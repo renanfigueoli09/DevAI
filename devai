@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export PYTHONPATH="/home/renan/git/devai:$PYTHONPATH"
+exec "/home/renan/git/devai/.venv/bin/python" "/home/renan/git/devai/main.py" "$@"

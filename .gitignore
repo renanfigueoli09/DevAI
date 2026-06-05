@@ -1,0 +1,43 @@
+# DevAI project .gitignore
+
+# Virtual environment (criado pelo install.sh)
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# DevAI runtime cache
+.devai/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Qodo / AI tools
+.qodo/
+
+# Training store — commitar o knowledge.db mas não os exports temporários
+training/export/*.md
+!training/README.md
+!training/.gitkeep
