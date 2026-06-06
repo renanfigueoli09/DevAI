@@ -2,21 +2,21 @@
   "search:NextJS + Supabase Performance Optimization:nextjs supabase performance op": {
     "content": "- Use `next/image` for image optimization.\n- Implement RLS indexes on Supabase tables.\n- Configure ISR (`getStaticProps`) for static generation with revalidation.\n- Utilize the connection-pooler trap to manage database connections efficiently.\n- Optimize queries by using `select('*')` only when necessary.\n- Use `next.config.js` to configure image optimization settings.\n- Implement caching strategies on both client and server sides.\n- Monitor performance regularly using tools like Lighthouse or WebPageTest.\n- Update Next.js and Supabase to their latest versions for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780761885.2759516
+    "updated_at": 1780762556.1753395
   },
   "search:NextJS + Supabase Performance Optimization:improving database queries wit": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase: 2.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Database schema design for efficient querying\n  - Indexing strategies to improve query performance\n  - Real-time subscriptions using Supabase's WebSocket API",
     "source": "web_search",
-    "updated_at": 1780761886.0519242
+    "updated_at": 1780762556.7537532
   },
   "search:NextJS + Supabase Performance Optimization:improving database queries wit_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase: v2.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Database schema design for efficient querying\n  - Indexing strategies for performance optimization",
     "source": "code_example",
-    "updated_at": 1780761886.7800515
+    "updated_at": 1780762557.318775
   },
   "search:NextJS + Supabase Performance Optimization:nextjs supabase performance op_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase Client: v2.0.0\n\n- **Key Config Options**:\n  - Environment variables for Supabase URL and Key (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`)\n  - Database schema optimization (normalize, denormalize based on use cases)\n  - Caching strategies in Next.js (ISR, SSG, Static Generation)\n  - Indexing columns frequently queried for performance\n  - Use of Supabase's real-time capabilities for live updates",
     "source": "code_example",
-    "updated_at": 1780761887.4872432
+    "updated_at": 1780762557.958788
   }
 }
