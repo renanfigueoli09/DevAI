@@ -2,12 +2,12 @@
   "pattern:docker+mongodb-only": {
     "content": "// docker-compose.yml MongoDB only: services: db: image:mongo:7.0, healthcheck:{test:[mongosh,--eval,db.adminCommand('ping')],interval:15s}. app: depends_on:{db:{condition:service_healthy}}, environment:{MONGODB_URI:mongodb://db:27017/myapp}",
     "source": "code_pattern",
-    "updated_at": 1780730456.529137
+    "updated_at": 1780730675.4726093
   },
   "pattern:docker+postgres-only": {
     "content": "// docker-compose.yml PostgreSQL only: db: image:postgres:16-alpine, environment:{POSTGRES_DB,POSTGRES_USER,POSTGRES_PASSWORD}, healthcheck:{test:pg_isready -U postgres}. app: depends_on db, environment: DB_HOST:db DB_PORT:5432",
     "source": "code_pattern",
-    "updated_at": 1780730456.6858096
+    "updated_at": 1780730675.650184
   },
   "pattern:docker:healthcheck-mongo": {
     "content": "MongoDB healthcheck: test: ['CMD','mongosh','--eval',\"db.adminCommand('ping')\"] interval:15s timeout:10s retries:5. depends_on: db: condition: service_healthy. NEVER pg_isready for MongoDB.",
