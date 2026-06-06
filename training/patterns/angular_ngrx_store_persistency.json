@@ -2,21 +2,21 @@
   "search:angular-ngrx-store-persistency:angular ngrx store persistency": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create an NgRx store.\n  - `ng serve` to start the Angular development server.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.4\n  - NgRx: v15.0.0\n\n- **Key Config Options**:\n  - `storeConfig`: Configure the NgRx store with initial state and reducers.\n  - `metaReducers`: Define meta-reducers for side effects like logging or persistence.\n\n- **Resources**:\n  - [Angular State Management with NgRx](https://www.apriorit.com/blog/2018/07/angular-state-management-ngrx)\n  - [GitHub Example](https://github.com/tamani-coding/angular-ngrx-store-example)\n  - [StackBlitz Starter Project](https://stackblitz.com/fork/angular-ngrx-store-practice)",
     "source": "web_search",
-    "updated_at": 1780765578.4536767
+    "updated_at": 1780766093.456288
   },
   "search:angular-ngrx-store-persistency:angular ngrx store persistency_ex": {
     "content": "- Use `ng new` to create a new Angular project.\n- Install NGRX using `npm install @ngrx/store @ngrx/effects`.\n- Update `app.module.ts` with `StoreModule.forRoot({})` and `EffectsModule.forRoot([])`.\n- Create feature modules for state management, e.g., `ng generate module auth --module app`.\n- Define reducers in the feature module, e.g., `auth.reducer.ts`.\n- Register reducers in `app.module.ts` using `StoreModule.forFeature('auth', reducer)`.\n- Implement effects for side-effects, e.g., `auth.effects.ts`.\n- Dispatch actions to update state from components.\n- Use selectors to access state in components.",
     "source": "code_example",
-    "updated_at": 1780765579.0483944
+    "updated_at": 1780766094.30252
   },
   "search:angular-ngrx-store-persistency:persisting state in angular ng": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng add @ngrx/store` to install NgRx in an Angular project.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version of NgRx is 15.x. Always check the official [NgRx GitHub repository](https://github.com/ngrx/platform) for the most current version.\n\n- **Key Config Options**:\n  - `initialState`: Define the initial state of your store.\n  - `reducers`: Map actions to functions that update the state.\n  - `effects`: Handle side effects and asynchronous operations.\n  - `metaReducers`: Enhance the behavior of reducers, such as logging or undo/redo functionality.",
     "source": "web_search",
-    "updated_at": 1780765579.660632
+    "updated_at": 1780766095.0828054
   },
   "search:angular-ngrx-store-persistency:persisting state in angular ng_ex": {
     "content": "- Use `ng generate store <feature-name>` to create NgRx stores.\n- Install latest NgRx version using npm or yarn.\n- Configure the root module with `StoreModule.forRoot({})`.\n- Define reducers in separate files and import them into the store configuration.\n- Use `@ngrx/effects` for side effects, creating effect classes with `createEffect()`.\n- Apply lazy loading by importing feature modules with `FeatureStoreModule.forFeature()` in the main app module.\n- Utilize `select` from `@ngrx/store` to access state slices in components.\n- Implement selectors using `createSelector` for efficient state selection.",
     "source": "code_example",
-    "updated_at": 1780765580.2765408
+    "updated_at": 1780766095.8472495
   }
 }
