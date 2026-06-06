@@ -1,0 +1,22 @@
+{
+  "search:react-native-performance-optimization:react native performance optim": {
+    "content": "- Use `react-native performance monitor` to analyze frame rates, JavaScript execution time, and memory usage.\n- Implement `FlatList` for rendering scrollable lists with efficient data handling.\n- Utilize `React.memo` or `useMemo`/`useCallback` to optimize functional components.\n- Enable `shouldComponentUpdate` in class components to prevent unnecessary re-renders.\n- Use `react-native-reanimated` for smooth animations and gestures.\n- Implement lazy loading for images with libraries like `react-native-fast-image`.\n- Optimize state management with Redux or Context API for large applications.\n- Use `react-native-screens` for better performance in navigation.\n- Ensure proper memory management by avoiding circular references and using weak maps.",
+    "source": "web_search",
+    "updated_at": 1780738991.2069054
+  },
+  "search:react-native-performance-optimization:react native performance optim_ex": {
+    "content": "- Use `react-native-performance` library for profiling.\n- Implement lazy loading for components and images.\n- Optimize state management with Redux or Context API.\n- Use `FlatList` instead of `ScrollView` for large lists.\n- Enable hardware acceleration by setting `android:hardwareAccelerated=\"true\"` in `AndroidManifest.xml`.\n- Utilize `react-native-reanimated` for smooth animations.\n- Implement memoization with `React.memo` and `useMemo`.\n- Minimize re-renders by using `shouldComponentUpdate` or `React.PureComponent`.\n- Use `react-native-fast-image` for efficient image loading.\n- Ensure proper asset optimization (e.g., use WebP format, compress images).",
+    "source": "code_example",
+    "updated_at": 1780738995.774703
+  },
+  "search:react-native-performance-optimization:react native profiling and deb": {
+    "content": "- **React Native Debugger**: \n  - Use `npx react-native-debugger` to start the debugger.\n  - Flags: `--port <number>` for custom port.\n\n- **Expo Dev Tool Plugins**:\n  - Install via npm or yarn.\n  - Configure in VSCode settings for seamless integration.\n\n- **iOS Profiling Tools**:\n  - Xcode's Instruments (e.g., Time Profiler, Memory Grapher).\n  - Flags: Use schemes to select the target device and run profiling.\n\n- **Android Profiling Tools**:\n  - Android Studio's Profiler.\n  - Flags: Select the correct device/emulator and start profiling.\n\n- **Key Config Options**:\n  - For React Native Debugger: Ensure VSCode is configured with the correct extensions.\n  - For Expo Dev Tool Plugins: Check VSCode settings for plugin configurations.\n\n- **Latest Versions**:\n  - React Native Debugger: Version 0.13.0 (as of latest update).\n  - Expo Dev Tool Plugins: Latest version available via npm or yarn.\n  - Xcode and Android Studio: Use the latest stable versions for optimal performance.",
+    "source": "web_search",
+    "updated_at": 1780739004.9621396
+  },
+  "search:react-native-performance-optimization:react native profiling and deb_ex": {
+    "content": "- **React Native DevTools**: Accessible via the Console, Sources, Network (Expo only), and Memory tabs.\n- **iOS Instruments for Profiling**:\n  - Hermes Debugger: Use `RN -> Profiler` to start profiling.\n  - CPU Profiling: Use Xcode's Time Profiler.\n  - Memory Profiling: Use Xcode's Allocations tool.\n- **Android Profiling Tools**:\n  - Systrace: Use `adb shell systrace trace.txt <options>`.\n  - Android Studio Profiler: Accessible from the top menu under \"View\" -> \"Tool Windows\" -> \"Profiler\".\n- **Pef Monitor**: Available in the debug menu for accessing profiling on React Native apps.\n- **Key Config Options**:\n  - Hermes Engine: Enable Hermes by setting `\"useHermes\": true` in `android/app/build.gradle`.\n  - CPU and Memory Limits: Configure these in Xcode's scheme settings under \"Diagnostics\" tab.\n\nLatest versions as of my last update include React Native 0.71, iOS Instruments, Android Studio, and Hermes Debugger. Always check the official documentation for the most current information.",
+    "source": "code_example",
+    "updated_at": 1780739019.6908596
+  }
+}
