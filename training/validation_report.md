@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-05 23:21*
+*2026-06-05 23:27*
 
-## Score: 64% `[████████████░░░░░░░░]`
+## Score: 66% `[█████████████░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -10,18 +10,19 @@
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
 | nlp | 7.9/15.0 | 53% | ❌ |
+| nestjs-mongodb | 7.5/15.0 | 50% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nestjs-mongodb | 6.0/15.0 | 40% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (40%)
+### nestjs-mongodb (50%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
-- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
-  - Wrong: `TypeOrmModule`
+- ✗ NestJS Mongoose service: which method to use instead of findOneBy
+  - Missing: `findById`
+  - Wrong: `findOneBy`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?

@@ -3,8 +3,8 @@
 Agente de código multi-stack usando LLM local via Ollama.
 100% offline · aprende com o uso · entende português informal.
 
-> Training store: **582 itens** | **559 embeddings** | storage: `lancedb+json`
-> *Atualizado: 2026-06-05 23:22*
+> Training store: **595 itens** | **572 embeddings** | storage: `lancedb+json`
+> *Atualizado: 2026-06-05 23:28*
 
 ---
 
