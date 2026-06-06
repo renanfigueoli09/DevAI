@@ -1,0 +1,22 @@
+{
+  "search:React Query Performance Optimization:react query performance": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to set up a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest version of React Query by running `npm install react-query@latest`.\n- **Key Config Options**:\n  - `staleTime`: Set how long data should be considered fresh before refetching. Default is 0 (always refetch).\n  - `refetchInterval`: Automatically refetch at a specified interval.\n  - `cacheTime`: Time for which queries are kept in the cache after being invalidated.\n  - `retry`: Number of retries on failed requests.\n- **Optimization Techniques**:\n  - Use `useMemo` and `useCallback` to memoize expensive computations and functions.\n  - Implement server-side rendering (SSR) for better initial load times.\n  - Utilize React's built-in `React.memo` for functional components that don't need re-rendering on prop changes.",
+    "source": "web_search",
+    "updated_at": 1780740835.1764207
+  },
+  "search:React Query Performance Optimization:react query performance_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4.x, React v18.x\n- **Key Config Options**:\n  - `queryCache`: Manage caching behavior.\n  - `retry`: Control retry logic.\n  - `staleTime`: Define how long data is considered fresh.",
+    "source": "code_example",
+    "updated_at": 1780740842.4290733
+  },
+  "search:React Query Performance Optimization:optimizing react query": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of React Query to benefit from the most recent features and optimizations.\n- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript` for creating a new TypeScript project with React Query.\n  - `npm install react-query@latest` or `yarn add react-query@latest` to install the latest version of React Query.\n- **Key Config Options**:\n  - `queryClient`: Configure the query client with options like `defaultOptions`, `logger`, and `retry`.\n  - `useQuery`: Use this hook for fetching data. Key flags include `enabled`, `refetchOnWindowFocus`, and `staleTime`.\n  - `useMutation`: For handling side effects, use this hook. Flags like `onSuccess`, `onError`, and `onSettled` are useful.\n- **Performance Enhancements**:\n  - Implement caching to reduce the number of API calls.\n  - Use background refetching to keep data up-to-date without blocking user interactions.\n  - Invalidate queries when relevant data changes to ensure fresh data is fetched.",
+    "source": "web_search",
+    "updated_at": 1780740855.9180815
+  },
+  "search:React Query Performance Optimization:optimizing react query_ex": {
+    "content": "- Use `React.lazy` and `Suspense` for lazy loading components.\n- Install the latest version of React Query using npm or yarn:\n  ```bash\n  npm install @tanstack/react-query@latest\n  ```\n  or\n  ```bash\n  yarn add @tanstack/react-query@latest\n  ```\n- Configure React Query with options like `defaultOptions` for global settings.\n- Use `useQueryClient` to prefetch data selectively.\n- Implement infinite scroll using `useInfiniteQuery`.\n- Optimize rendering by using `select` in `useQuery` to reduce the amount of data fetched.",
+    "source": "code_example",
+    "updated_at": 1780740864.6802347
+  }
+}

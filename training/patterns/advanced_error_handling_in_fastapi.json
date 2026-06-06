@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in FastAPI:fastapi error handling": {
+    "content": "- Use `@app.exception_handler()` to create custom exception handlers.\n- Middleware can be used to handle errors globally across the application.\n- Ensure error responses are well-documented and consistent with success responses using Pydantic models.\n- Implement global error handlers in FastAPI for better API design and consumer experience.",
+    "source": "web_search",
+    "updated_at": 1780740722.8759565
+  },
+  "search:Advanced Error Handling in FastAPI:fastapi error handling_ex": {
+    "content": "- Use `uvicorn` to run FastAPI apps.\n- Install FastAPI using pip: `pip install fastapi`.\n- Use `uvicorn main:app --reload` for development.\n- Implement custom exception handlers in FastAPI.\n- Key config options include `debug=True` and `reload=True`.\n- For production, use a WSGI server like Gunicorn or Uvicorn with ASGI support.",
+    "source": "code_example",
+    "updated_at": 1780740727.9668717
+  },
+  "search:Advanced Error Handling in FastAPI:exception handling in fastapi": {
+    "content": "- Use `uvicorn` to run your FastAPI application.\n- Override default exception handlers by defining custom ones in your FastAPI app.\n- Implement global exception handling using middleware or decorators.\n- Define custom exceptions by subclassing `HTTPException`.\n- Utilize Starlette's exception handling system for more control over error responses.\n- Configure logging within FastAPI to capture and log errors effectively.",
+    "source": "web_search",
+    "updated_at": 1780740743.3853664
+  },
+  "search:Advanced Error Handling in FastAPI:exception handling in fastapi_ex": {
+    "content": "- Use `HTTPException` from FastAPI to raise exceptions.\n- Register exception handlers using `@app.exception_handler(HTTPException)`.\n- Handle custom exceptions by subclassing `HTTPException`.\n- Configure error responses with `detail`, `headers`, and `status_code`.\n- Update FastAPI to the latest version for bug fixes and features.\n- Use `fastapi.middleware.cors.CORSMiddleware` for handling CORS issues.\n- Implement rate limiting with `fastapi_limiter` for security.",
+    "source": "code_example",
+    "updated_at": 1780740762.9756222
+  }
+}
