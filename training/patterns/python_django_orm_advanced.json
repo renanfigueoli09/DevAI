@@ -12,6 +12,6 @@
   "search:python-django-orm-advanced:python django orm performance ": {
     "content": "- **CLI Commands**:\n  - `python manage.py explain_sql <query>` to analyze SQL queries.\n  - `python manage.py runserver --insecure` for development without SSL.\n\n- **Latest Versions**:\n  - Django 5.2 as of August 2025.\n  - Python 3.10 or later recommended for better performance and features.\n\n- **Key Config Options**:\n  - `DATABASES['default']['OPTIONS']` for database-specific settings like connection pool size.\n  - `CACHES` configuration to enable caching mechanisms for reducing database load.\n  - `DEBUG = False` in production to disable debug mode, which can slow down the application.",
     "source": "web_search",
-    "updated_at": 1780776206.071368
+    "updated_at": 1780777039.7076802
   }
 }

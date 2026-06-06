@@ -2,27 +2,27 @@
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation": {
     "content": "- **CLI Command**: `jooq-codegen`\n- **Latest Version**: Check [Maven Central](https://search.maven.org/artifact/org.jooq/jooq-codegen)\n- **Key Config Options**:\n  - `-url`: JDBC connection URL\n  - `-username`: Database username\n  - `-password`: Database password\n  - `-generator`: Specify generator type (e.g., `org.jooq.meta.postgres.PostgreSQLGenerator`)\n  - `-target.directory`: Output directory for generated Java classes",
     "source": "web_search",
-    "updated_at": 1780776577.449656
+    "updated_at": 1780777444.6655924
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management": {
     "content": "- **Atlas**: Use `atlas apply` to manage database schemas as code.\n- **Latest Version**: Atlas v2.3.1\n- **Key Config Options**:\n  - `provider`: Specifies the database provider (e.g., PostgreSQL, MySQL).\n  - `connection_string`: Database connection details.\n  - `migrations_dir`: Directory containing migration scripts.",
     "source": "web_search",
-    "updated_at": 1780776578.4576747
+    "updated_at": 1780777446.9277046
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management_ex": {
     "content": "- **CLI Commands**: Use `hevo data` to explore database schema examples.\n- **Latest Versions**: Check the latest version of Hevo Data on their official website.\n- **Key Config Options**: Review the README file in the GitHub repository for specific configuration details and SQL scripts.",
     "source": "code_example",
-    "updated_at": 1780776579.4927423
+    "updated_at": 1780777448.0707977
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries": {
     "content": "- **jOOQ**: Use `mvn dependency:add` to include jOOQ in your project.\n- **Prisma TypedSQL**: Install Prisma CLI with `npm install -g prisma`.\n- **Kysely**: Install Kysely with `npm install kysely`.\n- **Neon**: Install Neon with `npm install neon-js`.\n- **Latest versions**: Check [Maven Central](https://search.maven.org/) for jOOQ, [npmjs.com](https://www.npmjs.com/) for Prisma, Kysely, and Neon.\n- **Key config options**:\n  - jOOQ: Configure your database connection in `pom.xml`.\n  - Prisma: Define your data model in `schema.prisma`.\n  - Kysely: Use the `Database` class with a connection string.\n  - Neon: Set up environment variables for connection details.",
     "source": "web_search",
-    "updated_at": 1780776580.6406507
+    "updated_at": 1780777449.3684888
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries_ex": {
     "content": "- **CLI Commands**:\n  - `sqlc generate`: Compiles SQL queries into type-safe Go code.\n  - `sqlx query`: Executes parameterized SQL queries in Rust.\n\n- **Latest Versions**:\n  - sqlc: v1.14.0 (as of Aug 5, 2024)\n  - sqlx: v0.6.3 (as of Aug 5, 2024)\n\n- **Key Config Options**:\n  - `sqlc` uses a configuration file (`sqlc.yaml`) to specify database connection details and SQL files.\n  - `sqlx` supports various database drivers like PostgreSQL, MySQL, SQLite, etc., through its driver configuration.",
     "source": "code_example",
-    "updated_at": 1780776581.8606799
+    "updated_at": 1780777450.6471713
   },
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation_ex": {
     "content": "- Use `jooq-codegen-maven` or `jooq-codegen-cli` for code generation.\n- For Maven, add `<plugin>` in `pom.xml`.\n- For CLI, run `java -jar jooq-codegen-cli.jar --input <config-file>`.\n- Key config options: `jdbcUrl`, `username`, `password`, `generator.database.name`.\n- Ensure database schema is up-to-date before generating code.\n- Use latest versions of jOOQ for optimal functionality and security.",

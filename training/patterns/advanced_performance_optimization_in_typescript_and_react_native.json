@@ -2,21 +2,21 @@
   "search:Advanced Performance Optimization in TypeScript and React Native:typescript performance optimiz": {
     "content": "- Use `tsc --incremental` for faster builds.\n- Update TypeScript to the latest version for performance improvements.\n- Configure `tsconfig.json`:\n  - `\"module\": \"ESNext\"`\n  - `\"target\": \"ESNext\"`\n  - `\"strict\": true`\n  - `\"esModuleInterop\": true`\n  - `\"skipLibCheck\": true`\n  - `\"forceConsistentCasingInFileNames\": true`\n- Use `--noEmitOnError` to prevent unnecessary compilation.\n- Employ `--watch` for real-time updates during development.\n- Optimize imports with named imports instead of `* as`.\n- Minimize the use of global variables and functions.\n- Utilize TypeScript's type system to catch errors early.\n- Profile your application using tools like Chrome DevTools.",
     "source": "web_search",
-    "updated_at": 1780776428.7964256
+    "updated_at": 1780777289.3661766
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:typescript performance optimiz_ex": {
     "content": "- **CLI Commands**:\n  - `tsc --incremental` for faster compilation by caching results.\n  - `tsc --watch` to automatically recompile on file changes.\n\n- **Latest Versions**:\n  - TypeScript v5.x is recommended for the latest features and performance improvements.\n\n- **Key Config Options**:\n  - `\"module\": \"ESNext\"` for better tree-shaking support.\n  - `\"target\": \"ES2019\"` to take advantage of modern JavaScript features.\n  - `\"isolatedModules\": true` to ensure each file can be compiled in isolation.",
     "source": "code_example",
-    "updated_at": 1780776429.5614324
+    "updated_at": 1780777290.247039
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips": {
     "content": "- Use `React.memo` to prevent unnecessary re-renders.\n- Implement `useEffect` cleanup to terminate subscriptions and asynchronous tasks.\n- Avoid using `ListView`, opt for more efficient alternatives like `FlatList`.\n- Utilize `react-native-screens` for better performance in navigation.\n- Enable Hermes engine for faster JavaScript execution with `--hermes-engine` flag.\n- Use `react-native-reanimated` for smooth animations.\n- Optimize images by compressing and using appropriate formats.\n- Minimize global state management to reduce re-renders.\n- Use `useCallback` and `useMemo` to memoize functions and values.",
     "source": "web_search",
-    "updated_at": 1780776430.3836162
+    "updated_at": 1780777291.128629
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips_ex": {
     "content": "- Use `react-native link` to link native modules.\n- Update React Native to the latest version using `npx react-native upgrade`.\n- Implement memoization with `React.memo` or `useMemo`.\n- Utilize `FlatList` for efficient list rendering.\n- Enable Hermes engine by setting `\"hermesEnabled\": true` in `android/app/build.gradle`.\n- Optimize bridge performance by reducing unnecessary props and state updates.\n- Use `react-native-reanimated` for smooth animations.\n- Implement lazy loading with `React.lazy` and `Suspense`.\n- Profile your app using React DevTools for identifying bottlenecks.",
     "source": "code_example",
-    "updated_at": 1780776431.2056494
+    "updated_at": 1780777292.0963466
   }
 }

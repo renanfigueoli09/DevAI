@@ -2,11 +2,11 @@
   "search:python-fastapi-authentication:fastapi authentication best pr": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2, use the `fastapi-oauthlib` package with `pip install fastapi_oauthlib`.\n- For JWT, ensure you have `python-jose[cryptography]` installed via `pip install python-jose[cryptography]`.\n- Implement password hashing using `bcrypt`, install it with `pip install bcrypt`.\n- Configure your FastAPI app to use OAuth2 and JWT by setting up the necessary routes and dependencies.\n- Use environment variables for sensitive information like secret keys, tokens, and database credentials.\n- For production, ensure HTTPS is used to secure all communications.\n- Regularly update FastAPI, `fastapi-oauthlib`, and other packages to their latest versions to benefit from security patches and new features.",
     "source": "web_search",
-    "updated_at": 1780776378.1359448
+    "updated_at": 1780777232.038966
   },
   "search:python-fastapi-authentication:fastapi authentication best pr_ex": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2 JWT authentication, use `pip install python-multipart`.\n- Set up Tortoise ORM with `pip install tortoise-orm`.\n- Configure security settings in your FastAPI app using environment variables for sensitive data like secret keys.\n- Implement JWT token generation and verification using libraries like `python-jose[cryptography]`.\n- Use password hashing with `passlib` for storing user passwords securely.\n- Integrate Tortoise ORM models for database operations related to authentication.\n- Enable CORS in your FastAPI app using `fastapi.middleware.cors.CORSMiddleware`.\n- Regularly update dependencies and libraries to ensure security patches are applied.",
     "source": "code_example",
-    "updated_at": 1780776378.9489608
+    "updated_at": 1780777232.9060574
   }
 }

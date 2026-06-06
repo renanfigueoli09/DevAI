@@ -2,21 +2,21 @@
   "search:typescript+jest-advanced:advanced typescript jest testi": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: v29.x\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for browser-like environment.\n  - `transformIgnorePatterns`: Array of regex patterns to ignore during transformation.\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test framework has been installed in the environment.",
     "source": "web_search",
-    "updated_at": 1780776558.8462348
+    "updated_at": 1780777424.6588666
   },
   "search:typescript+jest-advanced:advanced typescript jest testi_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest ts-jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.x\n\n- **Key Config Options**:\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"testRegex\": \".*\\\\.(test|spec)\\\\.[tj]sx?$\"`\n  - `\"moduleFileExtensions\": [\"ts\", \"tsx\", \"js\"]`",
     "source": "code_example",
-    "updated_at": 1780776560.1720958
+    "updated_at": 1780777425.8253891
   },
   "search:typescript+jest-advanced:jest mocking and spying in typ": {
     "content": "- Use `jest.fn()` to create mock functions.\n- For mocking the Date constructor, use `jest.setSystemTime(mockDate)`.\n- To clear or reset mocks/spies, use `mockClear()`, `mockReset()`, and `mockRestore()`.\n- Ensure each test has its own initial values for shared mocks/spies.",
     "source": "web_search",
-    "updated_at": 1780776561.5019383
+    "updated_at": 1780777427.1688094
   },
   "search:typescript+jest-advanced:jest mocking and spying in typ_ex": {
     "content": "- Use `jest.fn()` to create mock functions.\n- Mocking async functions can be done using `mockResolvedValue`.\n- For spying on function calls, use `jest.spyOn()`.\n- Ensure Jest is installed via npm with `npm install --save-dev jest`.\n- Update your `package.json` to include `\"test\": \"jest\"`.\n- Configure Jest in a `jest.config.js` file if needed.\n- Use the latest version of TypeScript compatible with Jest for better type support.",
     "source": "code_example",
-    "updated_at": 1780776562.620488
+    "updated_at": 1780777428.3695803
   }
 }
