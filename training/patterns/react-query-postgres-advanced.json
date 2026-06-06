@@ -1,0 +1,32 @@
+{
+  "search:react-query+postgres-advanced:react query with postgresql ad": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `staleTime`: Controls how long the data is considered fresh.\n  - `refetchInterval`: Automatically refetches data at a specified interval.\n  - `queryFn`: The function that fetches data.",
+    "source": "web_search",
+    "updated_at": 1780722191.1490736
+  },
+  "search:react-query+postgres-advanced:react query with postgresql ad_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for managing cache and state.\n  - `useQuery`: Hook to fetch data from an API.\n  - `useMutation`: Hook to handle mutations like POST, PUT, DELETE.",
+    "source": "code_example",
+    "updated_at": 1780722198.3216596
+  },
+  "search:react-query+postgres-advanced:react query and postgresql cac": {
+    "content": "- **PostgreSQL Extensions**: pgpool-II, pgbouncer\n- **CLI Commands**:\n  - `CREATE EXTENSION IF NOT EXISTS pgpool2;`\n  - `pgbouncer -d /etc/pgbouncer/pgbouncer.ini`\n- **Latest Versions**:\n  - PostgreSQL: 15.3\n  - pgpool-II: 4.2.0\n  - pgbouncer: 1.18.1\n- **Key Config Options**:\n  - `shared_buffers`: 25% of total RAM\n  - `work_mem`: 64MB per query\n  - `maintenance_work_mem`: 512MB\n  - `effective_cache_size`: 75% of total RAM",
+    "source": "web_search",
+    "updated_at": 1780722205.1452405
+  },
+  "search:react-query+postgres-advanced:react query and postgresql cac_ex": {
+    "content": "- Install PostgreSQL using `brew install postgresql` on macOS.\n- Create a new database with `createdb mydatabase`.\n- Start the PostgreSQL server with `pg_ctl -D /usr/local/var/postgres start`.\n- Use `psql mydatabase` to interact with your database.\n- Install TanStack Query via npm: `npm install @tanstack/react-query`.\n- Import React Query in your project:\n  ```javascript\n  import { QueryClient, QueryClientProvider } from '@tanstack/react-query';\n  ```\n- Create a QueryClient instance:\n  ```javascript\n  const queryClient = new QueryClient();\n  ```\n- Wrap your application with the QueryClientProvider:\n  ```javascript\n  <QueryClientProvider client={queryClient}>\n    {/* Your app components */}\n  </QueryClientProvider>\n  ```\n- Use `useQuery` to fetch data:\n  ```javascript\n  import { useQuery } from '@tanstack/react-query';\n  \n  const fetchData = async () => {\n    const response = await fetch('https://api.example.com/data');\n    return response.json();\n  };\n  \n  function DataComponent() {\n    const { isLoading, error, data } = useQuery(['data'], fetchData);\n    \n    if (isLoading) return 'Loading...';\n    if (error) return 'An error has occurred: ' + error.message;\n    \n    return <div>{JSON.stringify(data)}</div>;\n  }\n  ```\n- Configure cache options in `useQuery`:\n  ```javascript\n  useQuery(['data'], fetchData, {\n    staleTime: 5000, // 5 seconds\n    cacheTime: 1000 * 60 * 60, // 1 hour\n  });\n  ```\n- Use `invalidateQueries` to refetch data:\n  ```javascript\n  queryClient.invalidateQueries(['data']);\n  ```\n\nThese steps provide a practical guide for integrating React Query with PostgreSQL caching strategies in a React application.",
+    "source": "code_example",
+    "updated_at": 1780722216.2258642
+  },
+  "search:react-query+postgres-advanced:react query and postgresql rea": {
+    "content": "- Use `npm install` to install necessary packages.\n- Run project using `dotnet run` from the command line.\n- For real-time updates, consider Hasura with PostgreSQL.\n- Set up Auth0 for dynamic access control and authentication.\n- Key config options include database connection strings and schema definitions.",
+    "source": "web_search",
+    "updated_at": 1780722223.94497
+  },
+  "search:react-query+postgres-advanced:react query and postgresql rea_ex": {
+    "content": "- **Install Dozer**: `brew install dozer`\n- **Navigate to Project Directory**: `cd /usecases/reactdirectory`\n- **Install Dependencies**: Ensure you have Node.js, npm, and PostgreSQL installed.\n- **Create React App**: `npx create-react-app my-app`\n- **Set Up Backend**: Use Express for the backend server.\n- **Configure PostgreSQL**: Install PostgreSQL and set up a database.\n- **Integrate React Query**: Install `react-query` using npm or yarn.\n- **Real-time Updates**: Use WebSockets or GraphQL subscriptions for real-time data syncing.\n- **Example Project**: Refer to [Macaies/Full-Stack-Application-using-React-JS-Nodejs-PostgreSQL](https://github.com/Macaies/Full-Stack-Application-using-React-JS-Nodejs-PostgreSQL) for a complete example.",
+    "source": "code_example",
+    "updated_at": 1780722232.224572
+  }
+}

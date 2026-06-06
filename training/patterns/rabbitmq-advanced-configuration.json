@@ -1,0 +1,22 @@
+{
+  "search:RabbitMQ Advanced Configuration:rabbitmq advanced topics": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl cluster_status`\n  - `rabbitmqctl set_policy`\n  - `rabbitmqadmin declare queue`\n\n- **Latest Versions**:\n  - RabbitMQ 3.8.x\n  - Erlang/OTP 24.x\n\n- **Key Config Options**:\n  - `listeners.tcp.default`: Port for AMQP connections.\n  - `cluster_formation.classic_config.nodes`: List of nodes in the cluster.\n  - `vm_memory_high_watermark.relative`: Memory watermark as a percentage.",
+    "source": "web_search",
+    "updated_at": 1780722075.6993198
+  },
+  "search:RabbitMQ Advanced Configuration:rabbitmq advanced topics_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl cluster_status`\n  - `rabbitmqctl set_policy ha-all \"^\" '{\"ha-mode\":\"all\"}'`\n\n- **Latest Versions**:\n  - RabbitMQ 3.12.x\n\n- **Key Config Options**:\n  - `cluster_partition_handling`: autoheal\n  - `vm_memory_high_watermark.relative`: 0.4",
+    "source": "code_example",
+    "updated_at": 1780722080.71602
+  },
+  "search:RabbitMQ Advanced Configuration:rabbitmq best practices": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl start_app`\n  - `rabbitmqctl stop_app`\n  - `rabbitmqctl status`\n\n- **Latest Versions**:\n  - RabbitMQ 3.8.x\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark.relative`: Set to control memory usage.\n  - `queue_index_type`: Choose between `default` and `btree`.\n  - `ha_mode`: Enable high availability with options like `all`, `nodes`, or `exactly`.\n\n- **Monitoring Tools**:\n  - Prometheus + Grafana\n  - RabbitMQ Management Plugin\n\n- **Security Practices**:\n  - Use SSL/TLS for secure communication.\n  - Limit user permissions to necessary roles.\n\n- **Performance Tuning**:\n  - Adjust `channel_max` and `frame_max`.\n  - Enable publisher confirms for reliable message delivery.",
+    "source": "web_search",
+    "updated_at": 1780722090.1196332
+  },
+  "search:RabbitMQ Advanced Configuration:rabbitmq best practices_ex": {
+    "content": "- Use `rabbitmqadmin` CLI tool for managing RabbitMQ instances.\n- Ensure RabbitMQ version is up-to-date, e.g., `3.8.x`.\n- Configure message acknowledgment using `basic_ack` or `basic_nack`.\n- Set message persistency with `delivery_mode=2` in the producer code.\n- Implement error handling strategies like retries and dead-letter exchanges.\n- Use Spring Boot's `@RabbitListener` annotation for consuming messages.\n- Monitor RabbitMQ performance metrics with tools like Prometheus and Grafana.\n- Configure concurrency management using `concurrency` property in the listener container factory.",
+    "source": "code_example",
+    "updated_at": 1780722094.9324772
+  }
+}

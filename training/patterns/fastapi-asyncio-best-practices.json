@@ -1,0 +1,22 @@
+{
+  "search:FastAPI Asyncio Best Practices:asyncio in fastapi": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n  - Command: `uvicorn main:app --reload`\n- FastAPI is built on top of Starlette and AnyIO, supporting both asyncio and Trio.\n- Define asynchronous endpoints using `async def`.\n- Utilize `await` for non-blocking operations within endpoint functions.\n- Key config options include:\n  - `--host`: Set the host to listen on (default: `127.0.0.1`).\n  - `--port`: Set the port to listen on (default: `8000`).\n  - `--reload`: Enable auto-reload during development.\n- FastAPI supports advanced concurrency patterns through AnyIO.\n- Latest versions can be found on [FastAPI's GitHub repository](https://github.com/tiangolo/fastapi).",
+    "source": "web_search",
+    "updated_at": 1780722160.2987466
+  },
+  "search:FastAPI Asyncio Best Practices:asyncio in fastapi_ex": {
+    "content": "- Use `uvicorn` to run FastAPI apps with async support.\n  - Command: `uvicorn main:app --reload`\n  \n- FastAPI is compatible with both asyncio and Trio via AnyIO.\n  - No specific flags needed for compatibility.\n\n- Key config options in FastAPI include:\n  - `asyncio.run(app)`\n  - `app.include_router(router)`\n\n- For advanced concurrency, consider using AnyIO directly.\n  - Install: `pip install anyio`\n  \n- Common pitfalls with async programming include:\n  - Blocking I/O operations blocking the event loop\n  - Not handling exceptions properly\n\n- Best practices for concurrent operations in FastAPI:\n  - Use dependency injection for shared resources\n  - Implement rate limiting to prevent abuse",
+    "source": "code_example",
+    "updated_at": 1780722164.227534
+  },
+  "search:FastAPI Asyncio Best Practices:fastapi performance tips": {
+    "content": "- Use `uvicorn` with the `--reload` flag during development.\n- Upgrade to the latest version of FastAPI and its dependencies.\n- Implement caching mechanisms like Redis or Memcached.\n- Utilize asynchronous programming for database operations.\n- Optimize routes by reducing complexity and minimizing data processing.\n- Enable gzip compression in production using middleware.\n- Configure logging levels appropriately (e.g., `INFO` in production).\n- Use connection pooling for databases to reduce latency.\n- Monitor performance with tools like `Pydantic` and `FastAPI-Monitoring`.\n- Regularly review and refactor code for efficiency.",
+    "source": "web_search",
+    "updated_at": 1780722169.5027351
+  },
+  "search:FastAPI Asyncio Best Practices:fastapi performance tips_ex": {
+    "content": "- Use `uvicorn` as the ASGI server for production.\n- Set `--host 0.0.0.0` and `--port 8000` in `uvicorn` command.\n- Enable `asyncio.run()` for asynchronous execution.\n- Implement caching using Redis or Memcached.\n- Use `fastapi.middleware.cors.CORSMiddleware` for cross-origin requests.\n- Optimize database queries with SQLAlchemy's ORM.\n- Configure logging to reduce overhead.\n- Use environment variables for sensitive data and settings.\n- Monitor performance with tools like `gunicorn` and `prometheus`.\n- Regularly update FastAPI and its dependencies.",
+    "source": "code_example",
+    "updated_at": 1780722177.6596642
+  }
+}
