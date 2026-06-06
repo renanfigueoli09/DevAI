@@ -54,15 +54,25 @@ echo -e "  ${GREEN}✓${NC} Ollama OK | $(date '+%H:%M %d/%m/%Y')"
 mkdir -p "$DEVAI_DIR/training"
 
 auto_commit() {
-    if command -v git &>/dev/null && [ -d "$DEVAI_DIR/.git" ]; then
-        cd "$DEVAI_DIR"
-        git add training/ README.md 2>/dev/null
-        if ! git diff --cached --quiet 2>/dev/null; then
-            git commit -m "🧠 training: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null \
-                && echo -e "  ${GREEN}✓ Commitado${NC}" || true
-            git push 2>/dev/null \
-                && echo -e "  ${GREEN}✓ Push realizado${NC}" || echo -e "  ${YELLOW}⚠ Push falhou (sem remote?)${NC}"
-        fi
+    if ! command -v git &>/dev/null || [ ! -d "$DEVAI_DIR/.git" ]; then return; fi
+    cd "$DEVAI_DIR"
+
+    # Aguarda se outro processo git estiver rodando (evita index.lock)
+    local LOCK="$DEVAI_DIR/.git/index.lock"
+    local waited=0
+    while [ -f "$LOCK" ] && [ $waited -lt 15 ]; do
+        sleep 1; waited=$((waited+1))
+    done
+    # Remove lock de processo morto
+    [ -f "$LOCK" ] && rm -f "$LOCK" 2>/dev/null
+
+    git add training/ README.md 2>/dev/null
+    if ! git diff --cached --quiet 2>/dev/null; then
+        git commit -m "🧠 training: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null \
+            && echo -e "  ${GREEN}✓ Commitado${NC}" || true
+        git push 2>/dev/null \
+            && echo -e "  ${GREEN}✓ Push OK${NC}" \
+            || echo -e "  ${YELLOW}⚠ Push falhou${NC}"
     fi
 }
 

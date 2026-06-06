@@ -293,6 +293,15 @@ def main():
             border_style="green",
         ))
 
+        # Commit ao final de cada ciclo
+        try:
+            from tools.vector_store import auto_commit
+            committed = auto_commit(f"🧠 training: self-improve cycle {cycle}")
+            if committed:
+                console.print("[dim]✓ Commitado[/dim]")
+        except Exception:
+            pass
+
         if not args.loop: break
         console.print("[dim]Próximo ciclo em 1min...[/dim]")
         time.sleep(60)

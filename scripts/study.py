@@ -666,11 +666,18 @@ def main():
             border_style="green",
         ))
         console.print("[dim]git add training/ && git commit -m 'training: update'[/dim]")
-        # Auto-atualiza documentação
+        # Auto-atualiza documentação e commita
         try:
             from scripts.update_docs import update_readme
             if update_readme():
                 console.print("[dim]✓ README.md atualizado[/dim]")
+        except Exception:
+            pass
+        try:
+            from tools.vector_store import auto_commit
+            committed = auto_commit()
+            if committed:
+                console.print("[green]✓ Commitado e push realizado[/green]")
         except Exception:
             pass
 

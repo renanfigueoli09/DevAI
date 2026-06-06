@@ -1,70 +1,75 @@
 # DevAI Training Store
 
-Conhecimento aprendido pelo agente. **Commite este diretório** — quanto mais treinado, mais inteligente.
+Conhecimento aprendido pelo agente. Commite este diretório — compartilha com o time.
 
 ## Estrutura
 
 ```
 training/
-  vectors/knowledge.lance/   ← LanceDB (Arrow + HNSW — busca vetorial nativa)
-  patterns/                  ← JSON por tópico (legível, editável)
-  index.json                 ← índice de todos os itens
-  discovered_topics.json     ← tópicos auto-descobertos (cresce a cada ciclo)
-  export/                    ← Markdown gerado por devai knowledge --export
-  study.log                  ← log do último treinamento
+  vectors/knowledge.lance/     ← LanceDB (Arrow + HNSW — busca vetorial)
+  patterns/*.json              ← JSON por tópico (legível, editável)
+  index.json                   ← índice de todos os itens
+  study_journal.json           ← histórico: quando estudou, score, prioridade
+  discovered_topics.json       ← tópicos auto-descobertos pelo agente
+  validation_report.md         ← último resultado da validação
+  study.log                    ← log do treinamento (não commitar)
+  validation.log               ← log da validação (não commitar)
+```
+
+## .gitignore recomendado
+
+```gitignore
+training/export/*.md    # gerado por devai knowledge --export, redundante
+training/study.log
+training/validation.log
 ```
 
 ## Como treinar
 
 ```bash
-chmod +x scripts/study.sh  # garante permissão
-
-# Rápido (~15min)
+# Estuda o que ainda não foi feito
 ./scripts/study.sh
 
-# Por stack (cobre TODOS os bancos + microserviços + auth + infra)
-./scripts/study.sh --group nestjs        # NestJS × MongoDB/PostgreSQL/Redis/Kafka/gRPC/GraphQL...
-./scripts/study.sh --group spring        # Spring Boot completo
-./scripts/study.sh --group python        # FastAPI + Django
-./scripts/study.sh --group dotnet        # ASP.NET Core
-./scripts/study.sh --group microservices # Kafka/RabbitMQ/gRPC/GraphQL × todas as stacks
-./scripts/study.sh --group databases     # MongoDB/PostgreSQL/Redis/Elasticsearch/Cassandra
-./scripts/study.sh --group infra         # Docker/Kubernetes/GitHub Actions
-./scripts/study.sh --group all           # TUDO (~2-4h)
+# Por área
+./scripts/study.sh --group nestjs
+./scripts/study.sh --group methodology   # SOLID, Clean Arch, Security, Testing
+./scripts/study.sh --group all           # Tudo
 
-# Overnight com descoberta autônoma de novos tópicos
-./scripts/study.sh --group all --loop
+# Intensivo overnight + auto-commita + push
+./scripts/study.sh --group all --intensive --loop
+
+# Treino + validação em paralelo (sem conflito de git)
+./scripts/train_and_validate.sh
+
+# Valida e corrige fracos
+python scripts/validate.py --fix --rounds 5
+
+# Status do que foi estudado
+./scripts/study.sh --status
 ```
 
-## Como commitar
+## Commitar
 
 ```bash
-cd ~/git/devai
-git add training/
-git commit -m "training: $(date +%Y-%m-%d) after full study"
-git push   # time inteiro recebe o treinamento
+git add training/ README.md
+git commit -m "🧠 training: update"
+git push
+# O loop faz isso automaticamente a cada ciclo
 ```
 
-## Cobertura (stack × banco × microserviço)
+## Cobertura
 
-| Stack | Bancos cobertos | Microserviços cobertos |
-|---|---|---|
-| NestJS | MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch, Cassandra | Kafka, RabbitMQ, gRPC, GraphQL, WebSocket, TCP |
-| Spring Boot | MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch | Kafka, RabbitMQ, gRPC, GraphQL |
-| FastAPI | MongoDB, PostgreSQL, MySQL, Redis | Kafka, RabbitMQ |
-| ASP.NET Core | MongoDB, PostgreSQL, MySQL, Redis | Kafka, RabbitMQ, SignalR |
-| Next.js | MongoDB, PostgreSQL | NextAuth |
-| Docker | MongoDB, PostgreSQL, Redis Sentinel, Kafka, Nginx | todos |
-| Microservices | CQRS, Saga, Event Sourcing, Circuit Breaker, API Gateway | todos |
-
-## Descoberta autônoma
-
-O estudo sugere e salva novos tópicos não cobertos a cada ciclo.
-Verificar: `cat training/discovered_topics.json`
-
-## Instalar embeddings
-
-```bash
-ollama pull nomic-embed-text
-devai knowledge   # verifica: "busca ✓ semântica ativa (LanceDB)"
-```
+| Área | Tópicos |
+|---|---|
+| NestJS | Core, MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch × Kafka, RabbitMQ, gRPC, GraphQL, WebSocket, Auth |
+| Spring Boot | Core, MongoDB, PostgreSQL, MySQL, Redis × Kafka, RabbitMQ, gRPC, Auth |
+| FastAPI | Core, MongoDB, PostgreSQL, Redis, Kafka, Auth |
+| ASP.NET Core | Core, MongoDB, PostgreSQL, Redis, Kafka, SignalR, Auth |
+| Next.js | Core, MongoDB, PostgreSQL, Auth |
+| Databases | MongoDB, PostgreSQL, Redis, Elasticsearch, Cassandra (avançado) |
+| Microservices | Kafka, RabbitMQ, gRPC, GraphQL, WebSocket, CQRS, Saga, Circuit Breaker |
+| Docker | Todas as combinações + Kubernetes + CI/CD |
+| Methodology | SOLID, Clean Architecture, API Design, Security, Testing, Performance, Anti-patterns |
+| CI/CD | GitHub Actions, GitLab CI, Azure DevOps, Bitbucket, CircleCI, Jenkins |
+| NLP | Entidades PT/EN, detecção de stack/banco, separação instrução×entidade |
+| Erros | TS2307, TS2339, findOneBy, PartialType, módulo ausente |

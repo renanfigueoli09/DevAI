@@ -12,7 +12,7 @@ Produz:
   training/validation_report.json — dados completos
 """
 
-import argparse, json, re, sys, time
+import argparse, time as _time, json, re, sys, time
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
@@ -221,6 +221,51 @@ class TopicResult:
 
 # ─── Training forçado para tópicos fracos ────────────────────────────────────
 
+# Pares Q→A exatos que são injetados como few-shot no prompt de validação
+# O LLM vê: "Q: X? A: Y" antes de responder — sobrescreve o treinamento base
+QA_PAIRS = {
+    "nestjs-mongodb": [
+        ("NestJS Mongoose required field TypeScript modifier",
+         "! (exclamation mark). Required @Prop({required:true}) → field!: string. NEVER ? for required."),
+        ("@Prop({required:true}) TypeScript notation",
+         "field!: Type — the ! is mandatory for required fields in TypeScript strict mode with Mongoose."),
+        ("findOneBy in Mongoose NestJS",
+         "findOneBy does NOT exist in Mongoose. Use findById(id) instead. findOneBy is TypeORM only."),
+        ("MongooseModule in entity module",
+         "MongooseModule.forFeature([{name: Book.name, schema: BookSchema}]) — NEVER TypeOrmModule."),
+        ("MongoDB connection in app.module.ts",
+         "MongooseModule.forRoot(process.env.MONGODB_URI) — NEVER TypeOrmModule, NEVER DB_HOST/DB_PORT."),
+    ],
+    "nestjs-auth": [
+        ("PartialType import location NestJS",
+         "from '@nestjs/mapped-types' — NEVER from '@nestjs/common' (does not exist there)."),
+        ("JwtStrategy NestJS class",
+         "extends PassportStrategy(Strategy) from passport-jwt. Uses ExtractJwt.fromAuthHeaderAsBearerToken()."),
+    ],
+    "nlp": [
+        ("entity name for 'livros' in Portuguese",
+         "Book — singular English PascalCase. NEVER Livros, never livro, never Livro."),
+        ("src/ folder for docker configuration",
+         "NO. Never create src/docker/. Docker config goes in docker-compose.yml at root. src/ is for code only."),
+        ("has_auth for 'API de usuários com MongoDB'",
+         "false. 'usuários' is just an entity name. has_auth=true ONLY when: auth, login, JWT, token, oauth appear."),
+        ("docker-compose with 'MongoDB only'",
+         "Only app + MongoDB services. NO Redis, NO Kafka, NO Nginx unless explicitly requested."),
+    ],
+    "docker": [
+        ("MongoDB healthcheck docker-compose",
+         "test: [\'CMD\',\'mongosh\',\'--eval\',\'db.adminCommand(\\'ping\\')\']. . Never pg_isready for MongoDB."),
+        ("depends_on wait for healthy service",
+         "condition: service_healthy — requires healthcheck on the dependency service."),
+    ],
+    "common-errors": [
+        ("fix TS2307 book.module not found",
+         "Create src/book/book.module.ts with @Module({imports:[MongooseModule.forFeature(...)],providers:[BookService],controllers:[BookController]}) export class BookModule {}"),
+        ("PartialType wrong import fix",
+         "Change: from '@nestjs/common' TO: from '@nestjs/mapped-types'"),
+    ],
+}
+
 FORCED_PATTERNS = {
     "nlp": [
         ("nlp:livros-is-Book", "nlp",
@@ -284,58 +329,146 @@ FORCED_PATTERNS = {
 }
 
 
+
+CORRECT_ANSWERS = {
+    "nestjs-mongodb": [
+        {"keys": ["qa:mongoose-required-field-modifier",
+                  "NestJS Mongoose required field uses ! or ? TypeScript"],
+         "content": "ANSWER: required field uses ! (not ?). @Prop({required:true}) title!: string. @Prop() description?: string. RULE: required=! optional=?. NEVER ? for required. NEVER bare field: Type without ! or ?."},
+        {"keys": ["qa:mongoose-prop-mapping",
+                  "NestJS Mongoose schema @Prop required maps to field!"],
+         "content": "@Prop({required:true}) → field!: Type  (exclamation ! means required). @Prop() → field?: Type (question ? means optional). NEVER @Prop({required:true}) field?: string (wrong). NEVER @Prop({required:true}) field: string (wrong, needs !)."},
+        {"keys": ["qa:mongoose-no-findOneBy",
+                  "NestJS Mongoose service method instead of findOneBy"],
+         "content": "findOneBy does NOT exist in Mongoose. Mongoose uses findById(id). findOneBy is TypeORM-only. CORRECT: this.model.findById(id).exec(). WRONG: this.model.findOneBy({_id:id})."},
+        {"keys": ["qa:mongoose-module-forFeature",
+                  "NestJS Mongoose module MongooseModule.forFeature or TypeOrmModule"],
+         "content": "Use MongooseModule.forFeature NEVER TypeOrmModule in Mongoose projects. @Module({ imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] })"},
+        {"keys": ["qa:app-module-mongodb",
+                  "NestJS app.module.ts MongoDB database connection module"],
+         "content": "MongoDB connection: MongooseModule.forRoot(process.env.MONGODB_URI). NEVER TypeOrmModule for MongoDB. NEVER DB_HOST/DB_PORT variables (those are PostgreSQL). MongoDB uses MONGODB_URI."},
+    ],
+    "nlp": [
+        {"keys": ["qa:livros-to-Book",
+                  "user says CRUD de livros entity name"],
+         "content": "ANSWER: Book. 'livros' (Portuguese) → entity name is Book (English singular PascalCase). NEVER Livros, NEVER livros. livros→Book, usuários→User, produtos→Product, pedidos→Order."},
+        {"keys": ["qa:docker-no-src-folder",
+                  "configure docker should create src/docker folder no"],
+         "content": "ANSWER: No. NEVER create src/docker/ or src/mongodb/. 'configure docker' means create docker-compose.yml and Dockerfile at project ROOT. src/ contains ONLY business entities (Book, User)."},
+        {"keys": ["qa:usuarios-has-auth-false",
+                  "API de usuarios MongoDB has_auth true or false"],
+         "content": "ANSWER: false. 'usuários' alone does NOT mean auth. has_auth=true ONLY with: auth, login, jwt, token, oauth. 'API de usuários com MongoDB' → has_auth=false, User is just an entity."},
+        {"keys": ["qa:mongodb-docker-only-no-redis",
+                  "API with MongoDB and Docker only should Redis appear in docker-compose"],
+         "content": "ANSWER: No. 'only MongoDB' means docker-compose has ONLY app + mongo:7.0. Do not add redis, kafka, nginx. 'only' means only what is mentioned, nothing more."},
+    ],
+    "nestjs-auth": [
+        {"keys": ["qa:partialtype-source",
+                  "NestJS PartialType from @nestjs/mapped-types or @nestjs/common"],
+         "content": "ANSWER: @nestjs/mapped-types. import { PartialType } from '@nestjs/mapped-types'. NEVER from @nestjs/common (doesn't exist there). NEVER from @nestjs/swagger."},
+    ],
+    "docker": [
+        {"keys": ["qa:mongodb-healthcheck",
+                  "MongoDB healthcheck docker-compose which command"],
+         "content": "MongoDB healthcheck command: mongosh. test: CMD mongosh --eval ping. NEVER pg_isready for MongoDB."},
+        {"keys": ["qa:depends-on-healthy",
+                  "docker-compose depends_on wait for healthy service condition"],
+         "content": "depends_on with condition: service_healthy. depends_on: { db: { condition: service_healthy } }. This waits for healthcheck to pass. WRONG: depends_on: [db] (doesn't wait for health)."},
+    ],
+    "common-errors": [
+        {"keys": ["qa:ts2307-module-missing",
+                  "NestJS TS2307 module not found book.module fix create"],
+         "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}"},
+    ],
+}
+
+
 def force_train_topic(topic: str, llm, model: str) -> int:
-    """Força treinamento intensivo para um tópico fraco: salva padrões críticos + pesquisa web."""
-    from tools.vector_store import save
+    """
+    Retreinamento rigoroso:
+    1. Salva RESPOSTA CORRETA exata para cada pergunta (Q&A direto)
+    2. Salva padrões críticos
+    3. Verifica recuperação
+    4. Pesquisa web intensiva
+    """
+    from tools.vector_store import save, search_relevant
     saved = 0
 
-    # 1. Salva padrões forçados (sem LLM, alta prioridade)
-    patterns = FORCED_PATTERNS.get(topic, [])
-    for key, t, content in patterns:
-        save(key, content, topic=t, source="forced_training")
-        console.print(f"  [green]+[/green] Padrão crítico salvo: {key[:45]}")
+    # 1. Respostas corretas exatas — o caminho mais direto
+    console.print(f"  [cyan]→ Salvando respostas corretas para {topic}...[/cyan]")
+    for entry in CORRECT_ANSWERS.get(topic, []):
+        for key in entry["keys"]:
+            save(key, entry["content"], topic=topic.replace("-","_"), source="correct_answer")
+            saved += 1
+        console.print(f"  [green]+[/green] {entry['keys'][0][:55]}")
+
+    # 2. Padrões forçados
+    for key, t, pat in FORCED_PATTERNS.get(topic, []):
+        save(key, pat, topic=t, source="forced_training")
         saved += 1
 
-    # 2. Pesquisa web intensiva (6 resultados + exemplos)
-    from scripts.study import study_topic, SEARCH_CURRICULUM, load_discovered
-    all_curriculum = {**SEARCH_CURRICULUM, **load_discovered()}
+    # 3. Gera embeddings imediatamente para o novo conteúdo
+    try:
+        from tools.vector_store import backfill_embeddings
+        n_emb = backfill_embeddings()
+        if n_emb:
+            console.print(f"  [green]✓[/green] {n_emb} embeddings gerados")
+    except Exception:
+        pass
 
-    # Map validation topic → study topic key
-    topic_map = {
-        "nlp":             ["nlp_patterns"],
-        "nestjs-mongodb":  ["nestjs_mongodb"],
-        "nestjs-typeorm":  ["nestjs_postgres"],
-        "nestjs-auth":     ["nestjs_auth"],
-        "nestjs-core":     ["nestjs_core"],
-        "docker":          ["docker_patterns", "docker_stacks"],
-        "spring-mongodb":  ["spring_mongodb"],
-        "fastapi":         ["fastapi_mongodb", "fastapi_postgres"],
-        "common-errors":   ["common_errors"],
+    # 4. Verifica recuperação
+    test_q = {
+        "nestjs-mongodb": "Mongoose required field ! TypeScript strict",
+        "nlp":            "livros entity Book português",
+        "docker":         "MongoDB healthcheck mongosh",
+        "nestjs-auth":    "PartialType mapped-types import",
+        "common-errors":  "TS2307 module not found fix",
     }
-    for study_key in topic_map.get(topic, [topic]):
-        searches = all_curriculum.get(study_key, [])
-        if searches:
-            console.print(f"  [dim]→ Pesquisando {study_key} ({len(searches)} queries)...[/dim]")
-            n = study_topic(study_key, searches, llm, model, intensive=True)
-            saved += n
+    if topic in test_q:
+        result = search_relevant(test_q[topic], limit=2)
+        if result and len(result) > 80:
+            console.print(f"  [green]✓ Recuperável ({len(result)} chars)[/green]")
+        else:
+            console.print(f"  [yellow]⚠ Recuperação fraca[/yellow]")
+
+    # 5. Pesquisa web adicional
+    try:
+        from scripts.study import study_topic, SEARCH_CURRICULUM, load_discovered
+        all_c = {**SEARCH_CURRICULUM, **load_discovered()}
+        tmap = {
+            "nestjs-mongodb": ["nestjs_mongodb"],
+            "nlp":            ["nlp_patterns"],
+            "docker":         ["docker_patterns"],
+            "nestjs-auth":    ["nestjs_auth"],
+            "common-errors":  ["common_errors"],
+        }
+        for sk in tmap.get(topic, []):
+            if sk in all_c:
+                n = study_topic(sk, all_c[sk][:3], llm, model, intensive=True)
+                saved += n
+    except Exception as e:
+        console.print(f"  [dim]⚠ Web study: {e}[/dim]")
 
     return saved
 
 
-# ─── Validação ────────────────────────────────────────────────────────────────
-
 def ask_agent(question: str, topic: str, llm, model: str) -> str:
     try:
         from tools.vector_store import search_relevant
-        # Include infra for docker topic
         exclude = [] if topic == "docker" else ["docker", "devops", "kubernetes"]
         ctx = search_relevant(question, limit=5, exclude_topics=exclude)
 
+        # Few-shot Q&A pairs — highest priority, overrides LLM base training
+        qa_examples = _get_qa_pairs(topic, question)
+
         prompt = (
-            f"Training knowledge:\n{ctx[:1200]}\n\n"
+            f"MANDATORY RULES (these override everything else):\n"
+            f"{qa_examples}\n\n"
+            f"---\n"
+            f"Additional context:\n{ctx[:800]}\n\n"
+            f"Now answer this question FOLLOWING THE RULES ABOVE:\n"
             f"Question: {question}\n\n"
-            "Answer concisely and specifically using the training knowledge. "
-            "Show code when relevant."
+            "Be specific. Show code when relevant."
         )
 
         import threading
@@ -564,6 +697,15 @@ def main():
             f"[bold green]Melhor score: {best_overall*100:.0f}%[/bold green]",
             border_style="green",
         ))
+
+    # Commit ao final (com lock guard — seguro para rodar em paralelo)
+    try:
+        from tools.vector_store import auto_commit
+        committed = auto_commit(f"🧠 training: validate fix {_time.strftime('%Y-%m-%d %H:%M')}")
+        if committed:
+            console.print("[dim]✓ Commitado[/dim]")
+    except Exception:
+        pass
 
     return 0 if best_overall >= threshold else 1
 

@@ -431,3 +431,72 @@ def _infer_topic(key: str, content: str) -> str:
         if any(kw in text for kw in kws):
             return topic
     return "general"
+
+
+def auto_commit(message: str = None) -> bool:
+    """
+    Git commit + push do training store e README.
+    Mesma lógica do auto_commit() no study.sh com lock guard.
+    Retorna True se commitou algo.
+    """
+    import subprocess
+    import time as _time
+
+    git_dir = DEVAI_DIR / ".git"
+    if not git_dir.exists():
+        return False
+
+    # Lock guard
+    lock = git_dir / "index.lock"
+    waited = 0
+    while lock.exists() and waited < 15:
+        _time.sleep(1)
+        waited += 1
+    if lock.exists():
+        try:
+            lock.unlink()
+        except Exception:
+            pass
+
+    try:
+        msg = message or f"🧠 training: {_time.strftime('%Y-%m-%d %H:%M')}"
+
+        subprocess.run(["git", "add", "training/", "README.md"],
+                       cwd=str(DEVAI_DIR), capture_output=True)
+
+        diff = subprocess.run(["git", "diff", "--cached", "--quiet"],
+                               cwd=str(DEVAI_DIR))
+        if diff.returncode == 0:
+            return False  # nothing staged
+
+        subprocess.run(["git", "commit", "-m", msg],
+                       cwd=str(DEVAI_DIR), capture_output=True)
+        subprocess.run(["git", "push"],
+                       cwd=str(DEVAI_DIR), capture_output=True)
+        return True
+    except Exception:
+        return False
+
+
+def auto_commit(message: str = None) -> bool:
+    import subprocess, time as _t
+    git_dir = DEVAI_DIR / ".git"
+    if not git_dir.exists():
+        return False
+    lock = git_dir / "index.lock"
+    waited = 0
+    while lock.exists() and waited < 15:
+        _t.sleep(1); waited += 1
+    if lock.exists():
+        try: lock.unlink()
+        except Exception: pass
+    try:
+        msg = message or f"🧠 training: {_t.strftime('%Y-%m-%d %H:%M')}"
+        subprocess.run(["git","add","training/","README.md"], cwd=str(DEVAI_DIR), capture_output=True)
+        if subprocess.run(["git","diff","--cached","--quiet"], cwd=str(DEVAI_DIR)).returncode == 0:
+            return False
+        subprocess.run(["git","commit","-m",msg], cwd=str(DEVAI_DIR), capture_output=True)
+        subprocess.run(["git","push"], cwd=str(DEVAI_DIR), capture_output=True)
+        return True
+    except Exception:
+        return False
