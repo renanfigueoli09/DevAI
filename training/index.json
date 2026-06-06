@@ -8,13 +8,13 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780782340.0451267,
+    "ts": 1780782814.9188793,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780782340.8042395,
+    "ts": 1780782815.7767632,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780782342.0239697,
+    "ts": 1780782816.5606272,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782328.3070786,
+    "ts": 1780782804.8644023,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782330.0377975,
+    "ts": 1780782806.2850306,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -398,67 +398,67 @@
   "pattern:nestjs+mongodb:schema": {
     "topic": "nestjs_mongodb",
     "source": "code_pattern",
-    "ts": 1780781792.9900894,
+    "ts": 1780782834.3801699,
     "size": 150
   },
   "pattern:nestjs+mongodb:service": {
     "topic": "nestjs_mongodb",
     "source": "code_pattern",
-    "ts": 1780781793.6216264,
+    "ts": 1780782834.9438534,
     "size": 359
   },
   "pattern:nestjs+mongodb:module": {
     "topic": "nestjs_mongodb",
     "source": "code_pattern",
-    "ts": 1780781794.1610467,
+    "ts": 1780782835.4751732,
     "size": 200
   },
   "pattern:nestjs+mongodb:app-module": {
     "topic": "nestjs",
     "source": "code_pattern",
-    "ts": 1780781794.7358975,
+    "ts": 1780782836.026246,
     "size": 180
   },
   "pattern:nestjs+postgres:entity": {
     "topic": "nestjs_typeorm",
     "source": "code_pattern",
-    "ts": 1780782140.2145357,
+    "ts": 1780782836.6657822,
     "size": 210
   },
   "pattern:nestjs+postgres:service": {
     "topic": "nestjs_typeorm",
     "source": "code_pattern",
-    "ts": 1780782141.170474,
+    "ts": 1780782837.2101016,
     "size": 347
   },
   "pattern:nestjs+postgres:app-module": {
     "topic": "nestjs",
     "source": "code_pattern",
-    "ts": 1780781796.369423,
+    "ts": 1780782837.7348619,
     "size": 343
   },
   "pattern:nestjs:dto": {
     "topic": "nestjs",
     "source": "code_pattern",
-    "ts": 1780781796.858437,
+    "ts": 1780782838.2821577,
     "size": 148
   },
   "pattern:nestjs:main": {
     "topic": "nestjs",
     "source": "code_pattern",
-    "ts": 1780781797.463361,
+    "ts": 1780782838.8674057,
     "size": 176
   },
   "pattern:nestjs-auth:jwt": {
     "topic": "nestjs_auth",
     "source": "code_pattern",
-    "ts": 1780781797.9997053,
+    "ts": 1780782839.3939471,
     "size": 257
   },
   "pattern:nestjs+kafka:setup": {
     "topic": "nestjs_kafka",
     "source": "code_pattern",
-    "ts": 1780781798.5817094,
+    "ts": 1780782839.9325984,
     "size": 263
   },
   "pattern:spring+mongodb:document": {
@@ -488,61 +488,61 @@
   "pattern:docker+mongodb-only": {
     "topic": "docker",
     "source": "code_pattern",
-    "ts": 1780781802.8785968,
+    "ts": 1780782661.0284193,
     "size": 241
   },
   "pattern:docker+postgres-only": {
     "topic": "docker",
     "source": "code_pattern",
-    "ts": 1780781803.5159783,
+    "ts": 1780782661.9766958,
     "size": 227
   },
   "nlp:entities-pt": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780781804.0836356,
+    "ts": 1780782685.7330847,
     "size": 190
   },
   "nlp:instructions-not-entities": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780781804.626378,
+    "ts": 1780782686.6277635,
     "size": 216
   },
   "nlp:auth-detection": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780781805.2541542,
+    "ts": 1780782687.5588663,
     "size": 193
   },
   "nlp:stack-db-detection": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780781805.8310723,
+    "ts": 1780782688.4858115,
     "size": 194
   },
   "pattern:error:module-not-found": {
     "topic": "common_errors",
     "source": "code_pattern",
-    "ts": 1780781806.582231,
+    "ts": 1780782589.4355342,
     "size": 242
   },
   "pattern:error:findOneBy-mongoose": {
     "topic": "common_errors",
     "source": "code_pattern",
-    "ts": 1780781807.4188435,
+    "ts": 1780782590.4190133,
     "size": 194
   },
   "pattern:error:partialtype": {
     "topic": "common_errors",
     "source": "code_pattern",
-    "ts": 1780781808.2795157,
+    "ts": 1780782591.353973,
     "size": 215
   },
   "nlp:user-pt-br-informal": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780781809.1543212,
+    "ts": 1780782689.4715927,
     "size": 1166
   },
   "search:django+celery-redis-performance:django celery redis performanc_ex": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782327.4435925,
+    "ts": 1780782803.9962327,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782329.1377747,
+    "ts": 1780782805.5778139,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780782330.9447415,
+    "ts": 1780782806.90949,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780782331.9087837,
+    "ts": 1780782807.6768105,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780782332.7104394,
+    "ts": 1780782809.9329002,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780782333.4732609,
+    "ts": 1780782810.684601,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780782334.2719903,
+    "ts": 1780782811.418785,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780782335.9774384,
+    "ts": 1780782812.8512702,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782338.306178,
+    "ts": 1780782813.48744,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780782340.3112867,
+    "ts": 1780782814.229258,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -1466,259 +1466,259 @@
   "search:fastapi+redis-async:fastapi with redis async 2023": {
     "topic": "fastapi_redis_async",
     "source": "web_search",
-    "ts": 1780781483.7558534,
+    "ts": 1780782526.1467154,
     "size": 880
   },
   "search:fastapi+redis-async:fastapi with redis async 2023_ex": {
     "topic": "fastapi_redis_async",
     "source": "code_example",
-    "ts": 1780781485.1405954,
+    "ts": 1780782527.0652592,
     "size": 1142
   },
   "search:fastapi+redis-async:fastapi and redis integration ": {
     "topic": "fastapi_redis_async",
     "source": "web_search",
-    "ts": 1780781486.4295316,
+    "ts": 1780782527.9621334,
     "size": 413
   },
   "search:fastapi+redis-async:fastapi and redis integration _ex": {
     "topic": "fastapi_redis_async",
     "source": "code_example",
-    "ts": 1780781487.5708294,
+    "ts": 1780782528.9647553,
     "size": 384
   },
   "search:typescript+nextjs-auth0:typescript next.js auth0 authe": {
     "topic": "typescript_nextjs_auth0",
     "source": "web_search",
-    "ts": 1780781477.8277633,
+    "ts": 1780782522.48414,
     "size": 635
   },
   "search:typescript+nextjs-auth0:typescript next.js auth0 authe_ex": {
     "topic": "typescript_nextjs_auth0",
     "source": "code_example",
-    "ts": 1780781479.0263138,
+    "ts": 1780782523.4080236,
     "size": 399
   },
   "search:typescript+nextjs-auth0:advanced typescript next.js wi": {
     "topic": "typescript_nextjs_auth0",
     "source": "web_search",
-    "ts": 1780781480.5738685,
+    "ts": 1780782524.288309,
     "size": 494
   },
   "search:typescript+nextjs-auth0:advanced typescript next.js wi_ex": {
     "topic": "typescript_nextjs_auth0",
     "source": "code_example",
-    "ts": 1780781482.3941913,
+    "ts": 1780782525.2533967,
     "size": 430
   },
   "search:spring-cloud-gateway+resilience4j:spring cloud gateway and resil": {
     "topic": "spring_cloud_gateway_resilience4j",
     "source": "web_search",
-    "ts": 1780781566.310889,
+    "ts": 1780782604.3795147,
     "size": 433
   },
   "search:spring-cloud-gateway+resilience4j:spring cloud gateway and resil_ex": {
     "topic": "spring_cloud_gateway_resilience4j",
     "source": "code_example",
-    "ts": 1780781567.4471133,
+    "ts": 1780782605.3075395,
     "size": 1153
   },
   "search:spring-cloud-gateway+resilience4j:resilient microservices with s": {
     "topic": "spring_cloud_gateway_resilience4j",
     "source": "web_search",
-    "ts": 1780781568.4400988,
+    "ts": 1780782607.5341773,
     "size": 771
   },
   "search:spring-cloud-gateway+resilience4j:resilient microservices with s_ex": {
     "topic": "spring_cloud_gateway_resilience4j",
     "source": "code_example",
-    "ts": 1780781569.4538066,
+    "ts": 1780782608.4700305,
     "size": 1227
   },
   "search:bitbucket-pipelines-advanced:bitbucket pipelines advanced c": {
     "topic": "bitbucket_pipelines_advanced",
     "source": "web_search",
-    "ts": 1780781646.5527112,
+    "ts": 1780782680.1034806,
     "size": 501
   },
   "search:bitbucket-pipelines-advanced:bitbucket pipelines advanced c_ex": {
     "topic": "bitbucket_pipelines_advanced",
     "source": "code_example",
-    "ts": 1780781647.4981358,
+    "ts": 1780782681.0260413,
     "size": 532
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:next.js supabase realtime test": {
     "topic": "testing_strategies_for_nextjs_supabase_realtime",
     "source": "web_search",
-    "ts": 1780781763.0690837,
+    "ts": 1780782800.4203439,
     "size": 485
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:next.js supabase realtime test_ex": {
     "topic": "testing_strategies_for_nextjs_supabase_realtime",
     "source": "code_example",
-    "ts": 1780781764.0591063,
+    "ts": 1780782801.402783,
     "size": 544
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:real-time data handling in nex": {
     "topic": "testing_strategies_for_nextjs_supabase_realtime",
     "source": "web_search",
-    "ts": 1780781765.0546997,
+    "ts": 1780782802.305925,
     "size": 365
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:real-time data handling in nex_ex": {
     "topic": "testing_strategies_for_nextjs_supabase_realtime",
     "source": "code_example",
-    "ts": 1780781767.5106819,
+    "ts": 1780782803.2561972,
     "size": 345
   },
   "search:dotnet+mvc-performance:asp.net mvc caching strategies": {
     "topic": "dotnet_mvc_performance",
     "source": "web_search",
-    "ts": 1780781378.5401313,
+    "ts": 1780782434.4657276,
     "size": 1187
   },
   "search:dotnet+mvc-performance:asp.net mvc caching strategies_ex": {
     "topic": "dotnet_mvc_performance",
     "source": "code_example",
-    "ts": 1780781379.7871032,
+    "ts": 1780782435.5215256,
     "size": 1386
   },
   "search:nodejs-express-redis-cache:node.js express redis cache im": {
     "topic": "nodejs_express_redis_cache",
     "source": "web_search",
-    "ts": 1780781705.973567,
+    "ts": 1780782736.527564,
     "size": 454
   },
   "search:nodejs-express-redis-cache:node.js express redis cache im_ex": {
     "topic": "nodejs_express_redis_cache",
     "source": "code_example",
-    "ts": 1780781706.9607925,
+    "ts": 1780782738.0232956,
     "size": 801
   },
   "search:nodejs-express-redis-cache:optimizing node.js express app": {
     "topic": "nodejs_express_redis_cache",
     "source": "web_search",
-    "ts": 1780781707.9766915,
+    "ts": 1780782739.1475275,
     "size": 904
   },
   "search:nodejs-express-redis-cache:optimizing node.js express app_ex": {
     "topic": "nodejs_express_redis_cache",
     "source": "code_example",
-    "ts": 1780781708.9759517,
+    "ts": 1780782740.2224092,
     "size": 905
   },
   "search:python-django-security-practices:django security best practices": {
     "topic": "python_django_security_practices",
     "source": "web_search",
-    "ts": 1780781642.4613395,
+    "ts": 1780782676.3460596,
     "size": 467
   },
   "search:python-django-security-practices:django security best practices_ex": {
     "topic": "python_django_security_practices",
     "source": "code_example",
-    "ts": 1780781643.4951153,
+    "ts": 1780782677.3098373,
     "size": 753
   },
   "search:python-django-security-practices:securing django web applicatio": {
     "topic": "python_django_security_practices",
     "source": "web_search",
-    "ts": 1780781644.5225098,
+    "ts": 1780782678.2668972,
     "size": 773
   },
   "search:python-django-security-practices:securing django web applicatio_ex": {
     "topic": "python_django_security_practices",
     "source": "code_example",
-    "ts": 1780781645.4820123,
+    "ts": 1780782679.2029371,
     "size": 564
   },
   "search:fastapi-asyncio-websockets:fastapi asyncio websockets tut": {
     "topic": "fastapi_asyncio_websockets",
     "source": "web_search",
-    "ts": 1780781449.19635,
+    "ts": 1780782493.315976,
     "size": 572
   },
   "search:fastapi-asyncio-websockets:fastapi asyncio websockets tut_ex": {
     "topic": "fastapi_asyncio_websockets",
     "source": "code_example",
-    "ts": 1780781450.3284562,
+    "ts": 1780782494.2406769,
     "size": 371
   },
   "search:fastapi-asyncio-websockets:building real-time application": {
     "topic": "fastapi_asyncio_websockets",
     "source": "web_search",
-    "ts": 1780781451.4990103,
+    "ts": 1780782495.1969392,
     "size": 398
   },
   "search:fastapi-asyncio-websockets:building real-time application_ex": {
     "topic": "fastapi_asyncio_websockets",
     "source": "code_example",
-    "ts": 1780781452.5385377,
+    "ts": 1780782496.1809354,
     "size": 2225
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb aggregatio": {
     "topic": "spring_boot_mongodb_advanced",
     "source": "web_search",
-    "ts": 1780781433.8882596,
+    "ts": 1780782481.1323044,
     "size": 730
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb aggregatio_ex": {
     "topic": "spring_boot_mongodb_advanced",
     "source": "code_example",
-    "ts": 1780781434.9472687,
+    "ts": 1780782482.0382066,
     "size": 438
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb reactive s": {
     "topic": "spring_boot_mongodb_advanced",
     "source": "web_search",
-    "ts": 1780781436.1985745,
+    "ts": 1780782483.0170043,
     "size": 502
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb reactive s_ex": {
     "topic": "spring_boot_mongodb_advanced",
     "source": "code_example",
-    "ts": 1780781437.296456,
+    "ts": 1780782483.90031,
     "size": 585
   },
   "search:nextjs-auth-advanced:nextjs authentication with jwt": {
     "topic": "nextjs_auth_advanced",
     "source": "web_search",
-    "ts": 1780781574.5236833,
+    "ts": 1780782613.1479933,
     "size": 363
   },
   "search:nextjs-auth-advanced:nextjs authentication with jwt_ex": {
     "topic": "nextjs_auth_advanced",
     "source": "code_example",
-    "ts": 1780781575.4819212,
+    "ts": 1780782614.1061547,
     "size": 407
   },
   "search:nextjs-auth-advanced:nextjs oauth integration 2023": {
     "topic": "nextjs_auth_advanced",
     "source": "web_search",
-    "ts": 1780781576.4052181,
+    "ts": 1780782615.0273108,
     "size": 444
   },
   "search:typescript+jest-integration-tests:typescript jest integration te": {
     "topic": "typescript_jest_integration_tests",
     "source": "web_search",
-    "ts": 1780781544.2530506,
+    "ts": 1780782585.737208,
     "size": 961
   },
   "search:typescript+jest-integration-tests:typescript jest integration te_ex": {
     "topic": "typescript_jest_integration_tests",
     "source": "code_example",
-    "ts": 1780781545.2426574,
+    "ts": 1780782586.6880352,
     "size": 384
   },
   "search:typescript+jest-integration-tests:unit and integration testing i": {
     "topic": "typescript_jest_integration_tests",
     "source": "web_search",
-    "ts": 1780781546.359869,
+    "ts": 1780782587.6302872,
     "size": 451
   },
   "search:typescript+jest-integration-tests:unit and integration testing i_ex": {
     "topic": "typescript_jest_integration_tests",
     "source": "code_example",
-    "ts": 1780781547.3081238,
+    "ts": 1780782588.5251594,
     "size": 595
   },
   "search:fastapi+celery-scheduling:fastapi celery task scheduling": {
@@ -1742,13 +1742,13 @@
   "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf": {
     "topic": "fastapi_asyncio_websockets",
     "source": "web_search",
-    "ts": 1780781453.887294,
+    "ts": 1780782497.1495042,
     "size": 681
   },
   "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf_ex": {
     "topic": "fastapi_asyncio_websockets",
     "source": "code_example",
-    "ts": 1780781455.2544534,
+    "ts": 1780782498.1322343,
     "size": 875
   },
   "search:typescript-react-query-performance:typescript react query perform": {
@@ -1796,13 +1796,13 @@
   "search:python-fastapi-asyncio:python fastapi asyncio pattern": {
     "topic": "python_fastapi_asyncio",
     "source": "web_search",
-    "ts": 1780781438.4098198,
+    "ts": 1780782484.8159187,
     "size": 688
   },
   "search:python-fastapi-asyncio:fastapi asyncio security best ": {
     "topic": "python_fastapi_asyncio",
     "source": "web_search",
-    "ts": 1780781439.5357947,
+    "ts": 1780782485.7554913,
     "size": 583
   },
   "search:NestJS + Kafka Error Handling:nestjs kafka error handling": {
@@ -1868,97 +1868,97 @@
   "search:Angular + Firebase Authentication Best Practices:secure user management in angu": {
     "topic": "angular_firebase_authentication_best_practices",
     "source": "web_search",
-    "ts": 1780781524.2715926,
+    "ts": 1780782567.503779,
     "size": 668
   },
   "search:Angular + Firebase Authentication Best Practices:secure user management in angu_ex": {
     "topic": "angular_firebase_authentication_best_practices",
     "source": "code_example",
-    "ts": 1780781525.314844,
+    "ts": 1780782568.4126844,
     "size": 546
   },
   "search:NextJS + Supabase Performance Optimization:nextjs supabase performance op": {
     "topic": "nextjs_supabase_performance_optimization",
     "source": "web_search",
-    "ts": 1780781613.5835931,
+    "ts": 1780782649.8832827,
     "size": 596
   },
   "search:NextJS + Supabase Performance Optimization:improving database queries wit": {
     "topic": "nextjs_supabase_performance_optimization",
     "source": "web_search",
-    "ts": 1780781614.523971,
+    "ts": 1780782650.7796688,
     "size": 403
   },
   "search:NextJS + Supabase Performance Optimization:improving database queries wit_ex": {
     "topic": "nextjs_supabase_performance_optimization",
     "source": "code_example",
-    "ts": 1780781615.666384,
+    "ts": 1780782651.679795,
     "size": 346
   },
   "search:Angular + Firebase Authentication Best Practices:angular firebase authenticatio": {
     "topic": "angular_firebase_authentication_best_practices",
     "source": "web_search",
-    "ts": 1780781526.3283842,
+    "ts": 1780782569.3577137,
     "size": 1083
   },
   "search:Angular + Firebase Authentication Best Practices:angular firebase authenticatio_ex": {
     "topic": "angular_firebase_authentication_best_practices",
     "source": "code_example",
-    "ts": 1780781527.473925,
+    "ts": 1780782570.2794764,
     "size": 1691
   },
   "search:NextJS + Supabase Performance Optimization:nextjs supabase performance op_ex": {
     "topic": "nextjs_supabase_performance_optimization",
     "source": "code_example",
-    "ts": 1780781616.7426739,
+    "ts": 1780782652.6577392,
     "size": 569
   },
   "search:Spring Boot + Hibernate:spring boot hibernate jpa 2025": {
     "topic": "spring_boot_hibernate",
     "source": "web_search",
-    "ts": 1780781702.0945387,
+    "ts": 1780782731.2923954,
     "size": 448
   },
   "search:Spring Boot + Hibernate:spring boot hibernate jpa 2025_ex": {
     "topic": "spring_boot_hibernate",
     "source": "code_example",
-    "ts": 1780781703.069009,
+    "ts": 1780782732.4264324,
     "size": 671
   },
   "search:Spring Boot + Hibernate:spring boot hibernate performa": {
     "topic": "spring_boot_hibernate",
     "source": "web_search",
-    "ts": 1780781704.0453002,
+    "ts": 1780782733.5000093,
     "size": 651
   },
   "search:Spring Boot + Hibernate:spring boot hibernate performa_ex": {
     "topic": "spring_boot_hibernate",
     "source": "code_example",
-    "ts": 1780781705.0461895,
+    "ts": 1780782735.3179116,
     "size": 517
   },
   "search:Advanced Error Handling in Python Flask:python flask error handling be": {
     "topic": "advanced_error_handling_in_python_flask",
     "source": "web_search",
-    "ts": 1780781717.968146,
+    "ts": 1780782751.2299926,
     "size": 516
   },
   "search:Advanced Error Handling in Python Flask:python flask error handling be_ex": {
     "topic": "advanced_error_handling_in_python_flask",
     "source": "code_example",
-    "ts": 1780781718.9564562,
+    "ts": 1780782752.2764988,
     "size": 590
   },
   "search:GraphQL + Apollo Server Performance Tuning:apollo server performance opti": {
     "topic": "graphql_apollo_server_performance_tuning",
     "source": "web_search",
-    "ts": 1780781607.1987822,
+    "ts": 1780782644.2580996,
     "size": 517
   },
   "search:GraphQL + Apollo Server Performance Tuning:apollo server performance opti_ex": {
     "topic": "graphql_apollo_server_performance_tuning",
     "source": "code_example",
-    "ts": 1780781608.1602442,
+    "ts": 1780782645.173298,
     "size": 445
   },
   "search:Advanced Testing Strategies for Node.js Applications:node.js testing frameworks 202": {
@@ -2012,25 +2012,25 @@
   "search:nodejs+sequelize-advanced:sequelize orm for node.js 2024": {
     "topic": "nodejs_sequelize_advanced",
     "source": "web_search",
-    "ts": 1780781772.5227194,
+    "ts": 1780782810.4433403,
     "size": 732
   },
   "search:nodejs+sequelize-advanced:advanced sequelize queries and": {
     "topic": "nodejs_sequelize_advanced",
     "source": "web_search",
-    "ts": 1780781773.5010893,
+    "ts": 1780782811.6990354,
     "size": 477
   },
   "search:nodejs+sequelize-advanced:advanced sequelize queries and_ex": {
     "topic": "nodejs_sequelize_advanced",
     "source": "code_example",
-    "ts": 1780781774.505636,
+    "ts": 1780782813.0902092,
     "size": 503
   },
   "search:nodejs+sequelize-advanced:performance optimization with ": {
     "topic": "nodejs_sequelize_advanced",
     "source": "web_search",
-    "ts": 1780781775.5964372,
+    "ts": 1780782814.466204,
     "size": 736
   },
   "search:python-django-postgresql-orm:django orm with postgresql 202": {
@@ -2048,25 +2048,25 @@
   "search:java-spring-boot-mongodb:spring boot mongodb integratio": {
     "topic": "java_spring_boot_mongodb",
     "source": "web_search",
-    "ts": 1780781713.8397286,
+    "ts": 1780782747.04004,
     "size": 625
   },
   "search:java-spring-boot-mongodb:spring boot mongodb integratio_ex": {
     "topic": "java_spring_boot_mongodb",
     "source": "code_example",
-    "ts": 1780781714.8747387,
+    "ts": 1780782748.1180484,
     "size": 449
   },
   "search:java-spring-boot-mongodb:spring data mongodb crud opera": {
     "topic": "java_spring_boot_mongodb",
     "source": "web_search",
-    "ts": 1780781716.0015483,
+    "ts": 1780782749.2051263,
     "size": 409
   },
   "search:java-spring-boot-mongodb:spring data mongodb crud opera_ex": {
     "topic": "java_spring_boot_mongodb",
     "source": "code_example",
-    "ts": 1780781716.9808598,
+    "ts": 1780782750.205749,
     "size": 603
   },
   "search:golang-echo-postgres:golang orm for postgresql 2025": {
@@ -2108,25 +2108,25 @@
   "search:fastapi-redis:fastapi redis caching strategi": {
     "topic": "fastapi_redis",
     "source": "web_search",
-    "ts": 1780781724.4216428,
+    "ts": 1780782758.159181,
     "size": 419
   },
   "search:fastapi-redis:fastapi redis caching strategi_ex": {
     "topic": "fastapi_redis",
     "source": "code_example",
-    "ts": 1780781725.3469696,
+    "ts": 1780782759.045942,
     "size": 435
   },
   "search:fastapi-redis:fastapi redis pub/sub patterns": {
     "topic": "fastapi_redis",
     "source": "web_search",
-    "ts": 1780781726.2532918,
+    "ts": 1780782759.9874148,
     "size": 520
   },
   "search:fastapi-redis:fastapi redis pub/sub patterns_ex": {
     "topic": "fastapi_redis",
     "source": "code_example",
-    "ts": 1780781727.1615589,
+    "ts": 1780782760.9384978,
     "size": 1649
   },
   "search:typescript-nextjs-authentication:typescript next.js authenticat": {
@@ -2156,19 +2156,19 @@
   "search:typescript+eslint-configurations:typescript eslint configuratio": {
     "topic": "typescript_eslint_configurations",
     "source": "web_search",
-    "ts": 1780781421.9284315,
+    "ts": 1780782471.0206587,
     "size": 1294
   },
   "search:typescript+eslint-configurations:typescript eslint configuratio_ex": {
     "topic": "typescript_eslint_configurations",
     "source": "code_example",
-    "ts": 1780781423.1303535,
+    "ts": 1780782473.3899584,
     "size": 751
   },
   "search:typescript+eslint-configurations:best typescript eslint rules f": {
     "topic": "typescript_eslint_configurations",
     "source": "web_search",
-    "ts": 1780781424.2773423,
+    "ts": 1780782474.4072435,
     "size": 1031
   },
   "search:docker+kubernetes-logging-and-monitoring:docker kubernetes logging and ": {
@@ -2240,43 +2240,43 @@
   "search:docker+kafka-security-best-practices:docker kafka security best pra": {
     "topic": "docker_kafka_security_best_practices",
     "source": "web_search",
-    "ts": 1780781409.3229487,
+    "ts": 1780782461.3391688,
     "size": 708
   },
   "search:docker+kafka-security-best-practices:docker kafka security best pra_ex": {
     "topic": "docker_kafka_security_best_practices",
     "source": "code_example",
-    "ts": 1780781410.410679,
+    "ts": 1780782462.2606764,
     "size": 1212
   },
   "search:docker+kafka-security-best-practices:securing kafka in docker conta": {
     "topic": "docker_kafka_security_best_practices",
     "source": "web_search",
-    "ts": 1780781411.5896633,
+    "ts": 1780782463.1909568,
     "size": 490
   },
   "search:azure-devops-git-workflow:azure devops git workflow best": {
     "topic": "azure_devops_git_workflow",
     "source": "web_search",
-    "ts": 1780781710.0134592,
+    "ts": 1780782742.6443367,
     "size": 629
   },
   "search:azure-devops-git-workflow:azure devops git workflow best_ex": {
     "topic": "azure_devops_git_workflow",
     "source": "code_example",
-    "ts": 1780781710.9149592,
+    "ts": 1780782743.6850703,
     "size": 479
   },
   "search:azure-devops-git-workflow:git integration with azure dev": {
     "topic": "azure_devops_git_workflow",
     "source": "web_search",
-    "ts": 1780781711.863838,
+    "ts": 1780782744.8062086,
     "size": 357
   },
   "search:azure-devops-git-workflow:git integration with azure dev_ex": {
     "topic": "azure_devops_git_workflow",
     "source": "code_example",
-    "ts": 1780781712.8762407,
+    "ts": 1780782745.9176102,
     "size": 956
   },
   "search:typescript-graphql-performance:typescript graphql performance": {
@@ -2318,133 +2318,133 @@
   "search:python-django-rest-authentication:django rest authentication pat": {
     "topic": "python_django_rest_authentication",
     "source": "web_search",
-    "ts": 1780781511.273603,
+    "ts": 1780782550.577705,
     "size": 436
   },
   "search:python-django-rest-authentication:django rest authentication pat_ex": {
     "topic": "python_django_rest_authentication",
     "source": "code_example",
-    "ts": 1780781512.4420736,
+    "ts": 1780782551.5917237,
     "size": 385
   },
   "search:python-django-rest-authentication:authentication in django rest ": {
     "topic": "python_django_rest_authentication",
     "source": "web_search",
-    "ts": 1780781513.473856,
+    "ts": 1780782552.5354588,
     "size": 1365
   },
   "search:nextjs+supabase-performance:next.js supabase performance o": {
     "topic": "nextjs_supabase_performance",
     "source": "web_search",
-    "ts": 1780781742.7228067,
+    "ts": 1780782778.4939342,
     "size": 469
   },
   "search:nextjs+supabase-performance:next.js supabase performance o_ex": {
     "topic": "nextjs_supabase_performance",
     "source": "code_example",
-    "ts": 1780781743.6953974,
+    "ts": 1780782779.6448286,
     "size": 758
   },
   "search:nextjs+supabase-performance:supabase with next.js caching ": {
     "topic": "nextjs_supabase_performance",
     "source": "web_search",
-    "ts": 1780781744.6930945,
+    "ts": 1780782780.746944,
     "size": 358
   },
   "search:nextjs+supabase-performance:supabase with next.js caching _ex": {
     "topic": "nextjs_supabase_performance",
     "source": "code_example",
-    "ts": 1780781745.7524574,
+    "ts": 1780782781.8216493,
     "size": 846
   },
   "search:docker+kubernetes-logging-patterns:docker kubernetes logging patt": {
     "topic": "docker_kubernetes_logging_patterns",
     "source": "web_search",
-    "ts": 1780781761.049016,
+    "ts": 1780782798.1419616,
     "size": 758
   },
   "search:docker+kubernetes-logging-patterns:docker kubernetes logging patt_ex": {
     "topic": "docker_kubernetes_logging_patterns",
     "source": "code_example",
-    "ts": 1780781762.0100598,
+    "ts": 1780782799.3446653,
     "size": 578
   },
   "search:angular+firebase-performance-optimization:angular firebase performance o": {
     "topic": "angular_firebase_performance_optimization",
     "source": "web_search",
-    "ts": 1780781401.0684183,
+    "ts": 1780782453.5723245,
     "size": 719
   },
   "search:angular+firebase-performance-optimization:angular firebase performance o_ex": {
     "topic": "angular_firebase_performance_optimization",
     "source": "code_example",
-    "ts": 1780781402.0494032,
+    "ts": 1780782454.560779,
     "size": 1430
   },
   "search:angular+firebase-performance-optimization:firebase performance monitorin": {
     "topic": "angular_firebase_performance_optimization",
     "source": "web_search",
-    "ts": 1780781403.0830853,
+    "ts": 1780782455.5161228,
     "size": 490
   },
   "search:angular+firebase-performance-optimization:firebase performance monitorin_ex": {
     "topic": "angular_firebase_performance_optimization",
     "source": "code_example",
-    "ts": 1780781404.102034,
+    "ts": 1780782456.490219,
     "size": 646
   },
   "search:python-django-async:django async middleware 2023": {
     "topic": "python_django_async",
     "source": "web_search",
-    "ts": 1780781368.9851673,
+    "ts": 1780782425.4378326,
     "size": 611
   },
   "search:python-django-async:django async middleware 2023_ex": {
     "topic": "python_django_async",
     "source": "code_example",
-    "ts": 1780781370.0240011,
+    "ts": 1780782426.4909983,
     "size": 734
   },
   "search:python-django-async:django async orm 2023": {
     "topic": "python_django_async",
     "source": "web_search",
-    "ts": 1780781371.1567438,
+    "ts": 1780782427.574038,
     "size": 491
   },
   "search:python-django-async:django async orm 2023_ex": {
     "topic": "python_django_async",
     "source": "code_example",
-    "ts": 1780781372.2084687,
+    "ts": 1780782428.6090474,
     "size": 316
   },
   "search:dotnet-efcore-sqlite:entity framework core sqlite p": {
     "topic": "dotnet_efcore_sqlite",
     "source": "web_search",
-    "ts": 1780781664.7303293,
+    "ts": 1780782697.1758778,
     "size": 854
   },
   "search:dotnet-efcore-sqlite:entity framework core sqlite p_ex": {
     "topic": "dotnet_efcore_sqlite",
     "source": "code_example",
-    "ts": 1780781667.0005558,
+    "ts": 1780782698.1193066,
     "size": 460
   },
   "search:dotnet-efcore-sqlite:ef core migrations for sqlite ": {
     "topic": "dotnet_efcore_sqlite",
     "source": "web_search",
-    "ts": 1780781668.0047076,
+    "ts": 1780782699.06194,
     "size": 450
   },
   "search:dotnet-efcore-sqlite:sqlite with entity framework c": {
     "topic": "dotnet_efcore_sqlite",
     "source": "web_search",
-    "ts": 1780781668.9464836,
+    "ts": 1780782699.9543896,
     "size": 1828
   },
   "search:dotnet-efcore-sqlite:sqlite with entity framework c_ex": {
     "topic": "dotnet_efcore_sqlite",
     "source": "code_example",
-    "ts": 1780781669.8173447,
+    "ts": 1780782700.9176598,
     "size": 1029
   },
   "search:fastapi-asyncio-websockets-security:fastapi asyncio websockets sec": {
@@ -2504,19 +2504,19 @@
   "search:dotnet-core-microservices-distributed-caching:distributed caching in .net co": {
     "topic": "dotnet_core_microservices_distributed_caching",
     "source": "web_search",
-    "ts": 1780781470.2511091,
+    "ts": 1780782515.8288507,
     "size": 579
   },
   "search:spring-boot-kafka-streams-performance:kafka streams with spring boot": {
     "topic": "spring_boot_kafka_streams_performance",
     "source": "web_search",
-    "ts": 1780781444.0888717,
+    "ts": 1780782489.5438302,
     "size": 635
   },
   "search:spring-boot-kafka-streams-performance:kafka streams with spring boot_ex": {
     "topic": "spring_boot_kafka_streams_performance",
     "source": "code_example",
-    "ts": 1780781445.4525716,
+    "ts": 1780782490.4920766,
     "size": 1166
   },
   "search:spring-data-jpa-performance:spring data jpa performance tu": {
@@ -2546,13 +2546,13 @@
   "search:typescript-nextjs-prisma-migration:prisma migration strategies fo": {
     "topic": "typescript_nextjs_prisma_migration",
     "source": "web_search",
-    "ts": 1780781519.0612514,
+    "ts": 1780782557.200586,
     "size": 606
   },
   "search:typescript-nextjs-prisma-migration:prisma migration strategies fo_ex": {
     "topic": "typescript_nextjs_prisma_migration",
     "source": "code_example",
-    "ts": 1780781520.0835547,
+    "ts": 1780782558.1183133,
     "size": 460
   },
   "search:fastapi-asyncio-rate-limiting:fastapi asyncio rate limiting ": {
@@ -2606,13 +2606,13 @@
   "search:docker+kubernetes-redis:kubernetes redis statefulset c": {
     "topic": "docker_kubernetes_redis",
     "source": "web_search",
-    "ts": 1780781558.6073973,
+    "ts": 1780782598.7998292,
     "size": 547
   },
   "search:docker+kubernetes-redis:kubernetes redis statefulset c_ex": {
     "topic": "docker_kubernetes_redis",
     "source": "code_example",
-    "ts": 1780781559.5478828,
+    "ts": 1780782599.7897084,
     "size": 583
   },
   "search:python-django-authentication:django authentication with oau": {
@@ -2630,43 +2630,43 @@
   "search:fastapi-redis-cache:fastapi redis cache implementa": {
     "topic": "fastapi_redis_cache",
     "source": "web_search",
-    "ts": 1780781528.4585404,
+    "ts": 1780782571.2255266,
     "size": 1108
   },
   "search:fastapi-redis-cache:fastapi redis cache implementa_ex": {
     "topic": "fastapi_redis_cache",
     "source": "code_example",
-    "ts": 1780781529.57985,
+    "ts": 1780782572.121403,
     "size": 402
   },
   "search:fastapi-redis-cache:redis cache strategies for fas": {
     "topic": "fastapi_redis_cache",
     "source": "web_search",
-    "ts": 1780781530.7281816,
+    "ts": 1780782574.6118302,
     "size": 877
   },
   "search:fastapi-redis-cache:redis cache strategies for fas_ex": {
     "topic": "fastapi_redis_cache",
     "source": "code_example",
-    "ts": 1780781533.0240753,
+    "ts": 1780782575.5028214,
     "size": 300
   },
   "search:go-gorm-mysql-advanced:go gorm mysql advanced queries": {
     "topic": "go_gorm_mysql_advanced",
     "source": "web_search",
-    "ts": 1780781440.6621144,
+    "ts": 1780782486.7150724,
     "size": 654
   },
   "search:go-gorm-mysql-advanced:go gorm mysql advanced queries_ex": {
     "topic": "go_gorm_mysql_advanced",
     "source": "code_example",
-    "ts": 1780781441.8156898,
+    "ts": 1780782487.6676621,
     "size": 648
   },
   "search:go-gorm-mysql-advanced:gorm performance tuning with m": {
     "topic": "go_gorm_mysql_advanced",
     "source": "web_search",
-    "ts": 1780781442.8585458,
+    "ts": 1780782488.5971167,
     "size": 950
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error ": {
@@ -2738,13 +2738,13 @@
   "search:Enhancing Angular + ngrx Performance for Large Applications:angular ngrx performance optim": {
     "topic": "enhancing_angular_ngrx_performance_for_large_applications",
     "source": "web_search",
-    "ts": 1780781629.780507,
+    "ts": 1780782664.8640788,
     "size": 617
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:angular ngrx performance optim_ex": {
     "topic": "enhancing_angular_ngrx_performance_for_large_applications",
     "source": "code_example",
-    "ts": 1780781630.7520096,
+    "ts": 1780782665.8305678,
     "size": 523
   },
   "search:Optimizing Entity Framework Core Migrations for .NET Applications:entity framework core performa_ex": {
@@ -2756,55 +2756,55 @@
   "search:Enhancing Angular + ngrx Performance for Large Applications:ngrx state management best pra": {
     "topic": "enhancing_angular_ngrx_performance_for_large_applications",
     "source": "web_search",
-    "ts": 1780781633.129614,
+    "ts": 1780782666.7820547,
     "size": 447
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:ngrx state management best pra_ex": {
     "topic": "enhancing_angular_ngrx_performance_for_large_applications",
     "source": "code_example",
-    "ts": 1780781634.1723707,
+    "ts": 1780782667.7031612,
     "size": 557
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "web_search",
-    "ts": 1780781692.4815793,
+    "ts": 1780782722.8811278,
     "size": 755
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling_ex": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "code_example",
-    "ts": 1780781693.514079,
+    "ts": 1780782723.9095619,
     "size": 490
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "web_search",
-    "ts": 1780781694.4020286,
+    "ts": 1780782724.8740852,
     "size": 754
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management_ex": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "code_example",
-    "ts": 1780781695.438508,
+    "ts": 1780782725.8746526,
     "size": 497
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker logging strategies": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "web_search",
-    "ts": 1780781696.5138113,
+    "ts": 1780782726.9539742,
     "size": 1133
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes fault tolerance": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "web_search",
-    "ts": 1780781697.5741906,
+    "ts": 1780782728.0547686,
     "size": 652
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes fault tolerance_ex": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "code_example",
-    "ts": 1780781699.9449542,
+    "ts": 1780782729.1249151,
     "size": 504
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:springdoc-openapi advanced usa": {
@@ -2840,127 +2840,127 @@
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "web_search",
-    "ts": 1780781752.8416636,
+    "ts": 1780782789.6163995,
     "size": 425
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "web_search",
-    "ts": 1780781753.874206,
+    "ts": 1780782790.6182225,
     "size": 318
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management_ex": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "code_example",
-    "ts": 1780781754.8957822,
+    "ts": 1780782791.712515,
     "size": 286
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "web_search",
-    "ts": 1780781755.8698394,
+    "ts": 1780782792.7314928,
     "size": 664
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries_ex": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "code_example",
-    "ts": 1780781756.7676415,
+    "ts": 1780782793.792639,
     "size": 495
   },
   "search:Advanced Hibernate Usage with Spring Boot:hibernate advanced features": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "web_search",
-    "ts": 1780781492.989384,
+    "ts": 1780782533.6335826,
     "size": 552
   },
   "search:Advanced Hibernate Usage with Spring Boot:hibernate advanced features_ex": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "code_example",
-    "ts": 1780781494.1578956,
+    "ts": 1780782534.6036174,
     "size": 485
   },
   "search:Advanced Hibernate Usage with Spring Boot:spring boot jpa": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "web_search",
-    "ts": 1780781495.350198,
+    "ts": 1780782535.5765793,
     "size": 503
   },
   "search:Advanced Hibernate Usage with Spring Boot:spring boot jpa_ex": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "code_example",
-    "ts": 1780781496.3825727,
+    "ts": 1780782536.5089633,
     "size": 279
   },
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "web_search",
-    "ts": 1780781498.9380088,
+    "ts": 1780782537.4277835,
     "size": 747
   },
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access_ex": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "code_example",
-    "ts": 1780781499.9962046,
+    "ts": 1780782538.3980043,
     "size": 617
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "web_search",
-    "ts": 1780781501.1084101,
+    "ts": 1780782540.8437536,
     "size": 336
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies_ex": {
     "topic": "advanced_hibernate_usage_with_spring_boot",
     "source": "code_example",
-    "ts": 1780781502.0835247,
+    "ts": 1780782541.7993498,
     "size": 1042
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:kafka streams in spring": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "web_search",
-    "ts": 1780781683.8045166,
+    "ts": 1780782715.402245,
     "size": 588
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:kafka streams in spring_ex": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "code_example",
-    "ts": 1780781685.0411246,
+    "ts": 1780782716.3479059,
     "size": 451
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:spring cloud stream architectu": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "web_search",
-    "ts": 1780781686.1454465,
+    "ts": 1780782717.2896273,
     "size": 856
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:stateful processing with kafka": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "web_search",
-    "ts": 1780781687.2387152,
+    "ts": 1780782718.1904159,
     "size": 757
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:stateful processing with kafka_ex": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "code_example",
-    "ts": 1780781688.299333,
+    "ts": 1780782719.1448157,
     "size": 358
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:real-time data pipelines": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "web_search",
-    "ts": 1780781689.3966777,
+    "ts": 1780782720.0419366,
     "size": 483
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:real-time data pipelines_ex": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "code_example",
-    "ts": 1780781690.3453612,
+    "ts": 1780782720.972497,
     "size": 565
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker logging strategies_ex": {
     "topic": "advanced_error_handling_in_docker_and_kubernetes",
     "source": "code_example",
-    "ts": 1780781701.0412798,
+    "ts": 1780782730.1891568,
     "size": 478
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:kotlin security": {
@@ -2984,85 +2984,85 @@
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation_ex": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "code_example",
-    "ts": 1780781757.8220954,
+    "ts": 1780782794.8798456,
     "size": 399
   },
   "search:JOOQ Code Generation for Spring Boot Applications:spring boot orm": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "web_search",
-    "ts": 1780781758.9878938,
+    "ts": 1780782795.964693,
     "size": 1459
   },
   "search:JOOQ Code Generation for Spring Boot Applications:spring boot orm_ex": {
     "topic": "jooq_code_generation_for_spring_boot_applications",
     "source": "code_example",
-    "ts": 1780781759.9490213,
+    "ts": 1780782797.0495458,
     "size": 710
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:spring cloud stream architectu_ex": {
     "topic": "kafka_streams_and_spring_cloud_stream_advanced_topics",
     "source": "code_example",
-    "ts": 1780781691.3568506,
+    "ts": 1780782721.9311516,
     "size": 550
   },
   "search:python-asyncio-databases:python asyncio with sqlalchemy": {
     "topic": "python_asyncio_databases",
     "source": "web_search",
-    "ts": 1780781577.447394,
+    "ts": 1780782615.9552588,
     "size": 396
   },
   "search:python-asyncio-databases:python asyncio with sqlalchemy_ex": {
     "topic": "python_asyncio_databases",
     "source": "code_example",
-    "ts": 1780781578.4337864,
+    "ts": 1780782616.9112325,
     "size": 510
   },
   "search:python-asyncio-databases:asyncio postgresql with python": {
     "topic": "python_asyncio_databases",
     "source": "web_search",
-    "ts": 1780781579.3982635,
+    "ts": 1780782617.847424,
     "size": 753
   },
   "search:python-asyncio-databases:asyncio postgresql with python_ex": {
     "topic": "python_asyncio_databases",
     "source": "code_example",
-    "ts": 1780781580.3319116,
+    "ts": 1780782618.8283389,
     "size": 606
   },
   "search:python-asyncio-databases:mongodb asyncio in python 2025": {
     "topic": "python_asyncio_databases",
     "source": "web_search",
-    "ts": 1780781581.313967,
+    "ts": 1780782619.8147814,
     "size": 804
   },
   "search:python-asyncio-databases:mongodb asyncio in python 2025_ex": {
     "topic": "python_asyncio_databases",
     "source": "code_example",
-    "ts": 1780781582.3656127,
+    "ts": 1780782620.787879,
     "size": 767
   },
   "search:fastapi+database-optimization:fastapi orm optimization 2025": {
     "topic": "fastapi_database_optimization",
     "source": "web_search",
-    "ts": 1780781786.373052,
+    "ts": 1780782827.3229053,
     "size": 387
   },
   "search:fastapi+database-optimization:fastapi orm optimization 2025_ex": {
     "topic": "fastapi_database_optimization",
     "source": "code_example",
-    "ts": 1780781787.528029,
+    "ts": 1780782828.5060952,
     "size": 886
   },
   "search:fastapi+database-optimization:database indexing for fastapi ": {
     "topic": "fastapi_database_optimization",
     "source": "web_search",
-    "ts": 1780781788.5756145,
+    "ts": 1780782829.5931716,
     "size": 476
   },
   "search:fastapi+database-optimization:database indexing for fastapi _ex": {
     "topic": "fastapi_database_optimization",
     "source": "code_example",
-    "ts": 1780781789.5091038,
+    "ts": 1780782830.6963112,
     "size": 524
   },
   "search:spring-boot+kafka-integration:kafka integration in spring bo": {
@@ -3104,67 +3104,67 @@
   "search:spring-boot-kotlin-jpa:spring boot kotlin jpa 2025": {
     "topic": "spring_boot_kotlin_jpa",
     "source": "web_search",
-    "ts": 1780781784.3798013,
+    "ts": 1780782824.9140227,
     "size": 551
   },
   "search:spring-boot-kotlin-jpa:spring boot kotlin jpa 2025_ex": {
     "topic": "spring_boot_kotlin_jpa",
     "source": "code_example",
-    "ts": 1780781785.3302062,
+    "ts": 1780782826.1036892,
     "size": 443
   },
   "search:fastapi-asyncpg:fastapi asyncpg orm 2025": {
     "topic": "fastapi_asyncpg",
     "source": "web_search",
-    "ts": 1780781462.8636286,
+    "ts": 1780782504.8318179,
     "size": 605
   },
   "search:fastapi-asyncpg:fastapi asyncpg orm 2025_ex": {
     "topic": "fastapi_asyncpg",
     "source": "code_example",
-    "ts": 1780781465.3919234,
+    "ts": 1780782507.2217748,
     "size": 582
   },
   "search:dotnet-core-entityframeworkcore-mongodb:entity framework core mongodb ": {
     "topic": "dotnet_core_entityframeworkcore_mongodb",
     "source": "web_search",
-    "ts": 1780781416.8212519,
+    "ts": 1780782467.0597796,
     "size": 499
   },
   "search:dotnet-core-entityframeworkcore-mongodb:entity framework core mongodb _ex": {
     "topic": "dotnet_core_entityframeworkcore_mongodb",
     "source": "code_example",
-    "ts": 1780781418.1969137,
+    "ts": 1780782468.0292578,
     "size": 639
   },
   "search:dotnet-core-entityframeworkcore-mongodb:optimizing entity framework co": {
     "topic": "dotnet_core_entityframeworkcore_mongodb",
     "source": "web_search",
-    "ts": 1780781419.482352,
+    "ts": 1780782469.03237,
     "size": 431
   },
   "search:dotnet-core-entityframeworkcore-mongodb:optimizing entity framework co_ex": {
     "topic": "dotnet_core_entityframeworkcore_mongodb",
     "source": "code_example",
-    "ts": 1780781420.6997807,
+    "ts": 1780782470.003429,
     "size": 1740
   },
   "search:python-fastapi-postgresql:python fastapi postgresql inte": {
     "topic": "python_fastapi_postgresql",
     "source": "web_search",
-    "ts": 1780781360.198668,
+    "ts": 1780782416.2612927,
     "size": 1048
   },
   "search:python-fastapi-postgresql:python fastapi postgresql inte_ex": {
     "topic": "python_fastapi_postgresql",
     "source": "code_example",
-    "ts": 1780781361.3043268,
+    "ts": 1780782417.5848858,
     "size": 315
   },
   "search:python-fastapi-postgresql:fastapi postgresql performance": {
     "topic": "python_fastapi_postgresql",
     "source": "web_search",
-    "ts": 1780781362.47119,
+    "ts": 1780782419.2151701,
     "size": 737
   },
   "search:java-spring-security-oauth2:spring security oauth2 impleme": {
@@ -3194,109 +3194,109 @@
   "search:kubernetes-statefulsets-scaling:statefulsets performance tunin": {
     "topic": "kubernetes_statefulsets_scaling",
     "source": "web_search",
-    "ts": 1780781431.5886521,
+    "ts": 1780782479.2796955,
     "size": 504
   },
   "search:kubernetes-statefulsets-scaling:statefulsets performance tunin_ex": {
     "topic": "kubernetes_statefulsets_scaling",
     "source": "code_example",
-    "ts": 1780781432.7343483,
+    "ts": 1780782480.2177382,
     "size": 546
   },
   "search:typescript+jest-testing:typescript jest mocking and sp": {
     "topic": "typescript_jest_testing",
     "source": "web_search",
-    "ts": 1780781488.8516011,
+    "ts": 1780782529.8914788,
     "size": 583
   },
   "search:typescript+jest-testing:typescript jest mocking and sp_ex": {
     "topic": "typescript_jest_testing",
     "source": "code_example",
-    "ts": 1780781489.9143872,
+    "ts": 1780782530.831683,
     "size": 215
   },
   "search:spring-data-cassandra-async:spring data cassandra async op": {
     "topic": "spring_data_cassandra_async",
     "source": "web_search",
-    "ts": 1780781514.597496,
+    "ts": 1780782553.501896,
     "size": 1334
   },
   "search:spring-data-cassandra-async:spring data cassandra async op_ex": {
     "topic": "spring_data_cassandra_async",
     "source": "code_example",
-    "ts": 1780781515.7712927,
+    "ts": 1780782554.489582,
     "size": 696
   },
   "search:spring-data-cassandra-async:cassandra with spring boot and": {
     "topic": "spring_data_cassandra_async",
     "source": "web_search",
-    "ts": 1780781516.870656,
+    "ts": 1780782555.3891826,
     "size": 574
   },
   "search:spring-data-cassandra-async:cassandra with spring boot and_ex": {
     "topic": "spring_data_cassandra_async",
     "source": "code_example",
-    "ts": 1780781517.9762704,
+    "ts": 1780782556.3001866,
     "size": 589
   },
   "search:docker-compose+kubernetes:docker compose kubernetes inte": {
     "topic": "docker_compose_kubernetes",
     "source": "web_search",
-    "ts": 1780781381.0190015,
+    "ts": 1780782436.4634254,
     "size": 677
   },
   "search:docker-compose+kubernetes:docker compose kubernetes inte_ex": {
     "topic": "docker_compose_kubernetes",
     "source": "code_example",
-    "ts": 1780781382.256447,
+    "ts": 1780782437.489065,
     "size": 597
   },
   "search:docker-compose+kubernetes:kubernetes deployment strategi": {
     "topic": "docker_compose_kubernetes",
     "source": "web_search",
-    "ts": 1780781383.5931883,
+    "ts": 1780782439.841575,
     "size": 1232
   },
   "search:docker-compose+kubernetes:kubernetes deployment strategi_ex": {
     "topic": "docker_compose_kubernetes",
     "source": "code_example",
-    "ts": 1780781385.062585,
+    "ts": 1780782440.8573666,
     "size": 600
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb advanced query": {
     "topic": "fastapi_mongodb_advanced",
     "source": "web_search",
-    "ts": 1780781405.2064795,
+    "ts": 1780782457.4701028,
     "size": 1094
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb advanced query_ex": {
     "topic": "fastapi_mongodb_advanced",
     "source": "code_example",
-    "ts": 1780781406.1890693,
+    "ts": 1780782458.4885788,
     "size": 462
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb performance op": {
     "topic": "fastapi_mongodb_advanced",
     "source": "web_search",
-    "ts": 1780781407.237579,
+    "ts": 1780782459.4054077,
     "size": 535
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb performance op_ex": {
     "topic": "fastapi_mongodb_advanced",
     "source": "code_example",
-    "ts": 1780781408.264987,
+    "ts": 1780782460.3888187,
     "size": 515
   },
   "search:kubernetes+redis-cache:kubernetes redis cache deploym": {
     "topic": "kubernetes_redis_cache",
     "source": "web_search",
-    "ts": 1780781446.7051966,
+    "ts": 1780782491.4521737,
     "size": 661
   },
   "search:kubernetes+redis-cache:kubernetes redis performance t": {
     "topic": "kubernetes_redis_cache",
     "source": "web_search",
-    "ts": 1780781448.011093,
+    "ts": 1780782492.4194524,
     "size": 381
   },
   "search:typescript-nextjs-testing:typescript next.js unit testin": {
@@ -3326,25 +3326,25 @@
   "search:spring-boot+jpa-batch:spring boot jpa batch processi": {
     "topic": "spring_boot_jpa_batch",
     "source": "web_search",
-    "ts": 1780781720.1262295,
+    "ts": 1780782753.303096,
     "size": 327
   },
   "search:spring-boot+jpa-batch:spring boot jpa batch processi_ex": {
     "topic": "spring_boot_jpa_batch",
     "source": "code_example",
-    "ts": 1780781721.1732268,
+    "ts": 1780782754.389921,
     "size": 537
   },
   "search:spring-boot+jpa-batch:batch processing with spring b": {
     "topic": "spring_boot_jpa_batch",
     "source": "web_search",
-    "ts": 1780781722.3262649,
+    "ts": 1780782755.8014863,
     "size": 372
   },
   "search:spring-boot+jpa-batch:batch processing with spring b_ex": {
     "topic": "spring_boot_jpa_batch",
     "source": "code_example",
-    "ts": 1780781723.3333056,
+    "ts": 1780782756.9413466,
     "size": 473
   },
   "search:fastapi+celery-rabbitmq:celery rabbitmq for distribute": {
@@ -3362,91 +3362,91 @@
   "search:typescript+sequelize:typescript sequelize orm crud ": {
     "topic": "typescript_sequelize",
     "source": "web_search",
-    "ts": 1780781412.902995,
+    "ts": 1780782464.1285279,
     "size": 348
   },
   "search:typescript+sequelize:typescript sequelize orm crud _ex": {
     "topic": "typescript_sequelize",
     "source": "code_example",
-    "ts": 1780781414.1699224,
+    "ts": 1780782465.040097,
     "size": 438
   },
   "search:typescript+sequelize:typescript sequelize migration": {
     "topic": "typescript_sequelize",
     "source": "web_search",
-    "ts": 1780781415.458918,
+    "ts": 1780782466.1137676,
     "size": 699
   },
   "search:python-django-orm-performance:python django orm performance ": {
     "topic": "python_django_orm_performance",
     "source": "web_search",
-    "ts": 1780781748.7333426,
+    "ts": 1780782785.292385,
     "size": 790
   },
   "search:python-django-orm-performance:python django orm performance _ex": {
     "topic": "python_django_orm_performance",
     "source": "code_example",
-    "ts": 1780781749.7972078,
+    "ts": 1780782786.335288,
     "size": 894
   },
   "search:python-django-orm-performance:python django orm best practic": {
     "topic": "python_django_orm_performance",
     "source": "web_search",
-    "ts": 1780781750.8097827,
+    "ts": 1780782787.4394257,
     "size": 630
   },
   "search:python-django-orm-performance:python django orm best practic_ex": {
     "topic": "python_django_orm_performance",
     "source": "code_example",
-    "ts": 1780781751.8057842,
+    "ts": 1780782788.5418422,
     "size": 574
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore cru": {
     "topic": "dotnet_entityframeworkcore",
     "source": "web_search",
-    "ts": 1780781617.7569637,
+    "ts": 1780782653.5940375,
     "size": 349
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore cru_ex": {
     "topic": "dotnet_entityframeworkcore",
     "source": "code_example",
-    "ts": 1780781618.7308955,
+    "ts": 1780782654.5156465,
     "size": 2312
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore mig": {
     "topic": "dotnet_entityframeworkcore",
     "source": "web_search",
-    "ts": 1780781619.71834,
+    "ts": 1780782655.44486,
     "size": 379
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore mig_ex": {
     "topic": "dotnet_entityframeworkcore",
     "source": "code_example",
-    "ts": 1780781620.7094276,
+    "ts": 1780782656.3955142,
     "size": 263
   },
   "search:typescript+jest-mocking:typescript jest mocking patter": {
     "topic": "typescript_jest_mocking",
     "source": "web_search",
-    "ts": 1780781768.5297017,
+    "ts": 1780782804.2264445,
     "size": 304
   },
   "search:typescript+jest-mocking:typescript jest mocking patter_ex": {
     "topic": "typescript_jest_mocking",
     "source": "code_example",
-    "ts": 1780781769.6106098,
+    "ts": 1780782805.4893014,
     "size": 736
   },
   "search:typescript+jest-mocking:typescript jest mock services ": {
     "topic": "typescript_jest_mocking",
     "source": "web_search",
-    "ts": 1780781770.6208916,
+    "ts": 1780782806.654375,
     "size": 507
   },
   "search:typescript+jest-mocking:typescript jest mock services _ex": {
     "topic": "typescript_jest_mocking",
     "source": "code_example",
-    "ts": 1780781771.6155472,
+    "ts": 1780782807.8739815,
     "size": 776
   },
   "search:python-django-celery:python django celery task sche": {
@@ -3548,139 +3548,139 @@
   "search:TypeScript and React Native Performance:typescript react native perfor": {
     "topic": "typescript_and_react_native_performance",
     "source": "web_search",
-    "ts": 1780781635.1470757,
+    "ts": 1780782668.6236358,
     "size": 659
   },
   "search:TypeScript and React Native Performance:typescript react native perfor_ex": {
     "topic": "typescript_and_react_native_performance",
     "source": "code_example",
-    "ts": 1780781636.204521,
+    "ts": 1780782669.5454452,
     "size": 926
   },
   "search:TypeScript and React Native Performance:react native state management ": {
     "topic": "typescript_and_react_native_performance",
     "source": "web_search",
-    "ts": 1780781637.195375,
+    "ts": 1780782670.3818135,
     "size": 477
   },
   "search:TypeScript and React Native Performance:react native state management _ex": {
     "topic": "typescript_and_react_native_performance",
     "source": "code_example",
-    "ts": 1780781638.233593,
+    "ts": 1780782671.2668688,
     "size": 327
   },
   "search:FastAPI with MongoDB:fastapi with mongodb crud oper": {
     "topic": "fastapi_with_mongodb",
     "source": "web_search",
-    "ts": 1780781456.4469965,
+    "ts": 1780782499.0869415,
     "size": 460
   },
   "search:FastAPI with MongoDB:fastapi with mongodb crud oper_ex": {
     "topic": "fastapi_with_mongodb",
     "source": "code_example",
-    "ts": 1780781457.4511805,
+    "ts": 1780782500.0753794,
     "size": 351
   },
   "search:FastAPI with MongoDB:mongodb performance tuning for": {
     "topic": "fastapi_with_mongodb",
     "source": "web_search",
-    "ts": 1780781458.5225794,
+    "ts": 1780782501.05867,
     "size": 360
   },
   "search:FastAPI with MongoDB:mongodb performance tuning for_ex": {
     "topic": "fastapi_with_mongodb",
     "source": "code_example",
-    "ts": 1780781459.6658504,
+    "ts": 1780782501.9783583,
     "size": 516
   },
   "search:FastAPI with MongoDB:fastapi and mongodb security p": {
     "topic": "fastapi_with_mongodb",
     "source": "web_search",
-    "ts": 1780781460.8229468,
+    "ts": 1780782502.9490263,
     "size": 596
   },
   "search:FastAPI with MongoDB:fastapi and mongodb security p_ex": {
     "topic": "fastapi_with_mongodb",
     "source": "code_example",
-    "ts": 1780781461.8167737,
+    "ts": 1780782503.8872046,
     "size": 353
   },
   "search:Node.js + Express Performance Tuning:express middleware for perform": {
     "topic": "node_js_express_performance_tuning",
     "source": "web_search",
-    "ts": 1780781604.1202135,
+    "ts": 1780782641.5233352,
     "size": 1043
   },
   "search:Node.js + Express Performance Tuning:node.js and mongodb integratio": {
     "topic": "node_js_express_performance_tuning",
     "source": "web_search",
-    "ts": 1780781605.095434,
+    "ts": 1780782642.434569,
     "size": 593
   },
   "search:Node.js + Express Performance Tuning:node.js and mongodb integratio_ex": {
     "topic": "node_js_express_performance_tuning",
     "source": "code_example",
-    "ts": 1780781606.187415,
+    "ts": 1780782643.3445017,
     "size": 611
   },
   "search:spring-boot-redis:spring boot redis integration ": {
     "topic": "spring_boot_redis",
     "source": "web_search",
-    "ts": 1780781570.411254,
+    "ts": 1780782609.441003,
     "size": 505
   },
   "search:spring-boot-redis:spring boot redis integration _ex": {
     "topic": "spring_boot_redis",
     "source": "code_example",
-    "ts": 1780781571.3745818,
+    "ts": 1780782610.368933,
     "size": 447
   },
   "search:spring-boot-redis:spring boot redis caching stra": {
     "topic": "spring_boot_redis",
     "source": "web_search",
-    "ts": 1780781572.499227,
+    "ts": 1780782611.329687,
     "size": 728
   },
   "search:spring-boot-redis:spring boot redis caching stra_ex": {
     "topic": "spring_boot_redis",
     "source": "code_example",
-    "ts": 1780781573.4911227,
+    "ts": 1780782612.2030237,
     "size": 452
   },
   "search:typescript-nextjs-auth:typescript next.js authenticat": {
     "topic": "typescript_nextjs_auth",
     "source": "web_search",
-    "ts": 1780781674.8522282,
+    "ts": 1780782705.5361037,
     "size": 954
   },
   "search:typescript-nextjs-auth:typescript next.js authenticat_ex": {
     "topic": "typescript_nextjs_auth",
     "source": "code_example",
-    "ts": 1780781675.7976267,
+    "ts": 1780782706.5121033,
     "size": 488
   },
   "search:typescript-nextjs-auth:typescript next.js jwt authent": {
     "topic": "typescript_nextjs_auth",
     "source": "web_search",
-    "ts": 1780781676.79829,
+    "ts": 1780782708.846047,
     "size": 1031
   },
   "search:typescript-nextjs-auth:typescript next.js jwt authent_ex": {
     "topic": "typescript_nextjs_auth",
     "source": "code_example",
-    "ts": 1780781677.7660537,
+    "ts": 1780782709.7785382,
     "size": 320
   },
   "search:python-fastapi-authentication:fastapi authentication best pr": {
     "topic": "python_fastapi_authentication",
     "source": "web_search",
-    "ts": 1780781509.279177,
+    "ts": 1780782548.546758,
     "size": 774
   },
   "search:python-fastapi-authentication:fastapi authentication best pr_ex": {
     "topic": "python_fastapi_authentication",
     "source": "code_example",
-    "ts": 1780781510.2294292,
+    "ts": 1780782549.642525,
     "size": 738
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:kubernetes error handling stra": {
@@ -3740,49 +3740,49 @@
   "search:Next.js + Prisma Authentication:nextjs prisma setup guide": {
     "topic": "next_js_prisma_authentication",
     "source": "web_search",
-    "ts": 1780781534.03616,
+    "ts": 1780782576.4403322,
     "size": 431
   },
   "search:Next.js + Prisma Authentication:prisma authentication strategi": {
     "topic": "next_js_prisma_authentication",
     "source": "web_search",
-    "ts": 1780781535.0234883,
+    "ts": 1780782577.3647199,
     "size": 625
   },
   "search:Next.js + Prisma Authentication:prisma authentication strategi_ex": {
     "topic": "next_js_prisma_authentication",
     "source": "code_example",
-    "ts": 1780781536.0383353,
+    "ts": 1780782578.272223,
     "size": 432
   },
   "search:Next.js + Prisma Authentication:user registration and login in": {
     "topic": "next_js_prisma_authentication",
     "source": "web_search",
-    "ts": 1780781537.041545,
+    "ts": 1780782579.2626,
     "size": 731
   },
   "search:Next.js + Prisma Authentication:user registration and login in_ex": {
     "topic": "next_js_prisma_authentication",
     "source": "code_example",
-    "ts": 1780781538.080449,
+    "ts": 1780782580.219706,
     "size": 530
   },
   "search:Next.js + Prisma Authentication:prisma with typescript for aut": {
     "topic": "next_js_prisma_authentication",
     "source": "web_search",
-    "ts": 1780781539.041864,
+    "ts": 1780782581.1476486,
     "size": 979
   },
   "search:Next.js + Prisma Authentication:secure user data handling in n": {
     "topic": "next_js_prisma_authentication",
     "source": "web_search",
-    "ts": 1780781540.1092536,
+    "ts": 1780782582.0971496,
     "size": 665
   },
   "search:Next.js + Prisma Authentication:secure user data handling in n_ex": {
     "topic": "next_js_prisma_authentication",
     "source": "code_example",
-    "ts": 1780781541.23353,
+    "ts": 1780782583.0527823,
     "size": 628
   },
   "search:Angular Material Design Patterns:angular material design patter": {
@@ -3842,13 +3842,13 @@
   "search:Next.js + Prisma Authentication:nextjs prisma setup guide_ex": {
     "topic": "next_js_prisma_authentication",
     "source": "code_example",
-    "ts": 1780781542.2440455,
+    "ts": 1780782583.9520988,
     "size": 788
   },
   "search:Next.js + Prisma Authentication:prisma with typescript for aut_ex": {
     "topic": "next_js_prisma_authentication",
     "source": "code_example",
-    "ts": 1780781543.2012975,
+    "ts": 1780782584.8249516,
     "size": 456
   },
   "search:Angular Material Design Patterns:best practices for using angul": {
@@ -3866,73 +3866,73 @@
   "search:kubernetes+istio:kubernetes istio service mesh ": {
     "topic": "kubernetes_istio",
     "source": "web_search",
-    "ts": 1780781364.9103296,
+    "ts": 1780782420.5939622,
     "size": 373
   },
   "search:kubernetes+istio:kubernetes istio service mesh _ex": {
     "topic": "kubernetes_istio",
     "source": "code_example",
-    "ts": 1780781365.9108639,
+    "ts": 1780782421.8378098,
     "size": 514
   },
   "search:kubernetes+istio:istio traffic management in ku": {
     "topic": "kubernetes_istio",
     "source": "web_search",
-    "ts": 1780781366.9024074,
+    "ts": 1780782423.064901,
     "size": 1696
   },
   "search:kubernetes+istio:istio traffic management in ku_ex": {
     "topic": "kubernetes_istio",
     "source": "code_example",
-    "ts": 1780781367.9637845,
+    "ts": 1780782424.354805,
     "size": 486
   },
   "search:fastapi+pydantic-advanced:fastapi pydantic advanced usag": {
     "topic": "fastapi_pydantic_advanced",
     "source": "web_search",
-    "ts": 1780781780.489007,
+    "ts": 1780782820.2424119,
     "size": 410
   },
   "search:fastapi+pydantic-advanced:fastapi pydantic advanced usag_ex": {
     "topic": "fastapi_pydantic_advanced",
     "source": "code_example",
-    "ts": 1780781781.4087853,
+    "ts": 1780782821.4050379,
     "size": 461
   },
   "search:fastapi+pydantic-advanced:pydantic validation strategies": {
     "topic": "fastapi_pydantic_advanced",
     "source": "web_search",
-    "ts": 1780781782.3876753,
+    "ts": 1780782822.6135657,
     "size": 483
   },
   "search:fastapi+pydantic-advanced:pydantic validation strategies_ex": {
     "topic": "fastapi_pydantic_advanced",
     "source": "code_example",
-    "ts": 1780781783.319172,
+    "ts": 1780782823.7308362,
     "size": 523
   },
   "search:typescript+jest-advanced:advanced typescript jest testi": {
     "topic": "typescript_jest_advanced",
     "source": "web_search",
-    "ts": 1780781728.1326306,
+    "ts": 1780782761.8533733,
     "size": 409
   },
   "search:typescript+jest-advanced:advanced typescript jest testi_ex": {
     "topic": "typescript_jest_advanced",
     "source": "code_example",
-    "ts": 1780781729.1128442,
+    "ts": 1780782762.9426644,
     "size": 319
   },
   "search:typescript+jest-advanced:jest mocking and spying in typ": {
     "topic": "typescript_jest_advanced",
     "source": "web_search",
-    "ts": 1780781730.1811178,
+    "ts": 1780782764.1529493,
     "size": 273
   },
   "search:typescript+jest-advanced:jest mocking and spying in typ_ex": {
     "topic": "typescript_jest_advanced",
     "source": "code_example",
-    "ts": 1780781731.2501698,
+    "ts": 1780782765.3328586,
     "size": 429
   },
   "search:spring-boot-kafka-streams:spring boot kafka streams adva": {
@@ -3986,49 +3986,49 @@
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling": {
     "topic": "advanced_error_handling_in_fastapi_with_jwt_authentication",
     "source": "web_search",
-    "ts": 1780781503.0329542,
+    "ts": 1780782542.7855885,
     "size": 328
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling_ex": {
     "topic": "advanced_error_handling_in_fastapi_with_jwt_authentication",
     "source": "code_example",
-    "ts": 1780781504.0798233,
+    "ts": 1780782543.7424934,
     "size": 425
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi": {
     "topic": "advanced_error_handling_in_fastapi_with_jwt_authentication",
     "source": "web_search",
-    "ts": 1780781505.0235074,
+    "ts": 1780782544.6798024,
     "size": 516
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi": {
     "topic": "advanced_error_handling_in_fastapi_with_jwt_authentication",
     "source": "web_search",
-    "ts": 1780781506.0807977,
+    "ts": 1780782545.6604702,
     "size": 490
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi_ex": {
     "topic": "advanced_error_handling_in_fastapi_with_jwt_authentication",
     "source": "code_example",
-    "ts": 1780781507.2119222,
+    "ts": 1780782546.630227,
     "size": 517
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:docker compose security": {
     "topic": "docker_compose_for_microservices_security_and_performance_optimization",
     "source": "web_search",
-    "ts": 1780781386.461254,
+    "ts": 1780782441.8166869,
     "size": 565
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti": {
     "topic": "docker_compose_for_microservices_security_and_performance_optimization",
     "source": "web_search",
-    "ts": 1780781387.5733697,
+    "ts": 1780782442.777877,
     "size": 772
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti_ex": {
     "topic": "docker_compose_for_microservices_security_and_performance_optimization",
     "source": "code_example",
-    "ts": 1780781388.7270977,
+    "ts": 1780782443.7652206,
     "size": 664
   },
   "search:Advanced Logging with Python-Django-REST-Framework:django logging": {
@@ -4064,49 +4064,49 @@
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security": {
     "topic": "advanced_spring_cloud_stream_with_security_and_performance_tuning",
     "source": "web_search",
-    "ts": 1780781353.9254313,
+    "ts": 1780782408.218073,
     "size": 383
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security_ex": {
     "topic": "advanced_spring_cloud_stream_with_security_and_performance_tuning",
     "source": "code_example",
-    "ts": 1780781354.9289894,
+    "ts": 1780782409.544795,
     "size": 551
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies": {
     "topic": "advanced_spring_cloud_stream_with_security_and_performance_tuning",
     "source": "web_search",
-    "ts": 1780781356.057934,
+    "ts": 1780782410.8726501,
     "size": 558
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies_ex": {
     "topic": "advanced_spring_cloud_stream_with_security_and_performance_tuning",
     "source": "code_example",
-    "ts": 1780781357.090009,
+    "ts": 1780782412.1958363,
     "size": 324
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization": {
     "topic": "advanced_spring_cloud_stream_with_security_and_performance_tuning",
     "source": "web_search",
-    "ts": 1780781358.1518896,
+    "ts": 1780782413.5349329,
     "size": 604
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi_ex": {
     "topic": "advanced_error_handling_in_fastapi_with_jwt_authentication",
     "source": "code_example",
-    "ts": 1780781508.263115,
+    "ts": 1780782547.5335164,
     "size": 861
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:container orchestration strate": {
     "topic": "docker_compose_for_microservices_security_and_performance_optimization",
     "source": "web_search",
-    "ts": 1780781389.8165095,
+    "ts": 1780782444.6693962,
     "size": 578
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:container orchestration strate_ex": {
     "topic": "docker_compose_for_microservices_security_and_performance_optimization",
     "source": "code_example",
-    "ts": 1780781390.9277449,
+    "ts": 1780782445.6145515,
     "size": 545
   },
   "search:Advanced Logging with Python-Django-REST-Framework:python logging best practices_ex": {
@@ -4118,31 +4118,31 @@
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization_ex": {
     "topic": "advanced_spring_cloud_stream_with_security_and_performance_tuning",
     "source": "code_example",
-    "ts": 1780781359.160428,
+    "ts": 1780782414.94646,
     "size": 615
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka adva": {
     "topic": "spring_cloud_stream_kafka_advanced",
     "source": "web_search",
-    "ts": 1780781648.7363553,
+    "ts": 1780782681.9875975,
     "size": 2015
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka adva_ex": {
     "topic": "spring_cloud_stream_kafka_advanced",
     "source": "code_example",
-    "ts": 1780781649.7762952,
+    "ts": 1780782682.872132,
     "size": 606
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka erro": {
     "topic": "spring_cloud_stream_kafka_advanced",
     "source": "web_search",
-    "ts": 1780781650.806587,
+    "ts": 1780782683.76765,
     "size": 576
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka erro_ex": {
     "topic": "spring_cloud_stream_kafka_advanced",
     "source": "code_example",
-    "ts": 1780781651.9416356,
+    "ts": 1780782684.6903467,
     "size": 830
   },
   "search:react-native-firebase-authentication-advanced:react native firebase authenti": {
@@ -4172,61 +4172,61 @@
   "search:fastapi-asyncio-redis-performance:fastapi asyncio redis performa": {
     "topic": "fastapi_asyncio_redis_performance",
     "source": "web_search",
-    "ts": 1780781776.6285648,
+    "ts": 1780782815.6015308,
     "size": 814
   },
   "search:fastapi-asyncio-redis-performance:fastapi asyncio redis performa_ex": {
     "topic": "fastapi_asyncio_redis_performance",
     "source": "code_example",
-    "ts": 1780781777.5827286,
+    "ts": 1780782816.8063245,
     "size": 389
   },
   "search:fastapi-asyncio-redis-performance:fastapi asyncio redis best pra": {
     "topic": "fastapi_asyncio_redis_performance",
     "source": "web_search",
-    "ts": 1780781778.5813756,
+    "ts": 1780782818.0092237,
     "size": 915
   },
   "search:fastapi-asyncio-redis-performance:fastapi asyncio redis best pra_ex": {
     "topic": "fastapi_asyncio_redis_performance",
     "source": "code_example",
-    "ts": 1780781779.5015876,
+    "ts": 1780782819.1215215,
     "size": 619
   },
   "search:dotnet+csharp-performance-tuning:.net c# performance tuning tec": {
     "topic": "dotnet_csharp_performance_tuning",
     "source": "web_search",
-    "ts": 1780781397.9157925,
+    "ts": 1780782450.6707573,
     "size": 636
   },
   "search:dotnet+csharp-performance-tuning:.net c# performance tuning tec_ex": {
     "topic": "dotnet_csharp_performance_tuning",
     "source": "code_example",
-    "ts": 1780781398.9132094,
+    "ts": 1780782451.5976286,
     "size": 323
   },
   "search:dotnet+csharp-performance-tuning:c# memory management in .net a": {
     "topic": "dotnet_csharp_performance_tuning",
     "source": "web_search",
-    "ts": 1780781400.0099986,
+    "ts": 1780782452.5840144,
     "size": 425
   },
   "search:kubernetes+ingress-controllers:kubernetes ingress controllers": {
     "topic": "kubernetes_ingress_controllers",
     "source": "web_search",
-    "ts": 1780781521.1468143,
+    "ts": 1780782564.6447918,
     "size": 602
   },
   "search:kubernetes+ingress-controllers:kubernetes ingress controllers_ex": {
     "topic": "kubernetes_ingress_controllers",
     "source": "code_example",
-    "ts": 1780781522.09169,
+    "ts": 1780782565.5829449,
     "size": 526
   },
   "search:kubernetes+ingress-controllers:setting up and configuring kub": {
     "topic": "kubernetes_ingress_controllers",
     "source": "web_search",
-    "ts": 1780781523.1944604,
+    "ts": 1780782566.5213807,
     "size": 394
   },
   "search:nodejs-express-mongoose:node.js express mongoose crud ": {
@@ -4244,217 +4244,217 @@
   "search:java-spring-security-advanced:spring security advanced confi": {
     "topic": "java_spring_security_advanced",
     "source": "web_search",
-    "ts": 1780781733.7616076,
+    "ts": 1780782766.5692952,
     "size": 678
   },
   "search:java-spring-security-advanced:spring security oauth2 impleme": {
     "topic": "java_spring_security_advanced",
     "source": "web_search",
-    "ts": 1780781734.724653,
+    "ts": 1780782767.7963333,
     "size": 427
   },
   "search:java-spring-security-advanced:spring security oauth2 impleme_ex": {
     "topic": "java_spring_security_advanced",
     "source": "code_example",
-    "ts": 1780781735.65434,
+    "ts": 1780782768.924672,
     "size": 499
   },
   "search:golang-gorm-performance-tuning:gorm performance tuning techni": {
     "topic": "golang_gorm_performance_tuning",
     "source": "web_search",
-    "ts": 1780781350.8164165,
+    "ts": 1780782401.0265276,
     "size": 337
   },
   "search:golang-gorm-performance-tuning:gorm indexing and query optimi": {
     "topic": "golang_gorm_performance_tuning",
     "source": "web_search",
-    "ts": 1780781351.8804715,
+    "ts": 1780782403.0198922,
     "size": 538
   },
   "search:golang-gorm-performance-tuning:gorm indexing and query optimi_ex": {
     "topic": "golang_gorm_performance_tuning",
     "source": "code_example",
-    "ts": 1780781352.909318,
+    "ts": 1780782406.137089,
     "size": 583
   },
   "search:typescript-sequelize-typescript:typescript sequelize orm crud ": {
     "topic": "typescript_sequelize_typescript",
     "source": "web_search",
-    "ts": 1780781392.0087652,
+    "ts": 1780782446.5903382,
     "size": 714
   },
   "search:typescript-sequelize-typescript:typescript sequelize orm crud _ex": {
     "topic": "typescript_sequelize_typescript",
     "source": "code_example",
-    "ts": 1780781393.1469324,
+    "ts": 1780782447.6520226,
     "size": 408
   },
   "search:typescript-sequelize-typescript:typescript sequelize migration": {
     "topic": "typescript_sequelize_typescript",
     "source": "web_search",
-    "ts": 1780781394.2786117,
+    "ts": 1780782448.7288551,
     "size": 514
   },
   "search:typescript-sequelize-typescript:typescript sequelize migration_ex": {
     "topic": "typescript_sequelize_typescript",
     "source": "code_example",
-    "ts": 1780781395.4731808,
+    "ts": 1780782449.6813617,
     "size": 623
   },
   "search:Advanced Error Handling in Spring + Hibernate:spring hibernate error handlin": {
     "topic": "advanced_error_handling_in_spring_hibernate",
     "source": "web_search",
-    "ts": 1780781621.83049,
+    "ts": 1780782657.2857773,
     "size": 565
   },
   "search:Advanced Error Handling in Spring + Hibernate:spring hibernate error handlin_ex": {
     "topic": "advanced_error_handling_in_spring_hibernate",
     "source": "code_example",
-    "ts": 1780781622.8032448,
+    "ts": 1780782658.2424262,
     "size": 435
   },
   "search:Advanced Error Handling in Spring + Hibernate:hibernate exception management": {
     "topic": "advanced_error_handling_in_spring_hibernate",
     "source": "web_search",
-    "ts": 1780781623.8395376,
+    "ts": 1780782659.2091043,
     "size": 419
   },
   "search:Advanced Error Handling in Spring + Hibernate:hibernate exception management_ex": {
     "topic": "advanced_error_handling_in_spring_hibernate",
     "source": "code_example",
-    "ts": 1780781624.8660235,
+    "ts": 1780782660.155823,
     "size": 396
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:spring boot kafka testing": {
     "topic": "testing_spring_boot_kafka_spring_cloud_stream",
     "source": "web_search",
-    "ts": 1780781670.870571,
+    "ts": 1780782701.8176198,
     "size": 445
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:spring boot kafka testing_ex": {
     "topic": "testing_spring_boot_kafka_spring_cloud_stream",
     "source": "code_example",
-    "ts": 1780781671.847665,
+    "ts": 1780782702.7294576,
     "size": 719
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:kafka stream integration tests": {
     "topic": "testing_spring_boot_kafka_spring_cloud_stream",
     "source": "web_search",
-    "ts": 1780781672.8947778,
+    "ts": 1780782703.6885684,
     "size": 722
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:kafka stream integration tests_ex": {
     "topic": "testing_spring_boot_kafka_spring_cloud_stream",
     "source": "code_example",
-    "ts": 1780781673.8859074,
+    "ts": 1780782704.6220908,
     "size": 337
   },
   "search:React Native Testing Library with React Query:react native testing library": {
     "topic": "react_native_testing_library_with_react_query",
     "source": "web_search",
-    "ts": 1780781662.7939463,
+    "ts": 1780782695.2337039,
     "size": 804
   },
   "search:React Native Testing Library with React Query:react native testing library_ex": {
     "topic": "react_native_testing_library_with_react_query",
     "source": "code_example",
-    "ts": 1780781663.815591,
+    "ts": 1780782696.1488726,
     "size": 813
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:typescript performance optimiz": {
     "topic": "advanced_performance_optimization_in_typescript_and_react_native",
     "source": "web_search",
-    "ts": 1780781583.3445754,
+    "ts": 1780782621.693165,
     "size": 671
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:typescript performance optimiz_ex": {
     "topic": "advanced_performance_optimization_in_typescript_and_react_native",
     "source": "code_example",
-    "ts": 1780781584.296634,
+    "ts": 1780782622.6045477,
     "size": 500
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips": {
     "topic": "advanced_performance_optimization_in_typescript_and_react_native",
     "source": "web_search",
-    "ts": 1780781585.3582878,
+    "ts": 1780782623.5122201,
     "size": 613
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips_ex": {
     "topic": "advanced_performance_optimization_in_typescript_and_react_native",
     "source": "code_example",
-    "ts": 1780781586.375443,
+    "ts": 1780782624.4481668,
     "size": 585
   },
   "search:react-native+firebase-push-notifications:react native firebase push not": {
     "topic": "react_native_firebase_push_notifications",
     "source": "web_search",
-    "ts": 1780781373.3017032,
+    "ts": 1780782430.010362,
     "size": 440
   },
   "search:react-native+firebase-push-notifications:react native firebase push not_ex": {
     "topic": "react_native_firebase_push_notifications",
     "source": "code_example",
-    "ts": 1780781374.3939018,
+    "ts": 1780782431.2108305,
     "size": 1240
   },
   "search:react-native+firebase-push-notifications:handling firebase push notific": {
     "topic": "react_native_firebase_push_notifications",
     "source": "web_search",
-    "ts": 1780781375.7596333,
+    "ts": 1780782432.4595869,
     "size": 549
   },
   "search:react-native+firebase-push-notifications:handling firebase push notific_ex": {
     "topic": "react_native_firebase_push_notifications",
     "source": "code_example",
-    "ts": 1780781377.2602563,
+    "ts": 1780782433.5137067,
     "size": 1352
   },
   "search:kubernetes+keda-autoscaling:keda autoscaling with kubernet": {
     "topic": "kubernetes_keda_autoscaling",
     "source": "web_search",
-    "ts": 1780781679.7560642,
+    "ts": 1780782711.6301026,
     "size": 720
   },
   "search:kubernetes+keda-autoscaling:keda autoscaling with kubernet_ex": {
     "topic": "kubernetes_keda_autoscaling",
     "source": "code_example",
-    "ts": 1780781680.703918,
+    "ts": 1780782712.5305305,
     "size": 570
   },
   "search:kubernetes+keda-autoscaling:horizontal pod autoscaler for ": {
     "topic": "kubernetes_keda_autoscaling",
     "source": "web_search",
-    "ts": 1780781681.685632,
+    "ts": 1780782713.4808846,
     "size": 482
   },
   "search:kubernetes+keda-autoscaling:horizontal pod autoscaler for _ex": {
     "topic": "kubernetes_keda_autoscaling",
     "source": "code_example",
-    "ts": 1780781682.7667131,
+    "ts": 1780782714.4229033,
     "size": 532
   },
   "search:fastapi+sqlalchemy-advanced:fastapi sqlalchemy advanced tu": {
     "topic": "fastapi_sqlalchemy_advanced",
     "source": "web_search",
-    "ts": 1780781425.5190892,
+    "ts": 1780782475.347643,
     "size": 411
   },
   "search:fastapi+sqlalchemy-advanced:fastapi sqlalchemy advanced tu_ex": {
     "topic": "fastapi_sqlalchemy_advanced",
     "source": "code_example",
-    "ts": 1780781426.8062084,
+    "ts": 1780782476.3733919,
     "size": 415
   },
   "search:fastapi+sqlalchemy-advanced:sqlalchemy with fastapi perfor": {
     "topic": "fastapi_sqlalchemy_advanced",
     "source": "web_search",
-    "ts": 1780781427.9442365,
+    "ts": 1780782477.3197496,
     "size": 463
   },
   "search:fastapi+sqlalchemy-advanced:sqlalchemy with fastapi perfor_ex": {
     "topic": "fastapi_sqlalchemy_advanced",
     "source": "code_example",
-    "ts": 1780781429.1171918,
+    "ts": 1780782478.314851,
     "size": 463
   },
   "search:spring-data-elasticsearch-advanced:spring data elasticsearch adva": {
@@ -4484,31 +4484,31 @@
   "search:kubernetes+nginx-ingress-controller:kubernetes nginx ingress contr": {
     "topic": "kubernetes_nginx_ingress_controller",
     "source": "web_search",
-    "ts": 1780781639.205953,
+    "ts": 1780782672.1655586,
     "size": 470
   },
   "search:kubernetes+nginx-ingress-controller:nginx as a reverse proxy in ku": {
     "topic": "kubernetes_nginx_ingress_controller",
     "source": "web_search",
-    "ts": 1780781640.2559478,
+    "ts": 1780782673.0740023,
     "size": 418
   },
   "search:kubernetes+nginx-ingress-controller:nginx as a reverse proxy in ku_ex": {
     "topic": "kubernetes_nginx_ingress_controller",
     "source": "code_example",
-    "ts": 1780781641.331906,
+    "ts": 1780782675.3836637,
     "size": 474
   },
   "search:Security Patterns in Python-Django:python-django-security-pattern": {
     "topic": "security_patterns_in_python_django",
     "source": "web_search",
-    "ts": 1780781790.504799,
+    "ts": 1780782831.7244048,
     "size": 881
   },
   "search:Security Patterns in Python-Django:kubernetes+postgres": {
     "topic": "security_patterns_in_python_django",
     "source": "web_search",
-    "ts": 1780781791.4731376,
+    "ts": 1780782832.762746,
     "size": 958
   },
   "search:Optimizing Django REST Framework with PostgreSQL:django-rest-framework+postgres": {
@@ -4562,43 +4562,43 @@
   "search:Advanced Spring Boot Security:spring-boot+jpa-batch": {
     "topic": "advanced_spring_boot_security",
     "source": "web_search",
-    "ts": 1780781746.7488194,
+    "ts": 1780782783.032021,
     "size": 342
   },
   "search:Advanced Spring Boot Security:spring-boot+jpa-batch_ex": {
     "topic": "advanced_spring_boot_security",
     "source": "code_example",
-    "ts": 1780781747.6862779,
+    "ts": 1780782784.1351469,
     "size": 594
   },
   "search:Security Patterns in Python-Django:kubernetes+postgres_ex": {
     "topic": "security_patterns_in_python_django",
     "source": "code_example",
-    "ts": 1780781792.406536,
+    "ts": 1780782833.8485622,
     "size": 573
   },
   "search:docker+kubernetes-logging-best-practices:docker kubernetes logging best": {
     "topic": "docker_kubernetes_logging_best_practices",
     "source": "web_search",
-    "ts": 1780781556.6641943,
+    "ts": 1780782596.884884,
     "size": 581
   },
   "search:docker+kubernetes-logging-best-practices:docker kubernetes logging best_ex": {
     "topic": "docker_kubernetes_logging_best_practices",
     "source": "code_example",
-    "ts": 1780781557.5841537,
+    "ts": 1780782597.8708372,
     "size": 782
   },
   "search:nextjs-serverless-caching:serverless next.js performance": {
     "topic": "nextjs_serverless_caching",
     "source": "web_search",
-    "ts": 1780781490.9607408,
+    "ts": 1780782531.720358,
     "size": 699
   },
   "search:nextjs-serverless-caching:serverless next.js performance_ex": {
     "topic": "nextjs_serverless_caching",
     "source": "code_example",
-    "ts": 1780781491.9680512,
+    "ts": 1780782532.6124606,
     "size": 474
   },
   "search:typescript+nextjs-sentry:sentry integration for typescr": {
@@ -4616,97 +4616,97 @@
   "search:dotnet-core-efcore-mysql:entity framework core mysql pe": {
     "topic": "dotnet_core_efcore_mysql",
     "source": "web_search",
-    "ts": 1780781592.2125425,
+    "ts": 1780782630.0646708,
     "size": 1149
   },
   "search:dotnet-core-efcore-mysql:entity framework core mysql pe_ex": {
     "topic": "dotnet_core_efcore_mysql",
     "source": "code_example",
-    "ts": 1780781593.138515,
+    "ts": 1780782630.9606595,
     "size": 606
   },
   "search:dotnet-core-efcore-mysql:dotnet core entity framework c": {
     "topic": "dotnet_core_efcore_mysql",
     "source": "web_search",
-    "ts": 1780781594.1585886,
+    "ts": 1780782631.8815093,
     "size": 673
   },
   "search:dotnet-core-efcore-mysql:dotnet core entity framework c_ex": {
     "topic": "dotnet_core_efcore_mysql",
     "source": "code_example",
-    "ts": 1780781595.1542187,
+    "ts": 1780782632.77995,
     "size": 1327
   },
   "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract": {
     "topic": "security_practices_for_typescript_and_next_js_authentication",
     "source": "web_search",
-    "ts": 1780781736.6253328,
+    "ts": 1780782770.2246935,
     "size": 532
   },
   "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract_ex": {
     "topic": "security_practices_for_typescript_and_next_js_authentication",
     "source": "code_example",
-    "ts": 1780781737.698748,
+    "ts": 1780782771.3671684,
     "size": 581
   },
   "search:Security Practices for TypeScript and Next.js Authentication:nextjs authentication security": {
     "topic": "security_practices_for_typescript_and_next_js_authentication",
     "source": "web_search",
-    "ts": 1780781738.6453788,
+    "ts": 1780782772.55401,
     "size": 654
   },
   "search:Security Practices for TypeScript and Next.js Authentication:jwt security in nextjs": {
     "topic": "security_practices_for_typescript_and_next_js_authentication",
     "source": "web_search",
-    "ts": 1780781739.5440743,
+    "ts": 1780782773.7236023,
     "size": 1346
   },
   "search:Security Practices for TypeScript and Next.js Authentication:jwt security in nextjs_ex": {
     "topic": "security_practices_for_typescript_and_next_js_authentication",
     "source": "code_example",
-    "ts": 1780781740.5436177,
+    "ts": 1780782776.2848313,
     "size": 537
   },
   "search:Advanced Error Handling in NestJS with MongoDB:nestjs error handling": {
     "topic": "advanced_error_handling_in_nestjs_with_mongodb",
     "source": "web_search",
-    "ts": 1780781471.225437,
+    "ts": 1780782516.8079166,
     "size": 425
   },
   "search:Advanced Error Handling in NestJS with MongoDB:nestjs error handling_ex": {
     "topic": "advanced_error_handling_in_nestjs_with_mongodb",
     "source": "code_example",
-    "ts": 1780781472.3280656,
+    "ts": 1780782517.7255375,
     "size": 548
   },
   "search:Advanced Error Handling in NestJS with MongoDB:error logging in nestjs": {
     "topic": "advanced_error_handling_in_nestjs_with_mongodb",
     "source": "web_search",
-    "ts": 1780781473.4595737,
+    "ts": 1780782518.6628125,
     "size": 2008
   },
   "search:Advanced Error Handling in NestJS with MongoDB:error logging in nestjs_ex": {
     "topic": "advanced_error_handling_in_nestjs_with_mongodb",
     "source": "code_example",
-    "ts": 1780781474.6341739,
+    "ts": 1780782519.6083746,
     "size": 523
   },
   "search:Advanced Error Handling in NestJS with MongoDB:mongodb error handling": {
     "topic": "advanced_error_handling_in_nestjs_with_mongodb",
     "source": "web_search",
-    "ts": 1780781475.6753528,
+    "ts": 1780782520.5909383,
     "size": 658
   },
   "search:Advanced Error Handling in NestJS with MongoDB:mongodb error handling_ex": {
     "topic": "advanced_error_handling_in_nestjs_with_mongodb",
     "source": "code_example",
-    "ts": 1780781476.8020406,
+    "ts": 1780782521.5333383,
     "size": 726
   },
   "search:Security Practices for TypeScript and Next.js Authentication:nextjs authentication security_ex": {
     "topic": "security_practices_for_typescript_and_next_js_authentication",
     "source": "code_example",
-    "ts": 1780781741.6126027,
+    "ts": 1780782777.3740325,
     "size": 1728
   },
   "search:python-fastapi-sqlalchemy:python fastapi sqlalchemy crud": {
@@ -4736,37 +4736,37 @@
   "search:dotnet-efcore-postgresql:dotnet efcore postgresql migra": {
     "topic": "dotnet_efcore_postgresql",
     "source": "web_search",
-    "ts": 1780781466.786782,
+    "ts": 1780782508.1600876,
     "size": 765
   },
   "search:dotnet-efcore-postgresql:dotnet efcore postgresql migra_ex": {
     "topic": "dotnet_efcore_postgresql",
     "source": "code_example",
-    "ts": 1780781468.043551,
+    "ts": 1780782509.1351264,
     "size": 716
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb crud 2": {
     "topic": "spring_data_jpa_mongodb",
     "source": "web_search",
-    "ts": 1780781609.3331819,
+    "ts": 1780782646.1243665,
     "size": 393
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb crud 2_ex": {
     "topic": "spring_data_jpa_mongodb",
     "source": "code_example",
-    "ts": 1780781610.452549,
+    "ts": 1780782647.0948484,
     "size": 442
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb perfor": {
     "topic": "spring_data_jpa_mongodb",
     "source": "web_search",
-    "ts": 1780781611.5601506,
+    "ts": 1780782648.05344,
     "size": 489
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb perfor_ex": {
     "topic": "spring_data_jpa_mongodb",
     "source": "code_example",
-    "ts": 1780781612.596349,
+    "ts": 1780782648.978981,
     "size": 591
   },
   "search:kubernetes-nginx-ingress:kubernetes nginx ingress contr": {
@@ -4844,115 +4844,115 @@
   "search:python-fastapi-asyncio-databases:fastapi async database integra": {
     "topic": "python_fastapi_asyncio_databases",
     "source": "web_search",
-    "ts": 1780781552.6267543,
+    "ts": 1780782593.187114,
     "size": 1344
   },
   "search:python-fastapi-asyncio-databases:fastapi async database integra_ex": {
     "topic": "python_fastapi_asyncio_databases",
     "source": "code_example",
-    "ts": 1780781553.6537874,
+    "ts": 1780782594.0647962,
     "size": 601
   },
   "search:python-fastapi-asyncio-databases:python fastapi with async sqla": {
     "topic": "python_fastapi_asyncio_databases",
     "source": "web_search",
-    "ts": 1780781554.6929905,
+    "ts": 1780782595.005819,
     "size": 463
   },
   "search:python-fastapi-asyncio-databases:python fastapi with async sqla_ex": {
     "topic": "python_fastapi_asyncio_databases",
     "source": "code_example",
-    "ts": 1780781555.659537,
+    "ts": 1780782595.9436235,
     "size": 342
   },
   "search:golang-gorm-migration:gorm migration best practices ": {
     "topic": "golang_gorm_migration",
     "source": "web_search",
-    "ts": 1780781560.6382067,
+    "ts": 1780782600.6675453,
     "size": 547
   },
   "search:golang-gorm-migration:gorm migration best practices _ex": {
     "topic": "golang_gorm_migration",
     "source": "code_example",
-    "ts": 1780781561.7158635,
+    "ts": 1780782601.6222744,
     "size": 701
   },
   "search:golang-gorm-migration:go gorm migrations tutorial 20": {
     "topic": "golang_gorm_migration",
     "source": "web_search",
-    "ts": 1780781562.8168106,
+    "ts": 1780782602.49313,
     "size": 412
   },
   "search:golang-gorm-migration:go gorm migrations tutorial 20_ex": {
     "topic": "golang_gorm_migration",
     "source": "code_example",
-    "ts": 1780781563.9329598,
+    "ts": 1780782603.4429944,
     "size": 464
   },
   "search:Spring Boot MongoDB Performance:mongodb performance tuning": {
     "topic": "spring_boot_mongodb_performance",
     "source": "web_search",
-    "ts": 1780781839.7824068,
+    "ts": 1780782510.1055949,
     "size": 515
   },
   "search:Spring Boot MongoDB Performance:mongodb performance tuning_ex": {
     "topic": "spring_boot_mongodb_performance",
     "source": "code_example",
-    "ts": 1780781849.7612894,
+    "ts": 1780782511.065719,
     "size": 549
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing": {
     "topic": "spring_boot_mongodb_performance",
     "source": "web_search",
-    "ts": 1780781856.1529124,
+    "ts": 1780782512.015977,
     "size": 584
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing_ex": {
     "topic": "spring_boot_mongodb_performance",
     "source": "code_example",
-    "ts": 1780781863.30521,
+    "ts": 1780782513.0415237,
     "size": 497
   },
   "search:Spring Boot MongoDB Performance:optimizing queries in spring b": {
     "topic": "spring_boot_mongodb_performance",
     "source": "web_search",
-    "ts": 1780781875.0462606,
+    "ts": 1780782513.9479024,
     "size": 736
   },
   "search:Next.js + Supabase Authentication:supabase authentication with n": {
     "topic": "next_js_supabase_authentication",
     "source": "web_search",
-    "ts": 1780781904.881688,
+    "ts": 1780782559.0812411,
     "size": 1204
   },
   "search:Next.js + Supabase Authentication:supabase authentication with n_ex": {
     "topic": "next_js_supabase_authentication",
     "source": "code_example",
-    "ts": 1780781913.9080846,
+    "ts": 1780782559.998284,
     "size": 439
   },
   "search:Next.js + Supabase Authentication:jwt token management in next.j": {
     "topic": "next_js_supabase_authentication",
     "source": "web_search",
-    "ts": 1780781921.8825417,
+    "ts": 1780782560.868861,
     "size": 677
   },
   "search:Next.js + Supabase Authentication:jwt token management in next.j_ex": {
     "topic": "next_js_supabase_authentication",
     "source": "code_example",
-    "ts": 1780781929.9591744,
+    "ts": 1780782561.793834,
     "size": 1369
   },
   "search:Next.js + Supabase Authentication:secure api routes in next.js": {
     "topic": "next_js_supabase_authentication",
     "source": "web_search",
-    "ts": 1780781939.9747908,
+    "ts": 1780782562.731468,
     "size": 676
   },
   "search:Next.js + Supabase Authentication:secure api routes in next.js_ex": {
     "topic": "next_js_supabase_authentication",
     "source": "code_example",
-    "ts": 1780781946.28812,
+    "ts": 1780782563.6674623,
     "size": 302
   },
   "search:FastAPI + Core:fastapi dependency injection": {

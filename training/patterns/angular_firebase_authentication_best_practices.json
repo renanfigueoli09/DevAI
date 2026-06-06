@@ -2,21 +2,21 @@
   "search:Angular + Firebase Authentication Best Practices:secure user management in angu": {
     "content": "- **CLI Commands**:\n  - `ng add @angular/fire`: Adds Firebase to an Angular project.\n  - `firebase init`: Initializes a new Firebase project or sets up Firebase in an existing project.\n\n- **Latest Versions**:\n  - Angular: 18.x\n  - Firebase SDK: 9.0.x\n\n- **Key Config Options**:\n  - `environment.ts` and `environment.prod.ts`: Configure Firebase credentials.\n  - Authentication methods: Email/Password, Google, Facebook, etc.\n  - Security rules in Firebase Realtime Database or Firestore to control data access.\n\n- **Additional Tips**:\n  - Use Angular's reactive forms for user input validation.\n  - Implement guards for route protection based on authentication status.",
     "source": "web_search",
-    "updated_at": 1780781524.2226493
+    "updated_at": 1780782567.4747028
   },
   "search:Angular + Firebase Authentication Best Practices:secure user management in angu_ex": {
     "content": "- Install Angular CLI: `npm install -g @angular/cli`\n- Create new Angular project: `ng new my-angular-app`\n- Add Firebase to Angular project:\n  ```bash\n  ng add @angular/fire\n  ```\n- Configure Firebase in `environment.ts` with your Firebase project details.\n- Import Firebase modules in `app.module.ts`.\n- Implement user registration in `sign-up.component.ts` using Firebase Authentication methods like `createUserWithEmailAndPassword`.\n- Use `AngularFireAuth` for authentication services.\n- Manage user state and navigation based on auth status.",
     "source": "code_example",
-    "updated_at": 1780781525.2894287
+    "updated_at": 1780782568.3926363
   },
   "search:Angular + Firebase Authentication Best Practices:angular firebase authenticatio": {
     "content": "- Use Angular CLI to create a new project: `ng new my-angular-firebase-app`\n- Install Firebase and AngularFire2: `npm install firebase @angular/fire`\n- Configure Firebase in your environment files:\n  ```typescript\n  export const environment = {\n    production: false,\n    firebase: {\n      apiKey: \"YOUR_API_KEY\",\n      authDomain: \"YOUR_AUTH_DOMAIN\",\n      projectId: \"YOUR_PROJECT_ID\",\n      storageBucket: \"YOUR_STORAGE_BUCKET\",\n      messagingSenderId: \"YOUR_MESSAGING_SENDER_ID\",\n      appId: \"YOUR_APP_ID\"\n    }\n  };\n  ```\n- Import AngularFireModule in your app.module.ts:\n  ```typescript\n  import { AngularFireModule } from '@angular/fire';\n  import { environment } from '../environments/environment';\n\n  @NgModule({\n    imports: [\n      AngularFireModule.initializeApp(environment.firebase)\n    ]\n  })\n  export class AppModule { }\n  ```\n- Use Angular Guards for route protection.\n- Implement authentication flows using Firebase Authentication service.\n- Handle authentication state in your components.\n- Follow best practices for security, performance, and code organization.",
     "source": "web_search",
-    "updated_at": 1780781526.2990494
+    "updated_at": 1780782569.3309555
   },
   "search:Angular + Firebase Authentication Best Practices:angular firebase authenticatio_ex": {
     "content": "- Install Angular CLI: `npm install -g @angular/cli`\n- Create new Angular project: `ng new my-angular-app`\n- Add Firebase to your project:\n  ```bash\n  ng add @angular/fire@latest\n  ```\n  Follow the prompts to configure Firebase.\n- Key config options in `environment.ts` and `environment.prod.ts`:\n  - `firebaseConfig`: Your Firebase project's configuration object.\n  - `production`: Set to `true` for production environments.\n- Implement Angular Route Guards for authentication:\n  ```typescript\n  import { Injectable } from '@angular/core';\n  import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';\n  import { Observable } from 'rxjs';\n  import { AuthService } from './auth.service';\n\n  @Injectable({\n    providedIn: 'root'\n  })\n  export class AuthGuard implements CanActivate {\n    constructor(private authService: AuthService, private router: Router) {}\n\n    canActivate(\n      next: ActivatedRouteSnapshot,\n      state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\n        return this.authService.isAuthenticated().pipe(\n          tap((authenticated) => {\n            if (!authenticated) {\n              this.router.navigate(['/login']);\n              return false;\n            }\n            return true;\n          })\n        );\n    }\n  }\n  ```\n- Secure Firebase Authentication:\n  - Use strong password policies.\n  - Enable email verification.\n  - Implement multi-factor authentication (MFA).\n- Protect user data:\n  - Use Firestore security rules to control access.\n  - Encrypt sensitive data both in transit and at rest.\n  - Regularly audit and update security configurations.",
     "source": "code_example",
-    "updated_at": 1780781527.4240878
+    "updated_at": 1780782570.2573695
   }
 }

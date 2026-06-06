@@ -2,21 +2,21 @@
   "search:react-native+firebase-push-notifications:react native firebase push not": {
     "content": "- Install dependencies using `npx expo install expo-notifications @react-native-firebase/app @react-native-firebase/messaging`\n- Ensure Firebase project is set up and Android support added, download `google-services.json` and place it in the correct directory\n- Use latest versions of Node.js (v10.15.0), React Native CLI, Expo SDK, and Firebase packages\n- Key config options include setting up notification channels for local notifications",
     "source": "web_search",
-    "updated_at": 1780781373.2739775
+    "updated_at": 1780782429.984188
   },
   "search:react-native+firebase-push-notifications:react native firebase push not_ex": {
     "content": "- **Install Notifee**: `npm install @notifee/react-native`\n- **Link Native Modules**: Run `npx react-native link @notifee/react-native` or use autolinking if available.\n- **Firebase Setup**:\n  - Install Firebase SDK: `npm install --save @react-native-firebase/app @react-native-firebase/messaging`\n  - Initialize Firebase in your app.\n- **Configure Firebase Cloud Messaging (FCM)**:\n  - Create a Firebase project and add an Android/iOS app.\n  - Download the `google-services.json`/`GoogleService-Info.plist` file and place it in the appropriate directory.\n- **Request Permissions**:\n  - For iOS: Add `NSLocalNotificationUsageDescription` to your `Info.plist`.\n  - For Android: Ensure you have the necessary permissions in your `AndroidManifest.xml`.\n- **Implement Push Notification Handling**:\n  - Import Notifee and Firebase Messaging.\n  - Set up a listener for incoming messages using `FirebaseMessaging.onMessage`.\n  - Handle messages with Notifee, e.g., `Notifee.displayNotification(notification)`.\n- **Send Test Notifications**:\n  - Use FCM console or Postman to send test notifications to your device.\n\nThese steps provide a concise guide on setting up and handling push notifications in a React Native app using Notifee and Firebase.",
     "source": "code_example",
-    "updated_at": 1780781374.36436
+    "updated_at": 1780782431.1621342
   },
   "search:react-native+firebase-push-notifications:handling firebase push notific": {
     "content": "- **CLI Commands**:\n  - `npx react-native init MyPushApp`\n  - `cd MyPushApp`\n  - `npm install --save @react-native-firebase/app`\n  - `npm install --save @react-native-firebase/messaging`\n\n- **Latest Versions**:\n  - React Native: 0.72\n  - @react-native-firebase/app: 15.0.0\n  - @react-native-firebase/messaging: 14.0.0\n\n- **Key Config Options**:\n  - Firebase Project Setup\n  - Android: `google-services.json` and `android/app/build.gradle`\n  - iOS: `GoogleService-Info.plist` and `AppDelegate.m`\n  - Notification Handling in App.js or equivalent file",
     "source": "web_search",
-    "updated_at": 1780781375.721237
+    "updated_at": 1780782432.4328299
   },
   "search:react-native+firebase-push-notifications:handling firebase push notific_ex": {
     "content": "- **Install Firebase CLI**: `npm install -g firebase-tools`\n- **Initialize Firebase Project**: `firebase init` and follow the prompts to set up a new project or select an existing one.\n- **Add Firebase to React Native**: Use `expo-firebase-analytics`, `react-native-firebase/app`, and other relevant packages as per your needs.\n- **Configure Firebase in App**: Download the `google-services.json` for Android and `GoogleService-Info.plist` for iOS, then place them in their respective directories.\n- **Install Dependencies**:\n  - For Android: `npm install react-native-firebase`\n  - For iOS: `npm install @react-native-firebase/app`\n- **Link Native Modules**: Run `npx react-native link react-native-firebase`.\n- **Configure Firebase Messaging**:\n  - Import and initialize Firebase in your app.\n  - Set up messaging with `firebase.messaging()`.\n- **Request User Permissions**: Use `requestPermission()` to request push notification permissions.\n- **Handle Notifications**: Implement listeners for incoming notifications using `onMessage()` and `setBackgroundMessageHandler()`.\n- **Key Config Options**:\n  - Android: `google-services.json`, `android/app/src/main/AndroidManifest.xml`\n  - iOS: `GoogleService-Info.plist`, `AppDelegate.m`\n\nNote: Ensure you are using the latest versions of Firebase and React Native packages to avoid compatibility issues.",
     "source": "code_example",
-    "updated_at": 1780781377.2009416
+    "updated_at": 1780782433.49323
   }
 }

@@ -2,26 +2,26 @@
   "search:Spring Boot MongoDB Performance:mongodb performance tuning": {
     "content": "- **CLI Commands**: Use `mongostat` and `mongotop` to monitor performance.\n- **Latest Versions**: Ensure MongoDB is updated to the latest stable version for optimal performance.\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory.\n  - `net.maxIncomingConnections`: Increase if facing connection issues.\n  - `operationProfiling.mode`: Set to `slowOp` or `all` for detailed query analysis.\n  - `storage.wiredTiger.engineConfig.cache_sizeGB`: Optimize cache size according to workload.",
     "source": "web_search",
-    "updated_at": 1780781839.780633
+    "updated_at": 1780782510.0811431
   },
   "search:Spring Boot MongoDB Performance:mongodb performance tuning_ex": {
     "content": "- Use `mongostat` and `mongotop` to monitor performance.\n- Enable query profiling with `db.setProfilingLevel(2)`.\n- Optimize queries by indexing fields frequently queried.\n- Adjust WiredTiger cache size using `wiredTigerCacheSizeGB`.\n- Increase the number of connections with `net.maxIncomingConnections`.\n- Use sharding for large datasets and high read/write loads.\n- Enable journaling for data durability but consider performance impact.\n- Regularly update MongoDB to the latest stable version.\n- Monitor disk I/O and ensure it's not a bottleneck.",
     "source": "code_example",
-    "updated_at": 1780781849.7600772
+    "updated_at": 1780782511.040211
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing": {
     "content": "- Enable auto-index creation in Spring Boot by setting `spring.data.mongodb.auto-index-creation=true` in your `application.properties` or `application.yml`.\n- Use annotations like `@Indexed`, `@CompoundIndex`, and `@TextIndexed` to define indexes directly on domain entities.\n- For programmatic index creation, use the `MongoTemplate` class with methods like `createIndex()`.\n- Ensure MongoDB server version compatibility with Spring Data MongoDB for optimal performance.\n- Check the latest versions of Spring Data MongoDB and MongoDB drivers regularly for bug fixes and new features.",
     "source": "web_search",
-    "updated_at": 1780781856.1518216
+    "updated_at": 1780782511.994552
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data MongoDB: 3.4.0\n  - MongoDB Java Driver: 4.5.1\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Specifies the MongoDB connection URI.\n  - `spring.data.mongodb.database`: Specifies the database name.\n  - `spring.data.mongodb.host`: Specifies the MongoDB host.\n  - `spring.data.mongodb.port`: Specifies the MongoDB port.",
     "source": "code_example",
-    "updated_at": 1780781863.3039854
+    "updated_at": 1780782513.0175202
   },
   "search:Spring Boot MongoDB Performance:optimizing queries in spring b": {
     "content": "- Use Spring Data JPA's `@Query` annotation for custom SQL queries.\n- Implement pagination using `Pageable` to limit the number of results returned by a query.\n- Optimize fetch strategies with `@Fetch(FetchMode.JOIN)` or `@BatchSize`.\n- Use JPQL (Java Persistence Query Language) for type-safe and efficient querying.\n- Enable lazy loading with `@Lazy` to reduce initial load times.\n- Utilize Spring Data JPA's `Querydsl` for type-safe query construction.\n- Configure the `spring.jpa.properties.hibernate.jdbc.batch_size` property for batch updates.\n- Monitor database performance using tools like Hibernate SQL logging or application monitoring.\n- Regularly review and optimize queries based on execution plans and performance metrics.",
     "source": "web_search",
-    "updated_at": 1780781875.0446908
+    "updated_at": 1780782513.9205844
   }
 }
