@@ -17,6 +17,6 @@
   "qa:mongodb-healthcheck": {
     "content": "MongoDB healthcheck: mongosh --eval db.adminCommand('ping')\ntest: [CMD, mongosh, --eval, db.adminCommand('ping')]\ninterval: 15s | timeout: 10s | retries: 5\nNEVER pg_isready (PostgreSQL) or redis-cli for MongoDB",
     "source": "critical_pattern",
-    "updated_at": 1780752882.0029597
+    "updated_at": 1780752953.1502073
   }
 }
