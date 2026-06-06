@@ -1,0 +1,22 @@
+{
+  "search:dotnet+cassandra-async:dotnet cassandra async program": {
+    "content": "- Use `ValueTask` for lightweight operations to reduce memory allocation.\n- Implement `async void` sparingly, typically for event handlers or top-level methods.\n- Configure `ConfigureAwait(false)` in non-UI threads to avoid deadlocks and improve performance.\n- Use `HttpClientFactory` for managing HTTP connections efficiently.\n- Avoid blocking calls within async methods; use `Task.Run` for CPU-bound operations.\n- Monitor and log exceptions properly using structured logging frameworks like Serilog.\n- Implement connection pooling for database operations to reduce latency.\n- Use `async`/`await` with LINQ queries to improve performance without compromising readability.\n- Regularly update .NET SDK and libraries to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1780724110.0235462
+  },
+  "search:dotnet+cassandra-async:dotnet cassandra async program_ex": {
+    "content": "- Use `dotnet new` to create new projects.\n- Update .NET SDK and runtime using `dotnet update`.\n- Implement async methods by adding the `async` keyword and returning a `Task`.\n- Avoid blocking calls in async methods; use `await` instead.\n- Configure logging with `appsettings.json` for better diagnostics.\n- Use dependency injection (DI) to manage service lifetimes.\n- Optimize Entity Framework Core queries using LINQ.\n- Implement caching strategies like Redis or MemoryCache.\n- Secure your application by validating inputs and handling exceptions.\n- Regularly update packages and libraries to benefit from security patches.",
+    "source": "code_example",
+    "updated_at": 1780724115.946632
+  },
+  "search:dotnet+cassandra-async:cassandra async queries in dot": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package CassandraCSharpDriver`\n  - `dotnet add package Azure.Data.Cassandra`\n\n- **Latest Versions**:\n  - DataStax C# Driver for Apache Cassandra: v3.x\n  - Azure Cosmos DB for Apache Cassandra Client Library: v4.x\n\n- **Key Config Options**:\n  - Connection String: `Server=your_server;Port=9042;Keyspace=your_keyspace`\n  - Authentication: Use `SaslOptions` to configure username and password.\n  - Query Execution: Use `ExecuteAsync` for asynchronous queries.",
+    "source": "web_search",
+    "updated_at": 1780724124.364064
+  },
+  "search:dotnet+cassandra-async:cassandra async queries in dot_ex": {
+    "content": "- **Latest DataStax C# Driver Version**: 3.24.0\n- **CLI Command to Install DataStax C# Driver**:\n  ```bash\n  dotnet add package CassandraCSharpDriver --version 3.24.0\n  ```\n- **Key Configuration Options**:\n  - `ContactPoints`: List of Cassandra nodes.\n  - `Port`: Port number for the Cassandra cluster.\n  - `Keyspace`: Default keyspace to use.\n  - `SslOptions`: SSL configuration options (if required).\n- **Asynchronous Operations**: Use `async` and `await` keywords with methods like `ExecuteAsync()` for non-blocking queries.",
+    "source": "code_example",
+    "updated_at": 1780724135.1517136
+  }
+}

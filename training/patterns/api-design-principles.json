@@ -1,0 +1,52 @@
+{
+  "search:API Design Principles:kubernetes api design patterns": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods`: Lists all pods.\n  - `kubectl apply -f <filename>.yaml`: Applies a configuration to a resource by filename or stdin.\n  - `kubectl delete pod <pod-name>`: Deletes a pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.0 (as of October 2023).\n\n- **Key Config Options**:\n  - `spec.template`: Defines the template for pods managed by a controller.\n  - `metadata.labels`: Labels to identify resources.\n  - `spec.containers`: Describes the containers in a pod.\n  - `resources.requests` and `resources.limits`: Specifies resource requirements and limits.",
+    "source": "web_search",
+    "updated_at": 1780724042.8624518
+  },
+  "search:API Design Principles:kubernetes api design patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods`\n  - `kubectl apply -f <filename>`\n  - `kubectl delete -f <filename>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.3\n\n- **Key Config Options**:\n  - `replicas`: Number of pod replicas.\n  - `imagePullPolicy`: Policy for pulling container images.\n  - `resources`: CPU and memory allocation.",
+    "source": "code_example",
+    "updated_at": 1780724048.0679948
+  },
+  "search:API Design Principles:next.js prisma api design": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npm install prisma --save-dev`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.10\n\n- **Key Config Options**:\n  - `prisma/schema.prisma`: Define your data model and relations.\n  - `next.config.js`: Configure API routes, database connection, etc.\n  - Environment variables for sensitive information like database URLs.",
+    "source": "web_search",
+    "updated_at": 1780724054.3184328
+  },
+  "search:API Design Principles:next.js prisma api design_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `prisma init`\n  - `prisma migrate dev --name init`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Prisma: 4.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model.\n  - `next.config.js`: Configure Next.js settings, including API routes.\n  - Environment variables for database connection strings.",
+    "source": "code_example",
+    "updated_at": 1780724059.470725
+  },
+  "search:API Design Principles:fastapi restful api design": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI application in development mode.\n  \n- **Latest Versions**:\n  - Check for the latest version of FastAPI on [PyPI](https://pypi.org/project/fastapi/).\n  - Ensure you are using compatible versions of dependencies like `python-multipart`, `uvicorn`, and `fastapi` itself.\n\n- **Key Config Options**:\n  - `app = FastAPI()` to create a new FastAPI application instance.\n  - `tags=[\"items\"]` in route definitions to group related endpoints.\n  - `responses={404: {\"description\": \"Item not found\"}}` to define custom responses for specific HTTP status codes.\n  - `dependencies=[Depends(get_token_header)]` to add dependencies to routes, enhancing security and functionality.",
+    "source": "web_search",
+    "updated_at": 1780724065.5274625
+  },
+  "search:API Design Principles:fastapi restful api design_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI application in development mode.\n  \n- **Latest Versions**:\n  - As of my last update, FastAPI is at version 0.95.1.\n\n- **Key Config Options**:\n  - `app = FastAPI()` initializes a new FastAPI app instance.\n  - `@app.get(\"/items/{item_id}\")` defines a GET endpoint that retrieves data.\n  - `@app.post(\"/items/\")` defines a POST endpoint for creating data.\n  - `@app.put(\"/items/{item_id}\")` defines a PUT endpoint for updating data.\n  - `@app.delete(\"/items/{item_id}\")` defines a DELETE endpoint for deleting data.",
+    "source": "code_example",
+    "updated_at": 1780724071.9803033
+  },
+  "search:API Design Principles:django postgresql orm api desi": {
+    "content": "- **CLI Commands**:\n  - `python -m venv neon-django-ai-marketplace`\n  - `pip install django djangorestframework`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework: 3.14\n\n- **Key Config Options**:\n  - Database settings in `settings.py`: `DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'your_db_name', 'USER': 'your_user', 'PASSWORD': 'your_password', 'HOST': 'localhost', 'PORT': '5432'}}`\n  - Middleware: Ensure `'rest_framework.middleware.AuthenticationMiddleware'` is included in `MIDDLEWARE`.\n  - Serializers: Define serializers for your models using Django REST Framework.\n  - Views: Use class-based views or function-based views with DRF.",
+    "source": "web_search",
+    "updated_at": 1780724078.7714298
+  },
+  "search:API Design Principles:django postgresql orm api desi_ex": {
+    "content": "- Install `django-postgres` using pip: `pip install django-postgres`\n- Ensure Django version is up to date, typically the latest LTS or stable release.\n- Configure your Django settings with PostgreSQL database details:\n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django.db.backends.postgresql',\n          'NAME': 'your_db_name',\n          'USER': 'your_db_user',\n          'PASSWORD': 'your_db_password',\n          'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n          'PORT': '5432',\n      }\n  }\n  ```\n- Use Django's ORM to define models, e.g.:\n  ```python\n  from django.db import models\n\n  class Customer(models.Model):\n      name = models.CharField(max_length=100)\n      email = models.EmailField(unique=True)\n  ```\n- Run migrations to create tables: `python manage.py makemigrations` followed by `python manage.py migrate`\n- Utilize Django Rest Framework for API creation, install it with pip: `pip install djangorestframework`, then add `'rest_framework'` to your `INSTALLED_APPS`.\n- Create serializers and views for your models using DRF.\n- Run the server with `python manage.py runserver` and access your API at `http://127.0.0.1:8000/`.",
+    "source": "code_example",
+    "updated_at": 1780724086.2037294
+  },
+  "search:API Design Principles:spring data jpa api design": {
+    "content": "- Use `spring-boot-starter-data-jpa` in your `pom.xml` or `build.gradle`.\n- Ensure you have a compatible version of JPA provider like Hibernate.\n- Utilize Spring Data JPA repositories for data access.\n- Implement custom queries using `@Query`, method naming conventions, or QueryDSL.\n- Configure entity mappings with annotations like `@Entity`, `@Table`, `@Id`, etc.\n- Use `Pageable` and `Sort` for pagination and sorting in repository methods.\n- Enable auditing by adding `@EnableJpaAuditing` to your configuration class.\n- Configure data source properties in `application.properties` or `application.yml`.\n- Utilize Spring Data JPA's transaction management capabilities.",
+    "source": "web_search",
+    "updated_at": 1780724091.1475751
+  },
+  "search:API Design Principles:spring data jpa api design_ex": {
+    "content": "- Use `@Entity` and `@Table` annotations to define entities.\n- Apply `@Id`, `@GeneratedValue`, and `@Column` for entity attributes.\n- Implement repositories using interfaces extending `JpaRepository`.\n- Utilize Spring Data JPA projections for selective data retrieval.\n- Configure `application.properties` or `application.yml` with database connection details.\n- Use `@Query` annotation for complex queries when needed.\n- Ensure transaction management with `@Transactional` on service methods.\n- Leverage Spring Boot Starter Data JPA for dependency management.",
+    "source": "code_example",
+    "updated_at": 1780724095.2119024
+  }
+}
