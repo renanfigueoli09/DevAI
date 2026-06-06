@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-logging-and-monitoring-advanced:advanced kubernetes logging an": {
+    "content": "- **CLI Commands**:\n  - `kubectl top node`: Display resource usage of nodes.\n  - `kubectl top pod`: Display resource usage of pods.\n\n- **Latest Versions**:\n  - Kubernetes v1.27: Latest stable version as of my last update.\n  - Datadog Agent v7.36: Latest version for advanced monitoring and security.\n\n- **Key Config Options**:\n  - `resources.requests` and `resources.limits`: Define CPU and memory limits for pods.\n  - `nodeSelector`: Assign pods to specific nodes based on labels.\n  - `tolerations`: Allow scheduling of pods on nodes with taints.",
+    "source": "web_search",
+    "updated_at": 1780750927.888673
+  },
+  "search:kubernetes-logging-and-monitoring-advanced:advanced kubernetes logging an_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>`: View logs of a specific pod.\n  - `kubectl top node`: Display resource usage of nodes.\n  - `kubectl top pod`: Display resource usage of pods.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.0\n  - Prometheus Operator v0.54.0\n  - Loki v2.3.0\n\n- **Key Config Options**:\n  - `logging.level`: Set the logging level for components.\n  - `metrics.enabled`: Enable or disable metrics collection.\n  - `tracing.enabled`: Enable or disable tracing in observability pipelines.",
+    "source": "code_example",
+    "updated_at": 1780750946.7044058
+  },
+  "search:kubernetes-logging-and-monitoring-advanced:kubernetes logging and monitor": {
+    "content": "- **Prometheus**: \n  - Latest Version: v2.40.0\n  - Key Config Options: `prometheus.yml`, `scrape_configs`\n  - CLI Command: `kubectl apply -f prometheus-deployment.yaml`\n\n- **Grafana**:\n  - Latest Version: 9.3.5\n  - Key Config Options: `grafana.ini`, `datasources`\n  - CLI Command: `kubectl apply -f grafana-deployment.yaml`\n\n- **Datadog**:\n  - Latest Version: 10.2.0\n  - Key Config Options: `datadog-agent.yaml`, `api_key`\n  - CLI Command: `kubectl apply -f datadog-agent.yaml`\n\n- **ELK Stack (Elasticsearch, Logstash, Kibana)**:\n  - Latest Versions: Elasticsearch 7.16.3, Logstash 7.16.3, Kibana 7.16.3\n  - Key Config Options: `elasticsearch.yml`, `logstash.conf`\n  - CLI Command: `kubectl apply -f elk-stack.yaml`\n\n- **Fluentd**:\n  - Latest Version: v1.14.2\n  - Key Config Options: `fluentd-config.yaml`\n  - CLI Command: `kubectl apply -f fluentd-deployment.yaml`",
+    "source": "web_search",
+    "updated_at": 1780750958.8651567
+  },
+  "search:kubernetes-logging-and-monitoring-advanced:kubernetes logging and monitor_ex": {
+    "content": "- **Prometheus**: \n  - Latest Version: v2.40.0\n  - Key Config Options: `prometheus.yml`\n  - CLI Command: `kubectl apply -f prometheus-deployment.yaml`\n\n- **Grafana**:\n  - Latest Version: 9.3.5\n  - Key Config Options: `grafana.ini`\n  - CLI Command: `kubectl apply -f grafana-deployment.yaml`\n\n- **ELK Stack (Elasticsearch, Logstash, Kibana)**:\n  - Latest Versions: Elasticsearch 8.4.0, Logstash 8.4.0, Kibana 8.4.0\n  - Key Config Options: `elasticsearch.yml`, `logstash.conf`, `kibana.yml`\n  - CLI Command: `kubectl apply -f elk-stack-deployment.yaml`\n\n- **Datadog**:\n  - Latest Version: Agent v7.36.1\n  - Key Config Options: `datadog.yaml`\n  - CLI Command: `kubectl apply -f datadog-agent.yaml`\n\n- **New Relic**:\n  - Latest Version: Agent v8.20.0\n  - Key Config Options: `newrelic.yml`\n  - CLI Command: `kubectl apply -f new-relic-agent.yaml`",
+    "source": "code_example",
+    "updated_at": 1780750980.8080044
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:fastapi-redis-cache-advanced:fastapi redis cache advanced t": {
+    "content": "- **CLI Commands**: Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- **Latest Versions**: As of my last update, the latest version of FastAPI is 0.96.0. Check [PyPI](https://pypi.org/project/fastapi/) for the most current version.\n- **Key Config Options**:\n  - `app = FastAPI()`: Create a new FastAPI application instance.\n  - `@app.get(\"/items/{item_id}\")`: Define a route with path parameters.\n  - `from fastapi import Depends`: Import dependency injection.\n  - `import redis`: Import Redis library for caching.\n  - `redis_client = Redis(host='localhost', port=6379, db=0)`: Configure Redis client.\n  - `@app.cache(key=\"items:{item_id}\")`: Use FastAPI's built-in caching decorator.\n- **Advanced Techniques**:\n  - Implement write-through or cache-aside strategies for optimal performance.\n  - Use background tasks to update cache asynchronously.\n  - Handle exceptions gracefully with `@app.exception_handler`.\n  - Configure logging using Python’s `logging` module.\n- **Performance Tuning**: Optimize Redis configurations like `maxmemory`, `maxmemory-policy`, and `timeout`.",
+    "source": "web_search",
+    "updated_at": 1780750815.1056724
+  },
+  "search:fastapi-redis-cache-advanced:fastapi redis cache advanced t_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  - Redis: 4.3.4\n\n- **Key Config Options**:\n  - `redis_url`: URL for the Redis server (e.g., `redis://localhost:6379/0`)\n  - `max_connections`: Maximum number of connections to Redis\n  - `min_connections`: Minimum number of connections to Redis",
+    "source": "code_example",
+    "updated_at": 1780750828.3884609
+  }
+}

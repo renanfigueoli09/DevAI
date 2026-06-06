@@ -1,0 +1,22 @@
+{
+  "search:react-query-advanced-use-cases:advanced react query use cases": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.x\n  - RTK Query: v2.x\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `useMutation`: For updating data.\n  - `queryClient`: For managing query cache and state.",
+    "source": "web_search",
+    "updated_at": 1780750987.4830046
+  },
+  "search:react-query-advanced-use-cases:advanced react query use cases_ex": {
+    "content": "- **CLI Commands**: N/A\n- **Latest Version**: React Query v4.0.0\n- **Key Config Options**:\n  - `queryFn`: Function to fetch data.\n  - `initialData`: Initial data for the query.\n  - `staleTime`: Time in milliseconds after which data is considered stale.\n  - `cacheTime`: Time in milliseconds for cache expiration.\n  - `refetchInterval`: Interval in milliseconds for automatic refetching.",
+    "source": "code_example",
+    "updated_at": 1780751007.9981108
+  },
+  "search:react-query-advanced-use-cases:optimizing react query for lar": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project.\n- **Latest Versions**:\n  - React Query: v4.0.0\n  - Axios: v1.5.0\n- **Key Config Options**:\n  - `useQuery`: Configure with `initialData`, `refetchInterval`, and `staleTime`.\n  - `useInfiniteQuery`: Use `getNextPageParam` for pagination.\n  - `queryClient`: Set up with `defaultOptions` for global configurations.",
+    "source": "web_search",
+    "updated_at": 1780751027.0318599
+  },
+  "search:react-query-advanced-use-cases:optimizing react query for lar_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app`\n- **Latest Versions**: React Query v4.0, React v18.2\n- **Key Config Options**:\n  - `useQuery`: Automatically handles data fetching, caching, and updating.\n  - `queryClient`: Manages the cache for queries.\n  - `refetchInterval`: Automatically refetches the query at a specified interval.\n  - `staleTime`: Specifies how long a query result is considered fresh.",
+    "source": "code_example",
+    "updated_at": 1780751032.9885173
+  }
+}
