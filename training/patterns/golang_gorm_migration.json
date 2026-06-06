@@ -12,11 +12,11 @@
   "search:golang-gorm-migration:go gorm migrations tutorial 20": {
     "content": "- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get github.com/go-migrate/migrate/v4`\n  - `migrate -path ./db/migrations -database \"postgres://user:password@localhost/dbname\" up`\n\n- **Latest Versions**:\n  - GORM: v1.23.0\n  - golang-migrate/migrate: v4.16.0\n\n- **Key Config Options**:\n  - `gorm.io/driver/postgres`\n  - `migrate.New(\"postgres://user:password@localhost/dbname\", \"file:///path/to/migrations\")`",
     "source": "web_search",
-    "updated_at": 1780788843.3928788
+    "updated_at": 1780790133.094908
   },
   "search:golang-gorm-migration:go gorm migrations tutorial 20_ex": {
     "content": "- **CLI Commands**:\n  - `migrate -path db/migrations -database \"postgres://user:password@localhost/dbname?sslmode=disable\" up`\n  - `migrate -path db/migrations -database \"postgres://user:password@localhost/dbname?sslmode=disable\" down`\n\n- **Latest Versions**:\n  - golang-migrate/migrate: v4.16.2\n  - GORM: v2.30.0\n\n- **Key Config Options**:\n  - `migrate.NewWithDatabaseURL(\"postgres://user:password@localhost/dbname?sslmode=disable\")`\n  - `db.AutoMigrate(&User{})`",
     "source": "code_example",
-    "updated_at": 1780788844.792206
+    "updated_at": 1780790134.4540002
   }
 }
