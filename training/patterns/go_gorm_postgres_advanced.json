@@ -1,0 +1,12 @@
+{
+  "search:go-gorm-postgres-advanced:gorm with go and postgresql: b": {
+    "content": "- Use `go get` to install packages like Gin, GORM, and PostgreSQL driver.\n- Define models in Go that map to database tables using GORM annotations.\n- Configure the connection string with your PostgreSQL credentials.\n- Initialize a GORM DB instance with `gorm.Open(postgres.Open(dsn), &gorm.Config{})`.\n- Use `db.AutoMigrate(&YourModel{})` to create or update tables based on model definitions.\n- Perform CRUD operations using methods like `Create`, `Find`, `Update`, and `Delete`.\n- Handle transactions using `tx := db.Begin()`, followed by `tx.Commit()` or `tx.Rollback()`.\n- Use GORM hooks for lifecycle callbacks such as `BeforeSave`, `AfterSave`, etc.\n- Ensure error handling with `if err != nil { log.Fatal(err) }` after database operations.",
+    "source": "web_search",
+    "updated_at": 1780747228.4155853
+  },
+  "search:go-gorm-postgres-advanced:gorm with go and postgresql: b_ex": {
+    "content": "- Ensure Go is installed on your machine.\n- Set up a PostgreSQL database and grant necessary permissions to the user.\n- Use GORM as the ORM for interacting with PostgreSQL in Go applications.\n- For unit testing, use `sqlmock` along with GORM to mock database interactions.\n- Key config options include setting up the GORM connection string correctly.\n- Use `mock.ExpectBegin()`, `mock.ExpectCommit()`, and `mock.ExpectQuery()` for comprehensive testing of transactions and queries.\n- Ensure that your PostgreSQL version is compatible with GORM.\n- For detailed documentation, refer to the official GORM and sqlmock documentation.",
+    "source": "code_example",
+    "updated_at": 1780747245.216396
+  }
+}

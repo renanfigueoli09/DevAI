@@ -8,5 +8,15 @@
     "content": "- Use `docker build --target <stage>` to specify the target stage in your multi-stage build.\n- Ensure base images are up-to-date by using `FROM <image>:latest`.\n- Minimize layers by combining commands and using `.dockerignore` for unnecessary files.\n- For Node.js, consider using `node:slim` as a base image.\n- Example Dockerfile snippet:\n  ```Dockerfile\n  # Build stage\n  FROM node:14 AS builder\n  WORKDIR /app\n  COPY package*.json ./\n  RUN npm install\n  COPY . .\n  RUN npm run build\n\n  # Production stage\n  FROM nginx:alpine\n  COPY --from=builder /app/dist /usr/share/nginx/html\n  ```\n- Use `docker history <image>` to inspect the layers of your image.\n- Consider using `docker scan` for security scans on your images.\n- Ensure all dependencies are explicitly listed in `package.json`.\n- Regularly update Docker and base images to benefit from security patches.",
     "source": "code_example",
     "updated_at": 1780747174.212566
+  },
+  "search:Docker + Multi-Stage Builds:performance optimization techn": {
+    "content": "- Use `docker build --target <stage_name>` to specify which stage to stop at.\n- Employ multiple `FROM` statements in your Dockerfile, each serving a specific purpose.\n- Copy artifacts between stages using `COPY --from=<build_stage>`.\n- Discard unnecessary components by separating build and runtime environments.\n- Example of multi-stage build for Python:\n  ```dockerfile\n  # Build stage\n  FROM python:3.9 AS builder\n  WORKDIR /app\n  COPY requirements.txt .\n  RUN pip install -r requirements.txt\n\n  # Final stage\n  FROM python:3.9-slim\n  WORKDIR /app\n  COPY --from=builder /app/app.py .\n  CMD [\"python\", \"app.py\"]\n  ```\n- Use `docker-compose` for managing multi-stage builds in a Docker Compose file.\n- Ensure your base images are up-to-date to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1780747225.1050403
+  },
+  "search:Docker + Multi-Stage Builds:performance optimization techn_ex": {
+    "content": "- Use `docker build --target <stage>` to specify the target stage in a multi-stage build.\n- Employ `COPY` instead of `ADD` for copying files as it's more efficient and secure.\n- Minimize layers by combining commands within a single RUN instruction when possible.\n- Utilize `.dockerignore` to exclude unnecessary files from being copied into the Docker image.\n- Consider using `AS <name>` to name intermediate stages in your Dockerfile for better readability and organization.\n- For GoLang, use `CGO_ENABLED=0` to disable cgo, which can reduce the size of the final image.\n- Ensure that each stage has a clean environment by removing unnecessary files and dependencies after installation.\n- Regularly update your base images (e.g., `FROM golang:latest`) to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780747243.0688844
   }
 }

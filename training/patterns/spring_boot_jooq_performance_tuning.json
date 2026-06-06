@@ -10,13 +10,13 @@
     "updated_at": 1780747201.124095
   },
   "search:spring-boot+jooq-performance-tuning:jooq with spring boot: advance": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - jOOQ: 3.17.6\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`\n  - `jooq.sql-dialect=MYSQL`",
+    "content": "- **CLI Commands**: \n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot 3.0.x\n  - Spring Framework 6.0.x\n  - jOOQ 3.17.x\n\n- **Key Config Options**:\n  - `spring.jooq.sql-dialect=POSTGRES`\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.datasource.username=myuser`\n  - `spring.datasource.password=mypassword`",
     "source": "web_search",
-    "updated_at": 1780747101.1755643
+    "updated_at": 1780747208.1256716
   },
   "search:spring-boot+jooq-performance-tuning:jooq with spring boot: advance_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - jOOQ: 3.17.8\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `jooq.generate.to-package`: Target package for generated classes.\n  - `jooq.generate.target-dir`: Directory to store generated classes.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - jOOQ: 3.17.5\n  - Spring Boot: 2.7.6\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `jooq.generateSchema`: Enable schema generation.\n  - `jooq.sqlDialect`: Specify the SQL dialect.",
     "source": "code_example",
-    "updated_at": 1780747113.7547793
+    "updated_at": 1780747210.7531722
   }
 }
