@@ -12,12 +12,12 @@
   "pattern:docker:healthcheck-mongo": {
     "content": "MongoDB healthcheck: test: ['CMD','mongosh','--eval',\"db.adminCommand('ping')\"] interval:15s timeout:10s retries:5. depends_on: db: condition: service_healthy. NEVER pg_isready for MongoDB.",
     "source": "forced_training",
-    "updated_at": 1780747037.1473863
+    "updated_at": 1780747119.127232
   },
   "pattern:docker:only-means-only": {
     "content": "When user says 'only MongoDB' or 'MongoDB and Docker only': docker-compose.yml has ONLY app + db (MongoDB). NO redis, NO kafka, NO nginx unless explicitly requested.",
     "source": "forced_training",
-    "updated_at": 1780747037.217038
+    "updated_at": 1780747119.1952631
   },
   "self:docker:compose-mongodb-only": {
     "content": "version: '3.8'\n\nservices:\n  db:\n    image: mongo:7.0\n    healthcheck:\n      test: [\"mongosh\", \"--eval\", \"db.adminCommand('ping')\"]\n      interval: 15s\n\n  app:\n    depends_on:\n      db:\n        condition: service_healthy\n    environment:\n      MONGODB_URI: mongodb://db:27017/myapp",
@@ -27,21 +27,21 @@
   "qa:mongodb-healthcheck": {
     "content": "MongoDB healthcheck command: mongosh. test: CMD mongosh --eval ping. NEVER pg_isready for MongoDB.",
     "source": "correct_answer",
-    "updated_at": 1780747036.899908
+    "updated_at": 1780747118.8785756
   },
   "MongoDB healthcheck docker-compose which command": {
     "content": "MongoDB healthcheck command: mongosh. test: CMD mongosh --eval ping. NEVER pg_isready for MongoDB.",
     "source": "correct_answer",
-    "updated_at": 1780747036.9695652
+    "updated_at": 1780747118.9330118
   },
   "qa:depends-on-healthy": {
     "content": "depends_on with condition: service_healthy. depends_on: { db: { condition: service_healthy } }. This waits for healthcheck to pass. WRONG: depends_on: [db] (doesn't wait for health).",
     "source": "correct_answer",
-    "updated_at": 1780747037.0310726
+    "updated_at": 1780747118.9858453
   },
   "docker-compose depends_on wait for healthy service condition": {
     "content": "depends_on with condition: service_healthy. depends_on: { db: { condition: service_healthy } }. This waits for healthcheck to pass. WRONG: depends_on: [db] (doesn't wait for health).",
     "source": "correct_answer",
-    "updated_at": 1780747037.0931082
+    "updated_at": 1780747119.056529
   }
 }
