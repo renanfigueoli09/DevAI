@@ -1,0 +1,52 @@
+{
+  "search:Kubernetes and Helm-Charts:advanced kubernetes deployment": {
+    "content": "- Use `kubectl apply -f <filename>` to deploy resources.\n- Employ `kubectl rollout status deployment/<deployment-name>` for deployment status checks.\n- Implement Blue-Green deployments using `kubectl set image deployment/<deployment-name> <container-name>=<new-image>`.\n- Utilize `kubectl patch deployment <deployment-name> -p '{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"kubectl.kubernetes.io/restartedAt\":\"'$(date +%FT%T%z)'\"}}}}'` for rolling updates.\n- For A/B testing, use `kubectl apply -f <blue-deployment>` and `kubectl apply -f <green-deployment>`, then gradually scale up the green deployment.\n- Shadow rollouts can be achieved by scaling down the original deployment to zero and scaling up the new one with a small percentage of traffic.\n- Key config options include `replicas`, `image`, `resources`, and `livenessProbe`.\n- Ensure Kubernetes version compatibility for strategies like Blue-Green and A/B testing.",
+    "source": "web_search",
+    "updated_at": 1780733511.7377305
+  },
+  "search:Kubernetes and Helm-Charts:advanced kubernetes deployment_ex": {
+    "content": "- **Rolling Update**: Use `kubectl rollout restart deployment/<deployment-name>`.\n- **Blue-Green Deployment**:\n  - Create two environments, blue and green.\n  - Deploy the new version to the green environment.\n  - Route traffic from blue to green when ready.\n- **Canary Release**:\n  - Deploy a small percentage of traffic (e.g., 10%) to the new version.\n  - Monitor for issues before rolling out fully.\n- **A/B Testing**:\n  - Split traffic between two versions.\n  - Measure user engagement and performance metrics.\n- **Progressive Delivery**:\n  - Gradually increase traffic to the new version.\n  - Rollback if issues are detected.\n- **Latest Version**: Ensure using `kubectl` and Kubernetes cluster at their latest stable versions for optimal functionality and security.\n\nKey Config Options:\n- `spec.strategy.type`: Set deployment strategy (e.g., RollingUpdate, Recreate).\n- `spec.strategy.rollingUpdate.maxUnavailable`: Define the number of Pods that can be unavailable during a rolling update.\n- `spec.strategy.rollingUpdate.maxSurge`: Specify the number of Pods that can be created over the desired number of replicas.\n\nFor detailed implementation and advanced configurations, refer to the official Kubernetes documentation or specific guides like those linked in the search results.",
+    "source": "code_example",
+    "updated_at": 1780733525.023067
+  },
+  "search:Kubernetes and Helm-Charts:helm chart best practices": {
+    "content": "- Use `helm create <chart-name>` to generate a new chart.\n- Update dependencies using `helm dependency update`.\n- Build the chart with `helm package <chart-path>`.\n- Deploy the chart with `helm install <release-name> <chart-path>`.\n- Upgrade an existing release with `helm upgrade <release-name> <chart-path>`.\n- Rollback to a previous version with `helm rollback <release-name> <revision-number>`.\n- Use `--set` flag in `helm install` and `helm upgrade` for overriding values.\n- Ensure `values.yaml` is well-organized and documented.\n- Utilize Helm hooks for pre-install, post-install, pre-upgrade, etc.\n- Keep charts modular with umbrella charts for complex applications.",
+    "source": "web_search",
+    "updated_at": 1780733535.978767
+  },
+  "search:Kubernetes and Helm-Charts:helm chart best practices_ex": {
+    "content": "- Use `helm create <chart-name>` to generate a new Helm chart.\n- Ensure chart names are lowercase and use hyphens for multi-word names.\n- Set the version number in the `Chart.yaml` file using semantic versioning.\n- Utilize `values.yaml` for configurable settings, with sensible defaults.\n- Employ `templates/` directory for Kubernetes manifest templates.\n- Use Helm hooks for pre-install/post-install actions.\n- Validate charts with `helm lint <chart-name>`.\n- Test charts locally with `helm install --dry-run <release-name> <chart-name>`.\n- Publish charts to a repository using `helm push <chart-path> <repo>`.\n\nLatest versions:\n- Helm 3.x\n- Kubernetes 1.20+\n\nKey config options in `Chart.yaml`:\n- name: Chart name\n- version: Semantic version\n- description: Brief chart description",
+    "source": "code_example",
+    "updated_at": 1780733540.5821729
+  },
+  "search:Kubernetes and Helm-Charts:ci/cd pipelines for kubernetes": {
+    "content": "- Use `kubectl` for managing Kubernetes resources.\n- Install and configure Helm for package management.\n- Utilize tools like Jenkins, GitLab CI, or GitHub Actions for CI/CD.\n- Employ Docker for containerization of applications.\n- Configure Kubernetes RBAC (Role-Based Access Control) for security.\n- Implement image scanning with tools like Trivy or Clair.\n- Use Prometheus for monitoring and Grafana for visualization.\n- Automate deployments using `kubectl apply -f <manifest-file>`.\n- Set up automated tests in CI/CD pipelines.",
+    "source": "web_search",
+    "updated_at": 1780733546.889236
+  },
+  "search:Kubernetes and Helm-Charts:ci/cd pipelines for kubernetes_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl logs <pod-name>` to view pod logs.\n\n- **Latest Versions**:\n  - Kubernetes: v1.26.0\n  - Helm: v3.9.0\n\n- **Key Config Options**:\n  - `image`: Specifies the Docker image for a container.\n  - `replicas`: Defines the number of pods to run.\n  - `serviceType`: Determines how services are exposed (e.g., NodePort, LoadBalancer).",
+    "source": "code_example",
+    "updated_at": 1780733550.760433
+  },
+  "search:Kubernetes and Helm-Charts:monitoring kubernetes clusters": {
+    "content": "- Use `kubectl top nodes` to view resource usage by nodes.\n- Install Prometheus using Helm with the command: `helm install prometheus stable/prometheus`.\n- Configure Grafana for visualization with a command like: `helm install grafana stable/grafana`.\n- Enable logging integration with Elasticsearch and Fluentd.\n- Set up alerting rules in Prometheus for critical metrics.\n- Use Azure Monitor's Kubernetes insights to monitor AKS clusters.\n- Ensure RBAC (Role-Based Access Control) is enabled for security.\n- Regularly update your monitoring tools to the latest versions using `helm upgrade`.\n- Configure resource limits and requests in Kubernetes deployments.",
+    "source": "web_search",
+    "updated_at": 1780733557.6173456
+  },
+  "search:Kubernetes and Helm-Charts:monitoring kubernetes clusters_ex": {
+    "content": "- Deploy Prometheus ConfigMap using `kubectl create -f config-map.yaml`\n- Access ConfigMap details with `kubectl get configmap`\n- Set up Prometheus and Grafana for Kubernetes monitoring as described in GeeksforGeeks article\n- Use latest versions of Prometheus and Grafana for optimal performance\n- Configure monitoring annotations for Argo CD integration\n- Run pipeline steps to reconcile cluster state\n- Monitor new services within minutes using Kubernetes cluster",
+    "source": "code_example",
+    "updated_at": 1780733561.8977382
+  },
+  "search:Kubernetes and Helm-Charts:automating kubernetes with ci/": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl scale deployment/<deployment-name> --replicas=<number>` to scale a deployment.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - GitHub Actions: Latest version as of the last update.\n  - CircleCI: Latest version as of the last update.\n\n- **Key Config Options**:\n  - `image`: Specifies the Docker image for the container.\n  - `replicas`: Defines the number of pod replicas to run.\n  - `resources`: Allocates resources like CPU and memory to containers.",
+    "source": "web_search",
+    "updated_at": 1780733566.9312918
+  },
+  "search:Kubernetes and Helm-Charts:automating kubernetes with ci/_ex": {
+    "content": "- Use `kubectl apply -f <filename>` to deploy resources.\n- For CI/CD, consider tools like Jenkins or GitLab CI.\n- Ensure your Kubernetes cluster is up-to-date with the latest version for security and features.\n- Key config options include `imagePullPolicy`, `replicas`, and `resources`.\n- Use Helm charts for managing complex applications in Kubernetes.\n- Implement automated testing using tools like SonarQube or JUnit.\n- For CI/CD, set up webhooks to trigger builds on code changes.\n- Utilize Kaniko for building Docker images directly within the Kubernetes cluster.",
+    "source": "code_example",
+    "updated_at": 1780733570.3840535
+  }
+}

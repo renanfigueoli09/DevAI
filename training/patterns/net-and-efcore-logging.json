@@ -1,0 +1,52 @@
+{
+  "search:.NET and EFCore-Logging:advanced entity framework core": {
+    "content": "- **Install EFCore**: `dotnet add package Microsoft.EntityFrameworkCore`\n- **Add Provider**: For SQL Server, use `Microsoft.EntityFrameworkCore.SqlServer`\n- **Update to Latest**: Check [GitHub](https://github.com/dotnet/efcore/releases) for the latest version.\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure connection string and options.\n  - `OnModelCreating`: Define model relationships and configurations.\n  - `UseLazyLoadingProxies`: Enable lazy loading for navigation properties.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n- **Performance Tips**:\n  - Use `EFCore.BulkExtensions` for bulk operations.\n  - Optimize queries with `EFCore.Visualizer`.\n  - Enable query splitting with `SplitQuery(true)` in `DbContextOptionsBuilder`.",
+    "source": "web_search",
+    "updated_at": 1780733699.9423928
+  },
+  "search:.NET and EFCore-Logging:advanced entity framework core_ex": {
+    "content": "- **Bulk Operations**: Use `EFCore.BulkExtensions` for high-performance bulk operations.\n- **Reverse Engineering**: Scaffold DbContext using `Scaffold-DbContext \"Server=localhost;Database=DbName;Trusted_Connection=True;\" -Context MyDbContext`.\n- **Exclude Indexes**: In EF Core PowerTools, add `ExcludedIndexes` to exclude specific indexes during reverse engineering.",
+    "source": "code_example",
+    "updated_at": 1780733701.5800421
+  },
+  "search:.NET and EFCore-Logging:logging strategies in .net app": {
+    "content": "- Use `dotnet new mvc -n LoggingApp` to create a new ASP.NET Core MVC project.\n- Update `Program.cs` to configure logging with:\n  ```csharp\n  builder.Services.AddLogging(builder =>\n  {\n      builder.ClearProviders();\n      builder.AddConsole();\n      builder.AddDebug();\n  });\n  ```\n- Use `ILogger<T>` for logging in your controllers and services.\n- Configure log levels in `appsettings.json`:\n  ```json\n  \"Logging\": {\n    \"LogLevel\": {\n      \"Default\": \"Information\",\n      \"Microsoft.AspNetCore\": \"Warning\"\n    }\n  }\n  ```\n- For high-performance logging, consider using `Serilog` or `NLog` by installing their NuGet packages and configuring them in `Program.cs`.\n- Use structured logging to improve log readability and searchability.\n- Implement custom log filters for more granular control over what gets logged.",
+    "source": "web_search",
+    "updated_at": 1780733707.3448944
+  },
+  "search:.NET and EFCore-Logging:logging strategies in .net app_ex": {
+    "content": "- Use `dotnet new console -n LoggingApp` to create a new .NET console application.\n- Install the latest logging provider via NuGet, e.g., `dotnet add package Microsoft.Extensions.Logging.Console`.\n- Configure logging in `Program.cs`:\n  ```csharp\n  var builder = WebApplication.CreateBuilder(args);\n  builder.Services.AddLogging(builder => {\n      builder.AddConsole();\n      builder.AddDebug();\n  });\n  ```\n- Use `ILogger<T>` for logging within your classes, e.g., \n  ```csharp\n  public class MyService {\n      private readonly ILogger<MyService> _logger;\n      public MyService(ILogger<MyService> logger) {\n          _logger = logger;\n      }\n      public void DoWork() {\n          _logger.LogInformation(\"Doing work...\");\n      }\n  }\n  ```\n- For database logging, consider `Microsoft.Extensions.Logging.EntityFrameworkCore` for Entity Framework Core.\n- Key config options in `appsettings.json`:\n  ```json\n  \"Logging\": {\n    \"LogLevel\": {\n      \"Default\": \"Information\",\n      \"Microsoft.AspNetCore\": \"Warning\"\n    },\n    \"Console\": {\n      \"IncludeScopes\": true,\n      \"LogLevel\": {\n        \"Default\": \"Debug\"\n      }\n    }\n  }\n  ```\n- Use `ILoggerFactory` for more advanced logging scenarios.\n- For production environments, consider using `Serilog` or `NLog` as alternatives to the built-in providers.",
+    "source": "code_example",
+    "updated_at": 1780733715.710752
+  },
+  "search:.NET and EFCore-Logging:performance tuning for efcore": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update).\n  - Dapper: Latest stable version available on NuGet.\n\n- **Key Config Options**:\n  - `AsNoTracking()` for read-only scenarios to improve performance.\n  - `Compiled Queries` for caching query plans.\n  - `Split Queries` to load related data in separate queries for better performance.",
+    "source": "web_search",
+    "updated_at": 1780733723.433374
+  },
+  "search:.NET and EFCore-Logging:performance tuning for efcore_ex": {
+    "content": "- Use EF Core version 7 or later for latest features and improvements.\n- For performance tuning, consider using `AsNoTracking()` when you don't need to update entities from the query results.\n- Implement batching with `FromSqlRaw` or `FromSqlInterpolated` for large datasets.\n- Utilize `async` methods like `ToListAsync()` instead of blocking calls with `ToList()`.\n- Configure connection strings in `appsettings.json` and use dependency injection to manage DbContext instances.\n- Use `ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;` globally if applicable.\n- Monitor query performance using EF Core's logging capabilities to identify bottlenecks.",
+    "source": "code_example",
+    "updated_at": 1780733727.7455537
+  },
+  "search:.NET and EFCore-Logging:security best practices for ef": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- Apply migrations using `dotnet ef database update`.\n- Utilize `Single()` or `SingleOrDefault()` for queries, preferring `SingleOrDefault()` when nullability is expected.\n- Implement proper exception handling in LINQ queries.\n- Configure indexes in the DbContext's `OnModelCreating` method using Fluent API.\n- Ensure your database context is disposed of properly to avoid connection leaks.\n- Use `Include()` and `ThenInclude()` for eager loading related entities efficiently.\n- Monitor query performance with EF Core's logging capabilities.\n- Regularly update EFCore to the latest version to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1780733734.3735797
+  },
+  "search:.NET and EFCore-Logging:security best practices for ef_ex": {
+    "content": "- Use EFCore's built-in migrations to manage database schema changes.\n- Implement data annotations or Fluent API for model validation and configuration.\n- Regularly update EFCore and its dependencies to the latest versions using `dotnet add package --update`.\n- Enable SQL Server encryption for sensitive data in production environments.\n- Utilize dependency injection for managing DbContext instances.\n- Configure logging to capture detailed information about database operations.\n- Implement role-based access control (RBAC) using IdentityServer4 or similar libraries.\n- Use parameterized queries to prevent SQL injection attacks.\n- Regularly audit and review code for security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780733738.710072
+  },
+  "search:.NET and EFCore-Logging:migrating data with efcore": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core 7.0\n  - .NET 6.0\n\n- **Key Config Options**:\n  - `UseSqlServer` for SQL Server\n  - `MigrationsAssembly` in `appsettings.json`",
+    "source": "web_search",
+    "updated_at": 1780733743.3531125
+  },
+  "search:.NET and EFCore-Logging:migrating data with efcore_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0.0\n\n- **Key Config Options**:\n  - `OnModelCreating`: Configure model relationships and properties.\n  - `SeedData`: Initialize the database with default data using `DbContext` methods.",
+    "source": "code_example",
+    "updated_at": 1780733746.2803142
+  }
+}
