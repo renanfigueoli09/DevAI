@@ -2,7 +2,7 @@
   "pattern:spring+mongodb:document": {
     "content": "// @Document(collection='books') @Data class Book { @Id String id; @NotBlank String title; @CreatedDate LocalDateTime createdAt; }. Repository: extends MongoRepository<Book,String>{}",
     "source": "code_pattern",
-    "updated_at": 1780747401.4209874
+    "updated_at": 1780747867.754669
   },
   "search:spring-boot-mongodb:spring boot mongodb crud opera": {
     "content": "- **Latest Versions**: Spring Boot 3.x, MongoDB 6.x\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application\n  - `mongoimport --db yourDatabase --collection yourCollection --file data.json` for importing data\n- **Key Config Options**:\n  - `spring.data.mongodb.uri=mongodb://localhost:27017/yourDatabase`\n  - `spring.data.mongodb.database=yourDatabase`\n  - `spring.data.mongodb.collection=yourCollection`\n- **Annotations**:\n  - `@Document` for MongoDB entities\n  - `@Id` for primary key\n  - `@Field` for custom field names\n- **CRUD Operations**:\n  - Create: Use `save()` method\n  - Read: Use `findById()`, `findAll()`\n  - Update: Use `save()` with existing document\n  - Delete: Use `deleteById()`\n- **Dependencies**:\n  - Add `spring-boot-starter-data-mongodb` to your `pom.xml`\n- **Example Project**: [GitHub - rajkumar70040/springboot-mongodb-crud](https://github.com/rajkumar70040/springboot-mongodb-crud)",
