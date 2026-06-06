@@ -1,0 +1,22 @@
+{
+  "search:react+redux-toolkit:react redux toolkit tutorial 2": {
+    "content": "- Install dependencies: `npm install @reduxjs/toolkit react-redux`\n- Use `createSlice` to define reducers and actions.\n- Configure store using `configureStore`.\n- Connect React components with Redux using `useSelector` and `useDispatch`.\n- Middleware can be added via `middleware` option in `configureStore`.\n- For best practices, use `createAsyncThunk` for asynchronous actions.",
+    "source": "web_search",
+    "updated_at": 1780713551.1242802
+  },
+  "search:react+redux-toolkit:react redux toolkit tutorial 2_ex": {
+    "content": "- Install `@reduxjs/toolkit` and `react-redux` using npm or yarn.\n- Use `npx create-react-app my-app --template redux` to set up a new React app with Redux pre-configured.\n- Import `configureStore` from `@reduxjs/toolkit` to configure the store.\n- Utilize `createSlice` for defining reducers and actions in a single slice of state.\n- Apply middleware like `thunk` for handling asynchronous operations using `getDefaultMiddleware`.\n- Connect React components to Redux store with `useSelector` and `useDispatch`.\n- Use `Provider` component from `react-redux` to pass the Redux store to your application.",
+    "source": "code_example",
+    "updated_at": 1780713560.0019028
+  },
+  "search:react+redux-toolkit:react redux toolkit best pract": {
+    "content": "- Install Redux Toolkit using `npm install @reduxjs/toolkit react-redux`\n- Use `createSlice` to define reducers and actions.\n- Utilize `configureStore` for store configuration.\n- Apply middleware with `getDefaultMiddleware`.\n- Use `useSelector` for state access in React components.\n- Employ `useDispatch` for dispatching actions.\n- Ensure immutability using Immer or other methods.\n- Implement selectors for efficient data retrieval.\n- Regularly update dependencies to the latest versions.",
+    "source": "web_search",
+    "updated_at": 1780713569.5607553
+  },
+  "search:react+redux-toolkit:react redux toolkit best pract_ex": {
+    "content": "- Install Redux Toolkit and React-Redux using npm or yarn.\n- Use `configureStore` from Redux Toolkit to set up the store with default settings.\n- Provide the Redux store to your React application via `<Provider>`.\n- Utilize `createSlice` for defining reducers and actions in a concise manner.\n- Employ `useSelector` and `useDispatch` hooks for accessing state and dispatching actions in functional components.\n- For asynchronous operations, use `createAsyncThunk` from Redux Toolkit.\n- Ensure proper error handling and loading states in your components.\n- Keep your reducers pure and side effects out of them using middleware like `redux-thunk`.\n- Regularly update to the latest versions of Redux Toolkit and React-Redux for bug fixes and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780713578.0932176
+  }
+}

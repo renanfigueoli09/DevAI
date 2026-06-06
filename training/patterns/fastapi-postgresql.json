@@ -1,0 +1,12 @@
+{
+  "search:fastapi+postgresql:fastapi with postgresql authen": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install sqlalchemy alembic psycopg2-binary`\n  - `docker-compose up --build`\n\n- **Latest Versions**:\n  - FastAPI: 0.104.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n  - Psycopg2: 2.9.6\n\n- **Key Config Options**:\n  - Database URL: `postgresql://user:password@localhost/dbname`\n  - Tortoise ORM: Configure models and connections in `models.py`\n  - JWT Authentication: Set up secret key, algorithm, and token expiration time\n  - Docker Compose: Define services for FastAPI, PostgreSQL, and any other dependencies",
+    "source": "web_search",
+    "updated_at": 1780713492.9765213
+  },
+  "search:fastapi+postgresql:fastapi with postgresql authen_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/KenMwaura1/Fast-Api-example.git`\n  - `docker-compose up --build`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 2.0.0\n  - Pydantic: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@localhost/dbname`\n  - Secret Key for JWT: Generate a secure secret key using `openssl rand -hex 32`\n  - Token Expiration Time: Set in the authentication configuration",
+    "source": "code_example",
+    "updated_at": 1780713500.747405
+  }
+}
