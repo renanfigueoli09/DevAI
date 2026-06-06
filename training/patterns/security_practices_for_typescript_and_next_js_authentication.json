@@ -2,31 +2,31 @@
   "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract": {
     "content": "- Use TypeScript's strong typing system to catch errors early.\n- Implement input validation using libraries like Zod or Yup.\n- Utilize environment variables for sensitive data, e.g., `dotenv`.\n- Employ HTTPS for all network communications.\n- Regularly update dependencies and use tools like Snyk for security audits.\n- Conduct code reviews focusing on security practices.\n- Use TypeScript's `noImplicitAny` flag to enforce type safety.\n- Implement rate limiting to prevent abuse.\n- Secure sensitive data using encryption techniques.",
     "source": "web_search",
-    "updated_at": 1780787854.1491208
+    "updated_at": 1780789093.2258332
   },
   "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract_ex": {
     "content": "- Use `tsc --strict` to enforce strict type checking.\n- Update TypeScript to the latest version using `npm install typescript@latest`.\n- Configure ESLint with a secure ruleset, e.g., `eslint-config-airbnb-typescript`.\n- Implement input validation and sanitization for all user inputs.\n- Use HTTPS for all network communications.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Employ code reviews to catch security vulnerabilities early.\n- Utilize TypeScript's type system to prevent runtime errors.\n- Enable source maps in production for easier debugging.",
     "source": "code_example",
-    "updated_at": 1780787855.584085
+    "updated_at": 1780789094.441237
   },
   "search:Security Practices for TypeScript and Next.js Authentication:nextjs authentication security": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm run dev` or `yarn dev`\n\n- **Latest Versions**:\n  - Next.js v13.5\n  - React v18.2\n\n- **Key Config Options**:\n  - `next.config.js`: Configure server settings, API routes, and more.\n  - `.env.local`: Define environment variables for sensitive data like API keys.\n  - `middleware.js`: Implement authentication middleware to protect routes.\n\n- **Security Practices**:\n  - Use JWT (JSON Web Tokens) for secure user sessions.\n  - Implement CSRF protection using cookies with HttpOnly flag.\n  - Sanitize inputs to prevent XSS attacks.\n  - Regularly update dependencies and Next.js itself.",
     "source": "web_search",
-    "updated_at": 1780787856.7873135
+    "updated_at": 1780789095.5948355
   },
   "search:Security Practices for TypeScript and Next.js Authentication:jwt security in nextjs": {
     "content": "- Use `npm install next-auth` to install NextAuth.js.\n- For JWT authentication, configure `next.config.js` with:\n  ```javascript\n  module.exports = {\n    authOptions: {\n      providers: [\n        // Define your providers here (e.g., Google, Facebook)\n      ],\n      jwt: {\n        secret: process.env.JWT_SECRET,\n      },\n    },\n  };\n  ```\n- Set environment variables in `.env.local` for `JWT_SECRET`.\n- Use `next-auth/jwt` to decode and verify JWT tokens.\n- Implement middleware for protected routes:\n  ```javascript\n  import { getServerSession } from 'next-auth/next';\n\n  export default async function handler(req, res) {\n    const session = await getServerSession(req, res);\n    if (!session) {\n      return res.status(401).json({ message: 'Unauthorized' });\n    }\n    // Handle protected route logic\n  }\n  ```\n- Update `pages/api/auth/[...nextauth].js` to include JWT strategy:\n  ```javascript\n  import NextAuth from 'next-auth';\n  import Providers from 'next-auth/providers';\n\n  export default NextAuth({\n    providers: [\n      Providers.Google({\n        clientId: process.env.GOOGLE_CLIENT_ID,\n        clientSecret: process.env.GOOGLE_CLIENT_SECRET,\n      }),\n    ],\n    jwt: {\n      secret: process.env.JWT_SECRET,\n    },\n  });\n  ```\n- Ensure `JWT_SECRET` is securely stored and rotated regularly.\n- Use HTTPS to secure token transmission.",
     "source": "web_search",
-    "updated_at": 1780787857.9176111
+    "updated_at": 1780789096.8410487
   },
   "search:Security Practices for TypeScript and Next.js Authentication:jwt security in nextjs_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 14+\n  - NextAuth.js: Latest\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for authentication.\n  - `session.maxAge`: Duration of the session in seconds.\n  - `session.strategy`: Strategy for managing sessions (e.g., \"jwt\").\n  - `providers`: List of authentication providers (e.g., Google, Facebook).\n  - `callbacks`: Custom callbacks for handling events like sign-in and sign-out.",
     "source": "code_example",
-    "updated_at": 1780787859.20722
+    "updated_at": 1780789098.2207086
   },
   "search:Security Practices for TypeScript and Next.js Authentication:nextjs authentication security_ex": {
     "content": "- Use `next-auth` library for authentication.\n- Install via npm: `npm install next-auth@latest`.\n- Configure in `_app.js`: \n  ```javascript\n  import { SessionProvider } from \"next-auth/react\";\n\n  function MyApp({ Component, pageProps }) {\n    return (\n      <SessionProvider session={pageProps.session}>\n        <Component {...pageProps} />\n      </SessionProvider>\n    );\n  }\n\n  export default MyApp;\n  ```\n- Define providers in `pages/api/auth/[...nextauth].js`:\n  ```javascript\n  import NextAuth from \"next-auth\";\n  import Providers from \"next-auth/providers\";\n\n  export default NextAuth({\n    providers: [\n      Providers.Credentials({\n        name: 'Credentials',\n        credentials: {\n          username: { label: \"Username\", type: \"text\" },\n          password: { label: \"Password\", type: \"password\" }\n        },\n        authorize(credentials, req) {\n          // Add logic to check if the provided credentials are valid\n          return { id: 1, name: 'J Smith', email: 'jsmith@example.com' };\n        }\n      })\n    ],\n    session: {\n      jwt: true,\n    },\n    secret: process.env.NEXTAUTH_SECRET,\n  });\n  ```\n- Protect routes with `useSession`:\n  ```javascript\n  import { useSession, signIn, signOut } from \"next-auth/react\";\n\n  function Component() {\n    const { data: session, status } = useSession();\n\n    if (status === \"loading\") return <p>Loading...</p>;\n    if (!session) return (\n      <>\n        Not signed in <br/>\n        <button onClick={() => signIn()}>Sign in</button>\n      </>\n    );\n    return (\n      <>\n        Signed in as {session.user.email} <br/>\n        <button onClick={() => signOut()}>Sign out</button>\n      </>\n    );\n  }\n  ```\n- Set `NEXTAUTH_SECRET` environment variable for production.",
     "source": "code_example",
-    "updated_at": 1780787860.631527
+    "updated_at": 1780789099.5173254
   }
 }

@@ -2,21 +2,21 @@
   "search:.NET Core SignalR:.net core signalr real-time co": {
     "content": "- **CLI Commands**:\n  - `dotnet new signalrserver`\n  - `dotnet add package Microsoft.AspNetCore.SignalR`\n\n- **Latest Versions**:\n  - ASP.NET Core SignalR: 6.0\n\n- **Key Config Options**:\n  - `app.UseEndpoints(endpoints => { endpoints.MapHub<YourHub>(\"/yourHub\"); });`\n  - `services.AddSignalR();`",
     "source": "web_search",
-    "updated_at": 1780787579.2514887
+    "updated_at": 1780788790.278526
   },
   "search:.NET Core SignalR:.net core signalr real-time co_ex": {
     "content": "- Install SignalR using NuGet: `dotnet add package Microsoft.AspNetCore.SignalR`\n- Add SignalR service to Startup.cs: `services.AddSignalR();`\n- Configure SignalR in Program.cs or Startup.cs:\n  ```csharp\n  app.UseEndpoints(endpoints =>\n  {\n      endpoints.MapHub<ChatHub>(\"/chatHub\");\n  });\n  ```\n- Create a Hub class (e.g., ChatHub.cs):\n  ```csharp\n  public class ChatHub : Hub\n  {\n      public async Task SendMessage(string user, string message)\n      {\n          await Clients.All.SendAsync(\"ReceiveMessage\", user, message);\n      }\n  }\n  ```\n- Connect to the hub from a client using JavaScript:\n  ```javascript\n  const connection = new signalR.HubConnectionBuilder()\n      .withUrl(\"/chatHub\")\n      .build();\n\n  connection.on(\"ReceiveMessage\", (user, message) => {\n      console.log(`${user}: ${message}`);\n  });\n\n  connection.start().then(() => {\n      console.log(\"SignalR Connected.\");\n  });\n  ```\n- Key config options in Startup.cs:\n  ```csharp\n  services.AddSignalR(options =>\n  {\n      options.EnableDetailedErrors = true;\n  });\n  ```\n- Latest versions: Ensure you use the latest compatible versions of .NET Core and SignalR.",
     "source": "code_example",
-    "updated_at": 1780787580.405706
+    "updated_at": 1780788791.565711
   },
   "search:.NET Core SignalR:signalr .net core chat applica": {
     "content": "- **CLI Commands**:\n  - `dotnet new mvc -n SignalRChatApp`\n  - `dotnet add package Microsoft.AspNetCore.SignalR`\n  - `flutter create flutter_chat_app`\n\n- **Latest Versions**:\n  - .NET Core: 6.0\n  - Flutter: 3.10\n\n- **Key Config Options**:\n  - In `Startup.cs`, configure SignalR with `services.AddSignalR()`.\n  - In `appsettings.json`, set up connection strings and JWT settings.\n  - For Flutter, ensure dependencies like `flutter_socket_io` are included in `pubspec.yaml`.",
     "source": "web_search",
-    "updated_at": 1780787581.4419153
+    "updated_at": 1780788792.9005508
   },
   "search:.NET Core SignalR:signalr .net core chat applica_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new mvc -n SignalRChatApp`\n  - `dotnet add package Microsoft.AspNetCore.SignalR`\n\n- **Latest Versions**:\n  - ASP.NET Core 7\n  - SignalR 6\n\n- **Key Config Options**:\n  - In `Startup.cs` or `Program.cs`, configure SignalR with `app.UseEndpoints(endpoints => { endpoints.MapHub<ChatHub>(\"/chatHub\"); });`\n  - Ensure CORS is enabled if necessary, e.g., `services.AddCors(options => options.AddPolicy(\"AllowAllOrigins\", builder => builder.AllowAnyOrigin()));`",
     "source": "code_example",
-    "updated_at": 1780787582.4553134
+    "updated_at": 1780788794.2012377
   }
 }
