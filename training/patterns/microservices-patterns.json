@@ -18,5 +18,45 @@
     "content": "- **CLI Commands**:\n  - `dotnet add package MassTransit` (for message broker integration)\n  - `dotnet ef migrations add InitialCreate` (for database migration)\n\n- **Latest Versions**:\n  - .NET Core 7.0\n  - Entity Framework Core 7.0\n  - MassTransit 8.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure connection strings and message broker settings.\n  - `Startup.cs`: Register services for dependency injection, including database context and message bus.\n  - `OutboxRepository`: Implement the outbox pattern to ensure event reliability.",
     "source": "code_example",
     "updated_at": 1780703457.7380025
+  },
+  "search:Microservices Patterns:microservices patterns fastapi": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `sqlalchemy initdb`: Initialize the database schema.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v1.4.32\n\n- **Key Config Options**:\n  - Database URL in `.env` file.\n  - ASGI server configuration (e.g., `uvicorn app.main:app --reload`).\n  - Dependency injection for managing database sessions.",
+    "source": "web_search",
+    "updated_at": 1780715561.8097744
+  },
+  "search:Microservices Patterns:microservices patterns fastapi_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create-app myproject`: Creates a new FastAPI project.\n  - `uvicorn myproject.main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.45\n\n- **Key Config Options**:\n  - Database URL in `settings.py` for SQLAlchemy.\n  - Environment variables for configuration (e.g., `DATABASE_URL`, `SECRET_KEY`).",
+    "source": "code_example",
+    "updated_at": 1780715566.2407203
+  },
+  "search:Microservices Patterns:microservices patterns nextjs ": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-microservices-project`\n  - `npm install @aws-amplify/cli`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - AWS Amplify CLI: v7.6\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing the Next.js build and server configurations.\n  - `.env.local`: For environment variables, including authentication keys.\n  - `amplify/backend/function/authFunction/src/index.js`: For defining AWS Lambda functions for authentication logic.",
+    "source": "web_search",
+    "updated_at": 1780715573.4899266
+  },
+  "search:Microservices Patterns:microservices patterns spring ": {
+    "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:create -DprojectGroupId=com.example -DprojectArtifactId=my-quarkus-app`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Quarkus: 2.13.0.Final\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Specifies the port on which the application will listen.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for database connection.\n  - `quarkus.datasource.username` and `quarkus.datasource.password`: Database credentials.\n  - `quarkus.log.level`: Sets the logging level (e.g., INFO, DEBUG).",
+    "source": "web_search",
+    "updated_at": 1780715586.9288423
+  },
+  "search:Microservices Patterns:microservices patterns spring _ex": {
+    "content": "- **CLI Commands**:\n  - `quarkus dev`: Start Quarkus in development mode.\n  - `mvn clean package -Dquarkus.package.type=native`: Build a native executable for Quarkus.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Quarkus: 2.16.7.Final\n\n- **Key Config Options**:\n  - `quarkus.http.host`: Set the HTTP host.\n  - `quarkus.http.port`: Set the HTTP port.\n  - `quarkus.native.container-build`: Build a container image for native executables.",
+    "source": "code_example",
+    "updated_at": 1780715592.5227373
+  },
+  "search:Microservices Patterns:microservices patterns gitlab-": {
+    "content": "- Clone the microservices_patterns repository using `git@gitlab.com:narsi.sanda/microservices_patterns.git`.\n- For GitLab CI/CD, use multi-stage workflows with caching and distributed runners for scalable automation.\n- Implement best practices to avoid widespread anti-patterns in GitLab CI/CD pipelines.\n- Learn about effective rate limiting in microservices using Spring Boot to control traffic and enhance reliability.",
+    "source": "web_search",
+    "updated_at": 1780715598.0217357
+  },
+  "search:Microservices Patterns:microservices patterns gitlab-_ex": {
+    "content": "- Use `gitlab-ci.yml` to define CI/CD pipelines.\n- For microservices, consider using GitLab's multi-project pipeline feature.\n- Utilize `image` keyword to specify the Docker image for your jobs.\n- Employ `script` section to run commands in a job.\n- Leverage `stages` and `jobs` to organize your pipeline logically.\n- Use `artifacts` to cache dependencies between stages.\n- Implement `cache` to speed up builds by reusing previous build artifacts.\n- For production deployments, use GitLab's environment variables for sensitive information.\n- Monitor pipeline status with GitLab's web interface or API.",
+    "source": "code_example",
+    "updated_at": 1780715602.0673215
+  },
+  "search:Microservices Patterns:microservices patterns nextjs _ex": {
+    "content": "- **CLI Commands**:\n  - `vercel` to deploy your Next.js app.\n  - `npm run dev` for local development.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Vercel CLI: v28.0.0\n\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations like asset paths, webpack settings.\n  - Environment variables in `.env.local` for sensitive data.\n\nFor serverless authentication with Auth0:\n- Clone the boilerplate from GitHub: `git clone https://github.com/AwolDes/serverless-nextjs-auth0.git`.\n- Install dependencies: `npm install`.\n- Configure environment variables in `.env.local` with your Auth0 domain, client ID, and secret.\n- Deploy to Vercel using `vercel`.\n\nThis setup provides a robust foundation for building serverless authenticated applications with Next.js.",
+    "source": "code_example",
+    "updated_at": 1780715579.0145974
   }
 }

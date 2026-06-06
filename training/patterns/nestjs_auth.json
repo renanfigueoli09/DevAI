@@ -1,7 +1,0 @@
-{
-  "pattern:nestjs-auth:jwt": {
-    "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
-    "source": "code_pattern",
-    "updated_at": 1780714993.7388475
-  }
-}
