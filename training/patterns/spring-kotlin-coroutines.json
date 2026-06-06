@@ -1,0 +1,22 @@
+{
+  "search:spring+kotlin-coroutines:spring kotlin coroutines perfo": {
+    "content": "- Use `@EnableCoroutineSupport` annotation in Spring Boot application.\n- Update Kotlin version to at least 1.8 for better coroutine support.\n- Utilize `suspend` functions for non-blocking operations.\n- Employ `withContext(Dispatchers.IO)` for I/O-bound tasks.\n- Avoid blocking calls within coroutines; use `async` and `await`.\n- Configure Spring Boot with `spring.task.execution.pool.core-size` and `spring.task.execution.pool.max-size` for optimal thread pool management.\n- Monitor application performance using tools like Micrometer or Prometheus.\n- Regularly update dependencies to benefit from latest optimizations and security patches.",
+    "source": "web_search",
+    "updated_at": 1780716855.098169
+  },
+  "search:spring+kotlin-coroutines:spring kotlin coroutines perfo_ex": {
+    "content": "- Use `suspend` functions instead of blocking calls.\n- Optimize dispatcher usage by choosing the right thread pool.\n- Apply structured concurrency to manage coroutine lifecycles.\n- Monitor and profile coroutines using tools like VisualVM or JProfiler.\n- Update Kotlin and Spring Framework to their latest versions for performance improvements.\n- Configure application properties for optimal coroutine behavior, e.g., `spring.task.execution.pool.core-size`.\n- Use `withContext` for context switching between different dispatchers.\n- Implement backpressure strategies with Kotlin Flow for reactive programming.\n- Regularly update dependencies and libraries to benefit from performance enhancements.",
+    "source": "code_example",
+    "updated_at": 1780716865.9147756
+  },
+  "search:spring+kotlin-coroutines:spring kotlin coroutines error": {
+    "content": "- **CLI Commands**:\n  - `./gradlew build --refresh-dependencies` to refresh dependencies.\n  - `./gradlew bootRun` to run a Spring Boot application.\n\n- **Latest Versions**:\n  - Kotlin: 1.9.20\n  - Spring Boot: 3.2.0\n\n- **Key Config Options**:\n  - `spring.task.execution.pool.core-size`: Core pool size for task execution.\n  - `spring.task.execution.pool.max-size`: Maximum pool size for task execution.\n  - `spring.task.execution.pool.queue-capacity`: Capacity of the queue used to hold tasks before they are executed.",
+    "source": "web_search",
+    "updated_at": 1780716873.7569485
+  },
+  "search:spring+kotlin-coroutines:spring kotlin coroutines error_ex": {
+    "content": "- **Error Handling in Kotlin Coroutines**: Use `try-catch` blocks to handle exceptions.\n- **Handling Exceptions in Flow**: Utilize the `catch` operator for exception handling in Kotlin Coroutines Flow.\n- **Non-Blocking Spring Boot with Kotlin Coroutines**: Leverage coroutines for building non-blocking applications.\n- **Comparison**: Compare reactive and coroutine approaches in Spring Boot development.",
+    "source": "code_example",
+    "updated_at": 1780716882.1352599
+  }
+}

@@ -1,25 +1,27 @@
 # DevAI Validation Report
-*2026-06-06 00:30*
+*2026-06-06 00:33*
 
 ## Score: 53% `[██████████░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
+| nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
 | nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nestjs-auth | 2.0/5.0 | 40% | ❌ |
-| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
+| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
 | spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (30%)
+### nestjs-mongodb (10%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
+- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
+  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
@@ -29,10 +31,6 @@
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
-
-### nestjs-auth (40%)
-- ✗ NestJS PartialType: from @nestjs/mapped-types or @nestjs/common?
-  - Wrong: `@nestjs/common`
 
 ### nlp (53%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
@@ -59,7 +57,7 @@ python scripts/validate.py --fix
 # Forçar retreinamento específico
 python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
-python scripts/validate.py --fix --topic nestjs-auth
+python scripts/validate.py --fix --topic nlp
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive
