@@ -1,0 +1,22 @@
+{
+  "search:docker+kubernetes-best-practices:docker kubernetes best practic": {
+    "content": "- **CLI Commands**:\n  - `docker build --platform linux/amd64 .`\n  - `kubectl apply -f deployment.yaml`\n  - `helm install my-release stable/my-chart`\n\n- **Latest Versions**:\n  - Docker: 25.0.0\n  - Kubernetes: v1.27.0\n  - Helm: v3.9.0\n\n- **Key Config Options**:\n  - Resource Requests and Limits in Kubernetes Pods\n  - Security Contexts for Containers\n  - Auto-scaling with Horizontal Pod Autoscaler (HPA)\n  - Observability with Prometheus and Grafana",
+    "source": "web_search",
+    "updated_at": 1780729858.7386858
+  },
+  "search:docker+kubernetes-best-practices:docker kubernetes best practic_ex": {
+    "content": "- **CLI Commands**:\n  - `docker build --tag myimage:latest .`\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl get pods`\n\n- **Latest Versions**:\n  - Docker: v24.0.6\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - Dockerfile: `FROM`, `RUN`, `COPY`, `CMD`\n  - deployment.yaml: `apiVersion`, `kind`, `metadata`, `spec`",
+    "source": "code_example",
+    "updated_at": 1780729868.403604
+  },
+  "search:docker+kubernetes-best-practices:docker kubernetes security har": {
+    "content": "- **CLI Commands**:\n  - `docker run --cap-drop ALL`: Drop all capabilities from the container.\n  - `kubectl apply -f security-policy.yaml`: Apply Kubernetes security policies.\n\n- **Latest Versions**:\n  - Docker: v24.1.0 (as of my last update)\n  - Kubernetes: v1.27.0\n\n- **Key Config Options**:\n  - Docker: Use `--security-opt=no-new-privileges` to prevent privilege escalation.\n  - Kubernetes: Implement RBAC for role-based access control, use Network Policies for network segmentation.",
+    "source": "web_search",
+    "updated_at": 1780729876.1255429
+  },
+  "search:docker+kubernetes-best-practices:docker kubernetes security har_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create secret tls my-tls-secret --cert=path/to/cert.pem --key=path/to/key.pem`\n  - `kubectl apply -f security-policy.yaml`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 24.0.0\n\n- **Key Config Options**:\n  - `podSecurityPolicy` for fine-grained control over pod creation.\n  - `networkPolicies` to define network access rules between pods and services.\n  - `imagePullSecrets` in pod specifications for secure image pulling from private registries.",
+    "source": "code_example",
+    "updated_at": 1780729880.9996507
+  }
+}
