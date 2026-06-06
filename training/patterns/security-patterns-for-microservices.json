@@ -1,0 +1,22 @@
+{
+  "search:security-patterns-for-microservices:microservices security best pr": {
+    "content": "- Use `kubectl` for managing Kubernetes resources.\n- Implement OAuth2 Proxy for authentication and authorization.\n- Update dependencies to the latest version using `npm update`.\n- Configure TLS/SSL certificates with `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`.\n- Use Docker Compose for local development and testing.\n- Implement rate limiting with tools like Envoy or Kubernetes Ingress Controller.\n- Regularly audit microservices using tools like Sonatype Nexus Lifecycle.\n- Enable encryption at rest and in transit using AWS KMS or Azure Key Vault.\n- Monitor security events with SIEM solutions like Splunk or ELK Stack.",
+    "source": "web_search",
+    "updated_at": 1780727170.66421
+  },
+  "search:security-patterns-for-microservices:microservices security best pr_ex": {
+    "content": "- Use Spring Security for authentication and authorization.\n- Implement OAuth2 for secure communication between microservices.\n- Utilize JWT (JSON Web Tokens) for stateless authentication.\n- Apply HTTPS to encrypt data in transit.\n- Regularly update dependencies to patch security vulnerabilities.\n- Employ Docker for containerization with latest image versions.\n- Configure CI/CD pipelines for automated testing and deployment.\n- Monitor microservices using tools like Prometheus and Grafana.\n- Implement rate limiting to prevent abuse and denial of service attacks.",
+    "source": "code_example",
+    "updated_at": 1780727175.1310604
+  },
+  "search:security-patterns-for-microservices:oauth 2.0 and jwt in microserv": {
+    "content": "- **CLI Commands**: Use `docker-compose up` to start services.\n- **Latest Versions**: Ensure using OAuth2 and JWT libraries compatible with your programming language.\n- **Key Config Options**:\n  - Set `ISSUER_URL` in the identity provider configuration.\n  - Configure `AUDIENCE` in the client application settings.\n  - Use `JWT_SECRET` for signing tokens securely.",
+    "source": "web_search",
+    "updated_at": 1780727184.9456372
+  },
+  "search:security-patterns-for-microservices:oauth 2.0 and jwt in microserv_ex": {
+    "content": "- **CLI Commands**: Use `docker-compose up` to start services.\n- **Latest Versions**:\n  - Node.js v16.x\n  - Express v4.18.x\n  - JWT v9.0.x\n  - OAuth2 v3.0.x\n- **Key Config Options**:\n  - `JWT_SECRET`: Secret key for signing JWT tokens.\n  - `OAUTH2_CLIENT_ID`: Client ID for OAuth2 authentication.\n  - `OAUTH2_CLIENT_SECRET`: Client secret for OAuth2 authentication.\n  - `GATEWAY_URL`: URL of the gateway service.",
+    "source": "code_example",
+    "updated_at": 1780727194.8299193
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "search:Testing Patterns for Spring Boot + JPA:unit testing with junit 5": {
+    "content": "- **CLI Commands**:\n  - `mvn test` to run tests using Maven.\n  - `gradle test` to run tests using Gradle.\n\n- **Latest Versions**:\n  - JUnit 5: Version 5.9.3 (as of my last update).\n  - Mockito: Version 4.0.0 (as of my last update).\n\n- **Key Config Options**:\n  - `@Test`: Marks a method as a test.\n  - `@BeforeEach`: Runs before each test method.\n  - `@AfterEach`: Runs after each test method.\n  - `@BeforeAll`: Runs once before all tests in the class.\n  - `@AfterAll`: Runs once after all tests in the class.\n  - `@TestInstance(TestInstance.Lifecycle.PER_METHOD)`: Specifies lifecycle per method for test instances.\n  - `@DisplayName(\"Custom Test Name\")`: Allows customizing the display name of a test.",
+    "source": "web_search",
+    "updated_at": 1780727063.655197
+  },
+  "search:Testing Patterns for Spring Boot + JPA:unit testing with junit 5_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn test` to run tests using Maven.\n  - `gradle test` to run tests using Gradle.\n\n- **Latest Versions**:\n  - JUnit 5: Version 5.9.3 (as of my last update).\n  - Mockito: Version 4.0.0 (as of my last update).\n\n- **Key Config Options**:\n  - `@Test`: Annotates methods to be run as tests.\n  - `@BeforeEach` and `@AfterEach`: Methods annotated with these will run before and after each test method, respectively.\n  - `@BeforeAll` and `@AfterAll`: Methods annotated with these will run once before and after all test methods in the class.\n  - `@MockBean`: Used to create a mock bean for dependency injection in Spring Boot tests.",
+    "source": "code_example",
+    "updated_at": 1780727068.1554995
+  },
+  "search:Testing Patterns for Spring Boot + JPA:integration testing strategies": {
+    "content": "- Use `go test` for running integration tests in Go.\n- For Big Bang testing, combine all components at once using the command `make test-all`.\n- Top-Down testing can be initiated with `make test-top-down`.\n- Key config options include setting environment variables like `export TEST_ENV=production`.\n- Ensure your CI/CD pipeline includes steps for running integration tests.",
+    "source": "web_search",
+    "updated_at": 1780727073.0281281
+  },
+  "search:Testing Patterns for Spring Boot + JPA:integration testing strategies_ex": {
+    "content": "- **CLI Commands**: Use `pytest` for Python integration tests.\n- **Latest Version**: Ensure using the latest version of `pytest` by running `pip install --upgrade pytest`.\n- **Key Config Options**:\n  - `-v`: Verbose mode to get detailed output.\n  - `-k <expression>`: Run only tests that match the given expression.\n  - `--cov=<module>`: Measure code coverage for a specific module.",
+    "source": "code_example",
+    "updated_at": 1780727076.2580483
+  },
+  "search:Testing Patterns for Spring Boot + JPA:mocking frameworks like mockit": {
+    "content": "- **Latest Version of Mockito**: As of my last update, the latest version is 4.x.\n- **CLI Commands**:\n  - `mvn dependency:add -DgroupId=org.mockito -DartifactId=mockito-core -Dversion=4.x`\n  - `gradle dependencies add testImplementation 'org.mockito:mockito-core:4.x'`\n- **Key Config Options**:\n  - `@Mock`: Creates a mock object.\n  - `@InjectMocks`: Injects mocks into the tested class.\n  - `when(...).thenReturn(...)`: Specifies the return value for a method call.\n  - `verify(...).times(n)`: Verifies that a method was called a specific number of times.",
+    "source": "web_search",
+    "updated_at": 1780727083.2484646
+  },
+  "search:Testing Patterns for Spring Boot + JPA:mocking frameworks like mockit_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn test` to run tests.\n  - `mvn clean install` for a full build.\n\n- **Latest Version**: \n  - Mockito 4.x\n\n- **Key Config Options**:\n  - `@Mock`: Creates a mock object.\n  - `@InjectMocks`: Injects mocks into the test class.\n  - `when(...).thenReturn(...)`: Specifies the behavior of the mock.",
+    "source": "code_example",
+    "updated_at": 1780727086.497504
+  }
+}
