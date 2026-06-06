@@ -17,6 +17,6 @@
   "search:Advanced Error Handling in Kubernetes StatefulSets:statefulset failure recovery_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n  - Kueue v0.15\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`\n  - `.spec.updateStrategy.type`",
     "source": "code_example",
-    "updated_at": 1780777112.0595746
+    "updated_at": 1780777901.368069
   }
 }
