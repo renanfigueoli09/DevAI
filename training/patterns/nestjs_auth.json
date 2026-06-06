@@ -2,21 +2,6 @@
   "pattern:nestjs-auth:jwt": {
     "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
     "source": "code_pattern",
-    "updated_at": 1780746339.1384373
-  },
-  "qa:partialtype-source": {
-    "content": "ANSWER: @nestjs/mapped-types. import { PartialType } from '@nestjs/mapped-types'. NEVER from @nestjs/common (doesn't exist there). NEVER from @nestjs/swagger.",
-    "source": "correct_answer",
-    "updated_at": 1780746235.790656
-  },
-  "NestJS PartialType from @nestjs/mapped-types or @nestjs/common": {
-    "content": "ANSWER: @nestjs/mapped-types. import { PartialType } from '@nestjs/mapped-types'. NEVER from @nestjs/common (doesn't exist there). NEVER from @nestjs/swagger.",
-    "source": "correct_answer",
-    "updated_at": 1780746235.9963012
-  },
-  "pattern:nestjs:partialtype-source": {
-    "content": "CRITICAL: PartialType MUST be imported from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import { PartialType } from '@nestjs/mapped-types';",
-    "source": "forced_training",
-    "updated_at": 1780746236.2604349
+    "updated_at": 1780746363.96058
   }
 }
