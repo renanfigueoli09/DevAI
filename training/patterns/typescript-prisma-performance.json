@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-performance:typescript prisma performance ": {
+    "content": "- **Prisma Optimize**: Integrate Prisma Optimize to diagnose and address inefficiencies in queries.\n- **Next.js Performance**: Use `getStaticProps` and `getServerSideProps` for efficient data handling.\n- **Prisma ORM**: Choose Prisma for its TypeScript-first approach, supporting both SQL and MongoDB.\n- **Performance Optimization**: Identify bottlenecks, streamline queries, and use caching to enhance responsiveness.\n- **CLI Commands**:\n  - `npx prisma optimize`: Run Prisma Optimize to diagnose query inefficiencies.\n  - `npm install @prisma/client@latest`: Install the latest version of Prisma Client.\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable query logging for debugging.\n  - `cache`: Configure caching strategies to improve performance.",
+    "source": "web_search",
+    "updated_at": 1780742427.13867
+  },
+  "search:typescript-prisma-performance:typescript prisma performance _ex": {
+    "content": "- **CLI Commands**: Use `prisma optimize` to analyze and suggest query improvements.\n- **Latest Version**: Ensure you are using the latest Prisma version for optimal performance.\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable logging of queries for debugging.\n  - `cache`: Configure caching strategies to reduce database load.\n  - `retryAttempts`: Set retry attempts for failed queries.",
+    "source": "code_example",
+    "updated_at": 1780742431.0971541
+  },
+  "search:typescript-prisma-performance:prisma typescript pagination b": {
+    "content": "- **Prisma ORM**: Use `prisma generate` to generate Prisma Client based on your schema.\n- **API Pagination**:\n  - Use cursor-based pagination for efficient large datasets.\n  - Implement query parameters like `page`, `limit`, and `cursor`.\n  - Ensure consistency in response structure across endpoints.\n- **React Frontend Pagination**:\n  - Utilize libraries like `react-paginate` or implement custom hooks.\n  - Manage state with React's `useState` for current page and data.\n  - Use `useEffect` to fetch data on page change.",
+    "source": "web_search",
+    "updated_at": 1780742438.7240524
+  },
+  "search:typescript-prisma-performance:prisma typescript pagination b_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates the Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.x\n  - Prisma Migrate: v1.20\n\n- **Key Config Options**:\n  - `page`: Specifies the current page number for pagination.\n  - `pageSize`: Defines the number of items per page.\n  - `cursor`: Used for cursor-based pagination, providing a unique identifier to fetch the next set of records.\n\n- **Best Practices**:\n  - Use cursor-based pagination over offset for large datasets due to better performance and scalability.\n  - Implement rate limiting to prevent abuse and ensure fair usage.",
+    "source": "code_example",
+    "updated_at": 1780742445.264772
+  }
+}

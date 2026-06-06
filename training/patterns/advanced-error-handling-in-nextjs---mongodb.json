@@ -1,0 +1,32 @@
+{
+  "search:Advanced Error Handling in NextJS + MongoDB:nextjs error handling": {
+    "content": "- **Error Handling in Next.js**: Learn comprehensive strategies to handle errors effectively.\n- **Implement Error Boundaries**: Use `getServerSideProps` and `getStaticProps` for server-side error handling.\n- **Custom Error Pages**: Create custom error pages using `_error.js`.\n- **Server Component Error Patterns**: Implement robust error handling patterns in server components.\n- **CLI Commands**: Use `next build` to build your application, `next start` to start the production server.\n- **Latest Versions**: Ensure you are using the latest version of Next.js for optimal performance and security.\n- **Key Config Options**: Configure `next.config.js` for advanced settings like asset optimization and environment variables.",
+    "source": "web_search",
+    "updated_at": 1780742217.3638694
+  },
+  "search:Advanced Error Handling in NextJS + MongoDB:nextjs error handling_ex": {
+    "content": "- **CLI Commands**: `next dev` for development, `next build` for building, `next start` for starting the server.\n- **Latest Versions**: Ensure using the latest Next.js version to benefit from the most recent features and bug fixes.\n- **Key Config Options**:\n  - `errorPageOverride`: Customize error pages by specifying a custom file or component.\n  - `reactStrictMode`: Enable React's strict mode for better development practices.\n  - `i18n`: Configure internationalization settings to support multiple languages.",
+    "source": "code_example",
+    "updated_at": 1780742222.4757874
+  },
+  "search:Advanced Error Handling in NextJS + MongoDB:mongodb error handling": {
+    "content": "- Use `try...catch` blocks to handle errors in MongoDB operations.\n- For Node.js, install the latest version of `mongodb` package using `npm install mongodb@latest`.\n- Configure MongoDB connection with error handling by setting options like `{ useNewUrlParser: true, useUnifiedTopology: true }`.\n- Utilize `db.collection.find().toArray()` method within a `try...catch` block to handle query errors.\n- Implement custom error handlers for different types of MongoDB errors (e.g., connection errors, query errors).\n- Use `console.error(err.stack)` to log detailed error information for debugging purposes.\n- Regularly update MongoDB and Node.js packages to benefit from the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1780742230.2541072
+  },
+  "search:Advanced Error Handling in NextJS + MongoDB:mongodb error handling_ex": {
+    "content": "- Use `try-catch` blocks to handle MongoDB errors.\n- Implement error logging using frameworks like Winston or Bunyan.\n- Utilize Mongoose middleware for handling errors in schemas and models.\n- Check MongoDB driver versions regularly for updates and bug fixes.\n- Configure MongoDB connection with options like `useNewUrlParser`, `useUnifiedTopology`.\n- Use `async/await` syntax to handle asynchronous operations more cleanly.\n- Implement custom error classes for specific application errors.\n- Regularly review and test error handling in your codebase.",
+    "source": "code_example",
+    "updated_at": 1780742236.0651433
+  },
+  "search:Advanced Error Handling in NextJS + MongoDB:error logging nextjs": {
+    "content": "- **Sentry Integration**:\n  - Install Sentry using `npm install @sentry/nextjs`\n  - Configure in `_app.js` with your DSN: \n    ```javascript\n    import * as Sentry from '@sentry/nextjs';\n\n    Sentry.init({\n      dsn: 'your-dsn-here',\n    });\n    ```\n\n- **Error Boundaries**:\n  - Create a class component `ErrorBoundary`:\n    ```javascript\n    import { Component } from 'react';\n\n    class ErrorBoundary extends Component {\n      constructor(props) {\n        super(props);\n        this.state = { hasError: false };\n      }\n\n      static getDerivedStateFromError(error) {\n        return { hasError: true };\n      }\n\n      componentDidCatch(error, errorInfo) {\n        console.error('Caught an error:', error, errorInfo);\n      }\n\n      render() {\n        if (this.state.hasError) {\n          return <h1>Something went wrong.</h1>;\n        }\n        return this.props.children;\n      }\n    }\n\n    export default ErrorBoundary;\n    ```\n  - Wrap your component in `pages/_app.js`:\n    ```javascript\n    import ErrorBoundary from '../components/ErrorBoundary';\n\n    function MyApp({ Component, pageProps }) {\n      return (\n        <ErrorBoundary>\n          <Component {...pageProps} />\n        </ErrorBoundary>\n      );\n    }\n\n    export default MyApp;\n    ```\n\n- **Middleware and Centralized Error Handler**:\n  - Install `nextjs-centralized-error-handler` using `npm install nextjs-centralized-error-handler`\n  - Configure in your Next.js project as per the documentation.\n\n- **Custom Error Pages**:\n  - Create a custom error page at `pages/500.js`:\n    ```javascript\n    export default function CustomErrorPage() {\n      return <h1>500 - Internal Server Error</h1>;\n    }\n    ```\n\nThese steps provide actionable guidance for setting up error logging and handling in a Next.js application using Sentry, Error Boundaries, middleware, and custom error pages.",
+    "source": "web_search",
+    "updated_at": 1780742245.4432619
+  },
+  "search:Advanced Error Handling in NextJS + MongoDB:error logging nextjs_ex": {
+    "content": "- Install Sentry using `npm install @sentry/nextjs`\n- Configure Sentry in `next.config.js` with your DSN\n- Use `Sentry.captureException(error)` to log errors\n- Implement Error Boundaries by creating a class component and wrapping it around pages\n- Check Next.js documentation for the latest version and best practices",
+    "source": "code_example",
+    "updated_at": 1780742249.5840282
+  }
+}

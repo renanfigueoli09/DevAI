@@ -2,6 +2,26 @@
   "pattern:spring+mongodb:document": {
     "content": "// @Document(collection='books') @Data class Book { @Id String id; @NotBlank String title; @CreatedDate LocalDateTime createdAt; }. Repository: extends MongoRepository<Book,String>{}",
     "source": "code_pattern",
-    "updated_at": 1780740569.49299
+    "updated_at": 1780742567.413723
+  },
+  "search:spring-boot-mongodb:spring boot mongodb crud opera": {
+    "content": "- **Latest Versions**: Spring Boot 3.x, MongoDB 6.x\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application\n  - `mongoimport --db yourDatabase --collection yourCollection --file data.json` for importing data\n- **Key Config Options**:\n  - `spring.data.mongodb.uri=mongodb://localhost:27017/yourDatabase`\n  - `spring.data.mongodb.database=yourDatabase`\n  - `spring.data.mongodb.collection=yourCollection`\n- **Annotations**:\n  - `@Document` for MongoDB entities\n  - `@Id` for primary key\n  - `@Field` for custom field names\n- **CRUD Operations**:\n  - Create: Use `save()` method\n  - Read: Use `findById()`, `findAll()`\n  - Update: Use `save()` with existing document\n  - Delete: Use `deleteById()`\n- **Dependencies**:\n  - Add `spring-boot-starter-data-mongodb` to your `pom.xml`\n- **Example Project**: [GitHub - rajkumar70040/springboot-mongodb-crud](https://github.com/rajkumar70040/springboot-mongodb-crud)",
+    "source": "web_search",
+    "updated_at": 1780742498.318481
+  },
+  "search:spring-boot-mongodb:spring boot mongodb crud opera_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mongoimport --db yourDatabaseName --collection yourCollectionName --file data.json` to import data into MongoDB.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - MongoDB Java Driver: 4.5.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for database schema management.\n  - `logging.level.org.springframework.data.mongodb=DEBUG`: Enable debug logging for MongoDB operations.",
+    "source": "code_example",
+    "updated_at": 1780742506.4749968
+  },
+  "search:spring-boot-mongodb:mongodb spring boot aggregatio": {
+    "content": "- **Latest Version of Spring Data MongoDB**: As of my last update, the latest version is 4.x.\n  \n- **CLI Commands**:\n  - `mvn clean install` for building projects with Maven.\n  - `gradle build` for building projects with Gradle.\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Specifies the MongoDB connection URI.\n  - `spring.data.mongodb.database`: Specifies the database name.\n  - `spring.data.mongodb.host`: Specifies the MongoDB host.\n  - `spring.data.mongodb.port`: Specifies the MongoDB port.\n\n- **Aggregation Framework Support**:\n  - Use `@Aggregation` annotation to define aggregation pipelines in Spring Data MongoDB.\n  - Utilize `Aggregation.newAggregation()` for constructing complex aggregation pipelines.\n\n- **GitHub Project**:\n  - Explore advanced MongoDB aggregation pipelines using Spring Boot 3.x and Spring Data MongoDB at [LvsalnNarayana/spring-mongodb-aggregation-query-api](https://github.com/LvsalnNarayana/spring-mongodb-aggregation-query-api).\n\n- **MongoDB Aggregation Pipelines**:\n  - Leverage MongoDB's powerful aggregation framework to transform and analyze data efficiently.\n  - Use stages like `$match`, `$group`, `$sort`, `$project` in your pipelines.\n\n- **Ultra-Fast APIs**:\n  - Build high-performance APIs using Spring Boot and MongoDB aggregation pipelines for real-time data analysis.",
+    "source": "web_search",
+    "updated_at": 1780742515.6785944
+  },
+  "search:spring-boot-mongodb:mongodb spring boot aggregatio_ex": {
+    "content": "- **CLI Commands**:\n  - `mongoimport --db <database_name> --collection <collection_name> --file <json_file_path>`\n  - `mongodump --uri \"mongodb+srv://<username>:<password>@cluster0.mongodb.net/<database_name>?retryWrites=true&w=majority\" --out /path/to/backup`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.5\n  - MongoDB Java Driver: 4.6.2\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string to MongoDB.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.collection`: Collection name.\n  - `spring.data.mongodb.host`: Host address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",
+    "source": "code_example",
+    "updated_at": 1780742526.032516
   }
 }

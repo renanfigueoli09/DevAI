@@ -1,0 +1,32 @@
+{
+  "search:DevOps Practices for React-Query + TypeScript:react-query devops": {
+    "content": "- **Latest Version**: react-query@3.39.3\n- **CLI Command**: Not applicable; use npm or yarn for installation.\n- **Key Config Options**:\n  - `queryClient`: Centralized place to configure and manage queries.\n  - `useQuery`: Hook for fetching data with caching and invalidation.\n  - `useMutation`: Hook for handling side effects like form submissions, custom mutations.\n  - `refetchInterval`: Automatically refetches the query at specified intervals.",
+    "source": "web_search",
+    "updated_at": 1780742369.6483808
+  },
+  "search:DevOps Practices for React-Query + TypeScript:react-query devops_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Version of React Query**: As of my last update, the latest version is 4.x.\n- **Key Config Options**:\n  - `useQuery`: For fetching data and managing state.\n  - `queryClient`: For configuring global query behavior.\n  - `refetchInterval`: To automatically refetch data at regular intervals.",
+    "source": "code_example",
+    "updated_at": 1780742372.5465007
+  },
+  "search:DevOps Practices for React-Query + TypeScript:docker react-query": {
+    "content": "- **CLI Commands**:\n  - `docker build --tag my-react-app .`\n  - `docker run -p 3000:3000 my-react-app`\n\n- **Latest Versions**:\n  - React Query: v4.x\n  - Docker: v20.10.x\n\n- **Key Config Options**:\n  - React Query: `queryClient` for managing query state.\n  - Docker: `Dockerfile` for defining build steps, `docker-compose.yml` for multi-container setups.",
+    "source": "web_search",
+    "updated_at": 1780742396.687128
+  },
+  "search:DevOps Practices for React-Query + TypeScript:typescript ci/cd": {
+    "content": "- Use GitLab CI/CD to build, test, and publish TypeScript libraries.\n- Install Cicada using npm (`npm install -g cicada`).\n- Configure Cicada pipelines in TypeScript for local testing.\n- Explore open-source CI/CD projects like promptfoo, kubero, and paths-filter on LibHunt.",
+    "source": "web_search",
+    "updated_at": 1780742380.6264932
+  },
+  "search:DevOps Practices for React-Query + TypeScript:typescript ci/cd_ex": {
+    "content": "- Use `npm install -g @aws-amplify/cli` to install the AWS Amplify CLI.\n- Initialize your project with `amplify init`.\n- Add a new environment with `amplify env add`.\n- Deploy your application with `amplify publish`.\n- Configure CI/CD in GitHub Actions by creating `.github/workflows/ci-cd.yml`.\n- Use `npm install --save-dev typescript @types/node` for TypeScript setup.\n- Configure `tsconfig.json` with `\"compilerOptions\": { \"target\": \"ES6\", \"module\": \"commonjs\" }`.\n- Add a build step in GitHub Actions: `run: npm run build`.\n- Deploy to AWS Lambda using the Amplify CLI or AWS CDK.\n- Ensure your code repository is connected to an AWS CodePipeline for automated builds and deployments.",
+    "source": "code_example",
+    "updated_at": 1780742388.0063167
+  },
+  "search:DevOps Practices for React-Query + TypeScript:docker react-query_ex": {
+    "content": "- **CLI Commands**:\n  - `docker build -t react-example-image:latest .`\n  - `docker run -p 3000:3000 react-example-image:latest`\n\n- **Latest Versions**:\n  - React Query: v4.x\n  - Vite: v4.x\n\n- **Key Config Options**:\n  - Dockerfile: Define the base image, install dependencies, copy files, and set environment variables.\n  - .dockerignore: Specify files to exclude from the build context.\n  - Environment Variables: Use `ENV` in Dockerfile or `-e` flag with `docker run`.",
+    "source": "code_example",
+    "updated_at": 1780742407.2213128
+  }
+}
