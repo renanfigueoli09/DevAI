@@ -2,6 +2,6 @@
   "search:go-gin-postgres-transaction:go gin postgresql transaction ": {
     "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u github.com/jinzhu/gorm`\n  - `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n\n- **Latest Versions**:\n  - Gin: v1.8.2\n  - GORM: v2.30.4\n  - PostgreSQL: 15.2\n\n- **Key Config Options**:\n  - `DB, err := gorm.Open(\"postgres\", \"host=localhost user=postgres password=mysecretpassword dbname=testdb sslmode=disable\")`\n  - `r := gin.Default()`\n  - `r.POST(\"/users\", func(c *gin.Context) { ... })`",
     "source": "web_search",
-    "updated_at": 1780750599.5209758
+    "updated_at": 1780750654.3440254
   }
 }
