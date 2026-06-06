@@ -2,6 +2,6 @@
   "pattern:nestjs+kafka:setup": {
     "content": "// Kafka: app.connectMicroservice({transport:Transport.KAFKA,options:{client:{brokers:[KAFKA_BROKER]},consumer:{groupId:'app-group',allowAutoTopicCreation:true}}}). Producer: ClientKafka.emit(topic,data). Consumer: @EventPattern('topic') handle(@Payload() data){}",
     "source": "code_pattern",
-    "updated_at": 1780765141.4068234
+    "updated_at": 1780765271.843657
   }
 }
