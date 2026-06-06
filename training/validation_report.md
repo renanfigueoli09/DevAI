@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-06 05:38*
+*2026-06-06 05:42*
 
 ## Score: 60% `[████████████░░░░░░░░]`
 
@@ -20,11 +20,11 @@
 ### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
+- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
+  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
-- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
-  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
