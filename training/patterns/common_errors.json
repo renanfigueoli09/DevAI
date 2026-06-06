@@ -17,6 +17,6 @@
   "qa:ts2307-create-module": {
     "content": "TS2307 Cannot find module './book/book.module': CREATE src/book/book.module.ts\n@Module({\n  imports: [MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],\n  providers: [BookService], controllers: [BookController], exports: [BookService]\n}) export class BookModule {}",
     "source": "critical_pattern",
-    "updated_at": 1780757863.9635913
+    "updated_at": 1780758176.0759647
   }
 }
