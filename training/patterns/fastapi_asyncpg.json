@@ -2,11 +2,11 @@
   "search:fastapi-asyncpg:fastapi asyncpg orm 2025": {
     "content": "- **GitHub Repository**: grillazz/fastapi-sqlalchemy-asyncpg\n- **Latest ORM**: Piccolo ORM\n- **Key Config Options**:\n  - FastAPI version: 0.75.2\n  - SQLAlchemy version: 1.4.39\n  - Asyncpg version: 0.26.0\n  - Uvicorn version: 0.18.2\n- **CLI Commands**:\n  ```bash\n  pip install fastapi sqlalchemy asyncpg piccolo[async]\n  uvicorn main:app --reload\n  ```\n- **Performance Highlights**:\n  - Piccolo ORM is up to 5-10x faster than traditional ORMs.\n  - FastAPI + Async ORM handles 3x more requests per second than Flask + sync ORM.\n  - PostgreSQL + asyncpg reduces query latency by 70% for I/O-bound operations.",
     "source": "web_search",
-    "updated_at": 1780774796.21787
+    "updated_at": 1780775529.542998
   },
   "search:fastapi-asyncpg:fastapi asyncpg orm 2025_ex": {
     "content": "- **GitHub Repository:** [jordic/fastapi_asyncpg](https://github.com/jordic/fastapi_asyncpg)\n- **Latest Version of FastAPI Asyncpg:** Not specified in the search results.\n- **Key Config Options:**\n  - `db.connection`: A raw connection picked from the pool.\n- **CLI Commands with Exact Flags:** Not applicable as this is a library for use within Python code, not a CLI tool.\n- **Latest Versions of Dependencies:**\n  - FastAPI: [2.0](https://fastapi.tiangolo.com/)\n  - asyncpg: [1.0](https://www.python.org/dev/peps/pep-0484/)\n  - SQLAlchemy: [2.0](https://docs.sqlalchemy.org/en/20/)",
     "source": "code_example",
-    "updated_at": 1780774796.9473655
+    "updated_at": 1780775530.3153331
   }
 }

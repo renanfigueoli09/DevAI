@@ -2,31 +2,31 @@
   "search:fastapi-asyncio-websockets-security:fastapi asyncio websockets sec": {
     "content": "- Use `uvicorn` to run your FastAPI application with WebSocket support.\n- Install the latest version of FastAPI and Starlette using pip:\n  ```bash\n  pip install fastapi starlette\n  ```\n- Configure CORS for WebSocket connections in your FastAPI app:\n  ```python\n  from fastapi import FastAPI, Request\n  from fastapi.middleware.cors import CORSMiddleware\n\n  app = FastAPI()\n\n  origins = [\n      \"http://localhost\",\n      \"http://localhost:8080\",\n  ]\n\n  app.add_middleware(\n      CORSMiddleware,\n      allow_origins=origins,\n      allow_credentials=True,\n      allow_methods=[\"*\"],\n      allow_headers=[\"*\"],\n  )\n  ```\n- Implement JWT authentication for WebSocket connections:\n  ```python\n  from fastapi import Depends, HTTPException, status\n  from fastapi.security import OAuth2PasswordBearer\n\n  oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n\n  async def get_current_user(token: str = Depends(oauth2_scheme)):\n      credentials_exception = HTTPException(\n          status_code=status.HTTP_401_UNAUTHORIZED,\n          detail=\"Could not validate credentials\",\n          headers={\"WWW-Authenticate\": \"Bearer\"},\n      )\n      # Validate token and return user\n  ```\n- Use Redis for managing WebSocket connections in a multi-worker environment.\n- Monitor your WebSocket endpoints using tools like Prometheus and Grafana.\n- Follow security best practices, such as validating all inputs and handling exceptions gracefully.",
     "source": "web_search",
-    "updated_at": 1780774641.382797
+    "updated_at": 1780775372.7377865
   },
   "search:fastapi-asyncio-websockets-security:fastapi asyncio websockets sec_ex": {
     "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install FastAPI using pip: `pip install fastapi`.\n- For WebSocket security, use JWT tokens or other secure authentication mechanisms.\n- Implement rate limiting to prevent abuse of WebSockets.\n- Configure CORS in FastAPI to allow cross-origin requests securely.\n- Use Redis for real-time data storage and Pub/Sub messaging.\n- Monitor application performance using tools like Prometheus and Grafana.\n- Regularly update dependencies to the latest versions to mitigate security risks.",
     "source": "code_example",
-    "updated_at": 1780774642.1320994
+    "updated_at": 1780775373.5223885
   },
   "search:fastapi-asyncio-websockets-security:securing fastapi asyncio webso": {
     "content": "- **FastAPI Version**: Use `fastapi==0.95.0`\n- **Starlette Version**: Use `starlette==0.23.0`\n- **WebSockets Library**: Use `websockets==10.4`\n\n**CLI Commands**:\n- To create a new FastAPI project: `uvicorn myproject.main:app --reload`\n- To install dependencies: `pip install fastapi starlette websockets uvicorn`\n\n**Key Config Options**:\n- **WebSocket Endpoint**: Define in your FastAPI app using `@app.websocket(\"/ws\")`\n- **Async/Await Syntax**: Use `async def` for handling WebSocket connections\n- **Broadcasting Messages**: Implement broadcasting logic within the WebSocket handler\n\n**Security Considerations**:\n- Use OAuth2 for securing your FastAPI server as shown in the YouTube video.\n- Ensure all data transmitted over WebSockets is encrypted using TLS/SSL.\n\n**Parallel Processing**:\n- Use `asyncio` and `aiohttp` to handle multiple WebSocket streams efficiently.",
     "source": "web_search",
-    "updated_at": 1780774642.9453485
+    "updated_at": 1780775374.414552
   },
   "search:fastapi-asyncio-websockets-security:securing fastapi asyncio webso_ex": {
     "content": "- Use `uvicorn` to run FastAPI applications.\n- Ensure JWTs are not embedded in URL query parameters due to security risks.\n- For securing FastAPI with OAuth2, use libraries like `fastapi-oauthlib`.\n- Implement WebSocket security by validating tokens and handling exceptions properly.\n- Update your code to handle websockets in parallel using `asyncio`.\n- Use the latest version of FastAPI for optimal performance and features.",
     "source": "code_example",
-    "updated_at": 1780774643.7316163
+    "updated_at": 1780775375.1504438
   },
   "search:fastapi-asyncio-websockets-security:fastapi asyncio websockets aut": {
     "content": "- **FastAPI Version**: Use `fastapi==0.95.0` for the latest stable version.\n- **Authentication Dependency**: Implement authentication using FastAPI's dependency injection system, e.g., `@Depends(get_current_user)`.\n- **Authorization**: Apply authorization checks within routes or dependencies, e.g., `@Depends(check_permissions)`.\n- **WebSockets**: Use `WebSocket` class from FastAPI for handling WebSocket connections.\n- **AsyncIO**: Leverage `asyncio` for asynchronous operations within WebSockets.\n- **State Management**: Manage state using FastAPI's dependency injection or context managers.\n- **Multi-Worker Scaling**: Configure your ASGI server (e.g., Uvicorn) to handle multiple workers, e.g., `uvicorn main:app --workers 4`.\n- **Error Handling**: Implement robust error handling within WebSocket routes and dependencies.\n- **Dependency Injection**: Use `Depends` for managing dependencies in both HTTP and WebSocket endpoints.",
     "source": "web_search",
-    "updated_at": 1780774644.4877877
+    "updated_at": 1780775376.003646
   },
   "search:fastapi-asyncio-websockets-security:fastapi asyncio websockets aut_ex": {
     "content": "- **Latest Version**: FastAPI v0.98.0, Starlette v0.24.0\n\n- **CLI Commands**:\n  - `uvicorn main:app --host 0.0.0.0 --port 8000`\n  - `pip install fastapi starlette`\n\n- **Key Config Options**:\n  - Authentication: Use `Depends` with custom authentication functions.\n  - Authorization: Implement role-based access control using permissions decorators.\n  - Connection Management: Utilize Starlette's WebSocketManager for managing connections.\n  - Scaling: Deploy behind a reverse proxy like Nginx and use Redis for session management.\n\n- **Example Code Snippet**:\n  ```python\n  from fastapi import FastAPI, WebSocket, Depends\n  from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials\n\n  app = FastAPI()\n  security = HTTPBearer()\n\n  async def get_current_user(token: HTTPAuthorizationCredentials = Depends(security)):\n      # Implement token validation logic here\n      return {\"user\": \"authenticated_user\"}\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket, current_user=Depends(get_current_user)):\n      await websocket.accept()\n      while True:\n          data = await websocket.receive_text()\n          await websocket.send_text(f\"Message text was: {data}\")\n  ```\n\n- **Dependencies**:\n  - `fastapi`\n  - `starlette`\n  - `uvicorn` (for running the app)\n  - `redis` (for session management in production)\n\n- **Production Deployment**:\n  - Use Nginx as a reverse proxy.\n  - Configure Redis for WebSocket sessions and authentication tokens.\n\nThis summary provides actionable facts for developers looking to implement WebSocket connections with FastAPI, including authentication, authorization, and scaling considerations.",
     "source": "code_example",
-    "updated_at": 1780774645.2993562
+    "updated_at": 1780775376.788891
   }
 }

@@ -2,31 +2,31 @@
   "search:fastapi-asyncio-websockets:fastapi asyncio websockets tut": {
     "content": "- **CLI Commands**:\n  - `fastapi run app`: Runs the FastAPI application.\n  - `uvicorn app.main:app --reload`: Starts the Uvicorn server with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - Starlette: 0.26.0\n  - Pydantic: 1.10.7\n\n- **Key Config Options**:\n  - `app.websocket(\"/ws\")`: Defines a WebSocket endpoint.\n  - `await websocket.accept()`: Accepts the incoming WebSocket connection.\n  - `await websocket.send_text(\"Hello, world!\")`: Sends text data to the client.\n  - `async for message in websocket.iter_text()`: Receives text messages from the client.",
     "source": "web_search",
-    "updated_at": 1780774783.8732083
+    "updated_at": 1780775520.095547
   },
   "search:fastapi-asyncio-websockets:fastapi asyncio websockets tut_ex": {
     "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development.\n  - `uvicorn main:app --host 0.0.0.0 --port 8000` for production.\n\n- **Latest Versions**:\n  - FastAPI: v0.100.2\n  - Starlette: v0.24.0\n\n- **Key Config Options**:\n  - `app.add_websocket_route(\"/ws\", WebSocketEndpoint)`\n  - `@app.websocket(\"/ws\")`\n  - `async def websocket_endpoint(websocket: WebSocket)`",
     "source": "code_example",
-    "updated_at": 1780774784.8793814
+    "updated_at": 1780775520.8812342
   },
   "search:fastapi-asyncio-websockets:building real-time application": {
     "content": "- **CLI Commands**:\n  - `fastapi dev`: Starts the FastAPI server with auto-reload enabled.\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  \n- **Key Config Options**:\n  - `auto_reload`: Enables or disables auto-reload during development.\n  - `host`: Specifies the host to run the server on (e.g., \"0.0.0.0\").\n  - `port`: Specifies the port to run the server on (default is 8000).",
     "source": "web_search",
-    "updated_at": 1780774786.7052026
+    "updated_at": 1780775521.6610858
   },
   "search:fastapi-asyncio-websockets:building real-time application_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `main.py`: Define your FastAPI app.\n    ```python\n    from fastapi import FastAPI\n    app = FastAPI()\n    ```\n  - `uvicorn.run()`: Run the app with specific settings.\n    ```python\n    uvicorn.run(\"main:app\", host=\"0.0.0.0\", port=8000, reload=True)\n    ```\n  - Environment Variables: Use `.env` for configuration.\n    ```bash\n    export API_KEY=your_api_key\n    ```\n\n- **Asynchronous Handling**:\n  - Use `async def` for asynchronous functions in FastAPI routes.\n    ```python\n    @app.get(\"/\")\n    async def read_root():\n        return {\"message\": \"Hello World\"}\n    ```\n  - Run asyncio within FastAPI using `asyncio.run()`.\n\n- **Pub/Sub with Redis**:\n  - Install Redis: `pip install redis`\n  - Use Redis for real-time communication.\n    ```python\n    import redis\n    r = redis.Redis(host='localhost', port=6379, db=0)\n    ```\n\n- **FastAPI Tutorial**:\n  - Watch the tutorial on YouTube to get started quickly.\n\n- **Error Handling**:\n  - Implement error handling in FastAPI routes.\n    ```python\n    from fastapi import HTTPException\n    @app.get(\"/items/{item_id}\")\n    async def read_item(item_id: int):\n        if item_id not in items:\n            raise HTTPException(status_code=404, detail=\"Item not found\")\n        return {\"item_id\": item_id}\n    ```\n\n- **Dependency Injection**:\n  - Use dependency injection for better code organization.\n    ```python\n    from fastapi import Depends\n\n    def common_parameters(q: str = None):\n        return {\"q\": q}\n\n    @app.get(\"/items/\")\n    async def read_items(commons: dict = Depends(common_parameters)):\n        return commons\n    ```\n\n- **Middleware**:\n  - Add middleware for cross-cutting concerns.\n    ```python\n    from fastapi import FastAPI, Request\n\n    app = FastAPI()\n\n    @app.middleware(\"http\")\n    async def add_process_time_header(request: Request, call_next):\n        start_time = time.time()\n        response = await call_next(request)\n        process_time = time.time() - start_time\n        response.headers[\"X-Process-Time\"] = str(process_time)\n        return response\n    ```",
     "source": "code_example",
-    "updated_at": 1780774787.746519
+    "updated_at": 1780775522.438061
   },
   "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf": {
     "content": "- Use `uvicorn` as your ASGI server for FastAPI applications.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- For WebSocket performance, consider using an executor to offload CPU-bound tasks:\n  ```bash\n  python -m uvicorn main:app --workers 4 --host 0.0.0.0 --port 8000\n  ```\n- Implement background tasks for non-blocking operations like ML inference.\n- Use `asyncio.gather` to run multiple asynchronous tasks concurrently, ensuring efficient data handling:\n  ```python\n  await asyncio.gather(read_from_socket(websocket), get_data_and_send())\n  ```\n- Configure the number of workers in `uvicorn` based on your server's CPU cores for optimal performance.",
     "source": "web_search",
-    "updated_at": 1780774788.786842
+    "updated_at": 1780775523.2134693
   },
   "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf_ex": {
     "content": "- Use `uvicorn` with the `--host` flag to specify the host, e.g., `uvicorn main:app --host 0.0.0.0`.\n- Upgrade FastAPI to version 0.95.0 or later for improved performance.\n- Configure Redis for WebSocket scalability by setting up a connection pool in your application code.\n- Implement background tasks using `BackgroundTasks` to offload CPU-bound work, e.g., `@app.post(\"/background-task\") async def create_task(background_tasks: BackgroundTasks):`.\n- Use `asyncio.Semaphore` to manage concurrent access and prevent blocking, e.g., `sem = asyncio.Semaphore(10)`.\n- Enable compression in FastAPI using middleware like `CompressMiddleware`, e.g., `app.add_middleware(CompressMiddleware, minimum_size=1024)`.\n- Monitor performance with tools like `asyncio`'s `run_in_executor` to offload blocking tasks to a thread pool, e.g., `await asyncio.to_thread(some_blocking_function)`.",
     "source": "code_example",
-    "updated_at": 1780774789.787346
+    "updated_at": 1780775523.9899979
   }
 }
