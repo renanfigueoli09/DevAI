@@ -2,21 +2,21 @@
   "search:TypeScript and React Native Performance:typescript react native perfor": {
     "content": "- Use `react-native init` to create a new project.\n- Update React Native to the latest version using `npx react-native upgrade`.\n- Optimize FlatList performance by avoiding inline functions and using keys.\n- Enable Hermes engine for better performance with `hermes-engine-android` and `hermes-engine-ios`.\n- Utilize `react-native-reanimated` for smooth animations.\n- Implement lazy loading in images with libraries like `react-native-fast-image`.\n- Use `react-native-screens` to improve navigation performance.\n- Monitor app performance using React Native Performance Monitor or similar tools.\n- Ensure proper state management to avoid unnecessary re-renders.",
     "source": "web_search",
-    "updated_at": 1780786510.562762
+    "updated_at": 1780787694.8039107
   },
   "search:TypeScript and React Native Performance:typescript react native perfor_ex": {
     "content": "- **CLI Commands**:\n  - `npx react-native init MyProject --template typescript`\n  - `npm install @react-navigation/native`\n  - `npm install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`\n\n- **Latest Versions**:\n  - React Native: v0.69\n  - TypeScript: v4.7\n\n- **Key Config Options**:\n  - `metro.config.js`: Configure Metro bundler for better performance.\n  - `react-native.config.js`: Define project-specific configurations.\n  - `tsconfig.json`: Adjust TypeScript settings for optimal build times and code quality.\n\n- **Performance Optimization Tips**:\n  - Use `React.memo` for functional components to prevent unnecessary re-renders.\n  - Implement lazy loading with `React.lazy` and `Suspense`.\n  - Optimize images using libraries like `react-native-fast-image`.\n  - Use `useCallback` and `useMemo` to memoize functions and values.",
     "source": "code_example",
-    "updated_at": 1780786511.9435315
+    "updated_at": 1780787695.9890065
   },
   "search:TypeScript and React Native Performance:react native state management ": {
     "content": "- **CLI Commands**: \n  - `npx react-native init <ProjectName>`\n  - `npm install --save @react-navigation/native`\n  - `npm install --save @react-navigation/stack`\n\n- **Latest Versions**:\n  - React Native: v0.71.2\n  - React Navigation: v6.0.0\n\n- **Key Config Options**:\n  - `initialRouteName`: Specifies the initial route to display.\n  - `headerShown`: Controls whether the header is shown or not.\n  - `stackPresentation`: Defines how the stack should be presented (modal, card).",
     "source": "web_search",
-    "updated_at": 1780786513.3983202
+    "updated_at": 1780787697.0746746
   },
   "search:TypeScript and React Native Performance:react native state management _ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-native-app my-app`\n  - `npm install @pmndrs/zustand`\n\n- **Latest Versions**:\n  - React Native: v0.68.x\n  - Zustand: v4.3.x\n\n- **Key Config Options**:\n  - For Zustand, initialize a store with `create` function.\n  - Use hooks like `useStore` to access and update state within components.",
     "source": "code_example",
-    "updated_at": 1780786514.780521
+    "updated_at": 1780787698.112771
   }
 }

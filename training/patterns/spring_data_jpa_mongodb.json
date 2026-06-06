@@ -2,21 +2,21 @@
   "search:spring-data-jpa-mongodb:spring data jpa mongodb crud 2": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n  - MongoDB Driver: 4.3.x\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop`.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.",
     "source": "web_search",
-    "updated_at": 1780786464.8506575
+    "updated_at": 1780787666.4300508
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb crud 2_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to start the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.2\n  - MongoDB Driver: 4.5.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for database schema management.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
     "source": "code_example",
-    "updated_at": 1780786466.1909165
+    "updated_at": 1780787667.4475892
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb perfor": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `mvn spring-boot:run` to run your Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.0.RELEASE\n  - MongoDB Java Driver: 4.3.1\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.properties.hibernate.dialect`: Set to `org.hibernate.dialect.MongoDBDialect` for MongoDB compatibility.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
     "source": "web_search",
-    "updated_at": 1780786467.5970066
+    "updated_at": 1780787670.1191742
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb perfor_ex": {
     "content": "- Use `@Query` annotation for custom MongoDB queries.\n- Enable query logging by setting `spring.data.mongodb.logging.level=DEBUG`.\n- Optimize indexes using `@Indexed` on entity fields.\n- Configure batch size with `@BatchSize(size = n)`.\n- Use `@Fetch(FetchType.LAZY)` to reduce initial load times.\n- Monitor performance with `MongoTemplate.executeCommand()`.\n- Update Spring Data JPA and MongoDB dependencies to latest versions regularly.\n- Utilize `@Document(collection = \"yourCollectionName\")` for explicit collection mapping.\n- Implement pagination in repository methods using `Pageable`.",
     "source": "code_example",
-    "updated_at": 1780786469.0083914
+    "updated_at": 1780787671.2223272
   }
 }

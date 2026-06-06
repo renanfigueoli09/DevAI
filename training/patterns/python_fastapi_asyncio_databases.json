@@ -2,21 +2,21 @@
   "search:python-fastapi-asyncio-databases:fastapi async database integra": {
     "content": "- Use `pip install fastapi[all] sqlalchemy asyncpg` to install FastAPI, SQLAlchemy, and asyncpg.\n- For the latest versions, check [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), and [asyncpg](https://magicstack.github.io/asyncpg/current/) official websites.\n- Key config options for FastAPI include `app = FastAPI()` to create an instance of the application.\n- For database integration, use `SQLModel` with `asyncpg` as the backend. Example:\n  ```python\n  from sqlmodel import SQLModel, create_engine\n\n  engine = create_engine(\"postgresql+asyncpg://user:password@localhost/dbname\")\n  ```\n- Use `AsyncSession` for asynchronous database sessions in SQLAlchemy.\n- For dependency injection of database sessions, use `Depends` with `AsyncSession`.\n- Example of a route using async database operations:\n  ```python\n  from fastapi import FastAPI, Depends\n  from sqlalchemy.ext.asyncio import AsyncSession\n  from sqlmodel import select\n\n  app = FastAPI()\n\n  @app.get(\"/items/\")\n  async def read_items(session: AsyncSession = Depends(get_async_session)):\n      result = await session.execute(select(Item))\n      return result.scalars().all()\n  ```\n- Ensure to handle exceptions and errors in asynchronous database operations.\n- For production, consider using connection pooling with `asyncpg` for better performance.",
     "source": "web_search",
-    "updated_at": 1780786385.596583
+    "updated_at": 1780787606.8041172
   },
   "search:python-fastapi-asyncio-databases:fastapi async database integra_ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init alembic/`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: 0.100+\n  - SQLAlchemy: 2.0\n  - Pydantic: 2.0\n  - Alembic: 1.11\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - SQLAlchemy engine creation: `engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)`\n  - Pydantic models for data validation.\n  - Dependency injection with FastAPI's `Depends` for database sessions.",
     "source": "code_example",
-    "updated_at": 1780786387.042378
+    "updated_at": 1780787607.885785
   },
   "search:python-fastapi-asyncio-databases:python fastapi with async sqla": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi async-sqlalchemy`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@host/dbname\"`\n  - Async Engine: `engine = create_async_engine(SQLALCHEMY_DATABASE_URL)`\n  - Async Session: `AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`",
     "source": "web_search",
-    "updated_at": 1780786388.4021008
+    "updated_at": 1780787609.071276
   },
   "search:python-fastapi-asyncio-databases:python fastapi with async sqla_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy asyncpg`\n  \n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - SQLAlchemy: 2.0.0\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - Async Session Factory: `AsyncSession(bind=engine)`\n  - Dependency Injection for DB Sessions",
     "source": "code_example",
-    "updated_at": 1780786389.8219385
+    "updated_at": 1780787610.2688308
   }
 }

@@ -2,21 +2,21 @@
   "search:azure-devops-git-workflow:azure devops git workflow best": {
     "content": "- Use `git checkout -b feature/branch-name` to create and switch to a new branch.\n- Merge changes using `git merge feature/branch-name`.\n- Resolve conflicts with `git mergetool` or manually edit files.\n- Push changes with `git push origin branch-name`.\n- Pull updates with `git pull origin main`.\n- Tag releases with `git tag -a v1.0 -m \"Release version 1.0\"`.\n- Use `git cherry-pick <commit-hash>` to apply a specific commit.\n- Configure Git with `git config --global user.name \"Your Name\"` and `git config --global user.email \"your.email@example.com\"`.\n- Ensure your branch is up-to-date with `git fetch origin` before merging.",
     "source": "web_search",
-    "updated_at": 1780786614.2419791
+    "updated_at": 1780787799.8044076
   },
   "search:azure-devops-git-workflow:azure devops git workflow best_ex": {
     "content": "- Use `git init` to initialize a new repository.\n- Commit changes using `git commit -m \"Your message\"`.\n- Push changes to Azure DevOps with `git push origin <branch-name>`.\n- Pull updates from Azure DevOps with `git pull origin <branch-name>`.\n- Set up SSH keys for secure Git operations.\n- Use `az acr build --registry <your-acr-name> --image <image-name>:<tag> .` to trigger a build in Azure Container Registry.\n- Configure Azure Pipelines for automated builds and deployments.",
     "source": "code_example",
-    "updated_at": 1780786615.4525692
+    "updated_at": 1780787801.312444
   },
   "search:azure-devops-git-workflow:git integration with azure dev": {
     "content": "- **CLI Commands**:\n  - `az devops login --organization https://dev.azure.com/yourOrganization`\n  - `git clone https://github.com/username/repository.git`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v2.150.0\n  - Git: v2.37.1\n\n- **Key Config Options**:\n  - Azure DevOps Organization URL\n  - Repository URL\n  - Personal Access Token (PAT) for authentication",
     "source": "web_search",
-    "updated_at": 1780786616.700226
+    "updated_at": 1780787802.8429775
   },
   "search:azure-devops-git-workflow:git integration with azure dev_ex": {
     "content": "- Install Azure CLI: `az --version`\n- Authenticate with Azure: `az login`\n- Create a new project in Azure DevOps:\n  ```bash\n  az devops project create --name \"MyProject\" --organization \"https://dev.azure.com/yourOrg\"\n  ```\n- Initialize Git repository locally and connect to Azure DevOps:\n  ```bash\n  git init\n  git remote add origin https://dev.azure.com/yourOrg/MyProject/_git/MyRepo\n  ```\n- Commit and push code:\n  ```bash\n  git add .\n  git commit -m \"Initial commit\"\n  git push origin master\n  ```\n- Create a new pipeline in Azure DevOps using YAML:\n  ```yaml\n  # azure-pipelines.yml\n  trigger:\n  - master\n\n  pool:\n    vmImage: 'ubuntu-latest'\n\n  steps:\n  - script: echo Hello, world!\n    displayName: 'Run a one-line script'\n  ```\n- Save and run the pipeline in Azure DevOps.\n- Configure service connections for authentication (e.g., Azure Resource Manager).\n- Set up environment-specific configuration files (.env) for different stages (Dev/UAT/Prod).",
     "source": "code_example",
-    "updated_at": 1780786617.9538698
+    "updated_at": 1780787805.8275578
   }
 }

@@ -2,16 +2,16 @@
   "search:nextjs-auth-advanced:nextjs authentication with jwt": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 14.x\n  - JWT: 9.x\n\n- **Key Config Options**:\n  - `next.config.js`: Configure server settings.\n  - `.env.local`: Define environment variables for secrets like JWT secret.\n  - `pages/api/auth/[...].js`: Handle authentication routes.",
     "source": "web_search",
-    "updated_at": 1780786413.3241987
+    "updated_at": 1780787628.4784768
   },
   "search:nextjs-auth-advanced:nextjs authentication with jwt_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - jsonwebtoken: v9.0.0\n\n- **Key Config Options**:\n  - JWT Secret: Define in `.env.local` as `JWT_SECRET=your-secret-key`\n  - Protected Routes: Use middleware to check for JWT token.\n  - User Authentication: Implement login and registration handlers using API routes.",
     "source": "code_example",
-    "updated_at": 1780786414.7123046
+    "updated_at": 1780787629.5697558
   },
   "search:nextjs-auth-advanced:nextjs oauth integration 2023": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.18\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for OAuth providers.\n  - `providers`: Array of OAuth provider objects (e.g., Google, GitHub).\n  - `secret`: Secret key used to sign JWTs.\n  - `session`: Session management options (e.g., strategy, maxAge).",
     "source": "web_search",
-    "updated_at": 1780786416.2216148
+    "updated_at": 1780787630.6711063
   }
 }

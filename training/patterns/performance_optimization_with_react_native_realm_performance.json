@@ -2,51 +2,51 @@
   "search:Performance Optimization with React Native + Realm Performance:react native performance optim": {
     "content": "- **CLI Commands**:\n  - `react-native start --reset-cache`: Resets the Metro Bundler cache.\n  - `adb shell input keyevent KEYCODE_MENU`: Enables React Native's performance monitor on Android.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of React Native CLI and dependencies for optimal performance.\n\n- **Key Config Options**:\n  - Enable Hermes: Add `\"hermesEnabled\": true` in your `android/app/build.gradle`.\n  - Use VirtualizedList or FlatList for large lists.\n  - Implement shouldComponentUpdate or PureComponent to prevent unnecessary re-renders.\n  - Cache static assets and images using react-native-cache-manager.",
     "source": "web_search",
-    "updated_at": 1780786368.4116704
+    "updated_at": 1780787594.3888512
   },
   "search:Performance Optimization with React Native + Realm Performance:react native performance optim_ex": {
     "content": "- **Enable Performance Monitor:** Use `adb shell input keyevent 82` to open the Developer Menu and then shake your device or press `Ctrl+M` in the emulator.\n- **Use Console Time:** Implement `console.time('label')` at the start of a block of code and `console.timeEnd('label')` at the end to measure execution time.\n- **React Native Performance Monitor:** Access it by shaking the device or using the Developer Menu. It provides insights into frame rates, JavaScript execution time, and memory usage.\n- **Gesture Optimization:** Implement structured gesture handling to optimize performance. This involves controlling how gesture events are processed from the ground up.\n- **Latest Versions:** Ensure you are using the latest versions of React Native and its dependencies for optimal performance.\n- **Key Config Options:** Adjust `metro.config.js` for better bundling performance, such as setting `maxWorkers`.\n- **Code Profiling:** Use tools like React DevTools to profile components and identify bottlenecks.\n- **Batch Updates:** Minimize the number of re-renders by batching updates using `useMemo`, `useCallback`, or `React.memo`.\n- **Lazy Loading:** Implement lazy loading for components that are not immediately visible to improve initial load times.",
     "source": "code_example",
-    "updated_at": 1780786370.159027
+    "updated_at": 1780787595.4172175
   },
   "search:Performance Optimization with React Native + Realm Performance:realm database performance tun": {
     "content": "- **CLI Commands**: Use `realm-cli` to manage your Realm databases.\n  - `realm-cli init`: Initialize a new Realm project.\n  - `realm-cli sync`: Sync your local database with the cloud.\n\n- **Latest Versions**:\n  - Swift: RealmSwift v10.2.0\n  - Objective-C: RealmObjC v10.2.0\n  - Java/Kotlin: RealmJava v10.2.0\n\n- **Key Config Options**:\n  - `schemaVersion`: Define the version of your schema.\n  - `migrationBlock`: Implement migration logic for schema changes.\n  - `inMemoryOnly`: Run the database in memory for temporary storage.\n\nThese actionable facts should help developers optimize and manage their Realm databases effectively.",
     "source": "web_search",
-    "updated_at": 1780786371.913593
+    "updated_at": 1780787596.5637
   },
   "search:Performance Optimization with React Native + Realm Performance:realm database performance tun_ex": {
     "content": "- **GitHub Repository**: [klinker41/android-realm-performance](https://github.com/klinker41/android-realm-performance)\n- **Latest Realm Version**: Check the official [Realm documentation](https://realm.io/docs/realm-object-server/latest/) for the latest version.\n- **Key Config Options**:\n  - `schema`: Define your schema in a structured way to optimize performance.\n  - `migrationBlock`: Handle database migrations efficiently.\n  - `shouldCompactOnLaunch`: Enable automatic compaction to manage disk space.\n\nFor React Native:\n- **Realm Version**: Ensure you are using the latest version compatible with React Native. Check [Realm's React Native documentation](https://realm.io/docs/react-native/latest/) for updates.\n- **Performance Tips**:\n  - Use `create` instead of `constructor` when creating Realm objects.\n  - Avoid nested transactions to improve performance.\n  - Use `find` and `filter` methods efficiently to reduce data retrieval time.",
     "source": "code_example",
-    "updated_at": 1780786373.386962
+    "updated_at": 1780787597.555268
   },
   "search:Performance Optimization with React Native + Realm Performance:cross-platform app performance": {
     "content": "- **React Native**:\n  - Use `react-native upgrade` to update dependencies.\n  - Optimize performance with `react-native link`.\n  - Key config: `metro.config.js`.\n\n- **Flutter**:\n  - Install Flutter SDK from [flutter.dev](https://flutter.dev/docs/get-started/install).\n  - Run `flutter doctor` for setup issues.\n  - Use `flutter build apk --release` to build a release APK.\n\n- **Cross-platform web app development**:\n  - Use frameworks like Angular, Vue.js, or React for cross-browser compatibility.\n  - Optimize with lazy loading and code splitting.",
     "source": "web_search",
-    "updated_at": 1780786375.0499215
+    "updated_at": 1780787598.58798
   },
   "search:Performance Optimization with React Native + Realm Performance:cross-platform app performance_ex": {
     "content": "- **Flutter Commands**:\n  - `flutter create <project-name>`: Creates a new Flutter project.\n  - `flutter run`: Runs your app on an emulator or connected device.\n\n- **Latest Versions**:\n  - Flutter SDK: Check the latest version at [flutter.dev](https://flutter.dev/docs/get-started/install).\n  - React Native CLI: Ensure you have the latest version installed globally using `npm install -g react-native-cli`.\n\n- **Key Config Options**:\n  - Flutter: Modify `pubspec.yaml` for dependencies and configurations.\n  - React Native: Configure `package.json` and modify settings in `android/app/build.gradle` and `ios/YourProject.xcodeproj/project.pbxproj`.",
     "source": "code_example",
-    "updated_at": 1780786376.6458237
+    "updated_at": 1780787599.6489825
   },
   "search:Performance Optimization with React Native + Realm Performance:optimizing data access pattern": {
     "content": "- **CLI Commands**:\n  - `npx react-native optimize`\n  - `react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/main.jsbundle`\n\n- **Latest Versions**:\n  - React Native: 0.72.3\n  - React: 18.2.0\n\n- **Key Config Options**:\n  - `metro.config.js`: Configure Metro bundler for faster builds.\n  - `react-native.config.js`: Define project-specific configurations.\n  - `android/app/build.gradle`: Adjust Gradle settings for Android performance.\n  - `ios/Podfile`: Customize CocoaPods dependencies and versions.",
     "source": "web_search",
-    "updated_at": 1780786377.9997942
+    "updated_at": 1780787602.344458
   },
   "search:Performance Optimization with React Native + Realm Performance:optimizing data access pattern_ex": {
     "content": "- **CLI Commands**: `npx react-native init MyProject`\n- **Latest Versions**: React Native 0.72, Expo SDK 48\n- **Key Config Options**:\n  - `metro.config.js` for customizing Metro Bundler settings.\n  - `app.json` for configuring app metadata and plugins.\n  - `react-native.config.js` for project-specific configurations.",
     "source": "code_example",
-    "updated_at": 1780786379.680124
+    "updated_at": 1780787603.5597546
   },
   "search:Performance Optimization with React Native + Realm Performance:comparing performance of diffe": {
     "content": "- **CLI Commands**: Use `gsutil` for Google Cloud Storage, `aws s3` for Amazon S3, and `az storage blob` for Azure Blob Storage.\n- **Latest Versions**: Ensure using the latest SDKs: `gsutil` v5.10, `aws-cli` v2.7.4, `azure-storage-blob` 12.16.0.\n- **Key Config Options**:\n  - Google Cloud Storage: Enable versioning with `gsutil versioning set on gs://your-bucket`.\n  - Amazon S3: Set lifecycle rules using `aws s3api put-bucket-lifecycle-configuration`.\n  - Azure Blob Storage: Configure access policies via the Azure Portal or CLI.",
     "source": "web_search",
-    "updated_at": 1780786381.2442608
+    "updated_at": 1780787604.6254022
   },
   "search:Performance Optimization with React Native + Realm Performance:comparing performance of diffe_ex": {
     "content": "- **CLI Commands and Flags**:\n  - `rsync` for benchmarking file transfers.\n  - `nfsstat` and `smbstatus` for monitoring NFS and SMB performance.\n\n- **Latest Versions**:\n  - Ensure using the latest versions of `rsync`, `nfs-utils`, and `cifs-utils`.\n\n- **Key Config Options**:\n  - For `rsync`: Use `-avz` for optimal data transfer.\n  - For `nfs`: Adjust `/etc/exports` to optimize performance.\n  - For `smb`: Configure `/etc/samba/smb.conf` for better file sharing.",
     "source": "code_example",
-    "updated_at": 1780786382.6056824
+    "updated_at": 1780787605.7834685
   }
 }
