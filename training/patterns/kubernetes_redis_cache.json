@@ -2,11 +2,11 @@
   "search:kubernetes+redis-cache:kubernetes redis cache deploym": {
     "content": "- Use Helm for deploying Redis on Kubernetes.\n- Install Helm using `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`.\n- Deploy Redis with Helm using `helm install my-redis bitnami/redis --set architecture=standalone`.\n- Check the status of your deployment with `kubectl get pods`.\n- Access the Redis server by running `kubectl run -i --tty --rm debug --image=busybox --restart=Never -- nslookup my-redis-master`.\n- Key config options include `replicaCount`, `password`, and `persistence.enabled` for data persistence.\n- Ensure Kubernetes version compatibility with Helm charts, typically using the latest stable versions of both.",
     "source": "web_search",
-    "updated_at": 1780774047.8619056
+    "updated_at": 1780774781.3365686
   },
   "search:kubernetes+redis-cache:kubernetes redis performance t": {
     "content": "- Use `kubectl scale` to horizontally scale Redis deployments.\n- Configure Redis using ConfigMaps and Secrets.\n- Deploy Redis Operator for automated management of Redis clusters on Kubernetes.\n- Ensure at least two worker nodes in your cluster for high availability.\n- Monitor Redis performance with Prometheus and Grafana.\n- Update Redis version through Helm charts if applicable.",
     "source": "web_search",
-    "updated_at": 1780774048.6192048
+    "updated_at": 1780774782.7177846
   }
 }
