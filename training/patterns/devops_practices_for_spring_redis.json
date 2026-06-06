@@ -27,26 +27,26 @@
   "search:DevOps Practices for Spring + Redis:monitoring and logging for spr_ex": {
     "content": "- Use `mvn clean install` to build your Spring Boot application.\n- Set logging levels in `application.properties` or `application.yml`. Example:\n  ```properties\n  logging.level.root=WARN\n  logging.level.com.example=DEBUG\n  ```\n- Customize log format using `logging.pattern.console` and `logging.pattern.file`.\n- Configure Logback with XML or YAML. Example (YAML):\n  ```yaml\n  logging:\n    file:\n      name: logs/app.log\n    pattern:\n      console: \"%d{yyyy-MM-dd HH:mm:ss} - %msg%n\"\n      file: \"%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n\"\n  ```\n- Regularly monitor log files for issues.\n- Use `@Slf4j` from Lombok to simplify logging in your classes.",
     "source": "code_example",
-    "updated_at": 1780786634.0347412
+    "updated_at": 1780787822.6199615
   },
   "search:DevOps Practices for Spring + Redis:automated testing and deployme": {
     "content": "- **CLI Commands**: Use `git push` to deploy code changes.\n- **Latest Versions**: Ensure using the latest version of your CI/CD tool, e.g., Jenkins 2.374, GitLab CI 15.6.\n- **Key Config Options**:\n  - For GitHub Actions: Configure `.github/workflows/main.yml`.\n  - For CircleCI: Use `config.yml` in the project root.\n  - For Jenkins: Define jobs and pipelines through the web interface or XML configuration files.",
     "source": "web_search",
-    "updated_at": 1780786635.1953177
+    "updated_at": 1780787824.0302818
   },
   "search:DevOps Practices for Spring + Redis:automated testing and deployme_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/humanitec-architecture/example-library.git`\n  - `cd example-library/pipelines/deployment-pipelines/run-automated-tests-after-deployment`\n  - `kubectl apply -f pipeline.yaml`\n\n- **Latest Versions**:\n  - GitHub Actions: Latest version as of my last update.\n  - Kubernetes: Latest stable version.\n\n- **Key Config Options**:\n  - `pipeline.yaml`: Defines the deployment and testing pipeline.\n  - `run-automated-tests-after-deployment`: Specifies the automated test step in the pipeline.",
     "source": "code_example",
-    "updated_at": 1780786636.3815613
+    "updated_at": 1780787825.319577
   },
   "search:DevOps Practices for Spring + Redis:security practices for deployi": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build and package your Spring Boot application.\n  - `java -jar target/your-application.jar` to run the packaged application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Security: 6.2.0\n\n- **Key Config Options**:\n  - `spring.security.user.name`: Default username.\n  - `spring.security.user.password`: Default password.\n  - `spring.security.user.roles`: Default roles for the user.\n  - `spring.security.basic.enabled`: Enable basic authentication.\n  - `spring.security.csrf.enabled`: Enable CSRF protection.",
     "source": "web_search",
-    "updated_at": 1780786637.5751936
+    "updated_at": 1780787826.6092236
   },
   "search:DevOps Practices for Spring + Redis:security practices for deployi_ex": {
     "content": "- Use `mvn spring-boot:run` to run Spring Boot applications locally.\n- Deploy using Docker with `docker build -t my-spring-app .` and `docker run -p 8080:8080 my-spring-app`.\n- Kubernetes deployment YAML example:\n  ```yaml\n  apiVersion: apps/v1\n  kind: Deployment\n  metadata:\n    name: spring-boot-deployment\n  spec:\n    replicas: 3\n    selector:\n      matchLabels:\n        app: spring-boot\n    template:\n      metadata:\n        labels:\n          app: spring-boot\n      spec:\n        containers:\n        - name: spring-boot\n          image: my-spring-app:latest\n          ports:\n          - containerPort: 8080\n  ```\n- Use `kubectl apply -f deployment.yaml` to deploy.\n- Update Spring Boot version in `pom.xml`.\n- Enable Spring Security with `@EnableWebSecurity` and configure it using Java configuration or XML.\n- Key security configurations include CSRF protection, HTTPs, and user authentication.",
     "source": "code_example",
-    "updated_at": 1780786638.8024044
+    "updated_at": 1780787827.8841577
   }
 }

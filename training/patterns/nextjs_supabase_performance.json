@@ -2,7 +2,7 @@
   "search:nextjs+supabase-performance:next.js supabase performance o": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `supabase init`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase: v2.4.0\n\n- **Key Config Options**:\n  - Environment variables for API keys (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`)\n  - Database schema design focusing on normalization and indexing\n  - Row Level Security policies for enhanced data security\n  - Performance tuning through query optimization and caching strategies",
     "source": "web_search",
-    "updated_at": 1780786668.4706423
+    "updated_at": 1780787861.9536114
   },
   "search:nextjs+supabase-performance:next.js supabase performance o_ex": {
     "content": "- Use `npx create-next-app@latest --example with-supabase my-project` to start a new Next.js app with Supabase integration.\n- Rename `.env.example` to `.env.local` and fill in your Supabase connection variables.\n- Enable connection pooling in Supabase by setting the `pool_size` parameter in your Supabase client configuration.\n- Optimize client-side performance by using server-side rendering (SSR) for critical pages.\n- Implement lazy loading for non-critical resources to reduce initial load time.\n- Use Next.js's built-in image optimization feature for efficient image handling.\n- Monitor and analyze performance using tools like Lighthouse or WebPageTest.\n- Regularly update Supabase and Next.js to benefit from the latest features and security patches.",
