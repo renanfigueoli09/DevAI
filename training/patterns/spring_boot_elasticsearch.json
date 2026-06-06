@@ -1,0 +1,12 @@
+{
+  "search:spring-boot+elasticsearch:spring boot elasticsearch inte": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to check Elasticsearch indices.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Elasticsearch: 8.5.3\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=my-application-cluster`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
+    "source": "web_search",
+    "updated_at": 1780755800.654857
+  },
+  "search:spring-boot+elasticsearch:spring boot elasticsearch inte_ex": {
+    "content": "- **Latest Version**: Spring Boot 3, Elasticsearch 7.x\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `curl -X GET \"localhost:9200/your_index_name/_search?pretty\"` to search documents.\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=elasticsearch`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
+    "source": "code_example",
+    "updated_at": 1780755822.613396
+  }
+}
