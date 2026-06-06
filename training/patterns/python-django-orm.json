@@ -1,0 +1,22 @@
+{
+  "search:python-django-orm:django orm performance tuning ": {
+    "content": "- Use `select_related` and `prefetch_related` to reduce database queries.\n- Upgrade Django to the latest version for performance improvements.\n- Implement caching mechanisms like Memcached or Redis.\n- Utilize asynchronous ORM libraries if dealing with large datasets.\n- Optimize queries by avoiding N+1 problems.\n- Use `annotate` and `aggregate` for complex calculations efficiently.\n- Configure database settings such as `CONN_MAX_AGE` for better connection management.\n- Employ Django's built-in profiling tools like `django-debug-toolbar`.\n- Consider using database indexing to speed up query performance.",
+    "source": "web_search",
+    "updated_at": 1780732621.7847486
+  },
+  "search:python-django-orm:django orm performance tuning _ex": {
+    "content": "- **CLI Commands**: Use `python manage.py runserver --nothreading` for improved performance in development.\n- **Latest Versions**: Ensure Django is up to date with the latest stable version using `pip install django --upgrade`.\n- **Key Config Options**:\n  - `DATABASES['default']['ENGINE']`: Set to `'django.db.backends.postgresql'` for better performance on large datasets.\n  - `CACHES`: Configure caching mechanisms like Redis or Memcached to reduce database load.\n  - `USE_TZ`: Set to `False` if your application does not require timezone support, which can save memory.",
+    "source": "code_example",
+    "updated_at": 1780732628.342697
+  },
+  "search:python-django-orm:django orm advanced queries 20": {
+    "content": "- **CLI Commands with Exact Flags**: Use `python manage.py shell` to interact with Django ORM.\n- **Latest Versions**: Ensure using the latest stable version of Django for optimal performance and features.\n- **Key Config Options**:\n  - `settings.AUTH_USER_MODEL`: Specifies the custom user model if used.\n  - `DATABASES`: Configure database settings in `settings.py`.\n  - `USE_TZ`: Set to `True` for timezone-aware datetimes.",
+    "source": "web_search",
+    "updated_at": 1780732644.9766269
+  },
+  "search:python-django-orm:django orm advanced queries 20_ex": {
+    "content": "- **Latest Version**: Django 3.2 Extended Support\n- **CLI Commands**:\n  - `python manage.py migrate`\n  - `python manage.py runserver`\n- **Key Config Options**:\n  - `DATABASES` in `settings.py` for database configuration\n  - `DEBUG` to enable or disable debug mode",
+    "source": "code_example",
+    "updated_at": 1780732651.6486347
+  }
+}

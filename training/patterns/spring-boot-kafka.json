@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-kafka:spring boot kafka integration ": {
+    "content": "- **Latest Spring Boot Kafka Integration Version**: Not explicitly stated in the search results, but based on the latest release of Spring for Apache Kafka, it is likely to be compatible with Spring Boot 2.7.x or later.\n  \n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka broker addresses.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g., because that data has been deleted).\n  - `spring.kafka.producer.key-serializer` and `spring.kafka.producer.value-serializer`: Serializer classes for keys and values.\n  \n- **CLI Commands**:\n  - To create a new Spring Boot project with Kafka integration, use:\n    ```bash\n    mvn archetype:generate -DgroupId=com.example -DartifactId=spring-kafka-demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false\n    ```\n    Then add the following dependencies to your `pom.xml`:\n    ```xml\n    <dependencies>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-kafka</artifactId>\n        </dependency>\n    </dependencies>\n    ```\n\n- **Latest Spring for Apache Kafka Version**: 2.1.0.RELEASE (and 1.3.2, 2.0.2).\n\n- **Key Features**:\n  - Enhanced performance and stability.\n  - Improved support for newer versions of Apache Kafka.\n  - Better integration with Spring Boot features like auto-configuration and dependency management.",
+    "source": "web_search",
+    "updated_at": 1780732580.8164537
+  },
+  "search:spring-boot-kafka:spring boot kafka integration _ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your Spring Boot project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Apache Kafka: 3.5.x\n  - Kafka Connect: 3.5.x\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Set to `localhost:9092` for local development.\n  - `spring.kafka.consumer.group-id`: Unique identifier for the consumer group.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.\n  - `spring.kafka.producer.key-serializer`: Use `org.apache.kafka.common.serialization.StringSerializer`.\n  - `spring.kafka.producer.value-serializer`: Use `org.apache.kafka.common.serialization.StringSerializer`.",
+    "source": "code_example",
+    "updated_at": 1780732592.905585
+  },
+  "search:spring-boot-kafka:spring boot kafka streams 2025": {
+    "content": "- Use `mvn spring-boot:run` to run your Spring Boot application.\n- Ensure Kafka Streams and Spring Boot are compatible by checking their latest versions.\n- Configure Kafka Streams in your Spring Boot app using `@Bean` methods, e.g., `KafkaStreamsConfig`.\n- Set up properties like `spring.kafka.bootstrap-servers` and `spring.kafka.streams.application-id` in your `application.properties`.\n- For request-response patterns, use headers like `correlationId` to correlate requests with responses.\n- Use Kafka Streams DSL for building stream processing applications.\n- Ensure proper error handling and logging within your Kafka Streams application.\n- Consider using Spring Cloud Stream for easier integration with Kafka Streams.",
+    "source": "web_search",
+    "updated_at": 1780732603.0390334
+  },
+  "search:spring-boot-kafka:spring boot kafka streams 2025_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kafka Streams: 3.0.x\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.cloud.stream.bindings.input.destination`: Name of the Kafka topic to consume from.\n  - `spring.cloud.stream.bindings.output.destination`: Name of the Kafka topic to produce to.\n  - `spring.cloud.stream.bindings.input.group`: Consumer group ID.",
+    "source": "code_example",
+    "updated_at": 1780732609.8488622
+  }
+}
