@@ -1,0 +1,12 @@
+{
+  "search:angular+firebase-authentication-best-practices:angular firebase authenticatio": {
+    "content": "- Use `ng add @angular/fire` to integrate Firebase into your Angular project.\n- Install the latest version of `@angular/fire` using npm or yarn.\n- Configure Firebase in your `environment.ts` and `environment.prod.ts` files with your project's credentials.\n- Utilize `provideFirebaseApp` and `provideAuth` for global configuration.\n- Implement authentication guards to secure routes, e.g., `CanActivate`, `CanDeactivate`.\n- Use `authState` observable to reactively update UI based on user authentication state.\n- Consider using Auth0 for more advanced authentication needs in Angular applications.",
+    "source": "web_search",
+    "updated_at": 1780746424.921598
+  },
+  "search:angular+firebase-authentication-best-practices:angular firebase authenticatio_ex": {
+    "content": "- **CLI Commands**:\n  - `ng new my-angular-app`\n  - `firebase init`\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - Firebase SDK: 9.x\n\n- **Key Config Options**:\n  - Authentication Providers: Google, Email/Password, Facebook, Twitter\n  - Security Rules for Firestore and Realtime Database",
+    "source": "code_example",
+    "updated_at": 1780746431.440163
+  }
+}

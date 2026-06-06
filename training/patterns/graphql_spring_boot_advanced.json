@@ -1,0 +1,22 @@
+{
+  "search:graphql-spring-boot-advanced:graphql spring boot advanced f": {
+    "content": "- Use `mvn spring-boot:run` to run your Spring Boot application.\n- Update dependencies in `pom.xml` for Spring Boot 3 and Spring Framework 6.\n- Define GraphQL schema using `.graphqls` or `.gqls` files under `src/main/resources/graphql/**`.\n- Configure GraphQL servlet properties in `application.yml` or `application.properties`, e.g., `graphql.servlet.enabled: true`.\n- Explore the `graphql-java-kickstart/graphql-spring-boot` GitHub repository for advanced features and configurations.\n- Use `spring-boot-starter-graphql` to add GraphQL support to your Spring Boot project.",
+    "source": "web_search",
+    "updated_at": 1780746365.2773056
+  },
+  "search:graphql-spring-boot-advanced:graphql spring boot advanced f_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0 (as of my last update)\n  - GraphQL Java: 18.0\n  - Spring for GraphQL: 1.0.0\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for configuring server port, security settings, and more.\n  - `@EnableGraphQL` to enable GraphQL in a Spring Boot application.\n  - `@QueryMapping`, `@MutationMapping`, and `@SubscriptionMapping` annotations for defining GraphQL operations.\n\n- **Additional Features**:\n  - Relationships between entities using `@OneToOne`, `@OneToMany`, etc., annotations.\n  - Pagination with `Pageable` interface.\n  - Filtering with custom directives or query parameters.\n  - Advanced security measures like OAuth2, JWT, and Spring Security.",
+    "source": "code_example",
+    "updated_at": 1780746376.0828967
+  },
+  "search:graphql-spring-boot-advanced:graphql spring boot performanc": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building Spring Boot projects.\n  - `npm install graphql-tools` for setting up GraphQL in a Node.js environment.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - GraphQL Java Tools: 14.0.0\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, database connection details.\n  - `schema.graphqls`: Define your GraphQL schema.\n  - `resolver`: Implement resolvers for each query and mutation.\n\n- **Performance Optimization Tips**:\n  - Use batching to reduce the number of requests.\n  - Implement caching strategies.\n  - Optimize data fetching by using DataLoader.",
+    "source": "web_search",
+    "updated_at": 1780746393.4503145
+  },
+  "search:graphql-spring-boot-advanced:graphql spring boot performanc_ex": {
+    "content": "- **Latest Version**: Spring Boot 3, GraphQL Java Tools 7.2.0\n- **Key Config Options**:\n  - `spring.graphql.schema.location`: Specifies the location of GraphQL schema files.\n  - `spring.graphql.servlet.enabled`: Enables or disables the GraphQL servlet.\n- **CLI Commands**:\n  - `mvn clean install` to build your project with Maven.\n  - `./gradlew build` for Gradle-based projects.",
+    "source": "code_example",
+    "updated_at": 1780746397.8005247
+  }
+}

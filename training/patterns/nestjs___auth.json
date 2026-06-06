@@ -1,0 +1,17 @@
+{
+  "search:NestJS + Auth:performance optimization techn": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Implement JWT-based authentication using `@nestjs/jwt`.\n- Utilize `@nestjs/passport` for passport strategies.\n- Configure database connections in `app.module.ts` with `TypeOrmModule.forRoot()`.\n- Apply indexing on database tables to improve query performance.\n- Use `nest generate controller auth` and `nest generate service auth` to scaffold authentication components.\n- Implement rate limiting using `@nestjs/throttler` for security.\n- Deploy your application using Docker with `docker-compose.yml`.\n- Monitor performance with tools like `nestjs-performance-monitor`.",
+    "source": "web_search",
+    "updated_at": 1780746369.4629216
+  },
+  "search:NestJS + Auth:performance optimization techn_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Update dependencies using `npm update`.\n- Implement JWT authentication by installing `@nestjs/jwt` and `passport-jwt`.\n- Configure JWT strategy in `auth.strategy.ts`:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { PassportStrategy } from '@nestjs/passport';\n  import { ExtractJwt, Strategy } from 'passport-jwt';\n\n  @Injectable()\n  export class JwtStrategy extends PassportStrategy(Strategy) {\n    constructor() {\n      super({\n        jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),\n        ignoreExpiration: false,\n        secretOrKey: 'your-secret-key',\n      });\n    }\n\n    async validate(payload: any) {\n      return { userId: payload.sub, username: payload.username };\n    }\n  }\n  ```\n- Use guards for authentication in controllers:\n  ```typescript\n  import { Controller, Get, UseGuards } from '@nestjs/common';\n  import { AuthGuard } from '@nestjs/passport';\n\n  @Controller('profile')\n  export class ProfileController {\n    @Get()\n    @UseGuards(AuthGuard('jwt'))\n    getProfile() {\n      return { message: 'This is a protected route' };\n    }\n  }\n  ```\n- Ensure sensitive fields are not exposed by stripping them from user objects:\n  ```typescript\n  const user = await this.userService.findOne(userId);\n  delete user.password;\n  return user;\n  ```\n- Use environment variables for secret keys and other sensitive information.",
+    "source": "code_example",
+    "updated_at": 1780746383.6565504
+  },
+  "search:NestJS + Auth:best practices for managing us": {
+    "content": "- **CLI Commands**:\n  - `npm install --save @nestjs/jwt`\n  - `nest generate module auth`\n  - `nest generate service auth`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/jwt: v9.x\n\n- **Key Config Options**:\n  - `JWT_SECRET`: Environment variable for security.\n  - `JWT_EXPIRES_IN`: Token expiration time, e.g., '60m' for 60 minutes.\n  - `JWT_ALGORITHM`: Algorithm used for signing tokens, e.g., 'HS256'.\n  - `JWT_ISSUER`: Issuer of the token.\n  - `JWT_AUDIENCE`: Audience of the token.",
+    "source": "web_search",
+    "updated_at": 1780746455.906173
+  }
+}
