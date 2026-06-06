@@ -1,0 +1,22 @@
+{
+  "search:spring+kotlin-jpa:spring kotlin jpa repository 2": {
+    "content": "- Use `@EnableJpaRepositories` to enable JPA repositories in your Spring application.\n- Ensure you have the latest version of Spring Boot and Kotlin dependencies in your `pom.xml` or `build.gradle`.\n- Configure your data source properties in `application.properties` or `application.yml`.\n- Utilize the `@Repository` annotation for repository interfaces.\n- Use `JpaRepository` or extend it for custom query methods.\n- Apply Kotlin's type inference to simplify repository method declarations.\n- Ensure you have Jackson and Hibernate dependencies for JSON serialization and ORM.\n- Check your entity classes for proper annotations like `@Entity`, `@Id`, etc.\n- Verify that your database schema matches the entity definitions.",
+    "source": "web_search",
+    "updated_at": 1780736047.0879073
+  },
+  "search:spring+kotlin-jpa:spring kotlin jpa repository 2_ex": {
+    "content": "- Use `./gradlew build` to build your project.\n- Ensure Kotlin version is at least 1.5.31 in your `build.gradle.kts`.\n- Add Spring Data JPA dependency with latest version, e.g., `implementation(\"org.springframework.boot:spring-boot-starter-data-jpa:2.7.4\")`.\n- Configure database connection properties in `application.properties` or `application.yml`.\n- Use `@Repository` annotation for repository interfaces.\n- Implement query methods directly in the repository interface using Spring Data JPA's method naming conventions.\n- Enable asynchronous repository execution with `@EnableAsync` and `@Async` annotations.\n- Define projections at runtime using interfaces or DTOs.\n- Utilize Kotlin data classes for entity definitions to simplify code.",
+    "source": "code_example",
+    "updated_at": 1780736052.5211153
+  },
+  "search:spring+kotlin-jpa:spring kotlin jpa transactions": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**:\n  - Spring Framework: 5.3.x\n  - JPA: 2.2\n  - Kotlin: 1.5.x\n- **Key Config Options**:\n  - `@Transactional`: Enables transaction management for a method or class.\n  - `readOnly = true`: Optimizes transactions for read-only operations.\n  - `TransactionManager`: Specifies the transaction manager to use (e.g., `DataSourceTransactionManager`).\n  - `propagation = Propagation.REQUIRED`: Defines how transactions are propagated between methods.",
+    "source": "web_search",
+    "updated_at": 1780736059.7786765
+  },
+  "search:spring+kotlin-jpa:spring kotlin jpa transactions_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew test` to run tests.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kotlin: 1.9.x\n  - JPA: 3.0.x\n\n- **Key Config Options**:\n  - `@Transactional`: Annotate repository methods or service classes with this to manage transactions.\n  - `spring.jpa.hibernate.ddl-auto=update`: Automatically update the schema based on entity definitions.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.",
+    "source": "code_example",
+    "updated_at": 1780736068.2484202
+  }
+}
