@@ -1,0 +1,22 @@
+{
+  "search:nextjs-nextauth-performance:next.js nextauth performance o": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - `providers`: Configure OAuth providers.\n  - `secret`: Secret key for JWT signing.\n  - `session`: Session management settings (e.g., strategy, maxAge).\n  - `callbacks`: Custom callbacks for authentication events.\n\n- **Optimization Tips**:\n  - Use serverless functions for authentication to scale easily.\n  - Implement rate limiting on login attempts.\n  - Cache authentication tokens to reduce server load.",
+    "source": "web_search",
+    "updated_at": 1780728941.8695118
+  },
+  "search:nextjs-nextauth-performance:next.js nextauth performance o_ex": {
+    "content": "- **Latest Version**: NextAuth.js 2025\n- **CLI Command**: `npx create-next-app@latest --auth-provider github`\n- **Key Config Options**:\n  - `session.maxAge`: Duration of the session in seconds.\n  - `providers`: List of authentication providers (e.g., GitHub, Google).\n  - `callbacks`: Custom functions for handling events like sign-in and sign-out.",
+    "source": "code_example",
+    "updated_at": 1780728948.645931
+  },
+  "search:nextjs-nextauth-performance:next.js nextauth benchmarking ": {
+    "content": "- **Latest Versions**: \n  - Next.js: v13.5\n  - NextAuth.js: v4.9\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for NextAuth.\n  - `providers`: Define authentication providers (e.g., Google, Facebook).\n  - `callbacks`: Customize the behavior of the authentication process.\n\n- **CLI Commands**:\n  - `npx create-next-app@latest my-app`: Create a new Next.js app.\n  - `npm install next-auth@latest`: Install the latest version of NextAuth.js.",
+    "source": "web_search",
+    "updated_at": 1780728957.007939
+  },
+  "search:nextjs-nextauth-performance:next.js nextauth benchmarking _ex": {
+    "content": "- **CLI Commands**: \n  - `npx create-next-app@latest my-next-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 16.x\n  - NextAuth.js: 5.x\n\n- **Key Config Options**:\n  - `providers`: Configure authentication providers like Google, Facebook, etc.\n  - `callbacks`: Customize the sign-in and session callbacks.\n  - `session`: Define how sessions are stored and managed.",
+    "source": "code_example",
+    "updated_at": 1780728967.6906064
+  }
+}
