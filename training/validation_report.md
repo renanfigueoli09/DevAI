@@ -1,27 +1,25 @@
 # DevAI Validation Report
-*2026-06-06 00:18*
+*2026-06-06 00:22*
 
-## Score: 60% `[███████████░░░░░░░░░]`
+## Score: 52% `[██████████░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
-| fastapi | 4.0/4.0 | 100% | ✅ |
-| common-errors | 6.0/6.0 | 100% | ✅ |
-| nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
-| spring-mongodb | 2.0/4.0 | 50% | ❌ |
-| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
+| fastapi | 2.0/4.0 | 50% | ❌ |
+| common-errors | 3.0/6.0 | 50% | ❌ |
+| nlp | 7.1/15.0 | 48% | ❌ |
+| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
+| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (10%)
+### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
@@ -32,15 +30,26 @@
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (53%)
+### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, docker-compose, Dockerfile`
+  - Missing: `não, never`
+  - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`
 
-### spring-mongodb (50%)
+### spring-mongodb (0%)
+- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
+  - Wrong: `@Entity`
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
   - Wrong: `JpaRepository`
+
+### fastapi (50%)
+- ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
+  - Wrong: `.dict()`
+
+### common-errors (50%)
+- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
+  - Wrong: `@nestjs/common`
 
 ## Como corrigir
 

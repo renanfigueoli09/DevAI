@@ -1,0 +1,12 @@
+{
+  "search:dotnet+cassandra-advanced:.net cassandra performance tun": {
+    "content": "- **CLI Commands**:\n  - `nodetool setcompactionthroughput <value>`: Set compaction throughput.\n  - `nodetool compact <keyspace> <table>`: Manually trigger compaction.\n\n- **Latest Versions**:\n  - Cassandra 4.x and later versions are recommended for the best performance and features.\n\n- **Key Config Options**:\n  - `heap_size`: Adjust JVM heap size based on available memory.\n  - `compaction_throughput_mb_per_sec`: Set compaction throughput in MB/s.\n  - `concurrent_compactors`: Number of concurrent compactors.\n  - `memtable_flush_writers`: Number of threads to use for flushing memtables.",
+    "source": "web_search",
+    "updated_at": 1780716161.1599004
+  },
+  "search:dotnet+cassandra-advanced:.net cassandra performance tun_ex": {
+    "content": "- **CLI Commands**:\n  - `nodetool gcstats`: Monitor garbage collection statistics.\n  - `nodetool tpstats`: View thread pool statistics.\n\n- **Latest Versions**:\n  - Cassandra C# Driver: 3.22.0\n\n- **Key Config Options**:\n  - JVM Heap Size (`-Xmx`, `-Xms`)\n  - Garbage Collector (e.g., G1GC)\n  - OS Settings: Disable swap, disable transparent huge pages, raise file descriptor limits\n  - Cassandra Configuration: Compaction throughput, thread pools, memtable sizing",
+    "source": "code_example",
+    "updated_at": 1780716177.409021
+  }
+}
