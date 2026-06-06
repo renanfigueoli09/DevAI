@@ -2,11 +2,11 @@
   "search:golang-echo-postgres:golang orm for postgresql 2025": {
     "content": "- **Bun ORM**: \n  - Latest version: Bun v1.7.2\n  - Key config options: `bun.RegisterModel`, `db.Connect`\n  - CLI commands: `bun init` to initialize a new project\n\n- **go-pg/pg**:\n  - Latest version: go-pg/pg v9.4.0\n  - Key config options: `pg.Options{User, Password, Addr}`\n  - Note: Maintenance mode; consider using Bun for future development.\n\n- **Query Builders**: \n  - Example: GORM (supports PostgreSQL)\n    - Latest version: GORM v2.31.0\n    - Key config options: `gorm.Open(postgres.Open(dsn))`\n    - CLI commands: `go get gorm.io/gorm` to install\n\nThese tools provide robust solutions for working with PostgreSQL in Go, each with its own set of features and configurations.",
     "source": "web_search",
-    "updated_at": 1780762493.856576
+    "updated_at": 1780762883.317197
   },
   "search:golang-echo-postgres:golang orm for postgresql 2025_ex": {
     "content": "- **GitHub - d-tsuji/awesome-go-orms**: Explore ORMs for Go, focusing on PostgreSQL features and performance.\n- **Bun ORM**: Supports PostgreSQL, MySQL, MSSQL, and SQLite. Use `go get github.com/uptrace/bun` to install.\n  - Key config options: `bun.NewDB(context.Background(), \"postgres://user:password@host/dbname\")`\n- **GO-PG**: A type-safe ORM for Go with code generation. Install using `go get github.com/go-pg/pg/v10`.\n  - Key config options: `db, err := pg.Connect(ctx, \"user=your_user dbname=your_db sslmode=disable\")`\n\nFor the latest versions and more detailed information, visit the respective GitHub repositories or official documentation sites.",
     "source": "code_example",
-    "updated_at": 1780762494.4498348
+    "updated_at": 1780762884.2281382
   }
 }
