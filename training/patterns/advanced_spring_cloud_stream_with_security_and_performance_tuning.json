@@ -2,31 +2,31 @@
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.4.RELEASE\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.cloud.stream.security.enabled=true`\n  - `spring.cloud.stream.security.jaas.config=classpath:jaas.conf`\n  - `spring.cloud.stream.security.oauth2.resource.server.jwt.key-value=<your-jwt-key>`",
     "source": "web_search",
-    "updated_at": 1780771917.2835054
+    "updated_at": 1780772540.5902596
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `docker-compose up` for running Kafka and Zookeeper.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic to consume from.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic to produce messages to.\n  - `spring.security.user.name` and `spring.security.user.password`: For securing the application endpoints.",
     "source": "code_example",
-    "updated_at": 1780771918.0236614
+    "updated_at": 1780772541.324761
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies": {
     "content": "- **CLI Commands**: Use `top`, `htop`, `iostat`, `vmstat` for monitoring system performance.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries to benefit from performance improvements.\n- **Key Config Options**:\n  - For Node.js: Adjust `--max-old-space-size` in the command line to increase memory allocation.\n  - For Python: Use `-O` flag for optimized code execution.\n  - For Apache: Increase `MaxRequestWorkers` in `httpd.conf`.\n  - For Nginx: Adjust `worker_processes` and `worker_connections` in `nginx.conf`.",
     "source": "web_search",
-    "updated_at": 1780771918.778778
+    "updated_at": 1780772542.037317
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies_ex": {
     "content": "- **CLI Commands**: Use `gprof` or `perf` for profiling.\n- **Latest Versions**: Ensure using the latest compiler and runtime versions.\n- **Key Config Options**:\n  - `-O2` or `-O3` flags in GCC for optimization levels.\n  - Enable Just-In-Time (JIT) compilation if applicable.\n  - Use efficient data structures and algorithms.",
     "source": "code_example",
-    "updated_at": 1780771919.509313
+    "updated_at": 1780772542.774338
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization": {
     "content": "- Use `node --stream` to enable streaming mode in Node.js.\n- Update Node.js to the latest version for performance improvements and bug fixes.\n- Configure stream processing applications with optimal buffer sizes using `highWaterMark`.\n- Employ `pipeline()` method from `stream` module for efficient data flow between streams.\n- Monitor latency by implementing `latencyAwareOperatorPlacement` strategies.\n- Utilize `Demeter` framework for resource-efficient distributed stream processing.\n- Set checkpoint intervals in distributed systems using a utilization model like the one described in \"Future Gener.\"",
     "source": "web_search",
-    "updated_at": 1780771920.2865741
+    "updated_at": 1780772543.541294
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization_ex": {
     "content": "- Use `filter` early to reduce unnecessary processing.\n- Optimize data structures before streaming.\n- Utilize primitive streams (`IntStream`, `LongStream`) for better performance.\n- Employ parallel streams with caution, ensuring thread safety.\n- Avoid collecting results into large collections if not necessary.\n- Use `reduce` or `collect` with appropriate collectors for efficient aggregation.\n- Minimize the use of intermediate operations like `map` and `flatMap`.\n- Consider using `peek` for debugging without affecting performance.\n- Regularly update Java to leverage performance improvements in newer versions.",
     "source": "code_example",
-    "updated_at": 1780771921.0244203
+    "updated_at": 1780772544.2760477
   }
 }

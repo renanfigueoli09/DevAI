@@ -2,21 +2,21 @@
   "search:React + Next.js Authentication Best Practices:react nextjs authentication be": {
     "content": "- Use `next-auth` for authentication in Next.js applications.\n- Install `next-auth` via npm or yarn: `npm install next-auth` or `yarn add next-auth`.\n- Configure `next-auth` by creating a file named `[...nextauth].js` in the `/pages/api/auth/` directory.\n- Define providers (e.g., Google, Facebook) and options within this file.\n- Protect routes using middleware. Create a `_middleware.js` file to protect specific pages or API routes.\n- Use `getServerSession` to access the session on server-side rendered pages.\n- Implement custom callbacks for handling sign-in, sign-out, and error events.\n- Utilize environment variables for sensitive information like client IDs and secrets.\n- Regularly update dependencies to ensure security patches are applied.",
     "source": "web_search",
-    "updated_at": 1780771771.1078055
+    "updated_at": 1780772406.865918
   },
   "search:React + Next.js Authentication Best Practices:react nextjs authentication be_ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Implement authentication using libraries like `next-auth`.\n- Configure `next-auth` with `[...nextauth].js` in the `pages/api/auth` directory.\n- Set up routes for login, sign-up, and logout.\n- Use middleware to protect routes that require authentication.\n- Store tokens securely using cookies or local storage.\n- Implement JWT (JSON Web Tokens) for stateless session management.\n- Regularly update dependencies to ensure security.\n- Test authentication flows thoroughly in development and production.",
     "source": "code_example",
-    "updated_at": 1780771771.9337313
+    "updated_at": 1780772407.560765
   },
   "search:React + Next.js Authentication Best Practices:securing react applications wi": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `next build --experimental-taintObjectReference`\n\n- **Latest Versions**:\n  - Next.js v14\n\n- **Key Config Options**:\n  - `security.headers` in `next.config.js`\n  - `experimental.taintObjectReference` flag",
     "source": "web_search",
-    "updated_at": 1780771772.748168
+    "updated_at": 1780772408.3344762
   },
   "search:React + Next.js Authentication Best Practices:securing react applications wi_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `npm run dev` for development server\n  - `npm run build` to build the project\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: v13.5 (as of my last update)\n  - React: v18.2 (as of my last update)\n\n- **Key Config Options**:\n  - Authentication: Use libraries like Clerk or Auth0 for handling user authentication.\n  - Security Headers: Configure `next.config.js` to include security headers such as Content-Security-Policy, X-XSS-Protection, and X-Frame-Options.\n  - Environment Variables: Store sensitive information in `.env.local` file and access them using `process.env.VARIABLE_NAME`.\n  - Data Handling: Implement server-side rendering (SSR) or static generation (SSG) to ensure data is fetched securely.",
     "source": "code_example",
-    "updated_at": 1780771773.53009
+    "updated_at": 1780772409.0712962
   }
 }

@@ -2,31 +2,31 @@
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling": {
     "content": "- Use `@app.exception_handler()` to add custom exception handling.\n- Middleware can be used to handle errors globally across the application.\n- Ensure error responses are well-documented and consistent with success responses using Pydantic models.\n- Implement global error handlers in FastAPI for better API consumer experience.",
     "source": "web_search",
-    "updated_at": 1780771994.2656531
+    "updated_at": 1780772630.1589403
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling_ex": {
     "content": "- Use `uvicorn` to run FastAPI apps.\n- Implement custom exception handlers using `@app.exception_handler`.\n- Utilize Python's built-in exceptions like `HTTPException`.\n- Configure error responses with JSON schemas for consistency.\n- Update FastAPI to the latest version for bug fixes and improvements.\n- Key config options include `debug=True` during development.\n- Use middleware for global error handling across all routes.",
     "source": "code_example",
-    "updated_at": 1780771995.0021038
+    "updated_at": 1780772631.0547967
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi": {
     "content": "- Use `openssl rand -base64 32` to generate a secure secret key.\n- Implement JWT signing with the HS256 algorithm for security.\n- Store the secret key securely, not in code or version control.\n- Set an appropriate expiration time (`exp`) in JWTs using libraries like `jsonwebtoken`.\n- Validate JWTs on each request by checking signature and expiration.\n- Use HTTPS to secure transmission of JWTs.\n- Implement token revocation mechanisms if needed.\n- Regularly update dependencies and libraries used for JWT handling.",
     "source": "web_search",
-    "updated_at": 1780771995.7132177
+    "updated_at": 1780772631.9452188
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi": {
     "content": "- Use `uvicorn` as the ASGI server to run your FastAPI application.\n- Override default exception handlers by defining custom exception handlers in your FastAPI app.\n- Implement global exception handling using middleware or decorators for consistent error responses.\n- Utilize Python's built-in exceptions like `HTTPException` for HTTP errors and create custom exceptions for application-specific errors.\n- Configure logging to capture and log exceptions, aiding in debugging and monitoring.",
     "source": "web_search",
-    "updated_at": 1780771996.463728
+    "updated_at": 1780772632.9190652
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi_ex": {
     "content": "- Use `HTTPException` from `fastapi` to raise exceptions.\n- Register exception handlers using the `@app.exception_handler(HTTPException)` decorator.\n- Handle custom exceptions by registering them with Starlette's `HTTPException`.\n- For more detailed error handling, consider using Pydantic models for validation errors.\n- FastAPI automatically handles common HTTP errors like 404 and 500.\n- Use middleware to handle global exceptions if needed.\n- Ensure all exception handlers return responses in a consistent format.",
     "source": "code_example",
-    "updated_at": 1780771997.208511
+    "updated_at": 1780772633.8659072
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi_ex": {
     "content": "- Use `openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048` to generate a private key.\n- Use `openssl rsa -pubout -in private.key -out public.key` to derive the public key from the private key.\n- Install `pyjwt` using pip with the command `pip install pyjwt`.\n- For JWT signing, use the following Python code snippet:\n  ```python\n  import jwt\n  encoded_jwt = jwt.encode({\"some\": \"payload\"}, \"secret\", algorithm=\"HS256\")\n  ```\n- For JWT decoding and verification, use this Python code snippet:\n  ```python\n  decoded_jwt = jwt.decode(encoded_jwt, \"secret\", algorithms=[\"HS256\"])\n  ```\n- Ensure your secret key is kept secure and not exposed in your source code.\n- Use HTTPS to protect JWTs during transmission.\n- Implement token expiration with the `exp` claim to enhance security.\n- Regularly rotate your secret keys for added security.",
     "source": "code_example",
-    "updated_at": 1780771997.9389863
+    "updated_at": 1780772634.8303514
   }
 }

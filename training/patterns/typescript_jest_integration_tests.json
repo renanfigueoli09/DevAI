@@ -2,7 +2,7 @@
   "search:typescript+jest-integration-tests:typescript jest integration te": {
     "content": "- Install Jest globally using `yarn global add jest` or `npm install jest --global`.\n- Use the command line to run Jest tests with options like `jest --watch`, `jest --coverage`, and `jest --verbose`.\n- For TypeScript projects, ensure you have `ts-jest` installed and configured in your `package.json`:\n  ```json\n  \"devDependencies\": {\n    \"@types/jest\": \"^29.0.3\",\n    \"ts-jest\": \"^29.0.3\",\n    \"typescript\": \"^4.5.4\"\n  }\n  ```\n- Configure Jest by creating a `jest.config.js` file with options like:\n  ```js\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts'],\n    coverageDirectory: './coverage'\n  };\n  ```\n- Use `describe`, `it`, and `expect` for writing tests.\n- For mocking modules in TypeScript, use Jest's `jest.mock()` function.\n- Utilize async testing patterns with `async/await` or `.then()`.\n- Leverage TypeScript's type safety features to catch errors during testing.",
     "source": "web_search",
-    "updated_at": 1780772021.4939635
+    "updated_at": 1780772669.6026826
   },
   "search:typescript+jest-integration-tests:typescript jest integration te_ex": {
     "content": "- Install Jest using npm or yarn.\n- Use `ts-jest` for TypeScript support.\n- Create a Jest configuration file (`jest.config.js`).\n- For global types, use `@types/jest`.\n- Mock async methods with Jest's mocking capabilities.\n- Consider using Vitest as an alternative to Jest in 2025.\n- Utilize Yarn workspaces for multi-package projects.\n- Set up multi-project Jest with GitHub Actions.",
