@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in React-Native-Firebase-Authentication:react-native-firebase-authenti": {
+    "content": "- Ensure Firebase SDK is up to date using `npm install @react-native-firebase/app@latest`.\n- For iOS, make sure the bundle identifier matches your Firebase project settings.\n- On Android, check that SHA-1 and SHA-256 fingerprints are correctly configured in Firebase console under Project Settings > General > Your apps.\n- For Apple authentication on iOS, use `@invertase/react-native-apple-authentication` for handling sign-in with Apple.\n- Implement error handling using try-catch blocks around authentication methods to catch and log errors effectively.\n- Example of handling Firebase login errors:\n  ```javascript\n  import auth from '@react-native-firebase/auth';\n\n  async function signIn(email, password) {\n    try {\n      await auth().signInWithEmailAndPassword(email, password);\n    } catch (error) {\n      console.error('Authentication failed:', error.message);\n    }\n  }\n  ```\n- Ensure all necessary permissions are granted in `Info.plist` for iOS and `AndroidManifest.xml` for Android.\n- For debugging, use Firebase Authentication debug tokens to verify authentication requests.",
+    "source": "web_search",
+    "updated_at": 1780729472.724559
+  },
+  "search:Advanced Error Handling in React-Native-Firebase-Authentication:react-native-firebase-authenti_ex": {
+    "content": "- Install `@react-native-firebase/app` and `@react-native-firebase/auth` using npm or yarn.\n- Ensure Firebase is initialized in your project with the correct configuration.\n- Use `auth().createUserWithEmailAndPassword(email, password)` for email/password registration.\n- Handle errors using try-catch blocks around authentication calls.\n- For social logins, use providers like FacebookAuthProvider and GoogleAuthProvider.\n- Implement error handling by checking the error code (`error.code`) to provide specific feedback.\n- Update Firebase SDKs regularly using `npm update @react-native-firebase/app @react-native-firebase/auth`.\n- Configure your project's Firebase settings in the Firebase console for correct functionality.",
+    "source": "code_example",
+    "updated_at": 1780729480.146751
+  },
+  "search:Advanced Error Handling in React-Native-Firebase-Authentication:firebase authentication error ": {
+    "content": "- Use `AuthErrorCode.Code(rawValue:)` to get error code instances from Firebase Auth errors.\n- Handle authentication errors in SwiftUI using the `try?` or `do-catch` syntax.\n- For network-related errors, check for \"auth/network-request-failed\" and handle accordingly.\n- Implement password-based authentication with Firebase by integrating email and password sign-in methods.\n- Ensure your Firebase project is properly configured with the latest SDK versions.",
+    "source": "web_search",
+    "updated_at": 1780729486.616509
+  },
+  "search:Advanced Error Handling in React-Native-Firebase-Authentication:firebase authentication error _ex": {
+    "content": "- **CLI Commands**: Use `firebase auth:import` to import users into Firebase Authentication.\n- **Latest Versions**: Ensure you are using the latest version of Firebase CLI and SDKs by running `npm install -g firebase-tools` and updating your project dependencies.\n- **Key Config Options**:\n  - `signInMethod`: Specifies the method for user sign-in (e.g., email/password, phone).\n  - `passwordHashAlgorithm`: Defines the algorithm used to hash passwords.\n  - `emailVerificationRequired`: Determines if email verification is required during registration.",
+    "source": "code_example",
+    "updated_at": 1780729489.819826
+  }
+}
