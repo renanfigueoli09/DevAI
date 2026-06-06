@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-performance-analysis:.net core performance profilin": {
+    "content": "- **dotTrace Profiler**: Use JetBrains dotTrace for detailed performance analysis.\n- **Visual Studio Profiling Tools**: Leverage built-in tools like CPU and Memory Profiler.\n- **ASP.NET Core Performance Diagnostic Tools**: Utilize Visual Studio's diagnostic tools for ASP.NET Core applications.\n- **Key Config Options**:\n  - `dotTrace`: Configure via JetBrains' GUI or command line options.\n  - `Visual Studio`: Set up profiling sessions through the IDE.\n- **CLI Commands**:\n  - `dotTrace` CLI: Use commands like `dottrace analyze` for performance analysis.\n  - `Visual Studio`: Utilize `msbuild /p:CollectPerformanceCounters=true` for detailed diagnostics.\n- **Latest Versions**: Ensure using the latest versions of dotTrace and Visual Studio for optimal performance.",
+    "source": "web_search",
+    "updated_at": 1780726399.5594804
+  },
+  "search:dotnet-core-performance-analysis:.net core performance profilin_ex": {
+    "content": "- **PerfView**: \n  - Command: `perfview collect`\n  - Flags: `-BufferSizeMB=256`, `-CircularBufferMB=4096`\n\n- **ultra**:\n  - Command: `ultra profile <process_id>`\n  - Flags: `-loglevel=Verbose`, `-outputdir=C:\\profile_output`\n\n- **Prefix**:\n  - Command: `prefix start`\n  - Config: Modify `web.config` to enable logging\n\n- **dotTrace** (latest version as of 2024):\n  - Download from JetBrains website\n  - Key Features: CPU, Memory, and Thread Profiling\n\n- **ANTS Performance Profiler** (latest version as of 2024):\n  - Download from Red Gate website\n  - Key Features: Comprehensive performance analysis, memory usage, and thread diagnostics",
+    "source": "code_example",
+    "updated_at": 1780726408.081512
+  },
+  "search:dotnet-core-performance-analysis:.net core memory management be": {
+    "content": "- Use `dotnet` CLI to manage projects and dependencies.\n- Target the latest .NET Core SDK version for optimal performance.\n- Configure memory allocation using `GCSettings.LargeObjectHeapCompactionMode`.\n- Implement IDisposable pattern for managing unmanaged resources.\n- Utilize `Span<T>` and `ReadOnlySpan<T>` for efficient contiguous memory access.\n- Monitor memory usage with tools like dotMemory or VisualVM.\n- Avoid creating unnecessary objects to reduce garbage collection pressure.\n- Use `GC.Collect()` sparingly, as it can disrupt performance.\n- Consider using `MemoryPool` for pooling large allocations.",
+    "source": "web_search",
+    "updated_at": 1780726418.5556443
+  },
+  "search:dotnet-core-performance-analysis:.net core memory management be_ex": {
+    "content": "- Use `dotnet build --configuration Release` for optimized builds.\n- Implement object pooling to reduce memory allocations, e.g., `ObjectPool<T>`.\n- Monitor memory usage with `GC.GetTotalMemory(false)` and `GC.Collect()`.\n- Configure the garbage collector with `<gcServer enabled=\"true\" />` in `appsettings.json`.\n- Use `using` statements for disposable objects to ensure proper disposal.\n- Avoid creating large arrays on the stack; use them on the heap instead.\n- Regularly update .NET Core to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1780726424.6393006
+  }
+}

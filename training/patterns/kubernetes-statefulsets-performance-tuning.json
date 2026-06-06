@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-statefulsets-performance-tuning:kubernetes statefulsets perfor": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n  - `kubectl apply -f <path-to-statefulset-yaml>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.replicas`: Define the number of replicas.\n  - `.spec.template`: Specify the pod template for the StatefulSet.\n  - `.spec.serviceName`: Link to a headless service for stable network identifiers.\n  - `.spec.updateStrategy`: Configure update policies (e.g., RollingUpdate, OnDelete).\n  - `.spec.volumeClaimTemplates`: Define persistent volume claims for state persistence.",
+    "source": "web_search",
+    "updated_at": 1780726469.5742528
+  },
+  "search:kubernetes-statefulsets-performance-tuning:kubernetes statefulsets perfor_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <statefulset-name> --image=<image-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<number>`\n  - `kubectl delete statefulset <statefulset-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.template`: Pod template specification.\n  - `.spec.serviceName`: Name of the service for StatefulSet pods.\n  - `.spec.volumeClaimTemplates`: Persistent volume claim templates.",
+    "source": "code_example",
+    "updated_at": 1780726481.24461
+  },
+  "search:kubernetes-statefulsets-performance-tuning:statefulsets best practices fo": {
+    "content": "- Use `kubectl scale statefulset <stateful-app> --replicas=2` to reduce replicas.\n- Update the image in the StatefulSet YAML using `kubectl apply -f <updated-statefulset-yaml>`.\n- Ensure persistent storage by defining a PersistentVolumeClaim (PVC) in your StatefulSet configuration.\n- Use `kubectl rollout restart statefulset <stateful-app>` for rolling updates.\n- Monitor StatefulSets with tools like Prometheus and Grafana.\n- Scale StatefulSets using `kubectl scale statefulset <stateful-app> --replicas=<desired-replicas>`.\n- Configure stable network identities by setting the `spec.template.spec.hostname` field in your StatefulSet YAML.\n- Implement backup and restore strategies for persistent volumes.\n- Use `kubectl delete pod <pod-name> --grace-period=0 --force` to forcefully terminate a pod during scaling down.",
+    "source": "web_search",
+    "updated_at": 1780726492.2738674
+  },
+  "search:kubernetes-statefulsets-performance-tuning:statefulsets best practices fo_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to create or update StatefulSets.\n- Ensure each pod has a unique identity using the `metadata.name` field in the StatefulSet specification.\n- Configure persistent storage for StatefulSets using PersistentVolumeClaims (PVCs).\n- Set `spec.updateStrategy.type=RollingUpdate` for controlled updates.\n- Use `kubectl rollout status statefulset/<statefulset-name>` to monitor update progress.\n- Ensure `spec.replicas` is set to the desired number of replicas for high availability.\n- Configure readiness and liveness probes using `readinessProbe` and `livenessProbe`.\n- Monitor StatefulSet events with `kubectl describe statefulset <statefulset-name>`.",
+    "source": "code_example",
+    "updated_at": 1780726498.633895
+  }
+}
