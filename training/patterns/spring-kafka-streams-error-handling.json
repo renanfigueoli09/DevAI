@@ -1,0 +1,17 @@
+{
+  "search:spring+kafka-streams-error-handling:spring kafka streams error han": {
+    "content": "- Use `spring-cloud-stream` and `kafka-streams` dependencies.\n- Implement error handling in your processor function.\n- Configure a Dead Letter Queue (DLQ) for bad messages using KIP-1034.\n- Set up Kafka Streams with Spring Cloud Stream by running a local Kafka cluster via Docker.\n- Use the latest versions of Spring Cloud Stream and Kafka Streams to ensure compatibility and bug fixes.\n- Key config options include `spring.cloud.stream.bindings.input.destination`, `spring.cloud.stream.bindings.output.destination`, and `spring.cloud.stream.kafka.streams.binder.configuration.auto.offset.reset`.\n- For native image testing, run `cloud:cloud-stream-kafka-streams:nativeAppTest` or `integration:spring-kafka-streams:nativeAppTest`.",
+    "source": "web_search",
+    "updated_at": 1780711471.0578084
+  },
+  "search:spring+kafka-streams-error-handling:kafka streams error management": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic_name>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group_id>`\n\n- **Latest Versions**:\n  - Spring Kafka: 2.8.x\n  - Apache Kafka Streams: 3.0.x\n\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.streams.binder.deserializationExceptionHandler`\n  - `spring.cloud.stream.bindings.<input>.consumer.errorHandler`\n  - `spring.cloud.stream.bindings.<output>.producer.errorHandler`",
+    "source": "web_search",
+    "updated_at": 1780711497.8473275
+  },
+  "search:spring+kafka-streams-error-handling:kafka streams error management_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic error-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Kafka: 3.0.0\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.error-handler`: Custom error handler for consumer.\n  - `spring.kafka.streams.application-id`: Unique identifier for the Kafka Streams application.\n  - `spring.kafka.streams.default-key-deserializer`: Deserializer for keys in streams.\n  - `spring.kafka.streams.default-value-deserializer`: Deserializer for values in streams.",
+    "source": "code_example",
+    "updated_at": 1780711507.4830098
+  }
+}
