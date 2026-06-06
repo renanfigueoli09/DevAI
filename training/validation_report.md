@@ -1,97 +1,43 @@
 # DevAI Validation Report
-*2026-06-06 09:33*
+*2026-06-06 09:43*
 
-## Score: 5% `[█░░░░░░░░░░░░░░░░░░░]`
+## Score: 75% `[███████████████░░░░░]`  (36.0/48.0)
 
-| Tópico | Score | % | Status |
-|---|---|---|---|
-| nlp | 3.3/15.0 | 22% | ❌ |
-| nestjs-mongodb | 0.0/15.0 | 0% | ❌ |
-| nestjs-typeorm | 0.0/4.0 | 0% | ❌ |
-| nestjs-auth | 0.0/5.0 | 0% | ❌ |
-| nestjs-core | 0.0/4.0 | 0% | ❌ |
-| docker | 0.0/4.0 | 0% | ❌ |
-| spring-mongodb | 0.0/4.0 | 0% | ❌ |
-| fastapi | 0.0/4.0 | 0% | ❌ |
-| common-errors | 0.0/6.0 | 0% | ❌ |
+### Knowledge Check (vector store): 22.0/34.0
+| Check | Score | OK |
+|---|---|---|
+| Mongoose: required=! optional=? | 3.0/3 | ✅ |
+| findOneBy não existe no Mongoose | 3.0/3 | ✅ |
+| MongooseModule.forFeature (não TypeOrmModule) | 3.0/3 | ✅ |
+| app.module MongoDB = MongooseModule.forRoot | 0.0/3 | ❌ |
+| livros → Book (não Livros) | 3.0/3 | ✅ |
+| docker config não cria src/docker/ | 3.0/3 | ✅ |
+| usuários ≠ auth (has_auth=false) | 3.0/3 | ✅ |
+| PartialType de @nestjs/mapped-types | 0.0/3 | ❌ |
+| MongoDB healthcheck: mongosh ping | 0.0/2 | ❌ |
+| docker only = sem Redis/Kafka | 2.0/2 | ✅ |
+| TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
+| Spring MongoDB: @Document não @Entity | 0.0/2 | ❌ |
+| FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
 
-## ❌ Retreinar urgente
+### Generation Check (LLM): 14.0/14.0
+| Check | Score | OK |
+|---|---|---|
+| schema.ts Mongoose strict mode | 4.0/4 | ✅ |
+| service.ts Mongoose CRUD | 4.0/4 | ✅ |
+| dto.ts PartialType correto | 3.0/3 | ✅ |
+| docker-compose MongoDB only | 3.0/3 | ✅ |
 
-### nestjs-mongodb (0%)
-- ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
-  - Missing: `!`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Missing: `field!, !:`
-- ✗ NestJS Mongoose service: which method to use instead of findOneBy
-  - Missing: `findById, findOne`
-- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
-  - Missing: `MongooseModule.forFeature`
-- ✗ NestJS app.module.ts for MongoDB: what module to add for database
-  - Missing: `MongooseModule.forRoot, MONGODB_URI`
+## ❌ Falhou
 
-### nestjs-typeorm (0%)
-- ✗ NestJS TypeORM: which decorator for primary UUID column?
-  - Missing: `@PrimaryGeneratedColumn, uuid`
-- ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
-  - Missing: `@InjectRepository`
+- **app.module MongoDB = MongooseModule.forRoot** — found=['MongooseModule.forRoot', 'MONGODB_URI'] missing=[] wrong=['DB_HOST', 'TypeOrmModule']
+- **PartialType de @nestjs/mapped-types** — found=['@nestjs/mapped-types', 'PartialType'] missing=[] wrong=['@nestjs/common']
+- **MongoDB healthcheck: mongosh ping** — found=['mongosh', 'ping'] missing=[] wrong=['pg_isready']
+- **Spring MongoDB: @Document não @Entity** — found=['@Document', 'MongoRepository'] missing=[] wrong=['@Entity', 'JpaRepository']
+- **FastAPI: AsyncIOMotorClient (não pymongo)** — found=['AsyncIOMotorClient', 'motor'] missing=[] wrong=['MongoClient', 'pymongo']
 
-### nestjs-auth (0%)
-- ✗ NestJS PartialType: from @nestjs/mapped-types or @nestjs/common?
-  - Missing: `@nestjs/mapped-types`
-- ✗ NestJS JWT: which class to extend for JwtStrategy?
-  - Missing: `PassportStrategy, Strategy`
-
-### nestjs-core (0%)
-- ✗ NestJS ValidationPipe: what options to set for whitelist and tran
-  - Missing: `whitelist, transform`
-- ✗ NestJS Swagger setup in main.ts: which classes to use?
-  - Missing: `DocumentBuilder, SwaggerModule`
-
-### nlp (22%)
-- ✗ User says 'CRUD de livros com MongoDB'. What is the entity name?
-  - Missing: `Book`
-- ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, docker-compose, Dockerfile`
-- ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `false, não`
-- ✗ User requests 'API with MongoDB and Docker only'. Should Redis ap
-  - Missing: `não, only, apenas`
-
-### docker (0%)
-- ✗ MongoDB healthcheck in docker-compose: which command?
-  - Missing: `mongosh, adminCommand, ping`
-- ✗ docker-compose depends_on: how to wait for a healthy service?
-  - Missing: `condition, service_healthy`
-
-### spring-mongodb (0%)
-- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Missing: `@Document`
-- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
-  - Missing: `MongoRepository`
-
-### fastapi (0%)
-- ✗ FastAPI MongoDB: which async driver to use?
-  - Missing: `motor, Motor, AsyncIOMotorClient`
-- ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
-  - Missing: `model_dump`
-
-### common-errors (0%)
-- ✗ NestJS TS2307: module not found book.module — what is the fix?
-  - Missing: `create, module.ts, BookModule, @Module`
-- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
-  - Missing: `@nestjs/mapped-types`
-
-## Como corrigir
-
+## Fix
 ```bash
-# Fix automático (retreina + re-valida)
-python scripts/validate.py --fix
-
-# Forçar retreinamento específico
-python scripts/validate.py --fix --topic nestjs-mongodb
-python scripts/validate.py --fix --topic nestjs-typeorm
-python scripts/validate.py --fix --topic nestjs-auth
-
-# Overnight
-./scripts/study.sh --group all --loop --validate --intensive
+python scripts/validate.py --fix --rounds 10
+./scripts/train_and_validate.sh
 ```

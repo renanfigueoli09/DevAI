@@ -1,0 +1,32 @@
+{
+  "search:Advanced Error Handling in React + Core:react error handling": {
+    "content": "- Use `try-catch` blocks within functional components or class methods.\n- Implement error boundaries using the `<ErrorBoundary>` component to catch and display errors in React applications.\n- Utilize Sentry for real-time error tracking and performance monitoring with its JavaScript SDK.\n- Configure Axios interceptors to handle HTTP errors globally across your application.\n- Use `console.error` for logging errors during development, but avoid exposing sensitive information in production logs.\n- Implement a custom hook or utility function to centralize error handling logic.\n- Ensure all API endpoints are validated and network configurations are correct to prevent Ajax/HTTP errors.",
+    "source": "web_search",
+    "updated_at": 1780749344.170086
+  },
+  "search:Advanced Error Handling in React + Core:react error handling_ex": {
+    "content": "- Use `react-error-boundary` library for error handling in React components.\n- Implement Error Boundaries using the `<ErrorBoundary>` component.\n- For async error handling, use `try-catch` blocks within event handlers or lifecycle methods.\n- Update React to the latest version (currently 18.2) for improved performance and new features.\n- Utilize `console.error` for logging errors in development environments.\n- Configure ESLint rules related to error handling for consistent code quality.\n- Use `react-test-renderer` for testing components that throw errors.\n- Implement custom error handlers in your application's root component.\n- Regularly update dependencies using tools like `npm outdated` and `npm update`.",
+    "source": "code_example",
+    "updated_at": 1780749368.9561584
+  },
+  "search:Advanced Error Handling in React + Core:core-js error handling": {
+    "content": "- Use `structuredClone()` or `postMessage()` for cloning errors between Workers.\n- Implement multiple layers of error handling in client-side applications: input validation, operational error handling, and global error logging.\n- For Node.js, use appropriate patterns like try-catch blocks to handle errors effectively.\n- In ASP.NET Core Blazor apps, utilize the built-in exception handling mechanisms provided by the framework.",
+    "source": "web_search",
+    "updated_at": 1780749386.7904012
+  },
+  "search:Advanced Error Handling in React + Core:core-js error handling_ex": {
+    "content": "- Use `addEventListener('error', handler, true)` to capture phase interception of resource failures.\n- Implement `window.onerror` return value logic (`true` to suppress default console logging).\n- Register async rejection handlers alongside sync error listeners.\n- Use Error Boundaries in React for UI-level error handling.\n- Log errors with context for debugging.\n- Always re-throw or handle—never silently swallow errors.\n- Strategies for robust code include using `try/catch` blocks and asynchronous task handling.",
+    "source": "code_example",
+    "updated_at": 1780749401.42992
+  },
+  "search:Advanced Error Handling in React + Core:react error boundaries": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app` to set up a new React app.\n  - `npm install react-error-boundary` to add the error boundary library.\n\n- **Latest Versions**:\n  - React: v18.2.0 (as of latest updates)\n  - react-error-boundary: v3.1.5 (as of latest updates)\n\n- **Key Config Options**:\n  - `fallback`: The UI to render when an error occurs.\n  - `onError`: A function that gets called with the error and component stack trace.\n  - `resetKeys`: An array of keys that, when changed, will reset the error boundary.",
+    "source": "web_search",
+    "updated_at": 1780749420.450794
+  },
+  "search:Advanced Error Handling in React + Core:react error boundaries_ex": {
+    "content": "- Install `react-error-boundary` using npm or yarn.\n- Use the `<ErrorBoundary>` component to wrap parts of your app that might throw errors.\n- Configure error boundaries with `fallback` prop for custom fallback UI.\n- Utilize `onError` callback for logging errors outside the component tree.\n- Ensure compatibility across React renderers like React DOM and React Native.",
+    "source": "code_example",
+    "updated_at": 1780749424.1767128
+  }
+}
