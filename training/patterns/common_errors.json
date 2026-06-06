@@ -2,17 +2,17 @@
   "qa:ts2307-module-missing": {
     "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}",
     "source": "correct_answer",
-    "updated_at": 1780750177.4118178
+    "updated_at": 1780750599.687123
   },
   "NestJS TS2307 module not found book.module fix create": {
     "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}",
     "source": "correct_answer",
-    "updated_at": 1780750177.6512558
+    "updated_at": 1780750599.870592
   },
   "pattern:error:missing-module": {
     "content": "TS2307 './book/book.module' not found: The fix is to CREATE src/book/book.module.ts. Content: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "forced_training",
-    "updated_at": 1780750177.8375683
+    "updated_at": 1780750600.0428421
   },
   "pattern:error:module-not-found": {
     "content": "// TS2307 './book/book.module' not found: CREATE src/book/book.module.ts with @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController]}) export class BookModule {}",
@@ -32,6 +32,6 @@
   "qa:ts2307-create-module": {
     "content": "TS2307 Cannot find module './book/book.module': CREATE src/book/book.module.ts\n@Module({\n  imports: [MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],\n  providers: [BookService], controllers: [BookController], exports: [BookService]\n}) export class BookModule {}",
     "source": "critical_pattern",
-    "updated_at": 1780750169.5196667
+    "updated_at": 1780750593.9210155
   }
 }
