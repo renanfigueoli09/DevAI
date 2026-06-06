@@ -58,5 +58,55 @@
     "content": "- Use `dotnet add package problem-spring-web` to install the necessary package.\n- Ensure your project targets .NET Core 3.1 or later for full support of RFC 7807.\n- Configure error handling in `Startup.cs` by adding middleware:\n  ```csharp\n  app.UseProblemDetails();\n  ```\n- Define custom problem details classes if needed, inheriting from `ValidationProblemDetails`.\n- Use `[ApiController]` and `[Route(\"api/[controller]\")]\n` attributes on your controllers to enable automatic validation.\n- Handle specific exceptions using `try-catch` blocks or middleware for more granular control over error responses.",
     "source": "code_example",
     "updated_at": 1780704251.8063107
+  },
+  "search:Error Handling:kafka-streams-advanced error h": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server <broker_address> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-console-producer.sh --broker-list <broker_address> --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server <broker_address> --topic <topic_name> --from-beginning`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.0.0\n  - Apache Kafka: 2.8.0\n\n- **Key Config Options**:\n  - `default.key.serde`: Serde for keys.\n  - `default.value.serde`: Serde for values.\n  - `auto.offset.reset`: Controls the starting offset if no initial offset is found or if the current offset does not exist anymore on the server (e.g., because that data has been deleted).\n  - `enable.auto.commit`: If true, Kafka Streams will periodically commit offsets to Zookeeper/AK.\n  - `max.poll.records`: Maximum number of records returned in a single call to poll().",
+    "source": "web_search",
+    "updated_at": 1780720407.5557203
+  },
+  "search:Error Handling:kafka-streams-advanced error h_ex": {
+    "content": "- Use `kafka-topics.sh --create` to create Kafka topics.\n- Set `default.deserialization.exception.handler` in `StreamsConfig` to handle deserialization errors.\n- Configure a Dead Letter Queue (DLQ) by setting `application.id`, `bootstrap.servers`, and DLQ properties.\n- Implement custom error handlers using `DeserializationExceptionHandler`.\n- Use `KafkaStreams#start()` to start the Kafka Streams application.\n- Monitor streams with tools like Confluent Control Center for real-time insights.\n- Ensure proper resource management with `KafkaStreams#close()`.",
+    "source": "code_example",
+    "updated_at": 1780720411.143594
+  },
+  "search:Error Handling:fastapi+mysql error management": {
+    "content": "- **GitHub Repository**: KEERTHANA-M-2005/FastAPI-mysql-CRUD\n- **YouTube Tutorial**: FastAPI MySQL REST API in Python | CRUD Operations\n- **FastAPI Documentation**: SQL (Relational) Databases - FastAPI\n- **Blog Post**: Server-side rendering with FastAPI and MySQL\n\n**CLI Commands**:\n- `git clone https://github.com/KEERTHANA-M-2005/FastAPI-mysql-CRUD.git`\n- `pip install fastapi[all] sqlalchemy mysql-connector-python`\n\n**Latest Versions**:\n- FastAPI: 0.98.0\n- SQLAlchemy: 1.4.36\n- MySQL Connector Python: 8.0.27\n\n**Key Config Options**:\n- Database URL: `mysql+mysqlconnector://user:password@host/dbname`\n- Dependency Injection for database session management\n- Use of Pydantic models for data validation and serialization",
+    "source": "web_search",
+    "updated_at": 1780720422.125668
+  },
+  "search:Error Handling:fastapi+mysql error management_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI and MySQL connector using pip:\n  ```bash\n  pip install fastapi uvicorn mysql-connector-python\n  ```\n- For error handling, use `HTTPException` from FastAPI for custom exceptions.\n- Implement custom exception handlers in your FastAPI application.\n- Configure database connections using environment variables or a configuration file.\n- Use middleware to handle global exceptions and logging.\n- Ensure validation of input data using Pydantic models for robust APIs.",
+    "source": "code_example",
+    "updated_at": 1780720426.6370704
+  },
+  "search:Error Handling:rabbitmq+advanced error handli": {
+    "content": "- **CLI Commands**: \n  - `rabbitmqctl start_app` to start RabbitMQ.\n  - `rabbitmqctl stop_app` to stop RabbitMQ.\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x (as of my last update).\n  - AMQP Extension for PHP: Check the official PHP documentation for the latest version.\n\n- **Key Config Options**:\n  - `listeners.tcp.default`: Specifies the TCP port on which RabbitMQ listens.\n  - `management.listener.port`: Enables and specifies the port for the management plugin.\n  - `cluster_partition_handling`: Defines how RabbitMQ handles cluster partitions.",
+    "source": "web_search",
+    "updated_at": 1780720432.0152137
+  },
+  "search:Error Handling:rabbitmq+advanced error handli_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl status` to check RabbitMQ server status.\n  - `rabbitmqadmin declare queue name=my_queue durable=true` to create a durable queue.\n\n- **Latest Versions**:\n  - RabbitMQ: v3.12.0 (as of my last update).\n  - Rascal: v4.5.0 (latest version available as of my last check).\n\n- **Key Config Options**:\n  - `durable`: Ensures the queue survives broker restarts.\n  - `auto_delete`: Automatically deletes the queue when it's no longer in use.\n  - `reconnect_delay`: Specifies the delay between reconnection attempts.",
+    "source": "code_example",
+    "updated_at": 1780720436.5914834
+  },
+  "search:Error Handling:spring-cloud-stream-kafka erro": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output.\n  - `spring.cloud.stream.bindings.error.destination`: Dead Letter Topic (DLT) for error messages.\n  - `spring.cloud.stream.bindings.error.group`: Consumer group for DLT.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Set to `earliest` or `latest`.\n  - `spring.cloud.stream.kafka.binder.configuration.retry.backoff.ms`: Retry interval in milliseconds.",
+    "source": "web_search",
+    "updated_at": 1780720442.751666
+  },
+  "search:Error Handling:spring-cloud-stream-kafka erro_ex": {
+    "content": "- **LogAndContinueExceptionHandler**: Logs the error and continues processing the next record.\n- **LogAndFailExceptionHandler**: Logs the error and fails, stopping further processing.\n- **Dead Letter Queue (DLQ)**: Use DLQ patterns for robust error handling in microservices.\n- **Spring Cloud Stream Binder**: Supports deserialization and serialization errors at the framework level.\n- **Kafka Streams**: Provides two kinds of deserialization exception handlers out-of-the-box.\n- **Latest Version**: Ensure using the latest version of Spring Cloud Stream and Kafka Streams for bug fixes and improvements.\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.errors.destination`: Specifies the DLQ destination.\n  - `spring.cloud.stream.bindings.input.errors.group`: Specifies the consumer group for error handling.",
+    "source": "code_example",
+    "updated_at": 1780720450.3040295
+  },
+  "search:Error Handling:spring+jpa-security error mana": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` to create global error handlers in Spring Boot.\n- Implement custom exception classes for specific error scenarios.\n- Configure `application.properties` or `application.yml` for logging levels and formats.\n- Utilize `@ResponseStatus` to specify HTTP status codes for exceptions.\n- Leverage `@Valid` and `BindingResult` for input validation in controllers.\n- Use `@Transactional` for managing database transactions.\n- Implement JWT authentication with Spring Security for secure REST APIs.\n- Configure `spring.jpa.properties.hibernate.dialect` for PostgreSQL compatibility.\n- Enable CORS using `@CrossOrigin` or global configuration to allow cross-origin requests.",
+    "source": "web_search",
+    "updated_at": 1780720456.5317233
+  },
+  "search:Error Handling:spring+jpa-security error mana_ex": {
+    "content": "- Use `@ControllerAdvice` to handle exceptions globally across the application.\n- Implement custom exception classes for specific error scenarios.\n- Utilize Spring's `ResponseEntityExceptionHandler` for structured error responses.\n- Configure `application.properties` or `application.yml` with properties like `spring.jpa.show-sql=true` and `spring.jpa.properties.hibernate.format_sql=true`.\n- Use `@Transactional` to manage transactions, ensuring data integrity.\n- Implement `@RepositoryRestResource` for RESTful access to repositories.\n- Ensure proper logging using SLF4J and Logback for debugging and monitoring.\n- Regularly update dependencies to the latest versions to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780720460.1294363
   }
 }

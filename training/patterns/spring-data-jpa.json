@@ -1,0 +1,32 @@
+{
+  "search:spring-data-jpa:spring data jpa best practices": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew test` to run tests.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.jpa.show-sql`: Set to `true` for debugging SQL queries.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect (e.g., `org.hibernate.dialect.MySQLDialect`).",
+    "source": "web_search",
+    "updated_at": 1780720737.2122343
+  },
+  "search:spring-data-jpa:spring data jpa best practices_ex": {
+    "content": "- Use Spring Data JPA version 3.x or later.\n- Employ `@Entity` annotations to define your data model.\n- Utilize `@Repository` interfaces for database access, leveraging Spring's auto-repository generation.\n- Implement custom query methods by defining method signatures in repository interfaces.\n- Optimize performance with `@Query` annotations for complex queries and `@Modifying` for update/delete operations.\n- Configure `application.properties` or `application.yml` for data source settings:\n  ```properties\n  spring.datasource.url=jdbc:mysql://localhost:3306/mydb\n  spring.datasource.username=root\n  spring.datasource.password=password\n  ```\n- Enable lazy loading with `@Lazy` annotation on repository interfaces.\n- Use `@Transactional` to manage transactions declaratively.\n- Monitor and tune query performance using Spring Boot Actuator endpoints.",
+    "source": "code_example",
+    "updated_at": 1780720744.3203073
+  },
+  "search:spring-data-jpa:spring data jpa performance tu": {
+    "content": "- **Query Hints**: Use `@QueryHints` to optimize query performance.\n- **Batch Inserts**: Configure `spring.jpa.properties.hibernate.jdbc.batch_size` and `spring.jpa.properties.hibernate.order_inserts=true`.\n- **Latest Version**: Ensure using the latest stable version of Spring Data JPA for bug fixes and improvements.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=false`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n- **CLI Commands**: Use `mvn clean install` to update dependencies and build your project.\n- **Monitoring**: Implement monitoring tools like Spring Boot Actuator for real-time performance insights.",
+    "source": "web_search",
+    "updated_at": 1780720751.6496975
+  },
+  "search:spring-data-jpa:spring data jpa performance tu_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` for running Spring Boot applications.\n\n- **Latest Versions**:\n  - Spring Data JPA: 3.2.0.RELEASE (as of my last update).\n  - Hibernate: 6.1.5.Final (compatible with Spring Data JPA).\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50` for batch processing.\n  - `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true` to optimize insert/update operations.\n  - `spring.jpa.show-sql=true` to log SQL queries for debugging.",
+    "source": "code_example",
+    "updated_at": 1780720756.6153593
+  },
+  "search:spring-data-jpa:spring data jpa security patte": {
+    "content": "- Use `getReferenceById` instead of `findById` to avoid loading the entity into memory.\n- Ensure your Spring Boot project includes dependencies for Spring Data JPA and a database driver.\n- Configure transaction management in your `application.properties` or `application.yml`.\n- Utilize Spring Security with JPA for authentication and authorization.\n- Implement repository interfaces extending `JpaRepository` or `CrudRepository`.\n- Use `@Transactional` annotation on service methods to manage transactions.\n- Enable caching using `@EnableCaching` and configure cache manager in your configuration class.\n- Regularly update dependencies to the latest versions to benefit from security patches and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780720767.0626442
+  },
+  "search:spring-data-jpa:spring data jpa security patte_ex": {
+    "content": "- **GitHub Repository**: [spring-projects/spring-data-examples](https://github.com/spring-projects/spring-data-examples)\n  - Example of integrating Spring Data JPA Repositories with Spring Security.\n\n- **Spring MVC Security**:\n  - Use Java config for security setup.\n  - Integrate Spring & Hibernate using XML configuration.\n\n- **Master REST API Development and Java & Spring Boot**:\n  - Learn step-by-step how to use Spring Data JPA through a simple example.\n\n- **GeeksforGeeks Tutorial**:\n  - Focuses on Spring Data JPA basics with minimal boilerplate code.\n\n- **Key Config Options**:\n  - `@EnableJpaRepositories` for enabling JPA repositories.\n  - `@EntityScan` to specify the package where entity classes are located.\n  - `spring.jpa.hibernate.ddl-auto` for database schema management (e.g., `create-drop`, `update`).\n\n- **Latest Versions**:\n  - Ensure using the latest versions of Spring Data JPA, Spring Security, and Hibernate in your project dependencies.\n\n- **CLI Commands**:\n  - `mvn clean install` to build and run your Spring Boot application.\n  - `./mvnw spring-boot:run` for running the application with Maven.",
+    "source": "code_example",
+    "updated_at": 1780720779.6271205
+  }
+}

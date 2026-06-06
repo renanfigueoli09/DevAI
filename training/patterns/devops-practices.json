@@ -58,5 +58,55 @@
     "content": "- **CLI Commands**:\n  - `otel-cli trace export --endpoint OTLP_EXPORTER_OTLP_ENDPOINT`\n  - `otel-cli log send --api-version v1.0`\n\n- **Latest Versions**:\n  - Grafana: 9.5.2\n  - OpenTelemetry (OTEL): 1.7.0\n\n- **Key Config Options**:\n  - `OTEL_EXPORTER_OTLP_ENDPOINT`: URL for OTLP/gRPC exporter.\n  - `LOGGING_API_VERSION`: Set to v1.0 for the latest logging API.",
     "source": "code_example",
     "updated_at": 1780704449.341942
+  },
+  "search:DevOps Practices:azure-devops best practices": {
+    "content": "- **CLI Commands**:\n  - `az devops project create --name <project-name> --organization <org-url>`\n  - `az pipelines create --name <pipeline-name> --repository <repo-url> --branch <branch-name>`\n\n- **Latest Versions**:\n  - Azure CLI: v2.46.0\n  - Azure DevOps Server: 2019 Update 17\n\n- **Key Config Options**:\n  - `ADO_ORG`: Your Azure DevOps organization URL.\n  - `ADO_PROJECT`: The name of your project.\n  - `ADO_REPO`: The repository where your code is stored.",
+    "source": "web_search",
+    "updated_at": 1780720667.177639
+  },
+  "search:DevOps Practices:gitlab-ci-pipelines-advanced a": {
+    "content": "- **CLI Commands**:\n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `git push origin <branch>`: Triggers pipeline on branch push.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Latest stable version as of my last update. Check [GitLab Release Notes](https://about.gitlab.com/releases/) for the most current version.\n\n- **Key Config Options**:\n  - `stages`: Defines stages in pipeline.\n  - `script`: Commands to run in job.\n  - `only/except`: Specifies when jobs should run.\n  - `cache`: Caches dependencies between jobs.",
+    "source": "web_search",
+    "updated_at": 1780720680.931714
+  },
+  "search:DevOps Practices:gitlab-ci-pipelines-advanced a_ex": {
+    "content": "- **CLI Commands**:\n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `gitlab-runner register`: Registers a new runner with GitLab.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Version 15.0\n  - GitLab Runner: Version 15.0\n\n- **Key Config Options**:\n  - `image`: Specifies the Docker image for the job.\n  - `services`: Defines services like databases or caches.\n  - `script`: Commands to run in the job.\n  - `artifacts`: Files to store and share between jobs.\n  - `deployments`: Configuration for deployment strategies.",
+    "source": "code_example",
+    "updated_at": 1780720684.9269497
+  },
+  "search:DevOps Practices:docker+kafka-streams container": {
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -p 9092:9092 wurstmeister/kafka`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.1\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to bootstrap from.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for what to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server.",
+    "source": "web_search",
+    "updated_at": 1780720690.6756148
+  },
+  "search:DevOps Practices:docker+kafka-streams container_ex": {
+    "content": "- Use `docker run -d --name kafka -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 bitnami/kafka` to start a Kafka container.\n- Ensure Docker and Docker Compose are up-to-date for the latest features and security patches.\n- For Kafka Streams, use `docker run -d --name kafka-streams-app -p 8080:8080 -e KAFKA_BOOTSTRAP_SERVERS=kafka:9092 your-kafka-streams-image`.\n- Key config options include `KAFKA_ADVERTISED_LISTENERS`, `KAFKA_ZOOKEEPER_CONNECT`, and `KAFKA_BROKER_ID` for Kafka.\n- Use `docker-compose up -d` to start a multi-container setup with Kafka, Zookeeper, and other services.\n- For production environments, consider using Docker Swarm or Kubernetes for orchestration.",
+    "source": "code_example",
+    "updated_at": 1780720697.4751506
+  },
+  "search:DevOps Practices:spring+rabbitmq devops integra": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `rabbitmqctl start_app` and `rabbitmqctl stop_app` to manage RabbitMQ service.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Spring AMQP: 2.9.5\n  - RabbitMQ: 3.8.27\n\n- **Key Config Options**:\n  - `spring.rabbitmq.host`: RabbitMQ server host.\n  - `spring.rabbitmq.port`: RabbitMQ server port.\n  - `spring.rabbitmq.username`: RabbitMQ username.\n  - `spring.rabbitmq.password`: RabbitMQ password.\n  - `spring.rabbitmq.virtual-host`: Virtual host to use.",
+    "source": "web_search",
+    "updated_at": 1780720705.3230855
+  },
+  "search:DevOps Practices:spring+rabbitmq devops integra_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Integration: 6.1.2\n  - RabbitMQ: 3.8.x\n\n- **Key Config Options**:\n  - `spring.rabbitmq.host`: RabbitMQ server host.\n  - `spring.rabbitmq.port`: RabbitMQ server port.\n  - `spring.rabbitmq.username`: RabbitMQ username.\n  - `spring.rabbitmq.password`: RabbitMQ password.\n  - `spring.rabbitmq.virtual-host`: Virtual host to use.",
+    "source": "code_example",
+    "updated_at": 1780720710.8250883
+  },
+  "search:DevOps Practices:angular-unit-testing-best-prac": {
+    "content": "- Use Angular CLI to generate unit tests: `ng generate component my-component --spec`\n- Update Angular version to the latest stable release.\n- Configure Jest as the test runner in your `angular.json`:\n  ```json\n  \"test\": {\n    \"builder\": \"@angular-devkit/build-angular:karma\",\n    \"options\": {\n      \"polyfills\": \"src/polyfills.ts\",\n      \"main\": \"src/test.ts\",\n      \"karmaConfig\": \"./karma.conf.js\",\n      \"assets\": [\n        \"src/favicon.ico\",\n        \"src/assets\"\n      ],\n      \"styles\": [\n        \"src/styles.css\"\n      ],\n      \"scripts\": []\n    }\n  }\n  ```\n- Use Angular Testing Library for querying and dispatching events.\n- Mock services using `jest.mock()` or `spyOn()`.\n- Configure Jest in your `package.json`:\n  ```json\n  \"scripts\": {\n    \"test\": \"ng test\"\n  },\n  \"devDependencies\": {\n    \"@types/jest\": \"^29.0.3\",\n    \"jest\": \"^29.0.3\",\n    \"jest-auto-spies\": \"^1.0.0\",\n    \"observer-spy\": \"^1.0.0\"\n  }\n  ```\n- Use `ng test` to run unit tests.\n- Ensure coverage is above a certain threshold in your CI/CD pipeline.",
+    "source": "web_search",
+    "updated_at": 1780720718.2401333
+  },
+  "search:DevOps Practices:angular-unit-testing-best-prac_ex": {
+    "content": "- Use Angular CLI to generate unit tests (`ng generate component <component-name> --spec`)\n- Ensure you have the latest version of Angular and Jasmine for testing.\n- Configure `tsconfig.spec.json` for test-specific TypeScript settings.\n- Mock external dependencies using Angular's `TestBed.configureTestingModule`.\n- Utilize Jest or Karma for running tests, depending on your project setup.\n- Implement coverage reporting with `ng test --code-coverage`.\n- Use `async` and `fakeAsync` for testing asynchronous code effectively.\n- Write descriptive test names that reflect the functionality being tested.\n- Regularly update test suites to cover new features and refactorings.",
+    "source": "code_example",
+    "updated_at": 1780720723.826544
+  },
+  "search:DevOps Practices:azure-devops best practices_ex": {
+    "content": "- **CLI Commands**:\n  - `az devops project create --name <project-name>`\n  - `az repos clone --repository <repo-name> --org <organization-url>`\n  - `az pipelines create --name <pipeline-name> --yml-path <path-to-yaml-file>`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v0.219.0\n  - Azure Repos: Latest version as of the latest update\n\n- **Key Config Options**:\n  - `azure-devops-pipelines.yml`: Configuration file for defining CI/CD pipelines.\n  - Area and Iteration Paths: Define project structure and workflows.\n  - Work Items Policies: Set rules for work item creation, updates, and deletion.",
+    "source": "code_example",
+    "updated_at": 1780720674.226887
   }
 }

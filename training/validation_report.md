@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-06 01:30*
+*2026-06-06 01:40*
 
 ## Score: 61% `[████████████░░░░░░░░]`
 
@@ -9,11 +9,11 @@
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
-| nlp | 9.5/15.0 | 64% | ⚠️ |
+| nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
+| spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
-| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
@@ -30,9 +30,13 @@
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### spring-mongodb (0%)
-- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Wrong: `@Entity`
+### nlp (53%)
+- ✗ User says 'configure docker com mongodb'. Should you create src/d
+  - Missing: `não, never, docker-compose, Dockerfile`
+- ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
+  - Missing: `não, no`
+
+### spring-mongodb (50%)
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
   - Wrong: `JpaRepository`
 
@@ -49,7 +53,7 @@ python scripts/validate.py --fix
 # Forçar retreinamento específico
 python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
-python scripts/validate.py --fix --topic spring-mongodb
+python scripts/validate.py --fix --topic nlp
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive
