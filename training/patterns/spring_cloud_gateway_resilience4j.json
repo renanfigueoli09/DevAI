@@ -2,21 +2,21 @@
   "search:spring-cloud-gateway+resilience4j:spring cloud gateway and resil": {
     "content": "- **CLI Commands**:\n  - `docker run --name mock-server -p 8080:8080 mockserver/mockserver`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.1.4.RELEASE\n  - Resilience4j: 1.7.0\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id=example_route`\n  - `spring.cloud.gateway.routes[0].uri=lb://service-name`\n  - `resilience4j.circuitbreaker.instances[myCircuitBreaker].registerHealthIndicator=true`",
     "source": "web_search",
-    "updated_at": 1780761148.5847523
+    "updated_at": 1780761871.064988
   },
   "search:spring-cloud-gateway+resilience4j:spring cloud gateway and resil_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.0.6.RELEASE\n  - Resilience4j: 1.7.0\n\n- **Key Config Options**:\n  - In `application.yml`, configure the API Gateway routes and circuit breaker settings.\n    ```yaml\n    spring:\n      cloud:\n        gateway:\n          routes:\n            - id: example_route\n              uri: lb://example-service\n              predicates:\n                - Path=/example/**\n              filters:\n                - name: CircuitBreaker\n                  args:\n                    name: exampleCB\n                    fallbackUri: forward:/fallback\n    ```\n  - Define circuit breaker properties in `application.yml`.\n    ```yaml\n    resilience4j:\n      circuitbreaker:\n        instances:\n          exampleCB:\n            registerHealthIndicator: true\n            slidingWindowSize: 10\n            minimumNumberOfCalls: 5\n            waitDurationInOpenState: PT2S\n            permittedNumberOfCallsInHalfOpenState: 3\n            automaticTransitionFromOpenToHalfOpenEnabled: true\n    ```",
     "source": "code_example",
-    "updated_at": 1780761149.276796
+    "updated_at": 1780761871.8286486
   },
   "search:spring-cloud-gateway+resilience4j:resilient microservices with s": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/spring-microservices-v3-in28minutes.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Cloud Gateway: 3.1.x\n  - Resilience4j: 1.7.x\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the service.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/api/**.\n  - `spring.cloud.gateway.filters[0].name`: Filter name, e.g., RewritePath=/api/(?<segment>.*), /$\\{segment}.\n  - `resilience4j.circuitbreaker.instances.myCircuitBreaker.failureRateThreshold`: Failure rate threshold for circuit breaker to open.",
     "source": "web_search",
-    "updated_at": 1780761149.984492
+    "updated_at": 1780761872.4231145
   },
   "search:spring-cloud-gateway+resilience4j:resilient microservices with s_ex": {
     "content": "- **GitHub Repository**: [stahiomar/microservice-resilience-example](https://github.com/stahiomar/microservice-resilience-example)\n- **Spring Cloud Gateway Version**: Latest as of my last update, but typically you'd use the latest stable version available.\n- **Spring Cloud Config Version**: Latest as of my last update, but typically you'd use the latest stable version available.\n- **Resilience4j Version**: Latest as of my last update, but typically you'd use the latest stable version available.\n- **CLI Commands**:\n  - `git clone https://github.com/stahiomar/microservice-resilience-example.git`\n  - `cd microservice-resilience-example`\n  - `./mvnw clean install` (for Maven projects)\n  - `./gradlew build` (for Gradle projects)\n- **Key Config Options**:\n  - Spring Cloud Gateway: `application.yml` or `application.properties` for routing and filtering.\n  - Spring Cloud Config: External configuration server URL in `bootstrap.yml`.\n  - Resilience4j: Configuration in `application.yml` for Circuit Breaker, Retry, Rate Limiter, etc.\n\nFor the latest versions, always check the official [Spring Cloud](https://spring.io/projects/spring-cloud) and [Resilience4j](https://resilience4j.readthedocs.io/en/latest/) documentation.",
     "source": "code_example",
-    "updated_at": 1780761150.6986933
+    "updated_at": 1780761873.0672889
   }
 }

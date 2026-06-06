@@ -2,21 +2,21 @@
   "search:spring-data-jpa-performance:spring data jpa performance tu": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `jpa:validate` to validate the JPA entities.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.show_sql=false`",
     "source": "web_search",
-    "updated_at": 1780761081.8919303
+    "updated_at": 1780761806.514544
   },
   "search:spring-data-jpa-performance:spring data jpa performance tu_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Data JPA 2.7.5, Hibernate 6.1.3.Final.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory`",
     "source": "code_example",
-    "updated_at": 1780761082.4056263
+    "updated_at": 1780761807.0527415
   },
   "search:spring-data-jpa-performance:spring data jpa query optimiza": {
     "content": "- Use `@Query` annotation for complex JPQL or native SQL queries.\n- Implement DTO projection to reduce data transfer.\n- Create indexes on frequently queried columns.\n- Utilize Spring Data JPA's Query By Example feature for flexible querying.\n- Enable query logging with `spring.jpa.show-sql=true` in `application.properties`.\n- Use `@EntityGraph` for fetching related entities efficiently.\n- Consider using `Pageable` and `Sort` for pagination and sorting.\n- Optimize database schema design, e.g., denormalize tables for read-heavy workloads.\n- Regularly review and analyze query performance with tools like JProfiler or VisualVM.",
     "source": "web_search",
-    "updated_at": 1780761082.9365394
+    "updated_at": 1780761807.5793395
   },
   "search:spring-data-jpa-performance:spring data jpa query optimiza_ex": {
     "content": "- Use `@Query` for custom JPQL or native SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Utilize `@Fetch(FetchMode.JOIN)` to optimize fetch strategies.\n- Enable query caching with `@EnableCaching` and `@Cacheable`.\n- Optimize entity mappings by reducing unnecessary joins.\n- Use `@QueryHints` for database-specific optimizations.\n- Consider using `@EntityGraph` for efficient data fetching.\n- Regularly update Spring Data JPA to the latest version (e.g., 2.7.x).\n- Monitor query performance with tools like Spring Boot Actuator.\n- Implement batch processing for large data operations.",
     "source": "code_example",
-    "updated_at": 1780761083.4336011
+    "updated_at": 1780761808.1246538
   }
 }

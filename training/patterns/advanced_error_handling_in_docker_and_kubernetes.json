@@ -2,36 +2,36 @@
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling": {
     "content": "- **CLI Commands**:\n  - `docker logs <container_id>`: View container logs.\n  - `docker inspect <container_id>`: Get detailed information about a container.\n  - `docker exec -it <container_id> /bin/bash`: Execute commands inside a running container.\n\n- **Latest Versions**:\n  - Ensure Docker is up to date using `docker --version`.\n\n- **Key Config Options**:\n  - `Dockerfile` directives like `FROM`, `RUN`, `CMD`.\n  - Environment variables in `docker run` with `-e VAR=value`.\n  - Volumes for persistent storage with `-v /host/path:/container/path`.",
     "source": "web_search",
-    "updated_at": 1780761316.4959698
+    "updated_at": 1780761915.0679388
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling_ex": {
     "content": "- Use `docker remove -v` to remove a container and its associated volumes.\n- Check Docker Compose documentation for the latest version and usage examples.\n- Configure error handling in Docker Compose using middleware like `error-handling-middleware`.\n- For debugging, run containers with verbose logging using `-v` flag.\n- Ensure commands are correctly spelled and include all necessary characters.",
     "source": "code_example",
-    "updated_at": 1780761319.823327
+    "updated_at": 1780761915.7445014
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management": {
     "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: Lists all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Provides detailed information about a specific pod.\n  - `kubectl logs <pod-name> -n <namespace>`: Displays the logs of a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x (as of my last update).\n\n- **Key Config Options**:\n  - `imagePullPolicy`: Specifies when to pull an image (`Always`, `IfNotPresent`, `Never`).\n  - `resources`: Defines CPU and memory limits and requests.\n  - `restartPolicy`: Controls how Kubernetes restarts a pod (`Always`, `OnFailure`, `Never`).",
     "source": "web_search",
-    "updated_at": 1780761328.9940221
+    "updated_at": 1780761916.422037
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management_ex": {
     "content": "- Use `kubectl describe pod <pod-name>` to get detailed information about a specific pod.\n- Check node status with `kubectl get nodes` and ensure all nodes are in the Ready state.\n- For OOMKilled errors, use `kubectl logs <pod-name> -c <container-name>` to inspect container logs for clues.\n- Update Kubernetes to the latest version using `minikube update-context` or equivalent for your cluster provider.\n- Key config options include `resources.limits` and `resources.requests` in pod specifications to manage resource usage effectively.",
     "source": "code_example",
-    "updated_at": 1780761333.1353269
+    "updated_at": 1780761917.1323857
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker logging strategies": {
     "content": "- Use `docker logs` command to view container logs.\n- Implement log rotation using tools like `logrotate`.\n- Configure Docker logging drivers such as `json-file`, `syslog`, or `fluentd`.\n- Set the `--log-opt max-size=10m --log-opt max-file=3` flags for `json-file` driver to manage log size.\n- Use environment variables to configure logging options dynamically.\n- Employ external logging solutions like ELK Stack (Elasticsearch, Logstash, Kibana) or Fluentd for centralized logging.\n- Regularly review and clean up old logs to prevent disk space issues.",
     "source": "web_search",
-    "updated_at": 1780761340.4667003
+    "updated_at": 1780761917.8130445
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes fault tolerance": {
     "content": "- Use `kubectl get pods --all-namespaces` to check the status of all pods.\n- Apply replication controllers or deployments using YAML files with `kubectl apply -f <filename>.yaml`.\n- Set tolerations in pod specifications for specific node taints: `tolerations: - key: \"key\" operator: \"Equal\" value: \"value\" effect: \"NoSchedule|PreferNoSchedule|NoExecute\"`\n- Configure liveness and readiness probes to ensure pods are healthy: `livenessProbe: httpGet: path: /health port: 80 initialDelaySeconds: 30 periodSeconds: 10`\n- Use stateful sets for applications requiring stable network identifiers: `apiVersion: apps/v1 kind: StatefulSet metadata: name: web spec: serviceName: \"nginx\" replicas: 3 selector: matchLabels: app: nginx template: metadata: labels: app: nginx spec: containers: - name: nginx image: nginx ports: - containerPort: 80 volumeMounts: - name: www mountPath: /usr/share/nginx/html volumes: - name: www emptyDir: {}`\n- Monitor pod events with `kubectl describe pod <pod-name>`.\n- Use `kubectl rollout status deployment/<deployment-name>` to check the status of a deployment.\n- Ensure high availability by using multiple nodes and zones in your Kubernetes cluster.",
     "source": "web_search",
-    "updated_at": 1780761365.1067076
+    "updated_at": 1780761918.4331825
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes fault tolerance_ex": {
     "content": "- Use `kubectl describe pod <pod-name>` to check the status of a Kubernetes pod.\n- Employ `kubectl get events` to view recent cluster events, which can help in identifying faults.\n- Configure fault tolerance with `tolerations` and `anti-affinity` in your deployment YAML files.\n- Set up liveness and readiness probes using `livenessProbe` and `readinessProbe` in the pod specification.\n- Use `kubectl rollout restart deployment/<deployment-name>` to restart a deployment, which can help in recovering from faults.\n- Implement job retries with `restartPolicy: OnFailure` in your job YAML file.\n- Monitor pod health with `kubectl top pod <pod-name>`, available in Kubernetes 1.13+.\n- Use `kubectl scale deployment/<deployment-name> --replicas=<number>` to increase or decrease the number of replicas for fault tolerance.\n- Ensure that your storage classes support volume expansion if you need dynamic scaling and fault tolerance.\n- Utilize StatefulSets for stateful applications where data persistence is crucial, providing better fault tolerance.",
     "source": "code_example",
-    "updated_at": 1780761371.224213
+    "updated_at": 1780761919.0508993
   }
 }

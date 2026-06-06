@@ -2,26 +2,26 @@
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation": {
     "content": "- **CLI Command**: `mvn generate-sources`\n  - **Flags**: `-DjooqVersion=3.17.8`, `-Ddatabase=mysql`, `-DjdbcDriver=com.mysql.cj.jdbc.Driver`, `-DjdbcUrl=jdbc:mysql://localhost:3306/sakila`, `-Dusername=root`, `-Dpassword=password`\n\n- **Latest Version**: 3.17.8\n\n- **Key Config Options**:\n  - `jdbcDriver`: JDBC driver class name.\n  - `jdbcUrl`: Database URL.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Target database type (e.g., mysql, postgresql).",
     "source": "web_search",
-    "updated_at": 1780761446.7294507
+    "updated_at": 1780761941.2187936
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management": {
     "content": "- **CLI Commands**: Use `atlas apply` to deploy schema changes.\n- **Latest Version**: Atlas v2.3.1 as of the last update.\n- **Key Config Options**:\n  - `schema.as.code`: Enables schema management using code.\n  - `versioned.migrations`: Supports versioning for database migrations.\n  - `declarative.schema`: Allows defining schemas declaratively.",
     "source": "web_search",
-    "updated_at": 1780761487.2586598
+    "updated_at": 1780761942.1787431
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management_ex": {
     "content": "- **CLI Commands**: Use `hevo data` to explore database schema examples.\n- **Latest Versions**: Check the latest version of Hevo Data on their official website or GitHub repository.\n- **Key Config Options**: For GeeksforGeeks, review the documentation for any specific configuration options related to database schemas.\n- **GitHub Repository**: Clone the `awesomejt/database-schema-examples` repository using `git clone https://github.com/awesomejt/database-schema-examples.git`.\n- **ER Diagrams**: Use tools like Lucidchart or draw.io to create ER diagrams for your database schema designs.",
     "source": "code_example",
-    "updated_at": 1780761491.503292
+    "updated_at": 1780761943.044963
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries": {
     "content": "- **jOOQ**: Use `mvn dependency:add` to include jOOQ in your project.\n- **Prisma Documentation**: Install Prisma CLI with `npm install -g prisma`.\n- **Kysely and Neon**: Ensure you have Node.js installed, then use `npm install kysely neon`.\n- **Type-safe SQL queries**: Leverage type-safe query builders like jOOQ, TypedSQL, or Kysely for safer database interactions.",
     "source": "web_search",
-    "updated_at": 1780761500.3031194
+    "updated_at": 1780761943.781356
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries_ex": {
     "content": "- **CLI Commands**:\n  - `sqlc generate`: Generates type-safe code from SQL queries.\n  \n- **Latest Versions**:\n  - sqlc: v1.14.2\n\n- **Key Config Options**:\n  - `-tags <tag>`: Specifies build tags for generated Go files.\n  - `-output <path>`: Sets the output directory for generated code.",
     "source": "code_example",
-    "updated_at": 1780761503.8294098
+    "updated_at": 1780761944.5073826
   }
 }
