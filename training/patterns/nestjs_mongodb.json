@@ -2,36 +2,36 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
     "source": "code_pattern",
-    "updated_at": 1780772699.526478
+    "updated_at": 1780772827.624081
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780772174.88699
+    "updated_at": 1780772828.0852652
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780772175.4524126
+    "updated_at": 1780772829.485778
   },
   "qa:mongoose-required-bang": {
     "content": "@Prop({required:true}) → field!: string  (! = required, NON-NULL ASSERTION)\n@Prop() → field?: string  (? = optional)\nNEVER: @Prop({required:true}) field?: string  (WRONG)\nNEVER: @Prop({required:true}) field: string   (WRONG, needs !)\nRULE: required=! | optional=? | NO EXCEPTIONS",
     "source": "critical_pattern",
-    "updated_at": 1780772637.6287267
+    "updated_at": 1780772702.7546391
   },
   "qa:mongoose-no-findOneBy": {
     "content": "findOneBy does NOT exist in Mongoose. findOneBy is TypeORM-only.\nMongoose CORRECT: findById(id), findByIdAndUpdate(id,{$set:dto},{new:true}), findByIdAndDelete(id)\nWRONG: this.model.findOneBy({_id:id})  ← TypeORM only\nCORRECT: this.model.findById(id).exec()",
     "source": "critical_pattern",
-    "updated_at": 1780772638.2511404
+    "updated_at": 1780772703.614929
   },
   "qa:mongoose-forFeature": {
     "content": "NestJS Mongoose module uses MongooseModule.forFeature NEVER TypeOrmModule.\n@Module({ imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] })\nWRONG: TypeOrmModule.forFeature([Book])  ← TypeORM only",
     "source": "critical_pattern",
-    "updated_at": 1780772638.85052
+    "updated_at": 1780772704.632849
   },
   "qa:app-module-mongodb": {
     "content": "app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/app')\nWRONG: TypeOrmModule with DB_HOST/DB_PORT/DB_NAME  ← PostgreSQL config\nMongoDB uses MONGODB_URI, NOT DB_HOST/DB_PORT",
     "source": "critical_pattern",
-    "updated_at": 1780772639.4322195
+    "updated_at": 1780772705.4364207
   }
 }

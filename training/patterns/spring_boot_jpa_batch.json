@@ -2,21 +2,21 @@
   "search:spring-boot+jpa-batch:spring boot jpa batch processi": {
     "content": "- **CLI Commands**: Use `mvn clean install` for building the project.\n- **Latest Versions**: Spring Boot 3.2, Spring Data JPA 2.7.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "web_search",
-    "updated_at": 1780772122.246047
+    "updated_at": 1780772781.4375422
   },
   "search:spring-boot+jpa-batch:spring boot jpa batch processi_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Data JPA: 3.2.5\n  - H2 Database: 1.4.200\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection details.\n  - `@EnableBatchProcessing` annotation in main class.\n  - `JobBuilderFactory` and `StepBuilderFactory` for defining batch jobs and steps.\n  - `ItemReader`, `ItemProcessor`, and `ItemWriter` interfaces for customizing data processing logic.",
     "source": "code_example",
-    "updated_at": 1780772122.996387
+    "updated_at": 1780772782.249797
   },
   "search:spring-boot+jpa-batch:batch processing with spring b": {
     "content": "- **CLI Commands**: `mvn spring-boot:run` to run Spring Boot application.\n- **Latest Versions**: Spring Boot 3, Spring Data JPA 2.7.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "web_search",
-    "updated_at": 1780772123.771456
+    "updated_at": 1780772783.0957186
   },
   "search:spring-boot+jpa-batch:batch processing with spring b_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` for building and packaging the project.\n\n- **Latest Versions**:\n  - Spring Boot 3.0.x (as of my last update)\n  - JPA 2.2\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.batch.job.enabled=true`\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`",
     "source": "code_example",
-    "updated_at": 1780772124.5251353
+    "updated_at": 1780772783.9614472
   }
 }
