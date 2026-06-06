@@ -2,11 +2,11 @@
   "search:docker+kubernetes-logging-patterns:docker kubernetes logging patt": {
     "content": "- Use `kubectl logs <pod-name>` to fetch container logs.\n- Employ logging drivers like Fluentd, Fluent Bit, or EFK Stack for centralized log management.\n- Configure log rotation and retention policies in your logging setup.\n- Implement structured logging using JSON format for easier parsing and querying.\n- Utilize labels and annotations in Kubernetes resources for better log filtering and correlation.\n- Regularly update your logging tools to the latest versions for security patches and performance improvements.\n- Monitor log volume and ensure adequate storage capacity.\n- Set up alerting rules based on log patterns or error rates using Prometheus and Grafana.\n- Use `kubectl logs --tail=100 <pod-name>` to view the last 100 lines of a container's log.",
     "source": "web_search",
-    "updated_at": 1780772805.249634
+    "updated_at": 1780773540.0143008
   },
   "search:docker+kubernetes-logging-patterns:docker kubernetes logging patt_ex": {
     "content": "- Use `kubectl logs <pod-name>` to access container logs.\n- Implement centralized logging using tools like Fluentd, Fluent Bit, or Elasticsearch Stack.\n- Configure Docker logging drivers such as `json-file`, `syslog`, or `gelf`.\n- Set up log rotation with `--log-opt max-size=10m --log-opt max-file=3` for the `json-file` driver.\n- Use structured logs by configuring your application to output JSON format.\n- Ensure logs are accessible and searchable using tools like ELK Stack or Prometheus with Loki.\n- Regularly review and clean up old log files to prevent disk space issues.",
     "source": "code_example",
-    "updated_at": 1780772806.075167
+    "updated_at": 1780773540.8552854
   }
 }

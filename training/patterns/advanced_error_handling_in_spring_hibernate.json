@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Spring + Hibernate:spring hibernate error handlin": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` in Spring to handle exceptions globally.\n- Implement custom exception classes for specific error scenarios.\n- Configure Hibernate properties in `application.properties` or `application.yml`.\n- Use `@Transactional` annotation to manage transactions, ensuring data consistency.\n- Handle `DataIntegrityViolationException` by catching it in service layer and converting to a custom exception.\n- Utilize Spring Boot's auto-configuration for Hibernate and JPA.\n- Implement optimistic locking using version fields in entities.\n- Log exceptions with detailed stack traces for debugging purposes.",
+    "source": "web_search",
+    "updated_at": 1780773590.4830012
+  },
+  "search:Advanced Error Handling in Spring + Hibernate:spring hibernate error handlin_ex": {
+    "content": "- Use Spring Boot Validation Starter for validation.\n- Handle exceptions in Spring MVC by configuring default error views.\n- For Hibernate errors, check SQL syntax and database permissions.\n- Update to the latest versions of Spring Boot and Hibernate for bug fixes.\n- Configure `defaultErrorView` in `application.properties` or `application.yml`.\n- Use `@ExceptionHandler` annotations for specific exception handling.",
+    "source": "code_example",
+    "updated_at": 1780773597.9311893
+  },
+  "search:Advanced Error Handling in Spring + Hibernate:hibernate exception management": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.2.5.Final, Spring Boot 3.1.4.\n- **Key Config Options**:\n  - `hibernate.dialect`: Specify the database dialect.\n  - `hibernate.hbm2ddl.auto`: Set schema generation strategy (e.g., create-drop).\n  - `spring.jpa.properties.hibernate.show_sql`: Enable SQL logging for debugging.",
+    "source": "web_search",
+    "updated_at": 1780773606.8357494
+  },
+  "search:Advanced Error Handling in Spring + Hibernate:hibernate exception management_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.x is the latest stable version as of my last update.\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect for your database.\n  - `hibernate.hbm2ddl.auto`: Controls schema generation (e.g., create-drop, update).\n  - `hibernate.show_sql`: Enables logging of SQL statements.",
+    "source": "code_example",
+    "updated_at": 1780773612.5116534
+  }
+}

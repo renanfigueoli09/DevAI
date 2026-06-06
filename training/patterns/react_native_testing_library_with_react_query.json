@@ -1,0 +1,12 @@
+{
+  "search:React Native Testing Library with React Query:react native testing library": {
+    "content": "- **CLI Commands**: `npx @testing-library/react-native test`\n- **Latest Version**: Check on [npm](https://www.npmjs.com/package/@testing-library/react-native)\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: For setting up Jest before tests run.\n  - `testEnvironment`: Set to `'react-native'` for React Native environment.\n  - `transformIgnorePatterns`: Exclude node_modules except those in your project.",
+    "source": "web_search",
+    "updated_at": 1780773661.5656607
+  },
+  "search:React Native Testing Library with React Query:react native testing library_ex": {
+    "content": "- Install React Native Testing Library: `npm install --save-dev @testing-library/react-native`\n- Import necessary modules in your test file:\n  ```javascript\n  import { render, fireEvent } from '@testing-library/react-native';\n  ```\n- Example test for a component:\n  ```javascript\n  import MyComponent from './MyComponent';\n\n  test('renders correctly', () => {\n    const { getByText } = render(<MyComponent />);\n    expect(getByText('Hello World')).toBeTruthy();\n  });\n  ```\n- Use `fireEvent` to simulate user interactions:\n  ```javascript\n  fireEvent.press(getByText('Press me'));\n  ```\n- Check for component state changes:\n  ```javascript\n  expect(queryByText('Clicked')).toBeTruthy();\n  ```\n- Key config options: None specific to React Native Testing Library, use standard Jest configuration.",
+    "source": "code_example",
+    "updated_at": 1780773670.114123
+  }
+}
