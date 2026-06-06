@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-06 04:24*
+*2026-06-06 04:30*
 
-## Score: 47% `[█████████░░░░░░░░░░░]`
+## Score: 52% `[██████████░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -12,20 +12,19 @@
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | common-errors | 3.0/6.0 | 50% | ❌ |
 | nlp | 7.1/15.0 | 48% | ❌ |
-| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
+| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
 | spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (10%)
+### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
 - ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
   - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
+  - Missing: `findById`
   - Wrong: `findOneBy`
-- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
-  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
@@ -33,7 +32,7 @@
 
 ### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never`
+  - Missing: `não, never, Dockerfile`
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`
