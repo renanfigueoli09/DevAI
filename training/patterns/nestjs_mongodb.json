@@ -1,0 +1,17 @@
+{
+  "pattern:nestjs+mongodb:schema": {
+    "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
+    "source": "code_pattern",
+    "updated_at": 1780751412.832782
+  },
+  "pattern:nestjs+mongodb:service": {
+    "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
+    "source": "code_pattern",
+    "updated_at": 1780751413.032687
+  },
+  "pattern:nestjs+mongodb:module": {
+    "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
+    "source": "code_pattern",
+    "updated_at": 1780751413.2409883
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "search:kubernetes+cert-manager:kubernetes certificate managem": {
-    "content": "- **Latest Version**: cert-manager v1.12.0\n- **CLI Commands**:\n  - `kubectl apply -f https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.yaml`\n  - `cert-manager version` to check the installed version.\n- **Key Config Options**:\n  - `issuer`: Defines how certificates are obtained (e.g., Let's Encrypt).\n  - `certificate`: Specifies details about the certificate, including DNS names and secret storage.\n  - `clusterIssuer`: Similar to `issuer`, but for cluster-wide use.",
-    "source": "web_search",
-    "updated_at": 1780713599.7258556
-  }
-}

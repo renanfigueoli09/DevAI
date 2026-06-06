@@ -1,7 +1,0 @@
-{
-  "search:spring-data-jpa-security:securing spring data jpa repos": {
-    "content": "- Use `@EnableJpaRepositories` to activate Spring Data JPA repositories.\n- Configure the base package in `@EnableJpaRepositories` if needed.\n- JpaRepository extends PagingAndSortingRepository, which extends CrudRepository.\n- Key CRUD operations are provided by JpaRepository.\n- For pagination and sorting, use methods like `findAll(Pageable pageable)` in JpaRepository.\n- Ensure your entity classes are annotated with JPA annotations like `@Entity`, `@Id`, etc.\n- Use Spring Boot's auto-configuration for JPA repositories.\n- Check the latest version of Spring Data JPA on [Maven Central](https://search.maven.org/artifact/org.springframework.data/spring-data-jpa).\n- Configure data source properties in `application.properties` or `application.yml`.",
-    "source": "web_search",
-    "updated_at": 1780714222.8234007
-  }
-}
