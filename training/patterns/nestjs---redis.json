@@ -13,5 +13,35 @@
     "content": "- Use `@nestjs/redis` package for Redis integration.\n- Install via npm: `npm install @nestjs/redis`.\n- Import `RedisModule.forRoot()` in your app module to configure Redis connection.\n- Key config options include `host`, `port`, and `password`.\n- For L1+L2 caching, consider using `@nestjs-redisx/cache` package.\n- Install via npm: `npm install @nestjs-redisx/cache`.\n- Use decorators like `@Cacheable()`, `@CachePut()`, and `@CacheEvict()` for caching operations.\n- Implement distributed locks with `@nestjs-redisx/locks` for concurrency control.\n- Rate limiting can be achieved using `@nestjs-redisx/rate-limit`.",
     "source": "web_search",
     "updated_at": 1780747002.7218091
+  },
+  "search:NestJS + Redis:testing redis operations and c_ex": {
+    "content": "- Use `@nestjs/common` version 9.x for the latest features and improvements.\n- Implement caching using `@nestjs/common/cache` module.\n- Configure cache manager in `app.module.ts`:\n  ```typescript\n  import { CacheModule, Module } from '@nestjs/common';\n  @Module({\n    imports: [\n      CacheModule.register({\n        ttl: 60,\n        max: 100,\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use `@CacheInterceptor` to cache responses:\n  ```typescript\n  import { Controller, Get } from '@nestjs/common';\n  import { CacheInterceptor, UseInterceptors } from '@nestjs/common';\n\n  @Controller('example')\n  export class ExampleController {\n    @Get()\n    @UseInterceptors(CacheInterceptor)\n    getExample() {\n      return 'Cached data';\n    }\n  }\n  ```\n- For Redis caching, install `@nestjs-modules/ioredis`:\n  ```bash\n  npm install @nestjs-modules/ioredis --save\n  ```\n- Configure Redis in `app.module.ts`:\n  ```typescript\n  import { CacheModule } from '@nestjs/common';\n  import { IORedisStore } from '@nestjs-modules/ioredis';\n\n  @Module({\n    imports: [\n      CacheModule.register({\n        store: IORedisStore,\n        host: 'localhost',\n        port: 6379,\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use `@RedisCacheInterceptor` for Redis caching:\n  ```typescript\n  import { Controller, Get } from '@nestjs/common';\n  import { RedisCacheInterceptor, UseInterceptors } from '@nestjs-modules/ioredis';\n\n  @Controller('example')\n  export class ExampleController {\n    @Get()\n    @UseInterceptors(RedisCacheInterceptor)\n    getExample() {\n      return 'Redis cached data';\n    }\n  }\n  ```\n- Test caching strategies using NestJS testing utilities:\n  ```bash\n  npm run test:e2e\n  ```\n- Monitor cache performance and adjust TTL and max settings accordingly.",
+    "source": "code_example",
+    "updated_at": 1780747020.4208074
+  },
+  "search:NestJS + Redis:security considerations when u": {
+    "content": "- Ensure Redis server is running before starting your NestJS application.\n- Use `@nestjs/cache-manager` and `cache-manager-redis-store` for Redis caching in NestJS.\n- Configure Redis with authentication and SSL for production environments:\n  - Set `REDIS_URL` environment variable to include auth details: `redis://username:password@host:port/database`.\n  - Enable SSL by setting `ssl: true` in the Redis configuration.\n- Use `CACHE_MANAGER` injection token from `@nestjs/cache-manager` to interact with Redis cache.\n- For real-time messaging, use Redis pub/sub features within NestJS services.\n- Implement session management using Redis for stateless applications.\n- Monitor and optimize Redis performance using tools like RedisInsight or Redis CLI commands.\n- Regularly update dependencies to the latest versions:\n  - `@nestjs/cache-manager` (latest version)\n  - `cache-manager-redis-store` (latest version)\n  - Redis server (latest stable version)",
+    "source": "web_search",
+    "updated_at": 1780747038.8052099
+  },
+  "search:NestJS + Redis:performance optimization techn": {
+    "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Ensure using the latest version of Redis, e.g., `6.2.6`.\n- **Key Config Options**:\n  - `maxmemory`: Set to limit memory usage.\n  - `maxmemory-policy`: Define eviction policy (e.g., `allkeys-lru`).\n  - `cache.ttl`: Set time-to-live for cache entries.",
+    "source": "web_search",
+    "updated_at": 1780747077.2417035
+  },
+  "search:NestJS + Redis:performance optimization techn_ex": {
+    "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Ensure using the latest version of Redis and caching libraries like `cachetools`.\n- **Key Config Options**:\n  - TTL (Time To Live) for cache entries to manage expiration.\n  - LRU (Least Recently Used) eviction policy for managing cache size.\n  - Sharding for distributing cache across multiple nodes.",
+    "source": "code_example",
+    "updated_at": 1780747102.6972022
+  },
+  "search:NestJS + Redis:best practices for managing re": {
+    "content": "- Use `redis-cli --version` to check the latest version.\n- Configure persistence using RDB snapshots with `save <seconds> <changes>` in `redis.conf`.\n- Enable AOF persistence with `appendonly yes` and set the append fsync policy (e.g., `no`, `always`, `everysec`) in `redis.conf`.\n- Monitor persistence status with `INFO persistence`.\n- Use `FLUSHALL` or `FLUSHDB` to clear data, but be cautious.\n- Adjust `maxmemory` and `maxmemory-policy` for memory management.\n- Regularly backup RDB files using `cp /path/to/dump.rdb /backup/location`.\n- Monitor AOF file size with `DEBUG OBJECT mykey` to ensure it's not growing uncontrollably.",
+    "source": "web_search",
+    "updated_at": 1780747110.014152
+  },
+  "search:NestJS + Redis:best practices for managing re_ex": {
+    "content": "- Use connection pooling libraries like `ioredis` or `redis-pool`.\n- Implement keep-alive connections to reduce latency.\n- Configure Redis clients with `maxRetriesPerRequest` and `retryStrategy`.\n- Monitor connection usage with tools like Prometheus and Grafana.\n- Regularly update Redis client libraries to the latest version (e.g., `ioredis@latest`).\n- Use Redis Sentinel for high availability and automatic failover.\n- Implement data persistence strategies: RDB or AOF, depending on your needs.\n- Avoid blocking operations by using non-blocking commands where possible.\n- Monitor memory usage with `INFO memory` command to prevent out-of-memory errors.",
+    "source": "code_example",
+    "updated_at": 1780747117.1918328
   }
 }

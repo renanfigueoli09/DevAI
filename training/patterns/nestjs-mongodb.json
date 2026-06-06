@@ -2,32 +2,32 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
     "source": "code_pattern",
-    "updated_at": 1780746919.3080587
+    "updated_at": 1780747137.327973
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780746919.3735065
+    "updated_at": 1780747137.5520477
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780746919.4578366
+    "updated_at": 1780747137.7872524
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "• With Mongoose, everything is derived from a Schema. Schemas can be created with NestJS decorators, or with Mongoose itself manually. The @Prop() decorator ...\n• Jul 6, 2020 · How can I do it with NestJS decorators ( @Schema() & @Prop() )?. I ... from '@nestjs/mongoose'; import { HydratedDocument } from ...\n• Feb 19, 2025 · HydratedDocument : A Mongoose type that indicates that the document returned after a database operation will be fully hydrated with Mongoose- ...",
     "source": "web_search",
-    "updated_at": 1780746996.5737674
+    "updated_at": 1780747248.0012023
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "content": "- **CLI Commands**:\n  - `yarn add @nestjs/mongoose mongoose`\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n  \n- **Key Config Options**:\n  - Import `MongooseModule` in `AppModule`.\n  - Use `@Schema` decorator for defining document schemas.\n  - Utilize `@Prop` to define properties within a schema.\n  - Employ `HydratedDocument` for type-safe documents.",
     "source": "code_example",
-    "updated_at": 1780746996.8372364
+    "updated_at": 1780747248.1972318
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - Connection String: `mongoose.connect('mongodb://localhost:27017/mydatabase')`\n  - Schema Definition: Define schemas using `new mongoose.Schema({...})`\n  - CRUD Operations:\n    - Find by ID: `await Model.findById(id)`\n    - Update by ID: `await Model.findByIdAndUpdate(id, updateData)`\n    - Delete by ID: `await Model.findByIdAndDelete(id)`",
     "source": "web_search",
-    "updated_at": 1780746997.149743
+    "updated_at": 1780747248.3950984
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - `@Module({ imports: [MongooseModule.forRoot('mongodb://localhost/nestjs')] })`\n  - `@Schema()`\n  - `Model.findById(id)`\n  - `Model.findByIdAndUpdate(id, update)`\n  - `Model.findByIdAndDelete(id)`",
@@ -97,7 +97,7 @@
   "qa:mongoose-required-field-modifier": {
     "content": "ANSWER: required field uses ! (not ?). @Prop({required:true}) title!: string. @Prop() description?: string. RULE: required=! optional=?. NEVER ? for required. NEVER bare field: Type without ! or ?.",
     "source": "correct_answer",
-    "updated_at": 1780747007.5087955
+    "updated_at": 1780747255.1070201
   },
   "NestJS Mongoose required field uses ! or ? TypeScript": {
     "content": "ANSWER: required field uses ! (not ?). @Prop({required:true}) title!: string. @Prop() description?: string. RULE: required=! optional=?. NEVER ? for required. NEVER bare field: Type without ! or ?.",
@@ -143,5 +143,10 @@
     "content": "MongoDB connection: MongooseModule.forRoot(process.env.MONGODB_URI). NEVER TypeOrmModule for MongoDB. NEVER DB_HOST/DB_PORT variables (those are PostgreSQL). MongoDB uses MONGODB_URI.",
     "source": "correct_answer",
     "updated_at": 1780746969.2299352
+  },
+  "self:nestjs+mongoose:book-schema": {
+    "content": "import { Document, Schema as MongooseSchema, model } from 'mongoose';\nimport { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\n\nexport type BookDocument = HydratedDocument<Book>;\n\n@Schema()\nexport class Book {\n  @Prop({ required: true })\n  title!: string;\n\n  @Prop({ required: true })\n  author!: string;\n\n  @Prop({ required: true, min: 0 })\n  price!: number;\n\n  @Prop({ required: false })\n  description?: string;\n\n  @Prop({ required: false, default: true })\n  isActive?: boolean;\n}\n\nexport const BookSchema = SchemaFactory.createForClass(Book);\n\nexport const BookModel = model<BookDocument>('Book', BookSchema);",
+    "source": "self_generated_validated",
+    "updated_at": 1780747022.721824
   }
 }
