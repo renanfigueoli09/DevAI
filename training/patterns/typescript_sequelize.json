@@ -12,6 +12,6 @@
   "search:typescript+sequelize:typescript sequelize migration": {
     "content": "- **CLI Commands**:\n  - `npx sequelize-cli init` to initialize Sequelize.\n  - `npx sequelize-cli model:create --name User --attributes username:string,email:string` to create a new model.\n  - `npx sequelize-cli migration:generate --name add-email-to-users` to generate a migration file.\n  - `npx sequelize-cli db:migrate` to apply migrations.\n\n- **Latest Versions**:\n  - Sequelize CLI: v7.0.0\n  - Sequelize: v6.32.1\n\n- **Key Config Options**:\n  - `config/config.json`: Define database connection settings and migration paths.\n  - `models/User.ts`: Define your models with TypeScript interfaces.\n  - `migrations/xxxx_xx_xx_add_email_to_users.js`: Write migration scripts to alter the database schema.",
     "source": "web_search",
-    "updated_at": 1780765792.995633
+    "updated_at": 1780766121.2572143
   }
 }
