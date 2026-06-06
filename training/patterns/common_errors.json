@@ -2,16 +2,31 @@
   "qa:ts2307-module-missing": {
     "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}",
     "source": "correct_answer",
-    "updated_at": 1780747119.3134258
+    "updated_at": 1780747202.6065447
   },
   "NestJS TS2307 module not found book.module fix create": {
     "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}",
     "source": "correct_answer",
-    "updated_at": 1780747119.362206
+    "updated_at": 1780747202.6647525
   },
   "pattern:error:missing-module": {
     "content": "TS2307 './book/book.module' not found: The fix is to CREATE src/book/book.module.ts. Content: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "forced_training",
-    "updated_at": 1780747119.3997061
+    "updated_at": 1780747202.7185001
+  },
+  "pattern:error:module-not-found": {
+    "content": "// TS2307 './book/book.module' not found: CREATE src/book/book.module.ts with @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController]}) export class BookModule {}",
+    "source": "code_pattern",
+    "updated_at": 1780747142.1084354
+  },
+  "pattern:error:findOneBy-mongoose": {
+    "content": "// TS2551 Model.findOneBy does not exist: findOneBy is TypeORM-only. Mongoose uses: findById(id), findOne({field:value}), findByIdAndUpdate, findByIdAndDelete. NEVER use findOneBy with Mongoose.",
+    "source": "code_pattern",
+    "updated_at": 1780747142.3481097
+  },
+  "pattern:error:partialtype": {
+    "content": "// PartialType import: ALWAYS from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist there). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import {PartialType} from '@nestjs/mapped-types'",
+    "source": "code_pattern",
+    "updated_at": 1780747142.5766327
   }
 }

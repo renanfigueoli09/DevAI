@@ -1,0 +1,22 @@
+{
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy orm tutoria": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init <dir>`: Initialize Alembic in a specified directory.\n  - `alembic revision --autogenerate -m \"message\"`: Generate a migration script from database changes.\n\n- **Latest Versions**:\n  - FastAPI: 0.100.2\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for the database connection.\n  - `DATABASE_URL`: Alias for `SQLALCHEMY_DATABASE_URL`.\n  - `MIGRATIONS_DIR`: Directory where Alembic migration scripts are stored.\n  - `TESTING`: Boolean flag to indicate if running tests.",
+    "source": "web_search",
+    "updated_at": 1780747161.4986217
+  },
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy orm tutoria_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy alembic asyncpg pytest`\n  - `alembic init migrations`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 2.0.13\n  - Alembic: 1.8.4\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - Alembic Configuration: `alembic.ini` and `env.py`\n  - FastAPI Dependencies: Dependency injection for database sessions",
+    "source": "code_example",
+    "updated_at": 1780747177.8586676
+  },
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy migrations ": {
+    "content": "- Use `alembic init alembic` to initialize Alembic.\n- Run `alembic revision --autogenerate -m \"message\"` to generate migration scripts.\n- Apply migrations with `alembic upgrade head`.\n- Key config options in `alembic.ini`: `sqlalchemy.url`, `script_location`.\n- Latest versions: FastAPI 0.102.0, SQLAlchemy 1.4.39, Alembic 1.8.1.\n- Use `alembic downgrade -1` to revert the last migration.\n- Ensure your models are in a separate file for easy management.\n- Regularly run migrations on development and staging environments before production.",
+    "source": "web_search",
+    "updated_at": 1780747185.1818278
+  },
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy migrations _ex": {
+    "content": "- Use `alembic revision --autogenerate -m \"message\"` to generate migrations.\n- Apply migrations using `alembic upgrade head`.\n- Review auto-generated migrations before applying.\n- Test migrations on development database first.\n- Commit migration scripts to version control.\n- Use latest versions of FastAPI, SQLAlchemy, and Alembic.\n- Configure Alembic in your project with the correct connection string.\n- Ensure database models are defined correctly for accurate migrations.",
+    "source": "code_example",
+    "updated_at": 1780747188.868156
+  }
+}
