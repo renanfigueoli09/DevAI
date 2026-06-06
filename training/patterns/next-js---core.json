@@ -13,5 +13,40 @@
     "content": "- **CLI Commands**:\n  - `npm test` or `yarn test`: Runs tests using the configured testing framework.\n  - `next dev --turbo`: Starts the Next.js development server with Turbo mode enabled for faster builds.\n\n- **Latest Versions**:\n  - Jest: v29.0.3\n  - React Testing Library: v14.0.0\n\n- **Key Config Options**:\n  - In `jest.config.js`, configure `testEnvironment` to `\"jsdom\"` for DOM testing.\n  - Use `setupFilesAfterEnv` to include setup files like `@testing-library/jest-dom/extend-expect`.\n  - Configure `transformIgnorePatterns` to ignore node_modules unless they are peer dependencies.",
     "source": "web_search",
     "updated_at": 1780746497.3259206
+  },
+  "search:Next.js + Core:testing core components and ut_ex": {
+    "content": "- **Install Jest and React Testing Library**:\n  ```bash\n  npm install --save-dev jest @testing-library/react @testing-library/jest-dom\n  ```\n\n- **Configure Jest in Next.js**:\n  Create a `jest.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n    testEnvironment: 'jsdom',\n  };\n  ```\n\n- **Run Tests**:\n  ```bash\n  npm test\n  ```\n\n- **Install Playwright for UI Testing**:\n  ```bash\n  npm install --save-dev playwright\n  npx playwright install\n  ```\n\n- **Configure Playwright in Next.js**:\n  Create a `playwright.config.ts` file with the following content:\n  ```typescript\n  import { defineConfig } from '@playwright/test';\n\n  export default defineConfig({\n    testDir: './tests',\n    use: {\n      baseURL: 'http://localhost:3000',\n    },\n  });\n  ```\n\n- **Run UI Tests**:\n  ```bash\n  npx playwright test\n  ```\n\n- **Key Config Options for Jest**:\n  - `setupFilesAfterEnv`: Array of paths to modules that run before each test.\n  - `testEnvironment`: The test environment (e.g., 'jsdom').\n\n- **Key Config Options for Playwright**:\n  - `testDir`: Directory where tests are located.\n  - `use.baseURL`: Base URL for the application under test.",
+    "source": "code_example",
+    "updated_at": 1780746509.5099454
+  },
+  "search:Next.js + Core:security best practices for us": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Implement authentication using `next-auth.js` for secure login.\n- Update dependencies regularly with `npm update`.\n- Enable HTTPS by configuring SSL certificates in your hosting environment.\n- Utilize Content Security Policy (CSP) headers for enhanced security.\n- Apply input sanitization and validation on both client and server sides.\n- Use environment variables to manage sensitive information securely.\n- Implement rate limiting to prevent brute force attacks.\n- Regularly audit dependencies with `npm audit` and fix vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1780746519.7509046
+  },
+  "search:Next.js + Core:security best practices for us_ex": {
+    "content": "- Use `next auth` for authentication.\n- Implement `getServerSideProps` for server-side rendering.\n- Utilize `middleware.js` for API routes protection.\n- Enable `next/image` for optimized image loading.\n- Configure `next.config.js` for custom build settings.\n- Employ `next-i18next` for internationalization.\n- Use `react-hook-form` for form validation.\n- Implement `next/error` for error handling.\n- Utilize `next/link` for client-side navigation.",
+    "source": "code_example",
+    "updated_at": 1780746523.7382727
+  },
+  "search:Next.js + Core:performance optimization techn": {
+    "content": "- Use `next build` to optimize your Next.js application.\n- Implement automatic code splitting by using dynamic imports.\n- Utilize the App Router's Server Component architecture for performance improvements.\n- Enable image optimization with `next/image`.\n- Employ static generation (`getStaticProps`) for pages that don't change often.\n- Apply server-side rendering (`getServerSideProps`) for pages that require up-to-date data.\n- Use `next/image` for optimized images.\n- Configure the `next.config.js` file to optimize performance settings.\n- Monitor and analyze performance with tools like Lighthouse or Next.js DevTools.",
+    "source": "web_search",
+    "updated_at": 1780746532.2841172
+  },
+  "search:Next.js + Core:performance optimization techn_ex": {
+    "content": "- **CLI Commands**:\n  - `next build`: Builds your Next.js application.\n  - `next start`: Starts the production server.\n\n- **Latest Versions**:\n  - As of my last update, the latest version is Next.js 13.x. Always check [Next.js official website](https://nextjs.org/) for the most current version.\n\n- **Key Config Options**:\n  - `images: { domains: ['example.com'] }`: Specifies allowed image domains.\n  - `reactStrictMode: true`: Enables React Strict Mode for better development experience and potential bug detection.\n  - `swcMinify: true`: Uses SWC for minification, which is faster than Babel.\n\n- **Performance Techniques**:\n  - **Code Splitting**: Automatically handled by Next.js with dynamic imports.\n  - **Image Optimization**: Use the built-in Image component for automatic optimization.\n  - **Lazy Loading**: Images are automatically lazy-loaded using the Image component.\n  - **Monitoring Tools**: Utilize tools like Lighthouse and WebPageTest for performance analysis.\n\n- **Bundle Analysis**:\n  - Run `next build` to generate a report in the `.next/build/output/bundle-analyzer/` directory.",
+    "source": "code_example",
+    "updated_at": 1780746542.68137
+  },
+  "search:Next.js + Core:best practices for server-side": {
+    "content": "- Use `next build` for static generation.\n- Utilize `getServerSideProps` for server-side rendering on every request.\n- Employ `getStaticPaths` and `getStaticProps` for static site generation with data fetching.\n- Configure `rewrites`, `redirects`, and `headers` in `next.config.js`.\n- Ensure proper handling of dynamic routes using `[slug].js` syntax.\n- Update Next.js to the latest version for performance improvements and new features.\n- Use `next/image` for optimized image delivery.\n- Implement `robots.txt` for SEO control.\n- Monitor server logs and performance metrics regularly.",
+    "source": "web_search",
+    "updated_at": 1780746550.4955432
+  },
+  "search:Next.js + Core:best practices for server-side_ex": {
+    "content": "- Use `next build` to prepare your app for production.\n- Deploy using `vercel` or `netlify`.\n- For SSR, use `getServerSideProps`.\n- For SSG, use `getStaticPaths` and `getStaticProps`.\n- Latest Next.js version: 13.5 as of my last update.\n- Key config options in `next.config.js`: `output`, `rewrites`, `headers`.",
+    "source": "code_example",
+    "updated_at": 1780746555.9861617
   }
 }
