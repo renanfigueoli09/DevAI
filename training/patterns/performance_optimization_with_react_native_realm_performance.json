@@ -30,23 +30,23 @@
     "updated_at": 1780784178.131695
   },
   "search:Performance Optimization with React Native + Realm Performance:optimizing data access pattern": {
-    "content": "- Use `react-data-patterns` for efficient data handling in React Native.\n- Implement `async/await` for better performance and readability when dealing with asynchronous operations.\n- Optimize memory management by using `React.memo` and `useCallback`.\n- Bundle optimization can be achieved through tools like `metro-bundler-config` and `react-native-code-push`.\n- Use `FlatList` instead of `ScrollView` for large lists to improve performance.\n- Implement lazy loading for images and components to reduce initial load time.\n- Utilize `React.lazy` and `Suspense` for code splitting in React Native applications.",
+    "content": "- **CLI Commands**:\n  - `npx react-native optimize`\n  - `react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/main.jsbundle`\n\n- **Latest Versions**:\n  - React Native: 0.72.3\n  - React: 18.2.0\n\n- **Key Config Options**:\n  - `metro.config.js`: Configure Metro bundler for faster builds.\n  - `react-native.config.js`: Define project-specific configurations.\n  - `android/app/build.gradle`: Adjust Gradle settings for Android performance.\n  - `ios/Podfile`: Customize CocoaPods dependencies and versions.",
     "source": "web_search",
-    "updated_at": 1780783847.94816
+    "updated_at": 1780784183.3112943
   },
   "search:Performance Optimization with React Native + Realm Performance:optimizing data access pattern_ex": {
-    "content": "- Use `react-data-patterns` for optimized data handling in React Native.\n- Employ custom hooks to simplify and optimize data flow.\n- Structure your project with clean code and essential navigation setup.\n- Focus on projects with comprehensive documentation and active community support.\n- Regularly update dependencies to the latest versions using `npm update`.\n- Use `react-native-reanimated` for smooth animations.\n- Implement lazy loading for performance optimization.\n- Utilize React Native's built-in `FlatList` for efficient list rendering.\n- Leverage context API or Redux for state management across components.",
+    "content": "- **CLI Commands**: `npx react-native init MyProject`\n- **Latest Versions**: React Native 0.72, Expo SDK 48\n- **Key Config Options**:\n  - `metro.config.js` for customizing Metro Bundler settings.\n  - `app.json` for configuring app metadata and plugins.\n  - `react-native.config.js` for project-specific configurations.",
     "source": "code_example",
-    "updated_at": 1780783849.0213544
+    "updated_at": 1780784185.6207564
   },
   "search:Performance Optimization with React Native + Realm Performance:comparing performance of diffe": {
-    "content": "- **CLI Commands**: Use `gsutil` for Google Cloud Storage, `aws s3` for Amazon S3, and `az storage blob` for Azure Blob Storage.\n- **Latest Versions**: Ensure using the latest SDKs: `gsutil` v4.60, `awscli` v2.11.58, `azure-cli` 2.49.0.\n- **Key Config Options**:\n  - Google Cloud Storage: `--project`, `--zone`.\n  - Amazon S3: `--region`, `--endpoint-url`.\n  - Azure Blob Storage: `--account-name`, `--container-name`.",
+    "content": "- **CLI Commands**: Use `gsutil` for Google Cloud Storage, `aws s3` for Amazon S3, and `az storage blob` for Azure Blob Storage.\n- **Latest Versions**: Ensure using the latest SDKs: `gsutil` v5.10, `aws-cli` v2.7.4, `azure-storage-blob` 12.16.0.\n- **Key Config Options**:\n  - Google Cloud Storage: Enable versioning with `gsutil versioning set on gs://your-bucket`.\n  - Amazon S3: Set lifecycle rules using `aws s3api put-bucket-lifecycle-configuration`.\n  - Azure Blob Storage: Configure access policies via the Azure Portal or CLI.",
     "source": "web_search",
-    "updated_at": 1780783850.1036265
+    "updated_at": 1780784192.6246612
   },
   "search:Performance Optimization with React Native + Realm Performance:comparing performance of diffe_ex": {
-    "content": "- **CLI Commands**:\n  - `rsync` for benchmarking file transfers.\n  - `dd if=/dev/zero of=testfile bs=1G count=1` to create a test file.\n\n- **Latest Versions**:\n  - Ensure using the latest version of `rsync` and any other tools used in benchmarks.\n\n- **Key Config Options**:\n  - For `rsync`, use `-avz` for archive mode, verbose output, and compression.\n  - Adjust block size (`bs`) based on your storage solution's capabilities.",
+    "content": "- **CLI Commands and Flags**:\n  - `rsync` for benchmarking file transfers.\n  - `nfsstat` and `smbstatus` for monitoring NFS and SMB performance.\n\n- **Latest Versions**:\n  - Ensure using the latest versions of `rsync`, `nfs-utils`, and `cifs-utils`.\n\n- **Key Config Options**:\n  - For `rsync`: Use `-avz` for optimal data transfer.\n  - For `nfs`: Adjust `/etc/exports` to optimize performance.\n  - For `smb`: Configure `/etc/samba/smb.conf` for better file sharing.",
     "source": "code_example",
-    "updated_at": 1780783851.2010853
+    "updated_at": 1780784195.7934916
   }
 }
