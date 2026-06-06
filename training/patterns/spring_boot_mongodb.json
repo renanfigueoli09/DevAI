@@ -2,11 +2,11 @@
   "pattern:spring+mongodb:document": {
     "content": "// @Document(collection='books') @Data class Book { @Id String id; @NotBlank String title; @CreatedDate LocalDateTime createdAt; }. Repository: extends MongoRepository<Book,String>{}",
     "source": "code_pattern",
-    "updated_at": 1780764800.9186912
+    "updated_at": 1780765061.8429108
   },
   "qa:spring-document-not-entity": {
     "content": "Spring Boot MongoDB: use @Document NOT @Entity\n@Document(collection='books') class Book { @Id String id; @NotBlank String title; }\nRepository: extends MongoRepository<Book, String>\nWRONG: @Entity, JpaRepository  ← those are JPA/PostgreSQL",
     "source": "critical_pattern",
-    "updated_at": 1780764837.9549
+    "updated_at": 1780765246.4622855
   }
 }
