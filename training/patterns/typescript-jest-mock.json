@@ -1,0 +1,22 @@
+{
+  "search:typescript+jest-mock:typescript jest mocking techni": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 5.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"setupFilesAfterEnv\": [\"<rootDir>/setupTests.ts\"]`",
+    "source": "web_search",
+    "updated_at": 1780732329.8959303
+  },
+  "search:typescript+jest-mock:typescript jest mocking techni_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest --init` to set up Jest\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 5.1.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"moduleFileExtensions\": [\"ts\", \"tsx\", \"js\"]`",
+    "source": "code_example",
+    "updated_at": 1780732338.01186
+  },
+  "search:typescript+jest-mock:typescript jest mock api calls": {
+    "content": "- Use `jest.mock('axios')` to mock the axios library.\n- To mock an array of objects, use `mockImplementation(() => [{}, {}])`.\n- For mocking properties, ensure you're using the correct syntax: `const mockObject = { method: jest.fn() }`.\n- In your test file, import the module and set up mocks before each test with `beforeEach(() => { ... })`.\n- Use `expect(mockFunction).toHaveBeenCalledWith(arg)` to verify function calls.\n- For TypeScript compatibility, ensure you have `@types/jest` installed.\n- Update Jest to the latest version for bug fixes and new features.\n- Configure Jest in your `package.json` under `jest` key with options like `\"testEnvironment\": \"jsdom\"`.\n- Use `mockImplementationOnce(() => {})` if you need different mock implementations for multiple calls.",
+    "source": "web_search",
+    "updated_at": 1780732361.11264
+  },
+  "search:typescript+jest-mock:typescript jest mock api calls_ex": {
+    "content": "- Use `jest.mock()` to mock entire modules.\n- For TypeScript, ensure compatibility by using `jest.Mock`.\n- In Next.js projects, use `jest.mock()` for mocking API calls.\n- Mock utility functions with `jest.fn()`.\n- Configure Jest in your project's `package.json` or `jest.config.ts`.",
+    "source": "code_example",
+    "updated_at": 1780732364.6053157
+  }
+}
