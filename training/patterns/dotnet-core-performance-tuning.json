@@ -1,0 +1,22 @@
+{
+  "search:dotnet+core-performance-tuning:dotnet core performance tuning": {
+    "content": "- **CLI Commands**: Use `dotnet benchmark` to run benchmarks.\n- **Latest Versions**: .NET 10 is the latest version as of my last update.\n- **Key Config Options**:\n  - `ThreadPool.SetMinThreads`: Adjusts the minimum number of threads in the thread pool.\n  - `GC.Server`: Enables server garbage collection for better performance on large applications.\n  - `AppContext.SetSwitch`: Controls various runtime behaviors, such as enabling or disabling features.",
+    "source": "web_search",
+    "updated_at": 1780732081.6344364
+  },
+  "search:dotnet+core-performance-tuning:dotnet core performance tuning_ex": {
+    "content": "- Use `dotnet publish -c Release` for optimized builds.\n- Enable Just-In-Time (JIT) compilation by setting `<PublishSingleFile>true</PublishSingleFile>` in your `.csproj`.\n- Utilize `dotnet-trace` to diagnose performance issues with `dotnet trace collect --process-id <pid>`.\n- Configure logging levels using `appsettings.json`, e.g., `\"LogLevel\": { \"Default\": \"Information\", \"Microsoft.AspNetCore\": \"Warning\" }`.\n- Implement caching strategies like in-memory caching or distributed caching.\n- Use async/await for I/O-bound operations to avoid blocking the main thread.\n- Optimize database queries and use connection pooling.\n- Monitor application performance with tools like Application Insights or Prometheus.\n- Regularly update .NET Core SDK and runtime to benefit from performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780732087.867712
+  },
+  "search:dotnet+core-performance-tuning:dotnet core optimization strat": {
+    "content": "- **CLI Commands**: Use `dotnet publish -c Release --self-contained false` for AOT compilation.\n- **Latest Versions**: Ensure you are using .NET 10 or later for the best performance features.\n- **Key Config Options**:\n  - `runtimeconfig.json`: Configure runtime options like garbage collection and memory limits.\n  - `appsettings.json`: Optimize settings for caching, logging, and other critical components.",
+    "source": "web_search",
+    "updated_at": 1780732107.5634215
+  },
+  "search:dotnet+core-performance-tuning:dotnet core optimization strat_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet publish --configuration Release` to publish optimized applications.\n  - `dotnet run --launch-profile \"Production\"` for running in production mode.\n\n- **Latest Versions**:\n  - .NET Core 7.0 is the latest stable version as of August 2025.\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure application settings like logging, connection strings.\n  - `launchSettings.json`: Define profiles for different environments (development, production).\n  - `Program.cs`/`Startup.cs`: Set up services and middleware.",
+    "source": "code_example",
+    "updated_at": 1780732126.933084
+  }
+}
