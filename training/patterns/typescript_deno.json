@@ -1,0 +1,22 @@
+{
+  "search:typescript+deno:typescript deno web developmen": {
+    "content": "- **CLI Commands**: `deno run`, `deno install`, `deno test`\n- **Latest Version**: Deno v1.28.3 (as of my last update)\n- **Key Config Options**:\n  - `tsconfig.json` for TypeScript configuration\n  - `deno.json` for Deno-specific settings",
+    "source": "web_search",
+    "updated_at": 1780746517.7234569
+  },
+  "search:typescript+deno:typescript deno web developmen_ex": {
+    "content": "- **CLI Commands**:\n  - `deno run --allow-net myscript.ts`: Runs a TypeScript script with network access.\n  - `deno install -f https://deno.land/std@v0.123.0/http/file_server.ts`: Installs the Deno file server.\n\n- **Latest Versions**:\n  - Deno: v1.45.0\n  - TypeScript: v5.1.6\n\n- **Key Config Options**:\n  - `deno.jsonc`: Configuration file for Deno projects.\n  - `\"compilerOptions\"`: Specifies compiler options like target, module, and strict mode.\n  - `\"include\"` and `\"exclude\"`: Defines which files to include or exclude from the compilation process.",
+    "source": "code_example",
+    "updated_at": 1780746535.0769205
+  },
+  "search:typescript+deno:typescript deno security best ": {
+    "content": "- **CLI Commands**: Use `deno run --allow-read --allow-write` to execute scripts with specific permissions.\n- **Latest Version**: Deno v1.26.3 as of April 2026.\n- **Key Config Options**:\n  - `permissions`: Define granular access controls using flags like `--allow-net`, `--allow-env`.\n  - `deno.jsonc`: Configure project settings, including dependencies and build options.\n  - `tsconfig.json`: Specify TypeScript compiler options for better code maintainability.",
+    "source": "web_search",
+    "updated_at": 1780746554.2440677
+  },
+  "search:typescript+deno:typescript deno security best _ex": {
+    "content": "- **CLI Commands**:\n  - `deno run --allow-all script.ts`: Runs a TypeScript script with all permissions.\n  - `deno install --allow-read --allow-write https://deno.land/std@0.123.0/examples/cat.ts`: Installs the Deno cat example.\n\n- **Latest Versions**:\n  - Deno: v1.45.0\n  - TypeScript: v5.0.0\n\n- **Key Config Options**:\n  - `tsconfig.json`: Specifies compiler options and project settings.\n  - `\"compilerOptions\": { \"target\": \"ESNext\", \"module\": \"ESNext\", \"strict\": true }`\n  - `\"include\": [\"src/**/*\"]`: Includes all TypeScript files in the src directory for compilation.",
+    "source": "code_example",
+    "updated_at": 1780746567.955561
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:Performance Optimization - Spring:testing performance metrics an": {
+    "content": "- Use `mvn clean install` to build your Spring Boot application.\n- For performance testing, Apache JMeter is recommended. Download the latest version from [Apache JMeter](https://jmeter.apache.org/download_jmeter.cgi).\n- Key config options in `application.properties` for monitoring:\n  - `management.endpoints.web.exposure.include=*`\n  - `management.endpoint.health.show-details=always`\n- Use Micrometer to measure metrics, add dependencies in `pom.xml`:\n  ```xml\n  <dependency>\n    <groupId>io.micrometer</groupId>\n    <artifactId>micrometer-core</artifactId>\n  </dependency>\n  ```\n- Run JMeter tests with the command: `jmeter -n -t your-test-plan.jmx -l results.jtl`.\n- Analyze results using JMeter's GUI or generate reports from `results.jtl`.",
+    "source": "web_search",
+    "updated_at": 1780746580.6794553
+  },
+  "search:Performance Optimization - Spring:testing performance metrics an_ex": {
+    "content": "- Use `./gradlew jmh` to run benchmarks from the command line.\n- Modify plugin configuration for specific benchmark usage.\n- Explore micro-benchmarks in the spring-projects/spring-framework Wiki on GitHub.\n- Latest versions can be found in the official Spring Framework documentation or Maven Central.",
+    "source": "code_example",
+    "updated_at": 1780746584.6964593
+  },
+  "search:Performance Optimization - Spring:security considerations when o": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot applications.\n  - `mvn clean install` for building and testing.\n\n- **Latest Versions**:\n  - Spring Security: 6.x\n  - Spring Boot: 3.x\n\n- **Key Config Options**:\n  - `spring.security.user.name`\n  - `spring.security.user.password`\n  - `spring.security.user.roles`\n  - `spring.security.basic.enabled=true` for basic authentication.\n  - `spring.security.ldap.enabled=true` for LDAP integration.\n\n- **Performance Considerations**:\n  - Use `@EnableWebSecurity` and extend `WebSecurityConfigurerAdapter`.\n  - Configure `HttpSecurity` to restrict access based on roles and URLs.\n  - Implement caching mechanisms for frequently accessed data.\n  - Optimize database queries using Spring Data JPA.",
+    "source": "web_search",
+    "updated_at": 1780746592.9853873
+  },
+  "search:Performance Optimization - Spring:security considerations when o_ex": {
+    "content": "- Use Spring Boot Actuator to monitor application performance.\n- Implement caching strategies using @Cacheable, @CachePut, and @CacheEvict annotations.\n- Optimize database queries by using JPA's Criteria API or QueryDSL.\n- Enable lazy loading for collections in entities.\n- Configure thread pools with appropriate core and maximum sizes.\n- Use asynchronous programming with CompletableFuture or Spring Task Execution.\n- Minimize the use of blocking I/O operations in critical paths.\n- Monitor and adjust garbage collection settings based on application needs.\n- Regularly update dependencies to the latest versions for performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780746597.6342928
+  }
+}

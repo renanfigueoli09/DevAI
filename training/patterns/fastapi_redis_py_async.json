@@ -1,0 +1,12 @@
+{
+  "search:fastapi+redis-py-async:fastapi redis-py async operati": {
+    "content": "- **CLI Commands**:\n  - `python3 app.py` to start the FastAPI server.\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Redis-Py: v4.2.0\n  \n- **Key Config Options**:\n  - `redis_url`: URL for connecting to the Redis database (e.g., `redis://localhost:6379/0`).\n  - `asyncio`: Enables asynchronous operations.\n  - `lifespan`: Manages application startup and shutdown phases, including Redis connection.",
+    "source": "web_search",
+    "updated_at": 1780746577.3746648
+  },
+  "search:fastapi+redis-py-async:fastapi redis-py async operati_ex": {
+    "content": "- **FastAPI Version**: 0.98.0\n- **Redis-py Version**: 4.5.4\n- **GitHub Repository**: [serafinovsky/fastapi-redis-utils](https://github.com/serafinovsky/fastapi-redis-utils)\n- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install redis`\n- **Key Config Options**:\n  - `dsn=\"redis://localhost:6379\"`\n  - `asyncio.run(app)`\n- **Integration Steps**:\n  1. Install FastAPI and Redis-py.\n  2. Configure the DSN for Redis connection.\n  3. Use `asyncio` to run your FastAPI app.\n  4. Integrate Redis for caching, session storage, or data persistence.",
+    "source": "code_example",
+    "updated_at": 1780746583.6007702
+  }
+}
