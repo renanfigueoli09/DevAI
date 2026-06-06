@@ -1,0 +1,17 @@
+{
+  "qa:partialtype-source": {
+    "content": "ANSWER: @nestjs/mapped-types. import { PartialType } from '@nestjs/mapped-types'. NEVER from @nestjs/common (doesn't exist there). NEVER from @nestjs/swagger.",
+    "source": "correct_answer",
+    "updated_at": 1780749226.665329
+  },
+  "NestJS PartialType from @nestjs/mapped-types or @nestjs/common": {
+    "content": "ANSWER: @nestjs/mapped-types. import { PartialType } from '@nestjs/mapped-types'. NEVER from @nestjs/common (doesn't exist there). NEVER from @nestjs/swagger.",
+    "source": "correct_answer",
+    "updated_at": 1780749226.6842282
+  },
+  "pattern:nestjs:partialtype-source": {
+    "content": "CRITICAL: PartialType MUST be imported from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import { PartialType } from '@nestjs/mapped-types';",
+    "source": "forced_training",
+    "updated_at": 1780749226.7074199
+  }
+}
