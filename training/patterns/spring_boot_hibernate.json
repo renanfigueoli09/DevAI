@@ -17,6 +17,6 @@
   "search:Spring Boot + Hibernate:spring boot hibernate performa_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Hibernate ORM: 6.x\n  - Spring Boot: 3.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "code_example",
-    "updated_at": 1780772769.0018685
+    "updated_at": 1780773496.375871
   }
 }
