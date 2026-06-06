@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-06 03:25*
+*2026-06-06 03:30*
 
-## Score: 55% `[██████████░░░░░░░░░░]`
+## Score: 60% `[████████████░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -10,10 +10,10 @@
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
+| spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nlp | 5.8/15.0 | 39% | ❌ |
+| nlp | 7.1/15.0 | 48% | ❌ |
 | nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
-| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
@@ -30,17 +30,14 @@
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (39%)
+### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, Dockerfile`
+  - Missing: `não, never`
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não`
-  - Wrong: `true`
+  - Missing: `não, no`
 
-### spring-mongodb (0%)
-- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Wrong: `@Entity`
+### spring-mongodb (50%)
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
   - Wrong: `JpaRepository`
 
