@@ -2,16 +2,16 @@
   "search:typescript-react-query-performance:typescript react query perform": {
     "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**:\n  - React Query: v4.x\n  - TanStack Query: v5.x\n- **Key Config Options**:\n  - `staleTime`: Time in milliseconds after which data is considered stale and can be refetched.\n  - `cacheTime`: Time in milliseconds for which data is kept in the cache before being removed.\n  - `refetchInterval`: Interval at which data is automatically refetched.\n  - `refetchOnWindowFocus`: Boolean to control whether data should be refetched when the window regains focus.",
     "source": "web_search",
-    "updated_at": 1780760608.3824446
+    "updated_at": 1780761058.725958
   },
   "search:typescript-react-query-performance:react query with typescript be": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React: 20.0.0\n  - TypeScript: 5.1.6\n  - React Query: 4.0.0\n\n- **Key Config Options**:\n  - In `react-query`, use `useQuery` for fetching data.\n  - Use `useMutation` for updating data.\n  - Configure `queryClient` with options like `defaultOptions`.\n  - Set up `ReactQueryDevtools` for development to monitor queries and mutations.",
     "source": "web_search",
-    "updated_at": 1780760608.843524
+    "updated_at": 1780761059.2123458
   },
   "search:typescript-react-query-performance:react query with typescript be_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React 2025, TypeScript 4.x, Next.js 14\n- **Key Config Options**:\n  - `react-query` hooks for data fetching and state management.\n  - `Material-UI` or `Ant Design` components with TypeScript support.\n  - `Next.js` server components for improved performance.",
     "source": "code_example",
-    "updated_at": 1780760609.3034167
+    "updated_at": 1780761059.6519296
   }
 }

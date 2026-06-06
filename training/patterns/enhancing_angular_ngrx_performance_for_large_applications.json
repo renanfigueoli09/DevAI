@@ -2,11 +2,11 @@
   "search:Enhancing Angular + ngrx Performance for Large Applications:angular ngrx performance optim": {
     "content": "- Use Angular CLI v15 or later for latest features and optimizations.\n- Implement lazy loading to reduce initial bundle size.\n- Utilize `ng generate component --change-detection OnPush` for components with immutable data.\n- Configure `angular.json` to enable AOT compilation: `\"aot\": true`.\n- Optimize selectors by using memoization techniques provided by NgRx.\n- Use `@ngrx/store-devtools` for development and debugging purposes.\n- Monitor performance using Angular DevTools or browser developer tools.\n- Regularly update dependencies to the latest versions to benefit from performance improvements.",
     "source": "web_search",
-    "updated_at": 1780760893.3438601
+    "updated_at": 1780761172.0254989
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:angular ngrx performance optim_ex": {
     "content": "- Use `ng add @ngrx/store` to install NgRx.\n- Update Angular and NgRx to their latest stable versions for performance improvements.\n- Utilize NgRx Entities for state management to optimize data retrieval.\n- Implement memoization in selectors using NgRx's built-in capabilities or custom memoization functions.\n- Avoid unnecessary dispatches by calling services directly from effects when possible.\n- Monitor and profile your application to identify bottlenecks specific to NgRx performance.",
     "source": "code_example",
-    "updated_at": 1780760905.9613428
+    "updated_at": 1780761172.7717378
   }
 }
