@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-06 04:39*
+*2026-06-06 04:43*
 
-## Score: 55% `[███████████░░░░░░░░░]`
+## Score: 57% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -10,18 +10,16 @@
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
-| spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | nlp | 7.1/15.0 | 48% | ❌ |
-| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
+| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
+| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (10%)
+### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
@@ -34,12 +32,14 @@
 
 ### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, Dockerfile`
+  - Missing: `não, never`
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`
 
-### spring-mongodb (50%)
+### spring-mongodb (0%)
+- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
+  - Wrong: `@Entity`
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
   - Wrong: `JpaRepository`
 

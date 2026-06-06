@@ -1,0 +1,22 @@
+{
+  "search:react-query-performance:react query performance optimi": {
+    "content": "- **CLI Commands**: Use `npm install react-query@latest` to install the latest version of React Query.\n- **Key Config Options**:\n  - `queryCache`: Configure cache settings for data fetching and caching.\n  - `retry`: Set retry logic for failed queries.\n  - `staleTime`: Define how long data should be considered fresh before refetching.\n  - `refetchInterval`: Automatically refetch data at specified intervals.\n- **Performance Tuning Tips**:\n  - Use `useQuery` with `enabled: false` to conditionally fetch data based on certain conditions.\n  - Implement `select` to transform fetched data, reducing unnecessary re-renders.\n  - Utilize `keepPreviousData` to keep previous data while fetching new data.\n  - Apply `suspense` for better performance in components that rely on data.",
+    "source": "web_search",
+    "updated_at": 1780731812.0387475
+  },
+  "search:react-query-performance:react query performance optimi_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4.x, React v18.x\n- **Key Config Options**:\n  - `notifyOnChangeProps`: Array of props to watch for changes.\n  - `staleTime`: Time in milliseconds after which data is considered stale.\n  - `refetchInterval`: Interval at which data should be refetched automatically.",
+    "source": "code_example",
+    "updated_at": 1780731815.5436912
+  },
+  "search:react-query-performance:react query caching patterns 2": {
+    "content": "- **CLI Commands**: Not applicable.\n- **Latest Version**: As of my last update, the latest version of React Query is 4.x. Check [TanStack Query's official GitHub page](https://github.com/TanStack/query) for the most current version.\n- **Key Config Options**:\n  - `queryKey`: Unique identifier for the query.\n  - `staleTime`: Time in milliseconds after which data is considered stale (default: 0).\n  - `cacheTime`: Time in milliseconds for which data remains in cache (default: Infinity).\n  - `refetchInterval`: Interval at which to refetch data (default: false).\n  - `refetchOnWindowFocus`: Whether to refetch data when the window regains focus (default: true).\n  - `refetchOnReconnect`: Whether to refetch data on network reconnection (default: true).",
+    "source": "web_search",
+    "updated_at": 1780731824.3256032
+  },
+  "search:react-query-performance:react query caching patterns 2_ex": {
+    "content": "- Ensure you are using the latest version of React Query.\n- Use `useQuery` hook to fetch data and enable caching by default.\n- Configure cache time with `staleTime` option in `useQuery`.\n- To prevent data refresh, use `refetchOnWindowFocus: false` or `refetchInterval: 0`.\n- For custom cache invalidation, use `invalidateQueries` method from React Query.\n- Example of using `queryFn` to return cached data:\n  ```javascript\n  const queryFn = async ({ queryKey }) => {\n    const [type, id] = queryKey;\n    if (type === 'user' && id) {\n      // Return cached data if available\n      const cachedData = cache.get(id);\n      if (cachedData) return cachedData;\n    }\n    // Fetch new data\n    const newData = await fetchData(queryKey);\n    cache.set(id, newData);\n    return newData;\n  };\n  ```\n- Use `useInfiniteQuery` for handling infinite lists and enable caching with `getNextPageParam`.\n- For conditional fetching, use the `enabled` option in `useQuery`.",
+    "source": "code_example",
+    "updated_at": 1780731843.421871
+  }
+}
