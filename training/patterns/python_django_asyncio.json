@@ -1,0 +1,27 @@
+{
+  "search:python-django-asyncio:asynchronous django views and ": {
+    "content": "- Django 6.0 introduced full async support.\n- Use ASGI servers like Daphne or Uvicorn for deploying async Django apps.\n- To define an async view, use the `async def` syntax in your views.py file.\n- Middleware can also be made asynchronous by using `async def`.\n- Key config options include setting `ASGI_APPLICATION = 'your_project.asgi.application'` in settings.py.\n- Install and configure `httpx` for making HTTP requests asynchronously.\n- Use `uvicorn run your_project.asgi:application --host 0.0.0.0 --port 8000` to start the server.\n- Ensure all database operations are compatible with async support, using libraries like `aiosqlite`.\n- For middleware, ensure it's designed to handle asynchronous requests and responses properly.",
+    "source": "web_search",
+    "updated_at": 1780747473.8045478
+  },
+  "search:python-django-asyncio:django asyncio for high perfor": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver` for running the development server.\n  - `python manage.py migrate` to apply migrations.\n\n- **Latest Versions**:\n  - Django 4.2 as of my last update, with async support enhancements.\n\n- **Key Config Options**:\n  - Use ASGI instead of WSGI for asynchronous capabilities.\n  - Configure settings like `ASGI_APPLICATION` and `WSGI_APPLICATION` accordingly.\n  - Enable async views by using the `async def` syntax in your view functions.",
+    "source": "web_search",
+    "updated_at": 1780747457.7975216
+  },
+  "search:python-django-asyncio:asynchronous django views and _ex": {
+    "content": "- **Latest Version**: Django 6.0\n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to your ASGI application.\n  - `MIDDLEWARE`: Include async middleware if needed.\n- **CLI Commands**:\n  - `python manage.py runserver` for WSGI development (with performance penalties).\n  - `uvicorn myproject.asgi:application --reload` for ASGI development with better concurrency handling.",
+    "source": "code_example",
+    "updated_at": 1780747478.417521
+  },
+  "search:python-django-asyncio:optimizing django with asyncio": {
+    "content": "- Use `aiohttp` for async HTTP requests within Django views.\n- Install `django-asyncio` for better compatibility and performance.\n- Utilize `sync_to_async()` from `asgiref` to interact with synchronous parts of Django in an asynchronous context.\n- Configure your Django project to run under ASGI for full async capabilities.\n- Use `uvicorn` as the ASGI server for running your Django app asynchronously.\n- Implement async views by defining them with `async def` and using `await` for asynchronous operations.\n- Ensure your database backend supports async operations or use `sync_to_async()` for ORM interactions.\n- Monitor performance and adjust configurations as needed to optimize async operations in Django.",
+    "source": "web_search",
+    "updated_at": 1780747483.524241
+  },
+  "search:python-django-asyncio:django asyncio for high perfor_ex": {
+    "content": "- Use `aiohttp` for asynchronous views in Django.\n- Install `aioredis` and `asyncpg` for async database support.\n- Configure Django settings to use async ORM:\n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django_async.db.backends.postgresql',\n          'NAME': 'mydatabase',\n          'USER': 'mydatabaseuser',\n          'PASSWORD': 'mypassword',\n          'HOST': '127.0.0.1',\n          'PORT': '5432',\n      }\n  }\n  ```\n- Use `uvicorn` as an ASGI server for Django:\n  ```bash\n  uvicorn myproject.asgi:application --host 0.0.0.0 --port 8000\n  ```\n- Install latest versions of libraries using pip:\n  ```bash\n  pip install django-async aiohttp aioredis asyncpg uvicorn\n  ```\n- Key config options include `ASGI_APPLICATION` in settings.py.\n- Use `aiofiles` for asynchronous file operations.",
+    "source": "code_example",
+    "updated_at": 1780747467.492711
+  }
+}

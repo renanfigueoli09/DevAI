@@ -1,0 +1,7 @@
+{
+  "search:go-gin-swagger:gin framework swagger integrat": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/swaggo/gin-swagger`\n  - `go get -u github.com/swaggo/files`\n\n- **Latest Versions**:\n  - Gin Framework: v1.8.2\n  - Swagger UI for Go: v3.0.0\n\n- **Key Config Options**:\n  - Define routes and their documentation using tags.\n  - Use `gin-swagger` middleware to serve the Swagger UI.\n  - Configure CORS if needed for cross-origin requests.\n\nExample of a simple Gin route with Swagger documentation:\n\n```go\npackage main\n\nimport (\n    \"github.com/gin-gonic/gin\"\n    swaggerFiles \"github.com/swaggo/files\"\n    ginSwagger \"github.com/swaggo/gin-swagger\"\n)\n\n// @title Sample API\n// @version 1.0\n// @description This is a sample API.\nfunc main() {\n    r := gin.Default()\n\n    // Example route with Swagger documentation\n    r.GET(\"/ping\", func(c *gin.Context) {\n        c.JSON(200, gin.H{\n            \"message\": \"pong\",\n        })\n    })\n\n    // Serve Swagger UI\n    r.GET(\"/swagger/*any\", ginSwagger.WrapHandler(swaggerFiles.Handler))\n\n    r.Run(\":8080\")\n}\n```\n\nThis setup integrates Swagger UI into a Gin-based Go application, allowing for easy API documentation and testing.",
+    "source": "web_search",
+    "updated_at": 1780747488.6433017
+  }
+}
