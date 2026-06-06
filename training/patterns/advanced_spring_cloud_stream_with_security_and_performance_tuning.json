@@ -1,27 +1,32 @@
 {
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security": {
-    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run Spring Cloud Stream applications.\n- **Latest Versions**: Ensure using the latest stable version of Spring Cloud Stream and its dependencies for security updates.\n- **Key Config Options**:\n  - For Kerberos, configure JAAS properties in your application's configuration file or environment variables.\n  - Use `spring.cloud.stream.security.enabled=true` to enable security features.\n  - Configure OAuth2-based SSO with `spring.security.oauth2.client.registration.*` properties.\n  - Set up token relay between Resource Servers using `spring.cloud.gateway.routes[*].predicates[0]=Path=/api/**`.\n- **Security Features**: Leverage Spring Cloud Security for token-based authentication and authorization in your microservices architecture.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.4.RELEASE\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.cloud.stream.security.enabled=true`\n  - `spring.cloud.stream.security.jaas.config=classpath:jaas.conf`\n  - `spring.cloud.stream.security.oauth2.resource.server.jwt.key-value=<your-jwt-key>`",
     "source": "web_search",
-    "updated_at": 1780771112.5484295
+    "updated_at": 1780771474.6858006
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security_ex": {
-    "content": "- **Latest Version**: Spring Cloud Stream 4.0.0\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output.\n  - `spring.security.user.name`: Username for security configuration.\n  - `spring.security.user.password`: Password for security configuration.\n- **CLI Commands**:\n  ```bash\n  # Initialize a new Spring Boot project with Spring Initializr\n  curl https://start.spring.io/starter.zip -d dependencies=webflux,kafka,security -o spring-cloud-stream-security.zip\n\n  # Build and run the application\n  ./mvnw clean package && java -jar target/spring-cloud-stream-security-0.0.1-SNAPSHOT.jar\n  ```",
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `docker-compose up` for running Kafka and Zookeeper.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic to consume from.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic to produce messages to.\n  - `spring.security.user.name` and `spring.security.user.password`: For securing the application endpoints.",
     "source": "code_example",
-    "updated_at": 1780771113.2627113
+    "updated_at": 1780771477.5811658
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies": {
-    "content": "- **CLI Commands**: Use `top`, `htop`, `iostat`, `vmstat` for monitoring system performance.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries to benefit from performance improvements.\n- **Key Config Options**:\n  - For databases: Adjust `innodb_buffer_pool_size`, `query_cache_size`.\n  - For web servers: Increase `max_connections`, adjust `keepalive_timeout`.\n  - For Node.js: Use `--max-old-space-size` for memory allocation.\n- **Proactive Strategies**: Implement caching, optimize queries, use asynchronous programming.",
+    "content": "- **CLI Commands**: Use `top`, `htop`, `iostat`, `vmstat` for monitoring system performance.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries to benefit from performance improvements.\n- **Key Config Options**:\n  - For Node.js: Adjust `--max-old-space-size` in the command line to increase memory allocation.\n  - For Python: Use `-O` flag for optimized code execution.\n  - For Apache: Increase `MaxRequestWorkers` in `httpd.conf`.\n  - For Nginx: Adjust `worker_processes` and `worker_connections` in `nginx.conf`.",
     "source": "web_search",
-    "updated_at": 1780771114.0197263
+    "updated_at": 1780771482.4876611
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies_ex": {
-    "content": "- Use `clang-format` to format your code according to the LLVM coding standards.\n- Update your compiler to the latest version for performance improvements, e.g., `gcc --version`.\n- Enable optimization flags in your build configuration, such as `-O2` or `-O3`, e.g., `g++ -O3 my_program.cpp -o my_program`.\n- Utilize profiling tools like `gprof` or `perf` to identify bottlenecks in your code.\n- Implement lazy initialization for objects and data structures that are not always needed.\n- Use efficient data structures, such as hash maps or sets, instead of arrays or lists where applicable.\n- Minimize the use of global variables and prefer passing parameters by reference or value.\n- Optimize loops by reducing their complexity and minimizing work inside them.\n- Enable compiler-specific optimizations like `__attribute__((optimize(\"Ofast\")))` in GCC for additional performance gains.",
+    "content": "- **CLI Commands**: Use `gprof` or `perf` for profiling.\n- **Latest Versions**: Ensure using the latest compiler and runtime versions.\n- **Key Config Options**:\n  - `-O2` or `-O3` flags in GCC for optimization levels.\n  - Enable Just-In-Time (JIT) compilation if applicable.\n  - Use efficient data structures and algorithms.",
     "source": "code_example",
-    "updated_at": 1780771114.7591653
+    "updated_at": 1780771484.4474475
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization": {
-    "content": "- Use `node --optimize-for-size` to optimize Node.js applications.\n- Update to the latest version of Node.js for performance improvements.\n- Configure stream processing with `highWaterMark` to manage buffer sizes effectively.\n- Implement `pipeline()` method for efficient data flow in streams.\n- Utilize `stream.Transform` for custom transformations in stream processing.\n- Apply `backpressure` handling to prevent memory overflow.\n- Use `stream.Writable` and `stream.Readable` for creating custom streams.\n- Employ `stream.PassThrough` for simple passthrough of data streams.\n- Monitor and optimize checkpoint intervals using `Demeter`.\n- Consider `Fog Computing` for latency-aware stream operator placement.",
+    "content": "- Use `node --stream` to enable streaming mode in Node.js.\n- Update Node.js to the latest version for performance improvements and bug fixes.\n- Configure stream processing applications with optimal buffer sizes using `highWaterMark`.\n- Employ `pipeline()` method from `stream` module for efficient data flow between streams.\n- Monitor latency by implementing `latencyAwareOperatorPlacement` strategies.\n- Utilize `Demeter` framework for resource-efficient distributed stream processing.\n- Set checkpoint intervals in distributed systems using a utilization model like the one described in \"Future Gener.\"",
     "source": "web_search",
-    "updated_at": 1780771115.5190897
+    "updated_at": 1780771489.15543
+  },
+  "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization_ex": {
+    "content": "- Use `filter` early to reduce unnecessary processing.\n- Optimize data structures before streaming.\n- Utilize primitive streams (`IntStream`, `LongStream`) for better performance.\n- Employ parallel streams with caution, ensuring thread safety.\n- Avoid collecting results into large collections if not necessary.\n- Use `reduce` or `collect` with appropriate collectors for efficient aggregation.\n- Minimize the use of intermediate operations like `map` and `flatMap`.\n- Consider using `peek` for debugging without affecting performance.\n- Regularly update Java to leverage performance improvements in newer versions.",
+    "source": "code_example",
+    "updated_at": 1780771505.1861567
   }
 }
