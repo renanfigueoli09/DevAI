@@ -2,16 +2,16 @@
   "search:typescript+eslint-configurations:typescript eslint configuratio": {
     "content": "- Install ESLint and TypeScript ESLint plugin using `npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`\n- Create an `.eslintrc.js` file in the project root with the following configuration:\n```javascript\nmodule.exports = {\n  parser: '@typescript-eslint/parser',\n  plugins: ['@typescript-eslint'],\n  extends: [\n    'eslint:recommended',\n    'plugin:@typescript-eslint/recommended',\n  ],\n  rules: {\n    // Add custom rules here\n  },\n};\n```\n- Run `npx eslint --init` to create a configuration file interactively.\n- Install Prettier and its ESLint plugin using `npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev`.\n- Update `.eslintrc.js` to include Prettier:\n```javascript\nmodule.exports = {\n  // ... existing config ...\n  extends: [\n    'eslint:recommended',\n    'plugin:@typescript-eslint/recommended',\n    'prettier',\n    'plugin:prettier/recommended',\n  ],\n};\n```\n- Install Husky for Git hooks using `npm install husky --save-dev`.\n- Initialize Husky with `npx husky-init` and add a pre-commit hook to format code:\n```bash\nnpx husky add .husky/pre-commit \"npx eslint --fix . && npx prettier --write .\"\n```\n- Ensure the latest versions of ESLint, TypeScript ESLint plugin, Prettier, and Husky are used for optimal compatibility.",
     "source": "web_search",
-    "updated_at": 1780779712.4861352
+    "updated_at": 1780780512.1507804
   },
   "search:typescript+eslint-configurations:typescript eslint configuratio_ex": {
     "content": "- Install ESLint, Prettier, TypeScript using npm or yarn.\n- Use `eslint --init` to create an initial configuration file.\n- For React projects, consider extending the recommended configurations for React and TypeScript.\n- Key config options include `extends`, `parserOptions`, `rules`, and `overrides`.\n- Ensure TypeScript is properly configured by specifying the path to your tsconfig.json in the ESLint config.\n- Use plugins like `eslint-plugin-react` and `@typescript-eslint/parser` for additional rules.\n- For Prettier integration, use `eslint-config-prettier` and `eslint-plugin-prettier`.\n- Run ESLint with `npx eslint . --ext .js,.jsx,.ts,.tsx` to check all files in the project.\n- Update dependencies regularly using npm update or yarn upgrade.",
     "source": "code_example",
-    "updated_at": 1780779713.5672066
+    "updated_at": 1780780513.156796
   },
   "search:typescript+eslint-configurations:best typescript eslint rules f": {
     "content": "- Install ESLint globally using `npm install -g eslint`\n- Initialize ESLint in your project with `eslint --init`, selecting TypeScript and following prompts for recommended rules.\n- Add TypeScript-specific plugins to `.eslintrc.json`:\n  ```json\n  {\n    \"plugins\": [\"@typescript-eslint\"]\n  }\n  ```\n- Install the latest version of `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`.\n- Configure parser options in `.eslintrc.json`:\n  ```json\n  {\n    \"parserOptions\": {\n      \"ecmaVersion\": 2018,\n      \"sourceType\": \"module\",\n      \"project\": \"./tsconfig.json\"\n    }\n  }\n  ```\n- Enable recommended rules for TypeScript:\n  ```json\n  {\n    \"extends\": [\n      \"eslint:recommended\",\n      \"plugin:@typescript-eslint/recommended\"\n    ]\n  }\n  ```\n- Customize rules in `.eslintrc.json` as needed, e.g., to disallow certain patterns or enforce specific coding styles.\n- Run ESLint on your project with `npx eslint . --ext .ts,.tsx`.\n- Integrate ESLint into your development workflow for real-time feedback and automated fixes.",
     "source": "web_search",
-    "updated_at": 1780779714.692456
+    "updated_at": 1780780514.120534
   }
 }
