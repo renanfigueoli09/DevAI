@@ -1,0 +1,22 @@
+{
+  "search:angular+i18n-performance:angular i18n performance optim": {
+    "content": "- Use `ng build --prod` for production builds.\n- Implement lazy loading for modules using `loadChildren`.\n- Set `changeDetection: ChangeDetectionStrategy.OnPush` in components.\n- Utilize `i18n` attributes for internationalization.\n- Configure `angular.json` with optimization settings:\n  ```json\n  \"optimization\": true,\n  \"outputHashing\": \"all\",\n  \"sourceMap\": false,\n  \"extractCss\": true,\n  \"namedChunks\": true,\n  \"vendorChunk\": true,\n  \"buildOptimizer\": true\n  ```\n- Use `ng serve --prod` for development with production settings.\n- Implement tree shaking by removing unused code.\n- Optimize i18n bundle size using lazy loading for dictionaries.",
+    "source": "web_search",
+    "updated_at": 1780715882.2717588
+  },
+  "search:angular+i18n-performance:angular i18n performance optim_ex": {
+    "content": "- **CLI Commands**:\n  - `ng xi18n --output-path=src/locale/messages.xlf`\n  - `ng serve --configuration=i18n-en`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.0\n  - Angular Core: 16.2.0\n\n- **Key Config Options**:\n  - `angular.json`: Add `\"i18n\"` configuration under the project.\n  - `src/locale/messages.xlf`: Translation file for i18n.\n  - `src/en/main.ts`: Set locale to 'en' for development.",
+    "source": "code_example",
+    "updated_at": 1780715901.9534497
+  },
+  "search:angular+i18n-performance:angular i18n lazy loading 2025": {
+    "content": "- Use `ng generate module <module-name> --route=<route-name> --lazy` to create lazy-loaded modules.\n- For ngx-translate, update your `app.module.ts` with:\n  ```typescript\n  import { TranslateModule } from '@ngx-translate/core';\n\n  @NgModule({\n    imports: [\n      TranslateModule.forRoot({\n        loader: {\n          provide: TranslateLoader,\n          useFactory: (HttpLoaderFactory),\n          deps: [HttpClient]\n        }\n      })\n    ]\n  })\n  export class AppModule {}\n  ```\n- Use `ng add @angular/localize` to add i18n support.\n- For lazy loading with i18next, ensure you install `@ngx-translate/i18next` and configure it in your module:\n  ```typescript\n  import { I18NextModule } from '@ngx-translate/i18next';\n\n  @NgModule({\n    imports: [\n      I18NextModule.forRoot({\n        lng: 'en',\n        resources: {\n          en: { translation: require('./assets/i18n/en.json') }\n        },\n        backend: {\n          loadPath: './assets/i18n/{{lng}}.json'\n        }\n      })\n    ]\n  })\n  export class AppModule {}\n  ```\n- Ensure your `angular.json` includes the correct paths for i18n files.\n- Use `ng serve --configuration=production` to build and serve your app with production settings, including lazy loading and i18n.",
+    "source": "web_search",
+    "updated_at": 1780715918.232731
+  },
+  "search:angular+i18n-performance:angular i18n lazy loading 2025_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate component <component-name> --lazy`: Generates a lazy-loaded component.\n  - `ng serve --prod`: Serves the application in production mode.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - `app-routing.module.ts`: Configure lazy-loaded routes.\n    ```typescript\n    const routes: Routes = [\n      { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) }\n    ];\n    ```\n  - `angular.json`: Ensure the build configuration supports lazy loading.\n    ```json\n    \"projects\": {\n      \"your-project-name\": {\n        \"architect\": {\n          \"build\": {\n            \"options\": {\n              \"lazyModules\": [\n                \"src/app/lazy/lazy.module\"\n              ]\n            }\n          }\n        }\n      }\n    }\n    ```\n  - `i18n`: Configure i18n in `angular.json`.\n    ```json\n    \"projects\": {\n      \"your-project-name\": {\n        \"architect\": {\n          \"build\": {\n            \"options\": {\n              \"aot\": true,\n              \"localize\": [\"en\", \"fr\"]\n            }\n          }\n        }\n      }\n    }\n    ```\n  - `i18n attribute`: Use in component templates.\n    ```html\n    <h1 i18n>Translate this text</h1>\n    ```",
+    "source": "code_example",
+    "updated_at": 1780715927.379459
+  }
+}

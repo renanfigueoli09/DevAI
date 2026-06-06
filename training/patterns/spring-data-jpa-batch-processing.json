@@ -1,0 +1,22 @@
+{
+  "search:spring-data-jpa-batch-processing:spring data jpa batch processi": {
+    "content": "- Use `@EnableBatchProcessing` to enable batch processing in your Spring Boot application.\n- Configure batch properties in `application.properties` or `application.yml`.\n- Utilize `JpaItemWriter` for writing data to the database in batches.\n- Employ `JdbcBatchItemWriter` for batch inserts with JDBC.\n- Implement `@StepScope` on beans that need to be reused across steps.\n- Use `@Bean` to define custom step and job configurations.\n- Configure transaction management using `@Transactional` or XML configuration.\n- Monitor batch jobs using `JobExplorer` and `JobRepository`.\n- Ensure proper error handling with `ItemProcessor`, `ItemWriter`, and `StepListener`.",
+    "source": "web_search",
+    "updated_at": 1780715937.2320125
+  },
+  "search:spring-data-jpa-batch-processing:spring data jpa batch processi_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 2.7.5\n  - Hibernate: 6.1.8.Final\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.batch.job.enabled=false` to disable batch jobs during development",
+    "source": "code_example",
+    "updated_at": 1780715948.6566603
+  },
+  "search:spring-data-jpa-batch-processing:spring data jpa batch job conf": {
+    "content": "- Use `spring.jpa.properties.hibernate.jdbc.batch_size=4` and `spring.jpa.properties.hibernate.order_inserts=true` in `application.properties` for batch inserts.\n- For bulk inserts, consider using Spring Data JPA's `@Modifying` annotation with `@Query` for custom SQL queries.\n- Ensure your database connection URL includes `rewriteBatchedStatements=true`.\n- Use `EntityManager.flush()` and `EntityManager.clear()` after processing a batch to free up memory.\n- Consider using Spring Batch for more complex batch jobs, especially when dealing with large data sets.\n- Update dependencies regularly to the latest versions for security and performance improvements.\n- Utilize Lombok's `@Data` and `@NoArgsConstructor` annotations to simplify entity classes.\n- Monitor application performance during batch operations and adjust batch size as needed.",
+    "source": "web_search",
+    "updated_at": 1780715957.4909542
+  },
+  "search:spring-data-jpa-batch-processing:spring data jpa batch job conf_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`",
+    "source": "code_example",
+    "updated_at": 1780715965.7952192
+  }
+}
