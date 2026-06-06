@@ -1,0 +1,32 @@
+{
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka inte": {
+    "content": "- **Latest Version**: Spring Cloud Stream 3.2.x, Kafka Streams 3.4.x\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application with Spring Cloud Stream and Kafka.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output bindings.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Set to `earliest` or `latest`.\n  - `spring.cloud.stream.schema.registry.url`: URL of the schema registry.",
+    "source": "web_search",
+    "updated_at": 1780740443.3490055
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka inte_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` for building your project.\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.5.RELEASE\n  - Spring Kafka: 2.9.4.RELEASE\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input binding.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output binding.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest` based on your needs.\n  - `spring.kafka.consumer.group-id`: Unique identifier for the consumer group.",
+    "source": "code_example",
+    "updated_at": 1780740449.5764403
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka tran": {
+    "content": "- **Enable Kafka Transactions in Spring Cloud Stream**:\n  - Use `spring.cloud.stream.kafka.binder.transaction.transaction-id-prefix` to set a unique transaction ID per service instance.\n  \n- **Spring Cloud Stream Producer Issues**:\n  - Ensure the Kafka broker is up and running before sending messages.\n  - Check for network issues between the producer and the Kafka broker.\n\n- **Spring Cloud Stream 4.0.4 Configuration**:\n  - Use `spring.cloud.stream.kafka.binder.transaction.enabled` to enable transactions.\n  \n- **Multiple Kafka Clusters Configuration**:\n  - Define multiple bindings in `application.yml` or `bootstrap.yml`.\n  - Example: \n    ```yaml\n    spring:\n      cloud:\n        function:\n          definition: orderCreatedListener;orderProcessedListener\n        stream:\n          bindings:\n            orderCreatedProducer-out-0:\n              destination: kafka-topic1\n            orderProcessedProducer-out-0:\n              destination: kafka-topic2\n    ```\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 4.0.4\n  - Kafka Binder: Latest compatible version with Spring Cloud Stream\n\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.binder.transaction.enabled`: Enables transaction support.\n  - `spring.cloud.stream.kafka.binder.transaction.transaction-id-prefix`: Prefix for transaction IDs to avoid conflicts across instances.\n  - `spring.cloud.stream.bindings.<bindingName>.destination`: Specifies the Kafka topic for a binding.",
+    "source": "web_search",
+    "updated_at": 1780740469.35596
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka tran_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `docker-compose up` to start Kafka and Zookeeper.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.kafka.producer.transaction-id-prefix`: Enables transactions.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.",
+    "source": "code_example",
+    "updated_at": 1780740477.2520785
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka erro": {
+    "content": "- **Latest Version**: Spring Cloud Stream 4.x\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.errors.destination`: Specifies the name of the destination for error messages.\n  - `spring.cloud.stream.bindings.input.errors.group`: Specifies the consumer group for error messages.\n- **CLI Commands**:\n  - To create a new Spring Cloud Stream application: `mvn archetype:generate -DgroupId=com.example -DartifactId=spring-cloud-stream-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`\n  - To add Spring Cloud Stream Kafka dependency to your `pom.xml`:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.cloud</groupId>\n        <artifactId>spring-cloud-starter-stream-kafka</artifactId>\n    </dependency>\n    ```\n- **Error Handling Mechanisms**:\n  - Use `LogAndContinueExceptionHandler` to log errors and continue processing.\n  - Use `LogAndFailExceptionHandler` to log errors and fail processing.\n  - Implement custom error handlers by extending `ErrorHandler`.\n- **Dead Letter Queue (DLQ)**: Configure a DLQ for failed messages using the `spring.cloud.stream.bindings.input.errors.destination` property.",
+    "source": "web_search",
+    "updated_at": 1780740490.2809134
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka erro_ex": {
+    "content": "- Use `@StreamListener` and `@SendTo` annotations to handle errors in Kafka messages.\n- Implement error handling using `@DltHandler` for dead letter topics.\n- Configure retry strategies with `spring.cloud.stream.bindings.input.consumer.maxAttempts`.\n- Set up auto-commit offsets with `spring.cloud.stream.kafka.bindings.input.consumer.autoCommitOffset`.\n- Use `KafkaTemplate` to send messages to Kafka topics.\n- Ensure Kafka broker is running and accessible.\n- Check for latest versions of Spring Cloud Stream and Kafka in the official documentation.",
+    "source": "code_example",
+    "updated_at": 1780740494.4601066
+  }
+}
