@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+ingress-advanced:kubernetes ingress advanced co": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v1.2.1\n  - NGINX Ingress Controller: v1.3.0\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`\n  - `nginx.ingress.kubernetes.io/proxy-body-size`\n  - `nginx.ingress.kubernetes.io/auth-type`\n  - `nginx.ingress.kubernetes.io/auth-secret`",
+    "source": "web_search",
+    "updated_at": 1780740122.2129765
+  },
+  "search:kubernetes+ingress-advanced:kubernetes ingress advanced co_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingresses`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v2.4.0\n  - NGINX Ingress Controller: v1.3.1\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/auth-type`: Specifies the type of authentication (e.g., basic-auth).\n  - `nginx.ingress.kubernetes.io/auth-secret`: Secret containing the credentials for authentication.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: Specifies the protocol to use for backend communication (HTTP/HTTPS).",
+    "source": "code_example",
+    "updated_at": 1780740133.5177805
+  },
+  "search:kubernetes+ingress-advanced:kubernetes ingress performance": {
+    "content": "- **Latest Kubernetes Version**: v1.32\n- **CLI Commands**:\n  - `kubectl apply -f <ingress-resource-file>`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n- **Key Config Options for Performance Optimization**:\n  - `queueingHint`: Enables queueing hints to improve performance.\n  - `maxConnectionsPerBackend`: Limits the number of connections per backend server.\n  - `useProxyProtocol`: Enables Proxy Protocol for better load balancing and security.",
+    "source": "web_search",
+    "updated_at": 1780740142.6034396
+  },
+  "search:kubernetes+ingress-advanced:kubernetes ingress performance_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.25\n  - NGINX Ingress Controller: v1.2.0\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: Specifies the protocol for backend services (HTTP or HTTPS).\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: Adjusts the maximum body size allowed by NGINX.\n\n- **Observability**:\n  - Use Prometheus and Grafana to monitor Ingress performance.\n  - Configure custom metrics for better insights into request latency and throughput.\n\n- **Performance Tuning**:\n  - Enable `tcp keepalive` in NGINX configuration for persistent connections.\n  - Adjust worker processes and connections based on your cluster's capacity.",
+    "source": "code_example",
+    "updated_at": 1780740151.8902504
+  }
+}
