@@ -1,0 +1,22 @@
+{
+  "search:Security Enhancements:spring-data-jpa-batch-processi": {
+    "content": "- Use `spring-boot-starter-data-jpa` and `spring-boot-starter-batch` dependencies.\n- Configure batch size in `application.properties`: `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Enable JPA batching with `@EnableBatchProcessing` annotation.\n- Use `@Transactional` on repository methods for batch operations.\n- Adjust Hibernate properties: `spring.jpa.properties.hibernate.order_inserts=true`, `spring.jpa.properties.hibernate.order_updates=true`.\n- Utilize `ItemWriter` and `ItemProcessor` interfaces for custom processing logic.\n- Implement error handling with `ItemErrorHandler`.\n- Monitor batch job progress using `JobRepository`.",
+    "source": "web_search",
+    "updated_at": 1780741314.6501617
+  },
+  "search:Security Enhancements:spring-data-jpa-batch-processi_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n  - Spring Security: 6.1.0\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, batch size, and other properties.\n    ```properties\n    spring.datasource.url=jdbc:mysql://localhost:3306/mydb\n    spring.datasource.username=root\n    spring.datasource.password=password\n    spring.jpa.hibernate.ddl-auto=update\n    spring.batch.job.enabled=true\n    spring.batch.job.names=myJob\n    spring.batch.chunk.size=1000\n    ```\n  - `@EnableBatchProcessing`: Enables batch processing support.\n  - `@StepScope`: Defines a step scope for beans.\n  - `@Bean`: Define custom beans for batch processing, such as `ItemReader`, `ItemProcessor`, and `ItemWriter`.",
+    "source": "code_example",
+    "updated_at": 1780741327.0465431
+  },
+  "search:Security Enhancements:kubernetes-statefulsets-perfor": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>`: Create a StatefulSet.\n  - `kubectl get statefulsets`: List all StatefulSets.\n  - `kubectl describe statefulset <name>`: Describe a specific StatefulSet.\n  - `kubectl scale statefulset <name> --replicas=<number>`: Scale the number of replicas.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `spec.serviceName`: Name of the service that will be created for this StatefulSet.\n  - `spec.replicas`: Number of desired Pods in the StatefulSet.\n  - `spec.template.spec.containers.volumeMounts`: Volume mounts for persistent storage.\n  - `spec.updateStrategy.type`: Update strategy type (RollingUpdate, OnDelete).\n  - `spec.rollingUpdate.partition`: Partition for rolling update strategy.",
+    "source": "web_search",
+    "updated_at": 1780741337.1980715
+  },
+  "search:Security Enhancements:kubernetes-statefulsets-perfor_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<number>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.template`: Pod template specification.\n  - `.spec.volumeClaimTemplates`: Persistent volume claims for stateful data.\n\n- **Example Commands**:\n  ```sh\n  kubectl get statefulsets my-statefulset\n  kubectl describe statefulset my-statefulset\n  kubectl scale statefulset my-statefulset --replicas=3\n  ```\n\n- **DNS Configuration**:\n  - Edit CoreDNS config map to decrease cache time, e.g., `kubectl edit configmap coredns -n kube-system`.\n\n- **StatefulSet vs. Deployment**:\n  - StatefulSets maintain stable network identities and persistent storage.\n  - Deployments are for stateless applications with no guaranteed order or identity.\n\nThese actionable facts should help developers effectively manage Kubernetes StatefulSets, ensuring predictable behavior and reliable data persistence.",
+    "source": "code_example",
+    "updated_at": 1780741350.7309175
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:Testing Best Practices:typescript-jest-testing": {
+    "content": "- Install `ts-jest` using npm or yarn.\n- Use the command `npx ts-jest config:init` to generate a Jest configuration file tailored for TypeScript.\n- Ensure your `package.json` includes `\"test\": \"jest\"` under the `scripts` section.\n- Configure `tsconfig.json` to include `\"module\": \"commonjs\"` and `\"esModuleInterop\": true`.\n- Set up Jest's `transform` option in `jest.config.js` to use `ts-jest`. Example: `{ transform: { '^.+\\\\.tsx?$': 'ts-jest' } }`.\n- Use the `--watchAll` flag with `npm test` or `yarn test` for continuous testing.\n- Update Jest and TypeScript dependencies to their latest versions using npm or yarn.",
+    "source": "web_search",
+    "updated_at": 1780741232.1047719
+  },
+  "search:Testing Best Practices:typescript-jest-testing_ex": {
+    "content": "- Use `npm install --save-dev jest ts-jest @types/jest typescript`\n- Configure Jest in `jest.config.js`:\n  ```javascript\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node'\n  };\n  ```\n- Create a TypeScript file, e.g., `index.ts`, and add an add function.\n- Write tests for the add function in `index.test.ts`.\n- Run tests with `npm test` or `npx jest`.",
+    "source": "code_example",
+    "updated_at": 1780741237.2691636
+  },
+  "search:Testing Best Practices:fastapi-asyncio-testing": {
+    "content": "- Use `@pytest_asyncio.fixture(scope=\"function\")` to create an async client fixture.\n- Apply `@pytest.mark.asyncio` decorator on test functions that require asyncio support.\n- Ensure your FastAPI app is configured with an asynchronous database session.\n- Utilize AnyIO for handling asynchronous operations in tests.\n- For mocking, consider using libraries like `unittest.mock`.\n- Run tests using the command: `pytest --asyncio-mode=auto`.\n- Keep pytest and any related packages up to date for optimal functionality.",
+    "source": "web_search",
+    "updated_at": 1780741249.7026734
+  },
+  "search:Testing Best Practices:django-celery-testing": {
+    "content": "- Use `CELERY_ALWAYS_EAGER = True` to bypass the Celery daemon during testing.\n- Employ Django's `override_settings` for temporary configuration changes.\n- Utilize `unittest.mock` to mock task triggers and focus on task logic.\n- Ensure your tests cover both task execution and result checking.\n- Consult the latest version of django-celery documentation for updates.",
+    "source": "web_search",
+    "updated_at": 1780741281.0161576
+  }
+}
