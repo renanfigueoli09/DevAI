@@ -2,11 +2,11 @@
   "search:spring-boot-kotlin-jpa:spring boot kotlin jpa 2025": {
     "content": "- **Upgrade IntelliJ IDEA**: To version 2025.3 to benefit from Kotlin 2 support.\n- **Spring Boot Version**: 4.0\n- **Kotlin Version**: 2.2\n- **Dependencies**:\n  - `spring-boot-starter-data-jpa`\n  - `kotlin-reflect`\n- **CLI Commands**:\n  ```bash\n  ./gradlew build --refresh-dependencies\n  ```\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - Entity classes annotated with JPA annotations like `@Entity`, `@Id`, etc.\n  - Repository interfaces extending `JpaRepository` or `CrudRepository`.",
     "source": "web_search",
-    "updated_at": 1780766270.1036007
+    "updated_at": 1780766752.4445019
   },
   "search:spring-boot-kotlin-jpa:spring boot kotlin jpa 2025_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `./gradlew bootRun`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Kotlin: 1.8.x\n  - JPA: 2.2\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database configurations.\n  - `@EntityScan`, `@EnableJpaRepositories`, and `DataSource` bean definitions in Spring Boot configuration classes.\n  - Repository interfaces extending `JpaRepository` or `CrudRepository`.",
     "source": "code_example",
-    "updated_at": 1780766270.7509131
+    "updated_at": 1780766753.0789034
   }
 }

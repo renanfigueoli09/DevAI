@@ -1,0 +1,22 @@
+{
+  "search:Docker Compose for Microservices:docker compose microservices a": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts or restarts services.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `up`.\n  - `docker-compose build`: Builds or rebuilds services.\n\n- **Latest Versions**:\n  - Docker Compose: 1.29.2 (as of my last update)\n\n- **Key Config Options**:\n  - `services`: Defines the microservices.\n  - `networks`: Specifies networks for service communication.\n  - `volumes`: Manages data persistence across container restarts.\n  - `build`: Path to a Dockerfile or build context.",
+    "source": "web_search",
+    "updated_at": 1780766848.137687
+  },
+  "search:Docker Compose for Microservices:docker compose microservices a_ex": {
+    "content": "- Use `docker-compose up` to start services.\n- Specify services in `docker-compose.yml`.\n- Use `docker-compose down` to stop services.\n- Update Docker Compose file version to 3.x for latest features.\n- Key config options include `services`, `build`, `image`, and `ports`.\n- For Python, use `python:3.10-slim` as the base image.\n- Redis can be added with `redis:latest`.\n- FastAPI can be used with `fastapi` and `uvicorn`.\n- Use `docker-compose exec <service> command` to run commands in a service container.\n- For asynchronous programming, use `asyncio` or `aiohttp`.",
+    "source": "code_example",
+    "updated_at": 1780766858.9582777
+  },
+  "search:Docker Compose for Microservices:docker compose best practices ": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up` to start services.\n  - `docker-compose down` to stop and remove containers, networks, volumes, and images created by `up`.\n  - `docker-compose pull` to pull the latest images for services.\n\n- **Latest Versions**:\n  - Docker Compose version: [Check latest on Docker's official website](https://docs.docker.com/compose/install/).\n\n- **Key Config Options**:\n  - `services`: Define the services that make up your application.\n  - `networks`: Configure networks to connect services.\n  - `volumes`: Define volumes for data persistence.\n  - `build`: Specify build context and Dockerfile.\n  - `environment`: Set environment variables.\n\n- **Best Practices**:\n  - Use `.env` files for sensitive information.\n  - Keep your Compose file version up-to-date.\n  - Validate your Compose file with `docker-compose config`.\n  - Use labels for service discovery and management.",
+    "source": "web_search",
+    "updated_at": 1780766865.743805
+  },
+  "search:Docker Compose for Microservices:docker compose best practices _ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts or restarts services.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `docker-compose up`.\n  - `docker-compose pull`: Pulls the latest image for each service.\n\n- **Latest Versions**:\n  - Docker Compose v2.19.0 (as of my last update).\n\n- **Key Config Options**:\n  - `version`: Specifies the version of the Compose file format.\n  - `services`: Defines the services to run.\n  - `networks`: Declares networks that containers can join.\n  - `volumes`: Defines volumes for data persistence.\n  - `environment`: Sets environment variables for services.\n\n- **Best Practices**:\n  - Use `.env` files for environment variables.\n  - Separate development, staging, and production configurations using profiles.\n  - Utilize Docker secrets for sensitive information.\n  - Scale services by specifying the number of replicas in the service configuration.",
+    "source": "code_example",
+    "updated_at": 1780766871.1170454
+  }
+}

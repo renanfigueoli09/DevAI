@@ -2,21 +2,21 @@
   "search:typescript+jest-integration-tests:typescript jest integration te": {
     "content": "- Install Jest globally using `yarn global add jest` or `npm install jest --global`.\n- Use the command line to run Jest tests with options like `jest --watch`, `jest --coverage`, and `jest --verbose`.\n- For TypeScript projects, ensure you have `ts-jest` installed and configured in your `package.json`:\n  ```json\n  \"devDependencies\": {\n    \"@types/jest\": \"^29.0.3\",\n    \"ts-jest\": \"^29.0.3\",\n    \"typescript\": \"^4.5.4\"\n  }\n  ```\n- Configure Jest by creating a `jest.config.js` file with options like:\n  ```js\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts'],\n    coverageDirectory: './coverage'\n  };\n  ```\n- Use `describe`, `it`, and `expect` for writing tests.\n- For mocking modules in TypeScript, use Jest's `jest.mock()` function.\n- Utilize async testing patterns with `async/await` or `.then()`.\n- Leverage TypeScript's type safety features to catch errors during testing.",
     "source": "web_search",
-    "updated_at": 1780766170.2130857
+    "updated_at": 1780766654.307251
   },
   "search:typescript+jest-integration-tests:typescript jest integration te_ex": {
     "content": "- Install Jest using npm or yarn.\n- Use `ts-jest` for TypeScript support.\n- Create a Jest configuration file (`jest.config.js`).\n- For global types, use `@types/jest`.\n- Mock async methods with Jest's mocking capabilities.\n- Consider using Vitest as an alternative to Jest in 2025.\n- Utilize Yarn workspaces for multi-package projects.\n- Set up multi-project Jest with GitHub Actions.",
     "source": "code_example",
-    "updated_at": 1780766170.8727362
+    "updated_at": 1780766654.9408638
   },
   "search:typescript+jest-integration-tests:unit and integration testing i": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest --init` to set up Jest configuration.\n  - `npm run test` to execute tests.\n\n- **Latest Versions**:\n  - Jest: v29.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - `testEnvironment`: Set to `\"node\"` for Node.js environment.\n  - `transformIgnorePatterns`: Exclude node_modules from transformation.\n  - `setupFilesAfterEnv`: Path to setup files after Jest environment is initialized.",
     "source": "web_search",
-    "updated_at": 1780766171.5590143
+    "updated_at": 1780766655.612113
   },
   "search:typescript+jest-integration-tests:unit and integration testing i_ex": {
     "content": "- **CLI Commands**:\n  - `npm test` to run unit tests.\n  - `npm run integration-test` to run integration tests.\n\n- **Latest Versions**:\n  - Jest: Latest version as of my last update is 29.x.\n  - TypeScript: Latest version as of my last update is 5.0.x.\n  - Axios: Latest version as of my last update is 1.3.x.\n\n- **Key Config Options**:\n  - Jest configuration in `jest.config.js` for test environment setup.\n  - TypeScript configuration in `tsconfig.json` for project settings.\n  - Add `\"test\": \"jest\"` and `\"integration-test\": \"jest --runInBand --testPathPattern=integration\"` to `package.json`.",
     "source": "code_example",
-    "updated_at": 1780766172.2124262
+    "updated_at": 1780766656.2389877
   }
 }

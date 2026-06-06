@@ -2,21 +2,21 @@
   "search:typescript+jest-mocking:typescript jest mocking patter": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest ts-jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.8.x\n\n- **Key Config Options**:\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"moduleFileExtensions\": [\"ts\", \"tsx\", \"js\"]`\n  - `\"testEnvironment\": \"node\"`",
     "source": "web_search",
-    "updated_at": 1780766292.1043375
+    "updated_at": 1780766747.2474854
   },
   "search:typescript+jest-mocking:typescript jest mocking patter_ex": {
     "content": "- Use `npm install --save-dev jest` to install Jest.\n- Run tests using `npx jest`.\n- For TypeScript projects, use `ts-jest` by installing it with `npm install --save-dev ts-jest @types/jest`.\n- Configure Jest in a `jest.config.js` file:\n  ```javascript\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Use `mockImplementation` to mock function implementations.\n- Utilize `mockReturnValueOnce` for returning different values on consecutive calls.\n- Employ `mockClear`, `mockReset`, and `mockRestore` to manage mock state.\n- For mocking modules, use `jest.mock('module-path')`.\n- Leverage `spyOn` for spying on methods of objects.\n- Use `toMatchObject`, `toContain`, and other matchers for assertions.",
     "source": "code_example",
-    "updated_at": 1780766299.1177044
+    "updated_at": 1780766747.87165
   },
   "search:typescript+jest-mocking:typescript jest mock services ": {
     "content": "- Use `jest.mock('module-name')` to mock modules.\n- For TypeScript, use `jest.mock('module-name', () => ({ ... }))`.\n- Install `ts-jest` for better TypeScript support with Jest.\n- Update Jest and TypeScript versions as needed.\n- Configure Jest in `package.json` or `jest.config.js`.\n- Use `__mocks__` directory for manual mocks.\n- For class dependencies, use `jest.fn()` or mock implementations.\n- Mock AWS SSM using the SDK's mock implementation.\n- Use `axios-mock-adapter` for mocking axios in TypeScript.",
     "source": "web_search",
-    "updated_at": 1780766307.2269397
+    "updated_at": 1780766748.5375347
   },
   "search:typescript+jest-mocking:typescript jest mock services _ex": {
     "content": "- Use `jest.mock('module-path')` to mock an imported module.\n- For TypeScript, cast the mocked object to `jest.Mock` using `as jest.Mock`.\n- Example:\n  ```typescript\n  import * as SocketIO from 'socket.io';\n  \n  jest.mock('socket.io');\n  \n  const socketIoMock = SocketIO as jest.Mock;\n  ```\n- Use `.mockImplementation()` or `.mockReturnValue()` on the mock object to define behavior.\n- For example:\n  ```typescript\n  socketIoMock.mockImplementation(() => {\n    return {\n      on: jest.fn(),\n      emit: jest.fn()\n    };\n  });\n  ```\n- Ensure your Jest configuration in `jest.config.js` is set up correctly for TypeScript:\n  ```javascript\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node'\n  };\n  ```\n- Run tests with the command: `npm test` or `yarn test`.",
     "source": "code_example",
-    "updated_at": 1780766314.1901078
+    "updated_at": 1780766749.1691864
   }
 }
