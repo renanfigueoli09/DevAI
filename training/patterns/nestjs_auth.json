@@ -2,7 +2,7 @@
   "pattern:nestjs-auth:jwt": {
     "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
     "source": "code_pattern",
-    "updated_at": 1780708547.8662653
+    "updated_at": 1780708689.9758058
   },
   "pattern:nestjs:partialtype-source": {
     "content": "CRITICAL: PartialType MUST be imported from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import { PartialType } from '@nestjs/mapped-types';",

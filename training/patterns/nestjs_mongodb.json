@@ -17,17 +17,17 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
     "source": "code_pattern",
-    "updated_at": 1780708547.6112604
+    "updated_at": 1780708689.3003147
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780708547.6358368
+    "updated_at": 1780708689.4485025
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780708547.664761
+    "updated_at": 1780708689.5282166
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "• With Mongoose, everything is derived from a Schema. Schemas can be created with NestJS decorators, or with Mongoose itself manually. The @Prop() decorator ...\n• Jul 6, 2020 · How can I do it with NestJS decorators ( @Schema() & @Prop() )?. I ... from '@nestjs/mongoose'; import { HydratedDocument } from ...\n• Feb 19, 2025 · HydratedDocument : A Mongoose type that indicates that the document returned after a database operation will be fully hydrated with Mongoose- ...",
