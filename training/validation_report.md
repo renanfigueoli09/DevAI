@@ -1,47 +1,52 @@
 # DevAI Validation Report
-*2026-06-06 00:27*
+*2026-06-06 00:30*
 
-## Score: 62% `[████████████░░░░░░░░]`
+## Score: 53% `[██████████░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
-| nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
-| nestjs-mongodb | 7.5/15.0 | 50% | ❌ |
+| nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
-| spring-mongodb | 2.0/4.0 | 50% | ❌ |
-| nlp | 7.1/15.0 | 48% | ❌ |
-| fastapi | 0.0/4.0 | 0% | ❌ |
+| fastapi | 2.0/4.0 | 50% | ❌ |
+| nestjs-auth | 2.0/5.0 | 40% | ❌ |
+| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
+| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (50%)
+### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
+- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
+  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (48%)
+### nestjs-auth (40%)
+- ✗ NestJS PartialType: from @nestjs/mapped-types or @nestjs/common?
+  - Wrong: `@nestjs/common`
+
+### nlp (53%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never`
-  - Wrong: `src/docker, src/mongodb`
+  - Missing: `não, never, docker-compose, Dockerfile`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`
 
-### spring-mongodb (50%)
+### spring-mongodb (0%)
 - ✗ Spring Boot MongoDB: @Document or @Entity for model class?
   - Wrong: `@Entity`
+- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
+  - Wrong: `JpaRepository`
 
-### fastapi (0%)
-- ✗ FastAPI MongoDB: which async driver to use?
-  - Wrong: `pymongo`
+### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
   - Wrong: `.dict()`
 
@@ -54,7 +59,7 @@ python scripts/validate.py --fix
 # Forçar retreinamento específico
 python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
-python scripts/validate.py --fix --topic nlp
+python scripts/validate.py --fix --topic nestjs-auth
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive

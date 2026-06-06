@@ -1,0 +1,17 @@
+{
+  "search:react-query:react query for state manageme": {
+    "content": "- **React Query**: \n  - Install via npm: `npm install react-query`\n  - Use `useQuery` for data fetching and state management.\n  - Example:\n    ```jsx\n    import { useQuery } from 'react-query';\n\n    function App() {\n      const { isLoading, error, data } = useQuery('posts', fetchPosts);\n\n      if (isLoading) return 'Loading...';\n      if (error) return 'An error has occurred: ' + error.message;\n\n      return (\n        <ul>\n          {data.map(post => (\n            <li key={post.id}>{post.title}</li>\n          ))}\n        </ul>\n      );\n    }\n    ```\n\n- **TanStack Query**:\n  - Install via npm: `npm install @tanstack/react-query`\n  - Use `useQuery` for data fetching and state management.\n  - Example:\n    ```jsx\n    import { useQuery } from '@tanstack/react-query';\n\n    function App() {\n      const { isLoading, error, data } = useQuery('posts', fetchPosts);\n\n      if (isLoading) return 'Loading...';\n      if (error) return 'An error has occurred: ' + error.message;\n\n      return (\n        <ul>\n          {data.map(post => (\n            <li key={post.id}>{post.title}</li>\n          ))}\n        </ul>\n      );\n    }\n    ```\n\n- **SWR**:\n  - Install via npm: `npm install swr`\n  - Use `useSWR` for data fetching and state management.\n  - Example:\n    ```jsx\n    import useSWR from 'swr';\n\n    function App() {\n      const { data, error } = useSWR('/api/posts', fetchPosts);\n\n      if (error) return <div>Failed to load</div>;\n      if (!data) return <div>Loading...</div>;\n\n      return (\n        <ul>\n          {data.map(post => (\n            <li key={post.id}>{post.title}</li>\n          ))}\n        </ul>\n      );\n    }\n    ```\n\n- **Key Config Options**:\n  - `useQuery`: \n    - `queryKey`: Unique identifier for the query.\n    - `fetcher`: Function that returns data.\n    - `options`: Object with additional configuration options like `refetchInterval`, `staleTime`, etc.\n\n  - `useSWR`:\n    - `resource`: URL or function to fetch data.\n    - `fetcher`: Function that returns data.\n    - `initialData`: Initial data for the query.\n    - `revalidateOnFocus`: Boolean to control revalidation on focus.",
+    "source": "web_search",
+    "updated_at": 1780716601.9617789
+  },
+  "search:react-query:react query for state manageme_ex": {
+    "content": "- **CLI Commands**: Not applicable.\n- **Latest Versions**:\n  - React Query: v4.x\n  - TanStack/query: v5.x\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `useMutation`: For updating data.\n  - `queryClient`: For managing query cache and invalidation.\n  - `staleTime`: Controls how long a query result is considered fresh.\n  - `refetchInterval`: Automatically refetches the query at specified intervals.",
+    "source": "code_example",
+    "updated_at": 1780716606.6122346
+  },
+  "search:react-query:react query with typescript 20": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4, TypeScript v5\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `useMutation`: For updating data.\n  - `queryClient`: For managing query state globally.",
+    "source": "web_search",
+    "updated_at": 1780716619.869955
+  }
+}
