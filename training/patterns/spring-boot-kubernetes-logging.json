@@ -1,0 +1,17 @@
+{
+  "search:spring-boot+kubernetes-logging:logging in spring boot applica": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Spring Boot application to Kubernetes.\n- Ensure Docker image is built and pushed using `docker build -t <image_name>:<tag> .` followed by `docker push <image_name>:<tag>`.\n- For centralized logging, use tools like ELK Stack or Fluentd with Kubernetes plugins.\n- Configure logging in Spring Boot application using `application.properties` or `application.yml`:\n  ```properties\n  logging.level.root=INFO\n  logging.file.name=/var/log/myapp.log\n  ```\n- Deploy the logging configuration to Kubernetes using a ConfigMap or Secret.\n- Use `kubectl logs <pod_name>` to view logs of a specific pod.\n- For remote debugging, enable JMX and use tools like VisualVM or JConsole.\n- Ensure your Kubernetes cluster has sufficient resources (CPU, memory) for your application.",
+    "source": "web_search",
+    "updated_at": 1780718683.0868003
+  },
+  "search:spring-boot+kubernetes-logging:advanced logging strategies fo": {
+    "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl get pods` to list all pods in the current namespace.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Kubernetes: 1.27\n\n- **Key Config Options**:\n  - Actuator endpoints for monitoring and management.\n  - Logback or Log4j2 configuration for custom logging.\n  - Use of Zipkin for distributed tracing.\n  - Helm Charts for advanced deployment strategies.",
+    "source": "web_search",
+    "updated_at": 1780718707.2543623
+  },
+  "search:spring-boot+kubernetes-logging:advanced logging strategies fo_ex": {
+    "content": "- Deploy Fluent-bit using `kubectl apply -f fluent-bit.yaml`\n- Configure Fluent-bit to collect logs from Spring Boot apps and forward them to Elasticsearch.\n- Use the latest version of Fluent-bit, Logstash, and Kibana for optimal performance.\n- Enable Actuator in your Spring Boot application with `management.endpoints.web.exposure.include=*`.\n- Integrate Zipkin for distributed tracing by adding dependencies and configuring endpoints.\n- Deploy ELK stack using Helm charts: `helm install elasticsearch elastic/elasticsearch`\n- Configure Logstash to parse logs from Fluent-bit and forward them to Elasticsearch.\n- Use Kibana's Dev Tools to visualize and analyze logs.\n- Set up centralized logging in Kubernetes with a custom configuration file for Fluent-bit.",
+    "source": "code_example",
+    "updated_at": 1780718722.057308
+  }
+}

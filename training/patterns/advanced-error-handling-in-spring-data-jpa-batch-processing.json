@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Spring Data JPA Batch Processing:spring data jpa batch error ha": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Data JPA and Hibernate.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.use_sql_comments=true`",
+    "source": "web_search",
+    "updated_at": 1780718511.0983953
+  },
+  "search:Advanced Error Handling in Spring Data JPA Batch Processing:spring data jpa batch error ha_ex": {
+    "content": "- Use `@EnableBatchProcessing` to enable Spring Batch.\n- Configure error handling in your job configuration using `ItemProcessor`, `ItemWriter`, and `ItemErrorHandler`.\n- Implement custom error handlers by extending `DefaultItemErrorHandler` or implementing `ItemErrorHandler`.\n- Use `@StepListener` for step-level error handling.\n- Set `spring.jpa.properties.hibernate.jdbc.batch_size` to control batch size (e.g., 50).\n- Enable JPA batching in your repository configuration with `@EnableJpaRepositories(batchSize = 50)`.\n- Use `@Transactional(propagation = Propagation.REQUIRES_NEW)` for transaction management.\n- Implement custom exception handling in your service layer to differentiate between known and unknown errors.",
+    "source": "code_example",
+    "updated_at": 1780718516.5349834
+  },
+  "search:Advanced Error Handling in Spring Data JPA Batch Processing:batch processing error managem": {
+    "content": "- Use `spring batch` for robust error management in batch processing.\n- Implement try-catch blocks around critical operations to handle errors gracefully.\n- Utilize `error handling strategies` provided by Spring Batch, such as retry and skip policies.\n- Configure `step-level error handling` using `item reader`, `processor`, and `writer` configurations.\n- Use `@OnReadError`, `@OnProcessError`, and `@OnWriteError` annotations for custom error handling logic.\n- Implement a centralized error logging mechanism to track and analyze errors across batch jobs.\n- Regularly update Spring Batch to the latest version to benefit from bug fixes and performance improvements.\n- Monitor job execution using Spring Boot Actuator endpoints to detect and respond to errors in real-time.",
+    "source": "web_search",
+    "updated_at": 1780718528.9088159
+  },
+  "search:Advanced Error Handling in Spring Data JPA Batch Processing:batch processing error managem_ex": {
+    "content": "- Use `@echo off` to suppress command echoing.\n- Implement error handling using `if errorlevel` checks after each command.\n- Redirect errors to a log file with `2>> error.log`.\n- Use `setlocal enabledelayedexpansion` for variable expansion inside loops and conditionals.\n- Log critical errors with timestamps using `echo %date% %time% Error: >> error.log`.\n- Implement retry logic with `for /L %%i in (1,1,%retry_count%) do`.\n- Use `exit /b %errorlevel%` to return the last error level.\n- Enable delayed variable expansion for complex conditional logic.\n- Log all commands executed with `echo !cmd! >> command.log`.",
+    "source": "code_example",
+    "updated_at": 1780718537.169055
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:Optimizing Entity Framework Core Performance with .NET:efcore performance optimizatio": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef query statistics`\n\n- **Latest Versions**:\n  - EF Core 7.0 (as of my last update)\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only operations\n  - `AddDbContextPool<TContext>` for high-concurrency scenarios\n  - `UseLazyLoadingProxies()` for lazy loading\n  - `MaxBatchSize` in bulk operations",
+    "source": "web_search",
+    "updated_at": 1780718545.960845
+  },
+  "search:Optimizing Entity Framework Core Performance with .NET:efcore performance optimizatio_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef database update` to apply migrations.\n- **Latest Version**: EF Core 7.0 as of my last update.\n- **Key Config Options**:\n  - `MaxBatchSize`: Set the maximum number of commands in a batch.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disable change tracking for read-only queries.\n  - `AsNoTracking()`: Explicitly disable change tracking for specific queries.",
+    "source": "code_example",
+    "updated_at": 1780718549.425855
+  },
+  "search:Optimizing Entity Framework Core Performance with .NET:.net entity framework core spe": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n\n- **Latest Versions**:\n  - EF Core: Latest version as of my last update is 7.x, but always check the official [Microsoft documentation](https://docs.microsoft.com/en-us/ef/core/) for the most current version.\n\n- **Key Config Options**:\n  - `AsNoTracking()` to avoid tracking entities in memory.\n  - Use async methods like `ToListAsync()`, `FirstOrDefaultAsync()`.\n  - Configure batching with `UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)`.\n  - Enable compiled queries for complex queries using `DbContext.CompileQuery`.\n\n- **Performance Tips**:\n  - Avoid loading unnecessary data by using projections (`Select()`).\n  - Use eager loading (`Include()`) or explicit loading (`Load()`) for related entities.\n  - Optimize database indexes and schema design.\n\nThese actionable facts should help developers improve the performance of their Entity Framework Core applications.",
+    "source": "web_search",
+    "updated_at": 1780718569.6446912
+  },
+  "search:Optimizing Entity Framework Core Performance with .NET:.net entity framework core spe_ex": {
+    "content": "- Use the latest version of Entity Framework Core.\n- Apply the `AsNoTracking()` method to reduce memory usage and improve performance for read-only operations.\n- Implement batching with `FromSqlRaw` or `FromSqlInterpolated` for large datasets.\n- Optimize queries by using eager loading (`Include`) instead of lazy loading where possible.\n- Use raw SQL queries when Entity Framework Core's LINQ capabilities are insufficient.\n- Configure the connection string to use the appropriate database provider and settings (e.g., `Max Pool Size`, `Connection Timeout`).\n- Enable query splitting with `SplitQuery` for complex queries involving multiple tables.\n- Monitor and analyze query performance using tools like SQL Server Profiler or EF Core's logging capabilities.\n- Regularly update dependencies and apply security patches to ensure optimal performance and security.",
+    "source": "code_example",
+    "updated_at": 1780718577.8916578
+  }
+}

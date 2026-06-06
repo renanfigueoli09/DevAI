@@ -1,0 +1,22 @@
+{
+  "search:Advanced MongoDB Operations with Django Celery and Redis:django celery redis advanced": {
+    "content": "- Install Django, Redis, Celery using pip:\n  ```\n  pip install django redis celery\n  ```\n\n- Configure Redis in Django settings:\n  ```python\n  # settings.py\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n\n- Install django-celery-results for task results storage:\n  ```\n  pip install django-celery-results\n  ```\n\n- Configure django-celery-results in Django settings:\n  ```python\n  # settings.py\n  INSTALLED_APPS += ['django_celery_results']\n  CELERY_RESULT_BACKEND = 'django-db'\n  ```\n\n- Start Redis server (if not already running):\n  ```\n  redis-server\n  ```\n\n- Start Celery worker:\n  ```\n  celery -A your_project_name worker --loglevel=info\n  ```\n\n- Example Celery task in Django:\n  ```python\n  # tasks.py\n  from celery import shared_task\n\n  @shared_task\n  def send_email_task():\n      print(\"Sending email...\")\n  ```\n\n- Enqueue a task:\n  ```python\n  from .tasks import send_email_task\n\n  send_email_task.delay()\n  ```\n\n- Ensure Redis and Celery are running on the same machine or adjust URLs accordingly.",
+    "source": "web_search",
+    "updated_at": 1780718649.0330203
+  },
+  "search:Advanced MongoDB Operations with Django Celery and Redis:mongodb operations optimizatio": {
+    "content": "- **CLI Commands**:\n  - `mongostat` to monitor database performance.\n  - `mongotop` for real-time aggregation of read/write operations.\n  - `db.collection.stats()` to get statistics on a collection.\n\n- **Latest Versions**:\n  - MongoDB 6.0 introduced improvements in query optimization and indexing.\n\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjusts the size of the WiredTiger cache, which is crucial for performance.\n  - `replicaSet`: Enables replica sets for high availability and data redundancy.\n  - `sharding`: Distributes data across multiple servers to improve scalability.",
+    "source": "web_search",
+    "updated_at": 1780718664.6407685
+  },
+  "search:Advanced MongoDB Operations with Django Celery and Redis:mongodb operations optimizatio_ex": {
+    "content": "- Use `db.collection.find()` with query filters to optimize data retrieval.\n- Implement indexing on frequently queried fields using `db.collection.createIndex()`.\n- Utilize the latest MongoDB version for performance improvements and new features.\n- Monitor slow queries with `db.currentOp(true)` and analyze them using tools like `mongostat` and `mongotop`.\n- Enable sharding to distribute data across multiple servers, improving read/write scalability.\n- Adjust WiredTiger cache size via `wiredTigerCacheSizeGB` in the MongoDB configuration file for better performance.\n- Use `db.collection.aggregate()` with `$match`, `$sort`, and `$limit` stages for efficient data processing.\n- Regularly review and optimize database schema to ensure atomicity and minimize denormalization.",
+    "source": "code_example",
+    "updated_at": 1780718668.7679327
+  },
+  "search:Advanced MongoDB Operations with Django Celery and Redis:django celery redis advanced_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A celeryapp beat -l info` to start Celery Beat.\n  - `celery -A celeryapp worker -l info` to start a Celery worker.\n\n- **Latest Versions**:\n  - Django: 4.1\n  - Celery: 5.2\n  - Redis: 6.2\n\n- **Key Config Options**:\n  - Broker URL: `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n  - Result Backend: `CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'`\n  - Task Queue Name: `CELERY_TASK_QUEUE_NAME = 'default'`",
+    "source": "code_example",
+    "updated_at": 1780718658.9040139
+  }
+}
