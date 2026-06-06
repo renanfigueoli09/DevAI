@@ -1,42 +1,52 @@
 {
   "search:Angular Material Design Patterns:angular material design patter": {
-    "content": "- **Install Angular Material**: `ng add @angular/material`\n- **Import Modules**: Import specific modules like `MatTooltipModule` in your main module.\n- **Latest Version**: Check for the latest version on [Angular Material GitHub](https://github.com/angular/components).\n- **Key Config Options**:\n  - `colorScheme`: Define theme colors (e.g., `'primary', 'accent', 'warn'`).\n  - `theme`: Specify a custom theme or use pre-defined ones.\n  - `animationMode`: Control animations globally.\n- **Tooltip Example**: \n  ```typescript\n  import {MatTooltipModule} from '@angular/material/tooltip';\n  ```\n  Add to your module imports:\n  ```typescript\n  imports: [\n    MatTooltipModule,\n    // other modules...\n  ],\n  ```\n- **Starter Project**: Use `ng new my-app --style=scss` and then add Angular Material with the CLI command mentioned above.\n- **Admin Dashboard Templates**: Explore templates like Atrio on [Flatlogic](https://flatlogic.com/templates/).\n- **Responsive Design**: Ensure your application is responsive by using Angular's Flex Layout module or CSS media queries.",
+    "content": "- **CLI Commands**:\n  - `ng new my-angular-app --style=scss`\n  - `ng add @angular/material`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Material: 13.3.7\n\n- **Key Config Options**:\n  - `angular.json`: Configure paths, styles, and scripts.\n  - `app.module.ts`: Import `MatModule` for components like `MatTooltip`.\n  - `styles.scss`: Include theme variables and mixins from `@angular/material`.",
     "source": "web_search",
-    "updated_at": 1780769010.232883
+    "updated_at": 1780769372.8681874
   },
   "search:Angular Material Design Patterns:angular material design patter_ex": {
-    "content": "- Use `ng add @angular/material` to install Angular Material.\n- Install specific components using `ng generate @angular/material:<component-name>`.\n- Update `app.module.ts` with `MatModule` imports.\n- Configure theme in `styles.scss` or `styles.css`.\n- Utilize `mat-sidenav`, `mat-toolbar`, and other components for layout.\n- Check Angular Material documentation for the latest version and features.\n- Explore GitHub repositories like `angular-example` for practical examples.",
+    "content": "- Use `ng new` to create a new Angular project.\n- Install Angular Material using `ng add @angular/material`.\n- Choose your preferred theme during installation.\n- Import the required modules in your app module.\n- Use `mat-sidenav` for creating side navigation menus.\n- Utilize `mat-list` and `mat-list-item` for list items within the sidenav.\n- For mini variant, apply custom CSS to reduce size.\n- Update Angular and Material versions using `ng update @angular/core @angular/cli @angular/material`.\n- Configure theming in `styles.scss` with custom palettes.",
     "source": "code_example",
-    "updated_at": 1780769010.9311678
+    "updated_at": 1780769375.7039452
   },
   "search:Angular Material Design Patterns:material design components in ": {
-    "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v15.x\n\n- **Key Config Options**:\n  - `theme`: Define your theme in `styles.scss` using prebuilt themes or custom palettes.\n  - `icons`: Use icon fonts like Material Icons by adding them to your project.",
+    "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v14.x\n\n- **Key Config Options**:\n  - Theme configuration in `styles.scss` using Angular Material themes.\n  - Custom typography, color palettes, and icon sets.",
     "source": "web_search",
-    "updated_at": 1780769011.6008732
+    "updated_at": 1780769379.7103202
   },
   "search:Angular Material Design Patterns:material design components in _ex": {
-    "content": "- Install Angular Material via CLI: `ng add @angular/material`\n- Import BrowserAnimationsModule in your app module.\n- Use components like `<mat-button>`, `<mat-card>`, and `<mat-form-field>` directly in templates.\n- Key config options include theme selection (`theme` flag), typography customization, and icon font settings.\n- Update Angular Material to the latest version using: `ng update @angular/material`\n- For theming, use pre-built themes or create custom ones with SCSS variables.\n- Enable animations globally by importing BrowserAnimationsModule in your app module.",
+    "content": "- Install Angular CLI globally: `npm install -g @angular/cli`\n- Create a new Angular project: `ng new my-angular-app --strict`\n- Add Angular Material to an existing project:\n  ```bash\n  ng add @angular/material\n  ```\n  Follow the prompts to select pre-configured themes and components.\n- Import specific Material modules in your app module (e.g., `MatButtonModule` for buttons):\n  ```typescript\n  import { MatButtonModule } from '@angular/material/button';\n  ```\n- Use Angular Material components in your templates:\n  ```html\n  <button mat-button>Click me</button>\n  ```\n- Update to the latest version of Angular and Angular Material using:\n  ```bash\n  ng update @angular/core @angular/cli @angular/material\n  ```\n- Key configuration options include theme selection, typography, and icon sets.",
     "source": "code_example",
-    "updated_at": 1780769012.3312378
+    "updated_at": 1780769383.5052779
   },
   "search:Angular Material Design Patterns:customizing angular material c": {
-    "content": "- Use `ng generate theme` to create a new theme.\n- Update `angular.json` to include the custom theme.\n- Define colors in `_theming.scss`.\n- Apply theme to components using `::ng-deep`.\n- Customize typography and density via `mat-typography-config` and `mat-density`.\n- Override component styles within the theming system for consistency.\n- Use Angular Material's `MatButton` customization as a template.\n- Ensure customizations do not override core styles directly.",
+    "content": "- Use `ng generate theme` to create a custom Angular Material theme.\n- Update `angular.json` to include the new theme in the styles array.\n- Define colors and typography in the theme file using Angular Material's theming system.\n- Apply the theme to components by importing it into your component's SCSS file.\n- Use `mat-button`, `mat-card`, etc., with custom classes for additional styling.\n- Override component styles through Angular Material's theming APIs, not directly via CSS.\n- Ensure compatibility with Angular Material's latest version (e.g., v14) by following the official documentation.",
     "source": "web_search",
-    "updated_at": 1780769013.042619
+    "updated_at": 1780769400.4553359
   },
   "search:Angular Material Design Patterns:customizing angular material c_ex": {
-    "content": "- Use Angular CLI to create a new project with Angular Material: `ng new my-app --preset=angular`\n- Ensure Angular Material uses Sass or SCSS as the preprocessor.\n- For customizing themes, check out Maxim Sevriukov's guide on GitHub in the 'angular-material-12+' branch.\n- Angular Material v18 introduces easier customization of components. Watch the YouTube video for details.\n- To customize styles, define them for a component’s host element or change styles affecting position or layout (e.g., margin, position, top, left).\n- Key config options include `angular.json` for project settings and `styles.scss` for global styles.\n- For specific components, use Angular Material's theme customization tools provided in the documentation.",
+    "content": "- Use Angular CLI to create a new project with Angular Material: `ng new my-project --routing --style=scss`\n- Ensure Angular Material uses Sass or SCSS as the preprocessor.\n- For customizing Angular Material components, define styles for the component's host element.\n- Change styles affecting position or layout (e.g., margin, position, top, left).\n- Utilize Angular Material v18 for easier customization of components.\n- Check Maxim Sevriukov’s GitHub repository for complete code examples in the 'angular-material-12+' branch.",
     "source": "code_example",
-    "updated_at": 1780769013.7446618
+    "updated_at": 1780769403.0120606
   },
   "search:Angular Material Design Patterns:responsive design with angular": {
-    "content": "- Use `ng add @angular/material` to install Angular Material.\n- Update `angular.json` to include the necessary stylesheets and themes.\n- Utilize `mat-grid-list` for creating responsive layouts.\n- Apply `fxLayout` and `fxFlex` directives from Angular Flex Layout for responsiveness.\n- Implement `mat-table` with `ng-container` for dynamic data tables.\n- Use `mat-menu` and `mat-toolbar` for responsive navigation menus.\n- Configure `theme.scss` to define custom themes and variables.\n- Ensure all components are tested across different screen sizes using browser developer tools.",
+    "content": "- Use `ng add @angular/material` to install Angular Material.\n- Update Angular and Angular Material to the latest version using `ng update`.\n- Import components in your module with `import { MatTableModule } from '@angular/material/table';`.\n- Configure responsive tables by setting `responsive: true` in the table's configuration.\n- Use `mat-grid-list` for creating responsive layouts. Set `cols`, `rows`, and `gutterSize` properties.\n- For a responsive menu, use Angular Flex Layout with `fxLayout=\"row\"` or `fxLayout=\"column\"`.\n- Configure accessibility by using ARIA attributes provided by Angular Material components.\n- Use `ng serve --prod` to build your application for production.",
     "source": "web_search",
-    "updated_at": 1780769014.4734285
+    "updated_at": 1780769408.4378142
   },
   "search:Angular Material Design Patterns:responsive design with angular_ex": {
-    "content": "- Use `ng new` to create a new Angular project.\n- Install Angular Material using `ng add @angular/material`.\n- Import BrowserAnimationsModule in your app module for animations.\n- Utilize the BreakpointObserver service for responsive design.\n- Set up layout-related flags like `mat-sidenav` and `mat-tab-group` with responsive properties.\n- Apply CSS classes conditionally based on screen size without media queries.\n- Ensure Angular version is up to date using `ng update @angular/core`.\n- Configure Material theme in your styles.css file for consistent styling.\n- Use the Angular CDK (Component Dev Kit) for advanced layout and interaction components.",
+    "content": "- **CLI Commands**:\n  - `ng generate component <component-name>`\n  - `ng serve --prod` for production build\n\n- **Latest Versions**:\n  - Angular CLI: 18.x\n  - Angular Material: 15.x\n\n- **Key Config Options**:\n  - Use `BreakpointObserver` to observe screen size changes.\n  - Utilize `MatSidenav` and `MatDrawer` for responsive side navigation.\n  - Apply CSS classes based on breakpoints using Angular Material's utility classes.",
     "source": "code_example",
-    "updated_at": 1780769015.1949012
+    "updated_at": 1780769411.1792245
+  },
+  "search:Angular Material Design Patterns:best practices for using angul": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v15.x\n\n- **Key Config Options**:\n  - `angular.json`: Configure paths, styles, and scripts.\n  - `src/styles.scss`: Define custom themes and variables.",
+    "source": "web_search",
+    "updated_at": 1780769389.6279523
+  },
+  "search:Angular Material Design Patterns:best practices for using angul_ex": {
+    "content": "- **CLI Commands**: Use `ng generate component <component-name>` to create reusable components.\n- **Latest Version**: Angular Material is regularly updated; as of my last update, the latest version was Angular 16.\n- **Key Config Options**:\n  - AOT Compilation: Enabled by default since Angular 9. Configure in `angular.json` under `architect.build.options.aot`.\n  - Tree Shaking: Ensure your build configuration supports tree shaking to reduce bundle size.\n  - Lazy Loading: Use lazy loading for modules and components to improve initial load time.\n- **Best Practices**:\n  - Create reusable components.\n  - Utilize Angular Material's pre-built components and directives.\n  - Implement AOT compilation for faster production builds.\n  - Optimize images and assets for better performance.",
+    "source": "code_example",
+    "updated_at": 1780769395.6722999
   }
 }
