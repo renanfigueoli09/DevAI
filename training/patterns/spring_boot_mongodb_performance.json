@@ -2,12 +2,12 @@
   "search:Spring Boot MongoDB Performance:mongodb performance tuning": {
     "content": "- **CLI Commands**:\n  - `mongostat` for real-time performance metrics.\n  - `mongotop` to monitor read/write operations per second.\n\n- **Latest Versions**:\n  - MongoDB 6.0 introduced several performance enhancements and new features.\n\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjusts the size of the WiredTiger cache.\n  - `net.maxIncomingConnections`: Limits the number of incoming connections.\n  - `operationProfiling.mode`: Enables profiling to track slow operations.",
     "source": "web_search",
-    "updated_at": 1780782855.146172
+    "updated_at": 1780783739.3312864
   },
   "search:Spring Boot MongoDB Performance:mongodb performance tuning_ex": {
     "content": "- Use `mongostat` and `mongotop` to monitor performance.\n- Optimize queries by indexing fields that are frequently queried.\n- Adjust `wiredTigerCacheSizeGB` based on system memory.\n- Enable journaling with `journal.enabled: true`.\n- Set `storage.wiredTiger.engineConfig.cache_size_gb` in the configuration file.\n- Use `db.collection.stats()` to analyze collection performance.\n- Monitor and adjust `net.maxIncomingConnections` for network settings.\n- Regularly run `compact` on collections to reclaim storage space.",
     "source": "code_example",
-    "updated_at": 1780782858.1049097
+    "updated_at": 1780783740.462819
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing": {
     "content": "- Enable auto-index creation in Spring Boot by setting `spring.data.mongodb.auto-index-creation=true` in your application properties.\n- Use annotations like `@Indexed`, `@CompoundIndex`, and `@TextIndexed` to define indexes directly on domain entities.\n- For programmatically creating an index, use the `MongoTemplate.indexOps()` method with appropriate options.\n- Ensure MongoDB version compatibility with Spring Data MongoDB for optimal performance and features.",
