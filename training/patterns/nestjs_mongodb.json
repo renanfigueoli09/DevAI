@@ -1,0 +1,27 @@
+{
+  "self:nestjs+mongoose:book-schema": {
+    "content": "import { Document, Schema as MongooseSchema, model } from 'mongoose';\nimport { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\n\nexport type BookDocument = HydratedDocument<Book>;\n\n@Schema()\nexport class Book {\n  @Prop({ required: true })\n  title!: string;\n\n  @Prop({ required: true })\n  author!: string;\n\n  @Prop({ required: true, min: 0 })\n  price!: number;\n\n  @Prop({ required: false })\n  description?: string;\n\n  @Prop({ required: false, default: true })\n  isActive?: boolean;\n}\n\nexport const BookSchema = SchemaFactory.createForClass(Book);\n\nexport const BookModel = model<BookDocument>('Book', BookSchema);",
+    "source": "self_generated_validated",
+    "updated_at": 1780747022.721824
+  },
+  "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
+    "content": "• With Mongoose, everything is derived from a Schema. Schemas can be created with NestJS decorators, or with Mongoose itself manually. The @Prop() decorator ...\n• Jul 6, 2020 · How can I do it with NestJS decorators ( @Schema() & @Prop() )?. I ... from '@nestjs/mongoose'; import { HydratedDocument } from ...\n• Feb 19, 2025 · HydratedDocument : A Mongoose type that indicates that the document returned after a database operation will be fully hydrated with Mongoose- ...",
+    "source": "web_search",
+    "updated_at": 1780747035.99867
+  },
+  "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
+    "content": "- **CLI Commands**:\n  - `yarn add @nestjs/mongoose mongoose`\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n  \n- **Key Config Options**:\n  - Import `MongooseModule` in `AppModule`.\n  - Use `@Schema` decorator for defining document schemas.\n  - Utilize `@Prop` to define properties within a schema.\n  - Employ `HydratedDocument` for type-safe documents.",
+    "source": "code_example",
+    "updated_at": 1780747036.0534043
+  },
+  "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
+    "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - Connection String: `mongoose.connect('mongodb://localhost:27017/mydatabase')`\n  - Schema Definition: Define schemas using `new mongoose.Schema({...})`\n  - CRUD Operations:\n    - Find by ID: `await Model.findById(id)`\n    - Update by ID: `await Model.findByIdAndUpdate(id, updateData)`\n    - Delete by ID: `await Model.findByIdAndDelete(id)`",
+    "source": "web_search",
+    "updated_at": 1780747036.1236303
+  },
+  "qa:mongoose-required-field-modifier": {
+    "content": "ANSWER: required field uses ! (not ?). @Prop({required:true}) title!: string. @Prop() description?: string. RULE: required=! optional=?. NEVER ? for required. NEVER bare field: Type without ! or ?.",
+    "source": "correct_answer",
+    "updated_at": 1780747037.540525
+  }
+}
