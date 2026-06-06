@@ -2,51 +2,51 @@
   "search:Next.js + Prisma Authentication:nextjs prisma setup guide": {
     "content": "- Install Prisma CLI globally using `npm install -g prisma`\n- Initialize a new Prisma project with `prisma init`\n- Add PostgreSQL provider to your `schema.prisma` file\n- Run migrations with `npx prisma migrate dev --name init`\n- Install NextAuth.js using `npm install next-auth`\n- Configure NextAuth in `_app.js` or `_app.tsx`\n- Set up environment variables for database URL and secret key\n- Deploy to Vercel using `vercel` command",
     "source": "web_search",
-    "updated_at": 1780775570.241586
+    "updated_at": 1780776397.1714242
   },
   "search:Next.js + Prisma Authentication:prisma authentication strategi": {
     "content": "- Use `npx prisma init` to initialize Prisma in your project.\n- Update Prisma Client and Prisma Migrate using `npm install @prisma/client prisma --save-dev`.\n- Configure authentication methods like OAuth 2.0 with PKCE or service tokens in Prisma Management API settings.\n- Set up an authentication rule in Palo Alto Networks by adding an authentication profile to the rule.\n- Use Bearer token for authentication in the Authorization header of requests to Prisma Management API.\n- Review the latest documentation on authentication integration guides at [prisma/docs](https://www.prisma.io/docs/guides/auth/integration-guides).",
     "source": "web_search",
-    "updated_at": 1780775571.0060084
+    "updated_at": 1780776397.9803886
   },
   "search:Next.js + Prisma Authentication:prisma authentication strategi_ex": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies migrations based on your schema.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model.\n  - `prisma/client`: Generated client for database access.\n  - Environment variables (`DATABASE_URL`, etc.) for connection settings.",
     "source": "code_example",
-    "updated_at": 1780775571.8345742
+    "updated_at": 1780776398.818954
   },
   "search:Next.js + Prisma Authentication:user registration and login in": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- For user registration and login, consider using Supabase for backend services.\n- Install Supabase with `npm install @supabase/supabase-js`.\n- Configure Supabase in your project by creating a `.env.local` file with the following:\n  ```\n  SUPABASE_URL=your-supabase-url\n  SUPABASE_ANON_KEY=your-supabase-anon-key\n  ```\n- Implement user registration using Supabase's `auth.signUp` method.\n- For login, use `auth.signInWithPassword`.\n- To handle authentication state, utilize Next.js's `getServerSideProps` or `useEffect` with `useState`.\n- Ensure form validation on the frontend for security and usability.\n- Deploy your application to Vercel using `vercel deploy`.",
     "source": "web_search",
-    "updated_at": 1780775572.644925
+    "updated_at": 1780776399.6307526
   },
   "search:Next.js + Prisma Authentication:user registration and login in_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`: Creates a new Next.js app.\n  - `npm run dev`: Starts the development server.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for authentication providers like Gmail, Facebook, etc.\n  - `next.config.js`: For customizing build settings and environment variables.\n\n- **Dependencies**:\n  - `@next-auth/react` and `@next-auth/prisma-adapter` for handling user sessions and database integration.",
     "source": "code_example",
-    "updated_at": 1780775573.4658146
+    "updated_at": 1780776400.4674892
   },
   "search:Next.js + Prisma Authentication:prisma with typescript for aut": {
     "content": "- **GitHub Repository**: [Aryan123-rgb/nextjs15-prisma-clerk-startercode](https://github.com/Aryan123-rgb/nextjs15-prisma-clerk-startercode)\n  - Uses Next.js 15, TypeScript, Prisma, Clerk for authentication.\n  \n- **Prisma ORM**:\n  - Latest version: [Prisma CLI](https://www.prisma.io/docs/reference/cli-reference/prisma-cli) and [Prisma Client](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference)\n  - Key config options: `schema.prisma` file for defining data models, Prisma Migrate for database schema management.\n  \n- **Next.js + Next-Auth Authentication**:\n  - Latest version: [Next-Auth.js](https://next-auth.js.org/docs/getting-started/install)\n  - Key config options: `pages/api/auth/[...nextauth].ts` for authentication handlers, environment variables for credentials.\n\n- **Prisma Accelerate**:\n  - Improves performance by reducing latency issues.\n  \n- **Next-theme with Shadcn UI**:\n  - Provides a theme and UI components for Next.js applications.",
     "source": "web_search",
-    "updated_at": 1780775574.238667
+    "updated_at": 1780776401.2948327
   },
   "search:Next.js + Prisma Authentication:secure user data handling in n": {
     "content": "- Use `next-auth` for authentication in Next.js.\n- Install via npm: `npm install next-auth@latest`.\n- Configure `next-auth` by creating a `[...nextauth].js` file in the `/pages/api/auth` directory.\n- Key config options include `providers`, `secret`, and `session`.\n- For JWT-based authentication, use the `jwt` strategy in `next-auth`.\n- Implement route handlers for custom authentication logic.\n- Use Supabase for database operations with Next.js.\n- Install Supabase client: `npm install @supabase/supabase-js@latest`.\n- Configure Supabase URL and anon key in your environment variables.\n- Create a route handler for auth confirmation using `next-auth` middleware.",
     "source": "web_search",
-    "updated_at": 1780775574.9764328
+    "updated_at": 1780776402.1237457
   },
   "search:Next.js + Prisma Authentication:secure user data handling in n_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.2\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for authentication providers and options.\n  - `NEXTAUTH_URL`: URL of your application, used to redirect users after authentication.\n  - `NEXTAUTH_SECRET`: Secret key used to sign JWTs.\n\n- **Security Best Practices**:\n  - Use environment variables for sensitive information like secrets.\n  - Implement CSRF protection using NextAuth.js middleware.\n  - Regularly update dependencies and libraries.",
     "source": "code_example",
-    "updated_at": 1780775575.794984
+    "updated_at": 1780776402.9620683
   },
   "search:Next.js + Prisma Authentication:nextjs prisma setup guide_ex": {
     "content": "- **Install Prisma**: `npm install prisma --save-dev`\n- **Generate Prisma Client**: `npx prisma generate`\n- **Initialize Prisma**: `npx prisma init`\n- **Define Schema**: Edit `prisma/schema.prisma` with your data model.\n- **Run Migrations**: `npx prisma migrate dev --name init`\n- **Install Next.js**: `npm install next react react-dom`\n- **Create Next.js App**: `npx create-next-app@latest myapp`\n- **Integrate Prisma in Next.js**: Import Prisma Client in your API routes or server components.\n- **Deploy to Vercel**: Use Vercel CLI for deployment: `vercel`\n\n**Key Config Options**:\n- `schema.prisma`: Define data models and relations.\n- `prisma/.env`: Configure database connection URL.\n- `next.config.js`: Customize Next.js settings.\n\n**Latest Versions**:\n- Prisma: 7.x\n- Next.js: 16.x",
     "source": "code_example",
-    "updated_at": 1780775576.5719252
+    "updated_at": 1780776403.7728016
   },
   "search:Next.js + Prisma Authentication:prisma with typescript for aut_ex": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies migrations based on your schema.\n\n- **Latest Versions**:\n  - TypeScript: v5.x\n  - Node.js: v18.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model.\n  - `.env`: Environment variables for database connection and JWT secret.\n  - `prisma/schema.ts`: Configuration file for Prisma Client.",
     "source": "code_example",
-    "updated_at": 1780775577.3309143
+    "updated_at": 1780776404.5686529
   }
 }

@@ -2,21 +2,21 @@
   "search:Optimizing Django REST Framework with PostgreSQL:django-rest-framework+postgres": {
     "content": "- Install Django using `pip install django`\n- Install Django Rest Framework using `pip install djangorestframework`\n- Install PostgreSQL and psycopg2 using `pip install psycopg2`\n- Create a new Django project with `django-admin startproject myproject`\n- Add 'rest_framework' to `INSTALLED_APPS` in settings.py\n- Define your models in models.py\n- Run migrations with `python manage.py makemigrations` followed by `python manage.py migrate`\n- Create serializers in serializers.py\n- Define views in views.py using Django Rest Framework's viewsets or routers\n- Configure URLs in urls.py to include the API endpoints\n- Use `python manage.py runserver` to start the development server",
     "source": "web_search",
-    "updated_at": 1780775870.2322273
+    "updated_at": 1780776216.9249723
   },
   "search:Optimizing Django REST Framework with PostgreSQL:django-rest-framework+postgres_ex": {
     "content": "- **CLI Commands**:\n  - `django-admin startproject mrdj`\n  - `cd mrdj`\n  - `pip install djangorestframework psycopg2`\n  - `./manage.py migrate`\n  - `./manage.py createsuperuser`\n\n- **Latest Versions**:\n  - Django: 4.1\n  - Django REST Framework: 3.13\n\n- **Key Config Options**:\n  - Add `'rest_framework'` to `INSTALLED_APPS` in `settings.py`.\n  - Configure database settings in `settings.py` for PostgreSQL.\n    ```python\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': 'mrdj',\n            'USER': 'your_username',\n            'PASSWORD': 'your_password',\n            'HOST': 'localhost',\n            'PORT': '',\n        }\n    }\n    ```",
     "source": "code_example",
-    "updated_at": 1780775878.7365346
+    "updated_at": 1780776217.7544022
   },
   "search:Optimizing Django REST Framework with PostgreSQL:spring-boot+jooq": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - jOOQ: 3.17.6\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `jooq.sql-dialect`: SQL dialect for the database (e.g., POSTGRES).\n  - `jooq.codegen.target-package`: Target package for generated code.",
     "source": "web_search",
-    "updated_at": 1780775887.7392008
+    "updated_at": 1780776218.6453743
   },
   "search:Optimizing Django REST Framework with PostgreSQL:spring-boot+jooq_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - jOOQ: 3.17.0\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`\n  - `jooq.generate.to.package=com.example.jooq.generated`",
     "source": "code_example",
-    "updated_at": 1780775892.8552833
+    "updated_at": 1780776219.5654604
   }
 }

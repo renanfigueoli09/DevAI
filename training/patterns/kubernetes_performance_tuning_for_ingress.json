@@ -2,21 +2,21 @@
   "search:Kubernetes Performance Tuning for Ingress:kubernetes+ingress-performance": {
     "content": "- **CLI Commands**:\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n  - `kubectl apply -f <ingress-yaml-file>`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.0\n  - Contour: v1.18.0\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/proxy-read-timeout`: Adjusts the read timeout for backend servers.\n  - `nginx.ingress.kubernetes.io/proxy-send-timeout`: Adjusts the send timeout for backend servers.",
     "source": "web_search",
-    "updated_at": 1780775903.7645967
+    "updated_at": 1780776181.536772
   },
   "search:Kubernetes Performance Tuning for Ingress:kubernetes+ingress-performance_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <ingress-resource-file.yaml>`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - NGINX Ingress Controller: v1.3.x\n\n- **Key Config Options**:\n  - `spec.rules`: Defines the hostnames and paths to route traffic.\n  - `spec.tls`: Configures TLS termination for secure access.\n  - `metadata.annotations`: Custom annotations for controller-specific configurations.",
     "source": "code_example",
-    "updated_at": 1780775908.0499237
+    "updated_at": 1780776183.4693286
   },
   "search:Kubernetes Performance Tuning for Ingress:golang-gorm-performance-tuning": {
     "content": "- **CLI Commands**:\n  - `go build -gcflags=\"-m\"` to analyze memory allocations.\n  - `go tool pprof` for profiling CPU and memory usage.\n\n- **Latest Versions**:\n  - Ensure using the latest GORM version (e.g., v2.x) for performance improvements and bug fixes.\n\n- **Key Config Options**:\n  - Disable eager loading (`Preload`) in production if not necessary.\n  - Use `Select` to specify only required fields instead of loading entire structs.\n  - Configure connection pool settings like `MaxIdleConns`, `MaxOpenConns`, and `ConnMaxLifetime`.\n  - Enable batch inserts using `CreateInBatches` for large data operations.",
     "source": "web_search",
-    "updated_at": 1780775927.3872437
+    "updated_at": 1780776184.3362257
   },
   "search:Kubernetes Performance Tuning for Ingress:golang-gorm-performance-tuning_ex": {
     "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `go get -u gorm.io/driver/mysql` for MySQL driver.\n\n- **Latest Versions**:\n  - GORM: v1.23.7 (as of my last update)\n  - MySQL Driver: v1.5.0\n\n- **Key Config Options**:\n  - `gorm.DB.SetLogger`: Customize the logger.\n  - `gorm.DB.DB().SetMaxIdleConns`: Set max idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns`: Set max open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime`: Set connection lifetime.",
     "source": "code_example",
-    "updated_at": 1780775932.5557513
+    "updated_at": 1780776185.1822362
   }
 }

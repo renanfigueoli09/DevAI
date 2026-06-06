@@ -2,21 +2,21 @@
   "search:typescript-sequelize-typescript:typescript sequelize orm crud ": {
     "content": "- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes a new Sequelize project.\n  - `npx sequelize-cli model:create --name User --attributes username:string,email:string,password:string`: Creates a new model named \"User\".\n  - `npx sequelize-cli db:migrate`: Applies migrations to the database.\n\n- **Latest Versions**:\n  - Sequelize: v6.30.2\n  - Express: v4.18.2\n  - TypeScript: v5.1.6\n\n- **Key Config Options**:\n  - `config.json`: Configuration file for Sequelize, including database connection details.\n  - `models/User.ts`: Defines the User model with attributes like username, email, and password.\n  - `migrations/xxxx_xx_xx_create_user_table.js`: Migration file to create the User table in the database.",
     "source": "web_search",
-    "updated_at": 1780775480.7582974
+    "updated_at": 1780776303.6250982
   },
   "search:typescript-sequelize-typescript:typescript sequelize orm crud _ex": {
     "content": "- **CLI Commands**:\n  - `npm install sequelize-typescript`\n  - `npx sequelize-cli init`\n\n- **Latest Versions**:\n  - Sequelize: v7.x\n  - Sequelize-typescript: v3.x\n\n- **Key Config Options**:\n  - `modelsDir`: Directory where your model files are located.\n  - `seederStorage`: Storage type for seeders (e.g., 'sequelize', 'json').\n  - `migrationStorage`: Storage type for migrations (e.g., 'sequelize', 'json').",
     "source": "code_example",
-    "updated_at": 1780775481.5273876
+    "updated_at": 1780776304.4289405
   },
   "search:typescript-sequelize-typescript:typescript sequelize migration": {
     "content": "- Use `npx sequelize-cli migration:create --name add-some-table` to generate migrations.\n- Run migrations using `npx sequelize-cli db:migrate`.\n- For seeds, use `npx sequelize-cli seed:generate --name seed-example`.\n- Ensure TypeScript compatibility by installing necessary packages like `@types/sequelize`.\n- Use Umzug for advanced migration management if needed.\n- Check Sequelize CLI documentation for the latest version and features.\n- Configure Sequelize in your project with options like `define` and `sync`.",
     "source": "web_search",
-    "updated_at": 1780775482.301897
+    "updated_at": 1780776305.2248368
   },
   "search:typescript-sequelize-typescript:typescript sequelize migration_ex": {
     "content": "- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes Sequelize project structure.\n  - `npx sequelize-cli db:migrate`: Runs all migrations.\n  - `npx sequelize-cli model:create --name User --attributes username:string,email:string,password:string`: Creates a new model with specified attributes.\n\n- **Latest Versions**:\n  - Sequelize: v7.0.0\n  - Sequelize CLI: v6.2.0\n\n- **Key Config Options**:\n  - `config/config.json`: Contains database connection details.\n  - `models/User.ts`: Defines the User model with TypeScript types.\n  - `migrations/xxxx_xx_xx_create_user_table.js`: Migration file to create a users table.",
     "source": "code_example",
-    "updated_at": 1780775483.1550152
+    "updated_at": 1780776306.0684018
   }
 }

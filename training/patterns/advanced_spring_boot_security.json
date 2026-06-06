@@ -2,11 +2,11 @@
   "search:Advanced Spring Boot Security:spring-boot+jpa-batch": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot 3.x\n  - Spring Data JPA 2.7.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.batch.job.enabled=false` (to disable default batch job)\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`",
     "source": "web_search",
-    "updated_at": 1780775942.7420137
+    "updated_at": 1780776571.1629403
   },
   "search:Advanced Spring Boot Security:spring-boot+jpa-batch_ex": {
     "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run the Spring Boot application.\n- **Latest Versions**: Ensure using Spring Boot 3.x and Spring Data JPA 2.7.x for compatibility.\n- **Key Config Options**:\n  - `spring.batch.job.enabled=true`: Enable batch jobs.\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`: Database URL.\n  - `spring.datasource.username=root`: Username.\n  - `spring.datasource.password=password`: Password.\n  - `spring.jpa.hibernate.ddl-auto=update`: Auto-update schema.",
     "source": "code_example",
-    "updated_at": 1780775960.0734296
+    "updated_at": 1780776572.1316283
   }
 }

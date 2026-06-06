@@ -2,21 +2,21 @@
   "search:fastapi+sqlalchemy-advanced:fastapi sqlalchemy advanced tu": {
     "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI server.\n  - `pip install fastapi[all]` for installing FastAPI with all dependencies.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - SQLAlchemy: v2.0.7\n\n- **Key Config Options**:\n  - Database URL in `SQLAlchemy`: e.g., `sqlite:///./test.db`\n  - Pydantic models for data validation.\n  - Dependency injection for managing database sessions.",
     "source": "web_search",
-    "updated_at": 1780775504.0099661
+    "updated_at": 1780776328.1324754
   },
   "search:fastapi+sqlalchemy-advanced:fastapi sqlalchemy advanced tu_ex": {
     "content": "- **GitHub Repository**: [wpcodevo/fastapi_sqlalchemy](https://github.com/wpcodevo/fastapi_sqlalchemy)\n- **CLI Commands**:\n  - `uvicorn main:app --reload`\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - SQLAlchemy: v1.4.39\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"sqlite:///./sql_app.db\"`\n  - Pydantic Models for data validation.\n  - Starlette web server for running the FastAPI app.",
     "source": "code_example",
-    "updated_at": 1780775504.7870674
+    "updated_at": 1780776328.90784
   },
   "search:fastapi+sqlalchemy-advanced:sqlalchemy with fastapi perfor": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn sqlalchemy`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.13\n\n- **Key Config Options**:\n  - Use ASGI server (`uvicorn`) for production.\n  - Implement caching (e.g., Redis) to reduce database hits.\n  - Optimize SQL queries to avoid N+1 issues.\n  - Enable asynchronous operations with `async` and `await`.\n  - Configure database connection pooling in SQLAlchemy.",
     "source": "web_search",
-    "updated_at": 1780775505.5560608
+    "updated_at": 1780776329.747656
   },
   "search:fastapi+sqlalchemy-advanced:sqlalchemy with fastapi perfor_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy databases`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.13\n  - Databases: 0.7.0\n\n- **Key Config Options**:\n  - Database URL in settings.py or .env file\n  - Asynchronous database connections with `asyncpg`\n  - Use of Pydantic models for data validation and serialization\n  - Caching mechanisms like Redis for API responses\n  - Rate limiting to prevent abuse",
     "source": "code_example",
-    "updated_at": 1780775506.3698764
+    "updated_at": 1780776330.5231905
   }
 }
