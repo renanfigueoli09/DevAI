@@ -1,0 +1,22 @@
+{
+  "search:nextjs+serverless-deployment:next.js serverless deployment ": {
+    "content": "- **CLI Commands**: Use `next build` to prepare your app, followed by `next export` for static deployment.\n- **Latest Versions**: As of my last update in October 2023, the latest stable version is Next.js 13.x. Check [Next.js official website](https://nextjs.org/) for the most current version.\n- **Key Config Options**:\n  - `output: 'export'` in `next.config.js` to enable static export.\n  - `serverRuntimeConfig` and `publicRuntimeConfig` for environment variables.\n  - `rewrites`, `redirects`, and `headers` for custom routing.\n\nFor serverless deployments, consider using:\n- **AWS Lambda**: Deploy functions with `next start`.\n- **Vercel**: Use their platform directly or via the Vercel CLI.\n- **Netlify**: Deploy with `netlify deploy`.\n\nStay updated on GitHub repositories like [serverless-nextjs/serverless-next.js](https://github.com/serverless-nextjs/serverless-next.js) for future deployment strategies and improvements.",
+    "source": "web_search",
+    "updated_at": 1780712042.5997822
+  },
+  "search:nextjs+serverless-deployment:next.js serverless deployment _ex": {
+    "content": "- Use `next build` to prepare your Next.js app for deployment.\n- Deploy using `serverless-nextjs/serverless-next.js` for serverless mode on cloud providers like AWS, Vercel, or Netlify.\n- For enhanced performance and security in 2025, consider deploying with the latest version of Next.js (as of my last update).\n- Key config options include setting up environment variables in `.env.local` and configuring `next.config.js`.\n- Use `vercel deploy` for deploying to Vercel directly from your terminal.\n- For AWS Lambda, use `serverless deploy --provider aws` with the appropriate flags.\n- Ensure you have the latest version of Node.js installed (as of my last update).\n- Consider using `netlify deploy` for deploying to Netlify.\n- Always check the official Next.js and serverless deployment documentation for the most current practices.",
+    "source": "code_example",
+    "updated_at": 1780712050.8408
+  },
+  "search:nextjs+serverless-deployment:next.js serverless functions o": {
+    "content": "- **CLI Commands**: Use `npx create-next-app@latest` to start a new Next.js project.\n- **Latest Versions**: Ensure you are using the latest version of Next.js, which as of my last update is v13.5.\n- **Key Config Options**:\n  - `next.config.js`: Configure serverless functions and other settings.\n  - `api/` directory: Place your API routes here for serverless functions.\n  - `serverlessFunctions` flag in `next.config.js` to enable serverless mode.\n\nFor detailed guidance, refer to the official Next.js documentation or the provided articles.",
+    "source": "web_search",
+    "updated_at": 1780712062.006633
+  },
+  "search:nextjs+serverless-deployment:next.js serverless functions o_ex": {
+    "content": "- **CLI Commands**: Use `next dev` for development and `next build && next start` for production.\n- **Latest Versions**: Ensure using the latest Next.js version, currently at v13.5.\n- **Key Config Options**:\n  - `serverless`: Enable serverless mode in your `next.config.js`.\n  - `target: 'experimental-serverless-functions'`: Specify target for serverless functions.\n  - `functionsDir`: Define custom directory for serverless functions.\n- **Optimization Tips**:\n  - Use Vercel for deployment and optimization.\n  - Implement caching strategies to reduce latency.\n  - Monitor function execution times and logs for performance insights.",
+    "source": "code_example",
+    "updated_at": 1780712069.9561124
+  }
+}
