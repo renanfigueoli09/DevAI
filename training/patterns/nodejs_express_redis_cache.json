@@ -17,6 +17,6 @@
   "search:nodejs-express-redis-cache:optimizing node.js express app_ex": {
     "content": "- Install Redis: `sudo apt-get install redis-server`\n- Start Redis: `redis-server`\n- Connect to Redis: `redis-cli`\n- Node.js package for Redis: `npm install redis`\n- Key config options:\n  - `host`: Redis server host (default is `127.0.0.1`)\n  - `port`: Redis server port (default is `6379`)\n  - `password`: Redis password if set\n- Example of setting a cache in Node.js using Redis:\n  ```javascript\n  const redis = require('redis');\n  const client = redis.createClient({ host: 'localhost', port: 6379 });\n\n  client.set('myKey', 'myValue', redis.print);\n  ```\n- Example of getting a cache from Node.js using Redis:\n  ```javascript\n  client.get('myKey', (err, reply) => {\n    if (err) throw err;\n    console.log(reply); // Output: myValue\n  });\n  ```\n- Use `redis-cli` to monitor and manage your Redis server.\n- For production environments, consider using Redis Cluster for high availability and scalability.",
     "source": "code_example",
-    "updated_at": 1780774985.9258475
+    "updated_at": 1780775713.1012132
   }
 }
