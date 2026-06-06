@@ -1,0 +1,32 @@
+{
+  "search:Performance Tuning in FastAPI Asyncio:asyncio optimization technique": {
+    "content": "- Use `asyncio.run()` to run the main entry point of your asyncio application.\n- Employ `asyncio.create_task()` for scheduling coroutines concurrently.\n- Utilize `asyncio.Queue` for inter-task communication and synchronization.\n- Implement `asyncio.Lock`, `asyncio.Semaphore`, and `asyncio.Event` for managing shared resources.\n- Use `asyncio.gather()` to run multiple coroutines concurrently and wait for all of them to complete.\n- Employ `asyncio.wait_for()` to set a timeout on an asyncio Future or coroutine.\n- Leverage `asyncio.to_thread()` to offload blocking I/O operations to a separate thread pool.\n- Configure the event loop policy with `asyncio.set_event_loop_policy()`.\n- Use `asyncio.create_subprocess_exec()` for running external processes asynchronously.",
+    "source": "web_search",
+    "updated_at": 1780726804.9324446
+  },
+  "search:Performance Tuning in FastAPI Asyncio:asyncio optimization technique_ex": {
+    "content": "- Use `asyncio.run()` to run the main entry point of your application.\n- Employ `asyncio.create_task()` for scheduling coroutines concurrently.\n- Utilize `asyncio.Queue` for inter-task communication and synchronization.\n- Apply `asyncio.gather()` to run multiple coroutines concurrently and wait for all to complete.\n- Leverage `asyncio.Lock`, `asyncio.Semaphore`, and `asyncio.BoundedSemaphore` for managing access to shared resources.\n- Implement `asyncio.sleep(0)` in tight loops to yield control back to the event loop.\n- Use `asyncio.wait_for()` with a timeout to handle cases where tasks might hang indefinitely.\n- Optimize I/O-bound tasks by using `aiofiles` or other asynchronous file handling libraries.\n- Monitor and profile your asyncio applications using tools like `asyncio.profiler` or third-party profilers.",
+    "source": "code_example",
+    "updated_at": 1780726811.7869296
+  },
+  "search:Performance Tuning in FastAPI Asyncio:request/response handling effi": {
+    "content": "- Use `router.StrictSlash(true)` in Gorilla Mux to automatically redirect trailing slashes.\n- Implement route caching using `r.GetRoute()` for frequently accessed paths.\n- Leverage custom transformations, response caching, request/response logging, and error handling in .NET applications.\n- Middleware best practices and optimization are crucial for performance improvement.\n- Handle responses within `onResponse` methods in Android Kotlin.\n- Understand Django's Request/Response cycle to optimize web application handling.",
+    "source": "web_search",
+    "updated_at": 1780726819.1977131
+  },
+  "search:Performance Tuning in FastAPI Asyncio:request/response handling effi_ex": {
+    "content": "- Use `try-except` blocks to catch exceptions like `ResourceNotFoundException`, `ClientError`, or `RequestException`.\n- Implement error handling at both client and server sides.\n- For REST API errors, consider providing additional relevant information for better user experience.\n- Utilize the latest version of boto3 for invoking Lambda functions.\n- Configure Mule HTTP components with appropriate settings in AnypointStudio.",
+    "source": "code_example",
+    "updated_at": 1780726822.7316866
+  },
+  "search:Performance Tuning in FastAPI Asyncio:database performance tuning": {
+    "content": "- **CLI Commands**:\n  - `EXPLAIN` to analyze query performance.\n  - `ANALYZE TABLE` for statistics updates.\n\n- **Latest Versions**:\n  - PostgreSQL: v15\n  - MySQL: v8.0\n  - SQL Server: v2022\n\n- **Key Config Options**:\n  - PostgreSQL: `work_mem`, `maintenance_work_mem`\n  - MySQL: `innodb_buffer_pool_size`, `query_cache_size`\n  - SQL Server: `max server memory`, `cost threshold for parallelism`",
+    "source": "web_search",
+    "updated_at": 1780726829.8516762
+  },
+  "search:Performance Tuning in FastAPI Asyncio:database performance tuning_ex": {
+    "content": "- Use `EXPLAIN` to analyze query execution plans.\n- Update statistics with `UPDATE STATISTICS table_name`.\n- Index columns frequently queried or used in joins.\n- Consider partitioning large tables for better performance.\n- Optimize queries by removing unnecessary joins and subqueries.\n- Use parameterized queries to prevent SQL injection and improve caching.\n- Adjust buffer pool size based on available memory.\n- Regularly monitor and analyze database performance metrics.\n- Upgrade to the latest database engine version for performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780726840.0409555
+  }
+}
