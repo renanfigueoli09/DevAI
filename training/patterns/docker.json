@@ -12,11 +12,11 @@
   "qa:docker-mongodb-only": {
     "content": "When user says 'MongoDB only' or 'only MongoDB': docker-compose has ONLY app + mongo:7.0\nNO redis:, NO kafka:, NO nginx: unless explicitly requested\n'only' means ONLY what is mentioned",
     "source": "critical_pattern",
-    "updated_at": 1780762298.7394478
+    "updated_at": 1780762321.3183708
   },
   "qa:mongodb-healthcheck": {
     "content": "MongoDB healthcheck: mongosh --eval db.adminCommand('ping')\ntest: [CMD, mongosh, --eval, db.adminCommand('ping')]\ninterval: 15s | timeout: 10s | retries: 5\nNEVER pg_isready (PostgreSQL) or redis-cli for MongoDB",
     "source": "critical_pattern",
-    "updated_at": 1780762307.863623
+    "updated_at": 1780762323.573584
   }
 }
