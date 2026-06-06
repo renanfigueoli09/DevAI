@@ -1,0 +1,12 @@
+{
+  "search:azure-devops-pipelines:azure devops pipelines securit": {
+    "content": "- **CLI Commands**: Use `az devops pipeline create` to create a new pipeline.\n- **Latest Versions**: Ensure you are using the latest version of Azure DevOps and its components for security patches.\n- **Key Config Options**:\n  - Set up service connections with proper authentication.\n  - Use secrets management tools like Azure Key Vault.\n  - Implement branch policies to control code merges.\n  - Enable pipeline approvals and checks.\n  - Regularly update agent pools and software versions.",
+    "source": "web_search",
+    "updated_at": 1780713153.5923066
+  },
+  "search:azure-devops-pipelines:azure devops pipelines securit_ex": {
+    "content": "- **CLI Commands**: Use `az devops pipeline create` to create pipelines.\n- **Latest Versions**: Ensure using the latest Azure DevOps CLI and agent versions for security patches.\n- **Key Config Options**:\n  - Set up repository-level permissions with `az repos permission set`.\n  - Configure service connections securely using `az devops service-endpoint create`.\n  - Implement pipeline triggers with `trigger` in YAML files.\n  - Use variable groups to manage secrets and variables securely.\n  - Enable branch protection rules via Azure Repos settings.",
+    "source": "code_example",
+    "updated_at": 1780713161.942316
+  }
+}

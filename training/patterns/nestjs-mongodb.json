@@ -2,32 +2,32 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
     "source": "code_pattern",
-    "updated_at": 1780712890.265256
+    "updated_at": 1780713164.077589
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780712890.36318
+    "updated_at": 1780713164.1754885
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780712890.4576187
+    "updated_at": 1780713164.2596292
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "• With Mongoose, everything is derived from a Schema. Schemas can be created with NestJS decorators, or with Mongoose itself manually. The @Prop() decorator ...\n• Jul 6, 2020 · How can I do it with NestJS decorators ( @Schema() & @Prop() )?. I ... from '@nestjs/mongoose'; import { HydratedDocument } from ...\n• Feb 19, 2025 · HydratedDocument : A Mongoose type that indicates that the document returned after a database operation will be fully hydrated with Mongoose- ...",
     "source": "web_search",
-    "updated_at": 1780712893.1303432
+    "updated_at": 1780713167.1863272
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "content": "- **CLI Commands**:\n  - `yarn add @nestjs/mongoose mongoose`\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n  \n- **Key Config Options**:\n  - Import `MongooseModule` in `AppModule`.\n  - Use `@Schema` decorator for defining document schemas.\n  - Utilize `@Prop` to define properties within a schema.\n  - Employ `HydratedDocument` for type-safe documents.",
     "source": "code_example",
-    "updated_at": 1780712893.2555525
+    "updated_at": 1780713167.2821302
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - Connection String: `mongoose.connect('mongodb://localhost:27017/mydatabase')`\n  - Schema Definition: Define schemas using `new mongoose.Schema({...})`\n  - CRUD Operations:\n    - Find by ID: `await Model.findById(id)`\n    - Update by ID: `await Model.findByIdAndUpdate(id, updateData)`\n    - Delete by ID: `await Model.findByIdAndDelete(id)`",
     "source": "web_search",
-    "updated_at": 1780712893.3733475
+    "updated_at": 1780713167.398065
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - `@Module({ imports: [MongooseModule.forRoot('mongodb://localhost/nestjs')] })`\n  - `@Schema()`\n  - `Model.findById(id)`\n  - `Model.findByIdAndUpdate(id, update)`\n  - `Model.findByIdAndDelete(id)`",
@@ -57,17 +57,17 @@
   "pattern:nestjs+mongo:required-bang": {
     "content": "CRITICAL Mongoose TypeScript strict mode: @Prop({required:true}) → field!: Type  (exclamation mark, non-null assertion) @Prop() → field?: Type  (question mark, optional) NEVER: field: Type (without ! or ?)  NEVER use ! for optional fields or ? for required fields.",
     "source": "forced_training",
-    "updated_at": 1780712845.7283797
+    "updated_at": 1780713121.2859619
   },
   "pattern:nestjs+mongo:no-findOneBy": {
     "content": "CRITICAL: Mongoose does NOT have findOneBy(). This is TypeORM only. Mongoose methods: findById(id), findOne({field:value}), findByIdAndUpdate(), findByIdAndDelete(). If you see findOneBy in Mongoose code, replace with findById(id).",
     "source": "forced_training",
-    "updated_at": 1780712845.8124557
+    "updated_at": 1780713121.3099327
   },
   "pattern:nestjs+mongo:correct-module": {
     "content": "CRITICAL NestJS Mongoose module: imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] NEVER: TypeOrmModule.forFeature([Book]) in a Mongoose project. NEVER: MongooseModule.forRoot() in entity module (only in AppModule).",
     "source": "forced_training",
-    "updated_at": 1780712845.8835227
+    "updated_at": 1780713121.340237
   },
   "self:nestjs+mongoose:book-schema:missing": {
     "content": "COMMON MISTAKE in nestjs_mongodb:\nGenerated code was MISSING: @Schema, @Prop, HydratedDocument, SchemaFactory\nPrompt was: Generate a complete NestJS Mongoose schema for a Book entity with:\n- title (required string)\n- author (required string)\n- price (required number, min 0)\n- description (optional string)\n- isActive (opt\nCORRECT approach must include: @Schema, @Prop, HydratedDocument, SchemaFactory, title!:, price!:, description?:",

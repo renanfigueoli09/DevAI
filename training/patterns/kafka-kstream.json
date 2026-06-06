@@ -1,0 +1,12 @@
+{
+  "search:kafka+kstream:kafka streams stateful process": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic <topic-name> --bootstrap-server <broker-address> --partitions <num-partitions> --replication-factor <replication-factor>`\n  - `kafka-console-producer.sh --topic <topic-name> --bootstrap-server <broker-address>`\n  - `kafka-console-consumer.sh --topic <topic-name> --from-beginning --bootstrap-server <broker-address>`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.0.0\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `state.dir`: Directory for storing state stores.\n  - `cache.max.bytes.buffering`: Maximum size of the in-memory buffer used to cache records before they are written to disk.\n  - `cleanup.policy`: Defines how log segments are cleaned up (e.g., delete, compact).\n  - `retention.ms` and `retention.bytes`: Controls how long or how many bytes a message can be stored in Kafka.",
+    "source": "web_search",
+    "updated_at": 1780713113.4422865
+  },
+  "search:kafka+kstream:kafka streams stateful process_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `state.dir`: Directory for state stores.\n  - `cache.max.bytes.buffering`: Maximum size of the in-memory buffer used for caching records before they are written to disk.\n  - `processing.guarantee`: Processing guarantee (e.g., EXACTLY_ONCE, AT_LEAST_ONCE).",
+    "source": "code_example",
+    "updated_at": 1780713120.2173028
+  }
+}
