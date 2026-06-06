@@ -2,16 +2,16 @@
   "pattern:fastapi+mongodb:crud": {
     "content": "// FastAPI MongoDB: db=AsyncIOMotorClient(MONGODB_URI).myapp. @app.get('/books') async def list(): return [serialize(b) async for b in db.books.find()]. @app.post('/books',status_code=201) async def create(b:BookCreate): r=await db.books.insert_one(b.model_dump()); return {'id':str(r.inserted_id)}",
     "source": "code_pattern",
-    "updated_at": 1780787951.846575
+    "updated_at": 1780788452.7724771
   },
   "pattern:fastapi+postgres:sqlalchemy": {
     "content": "// FastAPI PostgreSQL: engine=create_async_engine(DATABASE_URL). class Book(Base): __tablename__='books'; id:Mapped[int]=mapped_column(primary_key=True); title:Mapped[str]=mapped_column(nullable=False).",
     "source": "code_pattern",
-    "updated_at": 1780787952.4993093
+    "updated_at": 1780788453.8745403
   },
   "qa:fastapi-motor-not-pymongo": {
     "content": "FastAPI MongoDB: use Motor (async) NOT pymongo (sync)\nCORRECT: from motor.motor_asyncio import AsyncIOMotorClient\nWRONG:   from pymongo import MongoClient\nMotor is async-compatible with FastAPI async routes",
     "source": "critical_pattern",
-    "updated_at": 1780788255.839144
+    "updated_at": 1780788706.5650983
   }
 }

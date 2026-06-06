@@ -2,21 +2,21 @@
   "search:typescript-graphql-performance:typescript graphql performance": {
     "content": "- Use `apollo-server` version 4 for high-performance GraphQL APIs.\n- Implement `DataLoader` to batch and cache database queries, reducing N+1 issues.\n- Employ Redis as a caching layer with commands like `SET`, `GET`, and `EXPIRE`.\n- Utilize query batching by enabling `batchHttpLink` in Apollo Client.\n- Apply pagination using `graphql-relay` or custom resolvers for efficient data retrieval.\n- Implement directives to control access and performance at the GraphQL schema level.\n- Monitor API performance with tools like Apollo Studio for real-time insights.\n- Consider schema federation with Apollo Federation for breaking APIs into subgraphs, enhancing scalability.",
     "source": "web_search",
-    "updated_at": 1780787165.4800024
+    "updated_at": 1780788311.0137641
   },
   "search:typescript-graphql-performance:typescript graphql performance_ex": {
     "content": "- Use `npm install @graphql-yoga/node` to install GraphQL Yoga.\n- Update TypeScript to the latest version using `npm update typescript`.\n- Configure DataLoader for efficient data fetching with `npm install dataloader`.\n- Implement caching strategies in your resolvers to reduce latency.\n- Utilize batching techniques by enabling it in your server configuration.\n- Optimize schema design to minimize complexity and improve performance.\n- Use Apollo Server's built-in tracing feature to identify bottlenecks.\n- Regularly update dependencies using `npm audit fix` to ensure security and performance improvements.",
     "source": "code_example",
-    "updated_at": 1780787166.4425254
+    "updated_at": 1780788313.7305455
   },
   "search:typescript-graphql-performance:graphql performance tuning in ": {
     "content": "- **Latest Version of Apollo Server**: Apollo Server 4.x\n- **CLI Command to Create a New Project**:\n  ```bash\n  npx create-apollo-server@latest my-project\n  ```\n- **Key Config Option for DataLoader**:\n  ```typescript\n  const server = new ApolloServer({\n    typeDefs,\n    resolvers,\n    dataSources: () => ({\n      userAPI: new UserAPI(),\n    }),\n  });\n  ```\n- **CLI Command to Install Apollo Server**:\n  ```bash\n  npm install apollo-server graphql\n  ```\n- **Key Config Option for Caching**:\n  ```typescript\n  const server = new ApolloServer({\n    typeDefs,\n    resolvers,\n    cache: 'bounded',\n  });\n  ```\n- **CLI Command to Run Apollo Server Locally**:\n  ```bash\n  npm run dev\n  ```\n- **Latest Version of DataLoader**: DataLoader 2.x\n- **Key Config Option for Query Complexity Analysis**:\n  ```typescript\n  const server = new ApolloServer({\n    typeDefs,\n    resolvers,\n    plugins: [\n      ApolloServerPluginUsageReporting(),\n      ApolloServerPluginSchemaReporting(),\n    ],\n  });\n  ```\n- **CLI Command to Install DataLoader**:\n  ```bash\n  npm install dataloader\n  ```\n- **Key Config Option for Field-Level Optimizations**:\n  ```typescript\n  const resolvers = {\n    Query: {\n      users: async (parent, args, context) => {\n        return await context.dataSources.userAPI.getUsers(args);\n      },\n    },\n  };\n  ```",
     "source": "web_search",
-    "updated_at": 1780787167.3594117
+    "updated_at": 1780788314.9238718
   },
   "search:typescript-graphql-performance:graphql performance tuning in _ex": {
     "content": "- **CLI Commands**:\n  - `npm install apollo-server graphql typescript`\n  - `npx create-react-app my-graphql-app --template typescript`\n\n- **Latest Versions**:\n  - Apollo Server: v4.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - Use `DataLoader` for batching and caching to reduce N+1 queries.\n  - Implement custom resolvers for type-safe schema definitions.\n  - Configure Apollo Server with `apolloServer.listen({ port: 4000 })` for server setup.",
     "source": "code_example",
-    "updated_at": 1780787168.2869577
+    "updated_at": 1780788316.096151
   }
 }
