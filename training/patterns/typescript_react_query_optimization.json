@@ -2,21 +2,21 @@
   "search:typescript-react-query-optimization:typescript react query optimiz": {
     "content": "- **CLI Commands**: `npm install @tanstack/react-query`\n- **Latest Version**: As of my last update, the latest version is 4.x.\n- **Key Config Options**:\n  - `queryClient`: Manages query state and cache.\n  - `useQuery`: Hook for fetching data.\n  - `useMutation`: Hook for updating data.\n  - `useInfiniteQuery`: Hook for handling infinite lists.",
     "source": "web_search",
-    "updated_at": 1780772438.4598355
+    "updated_at": 1780773161.6372273
   },
   "search:typescript-react-query-optimization:typescript react query optimiz_ex": {
     "content": "- Use `npm install react-query` or `yarn add react-query` to install the latest version.\n- Implement query prefetching using `useQuery` with the `staleTime` and `refetchInterval` options for better performance.\n- Define type parameters in selectors to ensure type safety, e.g., `select: (data: TData) => TSelected`.\n- Utilize pagination by setting `fetchNextPage` and `hasNextPage` in your query configuration.\n- Implement lazy loading data with the `useInfiniteQuery` hook for efficient data fetching on scroll.\n- Configure `refetchOnWindowFocus` to control whether queries should refetch when the window regains focus.",
     "source": "code_example",
-    "updated_at": 1780772439.2238529
+    "updated_at": 1780773162.357986
   },
   "search:typescript-react-query-optimization:react query for large data set": {
     "content": "- Use `react-query` version 3.x or later.\n- Implement pagination by setting the `pageParam` in your query function.\n- Utilize infinite scroll with `useInfiniteQuery`.\n- Employ virtualization libraries like `react-window` for large datasets.\n- Configure `staleTime` and `refetchInterval` to manage data freshness and polling frequency.\n- Use `keepPreviousData` to preserve previous data during refetches.\n- Implement `onSuccess` or `onError` callbacks to handle data updates or errors gracefully.",
     "source": "web_search",
-    "updated_at": 1780772439.948415
+    "updated_at": 1780773163.1221552
   },
   "search:typescript-react-query-optimization:react query for large data set_ex": {
     "content": "- **React Query**: Version 4.x is the latest stable version.\n- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query@latest`\n- **Key Config Options**:\n  - `queryClient`: Configure options for the query client, such as `defaultOptions`.\n  - `useQuery`: Use this hook to fetch data. Key flags include `queryKey`, `fetchFn`, and `options`.\n  - `useInfiniteQuery`: For handling infinite lists.\n- **Performance Considerations**:\n  - Implement pagination or infinite scrolling.\n  - Use `staleTime` to control when queries are refetched.\n  - Utilize `cacheTime` for managing cache lifetimes.",
     "source": "code_example",
-    "updated_at": 1780772440.675318
+    "updated_at": 1780773163.8358636
   }
 }

@@ -2,21 +2,21 @@
   "search:Optimizing Entity Framework Core Migrations for .NET Applications:dotnet efcore migrations optim": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add Initial`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET CLI: 6.x\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enable lazy loading for entities.\n  - `MigrationsAssembly`: Specify the assembly containing migrations.\n  - `Scaffold-DbContext`: Scaffold a DbContext and entity classes from an existing database.",
     "source": "web_search",
-    "updated_at": 1780772514.0071363
+    "updated_at": 1780773238.6053567
   },
   "search:Optimizing Entity Framework Core Migrations for .NET Applications:dotnet efcore migrations optim_ex": {
     "content": "- Use `dotnet ef migrations add <MigrationName>` to create a new migration.\n- Apply migrations using `dotnet ef database update`.\n- For Visual Studio, use `Add-Migration <MigrationName>`.\n- Ensure the latest version of EF Core is installed via NuGet.\n- Key config options include `DbContext` setup in `Startup.cs` or `Program.cs`.\n- Consider enabling logging for detailed migration output with Serilog or other providers.",
     "source": "code_example",
-    "updated_at": 1780772514.769256
+    "updated_at": 1780773239.3696194
   },
   "search:Optimizing Entity Framework Core Migrations for .NET Applications:entity framework core performa": {
     "content": "- Use `AsNoTracking()` to improve performance when entities are not modified.\n- Update Entity Framework Core to the latest version for performance improvements and bug fixes.\n- Configure connection strings properly, including pooling settings.\n- Use `Include` method judiciously to avoid N+1 query issues.\n- Implement batching with `FromSqlRaw` or `FromSqlInterpolated` for large datasets.\n- Optimize queries by using projections (`Select`) instead of loading entire entities.\n- Enable lazy loading if necessary, but be cautious about performance impacts.\n- Use `ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;` globally to avoid tracking all entities.\n- Monitor and analyze query plans with SQL Server Profiler or similar tools.",
     "source": "web_search",
-    "updated_at": 1780772515.492499
+    "updated_at": 1780773240.1265178
   },
   "search:Optimizing Entity Framework Core Migrations for .NET Applications:entity framework core performa_ex": {
     "content": "- Use the latest version of Entity Framework Core.\n- Enable query tracking (`QueryTrackingBehavior.NoTracking`) when read-only data is accessed to reduce memory usage.\n- Optimize queries by using eager loading (`Include`), explicit loading (`Load`), or projection (`Select`) instead of lazy loading.\n- Configure DbContext pooling with `DbContextOptionsBuilder.UseLazyLoadingProxies()` for better performance in high-concurrency scenarios.\n- Use the `AsNoTracking` method to avoid tracking entities, which can significantly improve performance when reading data that does not need to be updated.\n- Implement batching using `FromSqlRaw` or `FromSqlInterpolated` to reduce the number of round-trips to the database.\n- Monitor and analyze query performance with EF Core's built-in logging capabilities.\n- Use connection pooling (`optionsBuilder.UseLazyLoadingProxies()`) to manage database connections efficiently.\n- Consider using raw SQL queries for complex operations that cannot be optimized by LINQ.\n- Regularly review and optimize your entity models, including index creation and normalization.",
     "source": "code_example",
-    "updated_at": 1780772516.294868
+    "updated_at": 1780773240.8985236
   }
 }
