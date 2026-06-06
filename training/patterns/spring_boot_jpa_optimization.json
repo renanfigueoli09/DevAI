@@ -1,0 +1,17 @@
+{
+  "search:spring-boot+jpa-optimization:spring boot jpa performance tu": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Boot 3.0, JPA 2.2, Hibernate 6.0.\n- **Key Config Options**:\n  - `spring.jpa.open-in-view: false`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n- **Performance Tuning Tips**:\n  - Avoid N+1 queries by using `@BatchSize` and explicit fetching.\n  - Use pagination for large datasets.\n  - Analyze SQL logs to identify bottlenecks.\n  - Enable second-level cache for read-heavy applications.",
+    "source": "web_search",
+    "updated_at": 1780789227.661648
+  },
+  "search:spring-boot+jpa-optimization:spring boot jpa performance tu_ex": {
+    "content": "- Use `@BatchSize` annotation to configure batch size in Spring Data JPA repositories.\n- Optimize queries by using JPQL or native SQL for complex operations.\n- Implement pagination and sorting in repository methods to reduce data fetched at once.\n- Use `@Transactional` with appropriate isolation levels to manage transaction scope efficiently.\n- Monitor and analyze query performance using tools like Hibernate's Query Profiler.\n- Adjust JVM heap size based on application requirements and available resources.\n- Enable second-level cache for frequently accessed entities to reduce database hits.\n- Regularly update Spring Boot, JPA, and Hibernate libraries to benefit from performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780789230.620998
+  },
+  "search:spring-boot+jpa-optimization:spring boot jpa query optimiza": {
+    "content": "- Use `@Query` annotation for custom JPQL or native SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Apply fetch joins to reduce N+1 query problems.\n- Utilize `@EntityGraph` for efficient data fetching.\n- Enable query hints with `@QueryHints` for specific database optimizations.\n- Use `@BatchSize` on entities for batch loading.\n- Optimize sorting by using indexed columns.\n- Consider using Spring Data JPA's `@Modifying` and `@Transactional` annotations for bulk operations.\n- Regularly update Spring Boot and JPA to the latest versions for performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780789240.0111337
+  }
+}
