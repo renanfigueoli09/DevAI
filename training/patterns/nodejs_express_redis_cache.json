@@ -2,21 +2,21 @@
   "search:nodejs-express-redis-cache:node.js express redis cache im": {
     "content": "- Install Node.js and npm.\n- Use `npm install express redis axios`.\n- Create an Express server.\n- Configure Redis client using `redis.createClient()`.\n- Implement caching logic in routes:\n  - Check cache for data.\n  - If not found, fetch from API and store in cache.\n  - Return data from cache if available.\n- Set cache expiration time with `.expire()` method.\n- Use TypeScript for type safety (optional).\n- Deploy Redis locally or use a managed service.",
     "source": "web_search",
-    "updated_at": 1780762590.232406
+    "updated_at": 1780763005.2912824
   },
   "search:nodejs-express-redis-cache:node.js express redis cache im_ex": {
     "content": "- **Install Redis**: `sudo apt-get install redis-server`\n- **Node.js Version**: Use LTS version, e.g., `node --version v16.14.2`\n- **Express Version**: Install via npm, e.g., `npm install express@^4.17.1`\n- **Redis Client**: Install `redis` package, e.g., `npm install redis@^4.0.3`\n- **Axios for API Calls**: Install `axios`, e.g., `npm install axios@^0.21.1`\n- **Connect to Redis**: Use `const client = require('redis').createClient();`\n- **Cache Data**: Store data in Redis, e.g., `client.setex('key', 3600, 'value');`\n- **Retrieve Data**: Fetch data from Redis, e.g., `client.get('key', (err, reply) => { ... });`\n- **Error Handling**: Implement error handling for Redis operations.\n- **Express Middleware**: Use middleware to cache responses, e.g., `app.use(require('express-cache-middleware'));`",
     "source": "code_example",
-    "updated_at": 1780762590.89113
+    "updated_at": 1780763006.0590255
   },
   "search:nodejs-express-redis-cache:optimizing node.js express app": {
     "content": "- Install Redis using `sudo apt-get install redis-server` on Ubuntu.\n- Use `npm install express redis` to add Express and Redis packages.\n- Configure Redis client in your app with:\n  ```javascript\n  const redis = require('redis');\n  const client = redis.createClient();\n  ```\n- Implement caching middleware:\n  ```javascript\n  app.use((req, res, next) => {\n    const key = req.originalUrl;\n    client.get(key, (err, reply) => {\n      if (reply !== null) {\n        res.send(reply);\n      } else {\n        res.on('finish', () => {\n          client.setex(key, 3600, res.body); // Cache for 1 hour\n        });\n        next();\n      }\n    });\n  });\n  ```\n- Use `client.setex` to set cache with expiration time.\n- Monitor Redis performance using `redis-cli --stat`.\n- Update Express and Redis packages regularly:\n  ```bash\n  npm update express redis\n  ```\n- Key config options: `host`, `port`, `password`, `db`.",
     "source": "web_search",
-    "updated_at": 1780762591.4876032
+    "updated_at": 1780763006.739108
   },
   "search:nodejs-express-redis-cache:optimizing node.js express app_ex": {
     "content": "- Install Redis: `sudo apt-get install redis-server`\n- Start Redis: `redis-server`\n- Connect to Redis: `redis-cli`\n- Node.js package for Redis: `npm install redis`\n- Key config options:\n  - `host`: Redis server host (default is `127.0.0.1`)\n  - `port`: Redis server port (default is `6379`)\n  - `password`: Redis password if set\n- Example of setting a cache in Node.js using Redis:\n  ```javascript\n  const redis = require('redis');\n  const client = redis.createClient({ host: 'localhost', port: 6379 });\n\n  client.set('myKey', 'myValue', redis.print);\n  ```\n- Example of getting a cache from Node.js using Redis:\n  ```javascript\n  client.get('myKey', (err, reply) => {\n    if (err) throw err;\n    console.log(reply); // Output: myValue\n  });\n  ```\n- Use `redis-cli` to monitor and manage your Redis server.\n- For production environments, consider using Redis Cluster for high availability and scalability.",
     "source": "code_example",
-    "updated_at": 1780762592.1123111
+    "updated_at": 1780763007.5081775
   }
 }

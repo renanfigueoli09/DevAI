@@ -22,21 +22,21 @@
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access": {
     "content": "- Use `hibernate.jdbc.batch_size` in Hibernate configuration to optimize batch processing.\n- Implement connection pooling using libraries like HikariCP or Apache Commons DBCP for efficient database access.\n- Enable lazy loading with Entity Framework by setting `LazyLoadingEnabled = true` in the DbContext options.\n- Minimize queries by using criteria API, HQL, or native SQL instead of multiple small queries.\n- Use second-level caching in Hibernate to reduce database hits.\n- Optimize query performance by indexing frequently queried columns.\n- Regularly monitor and analyze database access patterns with tools like JProfiler or VisualVM.\n- Update Hibernate and Entity Framework to the latest versions for bug fixes and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780762523.027314
+    "updated_at": 1780762928.1513164
   },
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access_ex": {
     "content": "- Use Django's `select_related` and `prefetch_related` to reduce database queries.\n- Implement caching using Redis or Ehcache for frequently accessed data.\n- Configure connection pooling in Spring Boot with HikariCP.\n- Set the `spring.datasource.hikari.maximum-pool-size` to an appropriate value based on your application load.\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations in Spring Data JPA for caching management.\n- Monitor database access patterns using tools like Django Debug Toolbar or Spring Boot Actuator.\n- Regularly update frameworks and libraries to benefit from performance improvements.",
     "source": "code_example",
-    "updated_at": 1780762523.6477425
+    "updated_at": 1780762929.327417
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies": {
     "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Check the official documentation or use package managers like `npm install redis@latest`.\n- **Key Config Options**:\n  - `maxmemory`: Sets the maximum memory that Redis can use.\n  - `maxmemory-policy`: Defines the eviction policy when maxmemory is reached.",
     "source": "web_search",
-    "updated_at": 1780762524.2689648
+    "updated_at": 1780762930.3075614
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.Extensions.Caching.Memory`\n  - `dotnet new console -n CacheExample`\n\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Microsoft.Extensions.Caching.Memory: 7.0\n\n- **Key Config Options**:\n  - `CacheEntryOptions` for setting expiration times, sliding expiration, and absolute expiration.\n  - `MemoryCache` for managing cache entries programmatically.\n  - `IMemoryCache` interface for caching data in memory.\n\n- **Code Example**:\n  ```csharp\n  using Microsoft.Extensions.Caching.Memory;\n  using System;\n\n  class Program\n  {\n      static void Main(string[] args)\n      {\n          var cache = new MemoryCache(new MemoryCacheOptions());\n\n          // Set a cache entry with absolute expiration\n          cache.Set(\"key\", \"value\", new MemoryCacheEntryOptions()\n              .SetAbsoluteExpiration(TimeSpan.FromSeconds(60)));\n\n          // Get the cache entry\n          if (cache.TryGetValue(\"key\", out string value))\n          {\n              Console.WriteLine(value);\n          }\n      }\n  }\n  ```",
     "source": "code_example",
-    "updated_at": 1780762524.8442028
+    "updated_at": 1780762931.2496085
   }
 }
