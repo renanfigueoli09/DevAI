@@ -2,11 +2,11 @@
   "search:fastapi+celery-rabbitmq:celery rabbitmq for distribute": {
     "content": "- **Install Celery and RabbitMQ**:\n  ```bash\n  pip install celery\n  sudo apt-get install rabbitmq-server\n  ```\n\n- **Configure Celery with RabbitMQ**:\n  - Set `broker_url` to `amqp://localhost`\n  - Set `result_backend` to `rpc://localhost`\n\n- **Create a Celery app**:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='amqp://localhost', backend='rpc://localhost')\n  ```\n\n- **Define a task**:\n  ```python\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n\n- **Run the Celery worker**:\n  ```bash\n  celery -A app worker --loglevel=info\n  ```\n\n- **Call the task asynchronously**:\n  ```python\n  result = add.delay(4, 6)\n  print(result.get(timeout=1))\n  ```\n\n- **Install FastAPI and Uvicorn**:\n  ```bash\n  pip install fastapi uvicorn\n  ```\n\n- **Create a FastAPI app**:\n  ```python\n  from fastapi import FastAPI\n\n  app = FastAPI()\n\n  @app.post(\"/add/\")\n  async def add_numbers(x: int, y: int):\n      result = add.delay(x, y)\n      return {\"task_id\": result.id}\n  ```\n\n- **Run the FastAPI server**:\n  ```bash\n  uvicorn main:app --reload\n  ```\n\n- **Monitor tasks**:\n  - Use Celery Flower for real-time monitoring.\n  - Install and run Flower:\n    ```bash\n    pip install flower\n    celery -A app flower\n    ```\n  - Access Flower at `http://localhost:5555`",
     "source": "web_search",
-    "updated_at": 1780771102.8003893
+    "updated_at": 1780771908.1720679
   },
   "search:fastapi+celery-rabbitmq:celery rabbitmq for distribute_ex": {
     "content": "- **CLI Commands**:\n  - `celery -A app worker --loglevel=info`\n  - `celery -A app beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.87.0\n  - Celery: 5.2.3\n  - RabbitMQ: 3.11.4\n\n- **Key Config Options**:\n  - `app.conf.broker_url = 'amqp://guest@localhost//'`\n  - `app.conf.result_backend = 'rpc://'`",
     "source": "code_example",
-    "updated_at": 1780771103.4896908
+    "updated_at": 1780771908.9604304
   }
 }
