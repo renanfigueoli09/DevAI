@@ -18,5 +18,10 @@
     "content": "- Use Spring Boot Actuator to monitor application performance.\n- Implement caching strategies using @Cacheable, @CachePut, and @CacheEvict annotations.\n- Optimize database queries by using JPA's Criteria API or QueryDSL.\n- Enable lazy loading for collections in entities.\n- Configure thread pools with appropriate core and maximum sizes.\n- Use asynchronous programming with CompletableFuture or Spring Task Execution.\n- Minimize the use of blocking I/O operations in critical paths.\n- Monitor and adjust garbage collection settings based on application needs.\n- Regularly update dependencies to the latest versions for performance improvements.",
     "source": "code_example",
     "updated_at": 1780746597.6342928
+  },
+  "search:Performance Optimization - Spring:performance optimization techn": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest Spring Boot version, currently 3.2.x.\n- **Key Config Options**:\n  - `spring.main.lazy-initialization=true`: Enables lazy initialization of beans.\n  - `spring.jpa.hibernate.ddl-auto=none`: Disables auto-generation of DDL to improve performance.\n  - `server.connection-timeout=5000`: Sets the connection timeout for the server.",
+    "source": "web_search",
+    "updated_at": 1780746615.3315287
   }
 }
