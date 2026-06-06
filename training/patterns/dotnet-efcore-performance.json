@@ -1,0 +1,22 @@
+{
+  "search:dotnet+efcore-performance:entity framework core performa": {
+    "content": "- **Latest Version**: Entity Framework Core 7.0 as of my last update.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `MaxBatchSize` to control the number of entities processed in a single batch.\n  - `AsSplitQueries` for splitting large queries into multiple smaller ones.\n\n- **Performance Tuning Tips**:\n  - Use `Include` for eager loading instead of multiple queries.\n  - Optimize database indexes and schema design.\n  - Consider using raw SQL queries for complex operations.",
+    "source": "web_search",
+    "updated_at": 1780712372.4069233
+  },
+  "search:dotnet+efcore-performance:entity framework core performa_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n\n- **Latest Versions**:\n  - Entity Framework Core: Version 6.0 and later.\n  - .NET SDK: Latest stable version recommended for compatibility.\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` to improve performance on read-only operations.\n  - Indexes and eager loading to optimize data retrieval.",
+    "source": "code_example",
+    "updated_at": 1780712375.7110841
+  },
+  "search:dotnet+efcore-performance:optimizing entity framework co": {
+    "content": "- Use `dotnet ef` CLI for Entity Framework Core operations.\n- Ensure latest EF Core version to benefit from performance improvements and bug fixes.\n- Configure lazy loading with `.Include()` or eager loading with `.Load()`.\n- Optimize queries by using `.AsNoTracking()` when read-only data is accessed.\n- Implement pagination using `.Skip()` and `.Take()` for large datasets.\n- Use `async` methods like `.ToListAsync()` to avoid blocking the main thread.\n- Configure indexes in your database schema to speed up query performance.\n- Avoid N+1 queries by preloading related entities with `.Include()`.\n- Monitor query execution plans with SQL Server Profiler or EF Core's logging capabilities.\n- Regularly review and optimize LINQ queries for better performance.",
+    "source": "web_search",
+    "updated_at": 1780712385.887268
+  },
+  "search:dotnet+efcore-performance:optimizing entity framework co_ex": {
+    "content": "- Use `QueryTrackingBehavior.NoTracking` to improve performance when entities are not modified.\n- Apply `.AsNoTracking()` in your LINQ queries to avoid tracking changes.\n- Utilize `Include` and `ThenInclude` for eager loading, but be cautious of the N+1 query issue.\n- Implement batching with `FromSqlRaw` or `FromSqlInterpolated` for large datasets.\n- Consider using `AsSplitQuery()` to split related data queries into multiple smaller queries.\n- Regularly update Entity Framework Core to the latest version for performance improvements and bug fixes.\n- Monitor database execution plans to identify bottlenecks and optimize accordingly.\n- Use `async` methods (`ToListAsync`, `FirstOrDefaultAsync`) for non-blocking operations.\n- Implement caching strategies, such as in-memory caching or distributed caching, to reduce database load.",
+    "source": "code_example",
+    "updated_at": 1780712395.1456678
+  }
+}

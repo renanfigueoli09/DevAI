@@ -1,0 +1,22 @@
+{
+  "search:spring+kafka-security:kafka security in spring appli": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Apache Kafka: 3.4.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.security.protocol`: Set to `SSL` for secure connections.\n  - `spring.kafka.ssl.truststore-location`: Path to the truststore file.\n  - `spring.kafka.ssl.truststore-password`: Password for the truststore.",
+    "source": "web_search",
+    "updated_at": 1780712483.4552917
+  },
+  "search:spring+kafka-security:kafka security in spring appli_ex": {
+    "content": "- Ensure dependencies in `pom.xml` or `build.gradle`:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.kafka</groupId>\n      <artifactId>spring-kafka</artifactId>\n  </dependency>\n  ```\n  ```groovy\n  implementation 'org.springframework.kafka:spring-kafka'\n  ```\n\n- Use Spring Security for Kafka integration.\n- Configure SSL/TLS in `application.properties`:\n  ```properties\n  spring.kafka.producer.ssl.key-store=/path/to/keystore.jks\n  spring.kafka.producer.ssl.key-store-password=password\n  spring.kafka.producer.ssl.trust-store=/path/to/truststore.jks\n  spring.kafka.producer.ssl.trust-store-password=password\n  ```\n\n- Use mutual TLS for enhanced security:\n  ```properties\n  spring.kafka.consumer.ssl.key-store=/path/to/keystore.jks\n  spring.kafka.consumer.ssl.key-store-password=password\n  spring.kafka.consumer.ssl.trust-store=/path/to/truststore.jks\n  spring.kafka.consumer.ssl.trust-store-password=password\n  ```\n\n- Ensure Kafka broker is configured for SSL/TLS:\n  ```properties\n  listeners=ssl://localhost:9093\n  ssl.keystore.location=/path/to/keystore.jks\n  ssl.keystore.password=password\n  ssl.key.password=password\n  ssl.truststore.location=/path/to/truststore.jks\n  ssl.truststore.password=password\n  ```\n\n- Use the latest versions of Spring Boot and Kafka for compatibility.",
+    "source": "code_example",
+    "updated_at": 1780712495.8452637
+  },
+  "search:spring+kafka-security:securing kafka with spring 202": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Spring Boot: 3.1.5\n\n- **Key Config Options**:\n  - SSL Configuration:\n    ```properties\n    spring.kafka.producer.ssl.key-store-location=classpath:keystore.jks\n    spring.kafka.producer.ssl.key-store-password=password\n    spring.kafka.producer.ssl.key-password=password\n    spring.kafka.producer.ssl.trust-store-location=classpath:truststore.jks\n    spring.kafka.producer.ssl.trust-store-password=password\n    ```\n  - SASL Configuration:\n    ```properties\n    spring.kafka.producer.sasl.mechanism=PLAIN\n    spring.kafka.producer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username=\"admin\" password=\"admin-secret\";\n    ```\n  - ACLs (Access Control Lists):\n    ```bash\n    kafka-acls.sh --authorizer-properties zookeeper.connect=localhost:2181 --add --allow-principal User:alice --operation Read --topic my-topic\n    ```",
+    "source": "web_search",
+    "updated_at": 1780712511.7700076
+  },
+  "search:spring+kafka-security:securing kafka with spring 202_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -d wurstmeister/kafka`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.4\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: kafka:9092\n  - `spring.kafka.consumer.group-id`: my-group\n  - `spring.kafka.security.sasl.mechanism`: PLAIN\n  - `spring.kafka.security.protocol`: SASL_PLAINTEXT",
+    "source": "code_example",
+    "updated_at": 1780712517.4458237
+  }
+}
