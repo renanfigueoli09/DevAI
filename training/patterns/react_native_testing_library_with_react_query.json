@@ -2,11 +2,11 @@
   "search:React Native Testing Library with React Query:react native testing library": {
     "content": "- **Install React Native Testing Library**: `npm install @testing-library/react-native`\n- **CLI Commands**:\n  - `react-test-renderer`: For rendering components to JSON.\n  - `jest`: For running tests.\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Add setup files for testing environment.\n  - `testMatch`: Specify test file patterns.\n- **Latest Version**: Check [npm page](https://www.npmjs.com/package/@testing-library/react-native) for the latest version.\n- **Example Test File**:\n  ```javascript\n  import React from 'react';\n  import { render, screen } from '@testing-library/react-native';\n  import App from './App';\n\n  test('renders learn react link', () => {\n    render(<App />);\n    const linkElement = screen.getByText(/learn react/i);\n    expect(linkElement).toBeInTheDocument();\n  });\n  ```",
     "source": "web_search",
-    "updated_at": 1780783968.1731899
+    "updated_at": 1780785348.1067476
   },
   "search:React Native Testing Library with React Query:react native testing library_ex": {
     "content": "- Install dependencies: `npm install --save-dev react-test-renderer @testing-library/react-native`\n- Use `@testing-library/react-native` for testing React Native components.\n- Example component test:\n  ```jsx\n  import { render, fireEvent } from '@testing-library/react-native';\n  import MyComponent from './MyComponent';\n\n  test('renders correctly', () => {\n    const { getByText } = render(<MyComponent />);\n    expect(getByText('Hello World')).toBeTruthy();\n  });\n\n  test('handles button press', () => {\n    const mockFunction = jest.fn();\n    const { getByText } = render(<MyComponent onPress={mockFunction} />);\n    fireEvent.press(getByText('Press Me'));\n    expect(mockFunction).toHaveBeenCalled();\n  });\n  ```\n- Key config options: None specific to `@testing-library/react-native` in the provided examples.",
     "source": "code_example",
-    "updated_at": 1780783969.186709
+    "updated_at": 1780785349.0798953
   }
 }

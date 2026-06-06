@@ -2,11 +2,11 @@
   "search:nextjs-serverless-caching:serverless next.js performance": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app --typescript`\n  - `npm run build` for building the Next.js app.\n  - `npm start` to start the development server.\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Serverless Framework: 2.40.0\n\n- **Key Config Options**:\n  - `serverless.yml`: Configuration file for defining serverless functions and routes.\n  - `next.config.js`: Configuration file for customizing the Next.js build process.\n\n- **Performance Optimization Tips**:\n  - Use static generation (`getStaticProps`) for pages that don't require server-side rendering.\n  - Implement lazy loading for images and components.\n  - Minimize HTTP requests by combining CSS and JavaScript files.",
     "source": "web_search",
-    "updated_at": 1780783771.2913902
+    "updated_at": 1780785165.0309112
   },
   "search:nextjs-serverless-caching:serverless next.js performance_ex": {
     "content": "- **CLI Commands**:\n  - `next build`: Builds the Next.js application.\n  - `next start`: Starts the production server.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Vercel: Latest stable version\n\n- **Key Config Options**:\n  - `next.config.js`: Configuration file for customizing build and deployment settings.\n  - `images`: Optimizes image loading with automatic resizing and optimization.\n  - `reactStrictMode`: Enables React's strict mode for better development practices.",
     "source": "code_example",
-    "updated_at": 1780783772.490995
+    "updated_at": 1780785165.9109077
   }
 }

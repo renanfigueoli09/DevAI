@@ -2,31 +2,31 @@
   "search:Next.js + Supabase Authentication:supabase authentication with n": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase Client Library: 2.0\n\n- **Key Config Options**:\n  - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL.\n  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anon key for public access.\n  - `supabaseUrl`: URL of your Supabase project.\n  - `supabaseAnonKey`: Anon key for anonymous access.",
     "source": "web_search",
-    "updated_at": 1780783803.4762158
+    "updated_at": 1780785196.8607037
   },
   "search:Next.js + Supabase Authentication:supabase authentication with n_ex": {
     "content": "- Install Supabase client library using npm: `npm install @supabase/supabase-js`\n- Create a Supabase project and get your API keys from the Supabase dashboard.\n- Initialize Supabase in your Next.js project by creating a file like `utils/supabaseClient.js`:\n  ```javascript\n  import { createClient } from '@supabase/supabase-js';\n\n  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;\n  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;\n\n  export const supabase = createClient(supabaseUrl, supabaseAnonKey);\n  ```\n- Set environment variables in your `.env.local` file:\n  ```\n  NEXT_PUBLIC_SUPABASE_URL=your-supabase-url\n  NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key\n  ```\n- Use Supabase client in your Next.js pages or API routes to perform authentication and data operations.\n- For server-side rendering, use the `supabase` instance directly in your page components or API handlers.\n- For handling user sessions, consider using NextAuth.js with Supabase for a more robust solution.",
     "source": "code_example",
-    "updated_at": 1780783804.530358
+    "updated_at": 1780785197.7944577
   },
   "search:Next.js + Supabase Authentication:jwt token management in next.j": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-jwt-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 15.x\n  - NextAuth.js: latest\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for authentication providers and options.\n  - `JWT_SECRET`: Environment variable for JWT signing.\n  - `session.maxAge`: Duration of the session in seconds.",
     "source": "web_search",
-    "updated_at": 1780783805.5816712
+    "updated_at": 1780785198.7502825
   },
   "search:Next.js + Supabase Authentication:jwt token management in next.j_ex": {
     "content": "- Use `npm install next-auth` to install the latest version of NextAuth.js.\n- Configure JWT in your `next-auth.config.ts`:\n  ```typescript\n  import NextAuth from \"next-auth\";\n  import CredentialsProvider from \"next-auth/providers/credentials\";\n\n  export default NextAuth({\n    providers: [\n      CredentialsProvider({\n        // ... provider options\n      }),\n    ],\n    session: {\n      strategy: \"jwt\",\n    },\n    jwt: {\n      secret: process.env.JWT_SECRET,\n    },\n  });\n  ```\n- Set `JWT_SECRET` in your environment variables for security.\n- Use the `getToken` function to access JWT token in your Next.js pages or API routes:\n  ```typescript\n  import { getToken } from \"next-auth/jwt\";\n\n  export default async function handler(req, res) {\n    const token = await getToken({ req });\n    if (token) {\n      // Token is valid, proceed with the request\n    } else {\n      // Token is invalid or missing, redirect to login page\n    }\n  }\n  ```\n- For client-side authentication, use `useSession` hook from NextAuth.js:\n  ```typescript\n  import { useSession } from \"next-auth/react\";\n\n  function MyComponent() {\n    const { data: session, status } = useSession();\n\n    if (status === \"loading\") return <p>Loading...</p>;\n    if (!session) return <a href=\"/api/auth/signin\">Sign in</a>;\n\n    return (\n      <>\n        Signed in as {session.user.email} <br />\n        <button onClick={() => signOut()}>Sign out</button>\n      </>\n    );\n  }\n  ```\n- Ensure to handle token expiration and refresh logic appropriately.",
     "source": "code_example",
-    "updated_at": 1780783806.7093353
+    "updated_at": 1780785199.63997
   },
   "search:Next.js + Supabase Authentication:secure api routes in next.js": {
     "content": "- Use `next-auth.js` for authentication.\n- Install via npm: `npm install next-auth@latest`.\n- Configure in `pages/api/auth/[...nextauth].js`.\n- Implement middleware for API routes:\n  ```bash\n  // pages/api/middleware.js\n  import { NextResponse } from 'next/server';\n  export function middleware(request) {\n    const token = request.cookies.get('token');\n    if (!token) return new NextResponse(null, { status: 401 });\n    return NextResponse.next();\n  }\n  ```\n- Use `getSession()` or `getToken()` in API routes:\n  ```javascript\n  // pages/api/protected.js\n  import { getSession } from 'next-auth/react';\n\n  export default async function handler(req, res) {\n    const session = await getSession({ req });\n    if (!session) return res.status(401).json({ message: 'Unauthorized' });\n    res.json({ user: session.user });\n  }\n  ```\n- Protect pages using `useSession`:\n  ```javascript\n  // pages/protected.js\n  import { useSession } from 'next-auth/react';\n\n  export default function ProtectedPage() {\n    const { data: session, status } = useSession();\n    if (status === \"loading\") return <p>Loading...</p>;\n    if (!session) return <p>Access Denied</p>;\n    return <div>Welcome {session.user.name}</div>;\n  }\n  ```\n- Ensure Next.js version is up to date for security patches.",
     "source": "web_search",
-    "updated_at": 1780783807.7994545
+    "updated_at": 1780785200.632331
   },
   "search:Next.js + Supabase Authentication:secure api routes in next.js_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-secure-api`\n  - `npm run dev`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n\n- **Key Config Options**:\n  - Middleware for authentication (`middleware.js`)\n  - JWT (JSON Web Tokens) for token validation\n  - Environment variables for secret keys",
     "source": "code_example",
-    "updated_at": 1780783808.8798206
+    "updated_at": 1780785203.0708601
   }
 }

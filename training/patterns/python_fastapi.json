@@ -12,6 +12,6 @@
   "qa:fastapi-motor-not-pymongo": {
     "content": "FastAPI MongoDB: use Motor (async) NOT pymongo (sync)\nCORRECT: from motor.motor_asyncio import AsyncIOMotorClient\nWRONG:   from pymongo import MongoClient\nMotor is async-compatible with FastAPI async routes",
     "source": "critical_pattern",
-    "updated_at": 1780785022.293115
+    "updated_at": 1780785484.1453576
   }
 }
