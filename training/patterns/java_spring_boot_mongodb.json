@@ -2,21 +2,21 @@
   "search:java-spring-boot-mongodb:spring boot mongodb integratio": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mongoimport --db <database_name> --collection <collection_name> --file <json_file_path>` to import data into MongoDB.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data MongoDB: 4.0.x\n  - MongoDB Java Driver: 4.5.x\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.data.mongodb.database`: Name of the database to connect to.\n  - `spring.data.mongodb.host`: Hostname or IP address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number on which MongoDB is running.",
     "source": "web_search",
-    "updated_at": 1780779970.4809418
+    "updated_at": 1780780776.0430312
   },
   "search:java-spring-boot-mongodb:spring boot mongodb integratio_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` or `gradle build`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - MongoDB Driver: 4.x\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.host`: Host address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",
     "source": "code_example",
-    "updated_at": 1780779971.4974997
+    "updated_at": 1780780776.9315734
   },
   "search:java-spring-boot-mongodb:spring data mongodb crud opera": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `mvn spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - MongoDB Driver: 4.6.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.host`: Host address of MongoDB server.\n  - `spring.data.mongodb.port`: Port number of MongoDB server.",
     "source": "web_search",
-    "updated_at": 1780779972.3900864
+    "updated_at": 1780780777.876298
   },
   "search:java-spring-boot-mongodb:spring data mongodb crud opera_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mongoimport --db yourDatabaseName --collection yourCollectionName --file path/to/your/json/file.json` for importing data into MongoDB.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - MongoDB Java Driver: 4.5.2\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Specifies the MongoDB connection URI.\n  - `spring.data.mongodb.database`: Specifies the default database name.\n  - `spring.data.mongodb.host`: Specifies the MongoDB host address.\n  - `spring.data.mongodb.port`: Specifies the MongoDB port number.",
     "source": "code_example",
-    "updated_at": 1780779973.3335764
+    "updated_at": 1780780778.854096
   }
 }

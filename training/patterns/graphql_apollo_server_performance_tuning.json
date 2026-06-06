@@ -2,11 +2,11 @@
   "search:GraphQL + Apollo Server Performance Tuning:apollo server performance opti": {
     "content": "- **Latest Version**: Apollo Server 4\n- **Key Config Options**:\n  - `cacheControl`\n  - `dataLoader`\n  - `subscriptions`\n  - `observability`\n- **CLI Commands**:\n  - `apollo service:push --endpoint=https://your-endpoint.com/graphql`\n  - `apollo client:create --name=MyClient`\n- **Optimization Techniques**:\n  - Use DataLoader for batching and caching\n  - Implement Apollo Cache Control for efficient data fetching\n  - Enable subscriptions for real-time updates\n  - Utilize observability tools for performance monitoring",
     "source": "web_search",
-    "updated_at": 1780779870.5335283
+    "updated_at": 1780780677.4704022
   },
   "search:GraphQL + Apollo Server Performance Tuning:apollo server performance opti_ex": {
     "content": "- **CLI Commands**: Use `npx create-apollo-server` to set up a new Apollo Server project.\n- **Latest Versions**: Ensure using the latest version of Apollo Server, currently at v3.x.\n- **Key Config Options**:\n  - `cache`: Configure caching with options like `ttl` (time-to-live) and `maxSize`.\n  - `introspection`: Enable or disable introspection based on environment.\n  - `playground`: Enable or customize the GraphQL Playground for development.",
     "source": "code_example",
-    "updated_at": 1780779871.453584
+    "updated_at": 1780780678.4514472
   }
 }

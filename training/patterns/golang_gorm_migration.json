@@ -1,0 +1,7 @@
+{
+  "search:golang-gorm-migration:gorm migration best practices ": {
+    "content": "- Use `go run github.com/gormio/gorm/cmd/migrate` for running migrations.\n- Ensure your Go version is up to date, ideally using the latest LTS release.\n- Configure GORM with `gorm.Config{...}` for advanced settings like logging and dialect selection.\n- For circular relationships in GORM, use `foreignKeyConstraint: true` in model definitions.\n- Handle migration errors gracefully by implementing retry logic or custom error handling strategies.\n- Consider using Atlas for more robust migration management, especially for complex database schemas.",
+    "source": "web_search",
+    "updated_at": 1780781000.313048
+  }
+}

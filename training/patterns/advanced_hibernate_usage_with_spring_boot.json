@@ -27,16 +27,16 @@
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access_ex": {
     "content": "- Use Django's `select_related` and `prefetch_related` to reduce database queries.\n- Implement caching using Redis or Ehcache for frequently accessed data.\n- Configure connection pooling in Spring Boot with HikariCP.\n- Set the `spring.datasource.hikari.maximum-pool-size` to an appropriate value based on your application load.\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations in Spring Data JPA for caching management.\n- Monitor database access patterns using tools like Django Debug Toolbar or Spring Boot Actuator.\n- Regularly update frameworks and libraries to benefit from performance improvements.",
     "source": "code_example",
-    "updated_at": 1780779777.1209826
+    "updated_at": 1780780584.7365003
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies": {
     "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Check the official documentation or use package managers like `npm install redis@latest`.\n- **Key Config Options**:\n  - `maxmemory`: Sets the maximum memory that Redis can use.\n  - `maxmemory-policy`: Defines the eviction policy when maxmemory is reached.",
     "source": "web_search",
-    "updated_at": 1780779778.064173
+    "updated_at": 1780780585.9083016
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.Extensions.Caching.Memory`\n  - `dotnet new console -n CacheExample`\n\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Microsoft.Extensions.Caching.Memory: 7.0\n\n- **Key Config Options**:\n  - `CacheEntryOptions` for setting expiration times, sliding expiration, and absolute expiration.\n  - `MemoryCache` for managing cache entries programmatically.\n  - `IMemoryCache` interface for caching data in memory.\n\n- **Code Example**:\n  ```csharp\n  using Microsoft.Extensions.Caching.Memory;\n  using System;\n\n  class Program\n  {\n      static void Main(string[] args)\n      {\n          var cache = new MemoryCache(new MemoryCacheOptions());\n\n          // Set a cache entry with absolute expiration\n          cache.Set(\"key\", \"value\", new MemoryCacheEntryOptions()\n              .SetAbsoluteExpiration(TimeSpan.FromSeconds(60)));\n\n          // Get the cache entry\n          if (cache.TryGetValue(\"key\", out string value))\n          {\n              Console.WriteLine(value);\n          }\n      }\n  }\n  ```",
     "source": "code_example",
-    "updated_at": 1780779779.0565612
+    "updated_at": 1780780586.9230044
   }
 }

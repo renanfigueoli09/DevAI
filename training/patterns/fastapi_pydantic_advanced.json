@@ -2,21 +2,21 @@
   "search:fastapi+pydantic-advanced:fastapi pydantic advanced usag": {
     "content": "- **CLI Commands**: `fastapi create` to scaffold a new FastAPI project.\n- **Latest Versions**: Ensure using the latest FastAPI and Pydantic by running `pip install fastapi pydantic --upgrade`.\n- **Key Config Options**:\n  - `app = FastAPI()` initializes a FastAPI application instance.\n  - `pydantic_settings` for managing settings with validation.\n  - `dependencies` for dependency injection in FastAPI routes.",
     "source": "web_search",
-    "updated_at": 1780780034.6327882
+    "updated_at": 1780780836.796066
   },
   "search:fastapi+pydantic-advanced:fastapi pydantic advanced usag_ex": {
     "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app in development mode.\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Pydantic: v1.10.7\n\n- **Key Config Options**:\n  - `app = FastAPI()` to create a new FastAPI application instance.\n  - `@app.get(\"/\")` to define a GET endpoint.\n  - `Pydantic` models for data validation and settings management.\n  - Dependency injection with `Depends()`.\n  - Middleware for request/response handling.",
     "source": "code_example",
-    "updated_at": 1780780035.8036082
+    "updated_at": 1780780837.6861396
   },
   "search:fastapi+pydantic-advanced:pydantic validation strategies": {
     "content": "- **CLI Commands**: Use `pip install fastapi pydantic` to install FastAPI and Pydantic.\n- **Latest Versions**: As of my last update, the latest version of FastAPI is 0.98.0 and Pydantic is 1.10.7.\n- **Key Config Options**:\n  - `pydantic_settings`: For managing settings with validation.\n  - `Field` from Pydantic for specifying field types and constraints.\n  - `validator` decorator to add custom validators to models.\n  - `WrapValidator` for adding context to validation in FastAPI.",
     "source": "web_search",
-    "updated_at": 1780780036.9494593
+    "updated_at": 1780780838.6536005
   },
   "search:fastapi+pydantic-advanced:pydantic validation strategies_ex": {
     "content": "- Use `fastapi` version 0.85.0 or later.\n- Install `pydantic` using pip: `pip install pydantic`.\n- Create a FastAPI app instance: `app = FastAPI()`.\n- Define Pydantic models for data validation and settings management.\n- Use decorators like `@app.post`, `@app.get`, etc., to define API endpoints.\n- Handle exceptions with `HTTPException` for custom error responses.\n- Configure the application using environment variables or a configuration file.\n- Utilize FastAPI's built-in support for automatic documentation generation.",
     "source": "code_example",
-    "updated_at": 1780780038.0846198
+    "updated_at": 1780780839.5721955
   }
 }
