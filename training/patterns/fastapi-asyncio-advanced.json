@@ -1,0 +1,32 @@
+{
+  "search:fastapi+asyncio-advanced:fastapi asyncio advanced concu": {
+    "content": "- Use `uvicorn` as your ASGI server for FastAPI.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- For concurrency, use `asyncio` and `task groups` to manage tasks efficiently.\n- Implement semaphore rate limiting to control concurrent requests.\n- Utilize streaming techniques for large data responses.\n- Configure Uvicorn with `--workers=4` for better performance in production.\n- Use `FastAPI`'s built-in dependency injection for managing state across requests.\n- Monitor and tune your application using tools like Prometheus and Grafana.\n- Consider using a load balancer to distribute traffic evenly across multiple instances.",
+    "source": "web_search",
+    "updated_at": 1780723495.5943365
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio advanced concu_ex": {
+    "content": "- **CLI Commands**: `uvicorn main:app --host 0.0.0.0 --port 8000`\n- **Latest Versions**: FastAPI v0.96.0, AnyIO v3.5.0\n- **Key Config Options**:\n  - `max_connections`: Maximum number of simultaneous connections.\n  - `max_keep_alive_connections`: Maximum number of simultaneous keep-alive connections.\n  - `reload`: Automatically reload the server on code changes (development only).",
+    "source": "code_example",
+    "updated_at": 1780723499.9577174
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio performance op": {
+    "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --reload`\n  - `pip install fastapi[all]`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n\n- **Key Config Options**:\n  - `asyncio.run(app)`\n  - `app.state`\n  - `Depends` for dependency injection",
+    "source": "web_search",
+    "updated_at": 1780723505.7512
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio performance op_ex": {
+    "content": "- Use `fastapi` version 0.98.0 or later.\n- Employ `asyncio.to_thread()` for running synchronous ORM code in a separate thread.\n- Implement the FastAPI event loop model to understand non-blocking operations.\n- Keep the event loop responsive by avoiding blocking calls within it.\n- Utilize dependency injection for managing resources efficiently.\n- Optimize database queries using SQLAlchemy's async extension.\n- Enable caching mechanisms like Redis for reducing database load.\n- Monitor performance with tools such as `uvicorn` and `fastapi-middleware`.\n- Regularly update FastAPI and its dependencies to benefit from performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780723511.5253513
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio error handling": {
+    "content": "- Use `uvicorn` for running FastAPI applications.\n- Ensure all exceptions are caught and handled gracefully using try-except blocks.\n- Utilize FastAPI's built-in error handling capabilities to return detailed validation errors.\n- Implement custom exception handlers for specific error types.\n- Use `async def` functions for asynchronous operations to improve performance.\n- Configure rate limiting using middleware or third-party libraries.\n- Perform integration tests before production deployment to verify endpoint behavior and error handling.\n- Employ Pydantic models for data validation and serialization.\n- Keep FastAPI and its dependencies up-to-date with the latest versions.",
+    "source": "web_search",
+    "updated_at": 1780723516.7594154
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio error handling_ex": {
+    "content": "- Use `uvicorn` for running FastAPI applications.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- Set up an asynchronous test client with httpx: `httpx.AsyncClient()`.\n- Avoid blocking operations in your event loop by using async libraries and functions.\n- Configure FastAPI's dependency injection to manage resources efficiently.\n- Use middleware for cross-cutting concerns like logging and authentication.\n- Implement error handling using Python's exception handling mechanisms within FastAPI routes.\n- Regularly update FastAPI and its dependencies to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780723524.7533693
+  }
+}
