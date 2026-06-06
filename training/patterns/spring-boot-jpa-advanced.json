@@ -1,0 +1,32 @@
+{
+  "search:spring-boot+jpa-advanced:spring boot jpa advanced techn": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Spring Data JPA: 2.7.5\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: `update` or `create-drop`\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details\n  - `spring.jpa.properties.hibernate.dialect`: PostgreSQL dialect",
+    "source": "web_search",
+    "updated_at": 1780717652.031312
+  },
+  "search:spring-boot+jpa-advanced:spring boot jpa advanced techn_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `./mvnw clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n\n- **Key Config Options**:\n  - `spring.datasource.url`\n  - `spring.datasource.username`\n  - `spring.datasource.password`\n  - `spring.jpa.hibernate.ddl-auto`",
+    "source": "code_example",
+    "updated_at": 1780717668.8173282
+  },
+  "search:spring-boot+jpa-advanced:spring boot jpa performance op": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`: For building and testing the project.\n  - `jpa:show-sql=true`: To enable SQL logging for debugging.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Hibernate ORM (JPA Provider): 6.2.0.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`: For batch processing.\n  - `spring.jpa.properties.hibernate.order_inserts=true`: To optimize insert operations.\n  - `spring.jpa.properties.hibernate.order_updates=true`: To optimize update operations.\n  - `spring.jpa.show-sql=true`: Enables SQL logging for debugging.",
+    "source": "web_search",
+    "updated_at": 1780717678.3530822
+  },
+  "search:spring-boot+jpa-advanced:spring boot jpa performance op_ex": {
+    "content": "- Use `@Query` annotation for complex queries to optimize performance.\n- Implement pagination using `Pageable` and `Slice`.\n- Enable lazy loading by default in JPA entities.\n- Configure `spring.jpa.properties.hibernate.jdbc.batch_size` for batch processing.\n- Use `@EntityGraph` for fetching related entities efficiently.\n- Optimize database schema with proper indexing.\n- Monitor application performance using tools like Spring Boot Actuator.\n- Regularly update dependencies to the latest versions for performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780717681.8694677
+  },
+  "search:spring-boot+jpa-advanced:spring boot jpa best practices": {
+    "content": "- Use Spring Boot 3.x for latest features.\n- Implement repository interfaces using JPA annotations like `@Repository`, `@Query`.\n- Configure data source properties in `application.properties` or `application.yml`.\n- Utilize Spring Data JPA's query derivation to simplify custom queries.\n- Optimize database queries by adding indexes and avoiding N+1 issues.\n- Use `@EntityGraph` for efficient entity loading.\n- Implement transaction management using `@Transactional` annotations.\n- Monitor application performance with tools like Spring Boot Actuator.\n- Regularly update dependencies to benefit from security patches and new features.",
+    "source": "web_search",
+    "updated_at": 1780717692.4349165
+  },
+  "search:spring-boot+jpa-advanced:spring boot jpa best practices_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build and test the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`: JDBC URL for the database.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.database-platform`: SQL dialect to use (e.g., `org.hibernate.dialect.PostgreSQLDialect`).\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation strategy (`create`, `update`, `validate`, `none`).",
+    "source": "code_example",
+    "updated_at": 1780717700.2481165
+  }
+}
