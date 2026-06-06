@@ -1,0 +1,52 @@
+{
+  "search:Angular and Material-Design:advanced angular patterns": {
+    "content": "- **CLI Commands**: Use `ng generate` to create components, services, and modules.\n- **Latest Versions**: Angular 16 as of my last update.\n- **Key Config Options**:\n  - `angular.json`: Configure project settings like paths, scripts, and styles.\n  - `app.module.ts`: Define application metadata including declarations, imports, and providers.\n  - `tsconfig.json`: TypeScript configuration for the project.",
+    "source": "web_search",
+    "updated_at": 1780733032.9255075
+  },
+  "search:Angular and Material-Design:advanced angular patterns_ex": {
+    "content": "- Use `ng generate` to create components, services, and other Angular entities.\n- Update Angular CLI to the latest version using `npm install -g @angular/cli`.\n- Configure `tsconfig.json` for TypeScript settings like `strict`, `esModuleInterop`, and `skipLibCheck`.\n- Implement design patterns such as Singleton, Factory, Observer, and Strategy in your components and services.\n- Use Angular's dependency injection (DI) to manage service instances across the application.\n- Apply RxJS operators for asynchronous data handling and state management.\n- Utilize Angular's change detection strategies (`ChangeDetectionStrategy.OnPush`) to optimize performance.\n- Leverage Angular Material or PrimeNG for pre-built UI components following design patterns.\n- Implement lazy loading for modules to improve initial load times.",
+    "source": "code_example",
+    "updated_at": 1780733043.9540281
+  },
+  "search:Angular and Material-Design:material design in angular": {
+    "content": "- Install Angular Material via npm: `npm install @angular/material @angular/cdk @angular/animations`\n- Import BrowserAnimationsModule in your app module.\n- Use the Angular CLI to generate components with Material Design styles: `ng generate component my-component --module=app --style=scss`\n- Key config options include theme configuration and icon font inclusion.\n- Latest versions can be found on [Angular Material GitHub](https://github.com/angular/components).\n- For Material Design 3, follow the official Angular Material documentation for installation and usage.",
+    "source": "web_search",
+    "updated_at": 1780733051.8318934
+  },
+  "search:Angular and Material-Design:material design in angular_ex": {
+    "content": "- Install Angular CLI globally using `npm install -g @angular/cli`\n- Create a new Angular project with Material Design support by running `ng new my-app --routing --style=scss` and then navigate into the project directory.\n- Add Angular Material to your project by executing `ng add @angular/material`.\n- Choose a prebuilt theme or create a custom one during the setup process.\n- Import necessary modules in your app module (e.g., `MatButtonModule`, `MatInputModule`) from `@angular/material`.\n- Use components like `<mat-button>`, `<mat-input>`, etc., in your templates.\n- Update Angular and Material Design libraries to their latest versions using `ng update @angular/core @angular/cli @angular/material` or specific packages if needed.\n- Configure the theme by editing `styles.scss` and importing a prebuilt theme or creating a custom one.\n- Customize components further by overriding styles or using Angular's theming capabilities.",
+    "source": "code_example",
+    "updated_at": 1780733061.9455974
+  },
+  "search:Angular and Material-Design:performance optimization in an": {
+    "content": "- Use `ng build --prod` for production builds.\n- Implement lazy loading with `loadChildren`.\n- Optimize change detection using `ChangeDetectionStrategy.OnPush`.\n- Minimize HTTP requests by combining and minifying files.\n- Utilize Webpack's `SplitChunksPlugin` for code splitting.\n- Enable AOT compilation with `ng build --prod --aot`.\n- Use `ng serve --live-reload=false` to disable live reload during development.\n- Implement server-side rendering (SSR) using Angular Universal.\n- Monitor performance with Chrome DevTools and Angular's built-in profiling tools.",
+    "source": "web_search",
+    "updated_at": 1780733068.5229695
+  },
+  "search:Angular and Material-Design:performance optimization in an_ex": {
+    "content": "- Use Angular CLI version 14 or later.\n- Optimize templates by removing unnecessary bindings and using structural directives wisely.\n- Implement lazy loading for modules to reduce initial load time.\n- Utilize `ngOnDestroy` lifecycle hook to clean up subscriptions and event listeners.\n- Enable ahead-of-time (AOT) compilation with `ng build --prod`.\n- Use Angular's built-in change detection strategies like `ChangeDetectionStrategy.OnPush`.\n- Minimize the use of global variables and services for better performance.\n- Optimize images and assets by compressing them and using lazy loading.\n- Monitor and analyze performance using Angular DevTools or browser developer tools.",
+    "source": "code_example",
+    "updated_at": 1780733079.800969
+  },
+  "search:Angular and Material-Design:testing angular applications": {
+    "content": "- Use `ng test` to run unit tests.\n- Use `ng e2e` for end-to-end testing.\n- Update Angular and its CLI using `npm update @angular/core @angular/cli`.\n- Key config options in `karma.conf.js` include `browsers`, `singleRun`, and `autoWatch`.\n- For integration tests, use `TestBed.configureTestingModule()` to configure the test environment.\n- Use Jasmine for unit testing and Cypress or Protractor for end-to-end testing.",
+    "source": "web_search",
+    "updated_at": 1780733087.6318183
+  },
+  "search:Angular and Material-Design:testing angular applications_ex": {
+    "content": "- **CLI Commands**:\n  - `ng test`: Runs unit tests.\n  - `ng e2e`: Runs end-to-end tests.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.4\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - `karma.conf.js`: Configuration for Karma test runner.\n  - `angular.json`: Project configuration file, including test options.",
+    "source": "code_example",
+    "updated_at": 1780733093.4326265
+  },
+  "search:Angular and Material-Design:internationalization (i18n) in": {
+    "content": "- Use `ng xi18n` to extract i18n messages.\n- Set `i18n.sourceLocale` in `angular.json`.\n- Use `--locale=fr` for French translation.\n- Update Angular CLI and core to latest versions.\n- Configure `src/locale/messages.xlf` for translations.\n- Use `ng serve --configuration=i18n-fr` for serving French version.",
+    "source": "web_search",
+    "updated_at": 1780733102.887477
+  },
+  "search:Angular and Material-Design:internationalization (i18n) in_ex": {
+    "content": "- Use `ng xi18n` to extract i18n messages from your Angular app.\n- Update `angular.json` to include the `i18n` configuration:\n  ```json\n  \"projects\": {\n    \"your-project-name\": {\n      \"architect\": {\n        \"build\": {\n          \"options\": {\n            \"localize\": [\"en\", \"fr\"]\n          }\n        },\n        \"serve\": {\n          \"options\": {\n            \"localize\": [\"en\", \"fr\"]\n          }\n        }\n      }\n    }\n  }\n  ```\n- Use `ng serve --configuration=fr` to run your app in French.\n- Translate messages using a translation service like Transifex or Crowdin.\n- Update the `src/locale/messages.fr.xlf` file with translations.\n- Build the app for production with `ng build --prod --localize`.\n- Deploy the localized version of your app.",
+    "source": "code_example",
+    "updated_at": 1780733110.4711769
+  }
+}

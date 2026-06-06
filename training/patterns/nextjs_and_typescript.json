@@ -1,0 +1,52 @@
+{
+  "search:NextJS and TypeScript:typescript best practices for ": {
+    "content": "- Use `npx create-next-app@latest --typescript` to start a new Next.js project with TypeScript.\n- Update Next.js to the latest version using `npm install next@latest`.\n- Configure `tsconfig.json` for advanced TypeScript settings like `strict`, `esModuleInterop`, and `skipLibCheck`.\n- Utilize `next-env.d.ts` to declare global types in your project.\n- Implement static site generation with `getStaticProps` and dynamic routing with `getServerSideProps`.\n- Use `useEffect` for side effects in functional components, ensuring proper cleanup with `useEffect(() => { ... }, [])`.\n- Employ TypeScript interfaces or types for props and state to enhance code readability and maintainability.\n- Leverage Next.js's built-in API routes for server-side logic without leaving the framework.\n- Regularly update dependencies using `npm outdated` and `npm update`.",
+    "source": "web_search",
+    "updated_at": 1780733118.2687106
+  },
+  "search:NextJS and TypeScript:typescript best practices for _ex": {
+    "content": "- Use `npx create-next-app@latest --typescript` to start a new Next.js project with TypeScript.\n- Update your `tsconfig.json` for optimal configuration:\n  ```json\n  {\n    \"compilerOptions\": {\n      \"target\": \"es5\",\n      \"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],\n      \"allowJs\": true,\n      \"skipLibCheck\": true,\n      \"esModuleInterop\": true,\n      \"allowSyntheticDefaultImports\": true,\n      \"strict\": true,\n      \"forceConsistentCasingInFileNames\": true,\n      \"module\": \"esnext\",\n      \"moduleResolution\": \"node\",\n      \"resolveJsonModule\": true,\n      \"isolatedModules\": true,\n      \"noEmit\": true,\n      \"jsx\": \"preserve\"\n    },\n    \"include\": [\"next-env.d.ts\", \"**/*.ts\", \"**/*.tsx\"],\n    \"exclude\": [\"node_modules\"]\n  }\n  ```\n- Install `@types/react` and `@types/node` for type definitions.\n- Use TypeScript's type system to define props, states, and return types in components.\n- Utilize Next.js API routes with TypeScript by creating files under the `pages/api` directory with `.ts` or `.tsx` extensions.\n- Employ middleware functions in Next.js using TypeScript for server-side logic.\n- Optimize performance by using Server-Side Rendering (SSR) and Static Site Generation (SSG).\n- Implement error handling using TypeScript's union types to manage different error states.\n- Use ESLint with the `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` for linting.\n- Keep your dependencies up-to-date by running `npm update` or `yarn upgrade`.\n- Regularly run type checks with `npx tsc --noEmit` to ensure type safety.",
+    "source": "code_example",
+    "updated_at": 1780733131.3283408
+  },
+  "search:NextJS and TypeScript:advanced nextjs features": {
+    "content": "- **CLI Commands**:\n  - `next dev`: Starts the development server.\n  - `next build`: Builds your application for production.\n  - `next start`: Starts a Node.js server using the built files.\n\n- **Latest Versions**:\n  - Next.js 14: Latest stable version as of my last update. Check [official site](https://nextjs.org/) for updates.\n\n- **Key Config Options**:\n  - `next.config.js`: Configuration file to customize your project.\n    - `output: 'standalone'`: Enables standalone mode for production builds.\n    - `reactStrictMode: true`: Enables React Strict Mode in development.\n    - `images`: Configures image optimization settings.\n\n- **Advanced Features**:\n  - **Server Components**: Enhance performance by splitting components into server and client parts.\n  - **TurboPack**: Faster build times compared to Webpack.\n  - **App Router**: A new router for Next.js that provides more control over routing.\n  - **Revalidation**: Control when static pages are revalidated.\n\n- **Caching**:\n  - `getStaticProps` and `getServerSideProps`: For server-side rendering with caching options.\n  - `revalidate`: Configures how often a page should be revalidated.\n\nThese features and configurations can help developers build more efficient, scalable, and performant Next.js applications.",
+    "source": "web_search",
+    "updated_at": 1780733144.3122761
+  },
+  "search:NextJS and TypeScript:advanced nextjs features_ex": {
+    "content": "- **CLI Commands**: `next build`, `next start`\n- **Latest Versions**: Next.js v13.5, React v18.2\n- **Key Config Options**:\n  - `rewrites`: For URL rewriting.\n  - `headers`: For setting custom headers.\n  - `redirects`: For redirecting requests.\n  - `i18n`: For internationalization support.",
+    "source": "code_example",
+    "updated_at": 1780733154.0213408
+  },
+  "search:NextJS and TypeScript:performance optimization with ": {
+    "content": "- **CLI Commands**:\n  - `next build`: Builds the application.\n  - `next start`: Starts the production server.\n\n- **Latest Versions**:\n  - Next.js 13.x\n\n- **Key Config Options**:\n  - `images: { domains: ['example.com'] }` in `next.config.js` for image optimization.\n  - `reactStrictMode: true` to enable React's strict mode.\n  - `swcMinify: true` for faster builds using SWC.",
+    "source": "web_search",
+    "updated_at": 1780733161.4830043
+  },
+  "search:NextJS and TypeScript:performance optimization with _ex": {
+    "content": "- Use `next build` to optimize your application.\n- Implement code splitting using dynamic imports: `import()` syntax.\n- Utilize server-side rendering (SSR) with `getServerSideProps`.\n- Enable static site generation (SSG) with `getStaticProps`.\n- Configure image optimization in `next.config.js`: \n  ```javascript\n  images: {\n    domains: ['example.com'],\n  },\n  ```\n- Use `react-lazy-load-image-component` for lazy loading images.\n- Implement caching using `SWR` or `React Query`.\n- Monitor performance with Next.js DevTools and Lighthouse.\n- Update dependencies to the latest versions regularly.",
+    "source": "code_example",
+    "updated_at": 1780733172.5717216
+  },
+  "search:NextJS and TypeScript:testing nextjs applications": {
+    "content": "- **Sencha Test**: Use Sencha Studio for testing Ext JS applications.\n- **Frameworks and Tools**:\n  - **Siesta**: Best for automated UI testing on CI servers.\n  - **Jasmine**: For unit testing with the MVC approach of ExtJS.\n- **CLI Commands**:\n  - `sencha test run`: Run tests using Sencha Test.\n  - `npm install jasmine-core --save-dev`: Install Jasmine for unit testing.\n- **Latest Versions**:\n  - Ensure you use the latest versions of Sencha Test, Siesta, and Jasmine to benefit from the most recent features and bug fixes.\n- **Key Config Options**:\n  - For Sencha Test: Configure test suites in `test.json`.\n  - For Jasmine: Set up spec files with `.spec.js` extensions.\n- **Principles**: Apply the same testing principles for ExtJS as you would for other JavaScript frameworks, focusing on behavior-driven testing.",
+    "source": "web_search",
+    "updated_at": 1780733182.989141
+  },
+  "search:NextJS and TypeScript:testing nextjs applications_ex": {
+    "content": "- Use `npm test` or `yarn test` to run tests.\n- Install Jest and React Testing Library using `npm install --save-dev jest @testing-library/react`.\n- Configure Jest in your project with a `jest.config.js` file.\n- Key config options include `testEnvironment`, `setupFilesAfterEnv`, and `transformIgnorePatterns`.\n- For code coverage, use `npx react-scripts test --coverage` or configure Istanbul for more detailed reports.\n- Ensure you have the latest versions of NextJS, Jest, and React Testing Library to avoid compatibility issues.",
+    "source": "code_example",
+    "updated_at": 1780733189.4646602
+  },
+  "search:NextJS and TypeScript:serverless deployment with nex": {
+    "content": "- **CLI Commands**:\n  - `serverless deploy`: Deploys the serverless NextJS application.\n  - `next build --prod`: Builds the Next.js application for production.\n\n- **Latest Versions**:\n  - Serverless Framework: v3.x\n  - Next.js: v12.x\n\n- **Key Config Options**:\n  - `serverless.yml`: Configuration file for serverless deployments.\n    - `provider`: Specifies the cloud provider (e.g., aws, azure).\n    - `functions`: Defines serverless functions.\n      - `handler`: Entry point of the function.\n      - `events`: Triggers for the function.\n    - `custom`: Custom configuration specific to plugins and settings.",
+    "source": "web_search",
+    "updated_at": 1780733211.298686
+  },
+  "search:NextJS and TypeScript:serverless deployment with nex_ex": {
+    "content": "- Use `serverless-next.js` to deploy your Next.js app in serverless mode.\n- Install the latest version of `serverless-next.js` using npm or yarn.\n- Configure your project by creating a `serverless.yml` file.\n- Key config options include `service`, `provider`, and `functions`.\n- Deploy your application with the command: `sls deploy --stage production`.\n- Ensure compatibility with Next.js features like API routes, static generation, and server-side rendering.\n- For non-serverless deployments, explore both serverless and serverful approaches to find the best fit for your project.",
+    "source": "code_example",
+    "updated_at": 1780733219.270533
+  }
+}

@@ -1,16 +1,16 @@
 # DevAI Validation Report
-*2026-06-06 04:57*
+*2026-06-06 05:08*
 
-## Score: 52% `[██████████░░░░░░░░░░]`
+## Score: 47% `[█████████░░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
-| common-errors | 6.0/6.0 | 100% | ✅ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
+| common-errors | 3.0/6.0 | 50% | ❌ |
 | nlp | 7.1/15.0 | 48% | ❌ |
 | nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
 | spring-mongodb | 0.0/4.0 | 0% | ❌ |
@@ -48,6 +48,10 @@
 ### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
   - Wrong: `.dict()`
+
+### common-errors (50%)
+- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
+  - Wrong: `@nestjs/common`
 
 ## Como corrigir
 
