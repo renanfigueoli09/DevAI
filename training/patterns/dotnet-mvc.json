@@ -1,0 +1,7 @@
+{
+  "search:dotnet+mvc:asp.net mvc security best prac": {
+    "content": "- **CLI Commands**: Use `dotnet new mvc` to create a new ASP.NET MVC project.\n- **Latest Versions**: Ensure you are using the latest version of .NET Core or .NET 6+ for optimal performance and security features.\n- **Key Config Options**:\n  - Enable CORS in `Startup.cs`: `services.AddCors(options => options.AddPolicy(\"AllowAllOrigins\", builder => builder.AllowAnyOrigin()));`\n  - Configure authentication: `services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();`\n  - Use HTTPS redirection: `app.UseHttpsRedirection();`\n  - Enable request validation: `[HttpPost]` methods should validate input data using attributes like `[Required]`, `[StringLength]`.\n- **Security Practices**:\n  - Implement CSRF protection by using anti-forgery tokens.\n  - Sanitize user inputs to prevent XSS attacks.\n  - Regularly update dependencies and frameworks to patch security vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1780707790.6809273
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:fastapi+mysql:fastapi mysql integration tuto": {
+    "content": "- **Install FastAPI**: `pip install fastapi`\n- **Install SQLAlchemy**: `pip install sqlalchemy`\n- **Install MySQL Connector**: `pip install mysql-connector-python`\n- **Create FastAPI App**: Use `uvicorn main:app --reload` to run the app.\n- **Configure Database URL**: Set `SQLALCHEMY_DATABASE_URL = \"mysql+mysqlconnector://user:password@localhost/dbname\"`\n- **Define Models**: Create SQLAlchemy models in a separate file, e.g., `models.py`.\n- **Create Session**: Use `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`\n- **Dependency Injection**: Inject the database session into your routes using `@Depends(get_db)`.\n- **Run Migrations**: Use Alembic for migrations with commands like `alembic init alembic`, `alembic revision --autogenerate -m \"message\"`, and `alembic upgrade head`.\n\n**Key Config Options**:\n- `SQLALCHEMY_DATABASE_URL`: Specifies the database URL.\n- `SessionLocal`: Manages database sessions.\n- `BaseModel` from SQLAlchemy: Defines your data models.\n\n**Latest Versions**: Ensure you use the latest versions of FastAPI, SQLAlchemy, and MySQL Connector for optimal performance and security.",
+    "source": "web_search",
+    "updated_at": 1780707773.3101099
+  },
+  "search:fastapi+mysql:fastapi mysql transactions and": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up` to start MySQL and FastAPI services.\n  - `fastapi run app.main --reload` for development mode.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.1\n  - SQLAlchemy (for ORM): v2.0.4\n  - PyMySQL (MySQL client): v1.0.2\n\n- **Key Config Options**:\n  - MySQL Connection String: `mysql+pymysql://user:password@host/dbname`\n  - FastAPI Dependency Injection for Database Sessions.\n  - ACID Compliance through SQLAlchemy ORM transactions.",
+    "source": "web_search",
+    "updated_at": 1780707780.3422513
+  }
+}
