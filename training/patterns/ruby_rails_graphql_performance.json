@@ -3,5 +3,10 @@
     "content": "- Use `gem 'graphql'` in your Gemfile to add GraphQL support.\n- Run `bundle install` to install the gem.\n- Configure GraphQL schema with `GraphQL::Schema.define`.\n- Implement field resolvers for data fetching.\n- Use `GraphQL::Batch` for efficient data loading.\n- Optimize queries using fragments and aliases.\n- Enable caching with `graphql-cache` gem.\n- Monitor performance with tools like New Relic or Skylight.\n- Regularly update gems to the latest versions:\n  - `bundle update graphql`\n  - `bundle update graphql-batch`\n  - `bundle update graphql-cache`\n- Review and optimize resolver logic for better performance.",
     "source": "web_search",
     "updated_at": 1780784608.8645108
+  },
+  "search:ruby+rails-graphql-performance:ruby on rails graphql caching ": {
+    "content": "- **CLI Commands**:\n  - `rails generate graphql:install`\n  - `rails generate model User name:string email:string`\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - GraphQL-Ruby: 2.14.x\n\n- **Key Config Options**:\n  - In `config/initializers/graphql.rb`, configure schema and query types.\n  - In `app/assets/config/manifest.js`, ensure GraphiQL is included for development.\n  - Use `graphql-rails` gem for easy integration with Rails.\n  - Implement caching strategies on the client-side or use external libraries like `graphql-cache`.",
+    "source": "web_search",
+    "updated_at": 1780784631.488205
   }
 }
