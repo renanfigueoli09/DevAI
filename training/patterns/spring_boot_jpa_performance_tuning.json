@@ -1,0 +1,12 @@
+{
+  "search:spring-boot+jpa-performance-tuning:spring boot jpa performance tu": {
+    "content": "- Use `@Query` annotation for complex queries to avoid N+1 issues.\n- Configure batch size in `application.properties`: `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Enable lazy loading by default using `@Entity` with `fetch = FetchType.LAZY`.\n- Utilize Spring Data JPA's `saveAll()` method for batch inserts and updates.\n- Implement custom repository methods for optimized query execution.\n- Monitor and adjust the second-level cache settings in `application.properties`: `spring.jpa.cache.use_second_level_cache=true`.\n- Use `@Transactional` with `propagation = Propagation.REQUIRED` to manage transactions efficiently.\n- Optimize entity relationships by using `@OneToMany`, `@ManyToOne`, and `@ManyToMany` annotations appropriately.\n- Regularly update Spring Boot, JPA, and Hibernate to the latest versions for performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780785546.1184115
+  },
+  "search:spring-boot+jpa-performance-tuning:spring boot jpa performance tu_ex": {
+    "content": "- Use `@QueryHints` to optimize query performance.\n- Enable Hibernate statistics via `spring.jpa.properties.hibernate.generate_statistics=true`.\n- Utilize Spring Boot Actuator for monitoring and profiling.\n- Employ database-specific profilers like PostgreSQL or MySQL for detailed analysis.\n- Implement batch processing with `@Modifying` and `@BatchSize`.\n- Use pagination in repository methods to reduce data load.\n- Optimize entity mappings by avoiding unnecessary joins.\n- Enable lazy loading where applicable to improve performance.\n- Regularly update dependencies to the latest versions for performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780785550.6342082
+  }
+}
