@@ -1,0 +1,17 @@
+{
+  "search:Spring Boot JPA Performance Optimization:jpa performance tuning": {
+    "content": "- Use `@Query` to avoid N+1 query problem.\n- Configure second-level cache in `application.properties`: `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`.\n- Enable query caching with: `spring.jpa.properties.hibernate.cache.use_query_cache=true`.\n- Adjust batch size for inserts/updates: `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Use `@EntityGraph` to fetch related entities in a single query.\n- Optimize entity mappings for efficient database access.\n- Regularly update JPA and Hibernate libraries to the latest versions.\n- Monitor and analyze performance using tools like Spring Boot Actuator.",
+    "source": "web_search",
+    "updated_at": 1780721786.1092129
+  },
+  "search:Spring Boot JPA Performance Optimization:jpa performance tuning_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Version**: Check the latest version of Spring Data JPA on [Maven Central](https://search.maven.org/artifact/org.springframework.data/spring-data-jpa).\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`: Set batch size for better performance.\n  - `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true`: Order SQL statements to reduce lock contention.\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`: Enable second-level cache for entity caching.",
+    "source": "code_example",
+    "updated_at": 1780721791.9297917
+  },
+  "search:Spring Boot JPA Performance Optimization:spring boot database optimizat": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `mvn clean install` for building and testing.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - HikariCP: 4.0.3\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.datasource.hikari.maximum-pool-size`: Maximum number of connections in the pool.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `create-drop`, `update`).\n  - `spring.jpa.properties.hibernate.dialect`: Specifies the SQL dialect.",
+    "source": "web_search",
+    "updated_at": 1780721802.3181849
+  }
+}
