@@ -1,0 +1,32 @@
+{
+  "search:dotnet+efcore-async:dotnet efcore async performanc": {
+    "content": "- Use `dotnet ef database update` to apply migrations.\n- Employ `ToListAsync()` and `FirstOrDefaultAsync()` for asynchronous querying.\n- Ensure your DbContext is disposed of properly using `using` statements or `IDisposable`.\n- Update EF Core to the latest version (currently 7.x) for performance improvements.\n- Configure connection strings in `appsettings.json` with appropriate settings like `Pooling=true`.\n- Use `AsSplitQuery()` when dealing with large entities to improve query performance.\n- Implement batching for large data operations using `FromSqlRaw()`.\n- Monitor and log EF Core queries using `LoggerFactory` for optimization insights.",
+    "source": "web_search",
+    "updated_at": 1780728003.9492204
+  },
+  "search:dotnet+efcore-async:dotnet efcore async performanc_ex": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create new migrations.\n- Apply migrations using `dotnet ef database update`.\n- Enable lazy loading with `.Include()` in your query for related entities.\n- Configure logging level in `appsettings.json` under `Logging`.\n- Optimize performance by disabling lazy loading where possible.\n- Use `AsNoTracking()` if you don't need to modify the retrieved data.\n- Implement batching for large queries using `FromSqlRaw()`.\n- Monitor and analyze query performance with EF Core's built-in logging.\n- Update EFCore to the latest version via NuGet package manager.",
+    "source": "code_example",
+    "updated_at": 1780728012.0048928
+  },
+  "search:dotnet+efcore-async:async database operations with": {
+    "content": "- Use `dotnet ef` to manage Entity Framework Core migrations.\n- Update EFCore to the latest version using `dotnet add package Microsoft.EntityFrameworkCore --version <latest_version>`.\n- Implement asynchronous methods in your repository by adding `async` and `await` keywords, e.g., `public async Task<List<MyEntity>> GetEntitiesAsync()`.\n- Configure DbContext options in `Startup.cs` or `Program.cs`, e.g., `.UseSqlServer(\"YourConnectionString\")`.\n- Use `AddDbContextPool` for improved performance in web applications.\n- Handle exceptions using try-catch blocks when calling asynchronous methods, e.g.,\n  ```csharp\n  try\n  {\n      var entities = await _context.MyEntities.ToListAsync();\n  }\n  catch (Exception ex)\n  {\n      // Log or handle exception\n  }\n  ```\n- Avoid common pitfalls like running multiple async operations on the same DbContext instance.\n- Monitor and optimize your database queries to ensure efficient use of resources.",
+    "source": "web_search",
+    "updated_at": 1780728030.3526435
+  },
+  "search:dotnet+efcore-async:async database operations with_ex": {
+    "content": "- Use `dotnet ef` CLI to manage EF Core migrations and database operations.\n- Ensure your DbContext is configured for async operations by using the latest version of Entity Framework Core, currently at version 7 as of my last update.\n- Key configuration options include setting up the DbContext with `options.UseSqlServer()` or another provider's method.\n- Use `await` keyword when calling async methods like `ToListAsync()`, `FirstOrDefaultAsync()`, etc., to perform database operations asynchronously.\n- Consider using `Task.WhenAll()` for parallel execution of multiple async tasks.\n- For high-performance scenarios, explore batching and optimizing queries to reduce the number of round-trips to the database.",
+    "source": "code_example",
+    "updated_at": 1780728035.8242438
+  },
+  "search:dotnet+efcore-async:asynchronous entity framework ": {
+    "content": "- Use `dotnet ef` CLI to manage Entity Framework Core migrations.\n- Ensure latest EF Core version by running `dotnet add package Microsoft.EntityFrameworkCore --version <latest-version>`.\n- Configure DbContext in `Startup.cs` or `Program.cs` with connection strings and options.\n- Implement async queries using `.ToListAsync()`, `.FirstOrDefaultAsync()`, etc., for better performance.\n- Use `AsNoTracking()` to improve read-only scenarios by not tracking changes.\n- Optimize queries by avoiding N+1 issues, using eager loading (`Include()`), or projection (`Select()`).\n- Monitor and analyze query performance with EF Core's logging capabilities.\n- Consider batching large data operations to reduce memory usage and improve efficiency.",
+    "source": "web_search",
+    "updated_at": 1780728044.227335
+  },
+  "search:dotnet+efcore-async:asynchronous entity framework _ex": {
+    "content": "- Use `dotnet ef` for Entity Framework Core commands.\n- Ensure EF Core version is up to date, check [Microsoft's official site](https://docs.microsoft.com/en-us/ef/core/) for the latest release.\n- Key config options include `UseSqlServer`, `UseInMemoryDatabase`, and `UseNpgsql`.\n- For asynchronous operations, use `.ToListAsync()` or `.ToArrayAsync()`.\n- Example of an async query:\n  ```csharp\n  var customers = await context.Customers.Where(c => c.City == \"London\").ToListAsync();\n  ```\n- Ensure your DbContext is configured to support async operations.\n- Use `AsAsyncEnumerable()` for more complex scenarios.\n- Consider using `await` with `foreach` for asynchronous iteration over collections.",
+    "source": "code_example",
+    "updated_at": 1780728049.3491776
+  }
+}

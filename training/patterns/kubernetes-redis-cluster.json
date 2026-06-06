@@ -1,0 +1,32 @@
+{
+  "search:kubernetes+redis-cluster:kubernetes redis cluster perfo": {
+    "content": "- Deploy Redis on Kubernetes using `kubectl apply -f redis-deployment.yaml`\n- Use the latest stable Redis image in your deployment file, e.g., `image: bitnami/redis:latest`\n- Configure resources for each pod in your deployment file, e.g., `resources: requests: memory: \"512Mi\" limits: memory: \"1Gi\"`\n- Create a ConfigMap to manage Redis configuration values and mount it into the pods\n- Use the `redis-operator` from OT-CONTAINER-KIT for automated Redis cluster management on Kubernetes\n- Monitor performance using Kubernetes metrics and logs\n- Optimize by increasing pod replicas, adjusting resource limits, and tuning Redis configurations",
+    "source": "web_search",
+    "updated_at": 1780727962.6341145
+  },
+  "search:kubernetes+redis-cluster:kubernetes redis cluster perfo_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Redis on Kubernetes.\n- Ensure the latest version of Redis is used by checking the official Kubernetes Operator for Redis.\n- Configure Redis cluster settings in the YAML file, such as `replicas: 3`.\n- Set resource limits and requests using `resources` section in the YAML file.\n- Use `kubectl scale deployment <deployment-name> --replicas=<number>` to scale the Redis cluster.\n- Monitor Redis performance with `kubectl logs <pod-name>` and Kubernetes monitoring tools like Prometheus.\n- Secure Redis by enabling TLS encryption and configuring RBAC for access control.",
+    "source": "code_example",
+    "updated_at": 1780727968.3404367
+  },
+  "search:kubernetes+redis-cluster:kubernetes redis statefulset c": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml`\n  - `kubectl get pods --selector app=<app-name>`\n  - `kubectl exec -it <pod-name> -- /bin/sh`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Redis StatefulSet: Latest stable version compatible with Kubernetes\n\n- **Key Config Options**:\n  - `replicas`: Number of replicas in the StatefulSet.\n  - `volumeClaimTemplates`: Persistent volume claims for each pod.\n  - `service.beta.kubernetes.io/aws-load-balancer-type`: For AWS, specify the type of load balancer (e.g., `nlb`).\n  - `readinessProbe`: Define readiness checks to ensure pods are ready before traffic is routed.",
+    "source": "web_search",
+    "updated_at": 1780727976.2901998
+  },
+  "search:kubernetes+redis-cluster:kubernetes redis statefulset c_ex": {
+    "content": "- Use `kubectl apply -f statefulset.yaml` to create the StatefulSet.\n- Ensure your Kubernetes version is at least 1.27 for using the beta feature of ordinal numbering in StatefulSets.\n- Key config options include:\n  - `apiVersion: apps/v1`\n  - `kind: StatefulSet`\n  - `metadata.name`: Name of the StatefulSet\n  - `spec.replicas`: Number of replicas\n  - `spec.selector.matchLabels.app`: Label selector for pods\n  - `spec.template.metadata.labels.app`: Labels for pod template\n  - `spec.serviceName`: Headless service name\n  - `spec.template.spec.containers`: Container specifications",
+    "source": "code_example",
+    "updated_at": 1780727980.9092672
+  },
+  "search:kubernetes+redis-cluster:kubernetes redis high availabi": {
+    "content": "- Use `helm install` to deploy Redis on Kubernetes.\n- Specify the latest Helm chart version using `--version`.\n- Configure Redis Sentinel for high availability by adding `redis-sentinel.enabled=true` in the Helm values file.\n- Set up a service of type `ClusterIP` for internal communication between Redis instances and Sentinel.\n- Use `kubectl apply -f redis-config.yaml` to apply custom configurations.\n- Monitor Redis health with `kubectl exec -it <pod-name> -- redis-cli ping`.\n- Scale Redis by adjusting the `replicaCount` in the Helm values file.\n- Ensure network policies allow traffic between Redis pods and Sentinel.",
+    "source": "web_search",
+    "updated_at": 1780727994.1475737
+  },
+  "search:kubernetes+redis-cluster:kubernetes redis high availabi_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f redis-deployment.yaml`\n  - `kubectl apply -f redis-service.yaml`\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.3\n  - Redis: 7.0.5\n\n- **Key Config Options**:\n  - `replicas: 3` in deployment YAML for high availability.\n  - Persistent storage class and volume size in deployment YAML.\n  - `readinessProbe` and `livenessProbe` in service YAML to monitor Redis health.",
+    "source": "code_example",
+    "updated_at": 1780727997.5697763
+  }
+}
