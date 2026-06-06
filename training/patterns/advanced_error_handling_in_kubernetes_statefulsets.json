@@ -13,5 +13,10 @@
     "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl rollout status statefulset/<statefulset-name>`\n  - `kubectl scale statefulset/<statefulset-name> --replicas=<new-replica-count>`\n  - `kubectl delete pod <pod-name> --grace-period=0 --force`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - StatefulSet API: v1\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.template.spec.volumes`: PersistentVolumeClaims for data persistence.\n  - `.spec.updateStrategy.type`: RollingUpdate or OnDelete.\n  - `.spec.rollingUpdate.partition`: Partition for rolling update strategy.",
     "source": "web_search",
     "updated_at": 1780760790.5784984
+  },
+  "search:Advanced Error Handling in Kubernetes StatefulSets:statefulset failure recovery_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n  - Kueue v0.15\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`",
+    "source": "code_example",
+    "updated_at": 1780760804.57268
   }
 }

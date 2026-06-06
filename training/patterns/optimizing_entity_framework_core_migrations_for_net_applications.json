@@ -1,0 +1,17 @@
+{
+  "search:Optimizing Entity Framework Core Migrations for .NET Applications:dotnet efcore migrations optim": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add Initial`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET CLI: 6.0\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enable lazy loading for navigation properties.\n  - `MigrationsHistoryTable`: Customize the table name used to store migration history.\n  - `MaxBatchSize`: Set the maximum number of commands per batch when applying migrations.",
+    "source": "web_search",
+    "updated_at": 1780760812.6848176
+  },
+  "search:Optimizing Entity Framework Core Migrations for .NET Applications:dotnet efcore migrations optim_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `Add-Migration InitialCreate`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of .NET CLI and EF Core for optimal performance.\n\n- **Key Config Options**:\n  - Configure connection strings in `appsettings.json`.\n  - Use dependency injection (DI) to manage services.\n  - Enable logging for better debugging and monitoring.",
+    "source": "code_example",
+    "updated_at": 1780760828.9371932
+  },
+  "search:Optimizing Entity Framework Core Migrations for .NET Applications:entity framework core performa": {
+    "content": "- Use `AsNoTracking()` to reduce memory usage when entities are not modified.\n- Update Entity Framework Core to the latest version for performance improvements and bug fixes.\n- Configure connection strings with appropriate settings, such as enabling multiple active result sets (`MultipleActiveResultSets=true`).\n- Implement batching operations using `FromSqlRaw` or `FromSqlInterpolated` for large data queries.\n- Use lazy loading proxies by default unless explicitly disabled to leverage automatic change tracking and navigation property loading.\n- Optimize database schema design, including indexing and normalization, to improve query performance.\n- Consider using raw SQL queries when Entity Framework Core's LINQ capabilities are insufficient or too slow.\n- Monitor and analyze query execution plans using tools like SQL Server Profiler for identifying bottlenecks.\n- Regularly update the database driver and ensure it is compatible with the latest version of Entity Framework Core.",
+    "source": "web_search",
+    "updated_at": 1780760837.2962613
+  }
+}
