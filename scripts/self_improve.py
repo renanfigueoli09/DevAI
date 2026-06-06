@@ -294,8 +294,8 @@ def main():
         ))
 
         if not args.loop: break
-        console.print("[dim]Próximo ciclo em 10min...[/dim]")
-        time.sleep(600)
+        console.print("[dim]Próximo ciclo em 1min...[/dim]")
+        time.sleep(60)
         cycle += 1
 
 
