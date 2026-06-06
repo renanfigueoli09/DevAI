@@ -1,0 +1,17 @@
+{
+  "search:fastapi+uvicorn:fastapi with uvicorn for produ": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --host 0.0.0.0 --port 8000`\n  - `docker run -d -p 8000:8000 your_fastapi_image`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Uvicorn: 0.20.0\n\n- **Key Config Options**:\n  - `--host`: Specifies the host to run on (e.g., `0.0.0.0` for all interfaces).\n  - `--port`: Specifies the port to listen on (default is `8000`).\n  - `--reload`: Enables auto-reload during development.\n  - `--workers`: Number of worker processes to use (useful in production).",
+    "source": "web_search",
+    "updated_at": 1780735011.6756475
+  },
+  "search:fastapi+uvicorn:uvicorn as asgi server for fas": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --host 0.0.0.0 --port 8000`\n  - `systemctl start uvicorn.service`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `host`: Specifies the host to run on (e.g., `0.0.0.0` for all interfaces).\n  - `port`: Specifies the port to listen on (default is `8000`).\n  - `reload`: Enables auto-reload during development.\n  - `workers`: Number of worker processes to use (use `--workers=2` for production).",
+    "source": "web_search",
+    "updated_at": 1780735033.4488556
+  },
+  "search:fastapi+uvicorn:uvicorn as asgi server for fas_ex": {
+    "content": "- **CLI Command**: `uvicorn main:app --reload`\n- **Latest Version**: Check [Uvicorn GitHub](https://github.com/encode/uvicorn) for the latest version.\n- **Key Config Options**:\n  - `--host`: Specifies the host to run on (e.g., `127.0.0.1`).\n  - `--port`: Specifies the port to run on (e.g., `8000`).\n  - `--reload`: Enables auto-reload during development.\n  - `--workers`: Specifies the number of worker processes to use (e.g., `4` for production).",
+    "source": "code_example",
+    "updated_at": 1780735039.4069338
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:python-asyncio-multiprocessing:python asyncio and multiproces": {
+    "content": "- **CLI Commands**:\n  - `python3 -m asyncio script.py`\n  - `python3 -m multiprocessing script.py`\n\n- **Latest Versions**:\n  - Python 3.11\n\n- **Key Config Options**:\n  - `asyncio.run(main())` for running an asyncio program\n  - `multiprocessing.Pool(processes=None)` to create a pool of worker processes",
+    "source": "web_search",
+    "updated_at": 1780735094.532855
+  },
+  "search:python-asyncio-multiprocessing:python asyncio and multiproces_ex": {
+    "content": "- **CLI Commands**:\n  - `python3 -m asyncio your_script.py`\n  - `python3 -m multiprocessing your_script.py`\n\n- **Latest Versions**:\n  - Python 3.11\n  - Asyncio: Included in Python standard library\n  - Multiprocessing: Included in Python standard library\n\n- **Key Config Options**:\n  - `asyncio.run(main())` for running asyncio applications\n  - `multiprocessing.Pool(processes=4)` to create a pool of worker processes",
+    "source": "code_example",
+    "updated_at": 1780735110.117244
+  },
+  "search:python-asyncio-multiprocessing:concurrency in python with asy": {
+    "content": "- **CLI Commands**:\n  - `python -m asyncio <script.py>`\n  - `python -m multiprocessing <script.py>`\n\n- **Latest Versions**:\n  - Python 3.11\n  - AsyncIO: Latest version as of Python 3.11\n  - Multiprocessing: Built-in, no external installation required\n\n- **Key Config Options**:\n  - AsyncIO: `asyncio.run(main())`\n  - Multiprocessing: `if __name__ == \"__main__\": multiprocessing.freeze_support(); multiprocessing.Process(target=worker).start()`\n\nThese actionable facts provide a concise guide for developers to implement concurrency in Python using AsyncIO and Multiprocessing.",
+    "source": "web_search",
+    "updated_at": 1780735118.6955645
+  },
+  "search:python-asyncio-multiprocessing:concurrency in python with asy_ex": {
+    "content": "- **CLI Commands**:\n  - `python -m asyncio <script.py>`\n  - `python -m multiprocessing <script.py>`\n\n- **Latest Versions**:\n  - Python 3.11\n  - Asyncio: Latest version compatible with Python 3.11\n  - Multiprocessing: Built-in, no need for installation\n\n- **Key Config Options**:\n  - asyncio: `loop.run_until_complete()`, `asyncio.create_task()`\n  - multiprocessing: `multiprocessing.Pool(processes=4)`, `Process(target=<function>, args=(<args>))`",
+    "source": "code_example",
+    "updated_at": 1780735126.273977
+  }
+}
