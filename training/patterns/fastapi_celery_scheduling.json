@@ -12,6 +12,6 @@
   "search:fastapi+celery-scheduling:asynchronous task management i_ex": {
     "content": "- **Install FastAPI and Celery**: `pip install fastapi celery`\n- **Set up RabbitMQ or Redis** as a message broker.\n- **Configure Celery in `celery_config.py`**:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')\n  ```\n- **Create a task**: \n  ```python\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Call the task asynchronously**:\n  ```python\n  result = add.delay(4, 4)\n  print(result.get(timeout=1))\n  ```\n- **Run Celery worker**: `celery -A celery_config.celery worker --loglevel=info`\n- **Dockerize your application** for easy deployment.\n- **Use Swagger UI** to document API endpoints.\n- **Latest versions**: FastAPI: 0.95.2, Celery: 5.2.7, RabbitMQ: 3.8.x, Redis: 6.x",
     "source": "code_example",
-    "updated_at": 1780784890.384279
+    "updated_at": 1780785998.3605397
   }
 }

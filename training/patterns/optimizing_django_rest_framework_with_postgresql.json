@@ -2,21 +2,21 @@
   "search:Optimizing Django REST Framework with PostgreSQL:django-rest-framework+postgres": {
     "content": "- Install Django: `pip install django`\n- Install Django Rest Framework: `pip install djangorestframework`\n- Install psycopg2 for PostgreSQL support: `pip install psycopg2`\n- Create a new Django project: `django-admin startproject myproject`\n- Add 'rest_framework' to `INSTALLED_APPS` in settings.py\n- Define your models in models.py and apply migrations with `python manage.py makemigrations` followed by `python manage.py migrate`\n- Create serializers for your models in serializers.py\n- Define views using Django Rest Framework's viewsets or routers\n- Configure PostgreSQL database settings in settings.py under DATABASES dictionary\n- Run the development server: `python manage.py runserver`\n- Test API endpoints using tools like Postman or curl",
     "source": "web_search",
-    "updated_at": 1780784930.2228398
+    "updated_at": 1780786049.4161115
   },
   "search:Optimizing Django REST Framework with PostgreSQL:django-rest-framework+postgres_ex": {
     "content": "- Use `django-admin startproject myproject` to create a new Django project.\n- Add `'rest_framework'` and `'psycopg2'` to your `INSTALLED_APPS`.\n- Set up PostgreSQL database in `settings.py`: \n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django.db.backends.postgresql',\n          'NAME': 'mydatabase',\n          'USER': 'myuser',\n          'PASSWORD': 'mypassword',\n          'HOST': 'localhost',\n          'PORT': '',\n      }\n  }\n  ```\n- Run migrations with `python manage.py migrate`.\n- Create a new app with `python manage.py startapp myapp`.\n- Define models in `models.py` and run migrations again.\n- Use Django Rest Framework's serializers to serialize model data.\n- Configure URLs in `urls.py` to include API endpoints.\n- Test your API using tools like Postman or curl.",
     "source": "code_example",
-    "updated_at": 1780784931.2269707
+    "updated_at": 1780786050.4696357
   },
   "search:Optimizing Django REST Framework with PostgreSQL:spring-boot+jooq": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.1\n  - jOOQ: 3.17.8\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `jooq.sql-dialect`: SQL dialect (e.g., POSTGRES).\n  - `jooq.generate.to-package`: Package for generated classes.",
     "source": "web_search",
-    "updated_at": 1780784933.6209433
+    "updated_at": 1780786051.5277843
   },
   "search:Optimizing Django REST Framework with PostgreSQL:spring-boot+jooq_ex": {
     "content": "- **CLI Commands**: \n  - `mvn clean install` to build your project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - jOOQ: 3.17.9\n\n- **Key Config Options**:\n  - Database connection properties in `application.properties` or `application.yml`.\n  - Enable Jooq with `@EnableJpaRepositories(basePackages = \"com.example.repository\")`.\n  - Configure the DataSource bean if not using auto-configuration.\n  - Define repositories extending `org.jooq.DSLRepository`.",
     "source": "code_example",
-    "updated_at": 1780784934.5692585
+    "updated_at": 1780786052.5201797
   }
 }
