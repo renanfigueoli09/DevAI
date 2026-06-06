@@ -2,21 +2,21 @@
   "pattern:docker+mongodb-only": {
     "content": "// docker-compose.yml MongoDB only: services: db: image:mongo:7.0, healthcheck:{test:[mongosh,--eval,db.adminCommand('ping')],interval:15s}. app: depends_on:{db:{condition:service_healthy}}, environment:{MONGODB_URI:mongodb://db:27017/myapp}",
     "source": "code_pattern",
-    "updated_at": 1780758696.0264847
+    "updated_at": 1780759170.7827747
   },
   "pattern:docker+postgres-only": {
     "content": "// docker-compose.yml PostgreSQL only: db: image:postgres:16-alpine, environment:{POSTGRES_DB,POSTGRES_USER,POSTGRES_PASSWORD}, healthcheck:{test:pg_isready -U postgres}. app: depends_on db, environment: DB_HOST:db DB_PORT:5432",
     "source": "code_pattern",
-    "updated_at": 1780758696.2947915
+    "updated_at": 1780759171.0732696
   },
   "qa:docker-mongodb-only": {
     "content": "When user says 'MongoDB only' or 'only MongoDB': docker-compose has ONLY app + mongo:7.0\nNO redis:, NO kafka:, NO nginx: unless explicitly requested\n'only' means ONLY what is mentioned",
     "source": "critical_pattern",
-    "updated_at": 1780758907.812409
+    "updated_at": 1780759134.5277107
   },
   "qa:mongodb-healthcheck": {
     "content": "MongoDB healthcheck: mongosh --eval db.adminCommand('ping')\ntest: [CMD, mongosh, --eval, db.adminCommand('ping')]\ninterval: 15s | timeout: 10s | retries: 5\nNEVER pg_isready (PostgreSQL) or redis-cli for MongoDB",
     "source": "critical_pattern",
-    "updated_at": 1780758933.1759994
+    "updated_at": 1780759231.203683
   }
 }
