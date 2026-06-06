@@ -1,0 +1,32 @@
+{
+  "search:python-django-rest-framework:django rest framework advanced": {
+    "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `pip install django-allauth dj-rest-auth`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.2\n  - django-allauth: v0.51.0\n  - dj-rest-auth: v2.3.0\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py for authentication classes.\n  - `SITE_ID = 1` in settings.py for django-allauth.\n  - `INSTALLED_APPS` should include `'rest_framework'`, `'django.contrib.sites'`, `'allauth'`, `'allauth.account'`, and `'dj_rest_auth'`.\n  - URL patterns to include `path('api-auth/', include('dj_rest_auth.urls'))`.",
+    "source": "web_search",
+    "updated_at": 1780734096.6792889
+  },
+  "search:python-django-rest-framework:django rest framework advanced_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.0\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py:\n    ```python\n    REST_FRAMEWORK = {\n        'DEFAULT_AUTHENTICATION_CLASSES': [\n            'rest_framework.authentication.SessionAuthentication',\n            'rest_framework.authentication.BasicAuthentication',\n            'rest_framework_simplejwt.authentication.JWTAuthentication',\n        ],\n    }\n    ```\n  - Middleware for JWT Authentication:\n    ```python\n    MIDDLEWARE = [\n        ...\n        'rest_framework.middleware.AuthenticationMiddleware',\n        ...\n    ]\n    ```\n  - URL Configuration:\n    ```python\n    from django.urls import path, include\n    from rest_framework_simplejwt.views import TokenObtainPairView\n\n    urlpatterns = [\n        ...\n        path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n        ...\n    ]\n    ```",
+    "source": "code_example",
+    "updated_at": 1780734106.3410761
+  },
+  "search:python-django-rest-framework:django rest framework testing ": {
+    "content": "- **CLI Commands**:\n  - `python manage.py test`: Runs tests for all apps.\n  - `python manage.py test <app_name>`: Runs tests for a specific app.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework (DRF): 3.14\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK`: Configuration dictionary in settings.py.\n  - `TEST_RUNNER`: Specifies the test runner to use, default is `'django.test.runner.DiscoverRunner'`.\n  - `CORS_ORIGIN_ALLOW_ALL`: Allows all origins for CORS if set to True.",
+    "source": "web_search",
+    "updated_at": 1780734117.0434465
+  },
+  "search:python-django-rest-framework:django rest framework testing _ex": {
+    "content": "- Use `python manage.py test` to run tests.\n- Ensure Django and DRF are up-to-date using pip.\n- Key config options include `REST_FRAMEWORK` in settings.py for customizing the framework behavior.\n- Utilize `APIClient` from `rest_framework.test` for making requests.\n- Example unit test for a serializer:\n  ```python\n  from django.test import TestCase\n  from myapp.serializers import MyModelSerializer\n\n  class MyModelSerializerTest(TestCase):\n      def test_serializer_valid_data(self):\n          # Test valid data serialization here\n  ```\n- For integration tests, use `APIClient` to simulate HTTP requests.\n- Consider using `pytest-django` for more advanced testing features.",
+    "source": "code_example",
+    "updated_at": 1780734121.4179857
+  },
+  "search:python-django-rest-framework:django rest framework performa": {
+    "content": "- **CLI Commands**: Use `python manage.py runserver --insecure` for development.\n- **Latest Versions**: Ensure Django and DRF are up to date using pip:\n  ```bash\n  pip install django==latest djangorestframework==latest\n  ```\n- **Key Config Options**:\n  - Enable caching: Configure cache backends in `settings.py`.\n    ```python\n    CACHES = {\n        'default': {\n            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',\n        }\n    }\n    ```\n  - Use pagination: Set up pagination classes.\n    ```python\n    REST_FRAMEWORK = {\n        'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n        'PAGE_SIZE': 10,\n    }\n    ```\n  - Optimize serializers by using `select_related` and `prefetch_related`.\n  - Use asynchronous views for I/O-bound tasks.\n  - Implement caching strategies for frequently accessed data.",
+    "source": "web_search",
+    "updated_at": 1780734129.2750869
+  },
+  "search:python-django-rest-framework:django rest framework performa_ex": {
+    "content": "- Use Django REST Framework version 3.14 or later.\n- Implement pagination to avoid N+1 queries.\n- Utilize `select_related` and `prefetch_related` for efficient database queries.\n- Enable caching mechanisms like Redis for API responses.\n- Optimize serializers by using `SerializerMethodField` when necessary.\n- Use Django's built-in `bulk_create`, `bulk_update`, and `bulk_delete`.\n- Configure Django settings with `DEBUG = False` in production.\n- Employ asynchronous views or Celery for time-consuming tasks.\n- Regularly update dependencies to benefit from performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780734136.6461937
+  }
+}
