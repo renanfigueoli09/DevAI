@@ -1,19 +1,19 @@
 # DevAI Validation Report
-*2026-06-06 06:35*
+*2026-06-06 06:38*
 
-## Score: 55% `[██████████░░░░░░░░░░]`
+## Score: 61% `[████████████░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
+| spring-mongodb | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | nlp | 5.8/15.0 | 39% | ❌ |
 | nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
-| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
@@ -36,13 +36,7 @@
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não`
-  - Wrong: `true, JWT`
-
-### spring-mongodb (0%)
-- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Wrong: `@Entity`
-- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
-  - Wrong: `JpaRepository`
+  - Wrong: `JWT`
 
 ### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
