@@ -1,0 +1,22 @@
+{
+  "pattern:fastapi+mongodb:crud": {
+    "content": "// FastAPI MongoDB: db=AsyncIOMotorClient(MONGODB_URI).myapp. @app.get('/books') async def list(): return [serialize(b) async for b in db.books.find()]. @app.post('/books',status_code=201) async def create(b:BookCreate): r=await db.books.insert_one(b.model_dump()); return {'id':str(r.inserted_id)}",
+    "source": "code_pattern",
+    "updated_at": 1780708547.988896
+  },
+  "pattern:fastapi+postgres:sqlalchemy": {
+    "content": "// FastAPI PostgreSQL: engine=create_async_engine(DATABASE_URL). class Book(Base): __tablename__='books'; id:Mapped[int]=mapped_column(primary_key=True); title:Mapped[str]=mapped_column(nullable=False).",
+    "source": "code_pattern",
+    "updated_at": 1780708548.0213566
+  },
+  "self:fastapi+mongodb:book-crud:wrong": {
+    "content": "ANTI-PATTERN in python_fastapi:\nGenerated code WRONGLY used: .dict()\nThese are FORBIDDEN in this context.\nCorrect: AsyncIOMotorClient, model_dump, BaseModel",
+    "source": "anti_pattern",
+    "updated_at": 1780708455.0415714
+  },
+  "self:fastapi+mongodb:book-crud": {
+    "content": "from fastapi import FastAPI, HTTPException, Depends\nfrom motor.motor_asyncio import AsyncIOMotorClient\nfrom pydantic.v2 import BaseModel, Field\nfrom typing import List, Optional\n\napp = FastAPI()\n\n# MongoDB setup\nclient = AsyncIOMotorClient(\"mongodb://localhost:27017\")\ndb = client[\"library\"]\nbooks_collection = db[\"books\"]\n\nclass Book(BaseModel):\n    title: str = Field(..., min_length=1)\n    author: str = Field(..., min_length=1)\n    description: Optional[str] = None\n\nasync def get_book(id: str):\n    book = await books_collection.find_one({\"_id\": id})\n    if not book:\n        raise HTTPException(status_code=404, detail=\"Book not found\")\n    return book\n\n@app.post(\"/books\", response_model=Book)\nasync def create_book(book: Book):\n    result = await books_collection.insert_one(book.model_dump())\n    created_book = await get_book(str(result.inserted_id))\n    return created_book\n\n@app.get(\"/books\", response_model=List[Book])\nasync def read_books():\n    cursor = books_collection.find()\n    books = [book async for book in cursor]\n    return books\n\n@app.put(\"/books/{id}\", response_model=Book)\nasync def update_book(id: str, book: Book):\n    await books_collection.update_one({\"_id\": id}, {\"$set\": book.model_dump()})\n    updated_book = await get_book(id)\n    return updated_book\n\n@app.delete(\"/books/{id}\", status_code=204)\nasync def delete_book(id: str):\n    result = await books_collection.delete_one({\"_id\": id})\n    if result.deleted_count == 0:\n        raise HTTPException(status_code=404, detail=\"Book not found\")",
+    "source": "self_generated_validated",
+    "updated_at": 1780708522.2370825
+  }
+}

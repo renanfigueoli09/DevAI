@@ -2,11 +2,26 @@
   "pattern:docker+mongodb-only": {
     "content": "// docker-compose.yml MongoDB only: services: db: image:mongo:7.0, healthcheck:{test:[mongosh,--eval,db.adminCommand('ping')],interval:15s}. app: depends_on:{db:{condition:service_healthy}}, environment:{MONGODB_URI:mongodb://db:27017/myapp}",
     "source": "code_pattern",
-    "updated_at": 1780707824.11645
+    "updated_at": 1780708548.0533588
   },
   "pattern:docker+postgres-only": {
     "content": "// docker-compose.yml PostgreSQL only: db: image:postgres:16-alpine, environment:{POSTGRES_DB,POSTGRES_USER,POSTGRES_PASSWORD}, healthcheck:{test:pg_isready -U postgres}. app: depends_on db, environment: DB_HOST:db DB_PORT:5432",
     "source": "code_pattern",
-    "updated_at": 1780707824.176842
+    "updated_at": 1780708548.0811079
+  },
+  "pattern:docker:healthcheck-mongo": {
+    "content": "MongoDB healthcheck: test: ['CMD','mongosh','--eval',\"db.adminCommand('ping')\"] interval:15s timeout:10s retries:5. depends_on: db: condition: service_healthy. NEVER pg_isready for MongoDB.",
+    "source": "forced_training",
+    "updated_at": 1780708181.5000198
+  },
+  "pattern:docker:only-means-only": {
+    "content": "When user says 'only MongoDB' or 'MongoDB and Docker only': docker-compose.yml has ONLY app + db (MongoDB). NO redis, NO kafka, NO nginx unless explicitly requested.",
+    "source": "forced_training",
+    "updated_at": 1780708181.5253468
+  },
+  "self:docker:compose-mongodb-only": {
+    "content": "version: '3.8'\n\nservices:\n  db:\n    image: mongo:7.0\n    healthcheck:\n      test: [\"mongosh\", \"--eval\", \"db.adminCommand('ping')\"]\n      interval: 15s\n\n  app:\n    depends_on:\n      db:\n        condition: service_healthy\n    environment:\n      MONGODB_URI: mongodb://db:27017/myapp",
+    "source": "self_generated_validated",
+    "updated_at": 1780708439.6031628
   }
 }

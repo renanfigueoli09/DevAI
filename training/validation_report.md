@@ -1,41 +1,49 @@
 # DevAI Validation Report
-*2026-06-05 22:05*
+*2026-06-05 22:13*
 
-## Score: 67% `[█████████████░░░░░░░]`
+## Score: 58% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
-| spring-mongodb | 4.0/4.0 | 100% | ✅ |
-| fastapi | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
+| nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
-| nestjs-mongodb | 6.0/15.0 | 40% | ❌ |
-| nlp | 5.8/15.0 | 39% | ❌ |
+| spring-mongodb | 2.0/4.0 | 50% | ❌ |
+| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
+| fastapi | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (40%)
+### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Wrong: `findOneBy`
+- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
+  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (39%)
+### nlp (53%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, Dockerfile`
-  - Wrong: `src/docker`
+  - Missing: `não, never, docker-compose, Dockerfile`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não`
-  - Wrong: `JWT`
+  - Missing: `não, no`
+
+### spring-mongodb (50%)
+- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
+  - Wrong: `JpaRepository`
+
+### fastapi (0%)
+- ✗ FastAPI MongoDB: which async driver to use?
+  - Wrong: `pymongo`
+- ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
+  - Wrong: `.dict()`
 
 ## Como corrigir
 

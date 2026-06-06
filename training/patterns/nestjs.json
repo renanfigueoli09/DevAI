@@ -2,21 +2,31 @@
   "pattern:nestjs+mongodb:app-module": {
     "content": "// app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI||'mongodb://localhost:27017/app'). ONLY add modules that exist. NOT JwtModule/Redis/Kafka unless requested.",
     "source": "code_pattern",
-    "updated_at": 1780707823.4272404
+    "updated_at": 1780708547.6921098
   },
   "pattern:nestjs+postgres:app-module": {
     "content": "// app.module.ts PostgreSQL: TypeOrmModule.forRootAsync({useFactory:(c:ConfigService)=>({type:'postgres',host:c.get('DB_HOST'),port:+c.get('DB_PORT',5432),database:c.get('DB_NAME'),username:c.get('DB_USER'),password:c.get('DB_PASS'),entities:[__dirname+'/**/*.entity.js'],synchronize:c.get('NODE_ENV')!=='production'}),inject:[ConfigService]})",
     "source": "code_pattern",
-    "updated_at": 1780707823.5998895
+    "updated_at": 1780708547.773909
   },
   "pattern:nestjs:dto": {
     "content": "// dto.ts: import {PartialType} from '@nestjs/mapped-types' (NEVER @nestjs/common). export class UpdateBookDto extends PartialType(CreateBookDto) {}",
     "source": "code_pattern",
-    "updated_at": 1780707823.661737
+    "updated_at": 1780708547.800544
   },
   "pattern:nestjs:main": {
     "content": "// main.ts: ValidationPipe({whitelist:true,transform:true}). Swagger: DocumentBuilder().setTitle().setVersion().addBearerAuth().build(). SwaggerModule.setup('swagger',app,doc).",
     "source": "code_pattern",
-    "updated_at": 1780707823.7192101
+    "updated_at": 1780708547.8346255
+  },
+  "self:nestjs:dto-partialtype:missing": {
+    "content": "COMMON MISTAKE in nestjs:\nGenerated code was MISSING: @IsString\nPrompt was: Generate NestJS DTOs for Book entity.\nCreateBookDto with title, author (required strings) and description (optional string).\nUpdateBookDto extends PartialType(CreateBookDto) from '@nestjs/mapped-types\nCORRECT approach must include: PartialType, @nestjs/mapped-types, @IsString, UpdateBookDto",
+    "source": "anti_pattern",
+    "updated_at": 1780708436.721373
+  },
+  "self:nestjs:dto-partialtype": {
+    "content": "import { IsString, IsOptional } from 'class-validator';\nimport { PartialType } from '@nestjs/mapped-types';\n\nexport class CreateBookDto {\n  @IsString()\n  title: string;\n\n  @IsString()\n  author: string;\n\n  @IsString()\n  @IsOptional()\n  description?: string;\n}\n\nexport class UpdateBookDto extends PartialType(CreateBookDto) {}",
+    "source": "self_generated_validated",
+    "updated_at": 1780708508.572965
   }
 }
