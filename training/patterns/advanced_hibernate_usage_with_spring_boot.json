@@ -1,42 +1,42 @@
 {
   "search:Advanced Hibernate Usage with Spring Boot:hibernate advanced features": {
-    "content": "- **Latest Version**: Hibernate 7.4\n- **CLI Commands**:\n  - `mvn clean install` for building projects.\n  - `hibernate-cli.bat` for running Hibernate commands.\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect to use.\n  - `hibernate.hbm2ddl.auto`: Controls schema generation (e.g., create-drop, update).\n  - `hibernate.show_sql`: Enables logging of SQL statements.\n  - `hibernate.format_sql`: Formats logged SQL for better readability.",
+    "content": "- **Latest Version**: Hibernate 7.4\n- **CLI Commands**:\n  - `mvn clean install` for building projects.\n  - `hibernate-cli.bat` or `hibernate-cli.sh` for running Hibernate commands.\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect to use (e.g., `org.hibernate.dialect.MySQLDialect`).\n  - `hibernate.hbm2ddl.auto`: Controls schema generation strategy (e.g., `create`, `update`, `validate`).\n  - `hibernate.show_sql`: Enables logging of SQL statements.\n  - `hibernate.format_sql`: Formats the logged SQL for better readability.",
     "source": "web_search",
-    "updated_at": 1780761852.6778054
+    "updated_at": 1780762087.808558
   },
   "search:Advanced Hibernate Usage with Spring Boot:hibernate advanced features_ex": {
-    "content": "- **CLI Commands**: Use `mvn hibernate3:hbm2ddl` to generate schema from HBM files.\n- **Latest Versions**: Hibernate 6.2.5.Final, released on March 24, 2023.\n- **Key Config Options**:\n  - `hibernate.cache.use_second_level_cache`: Enable second-level cache.\n  - `hibernate.cache.region.factory_class`: Specify the cache region factory class (e.g., `org.hibernate.cache.ehcache.EhCacheRegionFactory`).\n  - `hibernate.jdbc.batch_size`: Set batch size for JDBC operations.\n  - `hibernate.order_inserts`: Order insert statements to improve performance.\n  - `hibernate.order_updates`: Order update statements to improve performance.",
+    "content": "- **CLI Commands**: Use `mvn hibernate3:hbm2ddl` to generate schema from HBM files.\n- **Latest Versions**: Hibernate 6.2.0.Final as of my last update.\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect for your database.\n  - `hibernate.cache.use_second_level_cache`: Enables second-level caching.\n  - `hibernate.cache.region.factory_class`: Specifies the cache region factory class.\n  - `hibernate.jdbc.batch_size`: Configures JDBC batch size for performance.",
     "source": "code_example",
-    "updated_at": 1780761853.2778475
+    "updated_at": 1780762090.4336596
   },
   "search:Advanced Hibernate Usage with Spring Boot:spring boot jpa": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.4\n  - Spring Data JPA: 2.7.5\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (e.g., `create-drop`, `update`).",
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 2.7.5\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (e.g., `update`, `create-drop`).",
     "source": "web_search",
-    "updated_at": 1780761853.8442285
+    "updated_at": 1780762095.3629613
   },
   "search:Advanced Hibernate Usage with Spring Boot:spring boot jpa_ex": {
-    "content": "- **Latest Versions**: Spring Boot 3.1.2, Spring Data JPA (Hibernate 6)\n- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `mvn clean install`\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:h2:mem:testdb`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`",
+    "content": "- **Latest Version**: Spring Boot 3.1.2, Spring Data JPA 2.7.4\n- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `mvn clean install`\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:h2:mem:testdb`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`",
     "source": "code_example",
-    "updated_at": 1780761854.402418
+    "updated_at": 1780762097.5726254
   },
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access": {
-    "content": "- **CLI Commands**: Use `mvn clean install` for building Java projects.\n- **Latest Versions**: Hibernate 6.2, Spring Boot 3.1, Entity Framework Core 7.0.\n- **Key Config Options**:\n  - Hibernate: `hibernate.jdbc.batch_size`, `hibernate.order_inserts`, `hibernate.order_updates`.\n  - Spring Boot: `spring.datasource.hikari.maximum-pool-size`, `spring.jpa.properties.hibernate.dialect`.\n  - Entity Framework Core: `LazyLoadingEnabled`, `ChangeTracker.QueryTrackingBehavior`.",
+    "content": "- Use `hibernate.jdbc.batch_size` in Hibernate configuration to optimize batch processing.\n- Implement connection pooling using libraries like HikariCP or Apache Commons DBCP for efficient database access.\n- Enable lazy loading with Entity Framework by setting `LazyLoadingEnabled = true` in the DbContext options.\n- Minimize queries by using criteria API, HQL, or native SQL instead of multiple small queries.\n- Use second-level caching in Hibernate to reduce database hits.\n- Optimize query performance by indexing frequently queried columns.\n- Regularly monitor and analyze database access patterns with tools like JProfiler or VisualVM.\n- Update Hibernate and Entity Framework to the latest versions for bug fixes and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780761854.9665284
+    "updated_at": 1780762102.5722888
   },
   "search:Advanced Hibernate Usage with Spring Boot:optimizing database access_ex": {
-    "content": "- Use Django's `select_related` and `prefetch_related` to reduce the number of queries.\n- Implement caching using Redis or Ehcache for frequently accessed data with annotations like `@Cacheable`.\n- Configure connection pooling in Spring Boot applications, e.g., using HikariCP with properties like `spring.datasource.hikari.maximum-pool-size`.\n- Use indexes on database tables to speed up query performance.\n- Optimize queries by avoiding N+1 selects and using joins where appropriate.\n- Regularly analyze and optimize database schema for better performance.",
+    "content": "- Use Django's `select_related` and `prefetch_related` to reduce database queries.\n- Implement caching using Redis or Ehcache for frequently accessed data.\n- Configure connection pooling in Spring Boot with HikariCP.\n- Set the `spring.datasource.hikari.maximum-pool-size` to an appropriate value based on your application load.\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations in Spring Data JPA for caching management.\n- Monitor database access patterns using tools like Django Debug Toolbar or Spring Boot Actuator.\n- Regularly update frameworks and libraries to benefit from performance improvements.",
     "source": "code_example",
-    "updated_at": 1780761855.517765
+    "updated_at": 1780762105.2914307
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies": {
-    "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Check the official documentation or use package managers like `npm install redis@latest`.\n- **Key Config Options**:\n  - `maxmemory`: Set the maximum memory usage for Redis.\n  - `maxmemory-policy`: Define eviction policy when maxmemory is reached (e.g., `allkeys-lru`).\n  - `ttl`: Set time-to-live for keys in seconds.",
+    "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Check the official documentation or use package managers like `npm install redis@latest`.\n- **Key Config Options**:\n  - `maxmemory`: Sets the maximum memory that Redis can use.\n  - `maxmemory-policy`: Defines the eviction policy when maxmemory is reached.",
     "source": "web_search",
-    "updated_at": 1780761856.0581553
+    "updated_at": 1780762109.1750224
   },
   "search:Advanced Hibernate Usage with Spring Boot:caching strategies_ex": {
-    "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.Extensions.Caching.Memory`\n  - `dotnet add package Microsoft.AspNetCore.ResponseCaching`\n\n- **Latest Versions**:\n  - .NET SDK: v7.x\n  - HybridCache: Available in .NET Core 3.0 and later\n\n- **Key Config Options**:\n  - Cache Expiration: `options.SetAbsoluteExpiration(TimeSpan.FromMinutes(10))`\n  - Cache Eviction Policy: `options.EvictionPolicy = new LruEvictionPolicy()`\n  - Response Caching: `app.UseResponseCaching();`",
+    "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.Extensions.Caching.Memory`\n  - `dotnet new console -n CacheExample`\n\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Microsoft.Extensions.Caching.Memory: 7.0\n\n- **Key Config Options**:\n  - `CacheEntryOptions` for setting expiration times, sliding expiration, and absolute expiration.\n  - `MemoryCache` for managing cache entries programmatically.\n  - `IMemoryCache` interface for caching data in memory.\n\n- **Code Example**:\n  ```csharp\n  using Microsoft.Extensions.Caching.Memory;\n  using System;\n\n  class Program\n  {\n      static void Main(string[] args)\n      {\n          var cache = new MemoryCache(new MemoryCacheOptions());\n\n          // Set a cache entry with absolute expiration\n          cache.Set(\"key\", \"value\", new MemoryCacheEntryOptions()\n              .SetAbsoluteExpiration(TimeSpan.FromSeconds(60)));\n\n          // Get the cache entry\n          if (cache.TryGetValue(\"key\", out string value))\n          {\n              Console.WriteLine(value);\n          }\n      }\n  }\n  ```",
     "source": "code_example",
-    "updated_at": 1780761856.6268578
+    "updated_at": 1780762113.7530043
   }
 }
