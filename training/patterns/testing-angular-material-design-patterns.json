@@ -18,5 +18,15 @@
     "content": "- Use `ng test` to run tests.\n- Install Angular Material testing utilities via npm.\n- Configure `karma.conf.js` for custom configurations.\n- Utilize Jasmine and Karma for unit testing.\n- Employ `TestBed.configureTestingModule` for module setup.\n- Apply `fixture.detectChanges()` after changes.\n- Use `DebugElement.query(By.css('selector'))` to select elements.\n- Implement async tests with `async()`.\n- Update Angular CLI and Material packages regularly.",
     "source": "code_example",
     "updated_at": 1780718630.1488743
+  },
+  "search:testing-angular-material-design-patterns:angular material design testin": {
+    "content": "- Use Angular CLI to generate components, services, and modules.\n- Install Angular Material using `ng add @angular/material`.\n- Update your `app.module.ts` with necessary imports for Material components.\n- Utilize `MatDialogRef` for opening dialogs in tests.\n- Employ `TestBed.configureTestingModule` for setting up test environments.\n- Use `fixture.detectChanges()` to trigger change detection after dialog opens.\n- Apply `async` and `fakeAsync` for handling asynchronous operations in tests.\n- Leverage `By.css` for querying elements within the dialog.\n- Ensure testing with Angular's latest version (currently 16.x) for compatibility.",
+    "source": "web_search",
+    "updated_at": 1780718872.32794
+  },
+  "search:testing-angular-material-design-patterns:angular material design testin_ex": {
+    "content": "- Use `ng generate component <component-name>` to create Angular components.\n- Install Angular Material using the command: `npm install @angular/material @angular/cdk @angular/animations`.\n- Import `MatDialogModule` in your module file for dialog functionality.\n- Utilize `MdDialog.open()` method to open a dialog and get a reference with an `afterClosed()` method.\n- For testing, use Angular's built-in testing utilities like `TestBed.configureTestingModule()`, `fixture.detectChanges()`, and `componentInstance`.\n- Ensure you have the latest versions of Angular CLI, Angular Material, and CDK for compatibility and features.\n- Key config options include enabling animations in your module with `BrowserAnimationsModule` for smooth dialog transitions.",
+    "source": "code_example",
+    "updated_at": 1780718882.3776374
   }
 }
