@@ -1,18 +1,18 @@
 # DevAI Validation Report
-*2026-06-06 05:53*
+*2026-06-06 05:57*
 
-## Score: 39% `[███████░░░░░░░░░░░░░]`
+## Score: 50% `[██████████░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
+| nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | common-errors | 3.0/6.0 | 50% | ❌ |
-| nestjs-auth | 2.0/5.0 | 40% | ❌ |
-| nlp | 3.1/15.0 | 21% | ❌ |
+| nlp | 7.1/15.0 | 48% | ❌ |
 | nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
 
 ## ❌ Retreinar urgente
@@ -32,22 +32,16 @@
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nestjs-auth (40%)
-- ✗ NestJS PartialType: from @nestjs/mapped-types or @nestjs/common?
-  - Wrong: `@nestjs/common`
-
-### nlp (21%)
-- ✗ User says 'CRUD de livros com MongoDB'. What is the entity name?
-  - Wrong: `Livros, livros, LIVROS, Livro`
+### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, Dockerfile`
+  - Missing: `não, never`
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`
 
 ### spring-mongodb (50%)
-- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Wrong: `@Entity`
+- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
+  - Wrong: `JpaRepository`
 
 ### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
@@ -66,7 +60,7 @@ python scripts/validate.py --fix
 # Forçar retreinamento específico
 python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
-python scripts/validate.py --fix --topic nestjs-auth
+python scripts/validate.py --fix --topic nlp
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive

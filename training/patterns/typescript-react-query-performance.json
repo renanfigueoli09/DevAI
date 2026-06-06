@@ -1,0 +1,22 @@
+{
+  "search:typescript+react-query-performance:typescript react query perform": {
+    "content": "- **CLI Commands**: Use `npm install @tanstack/react-query` or `yarn add @tanstack/react-query`.\n- **Latest Version**: As of my last update, the latest version is 4.x.\n- **Key Config Options**:\n  - `queryClient`: Configure options for the query client like default cache time and stale time.\n  - `useQuery`: Use this hook to fetch data. It accepts a query key and a function that returns a promise.\n  - `refetchOnWindowFocus`: Control whether queries should refetch when the window regains focus.\n  - `keepPreviousData`: Keep previous data while fetching new data.\n- **Performance Tuning**:\n  - Use `queryCacheKey` to ensure consistent cache keys for similar queries.\n  - Implement pagination and infinite scrolling efficiently using `useInfiniteQuery`.\n  - Optimize network requests by batching them or using more specific query parameters.",
+    "source": "web_search",
+    "updated_at": 1780736249.018605
+  },
+  "search:typescript+react-query-performance:typescript react query perform_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @tanstack/react-query`\n\n- **Latest Versions**:\n  - React Query v4.x\n\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global options.\n  - `useQuery`: Hook to fetch data with automatic caching and invalidation.\n  - `useMutation`: Hook to handle side effects like form submissions or data updates.\n  - `useInfiniteQuery`: Hook for fetching infinite lists of data.\n  - `queryCache`: Manage the cache manually if needed.",
+    "source": "code_example",
+    "updated_at": 1780736253.7268567
+  },
+  "search:typescript+react-query-performance:react query for typescript bes": {
+    "content": "- Install `react-query` using npm or yarn.\n- Use TypeScript's type system to define query options and data types.\n- Utilize the `useQuery` hook from `react-query`.\n- Configure `queryClient` with options like `defaultOptions` for global settings.\n- Implement error handling within your queries.\n- Use `refetchOnWindowFocus` or `staleTime` for optimal performance.\n- Ensure type safety by using TypeScript interfaces or types for query data.\n- Regularly update `react-query` to the latest version for bug fixes and new features.",
+    "source": "web_search",
+    "updated_at": 1780736265.0876534
+  },
+  "search:typescript+react-query-performance:react query for typescript bes_ex": {
+    "content": "- Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- Install `react-query@latest` and `axios@latest` using npm or yarn.\n- Configure `react-query` by creating a custom hook that initializes the QueryClient:\n  ```typescript\n  import { QueryClient, QueryClientProvider } from 'react-query';\n\n  const queryClient = new QueryClient();\n\n  function App() {\n    return (\n      <QueryClientProvider client={queryClient}>\n        {/* Your app components */}\n      </QueryClientProvider>\n    );\n  }\n  ```\n- Use `useQuery` to fetch data:\n  ```typescript\n  import { useQuery } from 'react-query';\n  import axios from 'axios';\n\n  function fetchData() {\n    return axios.get('https://api.example.com/data');\n  }\n\n  function DataComponent() {\n    const { isLoading, error, data } = useQuery('data', fetchData);\n\n    if (isLoading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error.message}</div>;\n\n    return (\n      <div>\n        {/* Render your data */}\n      </div>\n    );\n  }\n  ```\n- Implement custom hooks for reusable logic:\n  ```typescript\n  import { useQuery } from 'react-query';\n  import axios from 'axios';\n\n  function useCustomData(queryKey: string) {\n    const fetchData = () => axios.get(`https://api.example.com/${queryKey}`);\n    return useQuery(queryKey, fetchData);\n  }\n  ```\n- Use TypeScript for type safety in your components and hooks.\n- Test behavior, not implementation, to ensure your components work as expected with different data.",
+    "source": "code_example",
+    "updated_at": 1780736273.4377987
+  }
+}
