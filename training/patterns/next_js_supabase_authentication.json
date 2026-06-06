@@ -1,0 +1,17 @@
+{
+  "search:Next.js + Supabase Authentication:supabase authentication with n": {
+    "content": "- **Install Supabase Client**: `npm install @supabase/supabase-js`\n- **Create Supabase Instance**: \n  ```javascript\n  import { createClient } from '@supabase/supabase-js';\n\n  const supabaseUrl = 'https://your-supabase-url.supabase.co';\n  const supabaseAnonKey = 'your-anon-key';\n  const supabase = createClient(supabaseUrl, supabaseAnonKey);\n  ```\n- **Sign Up User**: \n  ```javascript\n  const { user, error } = await supabase.auth.signUp({\n    email: 'user@example.com',\n    password: 'password'\n  });\n  ```\n- **Log In User**: \n  ```javascript\n  const { user, error } = await supabase.auth.signInWithPassword({\n    email: 'user@example.com',\n    password: 'password'\n  });\n  ```\n- **Session Management**:\n  - `supabase.auth.onAuthStateChange((event, session) => { ... })`\n  - `session.user` to access user info\n- **Protect Routes**: Use middleware or custom hooks to protect routes based on authentication status.\n- **Key Config Options**:\n  - `supabaseUrl`: Your Supabase project URL.\n  - `supabaseAnonKey`: Anonymous key for public access.\n  - `supabaseServiceRoleKey`: Service role key for admin access.\n\nFor the latest versions, refer to [Supabase's official documentation](https://supabase.io/docs).",
+    "source": "web_search",
+    "updated_at": 1780781904.8803523
+  },
+  "search:Next.js + Supabase Authentication:supabase authentication with n_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Supabase JS Client: 2.0.x\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your Supabase project.\n  - Environment variables for security (e.g., `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).\n  - Authentication methods like magic links, email/password, etc.",
+    "source": "code_example",
+    "updated_at": 1780781913.906784
+  },
+  "search:Next.js + Supabase Authentication:jwt token management in next.j": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `jsonwebtoken` and `next-auth` using npm or yarn for JWT handling and authentication.\n- Configure `next.config.js` with the following options:\n  - `reactStrictMode: true`\n  - `swcMinify: true`\n- Implement JWT in your API routes by creating a middleware function to verify tokens.\n- Use `Auth.js` from `next-auth` for user session management and authentication flows.\n- Store JWT securely on the client side using `localStorage` or `cookie`.\n- Protect routes using `getServerSideProps` or `getStaticProps` with token validation.\n- Update your project dependencies regularly to ensure security patches.",
+    "source": "web_search",
+    "updated_at": 1780781921.8814154
+  }
+}
