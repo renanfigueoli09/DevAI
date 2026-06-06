@@ -1,0 +1,17 @@
+{
+  "search:python-django-redis-cache:django redis cache for high tr": {
+    "content": "- **Install django-redis**: `pip install django-redis`\n- **Configure settings.py**:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- **Use cache in views**:\n  ```python\n  from django.core.cache import cache\n\n  def my_view(request):\n      # Get cached data\n      value = cache.get('my_key')\n      if value is None:\n          # Generate data\n          value = 'some_data'\n          # Set cache for 300 seconds (5 minutes)\n          cache.set('my_key', value, timeout=300)\n      return HttpResponse(value)\n  ```\n- **Latest versions**: Check [PyPI](https://pypi.org/project/django-redis/) for the latest version.\n- **Key config options**:\n  - `LOCATION`: Redis URL.\n  - `OPTIONS.CLIENT_CLASS`: Client class to use.\n  - `timeout`: Cache expiration time in seconds.",
+    "source": "web_search",
+    "updated_at": 1780746789.7259033
+  },
+  "search:python-django-redis-cache:django redis cache for high tr_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install django-redis`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.2\n\n- **Key Config Options**:\n  - `CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }`\n  - `CACHES['default']['LOCATION']`: Redis server URL\n  - `CACHES['default']['OPTIONS']['CLIENT_CLASS']`: Client class for Redis connection\n\n- **Use Cases**:\n  - High traffic sites\n  - Improving application performance\n  - Reducing database load",
+    "source": "code_example",
+    "updated_at": 1780746793.2553642
+  },
+  "search:python-django-redis-cache:python django redis caching st": {
+    "content": "- Install Redis server using `sudo apt-get install redis-server` on Ubuntu.\n- Ensure Django version is at least 3.0 for optimal compatibility.\n- Use pip to install the Redis package with `pip install django-redis`.\n- Configure caching in Django settings by adding:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- For cache invalidation, use Django's built-in `cache.delete()` method or `cache.set()` with an expiration time.\n- Consider using Redis for caching views, querysets, and fragments to improve performance.\n- Regularly monitor and optimize your caching strategy based on application needs.",
+    "source": "web_search",
+    "updated_at": 1780746799.1488883
+  }
+}

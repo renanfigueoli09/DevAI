@@ -1,0 +1,47 @@
+{
+  "search:React + Testing Library:advanced error handling techni": {
+    "content": "- Use `QueryClientProvider` with custom `onError` callback to handle Tanstack Query errors in Expo and React Native.\n- For testing user interactions and error handling, ensure components update instantly on actions like liking a post.\n- Implement Error Boundaries using the `react-error-boundary` library for graceful error recovery.\n- Utilize `createMemoryHistory` from `history` package when testing components that use `react-router`.\n- Write custom render functions to share code between tests and simplify test setup.",
+    "source": "web_search",
+    "updated_at": 1780746836.822876
+  },
+  "search:React + Testing Library:advanced error handling techni_ex": {
+    "content": "- **CLI Commands**:\n  - `npm test` or `yarn test`: Runs tests using Jest.\n  - `npm run test --watchAll`: Continuously watches for changes and runs tests.\n\n- **Latest Versions**:\n  - React: 18.x\n  - React Testing Library: 13.x\n  - Tanstack Query: 4.x\n\n- **Key Config Options**:\n  - Jest configuration in `package.json`:\n    ```json\n    \"scripts\": {\n      \"test\": \"jest --watchAll\"\n    }\n    ```\n  - React Testing Library setup:\n    ```javascript\n    import { render, screen } from '@testing-library/react';\n    ```\n\n- **Error Handling Techniques**:\n  - Use `componentDidCatch` for error boundaries.\n  - Implement custom render functions to share code between tests.\n  - Test components using `createMemoryHistory` for `react-router`.\n\nThese actionable facts provide a concrete guide for developers implementing advanced error handling and testing techniques in React applications.",
+    "source": "code_example",
+    "updated_at": 1780746847.8272617
+  },
+  "search:React + Testing Library:testing components and hooks w": {
+    "content": "- Use `npm install --save-dev @testing-library/react-hooks`\n- Install specific React version if needed, e.g., `npm install react@^17.0.2 react-dom@^17.0.2`\n- Import `renderHook` from `@testing-library/react-hooks`\n- Example: \n  ```javascript\n  import { renderHook } from '@testing-library/react-hooks';\n  import useMyHook from './useMyHook';\n\n  test('should return the correct value', () => {\n    const { result } = renderHook(() => useMyHook());\n    expect(result.current).toBe(expectedValue);\n  });\n  ```\n- Use `@testing-library/jest-dom` for additional matchers\n- Configure Jest in your `package.json`\n  ```json\n  \"jest\": {\n    \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]\n  }\n  ```\n- For user events, use `fireEvent` from `@testing-library/react`\n- Example:\n  ```javascript\n  import { fireEvent } from '@testing-library/react';\n  // Simulate a click event on an element\n  fireEvent.click(element);\n  ```\n- Use Vitest for faster test runs if preferred",
+    "source": "web_search",
+    "updated_at": 1780746856.77594
+  },
+  "search:React + Testing Library:testing components and hooks w_ex": {
+    "content": "- Use `@testing-library/react-hooks` for testing React hooks.\n- Install it via npm or yarn: `npm install @testing-library/react-hooks` or `yarn add @testing-library/react-hooks`.\n- Import `renderHook` from `@testing-library/react-hooks`.\n- Use `act` to wrap your hook calls when dealing with state updates or async operations.\n- Example of testing a custom hook:\n  ```javascript\n  import { renderHook, act } from '@testing-library/react-hooks';\n  import useMyHook from './useMyHook';\n\n  test('should return the correct value', () => {\n    const { result } = renderHook(() => useMyHook());\n    expect(result.current).toBe(expectedValue);\n  });\n  ```\n- For async hooks, use `waitFor` to wait for promises to resolve:\n  ```javascript\n  import { renderHook, waitFor } from '@testing-library/react-hooks';\n  import useAsyncHook from './useAsyncHook';\n\n  test('should fetch data correctly', async () => {\n    const { result } = renderHook(() => useAsyncHook());\n    await waitFor(() => expect(result.current.data).not.toBe(null));\n  });\n  ```\n- Key config options include `wrapper` for providing context or providers.\n- Ensure your tests are isolated and do not rely on global state.",
+    "source": "code_example",
+    "updated_at": 1780746864.7775106
+  },
+  "search:React + Testing Library:security best practices when u": {
+    "content": "- Use `npm install @testing-library/react` or `yarn add @testing-library/react`\n- Ensure React version is up to date, check for latest via [React's official website](https://reactjs.org/docs/getting-started.html)\n- Implement Jest and React Testing Library for unit testing.\n- Utilize `fireEvent` for simulating user interactions in tests.\n- Use `render` method from `@testing-library/react` to render components.\n- Employ `screen.getByText`, `screen.getByRole`, etc., for querying elements.\n- Apply `userEvent` for more realistic interaction simulation.\n- Configure Jest with a custom setup file using `--setupFilesAfterEnv`.\n- Ensure all tests pass before deploying your application.",
+    "source": "web_search",
+    "updated_at": 1780746886.4421053
+  },
+  "search:React + Testing Library:security best practices when u_ex": {
+    "content": "- Use `npm install @testing-library/react` to install React Testing Library.\n- Utilize `render()` function from React Testing Library for rendering components in tests.\n- Employ `fireEvent` for simulating user interactions like clicks, key presses, etc.\n- Apply `screen.getByText`, `screen.getByRole`, etc., for querying elements in the DOM.\n- Implement `cleanup()` after each test to ensure no side effects persist between tests.\n- Use `beforeEach` and `afterEach` hooks for setup and teardown of tests respectively.\n- Consider using `jest-dom` for additional matchers that enhance assertions.\n- Ensure your tests cover both positive and negative scenarios.\n- Keep your test suite up-to-date with the latest React Testing Library version.",
+    "source": "code_example",
+    "updated_at": 1780746891.3421695
+  },
+  "search:React + Testing Library:performance optimization for l": {
+    "content": "- **pytest-optimized-parametrization**: Use `pytest` with the `--addopts=\"--parametrize=...\"` flag to optimize parametrization.\n- **Vitest**: Update to the latest version for performance improvements, typically via npm or yarn: `npm install vitest@latest`.\n- **Playwright**: Ensure you are using the latest version of Playwright by running: `npm install playwright@latest`. Utilize parallel testing with `npx playwright test --workers=0` for optimal performance.\n- **Parallelization**: For large test suites, enable parallel execution in your CI/CD pipeline to distribute tests across multiple machines or cores.",
+    "source": "web_search",
+    "updated_at": 1780746908.619388
+  },
+  "search:React + Testing Library:performance optimization for l_ex": {
+    "content": "- Use `jest --shard <totalShards>:<shardIndex>` to shard Jest test suites.\n- Install and use React Testing Library for DOM testing in Bun.\n- Configure happy-dom for fast performance with large test suites.\n- Ensure tests clean up global state after execution.\n- Monitor CI pipeline performance post-sharding or optimization.",
+    "source": "code_example",
+    "updated_at": 1780746913.0382888
+  },
+  "search:React + Testing Library:best practices for mocking and": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx create-react-app my-app`\n\n- **Latest Versions**:\n  - Jest: 29.3.1\n  - React: 18.2.0\n\n- **Key Config Options**:\n  - `jest.config.js`: `setupFilesAfterEnv`, `transformIgnorePatterns`, `testEnvironment`\n  - `.env`: `REACT_APP_API_URL`",
+    "source": "web_search",
+    "updated_at": 1780746987.9046087
+  }
+}

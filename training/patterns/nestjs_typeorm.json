@@ -1,0 +1,12 @@
+{
+  "pattern:nestjs+postgres:entity": {
+    "content": "// entity.ts: @Entity('books') class Book { @PrimaryGeneratedColumn('uuid') id:string; @Column({nullable:false}) title:string; @Column({nullable:true}) description?:string; @CreateDateColumn() createdAt:Date; }",
+    "source": "code_pattern",
+    "updated_at": 1780746919.580961
+  },
+  "pattern:nestjs+postgres:service": {
+    "content": "// service.ts TypeORM: @InjectRepository(Book) private repo:Repository<Book>. findAll(){return this.repo.find()} findOne(id){return this.repo.findOne({where:{id}})} create(dto){return this.repo.save(this.repo.create(dto as any))} update(id,dto){await this.repo.update(id,dto as any);return this.findOne(id)} remove(id){return this.repo.delete(id)}",
+    "source": "code_pattern",
+    "updated_at": 1780746919.620116
+  }
+}
