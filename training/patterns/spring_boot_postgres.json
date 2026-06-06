@@ -2,6 +2,6 @@
   "pattern:spring+postgres:entity": {
     "content": "// @Entity @Table(name='books') @Data class Book { @Id @GeneratedValue(strategy=UUID) String id; @Column(nullable=false) String title; @CreationTimestamp LocalDateTime createdAt; }. Repository: extends JpaRepository<Book,String>{}",
     "source": "code_pattern",
-    "updated_at": 1780759469.5144508
+    "updated_at": 1780759851.836363
   }
 }

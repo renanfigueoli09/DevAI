@@ -2,21 +2,21 @@
   "search:angular+firebase-performance-optimization:angular firebase performance o": {
     "content": "- Use Angular CLI version 16 or later.\n- Implement lazy loading for modules using `--lazy` flag in `ng generate module`.\n- Optimize change detection by setting `ChangeDetectionStrategy.OnPush` on components where data does not change frequently.\n- Utilize Webpack Bundle Analyzer to identify and optimize large bundles.\n- Enable Ahead-of-Time (AOT) compilation with `ng build --prod`.\n- Use Angular CDK for performance-critical UI elements.\n- Implement server-side rendering (SSR) using Angular Universal.\n- Minimize HTTP requests by combining and minifying CSS/JS files.\n- Optimize images using tools like ImageOptim or TinyPNG.\n- Regularly update Angular and its dependencies to benefit from performance improvements.",
     "source": "web_search",
-    "updated_at": 1780759393.8251898
+    "updated_at": 1780759773.7396514
   },
   "search:angular+firebase-performance-optimization:angular firebase performance o_ex": {
     "content": "- **CLI Commands**:\n  - `ng build --prod` for production builds.\n  - `ng serve --live-reload=false` to disable live reload during development.\n\n- **Latest Versions**:\n  - Angular CLI: v16.x\n  - Angular Core: v16.x\n\n- **Key Config Options**:\n  - `angular.json`: Configure build options, such as optimization flags.\n    ```json\n    \"configurations\": {\n      \"production\": {\n        \"fileReplacements\": [\n          { \"replace\": \"src/environments/environment.ts\", \"with\": \"src/environments/environment.prod.ts\" }\n        ],\n        \"optimization\": true,\n        \"outputHashing\": \"all\",\n        \"sourceMap\": false,\n        \"extractCss\": true,\n        \"namedChunks\": true,\n        \"aot\": true,\n        \"extractLicenses\": true,\n        \"vendorChunk\": true,\n        \"buildOptimizer\": true\n      }\n    }\n  ```\n  - `angular.json`: Enable lazy loading for better performance.\n    ```json\n    \"projects\": {\n      \"your-project-name\": {\n        \"architect\": {\n          \"build\": {\n            \"options\": {\n              \"lazyModules\": [\n                \"app/lazy-loaded-module/lazy-loaded-module.module\"\n              ]\n            }\n          }\n        }\n      }\n    }\n  ```\n\n- **Performance Techniques**:\n  - Use `ng serve --prod` for faster development builds.\n  - Implement lazy loading to reduce initial load time.\n  - Optimize images and assets using tools like WebP or SVG.\n  - Use Angular's built-in change detection strategies wisely.",
     "source": "code_example",
-    "updated_at": 1780759394.3450027
+    "updated_at": 1780759774.2570324
   },
   "search:angular+firebase-performance-optimization:firebase performance monitorin": {
     "content": "- **CLI Commands**:\n  - `ng add @angular/fire/performance`: Adds Firebase Performance Monitoring to your Angular project.\n  - `firebase deploy --only hosting`: Deploys your Angular app with Firebase Hosting.\n\n- **Latest Versions**:\n  - AngularFire: v7.x\n  - Firebase SDK for Web: v9.x\n\n- **Key Config Options**:\n  - `AngularFirePerformanceModule` in `AppModule` imports to enable performance monitoring.\n  - Configure Firebase project settings in `environment.ts` and `environment.prod.ts`.",
     "source": "web_search",
-    "updated_at": 1780759394.9454525
+    "updated_at": 1780759774.7460349
   },
   "search:angular+firebase-performance-optimization:firebase performance monitorin_ex": {
     "content": "- **CLI Commands**:\n  - `ng add @angular/fire`: Installs AngularFire and Firebase SDK.\n  - `firebase init`: Initializes a new Firebase project or connects an existing one to your Angular app.\n\n- **Latest Versions**:\n  - Ensure you are using the latest versions of Angular, AngularFire, and Firebase SDK for compatibility and performance improvements.\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `AngularFirePerformanceModule` from `@angular/fire/performance`.\n  - Configure Firebase in your environment files with your project's credentials.\n  - Use `firebase.initializeApp(environment.firebase)` to initialize Firebase in your app.",
     "source": "code_example",
-    "updated_at": 1780759395.9333344
+    "updated_at": 1780759775.2788432
   }
 }

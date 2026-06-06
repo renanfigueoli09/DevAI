@@ -2,21 +2,21 @@
   "search:spring-boot-mongodb-advanced:spring boot mongodb aggregatio": {
     "content": "- **Latest Version**: Spring Data MongoDB 3.x\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: MongoDB connection URI.\n  - `spring.data.mongodb.database`: Database name.\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `./gradlew build` for Gradle-based projects.\n- **GitHub Project**: LvsalnNarayana/spring-mongodb-aggregation-query-api\n- **Aggregation Framework Support**: Use `Aggregation` and `AggregationResults` classes.\n- **Projections**: Utilize Spring Data's projection capabilities to simplify data retrieval.\n- **Reactive MongoDB**: For reactive applications, use `ReactiveMongoTemplate`.\n- **Advanced Aggregations**: Explore MongoDB's native query language for complex transformations.",
     "source": "web_search",
-    "updated_at": 1780759399.6593592
+    "updated_at": 1780759778.8977845
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb aggregatio_ex": {
     "content": "- **CLI Commands**: Not applicable for Spring Boot MongoDB Aggregation Framework.\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data MongoDB: 4.x\n  - MongoDB: 6.x\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string to MongoDB.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.collection`: Collection name.\n  - `@Aggregation` annotation for defining aggregation pipelines in Java.",
     "source": "code_example",
-    "updated_at": 1780759400.1793728
+    "updated_at": 1780759779.4454901
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb reactive s": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data MongoDB Reactive: 4.1.0\n  - Maven: 3.8.5\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.webflux.thread-pool-size`: Number of threads in the thread pool for handling requests.\n  - `spring.data.mongodb.database`: Name of the MongoDB database to connect to.",
     "source": "web_search",
-    "updated_at": 1780759400.693746
+    "updated_at": 1780759780.0152025
   },
   "search:spring-boot-mongodb-advanced:spring boot mongodb reactive s_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Data MongoDB Reactive: 4.1.2\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: MongoDB connection URI.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.reactive.converters.auto-registration-mode`: Auto-registration mode for converters.\n\nThese details provide a concise summary of actionable facts for integrating Spring Boot with MongoDB using Reactive Streams.",
     "source": "code_example",
-    "updated_at": 1780759401.2097156
+    "updated_at": 1780759780.5567358
   }
 }

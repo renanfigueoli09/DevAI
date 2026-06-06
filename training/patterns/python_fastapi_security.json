@@ -2,21 +2,21 @@
   "search:python-fastapi-security:fastapi security best practice": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- Implement JWT token authentication using the `fastapi.security.OAuth2PasswordBearer`.\n- Configure CORS with `fastapi.middleware.cors.CORSMiddleware` for cross-origin requests.\n- Update FastAPI to the latest version by running `pip install --upgrade fastapi`.\n- Use environment variables for sensitive information like secret keys and database credentials.\n- Implement dependency injection for managing authentication state with `Depends`.\n- Regularly update dependencies using `pip list --outdated` and `pip install --upgrade <package>`.\n- Enable HTTPS by configuring your server to use SSL/TLS certificates.\n- Test security features thoroughly using tools like `pytest` and `securityheaders.com`.",
     "source": "web_search",
-    "updated_at": 1780759383.569403
+    "updated_at": 1780759763.6005423
   },
   "search:python-fastapi-security:fastapi security best practice_ex": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- Implement PKCE flow in OAuth 3.0 by using libraries like `fastapi-oauthlib`.\n- Validate all inputs using Pydantic models for data integrity.\n- Use environment variables for sensitive information like database credentials.\n- Enable HTTPS by configuring your server to use SSL/TLS certificates.\n- Regularly update FastAPI and its dependencies to the latest versions using `pip install --upgrade fastapi[all]`.\n- Implement rate limiting to prevent abuse of API endpoints.\n- Use dependency injection for managing application state and resources efficiently.\n- Configure logging with a structured format for better debugging and monitoring.",
     "source": "code_example",
-    "updated_at": 1780759384.0690007
+    "updated_at": 1780759764.145353
   },
   "search:python-fastapi-security:python fastapi authentication ": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - Pydantic: v2.0.0\n  - SQLAlchemy: v2.0.0\n\n- **Key Config Options**:\n  - `JWT_SECRET_KEY`: Secret key for JWT token signing.\n  - `ALGORITHM`: Algorithm used for JWT encoding (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiry time for access tokens in minutes.\n  - `DATABASE_URL`: URL for database connection.",
     "source": "web_search",
-    "updated_at": 1780759384.5605247
+    "updated_at": 1780759764.6316586
   },
   "search:python-fastapi-security:python fastapi authentication _ex": {
     "content": "- **CLI Commands**:\n  - `python -m venv myenv` to create a virtual environment.\n  - `source myenv/bin/activate` on Unix or `myenv\\Scripts\\activate` on Windows to activate the virtual environment.\n\n- **Latest Versions**:\n  - FastAPI: 0.100.0\n  - Pydantic: 2.4.0\n  - SQLAlchemy: 2.0.0\n  - Uvicorn: 13.0.0\n\n- **Key Config Options**:\n  - `JWT_SECRET_KEY`: Secret key for JWT token generation.\n  - `ALGORITHM`: Algorithm used for JWT encoding (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiration time for access tokens in minutes.\n  - `DATABASE_URL`: URL to connect to the database.",
     "source": "code_example",
-    "updated_at": 1780759385.0999124
+    "updated_at": 1780759765.132953
   }
 }
