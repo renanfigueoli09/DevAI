@@ -1,0 +1,12 @@
+{
+  "search:fastapi+redis-async:fastapi with redis async 2023": {
+    "content": "- **Install FastAPI and Redis**: Use `pip install fastapi[all] redis`.\n- **Create FastAPI App**: Initialize a basic FastAPI app.\n- **Redis Connection**: Establish an asynchronous connection to Redis using `redis.asyncio.Redis.from_url(\"redis://localhost:6379\")`.\n- **Cache Middleware**: Implement middleware to cache responses using Redis.\n- **Dependency Injection**: Use FastAPI's dependency injection for Redis operations.\n- **Asynchronous Operations**: Utilize async/await for non-blocking Redis interactions.\n- **Key Config Options**:\n  - `redis_url`: URL of the Redis server.\n  - `max_connections`: Maximum number of connections in the pool.\n  - `min_connections`: Minimum number of connections in the pool.\n- **Latest Versions**: Ensure using compatible versions of FastAPI and Redis libraries.\n- **Documentation**: Use Swagger UI to explore your API endpoints.",
+    "source": "web_search",
+    "updated_at": 1780751716.9661071
+  },
+  "search:fastapi+redis-async:fastapi with redis async 2023_ex": {
+    "content": "- **GitHub Repository**: [redis-developer/fastapi-redis-tutorial](https://github.com/redis-developer/fastapi-redis-tutorial)\n- **Latest FastAPI Version**: Use `pip install fastapi==0.98.0`\n- **Latest Redis-py Version**: Use `pip install redis==4.5.4`\n- **Key Config Options**:\n  - `REDIS_URL`: URL for connecting to the Redis server.\n  - `TIME_SERIES_KEY`: Key used for storing Bitcoin sentiment and price data in Redis Time Series.\n  - `ROLLING_AVERAGE_WINDOW`: Window size for calculating rolling averages.\n- **CLI Commands**:\n  ```bash\n  # Install FastAPI and Redis-py\n  pip install fastapi==0.98.0 redis==4.5.4\n\n  # Run the FastAPI application\n  uvicorn main:app --reload\n  ```\n\nThese actionable facts provide a clear guide for developers to integrate Redis with FastAPI, ensuring they have the necessary tools and configurations to build high-performance web services.",
+    "source": "code_example",
+    "updated_at": 1780751725.6124997
+  }
+}
