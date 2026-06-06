@@ -2,11 +2,11 @@
   "search:django-rest-framework+postgres:django rest framework and post": {
     "content": "- **CLI Commands**:\n  - `python manage.py runserver --settings=your_project.settings.production`\n  - `pgbench -i your_database_name`\n  - `pgbench -c 10 -T 60 your_database_name`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework: 3.14\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - `CACHES` in settings.py for Redis caching.\n  - `DATABASES` configuration for PostgreSQL connection parameters.\n  - `DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'` for better performance with large datasets.",
     "source": "web_search",
-    "updated_at": 1780778692.6100242
+    "updated_at": 1780779590.3342805
   },
   "search:django-rest-framework+postgres:django rest framework and post_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py runserver --insecure`\n  - `pgbench -i -s 10 mydb`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n  - PostgreSQL: 15.2\n\n- **Key Config Options**:\n  - `CACHES` in settings.py for caching strategies.\n  - `DATABASES` in settings.py for database configuration.\n  - `DEBUG = False` to disable debug mode in production.",
     "source": "code_example",
-    "updated_at": 1780778693.4198623
+    "updated_at": 1780779591.3447075
   }
 }

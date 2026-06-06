@@ -2,7 +2,7 @@
   "search:Docker Compose for Microservices Security and Performance Optimization:docker compose security": {
     "content": "- Use `docker-compose --version` to check the latest version.\n- Manage secrets securely using environment variables or Docker Secrets.\n- Apply network security by setting up custom networks and firewall rules.\n- Harden containers with non-root users, minimal privileges, and secure configurations.\n- Enable resource limits in `docker-compose.yml` for CPU and memory.\n- Disable privileged mode unless absolutely necessary.\n- Regularly scan images for vulnerabilities using tools like `docker scan`.\n- Implement health checks to ensure services are running correctly.",
     "source": "web_search",
-    "updated_at": 1780778774.3246675
+    "updated_at": 1780779677.842033
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti": {
     "content": "- Use `kubectl top pod` to monitor resource usage of microservices.\n- Implement circuit breakers using libraries like Hystrix or Resilience4j for fault tolerance.\n- Optimize database queries with indexes and query optimization techniques.\n- Enable caching mechanisms like Redis or Memcached to reduce latency.\n- Utilize load balancers like NGINX or HAProxy for distributing traffic evenly.\n- Monitor service dependencies using tools like Prometheus and Grafana.\n- Implement microservices architecture patterns such as API Gateway, Circuit Breaker, and Service Discovery.\n- Regularly update microservice dependencies to the latest versions for security and performance improvements.\n- Use `docker stats` to monitor resource usage of Docker containers hosting microservices.",
