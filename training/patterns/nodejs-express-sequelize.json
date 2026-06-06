@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-sequelize:nodejs express sequelize crud ": {
+    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express sequelize mysql2 body-parser cors swagger-jsdoc swagger-ui-express` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v16.14.0\n  - Express: ^4.18.2\n  - Sequelize: ^6.30.2\n  - MySQL2: ^2.3.3\n  - Body-parser: ^1.20.0\n  - Cors: ^2.8.5\n  - Swagger-jsdoc: ^6.2.4\n  - Swagger-ui-express: ^4.1.6\n\n- **Key Config Options**:\n  - Express Server: `app.listen(3000, () => console.log('Server running on port 3000'));`\n  - Sequelize Connection: `const sequelize = new Sequelize('database', 'username', 'password', { host: 'localhost', dialect: 'mysql' });`\n  - Swagger Configuration:\n    ```javascript\n    const swaggerUi = require('swagger-ui-express');\n    const swaggerJSDoc = require('swagger-jsdoc');\n\n    const options = {\n      definition: {\n        openapi: '3.0.0',\n        info: {\n          title: 'API Documentation',\n          version: '1.0.0',\n        },\n      },\n      apis: ['./routes/*.js'],\n    };\n\n    const swaggerSpec = swaggerJSDoc(options);\n\n    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));\n    ```",
+    "source": "web_search",
+    "updated_at": 1780739337.5098128
+  },
+  "search:nodejs-express-sequelize:nodejs express sequelize crud _ex": {
+    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express sequelize pg pg-hstore body-parser cors` to install necessary packages.\n\n- **Latest Versions**:\n  - Express: v4.18.2\n  - Sequelize: v6.30.2\n  - PostgreSQL: v14\n\n- **Key Config Options**:\n  - `app.use(bodyParser.json())` for parsing JSON bodies.\n  - `app.use(cors())` for enabling Cross-Origin Resource Sharing.\n  - Sequelize configuration in `config.js`: `{ username, password, database, host, dialect }`.",
+    "source": "code_example",
+    "updated_at": 1780739346.8155136
+  },
+  "search:nodejs-express-sequelize:express sequelize orm best pra": {
+    "content": "- Use `npm install sequelize` or `yarn add sequelize` to install Sequelize.\n- For TypeScript, use `npm install --save-dev @types/sequelize`.\n- Initialize a new Sequelize project with `npx sequelize-cli init`.\n- Define models using JavaScript or TypeScript for type safety.\n- Create typed Express routes by installing `@types/express` and defining route handlers that return types.\n- Use the latest version of Sequelize, which can be found on npm.\n- Configure Sequelize in your application by setting up a connection to your database in a configuration file.\n- Utilize migrations with `npx sequelize-cli db:migrate` for schema changes.\n- Employ seeders with `npx sequelize-cli db:seed:all` to populate the database with initial data.\n- For complex queries, use Sequelize's query interface or model methods like `.findAll()`, `.create()`, etc.",
+    "source": "web_search",
+    "updated_at": 1780739358.3901837
+  },
+  "search:nodejs-express-sequelize:express sequelize orm best pra_ex": {
+    "content": "- Use `npm install sequelize` to install Sequelize.\n- Install TypeScript and related packages using `npm install typescript @types/node --save-dev`.\n- Initialize a new Sequelize project with `npx sequelize-cli init`.\n- Define models using TypeScript interfaces for type safety.\n- Create typed Express routes by installing `@types/express` and defining route handlers with appropriate types.\n- Use environment variables for database configuration to keep sensitive information secure.\n- Implement proper error handling in your Sequelize queries.\n- Regularly update Sequelize and its dependencies to the latest versions using `npm update`.\n- Utilize Sequelize's built-in hooks for model lifecycle events.\n- Consider using a linter like ESLint with TypeScript rules for code quality.",
+    "source": "code_example",
+    "updated_at": 1780739365.3749075
+  }
+}

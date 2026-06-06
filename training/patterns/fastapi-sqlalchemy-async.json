@@ -1,0 +1,22 @@
+{
+  "search:fastapi+sqlalchemy-async:fastapi sqlalchemy async tutor": {
+    "content": "- Use `fastapi` version 0.95.0 or later.\n- Use `sqlalchemy` version 2.0.0 or later for asynchronous support.\n- Install `asyncpg` as the async PostgreSQL driver with `pip install asyncpg`.\n- Configure your database URL in FastAPI settings, e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`.\n- Use `AsyncEngine` from SQLAlchemy to create an asynchronous engine instance.\n- Initialize `SessionLocal` using `AsyncSession` for handling database sessions.\n- Define your models with SQLModel or SQLAlchemy ORM, ensuring they are compatible with async operations.\n- Use `Depends` in FastAPI routes to inject the database session (`async def get_db()`).\n- When querying, use `.all()`, `.first()`, etc., on async session objects.\n- Handle exceptions and errors appropriately using try-except blocks for robustness.",
+    "source": "web_search",
+    "updated_at": 1780739178.0115616
+  },
+  "search:fastapi+sqlalchemy-async:fastapi sqlalchemy async tutor_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`\n  - `alembic init alembic`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection for database session: `async def get_db()`\n  - Alembic configuration in `alembic.ini` and `env.py`\n\n- **Additional Resources**:\n  - FastAPI Documentation: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)\n  - SQLAlchemy ORM Documentation: [https://docs.sqlalchemy.org/en/14/orm/index.html](https://docs.sqlalchemy.org/en/14/orm/index.html)\n  - Alembic Documentation: [https://alembic.sqlalchemy.org/en/latest/](https://alembic.sqlalchemy.org/en/latest/)",
+    "source": "code_example",
+    "updated_at": 1780739185.9713109
+  },
+  "search:fastapi+sqlalchemy-async:fastapi async orm with sqlalch": {
+    "content": "- **CLI Commands**: Use `pip install fastapi sqlalchemy asyncpg` to install necessary packages.\n- **Latest Versions**: FastAPI v0.85.2, SQLAlchemy v2.0.0, Asyncpg v0.26.0.\n- **Key Config Options**:\n  - Define models using SQLAlchemy ORM.\n  - Use Pydantic for data validation and settings management.\n  - Configure ASGI server like Uvicorn with `uvicorn main:app --reload`.\n  - Set up database connection strings in environment variables or directly in code.",
+    "source": "web_search",
+    "updated_at": 1780739198.175231
+  },
+  "search:fastapi+sqlalchemy-async:fastapi async orm with sqlalch_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 2.0.0\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - ASGI Server: `uvicorn`\n  - ORM Configuration: SQLAlchemy Core and Async Engine\n  - Authentication: JWT (JSON Web Tokens)",
+    "source": "code_example",
+    "updated_at": 1780739209.3133724
+  }
+}
