@@ -2,11 +2,11 @@
   "search:Advanced Testing Strategies for Node.js Applications:node.js testing frameworks 202": {
     "content": "- **Jest**: \n  - Install: `npm install --save-dev jest`\n  - Run tests: `npx jest`\n  - Config file: `jest.config.js`\n\n- **Mocha**:\n  - Install: `npm install --save-dev mocha`\n  - Run tests: `mocha test`\n  - Config file: `.mocharc.json`\n\n- **Chai**:\n  - Install: `npm install --save-dev chai`\n  - Use with Mocha: `const assert = require('chai').assert;`\n  \n- **Supertest** (for HTTP testing):\n  - Install: `npm install --save-dev supertest`\n  - Usage: `const request = require('supertest');`\n\n- **Sinon.js** (for mocking):\n  - Install: `npm install --save-dev sinon`\n  - Use with Mocha: `const sinon = require('sinon');`\n\n- **Puppeteer** (for browser testing):\n  - Install: `npm install --save-dev puppeteer`\n  - Run tests: `npx mocha test/browser.js`\n\n- **AVA**:\n  - Install: `npm install --save-dev ava`\n  - Run tests: `npx ava`\n  - Config file: `ava.config.cjs`",
     "source": "web_search",
-    "updated_at": 1780767257.9705164
+    "updated_at": 1780767787.5366764
   },
   "search:Advanced Testing Strategies for Node.js Applications:node.js testing frameworks 202_ex": {
     "content": "- **CLI Commands**: \n  - `npm install --save-dev jest`\n  - `npx mocha test`\n  - `npm install --save-dev chai`\n\n- **Latest Versions**:\n  - Jest: 29.6.3\n  - Mocha: 10.2.0\n  - Chai: 4.3.7\n\n- **Key Config Options**:\n  - Jest: `\"testEnvironment\": \"node\"`\n  - Mocha: `{\"reporter\": \"spec\"}`\n  - Chai: `expect` or `should` style",
     "source": "code_example",
-    "updated_at": 1780767258.987167
+    "updated_at": 1780767788.212017
   }
 }
