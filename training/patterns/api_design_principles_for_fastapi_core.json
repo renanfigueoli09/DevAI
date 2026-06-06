@@ -2,21 +2,21 @@
   "search:API Design Principles for FastAPI + Core:rest api design principles": {
     "content": "- Understand REST as an architectural style, not a protocol.\n- Use HTTP methods like GET, POST, PUT, DELETE for CRUD operations.\n- Ensure your API is stateless and cacheable.\n- Implement versioning in the URL or headers.\n- Use JSON for data interchange.\n- Document your API thoroughly with Swagger or similar tools.\n- Handle errors gracefully by returning appropriate HTTP status codes.\n- Rate limit requests to prevent abuse.\n- Test your API using tools like Postman or cURL.",
     "source": "web_search",
-    "updated_at": 1780783037.9838898
+    "updated_at": 1780783510.235399
   },
   "search:API Design Principles for FastAPI + Core:rest api design principles_ex": {
     "content": "- **CLI Commands**: Use `curl` for testing REST APIs.\n- **Latest Versions**: Ensure using the latest version of HTTP/2 for optimal performance.\n- **Key Config Options**:\n  - Enable CORS for cross-origin requests.\n  - Implement rate limiting to prevent abuse.\n  - Use HTTPS for secure data transmission.",
     "source": "code_example",
-    "updated_at": 1780783042.1867747
+    "updated_at": 1780783511.0842168
   },
   "search:API Design Principles for FastAPI + Core:graphql api design best practi": {
     "content": "- **CLI Commands**: Use `graphql-cli` for schema validation and code generation.\n- **Latest Versions**: Ensure using the latest version of GraphQL libraries to benefit from performance improvements and security patches.\n- **Key Config Options**:\n  - Schema definition: Define types, queries, mutations, and subscriptions clearly.\n  - Performance optimization: Implement batching, caching, and pagination strategies.\n  - Security considerations: Use authentication and authorization middleware.\n  - Error handling: Provide detailed error messages for better debugging.",
     "source": "web_search",
-    "updated_at": 1780783049.8110113
+    "updated_at": 1780783512.0872543
   },
   "search:API Design Principles for FastAPI + Core:graphql api design best practi_ex": {
     "content": "- Use `graphql-cli` for schema generation and validation.\n- Update to the latest version of GraphQL.js for optimal performance.\n- Configure CORS in your server settings to allow cross-origin requests.\n- Implement pagination using `first`, `last`, `before`, and `after` arguments.\n- Secure your API with JWT tokens or OAuth2.\n- Use Apollo Server for easy setup and integration with Express.\n- Monitor query complexity to prevent denial-of-service attacks.\n- Cache frequently accessed data using Redis or Memcached.\n- Document your schema using GraphQL introspection and tools like Swagger UI.",
     "source": "code_example",
-    "updated_at": 1780783054.0170493
+    "updated_at": 1780783512.9301167
   }
 }

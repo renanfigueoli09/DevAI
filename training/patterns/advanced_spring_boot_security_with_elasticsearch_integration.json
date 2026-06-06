@@ -2,21 +2,21 @@
   "search:Advanced Spring Boot Security with Elasticsearch Integration:spring boot security elasticse": {
     "content": "- **CLI Commands**:\n  - `elasticsearch.bat` to run Elasticsearch.\n  \n- **Latest Versions**:\n  - Elasticsearch 8.7.0\n  \n- **Key Config Options**:\n  - Enable security in `application.yaml`.\n  - Configure HTTPS for secure connections.\n  - Use Spring Boot Starter Data Elasticsearch dependency.\n  - Define connection details in `ElasticsearchConfiguration` class.",
     "source": "web_search",
-    "updated_at": 1780782195.305393
+    "updated_at": 1780783464.3213985
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:spring boot security elasticse_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n  - Elasticsearch: 7.x\n\n- **Key Config Options**:\n  - `spring.data.elasticsearch.username` and `spring.data.elasticsearch.password`\n  - `spring.security.user.name` and `spring.security.user.password`\n  - `application.yaml` for JWT configuration",
     "source": "code_example",
-    "updated_at": 1780782196.3857439
+    "updated_at": 1780783465.2800355
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:elasticsearch authentication a": {
     "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name <domain-name> --elasticsearch-version <version> --ebs-options VolumeSize=<size> --instance-type <type> --security-group-ids <group-id> --vpc-options SubnetIds=<subnet-id>`\n  - `curl -X GET \"http://<host>:9200/_cat/nodes?v\"`\n  - `curl -X PUT \"http://<host>:9200/<index>/_doc/1\" -H 'Content-Type: application/json' -d '{ \"field\": \"value\" }'`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5\n  - AWS Elasticsearch Service: 8.5\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Enables security features.\n  - `xpack.security.authc.realms.file.file1.path`: Path to the file realm configuration.\n  - `xpack.security.authorization.enabled`: Enables role-based access control (RBAC).\n  - `xpack.security.audit.enabled`: Enables auditing of security events.",
     "source": "web_search",
-    "updated_at": 1780782197.3345387
+    "updated_at": 1780783466.1983614
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:elasticsearch authentication a_ex": {
     "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name <domain-name> --elasticsearch-version <version> --access-policies file://<policy-file>`\n  - `aws es update-service-software-options --domain-name <domain-name> --automated-update-type MAINTENANCE`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5\n  - AWS Elasticsearch Service: 1.0\n\n- **Key Config Options**:\n  - `accessPolicies`: Define IAM policies for domain access.\n  - `ebsOptions`: Configure EBS storage options.\n  - `instanceType`: Specify the instance type for nodes.\n  - `nodeCount`: Set the number of nodes in the cluster.",
     "source": "code_example",
-    "updated_at": 1780782198.4555058
+    "updated_at": 1780783467.1201606
   }
 }
