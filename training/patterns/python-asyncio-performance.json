@@ -1,0 +1,17 @@
+{
+  "search:python+asyncio-performance:python asyncio performance opt": {
+    "content": "- Use `asyncio.run()` to run the main entry point of your asyncio application.\n- Update Python to the latest version for performance improvements and bug fixes.\n- Configure event loop policies with `asyncio.set_event_loop_policy()`.\n- Utilize `asyncpg` for asynchronous PostgreSQL database access.\n- Employ `aiohttp` for building non-blocking web servers and clients.\n- Implement thread pools with `concurrent.futures.ThreadPoolExecutor` for CPU-bound tasks.\n- Use `asyncio.gather()` to run multiple coroutines concurrently.\n- Monitor performance using tools like `cProfile` and `asyncio.profiler`.\n- Apply rate limiting strategies with libraries like `ratelimit`.",
+    "source": "web_search",
+    "updated_at": 1780717464.6382704
+  },
+  "search:python+asyncio-performance:asynchronous programming in py": {
+    "content": "- Use `python -m pip install asyncio` to install the latest version of asyncio.\n- To run an asynchronous function, use `asyncio.run(main())`.\n- Key configuration options include setting event loop policies with `asyncio.set_event_loop_policy()`.\n- For creating tasks, use `asyncio.create_task(coroutine)`.\n- Use `await` keyword to pause execution until the awaited task completes.\n- Manage concurrency using `asyncio.gather(*tasks)` to run multiple tasks concurrently.\n- To handle exceptions in asynchronous code, use try-except blocks around await expressions.\n- For debugging, enable asyncio's debug mode with `asyncio.run(main(), debug=True)`.\n- Use `asyncio.sleep(delay)` for pausing execution asynchronously.",
+    "source": "web_search",
+    "updated_at": 1780717487.1202679
+  },
+  "search:python+asyncio-performance:asynchronous programming in py_ex": {
+    "content": "- Use `async def` to define asynchronous functions.\n- Employ `await` to pause execution until an asynchronous operation completes.\n- The latest version of Python for asyncio is 3.14.5 as of the documentation update date.\n- Key configuration options include setting up event loops with `asyncio.get_event_loop()`.\n- Use `asyncio.run()` to run the main entry point coroutine.\n- Implementing non-blocking I/O operations can be done using libraries like `aiohttp` for web requests or `aiomysql` for database connections.\n- For distributed systems, consider frameworks like FastAPI with asyncio support.\n- Utilize `asyncio.Queue` for inter-task communication and synchronization.\n- Monitor performance with tools like `asyncio.Task.all_tasks()` to manage tasks.",
+    "source": "code_example",
+    "updated_at": 1780717501.7920032
+  }
+}

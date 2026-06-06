@@ -1,0 +1,22 @@
+{
+  "search:docker+kubernetes-orchestration:docker kubernetes orchestratio": {
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes management.\n  - Example: `kubectl get pods`\n  - Flags: `-n <namespace>` to specify a namespace.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27 (as of my last update)\n  - Docker: v20.10\n\n- **Key Config Options**:\n  - Deployment: Define the desired state of your application.\n    ```yaml\n    apiVersion: apps/v1\n    kind: Deployment\n    metadata:\n      name: example-deployment\n    spec:\n      replicas: 3\n      selector:\n        matchLabels:\n          app: example\n      template:\n        metadata:\n          labels:\n            app: example\n        spec:\n          containers:\n          - name: example-container\n            image: nginx:latest\n            ports:\n            - containerPort: 80\n    ```\n  - Service: Expose your application to external traffic.\n    ```yaml\n    apiVersion: v1\n    kind: Service\n    metadata:\n      name: example-service\n    spec:\n      selector:\n        app: example\n      ports:\n        - protocol: TCP\n          port: 80\n          targetPort: 80\n      type: LoadBalancer\n    ```\n  - ConfigMap and Secret for configuration management.\n    ```yaml\n    apiVersion: v1\n    kind: ConfigMap\n    metadata:\n      name: example-config\n    data:\n      config.properties: |\n        property=value\n    ```\n\n- **Security Best Practices**:\n  - Use RBAC (Role-Based Access Control) to manage permissions.\n  - Enable network policies for isolation.\n  - Regularly update and patch your Kubernetes components.\n\n- **CI/CD Integration**:\n  - Use tools like Jenkins, GitLab CI, or GitHub Actions.\n  - Implement automated testing and deployment pipelines.",
+    "source": "web_search",
+    "updated_at": 1780717422.231825
+  },
+  "search:docker+kubernetes-orchestration:docker kubernetes orchestratio_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml`: Apply configuration to a resource.\n  - `kubectl get pods`: List all pods in the current namespace.\n  - `kubectl describe pod <pod-name>`: Get detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 20.10.17\n\n- **Key Config Options**:\n  - `replicas`: Number of pods to run.\n  - `imagePullPolicy`: When to pull the image (Always, IfNotPresent, Never).\n  - `resources`: CPU and memory limits and requests.\n\nThese commands, versions, and configurations are essential for effective Kubernetes orchestration.",
+    "source": "code_example",
+    "updated_at": 1780717430.9425979
+  },
+  "search:docker+kubernetes-orchestration:kubernetes deployment strategi": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml`: Deploys or updates resources based on the configuration file.\n  - `kubectl get pods`: Lists all pods in the current namespace.\n  - `kubectl scale deployment/<deployment-name> --replicas=<number>`: Scales a deployment to a specific number of replicas.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.0\n  - Jenkins X v3.9.0\n\n- **Key Config Options**:\n  - `spec.replicas`: Defines the desired number of pod replicas.\n  - `spec.template.spec.containers`: Specifies the container images and their configurations.\n  - `spec.strategy.type`: Determines the deployment strategy (e.g., RollingUpdate, Recreate).\n  - `spec.strategy.rollingUpdate.maxUnavailable`/`maxSurge`: Configures rolling update parameters to control the number of pods that can be unavailable or created during an update.",
+    "source": "web_search",
+    "updated_at": 1780717442.669824
+  },
+  "search:docker+kubernetes-orchestration:kubernetes deployment strategi_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy applications.\n- For rolling updates, set `strategy.type=RollingUpdate`.\n- Specify `maxUnavailable` and `maxSurge` in the deployment strategy for control over update speed.\n- Use `kubectl rollout status deployment/<deployment-name>` to monitor rollouts.\n- To rollback a deployment, use `kubectl rollout undo deployment/<deployment-name>`.\n- For canary deployments, create a separate service that routes traffic to a subset of pods.\n- Utilize Helm charts for managing complex Kubernetes applications.\n- Ensure readiness and liveness probes are configured in your pod specifications.\n- Use `kubectl get events` to troubleshoot issues during deployment.",
+    "source": "code_example",
+    "updated_at": 1780717446.9712236
+  }
+}
