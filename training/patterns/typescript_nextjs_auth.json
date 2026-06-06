@@ -2,21 +2,21 @@
   "search:typescript-nextjs-auth:typescript next.js authenticat": {
     "content": "- **Install NextAuth.js**: `npm install next-auth`\n- **Create Auth Provider**: Use `next-auth/providers/[provider].js` for custom providers.\n- **Configure NextAuth.js**: Update `pages/api/auth/[...nextauth].ts` with your provider and options.\n- **Secure Routes**: Protect routes using `[...slug].tsx` in pages directory.\n- **Session Management**: Access session data via `useSession()` hook.\n- **JWT Authentication**: Configure JWT strategy in `pages/api/auth/[...nextauth].ts`.\n- **Environment Variables**: Use `.env.local` for sensitive information like secrets and URLs.\n- **TypeScript Types**: Utilize TypeScript types from NextAuth.js for type-safe coding.\n- **Latest Version**: Check [NextAuth.js GitHub](https://github.com/nextauthjs/next-auth) for the latest version.\n- **Key Config Options**:\n  - `providers`: Array of authentication providers.\n  - `secret`: Secret key for JWT signing.\n  - `session`: Session settings like strategy and max age.",
     "source": "web_search",
-    "updated_at": 1780770522.6811264
+    "updated_at": 1780771274.905916
   },
   "search:typescript-nextjs-auth:typescript next.js authenticat_ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `next-auth` for authentication using `npm install next-auth`.\n- Configure `next-auth` in `pages/api/auth/[...nextauth].ts` with providers like Google, Facebook, etc.\n- Set up environment variables in `.env.local` for API keys and secrets.\n- Use `getServerSession` to get the current user session on server-side pages.\n- Implement protected routes by checking if a user is authenticated before rendering content.",
     "source": "code_example",
-    "updated_at": 1780770523.494835
+    "updated_at": 1780771275.671432
   },
   "search:typescript-nextjs-auth:typescript next.js jwt authent": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install dependencies with `npm install @types/node @types/react @types/react-dom next-auth jsonwebtoken`.\n- Configure JWT in `next.config.js`: `{ jwt: { secret: 'your-secret-key' } }`.\n- Create an API route for login, e.g., `/api/auth/login`, to handle user authentication.\n- Use `next-auth` package for handling sessions and authentication.\n- Implement JWT middleware to protect routes, e.g., in `_middleware.ts`:\n  ```typescript\n  import { NextResponse } from 'next/server';\n  import { getToken } from 'next-auth/jwt';\n\n  export async function middleware(req) {\n    const token = await getToken({ req, secret: process.env.JWT_SECRET });\n    if (!token && req.nextUrl.pathname !== '/api/auth/login') {\n      return NextResponse.redirect(new URL('/api/auth/login', req.url));\n    }\n    return NextResponse.next();\n  }\n  ```\n- Ensure to set `JWT_SECRET` in your environment variables.\n- Test authentication by accessing protected routes and checking the response.",
     "source": "web_search",
-    "updated_at": 1780770524.3589025
+    "updated_at": 1780771276.447753
   },
   "search:typescript-nextjs-auth:typescript next.js jwt authent_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app --typescript`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9\n  - jsonwebtoken: 9.0\n\n- **Key Config Options**:\n  - JWT Secret Key (`JWT_SECRET`)\n  - Cookie Name (`cookieName`)\n  - Token Expiry Time (`expiresIn`)",
     "source": "code_example",
-    "updated_at": 1780770525.3316576
+    "updated_at": 1780771277.1646442
   }
 }

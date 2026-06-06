@@ -2,16 +2,16 @@
   "search:Docker Compose for Microservices Security and Performance Optimization:docker compose security": {
     "content": "- Use `docker-compose --version` to check the latest version.\n- For secrets management, use environment variables or Docker Secrets in your `docker-compose.yml`.\n- Implement network security by setting up custom networks and using `network_mode: \"bridge\"` for isolation.\n- Apply container hardening with `user`, `cap-drop`, and `read-only-rootfs` options in the `docker-compose.yml`.\n- Set resource limits with `deploy.resources.limits` to prevent resource overuse.\n- Avoid privileged mode by setting `privileged: false` unless necessary.\n- Regularly scan images for vulnerabilities using tools like `docker scan`.\n- Use health checks with `healthcheck` to ensure containers are running correctly.",
     "source": "web_search",
-    "updated_at": 1780770665.5855777
+    "updated_at": 1780771128.7720892
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti": {
     "content": "- Use `kubectl top pod` to monitor resource usage in Kubernetes.\n- Implement circuit breakers using libraries like Hystrix or Resilience4j for microservices resilience.\n- Optimize database queries with indexes and query optimization techniques.\n- Use load balancers like NGINX or HAProxy to distribute traffic evenly across microservices.\n- Enable caching mechanisms (e.g., Redis, Memcached) to reduce database load.\n- Implement asynchronous processing using message queues (e.g., Kafka, RabbitMQ).\n- Monitor service latency with tools like Prometheus and Grafana for real-time insights.\n- Use gRPC instead of REST for microservices communication due to its efficiency.\n- Regularly update dependencies and libraries to the latest versions for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780770685.572075
+    "updated_at": 1780771129.5071113
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti_ex": {
     "content": "- **NCache**: Use `ncache-cli` to manage NCache instances.\n- **Latest Version**: Check [NCache GitHub](https://github.com/alachisoft/NCache) for the latest version.\n- **Key Config Options**:\n  - `MaxConnections`: Maximum number of concurrent connections.\n  - `CacheSize`: Total size of the cache in bytes.\n  - `EvictionPolicy`: Strategy to remove items when memory is full (e.g., LRU, FIFO).\n\n- **.NET Microservices**: Use `dotnet` CLI for project management.\n- **Latest Version**: Check [dotnet GitHub](https://github.com/dotnet/core) for the latest version.\n- **Key Config Options**:\n  - `Kestrel`: Configure Kestrel server settings in `appsettings.json`.\n  - `Logging`: Set logging levels and providers in `appsettings.json`.\n\n- **Load Balancing**: Use `kubectl` for Kubernetes load balancing.\n- **Latest Version**: Check [kubernetes.io](https://kubernetes.io/) for the latest version.\n- **Key Config Options**:\n  - `Service Type`: Choose between `ClusterIP`, `NodePort`, or `LoadBalancer`.\n  - `Annotations`: Configure additional settings like `service.beta.kubernetes.io/aws-load-balancer-type`.\n\nThese actionable facts provide concrete guidance for developers to optimize microservices performance using NCache, .NET, and Kubernetes.",
     "source": "code_example",
-    "updated_at": 1780770693.8865197
+    "updated_at": 1780771130.3028488
   }
 }

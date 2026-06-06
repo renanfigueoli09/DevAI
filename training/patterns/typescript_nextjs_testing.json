@@ -2,11 +2,11 @@
   "search:typescript-nextjs-testing:typescript next.js unit testin": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @types/jest ts-jest`\n  - `npx next dev` for development server\n  - `npm test` to run tests\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - Next.js: 13.x\n  - TypeScript: 4.8.x\n\n- **Key Config Options**:\n  - In `jest.config.ts`, set `testEnvironment: 'jsdom'`\n  - Configure `transform` to use `ts-jest` for `.ts` files\n  - Add `setupFilesAfterEnv: ['<rootDir>/setupTests.ts']` for global setup",
     "source": "web_search",
-    "updated_at": 1780770325.4309142
+    "updated_at": 1780771076.872555
   },
   "search:typescript-nextjs-testing:typescript next.js unit testin_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n  - `npx next dev` for development server\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - Next.js: 13.5\n  - TypeScript: 4.8\n\n- **Key Config Options**:\n  - In `jest.config.ts`, set up the following:\n    ```typescript\n    export default {\n      testEnvironment: 'jsdom',\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n    };\n    ```\n  - In `tsconfig.json`, ensure you have:\n    ```json\n    \"compilerOptions\": {\n      \"target\": \"es5\",\n      \"lib\": [\"dom\", \"es2015\"],\n      \"jsx\": \"react-jsx\"\n    }\n    ```\n\n- **Testing Setup**:\n  - Create a `__tests__` directory in your project.\n  - Write tests using Jest and React Testing Library for components.\n\n- **Running Tests**:\n  - Use the command: `npm test` to run all tests.",
     "source": "code_example",
-    "updated_at": 1780770326.1762688
+    "updated_at": 1780771077.6248484
   }
 }

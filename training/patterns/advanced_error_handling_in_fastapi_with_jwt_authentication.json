@@ -1,27 +1,27 @@
 {
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling": {
-    "content": "- Use `@app.exception_handler()` to add custom exception handling.\n- Implement global error handlers in FastAPI using middleware.\n- Ensure error responses are well-documented and consistent with success responses.\n- Utilize Pydantic models for defining error response schemas.\n- Middleware functions can intercept requests and handle errors before processing.",
+    "content": "- Use `@app.exception_handler()` to add custom exception handling.\n- Middleware can be used to handle errors globally across the application.\n- Ensure error responses are well-documented and consistent with success responses using Pydantic models.\n- Implement global error handlers in FastAPI for better API consumer experience.",
     "source": "web_search",
-    "updated_at": 1780770629.8931832
+    "updated_at": 1780771374.1692996
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling_ex": {
-    "content": "- Use `uvicorn` as the ASGI server.\n- Install FastAPI using pip: `pip install fastapi`.\n- Run your FastAPI app with: `uvicorn main:app --reload`.\n- Define custom exception handlers in your FastAPI application to handle specific errors gracefully.\n- Utilize Python's built-in exceptions like `HTTPException` for handling HTTP errors.\n- Configure error responses by specifying the status code and detail message.\n- Implement middleware for global error handling across all routes.\n- Use dependency injection to manage error handling logic centrally.",
+    "content": "- Use `uvicorn` to run FastAPI apps.\n- Implement custom exception handlers using `@app.exception_handler`.\n- Utilize Python's built-in exceptions like `HTTPException`.\n- Configure error responses with JSON schemas for consistency.\n- Update FastAPI to the latest version for bug fixes and improvements.\n- Key config options include `debug=True` during development.\n- Use middleware for global error handling across all routes.",
     "source": "code_example",
-    "updated_at": 1780770632.3517425
+    "updated_at": 1780771376.430462
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi": {
-    "content": "- Use `openssl rand -base64 32` to generate a secure secret key.\n- Implement JWT authentication in Node.js using libraries like `jsonwebtoken`.\n- Set the `expiresIn` option when signing tokens for security and convenience.\n- Store the secret key securely, not in code or version control systems.\n- Validate tokens on each request to ensure they are valid and have not expired.\n- Use HTTPS to encrypt token transmission between client and server.\n- Implement role-based access control (RBAC) using JWT claims for fine-grained authorization.\n- Regularly rotate secret keys to enhance security.\n- Monitor and log JWT usage for auditing and incident response.",
+    "content": "- Use `openssl rand -base64 32` to generate a secure secret key.\n- Implement JWT signing with the HS256 algorithm for security.\n- Store the secret key securely, not in code or version control.\n- Set an appropriate expiration time (`exp`) in JWTs using libraries like `jsonwebtoken`.\n- Validate JWTs on each request by checking signature and expiration.\n- Use HTTPS to secure transmission of JWTs.\n- Implement token revocation mechanisms if needed.\n- Regularly update dependencies and libraries used for JWT handling.",
     "source": "web_search",
-    "updated_at": 1780770639.737046
+    "updated_at": 1780771385.6159616
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi": {
     "content": "- Override default exception handlers using `@app.exception_handler(HTTPException)`\n- Create custom exceptions by subclassing `HTTPException`\n- Use `@app.exception_handler(Exception)` for global error handling\n- Return consistent JSON responses with custom exception handlers\n- Utilize Starlette's exception handling system for robust error management",
     "source": "web_search",
-    "updated_at": 1780770657.2300777
+    "updated_at": 1780771186.881811
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi_ex": {
     "content": "- Use `HTTPException` from FastAPI to raise exceptions.\n- Register exception handlers using `@app.exception_handler(HTTPException)`.\n- Handle custom exceptions by subclassing `HTTPException`.\n- Use `status_code` and `detail` in `HTTPException` for error details.\n- For logging, use Python's built-in `logging` module.\n- Ensure all exception handlers are registered before the app starts.",
     "source": "code_example",
-    "updated_at": 1780770659.2147264
+    "updated_at": 1780771187.6017792
   }
 }
