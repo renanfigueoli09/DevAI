@@ -2,31 +2,31 @@
   "search:Advanced Error Handling in NestJS with MongoDB:nestjs error handling": {
     "content": "- **CLI Commands**: Use `nest generate controller <name>` to create new controllers.\n- **Latest Version**: Check the latest version on [NestJS GitHub](https://github.com/nestjs/nest).\n- **Key Config Options**:\n  - `useGlobalPipes`: Apply pipes globally for validation.\n  - `useGlobalFilters`: Use global filters for error handling.\n  - `useGlobalInterceptors`: Implement global interceptors for request/response manipulation.",
     "source": "web_search",
-    "updated_at": 1780779194.6894104
+    "updated_at": 1780779754.845831
   },
   "search:Advanced Error Handling in NestJS with MongoDB:nestjs error handling_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate controller name`: Generates a new controller.\n  - `nest generate service name`: Generates a new service.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Node.js: v16.x or higher\n\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe())`: Globally applies validation pipes.\n  - `app.useGlobalFilters(new AllExceptionsFilter())`: Globally applies exception filters.\n  - `app.useLogger(app.get(Logger))`: Sets up a custom logger globally.",
     "source": "code_example",
-    "updated_at": 1780779197.9432516
+    "updated_at": 1780779755.8353431
   },
   "search:Advanced Error Handling in NestJS with MongoDB:error logging in nestjs": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Update dependencies using `npm update`.\n- Configure logging levels in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';\n  import { AllExceptionsFilter } from './filters/all-exceptions.filter';\n  import { LoggingInterceptor } from './interceptors/logging.interceptor';\n\n  @Module({\n    providers: [\n      {\n        provide: APP_FILTER,\n        useClass: AllExceptionsFilter,\n      },\n      {\n        provide: APP_INTERCEPTOR,\n        useClass: LoggingInterceptor,\n      },\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use `Logger` service for logging:\n  ```typescript\n  import { Injectable, Logger } from '@nestjs/common';\n\n  @Injectable()\n  export class AppService {\n    private readonly logger = new Logger(AppService.name);\n\n    getHello(): string {\n      this.logger.log('Getting hello message');\n      return 'Hello World!';\n    }\n  }\n  ```\n- Configure Winston for advanced logging:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';\n  import { AllExceptionsFilter } from './filters/all-exceptions.filter';\n  import { LoggingInterceptor } from './interceptors/logging.interceptor';\n  import { WinstonModule } from 'nest-winston';\n  import * as winston from 'winston';\n\n  @Module({\n    imports: [\n      WinstonModule.forRoot({\n        transports: [\n          new winston.transports.Console(),\n          new winston.transports.File({ filename: 'combined.log' }),\n        ],\n      }),\n    ],\n    providers: [\n      {\n        provide: APP_FILTER,\n        useClass: AllExceptionsFilter,\n      },\n      {\n        provide: APP_INTERCEPTOR,\n        useClass: LoggingInterceptor,\n      },\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use `nest generate interceptor logging` to scaffold a logging interceptor.\n- Use `nest generate filter all-exceptions` to scaffold an exception filter.",
     "source": "web_search",
-    "updated_at": 1780779208.7967327
+    "updated_at": 1780779756.9852104
   },
   "search:Advanced Error Handling in NestJS with MongoDB:error logging in nestjs_ex": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install necessary packages using npm or yarn, e.g., `npm install @nestjs/common @nestjs/core`.\n- Configure logging in `app.module.ts` with `import { Logger } from '@nestjs/common';`.\n- Implement error handling globally by creating an interceptor or using built-in decorators like `@Catch()`.\n- Use environment variables for configuring log levels and outputs.\n- For production, consider integrating with a centralized logging service like ELK Stack or Splunk.",
     "source": "code_example",
-    "updated_at": 1780779211.6332178
+    "updated_at": 1780779758.00392
   },
   "search:Advanced Error Handling in NestJS with MongoDB:mongodb error handling": {
     "content": "- Use `try-catch` blocks around MongoDB operations to catch errors.\n- Implement error logging using libraries like `winston` or `pino`.\n- Utilize MongoDB's built-in error codes and messages for better understanding of issues.\n- Regularly update MongoDB driver to the latest version to benefit from bug fixes and improvements.\n- Configure MongoDB with appropriate security settings, such as enabling authentication and encryption.\n- Use `db.getLastError()` to check the status of the last operation.\n- Implement retry logic for transient errors using libraries like `retry`.\n- Monitor MongoDB performance and logs regularly to identify potential issues early.",
     "source": "web_search",
-    "updated_at": 1780779218.0074506
+    "updated_at": 1780779759.0317452
   },
   "search:Advanced Error Handling in NestJS with MongoDB:mongodb error handling_ex": {
     "content": "- Use `try-catch` blocks to handle MongoDB errors in Java.\n- For Node.js, use `async/await` and `.catch()` for error handling with Mongoose.\n- Ensure you have the latest version of MongoDB drivers and libraries to benefit from the most recent features and bug fixes.\n- Key config options include setting up connection strings correctly and configuring timeouts.\n- Use `db.collection.find().toArray().then(data => { ... }).catch(err => { ... })` for error handling in Node.js with MongoDB.\n- For Java, consider using Morphia's `@Entity` and `@Reference` annotations to manage database operations more effectively.\n- In Express with Mongoose, use middleware like `express-async-handler` to simplify error handling across routes.",
     "source": "code_example",
-    "updated_at": 1780779222.807119
+    "updated_at": 1780779760.04695
   }
 }

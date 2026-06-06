@@ -2,11 +2,11 @@
   "search:docker+kubernetes-logging-best-practices:docker kubernetes logging best": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27 (as of early 2025)\n  - Docker: v24.0\n\n- **Key Config Options**:\n  - Use `--log-driver=fluentd` or `--log-driver=json-file` in `docker run` for better log management.\n  - Configure `resources.requests` and `resources.limits` in Kubernetes to manage resource usage effectively.\n  - Implement centralized logging with tools like EFK Stack (Elasticsearch, Fluentd, Kibana) or Loki.",
     "source": "web_search",
-    "updated_at": 1780778917.5720236
+    "updated_at": 1780779827.1096115
   },
   "search:docker+kubernetes-logging-best-practices:docker kubernetes logging best_ex": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- Employ `kubectl logs -f <pod-name>` for real-time log streaming.\n- For Docker, use `docker logs <container-id>` to access container logs.\n- Implement centralized logging solutions like ELK (Elasticsearch, Logstash, Kibana) or Fluentd for Kubernetes environments.\n- Configure logging drivers in Docker with `--log-driver` flag, e.g., `json-file`, `syslog`.\n- Set log rotation policies using `--log-opt max-size` and `max-file` flags in Docker.\n- Utilize Kubernetes ConfigMaps to manage logging configurations dynamically.\n- Apply Fluentd or Fluent Bit for efficient log collection and forwarding.\n- Ensure logs are stored securely, either on-premises or in cloud storage solutions like AWS S3 or Google Cloud Storage.",
     "source": "code_example",
-    "updated_at": 1780778918.5400524
+    "updated_at": 1780779828.1237886
   }
 }
