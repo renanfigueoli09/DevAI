@@ -2,7 +2,7 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
     "source": "code_pattern",
-    "updated_at": 1780772174.3263643
+    "updated_at": 1780772699.526478
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
