@@ -8,5 +8,20 @@
     "content": "- Use `tsc --target es6` to compile TypeScript code targeting ES6.\n- Implement strict mode in your `tsconfig.json`: `\"strict\": true`.\n- Utilize ESLint with the recommended configuration for TypeScript projects: `eslint --init --parser @typescript-eslint/parser --ext .js,.jsx,.ts,.tsx`.\n- Enable type checking during development by setting `\"noEmitOnError\": true` in `tsconfig.json`.\n- Use environment variables to manage sensitive information, e.g., API keys.\n- Regularly update TypeScript and all dependencies using `npm update`.\n- Implement input validation for user inputs to prevent injection attacks.\n- Use HTTPS for all network requests in production environments.\n- Conduct code reviews following a secure coding checklist.",
     "source": "code_example",
     "updated_at": 1780778331.1481984
+  },
+  "search:Security Practices for TypeScript and Next.js Authentication:nextjs authentication security": {
+    "content": "- **CLI Commands**: Use `npx create-next-app@latest` to start a new Next.js project.\n- **Latest Versions**: Ensure you are using the latest version of Next.js for security patches and features.\n- **Key Config Options**:\n  - `next.config.js`: Configure environment variables, asset paths, and other settings.\n  - `middleware.js`: Implement server-side logic before requests reach your application.\n  - `auth/[...].js`: Define custom authentication routes using NextAuth.js or similar libraries.",
+    "source": "web_search",
+    "updated_at": 1780778349.8201196
+  },
+  "search:Security Practices for TypeScript and Next.js Authentication:jwt security in nextjs": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-jwt-app`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 14+\n  - jsonwebtoken: latest\n\n- **Key Config Options**:\n  - JWT Secret: `JWT_SECRET` environment variable\n  - Token Expiry: Set in JWT payload, e.g., `{ exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24) }`\n  - Middleware Protection: Use Next.js middleware for token verification",
+    "source": "web_search",
+    "updated_at": 1780778369.2799776
+  },
+  "search:Security Practices for TypeScript and Next.js Authentication:jwt security in nextjs_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 14+\n  - NextAuth.js: Latest\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for authentication providers and callbacks.\n  - `JWT_SECRET`: Secret key for signing JWTs.\n  - `session.maxAge`: Duration of the session in seconds.",
+    "source": "code_example",
+    "updated_at": 1780778375.5253363
   }
 }
