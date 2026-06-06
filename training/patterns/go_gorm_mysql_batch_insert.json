@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-mysql-batch-insert:go gorm mysql batch insert 202": {
+    "content": "- Use `db.Create(&users)` to batch insert records.\n- Ensure MySQL server version is compatible with GORM.\n- For testing, use `sqlmock.New()` and mock the batch insert query.\n- When using `OnConflict{UpdateAll: true}`, ensure primary key handling is correct.\n- MariaDB may require specific configurations for batch inserts.",
+    "source": "web_search",
+    "updated_at": 1780749156.3576782
+  },
+  "search:go-gorm-mysql-batch-insert:go gorm mysql batch insert 202_ex": {
+    "content": "- **CLI Commands**: Use `go get` to install GORM and MySQL driver.\n- **Latest Versions**: Ensure using GORM v2.0 or later for batch insert support.\n- **Key Config Options**:\n  - Set `gorm.Config{DisableForeignKeyConstraintWhenMigrating: true}` during migration if needed.\n  - Configure MySQL connection settings in your Go code.\n- **Batch Insert Example**:\n  ```go\n  db := gorm.Open(mysql.Open(\"user:password@tcp(127.0.0.1:3306)/dbname\"), &gorm.Config{})\n  batchData := []User{ /* Your data here */ }\n  db.Create(&batchData)\n  ```\n- **Benchmarking**: Compare GORM's performance with Go’s `database/sql` package for batch inserts using tools like `go test -bench=.`.\n- **Error Handling**: Implement error handling around database operations to manage any potential issues during batch insert.",
+    "source": "code_example",
+    "updated_at": 1780749163.6300707
+  },
+  "search:go-gorm-mysql-batch-insert:batch operations in go gorm wi": {
+    "content": "- **Install GORM**: `go get -u gorm.io/gorm`\n- **MySQL Driver**: `go get -u gorm.io/driver/mysql`\n- **CLI Commands**:\n  - Initialize a new Go module: `go mod init <module-name>`\n  - Run migrations: `gorm-cli migrate`\n- **Latest Versions**:\n  - GORM: Check [GORM GitHub](https://github.com/go-gorm/gorm)\n  - MySQL Driver: Check [MySQL Driver GitHub](https://github.com/go-sql-driver/mysql)\n- **Key Config Options**:\n  - Database DSN (Data Source Name): `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Auto Migration: `db.AutoMigrate(&User{})`\n  - Batch Insert: `db.Create(&users)`\n- **Batch Operations**:\n  - Use slices to insert multiple records in one query.\n  - GORM handles transaction and backfilling primary keys automatically.",
+    "source": "web_search",
+    "updated_at": 1780749175.947643
+  },
+  "search:go-gorm-mysql-batch-insert:batch operations in go gorm wi_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.34.0 (as of my last update)\n  - MySQL Driver for GORM: v1.5.0\n\n- **Key Config Options**:\n  - Database URL format: `user:password@tcp(host:port)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Auto Migration: `db.AutoMigrate(&User{})`\n  - Batch Insert: `db.CreateInBatches(users, 100)`\n  - Batch Update: `db.Model(&User{}).Where(\"active = ?\", true).Updates(User{Age: gorm.Expr(\"age + ?\", 1)})`",
+    "source": "code_example",
+    "updated_at": 1780749182.2731075
+  }
+}

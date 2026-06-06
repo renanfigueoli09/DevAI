@@ -17,7 +17,7 @@
   "qa:mongoose-required-field-modifier": {
     "content": "ANSWER: required field uses ! (not ?). @Prop({required:true}) title!: string. @Prop() description?: string. RULE: required=! optional=?. NEVER ? for required. NEVER bare field: Type without ! or ?.",
     "source": "correct_answer",
-    "updated_at": 1780749107.737801
+    "updated_at": 1780749191.2883952
   },
   "NestJS Mongoose required field uses ! or ? TypeScript": {
     "content": "ANSWER: required field uses ! (not ?). @Prop({required:true}) title!: string. @Prop() description?: string. RULE: required=! optional=?. NEVER ? for required. NEVER bare field: Type without ! or ?.",
@@ -82,16 +82,16 @@
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "• With Mongoose, everything is derived from a Schema. Schemas can be created with NestJS decorators, or with Mongoose itself manually. The @Prop() decorator ...\n• Jul 6, 2020 · How can I do it with NestJS decorators ( @Schema() & @Prop() )?. I ... from '@nestjs/mongoose'; import { HydratedDocument } from ...\n• Feb 19, 2025 · HydratedDocument : A Mongoose type that indicates that the document returned after a database operation will be fully hydrated with Mongoose- ...",
     "source": "web_search",
-    "updated_at": 1780749098.446669
+    "updated_at": 1780749185.222369
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "content": "- **CLI Commands**:\n  - `yarn add @nestjs/mongoose mongoose`\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n  \n- **Key Config Options**:\n  - Import `MongooseModule` in `AppModule`.\n  - Use `@Schema` decorator for defining document schemas.\n  - Utilize `@Prop` to define properties within a schema.\n  - Employ `HydratedDocument` for type-safe documents.",
     "source": "code_example",
-    "updated_at": 1780749098.7129765
+    "updated_at": 1780749185.527645
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - Connection String: `mongoose.connect('mongodb://localhost:27017/mydatabase')`\n  - Schema Definition: Define schemas using `new mongoose.Schema({...})`\n  - CRUD Operations:\n    - Find by ID: `await Model.findById(id)`\n    - Update by ID: `await Model.findByIdAndUpdate(id, updateData)`\n    - Delete by ID: `await Model.findByIdAndDelete(id)`",
     "source": "web_search",
-    "updated_at": 1780749098.9482605
+    "updated_at": 1780749185.8121953
   }
 }
