@@ -1,0 +1,12 @@
+{
+  "search:Advanced Error Handling in Spring Data JPA Batch Processing:spring data jpa batch error ha": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Data JPA and Hibernate.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`: Set batch size for inserts/updates/deletes.\n  - `spring.jpa.properties.hibernate.order_inserts=true`: Orders insert statements to improve performance.\n  - `spring.jpa.properties.hibernate.order_updates=true`: Orders update statements to improve performance.\n  - `spring.jpa.properties.hibernate.jdbc.batch_versioned_data=true`: Ensures data consistency during batch operations.",
+    "source": "web_search",
+    "updated_at": 1780718213.4656384
+  },
+  "search:Advanced Error Handling in Spring Data JPA Batch Processing:spring data jpa batch error ha_ex": {
+    "content": "- Use `@EnableBatchProcessing` in your Spring Boot application to enable batch processing.\n- Configure error handling in your job using `ItemProcessor`, `ItemWriter`, and `StepListener`.\n- Implement `ItemSkipPolicy` for skipping known errors during processing.\n- For JPA batch operations, use `@Modifying` on repository methods with `@Query` and set `nativeQuery = true` if necessary.\n- Configure batch size in your job step using `stepBuilderFactory.get(\"yourStepName\").<inputType, outputType>chunk(batchSize)`.\n- Use `@Transactional(propagation = Propagation.REQUIRES_NEW)` for transaction management within your item processors or writers.\n- Monitor and log errors using `ItemWriteListener` to capture exceptions during batch processing.",
+    "source": "code_example",
+    "updated_at": 1780718219.5820498
+  }
+}

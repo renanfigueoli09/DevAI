@@ -1,0 +1,22 @@
+{
+  "search:react-native+realm-database:react native realm database pe": {
+    "content": "- **CLI Commands**: Install Realm using npm or yarn.\n  ```bash\n  npm install realm\n  ```\n  or\n  ```bash\n  yarn add realm\n  ```\n\n- **Latest Versions**: Check the latest version on [npm](https://www.npmjs.com/package/realm) or [GitHub](https://github.com/realm/realm-js).\n\n- **Key Config Options**:\n  - `schema`: Define your data model.\n    ```javascript\n    const schema = [\n      { name: 'Product', properties: { id: 'int', name: 'string', price: 'float' } }\n    ];\n    ```\n  - `path`: Specify the path to the Realm file.\n    ```javascript\n    const realm = new Realm({ schema, path: '/path/to/your/realm/file.realm' });\n    ```\n  - `encryptionKey`: For encrypted databases.\n    ```javascript\n    const encryptionKey = new Uint8Array(64); // Generate a secure key\n    const realm = new Realm({ schema, encryptionKey });\n    ```\n\n- **Performance Optimization Tips**:\n  - Use indexes for frequently queried fields.\n  - Batch writes to reduce the number of transactions.\n  - Monitor and optimize queries.\n\n- **Debugging**:\n  - Use Realm Browser to inspect your database.\n  - Check console logs for any errors or warnings.",
+    "source": "web_search",
+    "updated_at": 1780718086.9168556
+  },
+  "search:react-native+realm-database:react native realm database pe_ex": {
+    "content": "- Install @realm/react using npm or yarn.\n- Use `npx realm-cli` to initialize a new Realm project.\n- Set up the schema for your data model in JavaScript.\n- Utilize `Realm.open()` to open a connection to the database.\n- Perform CRUD operations using `realm.write()`, `realm.objects()`, etc.\n- Monitor performance with Realm's built-in profiling tools.\n- Update to the latest version of @realm/react and Realm CLI regularly.\n- Configure Realm with options like `encryptionKey` for security.\n- Use `Realm.defaultPath` to specify a custom database path if needed.",
+    "source": "code_example",
+    "updated_at": 1780718097.5014331
+  },
+  "search:react-native+realm-database:react native realm database se": {
+    "content": "- **CLI Commands**: Use `realm-cli` to manage Realm databases.\n- **Latest Versions**: Ensure using the latest Realm SDK version for React Native, typically found on [Realm's GitHub page](https://github.com/realm/realm-js/releases).\n- **Key Config Options**:\n  - `schema`: Define your data model in a schema.\n  - `encryptionKey`: For security, use an encryption key to protect sensitive data.\n  - `sync`: Enable Realm Sync for real-time collaboration and offline support.\n- **Security Practices**:\n  - Use strong passwords or keys for database encryption.\n  - Regularly update the Realm SDK to patch vulnerabilities.\n  - Implement access controls within your application logic.",
+    "source": "web_search",
+    "updated_at": 1780718108.4213912
+  },
+  "search:react-native+realm-database:react native realm database se_ex": {
+    "content": "- **CLI Commands**: Use `realm-cli` to manage Realm databases.\n- **Latest Versions**: Check the latest version on [Realm GitHub](https://github.com/realm/realm-js/releases).\n- **Key Config Options**:\n  - `schema`: Define your data model schema.\n  - `path`: Specify the path for the database file.\n  - `encryptionKey`: For encrypted databases, provide an encryption key.",
+    "source": "code_example",
+    "updated_at": 1780718118.6013489
+  }
+}

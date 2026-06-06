@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+quarkus-migration:spring boot quarkus migration ": {
+    "content": "- **CLI Commands**:\n  - `mvn quarkus:add-extension` to add Quarkus extensions.\n  - `quarkus dev` for development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Quarkus: 2.14.x\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Set the HTTP port.\n  - `quarkus.datasource.username`: Database username.\n  - `quarkus.datasource.password`: Database password.\n  - `quarkus.datasource.db-kind`: Type of database (e.g., h2, postgresql).",
+    "source": "web_search",
+    "updated_at": 1780718124.71425
+  },
+  "search:spring-boot+quarkus-migration:spring boot quarkus migration _ex": {
+    "content": "- **CLI Commands**:\n  - `mvn quarkus:add-extension` to add Quarkus extensions.\n  - `quarkus dev` for development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Quarkus: 2.10.6.Final\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Set the port number.\n  - `quarkus.datasource.username` and `quarkus.datasource.password`: Database credentials.\n  - `quarkus.arc.enabled`: Enable CDI if needed.",
+    "source": "code_example",
+    "updated_at": 1780718127.175292
+  },
+  "search:spring-boot+quarkus-migration:spring boot quarkus applicatio": {
+    "content": "- **CLI Commands**:\n  - `mvn clean package` to build the project.\n  - `quarkus dev` for development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Quarkus: 3.1.0\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`.\n  - Quarkus: `application.properties` or `application.yaml`.\n\n- **Performance Optimization Tips**:\n  - Use native image compilation for Quarkus with `./mvnw package -Pnative`.\n  - Enable caching in Spring Boot using `@Cacheable`, `@EnableCaching`.\n  - Optimize database queries and use connection pooling.\n  - Configure thread pools appropriately in both frameworks.",
+    "source": "web_search",
+    "updated_at": 1780718138.0617805
+  },
+  "search:spring-boot+quarkus-migration:spring boot quarkus applicatio_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean package` for building Spring Boot applications.\n  - `./mvnw compile quarkus:build` for building Quarkus applications.\n\n- **Latest Versions**:\n  - Spring Boot 3.1.4\n  - Quarkus 2.15.0.Final\n\n- **Key Config Options**:\n  - For Spring Boot: `spring.jpa.hibernate.ddl-auto=update`\n  - For Quarkus: `quarkus.datasource.db-kind=h2`",
+    "source": "code_example",
+    "updated_at": 1780718145.746546
+  }
+}

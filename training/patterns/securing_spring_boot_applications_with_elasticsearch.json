@@ -1,0 +1,22 @@
+{
+  "search:Securing Spring Boot Applications with Elasticsearch:spring boot security elasticse": {
+    "content": "- **CLI Commands**:\n  - `elasticsearch.bat` to run Elasticsearch.\n  \n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Elasticsearch: 8.7.0\n  \n- **Key Config Options**:\n  - `application.yaml`: Enable security, specify cluster URL, and configure authentication details.\n  - Java API Client: Use for secure HTTPS requests to Elasticsearch.",
+    "source": "web_search",
+    "updated_at": 1780718263.9167767
+  },
+  "search:Securing Spring Boot Applications with Elasticsearch:spring boot security elasticse_ex": {
+    "content": "- **Add Dependencies**: Include `spring-boot-starter-data-elasticsearch` in your `pom.xml`.\n- **Configure Elasticsearch**: Set up security in `application.yaml` with necessary credentials.\n- **Spring Boot Version**: Use the latest stable version of Spring Boot for compatibility and features.\n- **Spring Security Version**: Implement JWT authentication using Spring Security 6.\n- **YouTube Tutorial**: Watch \"Spring Boot 3 + Spring Security 6 - JWT Authentication\" for detailed implementation steps.\n- **Login Page Configuration**: Customize login and logout pages in your application.\n- **Menu JSP Update**: Add a logout submenu to `menu.jsp` for user session management.",
+    "source": "code_example",
+    "updated_at": 1780718279.8563752
+  },
+  "search:Securing Spring Boot Applications with Elasticsearch:elasticsearch security practic": {
+    "content": "- **CLI Commands**:\n  - `elasticsearch-plugin install x-pack` to install X-Pack security features.\n  - `curl -X PUT \"localhost:9200/_xpack/security/user/elastic/_password\" -H 'Content-Type: application/json' -d'{\"password\": \"new_password\"}'` to change the password for the default user.\n\n- **Latest Versions**:\n  - Ensure using Elasticsearch 7.x or later, as X-Pack security features are available from this version onwards.\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Set to `true` to enable security.\n  - `xpack.security.transport.ssl.enabled`: Set to `true` to enable SSL for transport layer security.\n  - `xpack.security.http.ssl.enabled`: Set to `true` to enable SSL for HTTP layer security.\n  - `xpack.security.authc.realms.file.file1.order`: Configure the order of authentication realms.",
+    "source": "web_search",
+    "updated_at": 1780718291.638582
+  },
+  "search:Securing Spring Boot Applications with Elasticsearch:elasticsearch security practic_ex": {
+    "content": "- Enable SSL/TLS by configuring `elasticsearch.yml` on each node.\n  ```yaml\n  xpack.security.transport.ssl.enabled: true\n  xpack.security.transport.ssl.keystore.path: /path/to/keystore.jks\n  xpack.security.transport.ssl.truststore.path: /path/to/truststore.jks\n  ```\n- Use X-Pack for securing Elasticsearch clusters.\n  ```bash\n  bin/elasticsearch-plugin install x-pack\n  ```\n- Configure authentication and authorization:\n  ```yaml\n  xpack.security.enabled: true\n  xpack.security.authc.realms.file.file1.order: 0\n  xpack.security.authc.realms.file.file1.path: /path/to/users_roles.yml\n  ```\n- Enable encryption for communication between nodes.\n  ```yaml\n  xpack.security.transport.ssl.verification_mode: certificate\n  ```\n- Install and configure Elasticsearch plugins using the CLI:\n  ```bash\n  bin/elasticsearch-plugin install <plugin-name>\n  ```\n- Ensure latest versions of Elasticsearch and X-Pack to benefit from security patches and features.",
+    "source": "code_example",
+    "updated_at": 1780718301.7648175
+  }
+}
