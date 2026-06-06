@@ -1,0 +1,22 @@
+{
+  "search:docker+kafka-security:docker kafka security best pra": {
+    "content": "- **CLI Commands**:\n  - `docker exec -ti kafka /opt/kafka/bin/kafka-cluster.sh cluster-id --bootstrap-server :9092`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `listeners`: Configure listeners for Kafka brokers.\n  - `advertised.listeners`: Set the advertised listener addresses.\n  - `ssl.keystore.location`: Path to the SSL keystore file.\n  - `ssl.keystore.password`: Password for the SSL keystore.\n  - `ssl.key.password`: Password for the key in the keystore.",
+    "source": "web_search",
+    "updated_at": 1780721047.148148
+  },
+  "search:docker+kafka-security:docker kafka security best pra_ex": {
+    "content": "- Use `docker run` to deploy Kafka with SASL authentication.\n- Specify the latest version of Kafka, e.g., `docker pull bitnami/kafka:latest`.\n- Set environment variables for SASL configuration:\n  - `KAFKA_SASL_ENABLED_MECHANISMS=PLAIN`\n  - `KAFKA_AUTHORIZER_CLASS_NAME=kafka.security.authorizer.AclAuthorizer`\n  - `KAFKA_SUPER_USERS=User:admin`\n- Use `docker-compose` to manage multiple Kafka brokers.\n- Configure SSL/TLS encryption with `docker run --volumes` for certificates.\n- Set `listeners=PLAINTEXT://0.0.0.0:9092,SSL://0.0.0.0:9093`.\n- Use `advertised.listeners` to specify the external address.\n- Ensure `zookeeper.connect` points to your Zookeeper instance.\n- Regularly rotate certificates for security.",
+    "source": "code_example",
+    "updated_at": 1780721056.9114478
+  },
+  "search:docker+kafka-security:docker kafka authentication an": {
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -d wurstmeister/kafka`\n  - `docker exec -it kafka bash`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Zookeeper: 3.7.0\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string to Zookeeper.\n  - `KAFKA_SECURITY_PROTOCOL`: Security protocol (e.g., PLAINTEXT, SASL_PLAINTEXT).\n  - `SASL_ENABLED_MECHANISMS`: List of enabled SASL mechanisms.",
+    "source": "web_search",
+    "updated_at": 1780721074.1876984
+  },
+  "search:docker+kafka-security:docker kafka authentication an_ex": {
+    "content": "- **Latest Version**: Kafka 4.X.Y, Strimzi 0.25.0\n- **Key Config Options**:\n  - `sasl.mechanism.inter.broker.protocol`\n  - `security.inter.broker.protocol`\n  - `authorizer.class.name`\n- **CLI Commands**:\n  ```bash\n  docker run --name kafka -e KAFKA_BROKER_ID=0 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_ADVERTISED_LISTENERS=SASL_PLAINTEXT://kafka:9092 -e KAFKA_SASL_ENABLED_MECHANISMS=SCRAM-SHA-512 -e KAFKA_OPTS=\"-Djava.security.auth.login.config=/etc/kafka/secrets/jaas.conf\" wurstmeister/kafka\n  ```\n- **Jaas Configuration**:\n  ```plaintext\n  KafkaServer {\n    org.apache.kafka.common.security.scram.ScramLoginModule required\n    username=\"admin\"\n    password=\"admin-secret\";\n  };\n  Client {\n    org.apache.kafka.common.security.scram.ScramLoginModule required\n    username=\"user\"\n    password=\"user-secret\";\n  };\n  ```\n- **Docker Compose Example**:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: wurstmeister/zookeeper\n    kafka:\n      image: wurstmeister/kafka\n      environment:\n        - KAFKA_BROKER_ID=0\n        - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181\n        - KAFKA_ADVERTISED_LISTENERS=SASL_PLAINTEXT://kafka:9092\n        - KAFKA_SASL_ENABLED_MECHANISMS=SCRAM-SHA-512\n        - KAFKA_OPTS=\"-Djava.security.auth.login.config=/etc/kafka/secrets/jaas.conf\"\n      volumes:\n        - ./secrets:/etc/kafka/secrets\n  ```\n- **Key Points**:\n  - Use SASL/SCRAM for authentication.\n  - Configure `authorizer.class.name` to enable authorization.\n  - Ensure SSL/TLS for secure communication.",
+    "source": "code_example",
+    "updated_at": 1780721104.4946504
+  }
+}

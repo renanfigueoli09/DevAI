@@ -1,0 +1,17 @@
+{
+  "search:kubernetes-statefulsets-scalability:kubernetes statefulsets scalab": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update StatefulSet.\n  - `kubectl scale statefulset/<statefulset-name> --replicas=<new-replica-count>` to scale the StatefulSet.\n\n- **Latest Versions**:\n  - Kubernetes v1.26 introduces KRaft mode for etcd, enhancing scalability and security.\n\n- **Key Config Options**:\n  - `.spec.updateStrategy`: Defines how updates are applied to Pods.\n  - `.spec.template`: Specifies the Pod template for StatefulSet.\n  - `.spec.serviceName`: Links a Service to the StatefulSet.\n  - `.spec.volumeClaimTemplates`: Automates volume provisioning for each Pod.",
+    "source": "web_search",
+    "updated_at": 1780721156.664066
+  },
+  "search:kubernetes-statefulsets-scalability:kubernetes statefulsets perfor": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update StatefulSet.\n  - `kubectl get statefulsets --all-namespaces` to list all StatefulSets.\n  - `kubectl describe statefulset <statefulset-name>` for detailed information.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - KRaft mode: Supported in Kubernetes v1.26\n\n- **Key Config Options**:\n  - `replicas`: Number of replicas.\n  - `volumeClaimTemplates`: Persistent volume claims for stateful storage.\n  - `service`: Service configuration for StatefulSet pods.\n\n- **Performance Tuning Tips**:\n  - Use KRaft mode for better performance and security.\n  - Optimize etcd performance with appropriate resources.\n  - Implement CSI drivers for efficient storage management.\n  - Regularly monitor and adjust resource allocations.",
+    "source": "web_search",
+    "updated_at": 1780721178.151542
+  },
+  "search:kubernetes-statefulsets-scalability:kubernetes statefulsets perfor_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>` to create a StatefulSet.\n  - `kubectl scale statefulset <name> --replicas=<number>` to scale the number of Pods.\n  - `kubectl patch statefulset <name> -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"<container-name>\",\"resources\":{\"limits\":{\"cpu\":\"500m\"}}}]}}}'` to update resource limits.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x is the latest stable version as of my last update in October 2023, but always check for the most current version on the official Kubernetes website.\n\n- **Key Config Options**:\n  - `spec.serviceName`: Specifies the name of a service that must exist before the StatefulSet Pods are created.\n  - `spec.replicas`: Defines the number of replicas to run.\n  - `spec.template.spec.volumes`: Allows for persistent storage volumes.\n  - `spec.updateStrategy.type`: Determines how updates are applied (RollingUpdate or OnDelete).\n  - `spec.rollingUpdate.partition`: Specifies the partition that is updated during a rolling update.\n\n- **Performance Tuning Tips**:\n  - Ensure adequate resource allocation (`resources.requests` and `resources.limits`) for each Pod.\n  - Use appropriate storage classes and persistent volumes to optimize data persistence.\n  - Monitor and adjust the number of replicas based on application load and performance metrics.",
+    "source": "code_example",
+    "updated_at": 1780721189.4579794
+  }
+}

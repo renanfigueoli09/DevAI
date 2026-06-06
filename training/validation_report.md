@@ -1,18 +1,18 @@
 # DevAI Validation Report
-*2026-06-06 01:40*
+*2026-06-06 01:45*
 
-## Score: 61% `[████████████░░░░░░░░]`
+## Score: 56% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
-| common-errors | 6.0/6.0 | 100% | ✅ |
 | nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
+| common-errors | 3.0/6.0 | 50% | ❌ |
 | nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
 
 ## ❌ Retreinar urgente
@@ -37,12 +37,16 @@
   - Missing: `não, no`
 
 ### spring-mongodb (50%)
-- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
-  - Wrong: `JpaRepository`
+- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
+  - Wrong: `@Entity`
 
 ### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
   - Wrong: `.dict()`
+
+### common-errors (50%)
+- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
+  - Wrong: `@nestjs/common`
 
 ## Como corrigir
 

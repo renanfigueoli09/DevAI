@@ -2,7 +2,7 @@
   "pattern:nestjs+kafka:setup": {
     "content": "// Kafka: app.connectMicroservice({transport:Transport.KAFKA,options:{client:{brokers:[KAFKA_BROKER]},consumer:{groupId:'app-group',allowAutoTopicCreation:true}}}). Producer: ClientKafka.emit(topic,data). Consumer: @EventPattern('topic') handle(@Payload() data){}",
     "source": "code_pattern",
-    "updated_at": 1780720903.826773
+    "updated_at": 1780721192.815082
   },
   "search:nestjs+kafka:nestjs kafka clientkafka emit ": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/microservices`\n\n- **Latest Versions**:\n  - NestJS: v9.x\n  - @nestjs/microservices: v8.x\n\n- **Key Config Options for ClientKafka**:\n  - `bootstrapServers`: Array of Kafka broker addresses.\n  - `clientId`: Unique identifier for the client.\n  - `groupId`: Group ID for consumer groups.\n\n- **Using @EventPattern**:\n  - Decorates a method to handle event-driven messages.\n  - No response expected from the handler.",

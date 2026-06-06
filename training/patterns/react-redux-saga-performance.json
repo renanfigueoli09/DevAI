@@ -1,0 +1,22 @@
+{
+  "search:react+redux-saga-performance:react redux saga performance o": {
+    "content": "- **CLI Commands**: Use `npm install redux-saga@latest` to install the latest version of Redux Saga.\n- **Key Config Options**:\n  - `sagaMiddleware.run(rootSaga)`: Starts the root saga.\n  - `takeEvery(actionType, worker)`: Listens for dispatched actions and runs a worker saga for each action.\n  - `put(action)`: Dispatches an action to the store.\n- **Optimization Tips**:\n  - Use `redux-saga/effects` like `call`, `fork`, `select`, and `takeLatest` to manage side effects efficiently.\n  - Implement memoization in sagas to avoid unnecessary computations.\n  - Use `redux-thunk` for simpler asynchronous actions if Redux Saga seems overkill for your use case.",
+    "source": "web_search",
+    "updated_at": 1780721112.8888128
+  },
+  "search:react+redux-saga-performance:react redux saga performance o_ex": {
+    "content": "- Use `npm install redux-saga@latest` or `yarn add redux-saga@latest` to install the latest version of Redux Saga.\n- Implement batching actions using `redux-batched-actions` for efficient state updates.\n- Configure middleware in your store with `applyMiddleware(sagaMiddleware)` to integrate Redux Saga.\n- Use `takeEvery`, `takeLatest`, and `takeLeading` sagas to manage side effects efficiently.\n- Optimize sagas by avoiding unnecessary API calls and using debouncing or throttling where applicable.\n- Utilize the `redux-saga/effects` library for managing side effects, such as `call`, `put`, `select`, etc.\n- Monitor performance with tools like React DevTools and Redux DevTools to identify bottlenecks.\n- Refactor sagas by breaking them down into smaller, reusable functions for better maintainability.",
+    "source": "code_example",
+    "updated_at": 1780721129.0954502
+  },
+  "search:react+redux-saga-performance:react redux saga testing patte": {
+    "content": "- Use `@redux-saga/testing-utils` for testing Redux Sagas.\n- Install latest version of `redux-saga` using npm or yarn.\n- For manual testing, call the generator function and use `.next()` to step through yields.\n- Ensure your repository is associated with the redux-saga topic on GitHub.",
+    "source": "web_search",
+    "updated_at": 1780721135.1728406
+  },
+  "search:react+redux-saga-performance:react redux saga testing patte_ex": {
+    "content": "- Use `npm install redux-saga` to install the latest version of Redux Saga.\n- For testing sagas, use `redux-saga-test-plan` with commands like `runSaga`, `expectSaga`.\n- Key config options include `sagaMiddleware.run(yourSaga)` in your store setup.\n- Consider using the Container-View pattern for better React application structure.",
+    "source": "code_example",
+    "updated_at": 1780721141.3506844
+  }
+}
