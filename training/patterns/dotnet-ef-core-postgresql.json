@@ -1,0 +1,22 @@
+{
+  "search:dotnet-ef-core-postgresql:entity framework core with pos": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Server=your_server;Database=your_database;User Id=your_user;Password=your_password;\" Npgsql.EntityFrameworkCore.PostgreSQL`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - PostgreSQL.EntityFrameworkCore.PostgreSQL: 6.1\n\n- **Key Config Options**:\n  - `MaxBatchSize`: Set the maximum number of commands to batch together.\n    ```csharp\n    optionsBuilder.UseNpgsql(\"your_connection_string\", options => options.MaxBatchSize(100));\n    ```\n  - `CommandTimeout`: Specify the command timeout in seconds.\n    ```csharp\n    optionsBuilder.UseNpgsql(\"your_connection_string\", options => options.CommandTimeout(30));\n    ```\n  - `EnableRetryOnFailure`: Enable retry logic for transient errors.\n    ```csharp\n    optionsBuilder.UseNpgsql(\"your_connection_string\", options => options.EnableRetryOnFailure());\n    ```",
+    "source": "web_search",
+    "updated_at": 1780728333.8689616
+  },
+  "search:dotnet-ef-core-postgresql:entity framework core with pos_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - ConnectionString: Ensure it includes `Pooling=true;MinPoolSize=10;MaxPoolSize=20`\n  - Use `EnableSensitiveDataLogging` for debugging.\n  - Implement `IDbContextFactory<TContext>` for better control over context lifecycle.",
+    "source": "code_example",
+    "updated_at": 1780728338.7403727
+  },
+  "search:dotnet-ef-core-postgresql:advanced entity framework core": {
+    "content": "- **Install Npgsql Provider**: Use `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- **Update EF Core**: Ensure you have the latest version by running `dotnet update`\n- **Configure DbContext**: In your `DbContext`, use `options.UseNpgsql(connectionString)`\n- **Connection String**: Include necessary PostgreSQL connection details like server, port, database name, username, and password\n- **Migrations**: Use `Add-Migration InitialCreate` to create migrations and `Update-Database` to apply them\n- **Querying Data**: Utilize LINQ syntax for querying data, e.g., `var users = await context.Users.ToListAsync()`\n- **Key Config Options**:\n  - `MaxBatchSize`: Limits the number of commands sent in a single batch.\n  - `CommandTimeout`: Sets the timeout for database operations.\n  - `EnableRetryOnFailure`: Enables automatic retry logic on transient errors.\n- **Performance Tuning**: Consider using `AsNoTracking()` for read-only queries to improve performance.",
+    "source": "web_search",
+    "updated_at": 1780728350.9589326
+  },
+  "search:dotnet-ef-core-postgresql:advanced entity framework core_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - Connection String: `Server=localhost;Port=5432;Database=mydatabase;Username=myuser;Password=mypassword;`\n  - DbContext Configuration: \n    ```csharp\n    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n    {\n        optionsBuilder.UseNpgsql(\"YourConnectionStringHere\");\n    }\n    ```\n  - Migrations:\n    ```bash\n    dotnet ef migrations add InitialCreate --context YourDbContextName\n    dotnet ef database update --context YourDbContextName\n    ```",
+    "source": "code_example",
+    "updated_at": 1780728358.4954703
+  }
+}
