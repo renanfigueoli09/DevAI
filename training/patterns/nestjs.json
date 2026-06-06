@@ -2,22 +2,22 @@
   "pattern:nestjs+mongodb:app-module": {
     "content": "// app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI||'mongodb://localhost:27017/app'). ONLY add modules that exist. NOT JwtModule/Redis/Kafka unless requested.",
     "source": "code_pattern",
-    "updated_at": 1780770467.1421385
+    "updated_at": 1780770608.9872806
   },
   "pattern:nestjs+postgres:app-module": {
     "content": "// app.module.ts PostgreSQL: TypeOrmModule.forRootAsync({useFactory:(c:ConfigService)=>({type:'postgres',host:c.get('DB_HOST'),port:+c.get('DB_PORT',5432),database:c.get('DB_NAME'),username:c.get('DB_USER'),password:c.get('DB_PASS'),entities:[__dirname+'/**/*.entity.js'],synchronize:c.get('NODE_ENV')!=='production'}),inject:[ConfigService]})",
     "source": "code_pattern",
-    "updated_at": 1780770468.010145
+    "updated_at": 1780770610.2959404
   },
   "pattern:nestjs:dto": {
     "content": "// dto.ts: import {PartialType} from '@nestjs/mapped-types' (NEVER @nestjs/common). export class UpdateBookDto extends PartialType(CreateBookDto) {}",
     "source": "code_pattern",
-    "updated_at": 1780770469.0844915
+    "updated_at": 1780770611.415421
   },
   "pattern:nestjs:main": {
     "content": "// main.ts: ValidationPipe({whitelist:true,transform:true}). Swagger: DocumentBuilder().setTitle().setVersion().addBearerAuth().build(). SwaggerModule.setup('swagger',app,doc).",
     "source": "code_pattern",
-    "updated_at": 1780770469.9644501
+    "updated_at": 1780770611.8656986
   },
   "qa:partialtype-mapped-types": {
     "content": "PartialType: ALWAYS from '@nestjs/mapped-types'\nCORRECT: import { PartialType } from '@nestjs/mapped-types';\nWRONG:   import { PartialType } from '@nestjs/common';   ← does NOT exist\nWRONG:   import { PartialType } from '@nestjs/swagger';  ← avoid",
