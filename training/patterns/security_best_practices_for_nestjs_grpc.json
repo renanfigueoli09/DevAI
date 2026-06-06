@@ -1,0 +1,22 @@
+{
+  "search:Security Best Practices for NestJS+gRPC:nestjs grpc security best prac": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install `@nestjs/microservices` and `@grpc/grpc-js` for gRPC support.\n- Configure gRPC in `app.module.ts` using `NestFactory.createMicroservice`.\n- Implement authentication middleware with JWT or OAuth2.\n- Use `class-validator` and `class-transformer` for DTO validation.\n- Enable CORS with `cors: true` in `app.module.ts`.\n- Utilize environment variables for sensitive information.\n- Regularly update dependencies to the latest versions using `npm update`.\n- Monitor application security with tools like SonarQube or ESLint.",
+    "source": "web_search",
+    "updated_at": 1780729256.9689152
+  },
+  "search:Security Best Practices for NestJS+gRPC:nestjs grpc security best prac_ex": {
+    "content": "- Use NestJS CLI to generate gRPC services (`nest generate grpc-service <service-name>`)\n- Ensure latest NestJS version for compatibility and features (`npm install @nestjs/core@latest`)\n- Configure `grpcOptions` in `app.module.ts` for server setup, e.g., `port`, `package`, `protoPath`\n- Implement authentication middleware to secure gRPC endpoints\n- Use `@GrpcMethod()` decorator on service methods to expose them as gRPC services\n- For client-side communication, use `ClientProxyFactory.create()` with appropriate options\n- Enable TLS for secure communication between clients and server by configuring SSL certificates",
+    "source": "code_example",
+    "updated_at": 1780729264.943536
+  },
+  "search:Security Best Practices for NestJS+gRPC:securing grpc services in nest": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install necessary packages using npm or yarn, e.g., `npm install @nestjs/microservices`.\n- Configure gRPC microservice in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { ClientsModule, Transport } from '@nestjs/microservices';\n\n  @Module({\n    imports: [\n      ClientsModule.register([\n        {\n          name: 'GRPC_SERVICE',\n          transport: Transport.GRPC,\n          options: {\n            url: 'localhost:50051',\n            package: 'package_name',\n            protoPath: join(__dirname, '..', 'path/to/your/proto/file.proto'),\n          },\n        },\n      ]),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use `@MessagePattern` decorator to define gRPC service methods in your controller.\n- Ensure secure communication by using TLS with the `grpc.credentials.createSsl()` method when setting up the client options.\n- Implement error handling within your service methods to manage exceptions properly.\n- Deploy your NestJS microservice on Azure Kubernetes Service (AKS) using a LoadBalancer service type to expose it publicly.",
+    "source": "web_search",
+    "updated_at": 1780729286.7863033
+  },
+  "search:Security Best Practices for NestJS+gRPC:securing grpc services in nest_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install gRPC dependencies with `npm install @grpc/grpc-js @grpc/proto-loader`.\n- Define your service in `.proto` files and use `protoc` compiler to generate TypeScript code.\n- Configure gRPC in `app.module.ts` using `GrpcGatewayModule.register()`.\n- Use `@GrpcMethod()` decorator to define RPC methods in your service classes.\n- Ensure secure communication by configuring TLS/SSL certificates.\n- Utilize NestJS's built-in validation pipes for input data sanitization and validation.",
+    "source": "code_example",
+    "updated_at": 1780729291.897501
+  }
+}
