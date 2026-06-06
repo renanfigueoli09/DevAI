@@ -1,0 +1,17 @@
+{
+  "search:fastapi-redis:fastapi redis caching strategi": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Redis: v4.6.3\n\n- **Key Config Options**:\n  - `redis_url`: URL for the Redis server.\n  - `max_connections`: Maximum number of connections to Redis.\n  - `min_connections`: Minimum number of connections to Redis.\n  - `cache_timeout`: Time in seconds that cached data remains valid.",
+    "source": "web_search",
+    "updated_at": 1780756560.6226857
+  },
+  "search:fastapi-redis:fastapi redis caching strategi_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Uvicorn: 10.6.0\n  - Redis: 4.3.4\n\n- **Key Config Options**:\n  - `redis_url`: URL for the Redis server (e.g., `redis://localhost:6379/0`)\n  - `cache_timeout`: Time in seconds to cache responses (e.g., `300` for 5 minutes)\n  - `max_connections`: Maximum number of connections to Redis (e.g., `10`)",
+    "source": "code_example",
+    "updated_at": 1780756567.2867477
+  },
+  "search:fastapi-redis:fastapi redis pub/sub patterns": {
+    "content": "- Use `pip install fastapi[all] redis` to install FastAPI and Redis.\n- For asynchronous operations, use `aioredis` instead of `redis`.\n- Implement a `RedisPubSubManager` class for managing connections, subscriptions, and publishing messages.\n- Utilize Uvicorn as the ASGI server for handling WebSocket connections in multi-worker deployments.\n- Configure Redis to handle pub/sub messaging between FastAPI instances.\n- Ensure proper error handling in production environments when using Redis pub/sub with Uvicorn workers.",
+    "source": "web_search",
+    "updated_at": 1780756585.003223
+  }
+}
