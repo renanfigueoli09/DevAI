@@ -1,0 +1,27 @@
+{
+  "search:Advanced Kafka Streams Use Cases:kafka streams use cases": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.1\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets on startup (e.g., `earliest`, `latest`).",
+    "source": "web_search",
+    "updated_at": 1780748641.4982889
+  },
+  "search:Advanced Kafka Streams Use Cases:kafka streams use cases_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Spring Cloud Stream: 3.2.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer`: Deserializer for key data.\n  - `value.deserializer`: Deserializer for value data.\n  - `auto.offset.reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g., because that data has been deleted). Options include `earliest`, `latest`, and `none`.",
+    "source": "code_example",
+    "updated_at": 1780748660.330065
+  },
+  "search:Advanced Kafka Streams Use Cases:stream processing kafka": {
+    "content": "- **Latest Version**: Kafka Streams is part of Apache Kafka, which has multiple releases. As of my last update in October 2023, the latest stable version can be found on the [Apache Kafka website](https://kafka.apache.org/downloads).\n  \n- **CLI Commands**:\n  - To create a topic: `kafka-topics.sh --create --topic <topic_name> --bootstrap-server <broker_address> --replication-factor <num_replicas> --partitions <num_partitions>`\n  - To produce messages: `kafka-console-producer.sh --topic <topic_name> --bootstrap-server <broker_address>`\n  - To consume messages: `kafka-console-consumer.sh --topic <topic_name> --from-beginning --bootstrap-server <broker_address>`\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the Kafka Streams application.\n  - `bootstrap.servers`: List of broker addresses used to establish initial connections to the cluster.\n  - `default.key.serde` and `default.value.serde`: Serdes (Serializer/Deserializer) for keys and values in records.\n\n- **Documentation**: For detailed information, refer to the [Kafka Streams documentation](https://kafka.apache.org/documentation/#streams).",
+    "source": "web_search",
+    "updated_at": 1780748683.508124
+  },
+  "search:Advanced Kafka Streams Use Cases:stream processing kafka_ex": {
+    "content": "- **CLI Commands**:\n  - `spark-submit --master spark://<host>:7077 --deploy-mode cluster <your-application.jar>`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic your-topic --from-beginning`\n\n- **Latest Versions**:\n  - Apache Spark 3.4\n  - Apache Kafka 3.0\n\n- **Key Config Options**:\n  - `spark.sql.streaming.checkpointLocation`\n  - `spark.kafka.consumer.groupId`\n  - `spark.executor.memory`",
+    "source": "code_example",
+    "updated_at": 1780748689.2478395
+  },
+  "search:Advanced Kafka Streams Use Cases:real-time data processing": {
+    "content": "- **Latest Kafka Version**: As of my last update, the latest stable version is 3.4.1.\n- **CLI Commands**:\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topic_name> --from-beginning`\n- **Key Config Options**:\n  - `replication.factor`: Number of replicas for each partition.\n  - `num.partitions`: Number of partitions to create when a topic is created.\n  - `acks`: Controls the number of acknowledgments before a producer considers a request complete.",
+    "source": "web_search",
+    "updated_at": 1780748719.8335664
+  }
+}

@@ -3,5 +3,15 @@
     "content": "- Use `uvicorn` to run FastAPI applications with asyncio support.\n  ```bash\n  uvicorn main:app --host 0.0.0.0 --port 8000\n  ```\n- Ensure Python version is at least 3.7 for asyncio compatibility.\n- Key config options include:\n  - `asyncio.run(app)`: Runs the FastAPI application using asyncio.\n  - `BackgroundTasks`: For handling background tasks asynchronously.\n  - `Depends`: For dependency injection in asynchronous functions.\n- Latest versions of FastAPI and Uvicorn can be installed via pip:\n  ```bash\n  pip install fastapi uvicorn\n  ```\n- Use `asyncio.create_task` for running async tasks concurrently within a request.",
     "source": "web_search",
     "updated_at": 1780748566.7312148
+  },
+  "search:Advanced Features of FastAPI and asyncio:websockets fastapi": {
+    "content": "- **Install FastAPI**: `pip install fastapi`\n- **Install Uvicorn**: `pip install uvicorn` for ASGI server\n- **Create WebSocket Endpoint**:\n  ```python\n  from fastapi import FastAPI, WebSocket\n\n  app = FastAPI()\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket):\n      await websocket.accept()\n      while True:\n          data = await websocket.receive_text()\n          await websocket.send_text(f\"Message text was: {data}\")\n  ```\n- **Run Application**: `uvicorn main:app --reload`\n- **Latest FastAPI Version**: Check [PyPI](https://pypi.org/project/fastapi/)\n- **Latest Uvicorn Version**: Check [PyPI](https://pypi.org/project/uvicorn/)\n- **Key Config Options**:\n  - `--host`: Set the host to listen on (default: `127.0.0.1`)\n  - `--port`: Set the port to listen on (default: `8000`)\n  - `--reload`: Enable auto-reload during development",
+    "source": "web_search",
+    "updated_at": 1780748618.813475
+  },
+  "search:Advanced Features of FastAPI and asyncio:websockets fastapi_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app with auto-reload.\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Starlette: v0.21.3\n  \n- **Key Config Options**:\n  - `websocket.receive()` and `websocket.send_text()` for handling WebSocket messages.\n  - Use `asyncio.Queue` for managing message queues in a multi-worker setup with Redis.\n  - Configure CORS using `fastapi.middleware.cors.CORSMiddleware`.",
+    "source": "code_example",
+    "updated_at": 1780748624.2058847
   }
 }
