@@ -1,0 +1,22 @@
+{
+  "search:spring+kafka-advanced:spring kafka advanced patterns": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to run Kafka and other services.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Kafka: 2.7.14\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `key.deserializer`: Deserializer for keys.\n  - `value.deserializer`: Deserializer for values.\n  - `group.id`: Consumer group ID.\n  - `auto.offset.reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on server.",
+    "source": "web_search",
+    "updated_at": 1780707652.5663846
+  },
+  "search:spring+kafka-advanced:spring kafka advanced patterns_ex": {
+    "content": "- **Latest Spring Kafka Version**: 3.1.x\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `docker-compose up` to start services.\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.producer.key-serializer`: Key serializer class.\n  - `spring.kafka.producer.value-serializer`: Value serializer class.",
+    "source": "code_example",
+    "updated_at": 1780707656.358095
+  },
+  "search:spring+kafka-advanced:kafka message processing strat": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server <broker_address> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker_address> --describe --group <consumer_group_id>`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `enable.idempotence`: Set to true for idempotent producer.\n  - `acks`: Configure as \"all\" for strict ordering and delivery guarantees.\n  - `max.in.flight.requests.per.connection`: Adjust based on network conditions and message size.\n  - `retries`: Define the number of retries before giving up.",
+    "source": "web_search",
+    "updated_at": 1780707664.9815648
+  },
+  "search:spring+kafka-advanced:kafka message processing strat_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.1\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `acks`: Set to `all` for strict ordering and reliability.\n  - `retries`: Number of retries before giving up on a message.\n  - `enable.idempotence`: Set to `true` for idempotent producer behavior.\n  - `max.in.flight.requests.per.connection`: Controls the number of in-flight requests per connection.",
+    "source": "code_example",
+    "updated_at": 1780707669.7944539
+  }
+}
