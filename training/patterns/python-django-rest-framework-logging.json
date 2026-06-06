@@ -1,0 +1,22 @@
+{
+  "search:python-django-rest-framework-logging:django rest framework logging ": {
+    "content": "- Install Django REST Framework using pip: `pip install djangorestframework`\n- Update `INSTALLED_APPS` in settings.py to include `'rest_framework'`.\n- Configure logging in settings.py with the LOGGING dictionary.\n- Use `python manage.py runserver` to start your Django development server.\n- Ensure you have a valid database setup and migrations applied: `python manage.py migrate`.\n- For authentication, consider using packages like `django-allauth` or `dj-rest-auth`.\n- Integrate Auth.js for client-side authentication if needed.",
+    "source": "web_search",
+    "updated_at": 1780738161.9554167
+  },
+  "search:python-django-rest-framework-logging:django rest framework logging _ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver`\n  - `pip install djangorestframework`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n\n- **Key Config Options**:\n  - `LOGGING` dictionary in settings.py for custom logging configuration.\n  - `REST_FRAMEWORK` dictionary for configuring DRF settings.",
+    "source": "code_example",
+    "updated_at": 1780738167.430155
+  },
+  "search:python-django-rest-framework-logging:django rest framework advanced": {
+    "content": "- Use `python manage.py runserver` to start the Django development server.\n- Update Django and Django REST Framework to their latest versions using pip:\n  ```bash\n  pip install --upgrade django djangorestframework\n  ```\n- Configure logging in your `settings.py` file under the `LOGGING` dictionary. Example configuration for console and file logging:\n  ```python\n  LOGGING = {\n      'version': 1,\n      'disable_existing_loggers': False,\n      'handlers': {\n          'console': {\n              'level': 'DEBUG',\n              'class': 'logging.StreamHandler',\n          },\n          'file': {\n              'level': 'INFO',\n              'class': 'logging.FileHandler',\n              'filename': '/path/to/django.log',\n          },\n      },\n      'loggers': {\n          'django': {\n              'handlers': ['console', 'file'],\n              'level': 'DEBUG',\n              'propagate': True,\n          },\n      },\n  }\n  ```\n- For structured JSON logging, use a custom formatter:\n  ```python\n  import json\n\n  class JsonFormatter(logging.Formatter):\n      def format(self, record):\n          log_record = {\n              \"timestamp\": self.formatTime(record, self.datefmt),\n              \"level\": record.levelname,\n              \"message\": record.getMessage(),\n          }\n          return json.dumps(log_record)\n  ```\n- Apply the custom formatter to your handlers:\n  ```python\n  'handlers': {\n      'json_file': {\n          'level': 'INFO',\n          'class': 'logging.FileHandler',\n          'filename': '/path/to/django_json.log',\n          'formatter': 'json_formatter',\n      },\n  },\n  'formatters': {\n      'json_formatter': {\n          '()': JsonFormatter,\n      },\n  },\n  ```\n- Use `django.core.management.base.BaseCommand` for custom management commands with logging:\n  ```python\n  from django.core.management.base import BaseCommand, CommandError\n\n  class Command(BaseCommand):\n      help = 'Closes the specified poll for voting'\n\n      def handle(self, *args, **options):\n          self.stdout.write(self.style.SUCCESS('Successfully closed vote'))\n  ```\n- For performance monitoring, consider using Django Debug Toolbar or third-party packages like `django-silk`.",
+    "source": "web_search",
+    "updated_at": 1780738180.7808921
+  },
+  "search:python-django-rest-framework-logging:django rest framework advanced_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install djangorestframework-simplejwt`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n  - django-rest-framework-simplejwt: 5.2.0\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py for authentication classes.\n  - Logging configuration in settings.py to capture detailed logs.\n  - Middleware order in settings.py for request/response handling.",
+    "source": "code_example",
+    "updated_at": 1780738196.5973835
+  }
+}
