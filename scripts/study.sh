@@ -82,7 +82,7 @@ for arg in "$@"; do [[ "$arg" == "--loop" ]] && LOOP_MODE=true; done
 
 if $LOOP_MODE; then
     ARGS="${*/--loop/}"
-    INTERVAL=${STUDY_INTERVAL:-1800}
+    INTERVAL=${STUDY_INTERVAL:-110}
     echo -e "  ${CYAN}Loop inteligente — só estuda o que ainda não foi feito${NC}"
     echo -e "  ${CYAN}Intervalo: ${INTERVAL}s | Log: $LOG_FILE${NC}\n"
     CYCLE=1
