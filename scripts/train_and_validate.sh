@@ -15,6 +15,19 @@ GREEN='\033[0;32m'; CYAN='\033[0;36m'; YELLOW='\033[1;33m'; NC='\033[0m'
 
 GROUP="all"
 VAL_INTERVAL="${VAL_INTERVAL:-300}"
+STUDY_PID=""
+TAIL_PID=""
+
+cleanup() {
+    echo -e "
+  ${YELLOW}Encerrando todos os processos...${NC}"
+    [ -n "$STUDY_PID" ] && kill "$STUDY_PID" 2>/dev/null
+    [ -n "$TAIL_PID"  ] && kill "$TAIL_PID"  2>/dev/null
+    kill -- -$$ 2>/dev/null
+    echo -e "  ${GREEN}✓ Encerrado${NC}"
+    exit 0
+}
+trap cleanup INT TERM
 
 for arg in "$@"; do
     case $arg in
