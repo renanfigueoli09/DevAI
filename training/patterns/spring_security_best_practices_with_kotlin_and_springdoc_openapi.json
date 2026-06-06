@@ -2,41 +2,41 @@
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:springdoc-openapi advanced usa": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `./mvnw spring-boot:run` to run your Spring Boot application.\n\n- **Latest Versions**:\n  - Springdoc OpenAPI: 2.8.12\n  - Spring Boot: 3.x\n\n- **Key Config Options**:\n  - Add dependency in `pom.xml`: `<dependency> <groupId>org.springdoc</groupId> <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId> <version>2.8.12</version> </dependency>`\n  - Access Swagger UI: Navigate to `http://localhost:8080/swagger-ui.html`",
     "source": "web_search",
-    "updated_at": 1780762834.9265692
+    "updated_at": 1780763321.910498
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:springdoc-openapi advanced usa_ex": {
     "content": "- **Latest Version**: springdoc-openapi v3.0.3\n- **CLI Command**: `mvn clean install`\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Path to access the API documentation.\n  - `springdoc.swagger-ui.path`: Path to access the Swagger UI.\n  - `springdoc.api-docs.enabled`: Enable or disable generation of API docs.",
     "source": "code_example",
-    "updated_at": 1780762835.718156
+    "updated_at": 1780763322.5775752
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:jwt authentication in spring b": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application-name.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0\n  - Java: 21\n\n- **Key Config Options**:\n  - `application.properties`: \n    ```properties\n    spring.security.jwt.secret=yourSecretKey\n    spring.security.jwt.expiration=86400\n    ```\n  - `pom.xml` dependencies for Spring Security and JWT:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-security</artifactId>\n    </dependency>\n    <dependency>\n        <groupId>io.jsonwebtoken</groupId>\n        <artifactId>jjwt-api</artifactId>\n        <version>0.11.5</version>\n    </dependency>\n    <dependency>\n        <groupId>io.jsonwebtoken</groupId>\n        <artifactId>jjwt-impl</artifactId>\n        <version>0.11.5</version>\n        <scope>runtime</scope>\n    </dependency>\n    <dependency>\n        <groupId>io.jsonwebtoken</groupId>\n        <artifactId>jjwt-jackson</artifactId>\n        <version>0.11.5</version>\n        <scope>runtime</scope>\n    </dependency>\n    ```",
     "source": "web_search",
-    "updated_at": 1780762836.4669425
+    "updated_at": 1780763323.3046196
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:role-based access control": {
     "content": "- **CLI Commands**: Use `aws iam create-policy` to create a policy.\n- **Latest Versions**: Ensure AWS CLI is up to date using `pip install --upgrade awscli`.\n- **Key Config Options**:\n  - `Version`: Specifies the version of the policy document (e.g., \"2012-10-17\").\n  - `Statement`: Defines the permissions and actions.\n  - `Effect`: Determines whether the statement allows or denies access (e.g., \"Allow\", \"Deny\").\n  - `Action`: Specifies the specific action to allow or deny.\n  - `Resource`: Identifies the resource that the action applies to.",
     "source": "web_search",
-    "updated_at": 1780762837.2482247
+    "updated_at": 1780763323.9762218
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:role-based access control_ex": {
     "content": "- **CLI Commands**: Use `rbacctl` for managing roles and permissions.\n- **Latest Version**: Ensure you are using the latest version of your RBAC tool, typically available through package managers like `apt`, `yum`, or `brew`.\n- **Key Config Options**:\n  - `role`: Define roles with specific permissions.\n  - `user`: Assign users to roles.\n  - `policy`: Implement policies that govern role assignments and access levels.",
     "source": "code_example",
-    "updated_at": 1780762838.0672715
+    "updated_at": 1780763324.632856
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:kotlin security": {
     "content": "- **CLI Commands**:\n  - `kotlin -version` to check Kotlin version.\n  - `./gradlew build` for building a project using Gradle.\n\n- **Latest Versions**:\n  - Kotlin 1.8.23 (as of my last update).\n  - Gradle 7.6.4 (as of my last update).\n\n- **Key Config Options**:\n  - For JWT: Use libraries like `jjwt` for creating and validating tokens.\n  - For OAuth2: Implement using Spring Security OAuth2 or Keycloak.\n  - For secure coding practices in Kotlin, refer to the official Kotlin documentation on mobile application security.",
     "source": "web_search",
-    "updated_at": 1780762838.8348117
+    "updated_at": 1780763325.280509
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:kotlin security_ex": {
     "content": "- Use the latest stable version of Kotlin.\n- Enable ProGuard/R8 for code obfuscation in release builds.\n- Utilize AndroidX Security for encrypting Shared Preferences and other data at rest.\n- Implement input validation and sanitization to prevent common security vulnerabilities.\n- Regularly update dependencies to patch known security issues.",
     "source": "code_example",
-    "updated_at": 1780762839.6283872
+    "updated_at": 1780763325.9704466
   },
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:jwt authentication in spring b_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Java 21 (as of Jan 5, 2026)\n  - Spring Boot 3.0 (as of May 5, 2026)\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for JWT secret and token expiration.\n  - Security configuration class to enable JWT authentication.\n  - UserDetailsService implementation for user authentication logic.\n  - Controller annotations like `@PreAuthorize` for securing endpoints.",
     "source": "code_example",
-    "updated_at": 1780762840.4367123
+    "updated_at": 1780763326.642282
   }
 }
