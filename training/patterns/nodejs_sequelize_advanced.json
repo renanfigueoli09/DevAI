@@ -2,21 +2,21 @@
   "search:nodejs+sequelize-advanced:sequelize orm for node.js 2024": {
     "content": "- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes Sequelize in your project.\n  - `npx sequelize-cli model:create --name User --attributes firstName:string,lastName:string,email:string`: Creates a new model named `User`.\n  - `npx sequelize-cli db:migrate`: Applies migrations to the database.\n\n- **Latest Version**:\n  - As of my last update, Sequelize is at version 6.x. Check [npm](https://www.npmjs.com/package/sequelize) for the latest version.\n\n- **Key Config Options**:\n  - `dialect`: Specifies the database dialect (e.g., 'postgres', 'mysql', 'sqlite').\n  - `host`: Database host.\n  - `port`: Database port.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Name of the database.",
     "source": "web_search",
-    "updated_at": 1780765260.5623703
+    "updated_at": 1780765752.058981
   },
   "search:nodejs+sequelize-advanced:advanced sequelize queries and": {
     "content": "- **CLI Commands**: Use `npx sequelize-cli` for Sequelize operations.\n- **Latest Versions**: Ensure using Sequelize v6 or later for the most features and security updates.\n- **Key Config Options**:\n  - `eagerLoading`: Enable fetching associated data in a single query.\n  - `include`: Specify associations to include in queries.\n  - `paranoidMode`: Soft delete records instead of hard deleting them.\n  - `operatorsAliases`: Customize or disable operator aliases for raw queries.",
     "source": "web_search",
-    "updated_at": 1780765261.2937312
+    "updated_at": 1780765752.739723
   },
   "search:nodejs+sequelize-advanced:advanced sequelize queries and_ex": {
     "content": "- **Eager Loading**: Use `include` option in model finder queries.\n- **Many to Many Associations**: Fetch associated data using `include`.\n- **Latest Version**: Check Sequelize documentation for the latest version.\n- **Key Config Options**:\n  - `eagerLoading`: Enable or disable eager loading globally.\n  - `associations`: Define associations between models.\n  - `transactions`: Manage database transactions.\n  - `scopes`: Define reusable query scopes.\n  - `hooks`: Use model hooks for lifecycle events.",
     "source": "code_example",
-    "updated_at": 1780765262.0270112
+    "updated_at": 1780765753.437822
   },
   "search:nodejs+sequelize-advanced:performance optimization with ": {
     "content": "- Use `sequelize-cli` version 6.x for database migrations and model generation.\n- Enable query logging with `logging: console.log` in Sequelize configuration to identify slow queries.\n- Utilize `sequelize-benchmark` for detailed performance analysis of Sequelize queries.\n- Implement eager loading using `.include()` to reduce the number of database hits.\n- Optimize associations by preloading related models when necessary.\n- Use raw SQL queries for complex operations where ORM limitations are a bottleneck.\n- Configure connection pool settings in Sequelize with options like `pool.max`, `pool.idle`, and `pool.acquireTimeout`.\n- Regularly update Sequelize to the latest version to benefit from performance improvements and bug fixes.",
     "source": "web_search",
-    "updated_at": 1780765262.811727
+    "updated_at": 1780765754.1368725
   }
 }

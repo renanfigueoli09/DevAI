@@ -1,0 +1,22 @@
+{
+  "search:python-django-orm-performance:python django orm performance ": {
+    "content": "- Use `django-admin` to manage your Django project.\n- Update Django to the latest version using pip: `pip install --upgrade django`.\n- Configure caching in settings.py with a suitable backend like `CACHES = {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',}}`.\n- Use `select_related` and `prefetch_related` for efficient database queries.\n- Implement lazy evaluation by avoiding unnecessary data fetching.\n- Utilize Django's built-in caching framework to reduce database hits.\n- Optimize queries using the `annotate()` and `aggregate()` methods.\n- Monitor performance with tools like Django Debug Toolbar.\n- Use `django.core.cache.backends.memcached.MemcachedCache` for production environments.\n- Regularly review and optimize your ORM queries for better performance.",
+    "source": "web_search",
+    "updated_at": 1780765823.6455295
+  },
+  "search:python-django-orm-performance:python django orm performance _ex": {
+    "content": "- Use `django-admin` to manage your project.\n- Update Django to the latest version using `pip install --upgrade django`.\n- Configure database settings in `settings.py`, e.g., `DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'mydatabase', 'USER': 'myuser', 'PASSWORD': 'mypassword', 'HOST': 'localhost', 'PORT': '5432'}}`.\n- Use Django's ORM methods like `select_related` and `prefetch_related` to reduce database queries.\n- Apply database indexing on frequently queried fields using `db_index=True`.\n- Utilize caching mechanisms like Memcached or Redis for reducing database load.\n- Employ Django's built-in query optimization tools such as `explain()` to analyze query performance.\n- Regularly run migrations with `python manage.py migrate` to keep your database schema up-to-date.\n- Monitor and profile your application using Django Debug Toolbar or similar tools.",
+    "source": "code_example",
+    "updated_at": 1780765829.035591
+  },
+  "search:python-django-orm-performance:python django orm best practic": {
+    "content": "- Use `python manage.py migrate` to apply migrations.\n- Utilize Django's ORM for database interactions, avoiding raw SQL queries.\n- Employ `select_related()` and `prefetch_related()` for efficient querying.\n- Apply slicing with `queryset[start:end]` or `.slice(start, end)` methods.\n- Monitor performance using Django Debug Toolbar.\n- Regularly update Django to the latest version for security and features.\n- Configure settings in `settings.py`, such as `DATABASES` and `INSTALLED_APPS`.\n- Use `django.db.models.signals` for handling model events.\n- Implement caching strategies with `django.core.cache` for improved performance.",
+    "source": "web_search",
+    "updated_at": 1780765841.1574285
+  },
+  "search:python-django-orm-performance:python django orm best practic_ex": {
+    "content": "- Use `python manage.py migrate` to apply migrations.\n- Utilize Django's ORM methods like `.filter()`, `.get()`, `.create()` for database operations.\n- Employ `select_related()` and `prefetch_related()` for efficient querying.\n- Set `db_index=True` on fields that are frequently queried.\n- Use `bulk_create()` for bulk inserts.\n- Apply `using='default'` to specify the database alias.\n- Configure `DATABASES` in settings.py with appropriate connection details.\n- Utilize Django's testing framework for unit tests.\n- Monitor performance using tools like Django Debug Toolbar.",
+    "source": "code_example",
+    "updated_at": 1780765847.0438259
+  }
+}

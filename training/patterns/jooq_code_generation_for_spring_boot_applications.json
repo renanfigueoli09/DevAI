@@ -2,41 +2,41 @@
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation": {
     "content": "- **CLI Command**: `jooq-codegen`\n- **Latest Version**: Check [Maven Central](https://search.maven.org/artifact/org.jooq/jooq-codegen)\n- **Key Config Options**:\n  - `-url`: JDBC connection URL\n  - `-username`: Database username\n  - `-password`: Database password\n  - `-generator`: Specify generator type (e.g., `org.jooq.meta.postgres.PostgreSQLGenerator`)\n  - `-target.directory`: Output directory for generated Java classes",
     "source": "web_search",
-    "updated_at": 1780765249.1936848
+    "updated_at": 1780765742.03745
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management": {
     "content": "- **Atlas**: Use `atlas apply` to manage database schemas as code.\n- **Latest Version**: Atlas v2.3.1\n- **Key Config Options**:\n  - `provider`: Specifies the database provider (e.g., PostgreSQL, MySQL).\n  - `connection_string`: Database connection details.\n  - `migrations_dir`: Directory containing migration scripts.",
     "source": "web_search",
-    "updated_at": 1780765250.0498042
+    "updated_at": 1780765742.734333
   },
   "search:JOOQ Code Generation for Spring Boot Applications:database schema management_ex": {
     "content": "- **CLI Commands**: Use `hevo data` to explore database schema examples.\n- **Latest Versions**: Check the latest version of Hevo Data on their official website.\n- **Key Config Options**: Review the README file in the GitHub repository for specific configuration details and SQL scripts.",
     "source": "code_example",
-    "updated_at": 1780765250.8552217
+    "updated_at": 1780765743.4228854
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries": {
     "content": "- **jOOQ**: Use `mvn dependency:add` to include jOOQ in your project.\n- **Prisma TypedSQL**: Install Prisma CLI with `npm install -g prisma`.\n- **Kysely**: Install Kysely with `npm install kysely`.\n- **Neon**: Install Neon with `npm install neon-js`.\n- **Latest versions**: Check [Maven Central](https://search.maven.org/) for jOOQ, [npmjs.com](https://www.npmjs.com/) for Prisma, Kysely, and Neon.\n- **Key config options**:\n  - jOOQ: Configure your database connection in `pom.xml`.\n  - Prisma: Define your data model in `schema.prisma`.\n  - Kysely: Use the `Database` class with a connection string.\n  - Neon: Set up environment variables for connection details.",
     "source": "web_search",
-    "updated_at": 1780765251.6224213
+    "updated_at": 1780765744.0825047
   },
   "search:JOOQ Code Generation for Spring Boot Applications:type-safe sql queries_ex": {
     "content": "- **CLI Commands**:\n  - `sqlc generate`: Compiles SQL queries into type-safe Go code.\n  - `sqlx query`: Executes parameterized SQL queries in Rust.\n\n- **Latest Versions**:\n  - sqlc: v1.14.0 (as of Aug 5, 2024)\n  - sqlx: v0.6.3 (as of Aug 5, 2024)\n\n- **Key Config Options**:\n  - `sqlc` uses a configuration file (`sqlc.yaml`) to specify database connection details and SQL files.\n  - `sqlx` supports various database drivers like PostgreSQL, MySQL, SQLite, etc., through its driver configuration.",
     "source": "code_example",
-    "updated_at": 1780765252.4055805
+    "updated_at": 1780765744.7644613
   },
   "search:JOOQ Code Generation for Spring Boot Applications:jooq code generation_ex": {
     "content": "- Use `jooq-codegen-maven` or `jooq-codegen-cli` for code generation.\n- For Maven, add `<plugin>` in `pom.xml`.\n- For CLI, run `java -jar jooq-codegen-cli.jar --input <config-file>`.\n- Key config options: `jdbcUrl`, `username`, `password`, `generator.database.name`.\n- Ensure database schema is up-to-date before generating code.\n- Use latest versions of jOOQ for optimal functionality and security.",
     "source": "code_example",
-    "updated_at": 1780765253.2222729
+    "updated_at": 1780765745.4529524
   },
   "search:JOOQ Code Generation for Spring Boot Applications:spring boot orm": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Hibernate ORM: 6.2.7.Final\n  - JPA (Java Persistence API): 3.0.1\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (`update`, `create-drop`, etc.).\n  - `spring.jpa.properties.hibernate.dialect`: Specifies the SQL dialect used by Hibernate.\n\n- **Dependencies**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.boot</groupId>\n      <artifactId>spring-boot-starter-data-jpa</artifactId>\n  </dependency>\n  <dependency>\n      <groupId>com.h2database</groupId>\n      <artifactId>h2</artifactId>\n      <scope>runtime</scope>\n  </dependency>\n  ```\n\n- **Example Application Properties**:\n  ```properties\n  spring.datasource.url=jdbc:h2:mem:testdb\n  spring.datasource.username=sa\n  spring.datasource.password=\n  spring.jpa.hibernate.ddl-auto=create-drop\n  spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect\n  ```\n\n- **Transaction Management**:\n  - Use `@Transactional` annotation on service methods.\n  - Configure transaction manager in Spring Boot.\n\n- **Testing**:\n  - Use `@DataJpaTest` for testing JPA repositories.\n  - Mock dependencies using Mockito.",
     "source": "web_search",
-    "updated_at": 1780765254.070966
+    "updated_at": 1780765746.1514728
   },
   "search:JOOQ Code Generation for Spring Boot Applications:spring boot orm_ex": {
     "content": "- **CLI Commands**: \n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Java 17\n  - Spring Boot 3.x (as of my last update)\n  - Hibernate 6.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n    ```properties\n    spring.datasource.url=jdbc:mysql://localhost:3306/mydb\n    spring.datasource.username=root\n    spring.datasource.password=password\n    spring.jpa.hibernate.ddl-auto=update\n    ```\n  - Entity classes annotated with JPA annotations like `@Entity`, `@Table`, `@Id`.\n  - Repository interfaces extending `JpaRepository` or `CrudRepository`.",
     "source": "code_example",
-    "updated_at": 1780765254.9269516
+    "updated_at": 1780765746.81806
   }
 }
