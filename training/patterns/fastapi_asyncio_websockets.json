@@ -23,5 +23,10 @@
     "content": "- Use `uvicorn` as your ASGI server for FastAPI applications.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- For WebSocket performance, consider using an executor to offload CPU-bound tasks:\n  ```bash\n  python -m uvicorn main:app --workers 4 --host 0.0.0.0 --port 8000\n  ```\n- Implement background tasks for non-blocking operations like ML inference.\n- Use `asyncio.gather` to run multiple asynchronous tasks concurrently, ensuring efficient data handling:\n  ```python\n  await asyncio.gather(read_from_socket(websocket), get_data_and_send())\n  ```\n- Configure the number of workers in `uvicorn` based on your server's CPU cores for optimal performance.",
     "source": "web_search",
     "updated_at": 1780753987.8628182
+  },
+  "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf_ex": {
+    "content": "- Use `uvicorn` with the `--host` flag to specify the host, e.g., `uvicorn main:app --host 0.0.0.0`.\n- Upgrade FastAPI to version 0.95.0 or later for improved performance.\n- Configure Redis for WebSocket scalability by setting up a connection pool in your application code.\n- Implement background tasks using `BackgroundTasks` to offload CPU-bound work, e.g., `@app.post(\"/background-task\") async def create_task(background_tasks: BackgroundTasks):`.\n- Use `asyncio.Semaphore` to manage concurrent access and prevent blocking, e.g., `sem = asyncio.Semaphore(10)`.\n- Enable compression in FastAPI using middleware like `CompressMiddleware`, e.g., `app.add_middleware(CompressMiddleware, minimum_size=1024)`.\n- Monitor performance with tools like `asyncio`'s `run_in_executor` to offload blocking tasks to a thread pool, e.g., `await asyncio.to_thread(some_blocking_function)`.",
+    "source": "code_example",
+    "updated_at": 1780754006.3172836
   }
 }

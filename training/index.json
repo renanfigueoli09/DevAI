@@ -8,13 +8,13 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780753968.1907806,
+    "ts": 1780754008.5305986,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780753968.45444,
+    "ts": 1780754008.7011094,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780753968.6748917,
+    "ts": 1780754008.8931768,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -1744,5 +1744,11 @@
     "source": "web_search",
     "ts": 1780753987.8638818,
     "size": 681
+  },
+  "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf_ex": {
+    "topic": "fastapi_asyncio_websockets",
+    "source": "code_example",
+    "ts": 1780754006.3178666,
+    "size": 875
   }
 }
