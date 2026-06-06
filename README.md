@@ -1,39 +1,34 @@
 # ⚡ DevAI — Agente Autônomo de Desenvolvimento Local
 
-Agente de código multi-stack que cria, evolui e corrige projetos usando LLM local via Ollama.
-100% offline · roda na sua GPU · aprende continuamente via vector store semântico (LanceDB).
+Agente de código multi-stack usando LLM local via Ollama.
+100% offline · aprende com o uso · entende português informal.
+
+> Training store: **342 itens** | **342 embeddings** | storage: `lancedb+json`
+> *Atualizado: 2026-06-05 21:20*
 
 ---
 
 ## Pré-requisitos
 
-| Ferramenta | Versão | Uso |
-|---|---|---|
-| Python | 3.10+ | runtime do agente |
-| [Ollama](https://ollama.com) | latest | LLM local |
-| GPU | 8GB VRAM+ (recomendado) | modelos 7B+ |
-| Node.js | 18+ | NestJS / Next.js |
-| Java | 21+ | Spring Boot |
-| .NET SDK | 8+ | ASP.NET Core |
-
 ```bash
-# Modelo de código
-ollama pull qwen2.5-coder:7b     # recomendado
-ollama pull deepseek-coder:6.7b  # alternativa leve
-
-# Embeddings (busca semântica no training store — obrigatório)
-ollama pull nomic-embed-text
+ollama pull qwen2.5-coder:7b    # modelo de código
+ollama pull nomic-embed-text     # embeddings (busca semântica)
 ```
 
----
+| Stack | Requisito |
+|---|---|
+| NestJS / Next.js | Node.js 18+ |
+| Spring Boot | Java 21+ |
+| ASP.NET Core | .NET SDK 8+ |
+| FastAPI / Django | Python 3.10+ (já no venv) |
 
 ## Instalação
 
 ```bash
 git clone <repo> ~/git/devai && cd ~/git/devai
-chmod +x install.sh scripts/study.sh
+chmod +x install.sh scripts/study.sh scripts/self_improve.py
 ./install.sh
-source ~/.zshrc  # ou ~/.bashrc
+source ~/.zshrc
 ```
 
 ---
@@ -43,91 +38,56 @@ source ~/.zshrc  # ou ~/.bashrc
 ### `devai new` / `devnew` — Criar projeto
 
 ```bash
-devai new <stack> <nome> "<descrição>"
-```
+devnew <stack> <nome> "<descrição em português ou inglês>"
 
-**NestJS:**
-```bash
+# Exemplos:
 devnew nestjs livros-api "CRUD de livros com MongoDB e docker"
 devnew nestjs loja       "API de pedidos com PostgreSQL, JWT e Redis"
 devnew nestjs chat       "Chat em tempo real com WebSocket, Kafka, MongoDB"
-devnew nestjs catalog    "API GraphQL de catálogo com MongoDB"
-devnew nestjs books-svc  "Microsserviço gRPC de livros com MongoDB"
-```
-
-**Spring Boot:**
-```bash
-devnew spring-boot users-svc  "Microsserviço de usuários com MongoDB, JWT e Kafka"
-devnew spring-boot inventory  "API de estoque com PostgreSQL e Spring Security"
-```
-
-**Python FastAPI:**
-```bash
+devnew spring-boot users "Microsserviço de usuários com MongoDB e JWT"
 devnew python books-api  "API FastAPI de livros com MongoDB"
-devnew python orders-api "API FastAPI de pedidos com PostgreSQL e JWT"
+devnew dotnet catalog    "API ASP.NET Core com MongoDB"
+devnew nextjs loja       "E-commerce Next.js 15 com MongoDB e NextAuth"
 ```
 
-**ASP.NET Core:**
-```bash
-devnew dotnet catalog-api "API de catálogo com ASP.NET Core 9 e MongoDB"
-```
-
-**Frontend / Fullstack:**
-```bash
-devnew nextjs loja "E-commerce Next.js 15 com MongoDB e NextAuth"
-devnew nestjs+nextjs plataforma "Plataforma fullstack NestJS + Next.js"
-```
-
-**Stacks:** `nestjs` · `spring-boot` · `python` · `dotnet` · `nextjs` · `angular` · `react` · `nestjs+nextjs` · `nestjs+angular`
+A IA entende português informal:
+- `"tem o mongoDb"` → usa MongoDB
+- `"s[oó] o necessário"` → sem extras
+- `"código em inglês"` → identificadores em English
 
 ---
 
 ### `devai feature` / `devfeat` — Adicionar feature
 
 ```bash
-cd ~/meu-projeto && devfeat "<descrição>"
-```
+devfeat "<descrição>"
 
-```bash
-devfeat "configure docker-compose com app e MongoDB"
-devfeat "adicione auth JWT com refresh token e roles"
-devfeat "adicione Kafka producer e consumer para pedidos"
+devfeat "configure o docker-compose com app e MongoDB"
+devfeat "configure o swagger"
+devfeat "adicione auth JWT com refresh token"
+devfeat "configure Kafka producer e consumer para pedidos"
 devfeat "configure Redis Sentinel para alta disponibilidade"
-devfeat "adicione WebSocket gateway para notificações em tempo real"
-devfeat "adicione GraphQL com subscriptions"
-devfeat "configure gRPC para comunicação com microsserviços"
-devfeat "adicione upload de arquivos para S3/MinIO"
-devfeat "configure rate limiting por IP com Redis"
-devfeat "adicione módulo de relatórios com Elasticsearch"
-devfeat "configure Circuit Breaker para chamadas externas"
-devfeat "configure nginx como reverse proxy"
+devfeat "adicione rate limiting por IP"
+devfeat "configure WebSocket gateway para notificações"
+devfeat "adicione upload de arquivos para S3"
 ```
 
 ---
 
-### `devai fix` / `devfix` — Reparar erros de build
+### `devai fix` / `devfix` — Corrigir erros de build
 
 ```bash
 devfix
-devai fix --rounds 15   # até 15 tentativas
+devai fix --rounds 15   # mais tentativas
 devai fix --run         # roda após corrigir
 ```
-
-Corrige automaticamente:
-- `PartialType` de `@nestjs/common` → `@nestjs/mapped-types`
-- `findById` → `findOne` / `findByIdAndDelete`
-- `users.module` → `user.module` (singular)
-- `user.entity` → `user.schema` (projetos MongoDB)
-- Paths de import errados → busca arquivo real no disco
-- Diretórios inválidos criados por alucinação → removidos
-- Espaços em nomes de arquivo → kebab-case
 
 ---
 
 ### `devai study` / `devstudy` — Estudar projeto existente
 
 ```bash
-cd ~/meu-projeto && devstudy
+devstudy
 devai study --path /caminho/do/projeto
 ```
 
@@ -136,8 +96,8 @@ devai study --path /caminho/do/projeto
 ### `devai ask` / `devask` — Perguntar sobre o projeto
 
 ```bash
-devask "como funciona o módulo de autenticação?"
-devask "como adicionar um novo endpoint seguindo o padrão?"
+devask "como funciona o módulo de auth?"
+devask "como adicionar endpoint seguindo o padrão?"
 ```
 
 ---
@@ -147,120 +107,84 @@ devask "como adicionar um novo endpoint seguindo o padrão?"
 ```bash
 devsearch "nestjs mongoose schema required optional 2025"
 devsearch "docker-compose mongodb healthcheck 2025"
-devsearch "fastapi postgresql sqlalchemy async 2025"
-devsearch "spring boot kafka consumer error handler 2025"
-devsearch "tema específico" --no-save  # só pesquisa, sem salvar
+devsearch "assunto específico" --no-save
 ```
 
 ---
 
-### `devai train` / `devtrain` — Treinar com arquivos de referência
+### `devai train` / `devtrain` — Treinar com referências
 
 ```bash
-devtrain src/configs/redis.sentinels.config.ts
+devtrain src/app.module.ts
 devtrain --dir src/configs/
-devtrain --dir src/modules/ --recursive
-devtrain --project /path/to/projeto-referencia/
-devtrain src/app.module.ts --label "app-module-mongodb"
+devtrain --project /path/to/referencia/
 ```
 
 ---
 
-### `devai knowledge` — Gerenciar o vector store
+### `devai knowledge` — Training store
 
 ```bash
-devai knowledge           # lista itens e status dos embeddings
+devai knowledge           # lista + status embeddings
 devai knowledge --export  # exporta para Markdown
 devai knowledge --clear   # limpa tudo
 ```
 
 ---
 
-### `scripts/study.sh` — Treinamento autônomo ultra-detalhado
+### `devai profile` — Perfil e preferências do usuário
 
 ```bash
-chmod +x scripts/study.sh  # (feito automaticamente pelo install.sh)
-
-# Rápido (~15min) — NestJS+MongoDB + Docker + erros
-./scripts/study.sh
-
-# Por stack — cobre TODOS os bancos + microserviços + auth + infra para a stack
-./scripts/study.sh --group nestjs          # NestJS completo
-./scripts/study.sh --group spring          # Spring Boot completo
-./scripts/study.sh --group python          # FastAPI + Django
-./scripts/study.sh --group dotnet          # ASP.NET Core
-./scripts/study.sh --group frontend        # Next.js + React + Angular
-
-# Por tema transversal
-./scripts/study.sh --group databases       # Todos os bancos (MongoDB, PostgreSQL, Redis, ES, Cassandra)
-./scripts/study.sh --group microservices   # Kafka, RabbitMQ, gRPC, GraphQL, WebSocket, Patterns
-./scripts/study.sh --group infra           # Docker, Kubernetes, GitHub Actions
-
-# TUDO — ultra-completo (~2-4h)
-./scripts/study.sh --group all
-
-# Overnight com loop + auto-commit + descoberta autônoma
-nohup ./scripts/study.sh --group all --loop > training/study.log 2>&1 &
-tail -f training/study.log
-
-# Intervalo menor entre ciclos (padrão: 30min)
-./scripts/study.sh --group all --loop --interval 900   # 15min
+devai profile             # mostra preferências salvas
+devai profile --set stack=nestjs db=mongodb  # define defaults
 ```
-
-**Cobertura do estudo:**
-
-| Grupo | O que estuda (stack × banco × microserviço) |
-|---|---|
-| `nestjs` | NestJS × MongoDB/PostgreSQL/MySQL/Redis/Elasticsearch × Kafka/RabbitMQ/gRPC/GraphQL/WebSocket/TCP × JWT/OAuth2/RBAC |
-| `spring` | Spring Boot × MongoDB/PostgreSQL/MySQL/Redis × Kafka/RabbitMQ/gRPC/GraphQL × JWT/Spring Security |
-| `python` | FastAPI × MongoDB/PostgreSQL/MySQL/Redis × Kafka/RabbitMQ × JWT/OAuth2 · Django × MongoDB/PostgreSQL |
-| `dotnet` | ASP.NET Core × MongoDB/PostgreSQL/MySQL/Redis × Kafka/RabbitMQ/SignalR × JWT/Identity |
-| `frontend` | Next.js × MongoDB/PostgreSQL × NextAuth · React · Angular |
-| `databases` | MongoDB/PostgreSQL/Redis/Elasticsearch/Cassandra (avançado) |
-| `microservices` | Kafka/RabbitMQ/gRPC/GraphQL/WebSocket × todas as stacks + CQRS/Saga/Circuit Breaker/Event Sourcing |
-| `infra` | Docker × todas as combinações + Kubernetes + GitHub Actions |
-| **`all`** | **Tudo acima (~60 tópicos × ~350 pesquisas)** |
-
-**O estudo descobre e mapeia novos tópicos automaticamente:**
-- A cada ciclo, pede ao LLM sugestões de tópicos não cobertos
-- Salva os novos tópicos em `training/discovered_topics.json`
-- Estuda imediatamente e persiste para próximos ciclos
-- O mapa de tópicos cresce continuamente
 
 ---
+---
 
-## Como o Training é Usado na Geração
+## Treinamento Autônomo
 
-Quando você executa `devai new` ou `devai feature`:
+```bash
+chmod +x scripts/study.sh  # já feito pelo install.sh
 
+# Estuda o que ainda não foi feito (inteligente — não repete)
+./scripts/study.sh
+
+# Por grupo
+./scripts/study.sh --group nestjs          # NestJS completo
+./scripts/study.sh --group methodology     # SOLID, Clean Arch, API Design, Security
+./scripts/study.sh --group all             # Tudo
+
+# Intensivo + loop overnight
+./scripts/study.sh --group all --intensive --loop --validate
+
+# Ver o que já foi estudado
+./scripts/study.sh --status
+
+# Auto-gera exemplos e aprende com os resultados
+python scripts/self_improve.py --loop
+
+# Valida e corrige fracos
+python scripts/validate.py --fix --rounds 5
 ```
-Você: devnew nestjs livros-api "CRUD de Livros com MongoDB"
-              ↓
-1. Domain Extraction (determinístico):
-   Entidade: Book (de "Livros")
-   db_type: mongodb
-   has_auth: false
-   infra: docker
 
-2. Vector Search (nomic-embed-text):
-   Query: "nestjs mongodb schema Book entity"
-   Top matches:
-     pattern:nestjs+mongodb:schema (score: 0.91) ← schema com ! e ?
-     pattern:nestjs+mongodb:service (score: 0.87) ← service CRUD
-     nlp:entities-pt-en-complete (score: 0.79)
+| Grupo | O que estuda | Tempo aprox. |
+|---|---|---|
+| `databases` | 4 tópico(s) | ~25min |
+| `dotnet` | 1 tópico(s) | ~15min |
+| `frontend` | 3 tópico(s) | ~15min |
+| `infra` | 7 tópico(s) | ~15min |
+| `microservices` | 9 tópico(s) | ~25min |
+| `nestjs` | 1 tópico(s) | ~35min |
+| `python` | 2 tópico(s) | ~20min |
+| `quick` | 5 tópico(s) | ~15min |
+| `spring` | 1 tópico(s) | ~20min |
+| **`all`** | **0 tópicos / ~0 pesquisas** | **~2-4h** |
 
-3. Geração de cada arquivo:
-   Para book.schema.ts → injeta pattern:nestjs+mongodb:schema como referência
-   LLM instrução: "Adapt this working pattern for entity Book with fields: title, author, price"
 
-4. Pós-processamento determinístico:
-   ensure_db_in_app_module() → MongooseModule.forRoot() no AppModule
-   integrate_module_into_app() → BookModule no @Module imports
-   cleanup_invalid_dirs() → remove pastas docker/container/image
-   apply_fixes_to_project() → PartialType, findById→findOne, etc.
+**Loop inteligente** — usa `training/study_journal.json` para não repetir o que já foi estudado.
+Descobre novos tópicos autonomamente a cada ciclo.
 
-5. Resultado: projeto compilável com padrões corretos
-```
 
 ---
 

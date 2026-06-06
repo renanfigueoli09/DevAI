@@ -1,0 +1,22 @@
+{
+  "search:spring+jpa:spring jpa best practices 2023": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.0\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection properties.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect.",
+    "source": "web_search",
+    "updated_at": 1780705070.822534
+  },
+  "search:spring+jpa:spring jpa best practices 2023_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Boot 3.0 and Spring Data JPA 2.7 are recommended.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development, `validate` for production.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect (e.g., `org.hibernate.dialect.PostgreSQLDialect`).",
+    "source": "code_example",
+    "updated_at": 1780705073.0762
+  },
+  "search:spring+jpa:spring jpa performance optimiz": {
+    "content": "- Use `@Query` annotation for complex queries.\n- Employ Spring Data JPA Specification for dynamic query building.\n- Utilize Hypersistence Optimizer for performance optimization with Spring Boot, Spring Framework, Jakarta EE, Java EE, Quarkus, Micronaut, or Play Framework.\n- Configure `spring.jpa.properties.hibernate.jdbc.batch_size` to improve batch processing.\n- Enable `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true` for better performance.\n- Use `@EntityGraph` for efficient data fetching.\n- Implement pagination with `Pageable` or `Slice` interfaces in repository methods.\n- Optimize queries by avoiding N+1 issues using JOIN FETCH or EntityGraph.\n- Regularly update Spring Boot and JPA dependencies to the latest versions.",
+    "source": "web_search",
+    "updated_at": 1780705079.6810844
+  },
+  "search:spring+jpa:spring jpa performance optimiz_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest Spring Boot and JPA versions for optimal performance.\n- **Key Config Options**:\n  - Enable query caching with `spring.jpa.properties.hibernate.cache.use_query_cache=true`.\n  - Configure second-level cache with `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`.\n  - Use pagination in queries to avoid loading large datasets at once: `.setFirstResult(0).setMaxResults(10)`.",
+    "source": "code_example",
+    "updated_at": 1780705081.8741987
+  }
+}

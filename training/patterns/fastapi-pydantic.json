@@ -1,0 +1,12 @@
+{
+  "search:fastapi+pydantic:fastapi and pydantic data vali": {
+    "content": "- Pydantic latest version: V2 as of April 2026.\n- FastAPI leverages Pydantic for data validation.\n- Define data models using Pydantic to include data types and validation rules.\n- For PUT method, ensure the body only contains necessary attributes by using a parent Pydantic model with shared attributes.",
+    "source": "web_search",
+    "updated_at": 1780705126.839104
+  },
+  "search:fastapi+pydantic:fastapi and pydantic data vali_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - Pydantic: v1.9.4\n\n- **Key Config Options**:\n  - `app = FastAPI()`: Create a new FastAPI instance.\n  - `class Item(BaseModel)`: Define data models using Pydantic for validation and serialization.\n  - `@app.post(\"/items/\")`: Define routes with HTTP methods like POST.\n  - `dependencies=[Depends(get_db)]`: Use dependencies for dependency injection.",
+    "source": "code_example",
+    "updated_at": 1780705132.96553
+  }
+}

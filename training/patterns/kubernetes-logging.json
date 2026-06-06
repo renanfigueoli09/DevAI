@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+logging:kubernetes logging best practi": {
+    "content": "- Use `kubectl logs <pod-name>` to fetch container logs.\n- Implement centralized logging using tools like Fluentd, Fluent Bit, or Elasticsearch.\n- Configure log rotation with `logrotate` on your logging agents.\n- Ensure structured logging by using JSON format for log entries.\n- Avoid logging sensitive information in plain text.\n- Include contextual information such as timestamps and pod metadata.\n- Use labels to filter logs based on application components.\n- Regularly update logging tools and configurations to the latest versions.\n- Implement role-based access control (RBAC) for secure log management.",
+    "source": "web_search",
+    "updated_at": 1780705152.6303792
+  },
+  "search:kubernetes+logging:kubernetes logging best practi_ex": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For centralized logging, consider using tools like Elasticsearch, Fluentd, and Kibana (EFK stack) or Loki with Grafana.\n- Configure log rotation in your container images using Docker's `--log-opt` flag.\n- Implement log aggregation by setting up a Fluentd daemonset to collect logs from all nodes.\n- Use labels for filtering logs based on application or environment.\n- Ensure logs are stored securely, possibly encrypting them at rest and in transit.\n- Regularly review and analyze logs using tools like Prometheus and Grafana for monitoring and alerting.\n- Update Kubernetes and logging components to the latest versions regularly for security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780705155.6583571
+  },
+  "search:kubernetes+logging:elastic stack with kubernetes ": {
+    "content": "- **CLI Commands**: \n  - `kubectl apply -f <filename>` to deploy resources.\n  - `helm install <release-name> <chart-name>` for Helm charts.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.3\n  - Helm: v3.9.0\n\n- **Key Config Options**:\n  - Elasticsearch: `replicas`, `resources`, `storageClass`\n  - Logstash: `pipeline.conf`, `output.elasticsearch`\n  - Fluent Bit: `inputs`, `filters`, `outputs`",
+    "source": "web_search",
+    "updated_at": 1780705164.1449347
+  },
+  "search:kubernetes+logging:elastic stack with kubernetes _ex": {
+    "content": "- **CLI Commands**:\n  - `helm install elasticsearch azure/helm-elasticstack --set image.repository=elasticsearch,image.tag=7.16.3`\n  - `kubectl apply -f kibana-deployment.yaml`\n  - `kubectl apply -f logstash-deployment.yaml`\n\n- **Latest Versions**:\n  - Elasticsearch: 7.16.3\n  - Logstash: 7.16.3\n  - Kibana: 7.16.3\n\n- **Key Config Options**:\n  - `elasticsearch.yml`: Configure cluster settings, node roles.\n  - `logstash.conf`: Define input, filter, and output plugins.\n  - `kibana.yml`: Set server port, Elasticsearch URL.",
+    "source": "code_example",
+    "updated_at": 1780705174.5234501
+  }
+}
