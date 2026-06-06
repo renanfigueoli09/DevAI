@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-actuator:spring boot actuator monitorin": {
+    "content": "- **Latest Version**: lightweight-spring-actuator-monitor v1.0.0 (2025-01-16)\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*` to expose all endpoints.\n  - `management.endpoint.health.show-details=always` for detailed health information.\n- **CLI Commands**:\n  - To start a Spring Boot application with Actuator: `mvn spring-boot:run`\n  - To build a production-ready JAR file: `mvn clean package`\n- **Documentation**: Visit [lightweight-spring-actuator-monitor](https://github.com/your-repo/lightweight-spring-actuator-monitor) for detailed documentation.",
+    "source": "web_search",
+    "updated_at": 1780727690.0743263
+  },
+  "search:spring-boot-actuator:spring boot actuator monitorin_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `curl http://localhost:8080/actuator/health` to check application health.\n\n- **Latest Versions**:\n  - Spring Boot Actuator: 3.1.5\n  - Micrometer: 1.10.7\n\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*`: Expose all endpoints.\n  - `management.endpoint.health.show-details=always`: Show detailed health information.\n  - `management.server.port=8081`: Change the management server port.",
+    "source": "code_example",
+    "updated_at": 1780727695.661706
+  },
+  "search:spring-boot-actuator:actuator endpoints for perform": {
+    "content": "- Ensure Spring Boot Actuator is enabled by setting `management.endpoints.web.exposure.include=*` in your `application.properties`.\n- Use the latest version of Spring Boot for access to the most recent features and security patches.\n- Implement security measures using Spring Security, securing Actuator endpoints with `management.endpoints.web.exposure.exclude=*` and defining specific paths to expose.\n- For HTTP tracing, use the `httptrace` endpoint available in Spring Boot 2.2.0 and later versions.\n- Redirect users attempting unauthorized access to a custom error page by configuring security rules.\n- Migrate custom Actuator endpoints to Spring Boot 2 using the `management.endpoints.web.exposure.include=your-endpoint-id`.\n- Monitor performance metrics using the `/prometheus` endpoint, ensuring Tomcat-related metrics are included by configuring your application accordingly.",
+    "source": "web_search",
+    "updated_at": 1780727707.3132899
+  },
+  "search:spring-boot-actuator:actuator endpoints for perform_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar --management.endpoints.web.exposure.include=*` to expose all endpoints.\n\n- **Latest Versions**:\n  - Spring Boot Actuator: 2.7.5\n  - Java: 17\n\n- **Key Config Options**:\n  - `management.endpoint.health.group.custom.include=diskSpace,ping`: Defines custom health groups.\n  - `management.endpoints.web.exposure.include=*`: Exposes all web endpoints.\n  - `management.endpoints.jmx.exposure.include=*`: Exposes all JMX endpoints.",
+    "source": "code_example",
+    "updated_at": 1780727712.0258536
+  }
+}
