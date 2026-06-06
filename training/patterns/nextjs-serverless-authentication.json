@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `serverless install --url https://github.com/laardee/serverless-authentication-boilerplate`\n  - `git clone <repository-url>`\n  - `cd authentication`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Serverless Framework and AWS CLI.\n\n- **Key Config Options**:\n  - Authentication provider (e.g., JWT, OAuth)\n  - DynamoDB table for storing tokens\n  - Lambda functions for handling auth logic",
     "source": "code_example",
     "updated_at": 1780712561.441879
+  },
+  "search:nextjs-serverless-authentication:next.js serverless authenticat": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase: v2.0\n\n- **Key Config Options**:\n  - `next.config.js`: For serverless functions and API routes.\n  - `.env.local`: For environment variables like Supabase URL and Key.\n  - `pages/api/auth/[...nextauth].js`: For handling authentication logic with NextAuth.js.",
+    "source": "web_search",
+    "updated_at": 1780738537.4845343
+  },
+  "search:nextjs-serverless-authentication:next.js serverless authenticat_ex": {
+    "content": "- **CLI Commands**: `npx create-next-app@latest my-auth-app`\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.18.2\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for authentication.\n  - `providers`: Specify the authentication providers (e.g., Google, Facebook).\n  - `secret`: A secret key used to sign JWT tokens.\n  - `session`: Configure session management settings.",
+    "source": "code_example",
+    "updated_at": 1780738542.5224373
+  },
+  "search:nextjs-serverless-authentication:next.js oauth integration stra": {
+    "content": "- **CLI Commands**: `npx create-next-app@latest my-app` to start a new Next.js project.\n- **Latest Versions**: Ensure you use the latest version of NextAuth.js and other dependencies for security and features.\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for OAuth providers, session management, etc.\n  - `session.maxAge`: Duration in seconds that a user's session will be valid.\n  - `providers`: Array of authentication providers (e.g., Google, Facebook).\n- **Email Verification**: Enable email verification by configuring the `sendVerificationRequest` function in your NextAuth.js configuration.\n- **Client-Side Authentication**: Use Auth.js for client-side authentication to handle login and logout processes seamlessly.",
+    "source": "web_search",
+    "updated_at": 1780738553.238754
+  },
+  "search:nextjs-serverless-authentication:next.js oauth integration stra_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-oauth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - NextAuth.js: 4.18.2\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for NextAuth.js.\n  - `providers`: Define authentication providers like Google, GitHub, etc.\n  - `secret`: A secret key used to sign JWT tokens.\n  - `session`: Configure session management options.",
+    "source": "code_example",
+    "updated_at": 1780738558.086396
   }
 }
