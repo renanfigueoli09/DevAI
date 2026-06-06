@@ -18,5 +18,15 @@
     "content": "- Use `docker build --target <stage>` to specify the target stage in a multi-stage build.\n- Employ `COPY` instead of `ADD` for copying files as it's more efficient and secure.\n- Minimize layers by combining commands within a single RUN instruction when possible.\n- Utilize `.dockerignore` to exclude unnecessary files from being copied into the Docker image.\n- Consider using `AS <name>` to name intermediate stages in your Dockerfile for better readability and organization.\n- For GoLang, use `CGO_ENABLED=0` to disable cgo, which can reduce the size of the final image.\n- Ensure that each stage has a clean environment by removing unnecessary files and dependencies after installation.\n- Regularly update your base images (e.g., `FROM golang:latest`) to benefit from security patches and performance improvements.",
     "source": "code_example",
     "updated_at": 1780747243.0688844
+  },
+  "search:Docker + Multi-Stage Builds:best practices for managing bu": {
+    "content": "- Use `npm outdated` to check for outdated dependencies.\n- Run `npm update <package-name>` to update specific packages.\n- Implement version control for build artifacts using Git.\n- Utilize tools like JFrog Artifactory or Nexus Repository Manager for artifact storage and management.\n- Configure CI/CD pipelines with steps to automatically tag builds (e.g., `git tag -a v1.0.0 -m \"Release version 1.0.0\"`).\n- Regularly audit dependencies using tools like Snyk or npm-audit.\n- Use `npm prune` to remove unused packages from your project.\n- Implement a governance framework for dependency management in large enterprises.\n- Ensure compliance with security standards by regularly scanning dependencies for vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1780747260.0230505
+  },
+  "search:Docker + Multi-Stage Builds:best practices for managing bu_ex": {
+    "content": "- Use `pyproject.toml` for Python projects.\n- Understand the difference between source distributions (`sdist`) and wheel files.\n- For efficient artifact dependency management, use Harness's best practices.\n- Configure artifact dependencies in TeamCity using the web UI.\n- Automate disk space management by letting TeamCity handle it based on artifact size.",
+    "source": "code_example",
+    "updated_at": 1780747266.3833835
   }
 }

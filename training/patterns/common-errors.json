@@ -2,17 +2,17 @@
   "pattern:error:module-not-found": {
     "content": "// TS2307 './book/book.module' not found: CREATE src/book/book.module.ts with @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780747142.1084354
+    "updated_at": 1780747404.0783145
   },
   "pattern:error:findOneBy-mongoose": {
     "content": "// TS2551 Model.findOneBy does not exist: findOneBy is TypeORM-only. Mongoose uses: findById(id), findOne({field:value}), findByIdAndUpdate, findByIdAndDelete. NEVER use findOneBy with Mongoose.",
     "source": "code_pattern",
-    "updated_at": 1780747142.3481097
+    "updated_at": 1780747404.3716419
   },
   "pattern:error:partialtype": {
     "content": "// PartialType import: ALWAYS from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist there). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import {PartialType} from '@nestjs/mapped-types'",
     "source": "code_pattern",
-    "updated_at": 1780747142.5766327
+    "updated_at": 1780747404.6845977
   },
   "search:common+errors:nestjs ts2307 ts2339 ts2551 ty": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev @types/node`\n  - `npm install --save-dev typescript`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeScript: v5.x\n\n- **Key Config Options**:\n  - `tsconfig.json`: Ensure `include` and `exclude` are correctly set.\n  - `compilerOptions.target`: Set to `\"es2019\"` or higher.\n  - `compilerOptions.module`: Set to `\"commonjs\"`.\n  - `compilerOptionsesModuleInterop`: Set to `true`.",
@@ -47,16 +47,16 @@
   "pattern:error:missing-module": {
     "content": "TS2307 './book/book.module' not found: The fix is to CREATE src/book/book.module.ts. Content: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "forced_training",
-    "updated_at": 1780747254.4646738
+    "updated_at": 1780747578.8959458
   },
   "qa:ts2307-module-missing": {
     "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}",
     "source": "correct_answer",
-    "updated_at": 1780747253.9096003
+    "updated_at": 1780747578.1688175
   },
   "NestJS TS2307 module not found book.module fix create": {
     "content": "TS2307 fix: CREATE src/book/book.module.ts. @Module({ imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService], controllers:[BookController] }) export class BookModule {}",
     "source": "correct_answer",
-    "updated_at": 1780747254.2035825
+    "updated_at": 1780747578.5104508
   }
 }

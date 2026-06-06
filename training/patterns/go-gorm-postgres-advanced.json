@@ -1,12 +1,17 @@
 {
   "search:go-gorm-postgres-advanced:gorm with go and postgresql: b": {
-    "content": "- Use `go get` to install packages like Gin, GORM, and PostgreSQL driver.\n- Define models in Go that map to database tables using GORM annotations.\n- Configure the connection string with your PostgreSQL credentials.\n- Initialize a GORM DB instance with `gorm.Open(postgres.Open(dsn), &gorm.Config{})`.\n- Use `db.AutoMigrate(&YourModel{})` to create or update tables based on model definitions.\n- Perform CRUD operations using methods like `Create`, `Find`, `Update`, and `Delete`.\n- Handle transactions using `tx := db.Begin()`, followed by `tx.Commit()` or `tx.Rollback()`.\n- Use GORM hooks for lifecycle callbacks such as `BeforeSave`, `AfterSave`, etc.\n- Ensure error handling with `if err != nil { log.Fatal(err) }` after database operations.",
+    "content": "- **CLI Commands**:\n  - `go get github.com/gin-gonic/gin`\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/postgres`\n\n- **Latest Versions**:\n  - Gin: v1.8.2\n  - GORM: v1.23.4\n  - PostgreSQL Driver for GORM: v1.2.6\n\n- **Key Config Options**:\n  - Replace placeholders in connection string with actual values.\n  - Define models to represent database tables.\n  - Use GORM's CRUD operations for database interactions.",
     "source": "web_search",
-    "updated_at": 1780747228.4155853
+    "updated_at": 1780747302.5891738
   },
   "search:go-gorm-postgres-advanced:gorm with go and postgresql: b_ex": {
-    "content": "- Ensure Go is installed on your machine.\n- Set up a PostgreSQL database and grant necessary permissions to the user.\n- Use GORM as the ORM for interacting with PostgreSQL in Go applications.\n- For unit testing, use `sqlmock` along with GORM to mock database interactions.\n- Key config options include setting up the GORM connection string correctly.\n- Use `mock.ExpectBegin()`, `mock.ExpectCommit()`, and `mock.ExpectQuery()` for comprehensive testing of transactions and queries.\n- Ensure that your PostgreSQL version is compatible with GORM.\n- For detailed documentation, refer to the official GORM and sqlmock documentation.",
+    "content": "- Install Go using `go install golang.org/dl/go1.20@latest` and set the PATH.\n- Set up PostgreSQL database and create a user with permissions.\n- Use GORM v2 for ORM operations: `go get -u gorm.io/gorm` and `go get -u gorm.io/driver/postgres`.\n- For unit testing, use sqlmock with GORM: `go get github.com/DATA-DOG/go-sqlmock/v4`.\n- Mock transactions using `mock.ExpectBegin()`, `mock.ExpectCommit()`, and `mock.ExpectQuery()` for PostgreSQL.\n- Configure GORM to connect to PostgreSQL in your Go application:\n  ```go\n  dsn := \"host=localhost user=youruser password=yourpassword dbname=yourdb port=5432 sslmode=disable TimeZone=Asia/Shanghai\"\n  db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})\n  ```\n- Use `RETURNING` in PostgreSQL queries to return inserted data for comparison.\n- Ensure your tests cover both successful and error cases for database operations.",
     "source": "code_example",
-    "updated_at": 1780747245.216396
+    "updated_at": 1780747307.162511
+  },
+  "search:go-gorm-postgres-advanced:go gorm postgresql advanced te": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to install the latest version of GORM.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest versions of GORM and PostgreSQL drivers for compatibility.\n\n- **Key Config Options**:\n  - Use `gorm.io/driver/postgres.Open(\"host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai\")` to connect to a PostgreSQL database.\n  - Configure advanced settings during initialization as needed.",
+    "source": "web_search",
+    "updated_at": 1780747268.4451632
   }
 }
