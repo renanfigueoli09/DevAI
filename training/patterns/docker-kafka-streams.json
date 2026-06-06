@@ -1,0 +1,17 @@
+{
+  "search:docker+kafka-streams:docker kafka streams integrati": {
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 wurstmeister/kafka`\n  - `docker run --name zookeeper -p 2181:2181 wurstmeister/zookeeper`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.0.0\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to bootstrap from.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server.",
+    "source": "web_search",
+    "updated_at": 1780711150.109293
+  },
+  "search:docker+kafka-streams:docker kafka streams integrati_ex": {
+    "content": "- **GitHub Repository**: [abhirockzz/docker-kafka-streams](https://github.com/abhirockzz/docker-kafka-streams)\n  - Contribute to Kafka Streams microservice running in Docker containers.\n  - Scale horizontally by starting new containers.\n\n- **YouTube Tutorial**: \"Spring Boot with Kafka & Docker\"\n  - Configure Kafka with Spring Boot and run it on Docker Compose.\n\n- **Docker Command for Producer**:\n  ```bash\n  docker exec -ti kafka /opt/kafka/bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic demo\n  ```\n  - Enter messages one per line to the `demo` topic.\n\n- **Key Config Options**:\n  - Kafka Streams Application ID\n  - Bootstrap Servers\n  - Input and Output Topics\n  - State Store Configuration\n\n- **Latest Versions**:\n  - Ensure using latest versions of Docker, Kafka, and Kafka Streams for compatibility and security.",
+    "source": "code_example",
+    "updated_at": 1780711169.7875082
+  },
+  "search:docker+kafka-streams:kafka streams with docker comp": {
+    "content": "- **Deploying Apache Kafka on Docker Compose**:\n  - Use `docker-compose up` to start the services.\n  - Ensure you have the latest version of Docker and Docker Compose installed.\n\n- **Setting Up Kafka Streaming with Docker Compose**:\n  - Clone the repository from GitHub: `git clone https://github.com/conduktor/kafka-stack-docker-compose.git`.\n  - Navigate to the directory: `cd kafka-stack-docker-compose`.\n  - Start the services using: `docker-compose up`.\n\n- **Key Config Options**:\n  - Kafka broker configuration in `docker-compose.yml` under `environment` section.\n  - Zookeeper settings can be adjusted in the same file.\n\n- **Latest Versions**:\n  - Ensure Docker and Docker Compose are updated to their latest versions for compatibility.",
+    "source": "web_search",
+    "updated_at": 1780711182.48961
+  }
+}

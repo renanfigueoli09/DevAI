@@ -1,0 +1,22 @@
+{
+  "search:react+jest-testing:react jest testing best practi": {
+    "content": "- Use `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n- Ensure Jest version is at least 24 for compatibility with React Testing Library.\n- Configure Jest in your project root with a `jest.config.js` file if needed.\n- For mocking, use `jest.mock('module')` or `mockImplementation`.\n- Use `render()` from `@testing-library/react` to render components.\n- Employ `fireEvent` for simulating user interactions.\n- Utilize `screen.getByText`, `screen.getByRole`, etc., for querying the DOM.\n- Apply async testing with `waitFor` when dealing with promises or async operations.\n- Implement snapshots for static UIs with `toMatchSnapshot()`.\n- Keep tests isolated and fast by mocking external dependencies.",
+    "source": "web_search",
+    "updated_at": 1780711207.0198565
+  },
+  "search:react+jest-testing:react jest testing best practi_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - React Testing Library: 13.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]`\n  - `\"transform\": {\"^.+\\\\.jsx?$\": \"babel-jest\"}`",
+    "source": "code_example",
+    "updated_at": 1780711214.2565238
+  },
+  "search:react+jest-testing:jest for react components 2024": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n  - `npx create-react-app my-app --template typescript` (for TypeScript projects)\n  \n- **Latest Versions**:\n  - Jest: 29.0.3\n  - React Testing Library: 14.0.0\n  \n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"transform\": {\"^.+\\\\.jsx?$\": \"babel-jest\"}`\n  - `\"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]`",
+    "source": "web_search",
+    "updated_at": 1780711229.7356114
+  },
+  "search:react+jest-testing:jest for react components 2024_ex": {
+    "content": "- **Install Jest and React Testing Library**:\n  ```bash\n  npm install --save-dev jest @testing-library/react @testing-library/jest-dom\n  ```\n\n- **Configure Jest in `package.json`**:\n  ```json\n  \"jest\": {\n    \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"],\n    \"testEnvironment\": \"jsdom\"\n  }\n  ```\n\n- **Mock IntersectionObserver for Testing**:\n  ```javascript\n  global.IntersectionObserver = class MockIntersectionObserver {\n    constructor(callback, options) {\n      this.callback = callback;\n      this.options = options || {};\n      this.root = null;\n      this.thresholds = Array.isArray(options.threshold)\n        ? options.threshold\n        : [options.threshold || 0];\n      this.rootMargin = options.rootMargin || '0px';\n      this.targets = new Map();\n    }\n\n    observe(target) {\n      if (!this.targets.has(target)) {\n        this.targets.set(target, { isIntersecting: false });\n      }\n    }\n\n    unobserve(target) {\n      this.targets.delete(target);\n    }\n\n    disconnect() {\n      this.targets.clear();\n    }\n\n    _fireCallbacks(entries) {\n      this.callback(entries, this);\n    }\n  };\n  ```\n\n- **Run Tests**:\n  ```bash\n  npm test\n  ```\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Extends Jest's expect with matchers from `@testing-library/jest-dom`.\n  - `testEnvironment`: Sets the environment to \"jsdom\" for DOM testing.\n\nThese steps provide a solid foundation for setting up and running tests for React components using Jest and React Testing Library.",
+    "source": "code_example",
+    "updated_at": 1780711241.4624918
+  }
+}

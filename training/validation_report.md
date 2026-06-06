@@ -1,37 +1,42 @@
 # DevAI Validation Report
-*2026-06-05 22:55*
+*2026-06-05 23:01*
 
-## Score: 62% `[████████████░░░░░░░░]`
+## Score: 47% `[█████████░░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
-| nlp | 8.2/15.0 | 55% | ❌ |
-| nestjs-mongodb | 7.5/15.0 | 50% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | common-errors | 3.0/6.0 | 50% | ❌ |
+| nlp | 5.3/15.0 | 35% | ❌ |
+| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (50%)
+### nestjs-mongodb (10%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
+- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
+  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
+- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
+  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (55%)
-- ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não`
-  - Wrong: `JWT`
+### nlp (35%)
+- ✗ User says 'CRUD de livros com MongoDB'. What is the entity name?
+  - Wrong: `Livros, livros, LIVROS, Livro`
+- ✗ User says 'configure docker com mongodb'. Should you create src/d
+  - Missing: `não, never, docker-compose, Dockerfile`
 
 ### spring-mongodb (50%)
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
