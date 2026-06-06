@@ -2,7 +2,7 @@
   "search:spring-boot+jooq-code-generation:spring boot jooq code generati": {
     "content": "- **CLI Commands**:\n  - `mvn jooq-codegen-maven:jooq-codegen-maven-plugin:3.17.6:generate`\n  \n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - JooQ: 3.17.6\n\n- **Key Config Options**:\n  - `jdbcUrl`: Database connection URL.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `generator.targetPackage`: Target package for generated classes.\n  - `generator.database.name`: Database type (e.g., POSTGRES).\n  - `generator.database.inputSchema`: Database schema.",
     "source": "web_search",
-    "updated_at": 1780774574.764756
+    "updated_at": 1780775298.0157073
   },
   "search:spring-boot+jooq-code-generation:spring boot jooq code generati_ex": {
     "content": "- **CLI Commands**:\n  - `mvn jooq-codegen-maven:jooq-codegen`\n  - `gradle jooqGenerate`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - jOOQ: 3.17.x\n\n- **Key Config Options**:\n  - Database URL, username, password in `pom.xml` or `build.gradle`\n  - Target package for generated classes\n  - Configuration file (`jooq-config.xml`) for advanced settings",
