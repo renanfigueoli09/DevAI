@@ -1,0 +1,12 @@
+{
+  "search:docker+kubernetes-microservices:docker kubernetes microservice": {
+    "content": "- **CLI Commands**:\n  - `docker run --name my-microservice -d my-image`\n  - `kubectl apply -f my-service.yaml`\n  - `kubectl get pods`\n  - `kubectl logs my-pod`\n\n- **Latest Versions**:\n  - Docker: 20.10\n  - Kubernetes: 1.26\n\n- **Key Config Options**:\n  - Docker Compose: Define multi-container apps with YAML.\n  - Kubernetes Deployment: Manage app replicas and scaling.\n  - Prometheus: Monitor container metrics.\n  - Grafana: Visualize monitoring data.",
+    "source": "web_search",
+    "updated_at": 1780724944.8441079
+  },
+  "search:docker+kubernetes-microservices:docker kubernetes microservice_ex": {
+    "content": "- Use `kubectl top pod` to monitor resource usage of pods.\n- Employ Prometheus and Grafana for comprehensive monitoring.\n- Implement Kubernetes Dashboard for real-time cluster overview.\n- Utilize Helm charts for easy deployment and management of applications.\n- Apply Istio for service mesh capabilities, including observability.\n- Configure logging with Fluentd or Fluent Bit for centralized logs.\n- Use `kubectl describe pod <pod-name>` to inspect pod details.\n- Set up alerting rules in Prometheus based on custom metrics.\n- Regularly update Kubernetes and its components to the latest versions.\n- Monitor container health using liveness and readiness probes.",
+    "source": "code_example",
+    "updated_at": 1780724949.3442607
+  }
+}

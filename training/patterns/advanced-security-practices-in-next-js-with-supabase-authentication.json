@@ -1,0 +1,22 @@
+{
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:nextjs security": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `npm run dev` for development\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js 16.2.6 (patch 13)\n  - Vercel CLI latest version\n\n- **Key Config Options**:\n  - Environment variables in `.env.local`\n  - Middleware security configurations\n  - Data validation and sanitization\n  - Dependency management with `npm audit`",
+    "source": "web_search",
+    "updated_at": 1780724835.1972375
+  },
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:nextjs security_ex": {
+    "content": "- Use `next build` to optimize your Next.js application.\n- Implement security headers using the `next.config.js` file, e.g., `headers: () => [{ source: '/(.*)', headers: [ { key: 'Content-Security-Policy', value: \"default-src 'self'\" } ] }]`.\n- Ensure data fetching is secure by using environment variables for sensitive information.\n- Utilize the latest version of Next.js to benefit from security patches and improvements.\n- Implement authentication and authorization mechanisms to protect user data.\n- Regularly update dependencies to avoid vulnerabilities.\n- Use HTTPS to encrypt data in transit.\n- Conduct code reviews and static analysis tools like ESLint for security best practices.",
+    "source": "code_example",
+    "updated_at": 1780724842.7830749
+  },
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:supabase authentication best p": {
+    "content": "- Use Supabase CLI version `supabase@latest` for the most up-to-date features and security patches.\n- Implement password-based authentication using `supabase.auth.signIn({ email, password })`.\n- Configure server-side authentication with `supabase.auth.api.createUser({ email, password })`.\n- Set environment variables for Supabase URL and anon/public API keys to enhance security.\n- Regularly update your Supabase project dependencies to the latest versions.\n- Enable two-factor authentication (2FA) using `supabase.auth.updateUser(user.id, { second_factor: true })`.\n- Implement role-based access control (RBAC) for fine-grained permissions management.\n- Monitor and audit user activity through Supabase's analytics dashboard.\n- Use HTTPS to encrypt data in transit between your application and Supabase.",
+    "source": "web_search",
+    "updated_at": 1780724852.5279458
+  },
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:supabase authentication best p_ex": {
+    "content": "- Use `supabase auth sign-up` to create new users.\n- Implement password hashing using bcrypt or Argon2.\n- Enable email verification for user accounts.\n- Set up JWT tokens with a secret key.\n- Regularly update Supabase CLI and server versions.\n- Configure CORS settings in Supabase project settings.\n- Use environment variables for sensitive information like API keys.\n- Monitor authentication logs for suspicious activity.\n- Implement rate limiting to prevent brute force attacks.",
+    "source": "code_example",
+    "updated_at": 1780724855.597662
+  }
+}
