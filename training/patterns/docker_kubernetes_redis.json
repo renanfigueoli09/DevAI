@@ -2,11 +2,11 @@
   "search:docker+kubernetes-redis:kubernetes redis statefulset c": {
     "content": "- Deploy Redis StatefulSet using `kubectl apply -f redis-statefulset.yaml`\n- Ensure persistence by setting `volumeClaimTemplates` in the YAML file\n- Use `helm install` for automated deployment with Helm charts\n- Configure scaling with `replicas` field in the YAML\n- Enable high availability through multi-zone deployments\n- Utilize `redis-enterprise-operator` for advanced Redis management on Kubernetes\n- Monitor and manage StatefulSets using `kubectl get statefulsets`\n- For troubleshooting, use `kubectl describe statefulset <statefulset-name>`",
     "source": "web_search",
-    "updated_at": 1780767876.7971709
+    "updated_at": 1780768360.5493236
   },
   "search:docker+kubernetes-redis:kubernetes redis statefulset c_ex": {
     "content": "- Use `kubectl apply -f <filename>.yaml` to create or update a StatefulSet.\n- Ensure the YAML file specifies `apiVersion: apps/v1`, `kind: StatefulSet`.\n- Define `spec.template.spec.containers` with necessary Redis configurations.\n- Set `volumeClaimTemplates` for persistent storage per pod.\n- Use `kubectl get statefulsets` to check the status of your StatefulSet.\n- For Redis, configure persistence by setting `appendonly yes` in `redis.conf`.\n- Adjust `maxmemory` and other settings as needed in `redis.conf`.\n- Update DNS caching time in CoreDNS config map for faster resolution.",
     "source": "code_example",
-    "updated_at": 1780767878.1628091
+    "updated_at": 1780768361.2542446
   }
 }

@@ -2,16 +2,16 @@
   "search:docker+kafka-security-best-practices:docker kafka security best pra": {
     "content": "- Use the latest Kafka Docker images from Bitnami or Apache.\n- Configure SASL/PLAIN authentication using `KAFKA_SASL_ENABLED=true` and `KAFKA_PLAINTEXT_LISTENERS=PLAINTEXT://`.\n- Enable TLS/SSL with `KAFKA_SSL_ENABLED=true`, providing paths to certificates in the environment variables.\n- Use Docker Compose for multi-container setups, ensuring network isolation.\n- Set resource limits using `deploy.resources.limits.cpu` and `deploy.resources.limits.memory`.\n- Configure log retention policies with `log.retention.hours` and `log.retention.bytes`.\n- Monitor Kafka cluster health using Prometheus and Grafana dashboards.\n- Regularly update Docker images and dependencies to mitigate security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780767813.7791934
+    "updated_at": 1780768296.9183717
   },
   "search:docker+kafka-security-best-practices:docker kafka security best pra_ex": {
     "content": "- Use `docker pull bitnami/kafka` to get the latest Bitnami Kafka image.\n- Run Kafka with TLS/SSL by mounting SSL certificates:\n  ```bash\n  docker run -v /path/to/certs:/certs bitnami/kafka:latest \\\n    --ssl.enabled true \\\n    --ssl.keystore.location /certs/server.keystore.jks \\\n    --ssl.keystore.password keystorepass \\\n    --ssl.key.password keypass\n  ```\n- Configure Kafka to use SASL/PLAIN for authentication:\n  ```bash\n  docker run -e KAFKA_SASL_ENABLED_MECHANISMS=PLAIN \\\n    -e KAFKA_PLAIN_PASSWORD=my-secret-pw bitnami/kafka:latest\n  ```\n- Use `docker-compose` with a custom `docker-compose.yml` file to manage Kafka services:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: wurstmeister/zookeeper\n    kafka:\n      image: wurstmeister/kafka\n      ports:\n        - \"9092:9092\"\n      environment:\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n  ```\n- Key config options for Kafka include `num.partitions`, `replication.factor`, and `ssl.enabled`.\n- Ensure Docker volumes are used to persist data across container restarts.\n- Regularly update the Kafka image to the latest version using `docker pull bitnami/kafka:latest`.",
     "source": "code_example",
-    "updated_at": 1780767815.1391063
+    "updated_at": 1780768297.567955
   },
   "search:docker+kafka-security-best-practices:securing kafka in docker conta": {
     "content": "- Use `docker run` to start a Kafka container.\n- Specify the latest Bitnami Kafka image from Docker Hub.\n- Enable SASL/PLAIN authentication by setting environment variables like `KAFKA_AUTH_ENABLED`, `KAFKA_SASL_PLAINTEXT_LISTENER_NAME`, and `KAFKA_USERS`.\n- Configure mutual TLS using certificates generated with OpenSSL.\n- Set up Access Control Lists (ACLs) for fine-grained access control.\n- Use the Kafka CLI within Docker containers to manage topics, produce/consume messages securely.",
     "source": "web_search",
-    "updated_at": 1780767816.1454687
+    "updated_at": 1780768298.2847037
   }
 }
