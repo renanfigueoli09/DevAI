@@ -1,0 +1,22 @@
+{
+  "search:security+owasp:owasp top 10 security risks 20": {
+    "content": "- **CLI Commands**: `owasp-top10 --version` to check the latest version.\n- **Latest Version**: As of Nov 10, 2025, the OWASP Top 10 2025 edition has been released.\n- **Key Config Options**:\n  - Enable strict input validation.\n  - Implement secure authentication mechanisms.\n  - Regularly update dependencies and frameworks.\n  - Use HTTPS for all communications.\n  - Conduct code reviews and static analysis.",
+    "source": "web_search",
+    "updated_at": 1780705992.5722518
+  },
+  "search:security+owasp:owasp top 10 security risks 20_ex": {
+    "content": "- **CLI Commands**: Use `owasp-top-10` for scanning web applications.\n- **Latest Version**: Check the OWASP website for the latest version of their guidelines.\n- **Key Config Options**:\n  - Enable HTTPS to secure data transmission.\n  - Implement CSRF tokens for protecting against cross-site request forgery.\n  - Regularly update dependencies and frameworks to patch vulnerabilities.\n  - Use input validation to prevent SQL injection and other attacks.\n  - Configure access controls and authentication mechanisms securely.",
+    "source": "code_example",
+    "updated_at": 1780705999.825879
+  },
+  "search:security+owasp:securing apis with owasp 2025": {
+    "content": "- **CLI Commands**: Use `owasp-top10-cli` to fetch the latest OWASP Top 10 data.\n- **Latest Versions**: Ensure using the latest version of your API security tools, such as SiteWALL WAF.\n- **Key Config Options**:\n  - Enable CORS for cross-origin requests securely.\n  - Implement rate limiting to prevent abuse.\n  - Use HTTPS to encrypt data in transit.\n  - Regularly update dependencies and libraries.",
+    "source": "web_search",
+    "updated_at": 1780706005.6869442
+  },
+  "search:security+owasp:securing apis with owasp 2025_ex": {
+    "content": "- Use `owasp-api-security-top-10` for the latest OWASP API Security Top 10 list.\n- Implement OWASP's recommendations in your development process.\n- Update dependencies regularly using `npm update --save-dev`.\n- Enable CORS with `Access-Control-Allow-Origin: *` in server headers.\n- Use HTTPS to secure data transmission.\n- Implement rate limiting with tools like `express-rate-limit`.\n- Sanitize inputs using libraries such as `validator.js`.\n- Regularly audit your API for vulnerabilities using tools like `OWASP ZAP`.\n- Monitor API usage and logs for suspicious activity.",
+    "source": "code_example",
+    "updated_at": 1780706013.5318449
+  }
+}

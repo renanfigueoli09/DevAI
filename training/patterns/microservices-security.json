@@ -1,0 +1,22 @@
+{
+  "search:microservices+security:microservices security best pr": {
+    "content": "- Use `kubectl` for Kubernetes management, ensuring you have the latest version installed.\n- Implement Role-Based Access Control (RBAC) using `kubectl create rolebinding` and `kubectl create clusterrolebinding`.\n- Utilize Network Policies with `kubectl apply -f network-policy.yaml` to control traffic between microservices.\n- Enable encryption in transit using TLS/SSL certificates for all communication between services.\n- Regularly update dependencies and frameworks to patch security vulnerabilities.\n- Implement continuous integration (CI) and continuous deployment (CD) pipelines with tools like Jenkins or GitLab CI.\n- Use a centralized logging system like ELK Stack (`elasticsearch`, `logstash`, `kibana`) for monitoring and auditing.\n- Conduct regular security audits and penetration testing of your microservices architecture.\n- Employ a service mesh solution like Istio to manage traffic, policies, and observability across microservices.",
+    "source": "web_search",
+    "updated_at": 1780706480.1828387
+  },
+  "search:microservices+security:microservices security best pr_ex": {
+    "content": "- Use Docker for containerization to isolate microservices.\n- Implement CI/CD pipelines with automated security scans.\n- Employ OAuth2 for authentication and authorization.\n- Utilize JSON Web Tokens (JWT) for secure communication between services.\n- Enable HTTPS for all service endpoints.\n- Regularly update dependencies using tools like Snyk or OWASP Dependency Check.\n- Configure API gateways to enforce rate limiting and access control.\n- Use Role-Based Access Control (RBAC) for fine-grained permissions.\n- Implement logging and monitoring with tools like ELK Stack or Splunk.\n- Conduct security audits and penetration testing annually.",
+    "source": "code_example",
+    "updated_at": 1780706485.320374
+  },
+  "search:microservices+security:microservices authentication p": {
+    "content": "- **CLI Commands**:\n  - `kubectl auth can-i <action> <resource>`\n  - `docker-compose up --build`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.0\n  - Docker Compose v2.19.0\n\n- **Key Config Options**:\n  - `authn.jwt.enabled: true`\n  - `security.authorization.mode: RBAC`",
+    "source": "web_search",
+    "updated_at": 1780706491.73607
+  },
+  "search:microservices+security:microservices authentication p_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up` to start services.\n  - `kubectl apply -f deployment.yaml` for Kubernetes deployments.\n\n- **Latest Versions**:\n  - Docker Compose v2.18.0\n  - Kubernetes v1.27.0\n\n- **Key Config Options**:\n  - Authentication: Use OAuth2 with JWT tokens.\n  - Authorization: Implement RBAC (Role-Based Access Control).\n  - API Gateway: Use Kong or Envoy for token exchange and routing.",
+    "source": "code_example",
+    "updated_at": 1780706499.3046172
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:docker+kubernetes:docker kubernetes deployment s": {
+    "content": "- **CLI Commands**:\n  - `kubectl rollout status deployment/<deployment-name>`\n  - `kubectl apply -f <filename>.yaml`\n  - `kubectl set image deployment/<deployment-name> <container-name>=<new-image>:tag`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Helm: v3.9\n\n- **Key Config Options**:\n  - `replicas`: Number of pods to run.\n  - `strategy.type`: RollingUpdate, Recreate.\n  - `maxUnavailable`: Maximum number or percentage of unavailable pods during an update.\n  - `maxSurge`: Maximum number or percentage of extra pods that can be created above the desired state during an update.",
+    "source": "web_search",
+    "updated_at": 1780705933.1034873
+  },
+  "search:docker+kubernetes:docker kubernetes deployment s_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml`: Applies configuration to a resource.\n  - `kubectl rollout status deployment/<deployment-name>`: Waits for a deployment to complete.\n\n- **Latest Versions**:\n  - Kubernetes v1.26\n  - Helm v3.9\n\n- **Key Config Options**:\n  - `replicas`: Number of desired pods.\n  - `strategy.type`: Deployment strategy (e.g., RollingUpdate, Recreate).\n  - `maxUnavailable` and `maxSurge`: Control the deployment update process.\n\n- **Deployment Strategies**:\n  - **Blue-Green**: Deploy new version to a separate environment, switch traffic when ready.\n  - **Canary**: Gradual rollout of new version to a subset of users or pods.\n  - **Rolling Update**: Gradual replacement of old pods with new ones.",
+    "source": "code_example",
+    "updated_at": 1780705936.7769144
+  },
+  "search:docker+kubernetes:kubernetes network policies 20": {
+    "content": "- **CLI Commands**:\n  - `kubectl create network-policy <policy-name> --namespace=<namespace>`\n  - `kubectl edit network-policy <policy-name> --namespace=<namespace>`\n\n- **Latest Versions**:\n  - Kubernetes Network Policies are supported in all versions of Kubernetes from 1.7 onwards.\n\n- **Key Config Options**:\n  - `podSelector`: Selects the Pods to which the policy applies.\n  - `ingress`: Specifies rules for incoming traffic.\n    - `from`: Defines sources allowed to access the selected Pods.\n      - `namespaceSelector`: Selects namespaces.\n      - `podSelector`: Selects specific Pods within a namespace.\n      - `ipBlock`: Allows traffic from specified IP ranges.\n  - `egress`: Specifies rules for outgoing traffic.\n    - Similar to `ingress`, but controls what the selected Pods can send out.",
+    "source": "web_search",
+    "updated_at": 1780705944.184778
+  },
+  "search:docker+kubernetes:kubernetes network policies 20_ex": {
+    "content": "- Use `kubectl apply -f <network-policy-file.yaml>` to create or update network policies.\n- Ensure your Kubernetes version is up-to-date for the latest features and security patches.\n- Key config options include:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: NetworkPolicy`\n  - `metadata.name` and `metadata.namespace`\n  - `spec.podSelector`\n  - `spec.policyTypes`: `Ingress`, `Egress`, or both\n  - `spec.ingress` and `spec.egress` rules defining source/destination IP ranges, ports, and protocols.\n- Avoid common mistakes like forgetting to specify `policyTypes` or misconfiguring `podSelector`.\n- For cross-namespace traffic, use `namespaceSelector` in the policy specification.\n- Regularly review and update network policies based on changing security requirements.",
+    "source": "code_example",
+    "updated_at": 1780705950.0121646
+  }
+}

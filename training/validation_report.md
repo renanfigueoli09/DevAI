@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-05 21:22*
+*2026-06-05 21:43*
 
-## Score: 57% `[███████████░░░░░░░░░]`
+## Score: 66% `[█████████████░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -9,33 +9,22 @@
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
+| nestjs-mongodb | 9.0/15.0 | 60% | ⚠️ |
+| nlp | 8.5/15.0 | 56% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nestjs-mongodb | 6.0/15.0 | 40% | ❌ |
-| nlp | 5.8/15.0 | 39% | ❌ |
 | spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
-
-### nestjs-mongodb (40%)
-- ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
-  - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
-- ✗ NestJS Mongoose service: which method to use instead of findOneBy
-  - Wrong: `findOneBy`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (39%)
+### nlp (56%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
   - Missing: `não, never, Dockerfile`
   - Wrong: `src/docker`
-- ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não`
-  - Wrong: `JWT`
 
 ### spring-mongodb (0%)
 - ✗ Spring Boot MongoDB: @Document or @Entity for model class?
@@ -44,8 +33,8 @@
   - Wrong: `JpaRepository`
 
 ### fastapi (50%)
-- ✗ FastAPI MongoDB: which async driver to use?
-  - Wrong: `pymongo`
+- ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
+  - Wrong: `.dict()`
 
 ## Como corrigir
 
@@ -54,9 +43,9 @@
 python scripts/validate.py --fix
 
 # Forçar retreinamento específico
-python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
 python scripts/validate.py --fix --topic nlp
+python scripts/validate.py --fix --topic spring-mongodb
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive

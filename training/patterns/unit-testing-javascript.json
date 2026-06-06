@@ -1,0 +1,12 @@
+{
+  "search:unit-testing-javascript:best practices for javascript ": {
+    "content": "- Use `npm install --save-dev jest` to install Jest.\n- Run tests with `npx jest`.\n- Configure Jest in `jest.config.js`.\n- Use TypeScript with Jest by installing `@types/jest`.\n- For parallel testing, use `--maxWorkers=2` flag.\n- Key config options: `testEnvironment`, `transform`, `setupFilesAfterEnv`.",
+    "source": "web_search",
+    "updated_at": 1780706188.9631495
+  },
+  "search:unit-testing-javascript:best practices for javascript _ex": {
+    "content": "- Use Jest for JavaScript testing, version 29.x.\n- Install Jest via npm: `npm install --save-dev jest`.\n- Run tests using the command: `npx jest`.\n- Configure Jest in a `jest.config.js` file.\n- Mock external dependencies with Jest's mocking features.\n- Write tests in `.test.js` or `.spec.js` files.\n- Use describe blocks to organize tests logically.\n- Aim for 100% coverage, but prioritize meaningful tests.\n- Utilize async/await for asynchronous testing.\n- Keep test data realistic and varied.",
+    "source": "code_example",
+    "updated_at": 1780706193.027034
+  }
+}

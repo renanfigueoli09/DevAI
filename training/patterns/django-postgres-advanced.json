@@ -1,0 +1,17 @@
+{
+  "search:django+postgres-advanced:django postgresql advanced que": {
+    "content": "- Use `django.contrib.postgres.search` for advanced PostgreSQL full-text search.\n- Install and configure PgBouncer for connection pooling using `pip install pgbouncer`.\n- Set up Django settings with `DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}` for secure connections.\n- Utilize Django's ORM methods like `.filter()`, `.exclude()`, and `.annotate()` for querying.\n- For JSONB fields, use `django.contrib.postgres.fields.JSONField`.\n- Create views in PostgreSQL using raw SQL migrations or third-party packages like `django-postgres-views`.\n- Deploy with Heroku by setting environment variables and configuring the database URL.",
+    "source": "web_search",
+    "updated_at": 1780706447.344322
+  },
+  "search:django+postgres-advanced:django postgresql migrations 2": {
+    "content": "- **CLI Commands**:\n  - `python manage.py makemigrations`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - `django-pg-zero-downtime-migrations` version 0.19\n\n- **Key Config Options**:\n  - Ensure PostgreSQL database is running.\n  - Configure Django settings with correct database URL.\n  - Use `makemigrations` to generate migration files.\n  - Apply migrations using `migrate`.",
+    "source": "web_search",
+    "updated_at": 1780706465.8964994
+  },
+  "search:django+postgres-advanced:django postgresql migrations 2_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py makemigrations`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - `DATABASES` in `settings.py`: Configure the database backend, user, password, host, and name.\n  - `django-pg-zero-downtime-migrations`: For zero downtime migrations with PostgreSQL.",
+    "source": "code_example",
+    "updated_at": 1780706471.8899853
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:performance-optimization-spring:spring boot performance tuning": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar --spring.config.location=classpath:/custom-config/,file:/opt/config/`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Java: 25\n\n- **Key Config Options**:\n  - `server.port`: Set application port.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.\n  - `spring.cache.type`: Cache type (e.g., caffeine, redis).\n  - `spring.jpa.properties.hibernate.dialect`: JPA dialect for database compatibility.",
+    "source": "web_search",
+    "updated_at": 1780706087.8600671
+  },
+  "search:performance-optimization-spring:spring boot performance tuning_ex": {
+    "content": "- Use the latest version of Spring Boot and Java.\n- Optimize JVM settings using flags like `-XX:+UseG1GC` for garbage collection.\n- Enable caching mechanisms in your application to reduce database load.\n- Configure connection pooling with libraries like HikariCP for efficient database connections.\n- Utilize asynchronous processing with `@Async` and `CompletableFuture` for non-blocking operations.\n- Implement logging with SLF4J and Logback for better performance and easier debugging.\n- Regularly monitor and analyze application performance using tools like Spring Boot Actuator and Prometheus.\n- Adjust thread pool sizes in your application to match the workload.\n- Use lazy initialization for beans that are not always required at startup.",
+    "source": "code_example",
+    "updated_at": 1780706092.105585
+  },
+  "search:performance-optimization-spring:optimizing spring boot applica": {
+    "content": "- Use `mvn clean install` for building the project.\n- Enable lazy initialization in Spring Boot by setting `spring.main.lazy-initialization=true`.\n- Optimize database queries using JPA/Hibernate's query optimization techniques.\n- Configure caching with `@EnableCaching` and use appropriate cache managers like Ehcache or Caffeine.\n- Use `@Async` for asynchronous method execution to improve response times.\n- Implement connection pooling in your data source configuration.\n- Monitor application performance using tools like Spring Boot Actuator.\n- Adjust JVM settings such as `-Xmx` and `-Xms` based on the application's memory requirements.\n- Regularly update dependencies to their latest versions to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1780706098.5936546
+  },
+  "search:performance-optimization-spring:optimizing spring boot applica_ex": {
+    "content": "- Use Java 21 Virtual Threads for non-blocking operations.\n- Implement Spring Boot REST controller to simulate blocking operations using virtual threads.\n- Optimize startup time and reduce memory usage in a Spring Boot application by using techniques specific to your app's characteristics.\n- Explore deploying a Spring Boot 3.3.x application with CDS (Class Data Sharing) and native images for improved performance.\n- Use CLI commands like `./mvnw clean package -DskipTests` for building the project.\n- Key config options include `server.port`, `spring.datasource.url`, and `spring.jpa.hibernate.ddl-auto`.",
+    "source": "code_example",
+    "updated_at": 1780706104.8113074
+  }
+}
