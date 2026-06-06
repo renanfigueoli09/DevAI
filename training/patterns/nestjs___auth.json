@@ -13,5 +13,10 @@
     "content": "- **CLI Commands**:\n  - `npm install --save @nestjs/jwt`\n  - `nest generate module auth`\n  - `nest generate service auth`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/jwt: v9.x\n\n- **Key Config Options**:\n  - `JWT_SECRET`: Environment variable for security.\n  - `JWT_EXPIRES_IN`: Token expiration time, e.g., '60m' for 60 minutes.\n  - `JWT_ALGORITHM`: Algorithm used for signing tokens, e.g., 'HS256'.\n  - `JWT_ISSUER`: Issuer of the token.\n  - `JWT_AUDIENCE`: Audience of the token.",
     "source": "web_search",
     "updated_at": 1780746455.906173
+  },
+  "search:NestJS + Auth:best practices for managing us_ex": {
+    "content": "- Install NestJS using `npm install --save @nestjs/jwt`\n- Use the latest version of `@nestjs/jwt` for compatibility and security updates.\n- Configure JWT in your `app.module.ts` with options like `secret` and `signOptions`.\n- Implement a JWT Auth Guard to protect routes, ensuring only authenticated users can access them.\n- Utilize refresh tokens alongside access tokens for long-lived user sessions.\n- Store refresh tokens securely, typically in a database or secure storage service.\n- Validate both access and refresh tokens on each request to maintain security.\n- Consider implementing role-based access control (RBAC) for fine-grained permissions.\n- Regularly update dependencies and review security practices to stay compliant.",
+    "source": "code_example",
+    "updated_at": 1780746461.150611
   }
 }
