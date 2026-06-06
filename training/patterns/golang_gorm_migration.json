@@ -2,12 +2,12 @@
   "search:golang-gorm-migration:gorm migration best practices ": {
     "content": "- Use `go run github.com/gormio/gorm/cmd/migrate` for running migrations.\n- Ensure your Go version is up to date, ideally using the latest LTS release.\n- Configure GORM with `gorm.Config{...}` for advanced settings like logging and dialect selection.\n- For circular relationships in GORM, use `foreignKeyConstraint: true` in model definitions.\n- Handle migration errors gracefully by implementing retry logic or custom error handling strategies.\n- Consider using Atlas for more robust migration management, especially for complex database schemas.",
     "source": "web_search",
-    "updated_at": 1780788840.7952402
+    "updated_at": 1780790130.5952692
   },
   "search:golang-gorm-migration:gorm migration best practices _ex": {
     "content": "- Use `sql-migrate` or `sqlc` for database migrations instead of GORM's automigrate.\n- For circular relationships, consider using foreign keys and constraints manually in your migration files.\n- Run migrations at the appropriate time during application startup or deployment.\n- Ensure all models are correctly defined with tags to map Go structs to database tables.\n- Use GORM's `AutoMigrate` method for quick setup but be cautious of its limitations.\n- Check the latest version of GORM on their official GitHub repository.\n- Configure GORM with necessary options such as `Logger`, `DryRun`, and `NamingStrategy`.\n- Automate migrations in your CI/CD pipeline to ensure consistency across environments.",
     "source": "code_example",
-    "updated_at": 1780788842.0328577
+    "updated_at": 1780790131.8549745
   },
   "search:golang-gorm-migration:go gorm migrations tutorial 20": {
     "content": "- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get github.com/go-migrate/migrate/v4`\n  - `migrate -path ./db/migrations -database \"postgres://user:password@localhost/dbname\" up`\n\n- **Latest Versions**:\n  - GORM: v1.23.0\n  - golang-migrate/migrate: v4.16.0\n\n- **Key Config Options**:\n  - `gorm.io/driver/postgres`\n  - `migrate.New(\"postgres://user:password@localhost/dbname\", \"file:///path/to/migrations\")`",
