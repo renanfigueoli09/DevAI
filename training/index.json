@@ -8,13 +8,13 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780782850.7788992,
+    "ts": 1780783262.434171,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780782851.7206342,
+    "ts": 1780783262.9727173,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780782816.5606272,
+    "ts": 1780783263.6472921,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782804.8644023,
+    "ts": 1780783256.416857,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782806.2850306,
+    "ts": 1780783257.4877775,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782803.9962327,
+    "ts": 1780783255.8831916,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782805.5778139,
+    "ts": 1780783256.9397929,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780782806.90949,
+    "ts": 1780783258.0081596,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780782807.6768105,
+    "ts": 1780783258.4973814,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780782809.9329002,
+    "ts": 1780783258.9847014,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780782810.684601,
+    "ts": 1780783259.5519814,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780782811.418785,
+    "ts": 1780783260.0191028,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780782812.8512702,
+    "ts": 1780783261.0184615,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780782813.48744,
+    "ts": 1780783261.4995308,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780782814.229258,
+    "ts": 1780783261.9357188,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -4922,67 +4922,265 @@
   "search:Next.js + Supabase Authentication:supabase authentication with n": {
     "topic": "next_js_supabase_authentication",
     "source": "web_search",
-    "ts": 1780782559.0812411,
-    "size": 1204
+    "ts": 1780782884.098324,
+    "size": 451
   },
   "search:Next.js + Supabase Authentication:supabase authentication with n_ex": {
     "topic": "next_js_supabase_authentication",
     "source": "code_example",
-    "ts": 1780782559.998284,
-    "size": 439
+    "ts": 1780782889.2546737,
+    "size": 1004
   },
   "search:Next.js + Supabase Authentication:jwt token management in next.j": {
     "topic": "next_js_supabase_authentication",
     "source": "web_search",
-    "ts": 1780782560.868861,
-    "size": 677
+    "ts": 1780782893.773637,
+    "size": 393
   },
   "search:Next.js + Supabase Authentication:jwt token management in next.j_ex": {
     "topic": "next_js_supabase_authentication",
     "source": "code_example",
-    "ts": 1780782561.793834,
-    "size": 1369
+    "ts": 1780782900.4622474,
+    "size": 1510
   },
   "search:Next.js + Supabase Authentication:secure api routes in next.js": {
     "topic": "next_js_supabase_authentication",
     "source": "web_search",
-    "ts": 1780782562.731468,
-    "size": 676
+    "ts": 1780782908.6018476,
+    "size": 1273
   },
   "search:Next.js + Supabase Authentication:secure api routes in next.js_ex": {
     "topic": "next_js_supabase_authentication",
     "source": "code_example",
-    "ts": 1780782563.6674623,
-    "size": 302
+    "ts": 1780782912.0571532,
+    "size": 295
   },
   "search:FastAPI + Core:fastapi dependency injection": {
     "topic": "fastapi_core",
     "source": "web_search",
-    "ts": 1780782136.5877738,
-    "size": 426
+    "ts": 1780782916.67406,
+    "size": 560
   },
   "search:FastAPI + Core:fastapi dependency injection_ex": {
     "topic": "fastapi_core",
     "source": "code_example",
-    "ts": 1780782137.5055428,
-    "size": 454
+    "ts": 1780782919.436827,
+    "size": 583
   },
   "search:FastAPI + Core:fastapi security best practice": {
     "topic": "fastapi_core",
     "source": "web_search",
-    "ts": 1780782138.3708098,
-    "size": 554
+    "ts": 1780782925.0919125,
+    "size": 797
   },
   "search:FastAPI + Core:fastapi security best practice_ex": {
     "topic": "fastapi_core",
     "source": "code_example",
-    "ts": 1780782139.2900157,
-    "size": 598
+    "ts": 1780782928.5122776,
+    "size": 750
   },
   "search:Spring Boot MongoDB Performance:optimizing queries in spring b_ex": {
     "topic": "spring_boot_mongodb_performance",
     "source": "code_example",
     "ts": 1780782878.692768,
     "size": 807
+  },
+  "search:FastAPI + Core:fastapi performance optimizati": {
+    "topic": "fastapi_core",
+    "source": "web_search",
+    "ts": 1780782935.4137626,
+    "size": 597
+  },
+  "search:FastAPI + Core:fastapi performance optimizati_ex": {
+    "topic": "fastapi_core",
+    "source": "code_example",
+    "ts": 1780782944.1738904,
+    "size": 727
+  },
+  "search:Performance Optimization with React Native + Realm Performance:react native performance optim": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "web_search",
+    "ts": 1780782962.3023078,
+    "size": 742
+  },
+  "search:Performance Optimization with React Native + Realm Performance:react native performance optim_ex": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "code_example",
+    "ts": 1780782972.043536,
+    "size": 1014
+  },
+  "search:Performance Optimization with React Native + Realm Performance:realm database performance tun": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "web_search",
+    "ts": 1780782981.3037143,
+    "size": 823
+  },
+  "search:Performance Optimization with React Native + Realm Performance:realm database performance tun_ex": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "code_example",
+    "ts": 1780782987.2612243,
+    "size": 890
+  },
+  "search:Performance Optimization with React Native + Realm Performance:cross-platform app performance": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "web_search",
+    "ts": 1780782993.6234574,
+    "size": 502
+  },
+  "search:Performance Optimization with React Native + Realm Performance:cross-platform app performance_ex": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "code_example",
+    "ts": 1780783001.2342184,
+    "size": 673
+  },
+  "search:Performance Optimization with React Native + Realm Performance:optimizing data access pattern": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "web_search",
+    "ts": 1780783008.1298037,
+    "size": 608
+  },
+  "search:Performance Optimization with React Native + Realm Performance:optimizing data access pattern_ex": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "code_example",
+    "ts": 1780783013.8538065,
+    "size": 618
+  },
+  "search:Performance Optimization with React Native + Realm Performance:comparing performance of diffe": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "web_search",
+    "ts": 1780783022.5832937,
+    "size": 418
+  },
+  "search:Performance Optimization with React Native + Realm Performance:comparing performance of diffe_ex": {
+    "topic": "performance_optimization_with_react_native_realm_performance",
+    "source": "code_example",
+    "ts": 1780783029.4734056,
+    "size": 428
+  },
+  "search:API Design Principles for FastAPI + Core:rest api design principles": {
+    "topic": "api_design_principles_for_fastapi_core",
+    "source": "web_search",
+    "ts": 1780783037.9851623,
+    "size": 476
+  },
+  "search:API Design Principles for FastAPI + Core:rest api design principles_ex": {
+    "topic": "api_design_principles_for_fastapi_core",
+    "source": "code_example",
+    "ts": 1780783042.1883745,
+    "size": 302
+  },
+  "search:API Design Principles for FastAPI + Core:graphql api design best practi": {
+    "topic": "api_design_principles_for_fastapi_core",
+    "source": "web_search",
+    "ts": 1780783049.8120933,
+    "size": 567
+  },
+  "search:API Design Principles for FastAPI + Core:graphql api design best practi_ex": {
+    "topic": "api_design_principles_for_fastapi_core",
+    "source": "code_example",
+    "ts": 1780783054.0183735,
+    "size": 591
+  },
+  "search:DevOps Practices for Spring + Redis:continuous integration and del": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "web_search",
+    "ts": 1780783101.6789505,
+    "size": 407
+  },
+  "search:DevOps Practices for Spring + Redis:continuous integration and del_ex": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "code_example",
+    "ts": 1780783107.7101848,
+    "size": 622
+  },
+  "search:DevOps Practices for Spring + Redis:redis caching strategies in a ": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "web_search",
+    "ts": 1780783118.25692,
+    "size": 590
+  },
+  "search:DevOps Practices for Spring + Redis:redis caching strategies in a _ex": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "code_example",
+    "ts": 1780783124.2216575,
+    "size": 536
+  },
+  "search:DevOps Practices for Spring + Redis:monitoring and logging for spr": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "web_search",
+    "ts": 1780783131.9289885,
+    "size": 563
+  },
+  "search:DevOps Practices for Spring + Redis:monitoring and logging for spr_ex": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "code_example",
+    "ts": 1780783137.3949025,
+    "size": 649
+  },
+  "search:DevOps Practices for Spring + Redis:automated testing and deployme": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "web_search",
+    "ts": 1780783143.2433333,
+    "size": 378
+  },
+  "search:DevOps Practices for Spring + Redis:automated testing and deployme_ex": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "code_example",
+    "ts": 1780783152.8122578,
+    "size": 582
+  },
+  "search:DevOps Practices for Spring + Redis:security practices for deployi": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "web_search",
+    "ts": 1780783162.4006102,
+    "size": 631
+  },
+  "search:DevOps Practices for Spring + Redis:security practices for deployi_ex": {
+    "topic": "devops_practices_for_spring_redis",
+    "source": "code_example",
+    "ts": 1780783172.3007507,
+    "size": 1329
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:oauth2 security best practices": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "web_search",
+    "ts": 1780783181.4288964,
+    "size": 574
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "web_search",
+    "ts": 1780783202.6584077,
+    "size": 318
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring_ex": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "code_example",
+    "ts": 1780783209.93816,
+    "size": 494
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:securing apis with oauth2 and ": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "web_search",
+    "ts": 1780783233.5849428,
+    "size": 334
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:securing apis with oauth2 and _ex": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "code_example",
+    "ts": 1780783240.0986102,
+    "size": 512
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:compliance and auditing in a s": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "web_search",
+    "ts": 1780783252.5565941,
+    "size": 662
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:compliance and auditing in a s_ex": {
+    "topic": "advanced_security_practices_with_java_spring_security_oauth2",
+    "source": "code_example",
+    "ts": 1780783260.2564855,
+    "size": 598
   }
 }

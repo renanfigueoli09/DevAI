@@ -1,0 +1,37 @@
+{
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:oauth2 security best practices": {
+    "content": "- Use `npm install express-session` for session management.\n- Implement CSRF protection using `express-csurf`.\n- Update dependencies regularly, e.g., `npm update --save-dev`.\n- Configure OAuth2 with latest libraries like `passport-oauth2`.\n- Set up environment variables for sensitive data (e.g., client ID, secret).\n- Use HTTPS to secure communication between client and server.\n- Implement rate limiting using middleware like `express-rate-limit`.\n- Regularly audit dependencies for vulnerabilities.\n- Enable strict mode in Node.js with `\"strict\": true` in `package.json`.",
+    "source": "web_search",
+    "updated_at": 1780783181.427532
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring": {
+    "content": "- **CLI Commands**:\n  - `mvnw spring-boot:run` to run the Spring Boot application.\n  \n- **Latest Versions**:\n  - Spring Boot 3.0\n  - Spring Security 6\n  \n- **Key Config Options**:\n  - JWT Secret Key for signing tokens.\n  - Token expiration time.\n  - Role-based access control configuration in `application.properties`.",
+    "source": "web_search",
+    "updated_at": 1780783202.6572788
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n\n- **Key Config Options**:\n  - `application.properties`: Configure JWT secret, expiration time, and other security settings.\n  - `SecurityConfig.java`: Define authentication manager, token provider, and filter chain.\n  - `JwtTokenProvider.java`: Implement JWT creation and validation logic.",
+    "source": "code_example",
+    "updated_at": 1780783209.9368
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:securing apis with oauth2 and ": {
+    "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for OAuth2 configuration\n  - JWT token generation and validation\n  - Authorization server setup\n  - Resource server configuration",
+    "source": "web_search",
+    "updated_at": 1780783233.583098
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:securing apis with oauth2 and _ex": {
+    "content": "- Clone the repository: `git clone https://github.com/hendisantika/spring-boot-security-oauth2-example.git`\n- Navigate to project directory: `cd spring-boot-security-oauth2-example`\n- Start MySQL using Docker Compose: `docker-compose up -d mysql`\n- Build and run the application: `mvn clean install && java -jar target/spring-boot-security-oauth2-example-0.0.1-SNAPSHOT.jar`\n\nKey Config Options:\n- `application.properties` for database connection\n- `src/main/resources/oauth2.properties` for OAuth2 configuration",
+    "source": "code_example",
+    "updated_at": 1780783240.09689
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:compliance and auditing in a s": {
+    "content": "- **FedRAMP Compliance Software Solutions**: Vanta, Drata, Secureframe, Paramify, Telos.\n- **IT Compliance and Auditing in Atlanta**: Ensure regulatory compliance while maintaining IT system efficiency.\n- **Windows Server Secure Auditing Best Practices**:\n  - Enable detailed auditing on critical resources.\n  - Configure audit policies to track user activities.\n  - Regularly review audit logs for anomalies.\n- **Intrusion Prevention Systems (IPS)**: Implement to detect and prevent unauthorized access attempts.\n- **Cloud DLP**: Use to protect sensitive data in cloud environments.\n- **Compliance Auditing Triad**:\n  - IPS\n  - Cloud DLP\n  - Compliance auditing",
+    "source": "web_search",
+    "updated_at": 1780783252.5549572
+  },
+  "search:Advanced Security Practices with Java-Spring-Security-OAuth2:compliance and auditing in a s_ex": {
+    "content": "- Use `git clone https://github.com/vectorc0de/compliance-automation-examples.git` to download the repository.\n- Install Python 3.8 or later for running scripts.\n- Run `pip install -r requirements.txt` to install necessary dependencies.\n- Execute `python compliance_check.py --target /path/to/your/codebase` to perform a security and compliance audit.\n- Key config options include `--standard CIS`, `--environment cloud`, and `--output report.json`.\n- Ensure your codebase is up-to-date with the latest security patches.\n- Regularly update dependencies using `pip install --upgrade <package_name>`.",
+    "source": "code_example",
+    "updated_at": 1780783260.2549691
+  }
+}
