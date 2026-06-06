@@ -13,5 +13,10 @@
     "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes a new Alembic environment.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a migration script based on detected changes in the models.\n  - `alembic upgrade head`: Applies all migrations to the database.\n  - `alembic downgrade -1`: Reverts the last applied migration.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for the database connection.\n  - `alembic.ini`: Configuration file for Alembic, specifying the environment and migration scripts location.\n  - `env.py`: Script where the target metadata is defined, used by Alembic to generate migrations.",
     "source": "web_search",
     "updated_at": 1780779255.4944632
+  },
+  "search:python-fastapi-sqlalchemy:python fastapi sqlalchemy migr_ex": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initialize Alembic in your project.\n  - `alembic revision --autogenerate -m \"message\"`: Generate a new migration script based on changes detected in the models.\n  - `alembic upgrade head`: Apply all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.39\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for the database connection.\n  - `alembic.ini`: Configuration file for Alembic, including paths to migration scripts and environment variables.\n  - `models.py`: Contains SQLAlchemy models defining the database schema.",
+    "source": "code_example",
+    "updated_at": 1780779269.3968031
   }
 }
