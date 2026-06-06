@@ -1,0 +1,17 @@
+{
+  "search:docker-compose-kafka-zookeeper:docker compose kafka zookeeper": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up -d`: Start the containers in detached mode.\n  - `docker-compose down`: Stop and remove the containers.\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Zookeeper: 3.8.0\n\n- **Key Config Options**:\n  - Kafka Broker Configuration (`server.properties`):\n    - `broker.id`\n    - `listeners`\n    - `log.dirs`\n  - Zookeeper Configuration (`zoo.cfg`):\n    - `tickTime`\n    - `dataDir`\n    - `clientPort`\n\n- **Docker Compose File Example**:\n  ```yaml\n  version: '3.8'\n  services:\n    zookeeper:\n      image: wurstmeister/zookeeper\n      ports:\n        - \"2181:2181\"\n    kafka:\n      image: wurstmeister/kafka\n      ports:\n        - \"9092:9092\"\n      environment:\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n        KAFKA_CREATE_TOPICS: topic1:3:1,topic2:3:1\n      depends_on:\n        - zookeeper\n  ```",
+    "source": "web_search",
+    "updated_at": 1780722856.1251605
+  },
+  "search:docker-compose-kafka-zookeeper:docker compose kafka zookeeper_ex": {
+    "content": "- Use `docker-compose up -d` to start the Kafka-Zookeeper cluster.\n- Ensure Docker and Docker Compose are installed on your machine.\n- Check the latest versions of Kafka, ZooKeeper, and Docker Compose from their respective official websites.\n- Key config options include setting environment variables for broker IDs, ports, and replication factors in `docker-compose.yml`.\n- Use `docker-compose ps` to check the status of running containers.\n- To stop the cluster, run `docker-compose down`.\n- For automated topic management, consider using a Makefile as described in the blog post.",
+    "source": "code_example",
+    "updated_at": 1780722860.2989829
+  },
+  "search:docker-compose-kafka-zookeeper:kafka zookeeper docker perform": {
+    "content": "- Use `docker-compose` to manage Kafka and Zookeeper containers.\n- Specify the latest version of `confluentinc/cp-zookeeper` and `confluentinc/cp-kafka`.\n- Configure environment variables like `ZOOKEEPER_CLIENT_PORT`, `KAFKA_BROKER_ID`, etc., in `docker-compose.yml`.\n- Map ports for Zookeeper (2181) and Kafka (9092).\n- Use `docker-compose up -d` to start the containers in detached mode.\n- Adjust `zookeeper.connect` in Kafka configuration to point to the Zookeeper container.\n- Monitor performance with tools like `kafka-topics.sh --describe --topic <topic> --bootstrap-server localhost:9092`.\n- Scale by adding more Kafka brokers in `docker-compose.yml`.",
+    "source": "web_search",
+    "updated_at": 1780722871.0510664
+  }
+}
