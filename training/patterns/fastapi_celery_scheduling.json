@@ -2,16 +2,16 @@
   "search:fastapi+celery-scheduling:fastapi celery task scheduling": {
     "content": "- Install FastAPI, Celery, Redis, and Uvicorn using pip.\n- Use the latest versions of FastAPI, Celery, Redis, and Uvicorn for compatibility.\n- Configure Celery with a broker like Redis (`celery -A tasks.celery_app worker --loglevel=info`).\n- Set up a beat schedule in Celery for periodic tasks (e.g., `celery_app.conf.beat_schedule = { \"monthly-payroll\": { \"task\": \"tasks.run_payroll\", \"schedule\": crontab(day_of_month=1, hour=0), } }`).\n- Ensure all dependencies are installed by running `pip install fastapi celery redis uvicorn`.\n- Use Uvicorn to run your FastAPI application (`uvicorn main:app --reload`).\n- Configure Celery with a result backend (e.g., Redis) for task results.\n- For production, use a more robust configuration and consider using Flower for monitoring Celery tasks.",
     "source": "web_search",
-    "updated_at": 1780780350.2435608
+    "updated_at": 1780781245.1685545
   },
   "search:fastapi+celery-scheduling:asynchronous task management i": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Celery: 5.3.1\n  - Redis: 6.2.6\n\n- **Key Config Options**:\n  - `broker_url`: Set to Redis URL (e.g., `redis://localhost:6379/0`)\n  - `result_backend`: Set to Redis URL (e.g., `redis://localhost:6379/1`)\n  - `task_serializer`: Set to `'json'`\n  - `accept_content`: Set to `['json']`\n  - `timezone`: Set to `'UTC'`",
     "source": "web_search",
-    "updated_at": 1780780351.113349
+    "updated_at": 1780781247.3268375
   },
   "search:fastapi+celery-scheduling:asynchronous task management i_ex": {
     "content": "- **Install FastAPI and Celery**: `pip install fastapi celery`\n- **Set up RabbitMQ or Redis** as a message broker.\n- **Configure Celery in `celery_config.py`**:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')\n  ```\n- **Create a task**: \n  ```python\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Call the task asynchronously**:\n  ```python\n  result = add.delay(4, 4)\n  print(result.get(timeout=1))\n  ```\n- **Run Celery worker**: `celery -A celery_config.celery worker --loglevel=info`\n- **Dockerize your application** for easy deployment.\n- **Use Swagger UI** to document API endpoints.\n- **Latest versions**: FastAPI: 0.95.2, Celery: 5.2.7, RabbitMQ: 3.8.x, Redis: 6.x",
     "source": "code_example",
-    "updated_at": 1780780352.046951
+    "updated_at": 1780781248.4571671
   }
 }

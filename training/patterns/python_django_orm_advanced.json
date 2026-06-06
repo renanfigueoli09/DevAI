@@ -2,16 +2,16 @@
   "search:python-django-orm-advanced:python django orm advanced tec": {
     "content": "- **CLI Commands**:\n  - `python manage.py shell`: Open Django shell.\n  - `python manage.py migrate`: Apply migrations to the database.\n\n- **Latest Versions**:\n  - Django ORM: As of my last update, Django 4.2 is the latest stable version. Check [Django's official website](https://www.djangoproject.com/download/) for the most current version.\n\n- **Key Config Options**:\n  - `DATABASES`: Configure database settings in `settings.py`.\n    ```python\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': 'mydatabase',\n            'USER': 'myuser',\n            'PASSWORD': 'mypassword',\n            'HOST': 'localhost',\n            'PORT': '',\n        }\n    }\n    ```\n  - `USE_TZ`: Set to `True` for timezone-aware datetimes.\n    ```python\n    USE_TZ = True\n    ```\n\n- **Advanced Techniques**:\n  - Use `select_related` and `prefetch_related` for efficient querying.\n    ```python\n    # select_related for single-valued relationships\n    Author.objects.select_related('profile').all()\n\n    # prefetch_related for multi-valued relationships\n    Book.objects.prefetch_related('authors').all()\n    ```\n  - Utilize `Q` objects for complex queries.\n    ```python\n    from django.db.models import Q\n\n    books = Book.objects.filter(Q(title__icontains='django') | Q(author__name__icontains='tim'))\n    ```\n  - Employ `F` expressions for database-level operations.\n    ```python\n    from django.db.models import F\n\n    Author.objects.update(age=F('age') + 1)\n    ```\n  - Use bulk operations for efficient data manipulation.\n    ```python\n    # Bulk create\n    Author.objects.bulk_create([Author(name='John Doe'), Author(name='Jane Smith')])\n\n    # Bulk update\n    Author.objects.filter(name__startswith='J').update(age=30)\n\n    # Bulk delete\n    Author.objects.filter(age__lt=18).delete()\n    ```",
     "source": "web_search",
-    "updated_at": 1780780370.287041
+    "updated_at": 1780781267.13271
   },
   "search:python-django-orm-advanced:python django orm advanced tec_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py shell`: Open the Django interactive shell.\n  - `python manage.py migrate`: Apply migrations to the database.\n\n- **Latest Versions**:\n  - Django 4.2\n\n- **Key Config Options**:\n  - `DATABASES`: Configure your database settings in `settings.py`.\n  - `INSTALLED_APPS`: List all installed apps in `settings.py`.",
     "source": "code_example",
-    "updated_at": 1780780371.115498
+    "updated_at": 1780781268.139055
   },
   "search:python-django-orm-advanced:python django orm performance ": {
     "content": "- **CLI Commands**:\n  - `python manage.py explain_sql <query>` to analyze SQL queries.\n  - `python manage.py runserver --insecure` for development without SSL.\n\n- **Latest Versions**:\n  - Django 5.2 as of August 2025.\n  - Python 3.10 or later recommended for better performance and features.\n\n- **Key Config Options**:\n  - `DATABASES['default']['OPTIONS']` for database-specific settings like connection pool size.\n  - `CACHES` configuration to enable caching mechanisms for reducing database load.\n  - `DEBUG = False` in production to disable debug mode, which can slow down the application.",
     "source": "web_search",
-    "updated_at": 1780780372.072939
+    "updated_at": 1780781269.2788658
   }
 }
