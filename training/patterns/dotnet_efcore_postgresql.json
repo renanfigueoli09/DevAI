@@ -2,11 +2,11 @@
   "search:dotnet-efcore-postgresql:dotnet efcore postgresql migra": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 6.0.1\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: `\"DefaultConnection\": \"Host=myhost;Database=mydatabase;Username=myuser;Password=mypassword\"`\n  - Migrations Configuration in `Startup.cs` or `Program.cs`: \n    ```csharp\n    services.AddDbContext<ApplicationDbContext>(options =>\n        options.UseNpgsql(Configuration.GetConnectionString(\"DefaultConnection\")));\n    ```\n  - Applying Migrations: Ensure migrations are applied after updating the model with `dotnet ef database update`.",
     "source": "web_search",
-    "updated_at": 1780779749.6857798
+    "updated_at": 1780780553.6800058
   },
   "search:dotnet-efcore-postgresql:dotnet efcore postgresql migra_ex": {
     "content": "- Install PostgreSQL EF Core provider: `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- Install EF Core tools: `dotnet add package Microsoft.EntityFrameworkCore.Tools`\n- Update database with migration tool: `dotnet ef migrations update`\n- Introduce new entities and create a second migration: `dotnet ef migrations add InitialCreate`\n- Reset the database schema: `dotnet ef database drop --force` followed by `dotnet ef database update`\n- View applied migrations: `dotnet ef migrations list`\n\nLatest versions:\n- Npgsql.EntityFrameworkCore.PostgreSQL: v9.0.4\n- Microsoft.EntityFrameworkCore.Tools: v7.0.0\n\nKey config options:\n- Connection string in appsettings.json\n- DbMigrationsOptions for configuration",
     "source": "code_example",
-    "updated_at": 1780779750.6459696
+    "updated_at": 1780780554.7828467
   }
 }
