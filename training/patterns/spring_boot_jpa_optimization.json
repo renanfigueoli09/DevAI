@@ -13,5 +13,15 @@
     "content": "- Use `@Query` annotation for custom JPQL or native SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Apply fetch joins to reduce N+1 query problems.\n- Utilize `@EntityGraph` for efficient data fetching.\n- Enable query hints with `@QueryHints` for specific database optimizations.\n- Use `@BatchSize` on entities for batch loading.\n- Optimize sorting by using indexed columns.\n- Consider using Spring Data JPA's `@Modifying` and `@Transactional` annotations for bulk operations.\n- Regularly update Spring Boot and JPA to the latest versions for performance improvements.",
     "source": "web_search",
     "updated_at": 1780789240.0111337
+  },
+  "search:spring-boot+jpa-optimization:spring boot jpa batch processi": {
+    "content": "- **Add Dependencies**: Include `spring-boot-starter-batch` and `spring-data-jpa`.\n- **Configure Batch Size**: Use `spring.jpa.properties.hibernate.jdbc.batch_size=4` in `application.properties`.\n- **Enable Order Inserts**: Set `spring.jpa.properties.hibernate.order_inserts=true` for ordered inserts.\n- **Use Spring Data JPA Repositories**: Implement repositories with `@Repository` and extend `JpaRepository`.\n- **Define Batch Job**: Create a job using `@Bean` method annotated with `@Job`.\n- **Configure Steps**: Define steps within the job, each with its own reader, processor, and writer.\n- **Reader Configuration**: Use `@StepScope` for readers to handle batch processing.\n- **Processor Configuration**: Implement custom processors if data transformation is required.\n- **Writer Configuration**: Configure writers to output data, e.g., CSV or database.\n- **Run Job**: Execute the job using `JobLauncher.run(job, parameters)`.",
+    "source": "web_search",
+    "updated_at": 1780789265.8551328
+  },
+  "search:spring-boot+jpa-optimization:spring boot jpa batch processi_ex": {
+    "content": "- Use `@EnableBatchProcessing` to enable batch processing in your Spring Boot application.\n- Configure `ItemReader`, `ItemProcessor`, and `ItemWriter` beans for custom data handling.\n- Utilize `JpaPagingItemReader` for reading large datasets efficiently.\n- Implement `@StepScope` on reader, processor, and writer beans to manage scope across steps.\n- Set `spring.jpa.properties.hibernate.jdbc.batch_size=50` in your `application.properties` for batch inserts/updates.\n- Use `@Transactional(propagation = Propagation.REQUIRES_NEW)` within step methods for transaction management.\n- Configure `JobRepository` bean with `JpaTransactionManager` for transactional support.\n- Implement `ItemWriter` to handle data output, such as writing to a CSV file or database.",
+    "source": "code_example",
+    "updated_at": 1780789272.1984584
   }
 }
