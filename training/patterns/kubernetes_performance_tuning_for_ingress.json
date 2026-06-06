@@ -2,21 +2,21 @@
   "search:Kubernetes Performance Tuning for Ingress:kubernetes+ingress-performance": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <ingress-controller-yaml>`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.0\n  - Contour: v1.18.0\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: To adjust the maximum body size for requests.\n  - `nginx.ingress.kubernetes.io/proxy-read-timeout`: To set a custom read timeout for proxied connections.",
     "source": "web_search",
-    "updated_at": 1780777007.983071
+    "updated_at": 1780777790.105032
   },
   "search:Kubernetes Performance Tuning for Ingress:kubernetes+ingress-performance_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <ingress-resource-file>.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - NGINX Ingress Controller: v1.3.x\n\n- **Key Config Options**:\n  - `apiVersion`: Specifies the version of the API.\n  - `kind`: Defines the type of resource, e.g., `Ingress`.\n  - `metadata.name`: Name of the ingress resource.\n  - `spec.rules`: Defines routing rules for traffic.\n  - `spec.tls`: Configures TLS termination.",
     "source": "code_example",
-    "updated_at": 1780777009.1424398
+    "updated_at": 1780777790.912412
   },
   "search:Kubernetes Performance Tuning for Ingress:golang-gorm-performance-tuning": {
     "content": "- **CLI Commands**: Use `go build -gcflags=\"-m\"` to analyze memory allocations.\n- **Latest Versions**: Ensure using the latest GORM version with `go get -u gorm.io/gorm`.\n- **Key Config Options**:\n  - Disable eager loading: `db.Preload(\"AssociationName\", false)`\n  - Batch size for bulk operations: `db.Find(&users).Limit(100).Find(&users)`\n  - Use raw SQL when necessary for performance.\n  - Indexes on database tables to speed up queries.",
     "source": "web_search",
-    "updated_at": 1780777010.1846302
+    "updated_at": 1780777791.736196
   },
   "search:Kubernetes Performance Tuning for Ingress:golang-gorm-performance-tuning_ex": {
     "content": "- **CLI Commands**: `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: Check the latest version on [GORM GitHub](https://github.com/go-gorm/gorm).\n- **Key Config Options**:\n  - `gorm.DB.DB().SetMaxIdleConns(10)` for setting maximum idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns(100)` for setting maximum open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime(time.Hour * 24)` for setting connection lifetime.",
     "source": "code_example",
-    "updated_at": 1780777011.3015163
+    "updated_at": 1780777792.5189269
   }
 }
