@@ -1,0 +1,22 @@
+{
+  "search:nextjs-auth0:next.js authentication with au": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @auth0/nextjs-auth0`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Auth0 Next.js SDK: v2.1\n\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Client ID from your Auth0 application.\n  - `AUTH0_CLIENT_SECRET`: Client secret from your Auth0 application.\n  - `AUTH0_AUDIENCE`: API identifier for your application.",
+    "source": "web_search",
+    "updated_at": 1780728671.1831903
+  },
+  "search:nextjs-auth0:next.js authentication with au_ex": {
+    "content": "- **Latest Version**: @auth0/nextjs-auth0 v4.22.0\n- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install @auth0/nextjs-auth0`\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Your Auth0 client ID.\n  - `AUTH0_CLIENT_SECRET`: Your Auth0 client secret.\n  - `AUTH0_AUDIENCE`: The API audience for your application.",
+    "source": "code_example",
+    "updated_at": 1780728685.7621853
+  },
+  "search:nextjs-auth0:auth0 integration in next.js a": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install the Auth0 SDK using `npm install @auth0/nextjs-auth0`.\n- Configure environment variables in `.env.local`: `AUTH0_ISSUER_BASE_URL`, `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`, and `AUTH0_AUDIENCE`.\n- Implement authentication by wrapping your pages with the `withApiAuthRequired` higher-order component.\n- For social logins, ensure you have configured them in the Auth0 dashboard under \"Connections\" > \"Social\".\n- Use the `useUser` hook to access user information in functional components.\n- Update Next.js router to use the new App Router for better performance and features.\n- Refer to the official [Auth0 documentation](https://auth0.com/docs) for detailed setup instructions and best practices.",
+    "source": "web_search",
+    "updated_at": 1780728695.2446082
+  },
+  "search:nextjs-auth0:auth0 integration in next.js a_ex": {
+    "content": "- **Latest Version**: @auth0/nextjs-auth0 v4.22.0\n- **CLI Commands**:\n  - `npx create-next-app@latest my-auth0-app`\n  - `npm install @auth0/nextjs-auth0`\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Your Auth0 client ID.\n  - `AUTH0_CLIENT_SECRET`: Your Auth0 client secret.\n  - `AUTH0_AUDIENCE`: Your API audience.",
+    "source": "code_example",
+    "updated_at": 1780728699.7165809
+  }
+}

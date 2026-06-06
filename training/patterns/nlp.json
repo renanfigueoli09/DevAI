@@ -2,57 +2,57 @@
   "nlp:entities-pt": {
     "content": "// PT→Entity: livro(s)→Book | usuário(s)→User | produto(s)→Product | pedido(s)→Order | categoria→Category | cliente→Customer | pagamento→Payment | tarefa→Task | livros→Book (plural→singular)",
     "source": "code_pattern",
-    "updated_at": 1780728441.2585335
+    "updated_at": 1780728707.0301218
   },
   "nlp:instructions-not-entities": {
     "content": "// NEVER create src/ folder from instructions: 'configure docker'→docker-compose NOT src/docker. 'mongoDb'→MongooseModule NOT src/mongodb. 'inglês'→code language NOT src/inglês. Only domain nouns become src/ folders.",
     "source": "code_pattern",
-    "updated_at": 1780728441.460518
+    "updated_at": 1780728707.1970112
   },
   "nlp:auth-detection": {
     "content": "// has_auth=true ONLY with: auth|autenticação|login|jwt|token|oauth|roles|permissions. 'usuários' alone→has_auth=FALSE. 'API de usuários'→User entity, NO auth. 'API com login JWT'→has_auth=TRUE",
     "source": "code_pattern",
-    "updated_at": 1780728441.6330917
+    "updated_at": 1780728707.3818154
   },
   "nlp:stack-db-detection": {
     "content": "// Stack: nestjs→NestJS|spring→Spring Boot|fastapi/python→FastAPI|dotnet/.net→ASP.NET. DB: mongodb/mongo→Mongoose|postgres/postgresql→TypeORM+pg|mysql→TypeORM+mysql2|redis→cache only NOT main db",
     "source": "code_pattern",
-    "updated_at": 1780728441.791962
+    "updated_at": 1780728707.5578432
   },
   "nlp:user-pt-br-informal": {
     "content": "\n# Vocabulário informal PT-BR que o usuário usa → o que quer dizer\n\nAbreviações:\n  oq = o que | tbm = também | tals = etc | pra/pro = para | n/ñ = não\n  ia = inteligência artificial | mto/mt = muito | blz = beleza | vlw = valeu\n\nAções implícitas:\n  \"configura X\"      → configure/setup X\n  \"tem o X\"          → usa X como tecnologia (tem o mongoDb = usa MongoDB)\n  \"arruma X\"         → fix/correct X\n  \"melhora X\"        → improve X\n  \"faz um CRUD\"      → create full CRUD (schema + service + module + controller + dto)\n  \"deixa só o necessário\" → minimal, não adicionar extras\n  \"código em inglês\" → todos os identificadores/arquivos em English\n\nExemplos de pedidos reais → o que o usuário quer:\n  \"configura o docker pra essa app que tem mongoDb\"\n    → gerar docker-compose.yml + Dockerfile com MongoDB (sem extras)\n  \"cria uma api de livros com mongo\"\n    → NestJS API, entidade Book (não Livros!), MongoDB, CRUD\n  \"faz a feature de auth com jwt\"\n    → adicionar módulo de autenticação com JWT + Passport\n  \"arruma o build\"\n    → devfix, corrigir erros TypeScript\n  \"não foi das tecnologias usadas\"\n    → gerou arquivos/configs para tecnologia diferente do pedido",
     "source": "code_pattern",
-    "updated_at": 1780728444.7524283
+    "updated_at": 1780728708.2960858
   },
   "nlp:user-intent-patterns": {
     "content": "\n# Padrões de intenção do usuário\n\n\"CRUD de X com Y\" → criar entidade X usando banco Y\n  CRUD de livros com MongoDB → Book entity + Mongoose\n  CRUD de produtos com postgres → Product entity + TypeORM\n\n\"configure o X\" → configurar serviço/feature X (editar arquivos existentes)\n  configure o swagger → instalar + editar main.ts\n  configure o docker → criar docker-compose.yml + Dockerfile\n  configure o CORS → editar main.ts\n\n\"adicione X\" → adicionar feature nova\n  adicione autenticação JWT → auth module\n  adicione rate limiting → throttler\n\n\"tem o X\" → usa X como dependência/tecnologia\n  \"app que tem o mongoDb\" → db_type = mongodb\n\n\"só\" / \"apenas\" / \"somente\" = MINIMAL — não adicionar NADA além do pedido\n  \"só o mongodb\" → docker-compose só com MongoDB, SEM Redis/Kafka/Nginx\n  \"só o necessário\" → mínimo funcional, sem extras\n\n\"código em inglês\" → todos arquivos, variáveis, classes em English\n  book.schema.ts (não livro.schema.ts)\n  class Book (não class Livro)\n  title, author, price (não titulo, autor, preco)",
     "source": "code_pattern",
-    "updated_at": 1780728444.9274259
+    "updated_at": 1780728708.4694417
   },
   "nlp:user-corrections": {
     "content": "\n# O que o usuário quer dizer quando reclama\n\n\"criou coisas nada a ver\" → gerou arquivos/pastas irrelevantes (src/docker, src/mongodb)\n\"não foi das tecnologias usadas\" → .env ou config com tecnologia errada (postgres em projeto mongo)\n\"tá repetindo\" → loop fazendo a mesma coisa\n\"não usa o treinamento\" → training store não está sendo consultado na geração\n\"precisa entender melhor oq pede\" → NLP está falhando na interpretação do pedido\n\"não evolui\" → loop estudando os mesmos tópicos repetidamente\n\"ficou melhor\" → aprovado, continuar com a abordagem\n\nQuando usuário diz qualquer variação de \"X não funciona\" ou \"X está errado\":\n  1. Identifica qual X especificamente\n  2. Verifica a causa raiz\n  3. Corrige o problema, não apenas o sintoma\n  4. Documenta o anti-pattern para não repetir",
     "source": "code_pattern",
-    "updated_at": 1780728445.125826
+    "updated_at": 1780728708.6244764
   },
   "nlp:livros-is-Book": {
     "content": "CRITICAL: 'livros' in Portuguese → entity name is 'Book' (English, singular PascalCase), NEVER 'Livros'. 'usuários'→User, 'produtos'→Product, 'pedidos'→Order, 'livros'→Book. The entity class name is ALWAYS English singular PascalCase.",
     "source": "forced_training",
-    "updated_at": 1780728335.2170994
+    "updated_at": 1780728629.7033703
   },
   "nlp:no-src-folders-from-config": {
     "content": "CRITICAL: NEVER create src/ subfolders from infrastructure words: docker→NO src/docker/, mongodb→NO src/mongodb/, configure→NO src/configure/. Only create src/{entityname}/ from business domain nouns. 'configure docker with mongodb' → docker-compose.yml + Dockerfile, NOTHING in src/",
     "source": "forced_training",
-    "updated_at": 1780728335.253398
+    "updated_at": 1780728629.7315776
   },
   "nlp:usuarios-no-auth": {
     "content": "CRITICAL: 'usuários/users' alone does NOT mean has_auth=true. has_auth=true ONLY when: auth, autenticação, login, jwt, token, oauth, roles, permissions appear. 'API de usuários com MongoDB' → has_auth=FALSE, User is just an entity.",
     "source": "forced_training",
-    "updated_at": 1780728335.28607
+    "updated_at": 1780728629.766005
   },
   "nlp:docker-only-means-only": {
     "content": "CRITICAL: 'MongoDB and Docker only' means the docker-compose.yml has ONLY MongoDB service. Do NOT add Redis, Kafka, Nginx, or any other service unless explicitly requested. If user says 'only', take it literally.",
     "source": "forced_training",
-    "updated_at": 1780728335.322668
+    "updated_at": 1780728629.7968373
   },
   "self:nlp:entity-extraction:wrong": {
     "content": "ANTI-PATTERN in nlp:\nGenerated code WRONGLY used: src/docker\nThese are FORBIDDEN in this context.\nCorrect: Book, mongodb, false",
