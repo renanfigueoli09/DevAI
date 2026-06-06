@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**: Use `graphql-cli` for schema generation and validation.\n- **Latest Versions**: Ensure using GraphQL.js v16 or later for the latest features and security patches.\n- **Key Config Options**:\n  - `schema`: Define your GraphQL schema using SDL (Schema Definition Language).\n  - `resolvers`: Implement resolvers to handle data fetching logic.\n  - `context`: Pass context to resolvers for shared data across operations.\n  - `directives`: Use directives for reusable functionality like authorization and caching.",
     "source": "code_example",
     "updated_at": 1780784211.4573126
+  },
+  "search:API Design Principles for FastAPI + Core:designing apis for scalability": {
+    "content": "- **CLI Commands**: Use `kubectl scale deployment <deployment-name> --replicas=<number>` to scale deployments.\n- **Latest Versions**: Ensure using the latest version of your API framework and libraries for optimal performance.\n- **Key Config Options**:\n  - Pagination: Implement pagination in APIs with parameters like `page` and `limit`.\n  - Caching: Use caching strategies such as Redis or Memcached to store frequently accessed data.\n  - Load Balancing: Configure load balancers like Nginx or AWS ELB to distribute traffic evenly across servers.\n  - Asynchronous Processing: Utilize asynchronous processing frameworks like Celery for handling background tasks.",
+    "source": "web_search",
+    "updated_at": 1780784221.2684858
+  },
+  "search:API Design Principles for FastAPI + Core:designing apis for scalability_ex": {
+    "content": "- Use Flask's `flask-restx` extension for API documentation.\n- Implement rate limiting using Flask-Limiter to prevent abuse.\n- Use Redis for caching to reduce database load.\n- Optimize MongoDB queries with indexes and aggregation pipelines.\n- Deploy on a cloud platform like AWS or GCP for auto-scaling capabilities.\n- Monitor API performance using tools like Prometheus and Grafana.\n- Use Docker containers for consistent deployment across environments.\n- Implement circuit breakers with libraries like Hystrix to manage failures gracefully.",
+    "source": "code_example",
+    "updated_at": 1780784230.2303407
+  },
+  "search:API Design Principles for FastAPI + Core:versioning strategies in api d": {
+    "content": "- **CLI Commands**: Use `curl` or Postman to test API endpoints.\n- **Latest Versions**: Check the official documentation for the latest version of each strategy.\n- **Key Config Options**:\n  - URL path: `/api/v1/resource`\n  - Query parameter: `?version=1`\n  - Header: `X-API-Version: 1`\n  - Date-based: Use ISO format in headers or query parameters.",
+    "source": "web_search",
+    "updated_at": 1780784238.50039
+  },
+  "search:API Design Principles for FastAPI + Core:versioning strategies in api d_ex": {
+    "content": "- **CLI Commands**:\n  - `curl` with `-H \"Accept: application/vnd.example.v2+json\"` for specifying API version.\n  \n- **Latest Versions**:\n  - REST API Versioning Guide: Latest as of Sep 1, 2025.\n\n- **Key Config Options**:\n  - Use semantic versioning (e.g., `v1`, `v2`).\n  - Implement versioning in the URL path or header.\n  - Document all versions and their changes.",
+    "source": "code_example",
+    "updated_at": 1780784242.3384774
   }
 }
