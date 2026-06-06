@@ -2,6 +2,6 @@
   "pattern:spring+mongodb:document": {
     "content": "// @Document(collection='books') @Data class Book { @Id String id; @NotBlank String title; @CreatedDate LocalDateTime createdAt; }. Repository: extends MongoRepository<Book,String>{}",
     "source": "code_pattern",
-    "updated_at": 1780729921.7297473
+    "updated_at": 1780730105.1325212
   }
 }

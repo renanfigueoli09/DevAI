@@ -1,0 +1,12 @@
+{
+  "search:dotnet-entityframework-core-migration:ef core migrations for large a": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update`: Applies all migrations to the database.\n  - `dotnet ef migrations add <MigrationName>`: Creates a new migration with the specified name.\n\n- **Latest Versions**:\n  - EF Core 7.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `UseMigrationsAssembly`: Specifies the assembly containing migrations.\n  - `MigrationsHistoryTable`: Customizes the table used to track migration history.\n\nThese actionable facts should help developers effectively manage EF Core migrations in large applications.",
+    "source": "web_search",
+    "updated_at": 1780730093.2254188
+  },
+  "search:dotnet-entityframework-core-migration:ef core migrations for large a_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration.\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n\n- **Latest Versions**:\n  - EF Core 7.0 (as of my last update in October 2023).\n\n- **Key Config Options**:\n  - `UseSqlServer`: Specifies SQL Server as the database provider.\n  - `MigrationsHistoryTable`: Customizes the name of the migrations history table.\n  - `EnableLazyLoadingProxies`: Enables lazy loading for navigation properties.",
+    "source": "code_example",
+    "updated_at": 1780730101.170978
+  }
+}
