@@ -1,13 +1,13 @@
 {
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling": {
-    "content": "- **CLI Commands**:\n  - `docker logs <container_id>`: View container logs.\n  - `docker inspect <container_id>`: Get detailed information about a container.\n  - `docker exec -it <container_id> /bin/bash`: Execute commands inside a running container.\n\n- **Latest Versions**:\n  - Ensure Docker is up to date using `docker --version`.\n\n- **Key Config Options**:\n  - `Dockerfile` directives like `FROM`, `RUN`, `CMD`.\n  - Environment variables in `docker run` with `-e VAR=value`.\n  - Volumes for persistent storage with `-v /host/path:/container/path`.",
+    "content": "- Use `docker logs <container_id>` to view container logs.\n- Run `docker ps -a` to list all containers, including stopped ones.\n- Utilize `docker inspect <container_id>` for detailed container information.\n- Employ `docker exec -it <container_id> /bin/bash` to access a running container's shell.\n- Update Docker to the latest version using your package manager (e.g., `sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io`).\n- Configure Docker daemon settings in `/etc/docker/daemon.json`.\n- Use `docker-compose up -d` to start services defined in a `docker-compose.yml` file.\n- Check Docker system health with `docker system df` and `docker system events`.\n- Restart the Docker service using `sudo systemctl restart docker`.",
     "source": "web_search",
-    "updated_at": 1780761915.0679388
+    "updated_at": 1780761965.8467574
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling_ex": {
-    "content": "- Use `docker remove -v` to remove a container and its associated volumes.\n- Check Docker Compose documentation for the latest version and usage examples.\n- Configure error handling in Docker Compose using middleware like `error-handling-middleware`.\n- For debugging, run containers with verbose logging using `-v` flag.\n- Ensure commands are correctly spelled and include all necessary characters.",
+    "content": "- Use `docker remove` command to delete containers.\n- Ensure correct command syntax, e.g., `docker run -v /host/path:/container/path image_name`.\n- Check Docker version with `docker --version`.\n- Configure Docker Compose using `docker-compose.yml`, specifying services and volumes.\n- Implement error handling in scripts using try-except blocks for Docker operations.\n- Use `--exit-code-from` flag in `docker-compose up` to specify which service's exit code determines the CLI's exit status.",
     "source": "code_example",
-    "updated_at": 1780761915.7445014
+    "updated_at": 1780761968.4584444
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management": {
     "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: Lists all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Provides detailed information about a specific pod.\n  - `kubectl logs <pod-name> -n <namespace>`: Displays the logs of a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x (as of my last update).\n\n- **Key Config Options**:\n  - `imagePullPolicy`: Specifies when to pull an image (`Always`, `IfNotPresent`, `Never`).\n  - `resources`: Defines CPU and memory limits and requests.\n  - `restartPolicy`: Controls how Kubernetes restarts a pod (`Always`, `OnFailure`, `Never`).",
