@@ -8,5 +8,10 @@
     "content": "- **CLI Commands**:\n  - `npm install sequelize-cli --save-dev`\n  - `npx sequelize init`\n\n- **Latest Versions**:\n  - Sequelize: 6.x\n  - Express: 4.x\n\n- **Key Config Options**:\n  - `config.json`: Database connection settings.\n  - `models/`: Define your data models using JavaScript classes.\n  - `migrations/`: Manage database schema changes with migrations.",
     "source": "code_example",
     "updated_at": 1780748070.7016776
+  },
+  "search:nodejs-sequelize:node.js sequelize migrations a": {
+    "content": "- **CLI Commands**:\n  - `npx sequelize-cli db:migrate` to apply migrations.\n  - `npx sequelize-cli db:migrate:undo` to revert the last migration.\n  - `npx sequelize-cli seed:generate --name <name>` to generate a new seeder file.\n  - `npx sequelize-cli db:seed:all` to run all seeders.\n\n- **Latest Versions**:\n  - Sequelize CLI: v7.0.0\n  - Sequelize Core: v6.25.4\n\n- **Key Config Options**:\n  - `config/config.json`: Specifies database connection details.\n  - `models/index.js`: Defines model associations and exports models.\n  - `migrations/` directory: Contains migration files for schema changes.\n  - `seeders/` directory: Contains seed files to populate the database.",
+    "source": "web_search",
+    "updated_at": 1780748080.3126357
   }
 }
