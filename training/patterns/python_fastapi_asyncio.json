@@ -2,11 +2,11 @@
   "search:python-fastapi-asyncio:python fastapi asyncio pattern": {
     "content": "- **CLI Commands**: Use `uvicorn` to run your FastAPI app with asyncio support.\n  ```bash\n  uvicorn main:app --host 0.0.0.0 --port 8000 --reload\n  ```\n- **Latest Version**: Ensure you are using the latest version of FastAPI and Python (3.9+).\n  ```bash\n  pip install fastapi[all] python==3.10\n  ```\n- **Key Config Options**:\n  - `app`: Your FastAPI application instance.\n  - `host`: The host to run your server on (`0.0.0.0` for all interfaces).\n  - `port`: The port number to listen on (default is 8000).\n  - `reload`: Enable auto-reload during development.\n\nThese actionable facts should help developers set up and configure their FastAPI applications effectively using asyncio in 2025.",
     "source": "web_search",
-    "updated_at": 1780759781.0685406
+    "updated_at": 1780760197.3077223
   },
   "search:python-fastapi-asyncio:fastapi asyncio security best ": {
     "content": "- Use `uvicorn` as the ASGI server for production.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- Implement JWT authentication with libraries like `python-jose`.\n- Configure rate limiting using middleware such as `fastapi-limiter`.\n- Enable HTTPS by providing SSL certificates when running Uvicorn.\n- Use environment variables for sensitive information like API keys.\n- Optimize performance with async operations and background tasks.\n- Deploy on platforms like Render for zero-downtime deploys.\n- Regularly update FastAPI, Uvicorn, and other dependencies.",
     "source": "web_search",
-    "updated_at": 1780759781.5977485
+    "updated_at": 1780760197.8328197
   }
 }
