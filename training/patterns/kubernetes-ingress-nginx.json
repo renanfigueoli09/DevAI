@@ -1,0 +1,12 @@
+{
+  "search:kubernetes+ingress-nginx:ingress nginx performance opti": {
+    "content": "- **Optimize NGINX Ingress Controller Startup Performance**:\n  - Use `--defer-host-conflicts` flag during startup to defer host conflict resolution.\n  \n- **Update NGINX Ingress Controller**:\n  - Ensure using the latest version for performance improvements and security patches.\n\n- **Key Config Options**:\n  - `worker_processes`: Set based on CPU cores (e.g., `auto`).\n  - `worker_connections`: Adjust based on expected traffic volume.\n  - `keepalive_timeout`: Increase if connections are kept open longer.\n\n- **Use Efficient Annotations**:\n  - Apply annotations like `nginx.ingress.kubernetes.io/rewrite-target: /$1` for URL rewriting.\n\n- **Enable Gzip Compression**:\n  - Configure gzip compression to reduce response sizes.\n  \n- **Monitor and Tune**:\n  - Use tools like Prometheus and Grafana to monitor performance metrics and adjust configurations accordingly.\n\n- **Optimize Backend Services**:\n  - Ensure backend services are optimized for high traffic, using caching, load balancing, etc.",
+    "source": "web_search",
+    "updated_at": 1780714190.923699
+  },
+  "search:kubernetes+ingress-nginx:ingress nginx performance opti_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-controller-config-file>`\n  - `kubectl edit deployment nginx-ingress-controller`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.5.1\n  - Kubernetes: v1.27.0\n\n- **Key Config Options**:\n  - `worker_processes auto`\n  - `worker_connections 1024`\n  - `keepalive_timeout 65`\n  - `proxy_read_timeout 90s`\n  - `proxy_send_timeout 90s`\n  - `sendfile on`\n  - `tcp_nopush on`\n  - `tcp_nodelay on`\n  - `gzip on`\n  - `limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s`\n  - `limit_req zone=one burst=5 nodelay`",
+    "source": "code_example",
+    "updated_at": 1780714200.3589928
+  }
+}

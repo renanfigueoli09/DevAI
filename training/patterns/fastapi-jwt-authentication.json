@@ -1,0 +1,17 @@
+{
+  "search:fastapi+jwt-authentication:fastapi jwt authentication tut": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- Install `uvicorn` for running the application with `uvicorn main:app --reload`.\n- For JWT authentication, use `python -m pip install python-jose[cryptography] passlib[bcrypt]`.\n- Key config options include setting up a secret key (`SECRET_KEY`) and an algorithm (`ALGORITHM`).\n- Use `OAuth2PasswordBearer` for token authentication.\n- Implement user login to generate JWT tokens using `JWT.encode()`.\n- Protect routes with `Depends()` on the OAuth2 password bearer token.\n- For production, ensure HTTPS is used by configuring your server or using middleware like `fastapi.middleware.httpsredirect.HTTPSRedirectMiddleware`.",
+    "source": "web_search",
+    "updated_at": 1780714109.8765242
+  },
+  "search:fastapi+jwt-authentication:fastapi jwt authentication tut_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app.\n  \n- **Latest Versions**:\n  - FastAPI: v0.85.2\n  - Pydantic: v1.9.2\n  - SQLAlchemy: v1.4.36\n  - psycopg2-binary: v2.9.1\n  \n- **Key Config Options**:\n  - `SECRET_KEY`: For JWT token signing.\n  - `ALGORITHM`: Algorithm used for encoding/decoding tokens (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Token expiration time in minutes.\n  - Database URL: Connection string for PostgreSQL.",
+    "source": "code_example",
+    "updated_at": 1780714117.3639936
+  },
+  "search:fastapi+jwt-authentication:fastapi jwt security best prac": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI along with all dependencies.\n- For JWT authentication, use the `python-jose[cryptography]` package for handling JWTs securely.\n- Implement OAuth2 with Password and Bearer tokens using `fastapi.security.OAuth2PasswordBearer`.\n- Configure your application's secret key in an environment variable or directly in your settings file.\n- Use `bcrypt` for password hashing to ensure secure storage of user credentials.\n- For role-based access control, define roles in your database and check permissions in your API endpoints.\n- Implement a dual-token architecture (access + refresh tokens) using Redis for session management.\n- Set up automatic user caching to improve performance by reducing database queries.\n- Use `fastapi.security.OAuth2PasswordRequestForm` for handling password-based authentication requests.",
+    "source": "web_search",
+    "updated_at": 1780714128.2465947
+  }
+}

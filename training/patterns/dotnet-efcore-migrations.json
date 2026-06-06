@@ -1,0 +1,22 @@
+{
+  "search:dotnet+efcore-migrations:ef core migrations for .net co": {
+    "content": "- **CLI Commands**: `dotnet ef migrations add <MigrationName>`, `dotnet ef database update`\n- **Latest Versions**: EF Core 7.0, .NET CLI tools version 6.0\n- **Key Config Options**:\n  - ConnectionStrings in `appsettings.json`\n  - Migrations folder configuration in project file",
+    "source": "web_search",
+    "updated_at": 1780714148.646461
+  },
+  "search:dotnet+efcore-migrations:ef core migrations for .net co_ex": {
+    "content": "- **Install EF Core Tools**: `dotnet tool install --global dotnet-ef`\n- **Add Migration**: `dotnet ef migrations add InitialCreate`\n- **Update Database**: `dotnet ef database update`\n- **Generate Script**: `dotnet ef migrations script`\n- **Latest Version**: Check [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools/) for the latest version.\n- **Key Config Options**:\n  - `ConnectionStrings:DefaultConnection`: Database connection string in `appsettings.json`.\n  - `MigrationsAssembly`: Specifies the assembly containing migrations.\n\nThese commands and configurations provide a solid foundation for managing database schema changes using EF Core in .NET Core applications.",
+    "source": "code_example",
+    "updated_at": 1780714154.6711135
+  },
+  "search:dotnet+efcore-migrations:best practices for ef core mig": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Creates a new migration.\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n  - `dotnet ef migrations remove`: Removes the last applied migration.\n\n- **Latest Versions**:\n  - EF Core 7.0\n  - .NET 6.0\n\n- **Key Config Options**:\n  - `MigrationsAssembly`: Specifies the assembly containing migrations.\n  - `MigrationTableName`: Customizes the name of the migration table in the database.\n  - `Schemas`: Defines the schema for the tables created by migrations.",
+    "source": "web_search",
+    "updated_at": 1780714163.7576485
+  },
+  "search:dotnet+efcore-migrations:best practices for ef core mig_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `UseSqlServer` for SQL Server\n  - `UseMySql` for MySQL\n  - `MigrationsAssembly` to specify the assembly containing migrations",
+    "source": "code_example",
+    "updated_at": 1780714168.120373
+  }
+}
