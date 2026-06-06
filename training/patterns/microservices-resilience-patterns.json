@@ -1,0 +1,22 @@
+{
+  "search:microservices+resilience-patterns:microservices resilience patte": {
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, e.g., `kubectl apply -f deployment.yaml`.\n- **Latest Versions**: Check the official documentation or GitHub repositories for the latest versions of microservices frameworks.\n- **Key Config Options**:\n  - **Circuit Breaker**: Implement using libraries like Hystrix or Resilience4j.\n  - **Retry Mechanism**: Configure retry policies in frameworks such as Spring Retry or Polly.\n  - **Timeouts**: Set timeouts for service calls to prevent long-running requests from blocking the system. Use tools like Netflix Ribbon or OpenFeign.\n  - **Bulkhead Pattern**: Isolate services using bulkheads to limit impact of failures. Implement with libraries like Resilience4j or Bulkhead.\n  - **Fallback Mechanism**: Define fallback methods for failed service calls. Use frameworks like Spring Cloud Gateway or Hystrix.\n- **Documentation and Best Practices**: Refer to official documentation, such as the Kubernetes documentation, for best practices and examples.",
+    "source": "web_search",
+    "updated_at": 1780711716.9995394
+  },
+  "search:microservices+resilience-patterns:microservices resilience patte_ex": {
+    "content": "- **CLI Commands**: `dotnet new webapi -n MyMicroservice`\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Polly: 8.2.3\n- **Key Config Options**:\n  - Polly Policies (Retry, Circuit Breaker, Timeout)\n  - Configuration in `appsettings.json` for resilience settings",
+    "source": "code_example",
+    "updated_at": 1780711732.1800075
+  },
+  "search:microservices+resilience-patterns:circuit breaker pattern in mic": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f circuit-breaker-config.yaml`\n  - `curl -X POST http://localhost:8080/circuitbreaker`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.1\n  - Hystrix (for Circuit Breaker): 1.5.18\n\n- **Key Config Options**:\n  - `failureThreshold`: Set to 5 for 5 consecutive failures.\n  - `resetTimeout`: Set to 30 seconds for the circuit breaker to transition from open to half-open state.\n  - `fallbackMethod`: Define a method to handle fallback scenarios.",
+    "source": "web_search",
+    "updated_at": 1780711739.8989916
+  },
+  "search:microservices+resilience-patterns:circuit breaker pattern in mic_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Boot 3.2, Resilience4j 1.8.1.\n- **Key Config Options**:\n  - `circuitbreaker.instances.<instanceName>.registerHealthIndicator: true`\n  - `circuitbreaker.instances.<instanceName>.failureRateThreshold: 50`\n  - `circuitbreaker.instances.<instanceName>.waitDurationInOpenState: PT30S`",
+    "source": "code_example",
+    "updated_at": 1780711746.5654287
+  }
+}
