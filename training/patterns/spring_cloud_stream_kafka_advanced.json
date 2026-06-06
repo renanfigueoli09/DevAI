@@ -2,21 +2,21 @@
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka adva": {
     "content": "- **Latest Version of Spring Cloud Stream Binder Kafka**: As of my last update, the latest version is not specified in the provided text. For the most current version, check the [Maven Repository](https://search.maven.org/artifact/org.springframework.cloud/spring-cloud-stream-binder-kafka).\n\n- **Key Configuration Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Configures how to reset offsets when there is no initial offset in Kafka or if an offset does not exist any more on the server (e.g., data has been deleted).\n  \n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Kafka, use the following command:\n    ```bash\n    mvn archetype:generate -DgroupId=com.example -DartifactId=spring-cloud-stream-kafka-demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false\n    ```\n  - To add dependencies for Spring Cloud Stream and Kafka to your `pom.xml`, include:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.cloud</groupId>\n        <artifactId>spring-cloud-stream-binder-kafka</artifactId>\n    </dependency>\n    ```\n\n- **Advanced Patterns**:\n  - Implementing fault tolerance: Use Kafka's built-in features like message retries and dead-letter queues.\n  - Load balancing: Configure multiple instances of your application to distribute load across them.\n  - Exactly Once Semantics: Ensure that messages are processed exactly once using Kafka transactions or idempotent producers.\n\n- **Documentation**:\n  - For detailed information, refer to the [Spring Cloud Stream Binder Reference Guide](https://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#spring-cloud-stream-binder-kafka).\n\nThese points should help developers set up and configure Spring Cloud Stream with Kafka effectively.",
     "source": "web_search",
-    "updated_at": 1780773451.5386233
+    "updated_at": 1780774172.9069538
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka adva_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your Spring Cloud Stream application.\n- **Latest Versions**: Ensure you are using the latest Spring Boot and Spring Cloud Stream versions for compatibility.\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.binder.defaultBrokerPort`: Set default Kafka broker port.\n  - `spring.cloud.stream.bindings.input.destination`: Specify input topic.\n  - `spring.cloud.stream.bindings.output.destination`: Specify output topic.\n  - `spring.cloud.stream.error.enabled`: Enable error handling.\n  - `spring.cloud.stream.error.destination`: Specify error topic.",
     "source": "code_example",
-    "updated_at": 1780773452.4738963
+    "updated_at": 1780774173.6960201
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka erro": {
     "content": "- Use `spring-cloud-stream` version 3.x or later.\n- Configure error handling in your application properties or YAML file.\n- Set up a Dead Letter Topic (DLT) for failed messages.\n- Implement retry strategies using `@Retryable` annotation or `RetryTemplate`.\n- Enable auto-recovery with `autoStartup: true` and `backOffMaxAttempts: 10`.\n- Use `spring.cloud.stream.bindings.input.errors.destination` to specify the DLT.\n- Configure Kafka consumer properties like `max.poll.records`, `enable.auto.commit`, etc.\n- Monitor error rates using metrics provided by Spring Boot Actuator.",
     "source": "web_search",
-    "updated_at": 1780773453.3984945
+    "updated_at": 1780774174.5019088
   },
   "search:spring-cloud-stream-kafka-advanced:spring cloud stream kafka erro_ex": {
     "content": "- Use `spring-cloud-stream` version 3.2.0.RELEASE or later.\n- Configure error handling in your application properties or YAML file:\n  ```yaml\n  spring:\n    cloud:\n      stream:\n        kafka:\n          binder:\n            auto-create-topics: true\n            error-handling-strategy: rethrow\n            max-attempts: 10\n            back-off-initial-interval: 2s\n            back-off-max-interval: 30s\n            back-off-multiple: 2.0\n  ```\n- Implement a custom `ErrorHandler` bean if default strategies do not meet your needs.\n- Use Dead Letter Topic (DLT) for failed messages:\n  ```yaml\n  spring:\n    cloud:\n      stream:\n        kafka:\n          binder:\n            error-channel-enabled: true\n            dlt-topic: my-dlt-topic\n  ```\n- Ensure Kafka producer and consumer properties are correctly configured for reliability.",
     "source": "code_example",
-    "updated_at": 1780773454.2995875
+    "updated_at": 1780774175.2734451
   }
 }

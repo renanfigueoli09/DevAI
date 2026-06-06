@@ -2,11 +2,11 @@
   "search:typescript+jest-testing:typescript jest mocking and sp": {
     "content": "- **CLI Commands**:\n  - `jest --watch` to run tests in watch mode.\n  - `jest --coverage` to generate a coverage report.\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test environment has been set up.\n  - `transformIgnorePatterns`: An array of regexp pattern strings that are matched against all source file paths before transformation. Files matching the following patterns will not be transformed.\n  - `testEnvironment`: The test environment (e.g., 'jsdom', 'node') to use for running tests.",
     "source": "web_search",
-    "updated_at": 1780773345.867718
+    "updated_at": 1780774069.6167252
   },
   "search:typescript+jest-testing:typescript jest mocking and sp_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"setupFilesAfterEnv\": [\"./jest.setup.ts\"]`",
     "source": "code_example",
-    "updated_at": 1780773346.6865997
+    "updated_at": 1780774070.563713
   }
 }

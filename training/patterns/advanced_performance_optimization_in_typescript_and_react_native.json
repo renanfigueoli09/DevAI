@@ -1,22 +1,22 @@
 {
   "search:Advanced Performance Optimization in TypeScript and React Native:typescript performance optimiz": {
-    "content": "- Use `tsc --incremental` for faster builds by enabling incremental compilation.\n- Update TypeScript to the latest version using `npm install typescript@latest`.\n- Configure `tsconfig.json` with `\"module\": \"ESNext\"` and `\"target\": \"ESNext\"` for optimal performance.\n- Enable `\"strictNullChecks\"` to catch potential null or undefined errors early.\n- Use `tsc --watch` for real-time compilation during development.\n- Optimize imports by using named imports instead of wildcard imports (`import { Component } from 'react'`).\n- Avoid unnecessary type assertions and use type guards when possible.\n- Utilize the latest TypeScript features like `async/await` and template literals for cleaner code.\n- Regularly profile your application to identify bottlenecks and optimize accordingly.",
+    "content": "- Use `tsc --incremental` for faster builds.\n- Update TypeScript to the latest version for performance improvements.\n- Configure `tsconfig.json`:\n  - `\"module\": \"ESNext\"`\n  - `\"target\": \"ESNext\"`\n  - `\"strict\": true`\n  - `\"esModuleInterop\": true`\n  - `\"skipLibCheck\": true`\n  - `\"forceConsistentCasingInFileNames\": true`\n- Use `--noEmitOnError` to prevent unnecessary compilation.\n- Employ `--watch` for real-time updates during development.\n- Optimize imports with named imports instead of `* as`.\n- Minimize the use of global variables and functions.\n- Utilize TypeScript's type system to catch errors early.\n- Profile your application using tools like Chrome DevTools.",
     "source": "web_search",
-    "updated_at": 1780773689.936378
+    "updated_at": 1780774344.5608656
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:typescript performance optimiz_ex": {
-    "content": "- **CLI Commands**:\n  - `tsc --incremental` to enable incremental compilation.\n  - `tsc --watch` for real-time type checking and compilation.\n\n- **Latest Versions**:\n  - TypeScript 5.x is recommended for the latest features and performance improvements.\n\n- **Key Config Options**:\n  - `compilerOptions.target`: Set to \"ESNext\" or \"ES2021\" for modern JavaScript.\n  - `compilerOptions.module`: Use \"esnext\" for better tree-shaking support.\n  - `compilerOptions.jsx`: Set to \"react-jsx\" for React components.\n  - `compilerOptions.removeComments`: True to remove comments from the output.\n  - `compilerOptions.sourceMap`: False in production for performance benefits.",
+    "content": "- **CLI Commands**:\n  - `tsc --incremental` for faster compilation by caching results.\n  - `tsc --watch` to automatically recompile on file changes.\n\n- **Latest Versions**:\n  - TypeScript v5.x is recommended for the latest features and performance improvements.\n\n- **Key Config Options**:\n  - `\"module\": \"ESNext\"` for better tree-shaking support.\n  - `\"target\": \"ES2019\"` to take advantage of modern JavaScript features.\n  - `\"isolatedModules\": true` to ensure each file can be compiled in isolation.",
     "source": "code_example",
-    "updated_at": 1780773700.8324575
+    "updated_at": 1780774347.2242758
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips": {
-    "content": "- Use `React.memo` to minimize re-renders.\n- Employ `useEffect` cleanup method for subscriptions and asynchronous tasks.\n- Replace `ListView` with `FlatList` or `SectionList`.\n- Utilize `react-native-reanimated` for smooth animations.\n- Implement lazy loading for images and components.\n- Optimize state management with Redux or Context API.\n- Use `ScrollView` instead of `FlatList` when possible for better performance.\n- Enable Hermes engine in Android for improved JavaScript execution speed.\n- Monitor memory usage using React Native Debugger or similar tools.",
+    "content": "- Use `React.memo` to prevent unnecessary re-renders.\n- Implement `useEffect` cleanup to terminate subscriptions and asynchronous tasks.\n- Avoid using `ListView`, opt for more efficient alternatives like `FlatList`.\n- Utilize `react-native-screens` for better performance in navigation.\n- Enable Hermes engine for faster JavaScript execution with `--hermes-engine` flag.\n- Use `react-native-reanimated` for smooth animations.\n- Optimize images by compressing and using appropriate formats.\n- Minimize global state management to reduce re-renders.\n- Use `useCallback` and `useMemo` to memoize functions and values.",
     "source": "web_search",
-    "updated_at": 1780773708.186485
+    "updated_at": 1780774352.059713
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips_ex": {
-    "content": "- Use Hermes JS engine for improved performance.\n- Implement `React.memo` and `useMemo` to prevent unnecessary re-renders.\n- Utilize `FlatList` with `keyExtractor` for efficient list rendering.\n- Enable `bridge optimization` in React Native CLI using `--bridge-optimization`.\n- Update React Native to the latest version for performance improvements.\n- Configure `metro.config.js` for faster bundling.\n- Use `AsyncStorage` or `React Query` for state management and data fetching.\n- Implement lazy loading with `React.lazy` and `Suspense`.\n- Monitor app performance using React DevTools and Chrome DevTools.",
+    "content": "- Use `react-native link` to link native modules.\n- Update React Native to the latest version using `npx react-native upgrade`.\n- Implement memoization with `React.memo` or `useMemo`.\n- Utilize `FlatList` for efficient list rendering.\n- Enable Hermes engine by setting `\"hermesEnabled\": true` in `android/app/build.gradle`.\n- Optimize bridge performance by reducing unnecessary props and state updates.\n- Use `react-native-reanimated` for smooth animations.\n- Implement lazy loading with `React.lazy` and `Suspense`.\n- Profile your app using React DevTools for identifying bottlenecks.",
     "source": "code_example",
-    "updated_at": 1780773716.3380096
+    "updated_at": 1780774355.8716817
   }
 }

@@ -1,12 +1,12 @@
 {
   "search:React Native Testing Library with React Query:react native testing library": {
-    "content": "- **CLI Commands**: `npx @testing-library/react-native test`\n- **Latest Version**: Check on [npm](https://www.npmjs.com/package/@testing-library/react-native)\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: For setting up Jest before tests run.\n  - `testEnvironment`: Set to `'react-native'` for React Native environment.\n  - `transformIgnorePatterns`: Exclude node_modules except those in your project.",
+    "content": "- **Install React Native Testing Library**: `npm install @testing-library/react-native`\n- **CLI Commands**:\n  - `react-test-renderer`: For rendering components to JSON.\n  - `jest`: For running tests.\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Add setup files for testing environment.\n  - `testMatch`: Specify test file patterns.\n- **Latest Version**: Check [npm page](https://www.npmjs.com/package/@testing-library/react-native) for the latest version.\n- **Example Test File**:\n  ```javascript\n  import React from 'react';\n  import { render, screen } from '@testing-library/react-native';\n  import App from './App';\n\n  test('renders learn react link', () => {\n    render(<App />);\n    const linkElement = screen.getByText(/learn react/i);\n    expect(linkElement).toBeInTheDocument();\n  });\n  ```",
     "source": "web_search",
-    "updated_at": 1780773661.5656607
+    "updated_at": 1780774322.8318315
   },
   "search:React Native Testing Library with React Query:react native testing library_ex": {
-    "content": "- Install React Native Testing Library: `npm install --save-dev @testing-library/react-native`\n- Import necessary modules in your test file:\n  ```javascript\n  import { render, fireEvent } from '@testing-library/react-native';\n  ```\n- Example test for a component:\n  ```javascript\n  import MyComponent from './MyComponent';\n\n  test('renders correctly', () => {\n    const { getByText } = render(<MyComponent />);\n    expect(getByText('Hello World')).toBeTruthy();\n  });\n  ```\n- Use `fireEvent` to simulate user interactions:\n  ```javascript\n  fireEvent.press(getByText('Press me'));\n  ```\n- Check for component state changes:\n  ```javascript\n  expect(queryByText('Clicked')).toBeTruthy();\n  ```\n- Key config options: None specific to React Native Testing Library, use standard Jest configuration.",
+    "content": "- Install dependencies: `npm install --save-dev react-test-renderer @testing-library/react-native`\n- Use `@testing-library/react-native` for testing React Native components.\n- Example component test:\n  ```jsx\n  import { render, fireEvent } from '@testing-library/react-native';\n  import MyComponent from './MyComponent';\n\n  test('renders correctly', () => {\n    const { getByText } = render(<MyComponent />);\n    expect(getByText('Hello World')).toBeTruthy();\n  });\n\n  test('handles button press', () => {\n    const mockFunction = jest.fn();\n    const { getByText } = render(<MyComponent onPress={mockFunction} />);\n    fireEvent.press(getByText('Press Me'));\n    expect(mockFunction).toHaveBeenCalled();\n  });\n  ```\n- Key config options: None specific to `@testing-library/react-native` in the provided examples.",
     "source": "code_example",
-    "updated_at": 1780773670.114123
+    "updated_at": 1780774326.4346383
   }
 }

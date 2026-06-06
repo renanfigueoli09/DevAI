@@ -1,22 +1,22 @@
 {
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:spring boot kafka testing": {
-    "content": "- **CLI Commands**:\n  - `docker run --rm -p 9092:9092 wurstmeister/kafka`: Runs a Kafka container.\n  - `mvn test`: Runs tests using Maven.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Spring Kafka: 3.1.4\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Set to `localhost:9092`.\n  - `spring.kafka.consumer.group-id`: Unique consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.",
+    "content": "- Use `docker-compose` to run Kafka in a container.\n- Add `spring-kafka-test` dependency to your project.\n- Configure Kafka properties using `application.properties` or `application.yml`.\n- Utilize `KafkaTestUtils` for setting up producer and consumer properties.\n- For integration testing, use Testcontainers for infrastructure validation.\n- Ensure you have Java 11 or later installed.\n- Use Maven or Gradle to manage your project dependencies.",
     "source": "web_search",
-    "updated_at": 1780773621.8434167
+    "updated_at": 1780774305.2627895
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:spring boot kafka testing_ex": {
-    "content": "- Use `mvn clean install` to build your project.\n- Ensure Kafka is running locally or use Docker with `docker run -d --name kafka -p 9092:9092 wurstmeister/kafka`.\n- For testing, include dependencies like `spring-kafka-test`, `testcontainers-kafka`.\n- Use `@EmbeddedKafka` for in-memory Kafka server.\n- Configure Kafka properties in `application.properties` or `application.yml`.\n- Example of a test case:\n  ```java\n  @SpringBootTest\n  public class KafkaListenerTest {\n      @Autowired\n      private KafkaTemplate<String, String> kafkaTemplate;\n\n      @Test\n      public void testKafkaListener() throws Exception {\n          // Send message to topic\n          kafkaTemplate.send(\"test-topic\", \"Hello, Kafka!\");\n\n          // Add assertions to verify listener received the message\n      }\n  }\n  ```\n- Use `@Container` from Testcontainers for more complex setups.\n- Ensure your Kafka topics are created before tests run.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your Spring Boot project.\n  - `docker-compose up` to start Kafka and Zookeeper containers using Testcontainers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Kafka: 3.0.0\n  - Testcontainers: 1.17.6\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Set to `localhost:9092` for local testing.\n  - `spring.kafka.consumer.group-id`: Unique consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.\n  - `spring.kafka.producer.key-serializer`: Use `org.apache.kafka.common.serialization.StringSerializer`.\n  - `spring.kafka.producer.value-serializer`: Use `org.apache.kafka.common.serialization.StringSerializer`.",
     "source": "code_example",
-    "updated_at": 1780773630.3993716
+    "updated_at": 1780774309.0042412
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:kafka stream integration tests": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `mvn test -DskipTests` to skip unit tests\n  - `mvn verify -Dit.test=IntegrationTest*` to run integration tests\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Spring Cloud Stream: 3.2.0\n  - Maven Surefire Plugin: 3.0.0-M5\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Set to `earliest` or `latest`\n  - `spring.cloud.stream.kafka.binder.configuration.enable.auto.commit`: Set to `true` or `false`\n  - `spring.cloud.stream.kafka.binder.configuration.key.deserializer`: Kafka key deserializer class\n  - `spring.cloud.stream.kafka.binder.configuration.value.deserializer`: Kafka value deserializer class",
+    "content": "- Use `mvn test -DskipTests=true` to skip unit tests during build.\n- For Kafka Streams integration tests, ensure Maven Surefire plugin is configured correctly in `pom.xml`.\n- Latest versions of Kafka and Kafka Streams should be used for compatibility and features.\n- Key config options include `bootstrap.servers`, `application.id`, and `default.key.deserializer`.\n- Use `kafka-topics.sh --create` to create topics with appropriate configurations.\n- For E2E testing, consider using Spring Cloud Stream's embedded Kafka support or real Kafka middleware.\n- Implement DLQ patterns in Kafka Streams by configuring a dead letter queue topic.\n- Ensure proper error handling and logging for robust stream processing applications.",
     "source": "web_search",
-    "updated_at": 1780773639.0921142
+    "updated_at": 1780774314.1294258
   },
   "search:Testing Spring Boot + Kafka-Spring-Cloud-Stream:kafka stream integration tests_ex": {
-    "content": "- Use `TopologyTestDriver` for unit tests.\n- Employ `EmbeddedKafka` and `Testcontainers` for integration tests.\n- Ensure Kafka Streams version compatibility with your project dependencies.\n- Configure `bootstrap.servers`, `application.id`, and `default.key.deserializer` in your properties.\n- Run tests using Maven or Gradle commands like `mvn test` or `gradle test`.\n- Check the latest Confluent documentation for up-to-date information on Kafka Streams testing.",
+    "content": "- Use `TopologyTestDriver` for unit tests.\n- Employ `EmbeddedKafka` and `Testcontainers` for integration tests.\n- Ensure Kafka Streams version compatibility with Spring Boot.\n- Configure `bootstrap.servers`, `application.id`, and `default.key.deserializer`.\n- Run tests using Maven or Gradle commands like `mvn test` or `./gradlew test`.",
     "source": "code_example",
-    "updated_at": 1780773653.946444
+    "updated_at": 1780774316.062854
   }
 }

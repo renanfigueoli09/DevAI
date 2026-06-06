@@ -2,16 +2,16 @@
   "search:kubernetes+ingress-controllers:kubernetes ingress controllers": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress-controller.yaml` to deploy an Ingress controller.\n  - `kubectl get ingresses` to list all Ingress resources.\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.0\n  - Traefik: v2.6.0\n  - HAProxy Ingress Controller: v1.9.4\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `traefik.ingress.kubernetes.io/router.entrypoints`: Specifies the entrypoint for routing.\n  - `haproxy-ingress.github.io/configuration/annotations#backend-maxconn`: Sets the maximum number of connections per backend server.",
     "source": "web_search",
-    "updated_at": 1780773367.8223703
+    "updated_at": 1780774092.3223853
   },
   "search:kubernetes+ingress-controllers:kubernetes ingress controllers_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v2.4.1\n\n- **Key Config Options**:\n  - `tls`: Specify TLS configuration for SSL termination.\n  - `rules`: Define routing rules for incoming traffic.\n  - `ingressClassName`: Specify the ingress class to use.\n\nThese commands, versions, and options provide a concise overview of actionable facts for configuring Kubernetes Ingress Controllers.",
     "source": "code_example",
-    "updated_at": 1780773368.5667794
+    "updated_at": 1780774093.1161544
   },
   "search:kubernetes+ingress-controllers:setting up and configuring kub": {
     "content": "- **Latest Version**: Kubernetes Ingress Controller v2.4.0\n- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n- **Key Config Options**:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: Ingress`\n  - `metadata.name`: Ingress resource name\n  - `spec.rules`: Defines routing rules\n  - `spec.tls`: Configures TLS settings",
     "source": "web_search",
-    "updated_at": 1780773369.3807793
+    "updated_at": 1780774093.9248195
   }
 }

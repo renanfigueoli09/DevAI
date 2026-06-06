@@ -2,11 +2,11 @@
   "search:dotnet-core-entityframeworkcore-sqlserver-performance:entity framework core sql serv": {
     "content": "- **Latest Version**: Entity Framework Core 7.0 is the latest stable version as of my last update.\n  \n- **CLI Commands**:\n  - `dotnet ef database update`: Migrates the database to the latest version based on migrations.\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration with the specified name.\n\n- **Key Config Options**:\n  - `OnConfiguring`: Used in the DbContext class to configure the connection string and other options.\n  - `UseSqlServer`: Specifies that the DbContext should use SQL Server as the database provider.\n  - `MigrationsAssembly`: Points to the assembly containing migrations if they are not in the same project.\n\n- **Advanced Querying**:\n  - Use `Include` for eager loading of related entities.\n  - Use `Where`, `OrderBy`, `Select`, etc., for LINQ queries directly on DbContext.",
     "source": "web_search",
-    "updated_at": 1780773209.9441009
+    "updated_at": 1780773932.9665802
   },
   "search:dotnet-core-entityframeworkcore-sqlserver-performance:entity framework core sql serv_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - SQL Server Provider: 7.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: `\"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\"`\n  - Using `Include()` for eager loading.\n  - Utilizing `ThenInclude()` for multi-level related entities.",
     "source": "code_example",
-    "updated_at": 1780773210.784259
+    "updated_at": 1780773933.7658043
   }
 }
