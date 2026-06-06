@@ -1,0 +1,22 @@
+{
+  "search:typescript+react-query:typescript react query for dat": {
+    "content": "- **CLI Commands**: Not applicable for this topic.\n- **Latest Versions**: Ensure you are using the latest version of React Query and TypeScript to avoid compatibility issues.\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `useMutation`: For updating data.\n  - `queryClient`: For managing query state globally.\n  - `refetchOnWindowFocus`: Controls refetching on window focus.",
+    "source": "web_search",
+    "updated_at": 1780735792.3887045
+  },
+  "search:typescript+react-query:typescript react query for dat_ex": {
+    "content": "- **CLI Commands**: Not applicable.\n- **Latest Version**: React Query v4.x\n- **Key Config Options**:\n  - `useQuery`: For fetching data and handling state.\n  - `queryClient`: For managing query cache and invalidation.\n  - `refetchInterval`: To automatically refetch data at a specified interval.",
+    "source": "code_example",
+    "updated_at": 1780735799.7454135
+  },
+  "search:typescript+react-query:advanced typescript react quer": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of React, ReactDOM, and TypeScript by running `npm update`.\n- **Key Config Options**:\n  - In `tsconfig.json`, set `\"strict\": true` for strict type-checking.\n  - Use `\"esModuleInterop\": true` to enable interoperability with ES modules.\n  - Configure `\"skipLibCheck\": true` in production builds to speed up compilation.",
+    "source": "web_search",
+    "updated_at": 1780735812.1912048
+  },
+  "search:typescript+react-query:advanced typescript react quer_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.x\n  - TypeScript: v5.x\n- **Key Config Options**:\n  - `useQuery`: `{ queryKey, queryFn, options }`\n  - `queryClient`: `{ defaultOptions }`",
+    "source": "code_example",
+    "updated_at": 1780735815.8328114
+  }
+}
