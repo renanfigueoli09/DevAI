@@ -1,0 +1,12 @@
+{
+  "search:Security Patterns in Python-Django:python-django-security-pattern": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --insecure`: Runs the development server without HTTPS.\n  - `django-admin startproject mysite`: Creates a new Django project.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - django-security: 1.0.0\n\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for cryptographic signing.\n  - `DEBUG`: Controls whether debug mode is on or off.\n  - `ALLOWED_HOSTS`: A list of strings representing the host/domain names that this Django site can serve.\n  - `CSRF_COOKIE_SECURE`: Ensures CSRF cookies are only sent over HTTPS.",
+    "source": "web_search",
+    "updated_at": 1780775817.3190145
+  },
+  "search:Security Patterns in Python-Django:kubernetes+postgres": {
+    "content": "- Deploy PostgreSQL using `kubectl apply -f postgres-deployment.yaml`\n- Use StatefulSets for persistent storage management\n- Configure Helm charts for easy deployment and management\n- Set up primary/standby architecture with CloudNativePG\n- Utilize native streaming replication for high availability\n- Ensure latest versions of PostgreSQL and Kubernetes for security and performance\n- Key config options include `replicas`, `storageClass`, and `resources`\n- Use `kubectl get pods` to check deployment status\n- Monitor logs with `kubectl logs <pod-name>`",
+    "source": "web_search",
+    "updated_at": 1780775847.7760315
+  }
+}
