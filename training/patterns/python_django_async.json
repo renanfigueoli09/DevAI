@@ -2,21 +2,21 @@
   "search:python-django-async:django async middleware 2023": {
     "content": "- **Latest Version**: Django 6.0\n- **Key Config Options**:\n  - `MIDDLEWARE`: Ensure your middleware is compatible with async support.\n  - `ASGI_APPLICATION`: Set to the ASGI application entry point for async views.\n- **CLI Commands**:\n  - `python manage.py runserver` (for development)\n  - `gunicorn --workers 4 myproject.asgi:application` (for production, using Gunicorn with ASGI)\n- **Actionable Facts**:\n  - Django now supports async views and middleware.\n  - Use `async def` for view functions.\n  - Middleware must be compatible with async contexts.\n  - Ensure your database operations are async-compatible.",
     "source": "web_search",
-    "updated_at": 1780763361.2018983
+    "updated_at": 1780763830.4571533
   },
   "search:python-django-async:django async middleware 2023_ex": {
     "content": "- Django 3.0 and later support asynchronous views.\n- Use `python manage.py runserver` to start the server, no special flags required for async support.\n- Key middleware components include AuthenticationMiddleware, SessionMiddleware, etc.\n- For async HTTP requests in Django, use libraries like `aiohttp`.\n- Install `aiohttp` using pip: `pip install aiohttp`.\n- Example of an async view:\n  ```python\n  import asyncio\n  from django.http import JsonResponse\n\n  async def my_async_view(request):\n      await asyncio.sleep(1)  # Simulate a delay\n      return JsonResponse({'message': 'Hello, world!'})\n  ```\n- Configure the URLconf to include your async views.\n- Ensure Django is configured for asynchronous handling in settings if needed.",
     "source": "code_example",
-    "updated_at": 1780763361.7870414
+    "updated_at": 1780763831.1695967
   },
   "search:python-django-async:django async orm 2023": {
     "content": "- **CLI Commands**:\n  - `python -m pip install django-async-orm`\n  - `python manage.py runserver` for WSGI, or `uvicorn myproject.asgi:application` for ASGI\n\n- **Latest Versions**:\n  - Django Async ORM: Not specified in the search results\n  - Django: Latest stable version as of my last update (3.2.x)\n\n- **Key Config Options**:\n  - Use ASGI server like `uvicorn` instead of WSGI for async capabilities\n  - Ensure your project is configured to run under ASGI if you intend to use async views",
     "source": "web_search",
-    "updated_at": 1780763362.4278994
+    "updated_at": 1780763831.9891753
   },
   "search:python-django-async:django async orm 2023_ex": {
     "content": "- **CLI Commands**:\n  - `python -m pip install django-async-orm`\n  \n- **Latest Versions**:\n  - Django Async ORM is in active development, no specific version mentioned.\n  \n- **Key Config Options**:\n  - Asynchronous views can be written using async and await syntax.\n  - Performance penalties when running under WSGI.",
     "source": "code_example",
-    "updated_at": 1780763363.0109458
+    "updated_at": 1780763832.5615726
   }
 }

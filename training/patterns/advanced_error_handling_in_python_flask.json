@@ -2,11 +2,11 @@
   "search:Advanced Error Handling in Python Flask:python flask error handling be": {
     "content": "- Use Flask's `@app.errorhandler` decorator to define custom error handlers.\n- Implement structured logging using libraries like `logging`.\n- Raise custom exceptions from your business logic and handle them in the error handler.\n- Return JSON responses for errors with HTTP status codes.\n- Utilize Flask extensions like `Flask-RESTful` for REST API development.\n- Configure centralized monitoring tools to track application errors.\n- Follow industry best practices for error handling, such as logging all exceptions.",
     "source": "web_search",
-    "updated_at": 1780763466.7921827
+    "updated_at": 1780763937.048332
   },
   "search:Advanced Error Handling in Python Flask:python flask error handling be_ex": {
     "content": "- Use `@app.errorhandler(Exception)` to define custom error handlers.\n- Implement structured logging using libraries like `logging` or `structlog`.\n- Utilize Flask's built-in HTTP exception classes (`HTTPException`) for common errors.\n- Create custom exception classes for application-specific errors.\n- Register custom exceptions with the app using `app.register_error_handler()`.\n- Use `@app.errorhandler(404)` to handle 404 Not Found errors.\n- Implement centralized monitoring using tools like Sentry or Rollbar.\n- Ensure error handlers return appropriate HTTP status codes and messages.",
     "source": "code_example",
-    "updated_at": 1780763467.3962426
+    "updated_at": 1780763937.7086165
   }
 }
