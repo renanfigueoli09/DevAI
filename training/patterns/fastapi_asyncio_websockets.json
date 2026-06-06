@@ -1,0 +1,17 @@
+{
+  "search:fastapi-asyncio-websockets:fastapi asyncio websockets tut": {
+    "content": "- **CLI Commands**:\n  - `fastapi run app`: Runs the FastAPI application.\n  - `uvicorn app.main:app --reload`: Starts the Uvicorn server with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - Starlette: 0.26.0\n  - Pydantic: 1.10.7\n\n- **Key Config Options**:\n  - `app.websocket(\"/ws\")`: Defines a WebSocket endpoint.\n  - `await websocket.accept()`: Accepts the incoming WebSocket connection.\n  - `await websocket.send_text(\"Hello, world!\")`: Sends text data to the client.\n  - `async for message in websocket.iter_text()`: Receives text messages from the client.",
+    "source": "web_search",
+    "updated_at": 1780753241.093186
+  },
+  "search:fastapi-asyncio-websockets:fastapi asyncio websockets tut_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development.\n  - `uvicorn main:app --host 0.0.0.0 --port 8000` for production.\n\n- **Latest Versions**:\n  - FastAPI: v0.100.2\n  - Starlette: v0.24.0\n\n- **Key Config Options**:\n  - `app.add_websocket_route(\"/ws\", WebSocketEndpoint)`\n  - `@app.websocket(\"/ws\")`\n  - `async def websocket_endpoint(websocket: WebSocket)`",
+    "source": "code_example",
+    "updated_at": 1780753247.830366
+  },
+  "search:fastapi-asyncio-websockets:building real-time application": {
+    "content": "- **CLI Commands**:\n  - `fastapi dev`: Starts the FastAPI server with auto-reload enabled.\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  \n- **Key Config Options**:\n  - `auto_reload`: Enables or disables auto-reload during development.\n  - `host`: Specifies the host to run the server on (e.g., \"0.0.0.0\").\n  - `port`: Specifies the port to run the server on (default is 8000).",
+    "source": "web_search",
+    "updated_at": 1780753255.3700233
+  }
+}
