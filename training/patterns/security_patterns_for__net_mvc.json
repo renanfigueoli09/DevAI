@@ -1,0 +1,32 @@
+{
+  "search:Security Patterns for .NET MVC:.net mvc security patterns": {
+    "content": "- Use `dotnet new mvc -au Individual` to create an ASP.NET Core MVC project with individual user accounts.\n- Update your `Startup.cs` or `Program.cs` to configure authentication and authorization:\n  ```csharp\n  services.AddAuthentication(options =>\n  {\n      options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;\n      options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;\n  })\n  .AddJwtBearer(options =>\n  {\n      options.TokenValidationParameters = new TokenValidationParameters\n      {\n          ValidateIssuer = true,\n          ValidateAudience = true,\n          ValidateLifetime = true,\n          ValidateIssuerSigningKey = true,\n          ValidIssuer = Configuration[\"Jwt:Issuer\"],\n          ValidAudience = Configuration[\"Jwt:Audience\"],\n          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration[\"Jwt:Key\"]))\n      };\n  });\n\n  services.AddAuthorization();\n  ```\n- Configure CORS in `Startup.cs` or `Program.cs`:\n  ```csharp\n  app.UseCors(builder =>\n  {\n      builder.WithOrigins(\"https://example.com\")\n             .AllowAnyHeader()\n             .AllowAnyMethod();\n  });\n  ```\n- Use `[Authorize]` attribute on controllers or actions to secure them.\n- Configure HTTPS in `appsettings.json`:\n  ```json\n  \"Kestrel\": {\n    \"Endpoints\": {\n      \"Http\": {\n        \"Url\": \"http://localhost:5000\"\n      },\n      \"Https\": {\n        \"Url\": \"https://localhost:5001\",\n        \"Certificate\": {\n          \"Path\": \"path/to/certificate.pfx\",\n          \"Password\": \"password\"\n        }\n      }\n    }\n  }\n  ```\n- Use `dotnet user-secrets` to manage sensitive data like API keys and passwords.\n- Ensure your application is up-to-date with the latest security patches by running `dotnet upgrade`.\n- Implement input validation using Data Annotations or Fluent Validation to prevent SQL injection and XSS attacks.",
+    "source": "web_search",
+    "updated_at": 1780719346.927597
+  },
+  "search:Security Patterns for .NET MVC:.net mvc security patterns_ex": {
+    "content": "- Use `dotnet new mvc` to create a new ASP.NET Core MVC project.\n- Ensure you have the latest version of .NET SDK installed for optimal performance and features.\n- Configure security in `Startup.cs` or `Program.cs`, including authentication and authorization middleware.\n- Utilize `data-val-regex-pattern` for client-side validation, ensuring it matches server-side validation patterns.\n- Implement CSRF protection using anti-forgery tokens in your forms.\n- Use HTTPS to secure data transmission between the client and server.\n- Regularly update dependencies and frameworks to address security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780719351.3378685
+  },
+  "search:Security Patterns for .NET MVC:asp.net mvc security best prac": {
+    "content": "- Use `dotnet new mvc` to create a new ASP.NET Core MVC project.\n- Ensure your project targets the latest LTS version of .NET Core or .NET 6+.\n- Implement authentication and authorization using built-in middleware like `app.UseAuthentication()` and `app.UseAuthorization()`.\n- Configure CORS in `Startup.cs` with `services.AddCors(options => options.AddPolicy(\"AllowAllOrigins\", builder => builder.AllowAnyOrigin()));`.\n- Use the `[Authorize]` attribute to protect controllers or actions.\n- Implement input validation using Data Annotations, e.g., `[Required]`, `[StringLength(100)]`.\n- Sanitize user inputs with `HtmlEncoder.Default.Encode(input)` to prevent XSS attacks.\n- Regularly update dependencies and frameworks to patch security vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1780719367.1662352
+  },
+  "search:Security Patterns for .NET MVC:asp.net mvc security best prac_ex": {
+    "content": "- Use `Html.AntiForgeryToken()` in your views to protect against CSRF attacks.\n- Ensure jQuery Ajax calls include the AntiForgeryToken for security.\n- Update ASP.NET Core to the latest version for enhanced security features.\n- Configure CORS settings in `Startup.cs` using `app.UseCors()`.\n- Implement custom validation attributes for data integrity.\n- Use HTTPS to encrypt data in transit.\n- Regularly update dependencies and frameworks to patch known vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780719374.154891
+  },
+  "search:Security Patterns for .NET MVC:mvc application security": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc --name SecureApp`\n  - `dotnet add package Microsoft.AspNetCore.Authentication.Cookies`\n\n- **Latest Versions**:\n  - ASP.NET Core MVC: 6.0\n  - Spring Security: 5.7\n\n- **Key Config Options**:\n  - Authentication: Use `services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie()`\n  - Authorization: Define policies in `Startup.cs` or `Program.cs`\n  - Cookie Security: Set `SameSiteMode = SameSiteMode.Strict` and `Secure = true`",
+    "source": "web_search",
+    "updated_at": 1780719382.4127457
+  },
+  "search:Security Patterns for .NET MVC:mvc application security_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc --auth Individual` to create a new MVC project with individual user accounts.\n  - `dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore` for adding Identity to an existing project.\n\n- **Latest Versions**:\n  - ASP.NET Core: Version 7.0\n  - Entity Framework Core: Version 7.0\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection string under `ConnectionStrings`.\n  - Set up authentication and authorization in `Startup.cs` or `Program.cs` using `services.AddAuthentication()` and `services.AddAuthorization()`.\n  - Configure Identity services with `services.AddIdentity<ApplicationUser, IdentityRole>()`.",
+    "source": "code_example",
+    "updated_at": 1780719399.5736403
+  }
+}

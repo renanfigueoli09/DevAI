@@ -1,0 +1,32 @@
+{
+  "search:Advanced Error Handling in .NET + PostgreSQL:.net error handling postgresql": {
+    "content": "- Use `NpgsqlException` to catch PostgreSQL errors in C#.\n- For Entity Framework, ensure you're catching `DbUpdateException` which wraps `NpgsqlException`.\n- Utilize the `RAISE` statement in PL/pgSQL for custom error handling.\n- Check system views like `pg_stat_activity` for tracking errors.\n- Use `psql` command-line tool with flags like `-v ON_ERROR_STOP=1` to stop on first error.\n- Ensure PostgreSQL version is up-to-date for latest features and security patches.\n- Configure logging in your application to capture detailed error messages.",
+    "source": "web_search",
+    "updated_at": 1780719238.1102922
+  },
+  "search:Advanced Error Handling in .NET + PostgreSQL:.net error handling postgresql_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package EntityFrameworkCore.Exceptions.PostgreSQL --version 10.0.1`\n  \n- **Latest Versions**:\n  - EntityFrameworkCore.Exceptions.PostgreSQL: 10.0.1\n\n- **Key Config Options**:\n  - Configure connection string in `appsettings.json` for PostgreSQL.\n  - Use `AddDbContext` to integrate with the database context in your application.\n  - Handle exceptions using `try-catch` blocks around database operations.",
+    "source": "code_example",
+    "updated_at": 1780719243.107255
+  },
+  "search:Advanced Error Handling in .NET + PostgreSQL:exception management dotnet po": {
+    "content": "- **Install Npgsql**: Use `dotnet add package Npgsql` to install the latest version.\n- **Configure DbContext**: Add `UseExceptionProcessor` in your `DbContext` configuration to handle PostgreSQL exceptions.\n- **Handle Specific Exceptions**: Catch and handle exceptions like `UniqueConstraintException`, `CannotInsertNullException`, etc., as needed.\n- **Latest Version**: Ensure you are using the latest version of EntityFrameworkCore.Exceptions.PostgreSQL for better compatibility and features.\n- **Npgsql Documentation**: Refer to [Npgsql's official documentation](https://www.npgsql.org/doc/) for detailed setup and usage instructions.\n- **GitHub Library**: Explore [STX.EFxceptions.PostgreSQL on GitHub](https://github.com/The-Standard-Organization/STX.EFxceptions.PostgreSQL) for a standardized approach to handling PostgreSQL exceptions in .NET.",
+    "source": "web_search",
+    "updated_at": 1780719251.1672072
+  },
+  "search:Advanced Error Handling in .NET + PostgreSQL:exception management dotnet po_ex": {
+    "content": "- Install EntityFrameworkCore.Exceptions.PostgreSQL via NuGet: `dotnet add package EntityFrameworkCore.Exceptions.PostgreSQL`\n- Use middleware for global exception handling in .NET 6 Web API:\n  ```csharp\n  app.UseExceptionHandler(\"/error\");\n  ```\n- Configure PostgreSQL connection string in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;\"\n  }\n  ```\n- Use Entity Framework Core with PostgreSQL in your project.",
+    "source": "code_example",
+    "updated_at": 1780719260.2094343
+  },
+  "search:Advanced Error Handling in .NET + PostgreSQL:database error handling strate": {
+    "content": "- Use `knex.js` version 2.x for robust database interactions.\n- Implement custom error classes like `DatabaseError` in Node.js to handle specific database issues more precisely.\n- In Django, catch and handle 'DatabaseError' by implementing strategies such as retry logic or logging detailed error messages.\n- For data integration pipelines, use a data transformation Snap that includes error handling for non-standard characters.\n- Route errors to an error pipeline where custom logic can clean the data or flag problems.",
+    "source": "web_search",
+    "updated_at": 1780719270.9901261
+  },
+  "search:Advanced Error Handling in .NET + PostgreSQL:database error handling strate_ex": {
+    "content": "- Use `TRY-CATCH` blocks to handle exceptions in SQL Server.\n- Implement error logging using `ERROR_NUMBER()`, `ERROR_MESSAGE()`, and `ERROR_SEVERITY()`.\n- For PostgreSQL, use `BEGIN...EXCEPTION...END` blocks for exception handling.\n- In MySQL, utilize `DECLARE CONTINUE HANDLER` for error handling.\n- Oracle supports `EXCEPTION` blocks to manage exceptions in PL/SQL.\n- Ensure transaction management by using `COMMIT` and `ROLLBACK`.\n- Use `RAISERROR()` in SQL Server to raise custom errors.\n- For PostgreSQL, use `RAISE` to handle errors.\n- In MySQL, use `SIGNAL` to throw errors.\n- Oracle uses `DBMS_OUTPUT.PUT_LINE` for debugging.\n- Regularly update database drivers and libraries to the latest versions.",
+    "source": "code_example",
+    "updated_at": 1780719278.2242682
+  }
+}
