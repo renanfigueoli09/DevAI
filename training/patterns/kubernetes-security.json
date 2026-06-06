@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+security:kubernetes security best pract": {
+    "content": "- **CLI Commands**:\n  - `kubectl create rolebinding <rolebinding-name> --role=<role-name> --user=<user-name>`\n  - `kubectl apply -f <path-to-security-policy-file>`\n  - `kubectl get pods --all-namespaces -o wide`\n  - `kubectl describe pod <pod-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.25\n  - Pod Security Standards: v1.0\n\n- **Key Config Options**:\n  - RBAC (Role-Based Access Control): Define roles and role bindings.\n  - Network Policies: Specify network access rules for pods.\n  - Secrets Management: Use `kubectl create secret` to manage sensitive data.\n  - Cluster Hardening: Apply CIS Kubernetes Benchmark configurations.",
+    "source": "web_search",
+    "updated_at": 1780709642.0454452
+  },
+  "search:kubernetes+security:kubernetes security best pract_ex": {
+    "content": "- **RBAC Configuration**: Use `kubectl create role` and `kubectl create rolebinding` to define roles and bindings.\n- **Pod Security Standards**: Apply the latest PodSecurityStandards using annotations like `pod-security.kubernetes.io/enforce=baseline`.\n- **Network Policies**: Define network policies with `kubectl apply -f policy.yaml`, where `policy.yaml` specifies allowed traffic.\n- **Secrets Management**: Use `kubectl create secret generic my-secret --from-literal=my-key=my-value` for managing secrets.\n- **Image Security**: Ensure images are scanned for vulnerabilities using tools like Trivy or Clair before deployment.\n- **Cluster Hardening**: Apply CIS benchmarks by running `kube-bench run`.\n- **Logging and Monitoring**: Use tools like Prometheus and Grafana to monitor cluster health and security events.\n- **Automated Scanning**: Integrate automated scanning with CI/CD pipelines using tools like Argo CD or Flux.\n- **Regular Audits**: Schedule regular audits of your Kubernetes cluster using `kubectl audit policy` and `kubectl audit logs`.\n- **Update Kubernetes**: Keep your Kubernetes version up to date by applying the latest patches and upgrades.",
+    "source": "code_example",
+    "updated_at": 1780709648.338649
+  },
+  "search:kubernetes+security:kubernetes security compliance": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: List all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Get detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27 (as of early 2024).\n\n- **Key Config Options**:\n  - RBAC (Role-Based Access Control): Define roles and bindings for user permissions.\n  - OPA (Open Policy Agent): Implement policy enforcement at the API layer.\n  - Auditing: Enable auditing to track API requests and responses.",
+    "source": "web_search",
+    "updated_at": 1780709657.7485354
+  },
+  "search:kubernetes+security:kubernetes security compliance_ex": {
+    "content": "- **CLI Commands**: Use `kubectl` for managing Kubernetes resources.\n  - Example: `kubectl apply -f <filename>.yaml`\n  \n- **Latest Versions**:\n  - Cilium: 1.19.4\n  - Kubernetes: v1.25.x\n\n- **Key Config Options**:\n  - Image Scanning: Use tools like Trivy for scanning container images.\n    - Example: `trivy image <image-name>`\n  - Network Policies: Define network access rules using Cilium or Calico.\n    - Example: \n      ```yaml\n      apiVersion: networking.k8s.io/v1\n      kind: NetworkPolicy\n      metadata:\n        name: example-network-policy\n      spec:\n        podSelector:\n          matchLabels:\n            role: db\n        policyTypes:\n        - Ingress\n        ingress:\n        - from:\n          - namespaceSelector:\n              matchLabels:\n                project: myproject\n          ports:\n          - protocol: TCP\n            port: 3306\n      ```\n  - Runtime Protection: Use Falco for monitoring and alerting on runtime anomalies.\n    - Example: `falco --rules /etc/falco/falco_rules.yaml`",
+    "source": "code_example",
+    "updated_at": 1780709664.0865157
+  }
+}

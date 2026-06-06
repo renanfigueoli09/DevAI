@@ -2,7 +2,7 @@
   "pattern:nestjs-auth:jwt": {
     "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
     "source": "code_pattern",
-    "updated_at": 1780707823.7764452
+    "updated_at": 1780709732.0483837
   },
   "search:nestjs+auth:nestjs jwt passport jwtstrateg": {
     "content": "- Install dependencies: `npm install @nestjs/passport passport passport-local passport-jwt @nestjs/jwt bcrypt`\n- Use Passport Module for authentication.\n- Create JWT Strategy to validate JWT tokens.\n- Import `JwtStrategy` and `UserEntity`.\n- Implement login validation with `passport-local`.\n- Enable JWT-based functionality with `passport-jwt`.\n- Key config options include `jwtFromRequest`, `ignoreExpiration`, and `secretOrKey`.",
@@ -33,5 +33,10 @@
     "content": "- Use `nest generate module auth` and `nest generate guard auth`\n- Implement roles using an enum like `enum Role { ADMIN, USER }`\n- Create a custom decorator for setting metadata:\n  ```typescript\n  import { createParamDecorator, ExecutionContext } from '@nestjs/common';\n\n  export const Roles = (...roles: string[]) => {\n    return createParamDecorator(\n      (data: unknown, ctx: ExecutionContext) => {\n        const request = ctx.switchToHttp().getRequest();\n        const user = request.user;\n        if (!user || !user.roles) {\n          throw new UnauthorizedException();\n        }\n        return user.roles.some(role => roles.includes(role));\n      },\n    );\n  };\n  ```\n- Use `Reflector` to access metadata in guards:\n  ```typescript\n  import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';\n  import { Reflector } from '@nestjs/core';\n\n  @Injectable()\n  export class RolesGuard implements CanActivate {\n    constructor(private reflector: Reflector) {}\n\n    canActivate(context: ExecutionContext): boolean {\n      const requiredRoles = this.reflector.getAllAndOverride<string[]>('roles', [\n        context.getHandler(),\n        context.getClass(),\n      ]);\n      if (!requiredRoles) {\n        return true;\n      }\n      const { user } = context.switchToHttp().getRequest();\n      return requiredRoles.some(role => user.roles.includes(role));\n    }\n  }\n  ```\n- Apply roles to routes using the `@Roles` decorator:\n  ```typescript\n  @Controller('users')\n  export class UsersController {\n    @Get()\n    @Roles(Role.ADMIN)\n    findAll() {\n      // ...\n    }\n  }\n  ```\n- Ensure your user service populates the `roles` field when fetching users.\n- Update `app.module.ts` to import and use the `RolesGuard`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { APP_GUARD } from '@nestjs/core';\n\n  @Module({\n    providers: [\n      {\n        provide: APP_GUARD,\n        useClass: RolesGuard,\n      },\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use the latest version of NestJS and related packages for compatibility and features.",
     "source": "code_example",
     "updated_at": 1780703116.3132315
+  },
+  "pattern:nestjs:partialtype-source": {
+    "content": "CRITICAL: PartialType MUST be imported from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import { PartialType } from '@nestjs/mapped-types';",
+    "source": "forced_training",
+    "updated_at": 1780709517.2365377
   }
 }

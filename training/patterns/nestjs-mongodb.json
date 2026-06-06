@@ -2,32 +2,32 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
     "source": "code_pattern",
-    "updated_at": 1780707823.2535982
+    "updated_at": 1780709731.3437932
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780707823.3122778
+    "updated_at": 1780709731.4086366
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780707823.370694
+    "updated_at": 1780709731.4825366
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "• With Mongoose, everything is derived from a Schema. Schemas can be created with NestJS decorators, or with Mongoose itself manually. The @Prop() decorator ...\n• Jul 6, 2020 · How can I do it with NestJS decorators ( @Schema() & @Prop() )?. I ... from '@nestjs/mongoose'; import { HydratedDocument } from ...\n• Feb 19, 2025 · HydratedDocument : A Mongoose type that indicates that the document returned after a database operation will be fully hydrated with Mongoose- ...",
     "source": "web_search",
-    "updated_at": 1780707824.9059362
+    "updated_at": 1780709733.5534444
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "content": "- **CLI Commands**:\n  - `yarn add @nestjs/mongoose mongoose`\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n  \n- **Key Config Options**:\n  - Import `MongooseModule` in `AppModule`.\n  - Use `@Schema` decorator for defining document schemas.\n  - Utilize `@Prop` to define properties within a schema.\n  - Employ `HydratedDocument` for type-safe documents.",
     "source": "code_example",
-    "updated_at": 1780707825.007067
+    "updated_at": 1780709733.644494
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - Connection String: `mongoose.connect('mongodb://localhost:27017/mydatabase')`\n  - Schema Definition: Define schemas using `new mongoose.Schema({...})`\n  - CRUD Operations:\n    - Find by ID: `await Model.findById(id)`\n    - Update by ID: `await Model.findByIdAndUpdate(id, updateData)`\n    - Delete by ID: `await Model.findByIdAndDelete(id)`",
     "source": "web_search",
-    "updated_at": 1780707825.1257086
+    "updated_at": 1780709733.7252278
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - `@Module({ imports: [MongooseModule.forRoot('mongodb://localhost/nestjs')] })`\n  - `@Schema()`\n  - `Model.findById(id)`\n  - `Model.findByIdAndUpdate(id, update)`\n  - `Model.findByIdAndDelete(id)`",
@@ -53,5 +53,45 @@
     "content": "- Use `nest new <project-name> --strict` to create a project with TypeScript's stricter feature set.\n- Ensure you are using the latest version of NestJS and Mongoose for compatibility and features.\n- Key config options include enabling strict mode in your `tsconfig.json` for better type safety.",
     "source": "code_example",
     "updated_at": 1780702621.9212675
+  },
+  "pattern:nestjs+mongo:required-bang": {
+    "content": "CRITICAL Mongoose TypeScript strict mode: @Prop({required:true}) → field!: Type  (exclamation mark, non-null assertion) @Prop() → field?: Type  (question mark, optional) NEVER: field: Type (without ! or ?)  NEVER use ! for optional fields or ? for required fields.",
+    "source": "forced_training",
+    "updated_at": 1780709517.1548116
+  },
+  "pattern:nestjs+mongo:no-findOneBy": {
+    "content": "CRITICAL: Mongoose does NOT have findOneBy(). This is TypeORM only. Mongoose methods: findById(id), findOne({field:value}), findByIdAndUpdate(), findByIdAndDelete(). If you see findOneBy in Mongoose code, replace with findById(id).",
+    "source": "forced_training",
+    "updated_at": 1780709517.1829944
+  },
+  "pattern:nestjs+mongo:correct-module": {
+    "content": "CRITICAL NestJS Mongoose module: imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] NEVER: TypeOrmModule.forFeature([Book]) in a Mongoose project. NEVER: MongooseModule.forRoot() in entity module (only in AppModule).",
+    "source": "forced_training",
+    "updated_at": 1780709517.2100568
+  },
+  "self:nestjs+mongoose:book-schema:missing": {
+    "content": "COMMON MISTAKE in nestjs_mongodb:\nGenerated code was MISSING: @Schema, @Prop, HydratedDocument, SchemaFactory\nPrompt was: Generate a complete NestJS Mongoose schema for a Book entity with:\n- title (required string)\n- author (required string)\n- price (required number, min 0)\n- description (optional string)\n- isActive (opt\nCORRECT approach must include: @Schema, @Prop, HydratedDocument, SchemaFactory, title!:, price!:, description?:",
+    "source": "anti_pattern",
+    "updated_at": 1780708536.8586445
+  },
+  "self:nestjs+mongoose:book-schema:wrong": {
+    "content": "ANTI-PATTERN in nestjs_mongodb:\nGenerated code WRONGLY used: title:\nThese are FORBIDDEN in this context.\nCorrect: @Schema, @Prop, HydratedDocument",
+    "source": "anti_pattern",
+    "updated_at": 1780708536.882074
+  },
+  "self:nestjs+mongoose:book-service": {
+    "content": "import { Injectable } from '@nestjs/common';\nimport { InjectModel } from '@nestjs/mongoose';\nimport { Model } from 'mongoose';\nimport { Book, BookDocument } from './book.schema';\n\n@Injectable()\nexport class BookService {\n  constructor(@InjectModel(Book.name) private model: Model<BookDocument>) {}\n\n  async findAll(): Promise<Book[]> {\n    return this.model.find().exec();\n  }\n\n  async findOne(id: string): Promise<Book> {\n    const book = await this.model.findById(id).exec();\n    if (!book) {\n      throw new NotFoundException(`Book with id ${id} not found`);\n    }\n    return book;\n  }\n\n  async create(dto: any): Promise<Book> {\n    return new this.model(dto).save();\n  }\n\n  async update(id: string, dto: any): Promise<Book> {\n    const updatedBook = await this.model.findByIdAndUpdate(id, { $set: dto }, { new: true }).exec();\n    if (!updatedBook) {\n      throw new NotFoundException(`Book with id ${id} not found`);\n    }\n    return updatedBook;\n  }\n\n  async remove(id: string): Promise<Book> {\n    const deletedBook = await this.model.findByIdAndDelete(id).exec();\n    if (!deletedBook) {\n      throw new NotFoundException(`Book with id ${id} not found`);\n    }\n    return deletedBook;\n  }\n}",
+    "source": "self_generated_validated",
+    "updated_at": 1780708430.368079
+  },
+  "self:nestjs+mongoose:book-module:missing": {
+    "content": "COMMON MISTAKE in nestjs_mongodb:\nGenerated code was MISSING: Book.name\nPrompt was: Generate a NestJS Mongoose module for Book entity.\nUse MongooseModule.forFeature([{name: Book.name, schema: BookSchema}]).\nImport BookService and BookController.\nReturn ONLY the TypeScript file conten\nCORRECT approach must include: MongooseModule.forFeature, Book.name, BookSchema, BookService, BookController",
+    "source": "anti_pattern",
+    "updated_at": 1780708433.4669006
+  },
+  "self:nestjs+mongoose:book-module": {
+    "content": "import { Module } from '@nestjs/common';\nimport { MongooseModule } from '@nestjs/mongoose';\nimport { Book, BookSchema } from './book.schema';\nimport { BookService } from './book.service';\nimport { BookController } from './book.controller';\n\n@Module({\n  imports: [MongooseModule.forFeature([{ name: Book.name, schema: BookSchema }])],\n  controllers: [BookController],\n  providers: [BookService],\n})\nexport class BookModule {}",
+    "source": "self_generated_validated",
+    "updated_at": 1780708505.847356
   }
 }

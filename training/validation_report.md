@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-05 22:13*
+*2026-06-05 22:33*
 
-## Score: 58% `[███████████░░░░░░░░░]`
+## Score: 59% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -9,11 +9,11 @@
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
 | common-errors | 6.0/6.0 | 100% | ✅ |
-| nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
+| fastapi | 2.0/4.0 | 50% | ❌ |
+| nlp | 6.6/15.0 | 44% | ❌ |
 | nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
-| fastapi | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
@@ -21,6 +21,7 @@
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
+  - Missing: `findById`
   - Wrong: `findOneBy`
 - ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
   - Wrong: `TypeOrmModule`
@@ -29,19 +30,18 @@
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (53%)
+### nlp (44%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
   - Missing: `não, never, docker-compose, Dockerfile`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não, no`
+  - Missing: `não`
+  - Wrong: `true`
 
 ### spring-mongodb (50%)
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
   - Wrong: `JpaRepository`
 
-### fastapi (0%)
-- ✗ FastAPI MongoDB: which async driver to use?
-  - Wrong: `pymongo`
+### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
   - Wrong: `.dict()`
 
