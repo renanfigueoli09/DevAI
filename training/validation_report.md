@@ -1,30 +1,21 @@
 # DevAI Validation Report
-*2026-06-05 23:14*
+*2026-06-05 23:16*
 
-## Score: 54% `[██████████░░░░░░░░░░]`
+## Score: 67% `[█████████████░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
+| common-errors | 6.0/6.0 | 100% | ✅ |
+| nestjs-mongodb | 9.0/15.0 | 60% | ⚠️ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| common-errors | 3.0/6.0 | 50% | ❌ |
 | nlp | 6.6/15.0 | 44% | ❌ |
-| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
 
 ## ❌ Retreinar urgente
-
-### nestjs-mongodb (30%)
-- ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
-  - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
-- ✗ NestJS Mongoose service: which method to use instead of findOneBy
-  - Missing: `findById`
-  - Wrong: `findOneBy`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
@@ -45,10 +36,6 @@
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
   - Wrong: `.dict()`
 
-### common-errors (50%)
-- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
-  - Wrong: `@nestjs/common`
-
 ## Como corrigir
 
 ```bash
@@ -56,9 +43,9 @@
 python scripts/validate.py --fix
 
 # Forçar retreinamento específico
-python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
 python scripts/validate.py --fix --topic nlp
+python scripts/validate.py --fix --topic spring-mongodb
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive
