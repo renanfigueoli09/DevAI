@@ -58,8 +58,10 @@ auto_commit() {
         cd "$DEVAI_DIR"
         git add training/ README.md 2>/dev/null
         if ! git diff --cached --quiet 2>/dev/null; then
-            git commit -m "training: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null \
+            git commit -m "🧠 training: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null \
                 && echo -e "  ${GREEN}✓ Commitado${NC}" || true
+            git push 2>/dev/null \
+                && echo -e "  ${GREEN}✓ Push realizado${NC}" || echo -e "  ${YELLOW}⚠ Push falhou (sem remote?)${NC}"
         fi
     fi
 }
