@@ -502,3 +502,52 @@ def auto_commit(message: str = None) -> bool:
         return True
     except Exception:
         return False
+
+
+def sync_patterns_to_vectors() -> int:
+    """
+    Sincroniza todos os JSON de patterns com o LanceDB.
+    Lê cada patterns/*.json e garante que cada item tem embedding no LanceDB.
+    Roda no início de cada ciclo de treinamento para manter tudo atualizado.
+    Retorna número de itens sincronizados.
+    """
+    if not PATTERNS_DIR.exists():
+        return 0
+
+    try:
+        from tools.embeddings import embed, model_available
+        if not model_available():
+            return backfill_embeddings()
+    except Exception:
+        return 0
+
+    synced = 0
+    idx = _load_index()
+
+    for json_file in PATTERNS_DIR.glob("*.json"):
+        try:
+            data = json.loads(json_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        for key, entry in data.items():
+            content = entry.get("content", "")
+            topic   = json_file.stem  # already normalized
+            # Check if already in LanceDB with embedding
+            already_embedded = key in idx and _lance_available()
+            if already_embedded:
+                try:
+                    tbl = _get_table()
+                    rows = tbl.search(None).where(f"id = '{key}'", prefilter=True).limit(1).to_list()
+                    if rows:
+                        continue  # already has embedding
+                except Exception:
+                    pass
+
+            # Generate embedding and save
+            emb = embed(f"{key}\n{content[:600]}")
+            if emb:
+                save(key, content, topic=topic, source=entry.get("source","pattern"), embedding=emb)
+                synced += 1
+
+    return synced

@@ -549,6 +549,18 @@ def main():
         now = time.time()
         console.print(Rule(f"[bold cyan]Ciclo {cycle} — {time.strftime('%H:%M %d/%m')}[/bold cyan]"))
 
+        # 0. Sincroniza vetores com patterns JSON (garante embeddings atualizados)
+        console.print(Rule("[cyan]0 — Sincronizando vetores ↔ patterns[/cyan]"))
+        try:
+            from tools.vector_store import sync_patterns_to_vectors
+            n_sync = sync_patterns_to_vectors()
+            if n_sync:
+                console.print(f"  [green]✓[/green] {n_sync} pattern(s) sincronizado(s)")
+            else:
+                console.print(f"  [dim]✓ Vetores já sincronizados[/dim]")
+        except Exception as e:
+            console.print(f"  [dim]⚠ Sync: {e}[/dim]")
+
         # 1. Sempre salva padrões de código (idempotente)
         console.print(Rule("[cyan]1 — Padrões de código[/cyan]"))
         n_pat = save_code_patterns()
