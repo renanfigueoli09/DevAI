@@ -1,0 +1,22 @@
+{
+  "search:nextjs+supabase-auth:next.js supabase authenticatio": {
+    "content": "- Install Supabase packages: `npm install @supabase/supabase-js @supabase/ssr`\n- Create `.env.local` file for environment variables.\n- Use Next.js App Router template with cookie-based auth, TypeScript, and Tailwind CSS.\n- Fork or clone the react-native-next-supabase-auth-monorepo from GitHub.\n- Import Supabase auth helpers library for authentication in your API routes.",
+    "source": "web_search",
+    "updated_at": 1780739845.9399042
+  },
+  "search:nextjs+supabase-auth:next.js supabase authenticatio_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-nextjs-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase JS Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your Supabase project.\n  - Environment variables for security (e.g., `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).\n  - Authentication methods: Sign Up, Sign In, Sign Out.",
+    "source": "code_example",
+    "updated_at": 1780739859.0740008
+  },
+  "search:nextjs+supabase-auth:next.js supabase jwt token man": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-nextjs-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n    ```\n    SUPABASE_URL=https://your-project.supabase.co\n    SUPABASE_ANON_KEY=your-anon-key\n    ```\n  - Middleware for JWT token refresh\n    ```javascript\n    export async function middleware(req) {\n      const response = NextResponse.next();\n      // Add your JWT token refresh logic here\n      return response;\n    }\n    ```\n  - Protected API routes using `withAuth` HOC or custom middleware",
+    "source": "web_search",
+    "updated_at": 1780739870.9413104
+  },
+  "search:nextjs+supabase-auth:next.js supabase jwt token man_ex": {
+    "content": "- Use Supabase CLI to generate JWT signing keys: `supabase functions deploy --project-ref <your-project-ref> --name auth-jwt`\n- Ensure Next.js and Supabase are on compatible versions.\n- Key config options in Supabase include:\n  - `JWT_SECRET`: For custom JWT signing.\n  - `NEXTAUTH_URL`: Base URL for your application.\n  - `NEXTAUTH_SECRET`: Secret used to encrypt cookies.\n- Implement email/password authentication with Supabase Auth.\n- Use Next.js API routes for handling authentication requests securely.\n- Avoid SSR issues by using Supabase's new package designed for server-side rendering.",
+    "source": "code_example",
+    "updated_at": 1780739887.3310692
+  }
+}
