@@ -92,8 +92,10 @@ def _save_index(idx: dict):
 
 
 def _normalize_topic(topic: str) -> str:
-    """Normalize topic name: underscores→hyphens, lowercase."""
-    return re.sub(r"[^\w-]", "-", topic.lower()).strip("-")
+    """Normalize topic name to consistent snake_case: special chars→_, collapse multiples."""
+    t = re.sub(r"[^\w]", "_", topic)   # any special char → _
+    t = re.sub(r"_+", "_", t)            # collapse ___  → _
+    return t.strip("_").lower()
 
 
 def _save_pattern_file(topic: str, key: str, content: str, source: str):

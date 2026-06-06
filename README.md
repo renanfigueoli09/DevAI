@@ -26,8 +26,7 @@ ollama pull nomic-embed-text     # embeddings (busca semântica)
 
 ```bash
 git clone <repo> ~/git/devai && cd ~/git/devai
-chmod +x install.sh scripts/study.sh scripts/self_improve.py
-./install.sh
+chmod +x install.sh scripts/study.sh scripts/self_improve.py scripts/train_and_validate.sh
 source ~/.zshrc
 ```
 
