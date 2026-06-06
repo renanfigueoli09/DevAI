@@ -1,0 +1,22 @@
+{
+  "search:golang-microservices:golang microservices with grpc": {
+    "content": "- **CLI Commands**:\n  - `go get google.golang.org/grpc`\n  - `go get go.mongodb.org/mongo-driver/mongo`\n  - `go get github.com/joho/godotenv`\n\n- **Latest Versions**:\n  - gRPC: v1.54.0\n  - MongoDB Go Driver: v1.23.0\n  - godotenv: v1.5.0\n\n- **Key Config Options**:\n  - `grpc.WithInsecure()`: For development environments.\n  - `mongo.NewClient(options.ClientOptions{})`: For connecting to MongoDB.\n  - `.Load(\".env\")`: For loading environment variables from a file.",
+    "source": "web_search",
+    "updated_at": 1780747971.1015606
+  },
+  "search:golang-microservices:golang microservices with grpc_ex": {
+    "content": "- Use `protoc` to generate gRPC code.\n- Install latest Go version from [golang.org/dl/](https://golang.org/dl/)\n- Initialize a new Go module with `go mod init <module-name>`\n- Add dependencies in `go.mod` for gRPC and other microservices libraries\n- Use `go build -o <binary-name> .` to compile the service\n- Deploy using Docker with `docker run -p <host-port>:<container-port> <image-name>`\n- Configure service discovery with Consul or Eureka\n- Implement circuit breaker pattern with Hystrix Go\n- Monitor services with Prometheus and Grafana",
+    "source": "code_example",
+    "updated_at": 1780747987.9280787
+  },
+  "search:golang-microservices:golang microservices with rest": {
+    "content": "- Use `go mod init <module_name>` to initialize a new Go module.\n- For HTTP Handlers, use `net/http` package.\n- Define custom types for data structures.\n- Implement OpenAPI 3 with tools like `swag`.\n- Use `protoc-gen-go-grpc` for gRPC code generation.\n- Configure microservices using environment variables or YAML files.\n- Deploy services using Docker containers.\n- Monitor and log services with tools like Prometheus and ELK stack.\n- Test APIs using Postman or cURL commands.",
+    "source": "web_search",
+    "updated_at": 1780748009.310898
+  },
+  "search:golang-microservices:golang microservices with rest_ex": {
+    "content": "- Use `go mod init <module_name>` to initialize a new Go module.\n- Run `go get -u github.com/gin-gonic/gin` to install the Gin web framework for building RESTful APIs.\n- For MongoDB integration, use `go get go.mongodb.org/mongo-driver/mongo`.\n- Key config options include setting environment variables for database URLs and API keys.\n- Use `go run main.go` to start your Go application locally.\n- Ensure you have the latest version of Go installed (as of my last update in October 2023, the latest stable version is Go 1.20).\n- For production environments, consider using Docker for containerization with a `Dockerfile`.\n- Implement middleware for logging and error handling to enhance your API's robustness.\n- Use tools like `go test` to write unit tests for your microservices.\n- For deployment, use services like AWS Elastic Beanstalk or Google Cloud Run.",
+    "source": "code_example",
+    "updated_at": 1780748029.7603648
+  }
+}

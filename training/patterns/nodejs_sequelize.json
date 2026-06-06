@@ -1,0 +1,12 @@
+{
+  "search:nodejs-sequelize:node.js sequelize orm crud ope": {
+    "content": "- **CLI Commands**:\n  - `npm install sequelize --save`\n  - `npm install pg pg-hstore --save` for PostgreSQL\n\n- **Latest Versions**:\n  - Sequelize: v6.x\n  - Node.js: v14.x, v16.x, v18.x\n\n- **Key Config Options**:\n  - `database`: Database name\n  - `username`: Database username\n  - `password`: Database password\n  - `host`: Database host\n  - `dialect`: Database dialect (e.g., 'postgres', 'mysql')\n\n- **Example Code Snippet for CRUD Operations**:\n\n```javascript\nconst { Sequelize, DataTypes } = require('sequelize');\n\n// Initialize Sequelize with your database configuration\nconst sequelize = new Sequelize('database', 'username', 'password', {\n  host: 'localhost',\n  dialect: 'postgres'\n});\n\n// Define a model\nconst User = sequelize.define('User', {\n  firstName: DataTypes.STRING,\n  lastName: DataTypes.STRING\n}, { tableName: 'users' });\n\n// Create a new user\nasync function createUser() {\n  const newUser = await User.create({\n    firstName: 'John',\n    lastName: 'Doe'\n  });\n  console.log(newUser.toJSON());\n}\n\n// Read all users\nasync function findAllUsers() {\n  const users = await User.findAll();\n  console.log(users.map(user => user.toJSON()));\n}\n\n// Update a user\nasync function updateUser() {\n  const [updated] = await User.update({ lastName: 'Smith' }, { where: { firstName: 'John' } });\n  console.log(`${updated} record(s) updated`);\n}\n\n// Delete a user\nasync function deleteUser() {\n  const deleted = await User.destroy({ where: { firstName: 'John', lastName: 'Smith' } });\n  console.log(`${deleted} record(s) deleted`);\n}\n\n// Execute functions\ncreateUser();\nfindAllUsers();\nupdateUser();\ndeleteUser();\n```\n\nThis code snippet demonstrates how to perform basic CRUD operations using Sequelize in a Node.js application.",
+    "source": "web_search",
+    "updated_at": 1780748066.2352383
+  },
+  "search:nodejs-sequelize:node.js sequelize orm crud ope_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install sequelize-cli --save-dev`\n  - `npx sequelize init`\n\n- **Latest Versions**:\n  - Sequelize: 6.x\n  - Express: 4.x\n\n- **Key Config Options**:\n  - `config.json`: Database connection settings.\n  - `models/`: Define your data models using JavaScript classes.\n  - `migrations/`: Manage database schema changes with migrations.",
+    "source": "code_example",
+    "updated_at": 1780748070.7016776
+  }
+}
