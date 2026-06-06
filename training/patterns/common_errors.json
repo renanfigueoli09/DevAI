@@ -1,7 +1,0 @@
-{
-  "pattern:error:missing-module": {
-    "content": "TS2307 './book/book.module' not found: The fix is to CREATE src/book/book.module.ts. Content: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])], providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
-    "source": "forced_training",
-    "updated_at": 1780737038.221066
-  }
-}

@@ -1,0 +1,22 @@
+{
+  "search:dotnet-ef-core-postgres:entity framework core with pos": {
+    "content": "- Install PostgreSQL using `sudo apt-get install postgresql`\n- Install Npgsql via NuGet: `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- Use latest Entity Framework Core version in your project file\n- Configure DbContext to use PostgreSQL:\n  ```csharp\n  services.AddDbContext<ApplicationDbContext>(options =>\n      options.UseNpgsql(Configuration.GetConnectionString(\"DefaultConnection\")));\n  ```\n- Define connection string in appsettings.json:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=localhost;Database=mydatabase;Username=myuser;Password=mypassword\"\n  }\n  ```\n- Use range types in PostgreSQL with Entity Framework Core by installing `Npgsql.EntityFrameworkCore.PostgreSQLExtensions`\n- Ensure Npgsql version is compatible with your EF Core version",
+    "source": "web_search",
+    "updated_at": 1780737191.107299
+  },
+  "search:dotnet-ef-core-postgres:entity framework core with pos_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.EntityFrameworkCore.PostgreSQL`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - Connection String: `Server=localhost;Port=5432;Database=mydatabase;User Id=myuser;Password=mypassword;`\n  - DbContext Configuration: \n    ```csharp\n    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n    {\n        optionsBuilder.UseNpgsql(\"YourConnectionStringHere\");\n    }\n    ```\n  - Migrations:\n    ```bash\n    dotnet ef migrations add InitialCreate --context YourDbContextName\n    dotnet ef database update --context YourDbContextName\n    ```",
+    "source": "code_example",
+    "updated_at": 1780737197.992001
+  },
+  "search:dotnet-ef-core-postgres:advanced entity framework core": {
+    "content": "- **Latest Version**: dotConnect for PostgreSQL 2025, EF Core 10\n- **CLI Commands**:\n  - `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - Connection String: `Server=localhost;Port=5432;Database=mydatabase;User Id=myuser;Password=mypassword;`\n  - Entity Framework Core DbContext Configuration: \n    ```csharp\n    public class MyDbContext : DbContext\n    {\n        public DbSet<MyEntity> MyEntities { get; set; }\n\n        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n        {\n            optionsBuilder.UseNpgsql(\"Server=localhost;Port=5432;Database=mydatabase;User Id=myuser;Password=mypassword;\");\n        }\n    }\n    ```\n  - Migrations: \n    ```bash\n    dotnet ef migrations add InitialCreate\n    dotnet ef database update\n    ```\n- **Integration Tips**:\n  - Use `Npgsql.EntityFrameworkCore.PostgreSQL` for PostgreSQL support.\n  - Configure DbContext in `OnConfiguring` method with connection string.\n  - Utilize Entity Framework Core migrations for schema management.",
+    "source": "web_search",
+    "updated_at": 1780737219.7549734
+  },
+  "search:dotnet-ef-core-postgres:advanced entity framework core_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - Connection String: `Server=your_server;Port=your_port;Database=your_database;Username=your_username;Password=your_password;`\n  - DbContext Configuration: \n    ```csharp\n    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n    {\n        optionsBuilder.UseNpgsql(\"YourConnectionStringHere\");\n    }\n    ```\n  - Migrations:\n    - `Add-Migration InitialCreate` (for Entity Framework Core CLI)\n    - `Update-Database` (for Entity Framework Core CLI)",
+    "source": "code_example",
+    "updated_at": 1780737238.8161645
+  }
+}

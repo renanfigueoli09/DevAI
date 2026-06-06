@@ -1,0 +1,22 @@
+{
+  "search:react-testing-library-react-query:testing react components with ": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npm install --save-dev jest`\n\n- **Latest Versions**:\n  - React Testing Library: v14.0.0\n  - Jest: v29.0.3\n\n- **Key Config Options**:\n  - In `jest.config.js`, add `\"testEnvironment\": \"jsdom\"` to simulate a browser environment.\n  - Use `setupFilesAfterEnv` to include setup files for React Testing Library and React Query.",
+    "source": "web_search",
+    "updated_at": 1780737285.0758297
+  },
+  "search:react-testing-library-react-query:testing react components with _ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react @testing-library/jest-dom`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - React Testing Library: v13.x\n  - Jest: v29.x\n\n- **Key Config Options**:\n  - In `jest.config.js`, add `\"testEnvironment\": \"jsdom\"` to use a DOM environment.\n  - Use `setupFilesAfterEnv` to include custom matchers with `@testing-library/jest-dom`.\n  - Configure `transformIgnorePatterns` in `jest.config.js` to ignore node_modules unless they are peer dependencies.",
+    "source": "code_example",
+    "updated_at": 1780737291.599362
+  },
+  "search:react-testing-library-react-query:best practices for testing asy": {
+    "content": "- Use Jest and React Testing Library for testing component behavior.\n- Employ `render` from React Testing Library to mount components.\n- Utilize `fireEvent` for simulating user interactions.\n- Implement `waitFor` or `async/await` for handling asynchronous operations.\n- Leverage `screen.getByText`, `screen.getByRole`, etc., for querying elements.\n- Use `jest.mock` to mock API calls and return test data.\n- Configure Jest with a `setupFilesAfterEnv` option for global setup.\n- Ensure proper error handling using try-catch blocks in tests.\n- Review the latest versions of React, Jest, and Testing Library regularly.",
+    "source": "web_search",
+    "updated_at": 1780737301.7090073
+  },
+  "search:react-testing-library-react-query:best practices for testing asy_ex": {
+    "content": "- Use `fireEvent` from React Testing Library to simulate user interactions.\n- Employ `waitFor` for handling asynchronous operations like data fetching in tests.\n- Ensure test reliability with `waitFor` to wait for API calls to complete.\n- Consider using Jest for mocking and testing asynchronous functions.\n- For React 2025, ensure compatibility with the latest versions of React Testing Library and Jest.\n- Key config options include setting up mock implementations for APIs.\n- Use CLI commands like `npm test` or `yarn test` to run tests.\n- Implement best practices by covering all possible scenarios in your tests.",
+    "source": "code_example",
+    "updated_at": 1780737309.9191344
+  }
+}
