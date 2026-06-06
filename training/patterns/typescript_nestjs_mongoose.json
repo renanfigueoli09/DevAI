@@ -17,6 +17,6 @@
   "search:typescript-nestjs-mongoose:mongoose crud operations with _ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: 9.x\n  - Mongoose: 6.x\n\n- **Key Config Options**:\n  - In `app.module.ts`, use `MongooseModule.forRoot()` to configure MongoDB connection.\n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { MongooseModule } from '@nestjs/mongoose';\n\n    @Module({\n      imports: [\n        MongooseModule.forRoot('mongodb://localhost/nestjs-example'),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Define a schema using `@Schema()` decorator in your model.\n    ```typescript\n    import { Schema, Document } from 'mongoose';\n    \n    @Schema()\n    export class User extends Document {\n      name: string;\n      email: string;\n    }\n    ```\n  - Use `MongooseModule.forFeature()` to register models within a module.\n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { MongooseModule } from '@nestjs/mongoose';\n    import { User, UserSchema } from './user.model';\n\n    @Module({\n      imports: [\n        MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),\n      ],\n    })\n    export class UsersModule {}\n    ```",
     "source": "code_example",
-    "updated_at": 1780781331.4944365
+    "updated_at": 1780782372.6134946
   }
 }
