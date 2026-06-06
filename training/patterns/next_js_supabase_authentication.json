@@ -13,5 +13,20 @@
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `jsonwebtoken` and `next-auth` using npm or yarn for JWT handling and authentication.\n- Configure `next.config.js` with the following options:\n  - `reactStrictMode: true`\n  - `swcMinify: true`\n- Implement JWT in your API routes by creating a middleware function to verify tokens.\n- Use `Auth.js` from `next-auth` for user session management and authentication flows.\n- Store JWT securely on the client side using `localStorage` or `cookie`.\n- Protect routes using `getServerSideProps` or `getStaticProps` with token validation.\n- Update your project dependencies regularly to ensure security patches.",
     "source": "web_search",
     "updated_at": 1780781921.8814154
+  },
+  "search:Next.js + Supabase Authentication:jwt token management in next.j_ex": {
+    "content": "- Install NextAuth.js using npm or yarn.\n- Use the `CredentialsProvider` for custom authentication logic.\n- Configure JWT in your NextAuth.js setup:\n  ```javascript\n  import NextAuth from \"next-auth\";\n  import CredentialsProvider from \"next-auth/providers/credentials\";\n\n  export default NextAuth({\n    providers: [\n      CredentialsProvider({\n        name: 'Credentials',\n        credentials: {\n          username: { label: \"Username\", type: \"text\" },\n          password: { label: \"Password\", type: \"password\" }\n        },\n        async authorize(credentials, req) {\n          // Add logic to check if the provided credentials are valid\n          return null; // Return the user object or null if authentication fails\n        }\n      })\n    ],\n    jwt: {\n      secret: 'your-secret-key', // Replace with a secure random string\n    },\n    session: {\n      strategy: \"jwt\",\n    },\n  });\n  ```\n- Use `getToken` from NextAuth.js to access the JWT token in your pages or API routes.\n- Protect routes using middleware:\n  ```javascript\n  import { getToken } from 'next-auth/jwt';\n\n  export default async function handler(req, res) {\n    const token = await getToken({ req });\n    if (!token) return res.status(401).json({ message: 'Unauthorized' });\n\n    // Proceed with handling the request\n  }\n  ```\n- Ensure your secret key is kept secure and not exposed in your codebase.",
+    "source": "code_example",
+    "updated_at": 1780781929.9578831
+  },
+  "search:Next.js + Supabase Authentication:secure api routes in next.js": {
+    "content": "- **Middleware and JWT**: Use Next.js Middleware to secure API routes.\n- **Latest Version**: Ensure using the latest version of Next.js for security updates.\n- **Key Config Options**:\n  - `middleware.js`: Define middleware logic in this file.\n  - `getToken()`: Function to retrieve JWT token from request headers.\n  - `useSessionReact Hook`: Secure pages by accessing session data.\n- **CLI Commands**: \n  - `npx create-next-app@latest my-app`: Create a new Next.js app.\n  - `npm run dev`: Start the development server.\n- **Authentication Guide**:\n  - Use `getSession()` or `getToken()` in API routes to validate tokens.\n  - Implement JWT authentication for secure data access.",
+    "source": "web_search",
+    "updated_at": 1780781939.9735184
+  },
+  "search:Next.js + Supabase Authentication:secure api routes in next.js_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - Middleware for authentication\n  - JWT (JSON Web Tokens) for token validation\n  - Environment variables for secret keys",
+    "source": "code_example",
+    "updated_at": 1780781946.2867851
   }
 }
