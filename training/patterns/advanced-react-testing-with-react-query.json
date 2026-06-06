@@ -1,0 +1,27 @@
+{
+  "search:Advanced React Testing with React Query:react testing library": {
+    "content": "- Install React Testing Library using npm or yarn:\n  ```\n  npm install @testing-library/react\n  # or\n  yarn add @testing-library/react\n  ```\n\n- Use the `render` function to render components for testing.\n- Utilize queries like `getByText`, `getByRole`, etc., to find elements in your component.\n- For simulating user events, use functions like `fireEvent.click(element)`.\n- Jest is often used with React Testing Library for assertions and test organization.\n- No specific configuration is required to start using React Testing Library.",
+    "source": "web_search",
+    "updated_at": 1780743227.2122943
+  },
+  "search:Advanced React Testing with React Query:react testing library_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npx create-react-app my-app`\n\n- **Latest Versions**:\n  - React Testing Library: v14.0.0\n  - Jest: v29.0.3\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: For setting up testing utilities.\n  - `testEnvironment`: Specifies the test environment (e.g., 'jsdom').\n  - `transformIgnorePatterns`: Ignores certain patterns during transformation.",
+    "source": "code_example",
+    "updated_at": 1780743230.5759358
+  },
+  "search:Advanced React Testing with React Query:testing react components": {
+    "content": "- **CLI Commands**:\n  - `npm test` or `yarn test`: Runs tests using the configured test runner.\n  - `react-scripts test --watchAll`: Starts Jest in watch mode, running tests on file changes.\n\n- **Latest Versions**:\n  - React: 18.2.0\n  - Jest: 29.3.1\n  - Testing Library: 14.0.0\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Array of paths to modules that run before all tests.\n  - `testEnvironment`: Specifies the test environment (e.g., 'jsdom' for browser-like testing).\n  - `transformIgnorePatterns`: Patterns for files that should not be transformed by Babel.",
+    "source": "web_search",
+    "updated_at": 1780743237.9114876
+  },
+  "search:Advanced React Testing with React Query:react query testing": {
+    "content": "- **CLI Command**: `npx create-next-app@latest testing-react-query`\n- **Latest Version**: Ensure you are using the latest version of React Query and Axios for compatibility.\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `useMutation`: For mutating data.\n  - `queryClient`: For managing query cache.\n  - `axios` for HTTP requests.",
+    "source": "web_search",
+    "updated_at": 1780743258.9540246
+  },
+  "search:Advanced React Testing with React Query:react query testing_ex": {
+    "content": "- Use `npm install @testing-library/react @testing-library/jest-dom` to install necessary testing libraries.\n- For React Query, use `@testing-library/react-query` for testing hooks and components that utilize React Query.\n- To mock queries, use `useQueryClient().setQueryData()` in your tests.\n- Ensure you have the latest versions of React, React Testing Library, and React Query to avoid compatibility issues.\n- Key config options include setting up a custom query client with `QueryClientProvider` for testing components that rely on React Query.",
+    "source": "code_example",
+    "updated_at": 1780743263.2124388
+  }
+}

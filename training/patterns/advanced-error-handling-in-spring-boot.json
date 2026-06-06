@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Spring Boot:spring boot error handling": {
+    "content": "- Use `@ControllerAdvice` to handle exceptions globally.\n- Implement `@ExceptionHandler` within `@ControllerAdvice` classes for specific exception handling.\n- Return custom error responses using `ResponseEntity`.\n- Utilize `@ResponseStatus` to set HTTP status codes.\n- Configure logging with `application.properties` or `application.yml`.\n- Use `@Valid` and `BindingResult` for input validation.\n- Implement `ErrorAttributes` for custom error attributes.\n- Leverage Spring Boot Actuator for monitoring and management.",
+    "source": "web_search",
+    "updated_at": 1780743160.7970307
+  },
+  "search:Advanced Error Handling in Spring Boot:spring boot error handling_ex": {
+    "content": "- Use `@ControllerAdvice` to handle exceptions globally across controllers.\n- Implement `ErrorController` to customize error handling.\n- Set `server.error.include-stacktrace=never` in `application.properties` for production environments.\n- Use `@ExceptionHandler` within a class annotated with `@ControllerAdvice`.\n- For RESTful APIs, return JSON responses using `ResponseEntity`.\n- Configure custom error pages by placing HTML files in the `src/main/resources/static/error/` directory.\n- Utilize `ErrorAttributes` to customize error attributes returned in JSON format.",
+    "source": "code_example",
+    "updated_at": 1780743165.280127
+  },
+  "search:Advanced Error Handling in Spring Boot:exception handling in spring b": {
+    "content": "- Use `@ExceptionHandler` annotation to handle exceptions in specific handler classes.\n- Implement `ResponseEntityExceptionHandler` for global exception handling, improving code reuse.\n- Utilize Spring Boot's default exception handling mechanisms to manage exceptions beyond simple 'try-catch' blocks.\n- Configure custom error responses using `@ControllerAdvice` and `@ExceptionHandler`.\n- For latest versions, refer to [Spring Boot official documentation](https://spring.io/projects/spring-boot).\n- Key config options include `server.error.path`, `server.error.include-message`, and `server.error.include-stacktrace`.",
+    "source": "web_search",
+    "updated_at": 1780743169.5939765
+  },
+  "search:Advanced Error Handling in Spring Boot:exception handling in spring b_ex": {
+    "content": "- Use `@ControllerAdvice` to define a global exception handler.\n- Implement `@ExceptionHandler` methods within the `@ControllerAdvice` class for specific exceptions.\n- Utilize `ResponseEntity` to return detailed error responses.\n- Configure custom error pages with `error-page` in `application.properties`.\n- Enable debug mode by setting `spring.mvc.throw-exception-if-no-handler-found=true` and `server.error.include-message=always`.\n- Use `@ResponseStatus` on methods or classes to specify HTTP status codes.\n- Implement `ErrorAttributes` for custom error attributes.\n- Configure logging levels for exceptions using `logging.level.org.springframework.web=DEBUG`.",
+    "source": "code_example",
+    "updated_at": 1780743175.6058042
+  }
+}
