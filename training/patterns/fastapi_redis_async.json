@@ -2,21 +2,21 @@
   "search:fastapi+redis-async:fastapi with redis async 2023": {
     "content": "- Install FastAPI and Redis using pip:\n  ```\n  pip install fastapi uvicorn redis[asyncio]\n  ```\n\n- Use the latest version of FastAPI, as of my last update in October 2023.\n\n- Key configuration options for connecting to Redis in an asynchronous way include:\n  ```python\n  from fastapi import FastAPI\n  from fastapi_redis_cache import FastAPICache, get_redis_connection\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      redis_client = await get_redis_connection()\n      FastAPICache.init(redis_client, prefix=\"fastapi-cache\")\n\n  # Example endpoint using caching\n  @app.get(\"/items/{item_id}\")\n  async def read_item(item_id: int):\n      return {\"item_id\": item_id}\n  ```\n\n- Ensure your Redis server is running and accessible.\n\n- For production environments, consider using environment variables to manage sensitive information like Redis connection strings.",
     "source": "web_search",
-    "updated_at": 1780760205.8920584
+    "updated_at": 1780760667.83082
   },
   "search:fastapi+redis-async:fastapi with redis async 2023_ex": {
     "content": "- **GitHub Repository**: [redis-developer/fastapi-redis-tutorial](https://github.com/redis-developer/fastapi-redis-tutorial)\n- **FastAPI Version**: Latest as of my last update, typically found in the repository's README.\n- **Redis-py Version**: Latest as of my last update, typically found in the repository's requirements.txt or setup.py.\n- **Key Config Options**:\n  - `REDIS_URL`: Connection string for Redis.\n  - `TIME_SERIES_KEY`: Key used for storing Bitcoin sentiment and price data.\n  - `ROLLING_AVERAGE_WINDOW`: Window size for calculating rolling averages.\n- **CLI Commands**:\n  ```bash\n  git clone https://github.com/redis-developer/fastapi-redis-tutorial.git\n  cd fastapi-redis-tutorial\n  pip install -r requirements.txt\n  uvicorn main:app --reload\n  ```\n- **Dependency Injection**: Use FastAPI's dependency injection to manage Redis connections and other resources.\n- **Caching**: Implement caching using Redis for frequently accessed data.\n- **Session Management**: Manage user sessions with Redis, storing session data in a hash.\n- **Rate Limiting**: Apply rate limiting using Redis to control the number of requests from users.",
     "source": "code_example",
-    "updated_at": 1780760206.4522405
+    "updated_at": 1780760668.394866
   },
   "search:fastapi+redis-async:fastapi and redis integration ": {
     "content": "- **CLI Commands**:\n  - `docker-compose up` to start services.\n  - `fastapi run app.main:app --reload` for development.\n\n- **Latest Versions**:\n  - FastAPI: v0.96.0\n  - Redis: v7.2.1\n\n- **Key Config Options**:\n  - In `docker-compose.yml`, configure service ports and volumes.\n  - In `app/core/cache.py`, set up Redis client connection details.\n  - Use environment variables for sensitive data like Redis password.",
     "source": "web_search",
-    "updated_at": 1780760207.0211978
+    "updated_at": 1780760668.9463983
   },
   "search:fastapi+redis-async:fastapi and redis integration _ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - Redis: 4.5.7\n\n- **Key Config Options**:\n  - Redis URL: `redis://localhost:6379/0`\n  - Dependency Injection: Configure dependencies in `main.py` for Redis connection.\n  - Pydantic Models: Define models using Pydantic and use them with FastAPI endpoints.",
     "source": "code_example",
-    "updated_at": 1780760207.586499
+    "updated_at": 1780760669.4583137
   }
 }

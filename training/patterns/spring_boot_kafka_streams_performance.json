@@ -2,11 +2,11 @@
   "search:spring-boot-kafka-streams-performance:kafka streams with spring boot": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Apache Kafka: 3.3.x\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Set to the Kafka broker address.\n  - `spring.kafka.consumer.group-id`: Unique identifier for consumer group.\n  - `spring.cloud.stream.bindings.input.destination`: Name of the Kafka topic to consume from.\n  - `spring.cloud.stream.bindings.output.destination`: Name of the Kafka topic to produce to.",
     "source": "web_search",
-    "updated_at": 1780760198.3583193
+    "updated_at": 1780760659.2459419
   },
   "search:spring-boot-kafka-streams-performance:kafka streams with spring boot_ex": {
     "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: As of my last update, the latest stable version of Spring Boot is 3.2.x and Kafka Streams is 3.4.x.\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer`/`value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets when no initial offset is found or an invalid offset is found. Options include `earliest`, `latest`, and `none`.\n- **Example Code Snippet**:\n  ```java\n  @SpringBootApplication\n  public class KafkaStreamsApplication {\n      public static void main(String[] args) {\n          SpringApplication.run(KafkaStreamsApplication.class, args);\n      }\n  }\n\n  @Bean\n  public KStream<String, String> processStream(StreamsBuilder builder) {\n      return builder.stream(\"input-topic\")\n              .mapValues(value -> value.toUpperCase());\n  }\n  ```\n- **Integration with REST**: Use `@RestController` and `@PostMapping` to create endpoints for triggering or managing Kafka Streams applications.",
     "source": "code_example",
-    "updated_at": 1780760198.900472
+    "updated_at": 1780760659.8003333
   }
 }

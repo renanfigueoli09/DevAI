@@ -1,0 +1,12 @@
+{
+  "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error ": {
+    "content": "- Use `kubectl describe statefulset <statefulset-name>` to get detailed information about the StatefulSet.\n- Check pod status with `kubectl get pods -l app=<app-label>`.\n- Inspect PVCs and PVs using `kubectl get pvc` and `kubectl get pv`, respectively.\n- Apply fixes using `kubectl apply -f <manifest-file>`.\n- Use `kubectl rollout restart statefulset <statefulset-name>` to restart the StatefulSet.\n- Monitor logs with `kubectl logs <pod-name>`.\n- Ensure correct configuration in the manifest file, focusing on `spec.template`, `spec.serviceName`, and `spec.volumeClaimTemplates`.",
+    "source": "web_search",
+    "updated_at": 1780760767.909533
+  },
+  "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error _ex": {
+    "content": "- Use `kubectl get statefulsets` to list all StatefulSets.\n- Check logs with `kubectl logs <statefulset-name>-<index>`.\n- Inspect events with `kubectl describe statefulset <statefulset-name>`.\n- Verify storage with `kubectl exec -it <pod-name> -- df -h`.\n- Use `kubectl rollout status statefulset <statefulset-name>` for deployment status.\n- Check readiness probes with `kubectl get statefulsets <statefulset-name> -o yaml | grep readinessProbe`.\n- Ensure ordered deployment and scaling by setting `updateStrategy.type=OrderedRollingUpdate`.",
+    "source": "code_example",
+    "updated_at": 1780760774.5483348
+  }
+}
