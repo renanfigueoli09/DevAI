@@ -1,0 +1,22 @@
+{
+  "search:fastapi+pydantic-validation:fastapi pydantic validation be": {
+    "content": "- Use `fastapi` version `0.95.0` or later.\n- Install Pydantic using `pip install pydantic`.\n- Define data models with Pydantic's `BaseModel` for validation and parsing.\n- Utilize FastAPI's automatic documentation generation with Swagger UI and ReDoc.\n- For complex data, use Pydantic's nested models and type annotations.\n- Apply validators to fields using Pydantic's `validator` decorator.\n- Use `Body`, `Query`, and `Path` to define request parameters.\n- Leverage Pydantic's error handling for robust validation.\n- Ensure your models are compatible with Python 3.10+ for full functionality.",
+    "source": "web_search",
+    "updated_at": 1780725356.7041574
+  },
+  "search:fastapi+pydantic-validation:fastapi pydantic validation be_ex": {
+    "content": "- Use `fastapi` and `pydantic` libraries.\n- Install FastAPI using pip: `pip install fastapi`.\n- Install Uvicorn for running the app: `pip install uvicorn`.\n- Define Pydantic models for data validation.\n- Use `response_model` in endpoint definitions to specify response structure.\n- Utilize type annotations for better code readability and type checking.\n- Implement query parameters with `fastapi.Query`.\n- Handle request body data using Pydantic models.\n- Ensure sensitive fields are not exposed in responses.\n- Test endpoints using tools like Postman or curl.",
+    "source": "code_example",
+    "updated_at": 1780725362.8096316
+  },
+  "search:fastapi+pydantic-validation:fastapi pydantic validation pe": {
+    "content": "- **CLI Commands**: Not explicitly provided in search results.\n- **Latest Versions**:\n  - Pydantic: Version 2.0.0 (as of my last update)\n  - FastAPI: Version 0.85.0 (as of my last update)\n- **Key Config Options**:\n  - For Pydantic, consider using `Config` class to customize model behavior.\n  - In FastAPI, use `Form`, `Query`, and `Path` for request parameters.\n  - Utilize validators in Pydantic models with the `@validator` decorator.",
+    "source": "web_search",
+    "updated_at": 1780725372.6177907
+  },
+  "search:fastapi+pydantic-validation:fastapi pydantic validation pe_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications (`uvicorn main:app --reload`)\n- Install the latest version of FastAPI and Pydantic using pip:\n  ```bash\n  pip install fastapi pydantic\n  ```\n- Key config options for performance include setting `workers` in Uvicorn:\n  ```bash\n  uvicorn main:app --workers 4\n  ```\n- For advanced validation, use Pydantic's custom validators as shown in the GitHub demo.\n- Ensure your FastAPI application is asynchronous to take full advantage of its performance benefits.",
+    "source": "code_example",
+    "updated_at": 1780725379.2603166
+  }
+}
