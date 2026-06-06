@@ -8,5 +8,10 @@
     "content": "- **Latest Version**: Spring Boot 3, Elasticsearch 7.x\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `curl -X GET \"localhost:9200/your_index_name/_search?pretty\"` to search documents.\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=elasticsearch`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
     "source": "code_example",
     "updated_at": 1780755822.613396
+  },
+  "search:spring-boot+elasticsearch:elasticsearch with spring boot": {
+    "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_cat/nodes?v\"` to check Elasticsearch cluster nodes.\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'{\"mappings\": {\"properties\": {\"title\": {\"type\": \"text\"}}}}'` to create an index with a text field.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Elasticsearch: 8.6.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Set the URI of your Elasticsearch instance.\n  - `elasticsearch.client.transport.sniff`: Enable or disable transport client sniffing.\n  - `elasticsearch.cluster.name`: Specify the name of your Elasticsearch cluster.",
+    "source": "web_search",
+    "updated_at": 1780755830.5222487
   }
 }
