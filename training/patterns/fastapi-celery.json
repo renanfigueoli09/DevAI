@@ -1,0 +1,22 @@
+{
+  "search:fastapi+celery:fastapi celery integration tut": {
+    "content": "- Install FastAPI and Uvicorn: `pip install fastapi uvicorn`\n- Install Celery: `pip install celery`\n- Set up a Celery worker with Redis as the broker: `celery -A your_project_name.celery_app worker --loglevel=info`\n- Configure Celery in your FastAPI app:\n  ```python\n  from celery import Celery\n\n  celery_app = Celery(\n      \"your_project_name\",\n      broker=\"redis://localhost:6379/0\",\n      backend=\"redis://localhost:6379/0\"\n  )\n  ```\n- Define a task in your project:\n  ```python\n  @celery_app.task\n  def add(x, y):\n      return x + y\n  ```\n- Call the task from an endpoint:\n  ```python\n  from fastapi import FastAPI\n\n  app = FastAPI()\n\n  @app.get(\"/add/\")\n  async def read_add():\n      result = add.delay(4, 6)\n      return {\"task_id\": result.id}\n  ```\n- Monitor tasks with Flower: `celery -A your_project_name.celery_app flower`\n- Ensure Redis is running and accessible.\n- Update FastAPI to the latest version using `pip install --upgrade fastapi`.\n- Update Celery to the latest version using `pip install --upgrade celery`.",
+    "source": "web_search",
+    "updated_at": 1780707263.7528622
+  },
+  "search:fastapi+celery:fastapi celery integration tut_ex": {
+    "content": "- **GitHub Repository**: [testdrivenio/fastapi-celery](https://github.com/testdrivenio/fastapi-celery)\n- **FastAPI Version**: 0.75.2\n- **Celery Version**: 5.2.3\n- **Redis Version**: 6.2.6\n- **Docker Compose File**:\n  ```yaml\n  version: '3'\n  services:\n    fastapi:\n      build: .\n      ports:\n        - \"8000:8000\"\n      depends_on:\n        - redis\n    celery:\n      build: .\n      command: celery -A main.celery_app worker --loglevel=info\n      depends_on:\n        - redis\n    redis:\n      image: \"redis:6.2.6-alpine\"\n  ```\n- **Celery Configuration** (`main.py`):\n  ```python\n  from celery import Celery\n\n  celery_app = Celery(\n      __name__,\n      broker=\"redis://redis:6379/0\",\n      backend=\"redis://redis:6379/0\",\n  )\n  ```\n- **Task Example**:\n  ```python\n  @celery_app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Running Celery Worker**:\n  ```bash\n  docker-compose run --rm celery celery -A main.celery_app worker --loglevel=info\n  ```\n- **Testing Celery Task**:\n  ```python\n  import pytest\n\n  from main import add\n\n  @pytest.mark.asyncio\n  async def test_add():\n      result = await add.delay(4, 6)\n      assert result.get() == 10\n  ```\n\nThese steps provide a concrete guide for integrating Celery into a FastAPI application using Docker and Redis.",
+    "source": "code_example",
+    "updated_at": 1780707270.981222
+  },
+  "search:fastapi+celery:fastapi celery task scheduling": {
+    "content": "- **Install FastAPI and Celery**: `pip install fastapi celery`\n- **Celery Configuration**:\n  - Create a Celery app instance.\n  - Configure broker URL (e.g., Redis or RabbitMQ).\n  - Set task serializer (e.g., JSON).\n- **FastAPI Integration**:\n  - Use `BackgroundTasks` for asynchronous tasks.\n  - Integrate Celery with FastAPI using `CeleryTask`.\n- **Example Task**:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def add(x, y):\n      return x + y\n  ```\n- **Running Celery Worker**: `celery -A your_project_name worker --loglevel=info`\n- **Scheduling Tasks**:\n  - Use Celery beat for periodic tasks.\n  - Configure schedule in Celery app settings.\n- **Handling Results**:\n  - Use Celery result backend to store task results.\n  - Retrieve results using `AsyncResult`.\n- **Deployment**:\n  - Deploy both FastAPI and Celery workers.\n  - Ensure proper configuration for production environments.",
+    "source": "web_search",
+    "updated_at": 1780707282.019897
+  },
+  "search:fastapi+celery:fastapi celery task scheduling_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A app worker --loglevel=info`\n  - `celery -A app beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - `app.config.update(result_backend='redis://localhost:6379/0')`\n  - `app.config.update(broker_url='redis://localhost:6379/0')`",
+    "source": "code_example",
+    "updated_at": 1780707286.6283112
+  }
+}

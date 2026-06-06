@@ -1,0 +1,22 @@
+{
+  "search:django+redis-cache:django redis cache optimizatio": {
+    "content": "- **Install Redis**: `sudo apt-get install redis-server`\n- **Django Cache Configuration**:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- **Key Config Options**:\n  - `BACKEND`: Specifies the cache backend to use.\n  - `LOCATION`: URL of the Redis server.\n  - `OPTIONS.CLIENT_CLASS`: Class used for connecting to Redis.\n- **CLI Commands**:\n  - Start Redis: `redis-server`\n  - Stop Redis: `redis-cli shutdown`\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.0\n- **Performance Tips**:\n  - Use `cache.set(key, value, timeout=None)` for setting cache.\n  - Use `cache.get(key)` for retrieving cache.\n  - Configure `CACHE_TTL` in settings for default timeout.",
+    "source": "web_search",
+    "updated_at": 1780707295.0741599
+  },
+  "search:django+redis-cache:django redis cache optimizatio_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest`\n  - `sudo service redis-server restart`\n\n- **Latest Versions**:\n  - django-redis: Latest version as of my last update is 5.1.0.\n  - Redis Stack Server: Latest version as of my last update is 2.6.\n\n- **Key Config Options**:\n  - In Django settings, configure `CACHES` to use Redis:\n    ```python\n    CACHES = {\n        \"default\": {\n            \"BACKEND\": \"django_redis.cache.RedisCache\",\n            \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n            \"OPTIONS\": {\n                \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            }\n        }\n    }\n    ```\n  - Use `django-redis` for session management:\n    ```python\n    SESSION_ENGINE = \"django.contrib.sessions.backends.cache\"\n    SESSION_CACHE_ALIAS = \"default\"\n    ```",
+    "source": "code_example",
+    "updated_at": 1780707301.1911154
+  },
+  "search:django+redis-cache:django redis session managemen": {
+    "content": "- Use `django-redis` for Redis session management.\n- Configure Redis as the cache backend in Django settings.\n- Set `SESSION_ENGINE = 'django.contrib.sessions.backends.cache'`.\n- Use Redis connection strings like `redis://localhost:6379/1`.\n- Enable session expiration with `SESSION_COOKIE_AGE`.\n- Utilize `django-redis` for pluggable clients and native redis-py support.\n- Monitor Redis performance using tools like `redis-cli` and `redis-stat`.",
+    "source": "web_search",
+    "updated_at": 1780707307.6310122
+  },
+  "search:django+redis-cache:django redis session managemen_ex": {
+    "content": "- Install `django-redis` using pip: `pip install django-redis`\n- Update Django settings to use Redis as session backend:\n  ```python\n  SESSION_ENGINE = \"django.contrib.sessions.backends.cache\"\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Ensure Redis server is running on `localhost` at port `6379`.\n- Use the latest version of Django and `django-redis` for optimal performance.\n- Configure `SESSION_COOKIE_AGE` in settings to control session expiration time.",
+    "source": "code_example",
+    "updated_at": 1780707317.6056914
+  }
+}

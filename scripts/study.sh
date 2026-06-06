@@ -56,8 +56,8 @@ mkdir -p "$DEVAI_DIR/training"
 auto_commit() {
     if command -v git &>/dev/null && [ -d "$DEVAI_DIR/.git" ]; then
         cd "$DEVAI_DIR"
-        if ! git diff --quiet training/ 2>/dev/null; then
-            git add training/ 2>/dev/null
+        git add training/ README.md 2>/dev/null
+        if ! git diff --cached --quiet 2>/dev/null; then
             git commit -m "training: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null \
                 && echo -e "  ${GREEN}✓ Commitado${NC}" || true
         fi

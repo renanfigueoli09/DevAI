@@ -1,0 +1,22 @@
+{
+  "search:dotnet+azure-cosmosdb:dotnet azure cosmosdb crud ope": {
+    "content": "- **CLI Commands**:\n  - `dotnet new func` to create a new Azure Functions project.\n  - `func azure functionapp publish <functionAppName>` to publish the function app.\n\n- **Latest Versions**:\n  - .NET SDK: 7.x\n  - Azure Functions Core Tools: 4.x\n  - Microsoft.Azure.Cosmos: 3.20\n\n- **Key Config Options**:\n  - `AzureWebJobsStorage`: Connection string for your storage account.\n  - `CosmosDBEndpoint`: Endpoint URL of your Cosmos DB account.\n  - `CosmosDBAuthKey`: Primary key or connection string for authentication.\n  - `DatabaseId` and `ContainerId`: IDs for the database and container in Cosmos DB.",
+    "source": "web_search",
+    "updated_at": 1780707379.7915823
+  },
+  "search:dotnet+azure-cosmosdb:dotnet azure cosmosdb crud ope_ex": {
+    "content": "- **CLI Commands**:\n  - `az cosmosdb create --name <your_cosmos_db_name> --resource-group <your_resource_group> --kind GlobalDocumentDB`\n  - `az cosmosdb sql database create --account-name <your_cosmos_db_name> --resource-group <your_resource_group> --name <your_database_name>`\n  - `az cosmosdb sql container create --account-name <your_cosmos_db_name> --resource-group <your_resource_group> --database-name <your_database_name> --name <your_container_name> --partition-key-path \"/id\"`\n\n- **Latest Versions**:\n  - Azure SDK for .NET: v12.14.0\n  - Cosmos DB SQL API Client Library: v3.36.0\n\n- **Key Config Options**:\n  - `EndpointUrl`: The URI of your Cosmos DB account.\n  - `AuthKey`: The primary key or connection string for your Cosmos DB account.\n  - `DatabaseId`: The ID of the database you want to interact with.\n  - `ContainerId`: The ID of the container within the database.",
+    "source": "code_example",
+    "updated_at": 1780707386.4177797
+  },
+  "search:dotnet+azure-cosmosdb:azure cosmosdb performance tun": {
+    "content": "- Use Azure Cosmos DB SDK v4 or later for optimal performance.\n- Implement hierarchical partition keys to improve query and write performance.\n- Scale your CosmosDB container to meet demand, ensuring sufficient throughput units (RU/s).\n- Utilize the DocumentClient class from the Azure Cosmos DB SDK for better JSON document handling.\n- Monitor and adjust indexing policies based on workload requirements.\n- Enable serverless storage options if applicable to reduce costs.\n- Regularly update SDKs and drivers to leverage performance improvements and bug fixes.",
+    "source": "web_search",
+    "updated_at": 1780707396.620654
+  },
+  "search:dotnet+azure-cosmosdb:azure cosmosdb performance tun_ex": {
+    "content": "- Use the latest version of the Azure Cosmos DB .NET SDK, specifically Version 3.\n- Configure the `RequestTimeout` and `MaxRetryAttemptsOnThrottledRequests` settings in your client configuration to optimize performance.\n- Implement partitioning strategies effectively by choosing appropriate partition keys.\n- Utilize indexing policies wisely to balance between query flexibility and storage efficiency.\n- Monitor and analyze query performance using Azure Cosmos DB's built-in metrics and logs.\n- Enable server-side encryption for data at rest to enhance security without impacting performance.\n- Regularly update your database schema and indexes based on application needs and usage patterns.",
+    "source": "code_example",
+    "updated_at": 1780707402.7835472
+  }
+}
