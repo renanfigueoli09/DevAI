@@ -1,0 +1,22 @@
+{
+  "search:PostgreSQL Performance Tuning for .NET Applications:dotnet postgres performance": {
+    "content": "- Use `dotnet user-secrets set \"ConnectionStrings:PostgresCache\" \"your_connection_string\"` to configure Postgres connection.\n- Ensure Docker Compose is used for setting up a separate, disposable container with PostgreSQL and .NET runtime.\n- For performance optimization in .NET applications using PostgreSQL, consider implementing tiered caching with HybridCache & Postgres.\n- Monitor and optimize database queries by analyzing execution plans and indexes.\n- Use the latest versions of .NET Core or .NET 6 for better performance and features.\n- Configure connection pooling in your application to manage database connections efficiently.\n- Regularly update PostgreSQL to benefit from performance improvements and security patches.\n- Implement asynchronous programming patterns in .NET applications when interacting with PostgreSQL to improve responsiveness.",
+    "source": "web_search",
+    "updated_at": 1780724497.939817
+  },
+  "search:PostgreSQL Performance Tuning for .NET Applications:dotnet postgres performance_ex": {
+    "content": "- Use `dotnet ef migrations add InitialCreate` to create initial database migration.\n- Update PostgreSQL to the latest version for performance improvements.\n- Configure connection string in `appsettings.json`: `\"ConnectionStrings\": { \"DefaultConnection\": \"Server=localhost;Port=5432;Database=mydatabase;User Id=myuser;Password=mypassword;\" }`.\n- Enable connection pooling by setting `Pooling=true` and `MaxPoolSize=100` in the connection string.\n- Use `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL` to install the latest PostgreSQL EF Core provider.\n- Monitor performance with tools like pgAdmin or dotnet-trace for insights.\n- Optimize queries using indexes, query plans, and stored procedures.\n- Scale out by adding more instances of your application and load balancing.",
+    "source": "code_example",
+    "updated_at": 1780724507.973618
+  },
+  "search:PostgreSQL Performance Tuning for .NET Applications:entity framework core postgres": {
+    "content": "- Use `dotnet ef database update` to apply migrations.\n- Ensure Npgsql.EntityFrameworkCore.PostgreSQL is up-to-date.\n- Configure query splitting in `appsettings.json`: `\"QuerySplittingBehavior\": \"Split\"`\n- Set the connection string in `appsettings.json`.\n- Use `AddDbContextPool<TContext>` for better performance with multiple requests.",
+    "source": "web_search",
+    "updated_at": 1780724518.4530447
+  },
+  "search:PostgreSQL Performance Tuning for .NET Applications:entity framework core postgres_ex": {
+    "content": "- Use the latest version of Entity Framework Core and Npgsql.\n- Install Entity Developer for PostgreSQL to simplify model generation.\n- Optimize queries by using `AsNoTracking()` when not updating entities.\n- Implement batching with `ToListAsync` or `ToArrayAsync`.\n- Configure connection pooling in your appsettings.json:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_pass;MaxPoolSize=100;\"\n  }\n  ```\n- Use indexes on frequently queried columns to speed up data retrieval.\n- Consider using `Include` for eager loading only the necessary related entities.\n- Monitor and analyze query performance with PostgreSQL's `EXPLAIN ANALYZE`.\n- Regularly update your database schema and indexes based on application usage patterns.",
+    "source": "code_example",
+    "updated_at": 1780724526.5552187
+  }
+}

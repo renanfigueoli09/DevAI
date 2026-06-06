@@ -1,0 +1,22 @@
+{
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:nextjs security": {
+    "content": "- **CLI Commands**: \n  - `npx create-next-app@latest my-app`\n  - `npm install next@latest`\n\n- **Latest Versions**:\n  - Next.js 16.2.6\n\n- **Key Config Options**:\n  - Environment variables: Use `.env.local` for sensitive data.\n  - Middleware security: Implement proper authentication and authorization in middleware.\n  - Data validation & sanitization: Use libraries like `yup` or built-in functions to validate user inputs.\n\n- **Security Advisories**:\n  - Middleware bypass\n  - Denial of service\n  - SSRF\n  - Cache poisoning\n  - Cross-site scripting (XSS)\n\n- **Best Practices**:\n  - Regularly update dependencies.\n  - Use HTTPS for all communications.\n  - Implement rate limiting to prevent abuse.",
+    "source": "web_search",
+    "updated_at": 1780724536.1243608
+  },
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:nextjs security_ex": {
+    "content": "- Use `next build` to optimize your Next.js app.\n- Implement security headers in `next.config.js` using the `headers` option.\n- Update dependencies regularly with `npm update`.\n- Enable automatic static optimization with `optimizeFonts: true` and `images: { domains: [] }`.\n- Utilize environment variables for sensitive data with `process.env.VARIABLE_NAME`.\n- Employ Content Security Policy (CSP) by setting `Content-Security-Policy` in headers.\n- Use HTTPS to secure data transmission with `https: true` in `next.config.js`.\n- Implement CSRF protection using cookies and tokens.\n- Regularly audit dependencies for vulnerabilities using tools like `snyk`.",
+    "source": "code_example",
+    "updated_at": 1780724542.7755415
+  },
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:supabase authentication best p": {
+    "content": "- Use Supabase CLI for project setup and management.\n- Ensure latest Supabase version by running `supabase upgrade`.\n- Implement password-based authentication with secure hashing using bcrypt.\n- Configure JWT secret in Supabase settings for server-side auth.\n- Utilize environment variables to store sensitive information like JWT secrets.\n- Enable two-factor authentication (2FA) for enhanced security.\n- Regularly update and patch dependencies to mitigate vulnerabilities.\n- Monitor and audit user activity for suspicious behavior.",
+    "source": "web_search",
+    "updated_at": 1780724552.0821402
+  },
+  "search:Advanced Security Practices in Next.js with Supabase Authentication:supabase authentication best p_ex": {
+    "content": "- Use `supabase init` to initialize your project.\n- Ensure you have the latest Supabase CLI version by running `npm install -g supabase-cli`.\n- For password-based authentication, use `supabase auth sign-up <email> <password>` and `supabase auth sign-in <email> <password>`.\n- Key config options include setting up JWTs with `JWT_SECRET` in your Supabase project settings.\n- Implement rate limiting to prevent brute force attacks using `supabase.auth.api.setRateLimit(<limit>, <interval>)`.\n- Enable two-factor authentication for added security by configuring it through the Supabase dashboard or API.\n- Regularly update and patch your Supabase dependencies to mitigate vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780724565.4339952
+  }
+}

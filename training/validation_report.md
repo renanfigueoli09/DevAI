@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-06 02:37*
+*2026-06-06 02:43*
 
 ## Score: 60% `[████████████░░░░░░░░]`
 
@@ -20,11 +20,11 @@
 ### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
+- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
+  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
@@ -32,7 +32,7 @@
 
 ### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never`
+  - Missing: `não, never, Dockerfile`
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`
