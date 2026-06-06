@@ -1,0 +1,32 @@
+{
+  "search:Performance:fastapi+mysql performance opti": {
+    "content": "- Use FastAPI's built-in asynchronous capabilities to handle requests concurrently.\n- Implement database connection pooling using SQLAlchemy or Tortoise ORM for efficient database operations.\n- Utilize caching mechanisms like Redis or Memcached to reduce database load and improve response times.\n- Employ async patterns such as `asyncio` and `uvicorn` for non-blocking I/O operations.\n- Monitor API performance with tools like Prometheus and Grafana for real-time insights.\n- Regularly update FastAPI, SQLAlchemy, and other dependencies to the latest versions for security and performance improvements.\n- Configure production environments using ASGI servers like Uvicorn or Hypercorn for optimal performance.\n- Implement rate limiting to prevent abuse and ensure fair usage of resources.",
+    "source": "web_search",
+    "updated_at": 1780720077.8667998
+  },
+  "search:Performance:rabbitmq+advanced performance ": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl set_policy` to configure policies.\n  - `rabbitmqctl set_user_tags` to assign tags to users.\n\n- **Latest Versions**:\n  - RabbitMQ 3.8.x (as of my last update).\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark.relative`: Set the relative memory watermark for the Erlang VM.\n  - `disk_free_limit.absolute`: Define an absolute disk free limit before RabbitMQ stops accepting new messages.\n  - `queue_index_type`: Choose between \"default\" and \"bloom\" for queue index types to optimize performance.",
+    "source": "web_search",
+    "updated_at": 1780720101.288722
+  },
+  "search:Performance:elasticsearch+setup performanc": {
+    "content": "- **CLI Commands**: Use `elasticsearch-plugin install` to add plugins like `analysis-icu`, `mapper-size`.\n- **Latest Versions**: Check [Elasticsearch official website](https://www.elastic.co/downloads/elasticsearch) for the latest version.\n- **Key Config Options**:\n  - `cluster.name`: Unique name for your cluster.\n  - `node.name`: Name of this node in the cluster.\n  - `network.host`: IP address or hostname to bind to.\n  - `http.port`: Port number for HTTP traffic.\n  - `discovery.seed_hosts`: List of initial hosts used for discovery.\n  - `cluster.initial_master_nodes`: List of nodes eligible to become master-eligible.\n  - `indices.recovery.max_bytes_per_sec`: Maximum bytes per second allowed for shard recovery.\n  - `index.number_of_shards`: Number of shards per index.\n  - `index.number_of_replicas`: Number of replicas per shard.",
+    "source": "web_search",
+    "updated_at": 1780720137.2792268
+  },
+  "search:Performance:elasticsearch+setup performanc_ex": {
+    "content": "- **CLI Commands**: Use `elasticsearch-plugin install` to install plugins like `analysis-icu`, and `bin/elasticsearch-reindex` for data migration.\n- **Latest Version**: As of my last update, Elasticsearch 8.x is the latest stable version.\n- **Key Config Options**:\n  - `cluster.routing.allocation.balance.shard`: Controls shard allocation balance across nodes.\n  - `indices.recovery.max_bytes_per_sec`: Limits the maximum recovery speed per node.\n  - `search.slowlog.threshold.query.warn`: Sets the threshold for slow query logs.",
+    "source": "code_example",
+    "updated_at": 1780720152.25146
+  },
+  "search:Performance:spring+kafka-advanced performa": {
+    "content": "- Use `ReconnectingKafkaTemplate` for connection pooling.\n- Optimize serialization by choosing efficient serializers like `JsonSerializer`.\n- Tune Kafka Streams commit intervals with `commit.interval.ms`.\n- Adjust cache sizes using `cache.max.bytes.buffering`.\n- Increase thread counts in Kafka Streams with `num.stream.threads`.\n- Ensure latest versions of Spring Boot and Kafka for performance improvements.\n- Configure message listener containers via `@KafkaListener` annotation.\n- Use Docker Compose to run Kafka with Spring Boot.\n- Monitor and adjust `max.poll.records` for optimal consumer behavior.",
+    "source": "web_search",
+    "updated_at": 1780720161.3045545
+  },
+  "search:Performance:spring+kafka-advanced performa_ex": {
+    "content": "- Use `mvn spring-boot:run` to run Spring Boot applications.\n- Update dependencies in `pom.xml` for the latest version of `spring-kafka`.\n- Configure Kafka properties in `application.properties` or `application.yml`, e.g., `spring.kafka.bootstrap-servers=localhost:9092`.\n- Implement stateful transformations using Kafka Streams with Spring Boot.\n- Use windowing to process data over time windows, e.g., `TimeWindows.of(Duration.ofMinutes(5))`.\n- Ensure fault tolerance by enabling idempotence and transactions in Kafka producer properties.\n- Monitor application performance with metrics like message throughput and latency.",
+    "source": "code_example",
+    "updated_at": 1780720166.7411501
+  }
+}

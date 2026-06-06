@@ -1,0 +1,52 @@
+{
+  "search:Testing:azure-devops testing methodolo": {
+    "content": "- **CLI Commands**:\n  - `az devops project create --name <project-name>`\n  - `az pipelines create --name <pipeline-name> --repository-url <repo-url>`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v0.182.0\n  - Postman: v10.4.0\n  - Newman: v5.3.0\n\n- **Key Config Options**:\n  - `azure-pipelines.yml`: Define build and release pipelines.\n  - Test Plans in Azure DevOps for tracking test cases and results.\n  - Integration with GitHub for version control and automation triggers.",
+    "source": "web_search",
+    "updated_at": 1780719881.7172976
+  },
+  "search:Testing:azure-devops testing methodolo_ex": {
+    "content": "- **Unit Testing Azure DevOps UI Extensions**: Use the `tsc` command to compile TypeScript files.\n- **Testing Methodologies Standards for Azure**: Refer to the latest version of the document on [codingrules.ai](https://codingrules.ai/testing-methodologies-standards-for-azure/).\n- **Testing API’s Using Postman & Newman in Azure Devops**:\n  - Install Newman via npm: `npm install -g newman`\n  - Run a test script with Newman: `newman run <path-to-your-test-script.json>`\n  - Example GET request test: Ensure the status code is 200.",
+    "source": "code_example",
+    "updated_at": 1780719889.665287
+  },
+  "search:Testing:gitlab-ci-pipelines-advanced t": {
+    "content": "- Use `gitlab-runner` CLI to register and manage runners.\n- Update `.gitlab-ci.yml` to configure pipelines.\n- Employ parallel testing by setting `parallel` flag in jobs.\n- Utilize `cache` keyword for speeding up pipeline execution.\n- Implement `artifacts` to share files between stages.\n- Use `only` or `except` keywords to control job execution conditions.\n- Leverage `variables` for environment-specific configurations.\n- Monitor pipeline status through GitLab UI or API.\n- Regularly update GitLab Runner and CI/CD features.",
+    "source": "web_search",
+    "updated_at": 1780719899.6966538
+  },
+  "search:Testing:gitlab-ci-pipelines-advanced t_ex": {
+    "content": "- Use `gitlab-ci.yml` to define CI/CD pipelines.\n- Example job in `.gitlab-ci.yml`:\n  ```yaml\n  test_job:\n    script:\n      - npm install\n      - npm test\n  ```\n- For parallel testing, use the `parallel` keyword:\n  ```yaml\n  test:e2e:\n    script: npm run test:e2e\n    parallel: 4\n  ```\n- Ensure tests are not flaky by using strategies like retries or randomization.\n- Use GitLab Runner for executing jobs. Install it on your server or use GitLab-hosted runners.\n- For storing sensitive data, use GitLab's CI/CD variables and protected branches.\n- Monitor pipeline performance with GitLab Analytics.\n- Update GitLab to the latest version for security patches and new features:\n  ```bash\n  sudo apt-get update\n  sudo apt-get install gitlab-ce\n  ```\n- Key config options in `.gitlab-ci.yml` include `stages`, `only/except`, and `cache`.",
+    "source": "code_example",
+    "updated_at": 1780719909.3429239
+  },
+  "search:Testing:dotnet-entity-framework-core-p": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update`\n  - `dotnet ef migrations add <MigrationName>`\n\n- **Latest Versions**:\n  - Entity Framework Core: [Check latest version on NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)\n  - Microsoft.EntityFrameworkCore.SqlServer: [Check latest version on NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/)\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enable lazy loading for navigation properties.\n    ```csharp\n    optionsBuilder.UseLazyLoadingProxies();\n    ```\n  - `MaxBatchSize`: Set the maximum batch size for commands.\n    ```csharp\n    optionsBuilder.MaxBatchSize(100);\n    ```\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disable change tracking for read-only scenarios.\n    ```csharp\n    optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);\n    ```\n\n- **Performance Tips**:\n  - Avoid N+1 queries by using eager loading or explicit includes.\n    ```csharp\n    var query = context.Entities.Include(e => e.RelatedEntities).ToList();\n    ```\n  - Use `AsNoTracking` for read-only operations.\n    ```csharp\n    var entities = context.Entities.AsNoTracking().ToList();\n    ```\n  - Optimize queries with projections and filtering early in the pipeline.",
+    "source": "web_search",
+    "updated_at": 1780719920.4243433
+  },
+  "search:Testing:dotnet-entity-framework-core-p_ex": {
+    "content": "- Use `dotnet ef database update` to apply migrations.\n- Ensure latest EF Core version via NuGet: `Install-Package Microsoft.EntityFrameworkCore`.\n- Configure DbContext in `Startup.cs` or `Program.cs`.\n- Enable logging for performance insights with `options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));`.\n- Use `AsNoTracking()` when reading data to avoid change tracking.\n- Batch inserts using `AddRange()`.\n- Optimize queries by avoiding N+1 issues with eager loading (`Include()`).\n- Use raw SQL queries for complex operations where EF Core is inefficient.\n- Monitor performance with tools like Entity Framework Profiler or dotTrace.\n- Regularly update and review EF Core documentation for best practices.",
+    "source": "code_example",
+    "updated_at": 1780719929.39173
+  },
+  "search:Testing:nestjs+elasticsearch testing a": {
+    "content": "- Use `npm install @nestjs/elasticsearch` to install the Elasticsearch module.\n- Import `ElasticsearchModule.registerAsync()` for asynchronous configuration.\n- Inject `ElasticsearchService` in your services to interact with Elasticsearch.\n- For testing, use Jest and `@nestjs/testing`.\n- Key config options include `hosts`, `logLevel`, and `sniff`.\n- Ensure you have the latest version of NestJS and Elasticsearch packages for compatibility.",
+    "source": "web_search",
+    "updated_at": 1780719939.5272908
+  },
+  "search:Testing:nestjs+elasticsearch testing a_ex": {
+    "content": "- Install `@nestjs/elasticsearch` and `@elastic/elasticsearch` using npm.\n- Create an Elasticsearch module in your NestJS project.\n- Configure the Elasticsearch client with necessary settings like host, port, etc.\n- Use decorators provided by `@nestjs/elasticsearch` to interact with Elasticsearch within your services.\n- Ensure proper error handling for network issues or invalid queries.",
+    "source": "code_example",
+    "updated_at": 1780719946.7700794
+  },
+  "search:Testing:django+celery testing techniqu": {
+    "content": "- Use `python manage.py test --settings=your_project.settings.test` to run tests with custom settings.\n- For Celery, use `celery -A your_project worker --loglevel=info --pool=solo`.\n- Set `CELERY_TASK_ALWAYS_EAGER = True` in your test settings for eager task execution.\n- Use `@override_settings(CELERY_BROKER_URL='memory://')` to bypass the broker during tests.\n- Install latest versions of Django and Celery using pip: `pip install django==3.2 celery==5.2`.\n- Configure Celery with `CELERY_BROKER_URL = 'redis://localhost:6379/0'` in your settings.\n- Use `celery -A your_project worker --loglevel=info --pool=solo --without-gossip --without-mingle --without-heartbeat` for production-like testing.",
+    "source": "web_search",
+    "updated_at": 1780719957.5095685
+  },
+  "search:Testing:django+celery testing techniqu_ex": {
+    "content": "- Use `override_settings` decorator/context manager in Django tests to temporarily override settings.\n- For Celery testing, ensure both test and Celery use the same database by configuring them accordingly.\n- Utilize a custom test runner if necessary for more granular control over test environments.\n- Ensure your Celery worker is running during tests to execute tasks as expected.\n- Use `celery -A <project_name> worker --loglevel=info` to start the Celery worker in development.\n- For production, avoid modifying settings directly; use environment variables or configuration files instead.",
+    "source": "code_example",
+    "updated_at": 1780719967.3050423
+  }
+}

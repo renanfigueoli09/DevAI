@@ -1,0 +1,52 @@
+{
+  "search:Error Handling:kafka-streams-advanced error h": {
+    "content": "- Use `kafka-topics.sh` to create topics with the `--config cleanup.policy=compact` flag for dead letter queues.\n- Implement error handling in Kafka Streams using `KafkaStreams.setUncaughtExceptionHandler`.\n- Configure `default.deserializer` and `key.deserializer` to handle deserialization errors gracefully.\n- Use `KafkaConsumer.poll(Duration)` with a timeout to manage backpressure.\n- Enable `enable.auto.commit=false` for manual commit control, allowing for more precise error handling.\n- Implement custom serializers and deserializers to catch exceptions during serialization/deserialization.\n- Utilize Kafka Streams' built-in support for dead letter queues via KIP-1034.\n- Set `max.poll.records` to limit the number of records processed in a single poll, preventing overwhelming the system.\n- Monitor Kafka Streams metrics using JMX or Prometheus for real-time error detection and resolution.",
+    "source": "web_search",
+    "updated_at": 1780719785.670969
+  },
+  "search:Error Handling:kafka-streams-advanced error h_ex": {
+    "content": "- Use `kafka-topics.sh --create` to create topics, e.g., `--topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1`\n- Set up a Kafka Streams application with the latest version (e.g., `kafka-streams-x.x.x.jar`)\n- Configure error handling in `StreamsConfig`:\n  - `StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG`: Specify key serde\n  - `StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG`: Specify value serde\n  - `StreamsConfig.APPLICATION_ID_CONFIG`: Set application ID\n  - `StreamsConfig.BOOTSTRAP_SERVERS_CONFIG`: Set bootstrap servers\n- Implement a Dead Letter Queue (DLQ) by setting the following properties:\n  ```java\n  props.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, LoggingDeserializationExceptionHandler.class.getName());\n  props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);\n  ```\n- Use `KafkaStreams` to create a stream and process it:\n  ```java\n  KafkaStreams streams = new KafkaStreams(builder.build(), props);\n  streams.start();\n  ```\n- Monitor and log errors using `LoggingDeserializationExceptionHandler` or custom handlers.",
+    "source": "code_example",
+    "updated_at": 1780719794.8366346
+  },
+  "search:Error Handling:fastapi+mysql error management": {
+    "content": "- Use `pip install fastapi[all] sqlalchemy mysql-connector-python` to install FastAPI, SQLAlchemy, and MySQL connector.\n- For error management, use `try-except` blocks around database operations.\n- Configure your database connection in a `.env` file using environment variables like `DATABASE_URL`.\n- Example of a custom error handler:\n  ```python\n  from fastapi import FastAPI, HTTPException\n\n  app = FastAPI()\n\n  @app.exception_handler(HTTPException)\n  async def http_exception_handler(request, exc):\n      return JSONResponse(\n          status_code=exc.status_code,\n          content={\"detail\": exc.detail},\n      )\n  ```\n- Use SQLAlchemy ORM for database operations to handle transactions and errors gracefully.\n- For validation, use Pydantic models with FastAPI's built-in validators.\n- Ensure your MySQL server is running and accessible from your application.\n- Update dependencies regularly using `pip install --upgrade <package-name>`.\n- Check the official FastAPI documentation for the latest features and best practices.",
+    "source": "web_search",
+    "updated_at": 1780719807.554733
+  },
+  "search:Error Handling:fastapi+mysql error management_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI and SQLAlchemy using pip:\n  ```bash\n  pip install fastapi sqlalchemy\n  ```\n- For MySQL, use the `mysql-connector-python` package:\n  ```bash\n  pip install mysql-connector-python\n  ```\n- Implement error handling with `HTTPException` for specific errors.\n- Create custom exception handlers to manage different types of exceptions globally.\n- Use middleware for cross-cutting concerns like logging and authentication.\n- Configure database connections using SQLAlchemy's ORM or Core.\n- Ensure data validation using Pydantic models for robust API inputs.",
+    "source": "code_example",
+    "updated_at": 1780719812.1561863
+  },
+  "search:Error Handling:rabbitmq+advanced error handli": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl` for managing RabbitMQ nodes.\n  - `rabbitmq-plugins enable rabbitmq_delayed_message_exchange` to enable delayed message exchange.\n\n- **Latest Versions**:\n  - RabbitMQ: Latest stable version can be found on the official website or through package managers like apt, yum, etc.\n  - Rascal (for advanced error handling): Check the latest release on GitHub.\n\n- **Key Config Options**:\n  - `rabbitmq.conf` for general configuration settings.\n  - `advanced.config` for advanced configurations including message TTL and delayed messages.\n  - `rabbitmq-env.conf` for environment-specific settings.",
+    "source": "web_search",
+    "updated_at": 1780719819.4904177
+  },
+  "search:Error Handling:rabbitmq+advanced error handli_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl status`\n  - `rabbitmq-plugins enable rabbitmq_management`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.5\n  - Rascal: 4.2.0\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the exchange to which messages are requeued if they cannot be delivered.\n  - `x-max-length`: Limits the number of messages that can be stored in a queue.\n  - `retry_attempts`: Number of retry attempts before giving up on a message.\n  - `retry_delay`: Delay between retry attempts.",
+    "source": "code_example",
+    "updated_at": 1780719823.216551
+  },
+  "search:Error Handling:spring-cloud-stream-kafka erro": {
+    "content": "- Use `spring.cloud.stream.bindings.input.errors.destination` to specify the Dead Letter Topic.\n- Configure retry strategies using `spring.cloud.stream.bindings.input.consumer.max-attempts` and `spring.cloud.stream.bindings.input.consumer.back-off-interval`.\n- Implement custom error handlers by extending `ErrorHandler`.\n- Utilize Spring Retry for automatic retries on failures.\n- Enable logging of errors with `logging.level.org.springframework.kafka=DEBUG`.\n- Monitor Kafka consumer offsets to ensure proper message processing.\n- Use `@StreamListener` and `@SendTo` annotations for handling incoming and outgoing messages respectively.\n- Ensure Kafka broker configurations are optimized for high availability and performance.",
+    "source": "web_search",
+    "updated_at": 1780719841.4111714
+  },
+  "search:Error Handling:spring-cloud-stream-kafka erro_ex": {
+    "content": "- **Error Handling Patterns**: Spring Cloud Stream Kafka supports two deserialization exception handlers - `LogAndContinueExceptionHandler` and `LogAndFailExceptionHandler`.\n- **Advanced Dead Letter Queues**: Use advanced patterns for robust error handling in microservices with Apache Kafka.\n- **Deserialization Errors**: Handle deserialization errors at the framework level using Spring Cloud Stream binder.\n- **Latest Version**: Ensure you are using the latest version of Spring Cloud Stream and Kafka to benefit from the latest features and improvements.\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.errors.destination`: Specifies the destination for error messages.\n  - `spring.cloud.stream.bindings.input.errors.group`: Specifies the consumer group for error messages.",
+    "source": "code_example",
+    "updated_at": 1780719846.263313
+  },
+  "search:Error Handling:spring+jpa-security error mana": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` to handle exceptions globally.\n- Implement custom error messages using `ResponseEntity`.\n- For PostgreSQL JSON type mismatches, use `@Converters` or `@JsonTypeInfo`.\n- Update Spring Boot to the latest version for security patches and performance improvements.\n- Configure `application.properties` with `spring.jpa.show-sql=true` for debugging.\n- Use `@Transactional` for database operations within a transaction context.\n- Implement custom converters using `AttributeConverter` for JPA entities.\n- Utilize `@Valid` and `@Constraint` for data validation in REST controllers.\n- Configure Spring Security with `WebSecurityConfigurerAdapter`.\n- Regularly update dependencies to avoid vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1780719862.964486
+  },
+  "search:Error Handling:spring+jpa-security error mana_ex": {
+    "content": "- Use `@ControllerAdvice` to handle exceptions globally across the application.\n- Implement custom exception classes like `ResourceNotFoundException`, `DataIntegrityViolationException`.\n- Annotate service methods with `@Transactional` for managing transactions and handling exceptions within them.\n- Configure error handling in Spring Boot using `application.properties` or `application.yml`.\n- Use `@ExceptionHandler` within controllers to handle specific exceptions locally.\n- Implement logging for exception details to aid debugging and monitoring.\n- Ensure that custom exceptions are thrown from repository methods when data access errors occur.",
+    "source": "code_example",
+    "updated_at": 1780719873.141089
+  }
+}
