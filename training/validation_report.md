@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-05 22:33*
+*2026-06-05 22:38*
 
-## Score: 59% `[███████████░░░░░░░░░]`
+## Score: 54% `[██████████░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -13,13 +13,15 @@
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
 | nlp | 6.6/15.0 | 44% | ❌ |
-| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
+| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (30%)
+### nestjs-mongodb (10%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
+- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
+  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
@@ -35,7 +37,7 @@
   - Missing: `não, never, docker-compose, Dockerfile`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não`
-  - Wrong: `true`
+  - Wrong: `JWT`
 
 ### spring-mongodb (50%)
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
