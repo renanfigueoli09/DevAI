@@ -1,22 +1,32 @@
 {
   "search:Testing Best Practices:typescript-jest-testing": {
-    "content": "- Install `ts-jest` using npm or yarn.\n- Use the command `npx ts-jest config:init` to generate a Jest configuration file tailored for TypeScript.\n- Ensure your `package.json` includes `\"test\": \"jest\"` under the `scripts` section.\n- Configure `tsconfig.json` to include `\"module\": \"commonjs\"` and `\"esModuleInterop\": true`.\n- Set up Jest's `transform` option in `jest.config.js` to use `ts-jest`. Example: `{ transform: { '^.+\\\\.tsx?$': 'ts-jest' } }`.\n- Use the `--watchAll` flag with `npm test` or `yarn test` for continuous testing.\n- Update Jest and TypeScript dependencies to their latest versions using npm or yarn.",
+    "content": "- Install `ts-jest` using npm: `npm install --save-dev ts-jest @types/jest`\n- Update Jest configuration in `jest.config.js`: \n  ```javascript\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Run tests with TypeScript transpilation:\n  ```bash\n  npx jest --watchAll\n  ```\n- Key config options include:\n  - `preset`: Specifies the Jest preset to use (e.g., `ts-jest`).\n  - `testEnvironment`: Sets the environment for running tests (e.g., `node`).\n  - `transform`: Maps file extensions to preprocessors (e.g., `.ts` -> `ts-jest`).",
     "source": "web_search",
-    "updated_at": 1780741232.1047719
+    "updated_at": 1780741594.7301943
   },
   "search:Testing Best Practices:typescript-jest-testing_ex": {
-    "content": "- Use `npm install --save-dev jest ts-jest @types/jest typescript`\n- Configure Jest in `jest.config.js`:\n  ```javascript\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node'\n  };\n  ```\n- Create a TypeScript file, e.g., `index.ts`, and add an add function.\n- Write tests for the add function in `index.test.ts`.\n- Run tests with `npm test` or `npx jest`.",
+    "content": "- Use `npm install --save-dev jest ts-jest @types/jest typescript`\n- Create `jest.config.ts` with the following:\n  ```typescript\n  export default {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Run tests using `npx jest`\n- Ensure TypeScript is configured in `tsconfig.json` for your project.",
     "source": "code_example",
-    "updated_at": 1780741237.2691636
+    "updated_at": 1780741597.4429486
   },
   "search:Testing Best Practices:fastapi-asyncio-testing": {
-    "content": "- Use `@pytest_asyncio.fixture(scope=\"function\")` to create an async client fixture.\n- Apply `@pytest.mark.asyncio` decorator on test functions that require asyncio support.\n- Ensure your FastAPI app is configured with an asynchronous database session.\n- Utilize AnyIO for handling asynchronous operations in tests.\n- For mocking, consider using libraries like `unittest.mock`.\n- Run tests using the command: `pytest --asyncio-mode=auto`.\n- Keep pytest and any related packages up to date for optimal functionality.",
+    "content": "- Use `pytest_asyncio` fixture for async database sessions.\n- Apply `@pytest.mark.asyncio` decorator to test functions using asyncio.\n- For FastAPI testing, use `AsyncClient` from `fastapi.testclient`.\n- Ensure your test environment is set up with the latest versions of FastAPI and pytest.\n- Key config options include setting up an asynchronous session for database interactions.\n- Use AnyIO for handling async operations in tests.\n- Example CLI command: `pytest --asyncio-mode=auto -v`",
     "source": "web_search",
-    "updated_at": 1780741249.7026734
+    "updated_at": 1780741604.8966346
   },
   "search:Testing Best Practices:django-celery-testing": {
-    "content": "- Use `CELERY_ALWAYS_EAGER = True` to bypass the Celery daemon during testing.\n- Employ Django's `override_settings` for temporary configuration changes.\n- Utilize `unittest.mock` to mock task triggers and focus on task logic.\n- Ensure your tests cover both task execution and result checking.\n- Consult the latest version of django-celery documentation for updates.",
+    "content": "- Use `CELERY_ALWAYS_EAGER = True` in settings to bypass the daemon during testing.\n- Employ Django's `override_settings` for temporary configuration changes.\n- Utilize `unittest.mock` to mock task triggers and focus on task logic.\n- Ensure Celery tasks are tested alongside other Django components for comprehensive coverage.",
     "source": "web_search",
-    "updated_at": 1780741281.0161576
+    "updated_at": 1780741616.7514377
+  },
+  "search:Testing Best Practices:fastapi-asyncio-testing_ex": {
+    "content": "- Use `pytest-asyncio` for async testing in FastAPI.\n- Install via pip: `pip install pytest-asyncio`.\n- Use `httpx.AsyncClient` instead of `TestClient` for async tests.\n- Ensure the event loop is respected by using `httpx.AsyncClient`.\n- Example CLI command:\n  ```bash\n  pytest --asyncio-mode=auto your_test_file.py\n  ```\n- Key config options in `pytest.ini`:\n  ```ini\n  [pytest]\n  addopts = --asyncio-mode=auto\n  ```\n- Latest versions: Check the official documentation for the most up-to-date information.",
+    "source": "code_example",
+    "updated_at": 1780741612.3919556
+  },
+  "search:Testing Best Practices:django-celery-testing_ex": {
+    "content": "- **Latest pytest-celery version**: 1.3.0\n- **CLI command to run tests**:\n  ```bash\n  pytest --celery-broker-url=redis://localhost:6379/0\n  ```\n- **Key config options in `pytest.ini`**:\n  ```ini\n  [pytest]\n  celery_broker_url = redis://localhost:6379/0\n  celery_result_backend = redis://localhost:6379/1\n  ```\n\nThese actionable facts provide a clear guide for setting up and running tests with pytest-celery in a Django project.",
+    "source": "code_example",
+    "updated_at": 1780741625.0789125
   }
 }

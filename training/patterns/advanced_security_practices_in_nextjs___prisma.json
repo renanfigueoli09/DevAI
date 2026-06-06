@@ -1,0 +1,27 @@
+{
+  "search:Advanced Security Practices in NextJS + Prisma:nextjs security": {
+    "content": "- **CLI Commands**: \n  - `npx create-next-app@latest my-app` to create a new Next.js project.\n  - `npm run dev` for development mode.\n  - `npm run build` to build the app for production.\n  - `npm start` to start the production server.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is Next.js 13.5.4. Check [Vercel's official website](https://nextjs.org/docs/getting-started) for the most current version.\n\n- **Key Config Options**:\n  - `security.headers` in `next.config.js` to configure HTTP headers.\n  - `headers()` function in middleware to add custom headers.\n  - Environment variables management using `.env.local` and `process.env`.\n\n- **Security Advisories**:\n  - Middleware bypass, denial of service, SSRF, cache poisoning, cross-site scripting (XSS), and SQL injection are common vulnerabilities. Regularly update dependencies and follow the latest security patches.\n\n- **Data Security**:\n  - Implement data validation and sanitization to prevent XSS and SQL injection.\n  - Use HTTPS for all communications.\n  - Secure environment variables by not hardcoding sensitive information in code.\n\n- **Dependency Management**:\n  - Use `npm outdated` to check for outdated packages.\n  - Run `npm audit fix` to automatically fix known vulnerabilities.\n  - Regularly update dependencies using `npm update`.\n\n- **Middleware Security**:\n  - Implement proper authentication and authorization checks in middleware.\n  - Avoid using untrusted data directly in middleware.\n\n- **Environment Variables**:\n  - Store sensitive information like API keys, database credentials, etc., in `.env.local`.\n  - Use `process.env` to access these variables securely.\n\n- **Regular Audits**:\n  - Conduct regular security audits and penetration testing.\n  - Stay updated with the latest security practices and guidelines.",
+    "source": "web_search",
+    "updated_at": 1780741912.2630386
+  },
+  "search:Advanced Security Practices in NextJS + Prisma:nextjs security_ex": {
+    "content": "- Use `next build` to build your Next.js application.\n- Implement security headers using the `next.config.js` file.\n- Example of setting a security header:\n  ```javascript\n  module.exports = {\n    async headers() {\n      return [\n        {\n          source: '/(.*)',\n          headers: [\n            {\n              key: 'Content-Security-Policy',\n              value: \"default-src 'self'\",\n            },\n          ],\n        },\n      ];\n    },\n  };\n  ```\n- Ensure all dependencies are up to date using `npm update`.\n- Use environment variables for sensitive data.\n- Implement CSRF protection with cookies.\n- Regularly audit your code for security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780741915.8515546
+  },
+  "search:Advanced Security Practices in NextJS + Prisma:prisma security": {
+    "content": "- **Prisma Cloud**: Use `prisma cloud` CLI to manage your cloud security.\n- **Latest Version**: Check [Palo Alto Networks](https://www.paloaltonetworks.com/prisma-cloud) for the latest version details.\n- **Key Config Options**:\n  - `securityProfile`: Define custom security profiles.\n  - `accessControl`: Configure access controls for databases.\n  - `auditLogging`: Enable and configure audit logging.",
+    "source": "web_search",
+    "updated_at": 1780741924.3738434
+  },
+  "search:Advanced Security Practices in NextJS + Prisma:prisma security_ex": {
+    "content": "- Install Prisma CLI and client using `npm install @prisma/client@latest npm install -D prisma@latest`\n- Add the `typedSql` preview feature flag to your schema.prisma file:\n  ```prisma\n  generator client {\n    provider = \"prisma-client\"\n    previewFeatures = [\"typedSql\"]\n    output = \"../src/generated/prisma\"\n  }\n  ```\n- Use `prisma platform auth login --early-access` for early access authentication with Prisma Data Platform.\n- Contribute to Prisma security by creating an account on GitHub and following the code of conduct.",
+    "source": "code_example",
+    "updated_at": 1780741933.7826533
+  },
+  "search:Advanced Security Practices in NextJS + Prisma:graphql security": {
+    "content": "- Use `graphql.security` tool for automated security tests.\n- Implement transport protocol-specific security measures, e.g., HTTPS.\n- Review and enforce GraphQL schema validation.\n- Apply rate limiting to prevent abuse.\n- Enable authentication and authorization mechanisms.\n- Regularly update libraries and dependencies.\n- Monitor API usage and logs for anomalies.",
+    "source": "web_search",
+    "updated_at": 1780741941.6307068
+  }
+}

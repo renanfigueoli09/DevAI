@@ -1,19 +1,19 @@
 # DevAI Validation Report
-*2026-06-06 07:22*
+*2026-06-06 07:34*
 
-## Score: 50% `[█████████░░░░░░░░░░░]`
+## Score: 56% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
 | nestjs-auth | 5.0/5.0 | 100% | ✅ |
 | nestjs-core | 4.0/4.0 | 100% | ✅ |
 | docker | 4.0/4.0 | 100% | ✅ |
-| common-errors | 6.0/6.0 | 100% | ✅ |
+| spring-mongodb | 4.0/4.0 | 100% | ✅ |
+| nlp | 8.5/15.0 | 56% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nlp | 5.8/15.0 | 39% | ❌ |
+| common-errors | 3.0/6.0 | 50% | ❌ |
 | nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
-| spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
@@ -32,23 +32,18 @@
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (39%)
+### nlp (56%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
   - Missing: `não, never`
   - Wrong: `src/docker, src/mongodb`
-- ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não`
-  - Wrong: `JWT`
-
-### spring-mongodb (0%)
-- ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Wrong: `@Entity`
-- ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
-  - Wrong: `JpaRepository`
 
 ### fastapi (50%)
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
   - Wrong: `.dict()`
+
+### common-errors (50%)
+- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
+  - Wrong: `@nestjs/common`
 
 ## Como corrigir
 
