@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-06 04:34*
+*2026-06-06 04:39*
 
-## Score: 53% `[██████████░░░░░░░░░░]`
+## Score: 55% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -12,12 +12,12 @@
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | spring-mongodb | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
-| nlp | 3.1/15.0 | 21% | ❌ |
+| nlp | 7.1/15.0 | 48% | ❌ |
+| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (30%)
+### nestjs-mongodb (10%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
 - ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
@@ -25,16 +25,16 @@
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
+- ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
+  - Wrong: `TypeOrmModule`
 
 ### nestjs-typeorm (50%)
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
   - Wrong: `@InjectModel`
 
-### nlp (21%)
-- ✗ User says 'CRUD de livros com MongoDB'. What is the entity name?
-  - Wrong: `Livros, livros, LIVROS, Livro`
+### nlp (48%)
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never`
+  - Missing: `não, never, Dockerfile`
   - Wrong: `src/docker, src/mongodb`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
   - Missing: `não, no`

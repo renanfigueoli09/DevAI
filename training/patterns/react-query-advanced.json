@@ -1,0 +1,32 @@
+{
+  "search:react-query-advanced:react query advanced usage 202": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Version**: React Query v4.x\n- **Key Config Options**:\n  - `queryClient`: Centralized place to configure and manage queries.\n  - `useQuery`: Hook for fetching data.\n  - `useMutation`: Hook for updating data.\n  - `useInfiniteQuery`: Hook for handling infinite lists.",
+    "source": "web_search",
+    "updated_at": 1780731525.2819283
+  },
+  "search:react-query-advanced:react query advanced usage 202_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4.x, React v18.x\n- **Key Config Options**:\n  - `queryClient`: Customizes the query client instance.\n  - `defaultOptions`: Sets default options for all queries.\n  - `staleTime`: Defines how long data should be considered fresh before refetching.",
+    "source": "code_example",
+    "updated_at": 1780731531.3819804
+  },
+  "search:react-query-advanced:react query caching strategies": {
+    "content": "- **React Query Version**: As of my last update in October 2023, the latest stable version is 4.x.\n  \n- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript` to set up a new React app with TypeScript.\n  - `npm install react-query@latest` or `yarn add react-query@latest` to install the latest version of React Query.\n\n- **Key Config Options**:\n  - `queryCache`: Manages the cache for queries. You can configure it to control how long data is cached and how it's invalidated.\n  - `staleTime`: Determines how long a query result is considered fresh before refetching.\n  - `refetchInterval`: Automatically refetches a query at specified intervals.\n\n- **Caching Strategies**:\n  - **In-Memory Cache**: React Query automatically caches data in memory. You can configure the cache size and eviction policies.\n  - **Server-Side Rendering (SSR)**: Use `useQuery` with `initialData` to pre-fetch data on the server and pass it to the client.\n  - **SWR**: Consider using SWR for more granular control over caching, especially in scenarios where you need fine-grained cache invalidation.\n\n- **Error Handling**:\n  - React Query provides built-in error handling mechanisms. You can use `onError` callback to handle errors globally or per-query basis.\n  \n- **Performance Optimization**:\n  - Use `suspense: true` with React's Suspense feature for better performance in large applications.\n  - Implement `isFetching` and `isLoading` flags to conditionally render UI elements based on the state of data fetching.\n\nThese actionable facts should help developers effectively implement caching strategies using React Query, enhancing the performance and user experience of their web applications.",
+    "source": "web_search",
+    "updated_at": 1780731544.2644858
+  },
+  "search:react-query-advanced:react query caching strategies_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app` to set up a new React app.\n- **Latest Versions**:\n  - React Query: v4.0.0\n  - Axios: v1.2.0\n- **Key Config Options**:\n  - `queryCache`: Manages the cache of queries.\n  - `mutationCache`: Manages the cache of mutations.\n  - `staleTime`: Time in milliseconds after which a query is considered stale.\n  - `refetchOnWindowFocus`: Automatically refetches queries when the window regains focus.",
+    "source": "code_example",
+    "updated_at": 1780731554.6624954
+  },
+  "search:react-query-advanced:react query error handling 202": {
+    "content": "- React Query version: 4.x\n- Error handling requires a rejected Promise.\n- Use `useQuery` or `useMutation` hooks for declarative error handling.\n- Implement custom error handlers within these hooks.\n- Key config options include `onError`, `onSuccess`, and `onSettled`.\n- For imperative error handling, use try-catch blocks around query/mutation calls.",
+    "source": "web_search",
+    "updated_at": 1780731565.885227
+  },
+  "search:react-query-advanced:react query error handling 202_ex": {
+    "content": "- **React Query Error Handling**: React Query requires a rejected Promise to handle errors correctly.\n- **Axios Integration**: Axios is commonly used for its error handling capabilities, which are compatible with React Query.\n- **Fetch API Consideration**: If using the fetch API, ensure it returns a rejected Promise for proper error handling.\n- **Manual Error Handling**: For non-render-based error handling, consider using imperative methods like `alert` or custom functions.\n- **Global Error Handling**: Implement global error handling by redirecting users based on specific error codes (e.g., \"UNAUTHORIZED\").\n- **trpc Client Error Handling**: Use trpc for globally handling client-side errors without specifying it on every mutation or query.",
+    "source": "code_example",
+    "updated_at": 1780731570.7822278
+  }
+}
