@@ -2,21 +2,21 @@
   "search:docker-compose+kubernetes:docker compose kubernetes inte": {
     "content": "- **CLI Commands**: `kompose convert` to translate Docker Compose to Kubernetes YAML.\n- **Latest Version**: Check latest version on [GitHub](https://github.com/kubernetes/kompose).\n- **Key Config Options**:\n  - `-f, --file string`: Specify the path to a Docker Compose file (default is \"docker-compose.yml\").\n  - `--provider string`: Specify the target container orchestration platform (e.g., kubernetes, openshift).\n  - `--output string`: Output directory for generated Kubernetes YAML files.\n- **Prerequisites**:\n  - Ensure you have a Kubernetes cluster and `kubectl` configured to communicate with it.\n  - At least two nodes in your cluster that are not control plane hosts.",
     "source": "web_search",
-    "updated_at": 1780777934.4165328
+    "updated_at": 1780778769.9179947
   },
   "search:docker-compose+kubernetes:docker compose kubernetes inte_ex": {
     "content": "- **CLI Commands**:\n  - `docker compose convert`: Converts a Docker Compose file to Kubernetes YAML.\n  - `kubectl apply -f <filename>.yaml`: Applies the Kubernetes configuration.\n\n- **Latest Versions**:\n  - Docker Desktop: Latest version as of my last update.\n  - Kubernetes: Latest stable version available.\n\n- **Key Config Options**:\n  - `volumes` in Docker Compose map to `volumes` or `persistentVolumeClaims` in Kubernetes.\n  - `services` in Docker Compose map to `deployments` or `statefulsets` in Kubernetes.\n  - `ports` in Docker Compose map to `containerPort` and `hostPort` in Kubernetes.",
     "source": "code_example",
-    "updated_at": 1780777935.4215066
+    "updated_at": 1780778771.0064158
   },
   "search:docker-compose+kubernetes:kubernetes deployment strategi": {
     "content": "- **Canary Deployment**: Use `kubectl apply -f <canary-deployment-file.yaml>`.\n- **Blue/Green Deployment**: Deploy new version to a separate namespace and switch traffic using `kubectl patch deployment <deployment-name> -p \"{\\\"spec\\\":{\\\"template\\\":{\\\"metadata\\\":{\\\"annotations\\\":{\\\"kubectl.kubernetes.io/restartedAt\\\":\\\"$(date +%FT%T%z)\\\"}}}}}\"`.\n- **Rolling Update**: Use `kubectl rollout restart deployment/<deployment-name>`.\n- **Helm Charts for Deployment**: Deploy using Helm with `helm install <release-name> <chart-path>`.\n- **Automated Rollback**: Configure rollback on error in Helm with `--rollback` flag.\n- **Service Mesh (Istio)**: Use Istio for traffic management and canary deployments.\n- **Progressive Delivery**: Implement A/B testing using Istio's VirtualService and DestinationRule.\n- **Key Config Options**:\n  - Deployment replicas\n  - Resource limits and requests\n  - Health checks\n  - Image version\n  - Service type (ClusterIP, NodePort, LoadBalancer)\n- **Latest Versions**: Ensure Kubernetes, Helm, and Istio are up to date for the latest features and security patches.\n- **CLI Commands**:\n  - `kubectl get deployments`\n  - `kubectl describe deployment <deployment-name>`\n  - `helm list`\n  - `istioctl version`",
     "source": "web_search",
-    "updated_at": 1780777936.4465196
+    "updated_at": 1780778772.1033742
   },
   "search:docker-compose+kubernetes:kubernetes deployment strategi_ex": {
     "content": "- Use `helm install <release-name> <chart-path>` to deploy a Helm chart.\n- Update Helm charts using `helm upgrade <release-name> <chart-path>`.\n- Manage dependencies with `dependencies update` in the chart directory.\n- Configure ingress with `--set ingress.enabled=true,ingress.hosts[0].host=example.com`.\n- Use `kubectl apply -f <manifest-file>` for applying Kubernetes manifests.\n- Scale deployments with `kubectl scale deployment/<deployment-name> --replicas=<number>`.\n- Secure applications by using secrets and config maps.\n- Monitor deployments with `kubectl get pods, kubectl logs <pod-name>`.",
     "source": "code_example",
-    "updated_at": 1780777937.4150548
+    "updated_at": 1780778773.2347858
   }
 }
