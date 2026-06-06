@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-06 13:47*
+*2026-06-06 13:54*
 
 ## Score: 61% `[████████████░░░░░░░░]`  (29.4/48.0)
 
@@ -37,7 +37,7 @@
 - **MongoDB healthcheck: mongosh ping** — found=['mongosh', 'ping'] missing=[] wrong=['pg_isready']
 - **Spring MongoDB: @Document não @Entity** — found=['@Document', 'MongoRepository'] missing=[] wrong=['@Entity', 'JpaRepository']
 - **FastAPI: AsyncIOMotorClient (não pymongo)** — found=['AsyncIOMotorClient', 'motor'] missing=[] wrong=['MongoClient', 'pymongo']
-- **schema.ts Mongoose strict mode** — found=['@Prop', 'title!:', 'price!:'] missing=['@Schema'] wrong=[]
+- **schema.ts Mongoose strict mode** — found=['@Schema', '@Prop', 'title!:'] missing=['HydratedDocument'] wrong=[]
 
 ## Fix
 ```bash

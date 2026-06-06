@@ -2,16 +2,16 @@
   "search:python-django-rest-authentication:django rest authentication pat": {
     "content": "- **CLI Commands**:\n  - `pip install django-rest-knox`\n  - `pip install dj-rest-auth`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.0\n  - django-rest-knox: v5.2.0\n  - dj-rest-auth: v2.2.0\n\n- **Key Config Options**:\n  - For `django-rest-knox`: Configure `KNOX_TOKEN_TTL` in settings for token expiration.\n  - For `dj-rest-auth`: Set up authentication backends and URL patterns in your project's settings and URLs respectively.",
     "source": "web_search",
-    "updated_at": 1780764252.755483
+    "updated_at": 1780764700.8124619
   },
   "search:python-django-rest-authentication:django rest authentication pat_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py createsuperuser`\n  - `python manage.py runserver`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework: 3.14\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py for authentication classes.\n  - `LOGIN_URL`, `LOGOUT_URL` in settings.py for URL redirections.\n  - `AUTH_USER_MODEL` to specify a custom user model if needed.",
     "source": "code_example",
-    "updated_at": 1780764253.3665998
+    "updated_at": 1780764701.3995924
   },
   "search:python-django-rest-authentication:authentication in django rest ": {
     "content": "- Install Django, Django Rest Framework, and Simple-JWT using pip:\n  ```bash\n  pip install django djangorestframework djangorestframework_simplejwt\n  ```\n- Create a new Django project:\n  ```bash\n  django-admin startproject myproject\n  ```\n- Navigate to your project directory:\n  ```bash\n  cd myproject\n  ```\n- Add 'rest_framework' and 'rest_framework_simplejwt' to `INSTALLED_APPS` in `settings.py`.\n- Configure JWT authentication by adding the following to `settings.py`:\n  ```python\n  REST_FRAMEWORK = {\n      'DEFAULT_AUTHENTICATION_CLASSES': (\n          'rest_framework_simplejwt.authentication.JWTAuthentication',\n      ),\n  }\n  ```\n- Create a new Django app for your API:\n  ```bash\n  python manage.py startapp myapi\n  ```\n- Define your models and views in `myapi/models.py` and `myapi/views.py`.\n- Include the API URLs in `myproject/urls.py`:\n  ```python\n  from django.urls import path, include\n  urlpatterns = [\n      path('api/', include('myapi.urls')),\n  ]\n  ```\n- Run migrations to create your database schema:\n  ```bash\n  python manage.py migrate\n  ```\n- Create a superuser for admin access:\n  ```bash\n  python manage.py createsuperuser\n  ```\n- Start the Django development server:\n  ```bash\n  python manage.py runserver\n  ```\n\nKey config options include `DEFAULT_AUTHENTICATION_CLASSES` in `settings.py` and model serialization/deserialization in views.",
     "source": "web_search",
-    "updated_at": 1780764253.9334598
+    "updated_at": 1780764701.960056
   }
 }
