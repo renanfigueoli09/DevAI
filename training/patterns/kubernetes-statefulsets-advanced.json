@@ -1,0 +1,12 @@
+{
+  "search:kubernetes-statefulsets-advanced:statefulsets performance optim": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update resources.\n  - `kubectl get statefulsets` to list all StatefulSets.\n  - `kubectl describe statefulset <statefulset-name>` for detailed information.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Karpenter: v0.4\n\n- **Key Config Options**:\n  - `spec.replicas`: Number of replicas.\n  - `spec.template.spec.containers`: Container specifications.\n  - `spec.volumeClaimTemplates`: Persistent volume claims for storage.\n  - `spec.serviceName`: Headless service name for stable network identities.\n\n- **Performance Optimization Tips**:\n  - Use StatefulSets for stateful applications requiring ordered, graceful deployment and scaling.\n  - Implement custom operators to optimize performance in specific use cases, like replacing StatefulSets with Karpenter for Postgres cloud platforms.",
+    "source": "web_search",
+    "updated_at": 1780713912.1937215
+  },
+  "search:kubernetes-statefulsets-advanced:statefulsets performance optim_ex": {
+    "content": "- Use `kubectl apply -f example-statefulset.yaml` to create or update a StatefulSet.\n- Ensure your StatefulSet YAML specifies `apiVersion: apps/v1`.\n- Set `spec.replicas` for the number of replicas you need.\n- Define `spec.template.spec.containers` with necessary container configurations.\n- Use `volumeClaimTemplates` for persistent storage.\n- Apply labels and selectors to manage StatefulSet pods effectively.\n- Monitor StatefulSet status using `kubectl get statefulset <name>`.\n- Update StatefulSets by modifying the YAML and applying it again.",
+    "source": "code_example",
+    "updated_at": 1780713922.3136618
+  }
+}

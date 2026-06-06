@@ -2,7 +2,7 @@
   "pattern:nestjs-auth:jwt": {
     "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
     "source": "code_pattern",
-    "updated_at": 1780713644.3929925
+    "updated_at": 1780713962.9726286
   },
   "search:nestjs+auth:nestjs jwt passport jwtstrateg": {
     "content": "- Install dependencies: `npm install @nestjs/passport passport passport-local passport-jwt @nestjs/jwt bcrypt`\n- Use Passport Module for authentication.\n- Create JWT Strategy to validate JWT tokens.\n- Import `JwtStrategy` and `UserEntity`.\n- Implement login validation with `passport-local`.\n- Enable JWT-based functionality with `passport-jwt`.\n- Key config options include `jwtFromRequest`, `ignoreExpiration`, and `secretOrKey`.",
