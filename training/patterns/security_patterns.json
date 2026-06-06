@@ -1,0 +1,52 @@
+{
+  "search:Security Patterns:.net mvc security patterns": {
+    "content": "- Use `Bind` attribute to control model binding in POST actions.\n- Implement custom security setup using ASP.NET Identity or similar libraries.\n- Update your .NET MVC application to the latest version for security patches.\n- Configure `web.config` with appropriate settings for security, such as `<httpRuntime requestValidationMode=\"2.0\" />`.\n- Regularly update and patch all dependencies and frameworks used in your project.\n- Use HTTPS to encrypt data transmitted between client and server.\n- Implement CSRF protection using anti-forgery tokens.\n- Validate user inputs on both client and server sides.\n- Monitor application logs for suspicious activities.",
+    "source": "web_search",
+    "updated_at": 1780723676.848241
+  },
+  "search:Security Patterns:.net mvc security patterns_ex": {
+    "content": "- Use `dotnet new mvc` to create a new ASP.NET Core MVC project.\n- Update your project file to target the latest LTS version of .NET Core, e.g., `<TargetFramework>net6.0</TargetFramework>`.\n- Implement authentication using `AddAuthentication` and configure schemes like JWT with `services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { ... })`.\n- Configure authorization rules in `Startup.cs` or `Program.cs`, e.g., `[Authorize(Roles = \"Admin\")]`.\n- Use the `[AllowAnonymous]` attribute to allow unauthenticated access to specific actions.\n- Secure your application by configuring CORS with `services.AddCors(options => options.AddPolicy(\"AllowAllOrigins\", builder => { ... }))`.\n- Implement data protection for sensitive information using `services.AddDataProtection()`.\n- Regularly update dependencies and frameworks to patch security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780723684.4445195
+  },
+  "search:Security Patterns:elasticsearch setup and securi": {
+    "content": "- **Enable Security Features**: Use `elasticsearch-plugin install x-pack` to install X-Pack.\n- **Configure Authentication**: Set `xpack.security.enabled: true` in `elasticsearch.yml`.\n- **Set Up Users**: Create users with roles using the Kibana Dev Tools or API:\n  ```bash\n  POST /_security/user/elastic_user\n  {\n    \"password\": \"your_password\",\n    \"roles\": [\"superuser\"],\n    \"full_name\": \"Elastic User\"\n  }\n  ```\n- **Enable TLS Encryption**: Configure SSL/TLS in `elasticsearch.yml` with paths to your certificates.\n- **Configure API Keys**: Generate and manage API keys for secure access:\n  ```bash\n  POST /_security/api_key\n  {\n    \"name\": \"my_api_key\",\n    \"role_descriptors\": {\n      \"my_role\": {\n        \"cluster\": [\"all\"],\n        \"indices\": [\n          {\n            \"names\": [\"index_*\"],\n            \"privileges\": [\"read\", \"write\"]\n          }\n        ]\n      }\n    }\n  }\n  ```\n- **Role-Based Access Control (RBAC)**: Define roles and assign them to users for fine-grained access control.\n- **Update Elasticsearch**: Always use the latest stable version for security patches and features:\n  ```bash\n  sudo apt-get update && sudo apt-get install elasticsearch=7.10.2\n  ```\n- **Monitor Security Events**: Use X-Pack's monitoring features to track security events and anomalies.\n\nThese steps provide a solid foundation for securing an Elasticsearch cluster, ensuring that it is protected against unauthorized access and data breaches.",
+    "source": "web_search",
+    "updated_at": 1780723696.1331177
+  },
+  "search:Security Patterns:elasticsearch setup and securi_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up -d`: Start Elasticsearch and Kibana containers in detached mode.\n  - `curl -X PUT \"localhost:9200/_security/user/elastic\" -H 'Content-Type: application/json' -d'{\"password\": \"new_password\"}'`: Set a password for the default user.\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5.3\n  - Kibana: 8.5.3\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Enable security features.\n  - `xpack.security.transport.ssl.enabled`: Enable SSL for transport layer.\n  - `xpack.security.http.ssl.enabled`: Enable SSL for HTTP layer.\n  - `xpack.security.fips_mode.enabled`: Enable FIPS mode for enhanced security.",
+    "source": "code_example",
+    "updated_at": 1780723701.3863552
+  },
+  "search:Security Patterns:kubernetes nginx ingress secur": {
+    "content": "- **CLI Commands**:\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n  - `kubectl edit ingress <ingress-name>`\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is NGINX Ingress Controller v1.2.0.\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/auth-type`: Specifies the type of authentication.\n  - `nginx.ingress.kubernetes.io/auth-secret`: Secret containing the credentials for basic auth.\n  - `nginx.ingress.kubernetes.io/rewrite-target`: Rewrites the target URL.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: Adjusts the maximum body size allowed by NGINX.\n\n- **Migration Steps**:\n  - Identify all Ingress resources using `kubectl get ingress`.\n  - Review each resource for custom annotations and configurations.\n  - Plan migration to an alternative Ingress controller like Traefik or Cilium Ingress Controller.\n  - Apply new Ingress resources with the chosen controller, ensuring compatibility and security settings.",
+    "source": "web_search",
+    "updated_at": 1780723711.1440043
+  },
+  "search:Security Patterns:kubernetes nginx ingress secur_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.1\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/auth-type`: For basic authentication.\n  - `nginx.ingress.kubernetes.io/auth-secret`: Secret containing the username and password for basic auth.",
+    "source": "code_example",
+    "updated_at": 1780723719.270588
+  },
+  "search:Security Patterns:docker kubernetes advanced log": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For real-time logging, consider using tools like `kubetail` or `stern`.\n- To check Docker disk usage, run `docker system df`.\n- For log rotation in Kubernetes, configure the `kubelet` with appropriate flags such as `--rotate-image-keep-days`, `--image-gc-high-threshold`, and `--image-gc-low-threshold`.\n- Use logging drivers like Fluentd or Fluent Bit for centralized logging.\n- Configure log retention policies in your logging infrastructure to manage disk space effectively.",
+    "source": "web_search",
+    "updated_at": 1780723734.4136224
+  },
+  "search:Security Patterns:docker kubernetes advanced log_ex": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs.\n- For advanced logging, consider using Fluentd or Fluent Bit.\n- Configure Fluentd in a DaemonSet for all nodes.\n- Set up log rotation with `logrotate` in your container images.\n- Use `--log-driver=fluentd` flag when creating pods.\n- Ensure Fluentd is configured to send logs to your desired destination (e.g., Elasticsearch, Splunk).\n- Key config options include `logOptions` in pod specifications for customizing log behavior.\n- For real-time monitoring, use tools like Prometheus and Grafana with Kubernetes metrics server.",
+    "source": "code_example",
+    "updated_at": 1780723742.0716608
+  },
+  "search:Security Patterns:angular material design securi": {
+    "content": "- Use Angular CLI to generate secure components and services.\n- Update Angular to the latest version using `ng update @angular/core`.\n- Implement HTTP interceptors for request and response handling.\n- Utilize Angular's built-in sanitization functions like `DomSanitizer` for HTML content.\n- Configure Angular Router with guards for authentication and authorization.\n- Enable strict mode in TypeScript by setting `\"strict\": true` in `tsconfig.json`.\n- Use HTTPS for all communications to protect against man-in-the-middle attacks.\n- Regularly update dependencies using `ng update @angular/cli`.\n- Implement server-side rendering (SSR) for better security and performance.",
+    "source": "web_search",
+    "updated_at": 1780723752.9305816
+  },
+  "search:Security Patterns:angular material design securi_ex": {
+    "content": "- Use `ng add @angular/material` to install Angular Material.\n- Update Angular and Angular Material to the latest version using `ng update`.\n- Configure Angular Material themes in `styles.scss` with `@import '~@angular/material/theming';`.\n- Import components from `@angular/material` in your modules, e.g., `MatButtonModule`.\n- Use `mat-form-field`, `mat-input`, and other form controls for consistent styling.\n- Implement custom themes by extending prebuilt themes or creating new ones.\n- Utilize Angular CDK (Component Dev Kit) for advanced Material components and utilities.\n- Enable animations in your project with `BrowserAnimationsModule` from `@angular/platform-browser/animations`.\n- Test your application thoroughly to ensure Material Design guidelines are followed.",
+    "source": "code_example",
+    "updated_at": 1780723759.617552
+  }
+}
