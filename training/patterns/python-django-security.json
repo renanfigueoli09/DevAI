@@ -1,0 +1,22 @@
+{
+  "search:python-django-security:django security best practices": {
+    "content": "- **CLI Commands**:\n  - `python manage.py migrate` to apply database migrations.\n  - `python manage.py createsuperuser` to create a superuser.\n\n- **Latest Versions**:\n  - Django 4.2 LTS\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a strong secret key in settings.py.\n  - `DEBUG`: Set to False in production.\n  - `ALLOWED_HOSTS`: List of allowed hosts.\n  - `CSRF_COOKIE_SECURE`: Set to True for HTTPS.\n  - `SESSION_COOKIE_SECURE`: Set to True for HTTPS.",
+    "source": "web_search",
+    "updated_at": 1780744029.5836842
+  },
+  "search:python-django-security:django security best practices_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --insecure`: Run development server without HTTPS.\n  - `python manage.py collectstatic`: Collect static files for deployment.\n\n- **Latest Versions**:\n  - Django 4.2: Latest stable version as of October 2025.\n  - Python 3.11: Recommended for new projects due to performance improvements and new features.\n\n- **Key Config Options**:\n  - `DEBUG = False`: Disable debug mode in production.\n  - `ALLOWED_HOSTS = ['example.com', 'www.example.com']`: Specify allowed hosts.\n  - `CSRF_COOKIE_SECURE = True`: Ensure CSRF cookies are sent over HTTPS.\n  - `SESSION_COOKIE_SECURE = True`: Ensure session cookies are sent over HTTPS.\n  - `SECURE_SSL_REDIRECT = True`: Redirect all HTTP requests to HTTPS.",
+    "source": "code_example",
+    "updated_at": 1780744040.7750795
+  },
+  "search:python-django-security:django csrf protection 2025": {
+    "content": "- **CLI Commands**: Use `python manage.py runserver` to start the Django development server.\n- **Latest Versions**: Ensure you are using Django version 4.2 or later for enhanced security features.\n- **Key Config Options**:\n  - `MIDDLEWARE`: Include `'django.middleware.csrf.CsrfViewMiddleware'`.\n  - `TEMPLATES`: Set `autoescape` to `True` in the template options.\n  - `SESSION_COOKIE_SECURE`: Set to `True` if using HTTPS.\n  - `CSRF_COOKIE_SECURE`: Set to `True` if using HTTPS.\n- **Testing**: Use Django’s testing framework with `pytest-django` for CSRF protection tests.",
+    "source": "web_search",
+    "updated_at": 1780744049.4522529
+  },
+  "search:python-django-security:django csrf protection 2025_ex": {
+    "content": "- Use `django.middleware.csrf.CsrfViewMiddleware` in your settings.\n- Include `{{ csrf_token }}` in forms to protect against CSRF attacks.\n- Apply the `@csrf_exempt` decorator to views that don't require CSRF protection.\n- Ensure Django's session middleware is enabled (`SESSION_COOKIE_SECURE = True`).\n- Update Django to the latest version for security patches and improvements.",
+    "source": "code_example",
+    "updated_at": 1780744056.7946758
+  }
+}
