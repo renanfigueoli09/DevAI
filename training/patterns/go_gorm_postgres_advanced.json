@@ -1,0 +1,7 @@
+{
+  "search:go-gorm-postgres-advanced:go gorm postgresql advanced te": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to install the latest version of GORM.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest versions of GORM and PostgreSQL drivers for compatibility.\n\n- **Key Config Options**:\n  - Use `gorm.io/driver/postgres.Open(\"host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai\")` to connect to a PostgreSQL database.\n  - Configure advanced settings during initialization as needed.",
+    "source": "web_search",
+    "updated_at": 1780747268.4451632
+  }
+}
