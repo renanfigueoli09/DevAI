@@ -2,21 +2,21 @@
   "search:FastAPI + Core:fastapi dependency injection": {
     "content": "- **CLI Commands**: None directly related to dependency injection.\n- **Latest Versions**: Ensure FastAPI is up-to-date using `pip install fastapi --upgrade`.\n- **Key Config Options**:\n  - Use the `Depends` function for dependency injection.\n  - Define dependencies as separate functions and pass them to your path operation functions.\n  - Handle sub-dependencies by returning multiple values from a single dependency function.",
     "source": "web_search",
-    "updated_at": 1780781952.3292203
+    "updated_at": 1780782136.5641787
   },
   "search:FastAPI + Core:fastapi dependency injection_ex": {
     "content": "- **CLI Commands**: `fastapi` (to create a new FastAPI project)\n- **Latest Version**: Check on [FastAPI GitHub](https://github.com/tiangolo/fastapi) for the latest version.\n- **Key Config Options**:\n  - `dependencies`: Define dependencies in your endpoint functions using `Depends`.\n  - `dependency injection`: Use `Depends` to inject services or data into your endpoints.\n  - `repository pattern`: Implement a repository pattern for database operations.",
     "source": "code_example",
-    "updated_at": 1780781958.6563368
+    "updated_at": 1780782137.4850295
   },
   "search:FastAPI + Core:fastapi security best practice": {
     "content": "- Use `uvicorn` to run your FastAPI app (`uvicorn main:app --reload`)\n- Install dependencies using pip (`pip install fastapi[all]`)\n- For security, use JWT tokens for authentication (`fastapi.security.OAuth2PasswordBearer`)\n- Hash passwords with `passlib` and `python-jose`\n- Configure CORS with `fastapi.middleware.cors.CORSMiddleware`\n- Use environment variables for sensitive data (`python-dotenv`)\n- Test your API with `pytest` and `httpx`\n- For production, use HTTPS (`uvicorn --ssl-keyfile=path/to/key.pem --ssl-certfile=path/to/cert.pem main:app`)",
     "source": "web_search",
-    "updated_at": 1780781972.0861826
+    "updated_at": 1780782138.3492146
   },
   "search:FastAPI + Core:fastapi security best practice_ex": {
     "content": "- Use `uvicorn` as the ASGI server.\n- Install FastAPI and dependencies using pip: `pip install fastapi uvicorn[standard]`.\n- Implement authentication with JWT tokens.\n- Use `HTTPBearer` for token-based authentication.\n- Configure security settings in your main application file.\n- Set up environment variables for sensitive information like secret keys.\n- Regularly update FastAPI, Uvicorn, and other dependencies to the latest versions.\n- Use HTTPS for production environments.\n- Implement rate limiting to protect against brute-force attacks.\n- Monitor API usage and logs for suspicious activity.",
     "source": "code_example",
-    "updated_at": 1780781977.9374697
+    "updated_at": 1780782139.2661085
   }
 }
