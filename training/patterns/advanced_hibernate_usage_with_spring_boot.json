@@ -28,5 +28,15 @@
     "content": "- Use Django's `select_related` and `prefetch_related` to reduce the number of queries.\n- Implement caching using Redis or Ehcache for frequently accessed data with annotations like `@Cacheable`.\n- Configure connection pooling in Spring Boot applications, e.g., using HikariCP with properties like `spring.datasource.hikari.maximum-pool-size`.\n- Use indexes on database tables to speed up query performance.\n- Optimize queries by avoiding N+1 selects and using joins where appropriate.\n- Regularly analyze and optimize database schema for better performance.",
     "source": "code_example",
     "updated_at": 1780761563.2343855
+  },
+  "search:Advanced Hibernate Usage with Spring Boot:caching strategies": {
+    "content": "- **CLI Commands**: Use `redis-cli` for Redis operations.\n- **Latest Versions**: Check the official documentation or use package managers like `npm install redis@latest`.\n- **Key Config Options**:\n  - `maxmemory`: Set the maximum memory usage for Redis.\n  - `maxmemory-policy`: Define eviction policy when maxmemory is reached (e.g., `allkeys-lru`).\n  - `ttl`: Set time-to-live for keys in seconds.",
+    "source": "web_search",
+    "updated_at": 1780761580.327036
+  },
+  "search:Advanced Hibernate Usage with Spring Boot:caching strategies_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.Extensions.Caching.Memory`\n  - `dotnet add package Microsoft.AspNetCore.ResponseCaching`\n\n- **Latest Versions**:\n  - .NET SDK: v7.x\n  - HybridCache: Available in .NET Core 3.0 and later\n\n- **Key Config Options**:\n  - Cache Expiration: `options.SetAbsoluteExpiration(TimeSpan.FromMinutes(10))`\n  - Cache Eviction Policy: `options.EvictionPolicy = new LruEvictionPolicy()`\n  - Response Caching: `app.UseResponseCaching();`",
+    "source": "code_example",
+    "updated_at": 1780761586.6709304
   }
 }
