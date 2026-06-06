@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+redis-advanced:advanced kubernetes redis conf": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to create resources.\n- Ensure Kubernetes version is 1.21 or higher and Redis version is 6 or higher.\n- Create a ConfigMap with Redis configuration values using `kubectl create configmap redis-config --from-file=redis.conf`.\n- Mount the ConfigMap in a Redis Pod using `volumeMounts: - name: redis-config mountPath: /etc/redis/config` in the Pod spec.\n- Use `kubectl get pods` to verify that the Redis Pod is running and configuration was applied correctly.\n- For Redis Operator, ensure Kubernetes version is 1.25 or higher and Redis version is 6 or higher.\n- Deploy Redis using Helm with the latest stable release: `helm install my-redis bitnami/redis`.\n- Configure Redis Sentinel in Kubernetes by deploying a StatefulSet with the appropriate configuration.\n- Use `kubectl get svc` to check if the Redis service is accessible.",
+    "source": "web_search",
+    "updated_at": 1780743723.88499
+  },
+  "search:kubernetes+redis-advanced:advanced kubernetes redis conf_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <config-file.yaml>`\n  - `kubectl get pods`\n  - `kubectl logs <pod-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - Redis Operator: v0.14.x\n\n- **Key Config Options**:\n  - `replicas`: Number of Redis instances.\n  - `storageClass`: Storage class for persistent storage.\n  - `resources`: CPU and memory limits/requests.\n  - `configMap`: Custom configuration settings.",
+    "source": "code_example",
+    "updated_at": 1780743731.9421053
+  },
+  "search:kubernetes+redis-advanced:redis in kubernetes for high a": {
+    "content": "- Use `helm install` to deploy Redis on Kubernetes.\n- Specify the latest version of Helm charts, e.g., `redis-enterprise-operator`.\n- Configure high availability with Redis Sentinel using `--set sentinel.enabled=true`.\n- Key config options include `replicaCount`, `master.persistence.size`, and `sentinel.quorum`.\n- Use `kubectl apply` to manage Kubernetes resources.\n- Monitor Redis health with `kubectl get pods -l app=redis`.\n- For failover testing, simulate a master node failure and observe Sentinel promotion.",
+    "source": "web_search",
+    "updated_at": 1780743749.142329
+  },
+  "search:kubernetes+redis-advanced:redis in kubernetes for high a_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f redis-enterprise-operator.yaml`\n  - `helm install my-redis stable/redis --set replicaCount=3`\n\n- **Latest Versions**:\n  - Redis Enterprise Operator: v2.6.0\n  - Helm Chart for Redis: v14.5.0\n\n- **Key Config Options**:\n  - `replicaCount`: Number of replicas (e.g., 3 for high availability)\n  - `resources.requests.memory`: Minimum memory required per pod\n  - `resources.limits.memory`: Maximum memory allowed per pod",
+    "source": "code_example",
+    "updated_at": 1780743763.275453
+  }
+}
