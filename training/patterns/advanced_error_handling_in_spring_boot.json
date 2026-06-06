@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Spring Boot:spring boot error handling": {
+    "content": "- Use `@ControllerAdvice` to handle exceptions globally across the application.\n- Implement `@ExceptionHandler` within `@ControllerAdvice` for specific exception handling.\n- Configure custom error responses using `ResponseEntity`.\n- Utilize `@ResponseStatus` to set HTTP status codes.\n- Enable global error logging with `ErrorAttributes`.\n- Use `@ResponseBody` in exception handlers to return JSON or XML responses.\n- Implement `@ExceptionHandler(Exception.class)` for a catch-all handler.\n- Consider using `@ExceptionHandler(MethodArgumentNotValidException.class)` for handling validation errors.\n- For microservices, use Spring Cloud Gateway for centralized error handling.",
+    "source": "web_search",
+    "updated_at": 1780742732.7817826
+  },
+  "search:Advanced Error Handling in Spring Boot:spring boot error handling_ex": {
+    "content": "- Use `@ControllerAdvice` to handle exceptions globally across controllers.\n- Implement `ErrorController` for custom error handling.\n- Set `server.error.include-stacktrace=never` in `application.properties` to hide stack traces.\n- Use `@ExceptionHandler` on methods within a class annotated with `@ControllerAdvice`.\n- Configure `spring.mvc.throw-exception-if-no-handler-found=true` to throw an exception if no handler is found.\n- Utilize `ResponseEntity` for returning custom HTTP responses.\n- Implement `ErrorAttributes` for custom error attributes in JSON format.",
+    "source": "code_example",
+    "updated_at": 1780742739.2333937
+  },
+  "search:Advanced Error Handling in Spring Boot:exception handling in spring b": {
+    "content": "- Use `@ExceptionHandler` annotation to handle exceptions in specific handler classes.\n- Extend `ResponseEntityExceptionHandler` for global exception handling, improving code reuse.\n- Utilize Spring Boot's default exception handling mechanism for common Spring MVC exceptions.\n- Implement a global exception handler by extending `ResponseEntityExceptionHandler`.\n- Configure custom error responses using `@ControllerAdvice` and `@ExceptionHandler`.\n- Use `@ResponseStatus` to specify HTTP status codes for exceptions.\n- Employ `@ResponseBody` in exception handlers to return JSON or XML responses.\n- Enable detailed stack traces in development environments with `spring.mvc.debug=true`.\n- Update Spring Boot version regularly to benefit from latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1780742750.8766203
+  },
+  "search:Advanced Error Handling in Spring Boot:exception handling in spring b_ex": {
+    "content": "- Use `@ControllerAdvice` to define global exception handlers.\n- Implement `@ExceptionHandler` methods within the `@ControllerAdvice`.\n- Utilize `ResponseEntity` for returning detailed error responses.\n- Configure custom error messages and HTTP status codes.\n- Enable logging in your exception handler for debugging purposes.\n- Consider using `@ResponseStatus` on controller methods for specific exceptions.\n- Update Spring Boot to the latest version for enhanced features and security patches.\n- Ensure proper testing of exception handling logic with unit tests.",
+    "source": "code_example",
+    "updated_at": 1780742760.7624211
+  }
+}

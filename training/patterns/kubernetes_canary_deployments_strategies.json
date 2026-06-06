@@ -1,0 +1,32 @@
+{
+  "search:Kubernetes Canary Deployments Strategies:canary deployments": {
+    "content": "- **CLI Commands**: Use `kubectl rollout` for Kubernetes deployments.\n- **Exact Flags**:\n  - `--image`: Specifies the new image version.\n  - `--replicas`: Adjusts the number of replicas in the canary deployment.\n  - `--progress-deadline`: Sets a deadline for the deployment to progress.\n- **Latest Versions**: Ensure using the latest Kubernetes and Helm versions for optimal functionality.\n- **Key Config Options**:\n  - `canaryRelease`: Enable or disable canary release.\n  - `trafficPercentage`: Define the percentage of traffic routed to the canary version.\n  - `rolloutStrategy`: Choose between blue-green or canary strategies.",
+    "source": "web_search",
+    "updated_at": 1780742906.4878778
+  },
+  "search:Kubernetes Canary Deployments Strategies:canary deployments_ex": {
+    "content": "- Use `kubectl annotate` to set canary routing annotations in Ingress-Nginx.\n- Example command: `kubectl annotate ingress <ingress-name> nginx.ingress.kubernetes.io/canary=true`\n- Specify the percentage of traffic for the canary version using `nginx.ingress.kubernetes.io/canary-weight`.\n- Example command: `kubectl annotate ingress <ingress-name> nginx.ingress.kubernetes.io/canary-weight=10`\n- For AWS CodeDeploy, use `aws deploy create-deployment` with `--deployment-group-name`, `--application-name`, and `--revision`.\n- Example command: `aws deploy create-deployment --deployment-group-name <group-name> --application-name <app-name> --revision revisionType=S3,s3Location=bucket=<bucket>,key=<key>`\n- For ECS canary deployments, use the AWS Management Console or AWS CLI to configure task sets.\n- Example CLI command: `aws ecs update-service --cluster <cluster-name> --service <service-name> --desired-count 10`\n- Key config options include `canary` and `canary-weight` in Ingress-Nginx annotations, and `revisionType`, `s3Location` in CodeDeploy commands.",
+    "source": "code_example",
+    "updated_at": 1780742919.8641214
+  },
+  "search:Kubernetes Canary Deployments Strategies:kubernetes canary": {
+    "content": "- Use `kubectl apply -f <canary-deployment.yaml>` to deploy the canary version.\n- Configure traffic splitting using Ingress-Nginx Controller with annotations like:\n  ```yaml\n  nginx.ingress.kubernetes.io/canary: \"true\"\n  nginx.ingress.kubernetes.io/canary-weight: \"10\"\n  ```\n- Monitor the canary deployment by checking logs and metrics.\n- Promote the canary version to production using `kubectl patch deployment <deployment-name> -p '{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"nginx.ingress.kubernetes.io/canary\":\"false\"}}}}}'`.\n- Ensure Istio is installed for advanced traffic management if needed:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/istio/installer/master/releases/1.15.0/components/base.yaml\n  ```\n- Use Helm charts to manage canary deployments more efficiently.\n- Keep Kubernetes and Ingress-Nginx Controller up-to-date with the latest versions for security and features:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml\n  ```\n- Utilize Prometheus and Grafana for monitoring canary deployment metrics.",
+    "source": "web_search",
+    "updated_at": 1780742930.464511
+  },
+  "search:Kubernetes Canary Deployments Strategies:kubernetes canary_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy canary version.\n- Apply traffic routing using Ingress or Istio.\n- Monitor metrics with Prometheus and Grafana.\n- Rollback if issues arise using `kubectl rollout undo deployment/<deployment-name>`.\n- Ensure Helm charts are up-to-date for latest features and security patches.",
+    "source": "code_example",
+    "updated_at": 1780742937.1435852
+  },
+  "search:Kubernetes Canary Deployments Strategies:blue-green deployment": {
+    "content": "- **CLI Commands**:\n  - `az containerapp create --name <app-name> --resource-group <group-name> --image <image-name>`\n  - `az containerapp revision swap --name <app-name> --resource-group <group-name> --target-revision green`\n\n- **Latest Versions**:\n  - Azure CLI: Ensure you are using the latest version by running `az upgrade`.\n\n- **Key Config Options**:\n  - `--environment`: Specifies the environment where the container app is deployed.\n  - `--image`: The Docker image to use for the container app.\n  - `--target-revision`: The revision of the container app to swap with the current production version.",
+    "source": "web_search",
+    "updated_at": 1780742947.485276
+  },
+  "search:Kubernetes Canary Deployments Strategies:blue-green deployment_ex": {
+    "content": "- **CLI Commands**:\n  - `aws ecs update-service --cluster <cluster-name> --service <service-name> --desired-count <new-desired-count>`\n  - `aws deploy create-deployment-group --application-name <app-name> --deployment-group-name <group-name> --service-role-arn <role-arn> --auto-scaling-groups <asg-name>`\n\n- **Latest Versions**:\n  - AWS ECS: v2.103.0\n  - AWS CodeDeploy: v1.5.0\n\n- **Key Config Options**:\n  - `trafficRoutingConfig`: Specifies how traffic is routed during a blue-green deployment.\n    ```json\n    \"trafficRoutingConfig\": {\n      \"type\": \"TimeBasedCanary\",\n      \"timeBasedCanary\": {\n        \"canarySizePercentage\": 15,\n        \"intervalMinutes\": 5\n      }\n    }\n    ```\n  - `stabilizationDuration`: Duration to wait after the initial canary deployment before fully routing traffic.\n    ```json\n    \"stabilizationDuration\": {\n      \"type\": \"TimeBasedCanary\",\n      \"timeBasedCanary\": {\n        \"canarySizePercentage\": 15,\n        \"intervalMinutes\": 5\n      }\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1780742968.7668102
+  }
+}
