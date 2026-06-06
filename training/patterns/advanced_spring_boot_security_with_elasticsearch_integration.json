@@ -2,21 +2,21 @@
   "search:Advanced Spring Boot Security with Elasticsearch Integration:spring boot security elasticse": {
     "content": "- **CLI Commands**:\n  - `elasticsearch.bat` to run Elasticsearch.\n  \n- **Latest Versions**:\n  - Elasticsearch 8.7.0\n  \n- **Key Config Options**:\n  - Enable security in `application.yaml`.\n  - Configure HTTPS for secure connections.\n  - Use Spring Boot Starter Data Elasticsearch dependency.\n  - Define connection details in `ElasticsearchConfiguration` class.",
     "source": "web_search",
-    "updated_at": 1780761066.5944407
+    "updated_at": 1780761256.9750314
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:spring boot security elasticse_ex": {
-    "content": "- Add `spring-boot-starter-data-elasticsearch` dependency to your Maven project.\n- Configure Elasticsearch security in `application.yaml`.\n- Use JWT authentication and authorization with Spring Boot 3 and Spring Security 6.\n- Implement a default login page using Spring Security.\n- Add logout functionality to the menu.jsp.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n  - Elasticsearch: 7.x\n\n- **Key Config Options**:\n  - `spring.data.elasticsearch.username` and `spring.data.elasticsearch.password`\n  - `spring.security.user.name` and `spring.security.user.password`\n  - `application.yaml` for JWT configuration",
     "source": "code_example",
-    "updated_at": 1780761067.0882103
+    "updated_at": 1780761259.3179529
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:elasticsearch authentication a": {
-    "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name my-domain --elasticsearch-version 7.10 --ebs-options VolumeSize=20 --instance-type m5.large.elasticsearch`\n  - `curl -X GET \"http://localhost:9200/_security/user?pretty\"`\n\n- **Latest Versions**:\n  - AWS Elasticsearch: 7.10\n  - Elasticsearch: 7.x\n\n- **Key Config Options**:\n  - Authentication: `xpack.security.enabled: true`\n  - Authorization: `xpack.security.authorization.enabled: true`\n  - Role-Based Access Control (RBAC): Define roles and assign them to users",
+    "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name <domain-name> --elasticsearch-version <version> --ebs-options VolumeSize=<size> --instance-type <type> --security-group-ids <group-id> --vpc-options SubnetIds=<subnet-id>`\n  - `curl -X GET \"http://<host>:9200/_cat/nodes?v\"`\n  - `curl -X PUT \"http://<host>:9200/<index>/_doc/1\" -H 'Content-Type: application/json' -d '{ \"field\": \"value\" }'`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5\n  - AWS Elasticsearch Service: 8.5\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Enables security features.\n  - `xpack.security.authc.realms.file.file1.path`: Path to the file realm configuration.\n  - `xpack.security.authorization.enabled`: Enables role-based access control (RBAC).\n  - `xpack.security.audit.enabled`: Enables auditing of security events.",
     "source": "web_search",
-    "updated_at": 1780761067.5874553
+    "updated_at": 1780761266.0448933
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:elasticsearch authentication a_ex": {
-    "content": "- Use `curl -u username:password` to send an Authorization header.\n- For API keys, create them via the Elasticsearch API and use the encoded value in headers.\n- AWS ES supports IAM authentication; enable it using the AWS Management Console or CLI with flags like `--domain-name`.\n- Resource-based policies allow adding principal elements directly to the policy document.\n- Key config options include `xpack.security.enabled` for enabling security features in Elasticsearch.",
+    "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name <domain-name> --elasticsearch-version <version> --access-policies file://<policy-file>`\n  - `aws es update-service-software-options --domain-name <domain-name> --automated-update-type MAINTENANCE`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5\n  - AWS Elasticsearch Service: 1.0\n\n- **Key Config Options**:\n  - `accessPolicies`: Define IAM policies for domain access.\n  - `ebsOptions`: Configure EBS storage options.\n  - `instanceType`: Specify the instance type for nodes.\n  - `nodeCount`: Set the number of nodes in the cluster.",
     "source": "code_example",
-    "updated_at": 1780761068.0986805
+    "updated_at": 1780761269.1791267
   }
 }

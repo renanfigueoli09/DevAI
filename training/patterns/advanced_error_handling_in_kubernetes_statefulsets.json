@@ -1,22 +1,22 @@
 {
   "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error ": {
-    "content": "- Use `kubectl describe statefulset <statefulset-name>` to get detailed information about the StatefulSet.\n- Check pod status with `kubectl get pods -l app=<app-label>`.\n- Inspect PVCs and PVs using `kubectl get pvc` and `kubectl get pv`, respectively.\n- Apply fixes using `kubectl apply -f <manifest-file>`.\n- Use `kubectl rollout restart statefulset <statefulset-name>` to restart the StatefulSet.\n- Monitor logs with `kubectl logs <pod-name>`.\n- Ensure correct configuration in the manifest file, focusing on `spec.template`, `spec.serviceName`, and `spec.volumeClaimTemplates`.",
+    "content": "- Use `kubectl describe statefulset <statefulset-name>` to get detailed information about the StatefulSet.\n- Check pod status with `kubectl get pods -l app=<app-label>`.\n- Inspect PVCs and PVs using `kubectl get pvc` and `kubectl get pv`, respectively.\n- Apply changes to a StatefulSet with `kubectl apply -f <statefulset-file.yaml>`.\n- Use `kubectl rollout restart statefulset/<statefulset-name>` for rolling updates.\n- Monitor logs with `kubectl logs <pod-name>`.\n- Check node conditions using `kubectl get nodes --show-labels`.\n- Apply network policies with `kubectl apply -f <network-policy-file.yaml>`.",
     "source": "web_search",
-    "updated_at": 1780761099.4358876
+    "updated_at": 1780761225.546637
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error _ex": {
-    "content": "- Use `kubectl get statefulsets` to list all StatefulSets.\n- Check logs with `kubectl logs <statefulset-name>-<index>`.\n- Inspect events with `kubectl describe statefulset <statefulset-name>`.\n- Verify storage with `kubectl exec -it <pod-name> -- df -h`.\n- Use `kubectl rollout status statefulset <statefulset-name>` for deployment status.\n- Check readiness probes with `kubectl get statefulsets <statefulset-name> -o yaml | grep readinessProbe`.\n- Ensure ordered deployment and scaling by setting `updateStrategy.type=OrderedRollingUpdate`.",
+    "content": "- Use `kubectl get statefulsets` to list StatefulSets.\n- Check logs with `kubectl logs <statefulset-name>-<index>`.\n- Inspect events with `kubectl describe statefulset <statefulset-name>`.\n- Use `kubectl rollout status statefulset <statefulset-name>` for deployment status.\n- Apply changes with `kubectl apply -f <manifest-file>`.\n- Scale StatefulSets with `kubectl scale statefulset <statefulset-name> --replicas=<new-replicas>`.",
     "source": "code_example",
-    "updated_at": 1780761099.996458
+    "updated_at": 1780761228.0813515
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:statefulset failure recovery": {
-    "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl rollout status statefulset/<statefulset-name>`\n  - `kubectl scale statefulset/<statefulset-name> --replicas=<new-replica-count>`\n  - `kubectl delete pod <pod-name> --grace-period=0 --force`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - StatefulSet API: v1\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.template.spec.volumes`: PersistentVolumeClaims for data persistence.\n  - `.spec.updateStrategy.type`: RollingUpdate or OnDelete.\n  - `.spec.rollingUpdate.partition`: Partition for rolling update strategy.",
+    "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`",
     "source": "web_search",
-    "updated_at": 1780761100.5135238
+    "updated_at": 1780761231.9549692
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:statefulset failure recovery_ex": {
-    "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n  - Kueue v0.15\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`",
+    "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n  - Kueue v0.15\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`\n  - `.spec.updateStrategy.type`",
     "source": "code_example",
-    "updated_at": 1780761101.1280007
+    "updated_at": 1780761234.1322238
   }
 }

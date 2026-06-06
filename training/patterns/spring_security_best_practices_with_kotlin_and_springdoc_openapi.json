@@ -1,0 +1,27 @@
+{
+  "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:springdoc-openapi advanced usa": {
+    "content": "- Use `implementation(\"org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.12\")` for Spring Boot 3.x projects.\n- Ensure compatibility between Springdoc OpenAPI version and Spring Boot version using the compatibility matrix.\n- Access Swagger UI page via `/swagger-ui.html`.\n- Key config options include `springdoc.api-docs.path` to customize API documentation path.\n- For error handling, use `@ControllerAdvice` and `@ExceptionHandler`.",
+    "source": "web_search",
+    "updated_at": 1780761390.7933095
+  },
+  "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:springdoc-openapi advanced usa_ex": {
+    "content": "- **Latest Version**: springdoc-openapi v3.0.3\n- **CLI Commands**:\n  - `mvn clean install` to build the project with OpenAPI documentation.\n  - `java -jar target/your-application.jar` to run your Spring Boot application with OpenAPI enabled.\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Specifies the path for accessing API docs (default `/v3/api-docs`).\n  - `springdoc.swagger-ui.path`: Specifies the path for accessing Swagger UI (default `/swagger-ui.html`).",
+    "source": "code_example",
+    "updated_at": 1780761395.758907
+  },
+  "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:jwt authentication in spring b": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application-name.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0\n  - Java: 21\n\n- **Key Config Options**:\n  - `application.properties`: Configure JWT secret, token expiration time, and other security settings.\n  ```properties\n  spring.security.jwt.secret=yourSecretKey\n  spring.security.jwt.expiration=86400\n  ```\n  - `SecurityConfig.java`: Customize Spring Security configuration for JWT authentication.\n  ```java\n  @EnableWebSecurity\n  public class SecurityConfig extends WebSecurityConfigurerAdapter {\n      @Override\n      protected void configure(HttpSecurity http) throws Exception {\n          http.csrf().disable()\n              .authorizeRequests()\n              .antMatchers(\"/api/auth/**\").permitAll()\n              .anyRequest().authenticated();\n      }\n  }\n  ```",
+    "source": "web_search",
+    "updated_at": 1780761413.687857
+  },
+  "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:role-based access control": {
+    "content": "- **CLI Commands**: Use `aws iam create-policy` to create a new policy.\n- **Latest Versions**: Ensure AWS CLI is up-to-date using `pip install --upgrade awscli`.\n- **Key Config Options**:\n  - `RoleName`: Name of the role.\n  - `PolicyDocument`: JSON document defining permissions.\n  - `Description`: Description of the role.",
+    "source": "web_search",
+    "updated_at": 1780761434.1639874
+  },
+  "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:role-based access control_ex": {
+    "content": "- **CLI Commands**: Use `rbacctl` for managing roles and permissions.\n- **Latest Version**: Ensure you are using the latest version of your RBAC tool, typically found in the official documentation or release notes.\n- **Key Config Options**:\n  - `role`: Define roles with specific permissions.\n  - `user`: Assign roles to users.\n  - `policy`: Implement policies that govern role assignments and access rules.",
+    "source": "code_example",
+    "updated_at": 1780761438.2949266
+  }
+}
