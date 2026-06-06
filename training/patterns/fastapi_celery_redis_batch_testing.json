@@ -7,6 +7,6 @@
   "search:FastAPI + Celery-Redis-Batch Testing:fastapi celery redis batch tes_ex": {
     "content": "- **GitHub Repository**: [jitendrasinghiitg/docker-fastapi-celery](https://github.com/jitendrasinghiitg/docker-fastapi-celery)\n  - Latest commit: `master`\n  \n- **FastAPI Version**: Not explicitly stated, but recommended to use the latest stable version.\n  \n- **Celery Version**: Not explicitly stated, but recommended to use the latest stable version.\n  \n- **Redis Version**: Not explicitly stated, but recommended to use the latest stable version.\n  \n- **CLI Commands**:\n  - `docker-compose up` to start services\n  - `celery -A worker.celery worker --loglevel=info` to run Celery worker\n  \n- **Key Config Options**:\n  - FastAPI: `background_tasks`\n  - Celery: `broker_url`, `result_backend`\n  - Redis: `host`, `port`\n\nThese points provide actionable information for setting up and testing a FastAPI application with Celery and Redis, including the latest versions and essential configuration options.",
     "source": "code_example",
-    "updated_at": 1780769020.6825814
+    "updated_at": 1780769753.8535519
   }
 }
