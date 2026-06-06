@@ -2,12 +2,12 @@
   "pattern:fastapi+mongodb:crud": {
     "content": "// FastAPI MongoDB: db=AsyncIOMotorClient(MONGODB_URI).myapp. @app.get('/books') async def list(): return [serialize(b) async for b in db.books.find()]. @app.post('/books',status_code=201) async def create(b:BookCreate): r=await db.books.insert_one(b.model_dump()); return {'id':str(r.inserted_id)}",
     "source": "code_pattern",
-    "updated_at": 1780723002.2149744
+    "updated_at": 1780723217.7424967
   },
   "pattern:fastapi+postgres:sqlalchemy": {
     "content": "// FastAPI PostgreSQL: engine=create_async_engine(DATABASE_URL). class Book(Base): __tablename__='books'; id:Mapped[int]=mapped_column(primary_key=True); title:Mapped[str]=mapped_column(nullable=False).",
     "source": "code_pattern",
-    "updated_at": 1780723002.350629
+    "updated_at": 1780723217.8797283
   },
   "self:fastapi+mongodb:book-crud:wrong": {
     "content": "ANTI-PATTERN in python_fastapi:\nGenerated code WRONGLY used: .dict()\nThese are FORBIDDEN in this context.\nCorrect: AsyncIOMotorClient, model_dump, BaseModel",
