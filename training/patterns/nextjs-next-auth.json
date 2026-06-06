@@ -1,0 +1,12 @@
+{
+  "search:nextjs-next-auth:next.js authentication with ne": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --auth`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - NextAuth.js: v4.x\n\n- **Key Config Options**:\n  - `providers`: Configure authentication providers (Google, Facebook, etc.)\n  - `secret`: A secret key for signing JWT tokens\n  - `session`: Session management settings (e.g., strategy, maxAge)\n  - `pages`: Custom pages for sign-in, sign-out, and error handling",
+    "source": "web_search",
+    "updated_at": 1780717106.9814677
+  },
+  "search:nextjs-next-auth:next.js authentication with ne_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - NextAuth.js: 4.x\n\n- **Key Config Options**:\n  - `providers`: Define authentication providers (e.g., Google, GitHub).\n  - `secret`: A secret key for signing JWTs.\n  - `session`: Configure session management (e.g., type, maxAge).\n  - `pages`: Customize the pages NextAuth.js uses (e.g., signIn, signOut).",
+    "source": "code_example",
+    "updated_at": 1780717116.7664628
+  }
+}

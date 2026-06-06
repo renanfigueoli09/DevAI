@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-06 00:33*
+*2026-06-06 00:38*
 
-## Score: 53% `[██████████░░░░░░░░░░]`
+## Score: 58% `[███████████░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
@@ -12,16 +12,14 @@
 | nlp | 7.9/15.0 | 53% | ❌ |
 | nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
 | fastapi | 2.0/4.0 | 50% | ❌ |
-| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
+| nestjs-mongodb | 4.5/15.0 | 30% | ❌ |
 | spring-mongodb | 0.0/4.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (10%)
+### nestjs-mongodb (30%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
   - Wrong: `?`
-- ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
   - Missing: `findById`
   - Wrong: `findOneBy`
