@@ -1,0 +1,22 @@
+{
+  "search:nextjs+mongodb-advanced:next.js mongodb advanced queri": {
+    "content": "- **CLI Commands**:\n  - `mongo` to connect to MongoDB.\n  - `db.collection.find(query)` for querying documents.\n\n- **Latest Versions**:\n  - Node.js v20.x\n  - MongoDB v7.x\n\n- **Key Config Options**:\n  - Indexes: Use `createIndex()` method for optimizing queries.\n  - Aggregation Framework: For complex data processing and analysis.",
+    "source": "web_search",
+    "updated_at": 1780710575.1934662
+  },
+  "search:nextjs+mongodb-advanced:next.js mongodb advanced queri_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install @mongodb/client`\n  - `npx create-next-app@latest my-mongodb-app`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - MongoDB Node.js Driver: v4.10\n\n- **Key Config Options**:\n  - MongoDB URI in `.env.local`: `MONGODB_URI=your_mongodb_connection_string`\n  - API Routes for CRUD operations (e.g., `/api/users`)\n\n- **Integration Steps**:\n  1. Install MongoDB client library.\n  2. Create a Next.js app.\n  3. Configure MongoDB connection URI in `.env.local`.\n  4. Implement API routes for CRUD operations using MongoDB.\n\nThis summary provides actionable facts for developers to integrate MongoDB with Next.js effectively.",
+    "source": "code_example",
+    "updated_at": 1780710584.4304762
+  },
+  "search:nextjs+mongodb-advanced:mongodb next.js aggregation fr": {
+    "content": "- **CLI Commands**: Use `mongo` shell or MongoDB Compass for interactive queries.\n- **Latest Versions**: Ensure you use the latest version of Node.js and MongoDB to leverage the most recent features.\n- **Key Config Options**:\n  - `$group`: Groups documents by one or more fields.\n  - `$match`: Filters documents based on a condition.\n  - `$sort`: Sorts documents in ascending or descending order.\n  - `$project`: Specifies the fields to include or exclude from the output documents.\n  - `$out`: Writes the results of an aggregation pipeline to a new collection.",
+    "source": "web_search",
+    "updated_at": 1780710591.1872807
+  },
+  "search:nextjs+mongodb-advanced:mongodb next.js aggregation fr_ex": {
+    "content": "- **CLI Commands**: `mongo` to connect to MongoDB, `mongosh` for the modern shell.\n- **Latest Versions**: MongoDB 6.x, Node.js 18.x, Next.js 13.x.\n- **Key Config Options**:\n  - MongoDB Atlas: Connection strings, authentication methods.\n  - Next.js: `next.config.js`, environment variables (`NEXT_PUBLIC_`).\n  - Aggregation Framework Stages: `$match`, `$group`, `$sort`, `$project`.",
+    "source": "code_example",
+    "updated_at": 1780710602.7629623
+  }
+}
