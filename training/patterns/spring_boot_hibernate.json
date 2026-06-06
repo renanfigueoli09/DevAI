@@ -2,21 +2,21 @@
   "search:Spring Boot + Hibernate:spring boot hibernate jpa 2025": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - Hibernate ORM: 7.0.1.Final\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect`",
     "source": "web_search",
-    "updated_at": 1780757492.1431491
+    "updated_at": 1780757887.6842642
   },
   "search:Spring Boot + Hibernate:spring boot hibernate jpa 2025_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Hibernate ORM: 5.6.x\n  - JPA: 3.0\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (e.g., `create-drop`, `update`).\n  - `logging.level.org.hibernate.SQL=DEBUG`: Enables SQL logging for debugging.\n  - `logging.level.org.hibernate.type=TRACE`: Enables type conversion logging for debugging.",
     "source": "code_example",
-    "updated_at": 1780757492.6815126
+    "updated_at": 1780757888.2008264
   },
   "search:Spring Boot + Hibernate:spring boot hibernate performa": {
     "content": "- Use `@Formula` in Hibernate to optimize queries without writing custom SQL.\n- Ensure JPA/Hibernate is up-to-date for the latest performance improvements.\n- Monitor and analyze logs for common Hibernate performance issues.\n- Optimize database connections by setting appropriate connection pool sizes.\n- Use second-level caching to reduce database hits.\n- Implement batch processing for bulk operations.\n- Avoid N+1 query problems by using `@BatchSize` or fetching strategies.\n- Configure Hibernate's `hibernate.jdbc.batch_size` and `hibernate.order_inserts=true`.\n- Regularly update Spring Boot and Hibernate to benefit from performance enhancements.",
     "source": "web_search",
-    "updated_at": 1780757493.2655795
+    "updated_at": 1780757888.7227113
   },
   "search:Spring Boot + Hibernate:spring boot hibernate performa_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Hibernate ORM: 6.x\n  - Spring Boot: 3.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "code_example",
-    "updated_at": 1780757493.8351796
+    "updated_at": 1780757889.2514791
   }
 }
