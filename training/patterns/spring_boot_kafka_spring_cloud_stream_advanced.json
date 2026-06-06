@@ -1,0 +1,7 @@
+{
+  "search:spring-boot+kafka-spring-cloud-stream-advanced:spring boot kafka spring cloud": {
+    "content": "- **Latest Version of Spring Cloud Stream**: 4.0\n- **Reactive Kafka Binder**: Use `spring-cloud-stream-binder-kafka-reactive` for reactive use cases.\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output bindings.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Set to `earliest` or `latest`.\n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Kafka: \n    ```bash\n    spring init --dependencies=webflux,kafka-streams my-kafka-app\n    ```\n  - To run the application:\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n- **Advanced Patterns**:\n  - Implement stateful transformations using `KStream`.\n  - Use windowing for time-based aggregations.\n  - Ensure fault tolerance with Kafka Streams features like exactly-once semantics.",
+    "source": "web_search",
+    "updated_at": 1780749112.2469244
+  }
+}
