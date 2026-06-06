@@ -2,11 +2,11 @@
   "search:typescript+nextjs-sentry:sentry integration for typescr": {
     "content": "- Install Sentry SDK using `npm install @sentry/nextjs`\n- Configure Sentry in your Next.js project by creating a `_app.tsx` file and adding the following code:\n```typescript\nimport * as Sentry from '@sentry/nextjs';\n\nSentry.init({\n  dsn: 'YOUR_SENTRY_DSN',\n  tracesSampleRate: 1.0,\n});\n```\n- Ensure you replace `'YOUR_SENTRY_DSN'` with your actual DSN.\n- To capture console errors, use the `captureConsoleIntegration`:\n```typescript\nimport * as Sentry from '@sentry/nextjs';\nimport { CaptureConsole } from '@sentry/integrations';\n\nSentry.init({\n  dsn: 'YOUR_SENTRY_DSN',\n  integrations: [new CaptureConsole()],\n});\n```\n- For TypeScript integration, ensure your `tsconfig.json` is correctly configured to include the necessary types.\n- Check Sentry's latest version on their official documentation for any updates or new features.",
     "source": "web_search",
-    "updated_at": 1780788254.6058626
+    "updated_at": 1780789544.9712403
   },
   "search:typescript+nextjs-sentry:sentry integration for typescr_ex": {
     "content": "- **Install Sentry SDK**: `npm install @sentry/nextjs`\n- **Configure Sentry in Next.js**:\n  ```javascript\n  // next.config.mjs\n  import * as Sentry from '@sentry/nextjs';\n\n  const SENTRY_DSN = process.env.NEXT_PUBLIC_SENTRY_DSN;\n\n  Sentry.init({\n    dsn: SENTRY_DSN,\n    tracesSampleRate: 1.0, // Capture 100% of transactions for performance monitoring\n  });\n  ```\n- **Environment Variables**: Set `NEXT_PUBLIC_SENTRY_DSN` in your `.env.local` file.\n- **Test Client Error**:\n  - Navigate to the page with the 'Test' button and click it.\n- **Trigger Node Error**:\n  - Access `http://localhost:3000/api/sentry?error=1`.\n- **Latest Version**: Ensure you are using the latest version of the Sentry SDK for Next.js by checking [npm](https://www.npmjs.com/package/@sentry/nextjs).\n- **Key Config Options**:\n  - `dsn`: Your project's DSN from Sentry.\n  - `tracesSampleRate`: Controls the percentage of transactions to capture for performance monitoring.",
     "source": "code_example",
-    "updated_at": 1780788255.9928114
+    "updated_at": 1780789545.9886303
   }
 }

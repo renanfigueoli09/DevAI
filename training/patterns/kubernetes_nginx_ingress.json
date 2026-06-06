@@ -2,21 +2,21 @@
   "search:kubernetes-nginx-ingress:kubernetes nginx ingress contr": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-controller-yaml-file>`\n  - `helm install nginx-ingress stable/nginx-ingress --set controller.replicaCount=2`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.5.0\n  - Helm Chart: v4.6.0\n\n- **Key Config Options**:\n  - `controller.service.annotations` for custom annotations.\n  - `controller.nodeSelector` to specify node selection.\n  - `controller.tolerations` for tolerating taints.\n  - `controller.resources` for resource limits and requests.\n\nThese points provide actionable guidance for configuring the NGINX Ingress Controller in a Kubernetes environment.",
     "source": "web_search",
-    "updated_at": 1780788321.906422
+    "updated_at": 1780789605.5680702
   },
   "search:kubernetes-nginx-ingress:kubernetes nginx ingress contr_ex": {
     "content": "- **Latest Version**: As of my last update, the latest stable version of the NGINX Ingress Controller is 4.5.2.\n  \n- **CLI Commands**:\n  - To install the NGINX Ingress Controller: `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v4.5.2/deploy/static/provider/cloud/deploy.yaml`\n  - To upgrade the NGINX Ingress Controller: `helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace`\n\n- **Key Config Options**:\n  - `controller.service.annotations`: Customize service annotations.\n  - `controller.replicaCount`: Set the number of replicas for the controller.\n  - `controller.nodeSelector`: Specify node labels for scheduling.\n  - `controller.tolerations`: Configure tolerations for scheduling on specific nodes.\n\n- **Security Note**: Be cautious with `configuration-snippet` and `permanent-redirect` annotations to avoid injection vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780788322.9731565
+    "updated_at": 1780789607.0450761
   },
   "search:kubernetes-nginx-ingress:nginx ingress for kubernetes s": {
     "content": "- **Update Nginx Ingress Controller**: Use `kubectl apply -f <nginx-ingress-controller-yaml>` to update to the latest version.\n- **Enable RBAC**: Configure Role-Based Access Control with `kubectl create rolebinding <role-binding-name> --role=<role-name> --serviceaccount=<namespace>:<service-account-name>`.\n- **Network Policies**: Implement network policies using `kubectl apply -f <network-policy-yaml>` to control traffic flow.\n- **Use OAuth2 Proxy**: Deploy OAuth2 Proxy for authentication with `kubectl apply -f <oauth2-proxy-yaml>`.\n- **Secure Sensitive Data**: Encrypt sensitive data using Kubernetes secrets and encryption tools like Bitnami Secrets Manager.\n- **Enable HTTPS**: Configure SSL/TLS termination in Nginx Ingress Controller by setting annotations in the ingress resource.\n- **Monitor and Audit**: Use logging and monitoring tools to audit access and detect anomalies.\n- **Regular Updates**: Keep all components, including Nginx Ingress Controller, OAuth2 Proxy, and Kubernetes itself, up-to-date with the latest security patches.",
     "source": "web_search",
-    "updated_at": 1780788324.1043916
+    "updated_at": 1780789608.5517097
   },
   "search:kubernetes-nginx-ingress:nginx ingress for kubernetes s_ex": {
     "content": "- Ensure NGINX Ingress Controller is updated to the latest version using `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml`.\n- Use `--publish-service` flag during deployment to expose the NGINX Ingress Controller service.\n- Implement TLS termination by providing a secret with your SSL certificate and key using `--default-tls-secret`.\n- Configure rate limiting with `limit-rps` or `limit-burst` in the NGINX configuration file.\n- Enable authentication using annotations like `nginx.ingress.kubernetes.io/auth-type: basic` and provide credentials via a secret.\n- Use `nginx.ingress.kubernetes.io/proxy-body-size` to adjust the maximum body size for requests.\n- Implement IP whitelisting with `nginx.ingress.kubernetes.io/whitelist-source-range`.\n- Regularly update your Kubernetes cluster and NGINX Ingress Controller to mitigate known vulnerabilities.\n- Monitor NGINX Ingress Controller logs for any suspicious activity using `kubectl logs <ingress-controller-pod>`.",
     "source": "code_example",
-    "updated_at": 1780788325.2756374
+    "updated_at": 1780789609.942149
   }
 }

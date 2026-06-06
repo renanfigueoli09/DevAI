@@ -2,51 +2,51 @@
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:kubernetes error handling stra": {
     "content": "- Use `kubectl describe pod <pod-name>` to get detailed information about a pod.\n- Check logs with `kubectl logs <pod-name>`.\n- For node failures, use `kubectl drain <node-name> --ignore-daemonsets` and `kubectl uncordon <node-name>`.\n- Implement Horizontal Pod Autoscaler (HPA) for automatic scaling based on CPU or memory usage.\n- Use `kubectl get events --sort-by=.metadata.creationTimestamp` to view recent cluster events.\n- Configure liveness and readiness probes in pod specifications to ensure healthy pods.\n- Utilize Kubernetes Dashboard for visual monitoring and management of the cluster.\n- Implement robust logging with tools like Fluentd or EFK stack (Elasticsearch, Fluentd, Kibana).\n- Regularly update Kubernetes components to the latest stable versions using `kubectl apply -f <manifest-file>`.",
     "source": "web_search",
-    "updated_at": 1780788257.6343727
+    "updated_at": 1780789547.087609
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:kubernetes error handling stra_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl describe pod <pod-name>` to get detailed information about the pod.\n  - `kubectl logs <pod-name>` to view the logs of a pod.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Kubernetes and Docker for compatibility and security updates.\n\n- **Key Config Options**:\n  - `imagePullPolicy`: Set to `Always` or `IfNotPresent` based on your needs.\n  - `restartPolicy`: Configure as `Always`, `OnFailure`, or `Never`.\n  - `resources`: Define CPU and memory limits and requests for containers.",
     "source": "code_example",
-    "updated_at": 1780788258.985658
+    "updated_at": 1780789548.019138
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:helm chart best practices": {
     "content": "- Use `helm create` to generate a new chart.\n- Update Helm to the latest version using `brew upgrade helm` on macOS or `choco upgrade kubernetes-helm` on Windows.\n- Structure your charts with clear directories and files, following best practices for organization.\n- Utilize semantic versioning in your chart versions (e.g., `1.2.3`).\n- Implement CI/CD pipelines to automate testing and deployment of Helm charts.\n- Use `helm lint` to check your charts for common mistakes before deploying.\n- Configure hooks in your charts for pre-install, post-install, pre-upgrade, and post-upgrade actions.\n- Secure your charts by using secrets and values that are encrypted or masked.\n- Test your charts locally with `helm install --dry-run --debug <release-name> <chart-path>` to ensure they work as expected before deploying.",
     "source": "web_search",
-    "updated_at": 1780788260.5384734
+    "updated_at": 1780789548.988609
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:helm chart best practices_ex": {
     "content": "- **CLI Commands**:\n  - `helm create <chart-name>` to initialize a new chart.\n  - `helm lint <chart-path>` to validate the chart.\n  - `helm package <chart-path>` to package the chart into a `.tgz` file.\n  - `helm install <release-name> <chart-path>` to deploy the chart.\n\n- **Latest Versions**:\n  - Helm: Version 3.x is recommended for its improved security and performance.\n\n- **Key Config Options**:\n  - `values.yaml`: Customize your chart's configuration.\n  - `templates/`: Directory containing Kubernetes manifest templates.\n  - `Chart.yaml`: Metadata about the chart, including versioning.",
     "source": "code_example",
-    "updated_at": 1780788261.8348637
+    "updated_at": 1780789550.0083666
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:kubernetes logging patterns": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl logs --tail=50 <pod-name>` to view the last 50 lines of logs.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x (latest stable version as of my knowledge cutoff in October 2023).\n  - Grafana Loki v2.6.x (latest stable version).\n\n- **Key Config Options**:\n  - `log-driver`: Specifies the logging driver for containers.\n    - Example: `\"json-file\"`, `\"syslog\"`.\n  - `log-opt`: Additional options for the logging driver.\n    - Example: `max-size=10m`, `max-file=3`.\n\n- **Alerting Patterns**:\n  - Look for patterns like \"error\", \"fail\", \"timeout\", \"panic\".\n  - Monitor resource usage metrics to detect high CPU or memory consumption.\n\n- **Logging Architecture**:\n  - Use centralized logging solutions like Grafana Loki.\n  - Implement log rotation and retention policies to manage disk space.",
     "source": "web_search",
-    "updated_at": 1780788263.0831294
+    "updated_at": 1780789551.0162737
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:kubernetes logging patterns_ex": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For Loki, use `loki --config.file=/etc/loki/local-config.yaml` to start the Loki server with a custom configuration file.\n- Key config options for Loki include `server.http_listen_port`, `schema_config.configs[0].from`, and `schema_config.configs[0].store`.\n- To view logs in Grafana, use the query language provided by Loki, such as `{job=\"my-job\"}` to filter logs by job.\n- For centralized logging with Fluentd, use `fluentd --config-dir=/etc/fluentd` to start Fluentd with a custom configuration directory.\n- Key config options for Fluentd include `<source>`, `<match>`, and `<buffer>`.\n- Use `kubectl get pods -l app=my-app` to list all pods with the label `app=my-app`.\n- For log rotation, use `logrotate` with a configuration file like `/etc/logrotate.d/kubernetes` to manage log files.\n- Key config options for logrotate include `daily`, `rotate 7`, and `compress`.",
     "source": "code_example",
-    "updated_at": 1780788264.4377418
+    "updated_at": 1780789551.9681714
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:error monitoring tools for kub": {
     "content": "- **Prometheus**: Use `kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml` to install.\n  - Key Config Options: `prometheus.yml`, `serviceMonitorSelector`.\n  \n- **Grafana**: Deploy with Helm using `helm repo add grafana https://grafana.github.io/helm-charts && helm install grafana grafana/grafana`.\n  - Key Config Options: `adminPassword`, `datasource`.\n\n- **Elastic Stack (ELK)**:\n  - Install Elasticsearch, Kibana, and Logstash.\n  - Use `kubectl apply -f elasticsearch.yaml` for Elasticsearch.\n  \n- **Jaeger**: Deploy with Helm using `helm repo add jaegertracing https://jaegertracing.github.io/helm-charts && helm install jaeger jaegertracing/jaeger`.\n  - Key Config Options: `ingress.enabled`, `service.type`.\n\n- **Kubernetes Dashboard**:\n  - Install with `kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml`.\n  - Access via `kubectl proxy` and navigate to `http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy`.\n\n- **KubeStateMetrics**: Deploy with Helm using `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm install kube-state-metrics prometheus-community/kube-state-metrics`.\n  - Key Config Options: `serviceMonitorSelector`, `podMonitorSelector`.\n\n- **Node Exporter**: Use `kubectl apply -f https://raw.githubusercontent.com/prometheus/node_exporter/master/quickstart.yml` to deploy.\n  - Key Config Options: `scrape_interval`, `path`.\n\n- **Fluentd**: Deploy with Helm using `helm repo add bitnami https://charts.bitnami.com/bitnami && helm install fluentd bitnami/fluentd`.\n  - Key Config Options: `elasticsearch.hosts`, `fluentd.conf`.\n\n- **Kiali**: Deploy with Helm using `helm repo add kiali-stable https://kiali.io/helm-charts && helm install kiali kiali-stable/kiali --set auth.strategy=anonymous`.\n  - Key Config Options: `service.type`, `ingress.enabled`.",
     "source": "web_search",
-    "updated_at": 1780788265.7083025
+    "updated_at": 1780789553.0299
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:error monitoring tools for kub_ex": {
     "content": "- **Prometheus**: Use `kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml` to install.\n- **Grafana**: Deploy using Helm with `helm repo add grafana https://grafana.github.io/helm-charts && helm install grafana grafana/grafana`.\n- **Alertmanager**: Install via Helm: `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm install alertmanager prometheus-community/alertmanager`.\n- **Key Config Options**:\n  - Prometheus: `scrape_configs` in `prometheus.yml`\n  - Grafana: Data sources and dashboards\n  - Alertmanager: `route` and `receivers` in `alertmanager.yml`\n- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: List all pods across namespaces.\n  - `kubectl logs <pod-name> -n <namespace>`: View logs for a specific pod.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Get detailed information about a pod.",
     "source": "code_example",
-    "updated_at": 1780788266.9923975
+    "updated_at": 1780789554.0858524
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:advanced fault tolerance techn": {
     "content": "- **Replication Based Fault Tolerance Techniques**: Use `replicate` flag in configuration files.\n- **Latest Version of Fault Tolerant MPI**: Check for updates on the official MPI website or repository.\n- **Key Config Options**:\n  - `failover_timeout`: Set timeout for failover operations.\n  - `max_retries`: Define maximum retry attempts before giving up.\n  - `replication_factor`: Specify how many copies to maintain.\n\nFor detailed implementation, refer to the official documentation of the specific system or framework you are using.",
     "source": "web_search",
-    "updated_at": 1780788268.347128
+    "updated_at": 1780789555.1937017
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:advanced fault tolerance techn_ex": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes deployments, e.g., `kubectl apply -f deployment.yaml`.\n- **Latest Version**: Check the official documentation or GitHub repository for the latest version of any software.\n- **Key Config Options**:\n  - For Docker: `--restart=always`, `--healthcheck`\n  - For Kubernetes: `livenessProbe`, `readinessProbe`, `replicas`\n  - For AWS EC2: `InstanceType`, `AvailabilityZone`, `AutoScalingGroup`",
     "source": "code_example",
-    "updated_at": 1780788269.7240906
+    "updated_at": 1780789556.1963196
   }
 }

@@ -2,21 +2,21 @@
   "search:python-fastapi-sqlalchemy:python fastapi sqlalchemy crud": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn sqlalchemy`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.78.0\n  - SQLAlchemy: 1.4.32\n\n- **Key Config Options**:\n  - Database URL (e.g., `SQLALCHEMY_DATABASE_URL = \"sqlite:///./test.db\"`)\n  - Model classes inheriting from `sqlalchemy.orm.declarative_base()`\n  - Pydantic models for data validation and settings management",
     "source": "web_search",
-    "updated_at": 1780788213.3197773
+    "updated_at": 1780789511.2256892
   },
   "search:python-fastapi-sqlalchemy:python fastapi sqlalchemy crud_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/tiangolo/full-stack-fastapi-postgresql.git`\n  - `cd full-stack-fastapi-postgresql`\n  - `docker-compose up --build`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.1\n  - SQLAlchemy: 1.4.32\n\n- **Key Config Options**:\n  - Database URL in `.env` file (e.g., `DATABASE_URL=postgresql://user:password@localhost/dbname`)\n  - Alembic migrations (`alembic init alembic`)\n  - FastAPI dependencies for authentication and database connection",
     "source": "code_example",
-    "updated_at": 1780788214.6692412
+    "updated_at": 1780789512.2736533
   },
   "search:python-fastapi-sqlalchemy:python fastapi sqlalchemy migr": {
     "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes a new Alembic environment.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a migration script based on detected changes in the models.\n  - `alembic upgrade head`: Applies all migrations to the database.\n  - `alembic downgrade -1`: Reverts the last applied migration.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for the database connection.\n  - `alembic.ini`: Configuration file for Alembic, specifying the environment and migration scripts location.\n  - `env.py`: Script where the target metadata is defined, used by Alembic to generate migrations.",
     "source": "web_search",
-    "updated_at": 1780788216.0666642
+    "updated_at": 1780789513.2328072
   },
   "search:python-fastapi-sqlalchemy:python fastapi sqlalchemy migr_ex": {
     "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initialize Alembic in your project.\n  - `alembic revision --autogenerate -m \"message\"`: Generate a new migration script based on changes detected in the models.\n  - `alembic upgrade head`: Apply all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.39\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for the database connection.\n  - `alembic.ini`: Configuration file for Alembic, including paths to migration scripts and environment variables.\n  - `models.py`: Contains SQLAlchemy models defining the database schema.",
     "source": "code_example",
-    "updated_at": 1780788217.4223583
+    "updated_at": 1780789514.2502813
   }
 }
