@@ -2,26 +2,26 @@
   "search:golang+mongo:golang mongodb performance opt": {
     "content": "- Use `mongo-bench` from GitHub to benchmark MongoDB performance.\n- Monitor MongoDB using Datadog for identifying slow queries and creating custom dashboards.\n- Optimize Go code by using goroutines for concurrent database operations.\n- Manage memory efficiently in Go with techniques like pooling and garbage collection tuning.\n- Implement indexing on frequently queried fields in MongoDB.\n- Use the latest version of the MongoDB Go driver to leverage performance improvements.\n- Configure connection pooling in MongoDB to manage connections efficiently.\n- Regularly update both Go and MongoDB drivers to benefit from security patches and performance enhancements.",
     "source": "web_search",
-    "updated_at": 1780784363.8036802
+    "updated_at": 1780785006.7293084
   },
   "search:golang+mongo:golang mongodb performance opt_ex": {
     "content": "- Use the latest version of the Golang MongoDB driver (`go get go.mongodb.org/mongo-driver/mongo`)\n- Optimize queries by using indexes and proper query conditions\n- Implement connection pooling with `options.Client().ApplyURI(\"mongodb://localhost:27017\").SetMaxPoolSize(100)`\n- Use bulk operations for batch inserts, updates, and deletes (`mongo.NewBulkWriteOptions()`)\n- Monitor performance with MongoDB's built-in profiling tools (`db.setProfilingLevel(1)`)\n- Ensure proper error handling to avoid unnecessary retries\n- Consider using `context` for timeout and cancellation control in database operations\n- Regularly update MongoDB server and driver versions for security patches and performance improvements",
     "source": "code_example",
-    "updated_at": 1780784366.9377592
+    "updated_at": 1780785007.8338068
   },
   "search:golang+mongo:golang mongodb best practices ": {
     "content": "- Use the latest MongoDB Go driver version.\n- Sanitize and validate input before building query arrays to avoid untrusted/unlimited inputs.\n- Optimize queries using indexes for faster data retrieval.\n- Consider sharding for large datasets to improve performance.\n- Monitor and tune memory sizing based on your application's needs.\n- Regularly update MongoDB and the Go driver to benefit from security patches and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780784376.7631674
+    "updated_at": 1780785008.9569416
   },
   "search:golang+mongo:golang mongodb best practices _ex": {
     "content": "- **CLI Commands**:\n  - `go get go.mongodb.org/mongo-driver/mongo`\n  - `go get go.mongodb.org/mongo-driver/mongo/options`\n\n- **Latest Versions**:\n  - Go: v1.20.x\n  - MongoDB Driver for Go: v1.13.x\n\n- **Key Config Options**:\n  - Connection URI: `mongodb://username:password@host:port/database`\n  - Database Name: `databaseName`\n  - Collection Name: `collectionName`\n  - Context Timeout: `context.WithTimeout(context.Background(), time.Duration)`\n  - Filter Query: `bson.M{\"key\": \"value\"}`",
     "source": "code_example",
-    "updated_at": 1780784381.4594393
+    "updated_at": 1780785009.9878695
   },
   "search:golang+mongo:golang mongodb security patter": {
     "content": "- **MongoDB Security Update**: CVE-2025-14847 impacts MongoDB Server on December 12, 2025.\n- **GitHub Repository**: iwita/grpc-golang-mongodb offers enterprise-grade security features including Copilot for Business and Premium Support.\n- **Advanced Security Patterns**: Explore patterns like secure API design, data encryption, and access control to build secure applications in 2025.\n- **Golang MongoDB Tutorial**:\n  - **Method-1**: Use `mongo-driver` for MongoDB operations. Install via `go get go.mongodb.org/mongo-driver`.\n  - **Method-2**: Use `mgo` as a driver for MongoDB. Install via `go get gopkg.in/mgo.v2`.\n- **Key Config Options**:\n  - Ensure MongoDB is running with authentication enabled.\n  - Configure network access controls to restrict connections.\n  - Regularly update MongoDB and drivers to patch security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780784390.050617
+    "updated_at": 1780785011.0090053
   }
 }

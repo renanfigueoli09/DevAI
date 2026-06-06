@@ -2,41 +2,41 @@
   "search:API Design Principles for FastAPI + Core:rest api design principles": {
     "content": "- Understand REST as an architectural style, not a protocol.\n- Use HTTP methods like GET, POST, PUT, DELETE for CRUD operations.\n- Design APIs to be stateless and cacheable.\n- Implement versioning in the API URL or headers.\n- Use standard HTTP status codes (200 OK, 404 Not Found, 500 Internal Server Error).\n- Document your API thoroughly with Swagger or similar tools.\n- Ensure data is represented as JSON.\n- Apply rate limiting to prevent abuse.\n- Implement authentication and authorization mechanisms.",
     "source": "web_search",
-    "updated_at": 1780784200.6520221
+    "updated_at": 1780784906.0525954
   },
   "search:API Design Principles for FastAPI + Core:rest api design principles_ex": {
     "content": "- **CLI Commands**: Use `curl` or Postman for testing API endpoints.\n- **Latest Versions**: Ensure using the latest version of libraries like Express.js, Flask, or Django for building REST APIs.\n- **Key Config Options**:\n  - Enable CORS with middleware like `cors` in Express.js.\n  - Implement rate limiting to prevent abuse.\n  - Use HTTPS for secure communication.\n  - Configure authentication methods (JWT, OAuth).\n  - Set up logging and monitoring tools.",
     "source": "code_example",
-    "updated_at": 1780784203.2028947
+    "updated_at": 1780784906.967425
   },
   "search:API Design Principles for FastAPI + Core:graphql api design best practi": {
     "content": "- Use `graphql-cli` for creating and managing GraphQL schemas.\n- Update to the latest version of Apollo Server for optimal performance and features.\n- Configure schema stitching using `@apollo/stitching` for combining multiple GraphQL APIs into a single API.\n- Implement pagination with `graphqql-relay` or custom directives like `first`, `last`, `before`, `after`.\n- Use environment variables to manage configuration settings, such as database URLs and API keys.\n- Apply security best practices by using JWT tokens for authentication and implementing role-based access control (RBAC).\n- Optimize queries by using fragments and aliases to reduce data duplication.\n- Handle errors gracefully by returning detailed error messages with `extensions` in the response.\n- Use GraphQL Inspector for validating and optimizing your schema.",
     "source": "web_search",
-    "updated_at": 1780784208.8132772
+    "updated_at": 1780784907.8527696
   },
   "search:API Design Principles for FastAPI + Core:graphql api design best practi_ex": {
     "content": "- **CLI Commands**: Use `graphql-cli` for schema generation and validation.\n- **Latest Versions**: Ensure using GraphQL.js v16 or later for the latest features and security patches.\n- **Key Config Options**:\n  - `schema`: Define your GraphQL schema using SDL (Schema Definition Language).\n  - `resolvers`: Implement resolvers to handle data fetching logic.\n  - `context`: Pass context to resolvers for shared data across operations.\n  - `directives`: Use directives for reusable functionality like authorization and caching.",
     "source": "code_example",
-    "updated_at": 1780784211.4573126
+    "updated_at": 1780784908.6837013
   },
   "search:API Design Principles for FastAPI + Core:designing apis for scalability": {
     "content": "- **CLI Commands**: Use `kubectl scale deployment <deployment-name> --replicas=<number>` to scale deployments.\n- **Latest Versions**: Ensure using the latest version of your API framework and libraries for optimal performance.\n- **Key Config Options**:\n  - Pagination: Implement pagination in APIs with parameters like `page` and `limit`.\n  - Caching: Use caching strategies such as Redis or Memcached to store frequently accessed data.\n  - Load Balancing: Configure load balancers like Nginx or AWS ELB to distribute traffic evenly across servers.\n  - Asynchronous Processing: Utilize asynchronous processing frameworks like Celery for handling background tasks.",
     "source": "web_search",
-    "updated_at": 1780784221.2684858
+    "updated_at": 1780784909.5665271
   },
   "search:API Design Principles for FastAPI + Core:designing apis for scalability_ex": {
     "content": "- Use Flask's `flask-restx` extension for API documentation.\n- Implement rate limiting using Flask-Limiter to prevent abuse.\n- Use Redis for caching to reduce database load.\n- Optimize MongoDB queries with indexes and aggregation pipelines.\n- Deploy on a cloud platform like AWS or GCP for auto-scaling capabilities.\n- Monitor API performance using tools like Prometheus and Grafana.\n- Use Docker containers for consistent deployment across environments.\n- Implement circuit breakers with libraries like Hystrix to manage failures gracefully.",
     "source": "code_example",
-    "updated_at": 1780784230.2303407
+    "updated_at": 1780784910.5132315
   },
   "search:API Design Principles for FastAPI + Core:versioning strategies in api d": {
     "content": "- **CLI Commands**: Use `curl` or Postman to test API endpoints.\n- **Latest Versions**: Check the official documentation for the latest version of each strategy.\n- **Key Config Options**:\n  - URL path: `/api/v1/resource`\n  - Query parameter: `?version=1`\n  - Header: `X-API-Version: 1`\n  - Date-based: Use ISO format in headers or query parameters.",
     "source": "web_search",
-    "updated_at": 1780784238.50039
+    "updated_at": 1780784911.3975215
   },
   "search:API Design Principles for FastAPI + Core:versioning strategies in api d_ex": {
     "content": "- **CLI Commands**:\n  - `curl` with `-H \"Accept: application/vnd.example.v2+json\"` for specifying API version.\n  \n- **Latest Versions**:\n  - REST API Versioning Guide: Latest as of Sep 1, 2025.\n\n- **Key Config Options**:\n  - Use semantic versioning (e.g., `v1`, `v2`).\n  - Implement versioning in the URL path or header.\n  - Document all versions and their changes.",
     "source": "code_example",
-    "updated_at": 1780784242.3384774
+    "updated_at": 1780784912.3233974
   }
 }

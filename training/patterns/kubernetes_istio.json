@@ -2,7 +2,7 @@
   "search:kubernetes+istio:kubernetes istio service mesh ": {
     "content": "- **CLI Commands**:\n  - `istioctl install --set profile=default`\n  - `kubectl apply -f <path-to-gateway-file>`\n  - `kubectl apply -f <path-to-virtual-service-file>`\n\n- **Latest Versions**:\n  - Istio: 1.14.0\n  - Kubernetes: v1.25.0\n\n- **Key Config Options**:\n  - `istioctl create -f <path-to-manifest-file>`\n  - `kubectl get svc --all-namespaces`\n  - `istioctl proxy-status`",
     "source": "web_search",
-    "updated_at": 1780783627.782375
+    "updated_at": 1780785049.216032
   },
   "search:kubernetes+istio:kubernetes istio service mesh _ex": {
     "content": "- **CLI Commands**:\n  - `istioctl install --set profile=default`\n  - `kubectl apply -f <path-to-virtualservice-file>`\n  - `kubectl apply -f <path-to-destinationrule-file>`\n\n- **Latest Versions**:\n  - Istio: 1.14\n  - Kubernetes: 1.23\n\n- **Key Config Options**:\n  - `VirtualService`: Defines routing rules for traffic.\n  - `DestinationRule`: Specifies the destination service and its settings.\n  - `Gateway`: Exposes services outside the mesh.\n  - `Sidecar Injection`: Automatically injects Envoy sidecars into pods.",
