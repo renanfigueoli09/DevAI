@@ -1,0 +1,7 @@
+{
+  "search:fastapi+asyncio-performance:high-performance fastapi appli": {
+    "content": "- Use `uvicorn` to run FastAPI applications, e.g., `uvicorn main:app --reload`.\n- For asynchronous operations, use `async def` and `await`.\n- Employ `asyncio.create_task()` for concurrent task execution.\n- Utilize `asyncio.gather()` to manage multiple tasks concurrently.\n- Optimize database interactions with async drivers like Motor for MongoDB.\n- Apply best practices such as using `async def` for I/O-bound tasks.\n- Monitor performance using tools like `FastAPI-Monitoring`.\n- Update FastAPI and its dependencies to the latest versions regularly.",
+    "source": "web_search",
+    "updated_at": 1780714499.2457743
+  }
+}
