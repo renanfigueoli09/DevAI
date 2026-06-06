@@ -1,0 +1,17 @@
+{
+  "search:redis-clustering-performance:redis clustering performance o": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> ...`\n  - `redis-cli --cluster add-node <new_host>:<new_port> <existing_host>:<existing_port>`\n  - `redis-cli --cluster del-node <host>:<port> <node_id>`\n\n- **Latest Versions**:\n  - Redis 7.0\n  - Spring Data Redis 3.1\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`\n  - `appendonly yes`",
+    "source": "web_search",
+    "updated_at": 1780721526.308453
+  },
+  "search:redis-clustering-performance:redis cluster scaling techniqu": {
+    "content": "- **Redis Cluster Scaling Techniques**:\n  - Automatic sharding\n  - Horizontal scaling\n  - High availability\n\n- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> ...`\n  - `redis-cli --cluster add-node <new_host>:<new_port> <existing_host>:<existing_port>`\n  - `redis-cli --cluster del-node <host>:<port> <node_id>`\n\n- **Latest Versions**:\n  - Redis: v7.0\n  - Docker: v24.1\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`",
+    "source": "web_search",
+    "updated_at": 1780721552.269818
+  },
+  "search:redis-clustering-performance:redis cluster scaling techniqu_ex": {
+    "content": "- Use `kubectl scale` to horizontally scale Redis shards and replicas.\n- Deploy Redis/Valkey cluster using KubeDB operator for horizontal scaling.\n- Master advanced Redis Cluster techniques like automatic sharding, high availability, and hash slots.\n- Ensure code security by protecting secrets during development.\n- Contribute to open-source projects like `jittagornp/redis-cluster-example` on GitHub.",
+    "source": "code_example",
+    "updated_at": 1780721558.7863302
+  }
+}

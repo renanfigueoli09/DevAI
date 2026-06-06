@@ -18,5 +18,25 @@
     "content": "- Use `AsSplitQuery()` to optimize EF Core queries, reducing memory usage and improving performance.\n- Configure globally in `DbContextOptionsBuilder` using `.UseLazyLoadingProxies()`.\n- Ensure proper indexing on database tables for faster query execution.\n- Avoid loading unnecessary data by using projection (`Select`) or eager loading (`Include`).\n- Use `FromSqlRaw()` or `FromSqlInterpolated()` for raw SQL queries when necessary.\n- Monitor and analyze query performance with EF Core's logging capabilities.\n- Update to the latest version of EF Core for bug fixes and performance improvements.",
     "source": "code_example",
     "updated_at": 1780714454.6446335
+  },
+  "search:dotnet-efcore-performance-tuning:.net entity framework core per": {
+    "content": "- **Latest Version**: EF Core 9 is the latest version as of October 2025.\n- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only queries.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `MaxBatchSize(int batchSize)` for batching operations.\n- **Performance Tips**:\n  - Optimize queries with `.Include()`, `.Where()`, and `.Select()`.\n  - Use raw SQL queries when EF Core's LINQ is not sufficient.\n  - Configure indexes in the database schema to speed up query performance.",
+    "source": "web_search",
+    "updated_at": 1780721370.3105123
+  },
+  "search:dotnet-efcore-performance-tuning:.net entity framework core per_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations and `dotnet ef database update` to apply migrations.\n- **Latest Version**: EF Core 7.0 was released in October 2023, focusing on performance improvements and new features.\n- **Key Config Options**:\n  - `MaxBatchSize`: Controls the maximum number of commands sent to the database per batch.\n  - `QuerySplittingBehavior`: Determines how queries are split into multiple SQL statements or combined into a single statement.\n  - `UseLazyLoadingProxies`: Enables lazy loading for navigation properties.",
+    "source": "code_example",
+    "updated_at": 1780721376.9195771
+  },
+  "search:dotnet-efcore-performance-tuning:.net efcore indexing best prac": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  \n- **Latest Versions**:\n  - EF Core 7.0\n  - .NET 6.0\n  \n- **Key Config Options**:\n  - Fluent API for index creation: \n    ```csharp\n    modelBuilder.Entity<YourEntity>()\n        .HasIndex(e => e.PropertyName)\n        .IsUnique();\n    ```\n  - Data Annotations for index creation:\n    ```csharp\n    [Index(\"IX_YourPropertyName\", IsUnique = true)]\n    public string PropertyName { get; set; }\n    ```\n  - Indexing navigation properties:\n    ```csharp\n    modelBuilder.Entity<ParentEntity>()\n        .HasOne(p => p.ChildEntity)\n        .WithOne(c => c.ParentEntity)\n        .HasForeignKey<ChildEntity>(c => c.ParentId)\n        .HasIndex();\n    ```",
+    "source": "web_search",
+    "updated_at": 1780721396.175147
+  },
+  "search:dotnet-efcore-performance-tuning:.net efcore indexing best prac_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add AddIndexes`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core 7.0\n\n- **Key Config Options**:\n  - Fluent API: `.HasIndex(e => e.PropertyName)`\n  - Data Annotations: `[Index(\"PropertyName\")]`\n  - Clustered vs Non-clustered Indexes\n  - Benchmarking with tools like Entity Framework Profiler",
+    "source": "code_example",
+    "updated_at": 1780721403.272182
   }
 }
