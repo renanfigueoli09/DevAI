@@ -2,31 +2,31 @@
   "search:spring-boot+elasticsearch:spring boot elasticsearch inte": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to check Elasticsearch indices.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Elasticsearch: 8.5.3\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=my-application-cluster`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
     "source": "web_search",
-    "updated_at": 1780755800.654857
+    "updated_at": 1780756087.1551228
   },
   "search:spring-boot+elasticsearch:spring boot elasticsearch inte_ex": {
     "content": "- **Latest Version**: Spring Boot 3, Elasticsearch 7.x\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `curl -X GET \"localhost:9200/your_index_name/_search?pretty\"` to search documents.\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=elasticsearch`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
     "source": "code_example",
-    "updated_at": 1780755822.613396
+    "updated_at": 1780756087.5833755
   },
   "search:spring-boot+elasticsearch:elasticsearch with spring boot": {
     "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_cat/nodes?v\"` to check Elasticsearch cluster nodes.\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'{\"mappings\": {\"properties\": {\"title\": {\"type\": \"text\"}}}}'` to create an index with a text field.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Elasticsearch: 8.6.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Set the URI of your Elasticsearch instance.\n  - `elasticsearch.client.transport.sniff`: Enable or disable transport client sniffing.\n  - `elasticsearch.cluster.name`: Specify the name of your Elasticsearch cluster.",
     "source": "web_search",
-    "updated_at": 1780755830.5222487
+    "updated_at": 1780756088.0120287
   },
   "search:spring-boot+elasticsearch:elasticsearch with spring boot_ex": {
     "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to list all indices.\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'{\"mappings\": {\"properties\": {\"title\": {\"type\": \"text\"}}}}'` to create an index with a text field.\n\n- **Latest Versions**:\n  - Elasticsearch: 8.4.3\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Set the URI of your Elasticsearch instance.\n  - `spring.elasticsearch.rest.username` and `spring.elasticsearch.rest.password`: For authentication if required.\n  - `elasticsearch.client.transport.sniff`: Enable or disable transport client sniffing for better cluster discovery.",
     "source": "code_example",
-    "updated_at": 1780755844.275109
+    "updated_at": 1780756088.4329722
   },
   "search:spring-boot+elasticsearch:performance tuning elasticsear": {
     "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to check index health.\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'{\"settings\": {\"number_of_shards\": 1, \"number_of_replicas\": 0}}'` to create an index with specific settings.\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5.3\n  - Spring Boot: 2.7.4\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Set the Elasticsearch REST API URI.\n  - `spring.elasticsearch.rest.username` and `spring.elasticsearch.rest.password`: For authentication if required.\n  - `elasticsearch.client.transport.sniff`: Enable transport client to discover nodes in a cluster.",
     "source": "web_search",
-    "updated_at": 1780755862.3650484
+    "updated_at": 1780756088.8660157
   },
   "search:spring-boot+elasticsearch:performance tuning elasticsear_ex": {
     "content": "- **CLI Commands**:\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'\n    {\n      \"settings\": {\n        \"number_of_shards\": 1,\n        \"number_of_replicas\": 0\n      },\n      \"mappings\": {\n        \"properties\": {\n          \"name\": { \"type\": \"text\" },\n          \"description\": { \"type\": \"text\" }\n        }\n      }\n    }'`\n  \n- **Latest Versions**:\n  - Spring Boot: 3.1.2\n  - Elasticsearch: 8.4.0\n  \n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Set the Elasticsearch REST API endpoint.\n  - `spring.elasticsearch.rest.username` and `spring.elasticsearch.rest.password`: For authentication if required.\n  - `spring.data.elasticsearch.cluster-name`: Specify the cluster name.\n  - `spring.data.elasticsearch.cluster-nodes`: List of nodes in the cluster.",
     "source": "code_example",
-    "updated_at": 1780755869.8572679
+    "updated_at": 1780756089.2720194
   }
 }
