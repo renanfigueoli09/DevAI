@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-active-record-associations:ruby on rails activerecord ass": {
+    "content": "- Use `rails generate model` to create models.\n- Define associations in models using methods like `has_one`, `belongs_to`, `has_many`.\n- Utilize the Rails console for testing and debugging (`rails c`).\n- Ensure latest ActiveRecord version by running `bundle update activerecord`.\n- Key config options include `config.autoload_paths` in `application.rb`.",
+    "source": "web_search",
+    "updated_at": 1780739596.8537557
+  },
+  "search:ruby-on-rails-active-record-associations:ruby on rails activerecord ass_ex": {
+    "content": "- Use `rails generate model` to create models and their associated tables.\n- Define associations in models using methods like `has_many`, `belongs_to`, `has_one`, etc.\n- Utilize `rails db:migrate` to apply migrations that create or modify the database schema based on model definitions.\n- For preloading associations, use `includes(:association_name)` to reduce N+1 query issues.\n- Check ActiveRecord documentation for the latest version and best practices: [ActiveRecord Associations](https://guides.rubyonrails.org/active_record_associations.html).\n- Be aware of potential bugs in specific association types like `has_one`, as noted by Evgeniy Demin.",
+    "source": "code_example",
+    "updated_at": 1780739608.198082
+  },
+  "search:ruby-on-rails-active-record-associations:ruby on rails advanced query t": {
+    "content": "- Use `rails db:migrate` to run database migrations.\n- Employ `rails c` for the Rails console.\n- Utilize `bundle exec rails server` for starting the development server.\n- Apply eager loading with `.includes(:association)` for performance optimization.\n- Leverage `where`, `find_by`, and `find_each` for efficient querying.\n- Use `pg_stat_statements` extension in PostgreSQL to monitor query performance.\n- Configure `config.active_record.query_cache_enabled = true` for caching queries.\n- Employ `rails runner script.rb` for running scripts without loading the full Rails environment.\n- Utilize `rails db:seed` for populating your database with initial data.",
+    "source": "web_search",
+    "updated_at": 1780739618.4193795
+  },
+  "search:ruby-on-rails-active-record-associations:ruby on rails advanced query t_ex": {
+    "content": "- **CLI Commands**:\n  - `rails db:migrate` to run migrations.\n  - `rails c` to open the Rails console.\n\n- **Latest Versions**:\n  - Ruby on Rails 7.0.5 as of my last update.\n\n- **Key Config Options**:\n  - `config/database.yml` for database configuration.\n  - `config/routes.rb` for defining routes.\n  - `config/initializers/*` for custom initializers.",
+    "source": "code_example",
+    "updated_at": 1780739624.6446652
+  }
+}
