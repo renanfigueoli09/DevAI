@@ -2,21 +2,21 @@
   "search:typescript+nextjs-auth0:typescript next.js auth0 authe": {
     "content": "- Install `@auth0/nextjs-auth0` using npm or yarn.\n- Wrap your root component in `_app.tsx` with the Auth0 provider.\n- Create an `auth` folder inside `pages/api`.\n- Inside the `auth` folder, create a file named `[...auth0].ts` and export `handleAuth` from `@auth0/nextjs-auth0`.\n- Set up environment variables in a `.env.local` file with Auth0 configuration details.\n- Ensure you have the latest versions of Next.js and `@auth0/nextjs-auth0` for compatibility.\n- Use `getServerSideProps` or `getStaticProps` to handle authentication logic server-side.\n- Configure routes in your Next.js application to protect public and private pages.",
     "source": "web_search",
-    "updated_at": 1780769824.7704768
+    "updated_at": 1780770411.1242118
   },
   "search:typescript+nextjs-auth0:typescript next.js auth0 authe_ex": {
     "content": "- **CLI Commands**:\n  - `yarn add @auth0/auth0-spa-js`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Next Auth: v4.18.2\n  - Auth0 SPA JS: v1.16.0\n\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Your Auth0 client ID.\n  - `NEXTAUTH_URL`: URL of your Next.js application.\n  - `NEXTAUTH_SECRET`: Secret key for signing JWTs.",
     "source": "code_example",
-    "updated_at": 1780769825.5332854
+    "updated_at": 1780770411.831164
   },
   "search:typescript+nextjs-auth0:advanced typescript next.js wi": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-next-auth-app`\n  - `npm install @auth0/nextjs-auth0`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Auth0 SDK for Next.js: v2.4.0\n\n- **Key Config Options**:\n  - `AUTH0_SECRET`: Generate a secret using `openssl rand -hex 32`\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain (e.g., `https://yourdomain.auth0.com`)\n  - `AUTH0_CLIENT_ID`: Client ID from your Auth0 application\n  - `AUTH0_CLIENT_SECRET`: Client Secret from your Auth0 application",
     "source": "web_search",
-    "updated_at": 1780769826.303846
+    "updated_at": 1780770412.5403914
   },
   "search:typescript+nextjs-auth0:advanced typescript next.js wi_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth0-app`\n  - `npm install @auth0/nextjs-auth0`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Auth0 SDK for Next.js: v2.4\n\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Client ID from your Auth0 application.\n  - `AUTH0_CLIENT_SECRET`: Client secret from your Auth0 application.\n  - `AUTH0_AUDIENCE`: Audience for your API.",
     "source": "code_example",
-    "updated_at": 1780769827.083501
+    "updated_at": 1780770413.9452877
   }
 }
