@@ -1,0 +1,22 @@
+{
+  "search:fastapi+database-performance:fastapi database performance o": {
+    "content": "- Use FastAPI's built-in dependency injection to manage database connections efficiently.\n- Implement efficient database indexing strategies, such as B-trees and hash indexes, for faster query performance.\n- Utilize Redis for caching frequently accessed data to reduce database load.\n- Apply rate limiting using middleware like `fastapi-limiter` with Redis backend to prevent abuse.\n- Optimize SQL queries by minimizing the use of subqueries and ensuring proper indexing.\n- Use asynchronous database drivers like `asyncpg` or `aiomysql` for non-blocking I/O operations.\n- Configure FastAPI's logging level appropriately (e.g., `INFO`, `WARNING`) to balance performance and debugging information.\n- Regularly monitor and analyze application metrics using tools like Prometheus and Grafana.\n- Consider using connection pooling libraries such as `SQLAlchemy` with `asyncpg` for managing database connections efficiently.",
+    "source": "web_search",
+    "updated_at": 1780737603.6115546
+  },
+  "search:fastapi+database-performance:fastapi database performance o_ex": {
+    "content": "- Use `uvicorn` as your ASGI server for FastAPI applications.\n- Implement connection pooling using libraries like `SQLAlchemy` or `Databases`.\n- Configure the pool size and max_overflow in SQLAlchemy to optimize performance.\n- Utilize environment variables for database credentials to enhance security.\n- Regularly update FastAPI, SQLAlchemy, and other dependencies to benefit from performance improvements and bug fixes.",
+    "source": "code_example",
+    "updated_at": 1780737607.8793957
+  },
+  "search:fastapi+database-performance:fastapi orm performance tuning": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - SQLAlchemy: v2.0.0\n  - Tortoise ORM: v0.18.0\n\n- **Key Config Options**:\n  - `database_url`: URL for the database connection.\n  - `asyncio.run(app)`: Run the FastAPI application using asyncio.\n  - `Mapped` and `mapped_column`: Define models in SQLAlchemy 2.0.\n  - `Tortoise.init_models()`: Initialize Tortoise ORM models.",
+    "source": "web_search",
+    "updated_at": 1780737616.0795448
+  },
+  "search:fastapi+database-performance:fastapi orm performance tuning_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI and Tortoise ORM using pip: `pip install fastapi tortoise-orm`.\n- Update FastAPI to the latest version with: `pip install --upgrade fastapi`.\n- Configure Tortoise ORM in your project by setting up a `Tortoise.init_models()` call.\n- Use async functions for database operations in FastAPI routes.\n- Set `asyncio.run(app)` to run the FastAPI application.\n- Monitor performance using tools like `uvicorn`'s built-in profiling or third-party libraries.\n- Optimize queries and use indexes for better performance.\n- Consider using a connection pool with Tortoise ORM for efficient database connections.",
+    "source": "code_example",
+    "updated_at": 1780737636.9557152
+  }
+}
