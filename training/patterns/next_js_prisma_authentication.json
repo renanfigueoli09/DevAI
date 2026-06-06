@@ -1,0 +1,42 @@
+{
+  "search:Next.js + Prisma Authentication:nextjs prisma setup guide": {
+    "content": "- **Install Prisma**: `npm install prisma --save-dev`\n- **Initialize Prisma**: `npx prisma init`\n- **Add Prisma Client to Next.js**: Install `@prisma/client` and import it in your project.\n- **Configure Prisma Schema**: Define your data models in `schema.prisma`.\n- **Run Migrations**: `npx prisma migrate dev --name init`\n- **Install NextAuth.js**: `npm install next-auth`\n- **Configure NextAuth.js**: Set up authentication providers and options in `[...nextauth].js`.\n- **Deploy to Vercel**: Use Vercel's Prisma integration for seamless deployment.\n- **Key Config Options**:\n  - `schema.prisma`: Define your data models.\n  - `prismaClient`: Import and use the Prisma client in your application.\n  - `[...nextauth].js`: Configure authentication providers and options.",
+    "source": "web_search",
+    "updated_at": 1780768639.6465461
+  },
+  "search:Next.js + Prisma Authentication:prisma authentication strategi": {
+    "content": "- Use `npx prisma init` to initialize Prisma in your project.\n- Update Prisma Client and Server using `npm install @prisma/client@latest prisma@latest`.\n- Configure authentication strategies with Passport.js by installing it via `npm install passport passport-local`.\n- For secure password storage, use bcrypt: `npm install bcrypt`.\n- Implement OAuth 2.0 with PKCE for user-facing apps.\n- Use service tokens for scripts and CI/CD through Prisma Management API.\n- Set up an authentication profile in Prisma Access to manage traffic matching rules.\n- Authenticate using a bearer token in the Authorization header for API requests.",
+    "source": "web_search",
+    "updated_at": 1780768658.2895792
+  },
+  "search:Next.js + Prisma Authentication:prisma authentication strategi_ex": {
+    "content": "- Install Prisma CLI globally using `npm install -g prisma`\n- Initialize a new Prisma project with `prisma init`\n- Use the latest version of Prisma Client by updating your package.json to `\"@prisma/client\": \"^3.0.0\"`\n- Configure authentication in Prisma schema with `generator client { provider = \"prisma-client-js\" }`\n- Implement JWT-based authentication using packages like `jsonwebtoken` for token generation and validation\n- Set up environment variables for sensitive information such as database URLs and secret keys\n- Use middleware in Express to handle authentication, e.g., checking for valid tokens on routes that require authorization",
+    "source": "code_example",
+    "updated_at": 1780768666.2744057
+  },
+  "search:Next.js + Prisma Authentication:user registration and login in": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- For user registration and login, consider using Supabase for backend services.\n- Install Supabase client with `npm install @supabase/supabase-js`.\n- Configure Supabase in your project by creating a `.env.local` file:\n  ```\n  SUPABASE_URL=your-supabase-url\n  SUPABASE_ANON_KEY=your-anon-key\n  ```\n- Use Next.js API routes for handling authentication requests.\n- Implement user registration and login forms using React components.\n- Validate form inputs on the client side using libraries like `yup`.\n- On server-side, use Supabase to create users and authenticate sessions.\n- For email verification, configure your email provider settings in Supabase.\n- Deploy your Next.js app to Vercel for production.",
+    "source": "web_search",
+    "updated_at": 1780768684.802453
+  },
+  "search:Next.js + Prisma Authentication:user registration and login in_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm run dev` or `yarn dev`\n\n- **Latest Versions**:\n  - Next.js 14\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: For handling authentication.\n  - `public/`: For static files like images and fonts.\n  - `styles/globals.css`: For global styles.",
+    "source": "code_example",
+    "updated_at": 1780768690.0792015
+  },
+  "search:Next.js + Prisma Authentication:prisma with typescript for aut": {
+    "content": "- **GitHub Repository**: Aryan123-rgb/nextjs15-prisma-clerk-startercode\n  - Next.js 15, TypeScript, Prisma ORM, Clerk for authentication\n\n- **Prisma ORM**:\n  - Latest version: [Check on Prisma's official website](https://www.prisma.io/docs/reference/system-requirements)\n  - Key config options: `schema.prisma`, `prisma migrate dev`\n\n- **Next.js + NextAuth Authentication**:\n  - Step 1: Install dependencies\n    ```bash\n    npm install next-auth @next-auth/prisma-adapter prisma\n    ```\n  - Key config options in `pages/api/auth/[...nextauth].ts`:\n    ```typescript\n    import NextAuth from 'next-auth';\n    import Providers from 'next-auth/providers';\n    import { PrismaAdapter } from '@next-auth/prisma-adapter';\n    import prisma from '../../../prisma/client';\n\n    export default NextAuth({\n      adapter: PrismaAdapter(prisma),\n      providers: [\n        Providers.Email({\n          server: process.env.EMAIL_SERVER,\n          from: process.env.EMAIL_FROM,\n        }),\n      ],\n      // Add more options as needed\n    });\n    ```\n\n- **Prisma Accelerate**:\n  - Improves performance by reducing latency issues. [Learn more](https://www.prisma.io/docs/concepts/performance/prisma-accelerate)",
+    "source": "web_search",
+    "updated_at": 1780768704.2345552
+  },
+  "search:Next.js + Prisma Authentication:secure user data handling in n": {
+    "content": "- Use `next-auth` for authentication and authorization in Next.js.\n- Install `@authjs/core` and `@authjs/node` for handling JWT-based authentication.\n- Configure `next.config.js` to enable API routes.\n- Set up route handlers like `[...nextauth].js` for authentication logic.\n- Use environment variables for sensitive data like secret keys.\n- Implement session management using cookies or JWTs.\n- Ensure password hashing with libraries like `bcrypt`.\n- Validate user inputs on both client and server sides.\n- Regularly update dependencies to the latest versions.",
+    "source": "web_search",
+    "updated_at": 1780768724.440801
+  },
+  "search:Next.js + Prisma Authentication:secure user data handling in n_ex": {
+    "content": "- Use `next-auth` for authentication in Next.js.\n- Install via npm: `npm install next-auth@latest`.\n- Configure in `_app.js`: \n  ```javascript\n  import { Provider } from 'next-auth/client';\n  \n  function MyApp({ Component, pageProps }) {\n    return (\n      <Provider session={pageProps.session}>\n        <Component {...pageProps} />\n      </Provider>\n    );\n  }\n  \n  export default MyApp;\n  ```\n- Use `getServerSideProps` or `getStaticProps` to fetch data securely.\n- Implement CSRF protection with `csrfToken`.\n- Use environment variables for sensitive data like API keys.\n- Enable HTTPS by setting up SSL certificates.\n- Regularly update dependencies using `npm outdated` and `npm update`.",
+    "source": "code_example",
+    "updated_at": 1780768731.0185559
+  }
+}
