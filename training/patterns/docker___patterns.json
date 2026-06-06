@@ -1,0 +1,42 @@
+{
+  "search:Docker + Patterns:testing docker images and serv": {
+    "content": "- **CLI Commands**:\n  - `docker build --test-stage <stage_name> .`\n  - `docker run --rm <image_name>`\n  - `docker exec -it <container_id> /bin/bash`\n\n- **Latest Versions**:\n  - Docker Desktop: v4.13.0\n  - Docker Hub: Latest stable version\n\n- **Key Config Options**:\n  - `.dockerignore` for excluding files and directories from the build context.\n  - `Dockerfile` multi-stage builds for separating build and runtime environments.\n  - `docker-compose.yml` for defining and running multi-container Docker applications.",
+    "source": "web_search",
+    "updated_at": 1780746202.7320187
+  },
+  "search:Docker + Patterns:testing docker images and serv_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run`: To run a Docker container.\n  - `docker build`: To build a Docker image from a Dockerfile.\n  - `docker exec`: To execute commands inside a running container.\n  - `dgoss test`: To test a Docker container using dgoss.\n\n- **Latest Versions**:\n  - Container Structure Test: Latest version as of writing is v1.20.0.\n  - dgoss: Latest version as of writing is v0.4.3.\n\n- **Key Config Options**:\n  - `ENTRYPOINT`: Defines the command to run when a container starts.\n  - `CMD`: Provides defaults for an executing container.\n  - `EXPOSE`: Informs Docker that the container listens on the specified network ports at runtime.\n  - `VOLUME`: Creates and mounts a new volume, or mounts an existing one.",
+    "source": "code_example",
+    "updated_at": 1780746221.0531676
+  },
+  "search:Docker + Patterns:security best practices for us": {
+    "content": "- **Update Docker and Host**: Regularly update both Docker and the host operating system to patch known vulnerabilities.\n- **Use Secure Images**: Pull images from trusted repositories like Docker Hub or private registries with verified security practices.\n- **Limit Privileges**: Use `--user` flag in Docker run commands to specify a non-root user inside the container.\n- **Enable SELinux/AppArmor**: Utilize Security-Enhanced Linux (SELinux) or AppArmor for additional security layers.\n- **Network Isolation**: Implement network isolation using Docker's built-in networking features like user-defined bridges.\n- **Volume Encryption**: Encrypt sensitive data stored in volumes to prevent unauthorized access.\n- **Use Docker Scout**: Leverage Docker Scout for scanning images and identifying vulnerabilities before deployment.\n- **Limit Exposed Ports**: Only expose necessary ports on the host to reduce attack surface.\n- **Regular Audits**: Conduct regular security audits of your Docker setup using tools like `docker scan`.\n- **Implement CI/CD Security Checks**: Integrate security checks into your CI/CD pipeline to catch vulnerabilities early.",
+    "source": "web_search",
+    "updated_at": 1780746250.1600566
+  },
+  "search:Docker + Patterns:security best practices for us_ex": {
+    "content": "- Use `docker pull` to fetch the latest image version.\n- Employ `docker run --rm` for temporary containers that clean up automatically after use.\n- Utilize `docker-compose` for multi-container setups, ensuring consistency across environments.\n- Implement non-root users in Dockerfiles with `USER <username>`.\n- Regularly update base images and dependencies to mitigate vulnerabilities.\n- Use `.dockerignore` to exclude unnecessary files from the build context.\n- Apply security scanning tools like Trivy or Clair on built images.\n- Employ secrets management solutions for sensitive data within containers.\n- Utilize Docker's built-in health checks with `HEALTHCHECK`.\n- Ensure proper logging and monitoring configurations.",
+    "source": "code_example",
+    "updated_at": 1780746260.1762226
+  },
+  "search:Docker + Patterns:performance optimization techn": {
+    "content": "- Use `docker run --cpus=\"<number>\"` to limit CPU usage.\n- Employ `docker run --memory=\"<size>\"` for memory constraints.\n- Implement `docker exec -it <container_id> /bin/bash` for interactive debugging.\n- Utilize `docker stats` to monitor container resource usage in real-time.\n- Apply `docker build --no-cache .` to avoid layer caching issues.\n- Configure Docker daemon with `--default-shm-size=\"<size>\"` for shared memory optimization.\n- Use `docker-compose up -d` for background service management.\n- Implement `docker system prune -a` for cleaning unused images, containers, and networks.\n- Apply `docker run --ulimit nofile=<soft_limit>:<hard_limit>` to manage file descriptor limits.",
+    "source": "web_search",
+    "updated_at": 1780746270.5324578
+  },
+  "search:Docker + Patterns:performance optimization techn_ex": {
+    "content": "- Use `docker build --cache-from <image>` to leverage cache.\n- Employ multi-stage builds with `FROM` and `COPY`.\n- Utilize `--secret` for secure secrets management.\n- Implement health checks in Docker Compose using `healthcheck`.\n- Scale services with `docker-compose up -d --scale <service>=<number>`.\n- Set resource constraints with `deploy.resources.limits.cpu/memory` in Docker Compose.\n- Use `docker image prune` to clean unused images.\n- Enable BuildKit by setting `DOCKER_BUILDKIT=1` or using `--buildkit-flag` options.\n- Monitor container performance with `docker stats`.",
+    "source": "code_example",
+    "updated_at": 1780746283.1264386
+  },
+  "search:Docker + Patterns:best practices for multi-stage": {
+    "content": "- Use `docker build --target <stage>` to specify the target stage in a multi-stage build.\n- Employ `FROM <image>:<tag>` to define each stage's base image.\n- Utilize `COPY` and `RUN` commands within stages to manage dependencies and artifacts efficiently.\n- Minimize layers by combining multiple `RUN` commands into one.\n- Remove unnecessary files with `RUN apt-get clean && rm -rf /var/lib/apt/lists/*`.\n- Use `.dockerignore` to exclude files from the build context, similar to `.gitignore`.\n- Ensure each stage's final image is as small as possible by removing development tools and dependencies.\n- Consider using multi-stage builds for applications that require different environments during build and runtime.",
+    "source": "web_search",
+    "updated_at": 1780746291.4910266
+  },
+  "search:Docker + Patterns:best practices for multi-stage_ex": {
+    "content": "- Use `docker build --target <stage>` to specify the target stage during build.\n- Employ `FROM <image>:<tag>` for each stage, where `<image>` is the base image and `<tag>` specifies the version.\n- Utilize `COPY --from=<previous_stage> /path/to/source /path/to/destination` to copy artifacts from one stage to another.\n- Ensure the final image only contains necessary files by minimizing layers in the last stage.\n- Consider using lightweight base images like `alpine` for reducing image size.\n- Regularly update Docker and base images to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780746303.161992
+  }
+}

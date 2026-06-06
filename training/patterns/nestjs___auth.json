@@ -1,0 +1,22 @@
+{
+  "search:NestJS + Auth:advanced error handling strate": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- For authentication, consider using Passport.js with strategies like JWT or local.\n- Implement custom error classes by extending `HttpException`.\n- Utilize the built-in `ValidationPipe` for data validation.\n- Configure CORS in `app.module.ts` using `CORSOptions`.\n- Use environment variables for sensitive information like secret keys.\n- Apply rate limiting to protect against brute-force attacks with `nestjs-rate-limit`.\n- Implement JWT refresh tokens for secure user sessions.",
+    "source": "web_search",
+    "updated_at": 1780746316.4027212
+  },
+  "search:NestJS + Auth:advanced error handling strate_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Update dependencies using `npm update`.\n- Implement custom exception filters by extending `BaseExceptionFilter`.\n- Configure global filters in `main.ts` with `app.useGlobalFilters(new HttpExceptionFilter())`.\n- Utilize `@Catch()` decorator on custom filters for specific exceptions.\n- Set up JWT authentication with `@nestjs/jwt` and `passport-jwt`.\n- Use Passport guards like `AuthGuard('jwt')` to protect routes.\n- Implement custom guards by extending `PassportStrategy(Strategy)`.\n- Configure JWT strategy in `auth.module.ts` using `JwtModule.register()`.\n- Handle errors centrally using global filters for consistent error responses.",
+    "source": "code_example",
+    "updated_at": 1780746321.2444491
+  },
+  "search:NestJS + Auth:testing authentication endpoin": {
+    "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Passport: v6.x\n  - JWT: v8.x\n\n- **Key Config Options**:\n  - `JWTStrategy` for handling JWT authentication.\n  - `PassportModule.register({ defaultStrategy: 'jwt' })` in the module configuration.\n  - `AuthService` methods for generating and validating tokens.",
+    "source": "web_search",
+    "updated_at": 1780746337.9619658
+  },
+  "search:NestJS + Auth:testing authentication endpoin_ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Passport: v6.x\n  - JWT: v8.x\n\n- **Key Config Options**:\n  - `JWT_SECRET`: Secret key for signing and verifying JWT tokens.\n  - `JWT_EXPIRATION_TIME`: Expiration time for the JWT token.\n  - `AUTH_STRATEGY`: Strategy to use for authentication (e.g., 'jwt', 'local').",
+    "source": "code_example",
+    "updated_at": 1780746347.847892
+  }
+}

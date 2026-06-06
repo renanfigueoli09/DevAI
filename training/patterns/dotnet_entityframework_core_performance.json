@@ -1,0 +1,32 @@
+{
+  "search:dotnet-entityframework-core-performance:entity framework core performa": {
+    "content": "- **Latest Version**: Entity Framework Core 7.0 was released in October 2023.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Key Config Options**:\n  - `MaxBatchSize`: Controls the maximum number of commands sent to the database per batch.\n  - `QuerySplittingBehavior`: Determines how EF Core handles splitting queries into multiple SQL statements.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disables change tracking for read-only scenarios.\n\n- **Performance Tuning Tips**:\n  - Use `AsNoTracking()` for read-only operations to avoid change tracking overhead.\n  - Implement batching with `MaxBatchSize` for large data sets.\n  - Optimize queries by using eager loading (`Include`) or explicit loading (`Load`) instead of lazy loading.",
+    "source": "web_search",
+    "updated_at": 1780746236.032941
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core performa_ex": {
+    "content": "- **Latest Version**: Entity Framework Core 7.0\n- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n  - `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios to improve performance.\n  - `AsNoTracking()` on queryable collections to avoid tracking entities.\n  - Indexes and eager loading in Entity Framework Core models to optimize data retrieval.",
+    "source": "code_example",
+    "updated_at": 1780746248.1641464
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core query op": {
+    "content": "- Use `dotnet ef database update` to apply migrations.\n- Enable lazy loading by setting `LazyLoadingEnabled = true` in the DbContext configuration.\n- Optimize queries using `.AsNoTracking()` when entities are not modified.\n- Apply indexes on frequently queried columns for faster data retrieval.\n- Use `.Include()` and `.ThenInclude()` for eager loading related entities efficiently.\n- Avoid N+1 query problems by preloading collections with `Load()`.\n- Utilize `QueryFilter` to filter out unwanted records at the database level.\n- Monitor performance using EF Core's built-in logging capabilities.\n- Regularly update Entity Framework Core to the latest version for bug fixes and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780746253.6301033
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core query op_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `ChangeTracker.QueryTrackingBehavior`: Set to `NoTracking` for read-only queries to improve performance.\n  - `UseLazyLoadingProxies()`: Enable lazy loading for related entities.\n  - `AsSplitQuery()`: Split large queries into multiple smaller queries to reduce memory usage.",
+    "source": "code_example",
+    "updated_at": 1780746261.8390489
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core indexing": {
+    "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer`\n- **Key Config Options**:\n  - `OnModelCreating`: Configure entity relationships and constraints.\n  - `DbContextOptionsBuilder`: Customize the DbContext configuration, e.g., connection strings, logging.\n  - `Index`: Define indexes on properties to improve query performance.",
+    "source": "web_search",
+    "updated_at": 1780746267.2356246
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core indexing_ex": {
+    "content": "- **Latest Version**: EF Core 7.0 was released on 8 November 2022.\n- **CLI Commands**:\n  - To install a provider package for SQL Server: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n  - To update to the latest version of EF Core: `dotnet tool update --global dotnet-ef`\n- **Key Config Options**:\n  - `OnModelCreating`: Use this method in your DbContext to configure entity types and relationships.\n  - `Index`: Define indexes on properties using Fluent API or Data Annotations.\n  - `IsUnique`: Specify if an index should be unique.",
+    "source": "code_example",
+    "updated_at": 1780746277.4562879
+  }
+}

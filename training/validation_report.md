@@ -1,53 +1,85 @@
 # DevAI Validation Report
-*2026-06-06 08:13*
+*2026-06-06 08:45*
 
-## Score: 52% `[██████████░░░░░░░░░░]`
+## Score: 5% `[█░░░░░░░░░░░░░░░░░░░]`
 
 | Tópico | Score | % | Status |
 |---|---|---|---|
-| nestjs-auth | 5.0/5.0 | 100% | ✅ |
-| nestjs-core | 4.0/4.0 | 100% | ✅ |
-| docker | 4.0/4.0 | 100% | ✅ |
-| common-errors | 6.0/6.0 | 100% | ✅ |
-| nestjs-typeorm | 2.0/4.0 | 50% | ❌ |
-| fastapi | 2.0/4.0 | 50% | ❌ |
-| nlp | 7.1/15.0 | 48% | ❌ |
-| nestjs-mongodb | 1.5/15.0 | 10% | ❌ |
+| nlp | 3.3/15.0 | 22% | ❌ |
+| nestjs-mongodb | 0.0/15.0 | 0% | ❌ |
+| nestjs-typeorm | 0.0/4.0 | 0% | ❌ |
+| nestjs-auth | 0.0/5.0 | 0% | ❌ |
+| nestjs-core | 0.0/4.0 | 0% | ❌ |
+| docker | 0.0/4.0 | 0% | ❌ |
 | spring-mongodb | 0.0/4.0 | 0% | ❌ |
+| fastapi | 0.0/4.0 | 0% | ❌ |
+| common-errors | 0.0/6.0 | 0% | ❌ |
 
 ## ❌ Retreinar urgente
 
-### nestjs-mongodb (10%)
+### nestjs-mongodb (0%)
 - ✗ NestJS Mongoose: required field uses ! or ? TypeScript modifier?
-  - Wrong: `?`
+  - Missing: `!`
 - ✗ NestJS Mongoose schema: @Prop({required:true}) maps to field!:str
-  - Wrong: `field?`
+  - Missing: `field!, !:`
 - ✗ NestJS Mongoose service: which method to use instead of findOneBy
-  - Missing: `findById`
-  - Wrong: `findOneBy`
+  - Missing: `findById, findOne`
 - ✗ NestJS Mongoose module: which import to use, MongooseModule.forFe
-  - Wrong: `TypeOrmModule`
+  - Missing: `MongooseModule.forFeature`
+- ✗ NestJS app.module.ts for MongoDB: what module to add for database
+  - Missing: `MongooseModule.forRoot, MONGODB_URI`
 
-### nestjs-typeorm (50%)
+### nestjs-typeorm (0%)
+- ✗ NestJS TypeORM: which decorator for primary UUID column?
+  - Missing: `@PrimaryGeneratedColumn, uuid`
 - ✗ NestJS TypeORM service: @InjectRepository vs @InjectModel?
-  - Wrong: `@InjectModel`
+  - Missing: `@InjectRepository`
 
-### nlp (48%)
+### nestjs-auth (0%)
+- ✗ NestJS PartialType: from @nestjs/mapped-types or @nestjs/common?
+  - Missing: `@nestjs/mapped-types`
+- ✗ NestJS JWT: which class to extend for JwtStrategy?
+  - Missing: `PassportStrategy, Strategy`
+
+### nestjs-core (0%)
+- ✗ NestJS ValidationPipe: what options to set for whitelist and tran
+  - Missing: `whitelist, transform`
+- ✗ NestJS Swagger setup in main.ts: which classes to use?
+  - Missing: `DocumentBuilder, SwaggerModule`
+
+### nlp (22%)
+- ✗ User says 'CRUD de livros com MongoDB'. What is the entity name?
+  - Missing: `Book`
 - ✗ User says 'configure docker com mongodb'. Should you create src/d
-  - Missing: `não, never, Dockerfile`
-  - Wrong: `src/docker, src/mongodb`
+  - Missing: `não, never, docker-compose, Dockerfile`
 - ✗ User says 'API de usuários com MongoDB'. Is has_auth true or fals
-  - Missing: `não, no`
+  - Missing: `false, não`
+- ✗ User requests 'API with MongoDB and Docker only'. Should Redis ap
+  - Missing: `não, only, apenas`
+
+### docker (0%)
+- ✗ MongoDB healthcheck in docker-compose: which command?
+  - Missing: `mongosh, adminCommand, ping`
+- ✗ docker-compose depends_on: how to wait for a healthy service?
+  - Missing: `condition, service_healthy`
 
 ### spring-mongodb (0%)
 - ✗ Spring Boot MongoDB: @Document or @Entity for model class?
-  - Wrong: `@Entity`
+  - Missing: `@Document`
 - ✗ Spring Data MongoDB: extends MongoRepository or JpaRepository?
-  - Wrong: `JpaRepository`
+  - Missing: `MongoRepository`
 
-### fastapi (50%)
+### fastapi (0%)
+- ✗ FastAPI MongoDB: which async driver to use?
+  - Missing: `motor, Motor, AsyncIOMotorClient`
 - ✗ FastAPI: Pydantic v2 model method to serialize: model_dump or dic
-  - Wrong: `.dict()`
+  - Missing: `model_dump`
+
+### common-errors (0%)
+- ✗ NestJS TS2307: module not found book.module — what is the fix?
+  - Missing: `create, module.ts, BookModule, @Module`
+- ✗ NestJS error: PartialType from @nestjs/common — what is correct i
+  - Missing: `@nestjs/mapped-types`
 
 ## Como corrigir
 
@@ -58,7 +90,7 @@ python scripts/validate.py --fix
 # Forçar retreinamento específico
 python scripts/validate.py --fix --topic nestjs-mongodb
 python scripts/validate.py --fix --topic nestjs-typeorm
-python scripts/validate.py --fix --topic nlp
+python scripts/validate.py --fix --topic nestjs-auth
 
 # Overnight
 ./scripts/study.sh --group all --loop --validate --intensive

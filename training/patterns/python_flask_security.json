@@ -1,0 +1,32 @@
+{
+  "search:python-flask-security:flask security best practices ": {
+    "content": "- Use Flask-Security extension for enhanced security features.\n- Update Flask and extensions regularly using pip.\n- Configure `SECRET_KEY` in your app to ensure secure sessions.\n- Implement HTTPS by configuring SSL/TLS certificates.\n- Use `Flask-Limiter` to prevent abuse and rate limiting.\n- Sanitize user inputs with `escape()` from Flask.\n- Regularly update dependencies using tools like `pip-audit`.\n- Enable CSRF protection with `CSRFProtect` from Flask-WTF.\n- Implement role-based access control (RBAC) for fine-grained permissions.",
+    "source": "web_search",
+    "updated_at": 1780746290.5772843
+  },
+  "search:python-flask-security:flask security best practices _ex": {
+    "content": "- Use `flask-security` extension for authentication and authorization.\n- Install latest Flask version using `pip install flask==2.3.2`.\n- Configure secret key in app with `app.config['SECRET_KEY'] = 'your_secret_key'`.\n- Implement user registration and login routes.\n- Protect routes with `@login_required` decorator.\n- Use HTTPS for secure data transmission.\n- Regularly update Flask and extensions to patch security vulnerabilities.\n- Implement CSRF protection using `flask-wtf` or similar libraries.",
+    "source": "code_example",
+    "updated_at": 1780746293.4284112
+  },
+  "search:python-flask-security:flask security authentication ": {
+    "content": "- **Latest Flask-Security Version**: 5.8.1\n- **CLI Commands**:\n  - `flask db init`: Initialize the database.\n  - `flask db migrate`: Create migration scripts from your models.\n  - `flask db upgrade`: Apply migrations to the database.\n- **Key Config Options**:\n  - `SECURITY_PASSWORD_SALT`: Salt for password hashing.\n  - `SECURITY_REGISTERABLE`: Enable user registration.\n  - `SECURITY_RECOVERABLE`: Enable password recovery.\n  - `SECURITY_TRACKABLE`: Track user login and logout times.",
+    "source": "web_search",
+    "updated_at": 1780746311.2139444
+  },
+  "search:python-flask-security:flask security authentication _ex": {
+    "content": "- **CLI Commands**:\n  - `flask db init`: Initializes the database.\n  - `flask db migrate -m \"Initial migration.\"`: Creates a new migration script.\n  - `flask db upgrade`: Applies migrations to the database.\n\n- **Latest Versions**:\n  - Flask-Security: v4.3.0\n  - Flask-Login: v0.6.2\n\n- **Key Config Options**:\n  - `SECURITY_PASSWORD_SALT`: Salt for password hashing.\n  - `SECURITY_REGISTERABLE`: Enable user registration.\n  - `SECURITY_RECOVERABLE`: Enable password recovery.\n  - `SECURITY_TRACKABLE`: Track user access times.",
+    "source": "code_example",
+    "updated_at": 1780746317.7879117
+  },
+  "search:python-flask-security:flask security authorization p": {
+    "content": "- **Flask Security Patterns**: Implement CSRF protection using Flask-WTF.\n- **Fixing BOLA in Flask APIs**: Use Flask-Security for role-based access control.\n- **OWASP API Security Risks**: Focus on function-level authorization policies.\n- **Spring Boot 3 + Spring Security 6**: Use JWT for authentication and authorization.\n- **CLI Commands**:\n  - `pip install Flask-WTF`\n  - `pip install Flask-Security`\n  - `mvn clean install` (for Spring Boot)\n- **Latest Versions**:\n  - Flask: 2.3.1\n  - Flask-WTF: 0.15.1\n  - Flask-Security: 4.1.0\n  - Spring Boot: 3.0.0\n  - Spring Security: 6.0.0\n- **Key Config Options**:\n  - `WTF_CSRF_ENABLED = True` in Flask-WTF.\n  - Define roles and permissions in Flask-Security.\n  - Configure JWT secret key in Spring Security.",
+    "source": "web_search",
+    "updated_at": 1780746328.3812478
+  },
+  "search:python-flask-security:flask security authorization p_ex": {
+    "content": "- **Latest Flask-Security Version**: 5.8.1\n- **CLI Commands**:\n  - `flask db init`: Initialize the database.\n  - `flask db migrate`: Create migration scripts from your models.\n  - `flask db upgrade`: Apply migrations to the database.\n- **Key Config Options**:\n  - `SECURITY_PASSWORD_SALT`: Salt for password hashing.\n  - `SECURITY_REGISTERABLE`: Enable user registration.\n  - `SECURITY_RECOVERABLE`: Enable password recovery.\n  - `JWT_SECRET_KEY`: Secret key for JWT tokens.",
+    "source": "code_example",
+    "updated_at": 1780746332.2062738
+  }
+}
