@@ -1,0 +1,22 @@
+{
+  "search:angular-forms-validation:angular reactive forms validat": {
+    "content": "- Use `ng generate form` or `ng g form <form-name>` to create a new reactive form.\n- Ensure Angular version is up-to-date, typically the latest LTS release for best practices and security updates.\n- Key config options include `Validators.required`, `Validators.email`, `Validators.minLength(n)`, etc., from `@angular/forms`.\n- For custom validators, implement a function that returns an error object or null.\n- Use `formControlName` in your template to bind form controls.\n- Subscribe to `valueChanges` and `statusChanges` observables for dynamic validation responses.\n- Implement `onSubmit()` method in your component to handle form submission logic.\n- Utilize `FormGroup` and `FormControl` classes from `@angular/forms` to structure your forms.",
+    "source": "web_search",
+    "updated_at": 1780725788.0344613
+  },
+  "search:angular-forms-validation:angular reactive forms validat_ex": {
+    "content": "- Use Angular CLI to generate forms: `ng generate form <form-name>`\n- Latest version as of my last update is Angular 16.\n- Key configuration options include:\n  - `FormControl`: Manages the state and validation logic for a single control.\n  - `FormGroup`: Groups multiple controls into a single logical unit.\n  - `Validators`: Provides methods to validate form inputs, such as `required`, `email`, etc.\n  - `FormBuilder`: Simplifies the creation of forms by providing convenient methods for creating controls and groups.",
+    "source": "code_example",
+    "updated_at": 1780725793.9629297
+  },
+  "search:angular-forms-validation:angular template-driven forms ": {
+    "content": "- Use `ng generate directive <directive-name>` to create custom directives.\n- Register the `NG_ASYNC_VALIDATORS` provider in your custom directive for async validation.\n- Implement validation logic in a separate class and inject it into your directive.\n- Apply validation attributes directly in HTML templates for template-driven forms.\n- Utilize Angular's built-in validators like `required`, `email`, `minLength`, etc., or create custom validators.\n- Use the `ngModel` directive to bind form controls to model properties.\n- Implement error handling using `*ngIf` directives to display validation messages.\n- Ensure your form is properly initialized with `formControlName` in your template.\n- Keep your validation logic DRY by creating reusable validator functions or directives.",
+    "source": "web_search",
+    "updated_at": 1780725802.3083713
+  },
+  "search:angular-forms-validation:angular template-driven forms _ex": {
+    "content": "- Use Angular CLI to generate forms: `ng generate form myForm`\n- Ensure latest Angular version for best practices and features.\n- Utilize `ngModel` for template-driven forms.\n- Implement validation using directives like `required`, `minlength`, etc., directly in the template.\n- For complex validations, consider using custom validators with `Validators.compose`.\n- Use `(ngSubmit)` to handle form submission events.\n- Configure form controls with initial values and validators in the component class.\n- Employ `formControlName` for binding form controls in the template.\n- Optionally, use reactive forms for more control over form state and validation logic.",
+    "source": "code_example",
+    "updated_at": 1780725818.0353112
+  }
+}

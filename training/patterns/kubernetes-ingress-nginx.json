@@ -8,5 +8,25 @@
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-controller-config-file>`\n  - `kubectl edit deployment nginx-ingress-controller`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.5.1\n  - Kubernetes: v1.27.0\n\n- **Key Config Options**:\n  - `worker_processes auto`\n  - `worker_connections 1024`\n  - `keepalive_timeout 65`\n  - `proxy_read_timeout 90s`\n  - `proxy_send_timeout 90s`\n  - `sendfile on`\n  - `tcp_nopush on`\n  - `tcp_nodelay on`\n  - `gzip on`\n  - `limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s`\n  - `limit_req zone=one burst=5 nodelay`",
     "source": "code_example",
     "updated_at": 1780714200.3589928
+  },
+  "search:kubernetes-ingress-nginx:kubernetes ingress nginx confi": {
+    "content": "- **Latest Version**: As of my last update, the latest stable version is 4.5.2.\n  \n- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingresses`\n  - `kubectl describe ingress <ingress-name>`\n  \n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/cors-allow-origin`: To enable CORS.\n  - `nginx.ingress.kubernetes.io/configuration-snippet`: Custom NGINX configuration snippets.\n\n- **Annotations for Specific Configurations**:\n  - Use annotations in the Ingress resource to apply specific configurations without modifying the controller's global settings.\n\n- **ConfigMap for Global Settings**:\n  - Create a ConfigMap to set global configurations such as timeouts, worker processes, and more.\n\n- **Command-Line Flags**:\n  - `--configmap`: Specifies the ConfigMap containing NGINX configuration.\n  - `--publish-service`: Specifies the Kubernetes service used to publish the Ingress controller's IP address.\n\n- **Configuration Validation**:\n  - The controller supports validation of Ingress resources to ensure they are correctly configured.\n\n- **CORS Support**:\n  - Use annotations like `nginx.ingress.kubernetes.io/cors-allow-origin` to enable Cross-Origin Resource Sharing (CORS).\n\n- **Expanded Annotation Combinations**:\n  - Explore various combinations of annotations for more complex configurations, such as custom headers and timeouts.",
+    "source": "web_search",
+    "updated_at": 1780725744.8398309
+  },
+  "search:kubernetes-ingress-nginx:kubernetes ingress nginx confi_ex": {
+    "content": "- **CLI Command to Deploy ingress-nginx**:\n  ```bash\n  helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace\n  ```\n\n- **Latest Version of Helm Chart**:\n  - Use version `1.1.0` for the ingress-nginx Helm chart.\n\n- **Key Configuration Options**:\n  - `kubernetes.io/hostname`: Set to your domain, e.g., `kubernetes-example.com`.\n  - `ingressClassName`: Specify the class name if multiple classes are configured.\n  - `controller.service.annotations`: Add annotations like `service.beta.kubernetes.io/aws-load-balancer-type: nlb` for AWS NLB.\n\n- **Supported Platforms**:\n  - NGINX Ingress Controller is supported on any Kubernetes platform.",
+    "source": "code_example",
+    "updated_at": 1780725750.874024
+  },
+  "search:kubernetes-ingress-nginx:kubernetes ingress nginx perfo": {
+    "content": "- **Update NGINX-Ingress to stable Ingress API**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml\n  ```\n\n- **Latest versions**:\n  - Kubernetes v1.36\n  - NGINX-Ingress Controller v2.4.0\n\n- **Key config options**:\n  - `max-worker-connections`: Adjusts the maximum number of simultaneous connections that a worker process can handle.\n    ```yaml\n    nginx.ingress.kubernetes.io/max-worker-connections: \"16384\"\n    ```\n  - `worker-processes`: Specifies the number of worker processes.\n    ```yaml\n    nginx.ingress.kubernetes.io/worker-processes: \"2\"\n    ```\n  - `proxy-body-size`: Sets the maximum allowed size of the client request body.\n    ```yaml\n    nginx.ingress.kubernetes.io/proxy-body-size: \"10m\"\n    ```\n\n- **In-place vertical scaling**:\n  ```bash\n  kubectl scale deployment/ingress-nginx-controller --replicas=3\n  ```",
+    "source": "web_search",
+    "updated_at": 1780725761.9250722
+  },
+  "search:kubernetes-ingress-nginx:kubernetes ingress nginx perfo_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-controller-yaml>`\n  - `kubectl get pods --namespace=<ingress-namespace>`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.0\n\n- **Key Config Options**:\n  - `connection_pool_size`: Adjusts the number of connections per worker process.\n  - `buffer_size`: Sets the size of buffers for reading client request bodies and headers.\n  - `worker_processes`: Specifies the number of worker processes to run.\n  - `proxy_cache_path`: Defines a path for caching proxied responses.",
+    "source": "code_example",
+    "updated_at": 1780725777.4924672
   }
 }
