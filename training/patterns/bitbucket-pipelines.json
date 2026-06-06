@@ -1,0 +1,12 @@
+{
+  "search:bitbucket-pipelines:bitbucket pipelines branches d": {
+    "content": "- **CLI Commands**:\n  - `bitbucket pipelines run --environment <env>`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Bitbucket Pipelines: 2.5.3\n  - Docker: 24.0.1\n\n- **Key Config Options**:\n  - `services`: Define additional Docker services in your pipeline.\n  - `image`: Specify the Docker image for your build steps.\n  - `cache`: Enable caching to speed up builds.",
+    "source": "web_search",
+    "updated_at": 1780703528.8476417
+  },
+  "search:bitbucket-pipelines:bitbucket pipelines branches d_ex": {
+    "content": "- **CLI Commands**:\n  - `bit pipeline run`: Runs a Bitbucket pipeline.\n  - `bit pipeline list`: Lists all pipelines.\n\n- **Latest Versions**:\n  - Bitbucket Pipelines: Version 2025.1\n  - Docker: Version 20.10\n\n- **Key Config Options**:\n  - `services`: Defines Docker services to run alongside the pipeline.\n  - `environment`: Sets environment variables for the pipeline.\n  - `steps`: Specifies the steps to execute in the pipeline.",
+    "source": "code_example",
+    "updated_at": 1780703531.0620465
+  }
+}

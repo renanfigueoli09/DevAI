@@ -1,0 +1,12 @@
+{
+  "search:dotnet+mongodb:asp.net core mongodb.driver im": {
+    "content": "- **CLI Commands**: Use `dotnet new webapi -n MyMongoApi` to create a new ASP.NET Core Web API project.\n- **Latest Versions**: Ensure you use the latest versions of `Microsoft.AspNetCore.Mvc.NewtonsoftJson`, `MongoDB.Driver`, and `MongoDB.Bson`.\n- **Key Config Options**:\n  - In `appsettings.json`, configure MongoDB connection string under `ConnectionStrings` section.\n  - Use `services.AddControllers().AddNewtonsoftJson()` in `Startup.cs` for JSON serialization.\n  - Configure read preference using `IMongoCollectionSettings.ReadPreference`.",
+    "source": "web_search",
+    "updated_at": 1780703311.1082983
+  },
+  "search:dotnet+mongodb:asp.net core mongodb.driver im_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package MongoDB.Driver`\n  - `dotnet restore`\n\n- **Latest Versions**:\n  - MongoDB.Driver: 2.13.1\n  - MongoDB.Driver.Core: 2.13.1\n\n- **Key Config Options**:\n  - Connection String: `mongodb://localhost:27017`\n  - Database Name: `yourDatabaseName`\n  - Collection Name: `yourCollectionName`",
+    "source": "code_example",
+    "updated_at": 1780703313.0837653
+  }
+}

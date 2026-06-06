@@ -1,0 +1,47 @@
+{
+  "search:security-patterns:sql injection xss csrf prevent": {
+    "content": "- **CLI Commands**:\n  - `nest generate controller <name>` to create controllers.\n  - `nest generate service <name>` to create services.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeORM: v0.3.x\n\n- **Key Config Options**:\n  - Use environment variables for sensitive data (`process.env`).\n  - Enable CORS with `app.enableCors()`.\n  - Configure helmet for security headers.\n  - Implement rate limiting with `nestjs-rate-limit`.",
+    "source": "web_search",
+    "updated_at": 1780703880.4383824
+  },
+  "search:security-patterns:sql injection xss csrf prevent_ex": {
+    "content": "- **Prevent XSS**: Implement Content Security Policy (CSP) headers using Helmet middleware.\n  ```bash\n  npm install helmet --save\n  ```\n  Configure in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { AppController } from './app.controller';\n  import { AppService } from './app.service';\n  import * as helmet from 'helmet';\n\n  @Module({\n    imports: [\n      // Other modules\n      helmet(),\n    ],\n    controllers: [AppController],\n    providers: [AppService],\n  })\n  export class AppModule {}\n  ```\n\n- **Prevent SQL Injection**: Use parameterized queries with TypeORM.\n  ```typescript\n  const userRepository = getRepository(User);\n  const user = await userRepository.findOne({ where: { id: userId } });\n  ```\n  Ensure using `getRepository` or `createQueryBuilder` for safe operations.\n\n- **CSRF Prevention**: Implement CSRF tokens in forms and use middleware like `csurf`.\n  ```bash\n  npm install csurf --save\n  ```\n  Configure in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { AppController } from './app.controller';\n  import { AppService } from './app.service';\n  import * as csrf from 'csurf';\n\n  @Module({\n    imports: [\n      // Other modules\n      csrf(),\n    ],\n    controllers: [AppController],\n    providers: [AppService],\n  })\n  export class AppModule {}\n  ```\n  Add CSRF token to forms:\n  ```html\n  <form method=\"POST\" action=\"/submit\">\n    <input type=\"hidden\" name=\"_csrf\" value=\"<%= csrfToken %>\">\n    <!-- Other form fields -->\n    <button type=\"submit\">Submit</button>\n  </form>\n  ```\n\n- **Latest Versions**:\n  - NestJS: `v10.0.0`\n  - TypeORM: `v0.3.7`\n  - Helmet: `^4.6.0`\n  - CSurf: `^2.0.1`",
+    "source": "code_example",
+    "updated_at": 1780703895.8858225
+  },
+  "search:security-patterns:jwt security best practices ex": {
+    "content": "- **Algorithm Choice**: Use RS256 over HS256 for better security.\n- **Token Expiry**: Set a reasonable expiry time, e.g., 30 minutes.\n- **Rotation Strategy**: Implement refresh tokens to rotate access tokens securely.\n- **Key Management**: Regularly rotate secret keys at least once a year.\n- **CLI Commands**:\n  - `openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048`\n  - `openssl rsa -pubout -in private_key.pem -out public_key.pem`\n- **Key Config Options**: \n  - `JWT_SECRET`: Securely store and rotate this key.\n  - `JWT_ALGORITHM`: Set to `RS256`.\n  - `JWT_EXPIRY`: Configure token expiry time in seconds (e.g., 1800 for 30 minutes).\n- **Refresh Tokens**: Use refresh tokens with a longer expiry, e.g., 7 days.\n- **Security Measures**:\n  - Implement CSRF protection.\n  - Secure storage of JWTs to prevent XSS attacks.",
+    "source": "web_search",
+    "updated_at": 1780703908.1173642
+  },
+  "search:security-patterns:jwt security best practices ex_ex": {
+    "content": "- **CLI Commands**: Use `jwt-cli` for generating and verifying JWTs.\n- **Latest Versions**: Ensure using the latest version of `jwt-cli` to benefit from security patches and features.\n- **Key Config Options**:\n  - Set expiration time (`exp`) in seconds or milliseconds.\n  - Configure refresh token rotation intervals.\n  - Implement revocation mechanisms for tokens.",
+    "source": "code_example",
+    "updated_at": 1780703915.0860584
+  },
+  "search:security-patterns:input validation sanitization ": {
+    "content": "- **CLI Commands with Exact Flags**:\n  - `npm install --save express-validator`\n  - `yarn add @types/express-validator`\n\n- **Latest Versions**:\n  - Express Validator: v6.5.3\n  - OWASP Cheat Sheet Series: Latest as of Feb 2025\n\n- **Key Config Options**:\n  - `trim`: Removes whitespace from the beginning and end of a string.\n  - `escape`: Escapes HTML characters in a string.\n  - `toInt`: Converts a string to an integer.\n  - `isEmail`: Validates if a string is a valid email address.",
+    "source": "web_search",
+    "updated_at": 1780703922.1764264
+  },
+  "search:security-patterns:secrets management environment": {
+    "content": "- **DevSecrets**: Secure environment variable management tool.\n  - macOS available, Windows and Linux coming soon.\n\n- **Environment Variables in 2026**:\n  - Environment variables fall short due to modern security concerns.\n  - Secrets managers offer solutions but introduce complexity.\n  - Hybrid approach combines security with simplicity.\n\n- **Secure Environment Variable Handling**:\n  - Implement proper access control.\n  - Follow best practices for secrets management.\n  - Reduce risks of injection attacks and leaks.\n\n- **CloudFlare Worker Secrets and Environment Variables**:\n  - Critical for maintaining performance and security in edge networks.\n  - Ensure secure handling of sensitive data.",
+    "source": "web_search",
+    "updated_at": 1780703941.7215788
+  },
+  "search:security-patterns:secrets management environment_ex": {
+    "content": "- **CLI Commands**: Use `databricks secrets` to manage secrets and environment variables.\n- **Latest Version**: Ensure using the latest version of Databricks CLI for compatibility and security features.\n- **Key Config Options**:\n  - `--scope`: Specifies the scope where the secret is stored.\n  - `--key`: Specifies the key under which the secret is stored.\n  - `--overwrite`: Overwrites an existing secret if it exists.\n  - `--description`: Adds a description to the secret for better management.",
+    "source": "code_example",
+    "updated_at": 1780703948.2183404
+  },
+  "search:security-patterns:https tls certificate backend ": {
+    "content": "- **CLI Commands**:\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`\n  - `iisreset /restart`\n\n- **Latest Versions**:\n  - Windows Server 2025\n  - IIS 10.0\n\n- **Key Config Options**:\n  - TLS 1.2 and TLS 1.3 support\n  - Certificate binding to an IIS site\n  - HSTS (HTTP Strict Transport Security)\n  - Cipher suite configuration",
+    "source": "web_search",
+    "updated_at": 1780703966.1406496
+  },
+  "search:security-patterns:https tls certificate backend _ex": {
+    "content": "- **CLI Commands**:\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`\n  - `nginx -s reload`\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - OpenSSL: 3.0.x\n\n- **Key Config Options**:\n  - `server.key`: Path to the private key file.\n  - `server.cert`: Path to the certificate file.\n  - `ssl_protocols`: Specify TLS versions (e.g., TLSv1.2, TLSv1.3).\n  - `ssl_ciphers`: Define cipher suites for encryption.\n  - `ssl_prefer_server_ciphers`: Prefer server's ciphers over client's.",
+    "source": "code_example",
+    "updated_at": 1780703970.9691389
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:microservices+patterns:saga cqrs event sourcing circu": {
+    "content": "- **CLI Commands**:\n  - `microservices-cli init --pattern saga`\n  - `microservices-cli generate --type cqrs`\n  - `microservices-cli deploy --strategy event-sourcing`\n\n- **Latest Versions**:\n  - Microservices CLI: v2.1.0\n  - Saga Pattern Library: v3.4.5\n  - CQRS Framework: v4.2.3\n  - Event Sourcing Toolkit: v5.1.2\n\n- **Key Config Options**:\n  - `saga.timeout`: Set timeout for saga operations.\n  - `cqrs.aggregateId`: Unique identifier for the aggregate root.\n  - `event-sourcing.streamName`: Name of the event stream to publish events to.",
+    "source": "web_search",
+    "updated_at": 1780703444.9340374
+  },
+  "search:microservices+patterns:saga cqrs event sourcing circu_ex": {
+    "content": "- **Saga Pattern**: Use `saga` command in your microservices framework.\n- **CQRS Pattern**: Implement `cqrs` module in your backend services.\n- **Event Sourcing**: Enable `event-sourcing` flag in your service configuration.\n- **API Gateway**: Deploy an API gateway using `api-gateway` CLI tool.\n- **Circuit Breaker**: Configure `circuit-breaker` settings in your microservices.\n- **Latest Version**:\n  - Microservices Framework: v2.3.1\n  - Spring Boot: v2.7.4\n  - Istio: v1.15.0\n- **Key Config Options**:\n  - Saga: `saga.enable=true`\n  - CQRS: `cqrs.mode=write-back`\n  - Event Sourcing: `event-sourcing.store-type=redis`\n  - API Gateway: `api-gateway.host=localhost`\n  - Circuit Breaker: `circuit-breaker.threshold=0.8`",
+    "source": "code_example",
+    "updated_at": 1780703448.8252308
+  },
+  "search:microservices+patterns:outbox pattern ddd bounded con": {
+    "content": "- **DDD Bounded Contexts**: Align bounded contexts with team boundaries to ensure each team owns one coherent model and language.\n- **Microservices Patterns**:\n  - **Backend-for-Frontend (BFF)**: Simplifies client interactions by acting as a single entry point for the client, reducing network trips.\n  - **Aggregation**: Combines data from multiple services into a single response to reduce complexity and improve performance.\n- **Service Mesh**: Enhances microservices architecture by providing communication, observability, and security features. Latest version: Istio 1.15 (as of my last update).\n- **CLI Commands**:\n  - `istioctl install`: Installs the Istio service mesh.\n  - `kubectl apply -f <file.yaml>`: Applies a configuration file to your Kubernetes cluster.\n- **Key Config Options**:\n  - **Istio Gateway**: Defines how external traffic is routed to services within the mesh.\n  - **VirtualService**: Routes traffic between microservices based on rules and conditions.\n  - **DestinationRule**: Configures settings for outbound traffic from a service.",
+    "source": "web_search",
+    "updated_at": 1780703455.1473558
+  },
+  "search:microservices+patterns:outbox pattern ddd bounded con_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package MassTransit` (for message broker integration)\n  - `dotnet ef migrations add InitialCreate` (for database migration)\n\n- **Latest Versions**:\n  - .NET Core 7.0\n  - Entity Framework Core 7.0\n  - MassTransit 8.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure connection strings and message broker settings.\n  - `Startup.cs`: Register services for dependency injection, including database context and message bus.\n  - `OutboxRepository`: Implement the outbox pattern to ensure event reliability.",
+    "source": "code_example",
+    "updated_at": 1780703457.7380025
+  }
+}

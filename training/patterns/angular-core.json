@@ -1,0 +1,12 @@
+{
+  "search:angular+core:angular 19 standalone signals ": {
+    "content": "- **CLI Commands**:\n  - `ng new my-app --standalone`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular 19\n  - HttpClient\n\n- **Key Config Options**:\n  - Standalone Components: Use `@Component({ standalone: true })`\n  - Signal Tracking: Utilize `import { signal, computed } from '@angular/core';`\n  - HttpClient Guards: Implement guards for route protection.",
+    "source": "web_search",
+    "updated_at": 1780703402.525458
+  },
+  "search:angular+core:angular 19 standalone signals _ex": {
+    "content": "- **CLI Command:** `ng new my-angular-app --standalone`\n- **Latest Versions:** Angular 19, HttpClient, Signals\n- **Key Config Options:** \n  - Use `provideHttpClient` for HTTP client configuration.\n  - Implement guards using `canActivate`, `canActivateChild`, etc., with standalone components.",
+    "source": "code_example",
+    "updated_at": 1780703403.9757118
+  }
+}

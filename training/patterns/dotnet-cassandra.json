@@ -1,0 +1,22 @@
+{
+  "search:dotnet+cassandra:.net core cassandra data acces": {
+    "content": "- Use `docker exec -it accessing_data_cassandra bash -c \"cqlsh -u cassandra -p cassandra\"` to access the Cassandra query language shell.\n- For Amazon Keyspaces, use a .NET Core client driver compatible with your environment and operating system.\n- The latest version of Sail2025.DataAccess is 2026.1.5.\n- Spring Boot applications can integrate with Apache Cassandra for NoSQL data management.\n- Key config options in Cassandra include replication factors, consistency levels, and partition keys.",
+    "source": "web_search",
+    "updated_at": 1780704685.679168
+  },
+  "search:dotnet+cassandra:.net core cassandra data acces_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new console`\n  - `dotnet add package CData.Cassandra.EntityFrameworkCore8`\n\n- **Latest Versions**:\n  - Entity Framework Core Provider for Cassandra: 25.0.9539\n\n- **Key Config Options**:\n  - Connection String: `Server=<your_server>;Port=9042;Keyspace=<your_keyspace>`\n  - Authentication: Use Azure Active Directory or username/password\n  - SSL/TLS: Enable for secure connections",
+    "source": "code_example",
+    "updated_at": 1780704691.5543952
+  },
+  "search:dotnet+cassandra:cassandra entity framework cor": {
+    "content": "- **Latest Version**: CData.Cassandra.EntityFrameworkCore8 25.0.9434\n- **CLI Command to Install Provider**:\n  ```bash\n  dotnet add package CData.Cassandra.EntityFrameworkCore8 --version 25.0.9434\n  ```\n- **Key Configuration Options**:\n  - `ConnectionString`: Specifies the connection details for Cassandra.\n  - `ModelBuilder`: Used to configure the data model and relationships.\n  - `DbContext`: Manages the database operations.\n\nFor detailed instructions, refer to the [CData ADO.NET Provider for Cassandra documentation](https://www.cdata.com/drivers/cassandra/efcore/) or the [SimpleIdServer EFCore.Cassandra documentation](https://simpleidserver.github.io/documentation/EFCore.Cassandra).",
+    "source": "web_search",
+    "updated_at": 1780704700.8490694
+  },
+  "search:dotnet+cassandra:cassandra entity framework cor_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc -n MyCassandraApp`\n  - `dotnet add package EFCore.Cassandra`\n\n- **Latest Versions**:\n  - EFCore.Cassandra: v2.5.0\n\n- **Key Config Options**:\n  - ConnectionString: `Server=your_cassandra_server;Port=9042;Database=mydatabase;Username=myuser;Password=mypassword`\n  - DbContext Configuration: \n    ```csharp\n    public class MyDbContext : DbContext\n    {\n        public DbSet<MyModel> MyModels { get; set; }\n\n        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n        {\n            optionsBuilder.UseCassandra(\"Server=your_cassandra_server;Port=9042;Database=mydatabase;Username=myuser;Password=mypassword\");\n        }\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1780704705.684298
+  }
+}

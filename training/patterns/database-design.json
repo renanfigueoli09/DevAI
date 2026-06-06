@@ -1,0 +1,47 @@
+{
+  "search:database-design:when to use mongodb vs postgre": {
+    "content": "- **CLI Commands**:\n  - `mongod --version` to check MongoDB version.\n  - `psql --version` to check PostgreSQL version.\n\n- **Latest Versions**:\n  - MongoDB 6.0\n  - PostgreSQL 14\n\n- **Key Config Options**:\n  - MongoDB: `replicaSet`, `shards`\n  - PostgreSQL: `max_connections`, `shared_buffers`\n\nThese details provide a concise guide for developers to make informed decisions about using MongoDB or PostgreSQL in their projects.",
+    "source": "web_search",
+    "updated_at": 1780703776.004209
+  },
+  "search:database-design:when to use mongodb vs postgre_ex": {
+    "content": "- **MongoDB**:\n  - Latest version: MongoDB 6.0\n  - Key config options: `mongod.conf` for configuration, `--dbpath` for data directory.\n  - CLI commands: `mongo --version`, `mongod --config /path/to/mongod.conf`.\n\n- **PostgreSQL**:\n  - Latest version: PostgreSQL 14\n  - Key config options: `postgresql.conf` for configuration, `data_directory` for data path.\n  - CLI commands: `psql --version`, `pg_ctl start -D /path/to/data_directory`.",
+    "source": "code_example",
+    "updated_at": 1780703784.1025794
+  },
+  "search:database-design:nosql vs sql use cases pros co": {
+    "content": "- **CLI Commands**: Use `psql` for PostgreSQL and `mongo` for MongoDB.\n- **Latest Versions**: SQL databases like PostgreSQL 15, MySQL 8.0; NoSQL databases like MongoDB 6.0, Cassandra 4.0.\n- **Key Config Options**:\n  - SQL: `max_connections`, `shared_buffers`.\n  - NoSQL (MongoDB): `replicaSet`, `shards`.\n\nThese details provide actionable insights for developers when choosing between SQL and NoSQL databases in 2025.",
+    "source": "web_search",
+    "updated_at": 1780703805.0013158
+  },
+  "search:database-design:database indexing strategies p": {
+    "content": "- **CLI Commands**:\n  - `CREATE INDEX index_name ON table_name (column_name);`\n  - `DROP INDEX index_name ON table_name;`\n\n- **Latest Versions**:\n  - PostgreSQL: v15\n  - MySQL: v8.0\n  - SQL Server: v2024\n\n- **Key Config Options**:\n  - PostgreSQL: `work_mem`, `maintenance_work_mem`\n  - MySQL: `innodb_buffer_pool_size`, `query_cache_type`\n  - SQL Server: `max server memory`, `cost threshold for parallelism`",
+    "source": "web_search",
+    "updated_at": 1780703826.274563
+  },
+  "search:database-design:database indexing strategies p_ex": {
+    "content": "- **CLI Commands**: Use `CREATE INDEX` to add an index. Example: `CREATE INDEX idx_name ON table_name(column_name);`\n- **Latest Versions**: Ensure using the latest database management system version for optimal performance and security.\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on available memory, typically 70-80% of total RAM.\n  - `query_cache_type` and `query_cache_size`: Enable caching if your workload is read-heavy. Example: `SET GLOBAL query_cache_type = 1; SET GLOBAL query_cache_size = 64M;`\n  - `max_connections`: Increase based on expected concurrent connections, e.g., `max_connections = 500`.\n- **Index Types**:\n  - **B-tree**: Suitable for equality and range queries.\n  - **Hash**: Best for exact matches but not suitable for sorting or range queries.\n  - **Composite Indexes**: Use multiple columns to cover more query conditions efficiently.",
+    "source": "code_example",
+    "updated_at": 1780703831.5844738
+  },
+  "search:database-design:data modeling patterns embedde": {
+    "content": "- **CLI Commands**: Use `mongo` shell or MongoDB Compass.\n- **Latest Versions**: MongoDB 6.x, released in Q2 2025.\n- **Key Config Options**:\n  - `shardCollection`: For distributing data across shards.\n  - `index`: Create indexes to improve query performance.\n  - `collation`: Define collation rules for string comparisons.",
+    "source": "web_search",
+    "updated_at": 1780703838.3787894
+  },
+  "search:database-design:data modeling patterns embedde_ex": {
+    "content": "- **CLI Commands**: `mongo` shell, `mongosh`\n- **Latest Versions**: MongoDB 6.0\n- **Key Config Options**:\n  - `storage.wiredTiger.engineConfig.cacheSizeGB`: Adjusts the cache size for WiredTiger storage engine.\n  - `replication.replSetName`: Specifies the name of the replica set.\n  - `net.port`: Sets the port number for MongoDB to listen on.",
+    "source": "code_example",
+    "updated_at": 1780703846.0183957
+  },
+  "search:database-design:schema design decisions relati": {
+    "content": "- **CLI Commands**: Use `erd` for creating ERD diagrams.\n- **Latest Versions**: Check the latest version of tools like `erd` on their official website or GitHub repository.\n- **Key Config Options**: For ERD tools, key options might include `--output-format`, `--database-type`, and `--entity-color`.",
+    "source": "web_search",
+    "updated_at": 1780703856.7473385
+  },
+  "search:database-design:schema design decisions relati_ex": {
+    "content": "- **CLI Commands**: Use `CREATE TABLE` and `ALTER TABLE` to define and modify schemas in MySQL.\n- **Latest Versions**: Ensure using MySQL 8.0 or later for advanced features and performance improvements.\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on available memory for better performance.\n  - `query_cache_type`: Set to OFF if not needed to reduce overhead.\n  - `max_connections`: Increase if your application requires more concurrent connections.",
+    "source": "code_example",
+    "updated_at": 1780703860.2344162
+  }
+}

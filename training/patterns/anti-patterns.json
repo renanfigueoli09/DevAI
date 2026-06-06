@@ -1,0 +1,62 @@
+{
+  "search:anti-patterns:common nestjs mistakes anti-pa": {
+    "content": "- **CLI Commands**:\n  - `nest generate module <name>` to create a new module.\n  - `nest generate service <name>` to create a new service.\n  - `nest generate controller <name>` to create a new controller.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Node.js: v16.x or later\n\n- **Key Config Options**:\n  - `imports`: Array of modules the current module imports.\n  - `controllers`: Array of controllers the current module uses.\n  - `providers`: Array of services and providers the current module uses.\n  - `exports`: Array of providers that should be exported for use in other modules.",
+    "source": "web_search",
+    "updated_at": 1780704550.8481503
+  },
+  "search:anti-patterns:common nestjs mistakes anti-pa_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Ensure your `package.json` is up-to-date for the latest features and security patches.\n- Utilize dependency injection (DI) properly by avoiding circular dependencies through constructor-based DI.\n- Employ validation pipes (`@ValidateIf`, `@IsNotEmpty()`) to ensure data integrity.\n- Organize modules logically, keeping controllers focused on handling requests and services on business logic.\n- Implement error handling using NestJS's built-in mechanisms like `HttpException` or custom exceptions for better control over responses.\n- Use environment variables with `process.env` for configuration management across different environments.\n- Leverage middleware (`@UseInterceptors`, `@UseGuards`) to handle cross-cutting concerns efficiently.\n- Regularly update dependencies using tools like `npm-check-updates` and run tests to catch issues early.",
+    "source": "code_example",
+    "updated_at": 1780704557.8794024
+  },
+  "search:anti-patterns:common spring boot mistakes be": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build and test your Spring Boot project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot, as of my last update in October 2023, it was 3.1.x. Check [Spring's official website](https://spring.io/projects/spring-boot) for the most current version.\n- **Key Config Options**:\n  - `server.port`: Set the port number for your application.\n  - `logging.level.root`: Adjust logging levels for better debugging.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `spring.jpa.hibernate.ddl-auto`: Manage schema updates automatically (e.g., `update`).\n  - `spring.security.user.name`, `spring.security.user.password`: Set up default security user.",
+    "source": "web_search",
+    "updated_at": 1780704575.527148
+  },
+  "search:anti-patterns:common spring boot mistakes be_ex": {
+    "content": "- Use `mvn clean install` to build your project.\n- Update Spring Boot version in `pom.xml` to the latest stable release.\n- Configure environment-specific settings using `application-{profile}.properties/yaml`.\n- Enable virtual threads with `-XX:+UseVirtualThreads` JVM flag.\n- Optimize HikariCP connection pool by adjusting properties like `maximumPoolSize`, `minimumIdle`.\n- Use Spring Profiles for different environments (e.g., `dev`, `prod`).\n- Implement proper exception handling to avoid application crashes.\n- Enable logging for debugging and monitoring with `logging.level.root=DEBUG`.\n- Regularly update dependencies using tools like Maven or Gradle.\n- Utilize Spring Boot Actuator endpoints for health checks and metrics.",
+    "source": "code_example",
+    "updated_at": 1780704581.2740715
+  },
+  "search:anti-patterns:fat controller anti-pattern so": {
+    "content": "- **CLI Commands**: Use `rails generate controller` to create new controllers.\n- **Latest Versions**: Ensure using the latest Rails version for optimal performance and security.\n- **Key Config Options**:\n  - `config.autoload_paths`: Add directories to autoload classes from.\n  - `config.eager_load_paths`: Specify paths that should be eager loaded at boot time.",
+    "source": "web_search",
+    "updated_at": 1780704586.8657575
+  },
+  "search:anti-patterns:fat controller anti-pattern so_ex": {
+    "content": "- **CLI Commands**: Not applicable in this context.\n- **Latest Versions**: Ruby on Rails 7, ASP.NET Core 6.\n- **Key Config Options**:\n  - In Ruby on Rails, use `config/application.rb` for global configurations.\n  - In ASP.NET Core, configure settings in `appsettings.json`.",
+    "source": "code_example",
+    "updated_at": 1780704590.662227
+  },
+  "search:anti-patterns:god object anti-pattern refact": {
+    "content": "- Identify the God object in your codebase by searching for classes with many methods and properties.\n- Use refactoring tools like IntelliJ IDEA or Visual Studio Code to assist in breaking down large classes.\n- Apply principles of inheritance, aggregation, and association to create smaller, more focused objects.\n- Follow these steps:\n  - Analyze the responsibilities of the God object.\n  - Break it into multiple classes based on its functionalities.\n  - Ensure each class has a single responsibility (SRP).\n  - Refactor unit tests to reflect the new structure.\n  - Re-run integration tests to ensure no regressions.\n- Use design patterns like Strategy, Decorator, or Adapter to encapsulate behaviors and make them interchangeable.\n- Keep an eye on code complexity metrics like Cyclomatic Complexity and maintain a clean architecture.",
+    "source": "web_search",
+    "updated_at": 1780704598.1264994
+  },
+  "search:anti-patterns:god object anti-pattern refact_ex": {
+    "content": "- **CLI Commands**: Use `dotnet` or `go fmt` to format code.\n- **Latest Versions**: Ensure you use the latest version of .NET and Go for best practices.\n- **Key Config Options**:\n  - For C#: Configure project settings in `.csproj`.\n  - For Golang: Set up environment variables like `GOPATH` and `GOROOT`.",
+    "source": "code_example",
+    "updated_at": 1780704601.581452
+  },
+  "search:anti-patterns:premature optimization anti-pa": {
+    "content": "- **CLI Commands**: Use `gcc -O2` or `clang -O2` for basic optimization.\n- **Latest Versions**: Ensure using the latest compiler and IDE versions for best performance.\n- **Key Config Options**:\n  - `-O3` for higher levels of optimization.\n  - Enable Just-In-Time (JIT) compilation if applicable.\n  - Use profiling tools like `gprof` or `perf` to identify bottlenecks.",
+    "source": "web_search",
+    "updated_at": 1780704608.6434138
+  },
+  "search:anti-patterns:premature optimization anti-pa_ex": {
+    "content": "- **CLI Commands**: Use `git commit -m \"Optimize prematurely\"` to document changes.\n- **Latest Versions**: Ensure using Node.js v18.x for the latest performance improvements.\n- **Key Config Options**: In `.env`, set `OPTIMIZE=false` during development to avoid premature optimizations.",
+    "source": "code_example",
+    "updated_at": 1780704612.7256253
+  },
+  "search:anti-patterns:over-engineering simple soluti": {
+    "content": "- Use `git diff` to compare changes between commits.\n- Update Node.js to the latest LTS version using `nvm install --lts`.\n- Configure ESLint with a simple `.eslintrc.json` file for basic linting rules.\n- Employ `npm audit fix` to automatically fix known vulnerabilities in dependencies.\n- Use `docker-compose up -d` to start services defined in `docker-compose.yml`.\n- Implement unit tests using Jest with the command `npx jest --watchAll`.\n- Configure CI/CD pipelines with GitHub Actions by creating a `.github/workflows/ci.yml` file.\n- Use `npm run build` for building your project, assuming a script is defined in `package.json`.\n- Optimize code complexity by refactoring large functions into smaller, more manageable ones.",
+    "source": "web_search",
+    "updated_at": 1780704619.4703157
+  },
+  "search:anti-patterns:over-engineering simple soluti_ex": {
+    "content": "- **CLI Commands**: `git checkout -b feature/over-engineering`\n- **Latest Versions**: \n  - Node.js v20.5.0\n  - npm 9.3.0\n- **Key Config Options**:\n  - `.eslintrc.json`: Enable rules for clean architecture.\n  - `package.json`: Add scripts for testing and linting.\n  - `.gitignore`: Include node_modules, dist, and build directories.",
+    "source": "code_example",
+    "updated_at": 1780704624.9692702
+  }
+}

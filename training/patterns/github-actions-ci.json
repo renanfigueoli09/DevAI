@@ -1,0 +1,12 @@
+{
+  "search:github-actions+ci:github actions nestjs spring d": {
+    "content": "- Use `actions/cache` action for caching Docker images.\n- Example command to cache Docker layers:\n  ```yaml\n  - name: Cache Docker layers\n    uses: actions/cache@v3\n    with:\n      path: ~/.docker\n      key: ${{ runner.os }}-docker-${{ hashFiles('**/Dockerfile') }}\n      restore-keys: |\n        ${{ runner.os }}-docker-\n  ```\n- Ensure Docker images are built or pulled in the same job.\n- Use `reproducible-containers/buildkit-cache-dance` for advanced caching.\n- Key config options include `path`, `key`, and `restore-keys`.\n- Latest version of `actions/cache` is v3 as of my last update.",
+    "source": "web_search",
+    "updated_at": 1780703497.6134012
+  },
+  "search:github-actions+ci:github actions nestjs spring d_ex": {
+    "content": "- Use `nest new <project-name>` to create a new NestJS project.\n- Install NestJS via npm using `npm install -g @nestjs/cli`.\n- For GitHub Actions, configure `.github/workflows/main.yml` with the following structure:\n  ```yaml\n  name: CI\n\n  on:\n    push:\n      branches: [ main ]\n    pull_request:\n      branches: [ main ]\n\n  jobs:\n    build:\n\n      runs-on: ubuntu-latest\n\n      steps:\n      - uses: actions/checkout@v3\n      - name: Set up Node.js\n        uses: actions/setup-node@v3\n        with:\n          node-version: '16'\n      - run: npm install\n      - run: npm run build --if-present\n  ```\n- For Docker, create a `Dockerfile` in your project root:\n  ```dockerfile\n  # Use an official Node runtime as a parent image\n  FROM node:16\n\n  # Set the working directory in the container\n  WORKDIR /usr/src/app\n\n  # Copy package.json and package-lock.json\n  COPY package*.json ./\n\n  # Install any needed packages specified in package.json\n  RUN npm install\n\n  # Bundle app source inside Docker image\n  COPY . .\n\n  # Make port 3000 available to the world outside this container\n  EXPOSE 3000\n\n  # Define environment variable\n  ENV NAME World\n\n  # Run app.py when the container launches\n  CMD [\"npm\", \"run\", \"start\"]\n  ```\n- For a cache matrix, add `matrix` under jobs in your GitHub Actions workflow:\n  ```yaml\n  strategy:\n    matrix:\n      node-version: [14.x, 16.x]\n  ```\n- Ensure Docker Hub credentials are stored as secrets in your repository settings for automated builds and deployments.",
+    "source": "code_example",
+    "updated_at": 1780703507.5679457
+  }
+}

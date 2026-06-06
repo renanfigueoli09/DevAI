@@ -1,0 +1,12 @@
+{
+  "search:elasticsearch+setup:elasticsearch mapping query ds": {
+    "content": "- **CLI Commands**: Use `curl` or `elasticsearch-cli` for API calls.\n- **Latest Versions**: Elasticsearch 8.x, Node.js v16.x.\n- **Key Config Options**:\n  - `index.mapping.total_fields.limit`: Limits the number of fields in an index.\n  - `search.max_buckets`: Sets the maximum number of buckets allowed in a single aggregation.\n  - `node.attr.data`: Specifies whether a node is used for data storage.",
+    "source": "web_search",
+    "updated_at": 1780703436.826084
+  },
+  "search:elasticsearch+setup:elasticsearch mapping query ds_ex": {
+    "content": "- **CLI Commands**: `npm install elasticsearch`\n- **Latest Version**: Elasticsearch 8.x, Node.js 16.x\n- **Key Config Options**:\n  - `host`: Elasticsearch server URL\n  - `port`: Elasticsearch server port (default: 9200)\n  - `log`: Logging level (e.g., 'trace', 'debug')\n  - `apiVersion`: API version to use",
+    "source": "code_example",
+    "updated_at": 1780703438.6236553
+  }
+}

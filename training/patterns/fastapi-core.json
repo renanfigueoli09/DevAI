@@ -1,0 +1,12 @@
+{
+  "search:fastapi+core:fastapi pydantic v2 depends ba": {
+    "content": "- **Latest Version**: FastAPI 0.115\n- **Key Config Options**:\n  - `BackgroundTasks`\n  - `WebSocket`\n  - `TestClient`\n- **CLI Commands**:\n  - `uvicorn main:app --reload` for development\n  - `pytest` for testing\n- **Important Features**:\n  - Real-time communication with WebSockets\n  - Background tasks execution\n  - Dependency injection for better code organization",
+    "source": "web_search",
+    "updated_at": 1780703293.6217232
+  },
+  "search:fastapi+core:fastapi pydantic v2 depends ba_ex": {
+    "content": "- **GitHub Repository**: [ShardulAswale/Pydantic-Websockets](https://github.com/ShardulAswale/Pydantic-Websockets)\n- **FastAPI Version**: Latest as of my last update, but check the repository for the most current version.\n- **Pydantic Version**: Latest as of my last update, but check the repository for the most current version.\n- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI application with auto-reload during development.\n- **Key Config Options**:\n  - `background_tasks`: Use this in your WebSocket endpoint to handle background tasks asynchronously.\n  - `WebSocketDepends`: Import and use this for dependency injection in WebSocket endpoints.\n\nFor more detailed information, refer to the [FastAPI Reference](https://fastapi.tiangolo.com/) and the specific repository.",
+    "source": "code_example",
+    "updated_at": 1780703297.3606238
+  }
+}

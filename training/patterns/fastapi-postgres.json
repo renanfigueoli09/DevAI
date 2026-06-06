@@ -1,0 +1,12 @@
+{
+  "search:fastapi+postgres:fastapi sqlalchemy 2.0 async m": {
+    "content": "- **Latest Versions**:\n  - FastAPI: 0.98.x\n  - SQLAlchemy: 2.0.x\n  - Alembic: 2.0.x\n\n- **Key Config Options**:\n  - Database URL (e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`)\n  - Async Engine (`engine = create_async_engine(SQLALCHEMY_DATABASE_URL)`)\n  - Session (`AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`)\n\n- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"create table users\"`\n  - `alembic upgrade head`",
+    "source": "web_search",
+    "updated_at": 1780703258.2393172
+  },
+  "search:fastapi+postgres:fastapi sqlalchemy 2.0 async m_ex": {
+    "content": "- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - SQLAlchemy: 2.0.0\n  - Pydantic: 1.10.7\n  - Alembic: 2.0.0\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: Define your database URL.\n  - `async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL)`\n  - `SessionLocal = async_sessionmaker(autocommit=False, autoflush=False, bind=engine)`\n\n- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"create table users\"`\n  - `alembic upgrade head`",
+    "source": "code_example",
+    "updated_at": 1780703261.384051
+  }
+}

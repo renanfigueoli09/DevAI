@@ -1,0 +1,12 @@
+{
+  "search:dotnet+auth:asp.net core jwt addauthentica": {
+    "content": "- Install latest `Microsoft.AspNetCore.Authentication.JwtBearer` via NuGet.\n- Use `AddAuthentication` in `Program.cs`.\n- Configure JWT Bearer authentication with `services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)`.\n- Set `JwtBearerOptions` for token validation, including issuer and audience.\n- Ensure `app.UseAuthentication()` and `app.UseAuthorization()` are called in the pipeline.\n- Use `[Authorize]` attribute on controllers or actions to protect them.\n- Configure OAuth2 by adding `services.AddOAuth(options => { ... })`.\n- Set up OpenID Connect for more secure authentication flows.",
+    "source": "web_search",
+    "updated_at": 1780703354.803367
+  },
+  "search:dotnet+auth:asp.net core jwt addauthentica_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new webapi -n JwtAuthApp`\n  - `dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer`\n  - `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - ASP.NET Core: 7.0\n  - Entity Framework Core: 7.0\n\n- **Key Config Options**:\n  - `appsettings.json`:\n    ```json\n    \"Jwt\": {\n      \"Secret\": \"your_secret_key_here\",\n      \"Issuer\": \"your_issuer\",\n      \"Audience\": \"your_audience\"\n    }\n    ```\n  - `Startup.cs` or `Program.cs` (for .NET 6+):\n    ```csharp\n    services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n        .AddJwtBearer(options =>\n        {\n            options.TokenValidationParameters = new TokenValidationParameters\n            {\n                ValidateIssuer = true,\n                ValidateAudience = true,\n                ValidateLifetime = true,\n                ValidateIssuerSigningKey = true,\n                ValidIssuer = Configuration[\"Jwt:Issuer\"],\n                ValidAudience = Configuration[\"Jwt:Audience\"],\n                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration[\"Jwt:Secret\"]))\n            };\n        });\n    ```",
+    "source": "code_example",
+    "updated_at": 1780703359.6904771
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "search:performance-patterns:nestjs performance optimizatio": {
+    "content": "- **CLI Commands**:\n  - `nest generate module cache`\n  - `nest generate service cache`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Redis: v7.x\n\n- **Key Config Options**:\n  - Use `@CacheInterceptor` for caching responses.\n  - Configure Redis connection in `app.module.ts`.\n  - Implement `ttl` (Time To Live) for cache entries.\n\nExample configuration in `app.module.ts`:\n```typescript\nimport { Module } from '@nestjs/common';\nimport { CacheModule, CACHE_MANAGER } from '@nestjs/common';\nimport * as redisStore from 'cache-manager-redis-store';\n\n@Module({\n  imports: [\n    CacheModule.register({\n      store: redisStore,\n      host: 'localhost',\n      port: 6379,\n      ttl: 60, // seconds\n    }),\n  ],\n})\nexport class AppModule {}\n```\n\nExample usage in a service:\n```typescript\nimport { Injectable } from '@nestjs/common';\nimport { CacheInterceptor, UseInterceptors } from '@nestjs/common';\n\n@Injectable()\nexport class DataService {\n  @UseInterceptors(CacheInterceptor)\n  async fetchData() {\n    // Fetch data logic here\n  }\n}\n```\n\n- **Optimization Tips**:\n  - Implement caching for frequently accessed data.\n  - Optimize database queries using indexing and pagination.\n  - Use lazy loading for non-critical resources.",
+    "source": "web_search",
+    "updated_at": 1780704093.4706864
+  },
+  "search:performance-patterns:nestjs performance optimizatio_ex": {
+    "content": "- **CLI Commands**:\n  - `nest g interceptor cache`: Generates an interceptor for caching.\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/common: v10.x\n  - @nestjs/core: v10.x\n  \n- **Key Config Options**:\n  - Use `@CacheInterceptor` to apply caching globally or selectively.\n  - Configure cache expiration times using the `ttl` option in the interceptor.\n  - Implement custom cache keys for more granular control over what gets cached.",
+    "source": "code_example",
+    "updated_at": 1780704099.284019
+  },
+  "search:performance-patterns:database query optimization n+": {
+    "content": "- Use `EXPLAIN` to analyze query performance.\n- Implement indexing on frequently queried columns.\n- Avoid N+1 queries by using JOINs or eager loading.\n- Utilize connection pooling for efficient database connections.\n- Consider caching frequently accessed data.\n- Optimize pagination with cursors or keys.",
+    "source": "web_search",
+    "updated_at": 1780704106.0941274
+  },
+  "search:performance-patterns:database query optimization n+_ex": {
+    "content": "- **CLI Commands**:\n  - `php artisan tinker`: For interactive testing and debugging.\n  - `composer require laravel/ui`: To install Laravel UI package for authentication scaffolding.\n\n- **Latest Versions**:\n  - Laravel: Version 10.x (as of Sep 2025).\n  - PHP: Version 8.2 (recommended).\n\n- **Key Config Options**:\n  - `config/database.php`: Configure database connections.\n  - `.env` file: Set environment variables like DB_CONNECTION, DB_HOST, etc.\n\n- **Best Practices**:\n  - Use Eloquent relationships to avoid N+1 queries.\n  - Implement eager loading with `with()` method.\n  - Utilize query scopes for complex queries.\n  - Optimize database indexes for faster data retrieval.",
+    "source": "code_example",
+    "updated_at": 1780704111.2782612
+  },
+  "search:performance-patterns:async concurrency patterns nod": {
+    "content": "- **CLI Commands**: Use `node --version` to check Node.js version.\n- **Latest Versions**: Ensure you are using the latest LTS version of Node.js for optimal performance and security.\n- **Key Config Options**:\n  - For async/await, use `async` functions and `await` expressions within them.\n  - Implement error handling with try-catch blocks around asynchronous operations.\n  - Use `Promise.all()` to run multiple promises concurrently and wait for all of them to resolve.\n  - Consider using `async_hooks` for diagnostics in Node.js applications.\n- **Tools**:\n  - Visual Studio Code with async debugger for debugging Node.js applications.\n  - Mocha for testing asynchronous code effectively.",
+    "source": "web_search",
+    "updated_at": 1780704119.783217
+  },
+  "search:performance-patterns:async concurrency patterns nod_ex": {
+    "content": "- **CLI Commands**: `node --version` to check Node.js version; `npm install -g n` to update Node.js.\n- **Latest Version**: Node.js v18+ recommended for advanced async/await features.\n- **Key Config Options**:\n  - Use `async/await` for cleaner, more readable asynchronous code.\n  - Implement error handling with `try/catch` blocks around `await` statements.\n  - Utilize `Promise.all()` to handle multiple concurrent promises efficiently.",
+    "source": "code_example",
+    "updated_at": 1780704125.2401624
+  },
+  "search:performance-patterns:pagination cursor-based offset": {
+    "content": "- Use `curl` or Postman for testing API endpoints.\n- For cursor-based pagination, ensure the endpoint returns a unique identifier (cursor) for each page.\n- Implement error handling to manage cases where the cursor is invalid or expired.\n- Consider using libraries like `axios` in JavaScript for making HTTP requests with pagination support.\n- Set the maximum number of records per page (`limit`) to optimize performance and reduce load times.\n- Regularly update your API documentation to reflect changes in pagination methods.\n- Monitor API usage metrics to identify potential issues with pagination logic.\n- Use environment variables to manage configuration options like `API_URL`, `LIMIT`, and `CURSOR`.\n- Implement rate limiting on the server side to prevent abuse of pagination features.",
+    "source": "web_search",
+    "updated_at": 1780704131.8831654
+  },
+  "search:performance-patterns:pagination cursor-based offset_ex": {
+    "content": "- **CLI Commands**: Use `curl` or Postman to test API endpoints.\n- **Latest Versions**: Ensure using the latest version of your programming language and libraries.\n- **Key Config Options**:\n  - For cursor-based pagination, use a unique identifier from the last item of the previous page as the cursor.\n  - Set appropriate headers for authentication and content type.\n  - Implement error handling for cases where the cursor is invalid or expired.",
+    "source": "code_example",
+    "updated_at": 1780704136.5553606
+  },
+  "search:performance-patterns:lazy loading eager loading str": {
+    "content": "- **CLI Commands**: Use `dotnet ef dbcontext scaffold` for database context generation.\n- **Latest Versions**: EF Core 7.0 introduced improvements in lazy loading and performance enhancements.\n- **Key Config Options**:\n  - `LazyLoadingEnabled`: Enables or disables lazy loading globally.\n  - `AsNoTracking()`: Disables change tracking, useful for read-only operations.\n  - `Include()`: Explicitly loads related data when querying.",
+    "source": "web_search",
+    "updated_at": 1780704142.2167473
+  },
+  "search:performance-patterns:lazy loading eager loading str_ex": {
+    "content": "- **Eager Loading**: Use `Include()` method in Entity Framework Core to load related data.\n- **Lazy Loading**: Enable lazy loading by setting `LazyLoadingEnabled` to true in your DbContext configuration.\n- **Latest Version of EF Core**: As of my last update, the latest version is 7.0, released on June 27, 2025.\n- **Key Config Options**:\n  - For eager loading: `dbSet.Include(\"RelatedEntity\")`\n  - For lazy loading: `optionsBuilder.UseLazyLoadingProxies()`\n- **CLI Commands**: \n  - Update EF Core tools: `dotnet tool update --global dotnet-ef`\n  - Add migration: `dotnet ef migrations add InitialCreate`\n  - Apply migration: `dotnet ef database update`",
+    "source": "code_example",
+    "updated_at": 1780704146.7054808
+  },
+  "search:performance-patterns:connection pooling database pe": {
+    "content": "- **CLI Commands**: Use `npm install pg-pool` to install PostgreSQL connection pooling.\n- **Latest Versions**: Ensure using the latest version of libraries like `pg-pool` and `django-db-connection-pool`.\n- **Key Config Options**:\n  - For Node.js (`pg-pool`): Set `max`, `min`, and `idleTimeoutMillis`.\n  - For Django: Configure `DATABASES['default']['OPTIONS']` with `pool_size` and `max_overflow`.",
+    "source": "web_search",
+    "updated_at": 1780704152.5191615
+  },
+  "search:performance-patterns:connection pooling database pe_ex": {
+    "content": "- **CLI Commands**: Use `db-pool-cli create --size=3 --timeout=5s` to initialize a connection pool.\n- **Latest Versions**: Ensure using the latest version of your database driver and connection pooling library.\n- **Key Config Options**:\n  - `pool_size`: Number of connections in the pool (e.g., `3`).\n  - `idle_timeout`: Time after which an idle connection is closed (e.g., `5s`).\n  - `max_lifetime`: Maximum lifetime of a connection before it's closed (if supported by your library).",
+    "source": "code_example",
+    "updated_at": 1780704157.7979927
+  }
+}

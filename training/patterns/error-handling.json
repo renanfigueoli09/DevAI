@@ -1,0 +1,62 @@
+{
+  "search:error-handling:error handling strategy nestjs": {
+    "content": "- **CLI Commands**:\n  - `nest generate filter <filter-name>` to create a new global exception filter.\n  \n- **Latest Versions**:\n  - NestJS: As of my last update, the latest stable version is 9.x.\n\n- **Key Config Options**:\n  - In `main.ts`, use `app.useGlobalFilters(new AllExceptionsFilter());` to apply a global exception filter.\n  - Define custom filters by extending `BaseExceptionFilter` and overriding the `catch` method.",
+    "source": "web_search",
+    "updated_at": 1780704163.6706598
+  },
+  "search:error-handling:error handling strategy nestjs_ex": {
+    "content": "- Use `nest generate filter <filter-name>` to create a new global exception filter.\n- Apply the filter globally by adding it to the `app.module.ts` file under `providers`.\n- Implement the `ExceptionFilter` interface in your custom filter class.\n- Utilize decorators like `@Catch()` to specify which exceptions the filter should handle.\n- Configure logging within the filter for better error tracking and debugging.\n- Ensure that the filter returns a structured response with appropriate HTTP status codes and messages.",
+    "source": "code_example",
+    "updated_at": 1780704169.206193
+  },
+  "search:error-handling:exception hierarchy domain err": {
+    "content": "- **CLI Commands**: Use `domain-exception-hierarchy` to build robust error hierarchies.\n- **Latest Version**: Not specified in the search results.\n- **Key Config Options**: None explicitly mentioned, but consider using a structured approach for error handling and validation within your domain model.",
+    "source": "web_search",
+    "updated_at": 1780704175.6410108
+  },
+  "search:error-handling:exception hierarchy domain err_ex": {
+    "content": "- Use `try/catch/finally` blocks in .NET to handle exceptions.\n- Implement domain-specific exceptions in Hexagonal Architecture for better separation of concerns.\n- Catch and handle exceptions in web packages to send appropriate HTTP error codes.\n- Avoid catching errors; they should not be handled by application code.",
+    "source": "code_example",
+    "updated_at": 1780704188.7426143
+  },
+  "search:error-handling:error logging structured winst": {
+    "content": "- **Install Pino**: `npm install pino`\n- **Install Winston**: `npm install winston`\n- **Pino Configuration**:\n  - Use `pino({ level: 'info' })` for setting the log level.\n  - Configure serializers with `pino.stdSerializers`.\n- **Winston Configuration**:\n  - Set up a logger with `const logger = winston.createLogger({...})`.\n  - Define transports like console or file using `winston.transports`.\n  - Use `format.json()` for structured logs.\n- **Key Config Options**:\n  - Pino: `level`, `serializers`, `redact`\n  - Winston: `level`, `transports`, `format`\n- **Performance Optimization**:\n  - Pino is known for its speed, especially with `pino-http`.\n  - Use child loggers in Pino for context-specific logging.\n- **GitHub Example**: Refer to #137 for practical implementation details.",
+    "source": "web_search",
+    "updated_at": 1780704199.041507
+  },
+  "search:error-handling:error logging structured winst_ex": {
+    "content": "- **Pino**: Fast and lightweight Node.js logger.\n  - Install: `npm install pino`\n  - Example usage: \n    ```javascript\n    const pino = require('pino');\n    const logger = pino();\n    logger.info('This is an info message');\n    ```\n  - Key config options:\n    - `level`: Set the logging level (e.g., 'info', 'debug').\n    - `transport`: Configure transport options for output.\n\n- **Winston**: Flexible and configurable Node.js logger.\n  - Install: `npm install winston`\n  - Example usage:\n    ```javascript\n    const winston = require('winston');\n    const logger = winston.createLogger({\n      level: 'info',\n      format: winston.format.json(),\n      transports: [\n        new winston.transports.File({ filename: 'combined.log' }),\n        new winston.transports.Console()\n      ]\n    });\n    logger.info('This is an info message');\n    ```\n  - Key config options:\n    - `level`: Set the logging level.\n    - `format`: Define log format (e.g., JSON, simple).\n    - `transports`: Specify where logs should be output (e.g., file, console).\n\n- **Bunyan**: Structured and fast Node.js logger.\n  - Install: `npm install bunyan`\n  - Example usage:\n    ```javascript\n    const bunyan = require('bunyan');\n    const log = bunyan.createLogger({\n      name: 'myapp',\n      streams: [\n        {\n          level: 'info',\n          path: '/var/log/myapp.log'\n        }\n      ]\n    });\n    log.info('This is an info message');\n    ```\n  - Key config options:\n    - `name`: Application name.\n    - `streams`: Define output streams (e.g., file, console).\n    - `level`: Set the logging level.",
+    "source": "code_example",
+    "updated_at": 1780704212.4140036
+  },
+  "search:error-handling:retry pattern exponential back": {
+    "content": "- **CLI Commands**: Use `aws s3 cp` for copying files to S3, and specify the retry pattern using `--retry-mode standard`.\n- **Latest Versions**: AWS CLI version 2.7.45, Python version 3.11.\n- **Key Config Options**:\n  - In AWS SDKs, set `max_attempts` in client configuration for retries.\n  - Use `backoff_factor` and `total_time` in exponential backoff libraries like `tenacity`.",
+    "source": "web_search",
+    "updated_at": 1780704218.717487
+  },
+  "search:error-handling:retry pattern exponential back_ex": {
+    "content": "- **CLI Commands**: Use `aws s3 cp` with `--retry-mode standard` for AWS S3 operations.\n- **Latest Versions**: Ensure using the latest SDKs and libraries to support exponential backoff, such as Boto3 for Python.\n- **Key Config Options**:\n  - **Exponential Backoff**: Implement exponential backoff in your code using libraries like `tenacity` or `retrying`.\n  - **Jitter**: Add jitter to avoid thundering herd problems with `backoff.jitter()`.\n  - **Base Delay**: Start with a base delay of 1-2 seconds for rate limit errors (HTTP 429).\n  - **Max Retries**: Set a reasonable maximum number of retries, typically between 5 and 10 attempts.",
+    "source": "code_example",
+    "updated_at": 1780704223.7091248
+  },
+  "search:error-handling:circuit breaker pattern implem": {
+    "content": "- **CLI Commands**:\n  - `az architecture circuit-breaker create --name <circuitBreakerName> --resource-group <resourceGroup>`\n  - `pybreaker CircuitBreaker`\n\n- **Latest Versions**:\n  - Azure Architecture Center: Not specified in the search results.\n  - System Design: Not specified in the search results.\n  - Medium Guide: Not specified in the search results.\n  - PyPI (PyBreaker): Version 0.12.0\n\n- **Key Config Options**:\n  - `max_tries`: Maximum number of attempts before opening the circuit.\n  - `reset_timeout`: Time to wait before attempting to close the circuit again.\n  - `fail_ratio`: Ratio of failures that will trigger the circuit breaker.\n  - `state_change_callback`: Callback function for state changes.",
+    "source": "web_search",
+    "updated_at": 1780704233.356894
+  },
+  "search:error-handling:circuit breaker pattern implem_ex": {
+    "content": "- **CLI Commands**: Use `dotnet add package Polly` to install the latest version of Polly.\n- **Latest Version**: As of my last update, the latest stable version is 7.3.1. Check [NuGet](https://www.nuget.org/packages/Polly/) for the most current version.\n- **Key Config Options**:\n  - `CircuitBreakerPolicy`: Defines how to handle failures and open/closed states.\n  - `ExecuteAsync<T>`: Executes an action or function, handling circuit breaker logic.\n  - `IsOpen`: Checks if the circuit is currently open.\n  - `ResetAfter`: Specifies when the circuit should be reset after being open.",
+    "source": "code_example",
+    "updated_at": 1780704238.8782752
+  },
+  "search:error-handling:validation error response form": {
+    "content": "- Use `dotnet add package Microsoft.AspNetCore.Mvc.ProblemDetails` to install the necessary NuGet package.\n- Configure Problem Details in your `Startup.cs` or `Program.cs`:\n  ```csharp\n  services.AddControllers().AddProblemDetails(options =>\n  {\n      options.IncludeExceptionDetails = (ctx, ex) => ctx.Environment.IsDevelopment();\n  });\n  ```\n- Handle validation errors using `ValidationProblemDetailsFactory`:\n  ```csharp\n  [ApiController]\n  public class MyController : ControllerBase\n  {\n      private readonly ValidationProblemDetailsFactory _problemDetailsFactory;\n\n      public MyController(ValidationProblemDetailsFactory problemDetailsFactory)\n      {\n          _problemDetailsFactory = problemDetailsFactory;\n      }\n\n      [HttpPost(\"validate\")]\n      public IActionResult Validate([FromBody] MyModel model)\n      {\n          if (!ModelState.IsValid)\n              return new BadRequestObjectResult(_problemDetailsFactory.CreateValidationProblemDetails(HttpContext, ModelState));\n          \n          // Proceed with valid data\n          return Ok();\n      }\n  }\n  ```\n- Ensure your API responses are in a machine-readable format as per RFC 7807.",
+    "source": "web_search",
+    "updated_at": 1780704246.8820398
+  },
+  "search:error-handling:validation error response form_ex": {
+    "content": "- Use `dotnet add package problem-spring-web` to install the necessary package.\n- Ensure your project targets .NET Core 3.1 or later for full support of RFC 7807.\n- Configure error handling in `Startup.cs` by adding middleware:\n  ```csharp\n  app.UseProblemDetails();\n  ```\n- Define custom problem details classes if needed, inheriting from `ValidationProblemDetails`.\n- Use `[ApiController]` and `[Route(\"api/[controller]\")]\n` attributes on your controllers to enable automatic validation.\n- Handle specific exceptions using `try-catch` blocks or middleware for more granular control over error responses.",
+    "source": "code_example",
+    "updated_at": 1780704251.8063107
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:fastapi+sqlalchemy:fastapi sqlalchemy orm crud 20": {
+    "content": "- **CLI Commands**: Use `pip install fastapi sqlalchemy databases` to install necessary packages.\n- **Latest Versions**: FastAPI v0.95.0, SQLAlchemy v2.0.0, Databases v1.0.0.\n- **Key Config Options**:\n  - Define models using SQLAlchemy ORM.\n  - Create a database engine with `create_engine(\"sqlite:///./test.db\")`.\n  - Use `SessionLocal` for dependency injection.\n  - Define routes in FastAPI to handle CRUD operations.\n  - Utilize Pydantic models for data validation and serialization.",
+    "source": "web_search",
+    "updated_at": 1780704655.577813
+  },
+  "search:fastapi+sqlalchemy:fastapi sqlalchemy orm crud 20_ex": {
+    "content": "- Clone the FastAPI SQLAlchemy CRUD source code from https://github.com/wpcodevo/fastapi_sqlalchemy.\n- Use an IDE to open the project.\n- Install FastAPI and SQLAlchemy using pip:\n  ```bash\n  pip install fastapi sqlalchemy\n  ```\n- For async support, use `fastapi[all]` instead of `fastapi`.\n- Key config options include database URL in `settings.py`, model definitions in `models.py`, and CRUD operations in `crud.py`.\n- FastAPI Quick CRUD is available on PyPI with the latest version being 1.4.23.\n- fastapi-crud-code-generator can be installed via pip:\n  ```bash\n  pip install fastapi-crud-code-generator\n  ```\n- For generating code, use the command:\n  ```bash\n  fastapi-crud-code-generator --database-url <your-database-url> --output-dir ./generated_code\n  ```",
+    "source": "code_example",
+    "updated_at": 1780704659.073537
+  },
+  "search:fastapi+sqlalchemy:sqlalchemy with fastapi 2025": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init <dir>`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: Define the connection string in `settings.py`.\n  - Dependency Injection: Use `Depends` for managing database sessions.\n  - Migrations: Configure Alembic with `alembic.ini` and use `alembic init <dir>` to set up migrations.",
+    "source": "web_search",
+    "updated_at": 1780704666.1024177
+  },
+  "search:fastapi+sqlalchemy:sqlalchemy with fastapi 2025_ex": {
+    "content": "- Use `fastapi-sqlalchemy` for FastAPI and SQLAlchemy integration.\n- Install dependencies with `pip install fastapi sqlalchemy databases[aiosqlite]`.\n- Create a FastAPI app instance (`app = FastAPI()`).\n- Define your database models using SQLAlchemy ORM.\n- Configure the database URL in your settings (e.g., `SQLALCHEMY_DATABASE_URL = \"sqlite:///./test.db\"`).\n- Use Pydantic models for data validation and schema definition.\n- Implement CRUD operations using SQLAlchemy's session API.\n- Run the FastAPI app with `uvicorn main:app --reload`.\n- For production, use a WSGI server like Gunicorn (`gunicorn -w 4 main:app`).\n- Ensure asynchronous patterns are used for database operations.",
+    "source": "code_example",
+    "updated_at": 1780704679.907624
+  }
+}

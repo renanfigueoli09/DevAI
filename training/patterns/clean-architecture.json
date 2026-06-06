@@ -1,0 +1,52 @@
+{
+  "search:clean-architecture:clean architecture backend nes": {
+    "content": "- **FastAPI**:\n  - CLI: `pip install fastapi`\n  - Latest Version: Check [PyPI](https://pypi.org/project/fastapi/)\n  - Key Config Options: `app = FastAPI()`, `uvicorn.run(app, host=\"0.0.0.0\", port=8000)`\n\n- **NestJS**:\n  - CLI: `npm install -g @nestjs/cli`\n  - Latest Version: Check [NestJS](https://docs.nestjs.com/)\n  - Key Config Options: `nest new project-name`, `app.module.ts` for module configuration\n\n- **Spring Boot**:\n  - CLI: `mvn spring-boot:run`\n  - Latest Version: Check [Maven Central](https://search.maven.org/artifact/org.springframework.boot/spring-boot-starter-parent)\n  - Key Config Options: `application.properties`, `@SpringBootApplication`\n\n- **Django**:\n  - CLI: `django-admin startproject project-name`\n  - Latest Version: Check [Django](https://www.djangoproject.com/)\n  - Key Config Options: `settings.py`, `urls.py`\n\n- **Express.js**:\n  - CLI: `npm install express`\n  - Latest Version: Check [NPM](https://www.npmjs.com/package/express)\n  - Key Config Options: `const app = express()`, `app.listen(3000, () => {})`",
+    "source": "web_search",
+    "updated_at": 1780703606.6064417
+  },
+  "search:clean-architecture:clean architecture backend nes_ex": {
+    "content": "- **FastAPI**:\n  - Latest version: v0.95.0\n  - CLI command to create a new project: `fastapi create`\n  \n- **NestJS**:\n  - Latest version: v10.2.3\n  - CLI command to create a new project: `nest new <project-name>`\n  - Key config options in `app.module.ts`:\n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { AppController } from './app.controller';\n    import { AppService } from './app.service';\n\n    @Module({\n      imports: [],\n      controllers: [AppController],\n      providers: [AppService],\n    })\n    export class AppModule {}\n    ```\n\n- **Clean Architecture**:\n  - Key layers in Clean Architecture (from outer to inner):\n    1. Presentation Layer\n    2. Application Services Layer\n    3. Domain Layer\n    4. Infrastructure Layer",
+    "source": "code_example",
+    "updated_at": 1780703613.1057105
+  },
+  "search:clean-architecture:solid principles typescript ne": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate module module-name`\n  - `nest generate controller controller-name`\n  - `nest generate service service-name`\n\n- **Latest Versions**:\n  - NestJS: v10.x (as of my last update)\n  - TypeScript: v4.x\n\n- **Key Config Options**:\n  - `app.module.ts`: Entry point for the application.\n  - `main.ts`: Bootstraps the application.\n  - `controllers/`: Define endpoints and handle incoming requests.\n  - `services/`: Implement business logic.\n  - `providers/`: Dependency injection container.\n  - `config/`: Configuration files for environment-specific settings.",
+    "source": "web_search",
+    "updated_at": 1780703620.3440673
+  },
+  "search:clean-architecture:solid principles typescript ne_ex": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate service service-name`\n  - `nest generate controller controller-name`\n\n- **Latest Versions**:\n  - NestJS: 9.x\n  - TypeScript: 4.x\n\n- **Key Config Options**:\n  - `app.module.ts`: Define application modules.\n  - `service.ts`: Implement business logic.\n  - `controller.ts`: Handle HTTP requests.\n  - `module.ts`: Organize related components.",
+    "source": "code_example",
+    "updated_at": 1780703624.3983102
+  },
+  "search:clean-architecture:dry yagni kiss principles code": {
+    "content": "- **CLI Commands**: Use `dotnet new console -n MyApp` to create a new .NET console application.\n- **Latest Versions**: Ensure you are using the latest version of .NET by running `dotnet --version`.\n- **Key Config Options**:\n  - DRY (Don't Repeat Yourself): Avoid code duplication. For example, use methods or classes to encapsulate repeated logic.\n  - YAGNI (You Aren't Gonna Need It): Only implement features that are currently required. Avoid over-engineering.\n  - KISS (Keep It Simple, Stupid): Write simple and understandable code. Avoid unnecessary complexity.",
+    "source": "web_search",
+    "updated_at": 1780703633.5937233
+  },
+  "search:clean-architecture:dry yagni kiss principles code_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev eslint`\n  - `npx create-react-app my-app`\n\n- **Latest Versions**:\n  - Node.js v18.14.2\n  - React v18.2.0\n\n- **Key Config Options**:\n  - ESLint: `.eslintrc.json` for custom rules\n  - Create React App: `package.json` for project settings",
+    "source": "code_example",
+    "updated_at": 1780703640.4967961
+  },
+  "search:clean-architecture:dependency injection inversion": {
+    "content": "- **CLI Commands**: Use `dotnet add package Microsoft.Extensions.DependencyInjection` to install the latest version of the ASP.NET Core Dependency Injection library.\n- **Latest Versions**: Check [NuGet](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/) for the most recent version.\n- **Key Config Options**:\n  - `services.AddTransient<TService, TImplementation>()`: Registers a service as transient.\n  - `services.AddScoped<TService, TImplementation>()`: Registers a service as scoped.\n  - `services.AddSingleton<TService, TImplementation>()`: Registers a service as singleton.",
+    "source": "web_search",
+    "updated_at": 1780703651.1930678
+  },
+  "search:clean-architecture:dependency injection inversion_ex": {
+    "content": "- Use `npm install inversify` to install InversifyJS, a popular IoC container for TypeScript.\n- Initialize an InversifyJS container using `const myContainer = new Container();`.\n- Register services with the container using `myContainer.bind<IService>(TYPES.IService).to(MyService);`.\n- Resolve dependencies in your classes using `@inject(TYPES.IService) private service: IService;`.\n- For Spring, use `@Autowired` to inject dependencies.\n- Use `@ComponentScan` to scan for components and enable dependency injection.\n- Configure the application context with XML or Java annotations.\n- Update your IDE's settings to support TypeScript and InversifyJS for better code completion and linting.",
+    "source": "code_example",
+    "updated_at": 1780703659.7228494
+  },
+  "search:clean-architecture:separation of concerns layered": {
+    "content": "- **CLI Commands:** Use `mvn clean install` to build your project.\n- **Latest Versions:** Ensure you are using the latest version of Maven by checking [Maven's official website](https://maven.apache.org/download.cgi).\n- **Key Config Options:** Configure your `pom.xml` for layered architecture, specifying dependencies and plugins appropriately.",
+    "source": "web_search",
+    "updated_at": 1780703668.590973
+  },
+  "search:clean-architecture:separation of concerns layered_ex": {
+    "content": "- **CLI Commands**: `npm install express` for setting up an API layer.\n- **Latest Versions**: Node.js v18.x, Express v4.18.x.\n- **Key Config Options**:\n  - In Express: `app.set('port', process.env.PORT || 3000);`\n  - For testing with Jest: `\"test\": \"jest\"` in `package.json`.\n- **Separation of Concerns**: Implement interfaces for services and repositories to decouple logic.\n- **Layered Architecture**:\n  - API Layer: Handles HTTP requests/responses, input validation, routing.\n  - Controller Layer: Coordinates between the API and service layers.",
+    "source": "code_example",
+    "updated_at": 1780703674.652858
+  }
+}

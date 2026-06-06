@@ -1,0 +1,12 @@
+{
+  "search:azure-devops:azure devops pipelines task do": {
+    "content": "- Use `az acr login --name <your-acr-name>` to log in to your Azure Container Registry.\n- For Docker build, use the command: `docker build -t <your-image-name>:<tag> .`\n- Push Docker image with: `docker push <your-acr-name>.azurecr.io/<your-image-name>:<tag>`\n- In Azure DevOps pipeline YAML, specify Docker task as follows:\n  ```yaml\n  - task: Docker@2\n    inputs:\n      containerRegistry: '<your-container-registry>'\n      repository: '<repository-name>'\n      command: 'buildAndPush'\n      tags: '$(Build.BuildId)'\n  ```\n- Ensure your Azure DevOps agent has the necessary permissions to access and push to your ACR.\n- Use `az acr build` for building Docker images directly in Azure, which can simplify pipeline steps.",
+    "source": "web_search",
+    "updated_at": 1780703522.3678892
+  },
+  "search:azure-devops:azure devops pipelines task do_ex": {
+    "content": "- Use `az acr build --image <your-image-name> .` to build and push Docker images to Azure Container Registry.\n- Configure the pipeline YAML file with steps for building, pushing, and deploying Docker images.\n- Key config options include `acrName`, `dockerfilePath`, and `context`.\n- Ensure you have the latest version of Azure CLI installed (`az --version`) for compatibility.\n- Use `az webapp deployment container config` to configure a Web App for Container.\n- For deploying to a specific slot, use `--slot <slot-name>` in the deployment command.",
+    "source": "code_example",
+    "updated_at": 1780703524.7189374
+  }
+}

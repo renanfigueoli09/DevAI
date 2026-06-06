@@ -1,0 +1,12 @@
+{
+  "search:spring+auth:spring security 6 jwt security": {
+    "content": "- **Latest Versions**: Spring Security 6, Spring Boot 3\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `java -jar target/your-application.jar` to run the application.\n- **Key Config Options**:\n  - JWT Token Creation: Use `JwtEncoder` and `JwtDecoder`.\n  - SecurityFilterChain Configuration: Define custom filters in `SecurityFilterChain`.\n  - @PreAuthorize Usage: Annotate methods with `@PreAuthorize(\"expression\")` for method-level security.",
+    "source": "web_search",
+    "updated_at": 1780703230.8084757
+  },
+  "search:spring+auth:spring security 6 jwt security_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot 3.0.x\n  - Spring Security 6.0.x\n\n- **Key Config Options**:\n  - `@EnableWebSecurity` to enable web security configuration.\n  - `@PreAuthorize(\"hasRole('ROLE_ADMIN')\")` for method-level authorization.\n  - `securityFilterChain` bean for defining security settings and rules.\n  - JWT (JSON Web Token) for stateless authentication.",
+    "source": "code_example",
+    "updated_at": 1780703233.1612687
+  }
+}

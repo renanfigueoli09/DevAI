@@ -1,0 +1,62 @@
+{
+  "search:testing-patterns:unit testing nestjs jest mock ": {
+    "content": "- Use `nest generate service <service-name>` to create a new service.\n- Install Jest and NestJS testing utilities via npm or yarn:\n  ```bash\n  npm install --save-dev jest @nestjs/testing\n  ```\n- Configure Jest in your project by creating a `jest.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    preset: '@nestjs/jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Use `describe`, `it`, and `expect` to write tests. For example:\n  ```typescript\n  import { Test, TestingModule } from '@nestjs/testing';\n  import { MyService } from './my.service';\n\n  describe('MyService', () => {\n    let service: MyService;\n\n    beforeEach(async () => {\n      const module: TestingModule = await Test.createTestingModule({\n        providers: [MyService],\n      }).compile();\n\n      service = module.get<MyService>(MyService);\n    });\n\n    it('should be defined', () => {\n      expect(service).toBeDefined();\n    });\n  });\n  ```\n- Mock services using `jest.mock()` or the NestJS testing utilities:\n  ```typescript\n  import { MyService } from './my.service';\n  import { AnotherService } from '../another/another.service';\n\n  describe('MyService', () => {\n    let service: MyService;\n    let anotherServiceMock: jest.Mocked<AnotherService>;\n\n    beforeEach(async () => {\n      anotherServiceMock = {\n        someMethod: jest.fn(),\n      };\n\n      const module: TestingModule = await Test.createTestingModule({\n        providers: [\n          MyService,\n          { provide: AnotherService, useValue: anotherServiceMock },\n        ],\n      }).compile();\n\n      service = module.get<MyService>(MyService);\n    });\n\n    it('should call another service method', () => {\n      service.someMethod();\n      expect(anotherServiceMock.someMethod).toHaveBeenCalled();\n    });\n  });\n  ```\n- Run tests with `npm test` or `yarn test`.\n- Ensure your `package.json` includes a script for testing:\n  ```json\n  \"scripts\": {\n    \"test\": \"jest\"\n  }\n  ```\n- For the latest versions, check the [NestJS documentation](https://docs.nestjs.com/) and [Jest documentation](https://jestjs.io/).",
+    "source": "web_search",
+    "updated_at": 1780703985.3396149
+  },
+  "search:testing-patterns:unit testing nestjs jest mock _ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate service <service-name>` to create a new service.\n  - `nest test` to run tests.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Jest: v29.x\n\n- **Key Config Options**:\n  - Use `jest-mock` for mocking in unit tests.\n  - Configure `test/jest-e2e.json` for end-to-end testing settings.",
+    "source": "code_example",
+    "updated_at": 1780703991.3108711
+  },
+  "search:testing-patterns:integration testing nestjs sup": {
+    "content": "- **CLI Commands**:\n  - `nest generate controller <name>` to create a new controller.\n  - `nest generate service <name>` to create a new service.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - Use `Test.createTestingModule` for setting up the testing module.\n  - Configure `imports`, `controllers`, and `providers`.\n  - Utilize `useFactory` for dynamic provider creation.",
+    "source": "web_search",
+    "updated_at": 1780703997.5583577
+  },
+  "search:testing-patterns:integration testing nestjs sup_ex": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save-dev @nestjs/testing supertest`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - Use `Test.createTestingModule()` for creating test modules.\n  - Configure `imports`, `controllers`, and `providers` in the testing module.\n  - Utilize `done()` callback or async/await for handling asynchronous operations.",
+    "source": "code_example",
+    "updated_at": 1780704002.3623528
+  },
+  "search:testing-patterns:unit testing spring boot junit": {
+    "content": "- **CLI Commands**:\n  - `mvn clean test` to run tests.\n  - `mvn dependency:tree` to check dependencies.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - JUnit 5: 5.9.1\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `spring.test.annotation.excludeFilters`: To exclude specific test classes.\n  - `spring.test.annotation.includeFilters`: To include specific test classes.\n  - `spring.main.allow-bean-definition-overriding=true`: To allow bean definition overriding in tests.",
+    "source": "web_search",
+    "updated_at": 1780704010.2475398
+  },
+  "search:testing-patterns:unit testing spring boot junit_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn test` to run tests.\n  - `mvn clean install` for a full build and test.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - JUnit: 5.x\n  - Mockito: 4.x\n\n- **Key Config Options**:\n  - `@SpringBootTest`: For loading the entire application context.\n  - `@MockBean`: To create a mock bean for dependency injection.\n  - `@WebMvcTest`: For testing controllers without starting the full application context.",
+    "source": "code_example",
+    "updated_at": 1780704015.042732
+  },
+  "search:testing-patterns:fastapi pytest async testing f": {
+    "content": "- Use `pytest` version 7.x or later.\n- Install `pytest-asyncio` using `pip install pytest-asyncio`.\n- Create an async fixture for your tests, e.g.,:\n  ```python\n  import pytest\n  from sqlalchemy.ext.asyncio import AsyncSession\n\n  @pytest.fixture(scope=\"module\")\n  async def async_session() -> AsyncSession:\n      # Setup and teardown logic here\n      session = AsyncSession()\n      yield session\n      await session.close()\n  ```\n- Use `async` functions for your test cases, e.g.,:\n  ```python\n  import pytest\n\n  @pytest.mark.asyncio\n  async def test_endpoint(async_session):\n      # Test code here\n      pass\n  ```\n- Configure `pytest.ini` or `tox.ini` to include asyncio support:\n  ```ini\n  [pytest]\n  addopts = --asyncio-mode=auto\n  ```\n- Use `pytest.mark.asyncio` to mark your test functions as asynchronous.\n- Ensure your FastAPI application is compatible with async operations.",
+    "source": "web_search",
+    "updated_at": 1780704024.1950805
+  },
+  "search:testing-patterns:fastapi pytest async testing f_ex": {
+    "content": "- Use `pytest-asyncio` for asynchronous testing.\n- Install via pip: `pip install pytest-asyncio`.\n- Create async fixtures using `@pytest.fixture` with `scope='async'`.\n- Example fixture:\n  ```python\n  import pytest\n  from fastapi.testclient import TestClient\n\n  @pytest.fixture(scope=\"module\")\n  async def client():\n      app = create_app()  # Your FastAPI application\n      async with TestClient(app) as client:\n          yield client\n  ```\n- Run tests: `pytest --asyncio-mode=auto`.\n- Key config options in `pytest.ini`:\n  ```ini\n  [pytest]\n  addopts = --asyncio-mode=auto\n  ```\n- Ensure your FastAPI app is compatible with async testing by using `async def` for endpoints.\n- Use `httpx` for making requests in tests, which supports both sync and async.",
+    "source": "code_example",
+    "updated_at": 1780704030.3189845
+  },
+  "search:testing-patterns:test driven development tdd ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest` to add Jest as a development dependency.\n  - `npx jest --watchAll` to run tests continuously.\n\n- **Latest Versions**:\n  - Jest: v29.5.0 (as of my last update, but check npm for the latest version).\n\n- **Key Config Options**:\n  - In `jest.config.js`, set `testEnvironment: 'jsdom'` for DOM testing.\n  - Use `setupFilesAfterEnv: ['./setupTests.js']` to run setup code before each test.",
+    "source": "web_search",
+    "updated_at": 1780704048.209987
+  },
+  "search:testing-patterns:test driven development tdd ex_ex": {
+    "content": "- **CLI Commands**: `npm test`, `pytest`\n- **Latest Versions**: Node.js v20.3, Python 3.11.4\n- **Key Config Options**:\n  - Jest: `testEnvironment: 'jsdom'`\n  - PyTest: `addopts = --cov=my_package`",
+    "source": "code_example",
+    "updated_at": 1780704060.400031
+  },
+  "search:testing-patterns:testing mongodb in-memory mong": {
+    "content": "- Use `mongodb-memory-server` to run an in-memory MongoDB instance.\n- Install via npm: `npm i mongodb-memory-server`.\n- For Jest, use `@shelf/jest-mongodb`, latest version is 6.0.2.\n- Install via npm: `npm i @shelf/jest-mongodb`.\n- Configure Jest to use the MongoDB environment:\n  ```json\n  {\n    \"testEnvironment\": \"@shelf/jest-mongodb\"\n  }\n  ```\n- For parallel testing, each worker runs its own MongoDB instance.\n- Ensure isolation between test suites by using separate databases.",
+    "source": "web_search",
+    "updated_at": 1780704068.9447322
+  },
+  "search:testing-patterns:testing mongodb in-memory mong_ex": {
+    "content": "- Use `npm install mongodb-memory-server` for installing the latest version.\n- For Jest, use `beforeAll(async () => { const mongoServer = new MongoMemoryServer(); await mongoServer.start(); });`\n- After tests, clean up with `afterAll(async () => { await mongoServer.stop(); });`\n- Key config options include `instance: { port: 27018 }` for specifying the port.\n- Ensure MongoDB version compatibility with your project requirements.",
+    "source": "code_example",
+    "updated_at": 1780704074.0559602
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:fastapi+auth:fastapi oauth2passwordbearer j": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Pydantic: 1.10.7\n  - Passlib: 1.0.6\n\n- **Key Config Options**:\n  - `OAuth2PasswordBearer(tokenUrl=\"token\")`\n  - `JWT_SECRET_KEY` (must be kept secret)\n  - `ALGORITHM` (e.g., \"HS256\")\n  - `ACCESS_TOKEN_EXPIRE_MINUTES` (default: 30 minutes)",
+    "source": "web_search",
+    "updated_at": 1780703285.8939846
+  },
+  "search:fastapi+auth:fastapi oauth2passwordbearer j_ex": {
+    "content": "- Install FastAPI and Uvicorn: `pip install fastapi uvicorn`\n- Use `OAuth2PasswordBearer` for authentication.\n- Implement JWT token generation with `passlib`.\n- Store hashed passwords in your database.\n- Use refresh tokens to handle user sessions securely.\n- Validate refresh tokens on each request.\n- Update dependencies regularly, e.g., `pip install --upgrade fastapi uvicorn passlib`.\n- Configure environment variables for sensitive information like secret keys.",
+    "source": "code_example",
+    "updated_at": 1780703289.3874724
+  }
+}

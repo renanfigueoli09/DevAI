@@ -1,0 +1,12 @@
+{
+  "search:spring+grpc:spring boot grpc grpc-spring-b": {
+    "content": "- Add dependency: `implementation 'org.springframework.grpc:spring-grpc-starter'`\n- Use `@GrpcService` annotation on your gRPC service class\n- Configure server port in `application.properties`: `grpc.server.port=50051`\n- Use `@GrpcClient` for client stubs\n- Latest version: Check [Maven Repository](https://search.maven.org/artifact/org.springframework.grpc/spring-grpc-starter)\n- Key config options:\n  - `grpc.server.port`: Port number for gRPC server\n  - `grpc.client.<clientName>.address`: Address of the gRPC client",
+    "source": "web_search",
+    "updated_at": 1780703222.9100354
+  },
+  "search:spring+grpc:spring boot grpc grpc-spring-b_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - gRPC: 1.48.0\n\n- **Key Config Options**:\n  - `grpc.server.port`: Port for gRPC server (default: 9090)\n  - `grpc.client.<service>.address`: Address of the gRPC client service\n  - `grpc.client.<service>.port`: Port of the gRPC client service",
+    "source": "code_example",
+    "updated_at": 1780703226.5200331
+  }
+}

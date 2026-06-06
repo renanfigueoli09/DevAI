@@ -1,0 +1,32 @@
+{
+  "search:nestjs+core:nestjs validationpipe configmo": {
+    "content": "- Install NestJS globally: `npm install -g @nestjs/cli`\n- Create a new NestJS project: `nest new my-project`\n- Add Swagger to your project: `npm install --save @nestjs/swagger class-validator class-transformer`\n- Configure ValidationPipe in main.ts:\n  ```typescript\n  import { ValidationPipe } from '@nestjs/common';\n  app.useGlobalPipes(new ValidationPipe());\n  ```\n- Use decorators for validation metadata (e.g., `@IsString()`, `@MinLength(5)`).\n- Update to the latest versions of NestJS, Swagger, class-validator, and class-transformer regularly.\n- Key config options in ValidationPipe include: `transform`, `whitelist`, `forbidNonWhitelisted`.\n- Use Swagger decorators like `@ApiTags()`, `@ApiOperation()` for API documentation generation.",
+    "source": "web_search",
+    "updated_at": 1780703121.6283116
+  },
+  "search:nestjs+core:nestjs validationpipe configmo_ex": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n  - `nest generate service service-name`: Generates a new service.\n\n- **Latest Versions**:\n  - NestJS: 10.0.0\n  - class-validator: 0.14.0\n  - class-transformer: 0.5.1\n\n- **Key Config Options**:\n  - `ValidationPipe` options for global validation.\n    ```typescript\n    import { ValidationPipe } from '@nestjs/common';\n\n    app.useGlobalPipes(\n      new ValidationPipe({\n        transform: true,\n        whitelist: true,\n        forbidNonWhitelisted: true,\n      }),\n    );\n    ```\n  - `ConfigModule` configuration for environment variables.\n    ```typescript\n    import { ConfigModule } from '@nestjs/config';\n\n    @Module({\n      imports: [\n        ConfigModule.forRoot({\n          isGlobal: true,\n          envFilePath: '.env',\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Swagger lifecycle hooks.\n    ```typescript\n    import { NestFactory } from '@nestjs/core';\n    import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';\n\n    async function bootstrap() {\n      const app = await NestFactory.create(AppModule);\n\n      const config = new DocumentBuilder()\n        .setTitle('API Documentation')\n        .setDescription('The API description')\n        .setVersion('1.0')\n        .addTag('example')\n        .build();\n\n      const document = SwaggerModule.createDocument(app, config);\n      SwaggerModule.setup('api', app, document);\n\n      await app.listen(3000);\n    }\n    bootstrap();\n    ```",
+    "source": "code_example",
+    "updated_at": 1780703128.4165769
+  },
+  "search:nestjs+core:nestjs exception filter interc": {
+    "content": "- **CLI Commands**:\n  - `nest generate interceptor <name>` to create an interceptor.\n  - `nest generate guard <name>` to create a guard.\n  - `nest generate filter <name>` to create a filter.\n\n- **Latest Versions**:\n  - NestJS: [Check latest version on npm](https://www.npmjs.com/package/@nestjs/core)\n  - Node.js: [Check latest LTS version on Node.js website](https://nodejs.org/)\n\n- **Key Config Options**:\n  - In `nest-cli.json`, set `\"commonSrc\": true` to place interceptors, guards, filters, and pipes in the `src/common/` folder.\n  - Use decorators like `@Cron('* * * * *')` for scheduling tasks.",
+    "source": "web_search",
+    "updated_at": 1780703134.873921
+  },
+  "search:nestjs+core:nestjs exception filter interc_ex": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Create a new NestJS project.\n  - `nest generate module module-name`: Generate a new module.\n  - `nest generate controller controller-name`: Generate a new controller.\n  - `nest generate service service-name`: Generate a new service.\n\n- **Latest Versions**:\n  - NestJS: Check the latest version on [npm](https://www.npmjs.com/package/@nestjs/core).\n  - TypeScript: Ensure you are using the latest LTS version.\n\n- **Key Config Options**:\n  - `app.useGlobalFilters(new AllExceptionsFilter())`: Apply a global exception filter.\n  - `@Cron('* * * * *')`: Schedule tasks with cron expressions in NestJS.\n  - `@UseInterceptors(TransformInterceptor)`: Use interceptors to transform responses globally or per controller.",
+    "source": "code_example",
+    "updated_at": 1780703138.1459148
+  },
+  "search:nestjs+core:nestjs circular dependency for": {
+    "content": "- Use `forwardRef()` to resolve circular dependencies in NestJS.\n- Example of using `forwardRef()`:\n  ```typescript\n  import { forwardRef, Inject, Injectable } from '@nestjs/common';\n  \n  @Injectable()\n  export class AService {\n    constructor(@Inject(forwardRef(() => BService)) private readonly bService: BService) {}\n  }\n  \n  @Injectable()\n  export class BService {\n    constructor(private readonly aService: AService) {}\n  }\n  ```\n- Ensure `forwardRef()` is used in both classes where the circular dependency occurs.\n- Avoid circular dependencies by refactoring code if possible.\n- NestJS documentation recommends avoiding circular dependencies to maintain loose coupling.",
+    "source": "web_search",
+    "updated_at": 1780703142.9440253
+  },
+  "search:nestjs+core:nestjs circular dependency for_ex": {
+    "content": "- Use `forwardRef` to resolve circular dependencies in NestJS.\n- Example: \n  ```typescript\n  import { forwardRef, Injectable } from '@nestjs/common';\n  import { UserService } from './user.service';\n\n  @Injectable()\n  export class AuthService {\n    constructor(\n      @forwardRef(() => UserService) private readonly userService: UserService,\n    ) {}\n  }\n  ```\n- Ensure `forwardRef` is used in both services that depend on each other.\n- Latest versions:\n  - NestJS CLI: `nest --version`\n  - Node.js: `node --version`\n- Key config options:\n  - `imports`: Use to import modules where circular dependencies are resolved.\n  - `providers`: List of providers for the module.",
+    "source": "code_example",
+    "updated_at": 1780703145.862753
+  }
+}

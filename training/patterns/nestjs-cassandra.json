@@ -1,0 +1,12 @@
+{
+  "search:nestjs+cassandra:nestjs cassandra-driver keyspa": {
+    "content": "- **Install Cassandra Driver**: `npm install cassandra-driver`\n- **Latest Version**: Check on [NPM](https://www.npmjs.com/package/cassandra-driver)\n- **Key Config Options**:\n  - `contactPoints`: Array of hostnames/IP addresses for the Cassandra cluster.\n  - `localDataCenter`: Specifies the local data center for load balancing.\n  - `keyspace`: The keyspace to use by default.\n- **CLI Commands**:\n  - Connect to CQL Shell: `cqlsh <hostname> <port>`\n  - Create Keyspace: `CREATE KEYSPACE IF NOT EXISTS my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};`\n  - Use Keyspace: `USE my_keyspace;`\n- **Error Handling**: Ensure keyspace is correctly specified in your configuration and that the cluster is accessible.",
+    "source": "web_search",
+    "updated_at": 1780702985.6557333
+  },
+  "search:nestjs+cassandra:nestjs cassandra-driver keyspa_ex": {
+    "content": "- **GitHub Repository**: [tensoar/cassandra-orm4nest](https://github.com/tensoar/cassandra-orm4nest)\n- **NPM Package**: `cassandra-driver`\n- **Key Config Options**:\n  - `contactPoints`: Array of hostnames or IP addresses.\n  - `localDataCenter`: Specifies the local data center for load balancing.\n  - `keyspace`: The keyspace to use.\n- **CLI Commands**:\n  - To install `cassandra-driver`, run: `npm install cassandra-driver`\n  - To initialize a new NestJS project, use: `nest new my-project`\n- **Latest Version**: Check the [NPM page](https://www.npmjs.com/package/cassandra-driver) for the latest version.\n- **Example Code**:\n  ```javascript\n  const { Client } = require('cassandra-driver');\n\n  const client = new Client({\n    contactPoints: ['127.0.0.1'],\n    keyspace: 'my_keyspace'\n  });\n\n  client.connect().then(() => {\n    return client.execute('SELECT * FROM my_table');\n  }).then(result => {\n    console.log(result.rows);\n  }).catch(err => {\n    console.error(err);\n  });\n  ```",
+    "source": "code_example",
+    "updated_at": 1780702990.6055987
+  }
+}

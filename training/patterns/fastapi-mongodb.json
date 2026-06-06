@@ -1,0 +1,12 @@
+{
+  "search:fastapi+mongodb:fastapi motor asynciomotorclie": {
+    "content": "- **FastAPI**: Version 0.85.0\n- **MongoDB**: Version 4.4.6\n- **Beanie**: Version 1.13.2\n- **Motor**: Version 3.7.1\n\n**CLI Commands:**\n- `pip install fastapi[all]`\n- `pip install motor`\n- `pip install beanie`\n\n**Key Config Options:**\n- FastAPI: `app = FastAPI()`\n- MongoDB URI: `mongodb://localhost:27017/mydatabase`\n- Beanie Model:\n  ```python\n  class MyModel(Document):\n      name: str\n      age: int\n  ```\n- Motor Client:\n  ```python\n  client = AsyncIOMotorClient(\"mongodb://localhost:27017\")\n  db = client.mydatabase\n  collection = db.mycollection\n  ```\n\n**Additional Resources:**\n- [FastAPI Documentation](https://fastapi.tiangolo.com/)\n- [MongoDB with FastAPI Tutorial](https://oneuptime.com/how-to-use-mongodb-with-fastapi/)\n- [Beanie Documentation](https://beanie-odm.github.io/beanie/)",
+    "source": "web_search",
+    "updated_at": 1780703249.2949944
+  },
+  "search:fastapi+mongodb:fastapi motor asynciomotorclie_ex": {
+    "content": "- Install FastAPI, Motor, Beanie, PyMongo, and Uvicorn using `pip install fastapi motor beanie pymongo uvicorn`.\n- Use `AsyncIOMotorClient` for asynchronous MongoDB connections.\n- Initialize Beanie with `await init_beanie(database=client.db_name, document_models=[YourModel])`.\n- For text search in MongoDB, use `{\"$text\": {\"$search\": \"example\"}}`.\n- Ensure your FastAPI app is configured to connect asynchronously using `async def init_db()`.\n- Use Uvicorn as the ASGI server for running your FastAPI application.",
+    "source": "code_example",
+    "updated_at": 1780703251.759068
+  }
+}

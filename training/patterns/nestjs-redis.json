@@ -1,0 +1,32 @@
+{
+  "search:nestjs+redis:nestjs @nestjs/cache-manager c": {
+    "content": "- Install `@nestjs/cache-manager` and `cache-manager` using `$ npm install --save @nestjs/cache-manager cache-manager`.\n- Use Redis as a cache manager in NestJS.\n- Configure CacheModule in `app.module.ts` with Redis options.\n- Key config options include `ttl`, `max`, and `isGlobal`.\n- Ensure compatibility with Node.js v14.15.4 and NestJS 9.0.0.\n- Use interceptors to handle caching logic automatically.\n- For GraphQL, consider using custom resolvers for caching.\n- Redis caching diagram shows request flow from user to cache hit/miss and data storage/retrieval.",
+    "source": "web_search",
+    "updated_at": 1780702927.1505482
+  },
+  "search:nestjs+redis:nestjs @nestjs/cache-manager c_ex": {
+    "content": "- Install `@keyv/redis` package using `$ npm install @keyv/redis`\n- Register CacheModule with Redis in NestJS:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { CacheModule, CacheInterceptor } from '@nestjs/cache-manager';\n  import { redisStore } from 'cache-manager-redis-store';\n\n  @Module({\n    imports: [\n      CacheModule.register({\n        store: redisStore,\n        host: 'localhost',\n        port: 6379,\n      }),\n    ],\n    controllers: [],\n    providers: [],\n  })\n  export class AppModule {}\n  ```\n- Use `CacheInterceptor` for caching in your services:\n  ```typescript\n  import { Controller, Get } from '@nestjs/common';\n  import { CacheInterceptor, UseInterceptors } from '@nestjs/cache-manager';\n\n  @Controller('example')\n  @UseInterceptors(CacheInterceptor)\n  export class ExampleController {\n    @Get()\n    getExample() {\n      return 'Cached data';\n    }\n  }\n  ```\n- Ensure Redis server is running on `localhost:6379` or configure host and port accordingly.\n- Check for any errors related to Redis connection or configuration in your logs.",
+    "source": "code_example",
+    "updated_at": 1780702931.990812
+  },
+  "search:nestjs+redis:nestjs @nestjs/bull bullmodule": {
+    "content": "- **CLI Commands**:\n  - `npm install @nestjs/bullmq`\n  - `npm install bullmq`\n\n- **Latest Versions**:\n  - @nestjs/bullmq: v3.2.1\n  - bullmq: v4.0.0\n\n- **Key Config Options**:\n  - Queue registration using `BullModule.registerQueue()`\n  - Processor registration using `Processor` decorator\n  - WorkerHost pattern for DLQs and BullMQ integration",
+    "source": "web_search",
+    "updated_at": 1780702950.24621
+  },
+  "search:nestjs+redis:nestjs @nestjs/bull bullmodule_ex": {
+    "content": "- Install NestJS and Bull using npm: `npm install @nestjs/bull bull`\n- Install type definitions for Bull: `npm install --save-dev @types/bull`\n- Create a Queue Service, Processor, Module.\n- Update `app.module.ts` to include the BullModule.\n- Key config options in BullModule.forRoot() include:\n  - name: string (queue name)\n  - defaultJobOptions: object (default job options)\n  - redis: object (Redis connection options)",
+    "source": "code_example",
+    "updated_at": 1780702952.3627512
+  },
+  "search:nestjs+redis:nestjs ioredis sentinel cluste": {
+    "content": "- Use `npm install @chenjm/nestjs-redis ioredis` to install the latest versions.\n- Configure Redis Sentinel in your NestJS app using the following key options:\n  - `sentinel.masterName`: The name of the master node.\n  - `sentinel.slaveOnly`: Set to true if you only want to connect to slaves.\n  - `sentinel.reconnectOnError`: Automatically reconnect on error.\n- Example configuration in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { RedisModule } from 'nestjs-redis';\n\n  @Module({\n    imports: [\n      RedisModule.register({\n        sentinels: [\n          { host: 'sentinel1', port: 26379 },\n          { host: 'sentinel2', port: 26379 },\n          { host: 'sentinel3', port: 26379 }\n        ],\n        sentinelMasterName: 'mymaster',\n        reconnectOnError: true,\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Ensure Node.js >=12.22.0, NestJS ^9.0.0, and ioredis ^5.0.0 for compatibility.\n- Use `npm update` to keep your dependencies up-to-date regularly.",
+    "source": "web_search",
+    "updated_at": 1780702959.7618759
+  },
+  "search:nestjs+redis:nestjs ioredis sentinel cluste_ex": {
+    "content": "- Use `npm install ioredis @nestjs/common` to install required packages.\n- Ensure NestJS version is ^10.0.0 and Node.js >=16.13.0.\n- For Redis Sentinel cluster, configure `ioredis` with sentinel options:\n  ```typescript\n  import { createClient } from 'ioredis';\n\n  const redis = createClient({\n    sentinels: [\n      { host: 'sentinel1.example.com', port: 26379 },\n      { host: 'sentinel2.example.com', port: 26379 },\n      { host: 'sentinel3.example.com', port: 26379 }\n    ],\n    name: 'mymaster'\n  });\n  ```\n- Use `nestjs-redis` for easier integration with NestJS:\n  ```bash\n  npm install nestjs-redis\n  ```\n- Configure `NestRedisModule` in your module:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { NestRedisModule } from 'nestjs-redis';\n\n  @Module({\n    imports: [\n      NestRedisModule.forRoot({\n        url: 'redis://sentinel1.example.com:26379,mymaster'\n      })\n    ]\n  })\n  export class AppModule {}\n  ```\n- For health checks, use `@nestjs/terminus` and configure Redis health check:\n  ```typescript\n  import { HealthCheckController } from '@nestjs/terminus';\n  import { HealthCheckService } from '@nestjs/terminus';\n\n  @Module({\n    imports: [HealthCheckModule.register()],\n    controllers: [HealthCheckController],\n    providers: [\n      HealthCheckService,\n      {\n        provide: 'REDIS_CLIENT',\n        useFactory: () => new RedisClient()\n      }\n    ]\n  })\n  export class AppModule {}\n  ```\n- Ensure to handle connection errors and retries in production.",
+    "source": "code_example",
+    "updated_at": 1780702967.1692927
+  }
+}

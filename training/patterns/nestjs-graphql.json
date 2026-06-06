@@ -1,0 +1,22 @@
+{
+  "search:nestjs+graphql:nestjs graphql apollodriver @o": {
+    "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate resolver <resolver-name> --graphql`\n  - `nest generate service <service-name>`\n\n- **Latest Versions**:\n  - NestJS: 9.x\n  - ApolloDriver: 2.0\n\n- **Key Config Options**:\n  - `driver: ApolloDriver` in `app.module.ts`\n  - `@ObjectType()` and `@Resolver()` decorators for defining GraphQL types and resolvers",
+    "source": "web_search",
+    "updated_at": 1780703058.643413
+  },
+  "search:nestjs+graphql:nestjs graphql apollodriver @o_ex": {
+    "content": "- Install NestJS GraphQL and ApolloServer: `npm i @nestjs/graphql @nestjs/apollo @apollo/server graphql`\n- Use the code-first approach for building GraphQL APIs.\n- The `@Resolver()` decorator defines a GraphQL resolver.\n- The `@Query()` decorator indicates a query operation returning a String type.\n- Key config options include setting the driver to ApolloDriver in your main application file.",
+    "source": "code_example",
+    "updated_at": 1780703060.3174312
+  },
+  "search:nestjs+graphql:nestjs graphql @subscription d": {
+    "content": "- **CLI Commands**: Use `nest generate subscription <name>` to create a new GraphQL subscription.\n- **Latest Versions**: Ensure you are using the latest version of NestJS and Apollo Server for optimal performance.\n- **Key Config Options**:\n  - `pubsub`: Configure your PubSub implementation (e.g., RedisPubSub).\n  - `dataloader`: Enable DataLoader for batching queries to reduce N+1 issues.\n  - `subscriptions`: Set up subscriptions using the appropriate transport method (e.g., WebSocket, Server-Sent Events).",
+    "source": "web_search",
+    "updated_at": 1780703064.5160148
+  },
+  "search:nestjs+graphql:nestjs graphql @subscription d_ex": {
+    "content": "- **CLI Commands**:\n  - `yarn add @nestjs/graphql mercurius`\n  - `npm install @nestjs/graphql mercurius`\n\n- **Latest Versions**:\n  - NestJS GraphQL: v12.x\n  - Mercurius: v5.x\n\n- **Key Config Options**:\n  - Use `@Subscription()` decorator for creating subscriptions.\n  - Implement `NestDataLoader` interface to simplify DataLoader usage.\n  - Configure DataLoader in your NestJS module.",
+    "source": "code_example",
+    "updated_at": 1780703066.5593247
+  }
+}

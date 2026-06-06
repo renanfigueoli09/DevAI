@@ -1,0 +1,22 @@
+{
+  "search:nestjs+grpc:nestjs grpc transport.grpc pro": {
+    "content": "- Install NestJS gRPC transporter: `npm install @grpc/grpc-js @grpc/proto-loader`\n- Define gRPC service methods using `.proto` files.\n- Use the `@GrpcMethod` decorator to map gRPC methods in NestJS controllers.\n- Update your module to include the gRPC transport.\n- Example of a `.proto` file:\n  ```proto\n  syntax = \"proto3\";\n  package user;\n\n  service UserService {\n    rpc GetUser (GetUserRequest) returns (GetUserResponse);\n  }\n\n  message GetUserRequest {\n    string id = 1;\n  }\n\n  message GetUserResponse {\n    string name = 1;\n    int32 age = 2;\n  }\n  ```\n- Implement the gRPC method in your service:\n  ```typescript\n  @GrpcMethod('UserService', 'GetUser')\n  async getUser(data: GetUserRequest, metadata: Metadata): Promise<GetUserResponse> {\n    // Implementation here\n  }\n  ```\n- Ensure NestJS is configured to use the gRPC transport in `app.module.ts`.",
+    "source": "web_search",
+    "updated_at": 1780703045.287199
+  },
+  "search:nestjs+grpc:nestjs grpc transport.grpc pro_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/microservices`.\n- Define `.proto` files for your gRPC service.\n- Use the `@GrpcMethod()` decorator in controllers to define gRPC methods.\n- Configure microservice options in `app.module.ts` using `NestFactory.createMicroservice()`.\n- Run the server with `npm run start:grpc`.\n- Ensure you have the latest versions of NestJS and gRPC packages for compatibility.",
+    "source": "code_example",
+    "updated_at": 1780703047.4482298
+  },
+  "search:nestjs+grpc:nestjs grpc client stub inject": {
+    "content": "- Use `grpc_tools_node_protoc` to generate gRPC client stubs.\n- Install the latest version of `@nestjs/microservices` for NestJS gRPC integration.\n- Configure `protoPath` in your `app.module.ts` for specifying the path to your `.proto` files.\n- Utilize `OpenAPI Generator` for SDK generation from OpenAPI specifications.\n- Ensure you have Node.js and npm installed for running CLI commands.\n- Use `swagger-editor` for writing and testing OpenAPI specifications.\n- For Go, use `protoc-gen-go` for generating gRPC client stubs.\n- Check the latest versions of libraries on their respective GitHub pages or npm repositories.",
+    "source": "web_search",
+    "updated_at": 1780703052.1853595
+  },
+  "search:nestjs+grpc:nestjs grpc client stub inject_ex": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name --transport grpc`\n  - `protoc --plugin=protoc-gen-nest=./node_modules/.bin/protoc-gen-nest-cli --nest_out=. path/to/protofile.proto`\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - gRPC: v2.0.0\n\n- **Key Config Options**:\n  - `transport: Transport.GRPC`\n  - `options: { url: 'localhost:50051' }`",
+    "source": "code_example",
+    "updated_at": 1780703054.513605
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "pattern:nestjs-auth:jwt": {
+    "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
+    "source": "code_pattern",
+    "updated_at": 1780704743.5365167
+  },
+  "search:nestjs+auth:nestjs jwt passport jwtstrateg": {
+    "content": "- Install dependencies: `npm install @nestjs/passport passport passport-local passport-jwt @nestjs/jwt bcrypt`\n- Use Passport Module for authentication.\n- Create JWT Strategy to validate JWT tokens.\n- Import `JwtStrategy` and `UserEntity`.\n- Implement login validation with `passport-local`.\n- Enable JWT-based functionality with `passport-jwt`.\n- Key config options include `jwtFromRequest`, `ignoreExpiration`, and `secretOrKey`.",
+    "source": "web_search",
+    "updated_at": 1780703078.4828298
+  },
+  "search:nestjs+auth:nestjs jwt passport jwtstrateg_ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Passport.js: 6.x\n  - JWT Strategy: passport-jwt@4.x\n\n- **Key Config Options**:\n  - JWT Secret: `JWT_SECRET` in `.env`\n  - JWT Expiry: `expiresIn: '1h'` in JWTStrategy configuration\n  - Local Strategy: `usernameField: 'email'`, `passwordField: 'password'`\n\n- **GitHub Repository**:\n  - [jasonthehung/nestjs-passport-jwt](https://github.com/jasonthehung/nestjs-passport-jwt)",
+    "source": "code_example",
+    "updated_at": 1780703081.6227517
+  },
+  "search:nestjs+auth:nestjs @useguards jwtauthguard": {
+    "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - @nestjs/jwt: 9.x\n  - bcryptjs: 5.x\n\n- **Key Config Options**:\n  - JWT Secret: `JWT_SECRET` (e.g., \"your_jwt_secret\")\n  - Access Token Expiry: `expiresIn: '30m'`\n  - Refresh Token Expiry: `expiresIn: '7d'`\n  - Bcrypt Salt ROUNDS: `saltRounds: 12`\n\n- **Implementation Steps**:\n  - Install dependencies: `npm install @nestjs/jwt bcryptjs`\n  - Create JWT Strategy: Implement a custom strategy for JWT authentication.\n  - Configure JwtModule in AppModule.\n  - Use Guards (`@UseGuards(JwtAuthGuard)`) on protected routes.\n  - Handle Refresh Tokens by creating a new access token when the refresh token is valid.",
+    "source": "web_search",
+    "updated_at": 1780703087.7451367
+  },
+  "search:nestjs+auth:nestjs @useguards jwtauthguard_ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate guard jwt-auth`\n\n- **Latest Versions**:\n  - NestJS: 9.x\n  - bcryptjs: 2.4.3\n  - @nestjs/jwt: 8.0.0\n\n- **Key Config Options**:\n  - JWT Secret: `JWT_SECRET`\n  - Refresh Token Expiry: `REFRESH_TOKEN_EXPIRATION` (e.g., '7d')\n  - Bcrypt Salt Rounds: `SALT_ROUNDS` (default is 10)",
+    "source": "code_example",
+    "updated_at": 1780703103.8621445
+  },
+  "search:nestjs+auth:nestjs rbac @roles @setmetadat": {
+    "content": "- Use `@Roles` decorator to specify user roles.\n- Import `ROLES_KEY` and `Roles` from your role enum file.\n- Apply the `Roles` decorator to controller methods or classes.\n- Define custom decorators using `SetMetadata` for RBAC.\n- Utilize `Reflector` to access metadata in guards.\n- Ensure NestJS version is up-to-date for latest features.\n- Configure Keycloak for authentication and authorization.\n- Implement role-based access control with `nestjs-query`.\n- Use Auth0 for secure API development with RBAC.",
+    "source": "web_search",
+    "updated_at": 1780703108.126977
+  },
+  "search:nestjs+auth:nestjs rbac @roles @setmetadat_ex": {
+    "content": "- Use `nest generate module auth` and `nest generate guard auth`\n- Implement roles using an enum like `enum Role { ADMIN, USER }`\n- Create a custom decorator for setting metadata:\n  ```typescript\n  import { createParamDecorator, ExecutionContext } from '@nestjs/common';\n\n  export const Roles = (...roles: string[]) => {\n    return createParamDecorator(\n      (data: unknown, ctx: ExecutionContext) => {\n        const request = ctx.switchToHttp().getRequest();\n        const user = request.user;\n        if (!user || !user.roles) {\n          throw new UnauthorizedException();\n        }\n        return user.roles.some(role => roles.includes(role));\n      },\n    );\n  };\n  ```\n- Use `Reflector` to access metadata in guards:\n  ```typescript\n  import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';\n  import { Reflector } from '@nestjs/core';\n\n  @Injectable()\n  export class RolesGuard implements CanActivate {\n    constructor(private reflector: Reflector) {}\n\n    canActivate(context: ExecutionContext): boolean {\n      const requiredRoles = this.reflector.getAllAndOverride<string[]>('roles', [\n        context.getHandler(),\n        context.getClass(),\n      ]);\n      if (!requiredRoles) {\n        return true;\n      }\n      const { user } = context.switchToHttp().getRequest();\n      return requiredRoles.some(role => user.roles.includes(role));\n    }\n  }\n  ```\n- Apply roles to routes using the `@Roles` decorator:\n  ```typescript\n  @Controller('users')\n  export class UsersController {\n    @Get()\n    @Roles(Role.ADMIN)\n    findAll() {\n      // ...\n    }\n  }\n  ```\n- Ensure your user service populates the `roles` field when fetching users.\n- Update `app.module.ts` to import and use the `RolesGuard`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { APP_GUARD } from '@nestjs/core';\n\n  @Module({\n    providers: [\n      {\n        provide: APP_GUARD,\n        useClass: RolesGuard,\n      },\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use the latest version of NestJS and related packages for compatibility and features.",
+    "source": "code_example",
+    "updated_at": 1780703116.3132315
+  }
+}
