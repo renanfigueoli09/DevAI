@@ -2,21 +2,21 @@
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore cru": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - .NET Core 6.0\n  - Entity Framework Core 6.0\n\n- **Key Config Options**:\n  - ConnectionStrings in `appsettings.json`\n  - DbContext configuration in `Startup.cs` or `Program.cs`\n  - Migration scripts for database schema changes",
     "source": "web_search",
-    "updated_at": 1780782653.564494
+    "updated_at": 1780783919.5572362
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore cru_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new mvc -n MyProject`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - ASP.NET Core: 7.0\n  - Entity Framework Core: 7.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: `\"DefaultConnection\": \"Server=.;Database=MyDatabase;Trusted_Connection=True;\"`\n  - DbContext Configuration: \n    ```csharp\n    public class MyDbContext : DbContext\n    {\n        public DbSet<Customer> Customers { get; set; }\n        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n        {\n            optionsBuilder.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"));\n        }\n    }\n    ```\n  - Entity Configuration:\n    ```csharp\n    protected override void OnModelCreating(ModelBuilder modelBuilder)\n    {\n        modelBuilder.Entity<Customer>().ToTable(\"Customers\");\n    }\n    ```\n\n- **Example Code Snippets**:\n  - Create:\n    ```csharp\n    public async Task<IActionResult> Create(Customer customer)\n    {\n        _context.Customers.Add(customer);\n        await _context.SaveChangesAsync();\n        return RedirectToAction(nameof(Index));\n    }\n    ```\n  - Read:\n    ```csharp\n    public async Task<IActionResult> Details(int id)\n    {\n        var customer = await _context.Customers.FindAsync(id);\n        if (customer == null)\n        {\n            return NotFound();\n        }\n        return View(customer);\n    }\n    ```\n  - Update:\n    ```csharp\n    [HttpPost]\n    [ValidateAntiForgeryToken]\n    public async Task<IActionResult> Edit(int id, Customer customer)\n    {\n        if (id != customer.Id)\n        {\n            return NotFound();\n        }\n\n        _context.Entry(customer).State = EntityState.Modified;\n        await _context.SaveChangesAsync();\n        return RedirectToAction(nameof(Index));\n    }\n    ```\n  - Delete:\n    ```csharp\n    [HttpPost, ActionName(\"Delete\")]\n    [ValidateAntiForgeryToken]\n    public async Task<IActionResult> DeleteConfirmed(int id)\n    {\n        var customer = await _context.Customers.FindAsync(id);\n        if (customer == null)\n        {\n            return NotFound();\n        }\n\n        _context.Customers.Remove(customer);\n        await _context.SaveChangesAsync();\n        return RedirectToAction(nameof(Index));\n    }\n    ```",
     "source": "code_example",
-    "updated_at": 1780782654.4911134
+    "updated_at": 1780783922.3584404
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore mig": {
     "content": "- **Latest Version**: Microsoft.EntityFrameworkCore 9.0.0\n- **CLI Commands**:\n  - `dotnet ef migrations add Initial`\n  - `dotnet ef database update`\n  - `dotnet ef migrations add AddQuartz`\n- **Key Config Options**:\n  - Provider: Specify the database provider (e.g., Microsoft.EntityFrameworkCore.SqlServer)\n  - Connection String: Define the connection string in appsettings.json",
     "source": "web_search",
-    "updated_at": 1780782655.4109905
+    "updated_at": 1780783923.412956
   },
   "search:dotnet-entityframeworkcore:dotnet entityframeworkcore mig_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `Add-Migration InitialCreate`\n\n- **Latest Versions**:\n  - Entity Framework Core 9.0.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - Migration Directory: `Migrations`",
     "source": "code_example",
-    "updated_at": 1780782656.3690684
+    "updated_at": 1780783924.4194407
   }
 }
