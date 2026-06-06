@@ -1,0 +1,12 @@
+{
+  "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract": {
+    "content": "- Use TypeScript's strong typing system to catch errors early.\n- Implement input validation using libraries like Zod or Joi.\n- Regularly update dependencies and use tools like `npm audit` for security checks.\n- Employ environment variables for sensitive data, e.g., `dotenv`.\n- Utilize HTTPS for all network communications.\n- Sanitize user inputs to prevent XSS attacks.\n- Implement rate limiting to protect against brute-force attacks.\n- Use Content Security Policy (CSP) headers to mitigate XSS and other code injection attacks.\n- Conduct regular security audits and penetration testing.",
+    "source": "web_search",
+    "updated_at": 1780778320.90784
+  },
+  "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract_ex": {
+    "content": "- Use `tsc --target es6` to compile TypeScript code targeting ES6.\n- Implement strict mode in your `tsconfig.json`: `\"strict\": true`.\n- Utilize ESLint with the recommended configuration for TypeScript projects: `eslint --init --parser @typescript-eslint/parser --ext .js,.jsx,.ts,.tsx`.\n- Enable type checking during development by setting `\"noEmitOnError\": true` in `tsconfig.json`.\n- Use environment variables to manage sensitive information, e.g., API keys.\n- Regularly update TypeScript and all dependencies using `npm update`.\n- Implement input validation for user inputs to prevent injection attacks.\n- Use HTTPS for all network requests in production environments.\n- Conduct code reviews following a secure coding checklist.",
+    "source": "code_example",
+    "updated_at": 1780778331.1481984
+  }
+}
