@@ -1,0 +1,7 @@
+{
+  "search:Advanced Features of FastAPI and asyncio:asyncio in fastapi": {
+    "content": "- Use `uvicorn` to run FastAPI applications with asyncio support.\n  ```bash\n  uvicorn main:app --host 0.0.0.0 --port 8000\n  ```\n- Ensure Python version is at least 3.7 for asyncio compatibility.\n- Key config options include:\n  - `asyncio.run(app)`: Runs the FastAPI application using asyncio.\n  - `BackgroundTasks`: For handling background tasks asynchronously.\n  - `Depends`: For dependency injection in asynchronous functions.\n- Latest versions of FastAPI and Uvicorn can be installed via pip:\n  ```bash\n  pip install fastapi uvicorn\n  ```\n- Use `asyncio.create_task` for running async tasks concurrently within a request.",
+    "source": "web_search",
+    "updated_at": 1780748566.7312148
+  }
+}

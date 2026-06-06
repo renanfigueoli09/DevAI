@@ -1,0 +1,32 @@
+{
+  "search:Error Handling in Next.js + Supabase Storage:nextjs error handling": {
+    "content": "- Use `next.config.js` to configure error handling.\n- Implement custom error pages using `_error.js`.\n- Utilize `getInitialProps` or `useEffect` for client-side error handling.\n- Employ `Error Boundaries` in React components with `getDerivedStateFromError` and `componentDidCatch`.\n- Use `next/error` for server-side error handling.\n- Implement middleware for global error handling with `middleware.js`.\n- Update Next.js to the latest version for bug fixes and improvements.\n- Consult the official [Next.js documentation](https://nextjs.org/docs/getting-started) for detailed guides.",
+    "source": "web_search",
+    "updated_at": 1780748281.8641324
+  },
+  "search:Error Handling in Next.js + Supabase Storage:nextjs error handling_ex": {
+    "content": "- **Error Handling in Next.js**: Learn how to display expected errors and handle uncaught exceptions.\n- **App Router Error Handling**: Simulate an uncaught exception by manually throwing an error in a Server Action.\n- **React Error Boundaries**: A graceful way to handle JavaScript errors on the client, ensuring other parts of the application continue working.",
+    "source": "code_example",
+    "updated_at": 1780748283.8873334
+  },
+  "search:Error Handling in Next.js + Supabase Storage:supabase storage error handlin": {
+    "content": "- **Error Codes**: Use the new error code system for better debugging.\n- **CLI Commands**: No specific flags mentioned, use general Supabase CLI commands.\n- **Latest Versions**: Ensure using the latest version of Supabase SDKs and CLI.\n- **Key Config Options**: Configure error handling in your application's settings or environment variables.\n- **Error Types**: Common types include `storage_error`, `database_error`, etc.\n- **Error Creation Patterns**: Follow patterns provided by Supabase for consistent error creation.\n- **Database Error Mapping**: Map database errors to appropriate HTTP status codes.\n- **HTTP Status Codes**: Use standard HTTP status codes (e.g., 404, 500) for better API communication.\n- **Try-Catch Blocks**: Implement try-catch blocks around storage operations for robust error handling.\n- **Debugging and Logging**: Log errors with detailed information for easier debugging.",
+    "source": "web_search",
+    "updated_at": 1780748292.684598
+  },
+  "search:Error Handling in Next.js + Supabase Storage:supabase storage error handlin_ex": {
+    "content": "- Use `supabase-js` version 2.5.0 or later.\n- Implement error handling using the `StorageBackendError` class and `ErrorCode` enum.\n- Set custom error handlers with the `setErrorHandler` Fastify plugin.\n- Monitor for high client concurrency to avoid Postgres connection issues.\n- Utilize CLI commands like `supabase storage upload` with flags such as `--path` and `--bucket`.\n- Configure environment variables for Supabase credentials, e.g., `SUPABASE_URL` and `SUPABASE_ANON_KEY`.",
+    "source": "code_example",
+    "updated_at": 1780748297.3325424
+  },
+  "search:Error Handling in Next.js + Supabase Storage:error logging nextjs": {
+    "content": "- **Sentry Integration**:\n  - Install Sentry using `npm install @sentry/nextjs`\n  - Configure in `_app.js` or `_app.tsx`: \n    ```javascript\n    import * as Sentry from '@sentry/nextjs';\n\n    Sentry.init({\n      dsn: 'YOUR_SENTRY_DSN',\n      tracesSampleRate: 1.0,\n    });\n    ```\n\n- **Error Boundaries**:\n  - Create a class component `ErrorBoundary`:\n    ```javascript\n    import { Component } from 'react';\n\n    class ErrorBoundary extends Component {\n      constructor(props) {\n        super(props);\n        this.state = { hasError: false };\n      }\n\n      static getDerivedStateFromError(error) {\n        return { hasError: true };\n      }\n\n      componentDidCatch(error, errorInfo) {\n        console.error('Caught an error:', error, errorInfo);\n      }\n\n      render() {\n        if (this.state.hasError) {\n          return <h1>Something went wrong.</h1>;\n        }\n        return this.props.children;\n      }\n    }\n\n    export default ErrorBoundary;\n    ```\n  - Wrap your component in `pages/_app.js`:\n    ```javascript\n    import ErrorBoundary from '../components/ErrorBoundary';\n\n    function MyApp({ Component, pageProps }) {\n      return (\n        <ErrorBoundary>\n          <Component {...pageProps} />\n        </ErrorBoundary>\n      );\n    }\n\n    export default MyApp;\n    ```\n\n- **Middleware and Error Handling**:\n  - Install `nextjs-centralized-error-handler` using `npm install nextjs-centralized-error-handler`\n  - Configure in `_middleware.js` or `_middleware.ts`:\n    ```javascript\n    import { errorHandler } from 'nextjs-centralized-error-handler';\n\n    export default errorHandler;\n    ```\n\n- **Custom Error Pages**:\n  - Create a custom error page: `pages/500.js`\n    ```javascript\n    export default function Custom500() {\n      return <h1>Something went wrong on the server.</h1>;\n    }\n    ```\n\nThese steps provide actionable guidance for integrating Sentry, using Error Boundaries, middleware, and custom error pages in a Next.js application.",
+    "source": "web_search",
+    "updated_at": 1780748312.6426516
+  },
+  "search:Error Handling in Next.js + Supabase Storage:error logging nextjs_ex": {
+    "content": "- Install Sentry using `npm install @sentry/nextjs`\n- Configure Sentry in your Next.js project by adding the following to `next.config.js`:\n```javascript\nconst { withSentryConfig } = require('@sentry/nextjs');\n\nmodule.exports = withSentryConfig({\n  sentry: {\n    // Optional build output directory (default is \".sentry/dist\")\n    distDir: '.sentry/dist',\n    // Optional silent logging (default is false)\n    silent: true,\n  },\n});\n```\n- Initialize Sentry in your `_app.js`:\n```javascript\nimport * as Sentry from '@sentry/nextjs';\n\nSentry.init({\n  dsn: 'YOUR_SENTRY_DSN',\n  tracesSampleRate: 1.0, // Capture 100% of transactions for performance monitoring.\n});\n```\n- Use `withSentry` HOC to wrap your pages or components:\n```javascript\nimport { withSentry } from '@sentry/nextjs';\n\nexport default withSentry(MyComponent);\n```\n- For custom logging, configure in `next.config.js` under `sentry.logging` and use Sentry's API for error reporting.",
+    "source": "code_example",
+    "updated_at": 1780748318.676011
+  }
+}

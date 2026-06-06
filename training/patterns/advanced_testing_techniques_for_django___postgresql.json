@@ -1,0 +1,32 @@
+{
+  "search:Advanced Testing Techniques for Django + PostgreSQL:django testing": {
+    "content": "- Use `python manage.py test` to run tests.\n- For Django 4.2, use `pytest-django`.\n- Configure `INSTALLED_APPS` in settings.py to include `'django.contrib.auth'`, `'django.contrib.contenttypes'`, etc.\n- Set up data using `@classmethod def setUpTestData(cls):` for efficient testing.\n- Use `assertEqual()`, `assertTrue()`, and other assertions from unittest.TestCase.\n- For integration tests, use Django's live server with `LiveServerTestCase`.\n- Configure database settings in settings.py for test environments.\n- Utilize fixtures for reusable data across tests.\n- Leverage Django's ORM for database interactions in tests.",
+    "source": "web_search",
+    "updated_at": 1780748326.830747
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:django testing_ex": {
+    "content": "- Use `python manage.py test` to run tests.\n- For coverage, use `coverage run manage.py test` followed by `coverage report`.\n- Django's testing framework uses Python's built-in `unittest` module.\n- Key config options include `INSTALLED_APPS`, `DATABASES`, and `TEST_RUNNER`.\n- Ensure you have the latest version of Django for optimal features and security.",
+    "source": "code_example",
+    "updated_at": 1780748330.7869053
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:postgres advanced queries": {
+    "content": "- Use `psql` command-line tool for PostgreSQL.\n- Install latest version from [PostgreSQL official website](https://www.postgresql.org/download/).\n- Key configuration options include:\n  - `shared_buffers`: Adjusts the amount of memory dedicated to caching data and indexes.\n  - `work_mem`: Sets the maximum amount of memory used by a hash table before switching to disk-based sorting or hashing.\n  - `maintenance_work_mem`: Specifies the amount of memory to be used for maintenance operations like VACUUM, CREATE INDEX, and ALTER TABLE ADD FOREIGN KEY.",
+    "source": "web_search",
+    "updated_at": 1780748348.9015987
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:postgres advanced queries_ex": {
+    "content": "- **CLI Commands**:\n  - `psql --version` to check the latest version of PostgreSQL.\n  - `pg_dump -U username dbname > backup.sql` for backing up a database.\n  - `pg_restore -U username backup.sql` for restoring a database.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is PostgreSQL 15. For the most current version, visit [PostgreSQL official website](https://www.postgresql.org/download/).\n\n- **Key Config Options**:\n  - `max_connections`: Maximum number of concurrent connections.\n  - `shared_buffers`: Size of memory to use for caching data and indexes.\n  - `work_mem`: Amount of memory to be used by each query before writing to temporary disk files.",
+    "source": "code_example",
+    "updated_at": 1780748373.4857707
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:unit testing django": {
+    "content": "- Use `python manage.py test` to run tests.\n- Ensure Django is up-to-date using pip: `pip install --upgrade django`.\n- Key settings for testing in `settings.py`: `TEST_RUNNER`, `INSTALLED_APPS`.\n- Utilize Django's built-in `unittest` framework for writing tests.\n- Mock external services with libraries like `responses`.\n- Use `pytest-django` for enhanced testing capabilities if preferred.",
+    "source": "web_search",
+    "updated_at": 1780748388.4421124
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:unit testing django_ex": {
+    "content": "- Use `python manage.py test` to run Django unit tests.\n- For doctests, include them in your Python files and use the `-v` flag for verbose output with `python -m doctest <filename>`.\n- Install pytest using pip: `pip install pytest-django`.\n- Run pytest with Django support by executing: `pytest --ds=your_project.settings`.\n- Key config options in `settings.py`: `INSTALLED_APPS`, `DATABASES`, and `TEST_RUNNER` for customizing test settings.\n- For Selenium tests, ensure you have the appropriate WebDriver installed (e.g., ChromeDriver) and specify it in your test setup.",
+    "source": "code_example",
+    "updated_at": 1780748405.455055
+  }
+}
