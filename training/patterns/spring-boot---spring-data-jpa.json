@@ -1,0 +1,12 @@
+{
+  "search:Spring Boot + Spring Data JPA:spring boot spring data jpa be": {
+    "content": "- Use `@Entity` and `@Table` annotations to define entities.\n- Employ `@Id`, `@GeneratedValue`, and `@Column` for entity attributes.\n- Utilize Spring Data JPA repositories with interfaces extending `JpaRepository`.\n- Apply transactions using `@Transactional` on service methods or repository operations.\n- Optimize queries by using JPQL, Criteria API, or native SQL when necessary.\n- Configure `application.properties` or `application.yml` for database connection settings.\n- Implement DTOs (Data Transfer Objects) to transfer data between layers efficiently.\n- Use Spring Boot DevTools for faster development and debugging.\n- Regularly update dependencies to the latest versions using Maven or Gradle.",
+    "source": "web_search",
+    "updated_at": 1780736439.1523492
+  },
+  "search:Spring Boot + Spring Data JPA:spring boot spring data jpa pe": {
+    "content": "- **CLI Commands**: Use `mvn clean install` for building projects.\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n  - HikariCP: 5.0.1\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.datasource.hikari.maximum-pool-size=20`\n  - `spring.jpa.show-sql=true` (for debugging)\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`",
+    "source": "web_search",
+    "updated_at": 1780736469.3128932
+  }
+}

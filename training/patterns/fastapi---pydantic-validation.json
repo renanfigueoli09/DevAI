@@ -1,0 +1,12 @@
+{
+  "search:FastAPI + Pydantic Validation:fastapi pydantic validation ad": {
+    "content": "- Use `fastapi` and `pydantic` to build robust APIs.\n- Install FastAPI using pip: `pip install fastapi`.\n- Install Uvicorn for running the app: `pip install uvicorn`.\n- Define models with Pydantic, e.g., `class Item(BaseModel): name: str description: Optional[str] = None price: float tax: Optional[float] = None`.\n- Use custom validators in Pydantic models by defining methods like `@validator` within the model.\n- Apply field enforcement to ensure data integrity, e.g., `name: constr(min_length=3)`.\n- Utilize nested models for complex data structures, e.g., `class Item(BaseModel): owner: User items: List[Item]`.\n- FastAPI supports asynchronous operations with async def and await.\n- Use Pydantic's `Field` to specify default values, types, and more, e.g., `price: float = Field(..., gt=0)`.\n- For production, run the app using Uvicorn: `uvicorn main:app --reload`.",
+    "source": "web_search",
+    "updated_at": 1780736526.1130621
+  },
+  "search:FastAPI + Pydantic Validation:fastapi pydantic validation ad_ex": {
+    "content": "- **CLI Commands**: `fastapi create`\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Pydantic: 1.10.7\n- **Key Config Options**:\n  - `app = FastAPI()`: Create a new FastAPI application.\n  - `pydantic.BaseModel`: Define data models for validation.\n  - `dependencies=[Depends(dep_func)]`: Use dependency injection.\n  - `async def endpoint() -> dict`: Handle asynchronous requests.\n  - `@app.exception_handler(HTTPException)`: Custom exception handling.",
+    "source": "code_example",
+    "updated_at": 1780736544.622058
+  }
+}

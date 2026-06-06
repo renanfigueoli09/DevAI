@@ -1,0 +1,17 @@
+{
+  "search:NestJS + Kafka Streams:nestjs kafka streams integrati": {
+    "content": "- **CLI Commands**:\n  - `npx @nestjs/cli new kafka-nestjs`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - KafkaJS: v2.x\n\n- **Key Config Options**:\n  - Kafka broker URL (`bootstrap.servers`)\n  - Topic names for producing and consuming messages\n  - Group ID for consumer groups",
+    "source": "web_search",
+    "updated_at": 1780736565.1879542
+  },
+  "search:NestJS + Kafka Streams:nestjs kafka streams performan": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name --package-manager npm`\n  - `npm install @nestjs/kafka`\n\n- **Latest Versions**:\n  - NestJS: v9.x\n  - Kafka: 3.x\n\n- **Key Config Options**:\n  - `bootstrapModule` in `main.ts`\n    ```typescript\n    import { NestFactory } from '@nestjs/core';\n    import { AppModule } from './app.module';\n\n    async function bootstrap() {\n      const app = await NestFactory.create(AppModule);\n      await app.listen(3000);\n    }\n    bootstrap();\n    ```\n  - `KafkaOptions` in `kafka.config.ts`\n    ```typescript\n    import { KafkaOptions, Transport } from '@nestjs/microservices';\n\n    export const kafkaConfig: KafkaOptions = {\n      transport: Transport.KAFKA,\n      options: {\n        client: {\n          brokers: ['localhost:9092'],\n        },\n        consumer: {\n          groupId: 'test-group',\n        },\n      },\n    };\n    ```\n  - `Consumer` and `Producer` in `kafka.service.ts`\n    ```typescript\n    import { Injectable } from '@nestjs/common';\n    import { ClientKafka, Transport } from '@nestjs/microservices';\n\n    @Injectable()\n    export class KafkaService {\n      private readonly client: ClientKafka;\n\n      constructor() {\n        this.client = new ClientKafka({\n          transport: Transport.KAFKA,\n          options: {\n            client: {\n              brokers: ['localhost:9092'],\n            },\n            consumer: {\n              groupId: 'test-group',\n            },\n          },\n        });\n        this.client.connect();\n      }\n\n      async consume() {\n        await this.client.subscribeToResponseOf('test-topic');\n        await this.client.send({ topic: 'test-topic', payload: 'Hello World' }).subscribe({\n          next(msg) {\n            console.log(`Received message: ${msg}`);\n          },\n          error(err) {\n            console.error(`Error: ${err}`);\n          },\n        });\n      }\n    }\n    ```",
+    "source": "web_search",
+    "updated_at": 1780736601.0830297
+  },
+  "search:NestJS + Kafka Streams:nestjs kafka streams performan_ex": {
+    "content": "- Use `npx @nestjs/cli new kafka-nestjs` to create a new NestJS project.\n- Ensure Docker is installed and running for containerized development.\n- For Kafka integration, consider using the latest version of KafkaJS.\n- Key configuration options include setting up Kafka brokers in your application's environment variables or configuration file.\n- Implement message producers and consumers within NestJS services.\n- Utilize Docker Compose to manage multiple services, including Kafka and your NestJS app.\n- Secure sensitive information like Kafka credentials by using environment variables or secure vaults.\n- Monitor performance metrics using tools like Prometheus and Grafana for Kafka and NestJS applications.",
+    "source": "code_example",
+    "updated_at": 1780736606.6284525
+  }
+}
