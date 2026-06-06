@@ -1,0 +1,32 @@
+{
+  "search:Advanced Error Handling:fastapi sqlalchemy error handl": {
+    "content": "- Use `uvicorn` to run your FastAPI application.\n- Install the latest version of FastAPI and SQLAlchemy using pip:\n  ```bash\n  pip install fastapi sqlalchemy\n  ```\n- Implement centralized exception handling in your FastAPI app for consistent error management.\n- Configure SQLAlchemy models with Pydantic for data validation and ORM capabilities.\n- Use `SQLModel` as a wrapper around SQLAlchemy and Pydantic to simplify database interactions.\n- Handle exceptions like `InvalidRequestError` by checking the SQLAlchemy documentation for specific error codes.\n- Ensure your database connection strings are correctly configured in your application settings.",
+    "source": "web_search",
+    "updated_at": 1780714680.9202375
+  },
+  "search:Advanced Error Handling:fastapi sqlalchemy error handl_ex": {
+    "content": "- Use `uvicorn` as the ASGI server for running FastAPI applications.\n- Install FastAPI and SQLAlchemy using pip: `pip install fastapi sqlalchemy`.\n- For centralized exception handling, use Python's built-in `try-except` blocks in your API endpoints.\n- Utilize SQLAlchemy 2.0 for database operations, which offers improved performance and new features.\n- Configure the database URL in your application settings, e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`.\n- Use FastAPI's dependency injection to manage database sessions across your application.\n- Implement error handlers using FastAPI's `@app.exception_handler` decorator for specific exceptions like 404 Not Found or 500 Internal Server Error.",
+    "source": "code_example",
+    "updated_at": 1780714689.9655786
+  },
+  "search:Advanced Error Handling:nextjs serverless-authenticati": {
+    "content": "- **CLI Commands**: `next dev` for development, `next build` for building the project, `next start` for starting the production server.\n- **Latest Versions**: Ensure you are using the latest version of Next.js to benefit from the most recent features and security patches.\n- **Key Config Options**:\n  - `next.config.js`: Configure options like `output: 'standalone'` for standalone deployments, or `serverRuntimeConfig` and `publicRuntimeConfig` for environment-specific settings.",
+    "source": "web_search",
+    "updated_at": 1780714700.0584166
+  },
+  "search:Advanced Error Handling:nextjs serverless-authenticati_ex": {
+    "content": "- Use `next build` to build your Next.js application.\n- Implement error handling in pages using the `_error.js` file.\n- Utilize `getServerSideProps` or `getStaticProps` for server-side rendering and error handling.\n- For client-side errors, use React's `ErrorBoundary`.\n- Configure error reporting tools like Sentry with `@sentry/nextjs`.\n- Use environment variables to manage different environments (development, production).\n- Implement custom error pages for better user experience.\n- Regularly update Next.js and its dependencies using `npm update next` or `yarn upgrade next`.",
+    "source": "code_example",
+    "updated_at": 1780714714.1899064
+  },
+  "search:Advanced Error Handling:gitlab-ci error handling": {
+    "content": "- Ensure your `.gitlab-ci.yml` file is named correctly as `.gitlab-ci.yml`.\n- Use the latest version of GitLab Runner.\n- Verify Docker executor settings in `.gitlab-ci.yml`.\n- Check for correct image specification in `image:` field.\n- Ensure SSH keys are correctly configured and accessible.\n- Update GitLab CI/CD to the latest version if using an older one.\n- Review error logs for specific issues like \"invalid key\" or \"non-running service\".\n- Use `docker-compose` if deploying multiple services to avoid single points of failure.",
+    "source": "web_search",
+    "updated_at": 1780714737.0979435
+  },
+  "search:Advanced Error Handling:gitlab-ci error handling_ex": {
+    "content": "- Ensure correct syntax in `.gitlab-ci.yml` file.\n- Use `script:` section to define job steps.\n- Example of a simple job:\n  ```yaml\n  stages:\n    - build\n\n  build_job:\n    stage: build\n    script:\n      - echo \"Building the project...\"\n      - ./build_script.sh\n  ```\n- Check for errors in the pipeline logs on GitLab UI.\n- Use `image:` to specify the Docker image for the job environment.\n- Example with a specific image:\n  ```yaml\n  stages:\n    - test\n\n  test_job:\n    stage: test\n    image: node:14\n    script:\n      - npm install\n      - npm test\n  ```\n- Utilize `cache:` to speed up subsequent builds by caching dependencies.\n- Example of caching:\n  ```yaml\n  stages:\n    - build\n\n  build_job:\n    stage: build\n    image: node:14\n    cache:\n      paths:\n        - node_modules/\n    script:\n      - npm install\n      - npm run build\n  ```\n- Ensure that all commands in the `script:` section are correctly formatted and do not exceed the expected number of arguments.\n- Check for any typos or incorrect flags in CLI commands used within the pipeline.",
+    "source": "code_example",
+    "updated_at": 1780714750.1199954
+  }
+}

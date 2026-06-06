@@ -1,0 +1,52 @@
+{
+  "search:Testing Techniques:spring postgres testing": {
+    "content": "- **CLI Commands**:\n  - `docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n  - `mvn test`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Testcontainers: 1.18.x\n\n- **Key Config Options**:\n  - `application-test.properties`: Configure database connection details.\n  - `@Testcontainers`: Annotate your test class to use Testcontainers.\n  - `Flyway`: For database migrations during tests.",
+    "source": "web_search",
+    "updated_at": 1780714768.332418
+  },
+  "search:Testing Techniques:spring postgres testing_ex": {
+    "content": "- Use `docker run -d --name postgres -e POSTGRES_PASSWORD=mysecretpassword postgres` to start a PostgreSQL container.\n- Add Testcontainers dependency in your `pom.xml`: `<dependency><groupId>org.testcontainers</groupId><artifactId>testcontainers</artifactId><version>1.17.3</version><scope>test</scope></dependency>`\n- Configure your Spring Boot application properties for testing:\n  ```properties\n  spring.datasource.url=jdbc:tc:postgresql:latest:///mydatabase\n  spring.datasource.username=postgres\n  spring.datasource.password=mysecretpassword\n  ```\n- Use `@Testcontainers` and `@Container` annotations in your test class to manage the PostgreSQL container lifecycle.\n- Run tests with `mvn test` or `./gradlew test`.",
+    "source": "code_example",
+    "updated_at": 1780714774.9669752
+  },
+  "search:Testing Techniques:fastapi sqlalchemy testing": {
+    "content": "- Use `pytest` for testing FastAPI applications.\n- Integrate `async SQLAlchemy 2.0` for asynchronous database operations.\n- Employ `Alembic` for database migrations.\n- Utilize `asyncpg` as the PostgreSQL driver.\n- For real PostgreSQL fixtures, consider using Docker containers for isolation and quick setup.\n- Ensure your test environment is isolated from production data to avoid side effects.\n- Use `pytest-docker-compose` for managing Docker containers in tests.\n- Configure SQLAlchemy models with appropriate relationships and constraints.\n- Write unit tests for individual endpoints and database operations.\n- Run tests using the command: `pytest --docker-compose up -d`.\n- Monitor test coverage using tools like `coverage.py`.",
+    "source": "web_search",
+    "updated_at": 1780714784.2332683
+  },
+  "search:Testing Techniques:fastapi sqlalchemy testing_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install `fastapi`, `sqlalchemy`, and `asyncpg`.\n- Create a database model using SQLAlchemy ORM.\n- Define API endpoints in FastAPI, using the models for data validation and interaction with the database.\n- Configure dependency injection for managing database sessions.\n- Use async functions for database operations to leverage asynchronous capabilities.\n- Write unit tests using libraries like `pytest` and `httpx`.\n- Ensure proper session management by closing sessions after each request or test.\n- Utilize migrations tools like Alembic for handling database schema changes.",
+    "source": "code_example",
+    "updated_at": 1780714803.0188138
+  },
+  "search:Testing Techniques:nextjs serverless-authenticati": {
+    "content": "- **Testing Next.js Authentication**: Run `npm test` or `yarn test`.\n- **Upstash Redis Testing**: Use `upstash-cli` to manage your Redis instance.\n- **GitHub Repository**: Clone the repository at [francisudeji/authentication-for-nextjs-serverless](https://github.com/francisudeji/authentication-for-nextjs-serverless).\n- **Auth0 Integration**: Install `@auth0/nextjs-auth0` and configure it in your Next.js app using environment variables.\n- **Serverless Functions**: Create API routes in the `pages/api` directory. Each file represents an endpoint.\n- **CLI Commands**:\n  - `upstash-cli init`: Initialize a new Upstash project.\n  - `upstash-cli deploy`: Deploy your application to Upstash.\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: The base URL of your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Your Auth0 client ID.\n  - `AUTH0_CLIENT_SECRET`: Your Auth0 client secret.",
+    "source": "web_search",
+    "updated_at": 1780714816.4116497
+  },
+  "search:Testing Techniques:nextjs serverless-authenticati_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.2\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for authentication.\n  - `providers`: List of authentication providers (e.g., Google, GitHub).\n  - `secret`: Secret key used to sign JWT tokens.\n  - `session`: Session management settings (e.g., strategy, maxAge).",
+    "source": "code_example",
+    "updated_at": 1780714821.361233
+  },
+  "search:Testing Techniques:spring quarkus testing": {
+    "content": "- **Migrate Spring Boot Testing to Quarkus Testing**: Use `rewrite` tool with the `spring-boot-to-quarkus` recipe.\n  ```bash\n  rewrite run --recipe spring-boot-to-quarkus\n  ```\n- **Quarkus Test Annotations**:\n  - Replace `@SpringBootTest` with `@QuarkusTest`.\n  - Replace `@MockBean` with `@InjectMock`.\n- **Key Config Options**:\n  - `quarkus.test.profile`: Specify the test profile.\n  - `quarkus.test.class-execution`: Control class execution mode (e.g., `per-class`, `per-method`).\n- **Fast Test Execution**: Quarkus boots applications in milliseconds, enabling fast and isolated tests.",
+    "source": "web_search",
+    "updated_at": 1780714832.712709
+  },
+  "search:Testing Techniques:spring quarkus testing_ex": {
+    "content": "- Use `mvn clean install` to build and test your Quarkus application.\n- Set `quarkus.test.profile.tags` system property to filter tests by tags.\n- Annotate tests with `@TestProfile` for conditional execution based on profiles.\n- For REST API testing, use Quarkus's built-in support without mocks or slices.\n- Ensure you have the latest Quarkus version for optimal performance and features.",
+    "source": "code_example",
+    "updated_at": 1780714840.1418347
+  },
+  "search:Testing Techniques:gitlab-ci testing": {
+    "content": "- To define a job in your `.gitlab-ci.yml` file for load performance testing, use the `script` keyword to run the necessary commands.\n- For running unit and integration tests using GitLab CI, specify the test commands under the `test` stage in your `.gitlab-ci.yml`.\n- Use the `artifacts` keyword to define which files or directories should be saved as artifacts after a job completes.\n- To locally test GitLab CI jobs, ensure Docker is installed and use the `docker-compose up` command to start the necessary services.\n- For systematically catching bugs with GitLab CI, configure your `.gitlab-ci.yml` to include stages for building, testing, and reporting.\n- Use the latest versions of GitLab Runner and Docker images to leverage the most recent features and security updates.\n- Key config options in `.gitlab-ci.yml` include `image`, `services`, `script`, `artifacts`, and `stages`.\n- For detailed information on configuring GitLab CI, refer to the [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/yaml/index.html).",
+    "source": "web_search",
+    "updated_at": 1780714852.3849995
+  },
+  "search:Testing Techniques:gitlab-ci testing_ex": {
+    "content": "- Use `gitlab-ci.yml` to configure CI/CD pipelines.\n- Run tests using `script` section in `.gitlab-ci.yml`.\n- Example command for running tests:\n  ```yaml\n  script:\n    - npm test\n  ```\n- Generate and display test reports by adding `artifacts` and `reports.junitxml`:\n  ```yaml\n  artifacts:\n    paths:\n      - coverage/lcov.info\n  reports:\n    junitxml: lcov.xml\n  ```\n- Link to important information directly in merge requests using GitLab's built-in features.\n- Use `only` or `except` keywords to control when jobs run based on branch names, tags, etc.\n- Example of conditional execution:\n  ```yaml\n  test_job:\n    script:\n      - npm test\n    only:\n      - main\n  ```\n- For language-specific testing, ensure the correct dependencies are installed. For example, for Node.js projects:\n  ```yaml\n  before_script:\n    - apt-get update -qy && apt-get install -y nodejs npm\n  ```\n- Use `cache` to speed up pipeline execution by reusing previous build artifacts.\n  ```yaml\n  cache:\n    paths:\n      - node_modules/\n  ```\n- For more advanced configurations, refer to the [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/yaml/index.html).",
+    "source": "code_example",
+    "updated_at": 1780714864.1972396
+  }
+}

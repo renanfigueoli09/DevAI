@@ -1,0 +1,52 @@
+{
+  "search:Security Practices:spring postgres security": {
+    "content": "- Use `mvn spring-boot:run` to run Spring Boot application.\n- Ensure PostgreSQL version is up-to-date, e.g., `15`.\n- Configure `application.properties` with database details:\n  ```properties\n  spring.datasource.url=jdbc:postgresql://localhost:5432/yourdb\n  spring.datasource.username=youruser\n  spring.datasource.password=yourpassword\n  ```\n- Implement JWT for authentication by adding dependencies in `pom.xml`:\n  ```xml\n  <dependency>\n      <groupId>io.jsonwebtoken</groupId>\n      <artifactId>jjwt-api</artifactId>\n      <version>0.11.5</version>\n  </dependency>\n  ```\n- Configure Spring Security to use JWT by creating a `SecurityConfig` class.\n- Use Dockerize PostgreSQL with official image:\n  ```bash\n  docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:latest\n  ```\n- Ensure SSL is enabled in PostgreSQL for secure connections.",
+    "source": "web_search",
+    "updated_at": 1780714876.9904094
+  },
+  "search:Security Practices:spring postgres security_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Security: 6.0.1\n  - PostgreSQL Driver: 42.3.1\n\n- **Key Config Options**:\n  - `spring.datasource.driver-class-name=org.postgresql.Driver`\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/yourdb`\n  - `spring.datasource.username=yourusername`\n  - `spring.datasource.password=yourpassword`\n  - `spring.jpa.hibernate.ddl-auto=update`",
+    "source": "code_example",
+    "updated_at": 1780714886.4820137
+  },
+  "search:Security Practices:fastapi sqlalchemy security": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0.14\n\n- **Key Config Options**:\n  - JWT Secret Key: `SECRET_KEY = \"your-secret-key\"`\n  - Algorithm: `ALGORITHM = \"HS256\"`\n  - Token Expiration Time (in minutes): `ACCESS_TOKEN_EXPIRE_MINUTES = 30`",
+    "source": "web_search",
+    "updated_at": 1780714895.8252647
+  },
+  "search:Security Practices:fastapi sqlalchemy security_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/KenMwaura1/Fast-Api-example.git`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0.0\n  - Pydantic: v1.10.7\n\n- **Key Config Options**:\n  - Database URL (e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`)\n  - JWT Secret Key (`SECRET_KEY = \"your-secret-key\"`)\n  - Token Expiration Time (`ACCESS_TOKEN_EXPIRE_MINUTES = 30`)",
+    "source": "code_example",
+    "updated_at": 1780714902.4894702
+  },
+  "search:Security Practices:nextjs serverless-authenticati": {
+    "content": "- Clone repository using `git clone git@github.com:francisudeji/authentication-for-nextjs-serverless.git`\n- Navigate to project directory with `cd authentication-for-nextjs-serverless`\n- For serverless functions, use the latest version of Next.js (v13.x)\n- Key config options include:\n  - `serverRuntimeConfig`: for sensitive environment variables\n  - `publicRuntimeConfig`: for public environment variables\n- Implement authentication and authorization securely within serverless functions.\n- Process form submissions using serverless functions to interact with databases or third-party services.\n- Serverless functions run in micro-containers, providing enhanced security and isolation.",
+    "source": "web_search",
+    "updated_at": 1780714913.2473483
+  },
+  "search:Security Practices:nextjs serverless-authenticati_ex": {
+    "content": "- **GitHub Repository**: [francisudeji/authentication-for-nextjs-serverless](https://github.com/francisudeji/authentication-for-nextjs-serverless)\n- **YouTube Tutorial**: \"Next.js App Router Authentication (Sessions, Cookies...)\"\n- **Serverless Next.js Deployment**:\n  - Platform: Vercel\n  - Integration: Seamless with Next.js\n\n### Actionable Facts for a Developer:\n\n1. **CLI Commands**:\n   ```bash\n   npm install next-auth\n   npx create-next-app@latest my-app --typescript\n   ```\n\n2. **Latest Versions**:\n   - Next.js: v13.5\n   - Next-Auth: v4.0\n\n3. **Key Config Options**:\n   - `pages/api/auth/[...nextauth].js`\n     ```javascript\n     import NextAuth from 'next-auth';\n     import Providers from 'next-auth/providers';\n\n     export default NextAuth({\n       providers: [\n         Providers.GitHub({\n           clientId: process.env.GITHUB_ID,\n           clientSecret: process.env.GITHUB_SECRET,\n         }),\n       ],\n       secret: process.env.NEXTAUTH_SECRET,\n     });\n     ```\n\n4. **Vercel Integration**:\n   - Deploy your Next.js app to Vercel for serverless hosting.\n   - Use `vercel` CLI for deployment:\n     ```bash\n     vercel\n     ```\n\n5. **Session Management**:\n   - Use cookies for session management in the Next.js App Router.\n\n6. **Community Libraries**:\n   - Utilize libraries like `next-auth` to simplify authentication processes.\n\n7. **Environment Variables**:\n   - Set environment variables for sensitive information like API keys and secrets.\n\n8. **Code Examples**:\n   - Refer to the GitHub repository for practical examples of serverless authentication in Next.js.\n\n9. **YouTube Tutorial**:\n   - Watch the tutorial for a step-by-step guide on implementing session-based authentication using cookies in Next.js App Router.\n\n10. **Serverless Deployment**:\n    - Deploy your application on Vercel for seamless serverless hosting and scalability.",
+    "source": "code_example",
+    "updated_at": 1780714925.2369525
+  },
+  "search:Security Practices:spring quarkus security": {
+    "content": "- **CLI Command to Add Quarkus Spring Security Extension**:\n  ```bash\n  mvn quarkus:add-extension -Dextensions=\"quarkus-spring-security\"\n  ```\n\n- **Latest Version of Quarkus Spring Security**:\n  `3.29.3`\n\n- **Key Configuration Options**:\n  - `quarkus.security.enabled`: Enable or disable security.\n  - `quarkus.security.auth-methods`: Specify authentication methods (e.g., `basic`, `form`).\n  - `quarkus.security.roles-permitted`: Define roles and their permissions.\n\nThese actionable facts should help a developer integrate Spring Security into a Quarkus application effectively.",
+    "source": "web_search",
+    "updated_at": 1780714934.1313365
+  },
+  "search:Security Practices:spring quarkus security_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn quarkus:add-extension -Dextensions=\"quarkus-spring-security\"`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Quarkus: 2.13.0.Final\n  - Spring Security: 5.7.4\n\n- **Key Config Options**:\n  - `quarkus.security.enabled=true`\n  - `quarkus.security.role-source.class=org.acme.security.RoleSource`\n  - `quarkus.security.credential.source.class=org.acme.security.CredentialsSource`",
+    "source": "code_example",
+    "updated_at": 1780714942.6850016
+  },
+  "search:Security Practices:gitlab-ci security": {
+    "content": "- **CLI Commands**:\n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `gitlab-runner register`: Registers a runner with GitLab.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Latest version as of my last update is [insert latest version].\n  - GitLab Runner: Latest version as of my last update is [insert latest version].\n\n- **Key Config Options**:\n  - `variables`: Define protected variables in `.gitlab-ci.yml`.\n  - `runners`: Configure runner scoping and environment gates.\n  - `environment`: Set environment-specific configurations.\n  - `only/except`: Control when jobs run based on branches or tags.",
+    "source": "web_search",
+    "updated_at": 1780714950.9304628
+  },
+  "search:Security Practices:gitlab-ci security_ex": {
+    "content": "- **Install GitLab Runner**: `sudo apt install gitlab-runner`\n- **Register GitLab Runner**: `gitlab-runner register --url https://gitlab.com/ --registration-token <token>`\n- **Configure SAST in `.gitlab-ci.yml`**:\n  ```yaml\n  sast:\n    stage: test\n    script:\n      - /opt/gitlab-runner/bin/artifacts-downloader --job $CI_JOB_ID --output artifacts.zip\n      - unzip artifacts.zip\n      - cat gl-sast-report.json\n    only:\n      - main\n  ```\n- **Configure DAST in `.gitlab-ci.yml`**:\n  ```yaml\n  dast:\n    stage: test\n    script:\n      - /opt/gitlab-runner/bin/artifacts-downloader --job $CI_JOB_ID --output artifacts.zip\n      - unzip artifacts.zip\n      - cat gl-dast-report.json\n    only:\n      - main\n  ```\n- **Configure Dependency Scanning in `.gitlab-ci.yml`**:\n  ```yaml\n  dependency_scanning:\n    stage: test\n    script:\n      - /opt/gitlab-runner/bin/artifacts-downloader --job $CI_JOB_ID --output artifacts.zip\n      - unzip artifacts.zip\n      - cat gl-dependency-scanning-report.json\n    only:\n      - main\n  ```\n- **Configure Container Scanning in `.gitlab-ci.yml`**:\n  ```yaml\n  container_scanning:\n    stage: test\n    script:\n      - /opt/gitlab-runner/bin/artifacts-downloader --job $CI_JOB_ID --output artifacts.zip\n      - unzip artifacts.zip\n      - cat gl-container-scanning-report.json\n    only:\n      - main\n  ```\n- **Latest GitLab Runner Version**: Check [GitLab Runner Release Notes](https://docs.gitlab.com/runner/release-notes/)\n- **Key Config Options**:\n  - `only`: Specifies branches or tags where the job should run.\n  - `script`: Commands to execute during the job.",
+    "source": "code_example",
+    "updated_at": 1780714965.0450313
+  }
+}
