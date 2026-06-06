@@ -2,21 +2,21 @@
   "search:kubernetes+keda-autoscaling:keda autoscaling with kubernet": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f keda.yaml` to deploy KEDA.\n  - `kubectl get pods --all-namespaces | grep keda` to check if KEDA is running.\n\n- **Latest Version**: As of my last update, the latest version of KEDA is 2.10.0. Check [GitHub](https://github.com/kedacore/keda/releases) for the most current version.\n\n- **Key Config Options**:\n  - `spec.scaleTargetRef`: Specifies the target workload to scale.\n  - `spec.minReplicaCount` and `spec.maxReplicaCount`: Define the minimum and maximum number of replicas.\n  - `triggers`: Configure different event sources like Kafka, Azure Storage Queues, etc.\n\n- **Documentation**: For detailed setup and usage, refer to [KEDA Documentation](https://keda.sh/docs/2.10/).",
     "source": "web_search",
-    "updated_at": 1780774421.6556723
+    "updated_at": 1780774962.009168
   },
   "search:kubernetes+keda-autoscaling:keda autoscaling with kubernet_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <path-to-keda-yaml>`\n  - `kubectl get keda.scaledobjects.keda.sh`\n  - `kubectl describe keda.scaledobject.keda.sh <scaled-object-name>`\n\n- **Latest Versions**:\n  - KEDA: v2.10.0\n  - Kubernetes: v1.24.x\n\n- **Key Config Options**:\n  - `spec.scaleTargetRef`: Refers to the target resource (e.g., Deployment, StatefulSet).\n  - `spec.triggers`: Defines the triggers for scaling (e.g., Prometheus metrics, Azure Queue messages).\n  - `spec.minReplicaCount` and `spec.maxReplicaCount`: Define the minimum and maximum number of replicas.",
     "source": "code_example",
-    "updated_at": 1780774431.8309002
+    "updated_at": 1780774962.819503
   },
   "search:kubernetes+keda-autoscaling:horizontal pod autoscaler for ": {
     "content": "- **CLI Commands**:\n  - `kubectl autoscale deployment <deployment-name> --cpu-percent=<percentage> --min=<min-pods> --max=<max-pods>`\n  - `kubectl get hpa`\n\n- **Latest Versions**:\n  - Kubernetes v1.27 introduces support for custom metrics in HPA.\n\n- **Key Config Options**:\n  - `--horizontal-pod-autoscaler-sync-period`: Interval for the control loop to run.\n  - `cpu-percent`: Target CPU utilization percentage.\n  - `min`: Minimum number of pods.\n  - `max`: Maximum number of pods.",
     "source": "web_search",
-    "updated_at": 1780774442.624314
+    "updated_at": 1780774963.6707377
   },
   "search:kubernetes+keda-autoscaling:horizontal pod autoscaler for _ex": {
     "content": "- **CLI Commands**:\n  - `kubectl autoscale deployment <deployment-name> --cpu-percent=<threshold> --min=<min-pods> --max=<max-pods>`\n  - `kubectl get hpa`\n  - `kubectl describe hpa <hpa-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.24 and later support custom metrics for HPA.\n\n- **Key Config Options**:\n  - `cpu-percent`: Target CPU utilization percentage.\n  - `min`: Minimum number of pods to scale down to.\n  - `max`: Maximum number of pods to scale up to.\n  - `metrics`: Define the metrics (CPU, custom) and their thresholds.",
     "source": "code_example",
-    "updated_at": 1780774448.6573641
+    "updated_at": 1780774964.483413
   }
 }

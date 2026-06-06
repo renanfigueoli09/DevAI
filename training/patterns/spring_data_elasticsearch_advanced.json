@@ -1,0 +1,22 @@
+{
+  "search:spring-data-elasticsearch-advanced:spring data elasticsearch adva": {
+    "content": "- **Latest Version**: Spring Data Elasticsearch 5.5, Elasticsearch 8.18\n- **CLI Commands**:\n  - `mvn spring-boot:run` for running the application\n  - `curl -X GET \"localhost:9200/your_index/_search?pretty\"` for querying Elasticsearch\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=elasticsearch`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
+    "source": "web_search",
+    "updated_at": 1780775097.0227056
+  },
+  "search:spring-data-elasticsearch-advanced:spring data elasticsearch adva_ex": {
+    "content": "- **CLI Commands**: `mvn spring-boot:run` to run the application.\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Elasticsearch: 7.16.3\n  - Spring Data Elasticsearch: 4.2.2\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Specifies the Elasticsearch cluster URI.\n  - `spring.data.elasticsearch.cluster-name`: Defines the name of the Elasticsearch cluster.\n  - `spring.elasticsearch.username` and `spring.elasticsearch.password`: For authentication if required.",
+    "source": "code_example",
+    "updated_at": 1780775103.5501742
+  },
+  "search:spring-data-elasticsearch-advanced:elasticsearch integration with": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to check Elasticsearch indices.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Elasticsearch: 8.5.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=my-application-cluster`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=password`",
+    "source": "web_search",
+    "updated_at": 1780775109.7756302
+  },
+  "search:spring-data-elasticsearch-advanced:elasticsearch integration with_ex": {
+    "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"`\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'\n    {\n      \"mappings\": {\n        \"properties\": {\n          \"field1\": { \"type\": \"text\" },\n          \"field2\": { \"type\": \"keyword\" }\n        }\n      }\n    }'\n\n- **Latest Versions**:\n  - Elasticsearch: 9.0.0\n  - Spring Boot: 3.0.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.elasticsearch.rest.username=elastic`\n  - `spring.elasticsearch.rest.password=password`",
+    "source": "code_example",
+    "updated_at": 1780775114.3576133
+  }
+}

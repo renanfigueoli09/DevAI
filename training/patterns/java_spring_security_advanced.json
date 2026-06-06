@@ -2,16 +2,16 @@
   "search:java-spring-security-advanced:spring security advanced confi": {
     "content": "- **Latest Version**: Spring Security 6+\n  \n- **Key Config Options**:\n  - `http.authorizeRequests()`\n  - `http.csrf().disable()` for disabling CSRF protection\n  - `http.formLogin()` for form-based login\n  \n- **CLI Commands**:\n  - `mvn clean install` to build the project with Spring Security\n  - `java -jar target/your-application.jar` to run the application\n\n- **Configuration Tips**:\n  - Use `@EnableWebSecurity` to enable web security configuration.\n  - Configure authentication and authorization using Java-based configuration or XML.\n\n- **Documentation**: Refer to [Spring Security 6+ Guide](https://spring.io/guides/gs/securing-web/) for detailed setup and best practices.",
     "source": "web_search",
-    "updated_at": 1780774234.9292188
+    "updated_at": 1780775005.5467427
   },
   "search:java-spring-security-advanced:spring security oauth2 impleme": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n- **Key Config Options**:\n  - `spring.security.oauth2.client.registration.google.client-id`\n  - `spring.security.oauth2.client.registration.google.client-secret`\n  - `spring.security.oauth2.client.registration.google.redirect-uri-template`\n  - `spring.security.oauth2.resourceserver.jwt.issuer-uri`",
     "source": "web_search",
-    "updated_at": 1780774235.6979733
+    "updated_at": 1780775006.4085171
   },
   "search:java-spring-security-advanced:spring security oauth2 impleme_ex": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for OAuth2 configuration.\n  - `spring.security.oauth2.client.registration.google.client-id`\n  - `spring.security.oauth2.client.registration.google.client-secret`\n  - `spring.security.oauth2.client.registration.google.redirect-uri`\n- **CLI Commands**:\n  - `mvn clean install` to build the project\n  - `java -jar target/your-application-name.jar` to run the application",
     "source": "code_example",
-    "updated_at": 1780774236.4904683
+    "updated_at": 1780775007.254088
   }
 }
