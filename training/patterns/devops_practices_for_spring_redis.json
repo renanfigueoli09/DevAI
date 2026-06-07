@@ -2,51 +2,51 @@
   "search:DevOps Practices for Spring + Redis:continuous integration and del": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `git push origin <branch-name>` to push changes to a remote repository.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Maven: 3.8.x\n  - GitLab CI/CD: Latest stable version\n\n- **Key Config Options**:\n  - In `pom.xml`, configure `<build><plugins>` for Maven plugins like Surefire, Failsafe.\n  - In `.gitlab-ci.yml`, define stages and jobs for CI/CD pipeline.",
     "source": "web_search",
-    "updated_at": 1780789059.510889
+    "updated_at": 1780790340.911502
   },
   "search:DevOps Practices for Spring + Redis:continuous integration and del_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`: Runs tests and packages the application.\n  - `git push origin master`: Pushes changes to the master branch.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.4\n  - Maven: 3.8.5\n\n- **Key Config Options**:\n  - `application.properties` for environment-specific settings.\n  - `.gitlab-ci.yml` for defining CI/CD pipeline steps.",
     "source": "code_example",
-    "updated_at": 1780789060.7488084
+    "updated_at": 1780790342.0986094
   },
   "search:DevOps Practices for Spring + Redis:redis caching strategies in a ": {
     "content": "- Use `redis-cli` for interacting with Redis.\n- Implement cache-aside strategy using `GETSET` and `EXPIRE`.\n- Configure Redis expiration with `EX` or `PX` flags.\n- Invalidate caches using `DEL` command.\n- Monitor cache performance with `INFO stats` and `MONITOR`.\n- Use `redis-py` for Python developers to interact with Redis.\n- Update `redis-py` to the latest version via pip: `pip install --upgrade redis`.\n- Key config options in Redis include `maxmemory`, `maxmemory-policy`, and `timeout`.",
     "source": "web_search",
-    "updated_at": 1780789062.0371668
+    "updated_at": 1780790344.6788843
   },
   "search:DevOps Practices for Spring + Redis:redis caching strategies in a _ex": {
     "content": "- Use `redis-cli` to interact with Redis.\n- Implement the Cache Aside Pattern using `GETSET` and `EXPIRE`.\n- Utilize Redis for caching database queries with `SET` and `EXPIRE`.\n- Configure cache invalidation with `DEL` or `EXPIREAT`.\n- Set expiration times with `EXPIRE` or `PEXPIRE`.\n- Monitor cache hit/miss ratio using `INFO stats`.\n- Use `SCAN` to iterate over keys in Redis.\n- Ensure data consistency with `WATCH` and `MULTI/EXEC`.\n- Upgrade Redis to the latest version for performance improvements.",
     "source": "code_example",
-    "updated_at": 1780789063.2539895
+    "updated_at": 1780790345.773061
   },
   "search:DevOps Practices for Spring + Redis:monitoring and logging for spr": {
     "content": "- Use `mvn clean install` to build your Spring Boot application.\n- Update SLF4J and Logback dependencies in `pom.xml` for the latest version.\n- Configure logging levels in `application.properties` or `application.yml`.\n- Utilize `@Slf4j` from Lombok to simplify logging code.\n- Implement comprehensive logging using SigNoz for request, response, and exception tracking.\n- Use `logging.file.name=app.log` or `logging.file.path=/var/log/myapp.log` in `application.properties` to specify log file location.\n- Enable console logging with `logging.level.root=INFO`.\n- Configure Logback by creating a `logback-spring.xml` file for advanced logging configurations.",
     "source": "web_search",
-    "updated_at": 1780789064.5081308
+    "updated_at": 1780790347.0646324
   },
   "search:DevOps Practices for Spring + Redis:monitoring and logging for spr_ex": {
     "content": "- Use `mvn clean install` to build your Spring Boot application.\n- Set logging levels in `application.properties` or `application.yml`. Example:\n  ```properties\n  logging.level.root=WARN\n  logging.level.com.example=DEBUG\n  ```\n- Customize log format using `logging.pattern.console` and `logging.pattern.file`.\n- Configure Logback with XML or YAML. Example (YAML):\n  ```yaml\n  logging:\n    file:\n      name: logs/app.log\n    pattern:\n      console: \"%d{yyyy-MM-dd HH:mm:ss} - %msg%n\"\n      file: \"%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n\"\n  ```\n- Regularly monitor log files for issues.\n- Use `@Slf4j` from Lombok to simplify logging in your classes.",
     "source": "code_example",
-    "updated_at": 1780789065.7003448
+    "updated_at": 1780790348.2702124
   },
   "search:DevOps Practices for Spring + Redis:automated testing and deployme": {
     "content": "- **CLI Commands**: Use `git push` to deploy code changes.\n- **Latest Versions**: Ensure using the latest version of your CI/CD tool, e.g., Jenkins 2.374, GitLab CI 15.6.\n- **Key Config Options**:\n  - For GitHub Actions: Configure `.github/workflows/main.yml`.\n  - For CircleCI: Use `config.yml` in the project root.\n  - For Jenkins: Define jobs and pipelines through the web interface or XML configuration files.",
     "source": "web_search",
-    "updated_at": 1780789066.8939624
+    "updated_at": 1780790349.7616508
   },
   "search:DevOps Practices for Spring + Redis:automated testing and deployme_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/humanitec-architecture/example-library.git`\n  - `cd example-library/pipelines/deployment-pipelines/run-automated-tests-after-deployment`\n  - `kubectl apply -f pipeline.yaml`\n\n- **Latest Versions**:\n  - GitHub Actions: Latest version as of my last update.\n  - Kubernetes: Latest stable version.\n\n- **Key Config Options**:\n  - `pipeline.yaml`: Defines the deployment and testing pipeline.\n  - `run-automated-tests-after-deployment`: Specifies the automated test step in the pipeline.",
     "source": "code_example",
-    "updated_at": 1780789068.1263351
+    "updated_at": 1780790350.9576538
   },
   "search:DevOps Practices for Spring + Redis:security practices for deployi": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build and package your Spring Boot application.\n  - `java -jar target/your-application.jar` to run the packaged application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Security: 6.2.0\n\n- **Key Config Options**:\n  - `spring.security.user.name`: Default username.\n  - `spring.security.user.password`: Default password.\n  - `spring.security.user.roles`: Default roles for the user.\n  - `spring.security.basic.enabled`: Enable basic authentication.\n  - `spring.security.csrf.enabled`: Enable CSRF protection.",
     "source": "web_search",
-    "updated_at": 1780789069.3935091
+    "updated_at": 1780790352.298506
   },
   "search:DevOps Practices for Spring + Redis:security practices for deployi_ex": {
     "content": "- Use `mvn spring-boot:run` to run Spring Boot applications locally.\n- Deploy using Docker with `docker build -t my-spring-app .` and `docker run -p 8080:8080 my-spring-app`.\n- Kubernetes deployment YAML example:\n  ```yaml\n  apiVersion: apps/v1\n  kind: Deployment\n  metadata:\n    name: spring-boot-deployment\n  spec:\n    replicas: 3\n    selector:\n      matchLabels:\n        app: spring-boot\n    template:\n      metadata:\n        labels:\n          app: spring-boot\n      spec:\n        containers:\n        - name: spring-boot\n          image: my-spring-app:latest\n          ports:\n          - containerPort: 8080\n  ```\n- Use `kubectl apply -f deployment.yaml` to deploy.\n- Update Spring Boot version in `pom.xml`.\n- Enable Spring Security with `@EnableWebSecurity` and configure it using Java configuration or XML.\n- Key security configurations include CSRF protection, HTTPs, and user authentication.",
     "source": "code_example",
-    "updated_at": 1780789070.6777673
+    "updated_at": 1780790353.4885845
   }
 }
