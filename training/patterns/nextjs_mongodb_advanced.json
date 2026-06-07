@@ -2,7 +2,7 @@
   "search:nextjs+mongodb-advanced:next.js mongodb advanced queri": {
     "content": "- **CLI Commands**:\n  - `npm install mongoose` to install Mongoose, the MongoDB object modeling tool.\n  - `mongoimport --db yourDatabase --collection yourCollection --file path/to/your/file.json` for importing data into MongoDB.\n\n- **Latest Versions**:\n  - Node.js: v18.14.0\n  - MongoDB: v6.0\n\n- **Key Config Options**:\n  - Mongoose Connection String: `mongoose.connect('mongodb://localhost:27017/yourDatabase');`\n  - Indexing: Use `.createIndex()` method on a schema to create an index.\n  - Aggregation Framework: Utilize `$lookup`, `$match`, `$sort`, and `$limit` stages for complex data processing.",
     "source": "web_search",
-    "updated_at": 1780804909.4581742
+    "updated_at": 1780809123.6100094
   },
   "search:nextjs+mongodb-advanced:next.js mongodb advanced queri_ex": {
     "content": "- **CLI Commands**:\n  - `mongo` to connect to MongoDB.\n  - `db.collection.find(query, projection)` for querying documents.\n  - `db.collection.aggregate(pipeline)` for advanced data aggregation.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - MongoDB: 6.0\n\n- **Key Config Options**:\n  - Connection URI: `mongodb://localhost:27017/mydatabase`\n  - Indexing: `{ field: 1 }` for ascending order, `-1` for descending.\n  - Aggregation Pipeline Stages: `$match`, `$group`, `$sort`, `$limit`.",
