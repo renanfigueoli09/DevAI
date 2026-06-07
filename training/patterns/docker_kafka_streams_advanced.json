@@ -2,21 +2,21 @@
   "search:docker+kafka-streams-advanced:docker kafka streams advanced ": {
     "content": "- **CLI Commands**:\n  - `docker build -t abhirockzz/docker-kafka-streams .`\n  - `docker run -d --name kafka-streams-container abhirockzz/docker-kafka-streams`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.0.0\n  - Confluent Platform: 7.2.1\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy to reset offsets on startup (e.g., `earliest`, `latest`).",
     "source": "web_search",
-    "updated_at": 1780839114.9284751
+    "updated_at": 1780841498.829262
   },
   "search:docker+kafka-streams-advanced:docker kafka streams advanced _ex": {
     "content": "- **Docker Kafka Streams Advanced Use Cases 2023**\n  - **CLI Commands**:\n    - `docker run --name kafka-streams-app -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 wurstmeister/kafka`\n    - `docker run --name zookeeper -p 2181:2181 wurstmeister/zookeeper`\n  - **Latest Versions**:\n    - Kafka Streams: 3.0.0\n    - Docker: 20.10.7\n  - **Key Config Options**:\n    - `bootstrap.servers`: List of host/port pairs to use for establishing the initial connection to the Kafka cluster.\n    - `key.deserializer`: The class name of a deserializer for keys that will be used to deserialize records on the consumer side.\n    - `value.deserializer`: The class name of a deserializer for values that will be used to deserialize records on the consumer side.",
     "source": "code_example",
-    "updated_at": 1780839116.6678934
+    "updated_at": 1780841500.6529398
   },
   "search:docker+kafka-streams-advanced:docker kafka streams performan": {
     "content": "- **CLI Commands**: Use `docker run` to start a container, e.g., `docker run -d --name my-kafka-streams-app my-kafka-streams-image`.\n- **Latest Versions**: Check Docker Hub for the latest version of Kafka Streams images.\n- **Key Config Options**:\n  - `KAFKA_STREAMS_APPLICATION_ID`: Unique identifier for your application.\n  - `KAFKA_BOOTSTRAP_SERVERS`: List of Kafka brokers to connect to.\n  - `KAFKA_CONSUMER_GROUP_ID`: ID for the consumer group.\n  - `KAFKA_INPUT_TOPIC`: Topic to read from.\n  - `KAFKA_OUTPUT_TOPIC`: Topic to write to.",
     "source": "web_search",
-    "updated_at": 1780839118.1368759
+    "updated_at": 1780841502.4192548
   },
   "search:docker+kafka-streams-advanced:docker kafka streams performan_ex": {
     "content": "- **CLI Commands**:\n  - `docker run --name kafka-streams-app -p 9092:9092 wurstmeister/kafka`\n  - `docker exec -it kafka-streams-app bash`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.1\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `bootstrap.servers`: Set to the Kafka broker address.\n  - `key.deserializer`: Deserializer for keys.\n  - `value.deserializer`: Deserializer for values.\n  - `auto.offset.reset`: Set to `earliest` or `latest`.",
     "source": "code_example",
-    "updated_at": 1780839119.725361
+    "updated_at": 1780841504.2246058
   }
 }

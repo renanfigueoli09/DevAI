@@ -2,21 +2,21 @@
   "search:nextjs+supabase-realtime:nextjs supabase real-time data": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase: v2.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key\n  - Realtime channel subscriptions\n  - Authentication methods (email/password, JWT)",
     "source": "web_search",
-    "updated_at": 1780839313.9350734
+    "updated_at": 1780841726.1335168
   },
   "search:nextjs+supabase-realtime:nextjs supabase real-time data_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-real-time-chat`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 15.x\n  - Supabase: 2.0.x\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project dashboard.\n  - Real-time channel subscriptions using `supabase_client.on('postgres_changes', ...)`.",
     "source": "code_example",
-    "updated_at": 1780839315.5448828
+    "updated_at": 1780841727.8683283
   },
   "search:nextjs+supabase-realtime:nextjs supabase authentication": {
     "content": "- Use `create-next-app` command with the `with-supabase` template to create a Next.js app pre-configured with Supabase.\n- Rename `.env.example` to `.env.local` and populate it with your Supabase connection variables.\n- Implement authentication using Supabase's official docs for Next.js (server-side).\n- Update middleware in `src/utils/supabase/middleware.js` to protect routes.\n- For real-time polling app, use Supabase and Next.js to build a system that showcases both authentication and authorization.",
     "source": "web_search",
-    "updated_at": 1780839317.1428933
+    "updated_at": 1780841729.5645268
   },
   "search:nextjs+supabase-realtime:nextjs supabase authentication_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-auth-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase Client: v2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your Supabase project.\n  - Environment variables for security (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).\n  - Authentication flow using Next.js App Router hooks like `useEffect` and `useState`.",
     "source": "code_example",
-    "updated_at": 1780839318.7409308
+    "updated_at": 1780841731.4513876
   }
 }

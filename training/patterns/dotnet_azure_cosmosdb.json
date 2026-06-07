@@ -2,11 +2,11 @@
   "search:dotnet+azure-cosmosdb:dotnet azure cosmosdb crud ope": {
     "content": "- Use `dotnet new webapi -n CosmosDBCRUD` to create a new ASP.NET Core Web API project.\n- Install the latest version of Azure Cosmos DB SDK via NuGet: `dotnet add package Microsoft.Azure.Cosmos`.\n- Configure Cosmos DB connection string in `appsettings.json`: `\"CosmosDbConnectionString\": \"your_cosmos_db_connection_string\"`.\n- Use `[EnableCors]` attribute to enable CORS for your API.\n- Implement CRUD operations using the Azure Cosmos DB SDK, e.g., `await _container.ReadItemAsync<T>(id, new PartitionKey(partitionKey))`.\n- For Azure Functions, use `CosmosDBTrigger` and `CosmosDBOutput` bindings in function.json.\n- Ensure proper indexing on your Cosmos DB container for efficient querying.\n- Use the latest version of Azure CLI for managing resources: `az --version`.\n- Configure logging levels in `appsettings.json` to control output verbosity.",
     "source": "web_search",
-    "updated_at": 1780839196.1332574
+    "updated_at": 1780841591.867411
   },
   "search:dotnet+azure-cosmosdb:dotnet azure cosmosdb crud ope_ex": {
     "content": "- **CLI Commands**:\n  - `az cosmosdb create --name <your_cosmos_db_name> --resource-group <your_resource_group> --kind GlobalDocumentDB`\n  - `az cosmosdb sql database create --account-name <your_cosmos_db_name> --resource-group <your_resource_group> --name <your_database_name>`\n  - `az cosmosdb sql container create --account-name <your_cosmos_db_name> --resource-group <your_resource_group> --database-name <your_database_name> --name <your_container_name> --partition-key-path /id`\n\n- **Latest Versions**:\n  - .NET SDK for Azure Cosmos DB: v4.13.0\n  - Azure CLI: v2.46.0\n\n- **Key Config Options**:\n  - `EndpointUrl`: The URL of your Cosmos DB account.\n  - `AuthorizationKey`: The primary or secondary key used to authenticate requests.\n  - `DatabaseId` and `ContainerId`: Names of the database and container where data is stored.\n  - Partition Key: Defines how data is partitioned across physical partitions.",
     "source": "code_example",
-    "updated_at": 1780839197.5911598
+    "updated_at": 1780841593.7784708
   }
 }
