@@ -1,0 +1,12 @@
+{
+  "search:kubernetes+logging-and-monitoring:kubernetes logging best practi": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- Implement centralized logging using tools like Fluentd, Fluent Bit, or Loki.\n- Configure log rotation with `logrotate` for long-term storage management.\n- Set up log retention policies in your logging solution (e.g., 30 days).\n- Use labels and annotations to organize and filter logs effectively.\n- Ensure logs are encrypted at rest and in transit using TLS.\n- Regularly update your logging agents and tools to the latest versions.\n- Implement role-based access control (RBAC) for log management.\n- Monitor log volume and performance regularly to optimize resource usage.",
+    "source": "web_search",
+    "updated_at": 1780818509.328026
+  },
+  "search:kubernetes+logging-and-monitoring:kubernetes monitoring tools an": {
+    "content": "- **Prometheus**: Use `kubectl apply -f prometheus.yaml` to deploy Prometheus.\n- **Grafana**: Deploy using Helm with `helm install grafana grafana/grafana`.\n- **ELK Stack**: Install Elasticsearch, Logstash, and Kibana using Docker Compose or Kubernetes manifests.\n- **Alertmanager**: Configure Alertmanager by editing the `alertmanager.yml` file.\n- **Key Config Options**:\n  - Prometheus: `scrape_interval`, `job_name`\n  - Grafana: Data sources, dashboards\n  - ELK Stack: Index patterns, logstash pipelines\n  - Alertmanager: Routing rules, notification channels",
+    "source": "web_search",
+    "updated_at": 1780818549.9794233
+  }
+}

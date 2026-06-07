@@ -8,5 +8,10 @@
     "content": "- Use a 3-5 machine Zookeeper ensemble solely dedicated to Kafka.\n- Configure Kafka brokers to automatically recover from Zookeeper unavailability.\n- Employ Confluent images for Docker-compose setup with 3 Zookeepers and 3 Kafka Brokers.\n- Utilize a bespoke Kafka load testing tool configured via YAML.\n- Consider using multiple ZooKeepers for increased fault tolerance.\n- Each Kafka server should ideally have its own dedicated ZooKeeper.\n- Monitor performance metrics regularly to optimize configurations.",
     "source": "web_search",
     "updated_at": 1780818124.0189505
+  },
+  "search:docker-compose-kafka-zookeeper:kafka zookeeper docker perform_ex": {
+    "content": "- Use `docker-compose` to set up Kafka and Zookeeper.\n- Example `docker-compose.yml` version: '3'.\n- Services include `zookeeper` and `kafka`.\n- Image for `zookeeper`: `confluentinc/cp-zookeeper:latest`.\n- Environment variables: `ZOOKEEPER_CLIENT_PORT`, `ZOOKEEPER_TICK_TIME`.\n- Port mapping: `2181:2181`.\n- Kafka supports mode without ZooKeeper since version 2.8.0.\n- Confluent Platform 7.5 deprecates ZooKeeper.\n- Use Docker image for Kafka including Zookeeper from GitHub repository.",
+    "source": "code_example",
+    "updated_at": 1780818141.6981485
   }
 }
