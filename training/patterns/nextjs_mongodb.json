@@ -2,11 +2,11 @@
   "search:nextjs+mongodb:next.js mongodb mongoose singl": {
     "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose`\n  - `npx next dev` for development server\n- **Key Config Options**:\n  - `mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })`\n  - Use environment variables for sensitive data like MongoDB URI\n  - Implement caching to reuse connections",
     "source": "web_search",
-    "updated_at": 1780822976.257998
+    "updated_at": 1780830629.301025
   },
   "search:nextjs+mongodb:next.js mongodb mongoose singl_ex": {
     "content": "- Use `mongoose.connect()` to establish a connection.\n- Implement the Singleton pattern by creating a module that exports a single instance of the Mongoose connection.\n- Ensure the connection is only created once and reused throughout the application lifecycle.\n- Key config options include `useNewUrlParser`, `useUnifiedTopology`, and `useCreateIndex`.\n- Use `db.on('error', callback)` to handle connection errors.\n- Consider using environment variables for sensitive information like database URLs.\n- For Node.js, ensure compatibility with the latest LTS version (e.g., v14.x or v16.x).\n- Example of a Mongoose connection file (`db.js`):\n  ```javascript\n  import mongoose from 'mongoose';\n\n  let db;\n\n  const connectDB = async () => {\n    if (!db) {\n      db = await mongoose.connect(process.env.MONGODB_URI, {\n        useNewUrlParser: true,\n        useUnifiedTopology: true,\n        useCreateIndex: true,\n      });\n      console.log('MongoDB connected...');\n    }\n    return db;\n  };\n\n  export default connectDB;\n  ```\n- Use `connectDB()` in your application entry point to ensure the connection is established before any other operations.",
     "source": "code_example",
-    "updated_at": 1780822977.4835436
+    "updated_at": 1780830630.7961113
   }
 }
