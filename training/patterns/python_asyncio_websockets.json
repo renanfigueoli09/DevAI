@@ -23,5 +23,10 @@
     "content": "- Use `websockets` library version 10 or later.\n- Implement buffering using `asyncio.Queue`.\n- Manage data flow efficiently to avoid backpressure.\n- Set timeouts for WebSocket connections to prevent hanging.\n- Monitor and optimize performance using tools like `cProfile`.\n- Scale horizontally by adding more instances of your application.\n- Use Redis for caching and message brokering in real-time applications.\n- Deploy with a load balancer to distribute traffic evenly.\n- Regularly update dependencies and Python itself to benefit from performance improvements.",
     "source": "web_search",
     "updated_at": 1780829108.8245115
+  },
+  "search:python-asyncio-websockets:performance optimization for p_ex": {
+    "content": "- Use `pip install websockets==10.3` to install the latest version of the `websockets` library.\n- Configure your WebSocket server using the following code snippet:\n```python\nimport asyncio\nimport websockets\n\nasync def echo(websocket, path):\n    async for message in websocket:\n        await websocket.send(message)\n\nstart_server = websockets.serve(echo, \"localhost\", 8765)\n\nasyncio.get_event_loop().run_until_complete(start_server)\nasyncio.get_event_loop().run_forever()\n```\n- Set the `max_size` parameter to control the maximum size of incoming messages:\n```python\nstart_server = websockets.serve(echo, \"localhost\", 8765, max_size=1024*1024)  # 1MB limit\n```\n- Use `websockets.exceptions.ConnectionClosed` to handle connection closures gracefully.\n- Enable compression by setting the `compression` parameter:\n```python\nstart_server = websockets.serve(echo, \"localhost\", 8765, compression=\"deflate\")\n```\n- Monitor performance using tools like `asyncio.proactor_events.ProactorEventLoop` for better I/O handling on Windows.\n- Implement rate limiting to prevent abuse and ensure fair usage of resources.",
+    "source": "code_example",
+    "updated_at": 1780829126.7424645
   }
 }
