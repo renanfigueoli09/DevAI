@@ -2,16 +2,16 @@
   "search:spring-data-jpa-advanced:spring data jpa advanced queri": {
     "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Data JPA, which as of my last update is 2.7.5.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set this to `update` or `create-drop` for development environments.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure your database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the dialect of your SQL database (e.g., `org.hibernate.dialect.MySQL5Dialect`).",
     "source": "web_search",
-    "updated_at": 1780807214.314522
+    "updated_at": 1780810460.9871678
   },
   "search:spring-data-jpa-advanced:spring data jpa advanced queri_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for production environments.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect.",
     "source": "code_example",
-    "updated_at": 1780807229.7367682
+    "updated_at": 1780810462.2077436
   },
   "search:spring-data-jpa-advanced:spring data jpa performance tu": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `jps` to list Java processes.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.datasource.hikari.maximum-pool-size=20`\n  - `spring.jpa.show-sql=true` for debugging SQL queries.\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`\n\n- **Performance Tuning Tips**:\n  - Use `@QueryHints` to optimize specific queries.\n  - Implement batch inserts using `saveAll()` with a configured batch size.\n  - Monitor and adjust HikariCP settings based on application load.",
     "source": "web_search",
-    "updated_at": 1780807250.085382
+    "updated_at": 1780810463.4186928
   }
 }
