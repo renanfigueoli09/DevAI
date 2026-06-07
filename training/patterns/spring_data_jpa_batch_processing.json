@@ -1,0 +1,17 @@
+{
+  "search:spring-data-jpa-batch-processing:spring data jpa batch processi": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/spring-batch-example.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Data JPA: 2.7.x\n  - Hibernate/JPA: 6.1.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password` for database connection.\n  - `spring.jpa.properties.hibernate.jdbc.batch_size` to set batch size (e.g., `50`).\n  - `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true` for ordered inserts/updates.",
+    "source": "web_search",
+    "updated_at": 1780808798.2536223
+  },
+  "search:spring-data-jpa-batch-processing:spring data jpa batch job conf": {
+    "content": "- Use `@EnableBatchProcessing` in your Spring Boot application.\n- Configure batch size in `application.properties`: `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Utilize `JpaItemWriter` for batch writing entities.\n- Implement `ItemProcessor` if you need to process items before writing.\n- Use `@Transactional` on your batch job methods.\n- Ensure entity classes are annotated with `@Entity` and have appropriate JPA annotations.\n- For bulk inserts, consider using `EntityManager.flush()` and `EntityManager.clear()` periodically.\n- Check Hibernate version compatibility for optimal performance.\n- Review Spring Data JPA documentation for the latest features and best practices.",
+    "source": "web_search",
+    "updated_at": 1780808820.512613
+  },
+  "search:spring-data-jpa-batch-processing:spring data jpa batch job conf_ex": {
+    "content": "- **CLI Commands**: \n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`",
+    "source": "code_example",
+    "updated_at": 1780808828.2183807
+  }
+}

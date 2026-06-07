@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-statefulsets-performance-optimization:kubernetes statefulsets perfor": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <statefulset-definition.yaml>`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0 (as of Jan 9, 2025)\n  - Karpenter: v0.30.0 (as of May 7, 2025)\n\n- **Key Config Options**:\n  - `replicas`: Number of replicas for the StatefulSet.\n  - `volumeClaimTemplates`: Defines PersistentVolumeClaims for each pod.\n  - `priorityClassName`: Assigns a priority class to the StatefulSet.\n  - `terminationGracePeriodSeconds`: Time in seconds before Kubernetes forcefully terminates a pod.",
+    "source": "web_search",
+    "updated_at": 1780808876.765132
+  },
+  "search:kubernetes-statefulsets-performance-optimization:kubernetes statefulsets perfor_ex": {
+    "content": "- Use `kubectl get statefulsets` to list StatefulSets.\n- Use `kubectl describe statefulset <statefulset-name>` for detailed information.\n- To update a StatefulSet, use `kubectl patch statefulset <statefulset-name> -p '{\"spec\":{\"replicas\":3}}'`.\n- For DNS caching in CoreDNS, edit the config map with `kubectl edit configmap coredns -n kube-system`.\n- Set `spec.template.metadata.labels` to match the StatefulSet workload name.\n- Use `kubectl scale statefulset <statefulset-name> --replicas=3` for scaling.\n- Ensure stable storage by using PersistentVolumeClaims (PVCs) in the StatefulSet's template.",
+    "source": "code_example",
+    "updated_at": 1780808884.005378
+  },
+  "search:kubernetes-statefulsets-performance-optimization:statefulsets in kubernetes bes": {
+    "content": "- **CLI Commands**: Use `kubectl get statefulsets` to list StatefulSets, and `kubectl describe statefulset <statefulset-name>` for detailed information.\n- **Latest Versions**: Ensure using Kubernetes v1.25 or later for the most recent features and improvements in StatefulSet management.\n- **Key Config Options**:\n  - `replicas`: Define the number of replicas.\n  - `volumeClaimTemplates`: Specify PersistentVolumeClaims for state persistence.\n  - `serviceName`: Link to a Service for stable network identity.\n  - `updateStrategy.type`: Set update strategy (e.g., RollingUpdate, OnDelete).\n- **Retention Policy**: Set `revisionHistoryLimit` between 5–10 for most workloads. Increase if deep rollback history is required.\n- **Monitoring**: Regularly check revisions with `kubectl get statefulsets --show-labels`. Alert on rapid revision count growth.\n- **Security Best Practices**: Use Network Policies, Role-Based Access Control (RBAC), and Secure Pod Definitions.\n- **Backup Strategies**: Implement regular backups using tools like Velero or custom scripts for StatefulSet data.",
+    "source": "web_search",
+    "updated_at": 1780808901.8627822
+  },
+  "search:kubernetes-statefulsets-performance-optimization:statefulsets in kubernetes bes_ex": {
+    "content": "- Use `kubectl apply -f example-statefulset.yaml` to create a StatefulSet.\n- Ensure your application is designed for state persistence.\n- Set `volumeClaimTemplates` in the StatefulSet spec to manage storage dynamically.\n- Use `service.alpha.kubernetes.io/appstudio-service-type: \"Stateful\"` for better integration with Kubernetes services.\n- Monitor StatefulSet status using `kubectl get statefulset <statefulset-name> -o yaml`.\n- Update StatefulSets by modifying the pod template and rolling out updates.\n- Key config options include `replicas`, `selector`, `template`, and `volumeClaimTemplates`.",
+    "source": "code_example",
+    "updated_at": 1780808907.3987432
+  }
+}
