@@ -18,5 +18,10 @@
     "content": "- Ensure NGINX Ingress Controller is updated to the latest version using `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml`.\n- Use `--publish-service` flag during deployment to expose the NGINX Ingress Controller service.\n- Implement TLS termination by providing a secret with your SSL certificate and key using `--default-tls-secret`.\n- Configure rate limiting with `limit-rps` or `limit-burst` in the NGINX configuration file.\n- Enable authentication using annotations like `nginx.ingress.kubernetes.io/auth-type: basic` and provide credentials via a secret.\n- Use `nginx.ingress.kubernetes.io/proxy-body-size` to adjust the maximum body size for requests.\n- Implement IP whitelisting with `nginx.ingress.kubernetes.io/whitelist-source-range`.\n- Regularly update your Kubernetes cluster and NGINX Ingress Controller to mitigate known vulnerabilities.\n- Monitor NGINX Ingress Controller logs for any suspicious activity using `kubectl logs <ingress-controller-pod>`.",
     "source": "code_example",
     "updated_at": 1780802800.3680031
+  },
+  "search:kubernetes+nginx-ingress:kubernetes nginx ingress contr": {
+    "content": "- **Latest Version**: As of my last update, the latest version is 1.2.3.\n- **Installation via Helm**:\n  ```bash\n  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx\n  helm install ingress-nginx ingress-nginx/ingress-nginx\n  ```\n- **Installation via kubectl apply**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml\n  ```\n- **Key Config Options**:\n  - `controller.service.type`: Set to `LoadBalancer` for cloud environments.\n  - `controller.replicaCount`: Number of replicas for high availability.\n  - `controller.nodeSelector`: Node selection criteria if needed.\n  - `controller.tolerations`: Tolerations for specific nodes.",
+    "source": "web_search",
+    "updated_at": 1780806033.9076679
   }
 }
