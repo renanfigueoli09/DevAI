@@ -2,27 +2,27 @@
   "pattern:nestjs+mongodb:app-module": {
     "content": "// app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI||'mongodb://localhost:27017/app'). ONLY add modules that exist. NOT JwtModule/Redis/Kafka unless requested.",
     "source": "code_pattern",
-    "updated_at": 1780803857.7906377
+    "updated_at": 1780804361.1645002
   },
   "pattern:nestjs+postgres:app-module": {
     "content": "// app.module.ts PostgreSQL: TypeOrmModule.forRootAsync({useFactory:(c:ConfigService)=>({type:'postgres',host:c.get('DB_HOST'),port:+c.get('DB_PORT',5432),database:c.get('DB_NAME'),username:c.get('DB_USER'),password:c.get('DB_PASS'),entities:[__dirname+'/**/*.entity.js'],synchronize:c.get('NODE_ENV')!=='production'}),inject:[ConfigService]})",
     "source": "code_pattern",
-    "updated_at": 1780803859.0097814
+    "updated_at": 1780804363.2410104
   },
   "pattern:nestjs:dto": {
     "content": "// dto.ts: import {PartialType} from '@nestjs/mapped-types' (NEVER @nestjs/common). export class UpdateBookDto extends PartialType(CreateBookDto) {}",
     "source": "code_pattern",
-    "updated_at": 1780803860.2970228
+    "updated_at": 1780804363.9248683
   },
   "pattern:nestjs:main": {
     "content": "// main.ts: ValidationPipe({whitelist:true,transform:true}). Swagger: DocumentBuilder().setTitle().setVersion().addBearerAuth().build(). SwaggerModule.setup('swagger',app,doc).",
     "source": "code_pattern",
-    "updated_at": 1780803861.6739376
+    "updated_at": 1780804364.581013
   },
   "qa:partialtype-mapped-types": {
     "content": "PartialType: ALWAYS from '@nestjs/mapped-types'\nCORRECT: import { PartialType } from '@nestjs/mapped-types';\nWRONG:   import { PartialType } from '@nestjs/common';   ← does NOT exist\nWRONG:   import { PartialType } from '@nestjs/swagger';  ← avoid",
     "source": "critical_pattern",
-    "updated_at": 1780804195.6118882
+    "updated_at": 1780804677.173581
   },
   "nestjs": {
     "content": "- **CLI Commands**:\n  - `nest new <project-name>`: Scaffolds a new NestJS project.\n  - `npm i @nestjs/cli`: Installs the Nest CLI globally.\n\n- **Latest Versions**:\n  - `@nestjs/cli` version: 11.0.21\n\n- **Key Config Options**:\n  - Authentication: Use Passport and JWT for secure user authentication.\n  - Development Mode: Serve the application in development mode with `nest start --watch`.\n  - Production Build: Build and bundle the application for production with `nest build`.",

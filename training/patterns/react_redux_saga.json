@@ -1,0 +1,12 @@
+{
+  "search:react+redux-saga:react redux saga patterns 2025": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template redux-saga`\n- **Latest Versions**:\n  - Redux-Saga: v1.4.3\n  - React: v18.2.0\n  - Node.js: v16.17.0\n- **Key Config Options**:\n  - `sagas`: Array of saga functions to be run.\n  - `middleware`: Include Redux Saga middleware in your store configuration.\n  - `effects`: Import and use effects like `call`, `put`, `takeEvery` for handling side effects.",
+    "source": "web_search",
+    "updated_at": 1780804467.540932
+  },
+  "search:react+redux-saga:react redux saga patterns 2025_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app` to set up a new React app.\n- **Latest Versions**:\n  - React: v18.2.0\n  - Redux: v4.1.5\n  - Redux-Saga: v1.3.6\n- **Key Config Options**:\n  - In `store.js`, configure middleware with `applyMiddleware(sagaMiddleware)`.\n  - Define sagas using generator functions and `yield` effects.\n  - Use `takeEvery` or `takeLatest` to handle actions asynchronously.\n  - Configure `sagaMiddleware.run(rootSaga)` in the store setup.",
+    "source": "code_example",
+    "updated_at": 1780804472.6065507
+  }
+}

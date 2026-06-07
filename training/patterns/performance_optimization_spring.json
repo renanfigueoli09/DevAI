@@ -2,16 +2,16 @@
   "search:performance-optimization-spring:spring boot performance tuning": {
     "content": "- Use `actuator` to monitor app performance.\n- Implement database connection pooling using HikariCP or Apache Commons DBCP2.\n- Configure caching with Spring Cache abstraction and use Redis for distributed caching.\n- Tune JVM settings like `-Xms`, `-Xmx`, `-XX:MetaspaceSize`, and `-XX:MaxMetaspaceSize`.\n- Use `@EnableAsync` for asynchronous processing to improve throughput.\n- Implement batch processing for database operations to reduce I/O overhead.\n- Optimize microservices by using load balancers (e.g., Ribbon) and service discovery (e.g., Eureka).\n- Configure thread pools with `ThreadPoolTaskExecutor` for better control over concurrency.\n- Use Spring Boot's auto-configuration features to simplify configuration.",
     "source": "web_search",
-    "updated_at": 1780801030.9995177
+    "updated_at": 1780804305.7947495
   },
   "search:performance-optimization-spring:optimizing spring boot applica": {
     "content": "- Use `mvn clean package` to build your Spring Boot application.\n- Monitor performance using tools like JConsole, VisualVM, or Prometheus.\n- Configure JVM options for better performance:\n  - `-Xms512m` and `-Xmx1024m` for initial and maximum heap size.\n  - `-XX:+UseG1GC` for the G1 Garbage Collector.\n- Enable caching to reduce database queries:\n  ```yaml\n  spring:\n    cache:\n      type: caffeine\n      caffeine:\n        spec: maximumSize=500,expireAfterWrite=60s\n  ```\n- Optimize database queries using Spring Data JPA and Hibernate.\n- Use `@Async` for asynchronous method execution to improve response times.\n- Configure static content delivery with a CDN.\n- Manage dependencies efficiently by excluding unnecessary transitive dependencies:\n  ```xml\n  <dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-web</artifactId>\n    <exclusions>\n      <exclusion>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-tomcat</artifactId>\n      </exclusion>\n    </exclusions>\n  </dependency>\n  ```\n- Use Spring Boot Actuator for monitoring and management endpoints.\n- Regularly update your dependencies to the latest versions for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780801032.2991958
+    "updated_at": 1780804307.1623135
   },
   "search:performance-optimization-spring:optimizing spring boot applica_ex": {
     "content": "- Use Java 21 Virtual Threads for non-blocking operations.\n- Implement Spring Boot REST controllers using virtual threads to handle blocking operations efficiently.\n- Optimize startup time and reduce memory usage by applying techniques specific to your application's characteristics.\n- Explore deploying a Spring Boot 3.3.x application with CDS (Class Data Sharing) and native images for improved performance.\n- Use CLI commands like `mvn clean package` for building applications.\n- Check the latest versions of Spring Boot, Java, and other dependencies regularly.\n- Configure key options such as `server.port`, `spring.datasource.url`, and `spring.jpa.hibernate.ddl-auto` in your `application.properties` or `application.yml`.",
     "source": "code_example",
-    "updated_at": 1780801033.8743384
+    "updated_at": 1780804308.5025249
   }
 }
