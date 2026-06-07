@@ -2,11 +2,11 @@
   "search:fastapi+auth:fastapi oauth2passwordbearer j": {
     "content": "- Install FastAPI, python-jose, and passlib using pip:\n  ```bash\n  pip install fastapi[all] python-jose passlib[bcrypt]\n  ```\n- Use `OAuth2PasswordBearer` to extract JWT token from the Authorization header.\n- Utilize `OAuth2PasswordRequestForm` for parsing login form data (username & password).\n- Implement JWT tokens for access control and include a refresh token mechanism.\n- Refresh tokens should be long-lived, allowing clients to request new short-lived access tokens without re-prompting users for credentials.\n- Ensure secure handling of passwords using passlib's bcrypt hashing algorithm.",
     "source": "web_search",
-    "updated_at": 1780792567.6306944
+    "updated_at": 1780796122.9097974
   },
   "search:fastapi+auth:fastapi oauth2passwordbearer j_ex": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For JWT, use `python-jose[cryptography]`.\n- For password hashing, use `passlib`.\n- Create a `token_url` endpoint for user authentication.\n- Use `OAuth2PasswordBearer(tokenUrl=\"token\")` in your API dependencies.\n- Implement password hashing using `passlib.context.CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")`.\n- Generate JWT tokens with `jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)`.\n- Decode JWT tokens with `jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])`.\n- Store refresh tokens securely in a database.\n- Implement token expiration and refresh logic in your authentication flow.",
     "source": "code_example",
-    "updated_at": 1780792577.7479503
+    "updated_at": 1780796124.1392002
   }
 }

@@ -2,11 +2,11 @@
   "search:spring+auth:spring security 6 jwt security": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - JWT Authentication: Use `JwtAuthenticationFilter` and `JwtTokenProvider`.\n  - Authorization: Implement `@PreAuthorize(\"hasRole('ROLE_ADMIN')\")` for role-based access control.\n  - Security Configuration: Define security settings in `SecurityFilterChain`.",
     "source": "web_search",
-    "updated_at": 1780792462.0188167
+    "updated_at": 1780796404.2059336
   },
   "search:spring+auth:spring security 6 jwt security_ex": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application\n  - `mvn clean install` for building the project\n- **Key Config Options**:\n  - `SecurityFilterChain` bean configuration\n  - `@PreAuthorize` annotations for method-level security\n  - JWT token signing and validation keys",
     "source": "code_example",
-    "updated_at": 1780792466.4173815
+    "updated_at": 1780796405.7227907
   }
 }

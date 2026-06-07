@@ -2,36 +2,36 @@
   "search:Advanced Testing:typescript nextjs testing adva": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install --save-dev cypress playwright vitest jest`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Cypress: v12.0.0\n  - Playwright: v1.24.0\n  - Vitest: v0.27.0\n  - Jest: v28.1.3\n\n- **Key Config Options**:\n  - `tsconfig.json`: Enable strict mode, use type-safe routing, define environment variable types.\n  - Cypress: Configure `cypress.json` for custom commands and plugins.\n  - Playwright: Use `playwright.config.ts` to set up browser configurations.\n  - Vitest: Customize `vitest.config.ts` for test environments and coverage reports.\n  - Jest: Modify `jest.config.js` for advanced testing features like mock functions.",
     "source": "web_search",
-    "updated_at": 1780794749.2428029
+    "updated_at": 1780796359.7663705
   },
   "search:Advanced Testing:typescript nextjs testing adva_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9\n  - Jest: 27.5\n\n- **Key Config Options**:\n  - In `tsconfig.json`, ensure `\"jsx\": \"react-jsx\"` and `\"moduleResolution\": \"node\"`\n  - In `jest.config.js`, add `\"testEnvironment\": \"jsdom\"`, `\"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]`",
     "source": "code_example",
-    "updated_at": 1780794756.1493511
+    "updated_at": 1780796361.3627348
   },
   "search:Advanced Testing:fastapi asyncio websockets tes": {
     "content": "- Use `TestClient` from FastAPI to test WebSockets.\n- Connect to WebSocket using `with TestClient(app) as client:`.\n- For async testing, use `httpx.AsyncClient` with `pytest-asyncio`.\n- Configure the async event loop for tests in your pytest configuration file.\n- Test async route handlers that use async SQLAlchemy.\n- Use `httpx-ws` or Starlette's test client to write WebSocket tests.\n- Ensure proper connection management and authentication in WebSocket servers.\n- Scale WebSocket connections using Redis for multi-worker environments.\n- Deploy WebSocket servers with FastAPI on production platforms.",
     "source": "web_search",
-    "updated_at": 1780794796.4500775
+    "updated_at": 1780796362.8858693
   },
   "search:Advanced Testing:fastapi asyncio websockets tes_ex": {
     "content": "- Install FastAPI, Uvicorn, Websockets, Pytest, and pytest-asyncio using pip.\n- Use `pytest` for testing WebSocket applications.\n- Employ `httpx` for making HTTP requests in tests.\n- Set up a basic WebSocket application for testing by defining routes and handling connections.\n- Assert response status codes to validate API endpoints.\n- Utilize Chanx testing utilities for comprehensive WebSocket testing.\n- Test message flows and broadcasting using pytest fixtures and asynchronous functions.\n- Handle exceptions like `asyncio.TimeoutError` during WebSocket tests.\n- Ensure proper setup of FastAPI, Uvicorn, and Websockets versions for compatibility.",
     "source": "code_example",
-    "updated_at": 1780794801.7103808
+    "updated_at": 1780796364.3918896
   },
   "search:Advanced Testing:spring kotlin jpa testing": {
     "content": "- **CLI Commands**:\n  - `./mvnw test` to run tests in a Maven project.\n  - `./gradlew test` for Gradle projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kotlin: 1.9.x\n  - Spring Data JPA: 3.2.x\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `create-drop` for testing environments.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
     "source": "web_search",
-    "updated_at": 1780794808.1967435
+    "updated_at": 1780796365.782705
   },
   "search:Advanced Testing:python fastapi authentication ": {
     "content": "- Use `uvicorn` to run FastAPI applications locally.\n- For testing, use `pytest` along with `TestClient`.\n- Install dependencies using pip:\n  ```bash\n  pip install fastapi uvicorn pytest testclient\n  ```\n- Create a test file (e.g., `test_main.py`) and import necessary modules.\n- Use `TestClient` to simulate HTTP requests to your FastAPI app.\n- For authentication, include the token in the headers of your requests.\n- Example:\n  ```python\n  from fastapi.testclient import TestClient\n  from main import app\n\n  client = TestClient(app)\n\n  def test_read_main():\n      response = client.get(\"/\")\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"Hello World\"}\n  ```\n- For testing protected routes, include the token in the headers:\n  ```python\n  def test_protected_route():\n      response = client.get(\"/protected\", headers={\"Authorization\": \"Bearer your_token_here\"})\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"This is a protected route\"}\n  ```\n- Ensure your FastAPI app has proper authentication middleware set up.\n- For more advanced testing, consider using `pytest` fixtures for setup and teardown.",
     "source": "web_search",
-    "updated_at": 1780794846.2799547
+    "updated_at": 1780796367.0435097
   },
   "search:Advanced Testing:python fastapi authentication _ex": {
     "content": "- Use `pip install fastapi uvicorn python-multipart` to install FastAPI, Uvicorn, and Python Multipart.\n- For authentication, use `pip install passlib[bcrypt] python-jose[cryptography]`.\n- Create a new FastAPI project with `fastapi create-app myproject`.\n- Configure the database connection in your main application file (e.g., `main.py`).\n- Implement user registration, login, and logout endpoints.\n- Use JWT for token-based authentication. Install `python-jose[cryptography]` and generate a secret key.\n- Set up middleware to handle authentication tokens on each request.\n- Test the authentication flow using tools like Postman or curl.\n- Ensure your application is secure by validating user input and handling exceptions properly.",
     "source": "code_example",
-    "updated_at": 1780794862.5626993
+    "updated_at": 1780796368.3190699
   }
 }

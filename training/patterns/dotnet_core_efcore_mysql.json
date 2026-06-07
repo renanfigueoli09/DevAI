@@ -2,21 +2,21 @@
   "search:dotnet-core-efcore-mysql:entity framework core mysql pe": {
     "content": "- **Latest Version**: Entity Framework Core 7.0 was released in October 2023.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Key Config Options**:\n  - `UseMySql`: Specify MySQL as the database provider.\n    ```csharp\n    services.AddDbContext<MyDbContext>(options =>\n        options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 21))));\n    ```\n  - `EnableSensitiveDataLogging`: Enable logging of sensitive data for debugging purposes.\n    ```csharp\n    options.EnableSensitiveDataLogging();\n    ```\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Prevent EF Core from tracking entities in memory.\n    ```csharp\n    context.Set<YourEntity>().AsNoTracking().ToList();\n    ```\n\n- **Performance Tips**:\n  - Use `AsNoTracking` to avoid change tracking for read-only operations.\n  - Implement caching strategies like Redis or MemoryCache.\n  - Optimize queries using projection (`Select`) and eager loading (`Include`).\n  - Use bulk operations libraries like Entity Framework Plus.\n  - Monitor and analyze query performance with tools like EF Core Profiler.",
     "source": "web_search",
-    "updated_at": 1780791801.7410393
+    "updated_at": 1780796437.516781
   },
   "search:dotnet-core-efcore-mysql:entity framework core mysql pe_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations and `dotnet ef database update` to apply them.\n- **Latest Versions**: EF Core 7.0, MySQL Connector/NET 8.0.\n- **Key Config Options**:\n  - `MaxBatchSize`: Controls the maximum number of commands sent in a single batch.\n  - `CommandTimeout`: Sets the timeout for command execution.\n  - `ConnectionResiliencyStrategy`: Specifies the strategy for handling transient errors and retries.\n  - `UseQuerySplittingBehavior(QuerySplittingBehavior.Always)`: Configures EF Core to always split queries into multiple SQL statements.",
     "source": "code_example",
-    "updated_at": 1780791802.944877
+    "updated_at": 1780796439.0158088
   },
   "search:dotnet-core-efcore-mysql:dotnet core entity framework c": {
     "content": "- Install EF Core: `dotnet add package Microsoft.EntityFrameworkCore`\n- Add MySQL provider: `dotnet add package Pomelo.EntityFrameworkCore.MySQL`\n- Scaffold model:\n  ```bash\n  dotnet ef dbcontext scaffold \"Server=localhost;Database=mydb;User=root;Password=mypassword;\" Pomelo.EntityFrameworkCore.MySQL -o Models\n  ```\n- Key config options in `appsettings.json`:\n  ```json\n  {\n    \"ConnectionStrings\": {\n      \"DefaultConnection\": \"Server=localhost;Database=mydb;User=root;Password=mypassword;\"\n    }\n  }\n  ```\n- Use DbContext in your application.\n- Ensure MySQL server is running and accessible.\n- Update to latest versions of EF Core and Pomelo provider for compatibility.",
     "source": "web_search",
-    "updated_at": 1780791804.1816235
+    "updated_at": 1780796440.59424
   },
   "search:dotnet-core-efcore-mysql:dotnet core entity framework c_ex": {
     "content": "- **Install Entity Framework Core and Pomelo.EntityFrameworkCore.MySql**:\n  ```bash\n  dotnet add package Microsoft.EntityFrameworkCore\n  dotnet add package Pomelo.EntityFrameworkCore.MySql\n  ```\n\n- **Create a DbContext**:\n  ```csharp\n  public class BloggingContext : DbContext\n  {\n      public DbSet<Blog> Blogs { get; set; }\n\n      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n      {\n          optionsBuilder.UseMySql(\"server=localhost;user=root;password=yourpassword;database=mydb\", new MySqlServerVersion(new Version(8, 0, 23)));\n      }\n  }\n  ```\n\n- **Define a Model**:\n  ```csharp\n  public class Blog\n  {\n      public int BlogId { get; set; }\n      public string Url { get; set; }\n  }\n  ```\n\n- **Migrate the Database**:\n  ```bash\n  dotnet ef migrations add InitialCreate\n  dotnet ef database update\n  ```\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - Pomelo.EntityFrameworkCore.MySql: 6.0\n\n- **Key Config Options**:\n  - `server`: MySQL server address.\n  - `user`: MySQL username.\n  - `password`: MySQL password.\n  - `database`: Database name.\n  - `MySqlServerVersion`: Specifies the version of MySQL to target.\n\nThese steps provide a concise guide for setting up an Entity Framework Core application with MySQL, including necessary CLI commands and key configuration options.",
     "source": "code_example",
-    "updated_at": 1780791805.330484
+    "updated_at": 1780796442.3212287
   }
 }

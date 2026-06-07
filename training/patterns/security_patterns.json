@@ -2,46 +2,46 @@
   "search:security-patterns:api security owasp top 10 back": {
     "content": "- **CLI Commands**: Use `owasp-top10-cli` to fetch the latest OWASP Top 10 data.\n- **Latest Version**: Check for updates using `owasp-top10-cli --update`.\n- **Key Config Options**:\n  - Enable API security scanning with `--api-security`.\n  - Set verbosity level with `--verbose <level>`.\n  - Specify target URL with `--url <target_url>`.",
     "source": "web_search",
-    "updated_at": 1780793525.896799
+    "updated_at": 1780796299.5546021
   },
   "search:security-patterns:api security owasp top 10 back_ex": {
     "content": "- Familiarize yourself with the latest OWASP Top 10 for 2025 web application security threats.\n- Implement input validation and sanitization to prevent injection attacks.\n- Use secure authentication mechanisms, such as OAuth or JWT, for API access control.\n- Regularly update dependencies and libraries to patch known vulnerabilities.\n- Employ rate limiting to mitigate brute force attacks.\n- Enable HTTPS to encrypt data in transit.\n- Conduct regular security audits and penetration testing.\n- Implement logging and monitoring to detect and respond to anomalies.\n- Use a content security policy (CSP) to prevent cross-site scripting (XSS).\n- Educate developers on secure coding practices and best practices.",
     "source": "code_example",
-    "updated_at": 1780793533.8626847
+    "updated_at": 1780796301.0433357
   },
   "search:security-patterns:sql injection xss csrf prevent": {
     "content": "- **CLI Commands**: Use `nest generate controller <name>` to create controllers.\n- **Latest Versions**: NestJS v10.x, Node.js v16.x.\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe({ transform: true }));` for input validation.\n  - `app.enableCors();` for enabling CORS.\n  - Use `@UseGuards(AuthGuard('jwt'))` for authentication guards.",
     "source": "web_search",
-    "updated_at": 1780793550.933205
+    "updated_at": 1780796302.349182
   },
   "search:security-patterns:sql injection xss csrf prevent_ex": {
     "content": "- **Prevent SQL Injection**: Use parameterized queries or prepared statements.\n- **Prevent XSS**: Sanitize user inputs, use Content Security Policy (CSP), and output encoding.\n- **Prevent CSRF**: Use CSRF tokens, validate Referer header, and set HttpOnly flag for cookies.\n- **NestJS**: Update to the latest version using `npm install @nestjs/core@latest`.\n- **Spring Boot**: Update to the latest version using `mvn versions:set -DnewVersion=2025.1.0.RELEASE`.\n- **CLI Commands**:\n  - For NestJS: `nest new project-name`\n  - For Spring Boot: `spring init --dependencies=web project-name`\n- **Key Config Options**:\n  - NestJS: `app.useGlobalPipes(new ValidationPipe({ transform: true }));`\n  - Spring Boot: `httpSecurity.csrf().disable();` (for development purposes only)",
     "source": "code_example",
-    "updated_at": 1780793561.0216243
+    "updated_at": 1780796303.6650834
   },
   "search:security-patterns:jwt security best practices ex": {
     "content": "- **CLI Commands**:\n  - `jwt-cli sign --alg HS256 --exp <expiry_time> --iss <issuer> --sub <subject> <payload>`\n  - `jwt-cli verify --key <secret_key> <token>`\n\n- **Latest Versions**:\n  - JWT CLI: v1.0.3\n  - Node.js JWT Library: v9.0.0\n\n- **Key Config Options**:\n  - `exp`: Expiration time in seconds.\n  - `iss`: Issuer of the token.\n  - `sub`: Subject of the token (usually user ID).\n  - `alg`: Algorithm used for signing (e.g., HS256, RS256).",
     "source": "web_search",
-    "updated_at": 1780793573.0063567
+    "updated_at": 1780796304.9895058
   },
   "search:security-patterns:jwt security best practices ex_ex": {
     "content": "- **CLI Commands**:\n  - `openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048`\n  - `openssl rsa -pubout -in private.key -out public.key`\n\n- **Latest Versions**:\n  - JWT Library: v9.0.0\n  - Node.js: v16.15.0\n\n- **Key Config Options**:\n  - Algorithm: RS256 for enhanced security\n  - Expiry Time: Set to 30 minutes (1800 seconds)\n  - Refresh Token Rotation: Enabled with a new token issued on each refresh\n  - Secret Key Management: Use environment variables for secret keys",
     "source": "code_example",
-    "updated_at": 1780793582.4828877
+    "updated_at": 1780796306.1258454
   },
   "search:security-patterns:input validation sanitization ": {
     "content": "- Use OWASP Cheat Sheet Series for comprehensive guidance.\n- Implement input validation using libraries like `express-validator` in Node.js.\n- Sanitize data using packages such as `sanitize-html`.\n- Regularly update dependencies to the latest versions.\n- Enable strict mode in JavaScript to catch common coding errors.\n- Configure security headers in your web server (e.g., Apache, Nginx).\n- Use parameterized queries for SQL statements to prevent SQL injection.\n- Implement rate limiting to protect against brute force attacks.\n- Conduct code reviews and use static analysis tools like ESLint.\n- Subscribe to OWASP newsletters for the latest best practices.",
     "source": "web_search",
-    "updated_at": 1780793589.7293959
+    "updated_at": 1780796307.1501155
   },
   "search:security-patterns:input validation sanitization _ex": {
     "content": "- Use `npm install express-validator` for input validation in Express.js.\n- Implement server-side validation using `express-validator`.\n- Use `bcrypt` for password hashing to prevent leaks.\n- Employ parameterized queries with libraries like `pg-promise` or `sequelize`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Enable CORS with `cors()` middleware in Express.js.\n- Implement CSRF protection using `csurf` middleware.\n- Use HTTPS for secure data transmission.\n- Sanitize user input using DOMPurify to prevent XSS attacks.",
     "source": "code_example",
-    "updated_at": 1780793598.5963693
+    "updated_at": 1780796308.345417
   },
   "search:security-patterns:https tls certificate backend ": {
     "content": "- **CLI Commands**:\n  - `certbot renew --dry-run` to test certificate renewal.\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes` to generate a self-signed certificate.\n\n- **Latest Versions**:\n  - Certbot: Ensure you are using the latest version for compatibility and security updates.\n  - OpenSSL: Update to the latest stable release for enhanced security features.\n\n- **Key Config Options**:\n  - `certbot renew --webroot -w /path/to/webroot` for webroot authentication.\n  - `openssl s_client -connect example.com:443 -showcerts` to check TLS certificate details.\n  - `nginx.conf` or `apache2.conf`: Configure SSL/TLS settings in your server configuration files.",
     "source": "web_search",
-    "updated_at": 1780793622.9416282
+    "updated_at": 1780796309.5915859
   }
 }

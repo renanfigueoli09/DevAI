@@ -2,21 +2,21 @@
   "search:Spring Boot WebFlux:spring boot webflux reactive p": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `./mvnw clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring WebFlux: 5.1.x\n\n- **Key Config Options**:\n  - `spring.webflux.base-path`: Sets the base path for all routes.\n  - `server.port`: Specifies the port number on which the server will listen.\n  - `spring.reactor.buffer-size`: Configures the buffer size for reactive streams.\n\nThese details provide a concise overview of actionable facts for developers working with Spring Boot WebFlux.",
     "source": "web_search",
-    "updated_at": 1780791622.3353448
+    "updated_at": 1780796139.6564145
   },
   "search:Spring Boot WebFlux:spring boot webflux reactive p_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring WebFlux: 5.4.12\n  - Spring Data Reactive MongoDB: 3.4.1\n\n- **Key Config Options**:\n  - `spring.webflux.base-path=/api`\n  - `spring.data.mongodb.uri=mongodb://localhost:27017/mydb`\n  - `spring.datasource.url=jdbc:h2:mem:testdb`",
     "source": "code_example",
-    "updated_at": 1780791623.5018847
+    "updated_at": 1780796140.8647482
   },
   "search:Spring Boot WebFlux:webflux spring boot real-time ": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring WebFlux: 5.1.0\n\n- **Key Config Options**:\n  - `spring.webflux.dispatch-uncaught-exceptions=true`\n  - `spring.web.resources.cache-period=0`",
     "source": "web_search",
-    "updated_at": 1780791624.6294644
+    "updated_at": 1780796142.2229412
   },
   "search:Spring Boot WebFlux:webflux spring boot real-time _ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Spring WebFlux: 5.3.20\n\n- **Key Config Options**:\n  - `spring.webflux.dispatch-uncaught-exceptions=true`: Enables dispatching uncaught exceptions.\n  - `spring.data.mongodb.uri=mongodb://localhost:27017/mydb`: MongoDB connection URI.\n  - `spring.kafka.bootstrap-servers=localhost:9092`: Kafka bootstrap servers.",
     "source": "code_example",
-    "updated_at": 1780791625.7817237
+    "updated_at": 1780796143.5607023
   }
 }
