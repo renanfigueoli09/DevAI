@@ -2,11 +2,11 @@
   "search:java-spring-boot-mysql:spring boot mysql integration ": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mysql -u username -p` to access MySQL database.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - MySQL Connector/J: 8.0.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/yourdb`\n  - `spring.datasource.username=yourusername`\n  - `spring.datasource.password=yourpassword`\n  - `spring.jpa.hibernate.ddl-auto=update`",
     "source": "web_search",
-    "updated_at": 1780838979.2436912
+    "updated_at": 1780841326.3595765
   },
   "search:java-spring-boot-mysql:spring boot mysql integration _ex": {
     "content": "- **CLI Commands**:\n  - `aws eks create-cluster --name my-cluster --role-arn arn:aws:iam::123456789012:role/eksctl-my-cluster-nodegroup RoleName=NodeInstanceRole`\n  - `kubectl apply -f deployment.yaml`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - MySQL Connector/J: 8.0.32\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://<RDS_ENDPOINT>:3306/<DB_NAME>`\n  - `spring.datasource.username=<USERNAME>`\n  - `spring.datasource.password=<PASSWORD>`\n  - `spring.jpa.hibernate.ddl-auto=update`",
     "source": "code_example",
-    "updated_at": 1780838980.8783731
+    "updated_at": 1780841328.6464615
   }
 }

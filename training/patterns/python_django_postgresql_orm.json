@@ -2,11 +2,11 @@
   "search:python-django-postgresql-orm:django orm with postgresql 202": {
     "content": "- Use `django-admin startproject` to create a new Django project.\n- Utilize `python manage.py migrate` to apply migrations.\n- Employ `python manage.py runserver` for local development.\n- For PostgreSQL, ensure you have the latest version installed and configured in your settings (`DATABASES`).\n- Leverage Django's ORM for database operations, avoiding N+1 queries with techniques like `select_related()` and `prefetch_related()`.\n- Explore Django 3.2+ features, including built-in support for window functions.\n- Configure PostgreSQL settings in `settings.py`, such as `TIME_ZONE` and `USE_TZ`.\n- Use `python manage.py createsuperuser` to create a superuser for admin access.\n- For database queries, use Django's ORM methods like `filter()`, `exclude()`, and `annotate()` effectively.",
     "source": "web_search",
-    "updated_at": 1780838993.0387926
+    "updated_at": 1780841342.4403644
   },
   "search:python-django-postgresql-orm:django orm with postgresql 202_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py migrate`: Applies migrations to the database.\n  - `python manage.py createsuperuser`: Creates a superuser for Django admin.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - `DATABASES` in `settings.py`: Configure database connection details.\n    ```python\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': 'your_db_name',\n            'USER': 'your_db_user',\n            'PASSWORD': 'your_db_password',\n            'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n            'PORT': '5432',\n        }\n    }\n    ```\n  - `INSTALLED_APPS`: Ensure Django apps are correctly installed.\n    ```python\n    INSTALLED_APPS = [\n        ...\n        'django.contrib.auth',\n        'django.contrib.contenttypes',\n        'django.contrib.sessions',\n        'django.contrib.messages',\n        'django.contrib.staticfiles',\n        ...\n    ]\n    ```\n\n- **Optimization Tips**:\n  - Use `select_related` and `prefetch_related` for efficient querying.\n  - Create indexes on frequently queried fields to speed up data retrieval.",
     "source": "code_example",
-    "updated_at": 1780838995.0940797
+    "updated_at": 1780841344.783484
   }
 }
