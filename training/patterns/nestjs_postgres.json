@@ -13,5 +13,20 @@
     "content": "- **CLI Commands**:\n  - `nest new nest-crud-app`: Creates a new NestJS project.\n  - `cd nest-crud-api`: Navigates into the project directory.\n  - `npm install --save @nestjs/typeorm typeorm pg`: Installs TypeORM and PostgreSQL driver.\n\n- **Latest Versions**:\n  - NestJS: Latest version as of my last update.\n  - TypeORM: Latest version as of my last update.\n  - PostgreSQL: Latest version as of my last update.\n\n- **Key Config Options**:\n  - `@InjectRepository(User)`: Injects the repository for the User entity.\n  - Repository design pattern in TypeORM allows each entity to have its own repository.",
     "source": "web_search",
     "updated_at": 1780790584.0569372
+  },
+  "search:nestjs+postgres:nestjs typeorm @injectreposito_ex": {
+    "content": "- Use `@InjectRepository` decorator to inject TypeORM repository into NestJS service.\n- Example command to install TypeORM and related packages:\n  ```bash\n  npm install @nestjs/typeorm typeorm reflect-metadata --save\n  ```\n- Ensure you have the latest versions of NestJS and TypeORM installed for compatibility.\n- Key configuration options include `entities`, `migrations`, and `subscribers` in your `app.module.ts`.\n- Example service using `@InjectRepository`:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { InjectRepository } from '@nestjs/typeorm';\n  import { Repository } from 'typeorm';\n  import { User } from './user.entity';\n\n  @Injectable()\n  export class UsersService {\n    constructor(\n      @InjectRepository(User)\n      private usersRepository: Repository<User>,\n    ) {}\n\n    async findAll(): Promise<User[]> {\n      return this.usersRepository.find();\n    }\n\n    async findOne(id: number): Promise<User> {\n      return this.usersRepository.findOne(id);\n    }\n\n    async remove(id: number): Promise<void> {\n      await this.usersRepository.delete(id);\n    }\n  }\n  ```\n- Use `typeorm` CLI to generate entities, migrations, and subscribers:\n  ```bash\n  npx typeorm migration:generate -n CreateUsersTable\n  ```\n- Ensure your `ormconfig.json` or equivalent configuration file is correctly set up with database connection details.",
+    "source": "code_example",
+    "updated_at": 1780790601.5426815
+  },
+  "search:nestjs+postgres:nestjs typeorm relations migra": {
+    "content": "- **CLI Commands**:\n  - `npm install typeorm --save`\n  - `npx typeorm migration:create -n CreateUsersTable`\n  - `npx typeorm migration:run`\n  - `npx typeorm migration:revert`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of TypeORM and NestJS to benefit from the latest features and bug fixes.\n\n- **Key Config Options**:\n  - `entities`: Array of entity classes or directories.\n  - `migrations`: Directory where migrations files are located.\n  - `synchronize`: Boolean flag to automatically synchronize schema with entities (not recommended for production).\n\nThese points provide actionable guidance for developers working with TypeORM and NestJS in 2025.",
+    "source": "web_search",
+    "updated_at": 1780790609.3015242
+  },
+  "search:nestjs+postgres:nestjs typeorm relations migra_ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate controller <controller-name>`\n  - `nest generate service <service-name>`\n  - `typeorm migration:create -n <migration-name>`\n  - `typeorm migration:run`\n  - `typeorm migration:revert`\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - TypeORM: v0.3.24\n\n- **Key Config Options**:\n  - `entities`: Array of entity classes or glob patterns.\n  - `migrations`: Array of migration files or glob patterns.\n  - `synchronize`: Boolean to enable schema synchronization.\n  - `logging`: Boolean or string for query logging level.",
+    "source": "code_example",
+    "updated_at": 1780790617.0226033
   }
 }

@@ -1,0 +1,7 @@
+{
+  "search:nestjs+mysql:nestjs typeorm mysql mysql2 en": {
+    "content": "- Install dependencies: `npm install --save @nestjs/typeorm typeorm mysql2`\n- Entity example:\n  ```typescript\n  import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';\n\n  @Entity()\n  export class User {\n    @PrimaryGeneratedColumn()\n    id: number;\n\n    @Column()\n    name: string;\n  }\n  ```\n- Migrations:\n  - Install `typeorm-cli`: `npm install --save-dev typeorm-cli`\n  - Generate migration file: `npx typeorm migration:generate -n CreateUsersTable`\n  - Run migrations: `npx typeorm migration:run`",
+    "source": "web_search",
+    "updated_at": 1780790624.080842
+  }
+}
