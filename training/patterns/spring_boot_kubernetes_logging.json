@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+kubernetes-logging:logging in spring boot applica": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy applications.\n  - `helm install <release-name> <chart-name>` for Helm package management.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - Logging: Use Logback or Log4j2 for custom configurations.\n  - Kubernetes Integration: Enable logging to stdout for automatic capture by Kubernetes.\n  - JWT Authentication: Configure `application.yml` with security settings and JWT properties.",
+    "source": "web_search",
+    "updated_at": 1780812530.99869
+  },
+  "search:spring-boot+kubernetes-logging:logging in spring boot applica_ex": {
+    "content": "- Use `docker build -t your-image-name:tag .` to build a Docker image.\n- Push the image to a registry using `docker push your-image-name:tag`.\n- Deploy with Helm using `helm install release-name path-to-chart`.\n- Update Helm release with `helm upgrade release-name path-to-chart`.\n- Use `kubectl apply -f kubernetes-config-file.yaml` for Kubernetes deployments.\n- Key config options in `application.properties`: `server.port`, `spring.datasource.url`, `spring.security.jwt.secret`.\n- Ensure your Dockerfile includes layers like `COPY src ./src` and `RUN mvn package`.\n- Use `docker-compose up` to run multi-container applications locally.\n- For JWT, configure `spring.security.jwt.secret` in `application.properties`.",
+    "source": "code_example",
+    "updated_at": 1780812537.1350439
+  },
+  "search:spring-boot+kubernetes-logging:advanced logging strategies fo": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl logs <pod-name>` to view pod logs.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Kubernetes: 1.25.x\n\n- **Key Config Options**:\n  - `logging.level.root=INFO`: Sets the logging level for all packages.\n  - `spring.application.name=myapp`: Specifies the application name.\n  - `server.port=8080`: Defines the server port.\n  - `spring.cloud.kubernetes.discovery.enabled=true`: Enables service discovery in Kubernetes.",
+    "source": "web_search",
+    "updated_at": 1780812544.5978599
+  },
+  "search:spring-boot+kubernetes-logging:advanced logging strategies fo_ex": {
+    "content": "- Deploy Spring Boot app to Kubernetes using `kubectl apply -f deployment.yaml`\n- Use Logback or Log4j2 for advanced logging in Spring Boot\n- Implement PII redaction with Logback by configuring filters\n- Enhance log management with AOP and custom annotations\n- Enable log tracing in Kubernetes with Spring Boot 3.x, Actuator, Zipkin, and ELK stack\n- Use `kubectl logs <pod-name>` to view application logs\n- Configure ELK stack for centralized logging: Elasticsearch, Logstash, Kibana\n- Update dependencies to latest versions for security and performance improvements",
+    "source": "code_example",
+    "updated_at": 1780812553.4631584
+  }
+}
