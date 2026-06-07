@@ -1,0 +1,32 @@
+{
+  "search:python-django-postgresql:django postgresql performance ": {
+    "content": "- Use `EXPLAIN` to analyze query performance.\n- Implement indexes on frequently queried columns.\n- Utilize Django's `select_related` and `prefetch_related` for efficient data retrieval.\n- Upgrade PostgreSQL to the latest version (currently 15).\n- Enable `pg_stat_statements` extension for detailed query statistics.\n- Configure `work_mem` and `maintenance_work_mem` in PostgreSQL settings.\n- Use `django-db-geventpool` for asynchronous database connections.\n- Optimize queries by avoiding N+1 selects.\n- Regularly run `VACUUM` and `ANALYZE` on your tables.",
+    "source": "web_search",
+    "updated_at": 1780829602.6663616
+  },
+  "search:python-django-postgresql:django postgresql performance _ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --insecure`: Runs the development server without HTTPS.\n  - `python manage.py migrate`: Applies migrations to the database.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - `DATABASES['default']`: Configure database settings in `settings.py`.\n  - `DEBUG = False`: Set to `False` for production environments.\n  - `ALLOWED_HOSTS`: List of allowed host/domain names.",
+    "source": "code_example",
+    "updated_at": 1780829618.376404
+  },
+  "search:python-django-postgresql:django postgresql security pra": {
+    "content": "- Use Django's built-in security features like CSRF protection and XSS prevention.\n- Ensure PostgreSQL is up to date with the latest version for security patches.\n- Configure Django settings securely, including `SECRET_KEY`, `DEBUG`, and database credentials.\n- Utilize Django's ORM for safe database queries to prevent SQL injection.\n- Implement user authentication using Django's authentication system or third-party packages like `django-allauth`.\n- Regularly update Django and all installed packages to patch security vulnerabilities.\n- Use HTTPS for all communications between the client and server.\n- Employ Django middleware for additional security, such as `SecurityMiddleware` for setting secure headers.\n- Conduct regular code reviews and security audits.",
+    "source": "web_search",
+    "updated_at": 1780829634.1813433
+  },
+  "search:python-django-postgresql:django postgresql security pra_ex": {
+    "content": "- **CLI Commands**:\n  - `psql --version`\n  - `pip install psycopg2-binary`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.1\n  - PostgreSQL: 13\n\n- **Key Config Options**:\n  - DATABASES in settings.py\n    ```python\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': 'your_db_name',\n            'USER': 'your_db_user',\n            'PASSWORD': 'your_db_password',\n            'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n            'PORT': '5432',\n        }\n    }\n    ```\n  - Enable Row-Level Security (RLS) in PostgreSQL:\n    ```sql\n    ALTER TABLE your_table ENABLE ROW LEVEL SECURITY;\n    CREATE POLICY your_policy ON your_table FOR ALL TO authenticated USING (current_user = user_id_column);\n    ```",
+    "source": "code_example",
+    "updated_at": 1780829652.6230528
+  },
+  "search:python-django-postgresql:django postgresql migrations t": {
+    "content": "- Django 4.1 introduced identity columns on PostgreSQL.\n- Use `python manage.py makemigrations` to create migrations based on model changes.\n- For fast backfilling in large tables, consider using Django's bulk update capabilities or raw SQL.\n- To enable zero downtime migrations with PostgreSQL, use the `django-pg-zero-downtime-migrations` package.\n- Configure your Django settings to use the custom backend provided by `django-pg-zero-downtime-migrations`.\n- Apply migrations safely with zero downtime by following the package's documentation.",
+    "source": "web_search",
+    "updated_at": 1780829668.636455
+  },
+  "search:python-django-postgresql:django postgresql migrations t_ex": {
+    "content": "- Django 4.1 introduced identity columns on PostgreSQL.\n- Use `python manage.py makemigrations` to create migrations.\n- Apply migrations using `python manage.py migrate`.\n- Configure `settings.py` with `DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'your_db_name', 'USER': 'your_username', 'PASSWORD': 'your_password', 'HOST': 'localhost', 'PORT': '5432'}}`.\n- Use `python manage.py sqlmigrate app_name migration_number` to see SQL for a specific migration.\n- For identity columns, ensure Django 4.1 or later and PostgreSQL 10+ are used.\n- Check Django documentation for the latest on migrations: <https://docs.djangoproject.com/en/stable/ref/migration-commands/>\n- Use `python manage.py showmigrations` to view current migration status.",
+    "source": "code_example",
+    "updated_at": 1780829676.2000623
+  }
+}
