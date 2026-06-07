@@ -1,0 +1,22 @@
+{
+  "search:rabbitmq+kafka-streams-advanced:rabbitmq kafka streams advance": {
+    "content": "- **Kafka Streams Tutorial**: Learn real-time data processing with Kafka Streams using DataCamp's guide.\n- **Kafka Streams vs Apache Flink**: Choose Kafka Streams for interactive queries and state management in real-time applications.\n- **RabbitMQ vs Apache Kafka**: RabbitMQ is better suited for traditional messaging patterns, while Kafka excels in high-throughput streaming.\n- **Kafka Streams vs Apache Flink vs Apache Storm**: Use Kafka Streams for its simplicity and ease of use, Flink for complex stream processing with state management, and Storm for real-time processing at scale.\n\n**Latest Versions**:\n- Kafka Streams: 3.0.0\n- Apache Flink: 1.14.0\n- Apache Storm: 2.5.0\n\n**Key Config Options**:\n- **Kafka Streams**: `application.id`, `bootstrap.servers`, `default.key.serde`, `default.value.serde`\n- **Apache Flink**: `env.parallelism`, `state.backend`, `execution.checkpointing.interval`\n- **Apache Storm**: `topology.workers`, `topology.spout.max.batch.size`, `topology.message.timeout.secs`",
+    "source": "web_search",
+    "updated_at": 1780819522.1875546
+  },
+  "search:rabbitmq+kafka-streams-advanced:rabbitmq kafka streams advance_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl start_app`\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.9\n  - Kafka: 3.4\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` for settings like `listeners.tcp.default`, `vm_memory_high_watermark.relative`\n  - Kafka: `server.properties` for configurations such as `broker.id`, `num.network.threads`, `log.dirs`",
+    "source": "code_example",
+    "updated_at": 1780819529.1902719
+  },
+  "search:rabbitmq+kafka-streams-advanced:rabbitmq kafka streams perform": {
+    "content": "- **Latest Versions**: \n  - Kafka: 4.0 KRaft GA\n  - RabbitMQ: 4.2\n\n- **Key Config Options**:\n  - **Kafka**: `num.partitions`, `replication.factor`, `message.max.bytes`\n  - **RabbitMQ**: `queue.durable`, `exchange.type`, `binding.key`\n\n- **CLI Commands**:\n  - Kafka Producer: \n    ```bash\n    kafka-console-producer.sh --broker-list localhost:9092 --topic test-topic\n    ```\n  - RabbitMQ Producer:\n    ```bash\n    rabbitmqadmin publish exchange=amq.default routing_key=test_queue payload=\"Hello, World!\"\n    ```\n\n- **Performance Benchmark**:\n  - Kafka: 1M msgs/s\n  - RabbitMQ: 50K msgs/s",
+    "source": "web_search",
+    "updated_at": 1780819546.5999687
+  },
+  "search:rabbitmq+kafka-streams-advanced:rabbitmq kafka streams perform_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=my_exchange type=direct`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n\n- **Latest Versions**:\n  - RabbitMQ Streams: 4.2\n  - Apache Kafka: 4.0 KRaft GA\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` settings for high-throughput, such as `vm_memory_high_watermark.relative`\n  - Kafka: `server.properties` configurations like `num.partitions`, `replication.factor`, and `message.max.bytes`",
+    "source": "code_example",
+    "updated_at": 1780819563.022167
+  }
+}

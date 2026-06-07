@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-redis-cache:spring boot redis cache tutori": {
+    "content": "- **Add Dependency**: Include `spring-boot-starter-data-redis` in your Maven `pom.xml`.\n- **Configure Redis**: Set `spring.cache.type=redis`, `spring.redis.host=localhost`, and `spring.redis.port=6379` in `application.properties`.\n- **Enable Caching**: Annotate your main class with `@EnableCaching`.\n- **Cache Operations**: Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations for caching logic.\n- **CLI Commands**:\n  - `redis-cli`: Access Redis server.\n  - `KEYS *`: List all keys in the cache.\n- **Latest Versions**: Ensure using compatible versions of Spring Boot, Spring Data Redis, and Redis.\n- **Key Config Options**:\n  - `spring.cache.type`: Specifies the caching type (e.g., redis).\n  - `spring.redis.host`: Redis server host.\n  - `spring.redis.port`: Redis server port.",
+    "source": "web_search",
+    "updated_at": 1780819760.698193
+  },
+  "search:spring-boot-redis-cache:spring boot redis cache tutori_ex": {
+    "content": "- **CLI Commands**:\n  - `redis-cli KEYS *` to check Redis Cache entries.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Redis: 6.2.x\n\n- **Key Config Options**:\n  - `spring.redis.host`: Redis server host.\n  - `spring.redis.port`: Redis server port.\n  - `spring.cache.type`: Set to `redis` for using Redis as the cache manager.\n  - `spring.cache.redis.time-to-live`: Time-to-live duration for cache entries.",
+    "source": "code_example",
+    "updated_at": 1780819765.0621157
+  },
+  "search:spring-boot-redis-cache:spring boot redis cache perfor": {
+    "content": "- Use `@EnableCaching` annotation in your Spring Boot application.\n- Configure Redis Cache Manager using `RedisCacheManager.builder(RedisConnectionFactory connectionFactory)`.\n- Set cache expiration times with `.entryTtl(Duration.ofMinutes(10))`.\n- Ensure Redis is running and accessible from your application.\n- Update to the latest version of Spring Boot for optimal performance.\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations on methods.\n- Configure Redis connection properties in `application.properties` or `application.yml`.\n- Example property: `spring.redis.host=localhost`\n- Example property: `spring.redis.port=6379`\n- Monitor cache hit/miss ratios using Redis monitoring tools.",
+    "source": "web_search",
+    "updated_at": 1780819793.4886804
+  },
+  "search:spring-boot-redis-cache:spring boot redis cache perfor_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Redis: 7.0.14\n\n- **Key Config Options**:\n  - `spring.cache.type=redis`\n  - `spring.redis.host=localhost`\n  - `spring.redis.port=6379`\n  - `spring.cache.redis.time-to-live=3600s`",
+    "source": "code_example",
+    "updated_at": 1780819800.8459327
+  }
+}
