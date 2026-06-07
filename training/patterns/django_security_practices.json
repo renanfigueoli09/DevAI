@@ -1,0 +1,12 @@
+{
+  "search:django+security-practices:securing django applications 2": {
+    "content": "- **CLI Commands**:\n  - `pip install django==3.2` to install Django 3.2.\n  \n- **Latest Versions**:\n  - Django 4.0 is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a strong, random secret key in your settings.py.\n  - `DEBUG`: Set to `False` in production environments.\n  - `ALLOWED_HOSTS`: Specify allowed hosts in your settings.py.\n  - `DATABASES`: Configure database connections securely.\n  - `SECURE_SSL_REDIRECT`: Redirect all HTTP traffic to HTTPS.",
+    "source": "web_search",
+    "updated_at": 1780806237.3493192
+  },
+  "search:django+security-practices:securing django applications 2_ex": {
+    "content": "- Use Django's built-in authentication system.\n- Implement CSRF protection using `@csrf_protect` decorator or middleware.\n- Sanitize user input using Django forms and validators.\n- Configure HTTPS by setting `SECURE_SSL_REDIRECT = True`.\n- Set `SESSION_COOKIE_SECURE = True` to ensure cookies are sent over HTTPS.\n- Use Django's password hashing mechanism with `django.contrib.auth.hashers`.\n- Regularly update Django and installed packages to patch security vulnerabilities.\n- Implement content security policies (CSP) using the `ContentSecurityPolicyMiddleware`.\n- Enable X-Frame-Options header for clickjacking protection.\n- Utilize Django's built-in email backend for secure password reset emails.",
+    "source": "code_example",
+    "updated_at": 1780806242.2280738
+  }
+}
