@@ -12,11 +12,11 @@
   "search:anti-patterns:premature optimization anti-pa": {
     "content": "- **CLI Commands**: Use `perf` or `gprof` for profiling.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries.\n- **Key Config Options**: Optimize based on actual system constraints, not assumptions.\n- **Avoid Assumptions**: Profile before optimizing to avoid common pitfalls like \"loops are slow\" or \"string operations are expensive.\"\n- **Cargo Cult Optimization**: Avoid optimizations without evidence.",
     "source": "web_search",
-    "updated_at": 1780800080.353743
+    "updated_at": 1780803264.2740135
   },
   "search:anti-patterns:premature optimization anti-pa_ex": {
     "content": "- Avoid micro-optimizations; focus on macro optimizations.\n- Use profiling tools like `cProfile` in Python to identify bottlenecks.\n- Ensure code readability and maintainability before optimization.\n- Consider using built-in functions and libraries for performance benefits.\n- Regularly update dependencies and use the latest versions of libraries.\n- Optimize data structures and algorithms based on real-world usage patterns.\n- Avoid premature optimization by following the 80/20 rule (Pareto Principle).\n- Use caching mechanisms to reduce redundant computations.\n- Monitor application performance using tools like Prometheus or Grafana.",
     "source": "code_example",
-    "updated_at": 1780800081.6068451
+    "updated_at": 1780803265.7831752
   }
 }

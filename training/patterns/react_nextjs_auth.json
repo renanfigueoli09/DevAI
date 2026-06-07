@@ -2,16 +2,16 @@
   "search:react+nextjs-auth:react next.js authentication b": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for authentication providers and options.\n  - `session.maxAge`: Duration of the session in seconds (default: 2592000).\n  - `providers`: List of authentication providers to enable (e.g., Google, Facebook).\n\n- **Actionable Steps**:\n  - Initialize a new Next.js project using `npx create-next-app@latest`.\n  - Install `next-auth` via npm.\n  - Configure authentication in `pages/api/auth/[...nextauth].js`.\n  - Protect routes by checking user session status.\n  - Implement authorization logic based on user roles or permissions.",
     "source": "web_search",
-    "updated_at": 1780800093.3023078
+    "updated_at": 1780803280.3096437
   },
   "search:react+nextjs-auth:react next.js authentication b_ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `next-auth@latest` for authentication.\n- Configure `pages/api/auth/[...nextauth].js` with your providers and options.\n- Utilize middleware for protecting routes, e.g., `middleware.ts`:\n  ```javascript\n  export default function middleware(req, ev) {\n    // Authentication logic here\n  }\n  ```\n- Implement session management using cookies or JWTs.\n- For OAuth providers, configure the provider's client ID and secret in your environment variables.\n- Use `getServerSession` to access the user session on server-side pages.\n- Employ `useSession` hook for accessing the session in React components.\n- Ensure password hashing with libraries like `bcrypt`.\n- Regularly update dependencies using `npm outdated` and `npm update`.",
     "source": "code_example",
-    "updated_at": 1780800094.5823495
+    "updated_at": 1780803281.6067429
   },
   "search:react+nextjs-auth:next.js jwt authentication tut": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-jwt-auth-app`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - jsonwebtoken: 9.0.0\n\n- **Key Config Options**:\n  - JWT Secret Key (`JWT_SECRET`)\n  - Cookie Name (`sessionToken`)\n  - Token Expiry Time (`expiresIn`)",
     "source": "web_search",
-    "updated_at": 1780800096.154221
+    "updated_at": 1780803282.9520772
   }
 }

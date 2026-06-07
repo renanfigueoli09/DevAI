@@ -2,21 +2,21 @@
   "search:nlp+transformers:nlp transformers for sentiment": {
     "content": "- Install transformers library: `pip install transformers==4.28.0`\n- Use model: `from transformers import pipeline`\n- Initialize sentiment analysis pipeline: `sentiment_pipeline = pipeline(\"sentiment-analysis\")`\n- Analyze text: `result = sentiment_pipeline(\"I love this product!\")`\n- Key config options:\n  - `model`: Specify the transformer model, e.g., `\"distilbert-base-uncased-finetuned-sst-2-english\"`\n  - `device`: Set device for computation (e.g., `-1` for CPU, `0` for GPU)\n  - `max_length`: Maximum length of input text\n  - `truncation`: Whether to truncate the input text if it exceeds max_length",
     "source": "web_search",
-    "updated_at": 1780800321.4882605
+    "updated_at": 1780803497.6498322
   },
   "search:nlp+transformers:nlp transformers for sentiment_ex": {
     "content": "- Use `pip install transformers` to install the latest version of the Transformers library.\n- For sentiment analysis, use models like `bert-base-uncased-finetuned-sst-2-english`.\n- Initialize a model with `from transformers import BertTokenizer, BertForSequenceClassification`\n- Tokenize text using `tokenizer.encode_plus(text, return_tensors='pt')`\n- Pass tokenized input to the model for prediction.\n- Use `model.eval()` for evaluation mode and `torch.no_grad()` to disable gradient computation.\n- For deployment, consider using Flask or FastAPI with a transformer-based sentiment analysis endpoint.",
     "source": "code_example",
-    "updated_at": 1780800322.618735
+    "updated_at": 1780803498.926316
   },
   "search:nlp+transformers:nlp transformers for text gene": {
     "content": "- **CLI Commands**:\n  - `python train.py --model gpt2 --dataset text_data.txt --epochs 5`\n  - `transformers-cli download gpt2`\n\n- **Latest Versions**:\n  - HuggingFace Transformers: v4.10.0\n  - PyTorch: v1.9.0\n\n- **Key Config Options**:\n  - `batch_size`: 32\n  - `learning_rate`: 5e-5\n  - `max_length`: 512",
     "source": "web_search",
-    "updated_at": 1780800325.0197785
+    "updated_at": 1780803500.1899402
   },
   "search:nlp+transformers:nlp transformers for text gene_ex": {
     "content": "- Use `pip install transformers` to install the latest version of the Transformers library.\n- For text generation, run `python -m transformers.generate_text --model t5-small --input \"translate English to French: Hello world\"` to generate text using T5 model.\n- Key config options include `max_length`, `num_return_sequences`, and `temperature`.\n- Ensure you have JAX and Flax installed for the latest T5X implementation with `pip install jax flax`.",
     "source": "code_example",
-    "updated_at": 1780800326.3029892
+    "updated_at": 1780803501.421408
   }
 }
