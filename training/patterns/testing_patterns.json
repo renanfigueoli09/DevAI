@@ -22,41 +22,41 @@
   "search:testing-patterns:unit testing spring boot junit": {
     "content": "- **CLI Commands**:\n  - `mvn test` to run tests.\n  - `mvn clean install` for a full build and test.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - JUnit 5: 5.9.1\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `@SpringBootTest`: For loading the full application context.\n  - `@MockBean`: To inject mock beans into your tests.\n  - `@TestInstance(TestInstance.Lifecycle.PER_CLASS)`: To reuse test instances across multiple tests.\n  - `@AutoConfigureMockMvc`: For testing web applications with MockMvc.",
     "source": "web_search",
-    "updated_at": 1780823692.8781435
+    "updated_at": 1780831652.4169319
   },
   "search:testing-patterns:unit testing spring boot junit_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `mvn test`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - JUnit 5: 5.9.2\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `@SpringBootTest` for full application context\n  - `@WebMvcTest` for testing controllers\n  - `@MockBean` to mock Spring beans\n  - `@InjectMocks` to inject mocks into the test class",
     "source": "code_example",
-    "updated_at": 1780823695.2039092
+    "updated_at": 1780831654.0537946
   },
   "search:testing-patterns:fastapi pytest async testing f": {
     "content": "- Install FastAPI, Pytest, and pytest-asyncio using pip: `pip install fastapi pytest pytest-asyncio`\n- Use Poetry or uv for dependency resolution.\n- For async testing with FastAPI, use the `pytest-asyncio` plugin.\n- Set up an environment for testing by installing necessary packages.\n- Create fixtures for your tests to manage resources like database sessions.\n- Use the `TestClient` from FastAPI to simulate HTTP requests in your tests.\n- Override dependencies using the `Depends` feature in Pytest.\n- Structure async tests for FastAPI endpoints that involve async database calls.",
     "source": "web_search",
-    "updated_at": 1780823696.9694042
+    "updated_at": 1780831655.9775052
   },
   "search:testing-patterns:fastapi pytest async testing f_ex": {
     "content": "- Use `pytest` for testing FastAPI applications.\n- Install `fastapi`, `uvicorn`, and `pytest` using pip.\n- Create a test file with `.py` extension, e.g., `test_main.py`.\n- Import `TestClient` from `fastapi.testclient`.\n- Initialize the client with your FastAPI app instance.\n- Use async fixtures for database connections.\n- Override dependencies in tests using `app.dependency_overrides`.\n- Run tests locally with `pytest` command.\n- For asynchronous testing, use `asyncio.run()`.\n- Ensure all test files start with `test_` prefix.\n- Utilize pytest's built-in assertion features for validation.",
     "source": "code_example",
-    "updated_at": 1780823698.8733597
+    "updated_at": 1780831657.9337375
   },
   "search:testing-patterns:test driven development tdd ex": {
     "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest v29.3.1\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\"\n  - `transformIgnorePatterns`: [\"node_modules/(?!@testing-library/react)\"]\n  - `setupFilesAfterEnv`: [\"./setupTests.js\"]",
     "source": "web_search",
-    "updated_at": 1780823700.8898811
+    "updated_at": 1780831662.063074
   },
   "search:testing-patterns:test driven development tdd ex_ex": {
     "content": "- **CLI Commands**: `pytest` for running tests, `unittest` for Python's built-in testing framework.\n- **Latest Versions**: Ensure using the latest version of Python and testing frameworks like `pytest` or `unittest`.\n- **Key Config Options**:\n  - For `pytest`, configure in `pytest.ini` or `.ini` files.\n  - For `unittest`, use configuration through `unittest.TestLoader` or command-line options.",
     "source": "code_example",
-    "updated_at": 1780823702.4979753
+    "updated_at": 1780831663.7903104
   },
   "search:testing-patterns:testing mongodb in-memory mong": {
     "content": "- Install `@shelf/jest-mongodb` using `npm i @shelf/jest-mongodb`\n- Use `mongodb-memory-server` for in-memory MongoDB testing\n- Latest version of `@shelf/jest-mongodb`: 6.0.2 (as of March 2023)\n- Key config options: \n  - `mongoInstanceOpts`: Customize MongoDB instance options\n  - `dbPath`: Specify the path to store the database files\n  - `instance`: Access the MongoDB instance for advanced configurations",
     "source": "web_search",
-    "updated_at": 1780823704.0304177
+    "updated_at": 1780831665.509534
   },
   "search:testing-patterns:testing mongodb in-memory mong_ex": {
     "content": "- Use `npm install jest-mongodb --save-dev` to install the latest version of `jest-mongodb`.\n- Configure Jest in your project by adding a `setupFilesAfterEnv` entry in `jest.config.js` pointing to `jest-mongodb/setup`.\n- For in-memory MongoDB testing, use the `mongo-memory-server` package. Install it with `npm install mongo-memory-server --save-dev`.\n- Initialize the in-memory server in your Jest setup file:\n  ```javascript\n  const { MongoMemoryServer } = require('mongodb-memory-server');\n\n  let mongoServer;\n\n  beforeAll(async () => {\n    mongoServer = await MongoMemoryServer.create();\n    const uri = mongoServer.getUri();\n\n    // Configure MongoDB URI for your application\n  });\n\n  afterAll(async () => {\n    if (mongoServer) {\n      await mongoServer.stop();\n    }\n  });\n  ```\n- Key config options in `jest.config.js`:\n  - `setupFilesAfterEnv`: Array of paths to files that run before each test.\n  - `testEnvironment`: Set to `'node'` for Node.js environment.\n  - `transformIgnorePatterns`: Exclude node_modules from transformation if not necessary.",
     "source": "code_example",
-    "updated_at": 1780823705.83329
+    "updated_at": 1780831667.4397135
   }
 }
