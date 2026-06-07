@@ -2,21 +2,21 @@
   "search:security+owasp:owasp top 10 security risks 20": {
     "content": "- **CLI Commands**: Use `owasp-top10-cli --version` to check the latest version.\n- **Latest Version**: The latest version as of now is 2025.\n- **Key Config Options**:\n  - `--reorder-risks`: Reorders risks based on new criteria.\n  - `--add-category`: Adds a new category to the list.\n  - `--update-dependencies`: Updates dependencies for security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780799868.2454786
+    "updated_at": 1780803015.893124
   },
   "search:security+owasp:owasp top 10 security risks 20_ex": {
     "content": "- OWASP Top 10 Web Application Security Risks 2025 is being analyzed to identify the most comprehensive dataset of application vulnerabilities.\n- The latest version of OWASP Top 10 projects follows a standard set of parameters to determine risk severity.\n- OWASP has released its Top 10 Non-Human Identities Risks for 2025, focusing on unique challenges in non-human identity security.",
     "source": "code_example",
-    "updated_at": 1780799869.4127133
+    "updated_at": 1780803017.1418662
   },
   "search:security+owasp:securing apis with owasp 2025": {
     "content": "- **CLI Commands**: Use `owasp-api-security` tool for scanning and securing APIs.\n- **Latest Versions**: Ensure using the latest version of OWASP API Security Project, currently at v2.5.\n- **Key Config Options**:\n  - Enable HTTPS to secure data in transit.\n  - Implement rate limiting to prevent abuse.\n  - Use JWT (JSON Web Tokens) for authentication and authorization.\n  - Regularly update dependencies to patch known vulnerabilities.\n  - Conduct security audits using tools like OWASP ZAP or Burp Suite.",
     "source": "web_search",
-    "updated_at": 1780799870.7025077
+    "updated_at": 1780803018.563617
   },
   "search:security+owasp:securing apis with owasp 2025_ex": {
     "content": "- **CLI Commands**: Use `dotnet add package OWASP.ApiSecurity` to install the latest version of the OWASP API Security library.\n- **Latest Versions**: Check for updates using `dotnet list package OWASP.ApiSecurity --outdated`.\n- **Key Config Options**:\n  - Enable CORS with `services.AddCors(options => options.AddPolicy(\"AllowAllOrigins\", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));`\n  - Implement rate limiting with `app.UseRateLimiting();` and configure it in `appsettings.json`.\n  - Use HTTPS by configuring Kestrel to listen on port 443: `\"Kestrel\": { \"Endpoints\": { \"Https\": { \"Url\": \"https://*:443\", \"Certificate\": { \"Path\": \"/path/to/certificate.pfx\", \"Password\": \"password\" } } } }`.",
     "source": "code_example",
-    "updated_at": 1780799871.9932954
+    "updated_at": 1780803019.7245414
   }
 }

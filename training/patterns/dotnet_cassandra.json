@@ -2,11 +2,11 @@
   "search:dotnet+cassandra:cassandra entity framework cor": {
     "content": "- **Install EF Core Cassandra Provider**: `dotnet add package EFCore.Cassandra`\n- **Latest Version**: Check [GitHub](https://github.com/zzzprojects/EFCore.Cassandra) for the latest version.\n- **Key Config Options**:\n  - Connection String: Specify your Cassandra connection details.\n  - Schema: Define the schema for your entities.\n  - Migrations: Use `dotnet ef migrations add InitialCreate` and `dotnet ef database update`.\n- **CLI Commands**:\n  - Add Package: `dotnet add package EFCore.Cassandra`\n  - Create Migration: `dotnet ef migrations add <MigrationName>`\n  - Update Database: `dotnet ef database update`\n- **Documentation**: Visit [readthedocs](https://efcore.cassandra.readthedocs.io/) for detailed documentation.",
     "source": "web_search",
-    "updated_at": 1780799725.640148
+    "updated_at": 1780802857.3843973
   },
   "search:dotnet+cassandra:cassandra entity framework cor_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet add package EFCore.Cassandra`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EFCore.Cassandra: [Check GitHub for latest version](https://github.com/robinrodricks/EFCore.Cassandra)\n  - CassandraCSharpDriver: [Check NuGet for latest version](https://www.nuget.org/packages/CassandraCSharpDriver)\n\n- **Key Config Options**:\n  - ConnectionString: `Server=your_cassandra_server;Port=9042;Keyspace=your_keyspace`\n  - MigrationsAssembly: Specify the assembly where migrations are stored.\n  - ModelBuilder: Use to configure entity types and relationships.",
     "source": "code_example",
-    "updated_at": 1780799726.8763418
+    "updated_at": 1780802858.648754
   }
 }
