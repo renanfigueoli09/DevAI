@@ -2,7 +2,7 @@
   "search:fastapi+pydantic-validation:fastapi pydantic validation be": {
     "content": "- Use Pydantic models to validate request data in FastAPI.\n- Install FastAPI and Pydantic using pip: `pip install fastapi pydantic`.\n- Utilize the latest versions of FastAPI and Pydantic for optimal performance and features.\n- Define data validation schemas with Pydantic models, ensuring type hints are used for better code readability and validation.\n- Leverage FastAPI's automatic documentation generation to create interactive API docs using Swagger UI or ReDoc.\n- For complex request bodies, use Pydantic's nested models and lists to define compound data structures.\n- Employ the `Query`, `Path`, and `Body` parameters in FastAPI for defining extra data for query, path, and body parameters respectively.\n- Configure logging with Pydantic by setting up a custom logger or using the built-in logging module.\n- For advanced validation, use Pydantic's validators to add custom logic for validating specific fields.",
     "source": "web_search",
-    "updated_at": 1780839939.9374936
+    "updated_at": 1780842471.8107278
   },
   "search:fastapi+pydantic-validation:fastapi pydantic validation be_ex": {
     "content": "- Use `fastapi` and `pydantic` latest versions.\n- Install FastAPI using pip: `pip install fastapi`.\n- Create Pydantic models for data validation.\n- Use `Field` from `pydantic` to add constraints like minimum/maximum, regex.\n- Implement dependency injection with FastAPI for better code organization.\n- Utilize `HTTPException` for handling errors gracefully.\n- Enable automatic documentation generation using Swagger UI or ReDoc.\n- Employ environment variables for configuration management.\n- Regularly update dependencies and security patches.",

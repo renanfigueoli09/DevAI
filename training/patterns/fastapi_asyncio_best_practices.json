@@ -2,31 +2,31 @@
   "search:FastAPI Asyncio Best Practices:fastapi performance tips": {
     "content": "- Use `uvicorn` as the ASGI server for production.\n- Set `workers=4` in `uvicorn` command to leverage multiple processes.\n- Enable `asyncio.run()` for asynchronous tasks.\n- Utilize FastAPI's built-in caching mechanisms with `fastapi.responses.Response`.\n- Optimize database queries by using eager loading and avoiding N+1 queries.\n- Implement caching strategies like Redis or Memcached for frequently accessed data.\n- Use `asyncpg` for PostgreSQL connections to improve performance.\n- Configure logging level to `WARNING` in production to reduce log verbosity.\n- Monitor API performance with tools like Prometheus and Grafana.",
     "source": "web_search",
-    "updated_at": 1780839635.8635216
+    "updated_at": 1780842093.9058907
   },
   "search:FastAPI Asyncio Best Practices:fastapi performance tips_ex": {
     "content": "- Use `uvicorn` as the ASGI server for production.\n- Enable `asyncio` for asynchronous operations.\n- Implement caching mechanisms like Redis or Memcached.\n- Optimize database queries using SQLAlchemy's ORM capabilities.\n- Configure FastAPI to use `background_tasks` for long-running tasks.\n- Utilize environment variables for configuration management.\n- Set `max_workers` in `uvicorn` based on CPU cores.\n- Enable `log_level=\"warning\"` in production for reduced log verbosity.\n- Use `fastapi.middleware.cors.CORSMiddleware` for cross-origin requests.\n- Regularly update FastAPI and its dependencies to the latest versions.",
     "source": "code_example",
-    "updated_at": 1780839637.4185936
+    "updated_at": 1780842095.792318
   },
   "search:fastapi-asyncio-best-practices:fastapi asyncio optimization t": {
     "content": "- Use `asyncio.run()` within FastAPI to run asynchronous code.\n- Integrate FastAPI with async SQLAlchemy for database operations.\n- Employ pytest for testing FastAPI applications asynchronously.\n- Utilize Alembic for migrations in an async environment.\n- Configure FastAPI to use a thread pool for synchronous SDK calls.\n- Ensure all path and Depends functions are asynchronous.\n- Use `asyncpg` as the driver for PostgreSQL with FastAPI.\n- Keep FastAPI, SQLAlchemy, pytest, and Alembic at their latest versions for optimal performance.",
     "source": "web_search",
-    "updated_at": 1780839639.118734
+    "updated_at": 1780842097.6651533
   },
   "search:fastapi-asyncio-best-practices:fastapi asyncio optimization t_ex": {
     "content": "- Use `uvicorn` with the `--reload` flag during development to enable auto-reload.\n- Upgrade FastAPI and its dependencies to their latest versions for performance improvements.\n- Implement caching mechanisms like Redis or Memcached to reduce database load.\n- Utilize async databases (e.g., Async SQLAlchemy) for non-blocking database operations.\n- Employ middleware for logging, authentication, and other cross-cutting concerns.\n- Optimize routes by reducing the number of nested dependencies and using dependency injection effectively.\n- Use `asyncio`'s `gather` function to run multiple tasks concurrently.\n- Configure ASGI servers with appropriate worker classes (e.g., `uvicorn.workers.UvicornWorker` for production).\n- Monitor performance using tools like `Pydantic` for data validation, `Starlette` for web framework metrics, and custom logging.",
     "source": "code_example",
-    "updated_at": 1780839641.0030181
+    "updated_at": 1780842099.5364897
   },
   "search:fastapi-asyncio-best-practices:fastapi security patterns with": {
     "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI using pip: `pip install fastapi`.\n- For OAuth2, use the `fastapi.security.HTTPBearer` and `fastapi.security.HTTPBasic`.\n- Implement JWT tokens for secure authentication.\n- Hash passwords using libraries like `passlib`.\n- Use database integration for user management.\n- Configure security with environment variables for production readiness.\n- Layered dependencies in FastAPI can be managed using `Depends`.\n- For asynchronous operations, use Python's `asyncio` library.",
     "source": "web_search",
-    "updated_at": 1780839642.6140904
+    "updated_at": 1780842101.2726636
   },
   "search:fastapi-asyncio-best-practices:fastapi security patterns with_ex": {
     "content": "- **GitHub Repository**: [akhil2308/fastapi-large-app-template](https://github.com/akhil2308/fastapi-large-app-template)\n  - Latest Version: Check the repository for the latest release.\n  - Key Config Options: Refer to the README for specific configuration details.\n\n- **fastapi-patterns**: [Everything Claude Code](https://everythingclauda.com/fastapi-patterns/)\n  - Latest Version: Not specified in the snippet, check the repository or website for updates.\n  - Key Config Options: Dependency injection, Pydantic models, OpenAPI docs, tests, security.\n\n- **Async APIs with FastAPI**: [Nov 5, 2025](https://everythingclauda.com/async-apis-with-fastapi/)\n  - Latest Version: Not specified in the snippet, check the article for updates.\n  - Key Config Options: Async and await syntax, performance optimization, security best practices.",
     "source": "code_example",
-    "updated_at": 1780839644.0811338
+    "updated_at": 1780842102.9714649
   }
 }

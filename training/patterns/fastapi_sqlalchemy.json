@@ -12,11 +12,11 @@
   "search:fastapi+sqlalchemy:sqlalchemy with fastapi 2025": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init <dir>`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.2\n  - SQLAlchemy: v1.4.46\n\n- **Key Config Options**:\n  - Database URL: Define in `.env` or directly in code.\n  - Async Session: Use `AsyncSession` for asynchronous operations.\n  - Model Definitions: Create Pydantic models and map them to SQLAlchemy ORM classes.\n  - Dependency Injection: Utilize FastAPI's dependency injection system for managing database sessions.",
     "source": "web_search",
-    "updated_at": 1780839545.292521
+    "updated_at": 1780841994.285592
   },
   "search:fastapi+sqlalchemy:sqlalchemy with fastapi 2025_ex": {
     "content": "- **GitHub Repo**: [fastapi-sqlalchemy2-alembic-postgresql](https://github.com/Tenacity-Dev/fastapi-sqlalchemy2-alembic-postgresql)\n- **FastAPI Version**: Latest as of the tutorial\n- **SQLAlchemy Version**: Latest as of the tutorial\n- **Alembic Version**: Latest as of the tutorial\n- **Database**: PostgreSQL\n- **ORM**: SQLAlchemy\n- **Web Server**: Starlette\n- **Data Validation**: Pydantic\n- **CLI Commands**:\n  - `git clone https://github.com/Tenacity-Dev/fastapi-sqlalchemy2-alembic-postgresql.git`\n  - `cd fastapi-sqlalchemy2-alembic-postgresql`\n  - `pip install -r requirements.txt`\n  - `uvicorn main:app --reload`\n- **Key Config Options**:\n  - Database URL in `.env` file\n  - Models defined in `models.py`\n  - CRUD operations in `main.py`\n  - Alembic migrations for database schema changes",
     "source": "code_example",
-    "updated_at": 1780839546.8559918
+    "updated_at": 1780841997.060386
   }
 }

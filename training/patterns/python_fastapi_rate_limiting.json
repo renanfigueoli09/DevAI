@@ -2,11 +2,11 @@
   "search:python-fastapi-rate-limiting:implementing rate limiting in ": {
     "content": "- Use `fastapi-limiter` library for rate limiting.\n- Install via pip: `pip install fastapi-limiter`\n- Import and configure in FastAPI app:\n  ```python\n  from fastapi import FastAPI\n  from fastapi_limiter import FastAPILimiter\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      await FastAPILimiter.init(app)\n  ```\n- Define rate limits using decorators:\n  ```python\n  from fastapi_limiter.depends import RateLimiter\n\n  @app.get(\"/items/\")\n  async def read_items(rate_limit: RateLimiter = Depends()):\n      return {\"message\": \"Items\"}\n  ```\n- Key config options include `max_requests` and `time_window`.\n- For more advanced usage, refer to the [fastapi-limiter documentation](https://github.com/tiangolo/fastapi-limiter).",
     "source": "web_search",
-    "updated_at": 1780839730.00352
+    "updated_at": 1780842204.3433294
   },
   "search:python-fastapi-rate-limiting:implementing rate limiting in _ex": {
     "content": "- Use `fastapi-limiter` package for rate limiting.\n- Install via pip: `pip install fastapi-limiter`\n- Import and configure in FastAPI app:\n```python\nfrom fastapi import FastAPI\nfrom fastapi_limiter import FastAPILimiter\n\napp = FastAPI()\n\n@app.on_event(\"startup\")\nasync def startup():\n    await FastAPILimiter.init(app, redis_url=\"redis://localhost:6379/0\")\n\n# Apply rate limiting to routes:\nfrom fastapi_limiter.depends import RateLimiter\nfrom fastapi import Depends\n\n@app.get(\"/items/\")\nasync def read_items(limit: int = Depends(RateLimiter(times=10, seconds=60))):\n    return {\"message\": \"Items\"}\n```\n- Key config options include `times` (max requests) and `seconds` (time window).\n- Use Redis for rate limiting storage.\n- Ensure Redis server is running at the specified URL.",
     "source": "code_example",
-    "updated_at": 1780839731.5770469
+    "updated_at": 1780842205.9570084
   }
 }

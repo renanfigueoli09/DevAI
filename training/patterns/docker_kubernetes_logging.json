@@ -2,21 +2,21 @@
   "search:docker+kubernetes-logging:docker kubernetes logging best": {
     "content": "- Use `kubectl logs -f <pod-name>` to follow logs in real-time.\n- Ensure containers write logs to STDOUT and STDERR for better integration with logging solutions.\n- Consider using Fluentd or Fluent Bit for log collection and forwarding.\n- Configure Elasticsearch, Logstash, and Kibana (ELK stack) for advanced log management and visualization.\n- Implement centralized logging with tools like Prometheus Operator for Kubernetes-native monitoring.\n- Use `--log-driver=fluentd` in your Docker run command to enable Fluentd logging driver.\n- Ensure log rotation policies are set up to prevent disk space issues.",
     "source": "web_search",
-    "updated_at": 1780839718.1464612
+    "updated_at": 1780842189.9419172
   },
   "search:docker+kubernetes-logging:docker kubernetes logging best_ex": {
     "content": "- **EFK Stack**: Use Elasticsearch, Fluentd, and Kibana.\n  - **Elasticsearch**: Version 8.x for full-text indexing capabilities.\n  - **Fluentd**: For log collection and forwarding to Elasticsearch.\n  - **Kibana**: Version 8.x for visualization.\n\n- **Loki**: A modern, open-source, horizontally scalable, multi-tenant log aggregation system.\n  - **Version**: Latest stable version recommended.\n\n- **JSON Logging**:\n  - Use Docker's `--log-driver json-file` flag to enable JSON logging.\n    ```sh\n    docker run --log-driver json-file myapp\n    ```\n  - Configure Fluentd or Loki to parse and store these logs in Elasticsearch or another storage system.\n\n- **Key Config Options**:\n  - **Elasticsearch**: `index.lifecycle.name`, `number_of_shards`, `number_of_replicas`.\n  - **Fluentd**: `in_docker` plugin for Docker container logs.\n  - **Loki**: `ingester.lifecycler.final_sleep`, `schema_config.index_prefix`.\n\n- **Migration**:\n  - Use Kubernetes ConfigMaps and Secrets to manage configuration files.\n  - Deploy Fluentd or Loki as DaemonSets in your Kubernetes cluster.\n\n- **Storage**:\n  - Store logs in S3 for long-term storage and retrieval.\n  - Configure lifecycle policies for automated log rotation and deletion.",
     "source": "code_example",
-    "updated_at": 1780839719.5648906
+    "updated_at": 1780842191.635287
   },
   "search:docker+kubernetes-logging:kubernetes logging tools and s": {
     "content": "- **Fluentd**: \n  - Latest Version: Fluentd v2.5.4\n  - Key Config Options: `source`, `match`, `output`\n  - CLI Command: `fluentd --config /path/to/fluent.conf`\n\n- **Loki**:\n  - Latest Version: Loki v2.3.0\n  - Key Config Options: `server`, `schema_config`, `storage_config`\n  - CLI Command: `loki --config.file=/etc/loki/local-config.yaml`\n\n- **ELK Stack (Elasticsearch, Logstash, Kibana)**:\n  - Latest Version: Elasticsearch v8.5.0, Logstash v8.5.0, Kibana v8.5.0\n  - Key Config Options: `elasticsearch`, `logstash.conf`, `kibana.yml`\n  - CLI Commands:\n    - Elasticsearch: `bin/elasticsearch --config /path/to/elasticsearch.yml`\n    - Logstash: `bin/logstash -f /path/to/logstash.conf`\n    - Kibana: `bin/kibana`\n\n- **Promtail** (for Loki):\n  - Latest Version: Promtail v2.3.0\n  - Key Config Options: `server`, `clients`, `positions`\n  - CLI Command: `promtail --config.file=/etc/promtail/config.yaml`",
     "source": "web_search",
-    "updated_at": 1780839721.0079226
+    "updated_at": 1780842193.424216
   },
   "search:docker+kubernetes-logging:kubernetes logging tools and s_ex": {
     "content": "- **Fluentd**: Version 1.14.6  \n  - `fluentd --version`\n  - Config file: `/etc/fluent/fluent.conf`\n\n- **Elasticsearch, Logstash, Kibana (ELK Stack)**: Latest versions as of 2025\n  - Install Elasticsearch: `docker run -p 9200:9200 -d elasticsearch`\n  - Install Logstash: `docker run -d --name logstash -v /path/to/config:/usr/share/logstash/pipeline logstash`\n  - Install Kibana: `docker run -d --name kibana -p 5601:5601 kibana`\n\n- **Fluent Bit**: Version 2.4.0\n  - `fluent-bit --version`\n  - Config file: `/etc/fluent-bit/fluent-bit.conf`\n\n- **Promtail**: Latest version as of 2025\n  - Install Promtail: `docker run -d --name promtail -v /path/to/config:/etc/promtail config.file=/etc/promtail/config.yaml grafana/promtail`\n\n- **Grafana Loki**: Latest version as of 2025\n  - Install Loki: `docker run -d --name loki -p 3100:3100 grafana/loki`\n\n- **Key Config Options**:\n  - Fluentd: `<source>`, `<match>`\n  - Elasticsearch: `index_name`, `document_type`\n  - Logstash: `input`, `filter`, `output`\n  - Promtail: `server.url`, `positions.filename`\n  - Loki: `ingester.lifecycler.final_sleep`",
     "source": "code_example",
-    "updated_at": 1780839722.5046082
+    "updated_at": 1780842195.4163787
   }
 }

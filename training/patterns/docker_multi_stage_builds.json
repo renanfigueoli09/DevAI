@@ -2,31 +2,31 @@
   "search:docker+multi-stage-builds:docker multi-stage builds best": {
     "content": "- Use `docker build --target <stage>` to specify the target stage in your multi-stage build.\n- Employ `COPY` instead of `ADD` for better control and security.\n- Utilize `.dockerignore` to exclude unnecessary files from the build context, similar to `.gitignore`.\n- Ensure each stage has a single responsibility to keep images lean.\n- Use `RUN apt-get update && apt-get install -y <package>` for installing dependencies in Debian-based images.\n- Minimize layers by combining commands within a single `RUN` instruction where possible.\n- Consider using `AS <name>` to name stages for better readability and management.\n- Regularly update base images and packages to enhance security.\n- Leverage multi-stage builds for separating build-time dependencies from runtime dependencies.",
     "source": "web_search",
-    "updated_at": 1780839774.376185
+    "updated_at": 1780842255.7930999
   },
   "search:docker+multi-stage-builds:docker multi-stage builds best_ex": {
     "content": "- Use `docker build --target <stage>` to specify the target stage of your multi-stage build.\n- Ensure base images are up-to-date by using `FROM <image>:<tag>`.\n- Utilize `COPY` and `RUN` instructions efficiently to minimize layer creation.\n- Avoid installing unnecessary packages in final stages.\n- Use `.dockerignore` to exclude files not needed during the build process.\n- Consider using lightweight base images like Alpine for smaller footprint.\n- Regularly update Docker and its components to benefit from security patches and performance improvements.",
     "source": "code_example",
-    "updated_at": 1780839775.8648176
+    "updated_at": 1780842257.5867326
   },
   "search:docker+multi-stage-builds:optimizing docker images with ": {
     "content": "- Use `docker build --target <stage_name>` to specify the target stage in your Dockerfile.\n- Employ `FROM <base_image>:<tag>` to define each stage's base image and tag.\n- Minimize layers by combining commands within a single RUN instruction where possible.\n- Utilize `.dockerignore` to exclude unnecessary files from being copied into the build context.\n- Latest versions of Docker support multi-stage builds, ensuring compatibility with the latest features and security patches.\n- Key config options include `EXPOSE`, `CMD`, and `ENTRYPOINT` for defining container behavior.\n- Example Dockerfile snippet:\n  ```dockerfile\n  # Stage 1: Build\n  FROM golang:1.19 AS builder\n  WORKDIR /app\n  COPY go.mod go.sum ./\n  RUN go mod download\n  COPY . .\n  RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .\n\n  # Stage 2: Publish\n  FROM alpine:latest\n  WORKDIR /root/\n  COPY --from=builder /app/main .\n  CMD [\"./main\"]\n  ```\n- Ensure each stage has a clear purpose, with the final stage containing only necessary files for production.",
     "source": "web_search",
-    "updated_at": 1780839777.332844
+    "updated_at": 1780842259.3011165
   },
   "search:docker+multi-stage-builds:optimizing docker images with _ex": {
     "content": "- Use `docker build --target <stage>` to specify the target stage in your Dockerfile.\n- Employ `COPY` and `RUN` instructions strategically to minimize layers.\n- Utilize `.dockerignore` to exclude unnecessary files from the build context.\n- Latest Docker version: 24.0.1 (as of my last update).\n- Key config options include `FROM`, `COPY`, `RUN`, `CMD`, and `ENTRYPOINT`.\n- Example Dockerfile for a Node.js app:\n```Dockerfile\n# Stage 1: Build the application\nFROM node:18 AS builder\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY . .\nRUN npm run build\n\n# Stage 2: Create a lean production image\nFROM nginx:alpine\nCOPY --from=builder /app/dist /usr/share/nginx/html\n```\n- Ensure each stage has the least necessary dependencies.\n- Regularly update Docker and base images to benefit from security patches.",
     "source": "code_example",
-    "updated_at": 1780839778.927075
+    "updated_at": 1780842261.1482973
   },
   "search:docker+multi-stage-builds:advanced docker techniques for": {
     "content": "- **Docker Compose**: Use `docker-compose up -d` to run services in detached mode.\n- **Health Checks**: Configure health checks in `docker-compose.yml` using the `healthcheck` key.\n- **Scaling**: Scale services with `docker-compose scale <service_name>=<number_of_instances>`.\n- **Resource Constraints**: Set resource limits and requests for containers using `resources` in `docker-compose.yml`.\n- **Dockerfile Optimization**:\n  - Use multi-stage builds: `FROM <base_image> AS stage1`, `COPY --from=stage1 /app /app`.\n  - Minimize layers by combining commands.\n  - Use `.dockerignore` to exclude unnecessary files.\n- **Wasm in Docker**: Run Wasm using the Docker Engine with shims like `wasmtime` or `wasmedge`. Example: `docker run --rm -v $(pwd):/app wasmtime /app/main.wasm`.\n- **Container Orchestration**:\n  - Use `docker swarm init` to initialize a swarm.\n  - Deploy services using `docker service create --replicas <number> <image_name>`.\n  - Configure custom sysctl parameters and network settings for optimal performance.\n- **Security Tools**: Utilize Docker security features like `--userns-remap`, `--seccomp`, and `--cap-drop` to enhance container security.",
     "source": "web_search",
-    "updated_at": 1780839780.687212
+    "updated_at": 1780842263.1438026
   },
   "search:docker+multi-stage-builds:advanced docker techniques for_ex": {
     "content": "- Use `docker-compose up` for orchestration.\n- Employ multi-stage builds with `FROM <image> AS <stage>` and `COPY --from=<stage>`.\n- Utilize Docker's caching mechanism by ordering instructions wisely.\n- Implement security best practices with `--security-opt=no-new-privileges=true`.\n- Update Docker to the latest version using `sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io`.\n- Configure Docker Compose files with environment variables and volumes for flexibility.\n- Use `docker run --rm` for temporary containers without leaving behind unnecessary images.\n- Implement network isolation with `docker network create <network-name>`.\n- Utilize Docker's health check feature with `HEALTHCHECK CMD [\"curl\", \"-f\", \"http://localhost:80\"]`.",
     "source": "code_example",
-    "updated_at": 1780839782.3307226
+    "updated_at": 1780842264.8383982
   }
 }

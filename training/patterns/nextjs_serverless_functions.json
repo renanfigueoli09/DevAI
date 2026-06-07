@@ -2,21 +2,21 @@
   "search:nextjs+serverless-functions:next.js serverless functions d": {
     "content": "- **CLI Commands**: Use `next dev` for development and `next build && next start` for production.\n- **Latest Versions**: Ensure you are using the latest Next.js version, as of my last update in October 2023, it's recommended to use the latest LTS version.\n- **Key Config Options**:\n  - `serverRuntimeConfig`: For sensitive environment variables that should not be exposed on the client side.\n  - `publicRuntimeConfig`: For environment variables that can be safely exposed on the client side.\n  - `apiRoutes`: Define custom API routes within your Next.js application.",
     "source": "web_search",
-    "updated_at": 1780839752.648239
+    "updated_at": 1780842229.6038144
   },
   "search:nextjs+serverless-functions:next.js serverless functions d_ex": {
     "content": "- **CLI Commands**: Use `vercel` for deployment.\n- **Latest Version**: Vercel CLI version 25.x.\n- **Key Config Options**:\n  - `next.config.js`: Configure serverless functions and other settings.\n  - `vercel.json`: Define build configurations and routes.",
     "source": "code_example",
-    "updated_at": 1780839754.1802924
+    "updated_at": 1780842231.3698368
   },
   "search:nextjs+serverless-functions:next.js serverless functions p": {
     "content": "- **CLI Commands**:\n  - `next build`: Builds the Next.js application.\n  - `next start`: Starts the production server.\n  - `vercel deploy`: Deploys your Next.js app to Vercel.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Vercel CLI: v26.0\n\n- **Key Config Options**:\n  - `next.config.js`:\n    - `output: 'standalone'`: Enables standalone mode for better performance.\n    - `images: { domains: ['example.com'] }`: Specifies allowed image domains.\n    - `reactStrictMode: true`: Enables React's strict mode for debugging.\n\n- **Performance Enhancements**:\n  - Use `getServerSideProps` or `getStaticProps` for server-side rendering and static generation respectively.\n  - Implement lazy loading with `next/image`.\n  - Minimize HTTP requests by combining CSS and JavaScript files.\n  - Utilize Vercel's caching mechanisms effectively.",
     "source": "web_search",
-    "updated_at": 1780839755.602912
+    "updated_at": 1780842233.3721538
   },
   "search:nextjs+serverless-functions:next.js serverless functions p_ex": {
     "content": "- **CLI Commands**:\n  - `next dev`: Start the Next.js development server.\n  - `next build`: Prepare your app for production.\n  - `next start`: Start a Node.js server with the built application.\n\n- **Latest Versions**:\n  - Next.js: Version 13.5\n  - Vercel CLI: Latest version as of 2024\n\n- **Key Config Options**:\n  - `serverRuntimeConfig` and `publicRuntimeConfig`: For environment-specific configurations.\n  - `rewrites`, `redirects`, `headers`: For custom routing and security settings in `next.config.js`.\n  - `images.remotePatterns`: To specify allowed domains for images in your Next.js application.",
     "source": "code_example",
-    "updated_at": 1780839757.0450199
+    "updated_at": 1780842235.408693
   }
 }

@@ -2,11 +2,11 @@
   "search:bitbucket-pipelines:bitbucket pipelines branches d": {
     "content": "- **CLI Commands**: `bitbucket pipelines run` to trigger a pipeline.\n- **Latest Versions**: As of my last update, Bitbucket Pipelines supports Docker up to version 23.7.\n- **Key Config Options**:\n  - `image`: Specifies the Docker image for the pipeline steps.\n  - `services`: Defines additional services required by the pipeline.\n  - `steps`: Lists the commands or scripts to run during the pipeline execution.\n\nFor more detailed information, refer to the [Bitbucket Pipelines documentation](https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelines-yml/).",
     "source": "web_search",
-    "updated_at": 1780839651.9364634
+    "updated_at": 1780842111.5990493
   },
   "search:bitbucket-pipelines:bitbucket pipelines branches d_ex": {
     "content": "- **CLI Commands**:\n  - `bitbucket-pipelines.yml` configuration file creation.\n  \n- **Latest Versions**:\n  - Bitbucket Pipelines: Version 2025.\n  - Docker: Latest stable version as of 2025.\n\n- **Key Config Options**:\n  - Define multiple Docker services in the `services` section.\n  - Configure environment variables using `environment`.\n  - Specify build steps under `steps`.",
     "source": "code_example",
-    "updated_at": 1780839653.5397809
+    "updated_at": 1780842113.3659897
   }
 }
