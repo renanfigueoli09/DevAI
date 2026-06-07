@@ -2,21 +2,21 @@
   "search:fastapi+database-optimization:fastapi orm optimization 2025": {
     "content": "- **fastapi-orm**: Install via `pip install fastapi-orm==1.2.3`\n- **FastAPI + PostgreSQL**: Use SQLModel or Tortoise ORM for async support.\n- **FastAPI Best Practices**: Key patterns include dependency injection, error handling, and deployment strategies.\n- **FastAPI Performance Optimization Guide**: Focus on async programming, caching, database tuning, and production deployment tips.",
     "source": "web_search",
-    "updated_at": 1780811303.809425
+    "updated_at": 1780817940.1568718
   },
   "search:fastapi+database-optimization:fastapi orm optimization 2025_ex": {
     "content": "- **GitHub Repository:** Alqudimi/FastApiOrm\n  - **Latest Version:** Not specified in the snippet.\n  - **Key Features:** Async support, automatic Pydantic integration, Django-like syntax.\n\n- **FastAPI Performance Optimization Guide**\n  - **CLI Commands:** `uvicorn app:app --reload`\n    - Flags:\n      - `--reload`: Enables auto-reload during development.\n  - **Latest Version:** Not specified in the snippet.\n  - **Key Config Options:** `asyncio.run(app)`\n    - Ensures FastAPI runs within an asyncio event loop.\n\n- **FastAPI + PostgreSQL: Tuning ORM Queries**\n  - **CLI Commands:** `psql -U username -d database_name`\n    - Flags:\n      - `-U`: Specifies the username.\n      - `-d`: Specifies the database name.\n  - **Latest Version:** Not specified in the snippet.\n  - **Key Config Options:** Connection pooling\n    - Use libraries like `asyncpg` for efficient connection management.",
     "source": "code_example",
-    "updated_at": 1780811305.2934353
+    "updated_at": 1780817941.4995208
   },
   "search:fastapi+database-optimization:database indexing for fastapi ": {
     "content": "- **CLI Commands**: Use `fastapi-pagination` library to simplify pagination.\n- **Latest Version**: Check [PyPI](https://pypi.org/project/fastapi-pagination/) for the latest version.\n- **Key Config Options**:\n  - `index=True` in SQLModel fields to create indexes for faster lookups.\n  - Configure caching strategies using FastAPI's built-in caching mechanisms or third-party libraries like `fastapi-cache`.\n  - Use async programming for database queries to improve performance.",
     "source": "web_search",
-    "updated_at": 1780811306.888977
+    "updated_at": 1780817942.884538
   },
   "search:fastapi+database-optimization:database indexing for fastapi _ex": {
     "content": "- **CLI Commands**: `fastapi run` for development, `uvicorn app.main:app --reload` for production.\n- **Latest Versions**: FastAPI v0.98.0, SQLAlchemy v2.0.0, MongoEngine v3.1.0.\n- **Key Config Options**:\n  - Database URL in `.env`: `DATABASE_URL=postgresql://user:password@localhost/dbname`.\n  - Indexing in SQLAlchemy: Use `db.Index` or `__table_args__ = (Index('idx_name', 'column'),)`.\n  - Caching with FastAPI: Use `fastapi-cache` for caching responses.\n  - Pagination with SQL: Implement using `limit()` and `offset()`.",
     "source": "code_example",
-    "updated_at": 1780811310.4964356
+    "updated_at": 1780817944.1915298
   }
 }

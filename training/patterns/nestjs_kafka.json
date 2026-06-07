@@ -2,7 +2,7 @@
   "pattern:nestjs+kafka:setup": {
     "content": "// Kafka: app.connectMicroservice({transport:Transport.KAFKA,options:{client:{brokers:[KAFKA_BROKER]},consumer:{groupId:'app-group',allowAutoTopicCreation:true}}}). Producer: ClientKafka.emit(topic,data). Consumer: @EventPattern('topic') handle(@Payload() data){}",
     "source": "code_pattern",
-    "updated_at": 1780816734.3908331
+    "updated_at": 1780817961.9889953
   },
   "search:nestjs+kafka:nestjs kafka clientkafka emit ": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/microservices`.\n- Configure Kafka in `app.module.ts`:\n  ```typescript\n  import { ClientsModule, Transport } from '@nestjs/microservices';\n\n  const kafkaConfig = {\n    transport: Transport.KAFKA,\n    options: {\n      client: {\n        brokers: ['localhost:9092'],\n      },\n      consumer: {\n        groupId: 'test-group',\n      },\n    },\n  };\n\n  @Module({\n    imports: [ClientsModule.register([kafkaConfig])],\n  })\n  export class AppModule {}\n  ```\n- Use `@EventPattern` for event-driven communication.\n- Use `emit()` method to send messages:\n  ```typescript\n  import { ClientKafka } from '@nestjs/microservices';\n\n  @Injectable()\n  export class KafkaService {\n    constructor(private readonly client: ClientKafka) {}\n\n    sendMessage(message: any) {\n      this.client.emit('event_name', message);\n    }\n  }\n  ```\n- Ensure Kafka broker is running and accessible.\n- Check for latest versions on [NestJS official website](https://nestjs.com/) or [npm page](https://www.npmjs.com/package/@nestjs/microservices).",

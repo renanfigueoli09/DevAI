@@ -2,21 +2,21 @@
   "search:performance-optimization-python:python performance optimizatio": {
     "content": "- Use `python -O` to enable optimization flag.\n- Install Python 3.13 for performance improvements.\n- Enable the new JIT compiler using `-X jit`.\n- Test free-threaded builds with `-m test --threaded`.\n- Compile with Profile Guided Optimization (PGO) and Link Time Optimization (LTO).\n- Use `pyperformance` to measure baselines.\n- Optimize memory management by using generators and context managers.\n- Apply variable packing for efficient data handling.\n- Loop optimization techniques include list comprehensions and generator expressions.",
     "source": "web_search",
-    "updated_at": 1780810949.7321186
+    "updated_at": 1780817592.7329004
   },
   "search:performance-optimization-python:python performance optimizatio_ex": {
     "content": "- Use `cProfile` and `line_profiler` for profiling.\n- Upgrade to Python 3.11 for performance improvements.\n- Utilize `numpy` and `pandas` for efficient data handling.\n- Implement list comprehensions instead of loops where possible.\n- Use generator expressions for memory efficiency.\n- Optimize string operations with `str.join()` over concatenation.\n- Employ dictionary comprehensions for faster dictionary creation.\n- Use `asyncio` for asynchronous programming to improve I/O-bound tasks.\n- Enable Just-In-Time (JIT) compilation with `numba`.\n- Configure virtual environments using `venv` or `conda`.",
     "source": "code_example",
-    "updated_at": 1780810951.0641785
+    "updated_at": 1780817594.0129046
   },
   "search:performance-optimization-python:python performance profiling t": {
     "content": "- **py-spy**: `py-spy top -p <pid>` to profile by CPU usage.\n- **Scalene**: `scalene <script.py>` for detailed line-by-line profiling.\n- **eBPF Profiling**: Use `ebpftrace` with Python eBPF scripts for high-performance tracing.\n- **cProfile**: `python -m cProfile -s time script.py` to profile by execution time.\n- **line_profiler**: Install via pip, then use `kernprof -l -v script.py` to profile line-by-line.\n- **memory_profiler**: Install via pip, then use `mprof run script.py` for memory usage analysis.\n- **PyCharm Profiling**: Use built-in tools in PyCharm IDE for profiling Python applications.\n- **VisualVM**: Connect to a running Python process and analyze CPU, memory, and thread usage.\n- **perf**: For Linux, use `perf record -g python script.py` followed by `perf report` for detailed performance analysis.",
     "source": "web_search",
-    "updated_at": 1780810952.3945036
+    "updated_at": 1780817595.2177892
   },
   "search:performance-optimization-python:python performance profiling t_ex": {
     "content": "- **cProfile**: Use `python -m cProfile script.py` to profile your Python script.\n- **line_profiler**: Install via pip (`pip install line_profiler`) and use `kernprof -l -v script.py`.\n- **timeit**: Run with `python -m timeit -s \"import module\" \"statement\"` for timing small code snippets.\n- Latest versions: Ensure tools are up-to-date using `pip install --upgrade tool_name`.\n- Key config options:\n  - `cProfile`: `-o output_file` to write results to a file.\n  - `line_profiler`: `-f function_name` to profile specific functions.\n  - `timeit`: `-n number_of_runs` for more accurate timing.",
     "source": "code_example",
-    "updated_at": 1780810953.8153996
+    "updated_at": 1780817596.4750679
   }
 }

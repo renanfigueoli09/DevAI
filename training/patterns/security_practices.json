@@ -2,41 +2,41 @@
   "search:Security Practices:spring postgres security": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Docker containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Security: 6.1.x\n  - PostgreSQL: 15.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.datasource.username=myuser`\n  - `spring.datasource.password=mypassword`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.security.user.name=admin`\n  - `spring.security.user.password=password`",
     "source": "web_search",
-    "updated_at": 1780811234.6405625
+    "updated_at": 1780817863.4894042
   },
   "search:Security Practices:spring postgres security_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/bezkoder/spring-boot-security-postgresql.git`\n  - `cd spring-boot-security-postgresql`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Security: 6.1.x\n  - PostgreSQL: 15.x\n\n- **Key Config Options**:\n  - `application.properties`:\n    ```properties\n    spring.datasource.url=jdbc:postgresql://localhost:5432/mydb\n    spring.datasource.username=myuser\n    spring.datasource.password=mypassword\n    spring.jpa.hibernate.ddl-auto=update\n    ```\n  - JWT Configuration:\n    ```java\n    @Bean\n    public JwtEncoder jwtEncoder() {\n        return new NimbusJwtEncoder(new ImmutableSecret<>(secretKey.getBytes()));\n    }\n    ```\n  - Security Configuration:\n    ```java\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.authorizeRequests()\n                .antMatchers(\"/api/public/**\").permitAll()\n                .anyRequest().authenticated();\n        }\n    }\n    ```",
     "source": "code_example",
-    "updated_at": 1780811236.2464817
+    "updated_at": 1780817865.125415
   },
   "search:Security Practices:fastapi sqlalchemy security": {
     "content": "- Use `pip install fastapi[all] sqlalchemy pydantic` to install FastAPI, SQLAlchemy, and Pydantic.\n- For JWT authentication, use `pip install python-jose[cryptography]`.\n- Latest versions: FastAPI 0.98.0, SQLAlchemy 1.4.46, Pydantic 2.0.0.\n- Key config options:\n  - `SECRET_KEY` for JWT signing\n  - `ALGORITHM` (e.g., \"HS256\")\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`\n  - Database URL in SQLAlchemy (e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`)\n- Use Pydantic models to define data schemas.\n- Implement OAuth2 password flow for username/password authentication.\n- Hash passwords using `pwd_context.hash(password)`.\n- Create JWT tokens with `access_token_expires` and `jwt.encode()`.\n- Protect routes with ` Depends(auth.get_current_user)` or ` Depends(auth.get_current_active_user)`.",
     "source": "web_search",
-    "updated_at": 1780811237.939604
+    "updated_at": 1780817866.502185
   },
   "search:Security Practices:nextjs serverless-authenticati": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `npm run dev` for development server\n  - `npm run build` to build the project\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: v13.5 (as of latest update)\n  - React: v18.2 (compatible with Next.js)\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing build settings\n  - `security.headers` in `next.config.js` for setting security headers\n  - Environment variables (`process.env`) for managing secrets and configurations\n\nFor serverless authentication, consider using packages like `next-auth` or `firebase-admin`, which provide robust solutions with built-in security features.",
     "source": "web_search",
-    "updated_at": 1780811241.6425686
+    "updated_at": 1780817867.9478412
   },
   "search:Security Practices:nextjs serverless-authenticati_ex": {
     "content": "- **GitHub Repository**: [francisudeji/authentication-for-nextjs-serverless](https://github.com/francisudeji/authentication-for-nextjs-serverless)\n- **YouTube Tutorial**: \"Next.js App Router Authentication (Sessions, Cookies...)\" by [John Doe]\n- **Latest Next.js Version**: 13.5\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations.\n  - `authOptions` in `[...nextauth].js`: Configuration for authentication providers and options.\n- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm run dev` to start the development server\n  - `npm run build` to build the application\n  - `npm start` to start the production server",
     "source": "code_example",
-    "updated_at": 1780811243.0315478
+    "updated_at": 1780817869.271294
   },
   "search:Security Practices:spring quarkus security": {
     "content": "- **CLI Command to Add Extension**: `quarkus dev --extension=io.quarkus:quarkus-spring-security`\n- **Latest Version**: As of my last update, the latest version is not explicitly stated in the provided text. You can find it on [Maven Repository](https://search.maven.org/artifact/io.quarkus/quarkus-spring-security).\n- **Key Config Options**:\n  - `quarkus.security.enabled`: Enables or disables security.\n  - `quarkus.security.cors.enabled`: Enables Cross-Origin Resource Sharing (CORS).\n  - `quarkus.security.cors.methods`: Specifies allowed HTTP methods for CORS.",
     "source": "web_search",
-    "updated_at": 1780811244.5065186
+    "updated_at": 1780817870.554156
   },
   "search:Security Practices:spring quarkus security_ex": {
     "content": "- Add dependencies using `quarkus extension add spring-web,spring-security,quarkus-elytron-security-properties-file,rest-jackson`\n- Use `@Secured` instead of `@RolesAllowed` for role-based authorization\n- Configure security properties in `quarkus-elytron-security-properties-file`\n- Explore Quarkus Security documentation for detailed configuration options\n- For OIDC and Auth0 integration, refer to the specific guide on ITNEXT",
     "source": "code_example",
-    "updated_at": 1780811245.8684058
+    "updated_at": 1780817871.7960773
   },
   "search:Security Practices:gitlab-ci security": {
     "content": "- **CLI Commands**: Use `gitlab-runner register` to register runners.\n- **Latest Versions**: Check [GitLab Runner](https://docs.gitlab.com/runner/install/) for the latest version.\n- **Key Config Options**:\n  - `variables`: Securely manage secrets and environment variables.\n  - `runners`: Configure runner scopes and permissions.\n  - `artifacts`: Control artifact downloads to prevent unauthorized access.",
     "source": "web_search",
-    "updated_at": 1780811247.298538
+    "updated_at": 1780817874.0693204
   }
 }

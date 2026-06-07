@@ -2,21 +2,21 @@
   "search:nestjs+prisma:nestjs prisma orm crud 2025": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `prisma init`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `PrismaModule.forRoot()`.\n  - Define models in `schema.prisma`.\n  - Use decorators like `@Injectable()` and `@Service()` for services.\n  - Utilize `@Controller()` and route decorators for controllers.",
     "source": "web_search",
-    "updated_at": 1780811134.0797467
+    "updated_at": 1780817755.0835848
   },
   "search:nestjs+prisma:nestjs prisma orm crud 2025_ex": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/cli`\n  - `nest new project-name`\n  - `npm install prisma --save-dev`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - `prisma/schema.prisma`: Define your data model.\n  - `nest-cli.json`: Configure project settings.\n  - `.env`: Set environment variables for database connection.",
     "source": "code_example",
-    "updated_at": 1780811137.9046779
+    "updated_at": 1780817758.8151143
   },
   "search:nestjs+prisma:nestjs prisma migrations 2025": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates the initial migration based on your Prisma schema.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Prisma: v5.0.0\n\n- **Key Config Options**:\n  - `prisma/schema.prisma`: Defines your data model and database connection.\n  - `nest-cli.json`: Configuration file for NestJS CLI.\n  - `.env`: Environment variables, including the database URL.",
     "source": "web_search",
-    "updated_at": 1780811140.1174972
+    "updated_at": 1780817760.1255999
   },
   "search:nestjs+prisma:nestjs prisma migrations 2025_ex": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name initial_migration`: Creates and applies migrations.\n\n- **Latest Versions**:\n  - NestJS: v9.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `nest-cli.json`: Configuration for the NestJS CLI.",
     "source": "code_example",
-    "updated_at": 1780811141.84905
+    "updated_at": 1780817761.5709407
   }
 }

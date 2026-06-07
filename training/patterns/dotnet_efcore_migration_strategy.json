@@ -2,6 +2,6 @@
   "search:dotnet-efcore-migration-strategy:best practices for ef core mig": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 9.0 (as of April 2026)\n  - .NET: 8.0 (as of August 2025)\n\n- **Key Config Options**:\n  - `MigrationsAssembly`: Specifies the assembly containing migrations.\n  - `Schemas`: Defines the database schema for migrations.\n  - `EnableDetailedErrors`: Enables detailed error messages during migration operations.",
     "source": "web_search",
-    "updated_at": 1780811104.5688574
+    "updated_at": 1780817729.4639094
   }
 }

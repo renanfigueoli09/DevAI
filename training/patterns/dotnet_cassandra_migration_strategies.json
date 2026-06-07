@@ -2,16 +2,16 @@
   "search:dotnet+cassandra-migration-strategies:cassandra migration strategies": {
     "content": "- **GitHub - patka/cassandra-migration**: Use `cassandra-migration` library for schema migrations in Java applications.\n- **Cassandra Migration to EC2**: Utilize Cassandra's multi-data center support for zero downtime migrations.\n- **ScyllaDB Data Migration**: Employ shadow writes for live migration with zero downtime.\n- **MongoDB to Cassandra Migration Tool (CMT)**: Use CMT for data migration from MongoDB to Cassandra, handling transformations and mappings.",
     "source": "web_search",
-    "updated_at": 1780810872.7833345
+    "updated_at": 1780817490.4071975
   },
   "search:dotnet+cassandra-migration-strategies:.net cassandra data modeling b": {
     "content": "- Use `cqlsh` for Cassandra command-line interface.\n- Ensure latest version of Apache Cassandra and DataStax Enterprise for optimal performance.\n- Configure `num_tokens` in `cassandra.yaml` to control the number of tokens per node.\n- Implement partition key wisely, ensuring uniqueness and distribution across nodes.\n- Utilize clustering columns for sorting data within partitions.\n- Avoid wide rows by limiting row size and using appropriate indexing.\n- Regularly monitor and tune query performance with `nodetool`.\n- Employ consistent hashing for even load distribution across the cluster.",
     "source": "web_search",
-    "updated_at": 1780810874.1416237
+    "updated_at": 1780817491.946362
   },
   "search:dotnet+cassandra-migration-strategies:.net cassandra data modeling b_ex": {
     "content": "- **CLI Commands**: Use `cqlsh` for Cassandra query shell.\n- **Latest Versions**: Ensure using the latest stable version of Apache Cassandra, as of my last update in October 2023, it's recommended to use Cassandra 4.x or later.\n- **Key Config Options**:\n  - `num_tokens`: Number of virtual nodes per physical node. Default is 256.\n  - `hinted_handoff_enabled`: Enables hinted handoff for write operations. Recommended in production environments.\n  - `read_repair_chance`: Controls the probability that a read repair will be triggered after a successful write.\n- **Real-Time Examples**: Utilize real-time data streams to inform your schema design, ensuring efficient querying and denormalization as needed.\n- **Query-Driven Design**: Focus on designing schemas based on query patterns to optimize performance.\n- **Denormalization**: Denormalize data where necessary to reduce read latency, especially for frequently accessed queries.",
     "source": "code_example",
-    "updated_at": 1780810875.4737413
+    "updated_at": 1780817493.356741
   }
 }

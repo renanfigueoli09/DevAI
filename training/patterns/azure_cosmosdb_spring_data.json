@@ -2,16 +2,16 @@
   "search:azure-cosmosdb-spring-data:azure cosmosdb with spring dat": {
     "content": "- **CLI Commands**:\n  - `az cosmosdb create --name <your_cosmos_db_name> --resource-group <your_resource_group> --kind GlobalDocumentDB`\n  - `az cosmosdb update --name <your_cosmos_db_name> --resource-group <your_resource_group> --enable-public-network true`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Spring Data CosmosDB: 2025.1.0\n\n- **Key Config Options**:\n  - `spring.data.cosmosdb.uri`: Your Cosmos DB URI.\n  - `spring.data.cosmosdb.key`: Your Cosmos DB key.\n  - `spring.data.cosmosdb.database`: Your database name.\n  - `spring.data.cosmosdb.collection`: Your collection name.",
     "source": "web_search",
-    "updated_at": 1780811429.2853258
+    "updated_at": 1780817751.5093892
   },
   "search:azure-cosmosdb-spring-data:azure cosmosdb with spring dat_ex": {
     "content": "- **CLI Commands**:\n  - `az cosmosdb create --name <cosmos-db-name> --resource-group <resource-group-name>`\n  - `az cosmosdb update --name <cosmos-db-name> --resource-group <resource-group-name> --enable-multiple-write-locations true`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Azure Cosmos DB SDK for Java: 4.12.0\n\n- **Key Config Options**:\n  - `spring.data.cosmosdb.uri`: Your Cosmos DB URI.\n  - `spring.data.cosmosdb.key`: Your Cosmos DB key.\n  - `spring.data.cosmosdb.database`: The name of your database.\n  - `spring.data.cosmosdb.collection`: The name of your collection.",
     "source": "code_example",
-    "updated_at": 1780811435.550109
+    "updated_at": 1780817752.690453
   },
   "search:azure-cosmosdb-spring-data:spring boot and azure cosmosdb": {
     "content": "- **CLI Commands**:\n  - `az cosmosdb create --name <cosmos-db-name> --resource-group <resource-group-name>`\n  - `docker run -d -p 8080:8080 --name spring-boot-app <spring-boot-image>`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Azure CosmosDB Java SDK: 4.29.0\n\n- **Key Config Options**:\n  - `spring.data.cosmosdb.uri`: Your Cosmos DB URI.\n  - `spring.data.cosmosdb.key`: Your Cosmos DB key.\n  - `spring.data.cosmosdb.database`: Your database name.\n  - `spring.data.cosmosdb.collection`: Your collection name.",
     "source": "web_search",
-    "updated_at": 1780811448.4716408
+    "updated_at": 1780817753.8682988
   }
 }

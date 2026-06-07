@@ -12,11 +12,11 @@
   "search:python-django-security-practices:securing django web applicatio": {
     "content": "- Use Django's built-in security features like `django.middleware.security.SecurityMiddleware`.\n- Sanitize user input using `django.utils.html.escape` or template auto-escaping.\n- Update Django to the latest version regularly, e.g., `pip install --upgrade django`.\n- Configure `ALLOWED_HOSTS` in settings.py with your domain names.\n- Use HTTPS by setting `SECURE_SSL_REDIRECT = True` and configuring SSL certificates.\n- Implement CSRF protection using `django.middleware.csrf.CsrfViewMiddleware`.\n- Use Django's authentication system for user management, e.g., `django.contrib.auth`.\n- Regularly update dependencies using tools like `pip-review`.\n- Enable content security policies (CSP) with `django-csp` package.\n- Utilize Django's template engine to prevent XSS attacks.",
     "source": "web_search",
-    "updated_at": 1780810844.10649
+    "updated_at": 1780817453.4125044
   },
   "search:python-django-security-practices:securing django web applicatio_ex": {
     "content": "- Install Simple-JWT using pip: `pip install djangorestframework-simplejwt`\n- Update settings.py to include 'rest_framework_simplejwt' in INSTALLED_APPS and configure authentication classes.\n- Run migrations with: `python manage.py migrate`\n- Generate JWT tokens via the API endpoint provided by Simple-JWT.\n- Configure Django Admin login security using OTP by installing a package like django-two-factor-auth and following its setup instructions.\n- Ensure all views that require authentication use the @permission_required decorator or similar to restrict access.",
     "source": "code_example",
-    "updated_at": 1780810845.3997624
+    "updated_at": 1780817455.2516587
   }
 }

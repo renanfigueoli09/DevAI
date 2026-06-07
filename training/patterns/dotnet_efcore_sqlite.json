@@ -2,26 +2,26 @@
   "search:dotnet-efcore-sqlite:entity framework core sqlite p": {
     "content": "- Install EF Core provider via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n- Use latest EF Core version: Check [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)\n- Key config options in `appsettings.json`:\n  - ConnectionString: `\"ConnectionStrings\": { \"DefaultConnection\": \"Data Source=yourfile.db\" }`\n  - Enable lazy loading: `\"LazyLoadingEnabled\": true`\n  - Use SQLite-specific features: `\"UseQueryTrackingBehavior\": QueryTrackingBehavior.NoTracking`\n- Optimize connection string for performance: `Data Source=yourfile.db;Cache Size=1024;PRAGMA journal_mode=WAL;`\n- Use `DbContextFactory` for managing DbContext lifecycle.\n- Enable batching to reduce round-trips: `options.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)`\n- Monitor and profile with tools like Entity Framework Profiler or dotTrace.",
     "source": "web_search",
-    "updated_at": 1780810917.1463566
+    "updated_at": 1780817539.7287374
   },
   "search:dotnet-efcore-sqlite:entity framework core sqlite p_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0.0\n  - SQLite: 3.42.0\n\n- **Key Config Options**:\n  - Connection String: `options.UseSqlite(\"Data Source=yourfile.db\")`\n  - Concurrency Token: `[Timestamp]` in your entity model\n  - Bulk Inserts: Use `SaveChangesAsync()` for asynchronous operations",
     "source": "code_example",
-    "updated_at": 1780810918.3840704
+    "updated_at": 1780817541.0064373
   },
   "search:dotnet-efcore-sqlite:ef core migrations for sqlite ": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate --context YourDbContextName`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - SQLite: 3.41.2\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: `\"DefaultConnection\": \"Data Source=yourdatabase.db\"`\n  - Ensure `Microsoft.EntityFrameworkCore.Sqlite` and `Microsoft.EntityFrameworkCore.Design` packages are installed via NuGet.",
     "source": "web_search",
-    "updated_at": 1780810919.6670594
+    "updated_at": 1780817542.3457086
   },
   "search:dotnet-efcore-sqlite:sqlite with entity framework c": {
     "content": "- **Install Entity Framework Core and SQLite Provider**:\n  ```bash\n  dotnet add package Microsoft.EntityFrameworkCore.Sqlite\n  dotnet add package Microsoft.EntityFrameworkCore.Design\n  ```\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - SQLite Provider: Compatible with EF Core 7.0\n\n- **Key Configuration Options**:\n  - `DbContext` class setup:\n    ```csharp\n    public class MyDbContext : DbContext\n    {\n        public DbSet<MyEntity> MyEntities { get; set; }\n\n        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n        {\n            optionsBuilder.UseSqlite(\"Data Source=mydatabase.db\");\n        }\n    }\n    ```\n  - `appsettings.json` configuration:\n    ```json\n    \"ConnectionStrings\": {\n      \"DefaultConnection\": \"Data Source=mydatabase.db\"\n    }\n    ```\n  - Using connection string from config:\n    ```csharp\n    optionsBuilder.UseSqlite(Configuration.GetConnectionString(\"DefaultConnection\"));\n    ```\n\n- **Migrations**:\n  - Create migration:\n    ```bash\n    dotnet ef migrations add InitialCreate\n    ```\n  - Update database:\n    ```bash\n    dotnet ef database update\n    ```\n\n- **Model Building**:\n  - Fluent API for model configuration:\n    ```csharp\n    protected override void OnModelCreating(ModelBuilder modelBuilder)\n    {\n        modelBuilder.Entity<MyEntity>(entity =>\n        {\n            entity.HasKey(e => e.Id);\n            entity.Property(e => e.Name).IsRequired();\n        });\n    }\n    ```\n\n- **Querying**:\n  - Basic query:\n    ```csharp\n    using (var context = new MyDbContext())\n    {\n        var entities = await context.MyEntities.ToListAsync();\n    }\n    ```\n\nThese steps provide a solid foundation for integrating SQLite with Entity Framework Core in a .NET application, ensuring you can perform CRUD operations efficiently.",
     "source": "web_search",
-    "updated_at": 1780810920.9833481
+    "updated_at": 1780817543.7379284
   },
   "search:dotnet-efcore-sqlite:sqlite with entity framework c_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new console -n EFCoreSQLiteExample`\n  - `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n  - `dotnet add package Microsoft.EntityFrameworkCore.Design`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0 (as of my last update)\n  - SQLite: 3.41.2\n\n- **Key Config Options**:\n  - Connection String: `options.UseSqlite(\"Data Source=example.db\")`\n  - DbContext Configuration: \n    ```csharp\n    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n    {\n        optionsBuilder.UseSqlite(\"Data Source=example.db\");\n    }\n    ```\n  - Model Building:\n    ```csharp\n    protected override void OnModelCreating(ModelBuilder modelBuilder)\n    {\n        modelBuilder.Entity<YourEntity>(entity =>\n        {\n            entity.HasKey(e => e.Id);\n            // Additional configurations\n        });\n    }\n    ```\n\n- **Additional Tips**:\n  - Use migrations for database schema changes: `dotnet ef migrations add InitialCreate`\n  - Apply migrations: `dotnet ef database update`",
     "source": "code_example",
-    "updated_at": 1780810922.272013
+    "updated_at": 1780817544.9708953
   }
 }
