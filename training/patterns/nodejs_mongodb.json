@@ -1,0 +1,22 @@
+{
+  "search:nodejs+mongodb:node.js mongodb security best ": {
+    "content": "- Use `npm install mongodb@latest` to install the latest MongoDB driver.\n- Implement authentication using `mongodb+srv://<username>:<password>@cluster0.mongodb.net/test?retryWrites=true&w=majority`.\n- Enable SSL/TLS for secure connections with `{ ssl: true }`.\n- Encrypt data at rest using MongoDB Atlas's Transparent Data Encryption (TDE).\n- Store passwords securely using bcrypt with `npm install bcrypt@latest` and `bcrypt.hashSync(password, saltRounds)`.\n- Implement role-based access control (RBAC) in MongoDB.\n- Use environment variables for sensitive information like database credentials.\n- Regularly update MongoDB driver and Node.js to patch security vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1780828066.3999524
+  },
+  "search:nodejs+mongodb:node.js mongodb security best _ex": {
+    "content": "- Use latest Node.js and MongoDB versions.\n- Implement JWT authentication using `jsonwebtoken` package.\n- Store JWT in HTTP-only, secure cookies for enhanced security.\n- Utilize Mongoose for MongoDB object modeling to simplify data handling.\n- Enable MongoDB's authentication mechanisms (e.g., SCRAM-SHA-1).\n- Regularly update dependencies and apply security patches.\n- Implement rate limiting to prevent brute-force attacks.\n- Use environment variables for sensitive information like database credentials.\n- Conduct regular security audits and vulnerability assessments.",
+    "source": "code_example",
+    "updated_at": 1780828072.2893474
+  },
+  "search:nodejs+mongodb:node.js mongodb query optimiza": {
+    "content": "- Use indexes to speed up queries.\n- Implement projections to reduce data transferred.\n- Apply query limits to minimize the number of documents processed.\n- Regularly analyze and optimize your database schema.\n- Utilize MongoDB's explain() method for query profiling.\n- Consider using aggregation pipelines for complex data processing.\n- Enable caching mechanisms like Redis or Memcached.\n- Monitor and adjust server resources based on performance metrics.\n- Keep MongoDB and Node.js packages up to date with latest versions.",
+    "source": "web_search",
+    "updated_at": 1780828085.2101502
+  },
+  "search:nodejs+mongodb:node.js mongodb query optimiza_ex": {
+    "content": "- Use `db.collection.find({})` to retrieve all documents.\n- Implement indexing on frequently queried fields using `db.collection.createIndex()`.\n- Utilize connection pooling with libraries like `mongoose-pool2`.\n- Enable lean mode for read queries by setting `{ lean: true }` in your query options.\n- Monitor performance with MongoDB's built-in profiling tools.\n- Regularly update MongoDB and Node.js to the latest versions for security and performance improvements.\n- Use aggregation pipelines for complex data processing tasks.\n- Implement sharding for horizontal scaling across multiple servers.\n- Optimize queries by avoiding unnecessary joins and using `$lookup` when necessary.",
+    "source": "code_example",
+    "updated_at": 1780828092.2254841
+  }
+}

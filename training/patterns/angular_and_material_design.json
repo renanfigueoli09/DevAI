@@ -13,5 +13,20 @@
     "content": "- Use Angular CLI to analyze and optimize your application with `ng analyze`.\n- Upgrade to the latest version of Angular to benefit from performance improvements.\n- Implement lazy loading for modules using `--lazy` flag in `ng generate module`.\n- Utilize Angular's change detection strategies like OnPush for components.\n- Minimize HTTP requests by combining them into a single request.\n- Use Angular pipes effectively to reduce unnecessary computations.\n- Configure the Angular compiler with `aot: true` for ahead-of-time compilation.\n- Optimize images and assets using tools like Webpack or Angular CLI's asset optimization features.\n- Monitor performance using Angular DevTools for real-time insights.",
     "source": "web_search",
     "updated_at": 1780827733.848841
+  },
+  "search:Angular and Material-Design:performance optimization in an_ex": {
+    "content": "- Use `ng build --prod` for production builds.\n- Implement lazy loading with `loadChildren`.\n- Optimize images using tools like WebP or SVG.\n- Use `OnPush` change detection strategy in components.\n- Minimize HTTP requests by combining files.\n- Utilize Angular's Ahead-of-Time (AOT) compilation with `ng build --prod --aot`.\n- Enable tree shaking to remove unused code with `--buildOptimizer`.\n- Cache static assets using service workers.\n- Monitor performance with Angular DevTools for insights.",
+    "source": "code_example",
+    "updated_at": 1780827741.569434
+  },
+  "search:Angular and Material-Design:internationalization (i18n) in": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/localize`\n  - `ng xi18n --browser-config=src/browser.ts`\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - Angular Core: 16.x\n\n- **Key Config Options**:\n  - `angular.json`: Configure `i18n` options under the project configuration.\n  - `src/locale/messages.xx.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x",
+    "source": "web_search",
+    "updated_at": 1780827760.5609574
+  },
+  "search:Angular and Material-Design:internationalization (i18n) in_ex": {
+    "content": "- **CLI Commands**:\n  - `ng xi18n`: Extracts i18n messages from your source code.\n  - `ng serve --configuration=production,i18n-en`: Runs the app with a specific configuration for production and English language.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2\n  - @angular/localize: v16.2\n\n- **Key Config Options**:\n  - `i18nLocale`: Specifies the locale of your application.\n  - `i18nFormat`: Specifies the format of the extracted i18n messages (e.g., xlf, xmb).\n  - `i18nMissingTranslation`: Defines how to handle missing translations (e.g., error, warning, ignore).",
+    "source": "code_example",
+    "updated_at": 1780827778.8342235
   }
 }
