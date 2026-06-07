@@ -2,11 +2,11 @@
   "search:angular+i18n:creating multilingual applicat": {
     "content": "- Use `ng xi18n` to extract i18n messages from your Angular project.\n- Update `angular.json` to include the `i18n` configuration for each language.\n- Install `@angular/localize` for runtime translation support.\n- Utilize `Transloco` for a more advanced multilingual solution with lazy loading capabilities.\n- Run `ng serve --configuration=production --base-href=/your-language-code/` to serve your app in a specific language.\n- Configure `transloco` by creating a `transloco.config.ts` file and defining your translation files.\n- Use the `TranslocoModule` in your Angular modules for internationalization.\n- Update your components and templates with `| transloco` pipe for dynamic translations.\n- Test your application across different languages to ensure proper localization.",
     "source": "web_search",
-    "updated_at": 1780807904.6690273
+    "updated_at": 1780810966.7571087
   },
   "search:angular+i18n:creating multilingual applicat_ex": {
     "content": "- **CLI Commands**:\n  - `ng new my-app --lang=fr` to create a new Angular project in French.\n  - `ng serve --configuration=production` to run the application with production settings.\n\n- **Latest Versions**:\n  - Angular CLI: 15.2.0\n  - Angular Core: 15.2.0\n\n- **Key Config Options**:\n  - `src/environments/environment.ts`: Configure environment-specific variables.\n  - `angular.json`: Define project configurations and build options.",
     "source": "code_example",
-    "updated_at": 1780807910.737344
+    "updated_at": 1780810967.9560544
   }
 }

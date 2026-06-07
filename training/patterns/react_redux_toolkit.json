@@ -2,11 +2,11 @@
   "search:react+redux-toolkit:react redux toolkit tutorial 2": {
     "content": "- **Install Redux Toolkit and React-Redux Packages**:\n  ```bash\n  npm install @reduxjs/toolkit react-redux\n  ```\n\n- **Create a Redux Store**:\n  ```javascript\n  import { configureStore } from '@reduxjs/toolkit';\n  import rootReducer from './rootReducer';\n\n  const store = configureStore({\n    reducer: rootReducer,\n  });\n\n  export default store;\n  ```\n\n- **Implement useSelector and useDispatch in React Components**:\n  ```javascript\n  import { useSelector, useDispatch } from 'react-redux';\n  import { RootState } from './store'; // Adjust the path to your store\n\n  const MyComponent = () => {\n    const data = useSelector((state: RootState) => state.yourReducer.data);\n    const dispatch = useDispatch();\n\n    return (\n      <div>\n        {/* Use data and dispatch */}\n      </div>\n    );\n  };\n  ```\n\n- **Latest Versions**:\n  - Redux Toolkit: `^1.8.0`\n  - React-Redux: `^7.2.6`",
     "source": "web_search",
-    "updated_at": 1780807015.806842
+    "updated_at": 1780810802.4698703
   },
   "search:react+redux-toolkit:react redux toolkit tutorial 2_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install @reduxjs/toolkit react-redux`\n\n- **Latest Versions**:\n  - React: 18.x\n  - Redux Toolkit: 2.x\n\n- **Key Config Options**:\n  - `configureStore`: Automatically generates a root reducer.\n  - `createSlice`: Simplifies the process of creating reducers and actions.\n  - `useDispatch` and `useSelector`: Hooks for accessing the Redux store in React components.",
     "source": "code_example",
-    "updated_at": 1780807032.0267868
+    "updated_at": 1780810803.7186978
   }
 }

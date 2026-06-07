@@ -2,11 +2,11 @@
   "search:dotnet+postgres:asp.net core ef core npgsql mi": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `Add-Migration InitialCreate`\n\n- **Latest Versions**:\n  - Npgsql.EntityFrameworkCore.PostgreSQL: Latest version as of my last update.\n  - EF Core: Latest version as of my last update.\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: Ensure it points to your PostgreSQL database.\n  - `DbContext` Configuration: Define your entities and relationships within the `DbContext`.",
     "source": "web_search",
-    "updated_at": 1780803999.8713746
+    "updated_at": 1780810834.6692805
   },
   "search:dotnet+postgres:asp.net core ef core npgsql mi_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Npgsql EF Core Provider: Latest version as of Oct 2025.\n  - Entity Framework Core: Latest version as of Oct 2025.\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - DbContext Configuration\n  - Migration Scripts",
     "source": "code_example",
-    "updated_at": 1780804001.215402
+    "updated_at": 1780810836.0957985
   }
 }
