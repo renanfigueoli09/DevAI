@@ -2,21 +2,21 @@
   "search:react-native+apollo-client:react native apollo client gra": {
     "content": "- **CLI Commands**:\n  - `npx create-react-native-app my-app`\n  - `npm install @apollo/client graphql`\n\n- **Latest Versions**:\n  - Apollo Client: v3.x\n  - React Native: v0.68.x\n\n- **Key Config Options**:\n  - `ApolloClient`: Configure with `uri`, `cache`, and `link`.\n  - `useQuery`: Pass GraphQL query and variables.\n  - `react-native-flipper` and `react-native-apollo-devtools-client`: For debugging in development.",
     "source": "web_search",
-    "updated_at": 1780823933.993565
+    "updated_at": 1780831978.5062695
   },
   "search:react-native+apollo-client:react native apollo client gra_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-native-app my-app`\n  - `npm install @apollo/client graphql`\n\n- **Latest Versions**:\n  - Apollo Client: v3.x\n  - React Native: v0.68\n\n- **Key Config Options**:\n  - `uri`: GraphQL server URL.\n  - `cache`: Cache configuration for data management.\n  - `link`: Network layer to connect with the GraphQL server.\n\nExample setup in a React Native app:\n\n```javascript\nimport { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';\n\nconst client = new ApolloClient({\n  link: new HttpLink({ uri: 'https://your-graphql-server.com/graphql' }),\n  cache: new InMemoryCache(),\n});\n\nexport default client;\n```\n\nThis setup initializes an Apollo Client instance with a basic HTTP link and an in-memory cache, ready to be used in your React Native application for GraphQL operations.",
     "source": "code_example",
-    "updated_at": 1780823935.235417
+    "updated_at": 1780831979.9703617
   },
   "search:react-native+apollo-client:react native apollo client per": {
     "content": "- **CLI Commands**: Use `apollo client:codegen` for code generation.\n- **Latest Versions**: Ensure using Apollo Client v3.x and React Native v0.64 or later.\n- **Key Config Options**:\n  - `cache`: Configure the cache with `InMemoryCache`.\n  - `link`: Use `HttpLink` for network requests.\n  - `optimisticResponse`: Implement optimistic updates for smoother UI interactions.\n  - `subscriptionClient`: Set up a subscription client for real-time data.",
     "source": "web_search",
-    "updated_at": 1780823936.50337
+    "updated_at": 1780831981.514273
   },
   "search:react-native+apollo-client:react native apollo client per_ex": {
     "content": "- Use `apollo-client@3.x` and `react-apollo@4.x`\n- Implement `useQuery` or `useMutation` hooks for React components\n- Configure `fetchPolicy` in queries to optimize data fetching\n- Utilize Apollo's caching mechanism with `InMemoryCache`\n- Employ `client.watchQuery` for real-time updates\n- Use `Suspense` with `react-apollo` for automatic loading states\n- Optimize GraphQL schema and resolvers for performance\n- Implement batching with `BatchHttpLink`\n- Monitor performance using Apollo DevTools",
     "source": "code_example",
-    "updated_at": 1780823937.7225633
+    "updated_at": 1780831983.1529582
   }
 }

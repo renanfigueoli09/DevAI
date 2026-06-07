@@ -2,21 +2,21 @@
   "search:graphql-spring-boot:graphql with spring boot 2023": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot 2.7.x\n  - Spring for GraphQL 1.0.x\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, database connection, etc.\n  - `GraphQLSchema`: Define your GraphQL schema using Java classes.\n  - `@QueryMapping`, `@MutationMapping`: Annotate methods to define query and mutation endpoints.\n\n- **Dependencies**:\n  - Add `spring-boot-starter-graphql` to your `pom.xml`.\n  - Include `spring-data-jpa` for database integration if needed.",
     "source": "web_search",
-    "updated_at": 1780826805.8536925
+    "updated_at": 1780831987.6278923
   },
   "search:graphql-spring-boot:graphql with spring boot 2023_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `curl -X POST http://localhost:8080/graphql -H \"Content-Type: application/json\" -d '{\"query\": \"{ hello }\"}'` to test GraphQL endpoint.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - GraphQL Java Tools: 10.3\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, database connection details.\n  - `schema.graphqls`: Define GraphQL schema.\n  - `resolver` packages: Specify resolver classes for handling queries and mutations.",
     "source": "code_example",
-    "updated_at": 1780826822.008208
+    "updated_at": 1780831989.0691984
   },
   "search:graphql-spring-boot:building graphql apis with spr": {
     "content": "- Use `spring-boot-starter-graphql` in your `pom.xml` or `build.gradle`.\n- Create GraphQL schema using `.graphqls` files.\n- Implement resolvers for each query and mutation.\n- Configure Spring Boot application with `@EnableWebFlux` if using reactive programming.\n- Enable CORS with `@CrossOrigin` annotation on controllers.\n- Use `GraphQlSchemaBuilder` to programmatically define the schema.\n- Deploy your application using standard Spring Boot commands like `mvn spring-boot:run`.\n- Monitor and debug GraphQL queries through tools like GraphiQL or Apollo Explorer.",
     "source": "web_search",
-    "updated_at": 1780826828.565845
+    "updated_at": 1780831990.560504
   },
   "search:graphql-spring-boot:building graphql apis with spr_ex": {
     "content": "- Add dependencies to `build.gradle` or `pom.xml`:\n  ```xml\n  <dependency>\n      <groupId>com.graphql-java-kickstart</groupId>\n      <artifactId>graphql-spring-boot-starter</artifactId>\n      <version>12.0.0</version>\n  </dependency>\n  ```\n- Enable GraphiQL in Spring Boot application properties:\n  ```properties\n  spring.graphql.graphiql.enabled=true\n  ```\n- Define GraphQL schema using `.graphqls` files.\n- Use `@Query`, `@Mutation`, and `@Subscription` annotations to define API endpoints.\n- Configure data fetchers for each field in the schema.\n- Run application with:\n  ```bash\n  ./mvnw spring-boot:run\n  ```\n- Access GraphiQL interface at `http://localhost:8080/graphiql`.",
     "source": "code_example",
-    "updated_at": 1780826834.0830507
+    "updated_at": 1780831992.1714108
   }
 }

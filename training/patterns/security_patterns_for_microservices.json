@@ -2,21 +2,21 @@
   "search:security-patterns-for-microservices:microservices security best pr": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**: Ensure using the latest versions of microservices frameworks like Spring Boot, Node.js, etc.\n- **Key Config Options**:\n  - Authentication: Implement OAuth2 and JWT.\n  - Authorization: Use Role-Based Access Control (RBAC).\n  - Network Policies: Define network policies for microservices communication.\n  - Logging & Monitoring: Enable detailed logging and use tools like Prometheus and Grafana for monitoring.\n  - Encryption: Encrypt data in transit using TLS/SSL.\n  - Regular Audits: Conduct regular security audits and vulnerability assessments.",
     "source": "web_search",
-    "updated_at": 1780824047.574716
+    "updated_at": 1780832162.0011928
   },
   "search:security-patterns-for-microservices:microservices security best pr_ex": {
     "content": "- Use Azure CLI for managing microservices securely.\n- Install latest version of Docker to containerize microservices.\n- Implement OAuth2 for secure API access.\n- Configure Kubernetes RBAC for role-based access control.\n- Use HashiCorp Vault for secrets management.\n- Enable TLS/SSL encryption for communication between services.\n- Regularly update dependencies and patch vulnerabilities.\n- Monitor microservices with Prometheus and Grafana.\n- Conduct security audits using tools like OWASP ZAP.",
     "source": "code_example",
-    "updated_at": 1780824048.858514
+    "updated_at": 1780832163.9848952
   },
   "search:security-patterns-for-microservices:oauth 2.0 and jwt in microserv": {
     "content": "- Use `docker-compose` to set up an OAuth 2.0 server and API gateway.\n- Implement JWT authentication in microservices using libraries like `jsonwebtoken`.\n- Ensure the latest version of Node.js (v16.x or later) for optimal performance.\n- Configure OAuth 2.0 with scopes and permissions for fine-grained access control.\n- Use environment variables to manage sensitive information securely.\n- Implement rate limiting on API gateways using middleware like `express-rate-limit`.\n- Regularly update dependencies and security patches.\n- Monitor authentication logs for suspicious activities.\n- Test JWT token expiration and refresh mechanisms thoroughly.",
     "source": "web_search",
-    "updated_at": 1780824050.1251764
+    "updated_at": 1780832165.8250906
   },
   "search:security-patterns-for-microservices:oauth 2.0 and jwt in microserv_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - `spring.security.oauth2.client.registration.google.client-id`: Your Google client ID.\n  - `spring.security.oauth2.client.registration.google.client-secret`: Your Google client secret.\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: URI for the JWKS endpoint.\n\n- **Example Configuration in `application.yml`**:\n  ```yaml\n  spring:\n    security:\n      oauth2:\n        client:\n          registration:\n            google:\n              client-id: your-google-client-id\n              client-secret: your-google-client-secret\n              redirect-uri: \"{baseUrl}/login/oauth2/code/{registrationId}\"\n              scope: profile, email\n        resourceserver:\n          jwt:\n            jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs\n  ```",
     "source": "code_example",
-    "updated_at": 1780824051.3556852
+    "updated_at": 1780832167.6150951
   }
 }

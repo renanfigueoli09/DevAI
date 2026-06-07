@@ -2,11 +2,11 @@
   "search:angular+i18n-performance:angular i18n performance optim": {
     "content": "- **CLI Commands**:\n  - `ng build --prod` for production builds.\n  - `ng serve --prod` to run in production mode.\n\n- **Latest Versions**:\n  - Angular CLI: v16.x\n  - Angular Core: v16.x\n\n- **Key Config Options**:\n  - In `angular.json`, set `\"optimization\": true` for production builds.\n  - Use `ServiceWorkerModule.register()` for offline support and performance improvements.\n  - Configure `budgets` in `angular.json` to enforce size limits on assets.",
     "source": "web_search",
-    "updated_at": 1780823765.584176
+    "updated_at": 1780831761.0213897
   },
   "search:angular+i18n-performance:angular i18n performance optim_ex": {
     "content": "- **CLI Commands**:\n  - `ng serve --prod` to build and serve the application in production mode.\n  - `ng xi18n` to extract i18n messages from your source code.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - `angular.json`: Configure the `i18n` section to specify the locale and translation files.\n    ```json\n    \"projects\": {\n      \"your-project-name\": {\n        \"architect\": {\n          \"build\": {\n            \"options\": {\n              \"i18nLocale\": \"en-US\",\n              \"i18nFile\": \"src/locale/messages.en-US.xlf\"\n            }\n          },\n          \"serve\": {\n            \"options\": {\n              \"browserTarget\": \"your-project-name:build\"\n            }\n          }\n        }\n      }\n    }\n  ```\n  - `src/locale/messages.en-US.xlf`: Translation file for English (United States).\n\n- **Performance Optimization Tips**:\n  - Use lazy loading for modules to reduce initial load time.\n  - Optimize component rendering by using `OnPush` change detection strategy.\n  - Minimize the number of bindings and use structural directives wisely.",
     "source": "code_example",
-    "updated_at": 1780823767.274102
+    "updated_at": 1780831765.601167
   }
 }

@@ -2,31 +2,31 @@
   "search:Spring Boot MongoDB Performance:mongodb performance tuning": {
     "content": "- **CLI Commands**:\n  - `mongostat` for real-time performance metrics.\n  - `mongotop` to monitor read/write operations per second.\n\n- **Latest Versions**:\n  - MongoDB 6.0 introduced several performance enhancements and new features.\n\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjusts the size of the WiredTiger cache.\n  - `net.maxIncomingConnections`: Limits the number of incoming connections.\n  - `operationProfiling.mode`: Enables profiling to track slow operations.",
     "source": "web_search",
-    "updated_at": 1780823840.6455853
+    "updated_at": 1780831858.9782057
   },
   "search:Spring Boot MongoDB Performance:mongodb performance tuning_ex": {
     "content": "- Use `mongostat` and `mongotop` to monitor performance.\n- Optimize queries by indexing fields that are frequently queried.\n- Adjust `wiredTigerCacheSizeGB` based on system memory.\n- Enable journaling with `journal.enabled: true`.\n- Set `storage.wiredTiger.engineConfig.cache_size_gb` in the configuration file.\n- Use `db.collection.stats()` to analyze collection performance.\n- Monitor and adjust `net.maxIncomingConnections` for network settings.\n- Regularly run `compact` on collections to reclaim storage space.",
     "source": "code_example",
-    "updated_at": 1780823842.0159495
+    "updated_at": 1780831860.5980637
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing": {
     "content": "- Enable auto-index creation in Spring Boot by setting `spring.data.mongodb.auto-index-creation=true` in your application properties.\n- Use annotations like `@Indexed`, `@CompoundIndex`, and `@TextIndexed` to define indexes directly on domain entities.\n- For programmatically creating an index, use the `MongoTemplate.indexOps()` method with appropriate options.\n- Ensure MongoDB version compatibility with Spring Data MongoDB for optimal performance and features.",
     "source": "web_search",
-    "updated_at": 1780823843.3377018
+    "updated_at": 1780831862.1213849
   },
   "search:Spring Boot MongoDB Performance:spring data mongodb indexing_ex": {
     "content": "- Use `@Indexed` annotation to define indexes in your entity classes.\n- Ensure MongoDB is running and accessible.\n- Configure Spring Boot application properties for MongoDB connection:\n  ```yaml\n  spring:\n    data:\n      mongodb:\n        uri: mongodb://localhost:27017/mydatabase\n  ```\n- For dynamic indexing, use `MongoTemplate` or `ReactiveMongoTemplate`.\n- Use `@CompoundIndex` for compound indexes.\n- Check MongoDB version compatibility with Spring Data MongoDB in the official documentation.\n- Ensure you have the latest versions of Spring Boot and Spring Data MongoDB to avoid deprecated features.",
     "source": "code_example",
-    "updated_at": 1780823844.6335738
+    "updated_at": 1780831863.603771
   },
   "search:Spring Boot MongoDB Performance:optimizing queries in spring b": {
     "content": "- Use `@Query` annotation for custom JPQL or SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Enable query logging to identify slow queries with `spring.jpa.show-sql=true`.\n- Optimize fetch strategies with `@Fetch(FetchMode.JOIN)` or `@BatchSize(size = 10)`.\n- Use DTOs for projections to reduce data transfer.\n- Implement caching using `@Cacheable`, `@CachePut`, and `@CacheEvict`.\n- Batch updates and deletes using `EntityManager.flush()` and `clear()`.\n- Monitor query performance with tools like Spring Boot Actuator.\n- Regularly update dependencies to the latest versions.",
     "source": "web_search",
-    "updated_at": 1780823845.9105377
+    "updated_at": 1780831865.25969
   },
   "search:Spring Boot MongoDB Performance:optimizing queries in spring b_ex": {
     "content": "- Use `@Query` annotation in Spring Data JPA for custom SQL queries.\n- Employ `@NamedNativeQuery` for native SQL queries to improve readability and maintainability.\n- Optimize JPQL by using joins and avoiding subqueries where possible.\n- Utilize Spring Boot's `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true` properties to optimize batch operations.\n- Enable query logging with `spring.jpa.show-sql=true` for debugging slow queries.\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations to cache query results, reducing database load.\n- Consider using Spring Data's `Pageable` interface for pagination to optimize large result sets.\n- Regularly analyze and profile SQL queries using tools like Hibernate Profiler or Spring Boot Actuator.",
     "source": "code_example",
-    "updated_at": 1780823847.121158
+    "updated_at": 1780831869.3013475
   }
 }
