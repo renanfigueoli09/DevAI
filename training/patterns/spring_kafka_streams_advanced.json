@@ -2,11 +2,11 @@
   "search:spring+kafka-streams-advanced:spring kafka streams advanced ": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Apache Kafka: 3.4.0\n  - Spring for Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.streams.application-id`: Application ID for Kafka Streams.\n  - `spring.kafka.streams.default-key-deserializer`: Default key deserializer class.\n  - `spring.kafka.streams.default-value-deserializer`: Default value deserializer class.",
     "source": "web_search",
-    "updated_at": 1780839037.6469254
+    "updated_at": 1780841402.0511954
   },
   "search:spring+kafka-streams-advanced:spring kafka streams state sto": {
     "content": "- **CLI Commands**: Use `kafka-topics.sh --create` to create Kafka topics.\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kafka Streams: 3.4.x\n- **Key Config Options**:\n  - `spring.kafka.streams.state-dir`: Specifies the local file system directory for state stores.\n  - `spring.kafka.streams.application-id`: Unique identifier for the application.\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers to connect to.",
     "source": "web_search",
-    "updated_at": 1780839039.417055
+    "updated_at": 1780841404.1156895
   }
 }
