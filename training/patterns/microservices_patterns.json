@@ -17,46 +17,46 @@
   "search:microservices+patterns:outbox pattern ddd bounded con_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new clean` to create a new .NET Clean Architecture project.\n  - `dotnet add package MediatR` for implementing the Mediator pattern.\n  - `dotnet add package MassTransit` for message bus integration.\n\n- **Latest Versions**:\n  - .NET 7\n  - MediatR 10.3.1\n  - MassTransit 6.2.4\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection strings and service buses.\n  - Use `services.AddMediatR(typeof(Startup));` in `Program.cs`.\n  - Configure MassTransit with `services.AddMassTransit(x => { ... });`.",
     "source": "code_example",
-    "updated_at": 1780822527.373439
+    "updated_at": 1780830061.6454685
   },
   "search:Microservices Patterns:microservices patterns spring ": {
     "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:2.13.4.Final:create`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Quarkus: 2.13.4.Final\n  - Spring Boot: 2.6.5\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Set the HTTP port for your application.\n  - `quarkus.datasource.username`: Database username.\n  - `quarkus.datasource.password`: Database password.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for the database.",
     "source": "web_search",
-    "updated_at": 1780822528.5189915
+    "updated_at": 1780830063.4847143
   },
   "search:Microservices Patterns:microservices patterns spring _ex": {
     "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:create -DprojectGroupId=com.example -DprojectArtifactId=my-quarkus-app`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Quarkus: 3.0.0.Final\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Specifies the port on which the application will listen.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for database connection.\n  - `quarkus.datasource.username` and `quarkus.datasource.password`: Database credentials.\n  - `quarkus.resteasy.path`: Base path for REST endpoints.",
     "source": "code_example",
-    "updated_at": 1780822529.7273865
+    "updated_at": 1780830065.1646504
   },
   "search:Microservices Patterns:microservices patterns fastapi": {
     "content": "- **FastAPI**: Version 0.95.0\n- **SQLAlchemy**: Version 2.0.0\n- **Redis**: Version 7.0.0\n- **Docker**: Latest version\n\n**CLI Commands:**\n- `fastapi create-app myproject`\n- `uvicorn myproject.main:app --reload`\n\n**Key Config Options:**\n- FastAPI:\n  - `title`: Application title.\n  - `description`: Application description.\n  - `version`: API version.\n\n- SQLAlchemy:\n  - `SQLALCHEMY_DATABASE_URL`: Database URL.\n  - `engine`: Connection engine.\n\n- Redis:\n  - `REDIS_HOST`: Host address.\n  - `REDIS_PORT`: Port number.",
     "source": "web_search",
-    "updated_at": 1780822530.9267242
+    "updated_at": 1780830067.0385125
   },
   "search:Microservices Patterns:microservices patterns fastapi_ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app my_project`\n  - `uvicorn my_project.main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - CORS origins in `main.py`: `app.add_middleware(CORSMiddleware, allow_origins=[\"*\"], allow_credentials=True, allow_methods=[\"*\"], allow_headers=[\"*\"])`",
     "source": "code_example",
-    "updated_at": 1780822532.1190844
+    "updated_at": 1780830068.7317858
   },
   "search:Microservices Patterns:microservices patterns nextjs ": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- For serverless authentication, consider using AWS Cognito or Firebase Authentication.\n- Implement microservices by creating separate Next.js applications for each service.\n- Utilize API Gateway and Lambda functions for deploying microservices on AWS.\n- Configure environment variables in `.env.local` for sensitive information like database URLs and API keys.\n- Use `next-auth.js` for handling authentication within a Next.js application.\n- For state management across microservices, consider using Redis or a shared database.\n- Implement JWT (JSON Web Tokens) for secure communication between microservices.\n- Deploy each microservice as a separate AWS Lambda function with API Gateway triggers.",
     "source": "web_search",
-    "updated_at": 1780822533.3037975
+    "updated_at": 1780830070.3168848
   },
   "search:Microservices Patterns:microservices patterns nextjs _ex": {
     "content": "- **CLI Commands**: Use `npx create-next-app@latest` to start a new Next.js project.\n- **Latest Versions**: Ensure you are using the latest version of Next.js by running `npm install next@latest`.\n- **Key Config Options**:\n  - `next.config.js`: Configure your project settings such as output type, asset prefix, and more.\n  - Environment Variables: Use `.env.local` to manage sensitive information like API keys.",
     "source": "code_example",
-    "updated_at": 1780822534.5432243
+    "updated_at": 1780830072.0681143
   },
   "search:Microservices Patterns:microservices patterns gitlab-": {
     "content": "- Use `gitlab-ci.yml` to define CI/CD pipelines.\n- Update GitLab Runner to latest version using `sudo gitlab-runner upgrade`.\n- Implement dynamic child pipelines with `include` directive in `.gitlab-ci.yml`.\n- Utilize DAG (Directed Acyclic Graph) for complex pipeline logic.\n- Key config options include `stages`, `script`, and `only/except`.\n- Use `cache` to speed up builds by caching dependencies.\n- Employ `artifacts` to share files between jobs.\n- Monitor pipeline performance with GitLab's built-in analytics.\n- Ensure security by using `variables` for sensitive data.\n- Regularly update GitLab CI templates for best practices.",
     "source": "web_search",
-    "updated_at": 1780822535.6911802
+    "updated_at": 1780830073.632221
   },
   "search:Microservices Patterns:microservices patterns gitlab-_ex": {
     "content": "- **CLI Commands**:\n  - `gitlab-runner register`: Registers a new runner.\n  - `gitlab-runner unregister --all-runners`: Unregisters all runners.\n\n- **Latest Versions**:\n  - GitLab Runner: v16.4.0\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml`: Main configuration file for defining CI/CD pipelines.\n  - `image`: Specifies the Docker image to use for pipeline jobs.\n  - `services`: Defines services (like databases) required by jobs.\n  - `script`: Commands executed in the job environment.",
     "source": "code_example",
-    "updated_at": 1780822536.8978586
+    "updated_at": 1780830075.1901684
   }
 }

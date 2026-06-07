@@ -2,21 +2,21 @@
   "search:spring-boot-spring-data-jpa:spring boot spring data jpa be": {
     "content": "- Use Spring Boot's `spring-boot-starter-data-jpa` dependency.\n- Leverage repository interfaces for data access, avoiding manual SQL queries.\n- Implement entity classes with proper ID types and consistent naming conventions.\n- Utilize DTOs for transferring data between layers.\n- Configure JPA properties in `application.properties` or `application.yml`.\n- Use Spring Data JPA's query derivation to simplify complex queries.\n- Ensure `equals/hashCode` methods are implemented safely in entities.\n- Employ Lombok annotations like `@Data` for convenience, but manually implement `equals/hashCode`.\n- Monitor and tune performance using Spring Boot Actuator endpoints.",
     "source": "web_search",
-    "updated_at": 1780826708.5178192
+    "updated_at": 1780830085.915846
   },
   "search:spring-boot-spring-data-jpa:spring boot spring data jpa be_ex": {
     "content": "- Use `@Transactional` annotation to manage transactions in your service layer.\n- Ensure entities are properly annotated with `@Entity`, `@Id`, and relationships using `@OneToMany`, `@ManyToOne`.\n- Utilize Spring Data JPA's repository interfaces for data access, extending `JpaRepository` or `CrudRepository`.\n- Implement DTOs (Data Transfer Objects) to transfer data between layers efficiently.\n- Use `@Query` annotation for complex queries when necessary, ensuring they are optimized and secure.\n- Configure database connection properties in `application.properties` or `application.yml`, e.g., `spring.datasource.url`, `spring.datasource.username`, etc.\n- Enable lazy loading by default using `@EntityGraph` to optimize query performance.\n- Regularly update Spring Boot, Spring Data JPA, and Hibernate to the latest versions for security patches and performance improvements.",
     "source": "code_example",
-    "updated_at": 1780826716.1829715
+    "updated_at": 1780830087.6509702
   },
   "search:spring-boot-spring-data-jpa:spring boot spring data jpa pe": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build and test the project.\n  - `jpa:show-sql=true` in application.properties to enable SQL logging.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Data JPA: 2.7.4\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect`",
     "source": "web_search",
-    "updated_at": 1780826744.0189316
+    "updated_at": 1780830089.2344837
   },
   "search:spring-boot-spring-data-jpa:spring boot spring data jpa pe_ex": {
     "content": "- Use `@Query` annotation for complex queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Enable query derivation by naming methods in repository interfaces.\n- Configure `spring.jpa.properties.hibernate.jdbc.batch_size` for batch updates.\n- Utilize `@EntityGraph` to optimize entity loading.\n- Set `spring.jpa.show-sql=true` for debugging SQL queries.\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations for caching.\n- Ensure database indexing on frequently queried columns.\n- Regularly update Spring Boot and JPA libraries to the latest versions.",
     "source": "code_example",
-    "updated_at": 1780826777.6855972
+    "updated_at": 1780830090.9218183
   }
 }
