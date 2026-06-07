@@ -2,16 +2,16 @@
   "search:react-native+realm-performance:react native realm performance": {
     "content": "- **CLI Commands**: Use `react-native upgrade` to update your project dependencies.\n- **Latest Versions**: React Native 0.72, Realm 10.5.0.\n- **Key Config Options**:\n  - `metro.config.js`: Adjust transformer and resolver settings for faster bundling.\n  - `app.json`: Configure performance-related options like `reactNativeDevServerPort`.\n  - `Realm.open()`: Optimize schema design and query performance.",
     "source": "web_search",
-    "updated_at": 1780828017.6164842
+    "updated_at": 1780831192.1262822
   },
   "search:react-native+realm-performance:react native realm performance_ex": {
     "content": "- **CLI Commands**: \n  - `npx react-native init MyProject`\n  - `react-native run-android`\n  - `react-native run-ios`\n\n- **Latest Versions**:\n  - React Native: 0.72.3\n  - Realm: 11.0.0\n\n- **Key Config Options**:\n  - `realmConfiguration`: Define schema, migration, and other settings.\n  - `useQuery`: Efficiently query data with Realm.\n  - `RealmProvider` and `useRealm`: For managing Realm state in React components.",
     "source": "code_example",
-    "updated_at": 1780828025.0247967
+    "updated_at": 1780831194.1628008
   },
   "search:react-native+realm-performance:react native realm database mi": {
     "content": "- **CLI Commands**: \n  - `realm-cli migrate --schema-path path/to/schema.json`\n  \n- **Latest Versions**:\n  - Realm React Native SDK: v10.x\n  - MongoDB Realm: v2.5\n  \n- **Key Config Options**:\n  - `Realm.open({ schema: [TodosSchema], migration: (oldRealm, newRealm) => { ... } })`\n  - `auth().onAuthStateChanged((user) => { ... })`",
     "source": "web_search",
-    "updated_at": 1780828032.1533427
+    "updated_at": 1780831195.9543567
   }
 }

@@ -2,21 +2,21 @@
   "search:spring-data-jpa-security:spring data jpa security best ": {
     "content": "- **Latest Version of Spring Boot**: As of my last update, the latest stable version is 3.2.x.\n- **Key Config Options for Security**:\n  - `spring.security.user.name` and `spring.security.user.password`: Set default user credentials.\n  - `spring.security.user.roles`: Define roles for the default user.\n- **CLI Commands**:\n  - To create a new Spring Boot project: `mvn archetype:generate -DgroupId=com.example -DartifactId=myapp -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`\n  - To run a Spring Boot application: `./mvnw spring-boot:run`\n- **Dependency Management**:\n  - Add Spring Data JPA and Security dependencies in your `pom.xml` or `build.gradle`.\n- **Querydsl Integration**:\n  - Include Querydsl dependency for type-safe queries.\n  - Use `@QuerydslPredicateExecutor` to enable query methods with Querydsl predicates.",
     "source": "web_search",
-    "updated_at": 1780823537.2488806
+    "updated_at": 1780831419.2633364
   },
   "search:spring-data-jpa-security:spring data jpa security best _ex": {
     "content": "- Use `spring-boot-starter-security` for integrating Spring Security.\n- Configure security in `application.properties` or `application.yml`.\n- Implement `@EnableWebSecurity` and extend `WebSecurityConfigurerAdapter`.\n- Use `HttpSecurity` to configure authentication and authorization rules.\n- Apply `@PreAuthorize`, `@PostAuthorize`, and `@Secured` for method-level security.\n- Utilize Spring Data JPA repositories with `@RepositoryRestResource` for RESTful access.\n- Ensure HTTPS by setting `server.ssl.enabled=true`.\n- Update dependencies in `pom.xml` or `build.gradle` to use latest versions of Spring Boot, Spring Security, and Spring Data JPA.",
     "source": "code_example",
-    "updated_at": 1780823538.4542108
+    "updated_at": 1780831420.693169
   },
   "search:spring-data-jpa-security:securing spring data jpa repos": {
     "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: Ensure you are using the latest version of Spring Data JPA and Spring Boot for optimal performance and security.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure your database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the Hibernate dialect based on your database.",
     "source": "web_search",
-    "updated_at": 1780823539.6661935
+    "updated_at": 1780831422.3740487
   },
   "search:spring-data-jpa-security:securing spring data jpa repos_ex": {
     "content": "- Use `@EnableJpaRepositories` to activate Spring Data JPA repositories.\n- Implement repository interfaces extending `JpaRepository`.\n- Utilize `Specifications` for complex query building.\n- Configure data source properties in `application.properties` or `application.yml`.\n- Ensure dependencies include `spring-boot-starter-data-jpa`.\n- Use `@Query` annotation for custom JPQL queries.\n- Leverage Spring Data JPA's auto-generated repository implementations.\n- Update dependencies to the latest versions using Maven or Gradle.\n- Configure transaction management with `@Transactional` annotations.",
     "source": "code_example",
-    "updated_at": 1780823540.8536358
+    "updated_at": 1780831424.1676583
   }
 }

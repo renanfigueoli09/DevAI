@@ -2,21 +2,21 @@
   "search:spring+jpa:spring jpa best practices 2023": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.5\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect.",
     "source": "web_search",
-    "updated_at": 1780823656.0544415
+    "updated_at": 1780831583.751457
   },
   "search:spring+jpa:spring jpa best practices 2023_ex": {
     "content": "- Use the latest version of Spring Boot and Spring Data JPA.\n- Implement pagination in repository methods to handle large datasets efficiently.\n- Utilize `@Query` annotations for complex queries instead of JPQL or native SQL.\n- Apply DTOs (Data Transfer Objects) for read operations to reduce data transfer size.\n- Configure `spring.jpa.properties.hibernate.dialect` based on your database type.\n- Use `@Transactional` annotation wisely, avoiding unnecessary transactions.\n- Implement custom repository interfaces for specific use cases.\n- Optimize entity relationships by using eager or lazy loading appropriately.\n- Regularly update and maintain dependencies to avoid security vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780823657.655786
+    "updated_at": 1780831585.4930294
   },
   "search:spring+jpa:spring jpa performance optimiz": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `gradle build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Data JPA: 2.7.4\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.show_sql=false`",
     "source": "web_search",
-    "updated_at": 1780823659.196404
+    "updated_at": 1780831587.0739946
   },
   "search:spring+jpa:spring jpa performance optimiz_ex": {
     "content": "- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations to manage caching.\n- Enable caching in Spring Boot by adding `@EnableCaching` to your configuration class.\n- Configure cache manager, e.g., `ConcurrentMapCacheManager`.\n- Optimize queries using JPQL or native SQL for better performance.\n- Use `@Query` annotation with `nativeQuery = true` for complex queries.\n- Avoid fetching unnecessary data by using `@EntityGraph` or `fetch = FetchType.LAZY`.\n- Configure batch processing in Spring Data JPA to reduce database round-trips.\n- Monitor and tune application performance using tools like Spring Boot Actuator.",
     "source": "code_example",
-    "updated_at": 1780823660.5265427
+    "updated_at": 1780831588.5888205
   }
 }

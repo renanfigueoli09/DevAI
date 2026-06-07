@@ -2,16 +2,16 @@
   "search:dotnet+azure-functions:.net azure functions best prac": {
     "content": "- Use Azure Functions Core Tools to develop locally.\n- Deploy using `func azure functionapp publish <functionAppName>`.\n- Set environment variables in the Azure portal or via `.env` file.\n- Utilize Azure Monitor for logging and monitoring functions.\n- Implement cold start optimization techniques.\n- Ensure proper error handling and retries.\n- Use Azure Functions Premium plan for high-performance scenarios.\n- Leverage durable functions for complex workflows.\n- Regularly update dependencies to latest versions.",
     "source": "web_search",
-    "updated_at": 1780823662.0608115
+    "updated_at": 1780831592.6611946
   },
   "search:dotnet+azure-functions:.net azure functions best prac_ex": {
     "content": "- Use the latest version of Azure Functions Core Tools (`func`) to create and manage functions.\n- Utilize Visual Studio or Visual Studio Code for development, leveraging extensions like \"Azure Functions\" by Microsoft.\n- Implement dependency injection in your Azure Functions using `Microsoft.Azure.Functions.Extensions` package.\n- Configure logging with `ILogger` to track function execution and errors.\n- Use Azure Storage Queues or Service Bus for input/output bindings to decouple functions from external systems.\n- Employ Azure Key Vault for secure storage of sensitive information like API keys and connection strings.\n- Implement unit tests using xUnit.net and Moq for your Azure Functions logic.\n- Deploy functions using Azure DevOps pipelines with the Azure Functions task.\n- Monitor function performance and logs through Azure Monitor.",
     "source": "code_example",
-    "updated_at": 1780823663.5231922
+    "updated_at": 1780831594.7765415
   },
   "search:dotnet+azure-functions:.net azure functions performan": {
     "content": "- **CLI Commands**:\n  - `func azure functionapp publish <functionAppName> --csharp`\n  - `dotnet publish -c Release`\n\n- **Latest Versions**:\n  - .NET 8\n  - Azure Functions Core Tools v4\n\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Set to `.NET` for .NET functions.\n  - `WEBSITE_NODE_DEFAULT_VERSION`: Specify Node.js version if needed.\n  - `AzureWebJobsStorage`: Connection string for Azure Storage.",
     "source": "web_search",
-    "updated_at": 1780823664.988046
+    "updated_at": 1780831597.006807
   }
 }

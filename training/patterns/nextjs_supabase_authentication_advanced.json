@@ -2,21 +2,21 @@
   "search:nextjs+supabase-authentication-advanced:next.js supabase authenticatio": {
     "content": "- Use `export const dynamic = 'force-dynamic'` on pages that require authentication in Next.js.\n- For Supabase SSR, refresh session tokens server-side and update JWT via a Set-Cookie header.\n- Implement authentication flow for users using Supabase with Next.js Server Actions.\n- Protect routes in Next.js using Supabase Authentication by updating middleware.\n- Master advanced authentication patterns including OAuth, magic links, passwordless auth, custom JWT, multi-tenant authentication, and enterprise SSO integration with Next.js and Supabase.",
     "source": "web_search",
-    "updated_at": 1780825926.8091888
+    "updated_at": 1780831215.0096
   },
   "search:nextjs+supabase-authentication-advanced:next.js supabase authenticatio_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase Client: 2.0.0\n\n- **Key Config Options**:\n  - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL.\n  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anon key for public access.\n  - `supabaseClient.auth.onAuthStateChange(callback)`: Listen to auth state changes.",
     "source": "code_example",
-    "updated_at": 1780825932.355364
+    "updated_at": 1780831216.7426019
   },
   "search:nextjs+supabase-authentication-advanced:supabase jwt authentication in": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS Client: v2.0.0\n\n- **Key Config Options**:\n  - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL.\n  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anon key for public access.\n  - `supabaseUrl` and `supabaseAnonKey` in your Supabase client setup.",
     "source": "web_search",
-    "updated_at": 1780825942.9730456
+    "updated_at": 1780831218.226994
   },
   "search:nextjs+supabase-authentication-advanced:supabase jwt authentication in_ex": {
     "content": "- **CLI Commands**: `npx create-next-app@latest my-supabase-app`\n- **Latest Versions**: Next.js 2025, Supabase v1.4.0\n- **Key Config Options**:\n  - JWT Secret: Store securely in environment variables.\n  - Authorization Header: Include token for API requests to Supabase.\n  - Row Level Security (RLS): Apply policies on data access.",
     "source": "code_example",
-    "updated_at": 1780825949.7788968
+    "updated_at": 1780831219.6743374
   }
 }

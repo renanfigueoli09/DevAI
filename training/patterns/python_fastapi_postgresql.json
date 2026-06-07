@@ -2,16 +2,16 @@
   "search:python-fastapi-postgresql:python fastapi postgresql inte": {
     "content": "- Install FastAPI using pip: `pip install fastapi`\n- Install PostgreSQL client library: `pip install psycopg2-binary`\n- Create a new FastAPI project:\n  ```bash\n  mkdir my_fastapi_project\n  cd my_fastapi_project\n  ```\n- Initialize a Python virtual environment and activate it.\n- Create an ASGI file (e.g., `main.py`) with the following content:\n  ```python\n  from fastapi import FastAPI\n\n  app = FastAPI()\n\n  @app.get(\"/\")\n  def read_root():\n      return {\"Hello\": \"World\"}\n  ```\n- Run the FastAPI application: `uvicorn main:app --reload`\n- Connect to PostgreSQL using DSN (Data Source Name):\n  ```python\n  from sqlalchemy import create_engine\n\n  SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"\n  engine = create_engine(SQLALCHEMY_DATABASE_URL)\n  ```\n- Define database models using SQLAlchemy ORM.\n- Create an asynchronous client for FastAPI:\n  ```python\n  from fastapi.testclient import TestClient\n\n  client = TestClient(app)\n  ```\n- Use JWT authentication in your FastAPI application.\n- Deploy your FastAPI app with Docker.",
     "source": "web_search",
-    "updated_at": 1780823440.8909392
+    "updated_at": 1780831284.7844641
   },
   "search:python-fastapi-postgresql:python fastapi postgresql inte_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn sqlalchemy psycopg2-binary`\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v1.4.36\n  - PostgreSQL: v14.5\n  \n- **Key Config Options**:\n  - Database URL: `postgresql://username:password@localhost/dbname`\n  - ASGI Server: `uvicorn main:app --reload`",
     "source": "code_example",
-    "updated_at": 1780823442.0416033
+    "updated_at": 1780831286.2552419
   },
   "search:python-fastapi-postgresql:fastapi postgresql performance": {
     "content": "- Use `uvicorn` with ASGI server for FastAPI applications.\n- Install latest FastAPI and SQLAlchemy using pip (`pip install fastapi sqlalchemy`).\n- Configure PostgreSQL connection pool in FastAPI app using SQLAlchemy's `create_engine`.\n- Implement async ORM like SQLModel or Tortoise ORM for database operations.\n- Optimize queries by avoiding N+1 issues, use eager loading where possible.\n- Monitor performance with tools like pg_stat_activity and pg_stat_statements.\n- Use indexes on frequently queried columns in PostgreSQL.\n- Regularly update FastAPI, SQLAlchemy, and PostgreSQL to the latest versions.\n- Implement caching strategies for read-heavy applications.\n- Scale horizontally by deploying FastAPI and PostgreSQL on Kubernetes.",
     "source": "web_search",
-    "updated_at": 1780823443.2472882
+    "updated_at": 1780831287.7061486
   }
 }

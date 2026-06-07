@@ -2,11 +2,11 @@
   "search:fastapi-advanced-authentication:fastapi advanced authenticatio": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Pydantic: 1.10.7\n\n- **Key Config Options**:\n  - `oauth2_scheme`: For OAuth2 authentication.\n  - `JWTBearer`: For JWT-based token verification.\n  - `Depends`: For dependency injection in routes.",
     "source": "web_search",
-    "updated_at": 1780828473.2704434
+    "updated_at": 1780831488.2456048
   },
   "search:fastapi-advanced-authentication:fastapi security best practice": {
     "content": "- Use `uvicorn` as the ASGI server for running FastAPI applications.\n- Install FastAPI using pip: `pip install fastapi`.\n- For authentication, use OAuth2 with JWT tokens.\n- Configure CORS in FastAPI to control which origins can access your API.\n- Implement rate limiting to prevent abuse and denial of service attacks.\n- Use environment variables for sensitive information like secret keys.\n- Regularly update FastAPI and its dependencies to patch security vulnerabilities.\n- Test your API endpoints using tools like `curl` or Postman.\n- Enable HTTPS by configuring SSL/TLS certificates.",
     "source": "web_search",
-    "updated_at": 1780828550.34979
+    "updated_at": 1780831489.7452831
   }
 }
