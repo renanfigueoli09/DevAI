@@ -13,5 +13,10 @@
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: [Check latest version on npm](https://www.npmjs.com/package/jest)\n\n- **Key Config Options**:\n  - `testMatch`: Array of glob patterns to match files for tests.\n  - `transformIgnorePatterns`: An array of regex patterns that are used to skip transformation.\n  - `setupFilesAfterEnv`: An array of paths to modules that run some code to configure or set up the testing environment before each test file in the suite is executed.",
     "source": "web_search",
     "updated_at": 1780837614.9934974
+  },
+  "search:TypeScript and Testing Patterns for NextJS:jest with typescript_ex": {
+    "content": "- **CLI Commands**:\n  - `npm init -y`\n  - `npm install --save-dev jest @types/jest ts-jest typescript`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.x\n\n- **Key Config Options**:\n  - `preset: 'ts-jest'`\n  - `testEnvironment: 'node'`",
+    "source": "code_example",
+    "updated_at": 1780837620.80454
   }
 }
