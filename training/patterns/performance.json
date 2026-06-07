@@ -8,5 +8,10 @@
     "content": "- Use `uvicorn` with the `--reload` flag during development.\n- Upgrade FastAPI to the latest version using pip: `pip install fastapi --upgrade`.\n- Implement caching mechanisms like Redis or Memcached.\n- Optimize database queries by indexing and reducing complexity.\n- Use asynchronous programming with `asyncio` for non-blocking I/O operations.\n- Configure MySQL with appropriate buffer sizes, connection pooling, and query optimization.\n- Deploy FastAPI behind a reverse proxy like Nginx for better performance and security.\n- Monitor application performance using tools like Prometheus and Grafana.",
     "source": "code_example",
     "updated_at": 1780813451.0437012
+  },
+  "search:Performance:rabbitmq+advanced performance ": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl set_vm_memory_high_watermark <fraction>`: Set the high water mark for memory usage.\n  - `rabbitmqctl set_policy <policy_name> '{\"ha-mode\":\"all\"}' --apply-to queues`: Enable message mirroring across nodes.\n\n- **Latest Versions**:\n  - RabbitMQ 3.10.x\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark`: Controls the memory usage threshold.\n  - `queue_index_type`: Specifies the type of index used by queues (default is \"btree\").\n  - `disk_free_limit.relative`: Sets a relative limit on disk space before RabbitMQ stops accepting new messages.",
+    "source": "web_search",
+    "updated_at": 1780813467.1775334
   }
 }
