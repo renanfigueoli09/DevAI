@@ -1,0 +1,12 @@
+{
+  "search:nextjs+auth:next.js nextauth.js v5 session": {
+    "content": "- **Latest Version**: NextAuth.js v5\n- **CLI Command**:\n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth@latest`\n- **Key Config Options**:\n  - `providers`: Configure authentication providers (e.g., Google, GitHub).\n  - `session`: Define session type and strategy (e.g., JWT).\n  - `jwt`: Customize JWT settings.\n- **Important Flags**:\n  - `--typescript` for TypeScript support\n  - `--app` to use the App Router\n- **Example Configuration**:\n  ```javascript\n  import NextAuth from 'next-auth';\n  import Providers from 'next-auth/providers';\n\n  export default NextAuth({\n    providers: [\n      Providers.Google({\n        clientId: process.env.GOOGLE_CLIENT_ID,\n        clientSecret: process.env.GOOGLE_CLIENT_SECRET,\n      }),\n    ],\n    session: {\n      strategy: 'jwt',\n    },\n    jwt: {\n      secret: process.env.JWT_SECRET,\n    },\n  });\n  ```",
+    "source": "web_search",
+    "updated_at": 1780792785.9194233
+  },
+  "search:nextjs+auth:next.js nextauth.js v5 session_ex": {
+    "content": "- **Latest Version**: NextAuth.js v5\n- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth@^5`\n- **Key Config Options**:\n  - `providers`: Define authentication providers (e.g., Google, GitHub).\n  - `session`: Configure session type (JWT or database).\n  - `callbacks`: Customize callbacks for JWT and session events.\n  - `pages`: Override default pages like login, sign-up, etc.",
+    "source": "code_example",
+    "updated_at": 1780792793.2980323
+  }
+}

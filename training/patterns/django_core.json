@@ -1,0 +1,12 @@
+{
+  "search:django+core:django rest framework viewset ": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/alibhatti1010/django_drf.git`\n  - `docker-compose up --build`\n  - `kubectl apply -f path/to/helm/chart`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework: 3.14\n  - JWT Authentication: 4.6\n  - Celery: 5.2\n  - Redis: 7.0\n  - Docker: 20.10\n  - Kubernetes: 1.24\n\n- **Key Config Options**:\n  - `settings.py`: Configure Django settings for JWT, Celery, and Channels.\n  - `urls.py`: Use `DefaultRouter` to register ViewSets.\n  - `celery.py`: Set up Celery configuration with Redis broker.\n  - `Dockerfile`: Define Docker build steps for multi-stage builds.\n  - `docker-compose.yml`: Configure services for Django, Redis, and Nginx.\n  - `helm chart`: Define Kubernetes resources and configurations.",
+    "source": "web_search",
+    "updated_at": 1780792599.54527
+  },
+  "search:django+core:django rest framework viewset _ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/Yosef-AlSabbah/Django-REST-Production-Starter-Kit.git`\n  - `docker-compose up --build`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework: 3.14\n  - Simple-JWT: 5.0\n  - Celery: 5.2\n\n- **Key Config Options**:\n  - JWT Authentication: `JWT_SECRET_KEY` in `.env`\n  - Database: PostgreSQL connection settings in `settings.py`\n  - Celery Configuration: Broker URL and result backend in `celery.py`\n  - Channels Configuration: ASGI application in `asgi.py`",
+    "source": "code_example",
+    "updated_at": 1780792605.5185044
+  }
+}

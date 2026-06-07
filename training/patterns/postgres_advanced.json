@@ -1,0 +1,7 @@
+{
+  "search:postgres+advanced:postgresql jsonb partitioning ": {
+    "content": "- **CLI Commands**:\n  - `CREATE TABLE my_table (id SERIAL PRIMARY KEY, data JSONB);`\n  - `SELECT * FROM my_table WHERE data @> '{\"key\": \"value\"}';`\n  - `pg_cron.schedule('refresh_materialized_view', '*/5 * * * *', 'REFRESH MATERIALIZED VIEW my_matview;');`\n\n- **Latest Versions**:\n  - PostgreSQL: 14.6\n  - pg_cron: 1.3.0\n  - pg_partman: 2.3.0\n\n- **Key Config Options**:\n  - `cron.schedule`: Schedule cron jobs within PostgreSQL.\n  - `partman.create_parent`: Automatically create partition tables.\n  - `fulltextsearch.enabled`: Enable full-text search capabilities.",
+    "source": "web_search",
+    "updated_at": 1780792875.9500601
+  }
+}

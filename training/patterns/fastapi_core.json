@@ -28,5 +28,15 @@
     "content": "- Use `uvicorn` with `--reload` flag during development.\n- Upgrade to the latest version of FastAPI and its dependencies using pip.\n- Implement caching mechanisms like Redis or Memcached for frequently accessed data.\n- Utilize asynchronous operations in your endpoints to handle multiple requests concurrently.\n- Configure database connections pool size based on your application's load.\n- Use middleware for logging, authentication, and other cross-cutting concerns.\n- Optimize JSON serialization by using `orjson` instead of the default `ujson`.\n- Monitor performance with tools like `PyCharm`, `VisualVM`, or custom profiling middleware.\n- Deploy behind a reverse proxy like Nginx to handle static files and SSL termination.",
     "source": "code_example",
     "updated_at": 1780791148.1881294
+  },
+  "search:fastapi+core:fastapi pydantic v2 depends ba": {
+    "content": "- **Latest FastAPI Version**: 0.124.0 (Release Date: 2025-12-06)\n- **Pydantic v2 Support**: Available in FastAPI 0.100+\n- **Key Config Options**:\n  - `WebSocket` for handling WebSocket connections\n  - `Depends` for dependency injection\n  - Background tasks with `BackgroundTasks`\n- **CLI Commands**:\n  - To install FastAPI: `pip install fastapi`\n  - To run a FastAPI application: `uvicorn main:app --reload`\n\nThese actionable facts provide essential information for developers working on projects that involve FastAPI, Pydantic v2, WebSocket testing, and background tasks.",
+    "source": "web_search",
+    "updated_at": 1780792584.8381176
+  },
+  "search:fastapi+core:fastapi pydantic v2 depends ba_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development server.\n  - `pytest` to run tests.\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Pydantic: v1.10.7\n\n- **Key Config Options**:\n  - `background_tasks`: For asynchronous background tasks.\n  - `WebSocket`: For handling WebSocket connections.\n  - `Depends`: For dependency injection.",
+    "source": "code_example",
+    "updated_at": 1780792590.7811403
   }
 }
