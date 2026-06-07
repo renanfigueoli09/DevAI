@@ -18,5 +18,15 @@
     "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`: Creates a new FastAPI application.\n  - `uvicorn myapp.main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - Pydantic: 1.10.9\n\n- **Key Config Options**:\n  - `app = FastAPI()`: Initializes a new FastAPI application.\n  - `pydantic_settings`: Customizes Pydantic settings for validation.\n  - `dependencies`: Manages dependencies in FastAPI routes.",
     "source": "code_example",
     "updated_at": 1780830793.0951731
+  },
+  "search:FastAPI + Pydantic Validation:fastapi pydantic validation ad": {
+    "content": "- **GitHub Repository**: [pydantic/pydantic](https://github.com/pydantic/pydantic)\n- **Latest Pydantic Version**: Use `pip install pydantic==2.4.2`\n- **Key Config Options**:\n  - `allow_population_by_field_name`: Allows setting fields by their name.\n  - `extra`: Controls how extra data is handled (`ignore`, `forbid`, or `allow`).\n  - `use_enum_values`: Determines if enum values are used in validation.\n- **CLI Commands**:\n  - `pydantic validate-models <module_path>`: Validates all models in a specified module.\n  - `pydantic generate-schema <model_name> <module_path>`: Generates JSON schema for a specific model.\n- **Advanced Features**:\n  - Cross-Field Validation: Use custom validators to ensure rules depend on multiple fields.\n  - Nested Models: Define complex data structures using nested Pydantic models.",
+    "source": "web_search",
+    "updated_at": 1780834159.568506
+  },
+  "search:FastAPI + Pydantic Validation:fastapi pydantic validation ad_ex": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run the FastAPI application, e.g., `uvicorn main:app --reload`.\n- **Latest Versions**: Ensure using the latest versions of FastAPI and Pydantic for optimal performance and security.\n- **Key Config Options**:\n  - `--reload`: Enables auto-reload during development.\n  - `--host` and `--port`: Specify the host and port for the server, e.g., `--host 0.0.0.0 --port 8000`.\n  - `--debug`: Runs the application in debug mode for detailed error messages.",
+    "source": "code_example",
+    "updated_at": 1780834175.306754
   }
 }
