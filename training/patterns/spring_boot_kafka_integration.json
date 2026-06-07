@@ -27,6 +27,6 @@
   "search:spring-boot+kafka-integration:kafka streams for stream proce_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092`\n  - `kafka-console-producer.sh --topic example-topic --bootstrap-server localhost:9092`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Confluent Platform: 7.5.1\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets on startup.",
     "source": "code_example",
-    "updated_at": 1780839979.5113015
+    "updated_at": 1780842533.147582
   }
 }

@@ -2,31 +2,31 @@
   "search:Testing Best Practices:typescript-jest-testing": {
     "content": "- **CLI Commands**:\n  - `tsc --init` to create a `tsconfig.json` file.\n  - `tsc` to compile TypeScript files.\n  - `npm install --save-dev jest @types/jest ts-jest` to set up Jest with TypeScript.\n\n- **Latest Versions**:\n  - TypeScript: v4.8.2\n  - Jest: v27.5.1\n\n- **Key Config Options**:\n  - In `tsconfig.json`, set `\"compilerOptions\": { \"module\": \"commonjs\", \"target\": \"es6\" }`.\n  - For Jest, configure in `jest.config.js` with `{ preset: 'ts-jest' }`.",
     "source": "web_search",
-    "updated_at": 1780840329.9322445
+    "updated_at": 1780842936.6420665
   },
   "search:Testing Best Practices:typescript-jest-testing_ex": {
     "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.x\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for browser-like environment.\n  - `transformIgnorePatterns`: Array of regex patterns to ignore during transformation.\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test framework has been installed in the environment.",
     "source": "code_example",
-    "updated_at": 1780840331.5004191
+    "updated_at": 1780842938.6734643
   },
   "search:Testing Best Practices:fastapi-asyncio-testing": {
     "content": "- Use `pytest-asyncio` for testing FastAPI applications.\n- Create an async client fixture using `@pytest_asyncio.fixture(scope=\"function\")`.\n- Example command to run tests: `pytest --asyncio-mode=auto`.\n- Ensure your test environment supports asynchronous operations.\n- Key config options include setting up the database session and configuring the FastAPI app.\n- Use `AsyncClient` for making requests in your tests.\n- Latest versions of FastAPI, pytest, and pytest-asyncio should be used for compatibility.",
     "source": "web_search",
-    "updated_at": 1780840333.075644
+    "updated_at": 1780842940.7090404
   },
   "search:Testing Best Practices:fastapi-asyncio-testing_ex": {
     "content": "- **FastAPI**: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.\n- **Asyncio**: Asyncio is the Python library used to write single-threaded concurrent code using coroutines, multiplexing I/O access over sockets and other resources, running network clients and servers, and other related primitives.\n- **Testing**: For testing FastAPI applications with asyncio, use libraries like `pytest` with `httpx`.\n- **CLI Commands**:\n  - `pip install fastapi uvicorn`: Installs FastAPI and Uvicorn for serving the application.\n  - `uvicorn main:app --reload`: Runs the FastAPI app in development mode with auto-reload.\n- **Latest Versions**:\n  - As of my last update, FastAPI is at version 0.95.1, and Uvicorn is at version 0.20.3.\n- **Key Config Options**:\n  - `app = FastAPI()`: Creates a new FastAPI application instance.\n  - `uvicorn.run(app, host=\"0.0.0.0\", port=8000)`: Runs the app on all network interfaces at port 8000.\n\nThese points provide actionable facts for developers working with FastAPI and asyncio, including installation commands, running the server, and key configuration options.",
     "source": "code_example",
-    "updated_at": 1780840334.6278794
+    "updated_at": 1780842942.67536
   },
   "search:Testing Best Practices:django-celery-testing": {
     "content": "- **CLI Commands**:\n  - `python manage.py test`: Runs Django tests.\n  - `celery -A your_project_name worker --loglevel=info`: Starts a Celery worker.\n\n- **Latest Versions**:\n  - Django: 4.1 (as of my last update)\n  - Celery: 5.2\n\n- **Key Config Options**:\n  - In `settings.py`, ensure you have the following configurations for Celery:\n    ```python\n    CELERY_BROKER_URL = 'redis://localhost:6379/0'\n    CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n    ```\n  - For testing, use an in-memory database like `sqlite` or configure a separate test database.",
     "source": "web_search",
-    "updated_at": 1780840336.1665227
+    "updated_at": 1780842944.7961068
   },
   "search:Testing Best Practices:django-celery-testing_ex": {
     "content": "- **Install Django**: `pip install django`\n- **Install Celery**: `pip install celery`\n- **Install Redis**: `sudo apt-get install redis-server` or use Docker.\n- **Create a Celery App**: `celery -A myproject worker --loglevel=info`\n- **Configure Celery in Django**:\n  ```python\n  # settings.py\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n- **Create a Task**: \n  ```python\n  # tasks.py\n  from celery import shared_task\n\n  @shared_task\n  def add(x, y):\n      return x + y\n  ```\n- **Run Celery Worker**: `celery -A myproject worker --loglevel=info`\n- **Test Celery Task**:\n  ```python\n  # test_tasks.py\n  from django.test import TestCase\n  from .tasks import add\n\n  class TestTasks(TestCase):\n      def test_add_task(self):\n          result = add.delay(4, 6)\n          self.assertEqual(result.get(), 10)\n  ```\n- **Latest Django**: `3.2`\n- **Latest Celery**: `5.2`\n- **Latest Redis**: `7.0`",
     "source": "code_example",
-    "updated_at": 1780840337.9105716
+    "updated_at": 1780842947.2672923
   }
 }

@@ -2,46 +2,46 @@
   "search:microservices-design:microservices decomposition st": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, `docker-compose` for local development.\n- **Latest Versions**: Ensure using the latest stable versions of Docker, Kubernetes, and microservices frameworks like Spring Boot or NestJS.\n- **Key Config Options**:\n  - For Kubernetes: Define resource limits (`resources`) in deployment YAML files.\n  - For Istio: Configure service mesh policies with `istioctl` for traffic management.\n  - For observability: Use OpenTelemetry to trace and monitor microservices.",
     "source": "web_search",
-    "updated_at": 1780840360.4829
+    "updated_at": 1780842976.778474
   },
   "search:microservices-design:service communication patterns": {
     "content": "- **Async vs Sync Communication**: Use sync for dialogue, nuance, and relationship-building; use async for everything else.\n- **Year in Review**: Focus on mastering async communication for smarter teams, clearer workflows, and more human-centered collaboration.\n- **Go-Python Interoperability**: For edge computing and AI at the edge:\n  - WebSockets for bidirectional streaming in AR/VR applications\n  - MQTT for lightweight IoT messaging\n  - Ensure cybersecurity through mTLS\n- **Microservices Communication Patterns**:\n  - Synchronous REST APIs for reliability and simplicity\n  - Asynchronous event processing for scalability and responsiveness\n  - gRPC for high-throughput communication within the system",
     "source": "web_search",
-    "updated_at": 1780840362.0805068
+    "updated_at": 1780842980.5937495
   },
   "search:microservices-design:service communication patterns_ex": {
     "content": "- **Microservices Communication Patterns**:\n  - REST: Ideal for stateless, client-server communication.\n  - gRPC: Best for high-performance services requiring strong typing and efficient serialization.\n  - Events: Suitable for decoupled systems where asynchronous communication is required.\n  - Service Mesh: Provides a way to manage and secure microservice communications.\n\n- **Go-Python Interoperability**:\n  - Use `cgo` for calling C functions from Go.\n  - Utilize Python's `ctypes` or `PyBind11` for calling Python functions from Go.\n\n- **Asyncio in Python**:\n  - Install: `pip install asyncio`\n  - Key Config Options:\n    - Event Loop: `asyncio.get_event_loop()`\n    - Tasks: `asyncio.create_task(coroutine)`\n    - Futures: `asyncio.Future`\n\n- **Latest Versions**:\n  - Go: v1.20\n  - Python: 3.11\n  - gRPC: Latest version available on [gRPC GitHub](https://github.com/grpc/grpc)\n  - Asyncio: Included in Python's standard library, no separate installation required.\n\n- **CLI Commands**:\n  - `go run main.go` to run a Go program.\n  - `python3 script.py` to run a Python script.",
     "source": "code_example",
-    "updated_at": 1780840363.7554822
+    "updated_at": 1780842984.738574
   },
   "search:microservices-design:api gateway pattern implementa": {
     "content": "- Use `kubectl apply -f api-gateway.yaml` to deploy an API gateway.\n- Ensure your Kubernetes version is up-to-date, ideally v1.23 or later.\n- Configure the API gateway with security settings using annotations like `nginx.ingress.kubernetes.io/auth-type: basic`.\n- Set up rate limiting with annotations such as `nginx.ingress.kubernetes.io/limit-rpm: \"60\"`.\n- For routing, use annotations like `nginx.ingress.kubernetes.io/backend-protocol: HTTPS`.\n- Ensure your API gateway is configured to handle both synchronous and asynchronous requests.\n- Use Kong Gateway for advanced features like rate limiting, authentication, and more.\n- Implement the Saga Pattern using Spring Boot Microservices with Kafka for event-driven architecture.\n- For best practices, refer to GeeksforGeeks articles on API Gateway implementation.",
     "source": "web_search",
-    "updated_at": 1780840365.3320594
+    "updated_at": 1780842987.133617
   },
   "search:microservices-design:api gateway pattern implementa_ex": {
     "content": "- **CLI Commands**:\n  - `spring cloud gateway`\n  - `npm install express`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: v3.2.5.RELEASE\n  - Express.js: v4.18.2\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the backend service.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/api/**\n  - `express.use(middleware)`: Middleware function to handle requests.",
     "source": "code_example",
-    "updated_at": 1780840366.7637997
+    "updated_at": 1780842989.9835472
   },
   "search:microservices-design:service discovery load balanci": {
     "content": "- **Service Discovery**: Use Consul, etcd, or Kubernetes Service Discovery.\n- **Load Balancing**: Implement client-side load balancing using tools like Envoy, Nginx Plus, or Kubernetes Ingress Controller.\n- **CLI Commands**:\n  - `consul members`: List all nodes in a Consul cluster.\n  - `kubectl get svc`: List all services in a Kubernetes cluster.\n  - `envoy --version`: Check the version of Envoy.\n- **Latest Versions**:\n  - Consul: v1.10\n  - Nginx Plus: v20.3\n  - Envoy: v1.25\n- **Key Config Options**:\n  - Consul: `service` block in configuration files.\n  - Kubernetes Service Discovery: `spec.selector` and `spec.clusterIP`.\n  - Envoy: `cluster` and `listener` configurations.",
     "source": "web_search",
-    "updated_at": 1780840368.2974749
+    "updated_at": 1780842993.9074814
   },
   "search:microservices-design:service discovery load balanci_ex": {
     "content": "- **Service Discovery**:\n  - Use Kubernetes `kube-proxy` to manage service discovery.\n  - Configure `kube-proxy` with the flag `--mode=iptables`.\n\n- **Load Balancing**:\n  - In Spring Cloud, use `@LoadBalanced` on a `RestTemplate` or `WebClient`.\n  - Ensure your application is running in a Spring Boot environment.\n\n- **Key Configurations**:\n  - Kubernetes Service: Define a service with type `ClusterIP`, `NodePort`, or `LoadBalancer`.\n  - Consul Configuration: Set up Consul agents on each node for health checks and service discovery.\n  - Spring Cloud Gateway: Configure routes to use load balancing by specifying the service name.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Spring Boot: 3.0\n  - Consul: 1.10\n\n- **CLI Commands**:\n  - `kubectl apply -f service.yaml` to create a Kubernetes service.\n  - `consul agent --dev` to start a development mode Consul agent.\n  - `java -jar my-spring-app.jar` to run a Spring Boot application.\n\nThese actionable facts provide concrete steps and configurations for implementing service discovery and load balancing in a microservices architecture using Kubernetes, Spring Cloud, and Consul.",
     "source": "code_example",
-    "updated_at": 1780840369.9510915
+    "updated_at": 1780842997.9835145
   },
   "search:microservices-design:idempotency distributed system": {
     "content": "- **CLI Commands**: Use `curl` or `httpie` for making HTTP requests.\n  - Example: `curl -X POST https://api.example.com/resource -H \"Content-Type: application/json\" -d '{\"key\":\"value\"}'`\n  \n- **Latest Versions**:\n  - Node.js: v18.14.0\n  - Python: 3.10.9\n  - Java: 17.0.6\n  \n- **Key Config Options**:\n  - Database connection pool size: `maxPoolSize=20`\n  - Retry attempts for idempotent operations: `retryAttempts=5`\n  - Timeout for network requests: `timeout=30s`",
     "source": "web_search",
-    "updated_at": 1780840371.4253454
+    "updated_at": 1780843000.3868454
   },
   "search:microservices-design:idempotency distributed system_ex": {
     "content": "- Use `curl` or `Postman` to send requests with an `Idempotency-Key` header.\n- Ensure your server stores outcomes against this key for idempotency checks.\n- Implement a deduplication store like Redis or DynamoDB to track processed keys.\n- Consider using the Saga Pattern for distributed transactions, especially in e-commerce platforms.\n- For production-grade implementation, use frameworks that support idempotency out-of-the-box (e.g., Spring Cloud).\n- Be aware of failure scenarios and implement appropriate fallback strategies.\n- Test your system thoroughly with various edge cases to ensure idempotency is maintained.",
     "source": "code_example",
-    "updated_at": 1780840372.9596424
+    "updated_at": 1780843002.8661048
   }
 }

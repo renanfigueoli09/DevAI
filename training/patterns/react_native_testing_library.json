@@ -2,21 +2,21 @@
   "search:react-native-testing-library:react native testing library b": {
     "content": "- **CLI Commands**: Use `npx create-react-app@latest my-app` to create a new React app.\n- **Latest Versions**: As of my last update, the latest version is React 18.x.\n- **Key Config Options**:\n  - `publicPath`: Specifies the base URL for your application.\n  - `homepage`: Sets the homepage URL for deployment.\n  - `proxy`: Forwards API requests during development.",
     "source": "web_search",
-    "updated_at": 1780840148.0685518
+    "updated_at": 1780842702.7105799
   },
   "search:react-native-testing-library:react native testing library b_ex": {
     "content": "- **React Native Testing Library**: For testing React Native components, use `@testing-library/react-native`.\n- **CLI Commands**:\n  - Install: `npm install --save-dev @testing-library/react-native`\n  - Run Tests: `npx react-native test`\n- **Latest Version**: As of my last update in October 2023, the latest version is 14.0.0.\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Configure setup files after environment setup for testing utilities.\n  - `testEnvironment`: Set the test environment to `jsdom` or another suitable environment.\n  - `transformIgnorePatterns`: Ignore patterns for transforming modules, useful for third-party libraries.",
     "source": "code_example",
-    "updated_at": 1780840150.1265292
+    "updated_at": 1780842704.6301398
   },
   "search:react-native-testing-library:testing react native component": {
     "content": "- Install Jest and React Native Testing Library using `yarn add -D jest @testing-library/react-native`\n- Use `fireEvent` for simulating user interactions, e.g., `fireEvent.press(button)`\n- Utilize `queryByRole`, `getByText`, etc., for querying elements in your tests\n- Configure Jest in your project by creating a `jest.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    preset: 'react-native',\n    transformIgnorePatterns: [\n      'node_modules/(?!(react-native|@testing-library/react-native)/)'\n    ]\n  };\n  ```\n- For E2E testing, consider using Detox, which can be installed with `yarn add -D detox`\n- Ensure your React Native project is configured for iOS and Android testing environments\n- Run tests using the command: `yarn test`",
     "source": "web_search",
-    "updated_at": 1780840151.7050061
+    "updated_at": 1780842706.2651227
   },
   "search:react-native-testing-library:testing react native component_ex": {
     "content": "- Use `npx react-native init MyProject` to create a new React Native project.\n- Install Testing Library with `npm install @testing-library/react-native`.\n- Ensure Jest is installed by running `npm install --save-dev jest`.\n- Configure Jest in your `package.json`:\n  ```json\n  \"jest\": {\n    \"preset\": \"react-native\"\n  }\n  ```\n- Use the following CLI commands for testing:\n  - Run tests with `npx react-native test`.\n  - Watch mode: `npx react-native test --watch`.\n  - Coverage report: `npx react-native test --coverage`.\n\nKey config options include setting up mocks and configuring Jest to handle React Native specific modules.",
     "source": "code_example",
-    "updated_at": 1780840153.3896034
+    "updated_at": 1780842707.9790032
   }
 }

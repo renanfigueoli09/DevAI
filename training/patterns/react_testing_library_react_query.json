@@ -2,21 +2,21 @@
   "search:react-testing-library-react-query:testing react components with ": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npm install --save-dev @testing-library/jest-dom`\n  - `npm install --save-dev react-query`\n\n- **Latest Versions**:\n  - React Query: v3.x (as of my last update, but check for the latest version on npm)\n  - Testing Library: v12.x\n\n- **Key Config Options**:\n  - In your Jest configuration file (`jest.config.js`), ensure you have the following setup:\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - For React Query, configure it in your application's root component or a provider:\n    ```jsx\n    import { QueryClient, QueryClientProvider } from 'react-query';\n\n    const queryClient = new QueryClient();\n\n    function App() {\n      return (\n        <QueryClientProvider client={queryClient}>\n          {/* Your app components */}\n        </QueryClientProvider>\n      );\n    }\n    ```\n\n- **Testing Library Commands**:\n  - `render(<Component />)` to render a component.\n  - `screen.getByText('text')` to find an element by its text content.\n  - `fireEvent.click(element)` to simulate a click event.\n\n- **React Query Testing**:\n  - Use `useQueryClient().getQueriesData()` to access query data in tests.\n  - Mock queries using `jest.mock('react-query');`\n\nThese actionable facts should help developers set up and run effective tests for React components using Testing Library and React Query.",
     "source": "web_search",
-    "updated_at": 1780840225.9233613
+    "updated_at": 1780842792.8745472
   },
   "search:react-testing-library-react-query:testing react components with _ex": {
     "content": "- **CLI Commands**:\n  - `npm install @testing-library/react`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Testing Library: v13.4.0\n  - React Query: v3.39.2\n\n- **Key Config Options**:\n  - `@testing-library/react`: `render`, `screen`, `fireEvent`\n  - `react-query`: `useQuery`, `useMutation`, `queryClient`",
     "source": "code_example",
-    "updated_at": 1780840227.5045385
+    "updated_at": 1780842794.6572926
   },
   "search:react-testing-library-react-query:best practices for testing asy": {
     "content": "- Use `waitFor` from React Testing Library to ensure tests only proceed once async operations complete.\n- Install and use Jest for testing asynchronous code in React components.\n- Mock network requests using `msw` (Mock Service Worker) or `jest-mock`.\n- Utilize `async/await` syntax within your test cases for cleaner and more readable code.\n- Configure Jest with the latest version to take advantage of its most recent features and improvements.\n- Employ `fireEvent` from React Testing Library to simulate user interactions that trigger async data fetching.\n- Ensure your tests are isolated by mocking external dependencies such as API calls.\n- Review the official React Testing Library documentation for best practices and examples.",
     "source": "web_search",
-    "updated_at": 1780840228.982641
+    "updated_at": 1780842796.5694964
   },
   "search:react-testing-library-react-query:best practices for testing asy_ex": {
     "content": "- Use `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n- Ensure React version is up to date, typically latest LTS.\n- Configure Jest in your project with a `jest.config.js` file:\n  ```javascript\n  module.exports = {\n    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n    testEnvironment: 'jsdom',\n  };\n  ```\n- Use `render()` from `@testing-library/react` to render components.\n- Employ `fireEvent` for simulating user interactions.\n- Utilize `waitFor` for handling asynchronous operations.\n- Ensure all tests are isolated and do not share state.",
     "source": "code_example",
-    "updated_at": 1780840230.454946
+    "updated_at": 1780842798.581195
   }
 }

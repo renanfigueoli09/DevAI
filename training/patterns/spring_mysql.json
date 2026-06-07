@@ -2,11 +2,11 @@
   "search:spring+mysql:spring boot mysql jpa pageable": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n  - Hibernate: 6.1.7.Final\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/yourdb`\n  - `spring.datasource.username=yourusername`\n  - `spring.datasource.password=yourpassword`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.data.jpa.repository.enabled=true`\n  - `spring.jpa.show-sql=true`",
     "source": "web_search",
-    "updated_at": 1780840205.6739936
+    "updated_at": 1780842769.1772802
   },
   "search:spring+mysql:spring boot mysql jpa pageable_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - MySQL Connector/J: 8.0.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`\n  - `spring.jpa.show-sql=true` (for debugging SQL)\n  - `spring.jpa.hibernate.ddl-auto=update` (for schema management)",
     "source": "code_example",
-    "updated_at": 1780840207.7584665
+    "updated_at": 1780842770.8704908
   }
 }

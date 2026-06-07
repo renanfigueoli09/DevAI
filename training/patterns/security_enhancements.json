@@ -2,21 +2,21 @@
   "search:Security Enhancements:docker-security-best-practices": {
     "content": "- **CLI Commands**:\n  - `docker run --rm <image_name>`: Runs a container and removes it after exiting.\n  - `docker pull <image_name>`: Pulls the latest version of an image from a registry.\n  - `docker build -t <tag> .`: Builds an image using a Dockerfile in the current directory.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version of Docker is [insert specific version number]. Check the official Docker website for the most current version.\n\n- **Key Config Options**:\n  - `--network host`: Runs the container with access to the host network.\n  - `-v /host/path:/container/path`: Mounts a directory from the host into the container.\n  - `--security-opt seccomp=unconfined`: Disables the default seccomp filter for increased flexibility.",
     "source": "web_search",
-    "updated_at": 1780840199.3535545
+    "updated_at": 1780842761.7823694
   },
   "search:Security Enhancements:docker-security-best-practices_ex": {
     "content": "- Use `docker build --no-cache` to avoid using cached layers.\n- Employ multi-stage builds (`FROM <image> AS <name>`) for reducing image size and security risks.\n- Utilize `RUN apt-get update && apt-get install -y <package>` instead of `RUN apt-get install -y <package>`.\n- Set non-root user in Dockerfile with `USER <username>`.\n- Avoid using `root` as the default user in your Dockerfile.\n- Use `COPY --chown=<user>:<group> <src>... <dest>` to set file permissions and ownership.\n- Implement `docker run --rm` to automatically remove the container when it exits.\n- Utilize `docker-compose up -d` for detached mode, allowing background execution of services.\n- Ensure your Dockerfile is as minimal as possible, only including necessary packages and dependencies.",
     "source": "code_example",
-    "updated_at": 1780840201.0716226
+    "updated_at": 1780842763.6379185
   },
   "search:Security Enhancements:kubernetes-statefulsets-perfor": {
     "content": "- **CLI Commands**: `kubectl get statefulsets`, `kubectl describe statefulset <statefulset-name>`, `kubectl scale statefulset <statefulset-name> --replicas=<number>`\n- **Latest Versions**: Check the [Kubernetes GitHub repository](https://github.com/kubernetes/kubernetes) for the latest version.\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas to run.\n  - `.spec.template`: Pod template specification.\n  - `.spec.serviceName`: Name of a service to create or use.\n  - `.spec.updateStrategy`: Update strategy for statefulset updates.",
     "source": "web_search",
-    "updated_at": 1780840202.7229805
+    "updated_at": 1780842765.2304182
   },
   "search:Security Enhancements:kubernetes-statefulsets-perfor_ex": {
     "content": "- **CLI Commands**: `kubectl get statefulsets`, `kubectl describe statefulset <name>`, `kubectl scale statefulset <name> --replicas=<number>`\n- **Latest Versions**: Ensure using the latest Kubernetes version for optimal performance and security.\n- **Key Config Options**:\n  - `.spec.replicas`: Defines the number of replicas.\n  - `.spec.template`: Specifies the pod template to use.\n  - `.spec.serviceName`: Links the statefulset with a headless service.\n  - `.spec.updateStrategy`: Controls how updates are applied.",
     "source": "code_example",
-    "updated_at": 1780840204.2233274
+    "updated_at": 1780842767.1231182
   }
 }
