@@ -1,0 +1,17 @@
+{
+  "search:redis-clustering-performance:redis clustering performance o": {
+    "content": "- Use `redis-cli --cluster create <host>:<port> ...` to initialize a Redis cluster.\n- Ensure latest Redis version for optimal performance and features.\n- Configure `cluster-enabled yes` in your Redis configuration file.\n- Set `cluster-config-file nodes.conf` to specify the configuration file name.\n- Adjust `cluster-node-timeout 5000` for better node communication.\n- Use `cluster-replicas <num>` to specify the number of replicas per master.\n- Monitor cluster health with `CLUSTER INFO` and `CLUSTER NODES`.\n- Optimize performance by tuning `maxmemory-policy allkeys-lru` or similar strategies.\n- Regularly check and fix hash slot distribution for even load balancing.",
+    "source": "web_search",
+    "updated_at": 1780814372.6366212
+  },
+  "search:redis-clustering-performance:redis cluster scaling techniqu": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> <host>:<port> ...`\n  - `redis-cli --cluster add-node <new_host>:<new_port> <existing_host>:<existing_port>`\n  - `redis-cli --cluster del-node <host>:<port> <node_id>`\n\n- **Latest Versions**:\n  - Redis 7.0 (February 2023)\n  - Redis Cluster 6.2\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`\n  - `appendonly yes`",
+    "source": "web_search",
+    "updated_at": 1780814421.5336227
+  },
+  "search:redis-clustering-performance:redis cluster scaling techniqu_ex": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> ...`\n  - `redis-cli --cluster add-node <new_host>:<port> <existing_host>:<port>`\n  - `redis-cli --cluster reshard <host>:<port>`\n\n- **Latest Versions**:\n  - Redis Cluster: Version 7.0\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`",
+    "source": "code_example",
+    "updated_at": 1780814426.7112
+  }
+}

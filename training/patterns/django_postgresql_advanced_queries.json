@@ -1,0 +1,17 @@
+{
+  "search:Django PostgreSQL Advanced Queries:postgresql advanced queries": {
+    "content": "- Use `psql` command-line tool for PostgreSQL.\n- Latest version as of my last update is PostgreSQL 15, released in October 2023.\n- Key configuration options include:\n  - `shared_buffers`: Controls the amount of memory used by shared buffers.\n  - `work_mem`: Sets the maximum amount of memory to be used by any one sort or hash operation.\n  - `maintenance_work_mem`: Specifies the amount of memory to use for maintenance operations like VACUUM, CREATE INDEX, and ALTER TABLE ADD FOREIGN KEY.",
+    "source": "web_search",
+    "updated_at": 1780814615.1877398
+  },
+  "search:Django PostgreSQL Advanced Queries:django orm optimization": {
+    "content": "- Use `django-admin` to manage your Django project.\n- Update Django to the latest version using pip: `pip install --upgrade django`.\n- Configure database settings in `settings.py`, e.g., `DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'mydatabase', 'USER': 'myuser', 'PASSWORD': 'mypassword', 'HOST': 'localhost', 'PORT': ''}}`.\n- Use Django's ORM to interact with the database, avoiding raw SQL queries where possible.\n- Optimize queries by using `select_related` and `prefetch_related` to reduce N+1 query problems.\n- Enable caching to speed up data retrieval. Configure caching in `settings.py`, e.g., `CACHES = {'default': {'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache', 'LOCATION': '127.0.0.1:11211'}}`.\n- Use Django's built-in profiling tools like `django-debug-toolbar` to identify bottlenecks.\n- Implement database indexing on frequently queried fields to improve query performance.\n- Regularly run database migrations using `python manage.py migrate`.",
+    "source": "web_search",
+    "updated_at": 1780814665.0164108
+  },
+  "search:Django PostgreSQL Advanced Queries:django orm optimization_ex": {
+    "content": "- Use `select_related` for single-valued relationships.\n- Use `prefetch_related` for multi-valued relationships.\n- Apply `only()` to specify fields to retrieve, reducing data transfer.\n- Utilize `defer()` for deferring the loading of specified fields until they are accessed.\n- Employ Django Debug Toolbar for real-time query analysis and optimization.\n- Ensure your database indexes are properly set up for faster lookups.",
+    "source": "code_example",
+    "updated_at": 1780814685.7553937
+  }
+}
