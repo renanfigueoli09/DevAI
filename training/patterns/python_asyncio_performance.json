@@ -1,0 +1,22 @@
+{
+  "search:python+asyncio-performance:python asyncio performance opt": {
+    "content": "- **CLI Commands**:\n  - `python3 -m asyncio <script.py>` to run an asyncio script.\n  - `pip install asyncio` to ensure the latest version of asyncio is installed.\n\n- **Latest Versions**:\n  - Python 3.13 includes significant performance improvements, including JIT compilation and memory enhancements.\n\n- **Key Config Options**:\n  - Use `asyncio.run()` for running top-level entry point coroutines.\n  - Adjust event loop policies with `asyncio.set_event_loop_policy()`.\n  - Optimize task creation by using `asyncio.create_task()` instead of `loop.create_task()` when possible.",
+    "source": "web_search",
+    "updated_at": 1780812019.3162956
+  },
+  "search:python+asyncio-performance:python asyncio performance opt_ex": {
+    "content": "- Use `asyncio.run()` for running the main entry point of asyncio programs.\n- Employ `asyncio.create_task()` to schedule the execution of a coroutine object in a separate task.\n- Optimize by limiting the number of tasks created; avoid creating too many small tasks as it can lead to excessive overhead and memory bloat.\n- Use `asyncio.Queue` for inter-task communication, which helps manage the flow of data between tasks efficiently.\n- For Windows, use `asyncio.WindowsSelectorEventLoopPolicy()` to ensure compatibility with the operating system's event loop policy.\n- Monitor CPU usage and memory allocation during task execution to identify bottlenecks.\n- Utilize profiling tools like `cProfile` for performance analysis and optimization.\n- Implement connection pooling in network-related tasks to reduce overhead and improve efficiency.",
+    "source": "code_example",
+    "updated_at": 1780812025.5986927
+  },
+  "search:python+asyncio-performance:asynchronous programming in py": {
+    "content": "- **CLI Commands**: `python -m asyncio your_script.py`\n- **Latest Version**: Python 3.14.5\n- **Key Config Options**:\n  - `loop.run_until_complete()`: Runs the event loop until a Future is done or the given timeout occurs.\n  - `asyncio.create_task()`: Creates a Task to run func in an event loop.\n  - `await asyncio.sleep(delay)`: Suspends execution of the current coroutine for a given number of seconds.",
+    "source": "web_search",
+    "updated_at": 1780812035.266008
+  },
+  "search:python+asyncio-performance:asynchronous programming in py_ex": {
+    "content": "- Use `python -m asyncio` to run an asyncio program.\n- Install the latest version of Python using `pyenv install <version>`.\n- Configure the event loop policy with `asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())` on Windows.\n- Key config options include setting the number of workers in a server application, such as `uvicorn.run(app, host=\"0.0.0.0\", port=8000, workers=4)`.\n- Use `async def` to define coroutines and `await` to call them.\n- Implement exception handling with `try-except` blocks within coroutines.\n- Utilize `asyncio.gather()` to run multiple coroutines concurrently.\n- Monitor performance using tools like `asyncio.run(asyncio.wait_for(my_coroutine(), timeout=10))`.\n- For database connections, use libraries like `aiomysql` or `asyncpg` for asynchronous operations.",
+    "source": "code_example",
+    "updated_at": 1780812044.6986935
+  }
+}
