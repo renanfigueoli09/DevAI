@@ -2,21 +2,21 @@
   "search:react-query-cache-management:react query cache management s": {
     "content": "- **CLI Commands**: Not applicable for this topic.\n- **Latest Versions**:\n  - React Query: v4.x\n  - TanStack Query: v5.x\n  - Redux Toolkit: v2.x\n- **Key Config Options**:\n  - React Query: `queryCache`, `refetchInterval`\n  - TanStack Query: `useQuery`, `useMutation`, `queryClient`\n  - Redux Toolkit: `createApi`, `setupListeners`",
     "source": "web_search",
-    "updated_at": 1780840795.3503816
+    "updated_at": 1780843438.4062288
   },
   "search:react-query-cache-management:react query cache management s_ex": {
     "content": "- **CLI Commands**: Not applicable for TanStack Query directly, but you can use tools like `create-react-app` or `next create-next-app` to set up a new React/Next.js project.\n  \n- **Latest Version**: As of my last update in October 2023, the latest version is 4.x. Check [TanStack Query's GitHub page](https://github.com/TanStack/query) for the most current version.\n\n- **Key Config Options**:\n  - `queryClient`: Centralized place to configure and manage query behavior.\n  - `queries`: Configuration options for individual queries, such as `cacheTime`, `staleTime`, `refetchInterval`.\n  - `mutations`: Configuration options for mutations, including `onSuccess`, `onError`, `onSettled`.\n\n- **Example Usage**:\n  ```javascript\n  import { QueryClient, QueryClientProvider } from 'react-query';\n  import { useQuery } from 'react-query';\n\n  const queryClient = new QueryClient();\n\n  function App() {\n    return (\n      <QueryClientProvider client={queryClient}>\n        <Data />\n      </QueryClientProvider>\n    );\n  }\n\n  function Data() {\n    const { data, isLoading, error } = useQuery('data', fetchData);\n\n    if (isLoading) return 'Loading...';\n    if (error) return 'An error has occurred: ' + error.message;\n\n    return <div>{data}</div>;\n  }\n\n  async function fetchData() {\n    const response = await fetch('https://api.example.com/data');\n    if (!response.ok) {\n      throw new Error('Network response was not ok');\n    }\n    return response.json();\n  }\n  ```\n\n- **Caching Strategies**:\n  - `cacheTime`: Time in milliseconds to keep data cached.\n  - `staleTime`: Time in milliseconds after which data is considered stale and refetched.\n\n- **Background Updates**:\n  - Automatic background updates based on the `refetchInterval` option.\n\n- **Stale Data Handling**:\n  - Automatically handles stale data by refetching when needed, ensuring up-to-date data without user intervention.",
     "source": "code_example",
-    "updated_at": 1780840797.1099038
+    "updated_at": 1780843441.3513577
   },
   "search:react-query-cache-management:advanced react query caching t": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.23.0\n  - TanStack Query: v5.0.0\n- **Key Config Options**:\n  - `queryClient`: Configure global query behavior.\n  - `defaultOptions`: Set default options for all queries.\n  - `cacheTime`: Define how long data should be cached.\n  - `staleTime`: Determine when data is considered stale and needs refetching.",
     "source": "web_search",
-    "updated_at": 1780840798.7145157
+    "updated_at": 1780843443.9555838
   },
   "search:react-query-cache-management:advanced react query caching t_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app` to set up a new React app.\n- **Latest Versions**:\n  - TanStack Query: v4.x\n  - React: v18.x\n- **Key Config Options**:\n  - `queryClient`: Manages the cache and provides methods for interacting with it.\n  - `useQuery`: Hook to fetch data, supports caching and invalidation.\n  - `useMutation`: Hook to handle side effects like form submissions or data updates.\n  - `refetchInterval`: Automatically refetches data at a specified interval.",
     "source": "code_example",
-    "updated_at": 1780840800.421048
+    "updated_at": 1780843446.8729396
   }
 }

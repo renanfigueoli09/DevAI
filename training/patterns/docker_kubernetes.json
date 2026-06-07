@@ -2,21 +2,21 @@
   "search:docker+kubernetes:docker kubernetes deployment s": {
     "content": "- Use `kubectl apply -f <filename>.yaml` to deploy applications.\n- For Canary deployment, use Istio and Helm with the command:\n  ```bash\n  helm upgrade --install my-release stable/my-chart --set strategy.type=RollingUpdate,strategy.rollingUpdate.maxUnavailable=10%\n  ```\n- To automate rollback based on logs or metrics, configure Helm hooks in your `values.yaml`.\n- Ensure Kubernetes is enabled in Docker Desktop by running:\n  ```bash\n  docker desktop start\n  ```\n- For production-grade configuration, use ConfigMaps and Secrets for environment variables.\n- Deploy using the latest version of Docker and Kubernetes to take advantage of new features and security patches.",
     "source": "web_search",
-    "updated_at": 1780840661.8667033
+    "updated_at": 1780843291.8800461
   },
   "search:docker+kubernetes:docker kubernetes deployment s_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl rollout status deployment/my-deployment`\n  - `kubectl scale deployment/my-deployment --replicas=3`\n\n- **Latest Versions**:\n  - Kubernetes: v1.26\n  - Docker: 20.10\n\n- **Key Config Options**:\n  - `spec.strategy.type`: RollingUpdate, Recreate\n  - `spec.template.spec.containers[].imagePullPolicy`: Always, IfNotPresent, Never\n  - `spec.replicas`: Number of desired Pods",
     "source": "code_example",
-    "updated_at": 1780840663.7293727
+    "updated_at": 1780843294.0075955
   },
   "search:docker+kubernetes:kubernetes network policies 20": {
     "content": "- **CLI Commands**: Use `kubectl get networkpolicies` to list all network policies in your cluster.\n- **Latest Versions**: Cilium, a popular Kubernetes Network Policy solution, is currently at version 1.12.\n- **Key Config Options**:\n  - `podSelector`: Selects pods that the policy should apply to.\n  - `ingress`: Defines rules for incoming traffic.\n  - `egress`: Defines rules for outgoing traffic.\n  - `policyTypes`: Specifies whether the policy is for ingress, egress, or both.",
     "source": "web_search",
-    "updated_at": 1780840665.4741557
+    "updated_at": 1780843295.7112691
   },
   "search:docker+kubernetes:kubernetes network policies 20_ex": {
     "content": "- Use `kubectl apply -f <network-policy-file.yaml>` to create or update network policies.\n- Ensure your Kubernetes cluster uses a networking solution that supports NetworkPolicy, such as Calico, Flannel, or Weave Net.\n- Key config options in the YAML file include:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: NetworkPolicy`\n  - `metadata`: Define the policy name and namespace.\n  - `spec`: Specify pod selectors and ingress/egress rules.\n- For automation, consider using Otterize Intents for managing Kubernetes network policies efficiently.\n- Always refer to the latest Kubernetes documentation for the most accurate and up-to-date information on Network Policies.",
     "source": "code_example",
-    "updated_at": 1780840667.1797278
+    "updated_at": 1780843297.6314278
   }
 }

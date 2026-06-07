@@ -2,11 +2,11 @@
   "search:spring+elasticsearch:spring data elasticsearch @doc": {
     "content": "- Use `docker-compose up` to create an Elasticsearch cluster.\n- Create a sample index using the Elasticsearch REST API or Kibana Dev Tools.\n- Post sample documents into Elasticsearch using the `_doc/_create` endpoint.\n- Implement search as you type feature in Angular by binding input events and making HTTP requests to Elasticsearch.\n- Use `@Document(indexName = \"your_index_name\")` in your entity class for Spring Data Elasticsearch.\n- Configure Elasticsearch connection properties in `application.properties` or `application.yml`.\n- Ensure Elasticsearch version compatibility with Spring Data Elasticsearch.\n- Utilize Spring Boot Actuator endpoints for monitoring and management of Elasticsearch connections.",
     "source": "web_search",
-    "updated_at": 1780840760.285699
+    "updated_at": 1780843397.663672
   },
   "search:spring+elasticsearch:spring data elasticsearch @doc_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to list Elasticsearch indices.\n\n- **Latest Versions**:\n  - Spring Data Elasticsearch: 4.3.0\n  - Elasticsearch: 7.10.2\n\n- **Key Config Options**:\n  - `spring.data.elasticsearch.cluster-name`: Name of the Elasticsearch cluster.\n  - `spring.data.elasticsearch.cluster-nodes`: List of nodes in the cluster.\n  - `spring.data.elasticsearch.repositories.enabled`: Enable Spring Data Elasticsearch repositories.",
     "source": "code_example",
-    "updated_at": 1780840761.9166176
+    "updated_at": 1780843399.2441092
   }
 }

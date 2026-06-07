@@ -2,21 +2,21 @@
   "search:fastapi+database-performance:fastapi database performance o": {
     "content": "- Use connection pooling to manage database connections efficiently.\n- Implement asynchronous operations for non-blocking database interactions.\n- Optimize queries using indexing techniques and query optimization tools.\n- Utilize caching strategies like Redis or Memcached to reduce database load.\n- Regularly monitor and analyze database performance metrics.\n- Upgrade to the latest version of FastAPI and SQLAlchemy for better performance.\n- Configure database settings such as pool size, timeout, and isolation level.\n- Use SQLModel for ORM operations to simplify database interactions.\n- Employ asynchronous database drivers like `asyncpg` or `aiomysql`.\n- Consider using a distributed caching system if dealing with high traffic.",
     "source": "web_search",
-    "updated_at": 1780840781.8758135
+    "updated_at": 1780843421.1465683
   },
   "search:fastapi+database-performance:fastapi database performance o_ex": {
     "content": "- **FastAPI Version**: Use `pip install fastapi==0.95.0`\n- **SQLAlchemy Version**: Use `pip install sqlalchemy==1.4.32`\n- **Database URL**: Configure with `DATABASE_URL=\"postgresql://user:password@localhost/dbname\"`\n- **Asyncio Engine**: Initialize with `engine = create_async_engine(DATABASE_URL)`\n- **Session Local**: Define with `async_session_local = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`\n- **Dependency Injection**: Use `@Depends(async_session_local)` for dependency injection\n- **Performance Tuning**: Enable connection pool settings like `pool_size=10` and `max_overflow=20`\n- **Logging Configuration**: Set logging level with `logging.basicConfig(level=logging.INFO)`\n- **Middleware Optimization**: Implement middleware for request/response processing\n- **Rate Limiting**: Use libraries like `fastapi-limiter` for rate limiting",
     "source": "code_example",
-    "updated_at": 1780840783.6747246
+    "updated_at": 1780843423.6238003
   },
   "search:fastapi+database-performance:fastapi orm performance tuning": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app myproject`: Creates a new FastAPI project.\n  - `uvicorn myproject.main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - Pydantic: v1.10.9\n\n- **Key Config Options**:\n  - `app = FastAPI()`: Initializes a new FastAPI application.\n  - `@app.get(\"/\")`: Decorator for defining HTTP GET endpoints.\n  - `dependencies=[Depends(dep)]`: Adds dependencies to routes.\n  - `response_model=Item`: Specifies the response model for serialization.",
     "source": "web_search",
-    "updated_at": 1780840785.2763965
+    "updated_at": 1780843425.88847
   },
   "search:fastapi+database-performance:fastapi orm performance tuning_ex": {
     "content": "- Use `SQLModel` and `Tortoise ORM` for ORM queries.\n- FastAPI routes can be defined as async to handle non-blocking I/O operations.\n- Utilize a threadpool for blocking I/O operations in FastAPI routes.\n- Ensure database connections are managed efficiently using connection pooling.\n- Monitor query performance using tools like `pg_stat_statements`.\n- Optimize queries by indexing columns used frequently in WHERE clauses.\n- Use batch inserts and updates to reduce the number of database round-trips.\n- Regularly update FastAPI, SQLModel, and Tortoise ORM to benefit from performance improvements and security patches.",
     "source": "code_example",
-    "updated_at": 1780840787.0084884
+    "updated_at": 1780843427.9719164
   }
 }

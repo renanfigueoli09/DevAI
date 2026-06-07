@@ -12,16 +12,16 @@
   "search:Performance Optimization in Next.js with Prisma:prisma performance": {
     "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma v5 is noted for significant performance improvements over v4.\n\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable query logging in Prisma Client.\n  - `maxQueryExecutionTime`: Set the maximum execution time for queries.",
     "source": "web_search",
-    "updated_at": 1780840455.9551485
+    "updated_at": 1780843110.5508006
   },
   "search:Performance Optimization in Next.js with Prisma:prisma performance_ex": {
     "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Creates a new migration and applies it to the database.\n\n- **Latest Versions**:\n  - Prisma: [Check latest version on npm](https://www.npmjs.com/package/prisma)\n  - Prisma Client JS: [Check latest version on npm](https://www.npmjs.com/package/@prisma/client)\n\n- **Key Config Options**:\n  - `batchSize`: Controls the number of records processed in a batch.\n    ```json\n    {\n      \"generator\": {\n        \"provider\": \"prisma-client-js\",\n        \"output\": \"./node_modules/@prisma/client\"\n      },\n      \"datasource\": {\n        \"default\": {\n          \"provider\": \"postgresql\",\n          \"url\": \"env(DATABASE_URL)\",\n          \"connectionLimit\": 10\n        }\n      }\n    }\n    ```\n  - `connectionLimit`: Limits the number of concurrent connections to the database.\n  - `queryLogging`: Enables or disables query logging for debugging.",
     "source": "code_example",
-    "updated_at": 1780840457.7073765
+    "updated_at": 1780843112.9063723
   },
   "search:Performance Optimization in Next.js with Prisma:typescript nextjs prisma": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install prisma @prisma/client`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Prisma: 4.x\n\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations.\n  - `.env.local`: For environment variables.\n  - `prisma/schema.prisma`: Defines your data model and relations.",
     "source": "web_search",
-    "updated_at": 1780840461.931544
+    "updated_at": 1780843115.1695137
   }
 }

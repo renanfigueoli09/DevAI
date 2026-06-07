@@ -2,21 +2,21 @@
   "search:nodejs-express-sequelize:nodejs express sequelize crud ": {
     "content": "- **CLI Commands**:\n  - `npm init` to create a new Node.js project.\n  - `npm install express sequelize pg pg-hstore --save` to install Express, Sequelize, and PostgreSQL adapter.\n  - `node app.js` to run the application.\n\n- **Latest Versions**:\n  - Node.js: v18.12.1\n  - Express: 4.18.2\n  - Sequelize: 6.30.2\n\n- **Key Config Options**:\n  - In `app.js`, set up an Express server.\n    ```javascript\n    const express = require('express');\n    const app = express();\n    app.listen(3000, () => console.log('Server running on port 3000'));\n    ```\n  - Configure Sequelize in a separate file (e.g., `db.js`).\n    ```javascript\n    const { Sequelize } = require('sequelize');\n    const sequelize = new Sequelize('database', 'username', 'password', {\n      host: 'localhost',\n      dialect: 'postgres'\n    });\n    module.exports = sequelize;\n    ```\n  - Define models using Sequelize.\n    ```javascript\n    const User = sequelize.define('user', {\n      firstName: {\n        type: DataTypes.STRING,\n        allowNull: false\n      },\n      lastName: {\n        type: DataTypes.STRING\n      }\n    });\n    ```\n  - Perform CRUD operations.\n    ```javascript\n    // Create\n    await User.create({ firstName: 'John', lastName: 'Doe' });\n\n    // Read\n    const users = await User.findAll();\n\n    // Update\n    await User.update({ lastName: 'Smith' }, { where: { id: 1 } });\n\n    // Delete\n    await User.destroy({ where: { id: 1 } });\n    ```",
     "source": "web_search",
-    "updated_at": 1780840594.394443
+    "updated_at": 1780843226.3190215
   },
   "search:nodejs-express-sequelize:nodejs express sequelize crud _ex": {
     "content": "- **VS Code**: Open source AI code editor.\n- **Code.org**: Offers free coding lessons and projects, including dance party coding.\n- **Coddy.Tech**: Provides interactive lessons in Python, JavaScript, SQL, and other languages.\n\nFor Node.js, Express, Sequelize CRUD Operations:\n\n- **Node.js**: Latest version as of 2023 is v18.x.\n- **Express**: Latest version as of 2023 is 4.18.x.\n- **Sequelize**: Latest version as of 2023 is 6.5.x.\n\n**CLI Commands with Exact Flags**:\n- `npm init -y` to create a new Node.js project.\n- `npm install express sequelize pg` to install Express, Sequelize, and PostgreSQL adapter.\n- `npx sequelize-cli init` to initialize Sequelize in your project.\n- `npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string` to generate a User model.\n\n**Key Config Options**:\n- **Express**: Configure middleware with `app.use()`.\n- **Sequelize**: Define models with attributes and options in `models/user.js`.\n- **Database Connection**: Set up connection in `config/config.json`.\n\nFor more detailed information, refer to the official documentation of Node.js, Express, and Sequelize.",
     "source": "code_example",
-    "updated_at": 1780840597.0963519
+    "updated_at": 1780843228.083211
   },
   "search:nodejs-express-sequelize:express sequelize orm best pra": {
     "content": "- **CLI Commands**: `npx sequelize-cli init` to initialize Sequelize, `npx sequelize-cli model:create --name User --attributes firstName:string,lastName:string` to create a new model.\n- **Latest Version**: Ensure you use the latest version of Sequelize by checking [npm](https://www.npmjs.com/package/sequelize).\n- **Key Config Options**:\n  - `define`: Customize model options like timestamps, underscored, etc.\n  - `sync`: Synchronize models with the database.\n  - `logging`: Control logging output (e.g., `console.log` or a custom function).",
     "source": "web_search",
-    "updated_at": 1780840598.900235
+    "updated_at": 1780843229.8101225
   },
   "search:nodejs-express-sequelize:express sequelize orm best pra_ex": {
     "content": "- **Install Sequelize**: `npm install sequelize`\n- **Initialize Sequelize**: `npx sequelize-cli init`\n- **Create Models**: Use `npx sequelize-cli model:create --name User --attributes username:string,email:string,password:string`\n- **Migrate Database**: `npx sequelize-cli db:migrate`\n- **Seed Data**: `npx sequelize-cli seed:generate --name users`\n- **Run Seeds**: `npx sequelize-cli db:seed:all`\n- **Latest Sequelize Version**: Check [npm](https://www.npmjs.com/package/sequelize)\n- **Key Config Options**:\n  - `config/config.json`: Define database connection settings\n  - `models/User.js`: Define model attributes and associations\n  - `migrations/xxxx_xx_xx_create_users.js`: Define migration scripts",
     "source": "code_example",
-    "updated_at": 1780840600.850514
+    "updated_at": 1780843231.5867872
   }
 }
