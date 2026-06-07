@@ -2,11 +2,11 @@
   "search:react+redux-saga-performance:react redux saga testing patte": {
     "content": "- **CLI Commands**: Use `npm install redux-saga-test-plan` to install the latest version of Redux Saga Test Plan.\n- **Latest Version**: Check for the latest version on [GitHub](https://github.com/jfairbank/redux-saga-test-plan/releases) or use `npm show redux-saga-test-plan version`.\n- **Key Config Options**:\n  - `testSaga`: Use to test sagas by providing a generator function.\n  - `put`: Assert that the saga puts an action.\n  - `call`: Assert that the saga calls a function with specific arguments.\n  - `select`: Assert that the saga selects a state value.",
     "source": "web_search",
-    "updated_at": 1780814070.4782982
+    "updated_at": 1780816718.9707782
   },
   "search:react+redux-saga-performance:react redux saga testing patte_ex": {
     "content": "- **CLI Commands**:\n  - `npm install redux-saga-test-plan --save-dev` to add the testing library.\n  - `npx jest` or `npx vitest` to run tests.\n\n- **Latest Versions**:\n  - Redux-Saga: v1.4.0\n  - Redux Toolkit: v2.5.0\n\n- **Key Config Options**:\n  - In `jest.config.js`, ensure you have the necessary setup for testing Sagas, including using `redux-saga-test-plan`.\n  - Configure Jest to mock any external dependencies or services your Sagas interact with.\n\n- **Testing Patterns**:\n  - Use `redux-saga-test-plan` to test sagas by inspecting yielded effects and comparing them to expected effects.\n  - Utilize `takeEvery`, `takeLatest`, and other Redux-Saga patterns in your tests to simulate different scenarios.",
     "source": "code_example",
-    "updated_at": 1780814076.0883713
+    "updated_at": 1780816723.4114738
   }
 }

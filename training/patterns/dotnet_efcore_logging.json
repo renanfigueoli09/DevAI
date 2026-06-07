@@ -2,21 +2,21 @@
   "search:dotnet+efcore-logging:.net ef core logging best prac": {
     "content": "- Use `dotnet ef migrations add InitialCreate` to create initial migration.\n- Update EF Core to latest version using `dotnet add package Microsoft.EntityFrameworkCore --version <latest-version>`.\n- Configure logging in `appsettings.json`:\n  ```json\n  \"Logging\": {\n    \"LogLevel\": {\n      \"Default\": \"Information\",\n      \"Microsoft.EntityFrameworkCore.Database.Command\": \"Debug\"\n    }\n  }\n  ```\n- Use Serilog for enhanced logging by installing `Serilog.AspNetCore`, `Serilog.Extensions.Logging`, and `Serilog.Sinks.File`.\n- Configure Serilog in `Program.cs`:\n  ```csharp\n  Log.Logger = new LoggerConfiguration()\n      .ReadFrom.Configuration(Configuration)\n      .Enrich.FromLogContext()\n      .WriteTo.File(\"logs/log-.txt\", rollingInterval: RollingInterval.Day)\n      .CreateLogger();\n\n  builder.Host.UseSerilog();\n  ```\n- Use `ILogger` for logging in your DbContext:\n  ```csharp\n  public class MyDbContext : DbContext\n  {\n      private readonly ILogger<MyDbContext> _logger;\n\n      public MyDbContext(DbContextOptions<MyDbContext> options, ILogger<MyDbContext> logger)\n          : base(options)\n      {\n          _logger = logger;\n      }\n\n      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n      {\n          if (!optionsBuilder.IsConfigured)\n          {\n              optionsBuilder.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"))\n                              .LogTo(_logger.LogDebug);\n          }\n      }\n  }\n  ```\n- Use `ILoggerFactory` for more advanced logging configurations.\n- Ensure to dispose of loggers properly in your application lifecycle.",
     "source": "web_search",
-    "updated_at": 1780809980.3304546
+    "updated_at": 1780816471.7251542
   },
   "search:dotnet+efcore-logging:.net ef core logging best prac_ex": {
     "content": "- Install latest EF Core package using `dotnet add package Microsoft.EntityFrameworkCore`\n- Use `ILoggerFactory` to configure logging in your `DbContext`\n- Add logging provider via NuGet, e.g., `Microsoft.Extensions.Logging.Console`\n- Configure logging level in `appsettings.json`, e.g., `\"Logging\": { \"LogLevel\": { \"Default\": \"Information\" } }`\n- Implement audit logging using EF Core interceptors\n- Secure change tracking by encrypting sensitive data\n- Use queryable history for retrieving past states of entities\n- Ensure compliance controls with custom logging and auditing strategies",
     "source": "code_example",
-    "updated_at": 1780809981.5356402
+    "updated_at": 1780816472.8737004
   },
   "search:dotnet+efcore-logging:.net ef core logging with seri": {
     "content": "- **CLI Commands**: \n  - `dotnet add package Serilog.AspNetCore`\n  - `dotnet add package Serilog.Sinks.File`\n  - `dotnet add package Serilog.EntityFrameworkCore`\n\n- **Latest Versions**:\n  - Serilog: 5.0.0\n  - EF Core: 7.0.0\n\n- **Key Config Options**:\n  - `Serilog.CreateLogger()`: Configure logger.\n  - `WriteTo.File(\"logs.txt\")`: Specify log file path.\n  - `Enrich.FromLogContext()`: Add contextual information to logs.\n  - `MinimumLevel.Debug()`: Set minimum logging level.",
     "source": "web_search",
-    "updated_at": 1780809982.8164349
+    "updated_at": 1780816474.1110082
   },
   "search:dotnet+efcore-logging:.net ef core logging with seri_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet add package Serilog.AspNetCore`\n  - `dotnet add package Serilog.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - Serilog: 5.0.0\n  - EF Core: 7.0.0\n\n- **Key Config Options**:\n  - `Serilog.CreateLogger`: Configure logger.\n  - `WriteTo.File`: Specify log file path.\n  - `Enrich.FromLogContext`: Add contextual information to logs.\n  - `MinimumLevel.Debug`: Set minimum logging level.",
     "source": "code_example",
-    "updated_at": 1780809984.134851
+    "updated_at": 1780816478.1370807
   }
 }

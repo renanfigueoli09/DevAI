@@ -2,11 +2,11 @@
   "search:dotnet+efcore-migration:best practices for ef core mig": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core 9 introduced automatic lock acquisition during migration application.\n  - .NET 8 supports safer schema changes and CI/CD with EF Core.\n\n- **Key Config Options**:\n  - Use `MigrateAsync` for async migration application.\n  - Configure database provider in `appsettings.json`.\n  - Set up migrations folder using `Scaffold-DbContext`.",
     "source": "web_search",
-    "updated_at": 1780809938.7532547
+    "updated_at": 1780816423.3554585
   },
   "search:dotnet+efcore-migration:best practices for ef core mig_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef database update` to apply migrations.\n- **Latest Version**: EF Core 9 introduced automatic lock acquisition during migration application.\n- **Key Config Options**:\n  - `MigrationsAssembly`: Specify the assembly containing migrations.\n  - `Context`: Define the DbContext for your application.",
     "source": "code_example",
-    "updated_at": 1780809940.105739
+    "updated_at": 1780816424.4967563
   }
 }

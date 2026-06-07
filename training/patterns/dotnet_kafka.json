@@ -2,11 +2,11 @@
   "search:dotnet+kafka:asp.net core confluent.kafka m": {
     "content": "- **Install MassTransit.Kafka**: `dotnet add package MassTransit.Kafka --version 8.4.1`\n- **Latest Version**: 8.4.1\n- **Key Config Options**:\n  - `KafkaHost`: Kafka broker address.\n  - `ClientId`: Unique identifier for the client.\n  - `TopicName`: Name of the Kafka topic to consume from or produce to.\n  - `BatchCount`: Number of messages to batch together before sending.\n  - `BatchSize`: Maximum size of a batch in bytes.",
     "source": "web_search",
-    "updated_at": 1780809844.6669817
+    "updated_at": 1780816322.5783358
   },
   "search:dotnet+kafka:asp.net core confluent.kafka m_ex": {
     "content": "- **Latest Versions**: \n  - MassTransit: 2.5.0\n  - Confluent.Kafka: 2.14.2\n\n- **CLI Commands**:\n  - `dotnet add package MassTransit --version 2.5.0`\n  - `dotnet add package Confluent.Kafka --version 2.14.2`\n\n- **Key Config Options**:\n  - For MassTransit: \n    - `Bus.Factory.CreateUsingRabbitMq(cfg => { ... })`\n    - `cfg.Host(\"localhost\", h => { ... })`\n    - `cfg.ReceiveEndpoint(\"queue_name\", e => { ... })`\n  \n  - For Confluent.Kafka:\n    - `var config = new ProducerConfig { BootstrapServers = \"localhost:9092\" };`\n    - `using (var producer = new ProducerBuilder<Null, string>(config).Build()) { ... }`",
     "source": "code_example",
-    "updated_at": 1780809846.009891
+    "updated_at": 1780816324.2868893
   }
 }

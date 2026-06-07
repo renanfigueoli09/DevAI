@@ -2,26 +2,26 @@
   "search:react-testing-library-advanced:advanced react testing library": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npm install --save-dev vitest`\n  - `npx msw init <path>`\n\n- **Latest Versions**:\n  - React Testing Library: v14.0.0\n  - Vitest: v0.28.0\n  - Mock Service Worker (MSW): v0.56.0\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: For global setup in Vitest.\n  - `testEnvironment`: Specify the test environment, e.g., `jsdom`.\n  - `mockServiceWorkerFile`: Path to MSW configuration file.",
     "source": "web_search",
-    "updated_at": 1780810192.9597986
+    "updated_at": 1780816662.223774
   },
   "search:react-testing-library-advanced:advanced react testing library_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - React Testing Library: v13.4.0\n  - Vitest: v0.27.0\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: For global setup files.\n  - `testEnvironment`: Set to 'jsdom' for DOM testing.\n  - `transformIgnorePatterns`: Exclude node_modules from transformation.",
     "source": "code_example",
-    "updated_at": 1780810194.239421
+    "updated_at": 1780816663.6661935
   },
   "search:react-testing-library-advanced:testing react components with ": {
     "content": "- Use `npm install @testing-library/react` to install React Testing Library.\n- Use `npm install @testing-library/jest-dom` for additional matchers.\n- Use `render(<Component />)` to render components in tests.\n- Use `fireEvent.click(element)` to simulate user clicks.\n- Use `screen.getByText('text')` or `getByRole('button')` to query elements.\n- Configure Jest with `\"testEnvironment\": \"jsdom\"` in `package.json`.\n- Use `npm test` to run tests.\n- Ensure React Testing Library is updated to the latest version for compatibility and features.",
     "source": "web_search",
-    "updated_at": 1780810195.4640424
+    "updated_at": 1780816665.0845618
   },
   "search:react-testing-library-advanced:testing react components with _ex": {
     "content": "- Install `@testing-library/react` and `@testing-library/jest-dom` using npm.\n- Use `react-testing-library` for testing React components.\n- Utilize `waitFor` method for asynchronous behavior in tests.\n- Configure Jest with `setupTests.js` for third-party assertion libraries.\n- Ensure your test environment is initialized properly.",
     "source": "code_example",
-    "updated_at": 1780810196.7922547
+    "updated_at": 1780816666.4989433
   },
   "search:react-testing-library-advanced:mocking and stubbing in react ": {
     "content": "- Install Vitest, @testing-library/react, and jsdom using npm or yarn.\n- Use `vitest.setup.ts` for configuring Vitest.\n- Mock functions with `vi.fn()`.\n- Stub dependencies using `vi.mock('module-path')`.\n- Override stub values in individual tests with `.mockReturnValueOnce(value)`.\n- Spy on function calls with `.mock.calls`.\n- Use `beforeEach()` to set up mocks and stubs before each test.\n- Ensure your test environment is configured for React components.",
     "source": "web_search",
-    "updated_at": 1780810198.2549129
+    "updated_at": 1780816668.025862
   }
 }

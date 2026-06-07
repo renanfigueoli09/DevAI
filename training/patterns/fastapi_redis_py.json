@@ -2,11 +2,11 @@
   "search:fastapi+redis-py:fastapi redis-py caching tutor": {
     "content": "- Install FastAPI and Redis-py using pip:\n  ```bash\n  pip install fastapi redis\n  ```\n- Use the latest version of FastAPI, as of my last update in October 2023.\n- Key config options for Redis include `host`, `port`, and `db`.\n- Example of connecting to Redis in a FastAPI app:\n  ```python\n  from fastapi import FastAPI\n  import redis\n\n  app = FastAPI()\n\n  r = redis.Redis(host='localhost', port=6379, db=0)\n  ```\n- To set a cache entry in Redis:\n  ```python\n  r.set('key', 'value')\n  ```\n- To get a cache entry from Redis:\n  ```python\n  value = r.get('key')\n  ```\n- For asynchronous operations with Redis-py, use `redis.asyncio.Redis` instead of `redis.Redis`.\n- Example of using async Redis in FastAPI:\n  ```python\n  import redis.asyncio as redis\n\n  app = FastAPI()\n\n  r = await redis.Redis(host='localhost', port=6379, db=0)\n  ```\n- To install the latest version of Redis-py:\n  ```bash\n  pip install --upgrade redis\n  ```",
     "source": "web_search",
-    "updated_at": 1780809985.512858
+    "updated_at": 1780816479.355054
   },
   "search:fastapi+redis-py:fastapi redis-py caching tutor_ex": {
     "content": "- **FastAPI Version**: 0.98.0\n- **Redis-py Version**: 4.5.4\n- **CLI Commands**:\n  - `docker run --name my-redis -d redis`\n  - `uvicorn main:app --reload`\n- **Key Config Options**:\n  - `CACHE_TTL`: Time-to-live for cached data in seconds.\n  - `REDIS_URL`: URL to connect to the Redis server.",
     "source": "code_example",
-    "updated_at": 1780809986.8608701
+    "updated_at": 1780816480.5938406
   }
 }
