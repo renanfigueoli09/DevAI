@@ -1,0 +1,7 @@
+{
+  "search:angular-unit-testing-best-practices:angular unit testing best prac": {
+    "content": "- Use Angular CLI to generate test files (`ng generate component <component-name> --spec`)\n- Update Angular version to the latest LTS release for best practices and security updates\n- Configure Jest as the testing framework in `angular.json` under `projects.<project-name>.architect.test.options.jestConfig`\n- Utilize `TestBed.configureTestingModule()` for setting up test environments\n- Employ Mocks for dependencies using Jasmine's `spyOn` or Angular's `MockBuilder`\n- Apply async/await with `fixture.whenStable()` for handling asynchronous operations in tests\n- Use `ng-mocks` for creating mocks and stubs more efficiently\n- Ensure coverage by running `ng test --code-coverage` and review results in the `coverage` folder\n- Refactor tests regularly to keep them maintainable and relevant",
+    "source": "web_search",
+    "updated_at": 1780807359.8160584
+  }
+}
