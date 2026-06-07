@@ -2,16 +2,16 @@
   "search:redis-pubsub:redis pub/sub pattern 2025": {
     "content": "- **GitHub Project**: [https://github.com/summersonnn/redis-messaging-patterns](https://github.com/summersonnn/redis-messaging-patterns)\n  - Python Publisher Service: `docker-compose up publisher`\n  - Go Subscriber Service: `docker-compose up subscriber`\n\n- **Understanding Pub/Sub in Redis**:\n  - Key Features: Real-time messaging, fire-and-forget system.\n  - Pattern Matching: Use `PSUBSCRIBE` for pattern-based subscriptions.\n\n- **Implementing Pub/Sub with Redis in Python**:\n  - Install Redis-py: `pip install redis`\n  - Publisher Example:\n    ```python\n    import redis\n\n    r = redis.Redis(host='localhost', port=6379, db=0)\n    r.publish('channel_name', 'message')\n    ```\n  - Subscriber Example:\n    ```python\n    import redis\n\n    pubsub = redis.Redis(host='localhost', port=6379, db=0).pubsub()\n    pubsub.subscribe('channel_name')\n\n    for message in pubsub.listen():\n        if message['type'] == 'message':\n            print(message['data'])\n    ```\n\n- **Latest Versions**:\n  - Redis: [https://redis.io/download](https://redis.io/download)\n  - Python: [https://www.python.org/downloads/](https://www.python.org/downloads/)\n  - Docker Compose: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)",
     "source": "web_search",
-    "updated_at": 1780816155.1573222
+    "updated_at": 1780823239.0048895
   },
   "search:redis-pubsub:real-time data processing with": {
     "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> ...`\n  - `redis-cli --eval script.lua`\n\n- **Latest Versions**:\n  - Redis 7.x\n\n- **Key Config Options**:\n  - `maxmemory`: Sets the maximum memory for Redis.\n  - `maxmemory-policy`: Defines eviction policy when maxmemory is reached.",
     "source": "web_search",
-    "updated_at": 1780816156.4534857
+    "updated_at": 1780823240.393505
   },
   "search:redis-pubsub:real-time data processing with_ex": {
     "content": "- Use `redis-cli` to interact with Redis.\n- Ensure Redis version is up-to-date, latest as of my last update is 7.x.\n- Configure Redis using the `redis.conf` file.\n- Key configuration options include `maxmemory`, `maxmemory-policy`, and `appendonly`.\n- For real-time data streaming, use Redis Streams with commands like `XADD`, `XRANGE`, and `XREAD`.\n- To cache transformer data preprocessing, utilize Redis's in-memory capabilities with commands such as `SET`, `GET`, and `DEL`.\n- Monitor Redis performance using the `INFO` command.\n- Implement replication for high availability with `replicaof <master-ip> <master-port>`.",
     "source": "code_example",
-    "updated_at": 1780816158.1935139
+    "updated_at": 1780823241.710334
   }
 }

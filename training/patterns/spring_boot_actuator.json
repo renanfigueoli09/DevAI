@@ -2,21 +2,21 @@
   "search:spring-boot-actuator:spring boot actuator monitorin": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `curl http://localhost:8080/actuator/health`: Checks the health of the application.\n\n- **Latest Versions**:\n  - Spring Boot Actuator: 3.1.5\n  - Micrometer: 1.10.2\n\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*`: Exposes all endpoints.\n  - `management.endpoint.health.show-details=always`: Shows detailed health information.\n  - `management.metrics.export.prometheus.enabled=true`: Enables Prometheus metrics export.",
     "source": "web_search",
-    "updated_at": 1780821044.833479
+    "updated_at": 1780822959.6175327
   },
   "search:spring-boot-actuator:spring boot actuator monitorin_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `curl http://localhost:8080/actuator/health`: Checks application health.\n\n- **Latest Versions**:\n  - Spring Boot Actuator: 3.2.5.RELEASE\n  - Spring Boot: 3.1.4.RELEASE\n\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*`: Exposes all endpoints.\n  - `management.endpoint.health.show-details=always`: Shows detailed health information.\n  - `management.server.port=8081`: Changes the management server port.",
     "source": "code_example",
-    "updated_at": 1780821065.1803682
+    "updated_at": 1780822960.7712023
   },
   "search:spring-boot-actuator:actuator endpoints for perform": {
     "content": "- **Enable Actuator Endpoints**: Use `management.endpoints.web.exposure.include=health,info,metrics` in your `application.properties`.\n- **Check App Health**: Access `/actuator/health` to monitor application health.\n- **Custom Endpoints**: Implement custom endpoints by creating a class annotated with `@RestController` and methods with `@GetMapping`.\n- **Secure Endpoints**: Use Spring Security to secure Actuator endpoints, e.g., `http.authorizeRequests().antMatchers(\"/actuator/**\").authenticated()`.\n- **Lazy Initialization**: Enable lazy initialization in your application properties: `spring.main.lazy-initialization=true`.\n- **Latest Version**: Ensure you are using the latest version of Spring Boot and Actuator for optimal performance and security.\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include`: Specify which endpoints to expose.\n  - `management.endpoint.health.show-details=always`: Control the level of detail in health information.\n  - `spring.main.lazy-initialization`: Enable lazy bean initialization.",
     "source": "web_search",
-    "updated_at": 1780821085.412457
+    "updated_at": 1780822961.9698668
   },
   "search:spring-boot-actuator:actuator endpoints for perform_ex": {
     "content": "- **CLI Commands**: `./mvnw spring-boot:run` to start the application.\n- **Latest Versions**: Spring Boot Actuator 2.7.x, Spring Security 5.6.x.\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*`: Expose all endpoints over web.\n  - `management.endpoint.health.show-details=always`: Show detailed health information.\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: URI for JWT keys.",
     "source": "code_example",
-    "updated_at": 1780821098.7392204
+    "updated_at": 1780822963.1848543
   }
 }

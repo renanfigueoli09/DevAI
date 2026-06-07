@@ -2,51 +2,51 @@
   "search:Testing:azure-devops testing methodolo": {
     "content": "- **CLI Commands**:\n  - `az devops test run create --project <project-name> --test-plan-id <test-plan-id> --configuration-id <config-id>`\n  - `npx playwright test --config playwright.config.v1.ts`\n  - `az pipelines runs update --id <run-id> --properties '{\"system.debug\": \"true\"}'`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v0.254.0\n  - Playwright: v1.32.0\n\n- **Key Config Options**:\n  - `playwright.config.v1.ts`: Specifies test configurations, browser settings, and other environment-specific details.\n  - `system.debug`: Enables debug mode in Azure DevOps pipeline runs for detailed logging.",
     "source": "web_search",
-    "updated_at": 1780815884.5906377
+    "updated_at": 1780822894.112901
   },
   "search:Testing:azure-devops testing methodolo_ex": {
     "content": "- **CLI Commands**:\n  - `az devops project create --name <project-name>`\n  - `az pipelines create --name <pipeline-name> --repository <repo-url>`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v1.0.0\n  - Azure Pipelines YAML Schema: v2.0\n\n- **Key Config Options**:\n  - `trigger`: Define build triggers in `.azure-pipelines.yml`\n  - `pool`: Specify the agent pool for pipeline jobs\n  - `steps`: List of tasks to run during the pipeline",
     "source": "code_example",
-    "updated_at": 1780815885.940497
+    "updated_at": 1780822895.2873607
   },
   "search:Testing:gitlab-ci-pipelines-advanced t": {
     "content": "- **CLI Commands**: Use `gitlab-ci-lint` to validate `.gitlab-ci.yml`.\n- **Latest Versions**: Ensure you use the latest GitLab Runner and GitLab CI/CD features.\n- **Key Config Options**:\n  - `parallel`: Enable parallel jobs for faster builds.\n  - `cache`: Utilize caching to speed up subsequent pipeline runs.\n  - `artifacts`: Store build artifacts for later stages or external access.\n  - `only` and `except`: Control when jobs run based on branches, tags, etc.",
     "source": "web_search",
-    "updated_at": 1780815887.1856687
+    "updated_at": 1780822899.4801092
   },
   "search:Testing:gitlab-ci-pipelines-advanced t_ex": {
     "content": "- Use `gitlab-runner register` to register a new runner.\n- Update GitLab Runner to the latest version using `sudo apt-get update && sudo apt-get install gitlab-runner`.\n- Configure `.gitlab-ci.yml` with `image: <docker_image>` to specify the Docker image for the pipeline stages.\n- Utilize `cache` in `.gitlab-ci.yml` to cache dependencies and speed up builds.\n- Employ `artifacts` to store build artifacts that can be used in subsequent jobs or stages.\n- Implement parallel jobs by setting `parallel: <number_of_jobs>` under a job definition.\n- Use `only` and `except` keywords to control when jobs run based on branches, tags, or schedules.\n- Configure `variables` in `.gitlab-ci.yml` for environment-specific settings.\n- Enable `trigger` to manually trigger pipelines from another project.\n- Utilize `include` to reuse common configurations across multiple projects.",
     "source": "code_example",
-    "updated_at": 1780815888.3500397
+    "updated_at": 1780822900.6403883
   },
   "search:Testing:dotnet-entity-framework-core-p": {
     "content": "- **CLI Commands**:\n  - `dotnet ef database update`: Migrates the database to the latest version.\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration with the specified name.\n\n- **Latest Versions**:\n  - Entity Framework Core: Version 7.0\n  - .NET SDK: Version 6.0\n\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or directly in code.\n  - Logging Level: Set logging level to capture detailed performance data using `AddDbContextOptions`.\n  - Query Caching: Enable caching for frequently executed queries using `QueryCacheBehavior`.",
     "source": "web_search",
-    "updated_at": 1780815889.5339582
+    "updated_at": 1780822901.8443773
   },
   "search:Testing:dotnet-entity-framework-core-p_ex": {
     "content": "- Use `dotnet benchmark` to run benchmarks.\n- Install BenchmarkDotNet via NuGet.\n- For EF Core performance, consider using `EF.CompileQuery` and `EF.CompileAsyncQuery`.\n- Ensure your DbContext is disposed of properly after use.\n- Optimize queries by avoiding unnecessary includes with `.Include()`.\n- Update Entity Framework Core to the latest version for performance improvements.\n- Configure logging to understand query execution plans better.\n- Use connection pooling in your database configuration.",
     "source": "code_example",
-    "updated_at": 1780815890.6987948
+    "updated_at": 1780822903.0642407
   },
   "search:Testing:nestjs+elasticsearch testing a": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/elasticsearch`\n  - `nest generate module elasticsearch`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Elasticsearch: 8.x\n\n- **Key Config Options**:\n  - `host`: URL of the Elasticsearch instance.\n  - `port`: Port number of the Elasticsearch instance.\n  - `username` and `password`: Authentication credentials if required.",
     "source": "web_search",
-    "updated_at": 1780815892.0002234
+    "updated_at": 1780822904.2512753
   },
   "search:Testing:nestjs+elasticsearch testing a_ex": {
     "content": "- Install `@nestjs/elasticsearch` and `@elastic/elasticsearch` using npm.\n- Create an Elasticsearch module in your NestJS project.\n- Import the Elasticsearch client configuration in your module.\n- Use the official @nestjs/elasticsearch library for interacting with Elasticsearch.\n- Ensure secure code practices by protecting secrets.\n- Follow GitHub guidelines for contributing to projects.",
     "source": "code_example",
-    "updated_at": 1780815893.242088
+    "updated_at": 1780822905.387321
   },
   "search:Testing:django+celery testing techniqu": {
     "content": "- Use `pytest-celery` for testing Celery tasks in Django.\n- Install latest versions of `celery`, `django-celery`, and `pytest-celery`.\n- Configure Celery in your Django settings with `CELERY_BROKER_URL` and `CELERY_RESULT_BACKEND`.\n- Mock Celery tasks using `@patch('path.to.task')` for unit testing.\n- Use `pytest.mark.django_db` to ensure database access is allowed during tests.\n- Run tests with `pytest --celery=django -v` to execute Celery-based tests.\n- Consult the official documentation for `pytest-celery` and `django-celery` for detailed instructions.",
     "source": "web_search",
-    "updated_at": 1780815894.4405699
+    "updated_at": 1780822906.5748224
   },
   "search:Testing:django+celery testing techniqu_ex": {
     "content": "- Use `python manage.py test` to run Django tests.\n- For Celery tasks, use `celery -A your_project_name worker --loglevel=info`.\n- Ensure Django's test runner uses the same database as Celery by configuring both in settings.\n- Latest versions: Django 4.1, Celery 5.2.\n- Key config options:\n  - `CELERY_BROKER_URL`: URL of message broker (e.g., Redis or RabbitMQ).\n  - `CELERY_RESULT_BACKEND`: Backend to store task results (e.g., Redis or Database).\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types for messages.\n  - `CELERY_TASK_SERIALIZER`: Serializer used to serialize tasks.",
     "source": "code_example",
-    "updated_at": 1780815895.57402
+    "updated_at": 1780822907.7938993
   }
 }

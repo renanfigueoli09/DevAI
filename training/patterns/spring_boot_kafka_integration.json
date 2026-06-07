@@ -2,31 +2,31 @@
   "search:spring-boot+kafka-integration:kafka integration in spring bo": {
     "content": "- **CLI Commands**:\n  - `mvn compile \"org.springframework.integration:spring-integration-kafka:7.0.4\"`\n\n- **Latest Versions**:\n  - Spring Integration Kafka: 7.0.4\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers\n  - `spring.kafka.consumer.group-id`: Consumer group ID\n  - `spring.kafka.consumer.auto-offset-reset`: Offset reset policy (e.g., earliest, latest)\n  - `spring.kafka.producer.key-serializer`: Key serializer class\n  - `spring.kafka.producer.value-serializer`: Value serializer class",
     "source": "web_search",
-    "updated_at": 1780816047.713392
+    "updated_at": 1780823098.7959895
   },
   "search:spring-boot+kafka-integration:kafka integration in spring bo_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n  - `spring.kafka.producer.key-serializer`: Serializer class for key that implements KafkaSerializer interface.\n  - `spring.kafka.producer.value-serializer`: Serializer class for value that implements KafkaSerializer interface.",
     "source": "code_example",
-    "updated_at": 1780816048.909184
+    "updated_at": 1780823100.1735106
   },
   "search:spring-boot+kafka-integration:real-time data processing with": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Kafka: 3.3.1\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n  - `spring.kafka.producer.key-serializer` and `spring.kafka.producer.value-serializer`: Serializer class for key and value types.",
     "source": "web_search",
-    "updated_at": 1780816050.1083522
+    "updated_at": 1780823102.28267
   },
   "search:spring-boot+kafka-integration:real-time data processing with_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic example-topic`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0\n  - Apache Kafka: 3.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Behavior when there is no initial offset or current offset does not exist anymore.\n  - `spring.kafka.producer.key-serializer`: Serializer for key type.\n  - `spring.kafka.producer.value-serializer`: Serializer for value type.",
     "source": "code_example",
-    "updated_at": 1780816051.4305847
+    "updated_at": 1780823103.98957
   },
   "search:spring-boot+kafka-integration:kafka streams for stream proce": {
     "content": "- **CLI Commands**: `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n- **Latest Versions**: Kafka Streams 3.4.0, Kafka 3.4.0\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of Kafka brokers to connect to.\n  - `default.key.serde` and `default.value.serde`: Serialization/deserialization formats for keys and values.\n  - `auto.offset.reset`: Strategy for processing offsets when no initial offset is found. Options include `earliest`, `latest`, and `none`.",
     "source": "web_search",
-    "updated_at": 1780816052.6919196
+    "updated_at": 1780823105.3806782
   },
   "search:spring-boot+kafka-integration:kafka streams for stream proce_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092`\n  - `kafka-console-producer.sh --topic example-topic --bootstrap-server localhost:9092`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Confluent Platform: 7.5.1\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets on startup.",
     "source": "code_example",
-    "updated_at": 1780816057.0337343
+    "updated_at": 1780823107.3195074
   }
 }

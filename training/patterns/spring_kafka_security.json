@@ -2,21 +2,21 @@
   "search:spring+kafka-security:kafka security in spring appli": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - SSL Configuration in `application.properties`:\n    ```properties\n    spring.kafka.bootstrap-servers=localhost:9092\n    spring.kafka.security.protocol=SSL\n    spring.kafka.ssl.truststore-location=file:/path/to/truststore.jks\n    spring.kafka.ssl.truststore-password=password\n    spring.kafka.ssl.keystore-location=file:/path/to/keystore.jks\n    spring.kafka.ssl.keystore-password=password\n    ```\n  - Mutual TLS Configuration:\n    ```properties\n    spring.kafka.security.protocol=SSL\n    spring.kafka.ssl.truststore-location=file:/path/to/truststore.jks\n    spring.kafka.ssl.truststore-password=password\n    spring.kafka.ssl.keystore-location=file:/path/to/keystore.jks\n    spring.kafka.ssl.keystore-password=password\n    spring.kafka.ssl.key-alias=mykey\n    ```\n  - Spring Security Integration:\n    ```java\n    @EnableWebSecurity\n    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.authorizeRequests()\n                .antMatchers(\"/kafka/**\").authenticated()\n                .and()\n                .httpBasic();\n        }\n    }\n    ```",
     "source": "web_search",
-    "updated_at": 1780816087.8206625
+    "updated_at": 1780823154.9334407
   },
   "search:spring+kafka-security:kafka security in spring appli_ex": {
     "content": "- Ensure dependencies in `pom.xml` or `build.gradle` include Spring Security and Kafka.\n- Use `spring-boot-starter-security` and `spring-kafka`.\n- Configure SSL/TLS for secure communication using properties like `spring.kafka.producer.ssl.truststore.location`, `spring.kafka.producer.ssl.truststore.password`, etc.\n- Set up Kafka producer with Spring Security by extending `AbstractKafkaListenerContainerFactory`.\n- Use `@EnableWebSecurity` and configure security rules in your Spring Security configuration class.\n- Ensure Kafka broker is configured to accept SSL/TLS connections.\n- Update dependencies to the latest versions for security patches and features.\n- Configure key properties such as `bootstrap.servers`, `security.protocol`, `ssl.truststore.location`, etc., in `application.properties` or `application.yml`.\n- Use tools like `keytool` to generate and manage truststores and keystores for SSL/TLS configuration.",
     "source": "code_example",
-    "updated_at": 1780816089.0367582
+    "updated_at": 1780823156.5074036
   },
   "search:spring+kafka-security:securing kafka with spring 202": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Apache Kafka: 3.4.1\n  - Spring Boot: 3.2.5\n\n- **Key Config Options**:\n  - SSL/TLS for Encryption:\n    ```properties\n    security.protocol=SSL\n    ssl.truststore.location=/path/to/truststore.jks\n    ssl.truststore.password=password\n    ```\n  - SASL Authentication:\n    ```properties\n    security.protocol=SASL_PLAINTEXT\n    sasl.mechanism=GSSAPI\n    sasl.kerberos.service.name=kafka\n    ```\n  - ACLs for Authorization:\n    ```bash\n    kafka-acls.sh --authorizer-properties zookeeper.connect=localhost:2181 \\\n      --add --allow-principal User:alice --operation Read --topic my-topic\n    ```",
     "source": "web_search",
-    "updated_at": 1780816093.0432012
+    "updated_at": 1780823158.0735614
   },
   "search:spring+kafka-security:securing kafka with spring 202_ex": {
     "content": "- **CLI Commands**: Use `kafka-topics.sh --create` to create topics, e.g., `--topic my-topic --bootstrap-server localhost:9092`.\n- **Latest Versions**: Kafka 3.4.0, Spring Boot 3.1.5.\n- **Key Config Options**:\n  - For SASL Authentication: `sasl.mechanism=PLAIN`, `security.protocol=SASL_PLAINTEXT`.\n  - For SSL Encryption: `ssl.truststore.location`, `ssl.keystore.location`.\n  - For Schema Registry: `spring.cloud.stream.schema.registry.url`.",
     "source": "code_example",
-    "updated_at": 1780816094.245036
+    "updated_at": 1780823159.8089945
   }
 }

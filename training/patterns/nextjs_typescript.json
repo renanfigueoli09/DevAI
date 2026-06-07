@@ -2,21 +2,21 @@
   "search:nextjs+typescript:next.js typescript integration": {
     "content": "- **CLI Command**: `npx create-next-app@latest --typescript`\n- **Latest Version**: Next.js 13, TypeScript support built-in.\n- **Key Config Options**:\n  - `tsconfig.json`: Customizable for project-specific settings.\n  - `next.config.js`: For customizing build and server configurations.",
     "source": "web_search",
-    "updated_at": 1780821124.1266963
+    "updated_at": 1780823025.1151729
   },
   "search:nextjs+typescript:next.js typescript integration_ex": {
     "content": "- **CLI Commands**:\n  - `npm run dev` to start the development server.\n  \n- **Latest Versions**:\n  - Next.js: 15\n  - TypeScript: Latest stable version\n  \n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript settings for your project.\n  - `next.config.js`: Customize Next.js build and configuration.",
     "source": "code_example",
-    "updated_at": 1780821147.226234
+    "updated_at": 1780823026.3147306
   },
   "search:nextjs+typescript:typescript in next.js best pra": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app --typescript`\n  - `npm run dev` for development server\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: 15.0 (as of August 2025)\n  - TypeScript: 4.9 (latest as of October 2024)\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing the build and server configuration.\n  - `tsconfig.json`: For configuring TypeScript settings such as compiler options, include/exclude files, and project references.\n\n- **Best Practices**:\n  - Use the App Router for future-proof React Server Components.\n  - Deploy on the Edge for faster global performance.\n  - Utilize Static Site Generation (SSG) for SEO-friendly pages.\n  - Implement Server-Side Rendering (SSR) for dynamic content.\n  - Employ Progressive Static Regeneration (ISR) for updating static pages without re-deploying.",
     "source": "web_search",
-    "updated_at": 1780821170.9432478
+    "updated_at": 1780823027.552454
   },
   "search:nextjs+typescript:typescript in next.js best pra_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm run dev` for development server\n\n- **Latest Versions**:\n  - Next.js v15\n  - TypeScript v4.9\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript settings like `compilerOptions`, `include`, and `exclude`.\n  - `next.config.js`: Customize Next.js behavior with options like `reactStrictMode`, `swcMinify`, and `images`.\n\n- **TypeScript Best Practices**:\n  - Use interfaces for props and state.\n  - Implement type guards for conditional rendering.\n  - Utilize TypeScript's built-in types (`number`, `string`, `boolean`) and custom types.\n\n- **Next.js Features**:\n  - App Router: For more intuitive routing and better performance.\n  - Static Site Generation (SSG): Pre-render pages at build time.\n  - Server-Side Rendering (SSR): Render pages on the server for SEO benefits.",
     "source": "code_example",
-    "updated_at": 1780821197.960988
+    "updated_at": 1780823028.7132788
   }
 }

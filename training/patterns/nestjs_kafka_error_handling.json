@@ -2,21 +2,21 @@
   "search:NestJS + Kafka Error Handling:nestjs kafka error handling": {
     "content": "- **CLI Commands**: `nest generate microservice kafka --name my-kafka-service`\n- **Latest Versions**: NestJS v10.x, Kafka.js v2.x\n- **Key Config Options**:\n  - `bootstrapServers`: Array of Kafka broker addresses.\n  - `clientId`: Unique identifier for the client.\n  - `retryAttempts`: Number of retry attempts on failure.\n  - `retryDelay`: Delay between retries in milliseconds.",
     "source": "web_search",
-    "updated_at": 1780815862.1011603
+    "updated_at": 1780822874.8685935
   },
   "search:NestJS + Kafka Error Handling:nestjs kafka error handling_ex": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Ensure you have the latest version of Node.js installed.\n- Install Kafka and its dependencies using npm or yarn:\n  ```bash\n  npm install @nestjs/microservices kafka-node\n  ```\n- Configure Kafka in your NestJS application by creating a `kafka.config.ts` file with necessary configurations such as `clientOptions`.\n- Implement custom exception handling by extending the base `HttpException` class and overriding its methods.\n- Use decorators like `@Catch()` to handle exceptions globally or at specific controller/service levels.\n- Ensure that all promise rejections are handled properly to avoid terminating the Node.js process unexpectedly.",
     "source": "code_example",
-    "updated_at": 1780815863.3615975
+    "updated_at": 1780822876.0620103
   },
   "search:NestJS + Kafka Error Handling:kafka error management in nest": {
     "content": "- Use `npm install @nestjs/kafka` to install the Kafka package.\n- Ensure Kafka server is running and accessible.\n- Configure Kafka in your NestJS app using `KafkaOptions`.\n- Example configuration:\n  ```typescript\n  import { KafkaOptions } from '@nestjs/microservices';\n\n  const kafkaConfig: KafkaOptions = {\n    transport: Transport.KAFKA,\n    options: {\n      client: {\n        brokers: ['localhost:9092'],\n      },\n      consumer: {\n        groupId: 'test-group',\n      },\n    },\n  };\n  ```\n- Use `@MessagePattern` decorator to define message patterns.\n- Implement error handling in Kafka consumers using try-catch blocks.\n- Example:\n  ```typescript\n  import { Controller, MessagePattern } from '@nestjs/microservices';\n\n  @Controller()\n  export class KafkaController {\n    @MessagePattern('test-pattern')\n    async handleTestMessage(data: any) {\n      try {\n        // Process message\n      } catch (error) {\n        // Handle error\n      }\n    }\n  }\n  ```\n- Use `@Injectable` to create services for handling Kafka messages.\n- Ensure proper error logging and monitoring in production environments.",
     "source": "web_search",
-    "updated_at": 1780815864.5734751
+    "updated_at": 1780822877.2498047
   },
   "search:NestJS + Kafka Error Handling:kafka error management in nest_ex": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- For Kafka integration, install `@nestjs/microservices`, `kafkajs`.\n- Configure Kafka in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { ClientsModule, Transport } from '@nestjs/microservices';\n\n  @Module({\n    imports: [\n      ClientsModule.register([\n        {\n          name: 'KAFKA_SERVICE',\n          transport: Transport.KAFKA,\n          options: {\n            client: {\n              brokers: ['localhost:9092'],\n            },\n            consumer: {\n              groupId: 'test-group',\n            },\n          },\n        },\n      ]),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Handle Kafka errors in service:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { ClientProxy, MessagePattern } from '@nestjs/microservices';\n\n  @Injectable()\n  export class KafkaService {\n    constructor(private readonly client: ClientProxy) {}\n\n    @MessagePattern('example.topic')\n    async handleExample(data: any): Promise<any> {\n      try {\n        return this.client.send('example.topic', data).toPromise();\n      } catch (error) {\n        // Handle error\n        console.error(error);\n        throw new Error('Kafka error occurred');\n      }\n    }\n  }\n  ```\n- Ensure Kafka broker is running and accessible.\n- Use `npm install` to install dependencies.\n- Run the application with `npm run start:dev`.",
     "source": "code_example",
-    "updated_at": 1780815865.8109355
+    "updated_at": 1780822878.4354084
   }
 }

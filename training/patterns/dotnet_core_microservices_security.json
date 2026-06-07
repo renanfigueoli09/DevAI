@@ -2,11 +2,11 @@
   "search:dotnet-core-microservices-security:microservices security best pr": {
     "content": "- Use `dotnet new mvc` to create a new .NET Core MVC project.\n- Update NuGet packages to their latest versions using `dotnet update`.\n- Implement JWT authentication with `Microsoft.AspNetCore.Authentication.JwtBearer`.\n- Configure CORS in `Startup.cs` with `services.AddCors(options => options.AddPolicy(\"AllowAllOrigins\", builder => builder.AllowAnyOrigin()));`.\n- Use HTTPS by configuring Kestrel in `appsettings.json`: `\"Kestrel\": { \"Endpoints\": { \"Http\": { \"Url\": \"http://localhost:5000\" }, \"Https\": { \"Url\": \"https://localhost:5001\", \"Certificate\": { \"Path\": \"<path_to_certificate>\", \"Password\": \"<password>\" } } } }`.\n- Apply the principle of least privilege by configuring role-based access control (RBAC) with `Microsoft.AspNetCore.Authorization`.\n- Implement input validation using Data Annotations or Fluent Validation.\n- Use dependency injection for managing service lifetimes and dependencies in `Startup.cs`: `services.AddScoped<IMyService, MyService>();`.\n- Regularly update .NET Core and all dependencies to mitigate security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780816080.3105433
+    "updated_at": 1780823136.2638807
   },
   "search:dotnet-core-microservices-security:microservices security best pr_ex": {
     "content": "- Use JWT for secure microservices authentication.\n- Implement Ocelot for API gateway and authorization.\n- Adhere to the principle of least privilege in microservice design.\n- Configure HTTPS server with SSL/TLS certificates.\n- Store authorization configuration centrally using a single location.\n- Utilize ASP.NET Core Web API Best Practices eBook for guidance.\n- Ensure each microservice has only necessary privileges.\n- Implement service-to-service authentication and authorization.\n- Regularly update dependencies to the latest versions.",
     "source": "code_example",
-    "updated_at": 1780816081.6247056
+    "updated_at": 1780823138.1670413
   }
 }

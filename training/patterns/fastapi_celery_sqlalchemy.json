@@ -2,21 +2,21 @@
   "search:fastapi+celery-sqlalchemy:fastapi celery integration for": {
     "content": "- **CLI Commands**:\n  - `celery -A your_project_name.celery worker --loglevel=info`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Celery: 5.3.1\n  - Redis: 7.0.4\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to `redis://localhost:6379/0`\n  - `CELERY_RESULT_BACKEND`: Set to `redis://localhost:6379/0`\n  - `CELERY_ACCEPT_CONTENT`: Set to `['json']`\n  - `CELERY_TASK_SERIALIZER`: Set to `'json'`",
     "source": "web_search",
-    "updated_at": 1780821675.289419
+    "updated_at": 1780822824.0081058
   },
   "search:fastapi+celery-sqlalchemy:fastapi celery integration for_ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up --build` to start services.\n  - `pytest` for running tests.\n\n- **Latest Versions**:\n  - FastAPI: v0.85.2\n  - Celery: v5.2.3\n  - Redis: latest\n\n- **Key Config Options**:\n  - FastAPI: `app = FastAPI()`\n  - Celery: `app.conf.update(broker_url='redis://localhost:6379/0', result_backend='redis://localhost:6379/0')`\n  - Docker Compose: Define services for FastAPI, Celery, and Redis.",
     "source": "code_example",
-    "updated_at": 1780821686.1662397
+    "updated_at": 1780822825.1943777
   },
   "search:fastapi+celery-sqlalchemy:sqlalchemy orm with celery in ": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy alembic celery`\n  - `alembic init migrations`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.14\n  - Alembic: 1.8.3\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - FastAPI: `app = FastAPI()`\n  - SQLAlchemy ORM: Define models using `class User(Base): __tablename__ = \"users\"`\n  - Alembic: Configure in `alembic.ini` and use migrations for database schema management\n  - Celery: Set up with `celery_app = Celery('tasks', broker='redis://localhost:6379/0')`",
     "source": "web_search",
-    "updated_at": 1780821707.7055178
+    "updated_at": 1780822829.4084537
   },
   "search:fastapi+celery-sqlalchemy:sqlalchemy orm with celery in _ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`\n  - `celery -A myapp.celery worker --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - SQLAlchemy: 2.0.0\n  - Celery: 5.3.0\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Celery Broker and Result Backend: \n    ```python\n    CELERY_BROKER_URL = 'redis://localhost:6379/0'\n    CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n    ```\n  - SQLAlchemy Async Engine:\n    ```python\n    from sqlalchemy.ext.asyncio import create_async_engine\n    engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)\n    ```\n  - Celery Task Decorator:\n    ```python\n    from celery import shared_task\n\n    @shared_task\n    def add(x, y):\n        return x + y\n    ```",
     "source": "code_example",
-    "updated_at": 1780821722.8430898
+    "updated_at": 1780822830.6209276
   }
 }
