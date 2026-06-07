@@ -3,5 +3,10 @@
     "content": "- Use Angular CLI to generate test files (`ng generate component <component-name> --spec`)\n- Update Angular version to the latest LTS release for best practices and security updates\n- Configure Jest as the testing framework in `angular.json` under `projects.<project-name>.architect.test.options.jestConfig`\n- Utilize `TestBed.configureTestingModule()` for setting up test environments\n- Employ Mocks for dependencies using Jasmine's `spyOn` or Angular's `MockBuilder`\n- Apply async/await with `fixture.whenStable()` for handling asynchronous operations in tests\n- Use `ng-mocks` for creating mocks and stubs more efficiently\n- Ensure coverage by running `ng test --code-coverage` and review results in the `coverage` folder\n- Refactor tests regularly to keep them maintainable and relevant",
     "source": "web_search",
     "updated_at": 1780807359.8160584
+  },
+  "search:angular-unit-testing-best-practices:angular unit testing best prac_ex": {
+    "content": "- Use `ng test` to run unit tests.\n- Ensure Angular CLI is up-to-date using `npm install -g @angular/cli`.\n- Configure `karma.conf.js` for custom Karma settings.\n- Utilize Jasmine as the default testing framework.\n- Employ Vitest for testing in newer projects with `ng new --testing=vitest`.\n- Implement coverage reports with `--code-coverage` flag in `ng test`.\n- Use `TestBed.configureTestingModule()` to set up module configurations.\n- Write tests using `describe()`, `it()`, and `expect()`.\n- Mock dependencies using Jasmine's `spyOn()` or Angular's `TestBed.inject()`.",
+    "source": "code_example",
+    "updated_at": 1780807375.892569
   }
 }

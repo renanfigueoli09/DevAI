@@ -8,31 +8,31 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780807324.7835906,
+    "ts": 1780807771.1312683,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780807325.445224,
+    "ts": 1780807771.800377,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780807326.014147,
+    "ts": 1780807772.3946698,
     "size": 867
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "topic": "nestjs_mongodb",
     "source": "code_example",
-    "ts": 1780807326.8124437,
+    "ts": 1780807773.1045613,
     "size": 830
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780807327.4052758,
+    "ts": 1780807773.770897,
     "size": 349
   },
   "qa:livros-to-Book": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780807328.1859167,
+    "ts": 1780807774.5872352,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780807317.1645896,
+    "ts": 1780807763.5147595,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780807318.3452995,
+    "ts": 1780807764.819701,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780807316.5734737,
+    "ts": 1780807762.8326414,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780807317.7616916,
+    "ts": 1780807764.187551,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780807318.9485757,
+    "ts": 1780807765.3894255,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780807319.577417,
+    "ts": 1780807765.9715548,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780807320.219399,
+    "ts": 1780807766.5652862,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780807320.9056091,
+    "ts": 1780807767.1337671,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780807321.551448,
+    "ts": 1780807767.7375355,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780807322.810117,
+    "ts": 1780807769.121182,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780807323.4405673,
+    "ts": 1780807769.7877302,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780807324.0191007,
+    "ts": 1780807770.5017996,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -9328,5 +9328,161 @@
     "source": "web_search",
     "ts": 1780807359.818068,
     "size": 790
+  },
+  "search:angular-unit-testing-best-practices:angular unit testing best prac_ex": {
+    "topic": "angular_unit_testing_best_practices",
+    "source": "code_example",
+    "ts": 1780807375.894378,
+    "size": 573
+  },
+  "search:kubernetes-statefulsets-advanced:kubernetes statefulsets advanc": {
+    "topic": "kubernetes_statefulsets_advanced",
+    "source": "web_search",
+    "ts": 1780807421.5215552,
+    "size": 790
+  },
+  "search:kubernetes-statefulsets-advanced:kubernetes statefulsets advanc_ex": {
+    "topic": "kubernetes_statefulsets_advanced",
+    "source": "code_example",
+    "ts": 1780807436.4175334,
+    "size": 577
+  },
+  "search:kubernetes-statefulsets-advanced:statefulsets performance optim": {
+    "topic": "kubernetes_statefulsets_advanced",
+    "source": "web_search",
+    "ts": 1780807448.744655,
+    "size": 568
+  },
+  "search:kubernetes-statefulsets-advanced:statefulsets performance optim_ex": {
+    "topic": "kubernetes_statefulsets_advanced",
+    "source": "code_example",
+    "ts": 1780807460.7716436,
+    "size": 495
+  },
+  "search:fastapi-rate-limiting:fastapi rate limiting strategi": {
+    "topic": "fastapi_rate_limiting",
+    "source": "web_search",
+    "ts": 1780807467.8510325,
+    "size": 701
+  },
+  "search:fastapi-rate-limiting:fastapi rate limiting strategi_ex": {
+    "topic": "fastapi_rate_limiting",
+    "source": "code_example",
+    "ts": 1780807483.9597983,
+    "size": 574
+  },
+  "search:fastapi-rate-limiting:rate limiting in fastapi appli": {
+    "topic": "fastapi_rate_limiting",
+    "source": "web_search",
+    "ts": 1780807494.1905122,
+    "size": 956
+  },
+  "search:fastapi-rate-limiting:rate limiting in fastapi appli_ex": {
+    "topic": "fastapi_rate_limiting",
+    "source": "code_example",
+    "ts": 1780807499.9708307,
+    "size": 943
+  },
+  "search:fastapi+jwt-authentication:fastapi jwt authentication tut": {
+    "topic": "fastapi_jwt_authentication",
+    "source": "web_search",
+    "ts": 1780807519.8067164,
+    "size": 1061
+  },
+  "search:fastapi+jwt-authentication:fastapi jwt authentication tut_ex": {
+    "topic": "fastapi_jwt_authentication",
+    "source": "code_example",
+    "ts": 1780807523.7500262,
+    "size": 397
+  },
+  "search:dotnet+efcore-migrations:ef core migrations for .net co": {
+    "topic": "dotnet_efcore_migrations",
+    "source": "web_search",
+    "ts": 1780807569.4550972,
+    "size": 445
+  },
+  "search:dotnet+efcore-migrations:ef core migrations for .net co_ex": {
+    "topic": "dotnet_efcore_migrations",
+    "source": "code_example",
+    "ts": 1780807574.277191,
+    "size": 531
+  },
+  "search:dotnet+efcore-migrations:best practices for ef core mig": {
+    "topic": "dotnet_efcore_migrations",
+    "source": "web_search",
+    "ts": 1780807600.4049442,
+    "size": 469
+  },
+  "search:dotnet+efcore-migrations:best practices for ef core mig_ex": {
+    "topic": "dotnet_efcore_migrations",
+    "source": "code_example",
+    "ts": 1780807613.8585274,
+    "size": 482
+  },
+  "search:kubernetes+ingress-nginx:kubernetes ingress nginx confi": {
+    "topic": "kubernetes_ingress_nginx",
+    "source": "web_search",
+    "ts": 1780807622.2316968,
+    "size": 797
+  },
+  "search:kubernetes+ingress-nginx:kubernetes ingress nginx confi_ex": {
+    "topic": "kubernetes_ingress_nginx",
+    "source": "code_example",
+    "ts": 1780807624.9664516,
+    "size": 424
+  },
+  "search:kubernetes+ingress-nginx:ingress nginx performance opti": {
+    "topic": "kubernetes_ingress_nginx",
+    "source": "web_search",
+    "ts": 1780807635.6040537,
+    "size": 843
+  },
+  "search:spring-data-jpa-security:spring data jpa security best ": {
+    "topic": "spring_data_jpa_security",
+    "source": "web_search",
+    "ts": 1780807666.0982802,
+    "size": 850
+  },
+  "search:spring-data-jpa-security:spring data jpa security best _ex": {
+    "topic": "spring_data_jpa_security",
+    "source": "code_example",
+    "ts": 1780807681.4246502,
+    "size": 648
+  },
+  "search:spring-data-jpa-security:securing spring data jpa repos": {
+    "topic": "spring_data_jpa_security",
+    "source": "web_search",
+    "ts": 1780807699.1356468,
+    "size": 565
+  },
+  "search:spring-data-jpa-security:securing spring data jpa repos_ex": {
+    "topic": "spring_data_jpa_security",
+    "source": "code_example",
+    "ts": 1780807716.161339,
+    "size": 596
+  },
+  "search:nextjs+supabase-authentication:next.js supabase authenticatio": {
+    "topic": "nextjs_supabase_authentication",
+    "source": "web_search",
+    "ts": 1780807726.6932633,
+    "size": 441
+  },
+  "search:nextjs+supabase-authentication:next.js supabase authenticatio_ex": {
+    "topic": "nextjs_supabase_authentication",
+    "source": "code_example",
+    "ts": 1780807739.8031735,
+    "size": 514
+  },
+  "search:nextjs+supabase-authentication:supabase authentication with n": {
+    "topic": "nextjs_supabase_authentication",
+    "source": "web_search",
+    "ts": 1780807749.3206432,
+    "size": 1021
+  },
+  "search:dotnet+efcore-performance-tuning:.net entity framework core per": {
+    "topic": "dotnet_efcore_performance_tuning",
+    "source": "web_search",
+    "ts": 1780807796.3816915,
+    "size": 2516
   }
 }
