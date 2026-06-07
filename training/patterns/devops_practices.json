@@ -23,5 +23,10 @@
     "content": "- **CLI Commands**: \n  - `git checkout <branch-name>`\n  - `git pull origin <branch-name>`\n  - `git push origin <branch-name>`\n\n- **Latest Versions**:\n  - GitHub Actions: v3.x\n  - Jenkins: LTS version\n  - GitLab CI: 15.0\n\n- **Key Config Options**:\n  - GitHub Actions: `.github/workflows/main.yml`\n  - Jenkins: `Jenkinsfile` or XML configuration\n  - GitLab CI: `.gitlab-ci.yml`\n\n- **Automation Efficiency**: \n  - Use parallel jobs for faster builds.\n  - Implement caching to speed up dependency installation.\n\n- **Cost-Aware Infrastructure Management**:\n  - Utilize spot instances in AWS or GCP.\n  - Monitor and scale resources dynamically based on demand.",
     "source": "web_search",
     "updated_at": 1780794136.6061087
+  },
+  "search:devops-practices:blue green deployment canary r": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f deployment.yaml` to deploy applications.\n  - `kubectl rollout status deployment/<deployment-name>` to check the status of a deployment.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0 (as of my last update).\n  - Docker: v20.10.7 (latest stable version).\n\n- **Key Config Options**:\n  - `spec.strategy.type`: Set to \"BlueGreen\" or \"Canary\".\n  - `spec.strategy.bluegreen`: Configuration for Blue-Green strategy.\n  - `spec.strategy.canary`: Configuration for Canary strategy.\n\nFor detailed instructions and the latest updates, refer to the official Kubernetes documentation.",
+    "source": "web_search",
+    "updated_at": 1780794177.7422357
   }
 }
