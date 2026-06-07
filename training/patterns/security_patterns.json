@@ -42,6 +42,6 @@
   "search:security-patterns:https tls certificate backend ": {
     "content": "- **CLI Commands**:\n  - `certbot renew --dry-run` to test certificate renewal.\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes` to generate a self-signed certificate.\n\n- **Latest Versions**:\n  - Certbot: Ensure you are using the latest version for compatibility and security updates.\n  - OpenSSL: Update to the latest stable release for enhanced security features.\n\n- **Key Config Options**:\n  - `certbot renew --webroot -w /path/to/webroot` for webroot authentication.\n  - `openssl s_client -connect example.com:443 -showcerts` to check TLS certificate details.\n  - `nginx.conf` or `apache2.conf`: Configure SSL/TLS settings in your server configuration files.",
     "source": "web_search",
-    "updated_at": 1780800508.9477637
+    "updated_at": 1780803726.9032078
   }
 }

@@ -2,31 +2,31 @@
   "search:nestjs+core:nestjs validationpipe configmo": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate module module-name`\n  - `nest generate controller controller-name`\n  - `nest generate service service-name`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - class-validator: v0.14.x\n  - class-transformer: v0.5.x\n\n- **Key Config Options for ValidationPipe**:\n  - `transform`: Automatically transforms incoming data to match DTOs.\n  - `whitelist`: Removes properties that are not defined in DTOs.\n  - `forbidNonWhitelisted`: Returns an error if any non-whitelisted properties are present.\n  - `skipMissingProperties`: Skips validation for missing properties.\n\n- **Global ValidationPipe Setup**:\n  ```typescript\n  import { NestFactory } from '@nestjs/core';\n  import { AppModule } from './app.module';\n  import { ValidationPipe } from '@nestjs/common';\n\n  async function bootstrap() {\n    const app = await NestFactory.create(AppModule);\n    app.useGlobalPipes(\n      new ValidationPipe({\n        transform: true,\n        whitelist: true,\n        forbidNonWhitelisted: true,\n        skipMissingProperties: false,\n      }),\n    );\n    await app.listen(3000);\n  }\n  bootstrap();\n  ```\n\n- **DTO and Validations**:\n  ```typescript\n  import { IsNotEmpty, IsInt } from 'class-validator';\n\n  export class CreateUserDto {\n    @IsNotEmpty()\n    name: string;\n\n    @IsInt()\n    age: number;\n  }\n  ```\n\n- **Group Validation and Partial Validation**:\n  - Group validation allows conditional validation based on the operation type (e.g., create, update).\n  - Partial validation allows partial updates without validating all properties.",
     "source": "web_search",
-    "updated_at": 1780800535.421798
+    "updated_at": 1780803758.5642405
   },
   "search:nestjs+core:nestjs validationpipe configmo_ex": {
     "content": "- **CLI Commands**: `nest new project-name`\n- **Latest Versions**:\n  - NestJS: v10.x\n  - ValidationPipe: v10.x\n  - Swagger: v6.x\n- **Key Config Options**:\n  - `ValidationPipe`: `{ transform: true, whitelist: true, forbidNonWhitelisted: true }`\n  - `ConfigModule`: `{ isGlobal: true }`\n  - `SwaggerModule`: `{ serveStaticOptions: { rootPath: path.join(__dirname, '..', 'public') } }`",
     "source": "code_example",
-    "updated_at": 1780800537.0239983
+    "updated_at": 1780803759.8422406
   },
   "search:nestjs+core:nestjs exception filter interc": {
     "content": "- Use `nest generate interceptor <name>` to create an interceptor.\n- Use `nest generate guard <name>` to create a guard.\n- Use `nest generate filter <name>` to create a filter.\n- Configure `nest-cli.json` to place generated files in `src/common/`.\n- Implement custom exception classes for specific error handling.\n- Use `@Cron('* * * * *')` decorator from `@nestjs/schedule` for scheduling tasks.\n- Create global exception filters using `app.useGlobalFilters(new AllExceptionsFilter())`.\n- Utilize built-in exceptions like `BadRequestException`, `NotFoundException`, etc., from `@nestjs/common`.",
     "source": "web_search",
-    "updated_at": 1780800538.3648088
+    "updated_at": 1780803761.1870415
   },
   "search:nestjs+core:nestjs exception filter interc_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n  - `nest generate service service-name`: Generates a new service.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - @nestjs/schedule: v10.0.0\n\n- **Key Config Options**:\n  - Exception Filters: Define custom error handling logic.\n  - Guards: Implement authorization and validation logic.\n  - Interceptors: Modify request/response objects or perform side effects.\n  - Cron Jobs: Schedule tasks using cron expressions with `@Cron` decorator.",
     "source": "code_example",
-    "updated_at": 1780800539.6614325
+    "updated_at": 1780803762.4774938
   },
   "search:nestjs+core:nestjs circular dependency for": {
     "content": "- Use `@Inject(forwardRef(() => ClassName))` to resolve circular dependencies.\n- Ensure all modules are correctly imported and exported.\n- Update NestJS CLI to the latest version for compatibility.\n- Review module imports and exports to identify circular references.\n- Consider restructuring services or using shared modules to break cycles.",
     "source": "web_search",
-    "updated_at": 1780800540.8541076
+    "updated_at": 1780803765.905523
   },
   "search:nestjs+core:nestjs circular dependency for_ex": {
     "content": "- Use `forwardRef` to resolve circular dependencies in NestJS.\n- Example of using `forwardRef`: \n  ```typescript\n  import { Module, forwardRef } from '@nestjs/common';\n  import { AService } from './a.service';\n  import { BService } from './b.service';\n\n  @Module({\n    providers: [AService],\n    exports: [AService]\n  })\n  export class AModule {}\n\n  @Module({\n    imports: [forwardRef(() => AModule)],\n    providers: [BService],\n    exports: [BService]\n  })\n  export class BModule {}\n  ```\n- Ensure you are using the latest version of NestJS for optimal functionality and security.\n- Key config options include `imports`, `providers`, and `exports` in module definitions.",
     "source": "code_example",
-    "updated_at": 1780800542.0596588
+    "updated_at": 1780803767.2674427
   }
 }
