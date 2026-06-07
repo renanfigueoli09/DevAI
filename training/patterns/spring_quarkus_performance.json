@@ -2,21 +2,21 @@
   "search:spring+quarkus-performance:spring quarkus performance tun": {
     "content": "- **CLI Commands**:\n  - `mvn clean package -Dquarkus.package.type=native` to build a native image.\n  - `java -jar target/my-quarkus-app-runner.jar` to run the Quarkus application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.14.0.Final\n\n- **Key Config Options**:\n  - For faster startup, use `quarkus.arc.producer-cache-size=0` to disable producer caching.\n  - To optimize memory usage, set `quarkus.native.builder-image=jib` for GraalVM native image builds.\n  - Enable HTTP/2 with `quarkus.http2.enabled=true`.",
     "source": "web_search",
-    "updated_at": 1780831394.620974
+    "updated_at": 1780840679.0624702
   },
   "search:spring+quarkus-performance:spring quarkus performance tun_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean package -Dquarkus.package.type=native` to build a native image.\n  - `./target/my-quarkus-app-runner.sh` to run the native application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.14.0.Final\n\n- **Key Config Options**:\n  - `quarkus.native.container-runtime=docker` for Docker-native builds.\n  - `quarkus.log.level=INFO` to set the logging level.\n  - `quarkus.scheduler.enabled=true` to enable scheduler support.",
     "source": "code_example",
-    "updated_at": 1780831396.29792
+    "updated_at": 1780840680.7476702
   },
   "search:spring+quarkus-performance:spring boot vs spring quarkus ": {
     "content": "- **CLI Commands**:\n  - To run Spring Boot application: `mvn spring-boot:run`\n  - To build a Quarkus project: `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Quarkus: 2.15.0.Final\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`\n  - Quarkus: `application.properties` or `application.yaml`, with additional Quarkus-specific properties like `quarkus.http.port`\n\nThese details provide a quick reference for developers to set up and configure both frameworks effectively.",
     "source": "web_search",
-    "updated_at": 1780831397.8902965
+    "updated_at": 1780840682.448124
   },
   "search:spring+quarkus-performance:spring boot vs spring quarkus _ex": {
     "content": "- **CLI Commands**:\n  - Spring Boot: `mvn spring-boot:run`\n  - Quarkus: `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Quarkus: 3.10.4.Final\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`\n  - Quarkus: `application.properties` or `application.yaml`\n\n- **Performance Metrics**:\n  - Spring Boot: Traditional blocking I/O\n  - Quarkus: Non-blocking reactive I/O",
     "source": "code_example",
-    "updated_at": 1780831399.374042
+    "updated_at": 1780840684.394682
   }
 }

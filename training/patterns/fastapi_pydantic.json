@@ -2,11 +2,11 @@
   "search:fastapi+pydantic:fastapi and pydantic data vali": {
     "content": "- FastAPI version: 0.95.0\n- Pydantic version: 1.10.7\n\nKey Config Options:\n- `pydantic_settings`: For managing settings and environment variables.\n- `fastapi.Request.state`: To store data across request/response lifecycle.\n\nCLI Commands:\n- `uvicorn main:app --reload` for development with auto-reload.\n- `python -m fastapi run app --reload` for running FastAPI application.",
     "source": "web_search",
-    "updated_at": 1780831351.0228374
+    "updated_at": 1780840631.4023893
   },
   "search:fastapi+pydantic:fastapi and pydantic data vali_ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Creates a new FastAPI project.\n  - `uvicorn run app:app --reload`: Runs the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.2\n  - Pydantic: v1.9.4\n\n- **Key Config Options**:\n  - `title`: Sets the title of the API documentation.\n  - `description`: Provides a description for the API documentation.\n  - `version`: Specifies the version of the API.\n  - `contact`: Includes contact information for the API.\n  - `license_info`: Adds license details to the API.",
     "source": "code_example",
-    "updated_at": 1780831352.653235
+    "updated_at": 1780840633.2541733
   }
 }

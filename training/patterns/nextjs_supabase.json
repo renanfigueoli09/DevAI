@@ -2,21 +2,21 @@
   "search:nextjs+supabase:nextjs supabase integration gu": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS Client: v2.0.0\n\n- **Key Config Options**:\n  - `NEXT_PUBLIC_SUPABASE_URL`: URL of your Supabase project.\n  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Anonymous API key for public access.\n  - `supabaseUrl`: URL from Supabase project settings.\n  - `supabaseAnonKey`: Anonymouse API key from Supabase project settings.",
     "source": "web_search",
-    "updated_at": 1780831524.1295002
+    "updated_at": 1780840827.2193475
   },
   "search:nextjs+supabase:nextjs supabase integration gu_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase JS Client: 2.0.0\n\n- **Key Config Options**:\n  - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL.\n  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anon key for public access.\n  - `NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY`: Service role key for serverless functions.",
     "source": "code_example",
-    "updated_at": 1780831525.982922
+    "updated_at": 1780840829.0044272
   },
   "search:nextjs+supabase:supabase realtime data with ne": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase JS Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Realtime subscriptions using `supabase_client.realtime.on()`\n  - Server components for handling real-time data updates",
     "source": "web_search",
-    "updated_at": 1780831527.7269483
+    "updated_at": 1780840830.8286166
   },
   "search:nextjs+supabase:supabase realtime data with ne_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-realtime-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project dashboard.\n  - Realtime channel subscriptions using `supabase_client.from('table_name').on('event_type', callback).subscribe()`.",
     "source": "code_example",
-    "updated_at": 1780831530.4404006
+    "updated_at": 1780840832.5190241
   }
 }

@@ -2,37 +2,37 @@
   "search:testing-patterns:unit testing nestjs jest mock ": {
     "content": "- **CLI Commands**: `nest generate service <service-name>` to create a new service.\n- **Latest Versions**: NestJS v10, Jest v29.\n- **Key Config Options**:\n  - `imports`: Array of modules the current module imports.\n  - `controllers`: Array of controllers the current module uses.\n  - `providers`: Array of providers that will be instantiated by the IoC container.\n  - `exports`: Array of providers that are exported from the current module.",
     "source": "web_search",
-    "updated_at": 1780831644.837838
+    "updated_at": 1780840939.218605
   },
   "search:testing-patterns:unit testing nestjs jest mock _ex": {
     "content": "- Use `nest generate service <service-name>` to create a new service.\n- Install Jest and NestJS testing utilities via npm: `npm install --save-dev @nestjs/testing jest`.\n- Mock services in tests using the `Test.createTestingModule` method.\n- Configure Jest in your project by creating a `jest.config.js` file.\n- Use `describe`, `it`, and `expect` for writing test cases.\n- Run tests with the command: `npm run test`.\n- Update NestJS to the latest version using npm commands.\n- Key config options include `imports`, `providers`, and `controllers`.",
     "source": "code_example",
-    "updated_at": 1780831646.4839194
+    "updated_at": 1780840941.0570114
   },
   "search:testing-patterns:integration testing nestjs sup": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Create a new NestJS project.\n  - `npm run test:e2e`: Run end-to-end tests.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - `test.e2e.json`: Configuration file for E2E testing.\n  - `jest-e2e.config.ts`: Jest configuration for E2E tests.",
     "source": "web_search",
-    "updated_at": 1780831648.2711854
+    "updated_at": 1780840942.879873
   },
   "search:testing-patterns:integration testing nestjs sup_ex": {
     "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate controller <controller-name>`\n  - `nest generate service <service-name>`\n  - `npm run test:e2e`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - Use Jest for unit tests.\n  - Use Supertest for E2E testing with `app.listen()` to start the server.\n  - Mock services and controllers using Nest's dependency injection system.",
     "source": "code_example",
-    "updated_at": 1780831650.3506706
+    "updated_at": 1780840944.9808764
   },
   "search:testing-patterns:unit testing spring boot junit": {
     "content": "- **CLI Commands**:\n  - `mvn test` to run tests.\n  - `mvn clean install` for a full build and test.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - JUnit 5: 5.9.1\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `@SpringBootTest`: For loading the full application context.\n  - `@MockBean`: To inject mock beans into your tests.\n  - `@TestInstance(TestInstance.Lifecycle.PER_CLASS)`: To reuse test instances across multiple tests.\n  - `@AutoConfigureMockMvc`: For testing web applications with MockMvc.",
     "source": "web_search",
-    "updated_at": 1780831652.4169319
+    "updated_at": 1780840947.2871242
   },
   "search:testing-patterns:unit testing spring boot junit_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `mvn test`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - JUnit 5: 5.9.2\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `@SpringBootTest` for full application context\n  - `@WebMvcTest` for testing controllers\n  - `@MockBean` to mock Spring beans\n  - `@InjectMocks` to inject mocks into the test class",
     "source": "code_example",
-    "updated_at": 1780831654.0537946
+    "updated_at": 1780840949.3725684
   },
   "search:testing-patterns:fastapi pytest async testing f": {
     "content": "- Install FastAPI, Pytest, and pytest-asyncio using pip: `pip install fastapi pytest pytest-asyncio`\n- Use Poetry or uv for dependency resolution.\n- For async testing with FastAPI, use the `pytest-asyncio` plugin.\n- Set up an environment for testing by installing necessary packages.\n- Create fixtures for your tests to manage resources like database sessions.\n- Use the `TestClient` from FastAPI to simulate HTTP requests in your tests.\n- Override dependencies using the `Depends` feature in Pytest.\n- Structure async tests for FastAPI endpoints that involve async database calls.",
     "source": "web_search",
-    "updated_at": 1780831655.9775052
+    "updated_at": 1780840951.350407
   },
   "search:testing-patterns:fastapi pytest async testing f_ex": {
     "content": "- Use `pytest` for testing FastAPI applications.\n- Install `fastapi`, `uvicorn`, and `pytest` using pip.\n- Create a test file with `.py` extension, e.g., `test_main.py`.\n- Import `TestClient` from `fastapi.testclient`.\n- Initialize the client with your FastAPI app instance.\n- Use async fixtures for database connections.\n- Override dependencies in tests using `app.dependency_overrides`.\n- Run tests locally with `pytest` command.\n- For asynchronous testing, use `asyncio.run()`.\n- Ensure all test files start with `test_` prefix.\n- Utilize pytest's built-in assertion features for validation.",
