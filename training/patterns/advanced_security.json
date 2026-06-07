@@ -2,46 +2,46 @@
   "search:Advanced Security:security best practices nestjs": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install `@nestjs/microservices` for gRPC support.\n- Use `npm install @grpc/grpc-js @grpc/proto-loader` for gRPC dependencies.\n- Configure gRPC in your `app.module.ts` with `imports: [GrpcClientModule.register({ ... })]`.\n- Define `.proto` files for service definitions and use `protoc` to compile them into TypeScript.\n- Implement authentication using JWT or OAuth2 in your NestJS application.\n- Use environment variables for sensitive information like API keys and secrets.\n- Regularly update dependencies with `npm update` and check for vulnerabilities with `npm audit`.\n- Enable HTTPS by configuring SSL certificates in your server settings.",
     "source": "web_search",
-    "updated_at": 1780794869.5148275
+    "updated_at": 1780795969.6736388
   },
   "search:Advanced Security:security best practices nestjs_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate service name`: Generates a new service.\n  - `nest generate controller name`: Generates a new controller.\n\n- **Latest Versions**:\n  - NestJS: v10.2.4\n  - gRPC: v1.56.3\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure the microservice with `NestFactory.createMicroservice(AppModule, { transport: Transport.GRPC });`.\n  - Define service methods in `.grpc.service.ts` files.\n  - Use decorators like `@GrpcMethod('ServiceName')` to define gRPC methods.",
     "source": "code_example",
-    "updated_at": 1780794884.1042328
+    "updated_at": 1780795971.4067159
   },
   "search:Advanced Security:dotnet mongodb security": {
     "content": "- **CLI Commands**:\n  - `dotnet add package MongoDB.Driver --version 3.9.0`\n  \n- **Latest Version**:\n  - MongoDB.Driver 3.9.0\n\n- **Key Config Options**:\n  - OIDC for secure authentication with MongoDB Atlas.\n  - File-based security features provided by GitHub Advanced Security.\n  - Queryable Encryption and Vector Search in MongoDB EF Core Provider.",
     "source": "web_search",
-    "updated_at": 1780794892.1609015
+    "updated_at": 1780795973.0039814
   },
   "search:Advanced Security:dotnet mongodb security_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet add package MongoDB.Driver`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - MongoDB.Driver: 2.13.0\n  - ASP.NET Core: 6.0\n\n- **Key Config Options**:\n  - Connection String: `mongodb+srv://<username>:<password>@cluster0.mongodb.net/test?retryWrites=true&w=majority`\n  - Authentication Mechanism: `SCRAM-SHA-1` or `SCRAM-SHA-256`\n  - SSL Enabled: `true`",
     "source": "code_example",
-    "updated_at": 1780794907.2440195
+    "updated_at": 1780795974.7597983
   },
   "search:Advanced Security:angular material design patter": {
     "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component <component-name>`\n\n- **Latest Versions**:\n  - Angular Material: v15.2.1\n\n- **Key Config Options**:\n  - Theme configuration in `styles.scss` using Angular Material themes.\n  - Form validation with Angular Reactive Forms and Angular Material form controls.\n  - Routing for navigation between components using Angular Router.",
     "source": "web_search",
-    "updated_at": 1780794914.3592947
+    "updated_at": 1780795976.54482
   },
   "search:Advanced Security:django postgres advanced secur": {
     "content": "- Use `psycopg2` version 3.x for the latest PostgreSQL adapter.\n- Configure Django settings in `settings.py`:\n  - `DATABASES['default']`: Define database connection details.\n  - `OPTIONS`: Set additional options like `sslmode`.\n- Implement advanced security measures:\n  - Use `django-postgres-lock` for row-level locking.\n  - Apply least privilege principle by setting specific user permissions.\n- Regularly update Django and PostgreSQL to patch vulnerabilities.\n- Utilize Django's ORM for secure database queries.\n- Employ parameterized queries to prevent SQL injection.",
     "source": "web_search",
-    "updated_at": 1780794964.8003423
+    "updated_at": 1780795978.2693152
   },
   "search:Advanced Security:django postgres advanced secur_ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up` to start the application.\n  - `Ctrl+C` to stop the application.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - Use Django's built-in authentication system for user registration.\n  - Enable Row-Level Security (RLS) in PostgreSQL using `django-rls`.\n  - Configure database settings in `settings.py` for secure connections.",
     "source": "code_example",
-    "updated_at": 1780794969.1119177
+    "updated_at": 1780795980.0756214
   },
   "search:Advanced Security:java spring boot security": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `./mvnw clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4 (as of my last update)\n  - Keycloak: 20.0.3 (as of my last update)\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, security settings.\n    ```properties\n    server.port=8080\n    spring.security.user.name=admin\n    spring.security.user.password=password\n    ```\n  - `pom.xml`: Add Spring Boot Starter Security dependency.\n    ```xml\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-security</artifactId>\n    </dependency>\n    ```\n  - Keycloak Configuration:\n    - URL: `keycloak.auth-server-url`\n    - Realm: `keycloak.realm`\n    - Client ID: `keycloak.resource`\n\n- **HTTPS**:\n  - Enable HTTPS by configuring SSL in `application.properties`.\n    ```properties\n    server.ssl.key-store=classpath:keystore.jks\n    server.ssl.key-store-password=password\n    server.ssl.key-alias=tomcat\n    ```\n\n- **Security Headers**:\n  - Configure security headers using Spring Security.\n    ```java\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.headers()\n                .contentSecurityPolicy(\"default-src 'self'\")\n                .xssProtection().and()\n                .httpStrictTransportSecurity().and()\n                .frameOptions();\n        }\n    }\n    ```\n\n- **Dependency Management**:\n  - Use Spring Boot's dependency management to ensure compatibility.\n    ```xml\n    <parent>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-parent</artifactId>\n        <version>3.1.4</version>\n    </parent>\n    ```\n\n- **Testing**:\n  - Use Spring Boot Test to write tests.\n    ```java\n    @SpringBootTest\n    public class SecurityTest {\n        @Autowired\n        private WebApplicationContext context;\n\n        @Test\n        public void testSecurity() throws Exception {\n            MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(context).build();\n            mockMvc.perform(get(\"/api/secure\"))\n                   .andExpect(status().isUnauthorized());\n        }\n    }\n    ```",
     "source": "web_search",
-    "updated_at": 1780794986.8398836
+    "updated_at": 1780795984.1533446
   },
   "search:Advanced Security:java spring boot security_ex": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `npx skills add auth0/agent-skills --skill auth0-quickstart --skill auth0-springboot-a`\n- **Key Config Options**:\n  - JWT Authentication and Authorization\n  - Integration with Postgres database\n  - Use of Spring Security for protecting the application\n  - Keycloak for authentication without adapters",
     "source": "code_example",
-    "updated_at": 1780794999.4984932
+    "updated_at": 1780795985.6721692
   }
 }
