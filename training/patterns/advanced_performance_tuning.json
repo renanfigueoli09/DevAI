@@ -1,0 +1,42 @@
+{
+  "search:Advanced Performance Tuning:kubernetes logging and monitor": {
+    "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.0\n  - Grafana: v8.3.5\n  - Loki: v2.7.1\n  - Prometheus: v2.34.0\n\n- **Key Config Options**:\n  - In `prometheus.yml`, configure scrape jobs for your Kubernetes services.\n  - In `loki-config.yaml`, define the storage and retention policies for logs.\n  - In `grafana.ini`, adjust settings like logging level and data source configurations.\n\n- **GitHub Repository**: [rslim087a/loki-prometheus-grafana](https://github.com/rslim087a/loki-prometheus-grafana)",
+    "source": "web_search",
+    "updated_at": 1780795038.2013943
+  },
+  "search:Advanced Performance Tuning:kubernetes logging and monitor_ex": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For advanced logging, consider using Fluentd or Fluent Bit as log agents.\n- To deploy Fluent Bit in Kubernetes, use the Helm chart:\n  ```bash\n  helm install fluent-bit bitnami/fluent-bit --set config.output.type=elasticsearch\n  ```\n- Key configuration options for Fluent Bit include `flush`, `log_level`, and `read_from_head`.\n- For monitoring, Prometheus and Grafana are popular choices.\n- Deploy Prometheus using Helm:\n  ```bash\n  helm install prometheus prometheus-community/prometheus\n  ```\n- Configure Prometheus to scrape metrics from Kubernetes nodes and pods.\n- Use Grafana to create dashboards for visualizing metrics and logs.\n- Key configuration options for Prometheus include `scrape_interval` and `evaluation_interval`.\n- For cost optimization, consider using log rotation policies in your logging stack.",
+    "source": "code_example",
+    "updated_at": 1780795064.0143495
+  },
+  "search:Advanced Performance Tuning:fastapi asyncio websockets per": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install the latest version of FastAPI and Uvicorn:\n  ```bash\n  pip install fastapi uvicorn[standard]\n  ```\n- Configure Uvicorn with the following options for better performance:\n  - `--host`: Set the host to listen on (e.g., `0.0.0.0`).\n  - `--port`: Set the port number (default is `8000`).\n  - `--workers`: Increase the number of worker processes based on CPU cores.\n    ```bash\n    uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4\n    ```\n- Use Redis for connection management and scaling in production environments.\n- Implement async generators to optimize WebSocket performance.\n- Monitor and profile your application using tools like `asyncio`'s `run_in_executor` or third-party libraries like `PySnooper`.\n- Consider using a load balancer to distribute traffic across multiple instances of your FastAPI app.\n- Enable connection pooling in Redis for better performance.\n- Use environment variables to manage configuration settings, such as database URLs and secret keys.",
+    "source": "web_search",
+    "updated_at": 1780795082.0355537
+  },
+  "search:Advanced Performance Tuning:fastapi asyncio websockets per_ex": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For WebSocket performance, consider using a load balancer like Nginx in front of your FastAPI application.\n- Key config options include setting `max_size` and `ping_interval` in the WebSocket connection configuration.\n- Use `asyncio` for handling asynchronous operations within WebSocket handlers.\n- Monitor and tune server resources (CPU, memory) based on performance metrics.\n- Consider using a database connection pool like SQLAlchemy with FastAPI for better performance.\n- For production environments, use HTTPS to secure WebSocket connections.",
+    "source": "code_example",
+    "updated_at": 1780795089.5793743
+  },
+  "search:Advanced Performance Tuning:spring kotlin jpa performance ": {
+    "content": "- **CLI Commands**:\n  - `./mvnw clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Kotlin: 2.3.x\n  - Spring Boot: 2.7.x\n  - JPA: 2.2\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect, e.g., `org.hibernate.dialect.MySQL5Dialect`.",
+    "source": "web_search",
+    "updated_at": 1780795098.4742792
+  },
+  "search:Advanced Performance Tuning:spring kotlin jpa performance _ex": {
+    "content": "- **CLI Commands**:\n  - `./gradlew build` to build the project.\n  - `./gradlew run` to start the Spring Boot application.\n\n- **Latest Versions**:\n  - Kotlin: 2.3.x\n  - Spring Boot: 2.7.x\n  - Spring Data JPA: 2.6.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.dialect`: Set the database dialect.\n  - `spring.jpa.hibernate.ddl-auto`: Control schema generation (e.g., `update`, `create-drop`).\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.",
+    "source": "code_example",
+    "updated_at": 1780795103.4047194
+  },
+  "search:Advanced Performance Tuning:python fastapi authentication ": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI using pip: `pip install fastapi`.\n- For authentication, use JWT tokens with libraries like `python-jose[cryptography]`.\n- Configure security by setting up a secret key and algorithm in your application settings.\n- Implement user management using databases or external services.\n- Use middleware for handling authentication and authorization.\n- Optimize performance with Redis caching and rate limiting.\n- Monitor API usage and adjust configurations as needed.",
+    "source": "web_search",
+    "updated_at": 1780795118.6538093
+  },
+  "search:Advanced Performance Tuning:python fastapi authentication _ex": {
+    "content": "- Use `pip install fastapi uvicorn python-multipart` to install FastAPI, Uvicorn, and Python-Multipart.\n- For JWT authentication, use `pip install passlib[bcrypt] pyjwt`.\n- Implement stateless tokens for better performance.\n- Configure Uvicorn with `uvicorn main:app --reload` for development.\n- Use environment variables for sensitive data like secret keys.\n- Optimize routes by using route-scoped guards.\n- Cache authentication checks to reduce latency.\n- Monitor API performance using tools like FastAPI's built-in metrics or third-party solutions.",
+    "source": "code_example",
+    "updated_at": 1780795123.1582801
+  }
+}
