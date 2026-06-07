@@ -13,5 +13,25 @@
     "content": "- **CLI Commands**: Use `aws cognito-idp` for AWS Cognito operations.\n- **Latest Versions**: Ensure using the latest SDKs and libraries compatible with your serverless framework (e.g., Serverless Framework, AWS SAM).\n- **Key Config Options**:\n  - For AWS Cognito: Configure user pools, identity pools, and resource policies.\n  - For IAM in Serverless: Define roles and permissions in `serverless.yml` or through CloudFormation templates.\n  - For OAuth integration: Set up OAuth providers like Google, Facebook, or custom providers.",
     "source": "web_search",
     "updated_at": 1780833438.3589063
+  },
+  "search:nextjs-serverless-authentication:next.js serverless authenticat": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm run dev` for development server\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: v13.5 (as of my last update)\n  - React: v18.2 (compatible with Next.js)\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing build and development settings\n  - Environment Variables: Use `.env.local` for sensitive information like API keys\n  - Middleware: Define serverless functions using middleware in `middleware.js`\n  - Authentication Providers: Integrate with OAuth providers through NextAuth.js or similar libraries",
+    "source": "web_search",
+    "updated_at": 1780835542.5668774
+  },
+  "search:nextjs-serverless-authentication:next.js serverless authenticat_ex": {
+    "content": "- Clone repository using `git clone git@github.com:francisudeji/authentication-for-nextjs-serverless.git`\n- Navigate to project directory with `cd authentication-for-nextjs-serverless`\n- Install dependencies with `npm install` or `yarn install`\n\nKey Config Options:\n- Authentication flow diagram available for educational purposes\n- Next.js API route at `pages/api/auth/[...nextauth].js`\n- Import `NextAuth` and `Providers` from `next-auth` package\n\nLatest Version: Ensure you are using the latest version of Next.js and `next-auth` by checking their respective documentation or running `npm outdated` / `yarn outdated`.",
+    "source": "code_example",
+    "updated_at": 1780835556.5356493
+  },
+  "search:nextjs-serverless-authentication:next.js oauth integration stra": {
+    "content": "- Use `next-auth` for OAuth integration.\n- Install via npm: `npm install next-auth`.\n- Configure in `_app.js`: \n  ```javascript\n  import { SessionProvider } from \"next-auth/react\";\n\n  function MyApp({ Component, pageProps }) {\n    return (\n      <SessionProvider session={pageProps.session}>\n        <Component {...pageProps} />\n      </SessionProvider>\n    );\n  }\n\n  export default MyApp;\n  ```\n- For Google OAuth:\n  ```javascript\n  import Providers from \"next-auth/providers\";\n  // ...\n  providers: [\n    Providers.Google({\n      clientId: process.env.GOOGLE_CLIENT_ID,\n      clientSecret: process.env.GOOGLE_CLIENT_SECRET,\n    }),\n  ],\n  ```\n- Set environment variables in `.env.local`:\n  ```\n  GOOGLE_CLIENT_ID=your-google-client-id\n  GOOGLE_CLIENT_SECRET=your-google-client-secret\n  ```\n- Use `next-auth/react` for signing in/out:\n  ```javascript\n  import { signIn, signOut, useSession } from \"next-auth/react\";\n\n  function SignInButton() {\n    const { data: session } = useSession();\n    if (session) {\n      return (\n        <button onClick={() => signOut()}>Sign out</button>\n      );\n    }\n    return (\n      <button onClick={() => signIn()}>Sign in</button>\n    );\n  }\n  ```\n- Ensure to handle CSRF tokens and secure cookies for production.",
+    "source": "web_search",
+    "updated_at": 1780835566.8785102
+  },
+  "search:nextjs-serverless-authentication:next.js oauth integration stra_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-oauth-app`\n  \n- **Latest Versions**:\n  - Next.js: 13.5\n  - OAuth libraries: `next-auth` v4\n  \n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for OAuth providers.\n  - Environment variables for client and server secrets.\n  - Redirect URIs in provider settings (e.g., Google, GitHub).",
+    "source": "code_example",
+    "updated_at": 1780835585.4430606
   }
 }

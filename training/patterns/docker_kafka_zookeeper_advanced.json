@@ -1,0 +1,12 @@
+{
+  "search:docker+kafka-zookeeper-advanced:docker kafka zookeeper advance": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in docker-compose.yml.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `docker-compose up`.\n\n- **Latest Versions**:\n  - Docker Engine: v24.0.1\n  - Docker Compose: v2.23.5\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka.\n  - `ZOOKEEPER_CLIENT_PORT`: Port for Zookeeper client connections.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string for Zookeeper.\n\nThese commands and options provide a solid foundation for advanced configuration of Docker, Kafka, and Zookeeper environments.",
+    "source": "web_search",
+    "updated_at": 1780835636.3363845
+  },
+  "search:docker+kafka-zookeeper-advanced:docker kafka zookeeper advance_ex": {
+    "content": "- **Docker Kafka Zookeeper Configuration**\n  - **Latest Versions**: Kafka 3.5, Zookeeper 3.8\n  - **CLI Commands**:\n    ```bash\n    docker run --name zookeeper -d wurstmeister/zookeeper:latest\n    docker run --name kafka -d --link zookeeper:zookeeper wurstmeister/kafka:latest -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181\n    ```\n  - **Key Config Options**:\n    - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n    - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string for Kafka.\n\n- **Advanced Configuration**\n  - **Replication Factor**: Set replication factor in Kafka topics to ensure data redundancy and fault tolerance.\n  - **Partition Count**: Increase partition count for higher throughput and parallelism.\n  - **Consumer Group Management**: Configure consumer groups for load balancing and message processing.\n  - **SSL/TLS Encryption**: Enable SSL/TLS encryption for secure communication between Kafka brokers and clients.\n\n- **Monitoring and Logging**\n  - **Prometheus**: Integrate Prometheus for monitoring Kafka metrics.\n  - **Grafana**: Use Grafana to visualize Kafka metrics with Prometheus data.\n  - **Log Aggregation**: Configure log aggregation using tools like Fluentd or Filebeat for centralized logging.",
+    "source": "code_example",
+    "updated_at": 1780835665.9025002
+  }
+}

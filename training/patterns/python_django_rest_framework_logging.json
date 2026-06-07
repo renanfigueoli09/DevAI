@@ -18,5 +18,15 @@
     "content": "- **Key Config Options**:\n  - `REST_FRAMEWORK`: Global settings dictionary for Django REST Framework.\n  - `DEFAULT_PARSER_CLASSES`: Configure default parsers globally.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Django and Django REST Framework to benefit from security patches and new features.\n\n- **CLI Commands with Exact Flags**:\n  - Not applicable for configuration directly in settings.py.",
     "source": "code_example",
     "updated_at": 1780835263.940729
+  },
+  "search:python-django-rest-framework-logging:django rest framework log rota": {
+    "content": "- **CLI Commands**:\n  - `python manage.py startapp api`\n  - `pip install djangorestframework`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.2\n\n- **Key Config Options**:\n  - `INSTALLED_APPS`: Add `'rest_framework'`\n  - `REST_FRAMEWORK`: Configure settings like authentication, permissions, pagination, etc.\n  - Middleware: Ensure `'django.middleware.common.CommonMiddleware'` is included for proper functionality.\n\nThese points provide actionable guidance for developers working with Django REST Framework.",
+    "source": "web_search",
+    "updated_at": 1780835279.4836705
+  },
+  "search:python-django-rest-framework-logging:django rest framework log rota_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py migrate`\n  - `python manage.py createsuperuser`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.2\n  - PostgreSQL: v15\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py for customizing the API behavior.\n  - Database configurations in `settings.py` for connecting to PostgreSQL.",
+    "source": "code_example",
+    "updated_at": 1780835300.4195895
   }
 }
