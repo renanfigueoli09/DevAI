@@ -2,21 +2,21 @@
   "search:microservices-security-best-practices:microservices security best pr": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, e.g., `kubectl apply -f deployment.yaml`.\n- **Latest Versions**: Ensure using the latest version of your microservices framework and libraries.\n- **Key Config Options**:\n  - Authentication: Implement JWT (JSON Web Tokens) for secure authentication.\n  - Authorization: Use OAuth2 or OpenID Connect for role-based access control.\n  - Encryption: Encrypt data in transit using TLS/SSL.\n  - Logging: Enable detailed logging with tools like ELK Stack.\n  - Monitoring: Utilize Prometheus and Grafana for real-time monitoring.\n  - Rate Limiting: Implement rate limiting to prevent abuse.\n  - Circuit Breakers: Use Hystrix or Resilience4j for fault tolerance.\n  - Service Discovery: Employ Eureka, Consul, or Kubernetes for dynamic service discovery.",
     "source": "web_search",
-    "updated_at": 1780833701.1533127
+    "updated_at": 1780846518.553282
   },
   "search:microservices-security-best-practices:microservices security best pr_ex": {
     "content": "- Use OAuth2 and JWT for secure service-to-service communication.\n- Implement API gateways to manage authentication and authorization.\n- Configure SSL/TLS for secure communication between microservices.\n- Utilize Spring Security for Java-based microservices.\n- Apply least privilege principles in access control.\n- Regularly update dependencies and frameworks.\n- Monitor and log security events.\n- Use tools like OWASP ZAP for vulnerability scanning.",
     "source": "code_example",
-    "updated_at": 1780833702.8917558
+    "updated_at": 1780846521.0761213
   },
   "search:microservices-security-best-practices:securing microservices archite": {
     "content": "- Use Azure CLI to manage microservices securely.\n- Update to the latest version of CodeFrost for the most current security practices.\n- Configure VMs and cloud platforms with HTTPS for secure communication.\n- Implement OAuth2 for user authentication and authorization.\n- Set up centralized logging using tools like ELK Stack or Splunk.\n- Automate CI/CD pipelines using Jenkins, GitLab CI, or GitHub Actions.\n- Validate access tokens using OpenID Connect provider's public keys.\n- Use Azure Key Vault to manage secrets securely.\n- Implement network segmentation for microservices.\n- Regularly update and patch all microservices components.",
     "source": "web_search",
-    "updated_at": 1780833704.7413406
+    "updated_at": 1780846523.421428
   },
   "search:microservices-security-best-practices:securing microservices archite_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources.\n  - `docker run --name <container_name> -d <image_name>:<tag>` to run a Docker container.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 24.0.2\n  - Spring Boot: 3.1.0\n\n- **Key Config Options**:\n  - Authentication: Use JWT for secure token-based authentication.\n  - Authorization: Implement role-based access control (RBAC) within your microservices.\n  - API Gateway: Configure an API gateway to handle requests and route them to appropriate services.\n  - Service-to-Service Authentication: Use mutual TLS or OAuth2 for secure communication between microservices.",
     "source": "code_example",
-    "updated_at": 1780833706.5425935
+    "updated_at": 1780846525.7533872
   }
 }

@@ -2,21 +2,21 @@
   "search:flask-sqlalchemy-performance:flask sqlalchemy performance o": {
     "content": "- Use `pip install Flask-SQLAlchemy` to install the latest version.\n- Configure your database URI in `app.config['SQLALCHEMY_DATABASE_URI']`.\n- Enable query logging with `app.config['SQLALCHEMY_ECHO'] = True` for debugging.\n- Utilize `subqueryload` for efficient loading of related objects.\n- Employ `DebugToolbarExtension` from `flask_debugtoolbar` to monitor and optimize queries.\n- Optimize bulk inserts using SQLAlchemy's built-in drivers or third-party extensions supporting the new bulk infrastructure.",
     "source": "web_search",
-    "updated_at": 1780836196.7321973
+    "updated_at": 1780846403.5208967
   },
   "search:flask-sqlalchemy-performance:flask sqlalchemy performance o_ex": {
     "content": "- **CLI Commands**: Use `flask run` to start the Flask application.\n- **Latest Versions**: Ensure you are using the latest version of Flask and SQLAlchemy by running `pip install --upgrade flask sqlalchemy`.\n- **Key Config Options**:\n  - Set `SQLALCHEMY_TRACK_MODIFICATIONS = False` in your config to improve performance.\n  - Use connection pooling with `SQLALCHEMY_POOL_SIZE` and `SQLALCHEMY_MAX_OVERFLOW`.",
     "source": "code_example",
-    "updated_at": 1780836213.7994754
+    "updated_at": 1780846406.285236
   },
   "search:flask-sqlalchemy-performance:flask sqlalchemy query tuning ": {
     "content": "- **Latest Version**: Flask 3.1.x\n- **CLI Commands**:\n  - `flask run`: Runs the application.\n  - `flask shell`: Opens an interactive Python shell with the app context.\n  - `flask db init`: Initializes a new migration repository.\n  - `flask db migrate`: Generates a new migration script from your models to the database schema.\n  - `flask db upgrade`: Applies all migrations to the database.\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for securely signing the session cookie.\n  - `SQLALCHEMY_DATABASE_URI`: The URI of the database to connect to.\n  - `SQLALCHEMY_TRACK_MODIFICATIONS`: Controls if Flask-SQLAlchemy should track modifications. Set to `False` for production environments.\n- **Extensions**:\n  - Flask-SQLAlchemy: ORM for working with databases.\n  - Flask-Migrate: Handles SQLAlchemy database migrations.\n  - Flask-WTF: Integration of WTForms for form validation and CSRF protection.\n  - Flask-Login: User session management.",
     "source": "web_search",
-    "updated_at": 1780836222.021744
+    "updated_at": 1780846408.644326
   },
   "search:flask-sqlalchemy-performance:flask sqlalchemy query tuning _ex": {
     "content": "- Use `flask db upgrade` to apply migrations.\n- Ensure Flask-SQLAlchemy version is up-to-date, typically the latest stable release.\n- Configure database URI in `app.config['SQLALCHEMY_DATABASE_URI']`.\n- Utilize `db.session.query()` for constructing queries.\n- Apply `group_by()` method for grouping results.\n- For async operations, consider using `asyncpg` with Flask-SQLAlchemy.\n- Monitor performance with tools like SQLAlchemy's built-in logging or third-party profilers.",
     "source": "code_example",
-    "updated_at": 1780836236.0090985
+    "updated_at": 1780846410.9471684
   }
 }

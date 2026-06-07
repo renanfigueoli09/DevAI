@@ -2,11 +2,11 @@
   "search:spring+kotlin:spring boot kotlin rest api 20": {
     "content": "- **CLI Commands**:\n  - `./gradlew build`: Builds the project.\n  - `./gradlew run`: Runs the application.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kotlin: 1.6.x\n\n- **Key Config Options**:\n  - Database Configuration in `application.properties` or `application.yml`.\n  - Swagger Configuration for API documentation.\n  - Actuator for monitoring and management.",
     "source": "web_search",
-    "updated_at": 1780833495.4100554
+    "updated_at": 1780846227.879473
   },
   "search:spring+kotlin:spring boot kotlin rest api 20_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Kotlin: 1.8.20\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, server port, etc.\n    ```properties\n    spring.datasource.url=jdbc:h2:mem:testdb\n    spring.datasource.driverClassName=org.h2.Driver\n    spring.datasource.username=sa\n    spring.datasource.password=\n    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect\n    ```\n  - `build.gradle.kts` or `pom.xml`: Define dependencies for Spring Boot, Kotlin, and other libraries.\n    ```kotlin\n    dependencies {\n        implementation(\"org.springframework.boot:spring-boot-starter-webflux\")\n        implementation(\"org.jetbrains.kotlin:kotlin-stdlib-jdk8\")\n        runtimeOnly(\"com.h2database:h2\")\n    }\n    ```\n\nThese actionable facts provide a clear guide for setting up and running a Spring Boot Kotlin REST API project.",
     "source": "code_example",
-    "updated_at": 1780833496.7652466
+    "updated_at": 1780846229.9931517
   }
 }

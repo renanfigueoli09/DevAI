@@ -2,21 +2,21 @@
   "search:fastapi+celery-background-tasks:fastapi celery background task": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`: Creates a new FastAPI project.\n  - `uvicorn myapp.main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.2\n  - Celery: v5.2.7\n\n- **Key Config Options**:\n  - `background_tasks`: Used to add background tasks in FastAPI.\n  - `CELERY_BROKER_URL`: URL for the message broker (e.g., Redis, RabbitMQ).\n  - `CELERY_RESULT_BACKEND`: URL for the result backend (e.g., Redis, Database).",
     "source": "web_search",
-    "updated_at": 1780833476.6490462
+    "updated_at": 1780846202.8619108
   },
   "search:fastapi+celery-background-tasks:fastapi celery background task_ex": {
     "content": "- **FastAPI**: Install using `pip install fastapi`\n- **Celery**: Install using `pip install celery`\n- **Redis**: For message broker, use `docker run -d --name redis -p 6379:6379 redis`\n- **RabbitMQ**: For message broker, use `docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management`\n- **Key Celery Config**: `broker_url` and `result_backend`\n- **FastAPI Background Tasks**: Use `@app.background_task`\n- **Celery Worker Command**: `celery -A your_project_name worker --loglevel=info`\n- **Latest FastAPI Version**: Check [PyPI](https://pypi.org/project/fastapi/)\n- **Latest Celery Version**: Check [PyPI](https://pypi.org/project/celery/)",
     "source": "code_example",
-    "updated_at": 1780833478.129427
+    "updated_at": 1780846204.604548
   },
   "search:fastapi+celery-background-tasks:using fastapi with celery for ": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.2\n  - Celery: 5.2.3\n\n- **Key Config Options**:\n  - Redis URL for Celery broker and backend.\n  - Task queue name in Celery configuration.\n  - Worker concurrency level.",
     "source": "web_search",
-    "updated_at": 1780833479.628585
+    "updated_at": 1780846206.365028
   },
   "search:fastapi+celery-background-tasks:using fastapi with celery for _ex": {
     "content": "- **FastAPI**: Install via pip: `pip install fastapi`\n- **Celery**: Install via pip: `pip install celery`\n- **Redis**: For message broker, install Redis server and ensure it's running.\n- **ASGI Server**: Use Uvicorn for FastAPI: `uvicorn main:app --reload`\n- **Celery Configuration**:\n  - Broker URL: `broker_url = 'redis://localhost:6379/0'`\n  - Result Backend: `result_backend = 'redis://localhost:6379/0'`\n- **Example Celery Task**:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='redis://localhost:6379/0')\n\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Running Celery Worker**: `celery -A tasks worker --loglevel=info`\n- **FastAPI Endpoint to Trigger Task**:\n  ```python\n  from fastapi import FastAPI\n  from celery.result import AsyncResult\n\n  app = FastAPI()\n\n  @app.post(\"/add/\")\n  async def add_numbers(x: int, y: int):\n      task = add.delay(x, y)\n      return {\"task_id\": task.id}\n  ```\n- **Checking Task Status**:\n  ```python\n  result = AsyncResult('task_id')\n  print(result.status)  # 'PENDING', 'STARTED', 'SUCCESS', etc.\n  ```\n\nThese steps provide a basic setup for using FastAPI with Celery for asynchronous processing.",
     "source": "code_example",
-    "updated_at": 1780833481.0357263
+    "updated_at": 1780846207.9745424
   }
 }

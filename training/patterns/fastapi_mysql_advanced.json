@@ -2,21 +2,21 @@
   "search:fastapi+mysql-advanced:fastapi mysql advanced usage 2": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn pydantic mysql-connector-python`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Pydantic: 1.10.7\n  - MySQL-Connector-Python: 8.0.26\n\n- **Key Config Options**:\n  - Database URL: `mysql+mysqlconnector://user:password@host/dbname`\n  - SQLAlchemy Engine: `SQLAlchemy.create_engine(database_url)`\n  - Pydantic Models for Data Validation\n  - FastAPI Dependencies for Authentication and Authorization",
     "source": "web_search",
-    "updated_at": 1780833593.9419272
+    "updated_at": 1780846350.310945
   },
   "search:fastapi+mysql-advanced:fastapi mysql advanced usage 2_ex": {
     "content": "- **GitHub Repository**: vuongtlt13/full-stack-fastapi-mysql\n- **FastAPI Version**: Not specified in the search results, but use latest stable version.\n- **SQLModel**: For ORM and database interactions.\n- **MySQL Connector**: Use `mysql-connector-python` for connecting to MySQL databases.\n- **CLI Commands**:\n  - `pip install fastapi uvicorn sqlmodel mysql-connector-python`\n- **Key Config Options**:\n  - Database URL: `mysql+mysqlconnector://user:password@host/dbname`\n  - Pydantic Models: Define data models using Pydantic for validation.\n  - CRUD Operations: Implement Create, Read, Update, Delete operations using FastAPI endpoints.",
     "source": "code_example",
-    "updated_at": 1780833595.5044265
+    "updated_at": 1780846352.6300073
   },
   "search:fastapi+mysql-advanced:mysql integration with fastapi": {
     "content": "- Use `pip install fastapi[all] mysql-connector-python` to install FastAPI and MySQL connector.\n- Create a `.env` file for environment variables like database credentials.\n- Use SQLModel for ORM, which is compatible with FastAPI.\n- Implement dependency injection for database sessions in FastAPI routes.\n- For health checks, create an endpoint that returns the current status of your application.\n- Ensure to use `asyncio` and `uvicorn` for running FastAPI applications asynchronously.\n- Regularly update dependencies using `pip install --upgrade <package_name>`.\n- Check the latest versions on [PyPI](https://pypi.org/) or [FastAPI GitHub](https://github.com/tiangolo/fastapi).\n- For database connection, use `mysql-connector-python` with appropriate flags for connection pooling.\n- Implement error handling in your database operations to manage exceptions gracefully.",
     "source": "web_search",
-    "updated_at": 1780833597.1407611
+    "updated_at": 1780846355.2052796
   },
   "search:fastapi+mysql-advanced:mysql integration with fastapi_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn sqlalchemy databases`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 1.4.32\n  - Databases: 0.6.1\n\n- **Key Config Options**:\n  - `.env` file for environment variables (e.g., `DATABASE_URL=sqlite:///./test.db`)\n  - Database URL format: `postgresql://user:password@host:port/dbname`\n  - SQLAlchemy models and schemas\n  - Dependency injection for database sessions",
     "source": "code_example",
-    "updated_at": 1780833598.681257
+    "updated_at": 1780846357.4977775
   }
 }

@@ -2,21 +2,21 @@
   "search:dotnet-ef-core-postgresql:entity framework core with pos": {
     "content": "- Install Npgsql.EntityFrameworkCore.PostgreSQL package using `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- Use the latest version of Entity Framework Core and Npgsql for optimal performance.\n- Configure connection pooling in your appsettings.json:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;Pooling=true;\"\n  }\n  ```\n- Enable logging to diagnose issues with `options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));`\n- Use async methods for database operations to improve performance: `await context.YourEntity.ToListAsync();`\n- Index your database tables to speed up query execution.\n- Monitor and adjust the maximum pool size based on your application's needs:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;Pooling=true;MaxPoolSize=100;\"\n  }\n  ```\n- Regularly update Npgsql and Entity Framework Core to benefit from performance improvements and security patches.",
     "source": "web_search",
-    "updated_at": 1780833411.5909104
+    "updated_at": 1780846112.640494
   },
   "search:dotnet-ef-core-postgresql:entity framework core with pos_ex": {
     "content": "- Use `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL` to install the latest version of the Npgsql EF Core provider.\n- Configure connection strings in your `appsettings.json` file, e.g., `\"DefaultConnection\": \"Host=localhost;Database=mydatabase;Username=myuser;Password=mypassword;\"`.\n- Enable logging for performance analysis by setting `optionsBuilder.EnableSensitiveDataLogging();` and configuring logging levels in `appsettings.json`.\n- Use `NpgsqlQueryCacheStrategy.None` to disable query caching if not needed, e.g., `optionsBuilder.UseQueryCacheStrategy(NpgsqlQueryCacheStrategy.None);`.\n- Optimize queries with indexes on frequently queried columns.\n- Adjust connection pool settings by setting `MaxPoolSize` and `MinPoolSize` in your connection string or through code configuration.\n- Monitor performance using tools like Entity Framework Core Profiler or PostgreSQL's own monitoring tools.\n- Regularly update the Npgsql provider to benefit from performance improvements and bug fixes.",
     "source": "code_example",
-    "updated_at": 1780833413.0476758
+    "updated_at": 1780846114.3028274
   },
   "search:dotnet-ef-core-postgresql:advanced entity framework core": {
     "content": "- **Install Npgsql.EntityFrameworkCore.PostgreSQL**: Use `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- **Latest Version**: Check [Npgsql GitHub](https://github.com/npgsql/Npgsql) for the latest version.\n- **Configure DbContext**: In `Startup.cs`, use `services.AddDbContext<YourDbContext>(options => options.UseNpgsql(\"your_connection_string\"))`.\n- **Migrations**: Use `dotnet ef migrations add InitialCreate` and `dotnet ef database update`.\n- **Pooling**: Set `poolSize` in `AddDbContextPool` to control the number of context instances.\n- **Connection String**: Ensure your connection string is correctly formatted for PostgreSQL.\n- **CRUD Operations**: Utilize standard EF Core methods like `Add`, `Update`, `Delete`, and `Query`.\n- **Performance Tuning**: Adjust `poolSize` based on application needs, default is 1024.\n- **Production Patterns**: Implement dependency injection and use migrations for database schema management.",
     "source": "web_search",
-    "updated_at": 1780833417.065369
+    "updated_at": 1780846116.1114233
   },
   "search:dotnet-ef-core-postgresql:advanced entity framework core_ex": {
     "content": "- **Latest Version**: Entity Framework Core 9.0 as of Nov 12, 2024.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json`.\n    ```json\n    \"ConnectionStrings\": {\n      \"DefaultConnection\": \"Server=yourserver;Port=5432;Database=yourdb;User Id=youruser;Password=yourpassword;\"\n    }\n    ```\n  - Use `Npgsql.EntityFrameworkCore.PostgreSQL` package for PostgreSQL support.\n- **Additional Tools**:\n  - Application Insights for tracking queries: Ensure it's configured in your project and that the necessary NuGet packages are installed.",
     "source": "code_example",
-    "updated_at": 1780833418.571174
+    "updated_at": 1780846118.1333425
   }
 }

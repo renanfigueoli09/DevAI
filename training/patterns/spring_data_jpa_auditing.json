@@ -2,21 +2,21 @@
   "search:spring-data-jpa-auditing:spring data jpa auditing 2025": {
     "content": "- **Enable Auditing**: Use `@EnableJpaAuditing` in your configuration class.\n- **Latest Version**: Spring Data JPA 2.7.x, Hibernate Envers 6.2.x, Micrometer 1.10.x.\n- **Key Config Options**:\n  - `@EntityListeners(AuditingEntityListener.class)`\n  - `@EnableJpaAuditing(auditorAwareRef = \"auditorProvider\")`\n  - Define an `AuditorAware` bean to provide the current auditor.\n- **CLI Commands**: None needed for basic setup.",
     "source": "web_search",
-    "updated_at": 1780833504.2211332
+    "updated_at": 1780846239.4414322
   },
   "search:spring-data-jpa-auditing:spring data jpa auditing 2025_ex": {
     "content": "- **CLI Commands**: None specific provided.\n- **Latest Versions**:\n  - Spring Data JPA: 3.x\n  - Hibernate Envers: 6.x\n  - Micrometer: 2.x\n- **Key Config Options**:\n  - `@EnableJpaAuditing` in main configuration class to enable auditing.\n  - `@EntityListeners(AuditingEntityListener.class)` on entity classes.\n  - Define `@PrePersist`, `@PostPersist`, `@PreUpdate`, and `@PostUpdate` methods in an audit listener.\n  - Use `@LastModifiedDate` and `@CreatedBy` annotations for automatic timestamping and user tracking.",
     "source": "code_example",
-    "updated_at": 1780833505.555983
+    "updated_at": 1780846241.2515903
   },
   "search:spring-data-jpa-auditing:auditing entities with spring ": {
     "content": "- **CLI Commands**: `mvn clean install` to build your project.\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.5\n  - Hibernate: 6.2.4.Final\n  - Java Persistence API (JPA): 3.0.1\n- **Key Config Options**:\n  - `@EnableJpaAuditing` in your configuration class.\n  - Define `@EntityListeners(AuditingEntityListener.class)` on your entity classes.\n  - Use `@CreatedDate`, `@LastModifiedDate`, `@CreatedBy`, and `@LastModifiedBy` annotations.\n  - Configure `application.properties` with `spring.jpa.hibernate.ddl-auto=update`.\n  - Implement `AuditorAware` to provide the current auditor.",
     "source": "web_search",
-    "updated_at": 1780833506.9138641
+    "updated_at": 1780846242.8541143
   },
   "search:spring-data-jpa-auditing:auditing entities with spring _ex": {
     "content": "- **CLI Commands**: None required.\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.x\n  - Hibernate: 6.1.x\n- **Key Config Options**:\n  - Register `AuditingEntityListener` in `orm.xml`.\n  - Use annotations like `@EnableJpaAuditing`, `@LastModifiedDate`, `@CreatedBy`, etc.\n  - Configure `AuditorAware` bean for user details.",
     "source": "code_example",
-    "updated_at": 1780833508.491844
+    "updated_at": 1780846244.4201732
   }
 }

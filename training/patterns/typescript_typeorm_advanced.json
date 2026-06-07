@@ -2,21 +2,21 @@
   "search:typescript-typeorm-advanced:typescript typeorm advanced us": {
     "content": "- **CLI Commands**:\n  - `tsc --init`: Initializes a new TypeScript project.\n  - `tsc --watch`: Compiles TypeScript files and watches for changes.\n\n- **Latest Version**: As of my last update, the latest stable version is 5.0.2. Check [TypeScript GitHub](https://github.com/microsoft/TypeScript/releases) for the most current version.\n\n- **Key Config Options**:\n  - `compilerOptions.target`: Specifies the target ECMAScript version.\n  - `compilerOptions.module`: Specifies module code generation.\n  - `include` and `exclude`: Specify files to include or exclude from compilation.\n  - `outDir`: Specifies the output directory for generated JavaScript files.",
     "source": "web_search",
-    "updated_at": 1780836368.012032
+    "updated_at": 1780846336.9397233
   },
   "search:typescript-typeorm-advanced:typescript typeorm advanced us_ex": {
     "content": "- **CLI Commands**:\n  - `npm install typeorm --save`\n  - `npx typeorm init`\n\n- **Latest Versions**:\n  - TypeORM: v0.3.9\n\n- **Key Config Options**:\n  - `entities`: Array of entity classes or directories.\n  - `migrations`: Directory where migration files are located.\n  - `subscribers`: Directory where subscriber files are located.\n  - `synchronize`: Boolean to automatically synchronize schema with entities.",
     "source": "code_example",
-    "updated_at": 1780836380.4369879
+    "updated_at": 1780846338.8196473
   },
   "search:typescript-typeorm-advanced:typescript typeorm performance": {
     "content": "- **Latest Version**: TypeScript 5.2 was released in October 2023.\n- **CLI Commands**:\n  - `tsc --init` to create a new `tsconfig.json`.\n  - `tsc --watch` for incremental compilation.\n  - `tsc --noEmitOnError` to skip emit if there are errors.\n- **Key Config Options in `tsconfig.json`**:\n  - `\"target\": \"ES6\"`: Specifies the target ECMAScript version.\n  - `\"module\": \"commonjs\"`: Defines module code generation.\n  - `\"strict\": true`: Enables all strict type-checking options.\n  - `\"esModuleInterop\": true`: Enables compatibility with ES modules.\n  - `\"skipLibCheck\": true`: Skips type checking of declaration files.\n- **Performance Optimization Tips**:\n  - Use `tsc --incremental` for faster builds on large projects.\n  - Optimize your `tsconfig.json` settings based on project needs.\n  - Consider using TypeScript's built-in performance features like `--noEmitOnError`.\n  - Regularly update TypeScript and related tools to benefit from performance improvements.",
     "source": "web_search",
-    "updated_at": 1780836391.943447
+    "updated_at": 1780846340.7874625
   },
   "search:typescript-typeorm-advanced:typescript typeorm performance_ex": {
     "content": "- **TypeScript Version**: Use the latest LTS version to take advantage of performance improvements and new features.\n- **TypeORM Version**: Update to the latest stable release for enhanced performance and bug fixes.\n- **CLI Commands**:\n  - `npm install typeorm --save`\n  - `npx typeorm migration:generate --name MigrationName`\n  - `npx typeorm migration:run`\n- **Key Config Options**:\n  - `entities`: Specify the path to your entity files.\n  - `migrations`: Set the path for migration files.\n  - `synchronize`: Enable or disable database schema synchronization (use with caution in production).\n  - `logging`: Configure logging levels for better performance monitoring.",
     "source": "code_example",
-    "updated_at": 1780836414.1580684
+    "updated_at": 1780846342.4738941
   }
 }
