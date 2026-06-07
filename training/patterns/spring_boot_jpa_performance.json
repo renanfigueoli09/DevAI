@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+jpa-performance:spring boot jpa performance op": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot and JPA.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.jdbc.use_get_generated_keys=true`\n  - `spring.jpa.open-in-view=false`",
+    "source": "web_search",
+    "updated_at": 1780806944.8302875
+  },
+  "search:spring-boot+jpa-performance:spring boot jpa performance op_ex": {
+    "content": "- Use `@Query` annotation for custom JPQL or native SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Enable second-level caching with `@EnableCaching` and configure cache providers like Ehcache or Caffeine.\n- Optimize entity mappings by avoiding lazy loading where possible.\n- Use batch processing for bulk operations with `@BatchSize`.\n- Configure connection pool settings in `application.properties` (e.g., `spring.datasource.hikari.maximum-pool-size=20`).\n- Monitor and analyze performance using tools like Spring Boot Actuator and JConsole.\n- Regularly update dependencies to the latest versions for security and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780806961.2265413
+  },
+  "search:spring-boot+jpa-performance:spring boot jpa caching strate": {
+    "content": "- **Enable Caching**: Use `@EnableCaching` annotation in your Spring Boot application.\n- **Cache Manager**: Default is `ConcurrentMapCacheManager`. For production, consider using `Ehcache`, `Caffeine`, or `Redis`.\n- **Spring Data JPA Cache**: Enable caching on repository methods with `@Cacheable`, `@CachePut`, and `@CacheEvict`.\n- **Custom Queries**: Use `@Query` to define custom queries that can be cached.\n- **First-Level Cache**: Managed by the JPA EntityManager, enabled by default. Caches entities within a transaction.\n- **Second-Level Cache**: Enabled via configuration in `application.properties`. Example: `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`.\n- **Caching Strategies**:\n  - **Read-Centric**: Use `@Cacheable` to cache query results.\n  - **Write-Centric**: Use `@CachePut` and `@CacheEvict` to handle updates and deletions.\n- **CLI Commands**:\n  - `mvn clean install`: Build your Spring Boot application.\n  - `java -jar target/your-application.jar`: Run your Spring Boot application.\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n- **Key Config Options**:\n  - `spring.cache.type`: Specifies the cache manager to use (e.g., `simple`, `caffeine`, `redis`).\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache`: Enables or disables the second-level cache.\n  - `spring.jpa.properties.hibernate.cache.region.factory_class`: Specifies the cache region factory class.",
+    "source": "web_search",
+    "updated_at": 1780806981.7847683
+  },
+  "search:spring-boot+jpa-performance:spring boot jpa caching strate_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `mvn clean install`: Builds and packages the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Data JPA: 2.7.4\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`: Configure caching strategies, database connections, and other settings.\n  - `@EnableCaching`: Enables caching in the Spring application context.\n  - `@Cacheable`, `@CachePut`, `@CacheEvict`: Annotations to control cache operations on methods.",
+    "source": "code_example",
+    "updated_at": 1780806997.418036
+  }
+}
