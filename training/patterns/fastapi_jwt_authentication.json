@@ -2,11 +2,11 @@
   "search:fastapi+jwt-authentication:fastapi jwt authentication tut": {
     "content": "- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`\n- Use the following command to run your FastAPI app: `uvicorn main:app --reload`\n- Key config options include:\n  - `SECRET_KEY`: A secret key for JWT encoding.\n  - `ALGORITHM`: The algorithm used for encoding (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiration time for access tokens.\n- For database integration, use SQLAlchemy with Alembic as ORM and migrations tool respectively.\n- Implement password hashing using Python's `bcrypt` library.\n- Key steps in JWT authentication:\n  1. User provides credentials (username/password).\n  2. Verify credentials against the database.\n  3. If valid, generate a JWT token.\n  4. Return the token to the user.\n  5. On subsequent requests, include the token in the Authorization header.\n  6. Decode and verify the token on the server side.\n- Ensure your environment variables are set for `SECRET_KEY`, `ALGORITHM`, etc., using `.env` file or environment-specific settings.\n- For production, consider using HTTPS to secure token transmission.",
     "source": "web_search",
-    "updated_at": 1780810651.2220411
+    "updated_at": 1780817217.933901
   },
   "search:fastapi+jwt-authentication:fastapi jwt authentication tut_ex": {
     "content": "- Use `pip install fastapi uvicorn python-multipart passlib[bcrypt]` to install necessary packages.\n- For JWT, use the latest version of `python-jose[cryptography]`.\n- Key config options include:\n  - `SECRET_KEY`: A secret key for signing tokens.\n  - `ALGORITHM`: The algorithm used for encoding/decoding tokens (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Token expiration time in minutes.",
     "source": "code_example",
-    "updated_at": 1780810652.7720249
+    "updated_at": 1780817219.4863997
   }
 }

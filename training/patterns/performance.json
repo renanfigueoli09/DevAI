@@ -2,46 +2,46 @@
   "search:Performance:fastapi+mysql performance opti": {
     "content": "- Use FastAPI's built-in ASGI server (`uvicorn`) for development and production.\n- Implement async programming to handle multiple requests concurrently.\n- Utilize SQLAlchemy or Tortoise ORM for database operations, as they support asynchronous queries.\n- Configure connection pooling in your database settings (e.g., `pool_size=10`, `max_overflow=20`).\n- Employ caching mechanisms like Redis or Memcached to reduce database load and improve response times.\n- Monitor API performance using tools like FastAPI's built-in metrics endpoint (`/docs#/info/metrics`) and third-party services such as Prometheus and Grafana.\n- Optimize SQL queries for better performance, avoiding N+1 query problems.\n- Regularly update FastAPI, SQLAlchemy, and other dependencies to the latest versions to benefit from performance improvements and security patches.\n- Use environment variables to manage configuration settings securely and efficiently.",
     "source": "web_search",
-    "updated_at": 1780813445.1630774
+    "updated_at": 1780817086.1253164
   },
   "search:Performance:fastapi+mysql performance opti_ex": {
     "content": "- Use `uvicorn` with the `--reload` flag during development.\n- Upgrade FastAPI to the latest version using pip: `pip install fastapi --upgrade`.\n- Implement caching mechanisms like Redis or Memcached.\n- Optimize database queries by indexing and reducing complexity.\n- Use asynchronous programming with `asyncio` for non-blocking I/O operations.\n- Configure MySQL with appropriate buffer sizes, connection pooling, and query optimization.\n- Deploy FastAPI behind a reverse proxy like Nginx for better performance and security.\n- Monitor application performance using tools like Prometheus and Grafana.",
     "source": "code_example",
-    "updated_at": 1780813451.0437012
+    "updated_at": 1780817087.3048189
   },
   "search:Performance:rabbitmq+advanced performance ": {
     "content": "- **CLI Commands**:\n  - `rabbitmqctl set_vm_memory_high_watermark <fraction>`: Set the high water mark for memory usage.\n  - `rabbitmqctl set_policy <policy_name> '{\"ha-mode\":\"all\"}' --apply-to queues`: Enable message mirroring across nodes.\n\n- **Latest Versions**:\n  - RabbitMQ 3.10.x\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark`: Controls the memory usage threshold.\n  - `queue_index_type`: Specifies the type of index used by queues (default is \"btree\").\n  - `disk_free_limit.relative`: Sets a relative limit on disk space before RabbitMQ stops accepting new messages.",
     "source": "web_search",
-    "updated_at": 1780813467.1775334
+    "updated_at": 1780817088.525489
   },
   "search:Performance:rabbitmq+advanced performance _ex": {
     "content": "- **CLI Commands**:\n  - `rabbitmqctl cluster_status`\n  - `rabbitmqctl set_policy`\n  - `rabbitmqctl set_user_tags`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.8.x (as of my last update)\n  - Erlang/OTP: 24.x\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark.relative`: Set to a value between 0.4 and 1.0.\n  - `disk_free_limit.absolute`: Define the disk space limit for RabbitMQ nodes.\n  - `cluster_partition_handling`: Configure how RabbitMQ handles network partitions (e.g., pause_minority, ignore).\n  - `queue_index_type`: Choose between 'btree' or 'multi_index' for queue indexing.",
     "source": "code_example",
-    "updated_at": 1780813475.3901274
+    "updated_at": 1780817089.8985035
   },
   "search:Performance:python+asyncio-performance opt": {
     "content": "- Use `asyncio.run()` to run the main entry point of your asyncio program.\n- Employ `asyncio.create_task()` for scheduling coroutines concurrently.\n- Utilize `asyncio.gather()` to run multiple tasks concurrently and wait for all to complete.\n- Optimize event loop by using `uvloop` or `libuv`, which are faster than the default asyncio event loop.\n- Implement thread pools with `concurrent.futures.ThreadPoolExecutor` for CPU-bound tasks.\n- Use `asyncio.Queue` for inter-task communication in a safe manner.\n- Monitor performance using tools like `asyncio.Task.all_tasks()` and `asyncio.current_task()`.\n- Ensure proper exception handling within coroutines to avoid unhandled exceptions that can crash the event loop.\n- Regularly update Python and asyncio libraries to benefit from performance improvements and bug fixes.",
     "source": "web_search",
-    "updated_at": 1780813490.4763675
+    "updated_at": 1780817091.1469831
   },
   "search:Performance:elasticsearch+setup performanc": {
     "content": "- **CLI Commands**:\n  - `docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e \"discovery.type=single-node\" docker.elastic.co/elasticsearch/elasticsearch:7.10.0`\n  - `curl -X PUT \"localhost:9200/my_index?pretty\"`\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"`\n\n- **Latest Versions**:\n  - Elasticsearch: 7.10.0\n  - OpenSearch: Not specified in the results\n\n- **Key Config Options**:\n  - `discovery.type`: Set to `single-node` for development environments.\n  - `cluster.name`: Define a unique name for your cluster.\n  - `node.name`: Assign a name to each node in the cluster.",
     "source": "web_search",
-    "updated_at": 1780813527.404686
+    "updated_at": 1780817092.3863475
   },
   "search:Performance:elasticsearch+setup performanc_ex": {
     "content": "- **CLI Commands**: Use `elasticsearch-plugin install` to install plugins like `analysis-icu`, `mapper-size`.\n- **Latest Version**: As of my last update, the latest stable version is 8.4.3.\n- **Key Config Options**:\n  - `index.refresh_interval`: Adjust based on your needs (e.g., `-1` for near real-time).\n  - `indices.memory.index_buffer_size`: Set to a value like `25%` of heap size.\n  - `thread_pool.search.size`: Increase if search operations are frequent.\n  - `discovery.seed_hosts`: Configure with IP addresses or hostnames.\n  - `cluster.initial_master_nodes`: List initial master nodes for new clusters.",
     "source": "code_example",
-    "updated_at": 1780813544.2910607
+    "updated_at": 1780817093.527142
   },
   "search:Performance:spring+kafka-advanced performa": {
     "content": "- Use `ReconnectingKafkaConsumerFactory` for connection pooling.\n- Optimize serialization by using `ByteArraySerializer` and `ByteArrayDeserializer`.\n- Tune Kafka Streams commit intervals with `commit.interval.ms`.\n- Increase cache sizes in Kafka Streams with `cache.max.bytes.buffering`.\n- Adjust thread counts in Kafka Streams with `num.stream.threads`.\n- Monitor Zookeeper writes for changes to consumer group membership or cluster topology.\n- Use Spring Boot's auto-configuration for Kafka, which simplifies setup and configuration.\n- Ensure latest versions of Spring Boot and Apache Kafka for performance improvements and bug fixes.\n- Utilize Java 21 Virtual Threads for scalability in event-driven microservices.",
     "source": "web_search",
-    "updated_at": 1780813553.2949855
+    "updated_at": 1780817094.7512038
   },
   "search:Performance:spring+kafka-advanced performa_ex": {
     "content": "- Use `mvn spring-boot:run` to run Spring Boot applications.\n- Ensure Kafka version compatibility with Spring Kafka, e.g., Spring Kafka 2.8.x works well with Kafka 3.0.x.\n- Key config options include:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Offset reset policy (e.g., earliest, latest).\n  - `spring.kafka.producer.key-serializer` and `spring.kafka.producer.value-serializer`: Serializer classes for keys and values.",
     "source": "code_example",
-    "updated_at": 1780813565.863676
+    "updated_at": 1780817095.9074397
   }
 }

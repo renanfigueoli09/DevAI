@@ -2,51 +2,51 @@
   "search:Advanced Testing:typescript nextjs testing adva": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install cypress --save-dev`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Cypress: v12.8\n\n- **Key Config Options**:\n  - `tsconfig.json`: Enable strict mode, type-safe routing, and environment variable types.\n  - `next.config.js`: Configure API routes, dynamic routing, and authentication tests.",
     "source": "web_search",
-    "updated_at": 1780810550.661582
+    "updated_at": 1780817117.3225029
   },
   "search:Advanced Testing:typescript nextjs testing adva_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9\n  - Jest: 27.5\n  - React Testing Library: 13.4\n\n- **Key Config Options**:\n  - `jest.config.ts` for Jest configuration.\n  - `tsconfig.json` for TypeScript settings.\n  - `.babelrc` or `babel.config.js` for Babel configuration if needed.",
     "source": "code_example",
-    "updated_at": 1780810555.2213888
+    "updated_at": 1780817118.4700487
   },
   "search:Advanced Testing:fastapi asyncio websockets tes": {
     "content": "- Use `TestClient` to test WebSockets in FastAPI.\n- Example command: `pytest --asyncio-mode=auto your_test_file.py`.\n- Ensure you have the latest versions of FastAPI, Starlette, and httpx for compatibility.\n- Key config options include setting up an async event loop with `pytest-asyncio`.\n- For WebSocket tests, use `httpx-ws` or the Starlette test client's WebSocket capabilities.",
     "source": "web_search",
-    "updated_at": 1780810557.2457852
+    "updated_at": 1780817119.6507752
   },
   "search:Advanced Testing:fastapi asyncio websockets tes_ex": {
     "content": "- Install FastAPI, Uvicorn, Websockets, Pytest, and Pytest-Asyncio using pip.\n- Use `pytest` for testing WebSocket applications.\n- Employ `httpx` for making HTTP requests in tests.\n- Set up a basic WebSocket application for testing by defining routes and handling connections.\n- Assert response status codes to validate the API's behavior.\n- Utilize Chanx testing utilities for comprehensive WebSocket testing.\n- Test message flows and broadcasting using pytest fixtures.\n- Handle exceptions like `asyncio.TimeoutError` during WebSocket communication.\n- Configure FastAPI for state management, authentication, and multi-worker scaling.",
     "source": "code_example",
-    "updated_at": 1780810558.732356
+    "updated_at": 1780817120.8944442
   },
   "search:Advanced Testing:spring kotlin jpa testing": {
     "content": "- **CLI Commands**:\n  - `./gradlew test` to run tests.\n  - `./mvnw clean install` for Maven projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kotlin: 1.9.x\n  - Spring Data JPA: 3.2.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database configurations.\n  - Use `@DataJpaTest` for testing repositories without full application context.\n  - Configure `spring.jpa.hibernate.ddl-auto=update` for development environments.\n\n- **Testing Frameworks**:\n  - JUnit 5\n  - Mockito for mocking dependencies\n\n- **Database Testing**:\n  - In-memory databases like H2 for quick tests.\n  - Use `@Sql` annotation to initialize database state before tests.",
     "source": "web_search",
-    "updated_at": 1780810560.2089663
+    "updated_at": 1780817122.0960765
   },
   "search:Advanced Testing:python fastapi authentication ": {
     "content": "- Use `uvicorn` to run FastAPI applications locally.\n- For testing, install `pytest` and `fastapi-testclient`.\n- Create a test file with `.test.py` extension.\n- Import `TestClient` from `fastapi.testclient`.\n- Initialize the client with your FastAPI app instance.\n- Use `client.post('/auth', data={'username': 'user', 'password': 'pass'})` to simulate authentication and get a token.\n- Store the token in a variable for subsequent requests.\n- Add headers with the token for authenticated requests, e.g., `headers={\"Authorization\": f\"Bearer {token}\"}`.\n- Use `client.get('/protected-endpoint', headers=headers)` to test protected routes.\n- Run tests using `pytest` command.",
     "source": "web_search",
-    "updated_at": 1780810561.6685548
+    "updated_at": 1780817123.441507
   },
   "search:Advanced Testing:python fastapi authentication _ex": {
     "content": "- Use `uvicorn` to run FastAPI applications.\n- Install `fastapi`, `python-multipart`, and `passlib[bcrypt]`.\n- For authentication, use JWT tokens with `python-jose[cryptography]`.\n- Configure the secret key and algorithm in your application settings.\n- Implement user registration, login, and logout endpoints.\n- Use Pydantic models for data validation.\n- Test authentication using tools like Postman or cURL.\n- Ensure middleware is used to handle authentication globally.",
     "source": "code_example",
-    "updated_at": 1780810563.1517196
+    "updated_at": 1780817124.62852
   },
   "search:Advanced Testing:react native redux saga testin": {
     "content": "- Use `redux-saga-test` library for syntactic sugar in step-by-step tests.\n- For manual iteration, use `.next()` method on the generator returned by `fromGenerator`.\n- Ensure you have the latest versions of `redux`, `react-redux`, and `redux-saga` installed.\n- Key config options include middleware setup with `applyMiddleware(sagaMiddleware)` in your store configuration.\n- For React Native testing, consider using Jest along with `redux-mock-store` for mocking Redux stores.",
     "source": "web_search",
-    "updated_at": 1780810564.5006902
+    "updated_at": 1780817125.9113514
   },
   "search:Advanced Testing:react native redux saga testin_ex": {
     "content": "- Use `npm install redux-saga` or `yarn add redux-saga` to install the latest version.\n- For testing sagas, consider using libraries like `redux-saga-test-plan`.\n- Initialize a saga with `createSagaMiddleware()`.\n- Configure your store with `applyMiddleware(sagaMiddleware)`.\n- Use `sagaMiddleware.run(yourSaga)` to start the saga.\n- To test sagas step-by-step, use `runSaga` from `redux-saga-test-plan`.\n- For full saga testing, run the saga and assert on its effects using `expectSaga`.\n- Key config options include middleware setup and saga initialization.",
     "source": "code_example",
-    "updated_at": 1780810565.9847367
+    "updated_at": 1780817127.0504308
   },
   "search:Advanced Testing:spring kotlin jpa testing_ex": {
     "content": "- **GitHub Repository**: [bastman/kotlin-spring-jpa-examples](https://github.com/bastman/kotlin-spring-jpa-examples)\n- **CLI Commands**:\n  - `git clone https://github.com/bastman/kotlin-spring-jpa-examples.git`\n  - `cd kotlin-spring-jpa-examples`\n  - `./mvnw clean install` (for Maven projects)\n  - `./gradlew build` (for Gradle projects)\n- **Latest Versions**:\n  - Kotlin: 1.8.20\n  - Spring Boot: 3.1.4\n  - JPA: 2.2\n  - Hibernate: 6.2.5.Final\n  - QueryDSL: 5.0.0\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - `@EntityScan`, `@EnableJpaRepositories`, and `@SpringBootApplication` annotations in main application class.\n  - Repository interfaces extending `JpaRepository` for data access.",
     "source": "code_example",
-    "updated_at": 1780810567.3922024
+    "updated_at": 1780817128.2667315
   }
 }

@@ -2,21 +2,21 @@
   "search:kubernetes+canary-deployments:kubernetes canary deployments ": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <canary-deployment-file.yaml>`\n  - `kubectl rollout status deployment/<deployment-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.x\n  - Helm: v3.8.x\n\n- **Key Config Options**:\n  - `spec.strategy.canary`: Defines the canary strategy.\n  - `spec.template.spec.containers.image`: Specifies the image version for the canary deployment.\n  - `spec.minReadySeconds`: Minimum number of seconds the new pods should be ready before marking the deployment as successful.",
     "source": "web_search",
-    "updated_at": 1780810582.3176947
+    "updated_at": 1780817139.5407324
   },
   "search:kubernetes+canary-deployments:kubernetes canary deployments _ex": {
     "content": "- Use `kubectl apply -f <canary-deployment-file>.yaml` to deploy canary version.\n- Ensure the canary deployment has a lower replica count initially, e.g., `replicas: 2`.\n- Gradually increase the canary's replicas using `kubectl scale deployment/<canary-deployment-name> --replicas=4`.\n- Monitor metrics with Prometheus and Grafana for health checks.\n- Use `kubectl rollout status deployment/<canary-deployment-name>` to track the progress of the canary release.\n- If successful, promote the canary to production by scaling down the original deployment and scaling up the canary.",
     "source": "code_example",
-    "updated_at": 1780810584.0039666
+    "updated_at": 1780817140.9103782
   },
   "search:kubernetes+canary-deployments:canary deployment strategies i": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout status deployment/<deployment-name>`\n  - `kubectl apply -f <canary-deployment-file.yaml>`\n\n- **Latest Versions**:\n  - Argo Rollouts: v1.2.3\n\n- **Key Config Options**:\n  - `spec.strategy.canary.steps`: Defines the steps for canary rollout.\n  - `spec.template.spec.containers.image`: Specifies the container image version.\n  - `spec.progressDeadlineSeconds`: Sets the timeout for a deployment to make progress before it is considered failed.",
     "source": "web_search",
-    "updated_at": 1780810585.692254
+    "updated_at": 1780817145.225503
   },
   "search:kubernetes+canary-deployments:canary deployment strategies i_ex": {
     "content": "- Use `kubectl apply -f <canary-deployment-file>.yaml` to deploy the canary version.\n- Set `spec.strategy.canary.weight` to control traffic split, e.g., `50`.\n- Monitor deployment with `kubectl rollout status deployment/<deployment-name> --watch`.\n- Rollback using `kubectl rollout undo deployment/<deployment-name>`.\n- Key config options: `canary`, `weight`, `maxSurge`, `maxUnavailable`.",
     "source": "code_example",
-    "updated_at": 1780810589.5466156
+    "updated_at": 1780817146.5599644
   }
 }

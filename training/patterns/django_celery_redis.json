@@ -2,21 +2,21 @@
   "search:django+celery-redis:django celery redis task queue": {
     "content": "- **CLI Commands**:\n  - `celery -A myproject worker --loglevel=info`\n  - `celery -A myproject beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to Redis URL (e.g., `redis://localhost:6379/0`)\n  - `CELERY_RESULT_BACKEND`: Set to Redis URL (e.g., `redis://localhost:6379/1`)\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types (e.g., `['json']`)\n  - `CELERY_TASK_SERIALIZER`: Serializer for task arguments (e.g., `'json'`)",
     "source": "web_search",
-    "updated_at": 1780810597.7107935
+    "updated_at": 1780817152.7585962
   },
   "search:django+celery-redis:django celery redis task queue_ex": {
     "content": "- **Install Celery**: `pip install celery`\n- **Install Redis**: `sudo apt-get install redis-server`\n- **Install RabbitMQ**: `sudo apt-get install rabbitmq-server`\n- **Django settings**:\n  - `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n  - `CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'`\n- **Create Celery app**: In your Django project, create a file `celery.py`:\n  ```python\n  from __future__ import absolute_import, unicode_literals\n  import os\n  from celery import Celery\n\n  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')\n\n  app = Celery('your_project')\n  app.config_from_object('django.conf:settings', namespace='CELERY')\n  app.autodiscover_tasks()\n  ```\n- **Define tasks**: In any Django app, create a `tasks.py` file and define your tasks:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def send_email_task(subject, message, to_email):\n      # Email sending logic here\n      pass\n  ```\n- **Run Celery worker**:\n  - `celery -A your_project worker --loglevel=info`\n- **Enqueue tasks**: Call the task from anywhere in your Django project:\n  ```python\n  send_email_task.delay('Subject', 'Message', 'example@example.com')\n  ```\n- **Latest versions**: Ensure you use compatible versions of Celery, Redis, and RabbitMQ.\n- **Key config options**:\n  - `CELERY_BROKER_URL`: URL for the message broker (Redis or RabbitMQ).\n  - `CELERY_RESULT_BACKEND`: URL for storing task results (Redis).",
     "source": "code_example",
-    "updated_at": 1780810599.4168868
+    "updated_at": 1780817153.935491
   },
   "search:django+celery-redis:django celery redis monitoring": {
     "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name flower`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n  - `CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'`\n  - `CELERY_ACCEPT_CONTENT = ['json']`\n  - `CELERY_TASK_SERIALIZER = 'json'`",
     "source": "web_search",
-    "updated_at": 1780810601.000193
+    "updated_at": 1780817155.1026957
   },
   "search:django+celery-redis:django celery redis monitoring_ex": {
     "content": "- **Install Celery and Redis**:\n  ```bash\n  pip install celery redis\n  ```\n\n- **Configure Django to use Redis as a broker**:\n  Update `settings.py`:\n  ```python\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n\n- **Create Celery tasks**:\n  In your Django app, create `tasks.py` and define a task:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def add(x, y):\n      return x + y\n  ```\n\n- **Run Celery worker**:\n  ```bash\n  celery -A your_project_name worker --loglevel=info\n  ```\n\n- **Docker Compose setup** (example `docker-compose.yml`):\n  ```yaml\n  version: '3.8'\n  services:\n    web:\n      build: .\n      command: python manage.py runserver 0.0.0.0:8000\n      volumes:\n        - .:/code\n      ports:\n        - \"8000:8000\"\n      depends_on:\n        - redis\n        - celery\n\n    redis:\n      image: \"redis:alpine\"\n\n    celery:\n      build: .\n      command: celery -A your_project_name worker --loglevel=info\n      volumes:\n        - .:/code\n      depends_on:\n        - redis\n  ```\n\n- **Latest versions**:\n  - Celery: `5.2.7`\n  - Redis: `6.2.6`\n\n- **Key config options**:\n  - `CELERY_BROKER_URL`: Specifies the URL of the message broker.\n  - `CELERY_RESULT_BACKEND`: Specifies where to store task results.\n  - `CELERY_ACCEPT_CONTENT`: List of content types that the worker will accept.\n\nThese steps provide a basic setup for integrating Celery with Django and Redis, including how to configure your project, create tasks, and run workers.",
     "source": "code_example",
-    "updated_at": 1780810602.3805285
+    "updated_at": 1780817156.321407
   }
 }
