@@ -2,31 +2,31 @@
   "search:typescript+nextjs-performance:typescript next.js performance": {
     "content": "- **CLI Commands**:\n  - `next build --optimize`: Optimizes the build process.\n  - `next start --dev`: Starts the development server with performance optimizations.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - TypeScript: v4.9\n\n- **Key Config Options**:\n  - `next.config.js`: Configure optimization settings like `reactStrictMode`, `swcMinify`.\n  - `publicRuntimeConfig` and `serverRuntimeConfig`: For environment-specific configurations.\n  - `images.optimization.deviceSizes`: Define device sizes for image optimization.",
     "source": "web_search",
-    "updated_at": 1780790385.589837
+    "updated_at": 1780792057.5626967
   },
   "search:typescript+nextjs-performance:typescript next.js performance_ex": {
     "content": "- **CLI Commands**:\n  - `next build`: Builds the Next.js application.\n  - `next start`: Starts the production server.\n\n- **Latest Versions**:\n  - Next.js: 13.x\n\n- **Key Config Options**:\n  - `next.config.js`: Configure various settings like output, assetPrefix, and webpack configuration.\n  - `reactStrictMode: true`: Enables React's strict mode for better development experience.\n  - `images: { domains: ['example.com'] }`: Specifies allowed image domains for optimization.",
     "source": "code_example",
-    "updated_at": 1780790386.7774305
+    "updated_at": 1780792058.8486848
   },
   "search:typescript+nextjs-performance:typescript next.js serverless ": {
     "content": "- **Latest Version of Next.js**: 14\n- **CLI Command to Create a New Project**:\n  ```bash\n  npx create-next-app@latest my-serverless-app --typescript\n  ```\n- **Key Config Options for Serverless Functions**:\n  - `next.config.js`: Configure serverless functions, API routes, and other settings.\n  - Environment Variables: Use `.env.local` or environment variables in Vercel to manage secrets and configurations.\n- **Performance Optimization Tips**:\n  - Utilize static generation (`getStaticProps`) for pages that don't change frequently.\n  - Leverage server-side rendering (`getServerSideProps`) for dynamic content.\n  - Implement caching strategies using middleware or API routes.\n- **GitHub Repositories for Further Learning**:\n  - [vikiboss/deno-functions](https://github.com/vikiboss/deno-functions)\n  - [nhost/graphql-api](https://github.com/nhost/graphql-api)",
     "source": "web_search",
-    "updated_at": 1780790387.925805
+    "updated_at": 1780792059.9889424
   },
   "search:typescript+nextjs-performance:typescript next.js serverless _ex": {
     "content": "- **Latest Next.js Version**: 14\n- **CLI Command to Create a New Project**:\n  ```bash\n  npx create-next-app@latest my-nextjs-serverless-project --typescript\n  ```\n- **Key Config Options in `next.config.js`**:\n  - `serverRuntimeConfig`: For environment variables that are only available on the server.\n  - `publicRuntimeConfig`: For environment variables that can be accessed both on the client and server.\n- **Security Considerations**:\n  - Use Next.js Actions for secure server-side code execution.\n  - Ensure all sensitive data is handled securely, especially in serverless functions.\n- **Database Integration**:\n  - MongoDB: Supported natively with Next.js using `@mongodb-js/nextjs-driver`.\n  - PostgreSQL: Can be integrated using libraries like `pg` or `knex`.\n- **Authentication and Authorization**:\n  - Use Firebase Authentication for user management.\n  - Implement custom middleware for authorization checks in serverless functions.\n- **Storage Solutions**:\n  - AWS S3: For static assets and file storage.\n  - Google Cloud Storage: Alternative for cloud-based storage solutions.",
     "source": "code_example",
-    "updated_at": 1780790389.0583525
+    "updated_at": 1780792061.1972613
   },
   "search:typescript+nextjs-performance:typescript next.js deployment ": {
     "content": "- **Latest Next.js Version**: 15\n- **TypeScript Version**: 6.0\n- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm run build` for production build\n  - `npm start` to run the development server\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations like asset paths, webpack settings.\n  - `tsconfig.json`: For TypeScript configuration options such as compiler options and include/exclude patterns.\n- **Performance Optimization Tips**:\n  - Use Server-Side Rendering (SSR) for dynamic content.\n  - Implement Static Site Generation (SSG) for static pages.\n  - Utilize Next.js Image component for optimized images.",
     "source": "web_search",
-    "updated_at": 1780790390.1080801
+    "updated_at": 1780792062.3163502
   },
   "search:typescript+nextjs-performance:typescript next.js deployment _ex": {
     "content": "- **CLI Commands**: `npx create-next-app@latest --typescript`\n- **Latest Versions**: Next.js v13.5, TypeScript v4.9\n- **Key Config Options**:\n  - `tsconfig.json`: Configure compiler options like `\"strict\": true`, `\"esModuleInterop\": true`.\n  - `next.config.js`: Enable TypeScript by setting `compilerOptions` in the `typescript` plugin.\n  - VSCode: Install \"TypeScript and JavaScript Language Features\" extension.",
     "source": "code_example",
-    "updated_at": 1780790391.1625478
+    "updated_at": 1780792063.5648122
   }
 }
