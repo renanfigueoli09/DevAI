@@ -2,31 +2,31 @@
   "search:fastapi+asyncio-performance:fastapi asyncio performance op": {
     "content": "- Use `uvicorn` as the ASGI server for FastAPI.\n- Ensure your database operations are async to avoid blocking the event loop.\n- Implement `run_in_executor` for CPU-bound tasks to offload them from the asyncio event loop.\n- Update FastAPI and its dependencies to their latest versions for performance improvements.\n- Use `asyncio.create_task()` for running async functions concurrently.\n- Monitor and profile your application using tools like `asyncio.run()` with profiling enabled.\n- Optimize database queries and use connection pooling.\n- Consider using a background task queue like Celery for long-running tasks.\n- Enable HTTP/2 support in `uvicorn` to improve performance over HTTP/1.1.\n- Use middleware for common functionality like logging, authentication, and rate limiting.",
     "source": "web_search",
-    "updated_at": 1780825186.863226
+    "updated_at": 1780833749.142992
   },
   "search:fastapi+asyncio-performance:fastapi asyncio performance op_ex": {
     "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --reload` for development.\n  - `uvicorn app.main:app --host 0.0.0.0 --port 8000` for production.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - Uvicorn: v10.7.0\n\n- **Key Config Options**:\n  - `asyncio.run(app)` for running the app.\n  - `app.state.cache = Cache()` for caching mechanisms.\n  - `database_url` in settings for database configuration.\n  - `max_connections` and `min_connections` for connection pool tuning.",
     "source": "code_example",
-    "updated_at": 1780825188.1584463
+    "updated_at": 1780833750.8931286
   },
   "search:fastapi+asyncio-performance:high-performance fastapi appli": {
     "content": "- **CLI Commands**: Use `uvicorn` to run FastAPI apps, e.g., `uvicorn main:app --reload`.\n- **Latest Versions**: Ensure you use the latest versions of FastAPI and Uvicorn for optimal performance.\n- **Key Config Options**:\n  - `asyncio.run(app)`: For running the app asynchronously.\n  - `background_tasks.add_task()`: To add background tasks.\n  - `Depends()`: For dependency injection, enhancing modularity and reusability.",
     "source": "web_search",
-    "updated_at": 1780825189.419508
+    "updated_at": 1780833752.8095326
   },
   "search:fastapi-asyncio-performance:fastapi asyncio performance op": {
     "content": "- Use FastAPI version 0.83.0 or later.\n- Employ `asyncio.sleep()` for simulating I/O operations.\n- For handling long-running tasks, use `run_in_executor` with a thread pool executor.\n- Configure the event loop to handle multiple concurrent requests efficiently.\n- Monitor and optimize your application using tools like FastAPI's built-in metrics and logging.\n- Consider using a hybrid architecture combining FastAPI for web services with other languages or frameworks for CPU-bound tasks.",
     "source": "web_search",
-    "updated_at": 1780825193.928062
+    "updated_at": 1780833754.5769663
   },
   "search:fastapi-asyncio-performance:fastapi asyncio performance op_ex": {
     "content": "- Use `uvicorn` as the ASGI server for FastAPI.\n- Ensure routes are defined as async to leverage FastAPI's non-blocking capabilities.\n- Utilize `asyncio.create_task()` to run multiple tasks concurrently within a single endpoint.\n- Employ `asyncio.gather()` to wait for all concurrent tasks to complete before proceeding.\n- For performance optimization, consider using `run_in_threadpool()` or `run_in_executor()` for CPU-bound operations.\n- Monitor and adjust the number of worker processes in `uvicorn` based on your application's load.\n- Regularly update FastAPI and its dependencies to benefit from performance improvements and security patches.",
     "source": "code_example",
-    "updated_at": 1780825195.1198332
+    "updated_at": 1780833756.489947
   },
   "search:fastapi-asyncio-performance:high performance fastapi appli": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Uvicorn: v0.21.2\n\n- **Key Config Options**:\n  - `app = FastAPI()`: Create a new FastAPI app instance.\n  - `uvicorn.run(app, host=\"127.0.0.1\", port=8000)`: Run the app with Uvicorn server.\n  - `dependencies`: Define dependencies for routes using Pydantic models.\n  - `responses`: Customize responses with status codes and descriptions.",
     "source": "web_search",
-    "updated_at": 1780825196.2936578
+    "updated_at": 1780833758.1676757
   }
 }

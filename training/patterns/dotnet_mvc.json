@@ -2,21 +2,21 @@
   "search:dotnet+mvc:asp.net mvc security best prac": {
     "content": "- **Update .NET Framework**: Ensure your project is using the latest version of the .NET Framework to benefit from security patches and improvements.\n  \n- **Use HTTPS**: Configure your application to use HTTPS by setting `https://` in the `web.config` file under `<system.webServer>` > `<rewrite>` > `<rules>`.\n  \n- **Input Validation**: Implement input validation for all user inputs using data annotations or custom validation attributes.\n  \n- **Anti-XSS Protection**: Use Anti-XSS libraries like Microsoft.Security.Application to encode outputs that are rendered in HTML.\n  \n- **CSRF Protection**: Enable CSRF protection by using the `ValidateAntiForgeryToken` attribute on your controllers and views.\n  \n- **Dependency Injection (DI)**: Utilize dependency injection for managing dependencies, which helps in reducing vulnerabilities related to object creation and management.\n  \n- **Use Strong Passwords**: Implement password policies that enforce strong passwords and require regular updates.\n  \n- **Logging and Monitoring**: Configure logging to capture security-related events and monitor logs regularly for suspicious activities.\n  \n- **Secure Cookies**: Set secure flags on cookies by setting `secure` and `HttpOnly` attributes in the `web.config`.\n  \n- **Regular Security Audits**: Schedule regular security audits and penetration testing to identify and mitigate vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780825019.131269
+    "updated_at": 1780833470.5581324
   },
   "search:dotnet+mvc:asp.net mvc security best prac_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new mvc` to create a new ASP.NET Core MVC project.\n  - `dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer` for JWT authentication.\n\n- **Latest Versions**:\n  - ASP.NET Core 7.0 (as of my last update in October 2023).\n  - Entity Framework Core 7.0.\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure `Authentication` and `Authorization` sections.\n    ```json\n    \"Authentication\": {\n      \"JwtBearer\": {\n        \"Authority\": \"https://your-auth-server.com\",\n        \"Audience\": \"your-audience\"\n      }\n    },\n    \"Authorization\": {\n      \"RequireAuthenticatedUser\": true\n    }\n  ```\n  - In `Startup.cs` or `Program.cs`, configure services and middleware for authentication and authorization.\n    ```csharp\n    services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)\n            .AddJwtBearer(options =>\n            {\n                options.Authority = Configuration[\"Authentication:JwtBearer:Authority\"];\n                options.Audience = Configuration[\"Authentication:JwtBearer:Audience\"];\n            });\n\n    app.UseAuthentication();\n    app.UseAuthorization();\n    ```\n\n- **Security Practices**:\n  - Use HTTPS.\n  - Implement input validation and sanitization.\n  - Regularly update dependencies to patch security vulnerabilities.\n  - Use dependency injection for managing services securely.",
     "source": "code_example",
-    "updated_at": 1780825020.3279862
+    "updated_at": 1780833471.9143674
   },
   "search:dotnet+mvc:asp.net mvc testing strategies": {
     "content": "- **Latest Version**: ASP.NET Core 6.0\n- **CLI Commands**:\n  - `dotnet new mvc` to create a new MVC project.\n  - `dotnet run` to start the application.\n  - `dotnet test` to run tests.\n- **Key Config Options**:\n  - `appsettings.json`: Configure application settings, including connection strings and logging levels.\n  - `Startup.cs` or `Program.cs`: Set up services and middleware for the application.",
     "source": "web_search",
-    "updated_at": 1780825021.5524929
+    "updated_at": 1780833473.5149865
   },
   "search:dotnet+mvc:asp.net mvc testing strategies_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet test`: Runs tests in the project.\n  - `dotnet add package NUnit`: Adds NUnit testing framework to your project.\n\n- **Latest Versions**:\n  - .NET 8\n  - NUnit 4.x\n\n- **Key Config Options**:\n  - `TestProjectName`: Specifies the name of the test project.\n  - `TargetFramework`: Defines the target framework for the tests (e.g., net8.0).",
     "source": "code_example",
-    "updated_at": 1780825022.8286622
+    "updated_at": 1780833474.9750276
   }
 }

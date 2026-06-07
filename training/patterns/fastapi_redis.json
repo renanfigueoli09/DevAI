@@ -2,31 +2,31 @@
   "search:fastapi-redis:fastapi redis caching strategi": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Redis: v4.6.3\n\n- **Key Config Options**:\n  - `redis_url`: URL for the Redis server.\n  - `max_connections`: Maximum number of connections to Redis.\n  - `min_connections`: Minimum number of connections to Redis.\n  - `cache_timeout`: Time in seconds that cached data remains valid.",
     "source": "web_search",
-    "updated_at": 1780824982.9223158
+    "updated_at": 1780833426.2072403
   },
   "search:fastapi-redis:fastapi redis caching strategi_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Uvicorn: 10.6.0\n  - Redis: 4.3.4\n\n- **Key Config Options**:\n  - `redis_url`: URL for the Redis server (e.g., `redis://localhost:6379/0`)\n  - `cache_timeout`: Time in seconds to cache responses (e.g., `300` for 5 minutes)\n  - `max_connections`: Maximum number of connections to Redis (e.g., `10`)",
     "source": "code_example",
-    "updated_at": 1780824984.3817513
+    "updated_at": 1780833427.6940875
   },
   "search:fastapi-redis:fastapi redis pub/sub patterns": {
     "content": "- Use `pip install fastapi[all] redis` to install FastAPI and Redis.\n- For asynchronous operations, use `aioredis` instead of `redis`.\n- Implement a `RedisPubSubManager` class for managing connections, subscriptions, and publishing messages.\n- Utilize Uvicorn as the ASGI server for handling WebSocket connections in multi-worker deployments.\n- Configure Redis to handle pub/sub messaging between FastAPI instances.\n- Ensure proper error handling in production environments when using Redis pub/sub with Uvicorn workers.",
     "source": "web_search",
-    "updated_at": 1780824985.7089896
+    "updated_at": 1780833429.1676571
   },
   "search:fastapi-redis:fastapi redis pub/sub patterns_ex": {
     "content": "- Install FastAPI and Redis using pip:\n  ```\n  pip install fastapi[all] redis\n  ```\n\n- Use the latest version of FastAPI and Redis as per PyPI.\n\n- Key configuration for RedisPubSubManager:\n  - `redis_url`: URL to connect to Redis.\n  - `channel_name`: Name of the channel for Pub/Sub operations.\n\n- Example usage in a FastAPI WebSocket endpoint:\n  ```python\n  from fastapi import WebSocket, FastAPI\n  import asyncio\n  import redis.asyncio as aioredis\n\n  app = FastAPI()\n\n  class RedisPubSubManager:\n      def __init__(self, redis_url: str, channel_name: str):\n          self.redis_url = redis_url\n          self.channel_name = channel_name\n          self.pubsub_client = None\n\n      async def connect(self):\n          self.pubsub_client = await aioredis.create_redis_pool(self.redis_url)\n          return self.pubsub_client\n\n      async def subscribe(self):\n          pubsub_client = await self.connect()\n          pubsub_client.subscribe(self.channel_name)\n\n      async def publish(self, message: dict):\n          pubsub_client = await self.connect()\n          await pubsub_client.publish(self.channel_name, json.dumps(message))\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket):\n      await websocket.accept()\n      redis_manager = RedisPubSubManager(\"redis://localhost\", \"test_channel\")\n      await redis_manager.subscribe()\n\n      while True:\n          data = await websocket.receive_text()\n          message = {\"text\": data}\n          await redis_manager.publish(message)\n  ```\n\n- Ensure Redis server is running and accessible at the specified URL.\n\n- Use `aioredis` for asynchronous operations with Redis in FastAPI.",
     "source": "code_example",
-    "updated_at": 1780824987.0357618
+    "updated_at": 1780833430.6972446
   },
   "search:fastapi+redis:fastapi redis-py aioredis cach": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi[all] aioredis`\n  - `pip install fastapi-advanced-rate-limiter`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - aioredis: 2.4.1\n  - fastapi-advanced-rate-limiter: 0.3.0\n\n- **Key Config Options**:\n  - Redis URL: `redis://localhost:6379/0`\n  - Rate Limit Algorithm: `fixed_window`\n  - Window Size: `60` seconds\n  - Max Requests: `20`\n\nFor detailed integration and usage, refer to the provided links.",
     "source": "web_search",
-    "updated_at": 1780824988.322055
+    "updated_at": 1780833432.2431533
   },
   "search:fastapi+redis:fastapi redis-py aioredis cach_ex": {
     "content": "- **Install fastapi-cache**: `pip install fastapi-cache`\n- **Install aioredis**: `pip install aioredis`\n- **Key Config Options**:\n  - `CACHE_URL`: Redis connection URL, e.g., `redis://localhost:6379/0`\n  - `BACKEND_CLASS`: Cache backend class, e.g., `fastapi_cache.backends.redis_backend.RedisBackend`\n- **CLI Commands**: None needed for basic setup\n- **Latest Versions**:\n  - fastapi-cache: v1.2.0\n  - aioredis: v2.3.0",
     "source": "code_example",
-    "updated_at": 1780824989.6352656
+    "updated_at": 1780833433.739054
   }
 }

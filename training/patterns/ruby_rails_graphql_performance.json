@@ -22,6 +22,6 @@
   "search:ruby+rails-graphql-performance:ruby on rails graphql security_ex": {
     "content": "- **Set up GraphQL server**: Use `rails generate graphql:install`\n- **Install gems**:\n  - `graphql-ruby` (latest version as of Sep 2025)\n  - `graphiql-rails` for interactive testing\n  - `devise` for authentication\n  - `jwt` for JSON Web Tokens\n- **Configure Devise**: Generate and configure Devise with `rails generate devise:install`\n- **Generate User model**: Use `rails generate devise User`\n- **Create GraphQL schema**: Define types and queries in `app/graphql/schema.rb`\n- **Implement JWT authentication**:\n  - Add `gem 'jwt'` to your Gemfile\n  - Configure JWT in an initializer or directly in the schema\n- **Secure mutations and queries**: Use `authenticate_user!` in controllers for protected routes\n- **Use GraphiQL for testing**: Access it at `/graphiql`\n- **Monitor and log**: Implement logging for security events and errors",
     "source": "code_example",
-    "updated_at": 1780824895.9306455
+    "updated_at": 1780833331.6992552
   }
 }

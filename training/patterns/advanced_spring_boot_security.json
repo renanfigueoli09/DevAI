@@ -2,11 +2,11 @@
   "search:Advanced Spring Boot Security:spring-boot+jpa-batch": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "web_search",
-    "updated_at": 1780825068.3120213
+    "updated_at": 1780833537.944602
   },
   "search:Advanced Spring Boot Security:spring-boot+jpa-batch_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `mvn clean install`: Builds and packages the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - `@EnableBatchProcessing`: Enables batch processing in the application context.\n  - `JobBuilderFactory` and `StepBuilderFactory`: Used to define jobs and steps.\n  - `ItemReader`, `ItemProcessor`, `ItemWriter`: Components for reading, processing, and writing data.",
     "source": "code_example",
-    "updated_at": 1780825069.5710342
+    "updated_at": 1780833539.335166
   }
 }

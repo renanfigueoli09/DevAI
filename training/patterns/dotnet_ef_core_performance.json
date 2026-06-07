@@ -2,21 +2,21 @@
   "search:dotnet-ef-core-performance:.net entity framework core per": {
     "content": "- **Latest Version**: EF Core 7.0 is the latest version as of October 2025.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `AsSplitQueries()` to enable split queries for better performance in many-to-many relationships.\n  - `UseLazyLoadingProxies()` for lazy loading, but be cautious of potential issues with circular references.\n\n- **Performance Tips**:\n  - Use `Include` and `ThenInclude` for eager loading instead of multiple queries.\n  - Avoid using `ToList().Count` as it loads all data into memory. Instead, use `CountAsync`.\n  - Optimize database indexes to improve query performance.\n  - Consider batch operations for large datasets.\n\n- **Monitoring**:\n  - Use EF Core's logging capabilities to monitor and optimize queries.\n  - Profile applications with tools like dotTrace or ANTS Performance Profiler.\n\n- **Caching**:\n  - Implement caching strategies using MemoryCache or distributed caches like Redis to reduce database load.",
     "source": "web_search",
-    "updated_at": 1780828752.9892395
+    "updated_at": 1780833618.9190078
   },
   "search:dotnet-ef-core-performance:.net entity framework core per_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core 7.0\n\n- **Key Config Options**:\n  - `ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;` for read-only scenarios\n  - Use `AsNoTracking()` in LINQ queries to avoid tracking entities",
     "source": "code_example",
-    "updated_at": 1780828755.490836
+    "updated_at": 1780833620.4611294
   },
   "search:dotnet-ef-core-performance:entity framework core best pra": {
     "content": "- **Latest Version**: EF Core 7.0 was released in October 2023.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n  - `dotnet ef database update` to apply migrations to the database.\n  - `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer -o Models` to reverse engineer a model from an existing database.\n- **Key Config Options**:\n  - `UseSqlServer`: Specifies SQL Server as the database provider.\n  - `UseInMemoryDatabase`: Uses an in-memory database for testing purposes.\n  - `OnModelCreating`: Used to configure entity types and relationships.\n  - `DbContextOptionsBuilder`: Configures the DbContext options, such as connection strings and logging.",
     "source": "web_search",
-    "updated_at": 1780828773.7073493
+    "updated_at": 1780833621.976414
   },
   "search:dotnet-ef-core-performance:entity framework core best pra_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add InitialCreate` to create initial migration.\n- **Latest Versions**: Ensure using Entity Framework Core 7.0 or later for the best features and performance.\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure connection strings, logging, and other options.\n  - `OnModelCreating`: Define model relationships and configurations in your DbContext.\n  - `Add-Migration` (for PowerShell): Adds a new migration with a specified name.",
     "source": "code_example",
-    "updated_at": 1780828789.0019217
+    "updated_at": 1780833623.4313807
   }
 }

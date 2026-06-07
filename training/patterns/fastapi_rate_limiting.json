@@ -2,21 +2,21 @@
   "search:fastapi-rate-limiting:fastapi rate limiting strategi": {
     "content": "- **CLI Commands**: Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- **Latest Version**: As of my last update, the latest version is 0.98.0. Check [FastAPI's official GitHub page](https://github.com/tiangolo/fastapi) for the most current version.\n- **Key Config Options**:\n  - `rate_limiting`: Use middleware like `fastapi_limiter` to implement rate limiting.\n  - `token_bucket`: Implement token bucket algorithm using libraries such as `ratelimit`.\n  - `GCRA`: Apply Generalized Congestion Response Algorithm for more adaptive rate limiting.\n  - **Response Strategy**: Customize responses using FastAPI's exception handling to manage rate limit exceeded scenarios gracefully.",
     "source": "web_search",
-    "updated_at": 1780825130.7378478
+    "updated_at": 1780833643.3970325
   },
   "search:fastapi-rate-limiting:fastapi rate limiting strategi_ex": {
     "content": "- **CLI Commands**: Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- **Latest Version**: As of my last update, the latest version is 0.98.0.\n- **Key Config Options**:\n  - `dependencies`: Define rate limiting rules in your FastAPI application using dependency injection.\n  - `rate_limiting`: Configure limits like `max_calls` and `time_window`.\n  - `throttling`: Implement throttling strategies to control the rate of requests.\n\nFor detailed implementation, refer to the official FastAPI documentation or the articles provided for practical examples.",
     "source": "code_example",
-    "updated_at": 1780825132.0089126
+    "updated_at": 1780833645.012285
   },
   "search:fastapi-rate-limiting:rate limiting in fastapi appli": {
     "content": "- Use `fastapi` and `slowapi` libraries for rate limiting.\n- Install via pip: `pip install fastapi slowapi`.\n- Import `RateLimiter` from `fastapi_limiter`.\n- Configure rate limit in FastAPI app:\n  ```python\n  from fastapi import FastAPI\n  from fastapi_limiter import RateLimiter\n\n  app = FastAPI()\n  limiter = RateLimiter()\n\n  @app.get(\"/\")\n  @limiter.limit(\"100 per day;50 per hour\")\n  async def read_root():\n      return {\"message\": \"Hello World\"}\n  ```\n- Use Redis for rate limiting storage:\n  ```python\n  from fastapi_limiter import FastAPILimiter\n  import redis.asyncio as redis\n\n  app = FastAPI()\n  rdb = redis.Redis(host=\"localhost\", port=6379, db=0)\n  await FastAPILimiter.init(rdb)\n  ```\n- Key config options:\n  - `rate`: Rate limit string (e.g., \"100 per day;50 per hour\").\n  - `key_func`: Function to generate unique keys for rate limiting.\n  - `backend`: Storage backend (Redis, in this case).\n- Monitor rate limiting with tools like OneUptime.",
     "source": "web_search",
-    "updated_at": 1780825133.2036636
+    "updated_at": 1780833646.5937173
   },
   "search:fastapi-rate-limiting:rate limiting in fastapi appli_ex": {
     "content": "- Install FastAPI Advanced Rate Limiter using pip: `pip install fastapi-advanced-rate-limiter==latest_version`\n- Import the library in your FastAPI application.\n- Configure rate limiting rules in your FastAPI app:\n  ```python\n  from fastapi import FastAPI\n  from fastapi_advanced_rate_limiter import RateLimiter\n\n  app = FastAPI()\n  limiter = RateLimiter(max_calls=10, time_window=60)  # Limit to 10 calls per minute\n\n  @app.get(\"/items/\")\n  @limiter.limit(\"10/minute\")\n  async def read_items():\n      return {\"message\": \"Items list\"}\n  ```\n- Choose the appropriate rate limiting algorithm based on your application's traffic patterns.\n- For Redis backend support, ensure Redis is installed and configure the library accordingly:\n  ```python\n  limiter = RateLimiter(max_calls=10, time_window=60, redis_url=\"redis://localhost:6379/0\")\n  ```\n- Test rate limiting by making multiple requests to your API endpoint within the specified time window.",
     "source": "code_example",
-    "updated_at": 1780825134.4261136
+    "updated_at": 1780833647.990763
   }
 }
