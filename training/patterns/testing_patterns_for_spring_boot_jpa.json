@@ -1,0 +1,32 @@
+{
+  "search:Testing Patterns for Spring Boot + JPA:unit testing with junit 5": {
+    "content": "- **CLI Commands**: \n  - `mvn test` to run tests using Maven.\n  - `gradle test` to run tests using Gradle.\n\n- **Latest Versions**:\n  - JUnit Jupiter API: 5.9.3\n  - JUnit Platform Launcher: 1.9.3\n\n- **Key Config Options**:\n  - `@Test`: Marks a method as a test.\n  - `@ParameterizedTest`: Allows for parameterized tests.\n  - `@DynamicTest`: Enables dynamic test generation.\n  - `@BeforeEach` and `@AfterEach`: Setup and teardown methods.\n  - `@BeforeAll` and `@AfterAll`: Static setup and teardown methods.",
+    "source": "web_search",
+    "updated_at": 1780820508.0425518
+  },
+  "search:Testing Patterns for Spring Boot + JPA:unit testing with junit 5_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn test` to run tests using Maven.\n  - `gradle test` to run tests using Gradle.\n\n- **Latest Versions**:\n  - JUnit Jupiter API: 5.9.3\n  - JUnit Platform Launcher: 1.9.3\n\n- **Key Config Options**:\n  - Use `@ParameterizedTest` for parameterized testing.\n  - Utilize `@DynamicTest` for dynamic test generation.\n  - Configure test execution with `@Timeout` and `@Disabled`.",
+    "source": "code_example",
+    "updated_at": 1780820512.817107
+  },
+  "search:Testing Patterns for Spring Boot + JPA:integration testing strategies": {
+    "content": "- **CLI Commands**: Use `datadog-ci test` to monitor and optimize testing workflows.\n- **Latest Versions**: Check Datadog's official website for the latest version of their CI/CD tools.\n- **Key Config Options**:\n  - `test_coverage`: Enable or disable coverage analysis.\n  - `api_tests`: Configure API test settings.\n  - `mobile_app_tests`: Set up mobile app testing parameters.\n  - `full_stack_visibility`: Enable full-stack monitoring and visibility.",
+    "source": "web_search",
+    "updated_at": 1780820527.5073597
+  },
+  "search:Testing Patterns for Spring Boot + JPA:integration testing strategies_ex": {
+    "content": "- **CLI Commands**: Use `pytest` for Python integration tests.\n- **Latest Version**: Ensure you use the latest version of `pytest` by running `pip install pytest --upgrade`.\n- **Key Config Options**:\n  - `-v`: Verbose mode to get more detailed output.\n  - `-k <expression>`: Run tests that match a given expression.\n  - `--cov=<module>`: Measure coverage for specified module.",
+    "source": "code_example",
+    "updated_at": 1780820549.5588005
+  },
+  "search:Testing Patterns for Spring Boot + JPA:mocking frameworks like mockit": {
+    "content": "- **Latest Version of Mockito**: As of my last update in October 2023, the latest stable version is 4.x. Check [Mockito's official repository](https://github.com/mockito/mockito) for the most current version.\n  \n- **CLI Commands**:\n  - To create a mock object: `mock(MyClass.class)`\n  - To stub a method call: `when(mockedObject.someMethod()).thenReturn(expectedValue);`\n  - To verify method calls: `verify(mockedObject).someMethod();`\n\n- **Key Config Options**:\n  - `@Mock`: Annotates fields to be automatically mocked.\n  - `@InjectMocks`: Automatically injects mocks into the annotated class under test.\n  - `@Spy`: Creates a spy object that wraps an existing object and allows partial mocking.\n\n- **Additional Resources**:\n  - [Mockito Documentation](https://javadoc.io/doc/org.mockito/mockito-core/latest/index.html)\n  - [Baeldung's Mockito Tutorial](https://www.baeldung.com/java-mockito)",
+    "source": "web_search",
+    "updated_at": 1780820557.5101924
+  },
+  "search:Testing Patterns for Spring Boot + JPA:mocking frameworks like mockit_ex": {
+    "content": "- **CLI Commands**: `mvn clean install` to run tests.\n- **Latest Version**: Mockito 4.x as of my last update.\n- **Key Config Options**:\n  - `@Mock`: Creates a mock object for the specified class.\n  - `@InjectMocks`: Injects mocks into the test class under test.\n  - `when(...).thenReturn(...)`: Specifies the behavior of the mock.\n  - `verify(...).times(n)`: Verifies that a method was called n times.",
+    "source": "code_example",
+    "updated_at": 1780820563.3339562
+  }
+}

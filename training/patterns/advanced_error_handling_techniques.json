@@ -1,0 +1,32 @@
+{
+  "search:Advanced Error Handling Techniques:try-catch-finally": {
+    "content": "- **JavaScript**:\n  - Use `try...catch...finally` to handle exceptions.\n  - Example:\n    ```javascript\n    try {\n        // Code that might throw an error\n        alert(\"This is a test\");\n    } catch (error) {\n        // Handle the error\n        console.error(error);\n    } finally {\n        // Always executed, regardless of errors\n        console.log(\"Execution complete.\");\n    }\n    ```\n\n- **Java**:\n  - Use `try...catch...finally` to handle exceptions.\n  - Example:\n    ```java\n    try {\n        // Code that might throw an error\n        int result = 10 / 0;\n    } catch (ArithmeticException e) {\n        // Handle the error\n        System.out.println(\"Error: \" + e.getMessage());\n    } finally {\n        // Always executed, regardless of errors\n        System.out.println(\"Execution complete.\");\n    }\n    ```\n\n- **C#**:\n  - Use `try...catch...finally` to handle exceptions.\n  - Example:\n    ```csharp\n    try {\n        // Code that might throw an error\n        int result = 10 / 0;\n    } catch (DivideByZeroException e) {\n        // Handle the error\n        Console.WriteLine(\"Error: \" + e.Message);\n    } finally {\n        // Always executed, regardless of errors\n        Console.WriteLine(\"Execution complete.\");\n    }\n    ```\n\n- **General**:\n  - `try` block contains code that might throw an exception.\n  - `catch` block handles the exception.\n  - `finally` block executes after try and catch blocks, regardless of whether an exception was thrown.",
+    "source": "web_search",
+    "updated_at": 1780820423.4722254
+  },
+  "search:Advanced Error Handling Techniques:try-catch-finally_ex": {
+    "content": "- **CLI Commands**: `node --version` to check Node.js version.\n- **Latest Versions**: As of my last update, the latest stable version of Node.js is 18.x.\n- **Key Config Options**:\n  - `try...catch`: Used for catching and handling exceptions.\n  - `finally`: Executed regardless of whether an exception was thrown or not.",
+    "source": "code_example",
+    "updated_at": 1780820427.3590677
+  },
+  "search:Advanced Error Handling Techniques:logging best practices": {
+    "content": "- Use `log4j2` or `logback` for structured logging.\n- Configure log levels appropriately (`DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`).\n- Implement OpenTelemetry context enrichment for distributed tracing.\n- Rotate logs using tools like `logrotate`.\n- Ensure log files are stored securely and accessible only by authorized personnel.\n- Use JSON format for structured logs to facilitate parsing and querying.\n- Avoid logging sensitive information such as passwords or tokens.\n- Regularly review and analyze logs to identify issues and improve system performance.\n- Utilize log aggregation tools like ELK Stack, Splunk, or Graylog for centralized monitoring.",
+    "source": "web_search",
+    "updated_at": 1780820453.9233215
+  },
+  "search:Advanced Error Handling Techniques:logging best practices_ex": {
+    "content": "- Use Serilog Library for Logging in ASP.NET Core.\n- Configure Python logging with `logging` module.\n- Set log levels using `basicConfig(level=)` method.\n- Utilize file handlers to save logs (`FileHandler`, `RotatingFileHandler`).\n- Implement exception handling with `try-except` blocks.\n- Use structured logging for better data extraction and analysis.\n- Rotate log files periodically to prevent disk space issues.\n- Enable logging in production environments for debugging and monitoring.\n- Regularly review and clean up old log files.",
+    "source": "code_example",
+    "updated_at": 1780820467.7234387
+  },
+  "search:Advanced Error Handling Techniques:exception chaining": {
+    "content": "- **CLI Commands**: Not directly applicable to programming languages.\n- **Latest Versions**:\n  - Python 3.14.5 (as of my last update)\n- **Key Config Options**:\n  - In Java, use `Throwable.initCause(Throwable cause)` or the constructor that accepts a cause.\n  - In Python, use `raise NewException from OriginalException` to chain exceptions.\n  - Use `from None` in Python to disable automatic exception chaining.",
+    "source": "web_search",
+    "updated_at": 1780820485.9442637
+  },
+  "search:Advanced Error Handling Techniques:exception chaining_ex": {
+    "content": "- Use `try-catch` blocks to handle exceptions.\n- For Java, use `throw new Exception(\"message\", cause)` to chain exceptions.\n- In Python, use `raise NewException from OriginalException`.\n- Ensure all exceptions are caught and handled appropriately to prevent program crashes.\n- Keep exception messages clear and informative for debugging.",
+    "source": "code_example",
+    "updated_at": 1780820489.8453846
+  }
+}

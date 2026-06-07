@@ -13,5 +13,10 @@
     "content": "- Use `kubectl scale statefulset <stateful-app> --replicas=N` to adjust the number of replicas.\n- Ensure persistent storage is configured in the StatefulSet YAML for data persistence.\n- For graceful pod termination, use `preStop` hooks in the Pod specification.\n- Implement backup and restore strategies using tools like Velero or custom scripts.\n- Monitor StatefulSets with Prometheus and Grafana for health and performance metrics.\n- Scale StatefulSets by updating the image version in the YAML file and applying changes.\n- Use `kubectl rollout status statefulset <stateful-app>` to monitor rolling updates.\n- Configure stable network identities using headless services.\n- Ensure that each Pod has a unique ordinal, which is assigned automatically.",
     "source": "web_search",
     "updated_at": 1780820362.6199634
+  },
+  "search:kubernetes-statefulsets-performance-tuning:statefulsets best practices fo_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to create or update StatefulSets.\n- Ensure each pod has a stable, unique identity using the `metadata.name` field.\n- Set `spec.replicas` to define the number of desired pods.\n- Configure `volumeClaimTemplates` for persistent storage.\n- Use `service.alpha.kubernetes.io/app-protocols` for dual-stack support.\n- Apply `kubectl rollout restart statefulset <statefulset-name>` after configuration changes.\n- Monitor pod status with `kubectl get pods -l app=<app-label>`.\n- Check logs with `kubectl logs <pod-name>`.\n- Use `kubectl describe statefulset <statefulset-name>` for detailed information.",
+    "source": "code_example",
+    "updated_at": 1780820370.9554422
   }
 }
