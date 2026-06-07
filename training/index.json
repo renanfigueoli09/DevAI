@@ -8,31 +8,31 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780790565.6353447,
+    "ts": 1780790978.5670073,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780790566.2545831,
+    "ts": 1780790979.2981756,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780790566.8857574,
+    "ts": 1780790980.0141222,
     "size": 867
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "topic": "nestjs_mongodb",
     "source": "code_example",
-    "ts": 1780790567.523934,
+    "ts": 1780790980.67974,
     "size": 830
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780790568.0866585,
+    "ts": 1780790979.9563015,
     "size": 349
   },
   "qa:livros-to-Book": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780790568.7578433,
+    "ts": 1780790980.806966,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780790557.6653836,
+    "ts": 1780790971.2939382,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780790558.9807498,
+    "ts": 1780790972.433261,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780790557.0597029,
+    "ts": 1780790970.651638,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780790558.330213,
+    "ts": 1780790971.8631032,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780790559.6003277,
+    "ts": 1780790973.025473,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780790560.275728,
+    "ts": 1780790973.6523495,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780790560.880608,
+    "ts": 1780790974.2220495,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780790561.6313503,
+    "ts": 1780790974.7731793,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780790562.280527,
+    "ts": 1780790975.2758026,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780790563.7314513,
+    "ts": 1780790976.4448745,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780790564.3595765,
+    "ts": 1780790977.1309576,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780790564.979469,
+    "ts": 1780790977.8184893,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -5788,5 +5788,239 @@
     "source": "web_search",
     "ts": 1780790624.0820692,
     "size": 509
+  },
+  "search:nestjs+mysql:nestjs typeorm mysql mysql2 en_ex": {
+    "topic": "nestjs_mysql",
+    "source": "code_example",
+    "ts": 1780790629.490464,
+    "size": 463
+  },
+  "search:nestjs+mysql:nestjs typeorm mysql relations": {
+    "topic": "nestjs_mysql",
+    "source": "web_search",
+    "ts": 1780790640.400674,
+    "size": 1525
+  },
+  "search:nestjs+mysql:nestjs typeorm mysql relations_ex": {
+    "topic": "nestjs_mysql",
+    "source": "code_example",
+    "ts": 1780790649.712945,
+    "size": 1299
+  },
+  "search:nestjs+redis:nestjs @nestjs/cache-manager c": {
+    "topic": "nestjs_redis",
+    "source": "web_search",
+    "ts": 1780790656.4110227,
+    "size": 577
+  },
+  "search:nestjs+redis:nestjs @nestjs/cache-manager c_ex": {
+    "topic": "nestjs_redis",
+    "source": "code_example",
+    "ts": 1780790662.7136486,
+    "size": 812
+  },
+  "search:nestjs+redis:nestjs @nestjs/bull bullmodule": {
+    "topic": "nestjs_redis",
+    "source": "web_search",
+    "ts": 1780790670.0692046,
+    "size": 321
+  },
+  "search:nestjs+redis:nestjs @nestjs/bull bullmodule_ex": {
+    "topic": "nestjs_redis",
+    "source": "code_example",
+    "ts": 1780790679.1667898,
+    "size": 1413
+  },
+  "search:nestjs+redis:nestjs ioredis sentinel cluste": {
+    "topic": "nestjs_redis",
+    "source": "web_search",
+    "ts": 1780790689.094984,
+    "size": 317
+  },
+  "search:nestjs+redis:nestjs ioredis sentinel cluste_ex": {
+    "topic": "nestjs_redis",
+    "source": "code_example",
+    "ts": 1780790697.6534739,
+    "size": 971
+  },
+  "search:nestjs+elasticsearch:nestjs @elastic/elasticsearch ": {
+    "topic": "nestjs_elasticsearch",
+    "source": "web_search",
+    "ts": 1780790708.5166597,
+    "size": 891
+  },
+  "search:nestjs+elasticsearch:nestjs @elastic/elasticsearch _ex": {
+    "topic": "nestjs_elasticsearch",
+    "source": "code_example",
+    "ts": 1780790713.1220224,
+    "size": 350
+  },
+  "search:nestjs+elasticsearch:nestjs elasticsearch mapping a": {
+    "topic": "nestjs_elasticsearch",
+    "source": "web_search",
+    "ts": 1780790731.3537173,
+    "size": 727
+  },
+  "search:nestjs+elasticsearch:nestjs elasticsearch mapping a_ex": {
+    "topic": "nestjs_elasticsearch",
+    "source": "code_example",
+    "ts": 1780790739.843267,
+    "size": 1520
+  },
+  "search:nestjs+cassandra:nestjs cassandra-driver keyspa": {
+    "topic": "nestjs_cassandra",
+    "source": "web_search",
+    "ts": 1780790746.634153,
+    "size": 322
+  },
+  "search:nestjs+cassandra:nestjs cassandra-driver keyspa_ex": {
+    "topic": "nestjs_cassandra",
+    "source": "code_example",
+    "ts": 1780790752.3904738,
+    "size": 371
+  },
+  "search:nestjs+kafka:nestjs kafka clientkafka emit ": {
+    "topic": "nestjs_kafka",
+    "source": "web_search",
+    "ts": 1780790762.0842814,
+    "size": 1118
+  },
+  "search:nestjs+kafka:nestjs kafka clientkafka emit _ex": {
+    "topic": "nestjs_kafka",
+    "source": "code_example",
+    "ts": 1780790767.6552036,
+    "size": 382
+  },
+  "search:nestjs+kafka:nestjs kafka error retry dead ": {
+    "topic": "nestjs_kafka",
+    "source": "web_search",
+    "ts": 1780790785.6068895,
+    "size": 819
+  },
+  "search:nestjs+kafka:nestjs kafka error retry dead _ex": {
+    "topic": "nestjs_kafka",
+    "source": "code_example",
+    "ts": 1780790794.470685,
+    "size": 1120
+  },
+  "search:nestjs+kafka:nestjs kafka transaction idemp": {
+    "topic": "nestjs_kafka",
+    "source": "web_search",
+    "ts": 1780790800.372169,
+    "size": 299
+  },
+  "search:nestjs+kafka:nestjs kafka transaction idemp_ex": {
+    "topic": "nestjs_kafka",
+    "source": "code_example",
+    "ts": 1780790804.9562674,
+    "size": 392
+  },
+  "search:nestjs+rabbitmq:nestjs rabbitmq transport.rmq ": {
+    "topic": "nestjs_rabbitmq",
+    "source": "web_search",
+    "ts": 1780790811.9327056,
+    "size": 472
+  },
+  "search:nestjs+rabbitmq:nestjs rabbitmq transport.rmq _ex": {
+    "topic": "nestjs_rabbitmq",
+    "source": "code_example",
+    "ts": 1780790820.6465735,
+    "size": 426
+  },
+  "search:nestjs+rabbitmq:nestjs rabbitmq dead letter ex": {
+    "topic": "nestjs_rabbitmq",
+    "source": "web_search",
+    "ts": 1780790827.9348133,
+    "size": 512
+  },
+  "search:nestjs+rabbitmq:nestjs rabbitmq dead letter ex_ex": {
+    "topic": "nestjs_rabbitmq",
+    "source": "code_example",
+    "ts": 1780790833.053656,
+    "size": 548
+  },
+  "search:nestjs+grpc:nestjs grpc transport.grpc pro": {
+    "topic": "nestjs_grpc",
+    "source": "web_search",
+    "ts": 1780790841.5499985,
+    "size": 531
+  },
+  "search:nestjs+grpc:nestjs grpc transport.grpc pro_ex": {
+    "topic": "nestjs_grpc",
+    "source": "code_example",
+    "ts": 1780790851.182524,
+    "size": 1263
+  },
+  "search:nestjs+grpc:nestjs grpc client stub inject": {
+    "topic": "nestjs_grpc",
+    "source": "web_search",
+    "ts": 1780790868.5049653,
+    "size": 854
+  },
+  "search:nestjs+grpc:nestjs grpc client stub inject_ex": {
+    "topic": "nestjs_grpc",
+    "source": "code_example",
+    "ts": 1780790873.4884148,
+    "size": 401
+  },
+  "search:nestjs+graphql:nestjs graphql apollodriver @o": {
+    "topic": "nestjs_graphql",
+    "source": "web_search",
+    "ts": 1780790879.6475859,
+    "size": 387
+  },
+  "search:nestjs+graphql:nestjs graphql apollodriver @o_ex": {
+    "topic": "nestjs_graphql",
+    "source": "code_example",
+    "ts": 1780790887.0191553,
+    "size": 338
+  },
+  "search:nestjs+graphql:nestjs graphql @subscription d": {
+    "topic": "nestjs_graphql",
+    "source": "web_search",
+    "ts": 1780790899.6673243,
+    "size": 1702
+  },
+  "search:nestjs+graphql:nestjs graphql @subscription d_ex": {
+    "topic": "nestjs_graphql",
+    "source": "code_example",
+    "ts": 1780790906.4862137,
+    "size": 1144
+  },
+  "search:nestjs+websocket:nestjs @websocketgateway @subs": {
+    "topic": "nestjs_websocket",
+    "source": "web_search",
+    "ts": 1780790922.6352668,
+    "size": 333
+  },
+  "search:nestjs+websocket:nestjs @websocketgateway @subs_ex": {
+    "topic": "nestjs_websocket",
+    "source": "code_example",
+    "ts": 1780790927.6126537,
+    "size": 553
+  },
+  "search:spring+kafka-transaction-management:spring kafka transaction manag": {
+    "topic": "spring_kafka_transaction_management",
+    "source": "web_search",
+    "ts": 1780790941.0648878,
+    "size": 896
+  },
+  "search:spring+kafka-transaction-management:spring kafka transaction manag_ex": {
+    "topic": "spring_kafka_transaction_management",
+    "source": "code_example",
+    "ts": 1780790956.182888,
+    "size": 515
+  },
+  "search:spring+kafka-transaction-management:spring kafka exactly once sema": {
+    "topic": "spring_kafka_transaction_management",
+    "source": "web_search",
+    "ts": 1780790967.5238729,
+    "size": 453
+  },
+  "search:spring+kafka-transaction-management:spring kafka exactly once sema_ex": {
+    "topic": "spring_kafka_transaction_management",
+    "source": "code_example",
+    "ts": 1780790973.9927511,
+    "size": 530
   }
 }
