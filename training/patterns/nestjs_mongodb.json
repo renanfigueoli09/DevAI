@@ -17,37 +17,37 @@
   "qa:mongoose-required-bang": {
     "content": "@Prop({required:true}) → field!: string  (! = required, NON-NULL ASSERTION)\n@Prop() → field?: string  (? = optional)\nNEVER: @Prop({required:true}) field?: string  (WRONG)\nNEVER: @Prop({required:true}) field: string   (WRONG, needs !)\nRULE: required=! | optional=? | NO EXCEPTIONS",
     "source": "critical_pattern",
-    "updated_at": 1780826299.5546083
+    "updated_at": 1780826758.900329
   },
   "qa:mongoose-no-findOneBy": {
     "content": "findOneBy does NOT exist in Mongoose. findOneBy is TypeORM-only.\nMongoose CORRECT: findById(id), findByIdAndUpdate(id,{$set:dto},{new:true}), findByIdAndDelete(id)\nWRONG: this.model.findOneBy({_id:id})  ← TypeORM only\nCORRECT: this.model.findById(id).exec()",
     "source": "critical_pattern",
-    "updated_at": 1780826300.2259214
+    "updated_at": 1780826759.5602179
   },
   "qa:mongoose-forFeature": {
     "content": "NestJS Mongoose module uses MongooseModule.forFeature NEVER TypeOrmModule.\n@Module({ imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] })\nWRONG: TypeOrmModule.forFeature([Book])  ← TypeORM only",
     "source": "critical_pattern",
-    "updated_at": 1780826300.8793573
+    "updated_at": 1780826760.1727993
   },
   "qa:app-module-mongodb": {
     "content": "app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/app')\nWRONG: TypeOrmModule with DB_HOST/DB_PORT/DB_NAME  ← PostgreSQL config\nMongoDB uses MONGODB_URI, NOT DB_HOST/DB_PORT",
     "source": "critical_pattern",
-    "updated_at": 1780826301.5917895
+    "updated_at": 1780826760.799612
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - Use `@Schema` to define a schema.\n  - Use `@Prop` to define properties within the schema.\n  - Import `HydratedDocument` from 'mongoose' for type safety.\n\n- **Example Usage**:\n  ```typescript\n  import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\n  import { HydratedDocument } from 'mongoose';\n\n  export const CatSchema = new Schema({\n    name: String,\n    age: Number,\n  });\n\n  export class Cat {\n    @Prop()\n    name: string;\n\n    @Prop()\n    age: number;\n  }\n\n  export type CatDocument = HydratedDocument<Cat>;\n  ```\n\n- **References**:\n  - [NestJS Mongoose](https://docs.nestjs.com/techniques/mongodb)\n  - [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)",
     "source": "web_search",
-    "updated_at": 1780826310.2282135
+    "updated_at": 1780826772.3175154
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - `@Schema` decorator for defining MongoDB schemas.\n  - `@Prop` decorator for schema properties.\n  - `HydratedDocument` type for strongly typed documents.\n\n- **Example Usage**:\n  ```typescript\n  import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\n  import { HydratedDocument } from 'mongoose';\n\n  export const CatSchema = new Schema({\n    name: String,\n    age: Number,\n  });\n\n  export type CatDocument = HydratedDocument<Cat>;\n\n  @Schema()\n  export class Cat {\n    @Prop({ required: true })\n    name: string;\n\n    @Prop({ required: true })\n    age: number;\n  }\n\n  export const CatModel = SchemaFactory.createForClass(Cat);\n  ```",
     "source": "code_example",
-    "updated_at": 1780826311.1300025
+    "updated_at": 1780826773.1107292
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "content": "- **CLI Commands**:\n  - `npm install --save @nestjs/mongoose mongoose`\n  \n- **Latest Versions**:\n  - NestJS: v9.x\n  - Mongoose: v9.6.3\n  \n- **Key Config Options**:\n  - Use `MongooseModule` in the imports array of your module.\n  - For updating a document, use `findByIdAndUpdate(id, update)`.\n  - For deleting a document, use `findByIdAndDelete(id)`.",
     "source": "web_search",
-    "updated_at": 1780826312.0709436
+    "updated_at": 1780826773.8147528
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v9.6.3\n\n- **Key Config Options**:\n  - Connection URI in `app.module.ts`: `MongooseModule.forRoot('mongodb://localhost:27017/databaseName')`\n  - Schema definition for models.\n  - Middleware and hooks for model operations.\n\n- **CRUD Operations**:\n  - `findById(id)`: Retrieve a document by its ID.\n  - `findByIdAndUpdate(id, update)`: Update a document by its ID.\n  - `findByIdAndDelete(id)`: Delete a document by its ID.",

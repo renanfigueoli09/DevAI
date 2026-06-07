@@ -18,5 +18,10 @@
     "content": "- Use `@KafkaListener` annotation in Spring Boot to handle Kafka messages.\n- Implement custom error handlers by extending `ErrorHandler` or `Recoverer`.\n- Configure retry strategies using `RetryTemplate` and `BackOffPolicy`.\n- Set up Dead Letter Topics (DLTs) for failed message handling.\n- Utilize `@EnableKafka` to enable Kafka support in your Spring Boot application.\n- Use `KafkaTemplate` for producing messages with error handling capabilities.\n- Implement custom deserialization logic using `Deserializer` and handle exceptions accordingly.\n- Configure consumer properties such as `enable.auto.commit`, `auto.commit.interval.ms`, etc., in `application.properties`.\n- Monitor Kafka metrics using tools like Spring Boot Actuator and Micrometer.",
     "source": "web_search",
     "updated_at": 1780826355.6840897
+  },
+  "search:spring-boot+kafka-spring-cloud-stream:spring boot kafka error handli_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - Apache Kafka: 3.0.1\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.error-handler`: Custom error handler for Kafka consumers.\n  - `spring.kafka.producer.error-handler`: Custom error handler for Kafka producers.\n  - `spring.kafka.listener.backoff-ms`: Time to wait before retrying a failed message.",
+    "source": "code_example",
+    "updated_at": 1780826370.0591004
   }
 }
