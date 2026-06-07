@@ -2,21 +2,21 @@
   "search:spring-boot-kafka-streams:spring boot kafka streams adva": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Kafka Streams: 3.1.0\n\n- **Key Config Options**:\n  - `spring.kafka.streams.application-id`: Unique identifier for the application.\n  - `spring.kafka.streams.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.streams.default-key-deserializer`: Deserializer for keys.\n  - `spring.kafka.streams.default-value-deserializer`: Deserializer for values.",
     "source": "web_search",
-    "updated_at": 1780789693.8040552
+    "updated_at": 1780791295.486123
   },
   "search:spring-boot-kafka-streams:spring boot kafka streams adva_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Kafka Streams: 3.1.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets on startup.",
     "source": "code_example",
-    "updated_at": 1780789694.9243426
+    "updated_at": 1780791296.4794092
   },
   "search:spring-boot-kafka-streams:spring boot kafka streams perf": {
     "content": "- **Latest Versions**: Spring Boot 3, Kafka Streams 3.x\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `key.deserializer`, `value.deserializer`: Deserializers for keys and values.\n  - `group.id`: Consumer group ID.\n  - `auto.offset.reset`: Strategy to reset offsets on startup (e.g., `earliest`, `latest`).\n  - `max.poll.records`: Maximum number of records to poll in a single call.\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n- **Performance Tuning Tips**:\n  - Increase `max.poll.records` for higher throughput.\n  - Adjust `num.stream.threads` based on CPU cores.\n  - Use `concurrency` parameter in Kafka Streams to control parallelism.\n  - Monitor and adjust `fetch.min.bytes` and `fetch.max.wait.ms`.\n- **Monitoring Tools**:\n  - Prometheus, Grafana\n  - Confluent Control Center",
     "source": "web_search",
-    "updated_at": 1780789696.0593536
+    "updated_at": 1780791297.4930756
   },
   "search:spring-boot-kafka-streams:spring boot kafka streams perf_ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up` to start Kafka using Docker Compose.\n  \n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Kafka Streams: 3.x\n  \n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `key.deserializer`: Deserializer for keys.\n  - `value.deserializer`: Deserializer for values.\n  - `group.id`: Consumer group ID.",
     "source": "code_example",
-    "updated_at": 1780789697.3023996
+    "updated_at": 1780791298.5259054
   }
 }

@@ -2,11 +2,11 @@
   "search:nodejs-express-mongoose:node.js express mongoose crud ": {
     "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors --save` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - Express: 4.18.x\n  - Mongoose: 6.x\n\n- **Key Config Options**:\n  - MongoDB connection string in `.env`: `MONGO_URI=mongodb://localhost:27017/mydatabase`\n  - Middleware for parsing JSON bodies: `app.use(bodyParser.json())`\n  - Enabling CORS for all routes: `app.use(cors())`",
     "source": "web_search",
-    "updated_at": 1780789515.2455726
+    "updated_at": 1780791128.7847443
   },
   "search:nodejs-express-mongoose:node.js express mongoose crud _ex": {
     "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.18.x\n  - Mongoose: 7.6.x\n\n- **Key Config Options**:\n  - MongoDB connection string in `mongoose.connect()`.\n  - Middleware for parsing JSON and URL-encoded bodies with `app.use(bodyParser.json())` and `app.use(bodyParser.urlencoded({ extended: true }))`.\n  - CORS configuration with `app.use(cors())`.",
     "source": "code_example",
-    "updated_at": 1780789516.2676885
+    "updated_at": 1780791129.8268285
   }
 }

@@ -2,31 +2,31 @@
   "search:Advanced Logging with Python-Django-REST-Framework:django logging": {
     "content": "- **CLI Commands**:\n  - `python manage.py runserver` to start the Django development server.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest stable version of Django and Python for compatibility.\n\n- **Key Config Options**:\n  - `LOGGING`: Configure logging in your settings module with a dictionary that defines loggers, handlers, and formatters.\n  - `handlers`: Define how logs should be handled (e.g., file, console).\n  - `formatters`: Specify the format of log messages.\n  - `loggers`: Define which parts of your application to log.\n\n- **Example Configuration**:\n  ```python\n  LOGGING = {\n      'version': 1,\n      'disable_existing_loggers': False,\n      'handlers': {\n          'file': {\n              'level': 'DEBUG',\n              'class': 'logging.FileHandler',\n              'filename': '/path/to/django/debug.log',\n          },\n      },\n      'loggers': {\n          'django': {\n              'handlers': ['file'],\n              'level': 'DEBUG',\n              'propagate': True,\n          },\n      },\n  }\n  ```\n\n- **Additional Tips**:\n  - Use `DEBUG = False` in production to avoid logging sensitive information.\n  - Configure different log levels for development and production environments.",
     "source": "web_search",
-    "updated_at": 1780789557.1827946
+    "updated_at": 1780791175.729901
   },
   "search:Advanced Logging with Python-Django-REST-Framework:django logging_ex": {
     "content": "- **Latest Version**: Django 3.2 Extended Support\n- **CLI Command**: `pip install django==3.2`\n- **Key Config Options**:\n  - `LOGGING`: Configure logging settings.\n  - `disable_existing_loggers`: Set to `True` to disable existing loggers (default).\n  - `handlers`: Define how logs are handled (e.g., file, console).\n  - `formatters`: Specify the format of log messages.\n  - `loggers`: Define custom loggers for specific parts of your application.",
     "source": "code_example",
-    "updated_at": 1780789558.1970358
+    "updated_at": 1780791176.7180207
   },
   "search:Advanced Logging with Python-Django-REST-Framework:rest framework logging": {
     "content": "- Use `python manage.py runserver` to start the server.\n- Install `drf-tracking` via pip: `pip install drf-tracking`.\n- Configure logging in Django settings:\n  ```python\n  LOGGING = {\n      'version': 1,\n      'disable_existing_loggers': False,\n      'handlers': {\n          'console': {\n              'level': 'DEBUG',\n              'class': 'logging.StreamHandler',\n          },\n      },\n      'loggers': {\n          'django.request': {\n              'handlers': ['console'],\n              'level': 'DEBUG',\n              'propagate': True,\n          },\n      },\n  }\n  ```\n- Use `drf-tracking` middleware in settings:\n  ```python\n  MIDDLEWARE = [\n      ...\n      'drf_tracking.middleware.TrackingMiddleware',\n      ...\n  ]\n  ```\n- Ensure `drf-tracking` is installed and configured to track requests.\n- Check the Django documentation for more advanced logging configurations.",
     "source": "web_search",
-    "updated_at": 1780789559.2407627
+    "updated_at": 1780791177.741216
   },
   "search:Advanced Logging with Python-Django-REST-Framework:rest framework logging_ex": {
     "content": "- Use `logging` module in Python for request/response logging.\n- Configure Django's logging system to capture DRF requests and responses.\n- Implement custom middleware to log details of each request and response.\n- Set up logging level and format according to your needs.\n- Ensure proper handling of sensitive data in logs.",
     "source": "code_example",
-    "updated_at": 1780789560.2536495
+    "updated_at": 1780791178.7546885
   },
   "search:Advanced Logging with Python-Django-REST-Framework:python logging best practices": {
     "content": "- Use `logging.basicConfig()` to configure basic settings.\n- Set log level using `level` parameter (e.g., `logging.DEBUG`, `logging.INFO`).\n- Utilize `format` parameter in `basicConfig()` for customizing log messages.\n- Employ file mode 'a' or 'w' in `basicConfig()` for appending or overwriting logs.\n- Use `logging.getLogger(__name__)` to create logger instances.\n- Apply logging levels (DEBUG, INFO, WARNING, ERROR, CRITICAL) appropriately.\n- Format log messages with placeholders like `%s`, `%d`, etc., and use `.format()` method.\n- Regularly review and rotate log files using handlers like `TimedRotatingFileHandler`.\n- Ensure all critical errors are logged for later analysis.\n- Use logging in production to monitor application behavior and diagnose issues.",
     "source": "web_search",
-    "updated_at": 1780789561.336103
+    "updated_at": 1780791179.782256
   },
   "search:Advanced Logging with Python-Django-REST-Framework:python logging best practices_ex": {
     "content": "- Use `logging.basicConfig()` to configure basic settings.\n- Set appropriate log levels (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`).\n- Format logs with `%(asctime)s - %(levelname)s - %(message)s`.\n- Use file handlers for persistent logging: `FileHandler`, `RotatingFileHandler`, etc.\n- Apply filters to control what gets logged.\n- Utilize loggers for different parts of your application.\n- Avoid using `print` statements; use `logging`.\n- Regularly review and clean up old logs.\n- Consider using external tools like SigNoz for advanced monitoring.",
     "source": "code_example",
-    "updated_at": 1780789562.3284628
+    "updated_at": 1780791180.7892363
   }
 }
