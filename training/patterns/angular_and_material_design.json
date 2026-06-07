@@ -8,5 +8,10 @@
     "content": "- **CLI Commands**:\n  - `ng generate component <component-name>`\n  - `ng serve --open`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular CLI: v15.2.4\n  - Angular Core: v13.2.0\n\n- **Key Config Options**:\n  - `app.module.ts`: Define declarations, imports, and providers.\n  - `component.ts`: Use `@Input()` for properties from parent components.\n  - `component.html`: Utilize structural directives like `*ngIf` and `*ngFor`.\n  - `component.css`: Apply styles using Angular's CSS encapsulation.",
     "source": "code_example",
     "updated_at": 1780827713.1757321
+  },
+  "search:Angular and Material-Design:performance optimization in an": {
+    "content": "- Use Angular CLI to analyze and optimize your application with `ng analyze`.\n- Upgrade to the latest version of Angular to benefit from performance improvements.\n- Implement lazy loading for modules using `--lazy` flag in `ng generate module`.\n- Utilize Angular's change detection strategies like OnPush for components.\n- Minimize HTTP requests by combining them into a single request.\n- Use Angular pipes effectively to reduce unnecessary computations.\n- Configure the Angular compiler with `aot: true` for ahead-of-time compilation.\n- Optimize images and assets using tools like Webpack or Angular CLI's asset optimization features.\n- Monitor performance using Angular DevTools for real-time insights.",
+    "source": "web_search",
+    "updated_at": 1780827733.848841
   }
 }
