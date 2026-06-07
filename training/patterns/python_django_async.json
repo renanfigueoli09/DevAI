@@ -12,11 +12,11 @@
   "search:python-django-async:django async orm 2023": {
     "content": "- **CLI Commands**:\n  - `python -m pip install django-async-orm`\n  - `python manage.py runserver` for WSGI, or `uvicorn myproject.asgi:application` for ASGI\n\n- **Latest Versions**:\n  - Django Async ORM: Not specified in the search results\n  - Django: Latest stable version as of my last update (3.2.x)\n\n- **Key Config Options**:\n  - Use ASGI server like `uvicorn` instead of WSGI for async capabilities\n  - Ensure your project is configured to run under ASGI if you intend to use async views",
     "source": "web_search",
-    "updated_at": 1780831316.4207728
+    "updated_at": 1780840570.118005
   },
   "search:python-django-async:django async orm 2023_ex": {
     "content": "- **CLI Commands**:\n  - `python -m pip install django-async-orm`\n  \n- **Latest Versions**:\n  - Django Async ORM is in active development, no specific version mentioned.\n  \n- **Key Config Options**:\n  - Asynchronous views can be written using async and await syntax.\n  - Performance penalties when running under WSGI.",
     "source": "code_example",
-    "updated_at": 1780831317.9951003
+    "updated_at": 1780840572.2857256
   }
 }

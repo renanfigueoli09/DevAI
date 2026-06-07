@@ -2,21 +2,21 @@
   "search:typescript+react-query-advanced:typescript react query advance": {
     "content": "- **Latest Version**: TanStack Query v5\n- **CLI Commands**:\n  - `npm install @tanstack/react-query`\n  - `yarn add @tanstack/react-query`\n- **Key Config Options**:\n  - `queryClient`: Centralized place to configure and manage queries.\n  - `useQuery`: Hook for fetching data from an API.\n  - `useMutation`: Hook for updating data on the server.\n  - `useInfiniteQuery`: Hook for handling infinite lists.\n  - `usePrefetchQuery`: Prefetches a query to be ready when needed.\n- **TypeScript Support**: Excellent, with full type inference and custom types.",
     "source": "web_search",
-    "updated_at": 1780834776.3767545
+    "updated_at": 1780840619.510146
   },
   "search:typescript+react-query-advanced:typescript react query advance_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React 18, TypeScript 4.9\n- **Key Config Options**:\n  - `.env` for environment variables\n  - `tsconfig.json` for TypeScript configuration\n  - `react-query` options in `useQuery`, `useMutation`, etc.\n  - Custom hooks for reusable logic",
     "source": "code_example",
-    "updated_at": 1780834798.9452088
+    "updated_at": 1780840621.2096806
   },
   "search:typescript+react-query-advanced:typescript react query best pr": {
     "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new TypeScript React project.\n- **Latest Versions**: Ensure you are using the latest versions of `@tanstack/react-query`, `react`, and `typescript`. Check [npm](https://www.npmjs.com/) for updates.\n- **Key Config Options**:\n  - `queryClient`: Configure options like `defaultOptions` to set default behavior for all queries.\n  - `useQuery`: Use `enabled: false` to disable a query initially, useful for conditional fetching.\n  - `refetchOnWindowFocus`: Set to `false` if you want to prevent refetching when the window regains focus.\n- **TypeScript Integration**: Import types from `@tanstack/react-query/typescript` and use them in your hooks and components.\n- **Error Handling**: Use `useQuery`'s `error` property to handle errors gracefully, providing fallback UI or logging.\n- **Performance Tips**:\n  - Use `staleTime` to control how long a query result is considered fresh.\n  - Implement `refetchInterval` for periodic refetching of data.\n- **Testing**: Write unit tests using Jest and React Testing Library to ensure your queries and hooks behave as expected.",
     "source": "web_search",
-    "updated_at": 1780834816.0682378
+    "updated_at": 1780840622.8616858
   },
   "search:typescript+react-query-advanced:typescript react query best pr_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.x\n  - Axios: v1.x\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `useMutation`: For updating data.\n  - `errorHandling`: Custom error handling with `onError` and `onSuccess`.\n  - `backgroundFetching`: Automatically refetches data in the background.",
     "source": "code_example",
-    "updated_at": 1780834832.2833889
+    "updated_at": 1780840624.6634738
   }
 }
