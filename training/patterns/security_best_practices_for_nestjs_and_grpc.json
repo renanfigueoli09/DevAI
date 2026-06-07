@@ -3,5 +3,15 @@
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n  - `nest generate service service-name`: Generates a new service.\n\n- **Latest Versions**:\n  - NestJS: Check the latest version on [npm](https://www.npmjs.com/package/@nestjs/core).\n\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe())`: Enables validation globally.\n  - `app.useGlobalFilters(new AllExceptionsFilter())`: Enables exception filters globally.\n  - `app.useGlobalGuards(AuthGuard('jwt'))`: Enables guards globally.",
     "source": "web_search",
     "updated_at": 1780837124.229706
+  },
+  "search:Security Best Practices for NestJS and gRPC:grpc security guidelines": {
+    "content": "- Use `grpcurl` for testing and auditing gRPC endpoints.\n- Implement mTLS (Mutual TLS) for secure communication between clients and servers.\n- Configure TLS in Kestrel for ASP.NET Core applications.\n- Apply rate limiting to prevent abuse and protect against DDoS attacks.\n- Enable logging and monitoring for security audits and incident response.\n- Use encryption for all gRPC messages in production environments.\n- Implement authentication mechanisms like OAuth 2.0 or JWT for secure access control.\n- Regularly update libraries and dependencies to patch known vulnerabilities.\n- Conduct code reviews and security assessments to identify potential risks.\n- Educate team members on best practices and security policies.",
+    "source": "web_search",
+    "updated_at": 1780837173.3264904
+  },
+  "search:Security Best Practices for NestJS and gRPC:grpc security guidelines_ex": {
+    "content": "- **CLI Commands**: Use `grpcurl` to test gRPC services.\n- **Latest Version**: Check the latest version on [gRPC GitHub](https://github.com/grpc/grpc).\n- **Key Config Options**:\n  - `server_credentials`: Configure SSL/TLS credentials for secure communication.\n  - `metadata_transformer`: Customize metadata for requests and responses.\n  - `max_send_message_size`/`max_receive_message_size`: Set limits on message sizes.",
+    "source": "code_example",
+    "updated_at": 1780837177.6105542
   }
 }

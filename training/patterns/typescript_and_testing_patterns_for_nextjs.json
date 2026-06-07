@@ -1,0 +1,17 @@
+{
+  "search:TypeScript and Testing Patterns for NextJS:typescript testing": {
+    "content": "- **CLI Commands**:\n  - `tsc --init`: Initializes a new TypeScript project.\n  - `tsc --watch`: Compiles TypeScript files and watches for changes.\n\n- **Latest Version**: Check [TypeScript GitHub](https://github.com/microsoft/TypeScript/releases) for the latest version.\n\n- **Key Config Options**:\n  - `compilerOptions.target`: Specifies the target JavaScript version (e.g., \"ES5\", \"ES6\").\n  - `compilerOptions.module`: Specifies module code generation (e.g., \"commonjs\", \"es2015\").\n  - `include` and `exclude`: Defines which files to include or exclude from compilation.\n  - `outDir`: Specifies the output directory for generated JavaScript files.",
+    "source": "web_search",
+    "updated_at": 1780837583.2462733
+  },
+  "search:TypeScript and Testing Patterns for NextJS:typescript testing_ex": {
+    "content": "- **CLI Commands**: `npm install --save-dev typescript`\n- **Latest Version**: TypeScript 5.2.2\n- **Key Config Options**:\n  - `tsconfig.json`: Specifies compiler options and project settings.\n  - `\"compilerOptions\"`: Defines the target JavaScript version, module system, and other settings.\n  - `\"include\"` and `\"exclude\"`: Specify files to include or exclude from compilation.\n  - `\"outDir\"`: Specifies the output directory for compiled JavaScript files.",
+    "source": "code_example",
+    "updated_at": 1780837597.1915255
+  },
+  "search:TypeScript and Testing Patterns for NextJS:jest with typescript": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: [Check latest version on npm](https://www.npmjs.com/package/jest)\n\n- **Key Config Options**:\n  - `testMatch`: Array of glob patterns to match files for tests.\n  - `transformIgnorePatterns`: An array of regex patterns that are used to skip transformation.\n  - `setupFilesAfterEnv`: An array of paths to modules that run some code to configure or set up the testing environment before each test file in the suite is executed.",
+    "source": "web_search",
+    "updated_at": 1780837614.9934974
+  }
+}
