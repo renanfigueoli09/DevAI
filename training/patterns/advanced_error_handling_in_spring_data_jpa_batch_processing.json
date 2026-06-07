@@ -2,16 +2,16 @@
   "search:Advanced Error Handling in Spring Data JPA Batch Processing:spring data jpa batch error ha": {
     "content": "- Use `@EnableBatchProcessing` to enable Spring Batch.\n- Configure `JpaItemWriter` and inject `EntityManager`.\n- Call `entityManager.flush()` manually in the writer to handle exceptions.\n- Implement error handling strategies using `ItemProcessor`, `ItemReader`, and `ItemWriter`.\n- Utilize `RetryTemplate` for retrying failed items.\n- Set `spring.batch.job.repository.table-prefix` if customizing batch tables.\n- Use `@StepListener` for step completion and failure callbacks.\n- Configure `JobRepository` with a transaction manager like `JpaTransactionManager`.",
     "source": "web_search",
-    "updated_at": 1780832054.806492
+    "updated_at": 1780844277.1059184
   },
   "search:Advanced Error Handling in Spring Data JPA Batch Processing:spring data jpa batch error ha_ex": {
     "content": "- Use `@EnableBatchProcessing` in your Spring Boot application.\n- Configure batch properties in `application.properties` or `application.yml`.\n- Implement a custom `ItemProcessor` to handle specific errors and decide whether to skip, retry, or fail the job.\n- Utilize `@StepListener` methods for pre- and post-step actions.\n- Use `@JobScope` for beans that need to be scoped per job execution.\n- Configure transaction management with `@Transactional` on your step processors.\n- Implement a custom `ItemErrorHandler` for global error handling during batch processing.\n- Ensure proper exception handling in your repository methods when interacting with the database.",
     "source": "code_example",
-    "updated_at": 1780832056.7101457
+    "updated_at": 1780844279.3106792
   },
   "search:Advanced Error Handling in Spring Data JPA Batch Processing:batch processing error managem": {
     "content": "- Use `spring batch` for reliable batch processing.\n- Implement error handling using Spring Batch's built-in tools.\n- Configure error management in your Spring Batch job XML or Java configuration.\n- Utilize `@OnError` and `@OnRetry` annotations to manage errors during processing.\n- Monitor batch jobs with Spring Boot Actuator endpoints.\n- Use `retryTemplate` for retrying failed tasks.\n- Implement custom error listeners to handle specific exceptions.\n- Configure `step` elements in your job XML or Java config for error handling.\n- Utilize `jobRepository` for tracking job execution and errors.",
     "source": "web_search",
-    "updated_at": 1780832058.333325
+    "updated_at": 1780844281.3670487
   }
 }

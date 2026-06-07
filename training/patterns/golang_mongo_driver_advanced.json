@@ -2,16 +2,16 @@
   "search:golang-mongo-driver-advanced:golang mongodb driver advanced": {
     "content": "- **CLI Commands**:\n  - `go get golang.org/x/tools/cmd/goimports`: Installs the Goimports tool for formatting and organizing Go code.\n  - `go mod tidy`: Removes unused dependencies from your go.mod file.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version of Go is 1.20.3. Check [golang.org/dl](https://golang.org/dl/) for the most current version.\n  \n- **Key Config Options**:\n  - `GOPATH`: Specifies the location where your Go workspace is stored. Default is `$HOME/go`.\n  - `GOROOT`: Specifies the root directory of the Go installation. Typically set automatically during installation.\n  - `GO11MODULE=on`: Enables Go modules for dependency management, which is recommended for new projects.\n\nThese actionable facts should help developers effectively use and configure the Golang MongoDB driver in their projects.",
     "source": "web_search",
-    "updated_at": 1780836263.2843726
+    "updated_at": 1780844373.9642017
   },
   "search:golang-mongo-driver-advanced:golang mongodb performance opt": {
     "content": "- Use `go get go.mongodb.org/mongo-driver/mongo` to install the latest MongoDB Go driver.\n- Initialize a new Go module with `go mod init <module-name>`.\n- Connect to MongoDB using `client, err := mongo.Connect(context.Background(), options.Client().ApplyURI(\"<mongodb-uri>\"))`.\n- Create an index on a collection with `collection.Indexes().CreateOne(ctx, models.IndexModel{Keys: bson.D{{\"field\", 1}}})`.\n- Use `$in` operator for set membership queries to leverage MongoDB's internal optimizations.\n- Ensure your MongoDB server is up-to-date and configured for optimal performance.\n- Monitor query performance using MongoDB's `explain()` method.\n- Adjust connection pool settings with `options.Client().SetMaxPoolSize(<size>)`.\n- Regularly update the Go driver and MongoDB server to benefit from performance improvements.",
     "source": "web_search",
-    "updated_at": 1780836301.9791949
+    "updated_at": 1780844375.6099763
   },
   "search:golang-mongo-driver-advanced:golang mongodb performance opt_ex": {
     "content": "- **CLI Commands**: Use `mongostat` and `mongotop` to monitor MongoDB performance.\n- **Latest Versions**: Ensure using MongoDB 6.x for the best performance improvements.\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory (e.g., `wiredTigerCacheSizeGB: 2.5`).\n  - `net.maxIncomingConnections`: Increase if facing connection issues (e.g., `net.maxIncomingConnections: 1000`).\n  - `operationProfiling.mode`: Set to `slowOp` for detailed query analysis.\n- **Indexes**: Create indexes on frequently queried fields to improve performance.\n- **Sharding**: Consider sharding for large datasets and high read/write loads.",
     "source": "code_example",
-    "updated_at": 1780836307.1649144
+    "updated_at": 1780844377.4365396
   }
 }

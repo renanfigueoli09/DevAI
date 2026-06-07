@@ -2,86 +2,86 @@
   "search:security-patterns:api security owasp top 10 back": {
     "content": "- **CLI Commands**: Use `owasp-top10-cli` to fetch the latest OWASP Top 10 data.\n- **Latest Version**: Check for updates using `owasp-top10-cli --update`.\n- **Key Config Options**:\n  - Enable API security scanning with `--api-security`.\n  - Set verbosity level with `--verbose <level>`.\n  - Specify target URL with `--url <target_url>`.",
     "source": "web_search",
-    "updated_at": 1780832387.7011054
+    "updated_at": 1780844685.6594803
   },
   "search:security-patterns:api security owasp top 10 back_ex": {
     "content": "- Familiarize yourself with the latest OWASP Top 10 for 2025 web application security threats.\n- Implement input validation and sanitization to prevent injection attacks.\n- Use secure authentication mechanisms, such as OAuth or JWT, for API access control.\n- Regularly update dependencies and libraries to patch known vulnerabilities.\n- Employ rate limiting to mitigate brute force attacks.\n- Enable HTTPS to encrypt data in transit.\n- Conduct regular security audits and penetration testing.\n- Implement logging and monitoring to detect and respond to anomalies.\n- Use a content security policy (CSP) to prevent cross-site scripting (XSS).\n- Educate developers on secure coding practices and best practices.",
     "source": "code_example",
-    "updated_at": 1780832389.0224319
+    "updated_at": 1780844688.2279842
   },
   "search:security-patterns:sql injection xss csrf prevent": {
     "content": "- **CLI Commands**: Use `nest generate controller <name>` to create controllers.\n- **Latest Versions**: NestJS v10.x, Node.js v16.x.\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe({ transform: true }));` for input validation.\n  - `app.enableCors();` for enabling CORS.\n  - Use `@UseGuards(AuthGuard('jwt'))` for authentication guards.",
     "source": "web_search",
-    "updated_at": 1780832390.5958185
+    "updated_at": 1780844690.5036082
   },
   "search:security-patterns:sql injection xss csrf prevent_ex": {
     "content": "- **Prevent SQL Injection**: Use parameterized queries or prepared statements.\n- **Prevent XSS**: Sanitize user inputs, use Content Security Policy (CSP), and output encoding.\n- **Prevent CSRF**: Use CSRF tokens, validate Referer header, and set HttpOnly flag for cookies.\n- **NestJS**: Update to the latest version using `npm install @nestjs/core@latest`.\n- **Spring Boot**: Update to the latest version using `mvn versions:set -DnewVersion=2025.1.0.RELEASE`.\n- **CLI Commands**:\n  - For NestJS: `nest new project-name`\n  - For Spring Boot: `spring init --dependencies=web project-name`\n- **Key Config Options**:\n  - NestJS: `app.useGlobalPipes(new ValidationPipe({ transform: true }));`\n  - Spring Boot: `httpSecurity.csrf().disable();` (for development purposes only)",
     "source": "code_example",
-    "updated_at": 1780832395.428912
+    "updated_at": 1780844692.7544708
   },
   "search:security-patterns:jwt security best practices ex": {
     "content": "- **CLI Commands**:\n  - `jwt-cli sign --alg HS256 --exp <expiry_time> --iss <issuer> --sub <subject> <payload>`\n  - `jwt-cli verify --key <secret_key> <token>`\n\n- **Latest Versions**:\n  - JWT CLI: v1.0.3\n  - Node.js JWT Library: v9.0.0\n\n- **Key Config Options**:\n  - `exp`: Expiration time in seconds.\n  - `iss`: Issuer of the token.\n  - `sub`: Subject of the token (usually user ID).\n  - `alg`: Algorithm used for signing (e.g., HS256, RS256).",
     "source": "web_search",
-    "updated_at": 1780832396.9898877
+    "updated_at": 1780844694.8003752
   },
   "search:security-patterns:jwt security best practices ex_ex": {
     "content": "- **CLI Commands**:\n  - `openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048`\n  - `openssl rsa -pubout -in private.key -out public.key`\n\n- **Latest Versions**:\n  - JWT Library: v9.0.0\n  - Node.js: v16.15.0\n\n- **Key Config Options**:\n  - Algorithm: RS256 for enhanced security\n  - Expiry Time: Set to 30 minutes (1800 seconds)\n  - Refresh Token Rotation: Enabled with a new token issued on each refresh\n  - Secret Key Management: Use environment variables for secret keys",
     "source": "code_example",
-    "updated_at": 1780832398.5754902
+    "updated_at": 1780844696.7267172
   },
   "search:security-patterns:input validation sanitization ": {
     "content": "- Use OWASP Cheat Sheet Series for comprehensive guidance.\n- Implement input validation using libraries like `express-validator` in Node.js.\n- Sanitize data using packages such as `sanitize-html`.\n- Regularly update dependencies to the latest versions.\n- Enable strict mode in JavaScript to catch common coding errors.\n- Configure security headers in your web server (e.g., Apache, Nginx).\n- Use parameterized queries for SQL statements to prevent SQL injection.\n- Implement rate limiting to protect against brute force attacks.\n- Conduct code reviews and use static analysis tools like ESLint.\n- Subscribe to OWASP newsletters for the latest best practices.",
     "source": "web_search",
-    "updated_at": 1780832400.1276314
+    "updated_at": 1780844699.042309
   },
   "search:security-patterns:input validation sanitization _ex": {
     "content": "- Use `npm install express-validator` for input validation in Express.js.\n- Implement server-side validation using `express-validator`.\n- Use `bcrypt` for password hashing to prevent leaks.\n- Employ parameterized queries with libraries like `pg-promise` or `sequelize`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Enable CORS with `cors()` middleware in Express.js.\n- Implement CSRF protection using `csurf` middleware.\n- Use HTTPS for secure data transmission.\n- Sanitize user input using DOMPurify to prevent XSS attacks.",
     "source": "code_example",
-    "updated_at": 1780832401.6342628
+    "updated_at": 1780844701.3997037
   },
   "search:security-patterns:https tls certificate backend ": {
     "content": "- **CLI Commands**:\n  - `certbot renew --dry-run` to test certificate renewal.\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes` to generate a self-signed certificate.\n\n- **Latest Versions**:\n  - Certbot: Ensure you are using the latest version for compatibility and security updates.\n  - OpenSSL: Update to the latest stable release for enhanced security features.\n\n- **Key Config Options**:\n  - `certbot renew --webroot -w /path/to/webroot` for webroot authentication.\n  - `openssl s_client -connect example.com:443 -showcerts` to check TLS certificate details.\n  - `nginx.conf` or `apache2.conf`: Configure SSL/TLS settings in your server configuration files.",
     "source": "web_search",
-    "updated_at": 1780832403.0990086
+    "updated_at": 1780844703.5605423
   },
   "search:Security Patterns:.net mvc security patterns": {
     "content": "- Use `dotnet new mvc -n SecureApp` to create a new secure MVC project.\n- Update your project file (.csproj) to target the latest LTS version of .NET Core or .NET 6+.\n- Implement authentication using Identity by running `dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore`.\n- Configure cookie options in `Startup.cs`:\n  ```csharp\n  services.ConfigureApplicationCookie(options =>\n  {\n      options.SlidingExpiration = false;\n      options.ExpireTimeSpan = TimeSpan.FromMinutes(30);\n      options.Cookie.HttpOnly = true;\n  });\n  ```\n- Use HTTPS by setting `<UseHttpsRedirection>true</UseHttpsRedirection>` in `Startup.cs`.\n- Implement authorization using `[Authorize]` and `[Roles]` attributes on controllers or actions.\n- Regularly update packages to the latest versions using `dotnet upgrade tool`.\n- Enable dependency injection for services that require configuration, e.g., `services.AddScoped<IMyService, MyService>()`.\n- Use middleware for common tasks like logging and error handling:\n  ```csharp\n  app.UseRouting();\n  app.UseAuthentication();\n  app.UseAuthorization();\n  app.UseEndpoints(endpoints =>\n  {\n      endpoints.MapControllerRoute(\n          name: \"default\",\n          pattern: \"{controller=Home}/{action=Index}/{id?}\");\n  });\n  ```\n- Implement input validation using data annotations or custom validators.\n- Use the OWASP cheat sheet for secure coding guidelines and best practices.",
     "source": "web_search",
-    "updated_at": 1780832404.5642624
+    "updated_at": 1780844706.4097095
   },
   "search:Security Patterns:elasticsearch setup and securi": {
     "content": "- **CLI Commands**:\n  - `elasticsearch-setup-passwords interactive`\n  - `bin/elasticsearch-plugin install x-pack-security`\n\n- **Latest Versions**:\n  - Elasticsearch 8.x\n\n- **Key Config Options**:\n  - `xpack.security.enabled: true`\n  - `xpack.security.transport.ssl.enabled: true`\n  - `xpack.security.authc.realms.file.file1.order: 0`\n  - `xpack.security.authz.roles.cache.size: 1000`",
     "source": "web_search",
-    "updated_at": 1780832405.9433396
+    "updated_at": 1780844709.3819528
   },
   "search:Security Patterns:elasticsearch setup and securi_ex": {
     "content": "- **CLI Commands**: \n  - `elasticsearch-plugin install x-pack`\n  - `bin/elasticsearch-setup-passwords interactive`\n\n- **Latest Versions**:\n  - Elasticsearch X-Pack is included in the latest versions of Elasticsearch.\n\n- **Key Config Options**:\n  - `xpack.security.enabled: true`\n  - `xpack.security.transport.ssl.enabled: true`\n  - `xpack.security.authc.realms.file.file1.order: 0`\n  - `xpack.security.authz.roles.cache.ttl: 1m`",
     "source": "code_example",
-    "updated_at": 1780832407.3156333
+    "updated_at": 1780844712.032924
   },
   "search:Security Patterns:kubernetes nginx ingress secur": {
     "content": "- **Install NGINX Ingress Controller**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml\n  ```\n\n- **Enable TLS/HTTPS**:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: Ingress\n  metadata:\n    name: example-ingress\n    annotations:\n      nginx.ingress.kubernetes.io/ssl-redirect: \"true\"\n  spec:\n    tls:\n    - hosts:\n      - example.com\n      secretName: example-tls-secret\n    rules:\n    - host: example.com\n      http:\n        paths:\n        - path: /\n          pathType: Prefix\n          backend:\n            service:\n              name: example-service\n              port:\n                number: 80\n  ```\n\n- **Configure Content Security Policy (CSP)**:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: Ingress\n  metadata:\n    annotations:\n      nginx.ingress.kubernetes.io/content-security-policy: \"default-src 'self'; script-src 'self' https://trustedscripts.example.com\"\n  spec:\n    rules:\n    - host: example.com\n      http:\n        paths:\n        - path: /\n          pathType: Prefix\n          backend:\n            service:\n              name: example-service\n              port:\n                number: 80\n  ```\n\n- **Rate Limiting**:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: Ingress\n  metadata:\n    annotations:\n      nginx.ingress.kubernetes.io/limit-rps: \"10\"\n  spec:\n    rules:\n    - host: example.com\n      http:\n        paths:\n        - path: /\n          pathType: Prefix\n          backend:\n            service:\n              name: example-service\n              port:\n                number: 80\n  ```\n\n- **Circuit Breaking**:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: Ingress\n  metadata:\n    annotations:\n      nginx.ingress.kubernetes.io/proxy-next-upstream-timeout: \"5s\"\n      nginx.ingress.kubernetes.io/proxy-next-upstream-retried-errors: \"502,503,504\"\n  spec:\n    rules:\n    - host: example.com\n      http:\n        paths:\n        - path: /\n          pathType: Prefix\n          backend:\n            service:\n              name: example-service\n              port:\n                number: 80\n  ```\n\n- **Blue-Green and Canary Deployments**:\n  Use Kubernetes Deployment strategies like `RollingUpdate` with `maxSurge` and `maxUnavailable`.\n\n- **A/B Testing**:\n  Implement using Ingress annotations to route traffic based on headers or cookies.\n\n- **Latest Version**:\n  Check the [NGINX Ingress Controller GitHub repository](https://github.com/kubernetes/ingress-nginx) for the latest version and release notes.",
     "source": "web_search",
-    "updated_at": 1780832408.6903567
+    "updated_at": 1780844714.6153615
   },
   "search:Security Patterns:kubernetes nginx ingress secur_ex": {
     "content": "- Use `kubectl apply -f <filename>.yaml` to deploy NGINX Ingress Controller.\n- Ensure the latest version of NGINX Ingress Controller is used for security patches and features.\n- Key config options include:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/content-security-policy`: To enforce Content Security Policy.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: To adjust the maximum body size for proxy requests.\n- Configure TLS/HTTPS by providing a certificate and key in the Ingress resource:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: Ingress\n  metadata:\n    name: example-ingress\n  spec:\n    tls:\n    - hosts:\n      - example.com\n      secretName: example-tls-secret\n    rules:\n    - host: example.com\n      http:\n        paths:\n        - path: /\n          pathType: Prefix\n          backend:\n            service:\n              name: example-service\n              port:\n                number: 80\n  ```\n- For enhanced security, consider using annotations like `nginx.ingress.kubernetes.io/whitelist-source-range` to restrict access by IP ranges.\n- Regularly update the NGINX Ingress Controller and related resources to patch known vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780832410.074738
+    "updated_at": 1780844716.9687173
   },
   "search:Security Patterns:docker kubernetes advanced log": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl logs --tail=50 <pod-name>` to view the last 50 lines of logs.\n  - `kubectl logs -f <pod-name>` for real-time log streaming.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Fluentd: v1.14\n  - FluentBit: v2.6\n  - Promtail: v0.25\n\n- **Key Config Options**:\n  - `log-driver`: Specifies the logging driver (e.g., json-file, fluentd).\n  - `log-opt`: Additional options for the log driver.\n  - `fluentd-address`: Fluentd server address if using fluentd or fluent-bit.\n  - `promtail-config`: Path to Promtail configuration file.",
     "source": "web_search",
-    "updated_at": 1780832411.3771882
+    "updated_at": 1780844719.6950219
   },
   "search:Security Patterns:docker kubernetes advanced log_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view container logs.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n  - `kubectl describe pod <pod-name>` for detailed pod information.\n\n- **Latest Versions**:\n  - Docker: [Docker Version](https://docs.docker.com/engine/release-notes/)\n  - Kubernetes: [Kubernetes Release Notes](https://kubernetes.io/docs/setup/release/notes/)\n\n- **Key Config Options**:\n  - `log-driver`: Specifies the logging driver for containers. Common options include `json-file`, `syslog`, and `fluentd`.\n  - `log-opt`: Additional logging options, e.g., `max-size` and `max-file` for log rotation.\n  - `resources.limits.cpu`: Sets CPU resource limits for a container.\n  - `resources.requests.memory`: Allocates memory resources to a container.",
     "source": "code_example",
-    "updated_at": 1780832412.7526252
+    "updated_at": 1780844723.7842987
   },
   "search:Security Patterns:angular material design securi": {
     "content": "- Use `ng serve --prod` for production builds.\n- Update Angular to the latest version using `npm update @angular/core @angular/cli`.\n- Implement HTTP interceptors for request and response handling.\n- Configure CORS in your backend server to restrict access.\n- Use Angular's built-in forms validation to prevent injection attacks.\n- Enable HTTPS by setting up SSL/TLS on your server.\n- Utilize Angular's `HttpClient` with `HttpParams` for safe URL parameter passing.\n- Implement Angular's `DomSanitizer` for sanitizing HTML content.\n- Regularly update dependencies using `npm audit fix`.\n- Use Angular's `RouterLinkActive` directive to prevent clickjacking.",
     "source": "web_search",
-    "updated_at": 1780832414.1810765
+    "updated_at": 1780844726.2368157
   }
 }

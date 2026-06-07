@@ -2,11 +2,11 @@
   "search:python-asyncio-multiprocessing:python asyncio and multiproces": {
     "content": "- **Python Version**: Use `python --version` to check the current version.\n- **Asyncio Installation**: No installation required as it's part of Python’s standard library.\n- **Multiprocessing Installation**: No installation required as it's also part of Python’s standard library.\n- **Running Asyncio Code**: Use `python -m asyncio your_script.py`.\n- **Running Multiprocessing Code**: Use `python -m multiprocessing your_script.py`.\n- **Latest Version**: Always use the latest stable version for security and performance improvements. Check [Python.org](https://www.python.org/downloads/) for updates.\n- **Key Config Options**:\n  - For Asyncio: `loop.run_until_complete()`, `async def` functions, `await` keyword.\n  - For Multiprocessing: `multiprocessing.Process()`, `process.start()`, `process.join()`.\n\nThese commands and options provide a solid foundation for developers looking to optimize their Python applications using asyncio and multiprocessing.",
     "source": "web_search",
-    "updated_at": 1780832319.9489086
+    "updated_at": 1780844560.4240532
   },
   "search:python-asyncio-multiprocessing:python asyncio and multiproces_ex": {
     "content": "- Use `asyncio` version 3.10 or later for better performance and features.\n- For multiprocessing, use Python's built-in `multiprocessing` module.\n- To combine asyncio with multiprocessing, use `run_in_executor` method from the asyncio library.\n- Key config options include setting the number of processes in multiprocessing to match the number of CPU cores.\n- Use CLI commands like `python -m multiprocessing your_script.py` for running scripts with multiprocessing.\n- Ensure Python version is up-to-date (3.10 or later) for optimal performance and features.\n- For better concurrency, consider using `asyncio.run()` instead of `loop.run_until_complete()`.\n- Key flags in asyncio include `-n` for specifying the number of workers when using `run_in_executor`.",
     "source": "code_example",
-    "updated_at": 1780832324.616866
+    "updated_at": 1780844562.0663345
   }
 }

@@ -2,21 +2,21 @@
   "search:angular-ngrx-store-advanced:angular ngrx store advanced us": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng add @ngrx/store` to set up NgRx in your Angular project.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular and NgRx for compatibility and performance improvements. Check [Angular](https://angular.io/guide/setup-local) and [NgRx](https://ngrx.io/guide/setup) official sites for the latest versions.\n\n- **Key Config Options**:\n  - `initialState`: Define the initial state of your store.\n  - `reducers`: Map actions to functions that update the state.\n  - `effects`: Handle side effects such as API calls.\n  - `metaReducers`: Enhance reducers with additional functionality like logging or persistence.",
     "source": "web_search",
-    "updated_at": 1780832169.5892925
+    "updated_at": 1780844386.6953857
   },
   "search:angular-ngrx-store-advanced:angular ngrx store advanced us_ex": {
     "content": "- Use Angular CLI to create new projects with NgRx support: `ng new my-app --routing --style=scss`\n- Install latest NgRx packages: `npm install @ngrx/store @ngrx/effects @ngrx/router-store @ngrx/schematics`\n- Key config options in `app.module.ts`:\n  - Import `StoreModule.forRoot()` for the root store.\n  - Import `EffectsModule.forRoot([])` for effects.\n  - Use `RouterStateSerializer` to serialize router state.\n- Example of a simple NgRx feature slice:\n  ```typescript\n  import { createFeatureSelector, createSelector } from '@ngrx/store';\n\n  export const featureName = 'exampleFeature';\n  export interface State {\n    data: any;\n  }\n\n  export const initialState: State = {\n    data: null,\n  };\n\n  export function reducer(state = initialState, action): State {\n    switch (action.type) {\n      case '[Example Feature] Load Data':\n        return { ...state, data: action.payload };\n      default:\n        return state;\n    }\n  }\n\n  export const selectFeatureState = createFeatureSelector<State>(featureName);\n  export const selectData = createSelector(selectFeatureState, state => state.data);\n  ```\n- Use `StoreDevtoolsModule` for development tools in `app.module.ts`.\n- Implement effects to handle side effects like API calls.\n- Utilize selectors and reducers to manage application state efficiently.",
     "source": "code_example",
-    "updated_at": 1780832171.4528308
+    "updated_at": 1780844388.7701046
   },
   "search:angular-ngrx-store-advanced:ngrx performance optimization ": {
     "content": "- Use the latest version of NgRx.\n- Implement lazy loading to reduce initial bundle size.\n- Utilize `select` operators for efficient state selection.\n- Employ immutable data structures to avoid unnecessary re-renders.\n- Apply memoization techniques with libraries like `reselect`.\n- Optimize selectors by avoiding deep nested properties.\n- Use `@ngrx/store-devtools` for debugging and performance monitoring.\n- Implement server-side rendering (SSR) for improved initial load times.\n- Regularly update Angular CLI to the latest version.\n- Monitor performance using tools like Angular Performance.",
     "source": "web_search",
-    "updated_at": 1780832173.2347765
+    "updated_at": 1780844390.5729513
   },
   "search:angular-ngrx-store-advanced:ngrx performance optimization _ex": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - @ngrx/store: 14.x\n  - @ngrx/effects: 14.x\n\n- **Key Config Options**:\n  - Use NgRX Entities for efficient state management.\n  - Implement Actions, Reducers, Selectors, Store, and Effects to manage application state.\n  - Utilize Smart Components for UI logic and Dumb Components for presentation.",
     "source": "code_example",
-    "updated_at": 1780832174.9640782
+    "updated_at": 1780844392.3560457
   }
 }
