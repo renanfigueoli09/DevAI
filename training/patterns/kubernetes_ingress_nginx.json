@@ -2,26 +2,26 @@
   "search:kubernetes+ingress-nginx:kubernetes ingress nginx confi": {
     "content": "- **Latest Version**: As of my last update, the latest stable version is v1.2.1.\n  \n- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy or update an Ingress resource.\n  - `kubectl get ingress` to list all Ingress resources in the current namespace.\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/cors-allow-origin`: To enable CORS with a specific origin.\n  - `nginx.ingress.kubernetes.io/configuration-snippet`: To add custom NGINX configuration snippets.\n\n- **Annotations**:\n  - Use annotations to customize Ingress rules without modifying the ConfigMap directly.\n  \n- **ConfigMap Settings**:\n  - Configure global settings using a ConfigMap, which can be applied across multiple Ingress resources.",
     "source": "web_search",
-    "updated_at": 1780816385.5087478
+    "updated_at": 1780823466.9587336
   },
   "search:kubernetes+ingress-nginx:kubernetes ingress nginx confi_ex": {
     "content": "- **CLI Commands**:\n  - `helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace`\n  - `kubectl apply -f nginx-ingress-config.yaml`\n\n- **Latest Versions**:\n  - Helm Chart: 1.1.0\n\n- **Key Config Options**:\n  - `controller.service.annotations` for custom service annotations\n  - `controller.replicaCount` to set the number of replicas\n  - `controller.nodeSelector` for node selection",
     "source": "code_example",
-    "updated_at": 1780816386.9080296
+    "updated_at": 1780823468.1793134
   },
   "search:kubernetes+ingress-nginx:ingress nginx performance opti": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-config-file>`\n  - `kubectl edit deployment ingress-nginx-controller -n <namespace>`\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.0 (as of my last update)\n  - Kubernetes: v1.25.x\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `http2`: Enable HTTP/2 for improved performance.\n  - `connection_pool_size`: Adjust based on expected load.\n  - `proxy_buffering`: Enable or disable proxy buffering.\n  - `rate_limiting`: Configure rate limiting rules.\n\n- **Optimization Tips**:\n  - Use connection pooling to reduce latency.\n  - Tune buffer sizes for optimal data transfer.\n  - Increase worker processes to handle more connections.\n  - Implement HTTP/2 for faster data delivery.\n  - Apply rate limiting to prevent abuse and improve stability.",
     "source": "web_search",
-    "updated_at": 1780816388.207672
+    "updated_at": 1780823469.4190161
   },
   "search:kubernetes-ingress-nginx:kubernetes ingress nginx perfo": {
     "content": "- **Latest Version**: NGINX Ingress Controller for Kubernetes Release 1.4.0\n- **CLI Command to Deploy**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.4.0/deploy/static/provider/cloud/deploy.yaml\n  ```\n- **Key Config Options**:\n  - `controller.service.annotations` for custom annotations on the service.\n  - `controller.replicaCount` to set the number of replicas.\n  - `controller.nodeSelector` to specify node selection criteria.\n  - `controller.tolerations` for tolerating taints on nodes.",
     "source": "web_search",
-    "updated_at": 1780819971.5362108
+    "updated_at": 1780823470.6262643
   },
   "search:kubernetes-ingress-nginx:kubernetes ingress nginx perfo_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingresses`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.1\n  - Kubernetes: v1.24.0\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `worker_connections`: Increase based on expected load.\n  - `proxy_buffer_size` and `proxy_buffers`: Adjust buffer sizes for better performance.\n  - `keepalive_timeout`: Increase for longer-lived connections.",
     "source": "code_example",
-    "updated_at": 1780819995.0494957
+    "updated_at": 1780823471.8323762
   }
 }

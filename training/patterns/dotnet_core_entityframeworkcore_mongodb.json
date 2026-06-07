@@ -2,21 +2,21 @@
   "search:dotnet-core-entityframeworkcore-mongodb:entity framework core mongodb ": {
     "content": "- **Latest Version**: MongoDB.EntityFrameworkCore 9.0.0 (Preview)\n- **CLI Command**:\n  ```bash\n  dotnet add package MongoDB.EntityFrameworkCore --version 9.0.0-preview\n  ```\n- **Key Config Options**:\n  - `OnModelCreating`: Configure entity mappings.\n  - `ChangeTrackingStrategy`: Set change tracking strategy (e.g., ChangeTrackingStrategy.Snapshot).\n  - `UseMongoClient`: Specify the MongoDB client connection string.\n  - `AutoDetectChangesEnabled`: Enable or disable automatic detection of changes.",
     "source": "web_search",
-    "updated_at": 1780816502.6485705
+    "updated_at": 1780823598.611477
   },
   "search:dotnet-core-entityframeworkcore-mongodb:entity framework core mongodb _ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0 (as of my last update in October 2023).\n  - MongoDB Driver for .NET: 2.14.0 (latest as of my last update).\n\n- **Key Config Options**:\n  - `OnModelCreating`: Configure model relationships and properties.\n  - `UseMongoClient`: Specify the connection string to MongoDB.\n  - `AddDbContext`: Register DbContext in dependency injection.\n\nFor more detailed information, refer to the official documentation for Entity Framework Core and MongoDB.",
     "source": "code_example",
-    "updated_at": 1780816503.916298
+    "updated_at": 1780823599.86272
   },
   "search:dotnet-core-entityframeworkcore-mongodb:optimizing entity framework co": {
     "content": "- **Latest Version**: MongoDB EF Core Provider compatible with EF Core 9.\n- **CLI Command**: `dotnet add package Microsoft.EntityFrameworkCore.MongoDB`\n- **Key Config Options**:\n  - Connection String: `options.UseMongoDb(\"mongodb://localhost:27017/mydatabase\")`\n  - Entity Configuration: Use Fluent API or Data Annotations for model configuration.\n  - Change Tracking: Configure change tracking strategies in the DbContext options.",
     "source": "web_search",
-    "updated_at": 1780816505.082443
+    "updated_at": 1780823601.2418916
   },
   "search:dotnet-core-entityframeworkcore-mongodb:optimizing entity framework co_ex": {
     "content": "- **Latest Version of EF Core:** As of my last update, the latest stable version is EF Core 7.\n  \n- **CLI Commands for EF Core with MongoDB:**\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n\n- **Key Configuration Options in `appsettings.json`:**\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"mongodb://localhost:27017/yourDatabaseName\"\n  }\n  ```\n\n- **Install EF Core MongoDB Provider:**\n  ```bash\n  dotnet add package Microsoft.EntityFrameworkCore.MongoDB\n  ```\n\n- **Example of a Basic Entity Model:**\n  ```csharp\n  public class Blog\n  {\n      public int BlogId { get; set; }\n      public string Url { get; set; }\n\n      public List<Post> Posts { get; set; }\n  }\n\n  public class Post\n  {\n      public int PostId { get; set; }\n      public string Title { get; set; }\n      public string Content { get; set; }\n\n      public int BlogId { get; set; }\n      public Blog Blog { get; set; }\n  }\n  ```\n\n- **Configuring DbContext:**\n  ```csharp\n  public class BloggingContext : DbContext\n  {\n      public DbSet<Blog> Blogs { get; set; }\n      public DbSet<Post> Posts { get; set; }\n\n      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n      {\n          optionsBuilder.UseMongoDB(\"mongodb://localhost:27017/yourDatabaseName\");\n      }\n  }\n  ```\n\n- **Migrations for EF Core with MongoDB:**\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n\n- **Key Points:**\n  - Ensure MongoDB server is running and accessible.\n  - Configure connection string correctly in `appsettings.json`.\n  - Install necessary NuGet packages for EF Core and MongoDB provider.",
     "source": "code_example",
-    "updated_at": 1780816506.2974508
+    "updated_at": 1780823605.6788998
   }
 }

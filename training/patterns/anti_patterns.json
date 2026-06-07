@@ -2,21 +2,21 @@
   "search:anti-patterns:god object anti-pattern refact": {
     "content": "- **CLI Commands**: Use `git reflog` to track changes and recover from mistakes.\n- **Latest Versions**: Ensure using the latest version of your IDE, such as IntelliJ IDEA 2023.2 or Visual Studio Code 1.74.\n- **Key Config Options**: For managing dependencies in Java, use Maven with the latest version (e.g., 3.8.5) and configure `pom.xml` for better organization.\n- **Refactoring Strategy**: Apply the Observer Pattern to distribute responsibilities among classes, reducing the God Object's burden.",
     "source": "web_search",
-    "updated_at": 1780816425.6578941
+    "updated_at": 1780823520.7003388
   },
   "search:anti-patterns:god object anti-pattern refact_ex": {
     "content": "- **CLI Commands**: Use `git reflog` to track changes in the repository.\n- **Latest Versions**: Ensure you are using the latest version of your IDE and any plugins for better support.\n- **Key Config Options**: Review and optimize configuration files such as `.editorconfig`, `.eslintrc`, and `.prettierrc`.\n- **Refactoring Steps**:\n  - Identify the god object by analyzing class responsibilities.\n  - Extract methods into smaller, focused classes.\n  - Use dependency injection to reduce coupling.\n  - Write unit tests for each new class to ensure functionality.\n  - Refactor step-by-step to avoid breaking changes.",
     "source": "code_example",
-    "updated_at": 1780816426.944088
+    "updated_at": 1780823521.8794127
   },
   "search:anti-patterns:premature optimization anti-pa": {
     "content": "- **CLI Commands**: Use `perf` or `gprof` for profiling.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries.\n- **Key Config Options**: Optimize based on actual system constraints, not assumptions.\n- **Avoid Assumptions**: Profile before optimizing to avoid common pitfalls like \"loops are slow\" or \"string operations are expensive.\"\n- **Cargo Cult Optimization**: Avoid optimizations without evidence.",
     "source": "web_search",
-    "updated_at": 1780816428.1718469
+    "updated_at": 1780823523.143735
   },
   "search:anti-patterns:premature optimization anti-pa_ex": {
     "content": "- Avoid micro-optimizations; focus on macro optimizations.\n- Use profiling tools like `cProfile` in Python to identify bottlenecks.\n- Ensure code readability and maintainability before optimization.\n- Consider using built-in functions and libraries for performance benefits.\n- Regularly update dependencies and use the latest versions of libraries.\n- Optimize data structures and algorithms based on real-world usage patterns.\n- Avoid premature optimization by following the 80/20 rule (Pareto Principle).\n- Use caching mechanisms to reduce redundant computations.\n- Monitor application performance using tools like Prometheus or Grafana.",
     "source": "code_example",
-    "updated_at": 1780816429.3860157
+    "updated_at": 1780823524.3306215
   }
 }

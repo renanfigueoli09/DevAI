@@ -2,21 +2,21 @@
   "search:dotnet-ef-core-performance-tuning:entity framework core performa": {
     "content": "- **Latest Version**: EF Core 9.0 as of Nov 12, 2024.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or directly in code.\n  - Performance Tuning: Use `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - Lazy Loading: Enable with `services.AddDbContext<YourContext>(options => options.UseLazyLoadingProxies())`.\n  - Batch Inserts/Updates: Use `SaveChangesAsync()` to batch operations.\n\n- **Performance Tips**:\n  - Indexes on database tables.\n  - Avoid N+1 queries by using eager loading or explicit includes.\n  - Optimize queries with LINQ expressions.",
     "source": "web_search",
-    "updated_at": 1780820098.2025578
+    "updated_at": 1780823473.0305803
   },
   "search:dotnet-ef-core-performance-tuning:entity framework core performa_ex": {
     "content": "- Use the latest version of Entity Framework Core.\n- Employ `DbContext` pooling to manage connections efficiently.\n- Implement lazy loading for better memory management.\n- Utilize `AsNoTracking()` for read-only operations to reduce memory usage.\n- Optimize queries by using projection and filtering early in the pipeline.\n- Batch inserts and updates using bulk operations libraries like Entity Framework Plus or Dapper.\n- Configure connection strings with appropriate settings (e.g., `Pooling=true`).\n- Use `ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;` for read-only scenarios.\n- Monitor performance using tools like SQL Server Profiler or EF Core's built-in logging.\n- Regularly update and review dependencies to ensure security and performance improvements.",
     "source": "code_example",
-    "updated_at": 1780820113.6526058
+    "updated_at": 1780823474.2821774
   },
   "search:dotnet-ef-core-performance-tuning:entity framework core query op": {
     "content": "- Use `Include()` to eager load related entities.\n- Apply `AsNoTracking()` when read-only queries are performed.\n- Optimize queries using LINQ projection for efficient data retrieval.\n- Utilize `ToListAsync()` or `ToArrayAsync()` for asynchronous query execution.\n- Enable query splitting with `SplitQuery=true` in the DbContext configuration.\n- Monitor and analyze query performance using EF Core's logging capabilities.\n- Consider batching related entities to reduce database round-trips.\n- Use `FromSqlRaw()` or `FromSqlInterpolated()` for raw SQL queries when necessary.\n- Regularly update Entity Framework Core to the latest version for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780820123.4357412
+    "updated_at": 1780823475.4901898
   },
   "search:dotnet-ef-core-performance-tuning:entity framework core query op_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations and `dotnet ef database update` to apply them.\n- **Latest Versions**: EF Core 7.0 introduced several performance improvements and new features.\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only queries to improve performance.\n  - `AsSplitQuery()` to enable split query loading for better performance in complex scenarios.\n  - Indexes on navigation properties can significantly speed up related entity loading.",
     "source": "code_example",
-    "updated_at": 1780820136.8458543
+    "updated_at": 1780823476.6335723
   }
 }

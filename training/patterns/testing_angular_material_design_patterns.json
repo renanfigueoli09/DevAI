@@ -2,31 +2,31 @@
   "search:Testing Angular Material Design Patterns:angular material testing patte": {
     "content": "- Use `ng test` to run tests.\n- Update Angular Material and CDK to latest versions using `npm update @angular/material @angular/cdk`.\n- Configure testing in `karma.conf.js` for custom settings.\n- Implement component harnesses with `@angular/cdk/testing`.\n- Use `render()` from `@testing-library/angular` for role-based queries.\n- Apply the Page Object pattern to encapsulate component interactions.\n- Ensure tests cover all components and edge cases.",
     "source": "web_search",
-    "updated_at": 1780816464.5504599
+    "updated_at": 1780823560.1023026
   },
   "search:Testing Angular Material Design Patterns:angular material testing patte_ex": {
     "content": "- Use `ng test` to run tests.\n- Ensure Angular Material components are tested using the provided testing utilities.\n- For HttpClient, use `provideRouter` in your test module.\n- Update Angular and Angular Material to their latest versions for best practices and features.\n- Configure `tsconfig.spec.json` for TypeScript settings specific to testing.\n- Use Jest or Jasmine for writing tests, depending on preference.\n- Employ mocking patterns like `HttpClientTestingModule` for HTTP requests.\n- Review the official Angular documentation for the most current testing guidelines.",
     "source": "code_example",
-    "updated_at": 1780816465.7005415
+    "updated_at": 1780823561.3663855
   },
   "search:Testing Angular Material Design Patterns:material design unit tests": {
     "content": "- Use `npm install @testing-library/react` or `yarn add @testing-library/react` to install the latest version of React Testing Library.\n- For Material UI components, test without tying tests too closely to Material UI internals for better maintainability.\n- Utilize Jest and React Testing Library for writing unit tests.\n- Key config options include setting up a testing environment in your `package.json` or using a configuration file like `jest.config.js`.\n- Example CLI command: `npm test -- --watchAll`\n- Latest versions can be checked on the official Material UI GitHub repository or npm page.\n- Focus on component isolation and interaction tests to ensure robustness.",
     "source": "web_search",
-    "updated_at": 1780816466.8069048
+    "updated_at": 1780823562.6565201
   },
   "search:Testing Angular Material Design Patterns:material design unit tests_ex": {
     "content": "- Use `npm install --save-dev @testing-library/react` to add React Testing Library.\n- Run tests with `npm test`.\n- Configure Jest in your project root with a `jest.config.js` file.\n- Key config options include `testEnvironment: 'jsdom'`, `setupFilesAfterEnv: ['./setupTests.js']`.\n- Use `@material-ui/core` for Material Design components.\n- Install Material UI icons with `npm install @material-ui/icons`.\n- For testing Material UI components, use `@testing-library/jest-dom` for additional matchers.",
     "source": "code_example",
-    "updated_at": 1780816468.0000222
+    "updated_at": 1780823563.8195477
   },
   "search:testing-angular-material-design-patterns:angular material design testin": {
     "content": "- **CLI Commands**: `ng generate component <component-name>`, `ng test`\n- **Latest Versions**: Angular Material v15, Angular CLI v14\n- **Key Config Options**:\n  - `angular.json`: For project configurations.\n  - `app.module.ts`: Importing and declaring modules.\n  - `styles.css`: Global styles for the application.",
     "source": "web_search",
-    "updated_at": 1780816469.3699222
+    "updated_at": 1780823565.0196886
   },
   "search:testing-angular-material-design-patterns:angular material design testin_ex": {
     "content": "- **CLI Commands**:\n  - `ng test`: Runs the unit tests using Karma and Jasmine.\n  - `ng e2e`: Runs end-to-end tests using Protractor.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - Angular Material: 13.x\n\n- **Key Config Options**:\n  - `angular.json`: Configure test environments, browsers, and test options.\n  - `karma.conf.js`: Customize Karma configuration for test runners.",
     "source": "code_example",
-    "updated_at": 1780816470.513831
+    "updated_at": 1780823566.3847408
   }
 }

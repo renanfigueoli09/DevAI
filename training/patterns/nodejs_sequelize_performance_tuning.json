@@ -2,16 +2,16 @@
   "search:nodejs-sequelize-performance-tuning:node.js sequelize performance ": {
     "content": "- **CLI Commands**:\n  - `npx sequelize-cli model:create --name User`\n  - `npx sequelize-cli migration:create --name add-email-to-users`\n\n- **Latest Versions**:\n  - Sequelize CLI: v7.5.3\n  - Sequelize Core: v6.28.0\n\n- **Key Config Options**:\n  - `logging`: Function to log SQL queries.\n  - `define`: Object for model options like timestamps, paranoid, etc.\n  - `pool`: Configuration for connection pool settings.",
     "source": "web_search",
-    "updated_at": 1780816245.8084614
+    "updated_at": 1780823334.4353242
   },
   "search:nodejs-sequelize-performance-tuning:sequelize query optimization t": {
     "content": "- Use Sequelize's `include` option to eager load related models, reducing the number of queries.\n- Employ `where` clauses for filtering data efficiently.\n- Utilize `order` and `limit` for pagination and sorting without loading unnecessary data.\n- Implement caching strategies like Redis or Memcached to store frequently accessed query results.\n- Use Sequelize's `raw: true` option when raw SQL is necessary, bypassing ORM overhead.\n- Monitor query performance using Sequelize's built-in logging and profiling tools.\n- Regularly update Sequelize and database drivers to benefit from performance improvements and security patches.\n- Consider using indexes on columns that are frequently queried or used in joins.\n- Optimize complex queries by breaking them down into simpler subqueries when possible.",
     "source": "web_search",
-    "updated_at": 1780816247.2051163
+    "updated_at": 1780823335.702529
   },
   "search:nodejs-sequelize-performance-tuning:sequelize query optimization t_ex": {
     "content": "- Use `sequelize-cli` for database migrations and optimizations.\n- Employ `EXPLAIN ANALYZE` in PostgreSQL to identify slow queries.\n- Optimize Sequelize models by using eager loading with `.include`.\n- Utilize `where` clauses effectively to filter data.\n- Apply indexes on frequently queried columns.\n- Consider batch processing for large datasets.\n- Use `LIMIT` and `OFFSET` judiciously to paginate results efficiently.\n- Regularly update Sequelize and PostgreSQL to the latest versions for performance improvements.",
     "source": "code_example",
-    "updated_at": 1780816248.6598253
+    "updated_at": 1780823336.9533339
   }
 }

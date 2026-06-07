@@ -2,21 +2,21 @@
   "search:fastapi+mongodb-advanced:fastapi mongodb advanced query": {
     "content": "- **FastAPI Version**: Use `fastapi==0.98.0` for the latest stable version.\n- **PyMongo Version**: Use `pymongo[async]==4.9.0` for native async support.\n- **CLI Commands**:\n  - Install FastAPI and PyMongo: `pip install fastapi pymongo[async]`\n  - Run FastAPI app: `uvicorn main:app --reload`\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017/yourdatabase`\n  - Async Client Initialization: `client = AsyncIOMotorClient(\"mongodb://localhost:27017\")`\n  - Database and Collection Access: `db = client[\"yourdatabase\"]` and `collection = db[\"yourcollection\"]`\n- **Advanced Querying**:\n  - Use PyMongo's query syntax directly in FastAPI routes.\n  - Example: Fetch documents by a specific field: `async def get_documents(field, value): return await collection.find_one({field: value})`\n- **Dependencies**:\n  - Ensure you have MongoDB running locally or use a cloud service like MongoDB Atlas.\n- **Testing**:\n  - Use tools like Postman or curl to test your API endpoints.\n- **Documentation**:\n  - FastAPI automatically generates interactive API documentation at `/docs` and `/redoc`.",
     "source": "web_search",
-    "updated_at": 1780816455.611531
+    "updated_at": 1780823551.7396867
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb advanced query_ex": {
     "content": "- Clone repository: `git clone https://github.com/mongodb-pymongo-fastapi/example-code.git`\n- Create and activate virtual environment:\n  ```bash\n  mkdir fastAPI\n  cd fastAPI\n  python -m venv fastAPI\n  source fastAPI/bin/activate\n  ```\n- Install dependencies:\n  ```bash\n  pip install fastapi uvicorn pydantic pymongo\n  ```\n- Run FastAPI app: `uvicorn main:app --reload`\n- Key config options in `main.py` include MongoDB connection string and PyMongo client setup.",
     "source": "code_example",
-    "updated_at": 1780816456.8543386
+    "updated_at": 1780823552.9813423
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb performance op": {
     "content": "- Use FastAPI version 0.95.0 or later.\n- MongoDB driver PyMongo version 4.3.0 or later.\n- Optimize MongoDB queries with indexing.\n- Implement caching in FastAPI using libraries like `fastapi-cache`.\n- Utilize Docker Compose for local development optimization.\n- Ensure efficient data retrieval by minimizing the number of database calls.\n- Use asynchronous operations in FastAPI to leverage non-blocking I/O.\n- Monitor and analyze performance metrics using tools like MongoDB Atlas or Prometheus with FastAPI's monitoring capabilities.",
     "source": "web_search",
-    "updated_at": 1780816458.1887596
+    "updated_at": 1780823554.1562703
   },
   "search:fastapi+mongodb-advanced:fastapi mongodb performance op_ex": {
     "content": "- Use `fastapi-motor-mongo-template` from GitHub for high-performance CRUD operations.\n- Dockerize your FastAPI application for efficient deployment and scaling.\n- Ensure MongoDB server is running before starting the FastAPI app.\n- Run FastAPI with `uvicorn` using the command: `uvicorn main:app --reload`.\n- Key config options include setting up Motor driver in FastAPI to interact with MongoDB asynchronously.\n- For benchmarking, refer to the author's blog post on comparing different FastAPI and MongoDB options.",
     "source": "code_example",
-    "updated_at": 1780816459.4751956
+    "updated_at": 1780823555.2920895
   }
 }
