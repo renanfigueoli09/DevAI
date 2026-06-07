@@ -1,0 +1,22 @@
+{
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka inte": {
+    "content": "- **Latest Version**: Spring Cloud Stream Kafka Integration 3.2.0.RELEASE\n- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `gradle bootRun`\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output.\n  - `spring.kafka.bootstrap-servers`: Kafka broker addresses.",
+    "source": "web_search",
+    "updated_at": 1780836823.833763
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka inte_ex": {
+    "content": "- **CLI Commands**: `mvn spring-boot:run`\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Spring Kafka: 2.8.0.RELEASE\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.binder.configuration.key.deserializer`: Deserializer for the key.\n  - `spring.cloud.stream.kafka.binder.configuration.value.deserializer`: Deserializer for the value.\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input binding.",
+    "source": "code_example",
+    "updated_at": 1780836829.719279
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka erro": {
+    "content": "- Use `@Retryable` and `@Recover` annotations for error handling in Kafka listeners.\n- Configure Kafka producer properties like `retries`, `retry.backoff.ms`, and `delivery.timeout.ms`.\n- Implement a Dead Letter Topic (DLT) to handle failed messages.\n- Use Spring Cloud Stream's `ErrorChannel` for custom error handling logic.\n- Ensure Kafka Streams application has proper state management and checkpointing enabled.\n- Monitor Kafka metrics using tools like Confluent Control Center or Prometheus.\n- Update dependencies to the latest versions of Spring Boot, Spring Cloud Stream, and Kafka to benefit from bug fixes and improvements.",
+    "source": "web_search",
+    "updated_at": 1780836876.4722965
+  },
+  "search:java-spring-cloud-stream-kafka:spring cloud stream kafka erro_ex": {
+    "content": "- Use `@StreamListener` to handle Kafka messages.\n- Implement `ErrorHandler` interface for custom error handling.\n- Configure `errorHandler` in `KafkaStreamsConfiguration`.\n- Use `@Retryable` and `@Recover` annotations for retries and fallbacks.\n- Set up a Dead Letter Topic (DLT) for failed messages.\n- Use `ListenerContainerCustomizer` to configure error handlers.\n- Ensure Kafka Streams version is compatible with Spring Cloud Stream.",
+    "source": "code_example",
+    "updated_at": 1780836886.1056905
+  }
+}

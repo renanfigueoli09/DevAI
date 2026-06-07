@@ -1,0 +1,7 @@
+{
+  "search:Security Best Practices for NestJS and gRPC:nestjs security best practices": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n  - `nest generate service service-name`: Generates a new service.\n\n- **Latest Versions**:\n  - NestJS: Check the latest version on [npm](https://www.npmjs.com/package/@nestjs/core).\n\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe())`: Enables validation globally.\n  - `app.useGlobalFilters(new AllExceptionsFilter())`: Enables exception filters globally.\n  - `app.useGlobalGuards(AuthGuard('jwt'))`: Enables guards globally.",
+    "source": "web_search",
+    "updated_at": 1780837124.229706
+  }
+}
