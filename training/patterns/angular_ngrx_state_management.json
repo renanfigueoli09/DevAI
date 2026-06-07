@@ -2,26 +2,26 @@
   "search:angular+ngRx-state-management:angular ngrx state management ": {
     "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - NgRx: v15.4.0\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)`: Registers the root reducers.\n  - `EffectsModule.forRoot(effects)`: Registers the root effects.\n  - `MetaReducer`: A function that modifies the state before it is returned to the store.",
     "source": "web_search",
-    "updated_at": 1780817157.5586529
+    "updated_at": 1780824356.1804981
   },
   "search:angular+ngRx-state-management:angular ngrx state management _ex": {
     "content": "- **CLI Commands**:\n  - `ng new my-angular-app --routing`\n  - `ng generate store feature-name`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.3\n  - NGRX: 15.0.0\n\n- **Key Config Options**:\n  - Store: Define actions, reducers, and selectors.\n  - Effects: Handle side effects like HTTP requests.\n  - Selectors: Extract data from the store for components.",
     "source": "code_example",
-    "updated_at": 1780817158.7028706
+    "updated_at": 1780824357.554852
   },
   "search:angular+ngRx-state-management:ngrx store optimization techni": {
     "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`\n  - `ng generate store <name>`\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - NgRx Store: 15.x\n\n- **Key Config Options**:\n  - `storeConfig` for configuring the store.\n  - `metaReducers` for applying meta-reducers globally.\n  - `initialState` for setting initial state values.",
     "source": "web_search",
-    "updated_at": 1780817159.9022195
+    "updated_at": 1780824359.0711422
   },
   "search:angular+ngRx-state-management:ngrx effects for side effects ": {
     "content": "- **CLI Commands**:\n  - `ng generate effect <effect-name>` to create an NgRx effect.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest version of NgRx by running `npm update @ngrx/core @ngrx/effects`.\n  \n- **Key Config Options**:\n  - In your `app.module.ts`, import and configure `StoreModule` and `EffectsModule`.\n  - Use `provideStore` for synchronous reducers.\n  - Use `provideEffects` to register effects.\n\n- **Additional Tips**:\n  - Utilize the `@Effect()` decorator to mark methods that handle side effects.\n  - Implement error handling within effect methods using RxJS operators like `catchError`.\n\nThis summary provides actionable facts for a developer working with NgRx Effects in Angular applications.",
     "source": "web_search",
-    "updated_at": 1780817161.103474
+    "updated_at": 1780824360.565726
   },
   "search:angular+ngRx-state-management:ngrx effects for side effects _ex": {
     "content": "- **CLI Commands**:\n  - `ng generate effects <effect-name>` to create an effect.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular CLI and NgRx libraries for compatibility and bug fixes.\n\n- **Key Config Options**:\n  - Use `ofType` from `@ngrx/effects` to filter actions based on their type.\n  - Implement error handling within effects using try-catch blocks or operators like `catchError`.\n  - Configure the store in your Angular module with `StoreModule.forRoot(reducers)` and `EffectsModule.forRoot([YourEffect])`.",
     "source": "code_example",
-    "updated_at": 1780817162.4509048
+    "updated_at": 1780824362.2048128
   }
 }
