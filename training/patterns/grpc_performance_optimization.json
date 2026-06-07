@@ -2,17 +2,17 @@
   "search:gRPC Performance Optimization:grpc performance tuning best p": {
     "content": "- Use latest gRPC version (v2.x as of my last update).\n- Enable compression (`grpc.enable_http2_permessage_deflate`).\n- Optimize protobuf schema for size and efficiency.\n- Implement caching strategies to reduce latency.\n- Adjust network configurations for optimal throughput.\n- Use `grpc.max_concurrent_streams` to control concurrency.\n- Monitor performance with tools like `gRPC Benchmark`.\n- Utilize `grpc.keepalive_time_ms` and `grpc.keepalive_timeout_ms` for connection management.\n- Enable server-side streaming if applicable for efficient data transfer.",
     "source": "web_search",
-    "updated_at": 1780829881.499932
+    "updated_at": 1780838982.676005
   },
   "search:gRPC Performance Optimization:grpc performance tuning best p_ex": {
     "content": "- **CLI Commands**: Use `grpcurl` for testing and debugging.\n- **Latest Versions**: Ensure using gRPC version 2.45 or later for the best performance features.\n- **Key Config Options**:\n  - `max_concurrent_streams`: Set to control the number of concurrent streams per connection.\n  - `idle_timeout`: Adjust the timeout for idle connections.\n  - `keepalive_time`: Configure keep-alive time to maintain long-lived connections.\n  - `keepalive_timeout`: Define the timeout for keep-alive pings.\n  - `max_send_message_length` and `max_receive_message_length`: Set limits on message sizes.",
     "source": "code_example",
-    "updated_at": 1780829882.7034988
+    "updated_at": 1780838984.3310242
   },
   "search:gRPC Performance Optimization:grpc load balancing strategies": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <envoy-config-file>` to deploy Envoy as a load balancer.\n  - `grpcurl -plaintext localhost:50051 list` to list services available on the gRPC server.\n\n- **Latest Versions**:\n  - gRPC: v1.46.3\n  - Envoy: v1.21.0\n\n- **Key Config Options**:\n  - `round_robin`: Distributes requests evenly across servers.\n  - `random`: Selects a random server for each request.\n  - DNS-based resolution: Periodically updates the list of available servers based on DNS changes.\n  - Envoy configuration: Specifies routes and load balancing policies.",
     "source": "web_search",
-    "updated_at": 1780829886.9550111
+    "updated_at": 1780838985.9808166
   },
   "search:gRPC Performance Optimization:grpc load balancing strategies_ex": {
     "content": "- **CLI Commands**:\n  - `docker build -t grpc-server .`\n  - `docker run -p 50051:50051 grpc-server`\n\n- **Latest Versions**:\n  - gRPC: v2.47.0\n  - Protocol Buffers: v3.19.4\n\n- **Key Config Options**:\n  - Load Balancing Policy: `round_robin`, `pick_first`\n  - xDS (x-Distributed Service) for dynamic load balancing and endpoint management.\n  - Proxy Load Balancer options: L7 (Application) vs L4 (Transport).",
