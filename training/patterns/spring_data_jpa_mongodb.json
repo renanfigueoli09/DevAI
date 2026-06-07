@@ -2,12 +2,12 @@
   "search:spring-data-jpa-mongodb:spring data jpa mongodb crud 2": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n  - MongoDB Driver: 4.3.x\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop`.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.",
     "source": "web_search",
-    "updated_at": 1780803899.1781163
+    "updated_at": 1780810707.756522
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb crud 2_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to start the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.2\n  - MongoDB Driver: 4.5.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for database schema management.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
     "source": "code_example",
-    "updated_at": 1780803900.42556
+    "updated_at": 1780810709.0363295
   },
   "search:spring-data-jpa-mongodb:spring data jpa mongodb perfor": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `mvn spring-boot:run` to run your Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.0.RELEASE\n  - MongoDB Java Driver: 4.3.1\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.properties.hibernate.dialect`: Set to `org.hibernate.dialect.MongoDBDialect` for MongoDB compatibility.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
