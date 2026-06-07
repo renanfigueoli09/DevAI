@@ -28,5 +28,15 @@
     "content": "- **GitHub Repository**: [liaoliaots/nestjs-redis](https://github.com/liaoliaots/nestjs-redis)\n- **Latest Version**: Check the repository for the latest release.\n- **Key Config Options**:\n  - `host`: Redis host address.\n  - `port`: Redis port number.\n  - `sentinelOptions`: Sentinel configuration options.\n  - `clusterOptions`: Cluster configuration options.\n- **CLI Commands**:\n  - Install: `npm install @liaoliaots/nestjs-redis`\n  - Test: `npm test` (Ensure you have the necessary tests set up)\n- **Example Usage**:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { RedisModule } from '@liaoliaots/nestjs-redis';\n\n  @Module({\n    imports: [\n      RedisModule.forRoot({\n        sentinels: [{ host: '127.0.0.1', port: 26379 }],\n        name: 'mymaster',\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- **Documentation**: Explore the [official documentation](https://github.com/liaoliaots/nestjs-redis#readme) for detailed usage and examples.",
     "source": "code_example",
     "updated_at": 1780800553.8981547
+  },
+  "redis_cache": {
+    "content": "- **CLI Commands**:\n  - `npm install @nestjs/common @nestjs/core @nestjs/platform-express`\n  - `npm install --save redis`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Redis: v7.x\n\n- **Key Config Options**:\n  - `redisOptions`: Configure Redis connection options.\n  - `ttl`: Set time-to-live for cache entries.\n  - `prefix`: Define a prefix for cache keys.",
+    "source": "web_research",
+    "updated_at": 1780801385.6235325
+  },
+  "nestjs_cache": {
+    "content": "- **CLI Commands**:\n  - `nest generate interceptor caching`\n  - `docker run --name my-redis -d redis`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Redis: v7.x\n  - @nestjs/common: v10.x\n\n- **Key Config Options**:\n  - CacheModule.register({ ttl: 60, isGlobal: true })\n  - Use `@CacheInterceptor` decorator on controllers or methods",
+    "source": "web_research",
+    "updated_at": 1780801391.903125
   }
 }
