@@ -48,5 +48,10 @@
     "content": "- **CLI Commands**: `pytest` for running tests, `unittest` for Python's built-in testing framework.\n- **Latest Versions**: Ensure using the latest version of Python and testing frameworks like `pytest` or `unittest`.\n- **Key Config Options**:\n  - For `pytest`, configure in `pytest.ini` or `.ini` files.\n  - For `unittest`, use configuration through `unittest.TestLoader` or command-line options.",
     "source": "code_example",
     "updated_at": 1780793740.9122326
+  },
+  "search:testing-patterns:testing mongodb in-memory mong": {
+    "content": "- Install `@shelf/jest-mongodb` using `npm i @shelf/jest-mongodb`\n- Use `mongodb-memory-server` for in-memory MongoDB testing\n- Latest version of `@shelf/jest-mongodb`: 6.0.2 (as of March 2023)\n- Key config options: \n  - `mongoInstanceOpts`: Customize MongoDB instance options\n  - `dbPath`: Specify the path to store the database files\n  - `instance`: Access the MongoDB instance for advanced configurations",
+    "source": "web_search",
+    "updated_at": 1780793750.2282097
   }
 }
