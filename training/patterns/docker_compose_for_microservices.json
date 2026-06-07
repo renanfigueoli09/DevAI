@@ -2,31 +2,31 @@
   "search:Docker Compose for Microservices:docker compose microservices a": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts or restarts services.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `up`.\n  - `docker-compose build`: Builds or rebuilds services.\n\n- **Latest Versions**:\n  - Docker Compose: 1.29.2 (as of my last update)\n\n- **Key Config Options**:\n  - `services`: Defines the microservices.\n  - `networks`: Specifies networks for service communication.\n  - `volumes`: Manages data persistence across container restarts.\n  - `build`: Path to a Dockerfile or build context.",
     "source": "web_search",
-    "updated_at": 1780830745.4792125
+    "updated_at": 1780839890.2010968
   },
   "search:Docker Compose for Microservices:docker compose microservices a_ex": {
     "content": "- Use `docker-compose up` to start services.\n- Specify services in `docker-compose.yml`.\n- Use `docker-compose down` to stop services.\n- Update Docker Compose file version to 3.x for latest features.\n- Key config options include `services`, `build`, `image`, and `ports`.\n- For Python, use `python:3.10-slim` as the base image.\n- Redis can be added with `redis:latest`.\n- FastAPI can be used with `fastapi` and `uvicorn`.\n- Use `docker-compose exec <service> command` to run commands in a service container.\n- For asynchronous programming, use `asyncio` or `aiohttp`.",
     "source": "code_example",
-    "updated_at": 1780830746.9967897
+    "updated_at": 1780839892.058974
   },
   "search:Docker Compose for Microservices:docker compose best practices ": {
     "content": "- **CLI Commands**:\n  - `docker-compose up` to start services.\n  - `docker-compose down` to stop and remove containers, networks, volumes, and images created by `up`.\n  - `docker-compose pull` to pull the latest images for services.\n\n- **Latest Versions**:\n  - Docker Compose version: [Check latest on Docker's official website](https://docs.docker.com/compose/install/).\n\n- **Key Config Options**:\n  - `services`: Define the services that make up your application.\n  - `networks`: Configure networks to connect services.\n  - `volumes`: Define volumes for data persistence.\n  - `build`: Specify build context and Dockerfile.\n  - `environment`: Set environment variables.\n\n- **Best Practices**:\n  - Use `.env` files for sensitive information.\n  - Keep your Compose file version up-to-date.\n  - Validate your Compose file with `docker-compose config`.\n  - Use labels for service discovery and management.",
     "source": "web_search",
-    "updated_at": 1780830748.4919467
+    "updated_at": 1780839894.0259814
   },
   "search:Docker Compose for Microservices:docker compose best practices _ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts or restarts services.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `docker-compose up`.\n  - `docker-compose pull`: Pulls the latest image for each service.\n\n- **Latest Versions**:\n  - Docker Compose v2.19.0 (as of my last update).\n\n- **Key Config Options**:\n  - `version`: Specifies the version of the Compose file format.\n  - `services`: Defines the services to run.\n  - `networks`: Declares networks that containers can join.\n  - `volumes`: Defines volumes for data persistence.\n  - `environment`: Sets environment variables for services.\n\n- **Best Practices**:\n  - Use `.env` files for environment variables.\n  - Separate development, staging, and production configurations using profiles.\n  - Utilize Docker secrets for sensitive information.\n  - Scale services by specifying the number of replicas in the service configuration.",
     "source": "code_example",
-    "updated_at": 1780830750.100702
+    "updated_at": 1780839896.0357094
   },
   "search:Docker Compose for Microservices:docker compose with kubernetes": {
     "content": "- **Kompose**: Use `kompose convert -f docker-compose.yml` to convert Docker Compose files to Kubernetes manifests.\n- **Kubectl**: Ensure it's installed and configured with `kubectl cluster-info`.\n- **Docker Compose**: Latest version is 1.29.2, released on April 13, 2021.\n- **Kubernetes**: Latest stable version as of my last update is 1.24.3, released on March 15, 2022.\n- **Key Config Options**:\n  - `image`: Specifies the Docker image to use.\n  - `replicas`: Defines the number of replicas for a service.\n  - `ports`: Maps container ports to host ports.\n  - `volumes`: Mounts volumes for persistent storage.",
     "source": "web_search",
-    "updated_at": 1780830751.7564278
+    "updated_at": 1780839897.6811266
   },
   "search:Docker Compose for Microservices:docker compose with kubernetes_ex": {
     "content": "- **Kompose**: Use `kompose convert` to convert Docker Compose files into Kubernetes manifests.\n- **Docker Compose v3**: Supports features like `restart_policy`.\n- **Kubernetes Deployments**: Recommended for managing containerized applications.\n- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the docker-compose.yml file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `up`.\n  - `kompose convert -f docker-compose.yml -o k8s/`: Converts a Docker Compose file to Kubernetes YAML files.\n- **Latest Versions**: Ensure using the latest versions of Docker, Docker Compose, and Kompose for compatibility and security updates.\n- **Key Config Options**:\n  - `restart_policy`: Defines how containers should restart after failures.\n  - `volumes`: Mounts volumes to persist data across container restarts.\n  - `ports`: Maps ports between the host and the container.",
     "source": "code_example",
-    "updated_at": 1780830753.3090613
+    "updated_at": 1780839899.531059
   }
 }

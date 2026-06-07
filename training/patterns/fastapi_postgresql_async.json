@@ -2,26 +2,26 @@
   "search:fastapi+postgresql-async:fastapi postgresql async perfo": {
     "content": "- Use `pip install fastapi[all] sqlalchemy asyncpg tortoise-orm` to install necessary packages.\n- For FastAPI, use the latest version available via pip.\n- Configure PostgreSQL with `asyncpg` for asynchronous connections.\n- Set up Tortoise ORM by creating a `models.py` file and defining your models.\n- Use `SQLModel` for ORM queries which supports both synchronous and asynchronous operations.\n- Implement efficient query handling using SQLAlchemy's async capabilities.\n- Monitor performance with tools like `asyncpg`'s built-in profiling features.\n- Adjust PostgreSQL settings such as `work_mem`, `maintenance_work_mem`, and `shared_buffers`.\n- Use connection pooling to manage database connections efficiently.\n- Optimize queries by indexing frequently accessed columns.",
     "source": "web_search",
-    "updated_at": 1780830632.4563627
+    "updated_at": 1780839766.4362385
   },
   "search:fastapi+postgresql-async:fastapi async orm with postgre": {
     "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.103.2\n  - SQLAlchemy: 1.4.46\n  - SQLModel: 0.0.5\n  - asyncpg: 0.27.0\n\n- **Key Config Options**:\n  - `DATABASE_URL`: Define the connection string for PostgreSQL.\n  - `SQLALCHEMY_DATABASE_URI`: Use this in SQLAlchemy to connect to PostgreSQL.\n  - `TORTOISE_ORM`: Configuration dictionary for Tortoise ORM.\n  - `MAX_CONNECIONS`: Maximum number of connections in the pool.\n  - `MIN_CONNECTIONS`: Minimum number of connections in the pool.",
     "source": "web_search",
-    "updated_at": 1780830634.1763842
+    "updated_at": 1780839768.2624264
   },
   "search:fastapi+postgresql-async:fastapi async orm with postgre_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/KenMwaura1/Fast-Api-example.git`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0.0\n  - asyncpg: v0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@localhost/dbname`\n  - Connection Pooling: Use `SQLAlchemy` with `asyncpg` for efficient connection management.\n  - ORM Choice: SQLModel or Tortoise ORM for asynchronous database operations.",
     "source": "code_example",
-    "updated_at": 1780830635.7589881
+    "updated_at": 1780839769.94218
   },
   "search:fastapi+postgresql-async:fastapi async database operati": {
     "content": "- Use `pip install fastapi asyncpg sqlalchemy` to install necessary packages.\n- For the latest versions, check [PyPI](https://pypi.org/).\n- Key config options include:\n  - Database URL format: `postgresql+asyncpg://user:password@host/dbname`\n  - Async SQLAlchemy model definitions\n  - FastAPI routes with async functions\n- Use `uvicorn app.main:app --reload` to run the FastAPI application.\n- For efficient CRUD operations, use asynchronous SQLAlchemy ORM methods like `.create()`, `.read()`, `.update()`, `.delete()`.\n- Configure PostgreSQL settings for optimal performance and scalability.",
     "source": "web_search",
-    "updated_at": 1780830637.238455
+    "updated_at": 1780839771.44929
   },
   "search:fastapi+postgresql-async:fastapi async database operati_ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init alembic`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - ASGI Server: `uvicorn main:app --reload`",
     "source": "code_example",
-    "updated_at": 1780830638.7851446
+    "updated_at": 1780839772.9218554
   }
 }

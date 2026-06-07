@@ -2,21 +2,21 @@
   "search:nestjs+mysql:nestjs typeorm mysql mysql2 en": {
     "content": "- Install dependencies: `npm install --save @nestjs/typeorm typeorm mysql2`\n- Entity example:\n  ```typescript\n  import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';\n\n  @Entity()\n  export class User {\n    @PrimaryGeneratedColumn()\n    id: number;\n\n    @Column()\n    name: string;\n  }\n  ```\n- Migrations:\n  - Install `typeorm-cli`: `npm install --save-dev typeorm-cli`\n  - Generate migration file: `npx typeorm migration:generate -n CreateUsersTable`\n  - Run migrations: `npx typeorm migration:run`",
     "source": "web_search",
-    "updated_at": 1780830733.8023245
+    "updated_at": 1780839873.1072738
   },
   "search:nestjs+mysql:nestjs typeorm mysql mysql2 en_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/typeorm typeorm mysql2`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeORM: v0.3.x\n  - MySQL2: v2.x\n\n- **Key Config Options**:\n  - `app.module.ts`: Import `TypeOrmModule.forRoot()` with connection options.\n  - `entity`: Define entity classes using decorators like `@Entity`, `@PrimaryGeneratedColumn`, etc.\n  - `.env`: Store database credentials securely as environment variables.",
     "source": "code_example",
-    "updated_at": 1780830735.3512335
+    "updated_at": 1780839874.9756627
   },
   "search:nestjs+mysql:nestjs typeorm mysql relations": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/typeorm typeorm mysql2`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeORM: v0.3.x\n\n- **Key Config Options**:\n  - `app.module.ts`: \n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { TypeOrmModule } from '@nestjs/typeorm';\n\n    @Module({\n      imports: [\n        TypeOrmModule.forRoot({\n          type: 'mysql',\n          host: 'localhost',\n          port: 3306,\n          username: 'root',\n          password: 'password',\n          database: 'testdb',\n          entities: [__dirname + '/**/*.entity{.ts,.js}'],\n          synchronize: true,\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Entity Example:\n    ```typescript\n    import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';\n\n    @Entity()\n    export class User {\n      @PrimaryGeneratedColumn()\n      id: number;\n\n      @Column()\n      name: string;\n\n      @Column()\n      email: string;\n    }\n    ```\n  - Controller Example:\n    ```typescript\n    import { Controller, Get, Post, Body } from '@nestjs/common';\n    import { UserService } from './user.service';\n    import { User } from './user.entity';\n\n    @Controller('users')\n    export class UserController {\n      constructor(private readonly userService: UserService) {}\n\n      @Post()\n      create(@Body() user: User) {\n        return this.userService.create(user);\n      }\n\n      @Get()\n      findAll() {\n        return this.userService.findAll();\n      }\n    }\n    ```",
     "source": "web_search",
-    "updated_at": 1780830736.66427
+    "updated_at": 1780839876.8905056
   },
   "search:nestjs+mysql:nestjs typeorm mysql relations_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/typeorm typeorm mysql2`\n\n- **Latest Versions**:\n  - NestJS: v9.x\n  - TypeORM: v0.3.x\n  - MySQL2: v2.x\n\n- **Key Config Options**:\n  - `app.module.ts`: \n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { TypeOrmModule } from '@nestjs/typeorm';\n\n    @Module({\n      imports: [\n        TypeOrmModule.forRoot({\n          type: 'mysql',\n          host: 'localhost',\n          port: 3306,\n          username: 'root',\n          password: 'password',\n          database: 'database_name',\n          entities: [__dirname + '/**/*.entity{.ts,.js}'],\n          synchronize: true, // Not recommended for production\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Entity relations:\n    ```typescript\n    import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';\n\n    @Entity()\n    export class User {\n      @PrimaryGeneratedColumn()\n      id: number;\n\n      @Column()\n      name: string;\n\n      @ManyToOne(type => Role, role => role.users)\n      role: Role;\n    }\n\n    @Entity()\n    export class Role {\n      @PrimaryGeneratedColumn()\n      id: number;\n\n      @Column()\n      name: string;\n\n      @OneToMany(type => User, user => user.role)\n      users: User[];\n    }\n    ```",
     "source": "code_example",
-    "updated_at": 1780830738.051143
+    "updated_at": 1780839878.6464374
   }
 }

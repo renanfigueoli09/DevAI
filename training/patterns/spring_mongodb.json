@@ -2,21 +2,21 @@
   "search:spring+mongodb:spring data mongodb @document ": {
     "content": "- **Latest Version**: Spring Data MongoDB 3.5.0\n- **Key Config Options**:\n  - `@Document(collection = \"yourCollectionName\")`\n  - `MongoRepository<T, ID>`\n- **CLI Commands**:\n  - `mvn clean install` for building the project\n  - `mvn spring-boot:run` to run a Spring Boot application\n- **Aggregation Example**:\n  ```java\n  AggregationResults<YourResultClass> results = mongoTemplate.aggregate(\n      Aggregation.newAggregation(\n          Aggregation.match(Criteria.where(\"field\").is(value)),\n          Aggregation.group(\"groupField\"),\n          Aggregation.project(\"projectedField\")\n      ),\n      \"yourCollectionName\",\n      YourResultClass.class\n  );\n  ```\n- **Dependency in `pom.xml`**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.boot</groupId>\n      <artifactId>spring-boot-starter-data-mongodb</artifactId>\n  </dependency>\n  ```\n- **MongoDB Client Dependency**:\n  ```xml\n  <dependency>\n      <groupId>org.mongodb</groupId>\n      <artifactId>mongodb-driver-sync</artifactId>\n  </dependency>\n  ```",
     "source": "web_search",
-    "updated_at": 1780830550.275246
+    "updated_at": 1780839705.5302682
   },
   "search:spring+mongodb:spring data mongodb @document _ex": {
     "content": "- **CLI Commands**: `mongo` to connect to MongoDB, `mongod` to start the MongoDB server.\n- **Latest Versions**: Ensure using Spring Boot and Spring Data MongoDB compatible with your project's Java version.\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Specifies the MongoDB connection URI.\n  - `spring.data.mongodb.database`: Specifies the database name.\n  - `spring.data.mongodb.host` and `spring.data.mongodb.port`: Specify the host and port of the MongoDB server.",
     "source": "code_example",
-    "updated_at": 1780830552.2547667
+    "updated_at": 1780839707.1364288
   },
   "search:spring+mongodb:spring boot mongodb reactivemo": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Data MongoDB: 4.0.6\n  - Project Reactor: 3.5.10\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.webflux.base-path`: Base path for web endpoints.\n  - `spring.data.mongodb.database`: Database name to connect to.",
     "source": "web_search",
-    "updated_at": 1780830554.2782745
+    "updated_at": 1780839708.756201
   },
   "search:spring+mongodb:spring boot mongodb reactivemo_ex": {
     "content": "- **CLI Commands**:\n  - `spring init --dependencies=webflux,data-mongodb-reactive,lombok,devtools myproject`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.4.2\n  - Java: 17\n\n- **Key Config Options**:\n  - `application.properties`: \n    ```properties\n    spring.data.mongodb.uri=mongodb://localhost:27017/mydatabase\n    ```\n  - `pom.xml` (for Maven):\n    ```xml\n    <dependencies>\n      <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-webflux</artifactId>\n      </dependency>\n      <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>\n      </dependency>\n      <dependency>\n        <groupId>org.projectlombok</groupId>\n        <artifactId>lombok</artifactId>\n        <optional>true</optional>\n      </dependency>\n      <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-devtools</artifactId>\n        <scope>runtime</scope>\n      </dependency>\n    </dependencies>\n    ```",
     "source": "code_example",
-    "updated_at": 1780830556.024816
+    "updated_at": 1780839710.312593
   }
 }
