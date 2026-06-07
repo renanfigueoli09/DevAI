@@ -2,11 +2,11 @@
   "search:dotnet+efcore-performance:optimizing entity framework co": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `UseOptimisticConcurrency()` for concurrency control.\n  - `MaxBatchSize(int batchSize)` for batching operations.",
     "source": "web_search",
-    "updated_at": 1780806105.85818
+    "updated_at": 1780810048.6462646
   },
   "search:dotnet+efcore-performance:optimizing entity framework co_ex": {
     "content": "- Use `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` to avoid tracking entities, reducing memory usage.\n- Employ `AsNoTracking()` in queries for read-only scenarios to prevent entity tracking.\n- Apply `Take(n)` and `Skip(n)` for pagination to limit the number of records fetched.\n- Utilize `Include` only when necessary to fetch related data efficiently.\n- Update Entity Framework Core to the latest version (e.g., EF Core 7.0) for performance improvements.\n- Configure `DbContextOptions` with appropriate settings like `UseQueryTrackingBehavior`.\n- Use `ExecuteAsync()` and `ToListAsync()` for asynchronous operations, improving application responsiveness.\n- Monitor query execution plans using SQL Server Profiler or similar tools to identify bottlenecks.\n- Implement caching strategies to reduce database load for frequently accessed data.",
     "source": "code_example",
-    "updated_at": 1780806124.6290653
+    "updated_at": 1780810050.2144954
   }
 }

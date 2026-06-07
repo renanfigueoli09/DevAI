@@ -2,11 +2,11 @@
   "search:react-native+firebase-authentication:react native firebase authenti": {
     "content": "- Install Firebase SDKs using `npm install @react-native-firebase/app` and `npm install @react-native-firebase/auth`.\n- Configure Firebase in your Android project by adding the Firebase BoM to `android/app/build.gradle`.\n- For Expo projects, use `expo install @react-native-firebase/app` and `expo install @react-native-firebase/auth`.\n- Implement authentication with email and password using `@react-native-firebase/auth.signInWithEmailAndPassword(email, password)`.\n- Ensure secure password handling by validating user input before submission.\n- Use Firebase Authentication's built-in UI components for a seamless user experience.\n- Regularly update your dependencies to the latest versions for security patches and new features.\n- Implement additional authentication methods like Google OAuth as needed.\n- Configure Firebase rules in the Firebase console to control access to your application data.",
     "source": "web_search",
-    "updated_at": 1780805868.0859401
+    "updated_at": 1780809946.74076
   },
   "search:react-native+firebase-authentication:react native firebase authenti_ex": {
     "content": "- Install Firebase CLI using `npm install -g firebase-tools`\n- Initialize Firebase in your project with `firebase init` and follow the prompts\n- Update React Native to the latest version for compatibility\n- Install @react-native-firebase/app using npm or yarn\n- Configure Firebase Authentication by setting up providers (email/password, Google, Facebook, etc.)\n- Use `firebase.auth().createUserWithEmailAndPassword(email, password)` for user registration\n- Implement login with `firebase.auth().signInWithEmailAndPassword(email, password)`\n- Secure user data by using Firestore or Realtime Database with appropriate rules\n- Enable email verification to ensure users are real\n- Regularly update Firebase SDK and dependencies to benefit from security patches and features",
     "source": "code_example",
-    "updated_at": 1780805883.5812826
+    "updated_at": 1780809948.0357168
   }
 }
