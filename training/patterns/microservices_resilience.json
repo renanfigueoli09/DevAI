@@ -2,21 +2,21 @@
   "search:microservices+resilience:microservices resilience patte": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**:\n  - Spring Cloud Gateway: v3.2.0\n  - Resilience4j: v1.7.0\n- **Key Config Options**:\n  - Circuit Breaker: `circuitBreaker.enabled=true`\n  - Retry: `retry.maxAttempts=5`\n  - Bulkhead: `bulkhead.maxConcurrentCalls=10`",
     "source": "web_search",
-    "updated_at": 1780824878.2144945
+    "updated_at": 1780833306.3233263
   },
   "search:microservices+resilience:microservices resilience patte_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <file.yaml>` to deploy microservices.\n  - `kubectl get pods` to check the status of microservices.\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.3\n  - Istio: 1.10.5\n\n- **Key Config Options**:\n  - Circuit Breaker: Use Istio's VirtualService and DestinationRule for circuit breaker.\n  - Retry: Configure retries in the VirtualService using `retries` field.\n  - Timeout: Set timeouts to prevent long-running requests from blocking others.",
     "source": "code_example",
-    "updated_at": 1780824879.8005664
+    "updated_at": 1780833312.611298
   },
   "search:microservices+resilience:circuit breaker and bulkhead i": {
     "content": "- **Circuit Breaker Implementation**:\n  - Use Spring Cloud Circuit Breaker.\n  - Add dependency: `implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'`.\n  - Configure in `application.yml`:\n    ```yaml\n    resilience4j.circuitbreaker.instances.myCircuitBreaker:\n      registerHealthIndicator: true\n      slidingWindowSize: 10\n      minimumNumberOfCalls: 5\n      waitDurationInOpenState: PT1s\n      permittedNumberOfCallsInHalfOpenState: 3\n      failureRateThreshold: 50\n    ```\n\n- **Bulkhead Implementation**:\n  - Use Spring Cloud Gateway or Resilience4j.\n  - Add dependency: `implementation 'org.springframework.cloud:spring-cloud-starter-gateway'`.\n  - Configure in `application.yml`:\n    ```yaml\n    spring:\n      cloud:\n        gateway:\n          routes:\n            - id: my_route\n              uri: lb://my-service\n              predicates:\n                - Path=/api/**\n              filters:\n                - name: RequestRateLimiter\n                  args:\n                    redis-rate-limiter.replenishRate: 10\n                    redis-rate-limiter.burstCapacity: 20\n    ```\n\n- **Latest Versions**:\n  - Spring Cloud Circuit Breaker: 3.0.x\n  - Resilience4j: 1.7.x\n\n- **Key Config Options**:\n  - `slidingWindowSize`: Number of calls in the sliding window.\n  - `minimumNumberOfCalls`: Minimum number of calls required to open a circuit.\n  - `waitDurationInOpenState`: Duration for which the circuit remains open.\n  - `permittedNumberOfCallsInHalfOpenState`: Number of allowed calls when the circuit is half-open.\n  - `failureRateThreshold`: Threshold above which the circuit opens.",
     "source": "web_search",
-    "updated_at": 1780824881.4223924
+    "updated_at": 1780833315.0157382
   },
   "search:microservices+resilience:circuit breaker and bulkhead i_ex": {
     "content": "- **CLI Commands**:\n  - `resilience4j-cli circuitbreaker create --name myCircuitBreaker`\n  - `resilience4j-cli bulkhead create --name myBulkhead`\n\n- **Latest Versions**:\n  - resilience4j: v1.7.0\n\n- **Key Config Options**:\n  - Circuit Breaker: `failureRateThreshold`, `waitDurationInOpenState`, `permittedNumberOfCallsInHalfOpenState`\n  - Bulkhead: `maxConcurrentCalls`, `maxWaitTime`",
     "source": "code_example",
-    "updated_at": 1780824883.0161152
+    "updated_at": 1780833316.8124201
   }
 }
