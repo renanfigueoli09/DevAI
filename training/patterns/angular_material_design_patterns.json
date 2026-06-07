@@ -58,5 +58,15 @@
     "content": "- **CLI Commands**:\n  - `ng new my-project --preset=angular`\n  - `ng add @angular/material`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Material: 15.0.3\n\n- **Key Config Options**:\n  - `theme`: Define a theme in `styles.scss` using Angular Material themes.\n  - `layoutDirection`: Set layout direction for responsive design using `MatLayoutModule`.\n  - `breakpoints`: Use `BreakpointObserver` to observe and react to different screen sizes.",
     "source": "code_example",
     "updated_at": 1780805171.22216
+  },
+  "search:angular+material-design-patterns:material design patterns in an": {
+    "content": "- **CLI Commands**: Use `ng add @angular/material` to install Angular Material.\n- **Latest Versions**: Ensure Angular and Angular Material are up-to-date using `npm update`.\n- **Key Config Options**:\n  - `theme`: Define your theme in `styles.scss` or `styles.css`.\n  - `iconRegistry`: Register icons for use across the application.\n  - `animationMode`: Set animation mode globally in `app.module.ts`.",
+    "source": "web_search",
+    "updated_at": 1780805177.562288
+  },
+  "search:angular+material-design-patterns:material design patterns in an_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v13.3.7\n\n- **Key Config Options**:\n  - `theme`: Define a theme in `styles.scss` using prebuilt themes or custom palettes.\n  - `icons`: Use icons from the Material Icons library by specifying them in your component templates.\n  - `typography`: Customize typography styles through the `mat-typography-config` token.",
+    "source": "code_example",
+    "updated_at": 1780805200.2588887
   }
 }

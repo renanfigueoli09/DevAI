@@ -7,6 +7,6 @@
   "qa:spring-document-not-entity": {
     "content": "Spring Boot MongoDB: use @Document NOT @Entity\n@Document(collection='books') class Book { @Id String id; @NotBlank String title; }\nRepository: extends MongoRepository<Book, String>\nWRONG: @Entity, JpaRepository  ← those are JPA/PostgreSQL",
     "source": "critical_pattern",
-    "updated_at": 1780805132.323992
+    "updated_at": 1780805572.7145123
   }
 }
