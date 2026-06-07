@@ -32,21 +32,21 @@
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:error monitoring tools for kub": {
     "content": "- **Prometheus**: Use `kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml` to install.\n  - Key Config Options: `prometheus.yml`, `serviceMonitorSelector`.\n  \n- **Grafana**: Deploy with Helm using `helm repo add grafana https://grafana.github.io/helm-charts && helm install grafana grafana/grafana`.\n  - Key Config Options: `adminPassword`, `datasource`.\n\n- **Elastic Stack (ELK)**:\n  - Install Elasticsearch, Kibana, and Logstash.\n  - Use `kubectl apply -f elasticsearch.yaml` for Elasticsearch.\n  \n- **Jaeger**: Deploy with Helm using `helm repo add jaegertracing https://jaegertracing.github.io/helm-charts && helm install jaeger jaegertracing/jaeger`.\n  - Key Config Options: `ingress.enabled`, `service.type`.\n\n- **Kubernetes Dashboard**:\n  - Install with `kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml`.\n  - Access via `kubectl proxy` and navigate to `http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy`.\n\n- **KubeStateMetrics**: Deploy with Helm using `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm install kube-state-metrics prometheus-community/kube-state-metrics`.\n  - Key Config Options: `serviceMonitorSelector`, `podMonitorSelector`.\n\n- **Node Exporter**: Use `kubectl apply -f https://raw.githubusercontent.com/prometheus/node_exporter/master/quickstart.yml` to deploy.\n  - Key Config Options: `scrape_interval`, `path`.\n\n- **Fluentd**: Deploy with Helm using `helm repo add bitnami https://charts.bitnami.com/bitnami && helm install fluentd bitnami/fluentd`.\n  - Key Config Options: `elasticsearch.hosts`, `fluentd.conf`.\n\n- **Kiali**: Deploy with Helm using `helm repo add kiali-stable https://kiali.io/helm-charts && helm install kiali kiali-stable/kiali --set auth.strategy=anonymous`.\n  - Key Config Options: `service.type`, `ingress.enabled`.",
     "source": "web_search",
-    "updated_at": 1780822504.6139398
+    "updated_at": 1780830028.7419999
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:error monitoring tools for kub_ex": {
     "content": "- **Prometheus**: Use `kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml` to install.\n- **Grafana**: Deploy using Helm with `helm repo add grafana https://grafana.github.io/helm-charts && helm install grafana grafana/grafana`.\n- **Alertmanager**: Install via Helm: `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm install alertmanager prometheus-community/alertmanager`.\n- **Key Config Options**:\n  - Prometheus: `scrape_configs` in `prometheus.yml`\n  - Grafana: Data sources and dashboards\n  - Alertmanager: `route` and `receivers` in `alertmanager.yml`\n- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: List all pods across namespaces.\n  - `kubectl logs <pod-name> -n <namespace>`: View logs for a specific pod.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Get detailed information about a pod.",
     "source": "code_example",
-    "updated_at": 1780822505.8580406
+    "updated_at": 1780830030.5148406
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:advanced fault tolerance techn": {
     "content": "- **Replication Based Fault Tolerance Techniques**: Use `replicate` flag in configuration files.\n- **Latest Version of Fault Tolerant MPI**: Check for updates on the official MPI website or repository.\n- **Key Config Options**:\n  - `failover_timeout`: Set timeout for failover operations.\n  - `max_retries`: Define maximum retry attempts before giving up.\n  - `replication_factor`: Specify how many copies to maintain.\n\nFor detailed implementation, refer to the official documentation of the specific system or framework you are using.",
     "source": "web_search",
-    "updated_at": 1780822506.9986303
+    "updated_at": 1780830032.2243507
   },
   "search:Advanced Error Handling in Kubernetes + Helm-Charts:advanced fault tolerance techn_ex": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes deployments, e.g., `kubectl apply -f deployment.yaml`.\n- **Latest Version**: Check the official documentation or GitHub repository for the latest version of any software.\n- **Key Config Options**:\n  - For Docker: `--restart=always`, `--healthcheck`\n  - For Kubernetes: `livenessProbe`, `readinessProbe`, `replicas`\n  - For AWS EC2: `InstanceType`, `AvailabilityZone`, `AutoScalingGroup`",
     "source": "code_example",
-    "updated_at": 1780822508.294249
+    "updated_at": 1780830033.6498017
   }
 }

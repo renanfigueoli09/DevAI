@@ -2,6 +2,6 @@
   "search:kafka-streams-advanced:kafka streams performance tuni": {
     "content": "- **CLI Commands**: Use `kafka-topics.sh --alter --topic <topic_name> --partitions <num_partitions>` to adjust topic partitions.\n- **Latest Versions**: Kafka Streams 3.0 and later versions offer enhanced performance features.\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `state.dir`: Directory where state stores are stored.\n  - `cache.max.bytes.buffering`: Maximum size of memory used for buffering records before they are written to disk.\n  - `max.poll.records`: Maximum number of records returned in a single poll call.",
     "source": "web_search",
-    "updated_at": 1780822520.191007
+    "updated_at": 1780830045.7020721
   }
 }
