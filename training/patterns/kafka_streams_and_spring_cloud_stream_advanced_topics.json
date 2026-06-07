@@ -17,26 +17,26 @@
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:stateful processing with kafka": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker_address> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-console-producer.sh --broker-list <broker_address> --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server <broker_address> --topic <topic_name> --from-beginning`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Kafka Streams: 3.4.0\n\n- **Key Config Options**:\n  - `state.dir`: Directory where state stores are stored.\n  - `cache.max.bytes.buffering`: Maximum size of the in-memory buffer for record cache.\n  - `cleanup.policy`: Defines how log segments are cleaned up (e.g., delete, compact).\n  - `retention.ms`: Retention period for messages in a topic.",
     "source": "web_search",
-    "updated_at": 1780790298.2550113
+    "updated_at": 1780791960.3636978
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:stateful processing with kafka_ex": {
     "content": "- **CLI Commands**: Use `kafka-topics.sh` to create topics with state stores.\n- **Latest Versions**: Kafka Streams latest version is 3.4.0.\n- **Key Config Options**:\n  - `state.dir`: Directory for storing state store data.\n  - `cleanup.policy`: Defines how old data should be cleaned up.\n  - `retention.ms`: Retention period for log messages in milliseconds.",
     "source": "code_example",
-    "updated_at": 1780790299.3861213
+    "updated_at": 1780791961.9969902
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:real-time data pipelines": {
     "content": "- **CLI Commands**:\n  - `snowsql --version`: Check SnowSQL version.\n  - `snowsql -a <account> -u <username> -p <password>`: Connect to Snowflake.\n\n- **Latest Versions**:\n  - Snowflake: Version 5.12.3\n  - Apache NiFi: Version 1.20.0\n\n- **Key Config Options**:\n  - `WAREHOUSE`: Specifies the compute resource.\n  - `DATABASE`: Defines the database to use.\n  - `SCHEMA`: Sets the schema within the database.\n  - `TIMESTAMP_OUTPUT_FORMAT`: Controls how timestamps are formatted in output.",
     "source": "web_search",
-    "updated_at": 1780790300.5340528
+    "updated_at": 1780791963.3959675
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:real-time data pipelines_ex": {
     "content": "- **CLI Commands**:\n  - `databricks pipelines create --name <pipeline_name> --config-file <path_to_config_file>`\n  - `databricks jobs run-now --job-id <job_id>`\n\n- **Latest Versions**:\n  - Databricks Runtime: 13.2 LTS\n  - Delta Lake: 2.0.0\n\n- **Key Config Options**:\n  - `spark.sql.streaming.checkpointLocation`: Specifies the location for checkpoint data.\n  - `spark.sql.streaming.maxOffsetsPerTrigger`: Limits the number of offsets processed per trigger.\n  - `spark.sql.streaming.stopGracefullyOnShutdown`: Ensures that streaming jobs stop gracefully on shutdown.",
     "source": "code_example",
-    "updated_at": 1780790301.6751518
+    "updated_at": 1780791964.6527998
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:spring cloud stream architectu_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `docker-compose up` to start services using Docker Compose.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.1.4.RELEASE\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the name of the input channel.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the name of the output channel.\n  - `spring.cloud.stream.bindings.input.group`: Specifies the consumer group for the input channel.",
     "source": "code_example",
-    "updated_at": 1780790302.8597178
+    "updated_at": 1780791966.0324457
   }
 }

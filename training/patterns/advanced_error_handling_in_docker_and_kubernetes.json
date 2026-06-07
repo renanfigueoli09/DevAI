@@ -2,41 +2,41 @@
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling": {
     "content": "- Use `docker logs <container_id>` to view container logs.\n- Run `docker ps -a` to list all containers, including stopped ones.\n- Utilize `docker inspect <container_id>` for detailed container information.\n- Employ `docker exec -it <container_id> /bin/bash` to access a running container's shell.\n- Update Docker to the latest version using your package manager (e.g., `sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io`).\n- Configure Docker daemon settings in `/etc/docker/daemon.json`.\n- Use `docker-compose up -d` to start services defined in a `docker-compose.yml` file.\n- Check Docker system health with `docker system df` and `docker system events`.\n- Restart the Docker service using `sudo systemctl restart docker`.",
     "source": "web_search",
-    "updated_at": 1780790311.252188
+    "updated_at": 1780791976.2987463
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker error handling_ex": {
     "content": "- Use `docker remove` command to delete containers.\n- Ensure correct command syntax, e.g., `docker run -v /host/path:/container/path image_name`.\n- Check Docker version with `docker --version`.\n- Configure Docker Compose using `docker-compose.yml`, specifying services and volumes.\n- Implement error handling in scripts using try-except blocks for Docker operations.\n- Use `--exit-code-from` flag in `docker-compose up` to specify which service's exit code determines the CLI's exit status.",
     "source": "code_example",
-    "updated_at": 1780790312.3843238
+    "updated_at": 1780791977.4688966
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management": {
     "content": "- Use `kubectl describe pod <pod-name>` to get detailed information about the pod.\n- Check logs with `kubectl logs <pod-name>`.\n- For `CrashLoopBackOff`, ensure your container image is correct and accessible.\n- Use `kubectl apply -f <filename>.yaml` to update resources.\n- For `ImagePullBackOff`, verify that the image repository is accessible and the image name is correct.\n- Adjust resource limits with `resources: {limits: {cpu: \"500m\", memory: \"512Mi\"}, requests: {cpu: \"250m\", memory: \"256Mi\"}}`.\n- Use `kubectl scale deployment <deployment-name> --replicas=3` to scale deployments.\n- Check for resource availability with `kubectl top node` and `kubectl top pod`.\n- For `OOMKilled`, increase the container's memory limit or optimize the application.",
     "source": "web_search",
-    "updated_at": 1780790313.5009627
+    "updated_at": 1780791978.9279988
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes error management_ex": {
     "content": "- Use `kubectl describe pod <pod-name>` to get detailed information about a pod.\n- Check node status with `kubectl get nodes` and ensure all nodes are in the Ready state.\n- To diagnose an OOMKilled container, use `kubectl logs <pod-name> -c <container-name>` to view logs.\n- For real-world scenarios, refer to [Kubernetes GitHub examples](https://github.com/kubernetes/examples/tree/master/troubleshooting).\n- Update Kubernetes tools to their latest versions for better functionality and security.",
     "source": "code_example",
-    "updated_at": 1780790314.6619349
+    "updated_at": 1780791980.2287257
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker logging strategies": {
     "content": "- Use `docker logs` command to view container logs.\n- Specify container ID or name directly after the command.\n- Example: `docker logs my_container`.\n- To follow log output in real-time, use `-f` flag:\n  - Example: `docker logs -f my_container`.\n- For more detailed logging, configure Docker daemon with a logging driver and options.\n- Common logging drivers include `json-file`, `syslog`, `journald`, etc.\n- Configure logging options in the Docker daemon configuration file (`/etc/docker/daemon.json`).\n  ```json\n  {\n    \"log-driver\": \"json-file\",\n    \"log-opts\": {\n      \"max-size\": \"10m\",\n      \"max-file\": \"3\"\n    }\n  }\n  ```\n- Restart Docker daemon to apply changes.\n- Use `docker-compose` for multi-container applications, specifying logging options in the `docker-compose.yml` file:\n  ```yaml\n  version: '3'\n  services:\n    web:\n      image: my_web_image\n      logging:\n        driver: \"json-file\"\n        options:\n          max-size: \"10m\"\n          max-file: \"3\"\n  ```\n- Ensure logs are rotated and managed to avoid filling up disk space.\n- Regularly review and analyze logs for troubleshooting and performance optimization.",
     "source": "web_search",
-    "updated_at": 1780790315.7588189
+    "updated_at": 1780791981.5408454
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes fault tolerance": {
     "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: Lists all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Describes a specific pod.\n  - `kubectl delete pod <pod-name> -n <namespace>`: Deletes a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes 1.27\n  - Docker 20.10\n\n- **Key Config Options**:\n  - `replicas`: Specifies the number of replicas for a deployment.\n  - `tolerations`: Allows pods to schedule on nodes with matching taints.\n  - `nodeSelector`: Assigns pods to specific nodes based on labels.\n  - `resources.requests` and `resources.limits`: Define resource requirements and limits for containers.",
     "source": "web_search",
-    "updated_at": 1780790316.925187
+    "updated_at": 1780791982.6991203
   },
   "search:Advanced Error Handling in Docker and Kubernetes:kubernetes fault tolerance_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <file.yaml>` to deploy resources.\n  - `kubectl delete -f <file.yaml>` to remove resources.\n  - `kubectl get pods` to list all pods.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `tolerations`: Define tolerations for nodes that have taints.\n  - `restartPolicy`: Set the restart policy for containers (e.g., `Always`, `OnFailure`, `Never`).\n  - `livenessProbe`: Configure liveness probes to check if a container is running properly.",
     "source": "code_example",
-    "updated_at": 1780790317.99919
+    "updated_at": 1780791984.1038167
   },
   "search:Advanced Error Handling in Docker and Kubernetes:docker logging strategies_ex": {
     "content": "- Use `docker logs` command to view container logs.\n- Configure logging drivers like `json-file`, `syslog`, or `fluentd`.\n- Set log rotation with `--log-opt max-size=10m --log-opt max-file=3`.\n- Centralize logs using tools like ELK Stack, Fluentd, or Prometheus.\n- Use structured logging formats for better analysis and correlation.\n- Implement log monitoring with tools such as Grafana or Splunk.\n- Ensure compliance with security policies by encrypting sensitive data in logs.",
     "source": "code_example",
-    "updated_at": 1780790319.07519
+    "updated_at": 1780791985.5623844
   }
 }
