@@ -1,0 +1,12 @@
+{
+  "search:kubernetes+ingress:kubernetes ingress controller ": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress-controller.yaml`\n  - `kubectl get ingresses`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.0\n  - Traefik: v3.0.0\n  - HAProxy Ingress Controller: v2.0.0\n\n- **Key Config Options**:\n  - `controller.service.annotations`: For custom annotations on the service.\n  - `controller.replicaCount`: Number of replicas for the controller.\n  - `controller.tls.enabled`: Enable TLS termination.\n  - `controller.tls.secretName`: Name of the secret containing TLS certificates.",
+    "source": "web_search",
+    "updated_at": 1780804722.8754265
+  },
+  "search:kubernetes+ingress:kubernetes ingress controller _ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress-controller.yaml` to deploy an NGINX Ingress Controller.\n  - `kubectl get ingress` to list all Ingress resources.\n  - `kubectl describe ingress <ingress-name>` for detailed information about a specific Ingress resource.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - NGINX Ingress Controller: v1.5\n\n- **Key Config Options**:\n  - `controller.service.annotations` for custom annotations.\n  - `controller.replicaCount` to set the number of replicas.\n  - `tcp` and `udp` sections for configuring TCP/UDP services.\n  - `tls` section for TLS configuration with secrets.",
+    "source": "code_example",
+    "updated_at": 1780804728.0924525
+  }
+}
