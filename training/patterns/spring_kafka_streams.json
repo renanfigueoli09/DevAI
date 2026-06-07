@@ -1,0 +1,7 @@
+{
+  "search:spring+kafka-streams:spring kafka streams integrati": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Kafka Streams: 3.0.5\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.streams.properties.bootstrap.servers`: Kafka broker addresses.\n  - `spring.kafka.streams.properties.application.id`: Unique application ID.\n  - `spring.kafka.streams.properties.default.key.serde`: Default key serializer/deserializer.\n  - `spring.kafka.streams.properties.default.value.serde`: Default value serializer/deserializer.",
+    "source": "web_search",
+    "updated_at": 1780798282.0496142
+  }
+}
