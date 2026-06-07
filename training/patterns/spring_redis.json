@@ -2,11 +2,11 @@
   "search:spring+redis:spring boot @cacheable redis l": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot 3.2.0\n  - Lettuce 6.2.5.RELEASE\n  - Redis 7.0.10\n\n- **Key Config Options**:\n  - `spring.redis.host`: Set the Redis host.\n  - `spring.redis.port`: Set the Redis port.\n  - `spring.cache.type`: Set to `redis` for using Redis caching.\n  - `spring.cache.redis.time-to-live`: Set cache expiration time in milliseconds.",
     "source": "web_search",
-    "updated_at": 1780800681.7362397
+    "updated_at": 1780803916.9565907
   },
   "search:spring+redis:spring boot @cacheable redis l_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your Spring Boot project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Lettuce: 6.x\n  - Redis: 7.x\n\n- **Key Config Options**:\n  - `spring.redis.host`: Redis server host.\n  - `spring.redis.port`: Redis server port.\n  - `spring.cache.type`: Set to `redis` for using Redis as the cache manager.\n  - `spring.cache.redis.key-prefix`: Prefix for cache keys.\n  - `spring.cache.redis.time-to-live`: Time-to-live duration for cache entries.",
     "source": "code_example",
-    "updated_at": 1780800682.9584613
+    "updated_at": 1780803918.1438277
   }
 }

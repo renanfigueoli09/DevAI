@@ -2,21 +2,21 @@
   "search:django+postgres-advanced:django postgresql advanced que": {
     "content": "- **CLI Commands**:\n  - `psql --version`: Check PostgreSQL version.\n  - `python manage.py migrate`: Apply migrations to the database.\n\n- **Latest Versions**:\n  - Django 4.2\n  - PostgreSQL 15\n\n- **Key Config Options**:\n  - `OPTIONS = {'sslmode': 'require'}` in settings for secure connections.\n  - `INDEXES` in models for custom indexing.\n  - `JSONField` and `JSONBField` for semi-structured data.\n  - Full-text search with `django.contrib.postgres.search`.\n  - Window functions for analytics.",
     "source": "web_search",
-    "updated_at": 1780800670.728727
+    "updated_at": 1780803906.9676569
   },
   "search:django+postgres-advanced:django postgresql advanced que_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py migrate`: Apply migrations to the database.\n  - `psql -U username dbname`: Connect to PostgreSQL database.\n\n- **Latest Versions**:\n  - Django 4.2\n  - PostgreSQL 15\n\n- **Key Config Options**:\n  - `DATABASES` in `settings.py`: Configure database settings.\n  - `django.db.models.JSONField`: Use for JSONB fields.\n  - `django.contrib.postgres.indexes.GinIndex`: For GIN indexes.\n  - `django.contrib.postgres.search.SearchVectorField`: For full-text search.",
     "source": "code_example",
-    "updated_at": 1780800671.9737492
+    "updated_at": 1780803908.2648377
   },
   "search:django+postgres-advanced:django postgresql migrations 2": {
     "content": "- **CLI Commands**:\n  - `python manage.py makemigrations`: Creates new migration files based on model changes.\n  - `python manage.py migrate`: Applies migrations to the database.\n\n- **Latest Versions**:\n  - Django: 4.2 (as of my last update, but check [Django's official website](https://www.djangoproject.com/download/) for the latest version).\n  - PostgreSQL: 15 (latest as of my last update, but check [PostgreSQL's official website](https://www.postgresql.org/about/news/) for the latest version).\n\n- **Key Config Options**:\n  - `DATABASES`: Configure database settings in `settings.py`.\n    ```python\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': 'your_db_name',\n            'USER': 'your_db_user',\n            'PASSWORD': 'your_db_password',\n            'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n            'PORT': '5432',\n        }\n    }\n    ```\n  - `MIGRATION_MODULES`: Customize migration modules if needed.\n    ```python\n    MIGRATION_MODULES = {\n        'app_name': 'custom_migration_module',\n    }\n    ```\n\n- **Additional Tools**:\n  - **django-pg-zero-downtime-migrations**: For applying migrations with minimal downtime.\n  - **django-postgres-extra**: Enhances Django ORM capabilities for PostgreSQL.",
     "source": "web_search",
-    "updated_at": 1780800673.2180426
+    "updated_at": 1780803909.5282476
   },
   "search:django+postgres-advanced:django postgresql migrations 2_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py makemigrations`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - `DATABASES` in settings.py for database configurations.\n  - `MIGRATION_MODULES` to specify custom migration modules.\n  - `OPTIONS` under `DATABASES` for additional PostgreSQL-specific options like `options`: '-c search_path=public,myapp'.",
     "source": "code_example",
-    "updated_at": 1780800674.5323246
+    "updated_at": 1780803910.808199
   }
 }

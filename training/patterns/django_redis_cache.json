@@ -2,21 +2,21 @@
   "search:django+redis-cache:django redis cache optimizatio": {
     "content": "- Install `django-redis` using pip: `pip install django-redis`\n- Ensure Redis server is running.\n- Configure Django settings:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Use `pip install redis` to install the Redis Python client.\n- For advanced configurations, refer to [django-redis documentation](https://django-redis.readthedocs.io/en/stable/).\n- To handle errors, use try-except blocks around cache operations.",
     "source": "web_search",
-    "updated_at": 1780800739.3111348
+    "updated_at": 1780803979.995664
   },
   "search:django+redis-cache:django redis cache optimizatio_ex": {
     "content": "- **CLI Commands**:\n  - `sudo service redis-server restart`: Restart Redis server.\n  \n- **Latest Versions**:\n  - Django 4.2\n  - django-redis 5.3.0\n  \n- **Key Config Options**:\n  - In `settings.py`, configure `CACHES` with Redis backend details.\n    ```python\n    CACHES = {\n        \"default\": {\n            \"BACKEND\": \"django_redis.cache.RedisCache\",\n            \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n            \"OPTIONS\": {\n                \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            }\n        }\n    }\n    ```\n  - Use `@cache_page` decorator to cache views.\n    ```python\n    from django.views.decorators.cache import cache_page\n\n    @cache_page(60 * 5)  # Cache for 5 minutes\n    def my_view(request):\n        ...\n    ```",
     "source": "code_example",
-    "updated_at": 1780800740.5756907
+    "updated_at": 1780803981.1592326
   },
   "search:django+redis-cache:django redis session managemen": {
     "content": "- Use `pip install django-redis` to install Django Redis.\n- Configure session engine in settings.py: `SESSION_ENGINE = \"django.contrib.sessions.backends.cache\"`\n- Set cache backend to Redis: `CACHES = { 'default': {'BACKEND': 'django_redis.cache.RedisCache', 'LOCATION': 'redis://127.0.0.1:6379/1', 'OPTIONS': {'CLIENT_CLASS': 'django_redis.client.DefaultClient',}} }`\n- Use `python manage.py migrate` to apply migrations.\n- For production, ensure Redis is secured and accessible.\n- Monitor Redis performance using tools like `redis-cli`.\n- Regularly update Django and Django Redis packages for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780800741.8264403
+    "updated_at": 1780803982.3601491
   },
   "search:django+redis-cache:django redis session managemen_ex": {
     "content": "- Install `django-redis-sessions` using pip: `pip install django-redis-sessions`\n- Configure session backend in Django settings:\n  ```python\n  SESSION_ENGINE = \"django.contrib.sessions.backends.cache\"\n  SESSION_CACHE_ALIAS = \"default\"\n  ```\n- Set up Redis cache in settings:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Ensure Redis server is running.\n- For Django < 1.4, use version `django-redis-sessions==0.3`.\n- Use `pip install django-redis-sessions` for the latest version.",
     "source": "code_example",
-    "updated_at": 1780800742.9491181
+    "updated_at": 1780803983.7192783
   }
 }

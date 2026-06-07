@@ -2,36 +2,36 @@
   "pattern:nestjs-auth:jwt": {
     "content": "// jwt.strategy.ts: extends PassportStrategy(Strategy). super({jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),secretOrKey:config.get('JWT_SECRET')}). validate(p:{sub,email}){return {id:p.sub,email:p.email}}. jwt.guard.ts: extends AuthGuard('jwt'){}",
     "source": "code_pattern",
-    "updated_at": 1780800828.258757
+    "updated_at": 1780804076.0881512
   },
   "search:nestjs+auth:nestjs jwt passport jwtstrateg": {
     "content": "- Install NestJS CLI globally using `npm install -g @nestjs/cli`\n- Create a new NestJS project with `nest new project-name`\n- Add Passport and JWT packages with `npm install --save @nestjs/passport passport passport-jwt`\n- Configure JWT strategy in `auth.strategy.ts`:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { PassportStrategy } from '@nestjs/passport';\n  import { ExtractJwt, Strategy } from 'passport-jwt';\n\n  @Injectable()\n  export class JwtStrategy extends PassportStrategy(Strategy) {\n    constructor() {\n      super({\n        jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),\n        ignoreExpiration: false,\n        secretOrKey: 'your-secret-key',\n      });\n    }\n\n    async validate(payload: any) {\n      return { userId: payload.sub, username: payload.username };\n    }\n  }\n  ```\n- Configure Local strategy in `auth.strategy.ts`:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { PassportStrategy } from '@nestjs/passport';\n  import { Strategy } from 'passport-local';\n\n  @Injectable()\n  export class LocalStrategy extends PassportStrategy(Strategy) {\n    constructor() {\n      super();\n    }\n\n    async validate(username: string, password: string): Promise<any> {\n      // Implement your user validation logic here\n      return { username };\n    }\n  }\n  ```\n- Update `auth.module.ts` to import and use the strategies:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { AuthService } from './auth.service';\n  import { JwtStrategy } from './jwt.strategy';\n  import { LocalStrategy } from './local.strategy';\n\n  @Module({\n    imports: [],\n    controllers: [],\n    providers: [AuthService, JwtStrategy, LocalStrategy],\n  })\n  export class AuthModule {}\n  ```\n- Use `@UseGuards(AuthGuard('jwt'))` or `@UseGuards(AuthGuard('local'))` to protect routes.",
     "source": "web_search",
-    "updated_at": 1780800829.5373297
+    "updated_at": 1780804077.2811403
   },
   "search:nestjs+auth:nestjs jwt passport jwtstrateg_ex": {
     "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Passport: 6.x\n  - @nestjs/jwt: 8.x\n\n- **Key Config Options**:\n  - JWT Secret: `JWT_SECRET` environment variable\n  - JWT Strategy: `JwtStrategy`\n  - Local Strategy: `LocalStrategy`\n  - Authentication Guards: `AuthGuard('jwt')`, `AuthGuard('local')`\n  - Passport Module: `PassportModule.register({ defaultStrategy: 'jwt' })`",
     "source": "code_example",
-    "updated_at": 1780800830.9019408
+    "updated_at": 1780804078.6208932
   },
   "search:nestjs+auth:nestjs @useguards jwtauthguard": {
     "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate guard auth`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - bcryptjs: 2.4.3\n  - @nestjs/jwt: 9.0.0\n\n- **Key Config Options**:\n  - JWT Secret Key: `JWT_SECRET`\n  - Refresh Token Expiry: `REFRESH_TOKEN_EXPIRES_IN` (e.g., \"7d\")\n  - Bcrypt Salt Rounding: `SALT_ROUNDS` (e.g., 12)",
     "source": "web_search",
-    "updated_at": 1780800832.0679932
+    "updated_at": 1780804079.9314306
   },
   "search:nestjs+auth:nestjs @useguards jwtauthguard_ex": {
     "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate guard auth`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/jwt: ^9.0.0\n  - @nestjs/passport: ^8.0.0\n  - bcryptjs: ^2.4.3\n\n- **Key Config Options**:\n  - `JWT_SECRET`: Secret key for signing JWT tokens.\n  - `JWT_EXPIRATION_TIME`: Expiration time for access tokens (e.g., '15m' for 15 minutes).\n  - `REFRESH_TOKEN_EXPIRATION_TIME`: Expiration time for refresh tokens (e.g., '7d' for 7 days).",
     "source": "code_example",
-    "updated_at": 1780800833.3499525
+    "updated_at": 1780804081.1752338
   },
   "search:nestjs+auth:nestjs rbac @roles @setmetadat": {
     "content": "- Use `@Roles` and `@SetMetadata` decorators to define roles and permissions.\n- Implement a guard that uses the `Reflector` to read metadata for role-based access control.\n- Example CLI command: `nest generate module auth`\n- Latest versions:\n  - NestJS: v10.x\n  - @nestjs/common: v10.x\n  - @nestjs/core: v10.x\n- Key config options:\n  - `roles`: List of allowed roles for a route.\n  - `permissions`: Map of permission names to actions.\n  - `grants`: Map of role names to permissions.\n  - `filters`: Custom filter implementations.",
     "source": "web_search",
-    "updated_at": 1780800834.6814208
+    "updated_at": 1780804082.3331234
   },
   "search:nestjs+auth:nestjs rbac @roles @setmetadat_ex": {
     "content": "- **CLI Commands**: `nest new project-name`\n- **Latest Version**: v11.0.5 (2025-01-23)\n- **Key Config Options**:\n  - `@Roles` decorator for defining user roles.\n  - `@SetMetadata` for setting metadata on routes.\n  - `Reflector` for retrieving metadata in guards or interceptors.",
     "source": "code_example",
-    "updated_at": 1780800837.818853
+    "updated_at": 1780804083.530147
   }
 }

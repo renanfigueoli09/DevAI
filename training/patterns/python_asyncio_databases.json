@@ -2,31 +2,31 @@
   "search:python-asyncio-databases:python asyncio with sqlalchemy": {
     "content": "- **Latest Version**: SQLAlchemy 2.1, asyncio support added in version 1.4.\n- **CLI Commands**:\n  - `pip install sqlalchemy==2.1`\n  - `pip install asyncpg` (for PostgreSQL)\n- **Key Config Options**:\n  - Use `create_async_engine()` for creating an asynchronous engine.\n  - Manage session lifecycle carefully to avoid common pitfalls.\n  - Utilize asyncio's event loop for efficient query execution.",
     "source": "web_search",
-    "updated_at": 1780800614.5816665
+    "updated_at": 1780803844.7029123
   },
   "search:python-asyncio-databases:python asyncio with sqlalchemy_ex": {
     "content": "- Use `asyncio.run(async_main())` to run the main asynchronous function.\n- Ensure SQLAlchemy version is at least 2.0 for full asyncio support.\n- Import necessary modules like `sqlalchemy` and `asyncio`.\n- Define an asynchronous function using `async def`.\n- Use `await _engine.dispose()` to properly close the database connection.\n- Key config options include setting up the engine with `create_async_engine` from SQLAlchemy 2.0.\n- Example GitHub repository provides practical usage of asyncio with SQLAlchemy.",
     "source": "code_example",
-    "updated_at": 1780800615.6457875
+    "updated_at": 1780803845.996385
   },
   "search:python-asyncio-databases:asyncio postgresql with python": {
     "content": "- Use `pip install databases asyncpg sqlalchemy` to install necessary packages.\n- For the latest version of Python, use `python3 --version`.\n- To create a single process-wide `asyncpg.Pool`, add:\n  ```python\n  import asyncpg, asyncio\n\n  pool = await asyncpg.create_pool(user='user', password='password', database='database', host='127.0.0.1')\n  ```\n- Set concurrency limits to avoid overloading the database.\n- Use `SQLModel` for ORM operations with PostgreSQL.\n- For CRUD operations, utilize SQLAlchemy's ORM capabilities.\n- Ensure proper session management to prevent leaks and ensure data integrity.\n- Utilize `asyncio.run()` to run your main coroutine.\n- Check Python 3.14.5 documentation for the most up-to-date asyncio features and best practices.",
     "source": "web_search",
-    "updated_at": 1780800616.7614586
+    "updated_at": 1780803847.2911394
   },
   "search:python-asyncio-databases:asyncio postgresql with python_ex": {
     "content": "- **GitHub Repository**: MagicStack/asyncpg\n  - Latest Version: Check [GitHub](https://github.com/MagicStack/asyncpg/releases)\n  \n- **Key Config Options**:\n  - Connection Pooling: Use `create_pool` with parameters like `min_size`, `max_size`.\n  - Transactions: Use `begin()`, `commit()`, and `rollback()` methods.\n  - Retries: Implement custom retry logic using asyncio.sleep.\n\n- **CLI Commands**:\n  - Install asyncpg: `pip install asyncpg`\n  - Run a PostgreSQL server: `pg_ctl start -D /path/to/data_directory`\n\n- **YouTube Tutorial**: \"Asyncio in Python - Full Tutorial\" by [Channel Name] (Link to video)",
     "source": "code_example",
-    "updated_at": 1780800617.866005
+    "updated_at": 1780803848.5899806
   },
   "search:python-asyncio-databases:mongodb asyncio in python 2025": {
     "content": "- **Latest Version**: Motor v2.6.0\n- **Key Config Options**:\n  - `host`: MongoDB server address.\n  - `port`: MongoDB server port.\n  - `database`: Database name to connect to.\n  - `username` and `password`: Authentication credentials.\n  - `ssl`: Enable SSL/TLS connection.\n- **CLI Commands**:\n  - To install Motor: `pip install motor==2.6.0`\n  - To run a Python script using Motor: `python your_script.py`\n- **Example Connection Code**:\n  ```python\n  import asyncio\n  from motor.motor_asyncio import AsyncIOMotorClient\n\n  async def main():\n      client = AsyncIOMotorClient('mongodb://localhost:27017', username='user', password='pass')\n      db = client['mydatabase']\n      collection = db['mycollection']\n\n      # Perform database operations here\n\n      await client.close()\n\n  asyncio.run(main())\n  ```",
     "source": "web_search",
-    "updated_at": 1780800619.1169777
+    "updated_at": 1780803849.9242394
   },
   "search:python-asyncio-databases:mongodb asyncio in python 2025_ex": {
     "content": "- **Latest Version**: Motor 3.7.1\n- **CLI Commands**:\n  - `pip install motor==3.7.1`\n- **Key Config Options**:\n  - Connection String: `mongodb://localhost:27017/`\n  - Database Name: `mydatabase`\n  - Collection Name: `mycollection`\n  - AsyncIO Event Loop: `asyncio.get_event_loop()`\n- **Example Code Snippet**:\n  ```python\n  import asyncio\n  from motor.motor_asyncio import AsyncIOMotorClient\n\n  async def main():\n      client = AsyncIOMotorClient(\"mongodb://localhost:27017/\")\n      db = client.mydatabase\n      collection = db.mycollection\n\n      # Insert a document\n      await collection.insert_one({\"name\": \"John Doe\"})\n\n      # Find a single document\n      result = await collection.find_one({\"name\": \"John Doe\"})\n      print(result)\n\n  asyncio.run(main())\n  ```",
     "source": "code_example",
-    "updated_at": 1780800620.3803668
+    "updated_at": 1780803851.220293
   }
 }

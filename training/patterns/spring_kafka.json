@@ -2,11 +2,11 @@
   "search:spring+kafka:spring boot kafkatemplate @kaf": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `mvn spring-boot:run` to run your Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.error-handler`: Specify a custom error handler.\n  - `spring.kafka.listener.retry-mode`: Set the retry mode (e.g., fixed-delay, exponential).\n  - `spring.kafka.listener.back-off-ms`: Define the back-off time between retries.\n  - `spring.kafka.listener.max-attempts`: Set the maximum number of attempts before giving up.",
     "source": "web_search",
-    "updated_at": 1780800606.278756
+    "updated_at": 1780803835.000381
   },
   "search:spring+kafka:spring boot kafkatemplate @kaf_ex": {
     "content": "- **Latest Version**: Spring Kafka 2.7.x\n- **Key Config Options**:\n  - `errorHandler`: Custom error handler for Kafka listeners.\n  - `concurrency`: Number of concurrent consumers in a listener container.\n  - `groupId`: Group ID for consumer group, used for load distribution.\n- **CLI Commands**:\n  - None specific to the topic provided.\n- **Example Code Snippet** (Producer):\n  ```java\n  @KafkaListener(topics = \"example-topic\", groupId = \"example-group\", concurrency = \"3\")\n  public void listen(String message) {\n      // Listener logic here\n  }\n  ```\n- **Error Handling Example**:\n  ```java\n  @Bean\n  public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {\n      ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();\n      factory.setConsumerFactory(consumerFactory());\n      factory.setErrorHandler(new SeekToCurrentErrorHandler()); // Custom error handler\n      return factory;\n  }\n  ```",
     "source": "code_example",
-    "updated_at": 1780800607.4969332
+    "updated_at": 1780803836.4031682
   }
 }

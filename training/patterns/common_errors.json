@@ -17,7 +17,7 @@
   "qa:ts2307-create-module": {
     "content": "TS2307 Cannot find module './book/book.module': CREATE src/book/book.module.ts\n@Module({\n  imports: [MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],\n  providers: [BookService], controllers: [BookController], exports: [BookService]\n}) export class BookModule {}",
     "source": "critical_pattern",
-    "updated_at": 1780803690.4502487
+    "updated_at": 1780804197.7369375
   },
   "search:common+errors:nestjs ts2307 ts2339 ts2551 ty": {
     "content": "- Install Node.js type definitions using `npm install @types/node --save-dev`\n- Use the correct import statement for 'events': `import { EventEmitter } from 'events';`\n- For Vue project errors, ensure TypeScript is properly configured in `tsconfig.json` and check for missing imports.\n- Update NestJS to the latest version using `npm update @nestjs/core`.\n- Check Nuxt 3 build logs for specific error messages and resolve them accordingly.\n- Use `tsc --watch` during development for real-time type checking.\n- Ensure all dependencies are up-to-date with `npm update`.\n- Review TypeScript configuration in `tsconfig.json`, especially `compilerOptions`.\n- For Vue project, use `vue-tsc` instead of `tsc` for better compatibility.",

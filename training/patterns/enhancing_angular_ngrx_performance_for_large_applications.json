@@ -2,21 +2,21 @@
   "search:Enhancing Angular + ngrx Performance for Large Applications:angular ngrx performance optim": {
     "content": "- Use Angular CLI version 14 or later.\n- Apply lazy loading to modules using `--lazy` flag in the CLI command.\n- Optimize selectors by ensuring they are pure functions and use memoization.\n- Utilize NgRx's `createSelector` for creating selectors with memoization.\n- Configure environment-specific settings in `environment.ts` and `environment.prod.ts`.\n- Implement server-side rendering (SSR) to improve initial load times.\n- Use Angular's change detection strategies like `OnPush` to optimize component performance.\n- Monitor and analyze application performance using tools like Angular DevTools and Chrome DevTools.",
     "source": "web_search",
-    "updated_at": 1780800732.6082165
+    "updated_at": 1780803974.727333
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:angular ngrx performance optim_ex": {
     "content": "- Use `ng add @ngrx/store` to install NgRx.\n- For performance, dispatch service calls directly from effects instead of through actions.\n- Utilize NgRX Entities for state management and lazy loading data as needed.\n- Implement memoization in selectors using `createSelector` with `MemoizedSelector`.\n- Ensure your reducers are pure functions to avoid side effects.\n- Use `@ngrx/store-devtools` for development environment debugging.\n- Consider using `@ngrx/effects` version 12 or later for improved performance and features.",
     "source": "code_example",
-    "updated_at": 1780800735.718219
+    "updated_at": 1780803976.083262
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:ngrx state management best pra": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create NgRx store.\n  - `ng generate effect <name>` to create NgRx effect.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.4\n  - NgRx: v15.0.0\n\n- **Key Config Options**:\n  - Store Configuration: Define initial state and reducers.\n  - Effects Configuration: Use `@Effect` decorator to handle side effects.\n  - Selectors Configuration: Create functions to select parts of the state for components.",
     "source": "web_search",
-    "updated_at": 1780800736.9903538
+    "updated_at": 1780803977.3635647
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:ngrx state management best pra_ex": {
     "content": "- **CLI Commands**:\n  - `ng generate store <path>/<name>` to create an NgRx store.\n  - `ng generate effect <path>/<name>` to create an NgRx effect.\n\n- **Latest Versions**:\n  - Angular: v16.2.0\n  - NgRx: v15.4.0\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure the store with `StoreModule.forRoot(reducers)` and `EffectsModule.forRoot([effects])`.\n  - Use `@ngrx/store-devtools` for development tools.\n  - Implement selectors in `selectors.ts` to access state slices.\n  - Define reducers in `reducers.ts` to handle state changes based on actions.",
     "source": "code_example",
-    "updated_at": 1780800738.1735957
+    "updated_at": 1780803978.6931977
   }
 }
