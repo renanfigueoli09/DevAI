@@ -2,46 +2,46 @@
   "search:error-handling:error handling strategy nestjs": {
     "content": "- Use `nest generate filter <filter-name>` to create a new global exception filter.\n- Apply the filter globally in `main.ts` using `app.useGlobalFilters(new AllExceptionsFilter());`.\n- Implement custom error handling logic within your filters.\n- Utilize NestJS's built-in exceptions like `HttpException`, `BadRequestException`, etc., for common scenarios.\n- For Prisma errors, refer to the official Prisma documentation for a list of error codes and handle them using try-catch blocks or custom filters.",
     "source": "web_search",
-    "updated_at": 1780795394.9209394
+    "updated_at": 1780799496.7721643
   },
   "search:error-handling:error handling strategy nestjs_ex": {
     "content": "- Use `nest generate filter <filter-name>` to create a new global exception filter.\n- Ensure NestJS version is up-to-date for the latest features and bug fixes.\n- Configure the global filter in your `main.ts` file using `app.useGlobalFilters(new AllExceptionsFilter());`.\n- Implement custom error handling logic within the filter's `catch` method.\n- Use the `@Catch()` decorator to specify which exceptions the filter should handle.\n- Consider using TypeScript interfaces or classes for more structured error responses.\n- Test your global exception filter thoroughly across different parts of your application.",
     "source": "code_example",
-    "updated_at": 1780795396.1551042
+    "updated_at": 1780799497.9543502
   },
   "search:error-handling:exception hierarchy domain err": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**:\n  - Java: JDK 17\n  - Maven: 3.8.4\n  - OWASP Dependency Check: 6.5.3\n- **Key Config Options**:\n  - In `pom.xml`, configure the OWASP Dependency Check plugin for security audits.\n  - Use SLF4J and Logback for logging with a custom log level configuration.\n  - Implement a custom exception hierarchy in Java, ensuring each exception type is clearly defined.",
     "source": "web_search",
-    "updated_at": 1780795397.4636202
+    "updated_at": 1780799499.150759
   },
   "search:error-handling:exception hierarchy domain err_ex": {
     "content": "- **CLI Commands**: Use `g++ -std=c++17` to compile C++ code with the latest standard.\n- **Latest Versions**: Ensure using the latest version of your IDE and compiler for optimal performance and features.\n- **Key Config Options**:\n  - In Java, configure exception handling by overriding the `getMessage()` method in custom exceptions.\n  - For robust error handling in C++, use a structured hierarchy with base class `HLMException` and subclasses like `NetworkException`, `FileIOException`.\n  - In Java, use try-catch blocks to handle exceptions gracefully.",
     "source": "code_example",
-    "updated_at": 1780795398.8340874
+    "updated_at": 1780799502.7067766
   },
   "search:error-handling:error logging structured winst": {
     "content": "- Use `npm install pino` or `npm install winston` to install the latest version of Pino or Winston.\n- For Pino, use CLI command: `pino --level info --pretty`. Key config options include `level`, `prettyPrint`.\n- For Winston, use CLI command: `winston-cli log --level info --message \"Hello World\"`. Key config options include `level`, `transports`.\n- Both libraries support structured logging. Pino uses JSON format by default, while Winston allows for custom formats.\n- Ensure to configure error handling and logging in your application code to capture exceptions effectively.\n- For production environments, consider using transports like file or remote logging services with both Pino and Winston.\n- Regularly review and analyze logs for insights and troubleshooting.",
     "source": "web_search",
-    "updated_at": 1780795400.1018846
+    "updated_at": 1780799504.5305142
   },
   "search:error-handling:error logging structured winst_ex": {
     "content": "- **CLI Commands**:\n  - `npm install winston pino`\n  - `npm update winston pino`\n\n- **Latest Versions**:\n  - Winston: v3.8.2\n  - Pino: v7.4.1\n\n- **Key Config Options**:\n  - Winston: `transports`, `format`, `level`\n  - Pino: `transport`, `formatters`, `level`",
     "source": "code_example",
-    "updated_at": 1780795401.4065447
+    "updated_at": 1780799505.843936
   },
   "search:error-handling:retry pattern exponential back": {
     "content": "- **CLI Commands**: Use `aws s3 cp` for AWS S3 operations.\n- **Latest Versions**: AWS SDKs and tools are regularly updated; check [AWS Documentation](https://docs.aws.amazon.com/sdk-for-python/v3/api/index.html) for the latest version.\n- **Key Config Options**:\n  - For exponential backoff in AWS services, use `BackoffMode` in AWS SDKs.\n  - In Python, configure `tenacity` with `wait_exponential` and `stop_after_attempt`.\n  - Set `max_attempts` to define the maximum number of retries.",
     "source": "web_search",
-    "updated_at": 1780795404.6195147
+    "updated_at": 1780799507.1536646
   },
   "search:error-handling:validation error response form": {
     "content": "- Use `curl` to test APIs and capture responses.\n- Ensure your API returns JSON formatted error messages.\n- Implement structured error objects including:\n  - `type`: A URI identifying the problem type.\n  - `title`: A short, human-readable summary of the problem.\n  - `status`: The HTTP status code for the error.\n  - `detail`: A detailed description of the error.\n  - `instance`: An optional URI that identifies the specific occurrence of the problem.\n- Use tools like Postman to simulate and test API responses.\n- Keep your API documentation up-to-date with error response formats.\n- Consider using middleware or decorators in frameworks like Spring Boot to standardize error handling.\n- Regularly review and update your error response format to align with RFC 7807 standards.",
     "source": "web_search",
-    "updated_at": 1780795405.9465947
+    "updated_at": 1780799508.455964
   },
   "search:error-handling:validation error response form_ex": {
     "content": "- Use `curl` or Postman to test API endpoints.\n- Ensure your server returns HTTP status codes and error messages in JSON format.\n- Implement middleware for handling errors and formatting them according to RFC 7807.\n- Update dependencies to the latest versions of libraries like Spring Boot (for Java) or ASP.NET Core (for .NET).\n- Configure logging to capture detailed error information for debugging.\n- Test error responses with different scenarios to ensure consistency.\n- Use tools like Swagger UI to document and test API endpoints.\n- Regularly review and update your error handling code to stay compliant with RFC 7807.",
     "source": "code_example",
-    "updated_at": 1780795407.2889948
+    "updated_at": 1780799509.7206094
   }
 }

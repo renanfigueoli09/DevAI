@@ -2,7 +2,7 @@
   "search:clean-architecture:clean architecture backend nes": {
     "content": "- **NestJS**:\n  - Latest Version: NestJS v10.x\n  - CLI Command: `nest new project-name`\n  - Key Config Options: `app.module.ts`, `main.ts`\n\n- **FastAPI**:\n  - Latest Version: FastAPI 0.78.x\n  - CLI Command: `uvicorn main:app --reload`\n  - Key Config Options: `main.py`, `pyproject.toml`\n\n- **Spring Boot**:\n  - Latest Version: Spring Boot 3.1.x\n  - CLI Command: `mvn spring-boot:run`\n  - Key Config Options: `application.properties`, `pom.xml`",
     "source": "web_search",
-    "updated_at": 1780795485.2441928
+    "updated_at": 1780799600.5844395
   },
   "search:clean-architecture:clean architecture backend nes_ex": {
     "content": "- **NestJS**: Use `nest new project-name` to create a new project.\n- **Spring Boot**: Initialize with `spring init --dependencies=web,actuator project-name`.\n- **FastAPI**: Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n\n**Key Config Options**:\n- **NestJS**: Configure in `app.module.ts` or `.env` files.\n- **Spring Boot**: Define properties in `application.properties` or `application.yml`.\n- **FastAPI**: Use environment variables for configuration.\n\n**Latest Versions**:\n- NestJS: Check [npm](https://www.npmjs.com/package/nest) for the latest version.\n- Spring Boot: Refer to [Maven Central](https://search.maven.org/) for the latest release.\n- FastAPI: Check [PyPI](https://pypi.org/project/fastapi/) for the most recent version.\n\n**CLI Commands with Exact Flags**:\n- **NestJS**: `nest generate module users` to create a new module.\n- **Spring Boot**: `mvn spring-boot:run` to run the application.\n- **FastAPI**: `uvicorn main:app --reload` to start the server in development mode.",
