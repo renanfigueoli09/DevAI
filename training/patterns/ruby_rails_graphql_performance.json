@@ -2,26 +2,26 @@
   "search:ruby+rails-graphql-performance:ruby on rails graphql performa": {
     "content": "- Use `gem 'graphql'` in your Gemfile to add GraphQL support.\n- Run `bundle install` to install the gem.\n- Configure GraphQL schema with `GraphQL::Schema.define`.\n- Implement field resolvers for data fetching.\n- Use `GraphQL::Batch` for efficient data loading.\n- Optimize queries using fragments and aliases.\n- Enable caching with `graphql-cache` gem.\n- Monitor performance with tools like New Relic or Skylight.\n- Regularly update gems to the latest versions:\n  - `bundle update graphql`\n  - `bundle update graphql-batch`\n  - `bundle update graphql-cache`\n- Review and optimize resolver logic for better performance.",
     "source": "web_search",
-    "updated_at": 1780833325.1760843
+    "updated_at": 1780846003.8238764
   },
   "search:ruby+rails-graphql-performance:ruby on rails graphql caching ": {
     "content": "- **CLI Commands**:\n  - `rails generate graphql:install`\n  - `rails generate model User name:string email:string`\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - GraphQL-Ruby: 2.14.x\n\n- **Key Config Options**:\n  - In `config/initializers/graphql.rb`, configure schema and query types.\n  - In `app/assets/config/manifest.js`, ensure GraphiQL is included for development.\n  - Use `graphql-rails` gem for easy integration with Rails.\n  - Implement caching strategies on the client-side or use external libraries like `graphql-cache`.",
     "source": "web_search",
-    "updated_at": 1780833326.67332
+    "updated_at": 1780846005.7617867
   },
   "search:ruby+rails-graphql-performance:ruby on rails graphql caching _ex": {
     "content": "- **CLI Commands**:\n  - `rails cache:clear` to clear the Rails cache.\n  - `rails g fragment_cache [cache_name] [view_path]` to generate a fragment cache.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - graphql-ruby: 2.0.x\n\n- **Key Config Options**:\n  - In `config/environments/production.rb`, set `config.cache_classes = true` for production caching.\n  - Configure fragment caching in views using `<%= cache [cache_key] do %>` syntax.\n  - Use `GraphQL::Cache` to manage GraphQL query caching.",
     "source": "code_example",
-    "updated_at": 1780833328.2946453
+    "updated_at": 1780846007.733205
   },
   "search:ruby+rails-graphql-performance:ruby on rails graphql security": {
     "content": "- Use `graphql-ruby` gem version 2.0 or later.\n- Implement input validation using `graphql-guard`.\n- Configure authorization with `graphql-guard` for role-based access control.\n- Enable CSRF protection by setting `config.action_controller.default_csrf_protection_level = :strong`.\n- Utilize `rack-cors` gem for handling cross-origin requests securely.\n- Regularly update dependencies and gems to patch security vulnerabilities.\n- Conduct security testing using tools like `graphql-security-tester`.\n- Implement rate limiting with `rack-ratelimit` to prevent abuse.\n- Use HTTPS to encrypt data in transit between client and server.",
     "source": "web_search",
-    "updated_at": 1780833329.9409962
+    "updated_at": 1780846009.703607
   },
   "search:ruby+rails-graphql-performance:ruby on rails graphql security_ex": {
     "content": "- **Set up GraphQL server**: Use `rails generate graphql:install`\n- **Install gems**:\n  - `graphql-ruby` (latest version as of Sep 2025)\n  - `graphiql-rails` for interactive testing\n  - `devise` for authentication\n  - `jwt` for JSON Web Tokens\n- **Configure Devise**: Generate and configure Devise with `rails generate devise:install`\n- **Generate User model**: Use `rails generate devise User`\n- **Create GraphQL schema**: Define types and queries in `app/graphql/schema.rb`\n- **Implement JWT authentication**:\n  - Add `gem 'jwt'` to your Gemfile\n  - Configure JWT in an initializer or directly in the schema\n- **Secure mutations and queries**: Use `authenticate_user!` in controllers for protected routes\n- **Use GraphiQL for testing**: Access it at `/graphiql`\n- **Monitor and log**: Implement logging for security events and errors",
     "source": "code_example",
-    "updated_at": 1780833331.6992552
+    "updated_at": 1780846011.5185058
   }
 }

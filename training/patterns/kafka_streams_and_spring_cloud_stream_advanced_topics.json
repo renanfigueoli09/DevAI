@@ -32,11 +32,11 @@
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:real-time data pipelines_ex": {
     "content": "- **CLI Commands**:\n  - `databricks pipelines create --name <pipeline_name> --config-file <path_to_config_file>`\n  - `databricks jobs run-now --job-id <job_id>`\n\n- **Latest Versions**:\n  - Databricks Runtime: 13.2 LTS\n  - Delta Lake: 2.0.0\n\n- **Key Config Options**:\n  - `spark.sql.streaming.checkpointLocation`: Specifies the location for checkpoint data.\n  - `spark.sql.streaming.maxOffsetsPerTrigger`: Limits the number of offsets processed per trigger.\n  - `spark.sql.streaming.stopGracefullyOnShutdown`: Ensures that streaming jobs stop gracefully on shutdown.",
     "source": "code_example",
-    "updated_at": 1780833302.6242158
+    "updated_at": 1780845979.5174205
   },
   "search:Kafka Streams and Spring Cloud Stream Advanced Topics:spring cloud stream architectu_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `docker-compose up` to start services using Docker Compose.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.1.4.RELEASE\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the name of the input channel.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the name of the output channel.\n  - `spring.cloud.stream.bindings.input.group`: Specifies the consumer group for the input channel.",
     "source": "code_example",
-    "updated_at": 1780833304.7559836
+    "updated_at": 1780845981.8302007
   }
 }
