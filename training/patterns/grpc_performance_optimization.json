@@ -17,16 +17,16 @@
   "search:gRPC Performance Optimization:grpc load balancing strategies_ex": {
     "content": "- **CLI Commands**:\n  - `docker build -t grpc-server .`\n  - `docker run -p 50051:50051 grpc-server`\n\n- **Latest Versions**:\n  - gRPC: v2.47.0\n  - Protocol Buffers: v3.19.4\n\n- **Key Config Options**:\n  - Load Balancing Policy: `round_robin`, `pick_first`\n  - xDS (x-Distributed Service) for dynamic load balancing and endpoint management.\n  - Proxy Load Balancer options: L7 (Application) vs L4 (Transport).",
     "source": "code_example",
-    "updated_at": 1780829888.2281413
+    "updated_at": 1780838987.6385055
   },
   "search:gRPC Performance Optimization:grpc security patterns 2023": {
     "content": "- Use `dotnet grpc` to scaffold gRPC services.\n- Implement TLS for transport security using `--https-port`.\n- Configure mTLS by setting up client and server certificates.\n- Utilize interceptors for token propagation with `Grpc.Core.Interceptors`.\n- Enable audit logging through middleware or custom interceptors.\n- Update gRPC packages to the latest version via NuGet.\n- Review and apply security patches regularly.\n- Implement role-based access control (RBAC) using metadata in headers.\n- Monitor gRPC services for anomalies using observability tools.",
     "source": "web_search",
-    "updated_at": 1780829889.4530995
+    "updated_at": 1780838989.4930196
   },
   "search:gRPC Performance Optimization:grpc security patterns 2023_ex": {
     "content": "- Use `openssl` to generate SSL certificates and keys.\n- For Java, use the following command to create a self-signed certificate:\n  ```bash\n  keytool -genkeypair -alias mygrpcserver -keyalg RSA -keysize 2048 -validity 365 -keystore server.jks\n  ```\n- In your gRPC server code, configure SSL/TLS using the generated keystore:\n  ```java\n  ServerBuilder<?> builder = NettyServerBuilder.forPort(50051)\n      .sslContext(SslContextBuilder.forServer(serverKeyCertChainFile, serverPrivateKeyFile).build());\n  ```\n- For mutual TLS, ensure both client and server have certificates.\n- Use the `--grpc.ssl_target_name_override` flag when running your gRPC client to override the target name for certificate validation.\n- In Go, use `google.golang.org/grpc/credentials/tls` package to set up TLS credentials:\n  ```go\n  creds := credentials.NewTLS(&tls.Config{\n      Certificates: []tls.Certificate{cert},\n      ClientAuth:   tls.RequireAndVerifyClientCert,\n  })\n  conn, err := grpc.Dial(\"localhost:50051\", grpc.WithTransportCredentials(creds))\n  ```\n- For ALTS transport security, use the `io.grpc.alts.AltsServerBuilder` and `io.grpc.alts.AltsCredentials` classes.\n- Ensure your gRPC server is configured with appropriate permissions for ALTS credentials.",
     "source": "code_example",
-    "updated_at": 1780829890.807539
+    "updated_at": 1780838991.234504
   }
 }
