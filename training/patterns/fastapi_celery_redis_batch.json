@@ -1,0 +1,12 @@
+{
+  "search:fastapi+celery-redis-batch:fastapi celery redis batch pro": {
+    "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Celery: 5.2.3\n  - Redis: 7.0.1\n\n- **Key Config Options**:\n  - `app.celery.conf.broker_url = 'redis://localhost:6379/0'`\n  - `app.celery.conf.result_backend = 'redis://localhost:6379/0'`\n  - `app.celery.conf.task_serializer = 'json'`\n  - `app.celery.conf.accept_content = ['json']`",
+    "source": "web_search",
+    "updated_at": 1780838092.0193021
+  },
+  "search:fastapi+celery-redis-batch:fastapi celery redis batch pro_ex": {
+    "content": "- **GitHub Repository**: [mh-mukul/fastapi-celery](https://github.com/mh-mukul/fastapi-celery)\n- **Celery Configuration**:\n  - Use Redis as the message broker.\n  - Configure Celery in `celery_config.py`.\n- **Docker Integration**:\n  - Tutorial video: [FastAPI Celery, Flower and Docker](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)\n- **Key Config Options**:\n  - Broker URL: `redis://localhost:6379/0`\n  - Result Backend: `redis://localhost:6379/1`\n- **CLI Commands**:\n  - Install Celery: `pip install celery`\n  - Start Redis server: `docker run --name some-redis -d redis`\n  - Run Celery worker: `celery -A app.celery worker --loglevel=info`\n- **Latest Versions**:\n  - FastAPI: [v0.81.0](https://fastapi.tiangolo.com/)\n  - Celery: [5.2.7](https://docs.celeryproject.org/en/stable/changelog.html#celery-5-2-7)\n  - Redis: [latest stable version](https://redis.io/download)",
+    "source": "code_example",
+    "updated_at": 1780838102.1863985
+  }
+}
