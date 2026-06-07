@@ -1,0 +1,27 @@
+{
+  "search:devops-practices:12 factor app methodology back": {
+    "content": "- **CLI Commands**: Use `heroku create` to provision a new app.\n- **Latest Versions**: Ensure using the latest Heroku CLI and Docker for containerization.\n- **Key Config Options**:\n  - `Procfile`: Define process types (web, worker).\n  - Environment Variables: Manage configuration through `.env` files or Heroku dashboard.\n  - Logging: Use centralized logging services like Loggly or Papertrail.\n  - Scaling: Adjust dyno counts with `heroku ps:scale web=2`.\n  - Database Management: Utilize Heroku Postgres for relational databases.",
+    "source": "web_search",
+    "updated_at": 1780794082.5077007
+  },
+  "search:devops-practices:12 factor app methodology back_ex": {
+    "content": "- **CLI Commands**: `git push heroku master`\n- **Latest Versions**: Ensure using latest Node.js, Python, or other language runtime.\n- **Key Config Options**:\n  - Environment variables for configuration (`process.env`)\n  - Database URLs (`DATABASE_URL`)\n  - Logging levels (`LOG_LEVEL`)\n  - Scaling options (`heroku ps:scale web=2`)",
+    "source": "code_example",
+    "updated_at": 1780794087.9535336
+  },
+  "search:devops-practices:containerization best practice": {
+    "content": "- **CLI Commands**:\n  - `docker build --pull .` to pull latest base image before building.\n  - `docker run --rm -it <image_name> /bin/bash` for interactive container sessions.\n  - `docker-compose up -d` to start services in detached mode.\n\n- **Latest Versions**:\n  - Docker Engine: Latest version as of October 2025 is 24.0.\n  - Docker Compose: Latest version as of October 2025 is 1.29.2.\n\n- **Key Config Options**:\n  - `Dockerfile`: Use `.dockerignore` to exclude unnecessary files from the build context.\n  - `docker-compose.yml`: Define services, networks, and volumes for multi-container setups.\n  - Environment Variables: Set environment variables using `-e` flag or in `docker-compose.yml`.",
+    "source": "web_search",
+    "updated_at": 1780794098.9473124
+  },
+  "search:devops-practices:containerization best practice_ex": {
+    "content": "- **CLI Commands**:\n  - `docker build --target <stage> .`\n  - `docker run --rm -it <image_name>`\n  - `docker push <repository>/<image>:<tag>`\n  - `docker pull <repository>/<image>:<tag>`\n  \n- **Latest Versions**:\n  - Docker Engine: v25.0\n  - Docker Compose: v2.13.0\n  \n- **Key Config Options**:\n  - Use multi-stage builds for optimization.\n  - Employ distroless images to reduce image size.\n  - Implement security hardening techniques (e.g., non-root user, vulnerability scans).\n  - Utilize `.dockerignore` to exclude unnecessary files from the build context.",
+    "source": "code_example",
+    "updated_at": 1780794105.1212878
+  },
+  "search:devops-practices:ci/cd pipeline best practices ": {
+    "content": "- **CLI Commands**: \n  - `git checkout <branch-name>`\n  - `git pull origin <branch-name>`\n  - `git push origin <branch-name>`\n\n- **Latest Versions**:\n  - GitHub Actions: v3.x\n  - Jenkins: LTS version\n  - GitLab CI: 15.0\n\n- **Key Config Options**:\n  - GitHub Actions: `.github/workflows/main.yml`\n  - Jenkins: `Jenkinsfile` or XML configuration\n  - GitLab CI: `.gitlab-ci.yml`\n\n- **Automation Efficiency**: \n  - Use parallel jobs for faster builds.\n  - Implement caching to speed up dependency installation.\n\n- **Cost-Aware Infrastructure Management**:\n  - Utilize spot instances in AWS or GCP.\n  - Monitor and scale resources dynamically based on demand.",
+    "source": "web_search",
+    "updated_at": 1780794136.6061087
+  }
+}

@@ -53,5 +53,10 @@
     "content": "- Install `@shelf/jest-mongodb` using `npm i @shelf/jest-mongodb`\n- Use `mongodb-memory-server` for in-memory MongoDB testing\n- Latest version of `@shelf/jest-mongodb`: 6.0.2 (as of March 2023)\n- Key config options: \n  - `mongoInstanceOpts`: Customize MongoDB instance options\n  - `dbPath`: Specify the path to store the database files\n  - `instance`: Access the MongoDB instance for advanced configurations",
     "source": "web_search",
     "updated_at": 1780793750.2282097
+  },
+  "search:testing-patterns:testing mongodb in-memory mong_ex": {
+    "content": "- Use `npm install jest-mongodb --save-dev` to install the latest version of `jest-mongodb`.\n- Configure Jest in your project by adding a `setupFilesAfterEnv` entry in `jest.config.js` pointing to `jest-mongodb/setup`.\n- For in-memory MongoDB testing, use the `mongo-memory-server` package. Install it with `npm install mongo-memory-server --save-dev`.\n- Initialize the in-memory server in your Jest setup file:\n  ```javascript\n  const { MongoMemoryServer } = require('mongodb-memory-server');\n\n  let mongoServer;\n\n  beforeAll(async () => {\n    mongoServer = await MongoMemoryServer.create();\n    const uri = mongoServer.getUri();\n\n    // Configure MongoDB URI for your application\n  });\n\n  afterAll(async () => {\n    if (mongoServer) {\n      await mongoServer.stop();\n    }\n  });\n  ```\n- Key config options in `jest.config.js`:\n  - `setupFilesAfterEnv`: Array of paths to files that run before each test.\n  - `testEnvironment`: Set to `'node'` for Node.js environment.\n  - `transformIgnorePatterns`: Exclude node_modules from transformation if not necessary.",
+    "source": "code_example",
+    "updated_at": 1780793758.85015
   }
 }
