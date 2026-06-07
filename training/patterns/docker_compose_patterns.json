@@ -2,16 +2,16 @@
   "search:docker-compose-patterns:docker compose patterns for mu": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts or restarts services.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by docker-compose.\n  - `docker-compose build`: Builds or rebuilds services.\n\n- **Latest Versions**:\n  - Docker Compose v2.17.0 (as of my last update)\n\n- **Key Config Options**:\n  - `services`: Defines the services to run in your application.\n  - `networks`: Specifies networks for service communication.\n  - `volumes`: Mounts volumes for data persistence.\n  - `build`: Specifies build context and Dockerfile.",
     "source": "web_search",
-    "updated_at": 1780832450.087448
+    "updated_at": 1780844798.2998807
   },
   "search:docker-compose-patterns:docker compose best practices ": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in `docker-compose.yml`.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `docker-compose up`.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is Docker Compose V2. For the most current version, check [Docker's official documentation](https://docs.docker.com/compose/install/).\n\n- **Key Config Options**:\n  - `services`: Defines services to run.\n  - `networks`: Specifies networks for service communication.\n  - `volumes`: Manages data persistence.\n  - `build`: Specifies how to build images from Dockerfiles.\n\n- **Additional Tips**:\n  - Use `.env` files for environment-specific configurations.\n  - Implement health checks in your services using the `healthcheck` option.\n  - Utilize secrets and config files for sensitive information.",
     "source": "web_search",
-    "updated_at": 1780832451.5688365
+    "updated_at": 1780844800.730415
   },
   "search:docker-compose-patterns:docker compose best practices _ex": {
     "content": "- **CLI Commands**: `docker-compose up`, `docker-compose down`, `docker-compose scale <service>=<number>`, `docker-compose pull`\n- **Latest Version**: As of my last update, the latest stable version is 2.23.1.\n- **Key Config Options**:\n  - `services`: Defines the services to run.\n  - `version`: Specifies the Compose file format version.\n  - `networks`: Configures networks for the services.\n  - `volumes`: Manages data persistence.\n  - `environment`: Sets environment variables.\n  - `build`: Specifies build context and Dockerfile.\n- **Best Practices**:\n  - Use `.env` files to separate environment variables.\n  - Scale services efficiently using `docker-compose scale`.\n  - Utilize Docker Compose profiles for different environments (e.g., development, production).\n  - Implement secret management using Docker secrets or environment variables.",
     "source": "code_example",
-    "updated_at": 1780832452.9950924
+    "updated_at": 1780844803.1810937
   }
 }

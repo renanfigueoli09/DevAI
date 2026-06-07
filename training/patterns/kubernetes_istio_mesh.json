@@ -2,7 +2,7 @@
   "search:kubernetes+istio-mesh:istio traffic management and s": {
     "content": "- **CLI Commands**:\n  - `istioctl install --set profile=default`\n  - `kubectl apply -f <path-to-yaml-file>`\n  - `istioctl version`\n\n- **Latest Versions**:\n  - Istio: v1.14.3\n  - Linkerd: v2.10.6\n\n- **Key Config Options**:\n  - Traffic Management: `VirtualService`, `DestinationRule`\n  - Security: `IstioOperator` for FIPS compliance, `PeerAuthentication` for identity-based auth",
     "source": "web_search",
-    "updated_at": 1780832485.4976988
+    "updated_at": 1780844847.0662322
   },
   "search:kubernetes+istio-mesh:istio traffic management and s_ex": {
     "content": "- **CLI Commands**:\n  - `istioctl install`: Installs Istio on your Kubernetes cluster.\n  - `kubectl apply -f <filename>.yaml`: Applies a configuration file to your Kubernetes cluster.\n\n- **Latest Versions**:\n  - Istio: v1.14.3 (as of my last update).\n\n- **Key Config Options**:\n  - `istio-ingressgateway`: The gateway for external traffic.\n  - `virtualservices`: Define routing rules.\n  - `destinationrules`: Configure traffic policies like retries and circuit breakers.\n\nFor detailed instructions, refer to the official Istio documentation.",
