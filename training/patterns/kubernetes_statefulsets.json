@@ -13,5 +13,10 @@
     "content": "- **CLI Commands**: Use `kubectl apply -f <filename.yaml>` to deploy StatefulSets.\n- **Latest Versions**: Ensure using Kubernetes v1.23 or later for optimal features and security.\n- **Key Config Options**:\n  - `spec.serviceName`: Define the service name for the StatefulSet.\n  - `spec.replicas`: Set the number of replicas.\n  - `spec.template.spec.containers.volumeMounts`: Mount volumes to containers.\n  - `spec.volumeClaimTemplates`: Define PersistentVolumeClaims for persistent storage.",
     "source": "web_search",
     "updated_at": 1780814349.5505006
+  },
+  "search:kubernetes-statefulsets:kubernetes statefulsets deploy_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update a StatefulSet.\n  - `kubectl get statefulsets` to list all StatefulSets in the current namespace.\n  - `kubectl describe statefulset <statefulset-name>` for detailed information about a specific StatefulSet.\n\n- **Latest Versions**:\n  - Kubernetes v1.24.x is recommended for using StatefulSets effectively, as it includes improvements and bug fixes.\n\n- **Key Config Options**:\n  - `spec.replicas`: Defines the number of replicas.\n  - `spec.template`: Specifies the pod template to use.\n  - `spec.serviceName`: Links the StatefulSet with a headless service for stable network identifiers.\n  - `volumeClaimTemplates`: Defines persistent storage claims for each pod.",
+    "source": "code_example",
+    "updated_at": 1780814363.6952515
   }
 }
