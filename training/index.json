@@ -8,31 +8,31 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780836163.2718036,
+    "ts": 1780836646.808233,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780836164.0959644,
+    "ts": 1780836647.6346705,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780836164.8651872,
+    "ts": 1780836649.0371292,
     "size": 867
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "topic": "nestjs_mongodb",
     "source": "code_example",
-    "ts": 1780836165.5950105,
+    "ts": 1780836649.8315952,
     "size": 830
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780836166.289551,
+    "ts": 1780836650.6766367,
     "size": 349
   },
   "qa:livros-to-Book": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780836167.4818437,
+    "ts": 1780836651.8584163,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780836153.2953205,
+    "ts": 1780836637.9918718,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780836154.8339949,
+    "ts": 1780836639.4260967,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780836152.5650845,
+    "ts": 1780836637.2202547,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780836154.0218549,
+    "ts": 1780836638.748575,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780836155.6009696,
+    "ts": 1780836640.114811,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780836156.346529,
+    "ts": 1780836640.8680532,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780836157.1397345,
+    "ts": 1780836641.586785,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780836157.9625607,
+    "ts": 1780836642.34085,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780836159.009041,
+    "ts": 1780836643.14707,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780836160.6622756,
+    "ts": 1780836644.5664701,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780836161.452002,
+    "ts": 1780836645.2334023,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780836162.2348716,
+    "ts": 1780836645.952086,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -15406,5 +15406,167 @@
     "source": "code_example",
     "ts": 1780836213.8024893,
     "size": 407
+  },
+  "search:flask-sqlalchemy-performance:flask sqlalchemy query tuning ": {
+    "topic": "flask_sqlalchemy_performance",
+    "source": "web_search",
+    "ts": 1780836222.024538,
+    "size": 949
+  },
+  "search:flask-sqlalchemy-performance:flask sqlalchemy query tuning _ex": {
+    "topic": "flask_sqlalchemy_performance",
+    "source": "code_example",
+    "ts": 1780836236.011626,
+    "size": 473
+  },
+  "search:golang-mongo-driver-advanced:golang mongodb driver advanced": {
+    "topic": "golang_mongo_driver_advanced",
+    "source": "web_search",
+    "ts": 1780836263.2870297,
+    "size": 840
+  },
+  "search:golang-mongo-driver-advanced:golang mongodb performance opt": {
+    "topic": "golang_mongo_driver_advanced",
+    "source": "web_search",
+    "ts": 1780836301.98208,
+    "size": 819
+  },
+  "search:golang-mongo-driver-advanced:golang mongodb performance opt_ex": {
+    "topic": "golang_mongo_driver_advanced",
+    "source": "code_example",
+    "ts": 1780836307.1677701,
+    "size": 646
+  },
+  "search:ruby-on-rails-active-record-associations:ruby on rails activerecord ass": {
+    "topic": "ruby_on_rails_active_record_associations",
+    "source": "web_search",
+    "ts": 1780836318.1252756,
+    "size": 270
+  },
+  "search:ruby-on-rails-active-record-associations:ruby on rails advanced query t": {
+    "topic": "ruby_on_rails_active_record_associations",
+    "source": "web_search",
+    "ts": 1780836356.4061418,
+    "size": 344
+  },
+  "search:ruby-on-rails-active-record-associations:ruby on rails advanced query t_ex": {
+    "topic": "ruby_on_rails_active_record_associations",
+    "source": "code_example",
+    "ts": 1780836361.2297914,
+    "size": 500
+  },
+  "search:typescript-typeorm-advanced:typescript typeorm advanced us": {
+    "topic": "typescript_typeorm_advanced",
+    "source": "web_search",
+    "ts": 1780836368.0147512,
+    "size": 654
+  },
+  "search:typescript-typeorm-advanced:typescript typeorm advanced us_ex": {
+    "topic": "typescript_typeorm_advanced",
+    "source": "code_example",
+    "ts": 1780836380.4400177,
+    "size": 408
+  },
+  "search:typescript-typeorm-advanced:typescript typeorm performance": {
+    "topic": "typescript_typeorm_advanced",
+    "source": "web_search",
+    "ts": 1780836391.9464688,
+    "size": 963
+  },
+  "search:typescript-typeorm-advanced:typescript typeorm performance_ex": {
+    "topic": "typescript_typeorm_advanced",
+    "source": "code_example",
+    "ts": 1780836414.1608858,
+    "size": 669
+  },
+  "search:java-spring-data-jpa-batch-processing:java spring data jpa batch pro": {
+    "topic": "java_spring_data_jpa_batch_processing",
+    "source": "web_search",
+    "ts": 1780836425.2950485,
+    "size": 712
+  },
+  "search:java-spring-data-jpa-batch-processing:java spring data jpa batch pro_ex": {
+    "topic": "java_spring_data_jpa_batch_processing",
+    "source": "code_example",
+    "ts": 1780836430.8881452,
+    "size": 540
+  },
+  "search:java-spring-data-jpa-batch-processing:java spring data jpa large dat": {
+    "topic": "java_spring_data_jpa_batch_processing",
+    "source": "web_search",
+    "ts": 1780836443.2080717,
+    "size": 1700
+  },
+  "search:java-spring-data-jpa-batch-processing:java spring data jpa large dat_ex": {
+    "topic": "java_spring_data_jpa_batch_processing",
+    "source": "code_example",
+    "ts": 1780836466.8543935,
+    "size": 574
+  },
+  "search:nextjs+supabase-auth:next.js supabase jwt token man": {
+    "topic": "nextjs_supabase_auth",
+    "source": "web_search",
+    "ts": 1780836522.0970066,
+    "size": 1081
+  },
+  "search:nextjs+supabase-auth:next.js supabase jwt token man_ex": {
+    "topic": "nextjs_supabase_auth",
+    "source": "code_example",
+    "ts": 1780836529.6837962,
+    "size": 412
+  },
+  "search:kubernetes+postgres-advanced:kubernetes postgresql high ava": {
+    "topic": "kubernetes_postgres_advanced",
+    "source": "web_search",
+    "ts": 1780836536.811569,
+    "size": 515
+  },
+  "search:kubernetes+postgres-advanced:kubernetes postgresql high ava_ex": {
+    "topic": "kubernetes_postgres_advanced",
+    "source": "code_example",
+    "ts": 1780836550.9258366,
+    "size": 702
+  },
+  "search:kubernetes+postgres-advanced:kubernetes postgresql backup a": {
+    "topic": "kubernetes_postgres_advanced",
+    "source": "web_search",
+    "ts": 1780836558.3293126,
+    "size": 529
+  },
+  "search:kubernetes+postgres-advanced:kubernetes postgresql backup a_ex": {
+    "topic": "kubernetes_postgres_advanced",
+    "source": "code_example",
+    "ts": 1780836581.1616907,
+    "size": 1650
+  },
+  "search:typescript-eslint-rules-performance:typescript eslint performance ": {
+    "topic": "typescript_eslint_rules_performance",
+    "source": "web_search",
+    "ts": 1780836591.257794,
+    "size": 931
+  },
+  "search:typescript-eslint-rules-performance:typescript eslint performance _ex": {
+    "topic": "typescript_eslint_rules_performance",
+    "source": "code_example",
+    "ts": 1780836609.8472652,
+    "size": 431
+  },
+  "search:typescript-eslint-rules-performance:typescript eslint best practic": {
+    "topic": "typescript_eslint_rules_performance",
+    "source": "web_search",
+    "ts": 1780836620.0538447,
+    "size": 1228
+  },
+  "search:typescript-eslint-rules-performance:typescript eslint best practic_ex": {
+    "topic": "typescript_eslint_rules_performance",
+    "source": "code_example",
+    "ts": 1780836633.8852713,
+    "size": 1083
+  },
+  "search:kubernetes+ingress-advanced:kubernetes ingress performance": {
+    "topic": "kubernetes_ingress_advanced",
+    "source": "web_search",
+    "ts": 1780836673.7860858,
+    "size": 1239
   }
 }
