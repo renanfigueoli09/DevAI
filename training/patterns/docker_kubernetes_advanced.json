@@ -2,16 +2,16 @@
   "search:docker+kubernetes-advanced:docker kubernetes advanced con": {
     "content": "- **CLI Commands**:\n  - `docker run --name mycontainer -d nginx`\n  - `kubectl apply -f my-deployment.yaml`\n  - `kubectl get pods`\n\n- **Latest Versions**:\n  - Docker: v24.0.1\n  - Kubernetes: v1.27.0\n\n- **Key Config Options**:\n  - Docker Compose: `version`, `services`, `networks`, `volumes`\n  - Kubernetes YAML: `apiVersion`, `kind`, `metadata`, `spec`",
     "source": "web_search",
-    "updated_at": 1780804340.557939
+    "updated_at": 1780811296.8107822
   },
   "search:docker+kubernetes-advanced:docker kubernetes advanced con_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml`: Apply configuration to a resource.\n  - `kubectl get pods --all-namespaces`: List all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Describe details of a specific pod.\n\n- **Latest Versions**:\n  - Docker: 20.10.7\n  - Kubernetes: 1.23.4\n\n- **Key Config Options**:\n  - `resources`: Define resource limits and requests for containers.\n  - `volumeMounts`: Mount volumes into a container.\n  - `service.beta.kubernetes.io/aws-load-balancer-type`: Specify the type of load balancer in AWS.\n\nThese actionable facts should help developers effectively manage Docker and Kubernetes environments.",
     "source": "code_example",
-    "updated_at": 1780804341.9766119
+    "updated_at": 1780811298.2178998
   },
   "search:docker+kubernetes-advanced:docker kubernetes performance ": {
     "content": "- **Kubernetes Performance Tuning Best Practices**\n  - Configure resource requests and limits properly.\n  - Use `kubectl apply` for configuration changes.\n  - Implement horizontal pod autoscaling with `--min=2 --max=10`.\n  - Optimize container images using multi-stage builds.\n\n- **Latest Versions**\n  - Docker Engine v28\n  - Kubernetes v1.34\n\n- **Key Config Options**\n  - CPU and memory resource management in YAML files.\n  - Use `kubectl scale` for scaling applications.\n  - Configure storage classes for persistent volumes.\n  - Enable network policies for security.\n\n- **CLI Commands with Exact Flags**\n  ```bash\n  kubectl apply -f deployment.yaml\n  kubectl scale deployment/my-deployment --replicas=5\n  kubectl get pods --all-namespaces\n  ```\n\n- **Unlocking Peak Performance**\n  - Use `cAdvisor` for container resource usage monitoring.\n  - Employ `Prometheus` and `Grafana` for comprehensive performance metrics visualization.\n  - Apply network optimizations like DNS caching and load balancing.",
     "source": "web_search",
-    "updated_at": 1780804343.301519
+    "updated_at": 1780811299.5553505
   }
 }

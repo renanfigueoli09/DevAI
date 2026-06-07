@@ -1,0 +1,22 @@
+{
+  "search:spring-cloud-stream-kafka:spring cloud stream kafka inte": {
+    "content": "- **Latest Version of Spring Cloud Stream Kafka**: As of my last update in October 2023, the latest version is 4.0. However, for the most current version, refer to the official [Spring Cloud Stream documentation](https://spring.io/projects/spring-cloud-stream).\n\n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Kafka: `mvn archetype:generate -DgroupId=com.example -DartifactId=spring-cloud-stream-kafka-demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`\n  - To add dependencies in your `pom.xml`:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.cloud</groupId>\n        <artifactId>spring-cloud-starter-stream-kafka</artifactId>\n    </dependency>\n    ```\n\n- **Key Configuration Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.kafka.bootstrap-servers`: Specifies the Kafka broker addresses.\n  - `spring.cloud.stream.bindings.*.group`: Specifies the consumer group ID.\n\n- **Additional Resources**:\n  - [Spring Cloud Stream Kafka Binder Reference Guide](https://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_kafka_binder)\n  - [Apache Kafka Spring Cloud Stream Integration: Complete Guide](https://www.baeldung.com/spring-cloud-stream-kafka-integration)",
+    "source": "web_search",
+    "updated_at": 1780811390.1905808
+  },
+  "search:spring-cloud-stream-kafka:spring cloud stream kafka inte_ex": {
+    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Apache Kafka: 3.0.0\n  - Spring Kafka: 2.8.0.RELEASE\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output bindings.\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Offset reset policy (e.g., earliest, latest).",
+    "source": "code_example",
+    "updated_at": 1780811404.3794668
+  },
+  "search:spring-cloud-stream-kafka:kafka streams with spring clou": {
+    "content": "- **Latest Versions**: Spring Cloud Stream 2025.0.0, Kafka Streams 3.4.2\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.streams.binder.application-id`\n  - `spring.cloud.stream.bindings.input.destination`\n  - `spring.cloud.stream.bindings.output.destination`\n- **CLI Commands**:\n  - `mvn clean install` to build the project\n  - `java -jar target/your-application.jar` to run the application",
+    "source": "web_search",
+    "updated_at": 1780811413.5238857
+  },
+  "search:spring-cloud-stream-kafka:kafka streams with spring clou_ex": {
+    "content": "- **GitHub Repository**: [taoudi-abdelbasset/kafka-streams-spring](https://github.com/taoudi-abdelbasset/kafka-streams-spring)\n- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Kafka Streams: 3.2.0\n  - Spring Cloud Stream: 4.0.0\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input events.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output events.\n  - `spring.kafka.bootstrap-servers`: Kafka broker address.\n  - `spring.cloud.stream.window.size`: Window size for aggregations.",
+    "source": "code_example",
+    "updated_at": 1780811420.6057987
+  }
+}

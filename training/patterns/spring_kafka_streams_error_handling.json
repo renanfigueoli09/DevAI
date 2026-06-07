@@ -7,6 +7,6 @@
   "search:spring+kafka-streams-error-handling:spring kafka streams error han_ex": {
     "content": "- Use Spring Kafka Streams instead of KafkaStreams for easier integration and management.\n- Ensure your application is running on the latest version of Spring Boot and Spring Kafka to benefit from the latest features and bug fixes.\n- Configure error handling at both the framework level (deserialization/serialization errors) and the application logic level.\n- Implement custom error handlers in your business logic to manage exceptions effectively.\n- Utilize the `@StreamListener` annotation for consuming messages, which simplifies error handling within the listener method.\n- Consider using the `SeekToCurrentErrorHandler` or a custom error handler to control message reprocessing behavior.\n- Monitor Kafka Streams metrics and logs to identify and resolve issues promptly.",
     "source": "code_example",
-    "updated_at": 1780805620.4944777
+    "updated_at": 1780811215.6835036
   }
 }

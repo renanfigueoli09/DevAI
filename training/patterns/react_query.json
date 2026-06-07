@@ -1,0 +1,12 @@
+{
+  "search:react-query:react query for state manageme": {
+    "content": "- **Latest Version**: React Query v4.23.0 (as of October 2023)\n- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install react-query@latest`\n- **Key Config Options**:\n  - `queryClient`: For configuring the query client.\n    ```javascript\n    const queryClient = new QueryClient();\n    ```\n  - `useQuery`: For fetching data.\n    ```javascript\n    useQuery('key', fetchData);\n    ```\n  - `useMutation`: For updating data.\n    ```javascript\n    useMutation(updateData);\n    ```\n  - `useInfiniteQuery`: For handling infinite lists.\n    ```javascript\n    useInfiniteQuery('key', fetchNextPage, {\n      getNextPageParam: (lastPage) => lastPage.nextCursor,\n    });\n    ```\n- **Suspense Support**: Enabled by default in React 18+.\n  ```javascript\n  <React.Suspense fallback={<div>Loading...</div>}>\n    <MyComponent />\n  </React.Suspense>\n  ```\n- **TypeScript Inference**: Improved for better type safety.\n- **Bundle Size**: Reduced by 20% compared to previous versions.",
+    "source": "web_search",
+    "updated_at": 1780811556.158572
+  },
+  "search:react-query:react query with typescript 20": {
+    "content": "- **Latest Version**: React Query v4.0.0, TypeScript v4.1 or greater.\n- **CLI Commands**:\n  - `npm install react-query@latest`\n  - `yarn add react-query@latest`\n- **Key Config Options**:\n  - `useQuery`: For fetching data and managing state.\n    ```typescript\n    useQuery('key', fetchData);\n    ```\n  - `useMutation`: For updating data.\n    ```typescript\n    useMutation(updateData);\n    ```\n  - `queryClient`: For manual cache operations.\n    ```typescript\n    const queryClient = new QueryClient();\n    ```\n- **TypeScript Integration**:\n  - Ensure TypeScript version is v4.1 or greater.\n  - Use generics for type safety in queries and mutations.\n    ```typescript\n    useQuery<MyDataType>('key', fetchData);\n    ```\n- **Documentation**: Refer to the official [React Query TypeScript documentation](https://tanstack.com/query/v4/docs/guides/typescript) for detailed information.",
+    "source": "web_search",
+    "updated_at": 1780811641.2030563
+  }
+}
