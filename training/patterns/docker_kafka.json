@@ -1,0 +1,7 @@
+{
+  "search:docker+kafka:docker kafka cluster managemen": {
+    "content": "- **CLI Commands**:\n  - `docker network create kafka-net`\n  - `docker-compose up -d` to start the cluster\n  - `docker-compose down` to stop the cluster\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Docker Compose: 1.29.2\n\n- **Key Config Options**:\n  - `KAFKA_BROKER_ID`: Unique identifier for each broker in the cluster.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string to ZooKeeper (if using ZK mode).\n  - `KAFKA_CLUSTER_ID`: Unique identifier for the Kafka cluster (required in KRaft mode).",
+    "source": "web_search",
+    "updated_at": 1780813911.2883213
+  }
+}
