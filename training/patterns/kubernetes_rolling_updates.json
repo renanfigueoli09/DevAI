@@ -2,31 +2,31 @@
   "search:kubernetes-rolling-updates:kubernetes rolling updates tut": {
     "content": "- Use `kubectl rollout` to manage rolling updates.\n- Flags like `--image`, `--record`, and `--max-surge`/`--max-unavailable`.\n- Latest version of Kubernetes is crucial for compatibility.\n- Key config options include `spec.strategy.rollingUpdate.maxSurge` and `maxUnavailable`.\n- Ensure your deployment YAML specifies these parameters.\n- Example command: `kubectl rollout restart deployment/my-deployment --record=true --image=my-image:v2`.",
     "source": "web_search",
-    "updated_at": 1780835363.1894045
+    "updated_at": 1780845574.5223877
   },
   "search:kubernetes-rolling-updates:kubernetes rolling updates tut_ex": {
     "content": "- **CLI Commands**: `kubectl rollout status deployment/<deployment-name>`\n- **Latest Versions**: Ensure you are using the latest version of Kubernetes and kubectl.\n- **Key Config Options**:\n  - `spec.strategy.type`: RollingUpdate or Recreate\n  - `spec.strategy.rollingUpdate.maxUnavailable`: Maximum number or percentage of Pods that can be unavailable during update\n  - `spec.strategy.rollingUpdate.maxSurge`: Maximum number or percentage of Pods that can be created over the desired number of Pods",
     "source": "code_example",
-    "updated_at": 1780835368.7987404
+    "updated_at": 1780845576.5967638
   },
   "search:kubernetes-rolling-updates:kubernetes rolling updates bes": {
     "content": "- Use `kubectl rollout status deployment/<deployment-name>` to monitor the progress of a rolling update.\n- Set `spec.strategy.rollingUpdate.maxUnavailable` and `spec.strategy.rollingUpdate.maxSurge` in your Deployment YAML to control the number of Pods that can be unavailable or created during an update.\n- Apply changes using `kubectl apply -f <path-to-deployment-yaml>`.\n- Use `kubectl rollout undo deployment/<deployment-name>` to rollback to a previous version if issues arise.\n- Ensure your application is stateless and idempotent for smooth rolling updates.\n- Monitor resource usage and logs during updates to identify potential bottlenecks or errors.\n- Update Kubernetes to the latest stable version for access to new features, security patches, and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780835376.08228
+    "updated_at": 1780845578.4577699
   },
   "search:kubernetes-rolling-updates:kubernetes rolling updates bes_ex": {
     "content": "- Use `kubectl rollout status deployment/<deployment-name>` to monitor the progress of a rolling update.\n- Set `spec.strategy.rollingUpdate.maxUnavailable` and `spec.strategy.rollingUpdate.maxSurge` in your Deployment YAML to control the number of pods that can be unavailable or created during an update.\n- Example: \n  ```yaml\n  spec:\n    strategy:\n      type: RollingUpdate\n      rollingUpdate:\n        maxUnavailable: 1\n        maxSurge: 25%\n  ```\n- Use `kubectl rollout undo deployment/<deployment-name>` to rollback a deployment if the update fails.\n- Ensure readiness probes are configured correctly in your Deployment YAML to avoid premature termination of pods during updates.\n- Example readiness probe configuration:\n  ```yaml\n  readinessProbe:\n    httpGet:\n      path: /healthz\n      port: 8080\n    initialDelaySeconds: 5\n    periodSeconds: 10\n  ```\n- Use `kubectl rollout history deployment/<deployment-name>` to view the revision history of your deployment.\n- Ensure that your application is designed for graceful shutdown and restarts, as Kubernetes will terminate old pods before starting new ones during a rolling update.",
     "source": "code_example",
-    "updated_at": 1780835394.4031076
+    "updated_at": 1780845580.1721697
   },
   "search:kubernetes-rolling-updates:kubernetes rolling updates wit": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout status deployment/<deployment-name>`: Check the status of a rolling update.\n  - `kubectl set image deployment/<deployment-name> <container-name>=<new-image>:<tag>`: Update an image in a deployment.\n\n- **Latest Versions**:\n  - Kubernetes v1.27 (as of my last update, but check for the latest version on the official Kubernetes website).\n\n- **Key Config Options**:\n  - `spec.strategy.type`: Set to \"RollingUpdate\" or \"Recreate\".\n  - `spec.strategy.rollingUpdate.maxUnavailable`: Maximum number or percentage of Pods that can be unavailable during the update.\n  - `spec.strategy.rollingUpdate.maxSurge`: Maximum number or percentage of Pods that can be created over the desired number of Pods.\n\n- **Blue-Green Deployment**:\n  - Create two identical environments (blue and green).\n  - Deploy new changes to the green environment.\n  - Test the green environment thoroughly.\n  - Switch traffic from blue to green once testing is complete.\n  - Decommission the old blue environment.",
     "source": "web_search",
-    "updated_at": 1780835403.9253888
+    "updated_at": 1780845581.7955587
   },
   "search:kubernetes-rolling-updates:kubernetes rolling updates wit_ex": {
     "content": "- Use `kubectl rollout` to manage rolling updates.\n- Pause updates with `kubectl rollout pause deployment/<deployment-name>`.\n- Resume updates with `kubectl rollout resume deployment/<deployment-name>`.\n- Set the number of replicas for a Deployment using `--replicas=<number>` in `kubectl create deployment`.\n- Configure max surge and max unavailable during updates with `--max-surge=<value>` and `--max-unavailable=<value>` flags.\n- Monitor update progress with `kubectl rollout status deployment/<deployment-name>`.",
     "source": "code_example",
-    "updated_at": 1780835416.335934
+    "updated_at": 1780845583.7553658
   }
 }

@@ -2,26 +2,26 @@
   "search:Security Patterns for .NET MVC:.net mvc security patterns": {
     "content": "- Use `dotnet new mvc` to create a new MVC project.\n- Update your project file to target the latest .NET version, e.g., `<TargetFramework>net6.0</TargetFramework>`.\n- Implement area-level security by creating areas and applying authorization attributes on controllers or actions within those areas.\n- Use `[Authorize]` attribute to secure controllers or actions, specifying roles or policies as needed.\n- Configure authentication in `Startup.cs` using methods like `services.AddAuthentication()` and `services.AddAuthorization()`.\n- Set up OAuth2, OpenID Connect for secure authentication by configuring the authentication services with provider-specific settings.\n- Use `Html.Encode` to prevent XSS attacks by encoding user input before rendering it in views.",
     "source": "web_search",
-    "updated_at": 1780833214.4495165
+    "updated_at": 1780845874.2549183
   },
   "search:Security Patterns for .NET MVC:asp.net mvc security best prac": {
     "content": "- Use `dotnet new mvc` to create a new ASP.NET Core MVC project.\n- Update your project file to target the latest LTS version of .NET Core or .NET 6+ for better performance and features.\n- Configure CORS in `Startup.cs` using `services.AddCors()` and define policies with `app.UseCors()`.\n- Implement authentication and authorization using Identity by running `dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore`.\n- Use the `[ValidateAntiForgeryToken]` attribute on forms to prevent cross-site request forgery (CSRF) attacks.\n- Configure data protection in `Startup.cs` for encrypting cookies and other sensitive data.\n- Enable HTTPS redirection in `Startup.cs` by calling `app.UseHttpsRedirection()`.\n- Implement input validation using Data Annotations or Fluent API in your models.\n- Use the `[ValidateInput(false)]` attribute on controllers to disable request form value validation, if necessary.",
     "source": "web_search",
-    "updated_at": 1780833216.1330962
+    "updated_at": 1780845876.5610726
   },
   "search:Security Patterns for .NET MVC:asp.net mvc security best prac_ex": {
     "content": "- Use `Html.AntiForgeryToken()` in your views to protect against CSRF attacks.\n- Implement `[ValidateAntiForgeryToken]` attribute on controller actions handling POST requests.\n- Ensure jQuery Ajax calls include the AntiForgeryToken for security.\n- Update ASP.NET MVC to the latest version for better security features and fixes.\n- Configure `web.config` with appropriate settings for request validation, e.g., `<httpRuntime requestValidationMode=\"2.0\" />`.\n- Use HTTPS to encrypt data in transit between client and server.\n- Regularly update dependencies and frameworks to patch known vulnerabilities.\n- Implement custom validation logic where necessary to handle specific security requirements.\n- Monitor application logs for suspicious activity related to security breaches.",
     "source": "code_example",
-    "updated_at": 1780833217.8004792
+    "updated_at": 1780845879.0594249
   },
   "search:Security Patterns for .NET MVC:mvc application security": {
     "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.AspNetCore.Mvc`\n  - `dotnet add package Microsoft.AspNetCore.Authentication.Cookies`\n\n- **Latest Versions**:\n  - ASP.NET Core MVC: 7.0\n  - Spring Security: 5.7\n\n- **Key Config Options**:\n  - Authentication schemes in `Startup.cs` or `Program.cs`\n  - Cookie-based authentication settings\n  - Authorization policies for controllers and actions",
     "source": "web_search",
-    "updated_at": 1780833219.3526342
+    "updated_at": 1780845881.224532
   },
   "search:Security Patterns for .NET MVC:mvc application security_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  \n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Security: 6.2.x\n  \n- **Key Config Options**:\n  - `application.properties`: Configure server port, security settings, etc.\n  - `web.xml`: Define servlets and filters for web application initialization.\n  - `SecurityConfig.java`: Customize Spring Security configuration.\n  - `@EnableWebSecurity`: Enable Spring Security in a Spring Boot application.",
     "source": "code_example",
-    "updated_at": 1780833221.285303
+    "updated_at": 1780845883.2096438
   }
 }

@@ -2,31 +2,31 @@
   "search:microservices-authentication-best-practices:best practices for microservic": {
     "content": "- Implement multi-factor authentication (MFA) using tools like Google Authenticator or Auth0.\n- Use centralized authentication providers such as Okta, Keycloak, or AWS Cognito for streamlined identity management.\n- Rotate and expire tokens regularly to mitigate risks of token theft. Consider using libraries like `jsonwebtoken` in Node.js for token handling.\n- Configure OAuth 2.0 or OpenID Connect for secure service-to-service communication.\n- Use a gateway proxy (e.g., Kong, Istio) to manage authentication and authorization centrally.\n- Implement role-based access control (RBAC) within microservices using frameworks like Spring Security or Keycloak.\n- Utilize environment variables for storing sensitive information like client IDs and secrets.\n- Regularly update dependencies and libraries to patch security vulnerabilities. Use tools like `npm audit` or `snyk`.\n- Monitor authentication logs and set up alerts for suspicious activities.",
     "source": "web_search",
-    "updated_at": 1780835105.3202112
+    "updated_at": 1780845674.7639039
   },
   "search:microservices-authentication-best-practices:best practices for microservic_ex": {
     "content": "- **CLI Commands**: Use `az login` to authenticate Azure services.\n- **Latest Versions**: Visual Studio Code v1.75, Node.js v18.12.\n- **Key Config Options**: In `.env`, set `JWT_SECRET` for secure token generation.",
     "source": "code_example",
-    "updated_at": 1780835113.1987467
+    "updated_at": 1780845676.5539823
   },
   "search:microservices-authentication-best-practices:securing microservices with oa": {
     "content": "- **CLI Commands**:\n  - `docker run --name bestbuy -d bestbuy/bestbuy`\n  - `kubectl apply -f bestbuy-deployment.yaml`\n\n- **Latest Versions**:\n  - Best Buy API: v2.3.1\n  - OAuth2 Server: v4.0.0\n\n- **Key Config Options**:\n  - `JWT_SECRET`: Secret key for signing JWT tokens.\n  - `OAUTH_CLIENT_ID`: Client ID for OAuth application.\n  - `OAUTH_CLIENT_SECRET`: Client secret for OAuth application.",
     "source": "web_search",
-    "updated_at": 1780835121.4274857
+    "updated_at": 1780845678.2950776
   },
   "search:microservices-authentication-best-practices:securing microservices with oa_ex": {
     "content": "- **OAuth Version**: OAuth 2.0 is the latest version.\n- **JWT Libraries**:\n  - `jsonwebtoken` for Node.js\n  - `pyjwt` for Python\n  - `jjwt` for Java\n- **CLI Commands**:\n  - `npm install jsonwebtoken`\n  - `pip install pyjwt`\n  - `mvn dependency:add -DgroupId=io.jsonwebtoken -DartifactId=jjwt-api -Dversion=0.11.5`\n- **Key Config Options**:\n  - `secret`: Secret key for signing JWTs.\n  - `issuer`: Issuer of the token.\n  - `audience`: Audience of the token.\n  - `expiresIn`: Expiration time in seconds or string like \"2h\".",
     "source": "code_example",
-    "updated_at": 1780835127.9111967
+    "updated_at": 1780845679.937703
   },
   "search:microservices-authentication-best-practices:microservices security: a comp": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**: Ensure using the latest version of your microservices framework and security tools.\n- **Key Config Options**:\n  - Enable encryption at rest and in transit.\n  - Implement role-based access control (RBAC).\n  - Configure network policies to restrict communication between services.\n  - Use secure authentication mechanisms like OAuth2 or JWT.",
     "source": "web_search",
-    "updated_at": 1780835148.6724494
+    "updated_at": 1780845682.007092
   },
   "search:microservices-authentication-best-practices:microservices security: a comp_ex": {
     "content": "- **Code.org**: Not directly related to security but offers coding tutorials.\n- **Visual Studio Code**:\n  - Latest version: [Check on official website](https://code.visualstudio.com/)\n  - Key config options: `settings.json`, extensions like \"ESLint\", \"Prettier\".\n- **Codecademy**:\n  - Offers free coding courses in various languages and technologies.\n  - Not directly related to security but provides foundational programming skills.",
     "source": "code_example",
-    "updated_at": 1780835155.105996
+    "updated_at": 1780845683.9813924
   }
 }

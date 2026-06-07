@@ -72,21 +72,21 @@
   "search:DevOps Practices:spring+rabbitmq devops integra": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management` to start RabbitMQ in Docker.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.4\n  - Spring AMQP: 2.8.4\n  - RabbitMQ: 3.8.x\n\n- **Key Config Options**:\n  - `spring.rabbitmq.host`: RabbitMQ host (default is `localhost`).\n  - `spring.rabbitmq.port`: RabbitMQ port (default is `5672`).\n  - `spring.rabbitmq.username`: RabbitMQ username.\n  - `spring.rabbitmq.password`: RabbitMQ password.\n  - `spring.rabbitmq.virtual-host`: Virtual host (default is `/`).",
     "source": "web_search",
-    "updated_at": 1780832879.8249984
+    "updated_at": 1780845439.9877653
   },
   "search:DevOps Practices:spring+rabbitmq devops integra_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/essentialprogramming/rabbitmq-example.git`\n  - `mvn clean install` to build the project\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - RabbitMQ: 3.8.20\n\n- **Key Config Options**:\n  - `spring.rabbitmq.host=localhost`\n  - `spring.rabbitmq.port=5672`\n  - `spring.rabbitmq.username=guest`\n  - `spring.rabbitmq.password=guest`",
     "source": "code_example",
-    "updated_at": 1780832881.5140166
+    "updated_at": 1780845442.2344134
   },
   "search:DevOps Practices:angular-unit-testing-best-prac": {
     "content": "- Use Angular CLI commands with `--watch` flag to automatically run tests on file changes.\n- Ensure Jasmine and Karma are updated to their latest versions for optimal performance and features.\n- Implement the AAA pattern (Arrange, Act, Assert) in unit tests for clarity and maintainability.\n- Avoid testing implementation details; focus on testing behavior instead.\n- Prevent memory leaks by cleaning up subscriptions and resources after each test.\n- Use `TestBed.configureTestingModule` for configuring the module before running tests.\n- Optimize test execution speed by reducing unnecessary setup and using async/await where applicable.\n- Ensure clean and maintainable tests by refactoring them when necessary.\n- Utilize Angular's testing utilities like `fixture.detectChanges()` to trigger change detection.",
     "source": "web_search",
-    "updated_at": 1780832883.0351923
+    "updated_at": 1780845444.7185285
   },
   "search:DevOps Practices:angular-unit-testing-best-prac_ex": {
     "content": "- Use `ng test` to run unit tests.\n- Ensure your project uses the latest Angular CLI version.\n- Configure `karma.conf.js` for custom Karma settings.\n- Utilize `vitest` for testing with a fast runner.\n- Implement coverage reporting with `ng test --code-coverage`.\n- Follow Angular's style guide for consistent code quality.\n- Avoid logic in templates and use components for business logic.\n- Use `ng generate component <name>` to create new components.\n- Configure `tsconfig.json` for TypeScript compilation options.",
     "source": "code_example",
-    "updated_at": 1780832884.6273453
+    "updated_at": 1780845447.071266
   }
 }
