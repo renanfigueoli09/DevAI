@@ -1,0 +1,12 @@
+{
+  "search:Performance:fastapi+mysql performance opti": {
+    "content": "- Use FastAPI's built-in ASGI server (`uvicorn`) for development and production.\n- Implement async programming to handle multiple requests concurrently.\n- Utilize SQLAlchemy or Tortoise ORM for database operations, as they support asynchronous queries.\n- Configure connection pooling in your database settings (e.g., `pool_size=10`, `max_overflow=20`).\n- Employ caching mechanisms like Redis or Memcached to reduce database load and improve response times.\n- Monitor API performance using tools like FastAPI's built-in metrics endpoint (`/docs#/info/metrics`) and third-party services such as Prometheus and Grafana.\n- Optimize SQL queries for better performance, avoiding N+1 query problems.\n- Regularly update FastAPI, SQLAlchemy, and other dependencies to the latest versions to benefit from performance improvements and security patches.\n- Use environment variables to manage configuration settings securely and efficiently.",
+    "source": "web_search",
+    "updated_at": 1780813445.1630774
+  },
+  "search:Performance:fastapi+mysql performance opti_ex": {
+    "content": "- Use `uvicorn` with the `--reload` flag during development.\n- Upgrade FastAPI to the latest version using pip: `pip install fastapi --upgrade`.\n- Implement caching mechanisms like Redis or Memcached.\n- Optimize database queries by indexing and reducing complexity.\n- Use asynchronous programming with `asyncio` for non-blocking I/O operations.\n- Configure MySQL with appropriate buffer sizes, connection pooling, and query optimization.\n- Deploy FastAPI behind a reverse proxy like Nginx for better performance and security.\n- Monitor application performance using tools like Prometheus and Grafana.",
+    "source": "code_example",
+    "updated_at": 1780813451.0437012
+  }
+}

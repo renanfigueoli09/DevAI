@@ -43,5 +43,25 @@
     "content": "- Use `curl` or Postman to test API endpoints.\n- Ensure your server returns HTTP status codes and error messages in JSON format.\n- Implement middleware for handling errors and formatting them according to RFC 7807.\n- Update dependencies to the latest versions of libraries like Spring Boot (for Java) or ASP.NET Core (for .NET).\n- Configure logging to capture detailed error information for debugging.\n- Test error responses with different scenarios to ensure consistency.\n- Use tools like Swagger UI to document and test API endpoints.\n- Regularly review and update your error handling code to stay compliant with RFC 7807.",
     "source": "code_example",
     "updated_at": 1780809171.4790258
+  },
+  "search:Error Handling:fastapi+mysql error management": {
+    "content": "- Use `pip install fastapi[all] sqlalchemy mysql-connector-python` to install FastAPI, SQLAlchemy, and MySQL connector.\n- Create a FastAPI app with `from fastapi import FastAPI`: `app = FastAPI()`.\n- Define Pydantic models for request and response data.\n- Use SQLAlchemy ORM or raw SQL queries with `SQLAlchemyRawSelect` for database operations.\n- Implement custom error handling using `@app.exception_handler(HTTPException)`.\n- Configure MySQL connection in your app, e.g., `DATABASE_URL = \"mysql+mysqlconnector://user:password@host/dbname\"`.\n- Use environment variables to manage sensitive data like database credentials.\n- Enable Swagger UI for API testing with `uvicorn main:app --reload` and visit `http://127.0.0.1:8000/docs`.",
+    "source": "web_search",
+    "updated_at": 1780813036.6208773
+  },
+  "search:Error Handling:rabbitmq+advanced error handli": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl set_policy` to configure policies.\n  - `rabbitmqadmin declare queue` for declaring queues.\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - Erlang/OTP: 25.x\n\n- **Key Config Options**:\n  - `dead_letter_exchange`: Specifies the exchange to which messages are requeued.\n  - `x-dead-letter-routing-key`: Routing key for dead letter messages.\n  - `x-max-length`: Maximum number of messages in a queue before messages are dropped.",
+    "source": "web_search",
+    "updated_at": 1780813081.1990952
+  },
+  "search:Error Handling:rabbitmq+advanced error handli_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl status`: Check the current status of RabbitMQ.\n  - `rabbitmqadmin declare queue name=my_queue durable=true`: Declare a durable queue.\n\n- **Latest Versions**:\n  - RabbitMQ: v3.10.4\n  - Python AMQP Client (pika): v1.2.0\n\n- **Key Config Options**:\n  - `durable`: Ensures the queue persists across broker restarts.\n  - `auto_delete`: Automatically deletes the queue when it's no longer in use.\n  - `arguments`: Custom arguments for advanced configurations, e.g., message TTL.",
+    "source": "code_example",
+    "updated_at": 1780813096.6152246
+  },
+  "search:Error Handling:spring+jpa-security error mana": {
+    "content": "- Use `@Transactional` annotation to manage transactions in your service layer.\n- Implement custom exception handlers using `@ControllerAdvice` and `@ExceptionHandler`.\n- Configure error handling in Spring Boot by creating a global exception handler class.\n- Utilize Spring's `ResponseEntity` for returning detailed error responses.\n- Ensure proper logging of exceptions for debugging and monitoring purposes.\n- Use `@RepositoryRestResource` to handle RESTful requests directly from your repository layer.\n- Implement retry mechanisms using Spring Retry for transient errors.\n- Configure data source properties in `application.properties` or `application.yml`.\n- Utilize `@Query` annotation with JPQL or native SQL for complex queries and error handling.",
+    "source": "web_search",
+    "updated_at": 1780813140.9990003
   }
 }
