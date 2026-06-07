@@ -2,11 +2,11 @@
   "search:FastAPI Asyncio Best Practices:fastapi performance tips": {
     "content": "- Use `uvicorn` as the ASGI server for production.\n- Set `workers=4` in `uvicorn` command to leverage multiple processes.\n- Enable `asyncio.run()` for asynchronous tasks.\n- Utilize FastAPI's built-in caching mechanisms with `fastapi.responses.Response`.\n- Optimize database queries by using eager loading and avoiding N+1 queries.\n- Implement caching strategies like Redis or Memcached for frequently accessed data.\n- Use `asyncpg` for PostgreSQL connections to improve performance.\n- Configure logging level to `WARNING` in production to reduce log verbosity.\n- Monitor API performance with tools like Prometheus and Grafana.",
     "source": "web_search",
-    "updated_at": 1780814742.0724387
+    "updated_at": 1780815859.73662
   },
   "search:FastAPI Asyncio Best Practices:fastapi performance tips_ex": {
     "content": "- Use `uvicorn` as the ASGI server for production.\n- Enable `asyncio` for asynchronous operations.\n- Implement caching mechanisms like Redis or Memcached.\n- Optimize database queries using SQLAlchemy's ORM capabilities.\n- Configure FastAPI to use `background_tasks` for long-running tasks.\n- Utilize environment variables for configuration management.\n- Set `max_workers` in `uvicorn` based on CPU cores.\n- Enable `log_level=\"warning\"` in production for reduced log verbosity.\n- Use `fastapi.middleware.cors.CORSMiddleware` for cross-origin requests.\n- Regularly update FastAPI and its dependencies to the latest versions.",
     "source": "code_example",
-    "updated_at": 1780814757.6604705
+    "updated_at": 1780815860.9176846
   }
 }

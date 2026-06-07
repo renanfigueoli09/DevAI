@@ -12,11 +12,11 @@
   "search:python-django-celery:python django celery monitorin": {
     "content": "- **Celery Monitoring Guide**: Use `celery -A proj status` to list active nodes.\n- **Flower Setup**:\n  - Install Flower with `pip install flower`.\n  - Run Flower with `celery -A proj flower --address=127.0.0.1 --port=5555`.\n- **Django-Celery-Results**:\n  - Configure in settings.py: \n    ```python\n    CELERY_RESULT_BACKEND = 'django-db'\n    ```\n  - Migrate with `python manage.py migrate django_celery_results`.\n- **Celery Monitor App**:\n  - Install with `pip install django-celery-monitor`.\n  - Run migrations with `python manage.py migrate celery_monitor`.\n  - Access in Django admin under \"Celery Monitor\".",
     "source": "web_search",
-    "updated_at": 1780809361.8420331
+    "updated_at": 1780815777.7954347
   },
   "search:python-django-celery:python django celery monitorin_ex": {
     "content": "- **Install django-celery-monitor**: `pip install django-celery-monitor==1.1.2`\n- **Add to INSTALLED_APPS**: `'django_celery_monitor'` in your Django settings.\n- **Run migrations**: `python manage.py migrate django_celery_monitor`\n- **Configure Celery**: Ensure Celery is properly configured in your Django project.\n- **Migrate Celery states**: Run `python manage.py celery_states_migrate` to set up task and worker state tracking.\n- **Access monitoring dashboard**: Navigate to `/admin/django_celery_monitor/workerstate/` and `/admin/django_celery_monitor/taskstate/`.\n- **Latest versions**: django-celery-monitor 1.1.2, Django 4.x, Celery 5.x\n- **Key config options**:\n  - `CELERY_BROKER_URL`: URL of the message broker (e.g., Redis or RabbitMQ).\n  - `CELERY_RESULT_BACKEND`: Backend to store task results (e.g., Redis or Database).",
     "source": "code_example",
-    "updated_at": 1780809363.0594015
+    "updated_at": 1780815780.0672083
   }
 }
