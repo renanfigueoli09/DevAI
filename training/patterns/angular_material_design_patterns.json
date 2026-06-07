@@ -48,5 +48,15 @@
     "content": "- **CLI Commands**: Use `ng generate component <component-name>` to create reusable components.\n- **Latest Version**: Angular Material is regularly updated; as of my last update, the latest version was Angular 16.\n- **Key Config Options**:\n  - AOT Compilation: Enabled by default since Angular 9. Configure in `angular.json` under `architect.build.options.aot`.\n  - Tree Shaking: Ensure your build configuration supports tree shaking to reduce bundle size.\n  - Lazy Loading: Use lazy loading for modules and components to improve initial load time.\n- **Best Practices**:\n  - Create reusable components.\n  - Utilize Angular Material's pre-built components and directives.\n  - Implement AOT compilation for faster production builds.\n  - Optimize images and assets for better performance.",
     "source": "code_example",
     "updated_at": 1780803069.579675
+  },
+  "search:angular+material-design-patterns:angular material design patter": {
+    "content": "- **CLI Commands**: \n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v15.2.1\n  - CDK: v15.2.1\n\n- **Key Config Options**:\n  - `theme`: Define theme in `angular.json` or `styles.scss`\n  - `icons`: Use `MatIconRegistry` to add custom icons\n  - `ripple`: Enable ripple effect globally or on specific components",
+    "source": "web_search",
+    "updated_at": 1780805166.8358305
+  },
+  "search:angular+material-design-patterns:angular material design patter_ex": {
+    "content": "- **CLI Commands**:\n  - `ng new my-project --preset=angular`\n  - `ng add @angular/material`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Material: 15.0.3\n\n- **Key Config Options**:\n  - `theme`: Define a theme in `styles.scss` using Angular Material themes.\n  - `layoutDirection`: Set layout direction for responsive design using `MatLayoutModule`.\n  - `breakpoints`: Use `BreakpointObserver` to observe and react to different screen sizes.",
+    "source": "code_example",
+    "updated_at": 1780805171.22216
   }
 }
