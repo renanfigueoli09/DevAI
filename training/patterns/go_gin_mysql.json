@@ -2,21 +2,21 @@
   "search:go-gin-mysql:go gin mysql rest api 2025": {
     "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - GORM: v2.3.6\n  - MySQL Driver for GORM: v1.4.5\n\n- **Key Config Options**:\n  - Database Connection String: `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Gin Mode: Set using `gin.SetMode(gin.ReleaseMode)`\n  - GORM Auto Migration: Use `db.AutoMigrate(&YourModel{})`",
     "source": "web_search",
-    "updated_at": 1780825222.534809
+    "updated_at": 1780833825.9834418
   },
   "search:go-gin-mysql:go gin mysql rest api 2025_ex": {
     "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - GORM: v2.30.0\n\n- **Key Config Options**:\n  - MySQL DSN (Data Source Name): `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Gin Mode: Set to `gin.ReleaseMode` for production\n  - GORM Auto Migration: Use `db.AutoMigrate(&YourModel{})`",
     "source": "code_example",
-    "updated_at": 1780825223.7959664
+    "updated_at": 1780833827.5970995
   },
   "search:go-gin-mysql:go gin mysql transaction handl": {
     "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - GORM: v2.34.0\n  - MySQL Driver for Go: v1.6.0\n\n- **Key Config Options**:\n  - `SetMaxOpenConns`: Maximum number of open connections to the database.\n  - `SetConnMaxLifetime`: Maximum amount of time a connection may be reused.\n  - Repository pattern for separating business logic from HTTP handlers.",
     "source": "web_search",
-    "updated_at": 1780825224.9673905
+    "updated_at": 1780833829.5193956
   },
   "search:go-gin-mysql:go gin mysql transaction handl_ex": {
     "content": "- Install Go version 1.10+.\n- Use `go get -u github.com/gin-gonic/gin` to install Gin.\n- Use `go get github.com/go-sql-driver/mysql` for MySQL driver.\n- Use `go get github.com/jinzhu/gorm` for ORM.\n- Set up MySQL connection in your Go code.\n- Define routes and controllers using Gin.\n- Handle transactions in MySQL using GORM or raw SQL with Go's database/sql package.",
     "source": "code_example",
-    "updated_at": 1780825229.4980505
+    "updated_at": 1780833831.3050025
   }
 }
