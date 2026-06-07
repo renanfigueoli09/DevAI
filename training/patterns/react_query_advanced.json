@@ -2,31 +2,31 @@
   "search:react-query-advanced:react query advanced usage 202": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install react-query@latest`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `staleTime`: Time in milliseconds after which the data is considered stale.\n  - `refetchInterval`: Interval at which to refetch the query.\n  - `retry`: Number of retries on failure.",
     "source": "web_search",
-    "updated_at": 1780829963.384853
+    "updated_at": 1780839064.5420682
   },
   "search:react-query-advanced:react query advanced usage 202_ex": {
     "content": "- **CLI Commands**: Not applicable for React Query.\n- **Latest Version**: As of my last update, the latest version is 4.x. Check [TanStack Query GitHub](https://github.com/TanStack/query) for the most current version.\n- **Key Config Options**:\n  - `queryClient`: Manages query state and cache.\n  - `useQuery`: Fetches data and handles caching.\n  - `useMutation`: Handles side effects like form submissions or data updates.\n  - `useInfiniteQuery`: Fetches multiple pages of data.\n  - `refetchOnWindowFocus`: Automatically refetches queries when the window regains focus.",
     "source": "code_example",
-    "updated_at": 1780829964.963916
+    "updated_at": 1780839066.065915
   },
   "search:react-query-advanced:react query caching strategies": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4.x, SWR v2.x\n- **Key Config Options**:\n  - `queryCache: new QueryCache()`\n  - `defaultOptions: { queries: { staleTime: Infinity } }`\n  - `refetchOnWindowFocus: false`",
     "source": "web_search",
-    "updated_at": 1780829966.4958858
+    "updated_at": 1780839067.8515036
   },
   "search:react-query-advanced:react query caching strategies_ex": {
     "content": "- **CLI Commands**: Not applicable for React Query directly.\n- **Latest Versions**:\n  - React Query: v4.x\n  - SWR: v2.x\n- **Key Config Options**:\n  - `queryCacheTime`: Duration in milliseconds to keep the query data cached.\n  - `staleTime`: Duration in milliseconds after which a query is considered stale and can be refetched.\n  - `refetchInterval`: Interval in milliseconds at which a query should automatically refetch.\n  - `cacheTime`: Total duration in milliseconds that a query result will be kept in the cache.",
     "source": "code_example",
-    "updated_at": 1780829968.057801
+    "updated_at": 1780839069.503236
   },
   "search:react-query-advanced:react query error handling 202": {
     "content": "- **Key Config Options**:\n  - `retry`: Controls the number of retries on failed requests.\n  - `refetchOnWindowFocus`: Determines if data should be refetched when the window regains focus.\n  - `staleTime`: Sets how long data is considered fresh before being refetched.\n\n- **Error Handling**:\n  - Use `useQuery`'s `onError` callback to handle errors globally or per query.\n  - Implement custom error handling logic within the `onError` callback.\n\n- **Advanced Error Handling**:\n  - Check server error codes using `error.response.status`.\n  - Handle specific types of errors with type guards (e.g., checking if `error instanceof AxiosError`).\n\n- **Latest Version**:\n  - React Query v3.x is the latest stable version as of my last update.\n\n- **CLI Commands**:\n  - No specific CLI commands are required for basic usage. Ensure you have Node.js and npm installed to use React Query in your project.",
     "source": "web_search",
-    "updated_at": 1780829969.5753684
+    "updated_at": 1780839071.050962
   },
   "search:react-query-advanced:react query error handling 202_ex": {
     "content": "- **React Query Error Handling**: Ensure your error handling logic is based on rendering specific JSX within your component or using imperative methods.\n- **useSuspenseQuery**: For better understanding, refer to the official React Query documentation for loading/error handling in a React-way.\n- **Error Handling with Axios**: Use axios to handle errors and ensure it returns a rejected Promise, which React Query can then use to manage errors effectively.",
     "source": "code_example",
-    "updated_at": 1780829971.023488
+    "updated_at": 1780839072.7125058
   }
 }

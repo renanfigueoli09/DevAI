@@ -2,21 +2,21 @@
   "search:rabbitmq+kafka-performance-tuning:rabbitmq performance tuning st": {
     "content": "- **CLI Commands**:\n  - `rabbitmqctl set_policy` for setting policies.\n  - `rabbitmqctl set_user_tags` to assign tags to users.\n\n- **Latest Versions**:\n  - RabbitMQ 3.8.x (as of my last update).\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark.relative`: Set the relative memory watermark.\n  - `queue_index_free_space_limit`: Limit free space in queue index.\n  - `disk_free_limit.relative`: Set disk free limit as a percentage.\n\n- **Performance Tuning Tips**:\n  - Use persistent messages for durability.\n  - Optimize message size and payload.\n  - Configure parallelism in consumers.\n  - Monitor using tools like RabbitMQ Management UI.",
     "source": "web_search",
-    "updated_at": 1780830009.513844
+    "updated_at": 1780839108.7319539
   },
   "search:rabbitmq+kafka-performance-tuning:rabbitmq performance tuning st_ex": {
     "content": "- **Latest Version**: RabbitMQ 3.12\n- **CLI Commands**:\n  - `rabbitmqctl set_vm_memory_high_watermark <fraction>` (e.g., `0.4`)\n  - `rabbitmqctl set_disk_free_limit <size>` (e.g., `5GB`)\n- **Key Config Options**:\n  - `vm_memory_high_watermark`\n  - `disk_free_limit`\n  - `queue_index_embed_msgs_below`\n  - `queue_index_type`",
     "source": "code_example",
-    "updated_at": 1780830011.2316298
+    "updated_at": 1780839110.1328478
   },
   "search:rabbitmq+kafka-performance-tuning:kafka performance optimization": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --zookeeper <zk_host> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-configs.sh --bootstrap-server <broker_host> --entity-type topics --entity-name <topic_name> --alter --add-config cleanup.policy=compact`\n\n- **Latest Versions**:\n  - Apache Kafka: 3.4.0\n\n- **Key Config Options**:\n  - `producer.batch.size`: Size of the batch to be sent in a single request.\n  - `consumer.fetch.min.bytes`: Minimum amount of data the server should return for a fetch request.\n  - `broker.memory.per.topic.max`: Maximum memory per topic on broker.\n  - `log.retention.hours`: How long Kafka will keep messages before deleting them.",
     "source": "web_search",
-    "updated_at": 1780830012.9521747
+    "updated_at": 1780839111.8903363
   },
   "search:rabbitmq+kafka-performance-tuning:kafka performance optimization_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-configs.sh --bootstrap-server <broker> --entity-type topics --entity-name <topic_name> --alter --add-config cleanup.policy=compact`\n\n- **Latest Versions**:\n  - Apache Kafka: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `message.max.bytes`: Maximum size of a message.\n  - `replication.factor`: Number of replicas for each partition.\n  - `num.partitions`: Number of partitions per topic.\n  - `cleanup.policy`: Determines how log segments are cleaned up (delete, compact).\n  - `transaction.state.log.replication.factor`: Replication factor for the transaction state log.",
     "source": "code_example",
-    "updated_at": 1780830014.604534
+    "updated_at": 1780839113.4806404
   }
 }

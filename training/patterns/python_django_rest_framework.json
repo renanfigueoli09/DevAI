@@ -2,31 +2,31 @@
   "search:python-django-rest-framework:django rest framework advanced": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py\n    ```python\n    REST_FRAMEWORK = {\n        'DEFAULT_AUTHENTICATION_CLASSES': [\n            'rest_framework.authentication.TokenAuthentication',\n        ],\n    }\n    ```\n  - Token Authentication:\n    ```python\n    from rest_framework.authtoken.models import Token\n\n    token, created = Token.objects.get_or_create(user=user)\n    ```\n  - JWT Authentication (using `djangorestframework-simplejwt`):\n    ```python\n    pip install djangorestframework-simplejwt\n    REST_FRAMEWORK = {\n        'DEFAULT_AUTHENTICATION_CLASSES': [\n            'rest_framework_simplejwt.authentication.JWTAuthentication',\n        ],\n    }\n    ```\n  - MFA:\n    - Implement custom authentication classes or use third-party packages like `django-two-factor-auth`.\n\n- **GitHub Repository**:\n  - [drf-auth-kit](https://github.com/forthecraft/drf-auth-kit) for advanced authentication features.",
     "source": "web_search",
-    "updated_at": 1780830137.7088623
+    "updated_at": 1780839252.3442166
   },
   "search:python-django-rest-framework:django rest framework advanced_ex": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework-simplejwt`\n  \n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n  - djangorestframework-simplejwt: 5.2.2\n\n- **Key Config Options**:\n  - Add `'rest_framework_simplejwt'` to `INSTALLED_APPS`.\n  - Configure `REST_FRAMEWORK` in settings.py with JWT authentication classes.\n  - Set up token expiration and refresh mechanisms using `SIMPLE_JWT`.",
     "source": "code_example",
-    "updated_at": 1780830138.991016
+    "updated_at": 1780839253.9886935
   },
   "search:python-django-rest-framework:django rest framework testing ": {
     "content": "- **CLI Commands**:\n  - `python manage.py test`: Runs all tests in the Django project.\n  - `pytest --cov=myapp`: Runs pytest with coverage for the specified app.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework (DRF): 3.14\n\n- **Key Config Options**:\n  - `INSTALLED_APPS`: List of apps to include in the project.\n  - `REST_FRAMEWORK`: Configuration for DRF, including default permissions and authentication classes.",
     "source": "web_search",
-    "updated_at": 1780830140.4816506
+    "updated_at": 1780839255.6430285
   },
   "search:python-django-rest-framework:django rest framework testing _ex": {
     "content": "- **CLI Commands**:\n  - `pytest --cov=your_project_name` to run tests and measure coverage.\n  - `python manage.py test your_app_name` to run Django tests for a specific app.\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Django REST Framework: 3.14\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK`: Configuration dictionary in settings.py for customizing DRF behavior.\n  - `TEST_RUNNER`: Set to `'rest_framework.test.IsolatedTestRunner'` for isolation during tests.",
     "source": "code_example",
-    "updated_at": 1780830141.920251
+    "updated_at": 1780839257.146661
   },
   "search:python-django-rest-framework:django rest framework performa": {
     "content": "- **Selective Field Retrieval**: Use `select_related` and `prefetch_related` to optimize database queries.\n- **Use of Indexes**: Ensure your database tables have appropriate indexes on frequently queried fields.\n- **Caching**: Implement caching mechanisms like Django's built-in cache framework or third-party packages like `django-cacheops`.\n- **Batch Operations**: Use batch operations for bulk updates and deletes to reduce the number of database hits.\n- **Database Profiling**: Utilize Django’s `debug_toolbar` or external tools like `pgBadger` for profiling and identifying bottlenecks.\n- **Asynchronous Views**: Consider using asynchronous views with libraries like `django-asyncio` to improve performance in I/O-bound tasks.\n- **Optimize Serializers**: Minimize the complexity of serializers by avoiding nested serializers where possible.\n- **Use of Caching Libraries**: For more advanced caching, consider using libraries like `django-cacheops` or `django-memcached`.\n- **Database Connection Pooling**: Configure your database connection pool to manage connections efficiently.",
     "source": "web_search",
-    "updated_at": 1780830143.576652
+    "updated_at": 1780839258.6255023
   },
   "search:python-django-rest-framework:django rest framework performa_ex": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n\n- **Key Config Options**:\n  - `CACHES`: Configure caching mechanisms like Redis or Memcached.\n  - `REST_FRAMEWORK`: Customize settings such as pagination, authentication, and permissions.\n  - `DATABASES`: Optimize database connections for high traffic.\n\n- **Performance Techniques**:\n  - Use `select_related` and `prefetch_related` to reduce database queries.\n  - Implement caching strategies like page-level or object-level caching.\n  - Utilize asynchronous views for non-blocking operations.",
     "source": "code_example",
-    "updated_at": 1780830145.0612624
+    "updated_at": 1780839260.0786426
   }
 }
