@@ -2,16 +2,16 @@
   "search:dotnet+csharp-performance-tuning:.net c# performance tuning tec": {
     "content": "- Use `nameof` operator instead of `ToString()` for better performance.\n- Implement asynchronous programming using `async` and `await` to improve responsiveness.\n- Utilize bitmasks for efficient data manipulation.\n- Consider using reflection sparingly due to its performance overhead.\n- Optimize loops by minimizing operations inside the loop.\n- Use LINQ efficiently, avoiding unnecessary operations.\n- Configure ASP.NET Core with minimal middleware for better performance.\n- Enable Just-In-Time (JIT) compilation optimizations in Visual Studio.\n- Monitor and profile applications using tools like dotTrace or ANTS Performance Profiler.",
     "source": "web_search",
-    "updated_at": 1780795922.3747451
+    "updated_at": 1780800084.9208627
   },
   "search:dotnet+csharp-performance-tuning:.net c# performance tuning tec_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet build --configuration Release`\n  - `dotnet publish --self-contained false`\n\n- **Latest Versions**:\n  - .NET 8\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure logging, caching, and other settings.\n  - `Program.cs`/`Startup.cs`: Set up services and middleware for the application.",
     "source": "code_example",
-    "updated_at": 1780795924.152068
+    "updated_at": 1780800086.3851068
   },
   "search:dotnet+csharp-performance-tuning:c# memory management in .net a": {
     "content": "- **CLI Commands**: Use `dotnet gc` to analyze garbage collection.\n- **Latest Versions**: Ensure using .NET 7 or later for improved memory management features.\n- **Key Config Options**:\n  - `gcServer=true`: Enables the server GC mode for better performance on large applications.\n  - `gcConcurrent=true`: Enables concurrent garbage collection.\n  - `COMPlus_GCHeapHardLimitMB=2048`: Sets a hard limit of 2GB for the heap size.",
     "source": "web_search",
-    "updated_at": 1780795925.8637705
+    "updated_at": 1780800087.566195
   }
 }

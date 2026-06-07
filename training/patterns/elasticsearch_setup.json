@@ -2,11 +2,11 @@
   "search:elasticsearch+setup:elasticsearch mapping query ds": {
     "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_search?pretty\" -H 'Content-Type: application/json' -d'\n    {\n      \"query\": {\n        \"match_all\": {}\n      },\n      \"aggs\": {\n        \"my_agg\": {\n          \"terms\": {\n            \"field\": \"my_field\"\n          }\n        }\n      }\n    }'\n  - `npm install elasticmagic`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5.0\n  - Elasticmagic: 1.2.3\n\n- **Key Config Options**:\n  - `query`: Defines the search criteria.\n  - `aggs`: Specifies aggregation queries to analyze data.\n  - `terms`: Groups documents by a field value.",
     "source": "web_search",
-    "updated_at": 1780795661.0122087
+    "updated_at": 1780799801.8983908
   },
   "search:elasticsearch+setup:elasticsearch mapping query ds_ex": {
     "content": "- Use `npm install elasticsearch` to install the Elasticsearch client.\n- To connect, use `const client = new elasticsearch.Client({ host: 'http://localhost:9200' });`.\n- For aggregation queries, use the Query DSL in your request body.\n- Example of a basic aggregation:\n  ```json\n  {\n    \"aggs\": {\n      \"my_agg\": {\n        \"terms\": { \"field\": \"my_field\" }\n      }\n    }\n  }\n  ```\n- Ensure Elasticsearch is running on `http://localhost:9200` or adjust the host in your client configuration.\n- Check the latest version of Elasticsearch and Node.js compatibility on the official documentation.\n- Key config options include `host`, `log`, and `apiVersion`.\n- Use `client.search({...})` to execute queries, including aggregation requests.",
     "source": "code_example",
-    "updated_at": 1780795662.2407265
+    "updated_at": 1780799803.1701999
   }
 }
