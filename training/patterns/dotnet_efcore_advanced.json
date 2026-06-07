@@ -7,6 +7,6 @@
   "search:dotnet+efcore-advanced:entity framework core performa_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 6.0.1\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enable lazy loading.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disable change tracking for read-only queries.\n  - `UseConnectionString(\"YourConnectionString\")`: Specify the database connection string.",
     "source": "code_example",
-    "updated_at": 1780810296.092978
+    "updated_at": 1780816804.827339
   }
 }
