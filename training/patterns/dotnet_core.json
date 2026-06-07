@@ -2,11 +2,11 @@
   "search:dotnet+core:asp.net core minimal api di mi": {
     "content": "- **CLI Commands**:\n  - `dotnet new webapi` to create a new minimal API project.\n  - `dotnet add package Swashbuckle.AspNetCore` to add Swagger support.\n\n- **Latest Versions**:\n  - ASP.NET Core: 7.x (as of my last update)\n  - Swashbuckle.AspNetCore: Latest stable version\n\n- **Key Config Options**:\n  - In `Program.cs`, configure Swagger with:\n    ```csharp\n    builder.Services.AddEndpointsApiExplorer();\n    builder.Services.AddSwaggerGen();\n    ```\n  - Add Swagger middleware in the pipeline:\n    ```csharp\n    app.UseSwagger();\n    app.UseSwaggerUI();\n    ```\n  - Configure API versioning (optional):\n    ```csharp\n    builder.Services.AddVersionedApiExplorer(options => {\n        options.GroupNameFormat = \"'v'VVV\";\n        options.SubstituteApiVersionInUrl = true;\n    });\n    builder.Services.AddApiVersioning();\n    ```\n\n- **Health Checks**:\n  - Add health checks with:\n    ```csharp\n    builder.Services.AddHealthChecks();\n    ```\n  - Configure health check middleware:\n    ```csharp\n    app.MapHealthChecks(\"/health\");\n    ```\n\nThese steps provide a concise guide for setting up minimal API projects in ASP.NET Core, integrating Swagger for API documentation, and adding health checks to monitor your application's status.",
     "source": "web_search",
-    "updated_at": 1780796274.2773366
+    "updated_at": 1780800477.730574
   },
   "search:dotnet+core:asp.net core minimal api di mi_ex": {
     "content": "- Use `dotnet new web -minimal` to create a new minimal API project.\n- Add Swagger by installing the package: `dotnet add package Swashbuckle.AspNetCore`.\n- Configure Swagger in `Program.cs`:\n  ```csharp\n  builder.Services.AddEndpointsApiExplorer();\n  builder.Services.AddSwaggerGen();\n  ```\n- Enable Swagger UI with middleware:\n  ```csharp\n  app.UseSwagger();\n  app.UseSwaggerUI();\n  ```\n- Add health checks by installing the package: `dotnet add package Microsoft.Extensions.Diagnostics.HealthChecks`.\n- Configure health checks in `Program.cs`:\n  ```csharp\n  builder.Services.AddHealthChecks()\n      .AddCheck(\"example\", () => HealthCheckResult.Healthy());\n  ```\n- Expose health check endpoint:\n  ```csharp\n  app.MapHealthChecks(\"/health\");\n  ```\n- Integrate health check with Swagger by adding a custom operation filter:\n  ```csharp\n  builder.Services.AddSwaggerGen(c =>\n  {\n      c.OperationFilter<HealthCheckOperationFilter>();\n  });\n  ```\n- Define `HealthCheckOperationFilter` to include health checks in Swagger UI.",
     "source": "code_example",
-    "updated_at": 1780796275.6520407
+    "updated_at": 1780800478.8387926
   }
 }

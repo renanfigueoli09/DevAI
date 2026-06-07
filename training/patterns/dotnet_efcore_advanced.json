@@ -2,11 +2,11 @@
   "search:dotnet+efcore-advanced:entity framework core performa": {
     "content": "- **Latest Version**: Entity Framework Core 7.0\n- **CLI Commands**:\n  - `dotnet ef database update`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `MaxBatchSize(int batchSize)` to control batch size for bulk operations.\n- **Performance Optimization Tips**:\n  - Enable second-level caching using `Microsoft.EntityFrameworkCore.Caching.Memory`.\n  - Use stored procedures and materialized views for complex queries.\n  - Optimize database schema and indexes.\n  - Monitor and tune query performance with Entity Framework Core's logging capabilities.",
     "source": "web_search",
-    "updated_at": 1780798843.478359
+    "updated_at": 1780800348.9490187
   },
   "search:dotnet+efcore-advanced:entity framework core performa_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 6.0.1\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enable lazy loading.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disable change tracking for read-only queries.\n  - `UseConnectionString(\"YourConnectionString\")`: Specify the database connection string.",
     "source": "code_example",
-    "updated_at": 1780798859.852318
+    "updated_at": 1780800350.0906324
   }
 }

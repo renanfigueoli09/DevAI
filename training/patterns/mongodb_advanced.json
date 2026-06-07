@@ -2,11 +2,11 @@
   "search:mongodb+advanced:mongodb aggregation transactio": {
     "content": "- **Latest MongoDB Version**: As of my last update in October 2023, the latest stable version is MongoDB 6.0.\n  \n- **CLI Commands**:\n  - `mongo` shell for interactive queries and operations.\n  - `mongosh` (MongoDB Shell) for a modern JavaScript-based interface.\n  - `mongodump` and `mongorestore` for backup and restore operations.\n\n- **Key Config Options for MongoDB Atlas**:\n  - `replicaSet`: Configure replica sets for high availability.\n  - `shardCollection`: Shard collections to distribute data across shards.\n  - `index`: Create indexes on collections for faster query performance.\n\n- **Aggregation Pipeline Tips**:\n  - Use `$match` early in the pipeline to reduce the amount of data processed.\n  - Utilize `$group` and `$sort` stages efficiently.\n  - Consider using `$lookup` for joining collections if necessary.\n\n- **Schema Design Patterns**:\n  - Pre-aggregation: Aggregate data at ingestion time to reduce query complexity.\n  - Computed Fields: Store precomputed values in documents for faster retrieval.\n  - Index-backed Pipeline Stages: Use indexed fields in pipeline stages to improve performance.",
     "source": "web_search",
-    "updated_at": 1780796211.588092
+    "updated_at": 1780800416.7537699
   },
   "search:mongodb+advanced:mongodb aggregation transactio_ex": {
     "content": "- **MongoDB Transactions**: Use `startTransaction`, `commitTransaction`, and `abortTransaction` methods.\n- **Read Concern**: Set using `readConcern` method with options like `local`, `majority`.\n- **Write Concern**: Configure using `writeConcern` method with options like `w:1`, `w:majority`.\n- **Read Preference**: Specify using `readPreference` method with options like `primary`, `secondary`.\n- **Create Collections and Indexes in a Transaction**: Use `db.createCollection()` within transaction.\n- **MongoDB Atlas Streams**: Configure streams to read from collections, use `fullDocument: 'updateLookup'`.\n- **Filter Operation Types**: Use `operationType` filter in change streams for insert, update, delete events.\n- **Latest MongoDB Version**: As of my last update, the latest stable version is 6.0.\n- **CLI Commands**:\n  - `mongo --host <hostname> --port <port>`\n  - `db.createCollection(<collectionName>, { writeConcern: { w: \"majority\" } })`\n  - `db.collection.watch({ operationType: { $in: [\"insert\", \"update\", \"delete\"] } })`\n\nThese actionable facts should help developers effectively use MongoDB transactions, indexing, and change streams in their applications.",
     "source": "code_example",
-    "updated_at": 1780796212.6616704
+    "updated_at": 1780800417.9108973
   }
 }

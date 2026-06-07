@@ -2,16 +2,16 @@
   "search:fastapi+celery:fastapi celery integration tut": {
     "content": "- **YouTube Tutorial**: [Link](https://www.youtube.com/watch?v=example)\n  - Integrate Celery into an existing FastAPI app using Redis and Docker.\n  \n- **TestDriven.io Article**:\n  - Integrate Celery into a FastAPI app.\n  - Create tasks.\n  - Containerize FastAPI, Celery, and Redis with Docker.\n  - Test Celery tasks with unit and integration tests.\n\n- **Medium Article**:\n  - Use FastAPI as the Celery client.\n  - RabbitMQ as the message broker and result backend.\n\n- **GitHub Repository**: [mh-mukul/fastapi-celery](https://github.com/mh-mukul/fastapi-celery)\n  - Key features include database integration with SQLAlchemy, command-line interface for managing the application, proper logging and error handling, Redis Celery for background tasks, API endpoint documentation with Swagger UI, and Docker support.\n\n- **CLI Commands**:\n  ```bash\n  # Create a virtual environment (optional but recommended)\n  python3 -m venv venv\n  source venv/bin/activate\n\n  # Install dependencies\n  pip install fastapi celery redis sqlalchemy uvicorn\n\n  # Run FastAPI app\n  uvicorn main:app --reload\n\n  # Start Celery worker\n  celery -A tasks.celery worker --loglevel=info\n\n  # Start Flower for monitoring (optional)\n  flower --broker=redis://localhost:6379/0\n  ```\n\n- **Latest Versions**:\n  - FastAPI: [v0.85.1](https://pypi.org/project/fastapi/)\n  - Celery: [v5.2.7](https://pypi.org/project/celery/)\n  - Redis: [v4.6.3](https://pypi.org/project/redis/)\n  - SQLAlchemy: [1.4.40](https://pypi.org/project/sqlalchemy/)\n\n- **Key Config Options**:\n  - FastAPI: `app = FastAPI()`\n  - Celery: \n    ```python\n    app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')\n    ```\n  - Redis: Ensure Redis server is running on `localhost:6379`.\n  - SQLAlchemy: Configure database URL in your settings.",
     "source": "web_search",
-    "updated_at": 1780798526.783776
+    "updated_at": 1780800517.7046163
   },
   "search:fastapi+celery:fastapi celery integration tut_ex": {
     "content": "- **CLI Commands**:\n  - `celery -A app worker --loglevel=info`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Celery: 5.3.1\n  - Redis: 7.0.4\n\n- **Key Config Options**:\n  - `app.config.update(broker_url='redis://localhost:6379/0', result_backend='redis://localhost:6379/0')`\n  - `@celery_app.task` decorator for defining tasks",
     "source": "code_example",
-    "updated_at": 1780798539.4239192
+    "updated_at": 1780800519.0854652
   },
   "search:fastapi+celery:fastapi celery task scheduling": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - Broker URL (e.g., `redis://localhost:6379/0`)\n  - Result Backend (e.g., `redis://localhost:6379/0`)\n  - Task Queue Name\n  - Beat Schedule Configuration",
     "source": "web_search",
-    "updated_at": 1780798548.2241356
+    "updated_at": 1780800520.3419518
   }
 }

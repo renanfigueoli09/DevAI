@@ -2,11 +2,11 @@
   "search:fastapi+postgres:fastapi sqlalchemy 2.0 async m": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy alembic`\n  - `alembic init migrations`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - In `alembic.ini`, set the database URL.\n  - Define models using `Mapped` and `mapped_column`.\n  - Use `Base` from `sqlalchemy.orm` as the base class for declarative models.\n  - Configure Alembic operations in migration scripts.",
     "source": "web_search",
-    "updated_at": 1780796271.680278
+    "updated_at": 1780800475.4540117
   },
   "search:fastapi+postgres:fastapi sqlalchemy 2.0 async m_ex": {
     "content": "- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"Initial migration\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.100+\n  - SQLAlchemy: 2.0\n  - Pydantic: 2.0\n  - Alembic: 2.0\n\n- **Key Config Options**:\n  - Use `async_sessionmaker` for asynchronous sessions.\n  - Define models using `mapped_column` from SQLAlchemy ORM.\n  - Configure database URL in settings with `SQLALCHEMY_DATABASE_URL`.",
     "source": "code_example",
-    "updated_at": 1780796272.9575877
+    "updated_at": 1780800476.6538475
   }
 }
