@@ -17,6 +17,6 @@
   "search:typescript-graphql-performance:graphql performance tuning in _ex": {
     "content": "- **CLI Commands**:\n  - `npm install apollo-server graphql typescript`\n  - `npx create-react-app my-graphql-app --template typescript`\n\n- **Latest Versions**:\n  - Apollo Server: v4.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - Use `DataLoader` for batching and caching to reduce N+1 queries.\n  - Implement custom resolvers for type-safe schema definitions.\n  - Configure Apollo Server with `apolloServer.listen({ port: 4000 })` for server setup.",
     "source": "code_example",
-    "updated_at": 1780815724.6339493
+    "updated_at": 1780822708.2108145
   }
 }
