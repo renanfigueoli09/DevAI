@@ -1,0 +1,22 @@
+{
+  "search:typescript-nextjs-i18n:typescript next.js internation": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --example app-directory my-internationalized-app`\n  \n- **Latest Versions**:\n  - Next.js: v14.x\n  - next-intl: v2.x\n  \n- **Key Config Options**:\n  - `i18n.locales`: Array of locale codes (e.g., [\"en\", \"fr\"]).\n  - `i18n.defaultLocale`: Default locale code.\n  - `i18n.domains`: Domain-specific locales for multi-domain setups.",
+    "source": "web_search",
+    "updated_at": 1780838628.6517115
+  },
+  "search:typescript-nextjs-i18n:typescript next.js internation_ex": {
+    "content": "- **Install Next.js**: `npx create-next-app@latest my-internationalization-app`\n- **Add i18next**: `npm install i18next next-i18next --save`\n- **Configure i18next**: Create a `next-i18next.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    i18n: {\n      locales: ['en', 'fr'],\n      defaultLocale: 'en',\n    },\n  };\n  ```\n- **Create translation files**: Place JSON files in `public/locales/en/common.json`, `public/locales/fr/common.json` with translations.\n- **Use translations in components**:\n  ```javascript\n  import { useTranslation } from 'next-i18next';\n\n  function MyComponent() {\n    const { t } = useTranslation('common');\n    return <div>{t('welcome')}</div>;\n  }\n  ```\n- **Change language**: Use `next-i18next` hooks to change the language dynamically.\n- **Optimize for performance**: Configure `i18next` to load only necessary translations based on user preference.\n\nThese steps provide a basic setup for internationalization in a Next.js application using `i18next`.",
+    "source": "code_example",
+    "updated_at": 1780838637.5208201
+  },
+  "search:typescript-nextjs-i18n:typescript next.js i18next 202": {
+    "content": "- **CLI Commands**:\n  - `tsc --init` to initialize a new TypeScript project.\n  - `npm install i18next next-i18next --save`\n\n- **Latest Versions**:\n  - TypeScript: v5.x (as of my last update)\n  - Next.js: v13.x\n  - i18next: v20.x\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript compiler options.\n    ```json\n    {\n      \"compilerOptions\": {\n        \"target\": \"ES5\",\n        \"lib\": [\"dom\", \"es2015\"],\n        \"jsx\": \"react\",\n        \"module\": \"commonjs\",\n        \"strict\": true,\n        \"esModuleInterop\": true,\n        \"skipLibCheck\": true,\n        \"forceConsistentCasingInFileNames\": true\n      },\n      \"include\": [\"next-env.d.ts\", \"**/*.ts\", \"**/*.tsx\"],\n      \"exclude\": [\"node_modules\"]\n    }\n    ```\n  - `i18n.js` (Next-i18next configuration):\n    ```javascript\n    import NextI18Next from 'next-i18next';\n\n    const nextI18Next = new NextI18Next({\n      i18n: {\n        defaultNS: \"common\",\n        locales: [\"en\", \"fr\"],\n        localePath: typeof window === \"undefined\" ? \"./public/locales\" : \"/locales\"\n      }\n    });\n\n    export default nextI18Next;\n    ```",
+    "source": "web_search",
+    "updated_at": 1780838667.0459251
+  },
+  "search:typescript-nextjs-i18n:typescript next.js i18next 202_ex": {
+    "content": "- Install `react-i18next` using npm: `$ npm i react-i18next`\n- Use hooks within `react-native` with version `v0.59.0` or later.\n- Configure Next.js for internationalization in `next.config.js`.\n  ```javascript\n  // Example next.config.js\n  module.exports = {\n    i18n: {\n      locales: ['en', 'fr'],\n      defaultLocale: 'en',\n    },\n  };\n  ```\n- Ensure you have the latest version of `react-i18next` for compatibility and features.\n- Use the `default` locale intentionally in your configuration.",
+    "source": "code_example",
+    "updated_at": 1780838683.4143038
+  }
+}
