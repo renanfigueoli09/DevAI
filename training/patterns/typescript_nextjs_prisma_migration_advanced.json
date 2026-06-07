@@ -2,21 +2,21 @@
   "search:typescript-nextjs-prisma-migration-advanced:prisma migrations in next.js 2": {
     "content": "- **Install Prisma**: `npm install prisma --save-dev`\n- **Initialize Prisma**: `npx prisma init`\n- **Add PostgreSQL Provider**: Update `schema.prisma` with `provider = \"postgresql\"`\n- **Generate Client**: `npx prisma generate`\n- **Create Migration**: `npx prisma migrate dev --name init`\n- **Apply Migrations**: `npx prisma migrate deploy`\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model.\n  - `.env`: Configure database connection URL.\n- **Latest Version**: Check [Prisma official docs](https://www.prisma.io/docs) for the latest version and updates.",
     "source": "web_search",
-    "updated_at": 1780817456.8408167
+    "updated_at": 1780824647.5364044
   },
   "search:typescript-nextjs-prisma-migration-advanced:prisma migrations in next.js 2_ex": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates a new migration based on your schema changes.\n  - `npx prisma db pull`: Pulls the database schema into your Prisma schema file.\n\n- **Latest Versions**:\n  - Prisma: 4.0.0\n  - Next.js: 13.5\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and relations.\n  - `prismaClientOptions`: Configuration for the Prisma Client, such as enabling or disabling query logging.\n  - `migrationsDirectory`: Specifies the directory where migrations are stored.",
     "source": "code_example",
-    "updated_at": 1780817458.3410015
+    "updated_at": 1780824648.8351717
   },
   "search:typescript-nextjs-prisma-migration-advanced:advanced prisma migration stra": {
     "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Create and apply migrations.\n  - `prisma migrate deploy`: Deploy migrations to production.\n  - `prisma migrate reset`: Reset the database and apply all migrations.\n\n- **Latest Versions**:\n  - Prisma CLI: v4.10.0\n  - Prisma Client JS/TS: v4.10.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data models.\n  - `.env`: Configure database connection strings and other environment variables.\n  - `prisma.migrate` in `package.json`: Scripts for managing migrations.\n\n- **Best Practices**:\n  - Automate migrations with CI/CD pipelines.\n  - Regularly review and test migrations before deployment.\n  - Use version control for your Prisma schema files.",
     "source": "web_search",
-    "updated_at": 1780817460.301035
+    "updated_at": 1780824650.0560021
   },
   "search:typescript-nextjs-prisma-migration-advanced:advanced prisma migration stra_ex": {
     "content": "- **CLI Commands**:\n  - `prisma migrate dev --name init`: Initializes a new migration.\n  - `prisma migrate deploy`: Deploys migrations to the database.\n  - `prisma migrate reset`: Resets the database and applies all migrations.\n\n- **Latest Versions**:\n  - Prisma CLI: v4.10.2\n  - Prisma Client JS: v4.10.2\n\n- **Key Config Options**:\n  - `schema`: Defines your data model.\n  - `datasource`: Specifies the database connection details.\n  - `generator`: Configures the Prisma Client generator settings.",
     "source": "code_example",
-    "updated_at": 1780817461.8536096
+    "updated_at": 1780824651.2480762
   }
 }

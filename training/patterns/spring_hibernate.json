@@ -2,11 +2,11 @@
   "search:spring+hibernate:spring hibernate jpa 2025": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Hibernate: 6.x\n  - JPA: 2.2\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`",
     "source": "web_search",
-    "updated_at": 1780817378.4322598
+    "updated_at": 1780824581.2382715
   },
   "search:spring+hibernate:spring hibernate jpa 2025_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 2025 (as of my last update)\n  - Hibernate: 6.x\n  - JPA: 3.0\n\n- **Key Config Options**:\n  - `spring.jpa.defer-datasource-initialization=true`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`\n\nThese configurations help in setting up and managing a Spring Boot application with Hibernate and JPA, ensuring that the database schema is correctly managed and SQL queries are visible for debugging.",
     "source": "code_example",
-    "updated_at": 1780817381.5848944
+    "updated_at": 1780824582.4895866
   }
 }

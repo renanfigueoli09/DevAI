@@ -2,21 +2,21 @@
   "search:nextjs+prisma-auth:nextjs prisma authentication b": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n\n- **Key Config Options**:\n  - `next.config.js`: Configure Next.js settings.\n  - `.env.local`: Define environment variables for sensitive data like database URLs and API keys.\n  - `pages/api/auth/[...nextauth].js`: Set up authentication with NextAuth.js and Prisma.",
     "source": "web_search",
-    "updated_at": 1780817633.1831734
+    "updated_at": 1780824884.5000188
   },
   "search:nextjs+prisma-auth:nextjs prisma authentication b_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @prisma/client next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Prisma: 4.0\n  - NextAuth.js: 4.2\n\n- **Key Config Options**:\n  - In `next.config.js`, ensure `reactStrictMode: true`.\n  - In `prisma/schema.prisma`, define your data models.\n  - In `pages/api/auth/[...nextauth].js`, configure the authentication providers and callbacks.\n\n- **Additional Steps**:\n  - Run `npx prisma init` to set up Prisma.\n  - Use `npm run db:migrate` to apply migrations.\n  - Configure environment variables in `.env.local`.\n\nThis setup provides a robust foundation for building secure, scalable authentication systems with Next.js and Prisma.",
     "source": "code_example",
-    "updated_at": 1780817634.4630444
+    "updated_at": 1780824886.0031598
   },
   "search:nextjs+prisma-auth:nextjs prisma security pattern": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n  - `npm install next-auth @prisma/client`: Installs NextAuth.js and Prisma Client.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - `DATABASE_URL` in `.env`: Specifies the database URL.\n  - `pages/api/auth/[...nextauth].js`: Configuration file for NextAuth.js.\n  - `prisma/schema.prisma`: Defines your data model and Prisma Client API.\n\n- **Boilerplate**:\n  - Use `allenarduino/nextjs-prisma-auth-boilerplate` for a complete example with email/password auth, Google login, password reset, protected routes, and a responsive dashboard UI.",
     "source": "web_search",
-    "updated_at": 1780817635.6879694
+    "updated_at": 1780824887.441497
   },
   "search:nextjs+prisma-auth:nextjs prisma security pattern_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @prisma/client next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - `next.config.js`: Configure server settings.\n  - `prisma/schema.prisma`: Define your data models.\n  - `pages/api/auth/[...nextauth].js`: Set up authentication logic with NextAuth.js and Prisma.",
     "source": "code_example",
-    "updated_at": 1780817636.903332
+    "updated_at": 1780824888.8600972
   }
 }

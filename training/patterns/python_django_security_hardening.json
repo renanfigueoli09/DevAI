@@ -2,31 +2,31 @@
   "search:python-django-security-hardening:hardening django security best": {
     "content": "- Always use the latest version of Django.\n- Update Django regularly to apply security patches.\n- Sanitize user input using Django's built-in mechanisms like `escape` and `mark_safe`.\n- Use Django’s authentication system for handling user accounts securely.\n- Configure `CSRF protection` in your settings with `MIDDLEWARE = ['django.middleware.csrf.CsrfViewMiddleware']`.\n- Enable HTTPS to encrypt data transmitted between the client and server.\n- Use Django's built-in password hashing mechanism (`PASSWORD_HASHERS`).\n- Implement content security policies (CSP) using the `ContentSecurityPolicyMiddleware`.\n- Regularly perform security audits and vulnerability assessments.",
     "source": "web_search",
-    "updated_at": 1780817477.1930213
+    "updated_at": 1780824686.1654503
   },
   "search:python-django-security-hardening:hardening django security best_ex": {
     "content": "- Use Django's `django-environ` package for environment-based settings.\n- Install and configure `django-cors-headers` for Cross-Origin Resource Sharing (CORS).\n- Enable `django.middleware.security.SecurityMiddleware`.\n- Set `SESSION_COOKIE_SECURE = True` to use secure cookies.\n- Configure `CSRF_COOKIE_SECURE = True` for CSRF protection over HTTPS.\n- Use `django.middleware.clickjacking.XFrameOptionsMiddleware` with `'DENY'`.\n- Implement `django.middleware.http.ConditionalGetMiddleware` for conditional GET requests.\n- Set `X_CONTENT_TYPE_OPTIONS = 'nosniff'` to prevent MIME type sniffing.\n- Enable `SECURE_SSL_REDIRECT = True` to enforce HTTPS.\n- Use `django.middleware.security.HstsMiddleware` with a long max-age value.\n- Regularly update Django and its dependencies to the latest versions.",
     "source": "code_example",
-    "updated_at": 1780817478.7628715
+    "updated_at": 1780824687.3994792
   },
   "search:python-django-security-hardening:securing django applications": {
     "content": "- Use `python manage.py runserver --ssl` to enable HTTPS locally.\n- Install and configure SSL certificates using Let's Encrypt for production environments.\n- Update Django to the latest stable version regularly.\n- Enable `SECURE_SSL_REDIRECT = True` in settings.py to enforce HTTPS.\n- Set `SESSION_COOKIE_SECURE = True` and `CSRF_COOKIE_SECURE = True`.\n- Use `django.middleware.security.SecurityMiddleware` at the top of MIDDLEWARE.\n- Implement user authentication with Django's built-in auth system.\n- Regularly update third-party packages using `pip list --outdated`.\n- Configure `ALLOWED_HOSTS` in settings.py to restrict access.\n- Use Django's `@login_required` decorator for protected views.",
     "source": "web_search",
-    "updated_at": 1780817480.3290815
+    "updated_at": 1780824688.6459804
   },
   "search:python-django-security-hardening:securing django applications_ex": {
     "content": "- **Install Simple-JWT**: `pip install djangorestframework-simplejwt`\n- **Add to INSTALLED_APPS**: `'rest_framework_simplejwt'`\n- **Configure Authentication**: Set `DEFAULT_AUTHENTICATION_CLASSES` in settings.py:\n  ```python\n  REST_FRAMEWORK = {\n      'DEFAULT_AUTHENTICATION_CLASSES': (\n          'rest_framework_simplejwt.authentication.JWTAuthentication',\n      ),\n  }\n  ```\n- **Create JWT Token Endpoint**: Use the provided views from Simple-JWT.\n- **Protect Views**: Apply `@authentication_classes([JWTAuthentication])` decorator to protected views.\n- **Configure Pydantic Models**: Define models using Pydantic for data validation and settings management.\n- **Use Environment Variables**: Store sensitive information like secret keys in environment variables.\n- **Update Django Security Settings**: Ensure `SECURE_SSL_REDIRECT`, `SESSION_COOKIE_SECURE`, and other security-related settings are enabled.",
     "source": "code_example",
-    "updated_at": 1780817481.7066932
+    "updated_at": 1780824689.8638065
   },
   "search:python-django-security-hardening:django security features and c": {
     "content": "- Always update Django to the latest version.\n- Use `python manage.py check --deploy` to identify potential security issues.\n- Set `DEBUG = False` in production settings.\n- Configure allowed hosts with `ALLOWED_HOSTS`.\n- Use HTTPS by setting `SECURE_SSL_REDIRECT = True`.\n- Sanitize user input using Django's built-in forms and escape functions.\n- Implement CSRF protection by including `{% csrf_token %}` in forms.\n- Use Django's authentication system for secure user management.\n- Regularly update dependencies with `pip list --outdated` and `pip install -U <package>`.",
     "source": "web_search",
-    "updated_at": 1780817484.9001284
+    "updated_at": 1780824691.1951325
   },
   "search:python-django-security-hardening:django security features and c_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py runserver --insecure`: Run the development server without enforcing security features.\n  - `python manage.py collectstatic`: Collect static files from all applications into a single directory.\n\n- **Latest Versions**:\n  - Django 4.2\n\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for cryptographic signing.\n  - `DEBUG`: Set to `False` in production environments.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.\n  - `CSRF_COOKIE_SECURE`: Ensure CSRF cookies are only sent over HTTPS.",
     "source": "code_example",
-    "updated_at": 1780817486.2757802
+    "updated_at": 1780824692.4193208
   }
 }

@@ -2,21 +2,21 @@
   "search:Securing Spring Boot Applications with Elasticsearch:spring boot security elasticse": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Elasticsearch 8.7.0\n  - Spring Boot 2.5.x\n\n- **Key Config Options**:\n  - `spring.data.elasticsearch.cluster-name=your-cluster-name`\n  - `spring.data.elasticsearch.cluster-nodes=your-node-addresses`\n  - `spring.data.elasticsearch.username=your-username`\n  - `spring.data.elasticsearch.password=your-password`\n  - `spring.data.elasticsearch.rest.uris=https://your-elasticsearch-url`",
     "source": "web_search",
-    "updated_at": 1780817463.3686671
+    "updated_at": 1780824667.1102283
   },
   "search:Securing Spring Boot Applications with Elasticsearch:spring boot security elasticse_ex": {
     "content": "- Add `spring-boot-starter-data-elasticsearch` to your Maven dependencies.\n- Configure Elasticsearch in `application.yaml` with security enabled.\n- Use `@EnableWebSecurity` and extend `WebSecurityConfigurerAdapter`.\n- Override `configure(HttpSecurity http)` to set up basic authentication.\n- Ensure your Elasticsearch cluster is secured with proper credentials.\n- Update Spring Boot and Spring Security to their latest versions for compatibility.\n- Configure JWT in Spring Security for stateless authentication if needed.",
     "source": "code_example",
-    "updated_at": 1780817464.699855
+    "updated_at": 1780824668.3154056
   },
   "search:Securing Spring Boot Applications with Elasticsearch:elasticsearch security practic": {
     "content": "- Use `network.host` in Elasticsearch YAML to bind nodes to private IPs or secure public IPs.\n- Set up separate security groups for different components.\n- Enable TLS encryption using `xpack.security.transport.ssl.enabled`.\n- Configure role-based access control with `xpack.security.authc.realms`.\n- Generate API keys using `elasticsearch-cli apikey create`.\n- Update Elasticsearch to the latest version for security patches.\n- Use `elasticsearch-plugin install` to install security plugins like X-Pack.\n- Set `xpack.security.enabled: true` in the YAML configuration file.\n- Regularly rotate passwords and API keys.",
     "source": "web_search",
-    "updated_at": 1780817466.0089695
+    "updated_at": 1780824669.55653
   },
   "search:Securing Spring Boot Applications with Elasticsearch:elasticsearch security practic_ex": {
     "content": "- **CLI Commands**:\n  - `elasticsearch-setup-passwords interactive`: Set up initial passwords for built-in users.\n  - `bin/elasticsearch-certutil ca --out elastic-stack-ca.p12`: Generate a CA certificate.\n  - `bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12 --out node-0.p12`: Generate a node certificate.\n\n- **Latest Versions**:\n  - Elasticsearch: v8.5.0\n  - Kibana: v8.5.0\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Enable security features.\n  - `xpack.security.transport.ssl.enabled`: Enable SSL for transport layer.\n  - `xpack.security.http.ssl.enabled`: Enable SSL for HTTP layer.\n  - `xpack.security.authc.realms.file.file1.order`: Define the order of authentication realms.",
     "source": "code_example",
-    "updated_at": 1780817467.3188262
+    "updated_at": 1780824670.8322806
   }
 }

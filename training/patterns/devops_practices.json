@@ -2,91 +2,91 @@
   "search:devops-practices:12 factor app methodology back": {
     "content": "- **CLI Commands**: Use `heroku create` to provision a new app.\n- **Latest Versions**: Ensure using the latest Heroku CLI and Docker for containerization.\n- **Key Config Options**:\n  - `Procfile`: Define process types (web, worker).\n  - Environment Variables: Manage configuration through `.env` files or Heroku dashboard.\n  - Logging: Use centralized logging services like Loggly or Papertrail.\n  - Scaling: Adjust dyno counts with `heroku ps:scale web=2`.\n  - Database Management: Utilize Heroku Postgres for relational databases.",
     "source": "web_search",
-    "updated_at": 1780817311.6811306
+    "updated_at": 1780824526.8346317
   },
   "search:devops-practices:12 factor app methodology back_ex": {
     "content": "- **CLI Commands**: `git push heroku master`\n- **Latest Versions**: Ensure using latest Node.js, Python, or other language runtime.\n- **Key Config Options**:\n  - Environment variables for configuration (`process.env`)\n  - Database URLs (`DATABASE_URL`)\n  - Logging levels (`LOG_LEVEL`)\n  - Scaling options (`heroku ps:scale web=2`)",
     "source": "code_example",
-    "updated_at": 1780817314.8214538
+    "updated_at": 1780824528.1325657
   },
   "search:devops-practices:containerization best practice": {
     "content": "- **CLI Commands**:\n  - `docker build --pull .` to pull latest base image before building.\n  - `docker run --rm -it <image_name> /bin/bash` for interactive container sessions.\n  - `docker-compose up -d` to start services in detached mode.\n\n- **Latest Versions**:\n  - Docker Engine: Latest version as of October 2025 is 24.0.\n  - Docker Compose: Latest version as of October 2025 is 1.29.2.\n\n- **Key Config Options**:\n  - `Dockerfile`: Use `.dockerignore` to exclude unnecessary files from the build context.\n  - `docker-compose.yml`: Define services, networks, and volumes for multi-container setups.\n  - Environment Variables: Set environment variables using `-e` flag or in `docker-compose.yml`.",
     "source": "web_search",
-    "updated_at": 1780817316.7039158
+    "updated_at": 1780824529.4722033
   },
   "search:devops-practices:containerization best practice_ex": {
     "content": "- **CLI Commands**:\n  - `docker build --target <stage> .`\n  - `docker run --rm -it <image_name>`\n  - `docker push <repository>/<image>:<tag>`\n  - `docker pull <repository>/<image>:<tag>`\n  \n- **Latest Versions**:\n  - Docker Engine: v25.0\n  - Docker Compose: v2.13.0\n  \n- **Key Config Options**:\n  - Use multi-stage builds for optimization.\n  - Employ distroless images to reduce image size.\n  - Implement security hardening techniques (e.g., non-root user, vulnerability scans).\n  - Utilize `.dockerignore` to exclude unnecessary files from the build context.",
     "source": "code_example",
-    "updated_at": 1780817318.3732984
+    "updated_at": 1780824530.7495792
   },
   "search:devops-practices:ci/cd pipeline best practices ": {
     "content": "- **CLI Commands**: \n  - `git checkout <branch-name>`\n  - `git pull origin <branch-name>`\n  - `git push origin <branch-name>`\n\n- **Latest Versions**:\n  - GitHub Actions: v3.x\n  - Jenkins: LTS version\n  - GitLab CI: 15.0\n\n- **Key Config Options**:\n  - GitHub Actions: `.github/workflows/main.yml`\n  - Jenkins: `Jenkinsfile` or XML configuration\n  - GitLab CI: `.gitlab-ci.yml`\n\n- **Automation Efficiency**: \n  - Use parallel jobs for faster builds.\n  - Implement caching to speed up dependency installation.\n\n- **Cost-Aware Infrastructure Management**:\n  - Utilize spot instances in AWS or GCP.\n  - Monitor and scale resources dynamically based on demand.",
     "source": "web_search",
-    "updated_at": 1780817319.9208953
+    "updated_at": 1780824531.9580803
   },
   "search:devops-practices:blue green deployment canary r": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f deployment.yaml` to deploy applications.\n  - `kubectl rollout status deployment/<deployment-name>` to check the status of a deployment.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0 (as of my last update).\n  - Docker: v20.10.7 (latest stable version).\n\n- **Key Config Options**:\n  - `spec.strategy.type`: Set to \"BlueGreen\" or \"Canary\".\n  - `spec.strategy.bluegreen`: Configuration for Blue-Green strategy.\n  - `spec.strategy.canary`: Configuration for Canary strategy.\n\nFor detailed instructions and the latest updates, refer to the official Kubernetes documentation.",
     "source": "web_search",
-    "updated_at": 1780817321.4680715
+    "updated_at": 1780824533.1916552
   },
   "search:devops-practices:blue green deployment canary r_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout restart deployment/<deployment-name>`\n  - `kubectl apply -f <blue-green-deployment-file.yaml>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.25.x\n  - Helm: v3.9.x\n\n- **Key Config Options**:\n  - `spec.strategy.type=BlueGreen`\n  - `spec.strategy.blueGreen.canaryRelease=true`\n  - `spec.strategy.blueGreen.greenService=<green-service-name>`",
     "source": "code_example",
-    "updated_at": 1780817323.0133417
+    "updated_at": 1780824534.4018147
   },
   "search:devops-practices:environment configuration stag": {
     "content": "- **Flutter Firebase Environment Setup Guide**\n  - Prerequisites: Flutter SDK installed.\n  - Android Configuration: Update `build.gradle` file.\n\n- **Environment Configuration and Deployment**\n  - Staging Environment File: `environment.staging.ts`\n  - Customize service endpoints, analytics configurations, and other application settings.\n\n- **Mastering Staging Environments For HospitoFind Development**\n  - Master configuration through environment variables.\n  - Flexibility in staging environment setup is crucial for success.\n\n- **Build a Chrome Extension that Switches localhost/staging/production...**\n  - Read current tab URL using `chrome.tabs.query`.\n  - Compare origin with configured environment origins.\n  - Find the active environment dynamically.",
     "source": "web_search",
-    "updated_at": 1780817324.6022205
+    "updated_at": 1780824535.6837525
   },
   "search:devops-practices:environment configuration stag_ex": {
     "content": "- **CLI Commands**: \n  - `dotnet publish --configuration Staging`\n  - `dotnet publish --configuration Production`\n\n- **Latest Versions**:\n  - .NET SDK 7.0\n\n- **Key Config Options**:\n  - `appsettings.Staging.json`\n  - `appsettings.Production.json`",
     "source": "code_example",
-    "updated_at": 1780817326.1999211
+    "updated_at": 1780824536.8685348
   },
   "search:devops-practices:observability logging metrics ": {
     "content": "- **CLI Commands and Flags**:\n  - `kubectl logs <pod-name>` to view container logs.\n  - `kubectl get pods` to list all pods.\n  - `kubectl describe pod <pod-name>` for detailed pod information.\n\n- **Latest Versions**:\n  - Prometheus: v2.40\n  - Grafana: v9.1\n  - Jaeger: v1.30\n\n- **Key Config Options**:\n  - Prometheus: `scrape_configs` in `prometheus.yml`.\n  - Grafana: Data sources and dashboard configurations.\n  - Jaeger: Collector, Query, UI configuration files.",
     "source": "web_search",
-    "updated_at": 1780817327.7889743
+    "updated_at": 1780824538.1181936
   },
   "search:devops-practices:observability logging metrics _ex": {
     "content": "- **CLI Commands**:\n  - `otelcol --config=/path/to/config.yaml`\n  - `grafana-server --config.file=/etc/grafana/grafana.ini`\n\n- **Latest Versions**:\n  - OpenTelemetry Collector: v1.25.0\n  - Grafana: v9.3.0\n\n- **Key Config Options**:\n  - `otelcol` config: `receivers`, `exporters`, `service`\n  - `grafana.ini`: `[server]`, `[database]`, `[auth]`",
     "source": "code_example",
-    "updated_at": 1780817329.1194925
+    "updated_at": 1780824539.412173
   },
   "search:DevOps Practices:gitlab-ci-pipelines-advanced a": {
     "content": "- Use `gitlab-runner` CLI to register and manage runners.\n- Ensure `.gitlab-ci.yml` is in the root of your repository.\n- Utilize GitLab Runner templates for job reuse.\n- Set up downstream pipelines with `trigger` keyword.\n- Configure pipeline triggers on specific events like `push`, `merge_request`.\n- Use `artifacts` to cache dependencies between jobs.\n- Implement parallel jobs using `parallel: matrix`.\n- Monitor pipeline status and logs via GitLab UI or API.\n- Update `.gitlab-ci.yml` with latest syntax and features regularly.",
     "source": "web_search",
-    "updated_at": 1780817330.5546086
+    "updated_at": 1780824540.6118565
   },
   "search:DevOps Practices:gitlab-ci-pipelines-advanced a_ex": {
     "content": "- **CLI Commands**:\n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `gitlab-runner register`: Registers a new runner with GitLab.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Version 15.0\n  - GitLab Runner: Version 15.0\n\n- **Key Config Options**:\n  - `stages`: Defines the stages of your pipeline.\n  - `script`: Specifies commands to run in a job.\n  - `image`: Specifies the Docker image for the job.\n  - `services`: Specifies services that should be available to the job.\n  - `only`/`except`: Controls when jobs are executed based on branches or tags.",
     "source": "code_example",
-    "updated_at": 1780817331.9331264
+    "updated_at": 1780824541.8437555
   },
   "search:DevOps Practices:docker+kafka-streams container": {
     "content": "- **CLI Commands**:\n  - `docker run --name kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -p 9092:9092 wurstmeister/kafka`\n  - `docker run --name zookeeper -d wurstmeister/zookeeper`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Docker: 20.10.17\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string.\n  - `KAFKA_BROKER_ID`: Unique broker ID in the cluster.",
     "source": "web_search",
-    "updated_at": 1780817333.36676
+    "updated_at": 1780824543.127499
   },
   "search:DevOps Practices:spring+rabbitmq devops integra": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management` to start RabbitMQ in Docker.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.4\n  - Spring AMQP: 2.8.4\n  - RabbitMQ: 3.8.x\n\n- **Key Config Options**:\n  - `spring.rabbitmq.host`: RabbitMQ host (default is `localhost`).\n  - `spring.rabbitmq.port`: RabbitMQ port (default is `5672`).\n  - `spring.rabbitmq.username`: RabbitMQ username.\n  - `spring.rabbitmq.password`: RabbitMQ password.\n  - `spring.rabbitmq.virtual-host`: Virtual host (default is `/`).",
     "source": "web_search",
-    "updated_at": 1780817334.8013744
+    "updated_at": 1780824544.3568377
   },
   "search:DevOps Practices:spring+rabbitmq devops integra_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/essentialprogramming/rabbitmq-example.git`\n  - `mvn clean install` to build the project\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - RabbitMQ: 3.8.20\n\n- **Key Config Options**:\n  - `spring.rabbitmq.host=localhost`\n  - `spring.rabbitmq.port=5672`\n  - `spring.rabbitmq.username=guest`\n  - `spring.rabbitmq.password=guest`",
     "source": "code_example",
-    "updated_at": 1780817336.179137
+    "updated_at": 1780824545.6009262
   },
   "search:DevOps Practices:angular-unit-testing-best-prac": {
     "content": "- Use Angular CLI commands with `--watch` flag to automatically run tests on file changes.\n- Ensure Jasmine and Karma are updated to their latest versions for optimal performance and features.\n- Implement the AAA pattern (Arrange, Act, Assert) in unit tests for clarity and maintainability.\n- Avoid testing implementation details; focus on testing behavior instead.\n- Prevent memory leaks by cleaning up subscriptions and resources after each test.\n- Use `TestBed.configureTestingModule` for configuring the module before running tests.\n- Optimize test execution speed by reducing unnecessary setup and using async/await where applicable.\n- Ensure clean and maintainable tests by refactoring them when necessary.\n- Utilize Angular's testing utilities like `fixture.detectChanges()` to trigger change detection.",
     "source": "web_search",
-    "updated_at": 1780817337.539074
+    "updated_at": 1780824546.808894
   },
   "search:DevOps Practices:angular-unit-testing-best-prac_ex": {
     "content": "- Use `ng test` to run unit tests.\n- Ensure your project uses the latest Angular CLI version.\n- Configure `karma.conf.js` for custom Karma settings.\n- Utilize `vitest` for testing with a fast runner.\n- Implement coverage reporting with `ng test --code-coverage`.\n- Follow Angular's style guide for consistent code quality.\n- Avoid logic in templates and use components for business logic.\n- Use `ng generate component <name>` to create new components.\n- Configure `tsconfig.json` for TypeScript compilation options.",
     "source": "code_example",
-    "updated_at": 1780817339.0599926
+    "updated_at": 1780824548.3249133
   }
 }

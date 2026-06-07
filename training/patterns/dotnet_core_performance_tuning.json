@@ -2,16 +2,16 @@
   "search:dotnet-core-performance-tuning:dotnet core performance tuning": {
     "content": "- Use `dotnet publish -c Release` to compile your application in release mode.\n- Implement caching strategies like Redis or MemoryCache for frequently accessed data.\n- Utilize async programming with `async` and `await` keywords to improve responsiveness.\n- Enable Just-In-Time (JIT) compilation optimizations by setting `<Optimize>true</Optimize>` in your project file.\n- Monitor performance using tools like dotTrace, PerfView, or Visual Studio Profiler.\n- Adjust the garbage collector settings by modifying the `gcServer`, `gcConcurrent`, and `gcAllowVeryLargeObjects` flags in your app.config or web.config.\n- Optimize database queries to reduce latency and improve application performance.\n- Use connection pooling for database connections to reuse existing connections.\n- Implement lazy loading for collections and entities to reduce memory usage.\n- Regularly update .NET Core to the latest version to benefit from performance improvements and security patches.",
     "source": "web_search",
-    "updated_at": 1780822149.4453325
+    "updated_at": 1780824652.536669
   },
   "search:dotnet-core-performance-tuning:dotnet core performance tuning_ex": {
     "content": "- Use `dotnet new webapi` to create an ASP.NET Core Web API project.\n- Optimize database performance by using async EF Core methods like `ToListAsync()`.\n- Configure logging with `appsettings.json` and set the log level for different environments.\n- Implement caching strategies in your application to reduce database load.\n- Use dependency injection (DI) for managing object lifetimes and promoting loose coupling.\n- Monitor application performance using tools like Application Insights or built-in profiling features.\n- Ensure thread safety by using locks, semaphores, or concurrent collections where necessary.\n- Regularly update dependencies and .NET Core SDK to benefit from performance improvements and security patches.",
     "source": "code_example",
-    "updated_at": 1780822166.8988862
+    "updated_at": 1780824653.7441456
   },
   "search:dotnet-core-performance-tuning:optimizing dotnet core applica": {
     "content": "- Use `dotnet publish -c Release` for publishing optimized applications.\n- Enable Just-In-Time (JIT) compilation by setting `<PublishSingleFile>true</PublishSingleFile>` in your `.csproj`.\n- Utilize `GC.Server=true` and `ServerGarbageCollection=true` in the appsettings.json to enable server garbage collection.\n- Implement caching strategies using `Microsoft.Extensions.Caching.Memory` for data retrieval optimization.\n- Monitor performance with tools like dotTrace, ANTS Performance Profiler, or VisualVM.\n- Optimize database queries by indexing columns used frequently in WHERE clauses.\n- Use async/await for I/O-bound operations to prevent blocking the main thread.\n- Configure logging levels and sinks in appsettings.json to reduce log verbosity and improve performance.\n- Regularly update .NET Core SDK and runtime to benefit from performance improvements and security patches.",
     "source": "web_search",
-    "updated_at": 1780822174.9846547
+    "updated_at": 1780824654.9499686
   }
 }

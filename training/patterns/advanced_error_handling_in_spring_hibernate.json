@@ -2,21 +2,21 @@
   "search:Advanced Error Handling in Spring + Hibernate:spring hibernate error handlin": {
     "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` in Spring to handle exceptions globally.\n- Implement custom exception classes for specific error scenarios.\n- Configure Hibernate properties in `application.properties` or `application.yml`.\n- Use `@Transactional` annotation to manage transactions and rollbacks.\n- Handle `DataIntegrityViolationException` by catching it and providing appropriate feedback.\n- Utilize `OptimisticLockingFailureException` for handling optimistic locking issues.\n- Implement custom error handlers that return meaningful HTTP responses.",
     "source": "web_search",
-    "updated_at": 1780817383.2619305
+    "updated_at": 1780824587.3251188
   },
   "search:Advanced Error Handling in Spring + Hibernate:spring hibernate error handlin_ex": {
     "content": "- Use Spring Boot Validation Starter for validation.\n- Check SQL syntax in your queries, especially when using Hibernate.\n- Configure default error views in Spring MVC to handle exceptions globally.\n- Ensure that all required dependencies are up-to-date.\n- Review the stack trace for more specific error details.\n- Use `@ExceptionHandler` annotations to handle specific exceptions.\n- Enable detailed error logging for better debugging.",
     "source": "code_example",
-    "updated_at": 1780817384.830553
+    "updated_at": 1780824588.5136905
   },
   "search:Advanced Error Handling in Spring + Hibernate:hibernate exception management": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.2.3.Final, Spring Data JPA 2.7.5.\n- **Key Config Options**:\n  - `hibernate.dialect`: Set the database dialect for Hibernate.\n  - `hibernate.show_sql`: Enable SQL logging for debugging.\n  - `hibernate.format_sql`: Format SQL statements in logs.\n  - `spring.jpa.properties.hibernate.jdbc.time_zone`: Set JDBC time zone.",
     "source": "web_search",
-    "updated_at": 1780817386.3834102
+    "updated_at": 1780824592.9577823
   },
   "search:Advanced Error Handling in Spring + Hibernate:hibernate exception management_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.x is the latest stable version as of my last update.\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect for the database.\n  - `hibernate.hbm2ddl.auto`: Controls schema generation (e.g., create-drop, update).\n  - `hibernate.show_sql`: Enables logging of SQL statements.",
     "source": "code_example",
-    "updated_at": 1780817387.8591576
+    "updated_at": 1780824594.2310815
   }
 }

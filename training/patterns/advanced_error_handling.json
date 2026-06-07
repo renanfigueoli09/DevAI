@@ -2,51 +2,51 @@
   "search:Advanced Error Handling:spring postgres error handling": {
     "content": "- **CLI Commands**:\n  - `psql --dbname=mydb --username=myuser` to connect to PostgreSQL.\n  - `pg_dump mydb > backup.sql` to back up a database.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - PostgreSQL: 15.4\n\n- **Key Config Options**:\n  - In `application.properties`, set `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`.\n  - Set `spring.datasource.username=myuser` and `spring.datasource.password=mypassword`.\n  - Enable error handling with `spring.mvc.throw-exception-if-no-handler-found=true`.",
     "source": "web_search",
-    "updated_at": 1780817513.10139
+    "updated_at": 1780824728.2056904
   },
   "search:Advanced Error Handling:spring postgres error handling_ex": {
     "content": "- Use `spring-boot-starter-data-jpa` and `postgresql` dependencies in your `pom.xml`.\n- Configure PostgreSQL connection properties in `application.properties` or `application.yml`.\n- Implement error handling using `@ControllerAdvice` and `@ExceptionHandler`.\n- Example of handling a non-existent user:\n  ```java\n  @ExceptionHandler(UserNotFoundException.class)\n  public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {\n      return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);\n  }\n  ```\n- Use Docker for containerization with PostgreSQL.\n- Ensure PostgreSQL data directory is correctly mounted in your Docker container.\n- Check Spring Batch and PostgreSQL logs for errors during execution.",
     "source": "code_example",
-    "updated_at": 1780817514.4990385
+    "updated_at": 1780824729.4258645
   },
   "search:Advanced Error Handling:fastapi sqlalchemy error handl": {
     "content": "- Use `uvicorn` as the ASGI server for running FastAPI applications.\n- Install FastAPI and SQLAlchemy using pip: `pip install fastapi sqlalchemy`.\n- For centralized exception handling, use a custom exception handler in your FastAPI app.\n- Configure database URL in your settings file or environment variables.\n- Use `SQLAlchemy ORM` to interact with the database.\n- Handle exceptions like `sqlalchemy.exc.InvalidRequestError` by checking primary key existence.\n- Utilize dependency injection for managing database sessions in FastAPI.\n- Ensure proper session management and closing after operations.\n- For production, use middleware for logging and error handling.",
     "source": "web_search",
-    "updated_at": 1780817515.7901263
+    "updated_at": 1780824733.8054938
   },
   "search:Advanced Error Handling:fastapi sqlalchemy error handl_ex": {
     "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI and SQLAlchemy using pip:\n  ```bash\n  pip install fastapi sqlalchemy databases[postgresql]\n  ```\n- Define Pydantic models for data validation.\n- Implement custom exception handlers in FastAPI to manage errors gracefully.\n- Utilize `@app.exception_handler(Exception)` decorator to handle specific exceptions.\n- Configure database connections with SQLAlchemy's `SQLAlchemy` class.\n- Use `try-except` blocks within endpoints to catch and handle exceptions.\n- Log errors for debugging purposes using Python's built-in logging module.\n- Return appropriate HTTP status codes and error messages in responses.",
     "source": "code_example",
-    "updated_at": 1780817518.9138007
+    "updated_at": 1780824735.0623672
   },
   "search:Advanced Error Handling:nextjs serverless-authenticati": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest <project-name>` to bootstrap a new Next.js project.\n  \n- **Latest Versions**:\n  - As of my last update, the latest version of Next.js is 13.x. For the most current version, check [Next.js official website](https://nextjs.org/).\n  \n- **Key Config Options**:\n  - `next.config.js`: Configure your project settings such as output type (serverless or server), asset paths, and more.\n  - `pages/_app.js` or `_app.tsx`: Customize the App component to add global state management, error handling, etc.\n  - `pages/api/*`: Use API routes for server-side logic. Implement error handling using try/catch blocks.\n\n- **Error Handling Patterns**:\n  - Use `getServerSideProps` or `getStaticProps` with try/catch to handle errors during data fetching.\n  - Implement custom error pages by creating files like `_error.js` in the `pages` directory.\n  - Utilize Next.js's built-in error handling mechanism for uncaught exceptions.\n\n- **Server Actions and Stateless Authentication**:\n  - Use Server Actions for server-side functions that can be called from client components without needing a full page refresh.\n  - Implement stateless authentication using JSON Web Tokens (JWT) or similar mechanisms to manage user sessions.",
     "source": "web_search",
-    "updated_at": 1780817520.239249
+    "updated_at": 1780824736.298916
   },
   "search:Advanced Error Handling:nextjs serverless-authenticati_ex": {
     "content": "- **CLI Commands**:\n  - `yarn create next-app`: Create a new Next.js project.\n  - `next dev`: Start the development server.\n  - `next build`: Build your application for production.\n  - `next start`: Start the production server.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Node.js: v16.x or later\n\n- **Key Config Options**:\n  - `next.config.js`: Configure various aspects of your Next.js application, including API routes, asset optimization, and more.\n  - Environment Variables: Use `.env.local` to manage sensitive information like API keys.\n\n- **Error Handling**:\n  - Implement error handling in serverless functions using try-catch blocks.\n  - Utilize middleware for global error handling across the entire application.",
     "source": "code_example",
-    "updated_at": 1780817521.6453602
+    "updated_at": 1780824737.5378246
   },
   "search:Advanced Error Handling:spring quarkus error handling": {
     "content": "- Use `quarkus.http.problem.enabled=true` in your `application.properties` to enable error handling.\n- For Quarkus 3.32+, add the dependency:\n  ```xml\n  <dependency>\n      <groupId>io.quarkiverse</groupId>\n      <artifactId>quarkus-http-problem</artifactId>\n  </dependency>\n  ```\n- For older versions, use `quarkus-resteasy-problem` instead.\n- Implement a custom exception handler using `@ExceptionHandler` or `@ControllerAdvice`.\n- Use `ProblemException` for structured error responses.\n- Ensure your application is compatible with the Quarkus version you are using.",
     "source": "web_search",
-    "updated_at": 1780817522.9645963
+    "updated_at": 1780824738.738443
   },
   "search:Advanced Error Handling:spring quarkus error handling_ex": {
     "content": "- Use `quarkus dev` to run Quarkus in development mode.\n- Include Jandex index generator in the jar build for component discovery.\n- Example POM for Common jar:\n```xml\n<build>\n    <plugins>\n        <plugin>\n            <groupId>io.quarkus</groupId>\n            <artifactId>quarkus-maven-plugin</artifactId>\n            <version>2.13.0.Final</version>\n            <executions>\n                <execution>\n                    <goals>\n                        <goal>build</goal>\n                    </goals>\n                </execution>\n            </executions>\n        </plugin>\n    </plugins>\n</build>\n```\n- For centralized error response handling, use the `quarkus-smallrye-health` extension.\n- Key config options for error handling include:\n  - `quarkus.smallrye-health.enabled`: Enable health checks.\n  - `quarkus.http.root-path`: Set the root path of your application.",
     "source": "code_example",
-    "updated_at": 1780817524.180058
+    "updated_at": 1780824739.9398513
   },
   "search:Advanced Error Handling:gitlab-ci error handling": {
     "content": "- Use `gitlab-runner exec` to run jobs locally.\n- Check pipeline logs using `gitlab-ci-multi-runner exec <runner> <job>`.\n- Inspect job artifacts with `gitlab-runner artifacts download --job <job_id>`.\n- Retry failed jobs in the GitLab UI or via API.\n- Configure retry attempts in `.gitlab-ci.yml` under `retry`.\n- Use `exit 1` to fail a job and pass an error message.\n- Monitor runner health and logs with `gitlab-runner status` and `gitlab-runner tail <runner>`.",
     "source": "web_search",
-    "updated_at": 1780817525.477413
+    "updated_at": 1780824741.2277052
   },
   "search:Advanced Error Handling:gitlab-ci error handling_ex": {
     "content": "- Ensure your `gitlab-ci.yml` file is correctly formatted.\n- Use the latest version of GitLab Runner and GitLab CI/CD.\n- Verify that all commands in your `.yml` file accept the correct number of arguments.\n- Check if the Docker image specified in your pipeline has the necessary permissions to access resources.\n- Ensure that the host and token provided during `gitlab-runner register` are accurate.\n- Review the error message for clues on what might be going wrong.\n- Use `docker exec -it <container_id> /bin/bash` to inspect the container environment.\n- Check if there are any network issues preventing the runner from connecting to GitLab.\n- Ensure that all required services and dependencies are up and running.",
     "source": "code_example",
-    "updated_at": 1780817526.6977682
+    "updated_at": 1780824742.4384398
   }
 }

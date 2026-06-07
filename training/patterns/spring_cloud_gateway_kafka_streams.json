@@ -2,21 +2,21 @@
   "search:spring-cloud-gateway-kafka-streams:spring cloud gateway kafka str": {
     "content": "- **GitHub Repository**: [cjrequena/spring-integration-gateway-kafka-sample](https://github.com/cjrequena/spring-integration-gateway-kafka-sample)\n- **Spring Cloud Version**: Latest as of my last update, but typically you would use the latest stable version compatible with your project.\n- **Kafka Streams Integration**: Use `spring-kafka-streams` dependency in your `pom.xml` or `build.gradle`.\n- **Key Config Options**:\n  - `bootstrap.servers`: Kafka broker addresses\n  - `application.id`: Unique identifier for the application\n  - `key.deserializer`: Deserializer class for keys\n  - `value.deserializer`: Deserializer class for values\n- **CLI Commands**:\n  - To run a Spring Boot application: `mvn spring-boot:run` or `./gradlew bootRun`\n  - To build a Docker image: `docker build -t your-image-name .`\n- **Latest Versions**:\n  - Check [Maven Central](https://search.maven.org/) for the latest versions of `spring-cloud-stream`, `spring-kafka-streams`, and other dependencies.\n- **Documentation**: Refer to [Spring Kafka Streams Documentation](https://docs.spring.io/spring-kafka/docs/current/reference/html/#kafka-streams) for detailed configuration and usage.",
     "source": "web_search",
-    "updated_at": 1780817280.2021227
+    "updated_at": 1780824498.2557025
   },
   "search:spring-cloud-gateway-kafka-streams:spring cloud gateway kafka str_ex": {
     "content": "- **Latest Version**: Spring Cloud Stream 3.2.0, Kafka Streams 3.3.0\n- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output.\n  - `spring.kafka.bootstrap-servers`: Kafka server address.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Offset reset policy (e.g., earliest, latest).",
     "source": "code_example",
-    "updated_at": 1780817281.820859
+    "updated_at": 1780824499.5358264
   },
   "search:spring-cloud-gateway-kafka-streams:kafka streams with spring clou": {
     "content": "- **Latest Version of Spring Cloud Stream**: 2025.0.0\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Set to `earliest` or `latest`.\n  - `spring.cloud.stream.kafka.binder.configuration.enable.auto.commit`: Set to `true` or `false`.\n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Kafka Streams: \n    ```bash\n    spring init --dependencies=webflux,kafka-streams-spring my-kafka-streams-app\n    ```\n  - To run the application:\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n- **Use Cases**:\n  - Real-time analytics and processing.\n  - Event-driven architectures.\n  - Stream processing pipelines.",
     "source": "web_search",
-    "updated_at": 1780817283.3088477
+    "updated_at": 1780824500.8542185
   },
   "search:spring-cloud-gateway-kafka-streams:kafka streams with spring clou_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start services.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Kafka Streams: 3.1.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Input topic name.\n  - `spring.cloud.stream.bindings.output.destination`: Output topic name.\n  - `spring.kafka.bootstrap-servers`: Kafka broker address.\n  - `spring.cloud.stream.schema.registry.url`: Schema registry URL.",
     "source": "code_example",
-    "updated_at": 1780817284.7698236
+    "updated_at": 1780824502.0675917
   }
 }
