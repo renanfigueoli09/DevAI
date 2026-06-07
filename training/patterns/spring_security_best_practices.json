@@ -2,16 +2,16 @@
   "search:spring+security-best-practices:spring security best practices": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application\n  - `mvn clean install` for building the project\n- **Key Config Options**:\n  - `application.properties`: Configure security settings like CSRF protection, session management.\n  - `@EnableWebSecurity`: Enables Spring Security configuration.\n  - `HttpSecurity`: Customizes HTTP security settings.\n  - `JwtAuthenticationFilter`: Custom filter for JWT authentication.\n  - `UserDetailsService`: Interface to load user-specific data.",
     "source": "web_search",
-    "updated_at": 1780809840.4562986
+    "updated_at": 1780816318.1921515
   },
   "search:spring+security-best-practices:advanced spring security confi": {
     "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6.0\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `mvn clean install` for building the project.\n- **Key Config Options**:\n  - `application.properties`: Configure server port and security settings.\n  - `SecurityConfig.java`: Customize authentication and authorization rules.\n  - JWT (JSON Web Token) for stateless authentication.\n  - OAuth2 for secure REST APIs.\n  - Custom Authentication Provider for integrating with existing systems.",
     "source": "web_search",
-    "updated_at": 1780809841.8796053
+    "updated_at": 1780816319.780721
   },
   "search:spring+security-best-practices:advanced spring security confi_ex": {
     "content": "- **GitHub Repository:** [spring-projects/spring-security-samples](https://github.com/spring-projects/spring-security-samples)\n- **Latest Version of Spring Security:** Not explicitly mentioned, but as of my last update in October 2023, the latest stable version is 6.1.x.\n- **Key Configuration Options:**\n  - `httpSecurity.authorizeRequests()`: Configures URL-based access control.\n  - `httpSecurity.csrf().disable()`: Disables CSRF protection (use with caution).\n  - `httpSecurity.headers().frameOptions().sameOrigin()`: Configures X-Frame-Options header.\n  - `httpSecurity.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)`: Manages session creation policy.\n  - `httpSecurity.exceptionHandling().accessDeniedPage(\"/403\")`: Customizes access denied page.\n  \n- **CLI Commands:**\n  - To clone the Spring Security samples repository:\n    ```bash\n    git clone https://github.com/spring-projects/spring-security-samples.git\n    ```\n  - To build a Spring Boot project using Maven:\n    ```bash\n    mvn clean install\n    ```\n\nThese points should help developers get started with advanced Spring Security configurations in their projects.",
     "source": "code_example",
-    "updated_at": 1780809843.3112755
+    "updated_at": 1780816321.06723
   }
 }
