@@ -2,26 +2,26 @@
   "search:Performance Optimization in Next.js with Prisma:nextjs performance optimizatio": {
     "content": "- Use `next build` to optimize your application.\n- Implement lazy loading with `next/image`.\n- Utilize the `Image` component for image optimization.\n- Enable static generation with `getStaticProps` and `getStaticPaths`.\n- Leverage server-side rendering (SSR) with `getServerSideProps`.\n- Minimize HTTP requests by combining CSS and JavaScript files.\n- Use `next.config.js` to configure advanced settings like asset paths and caching.\n- Monitor performance using Next.js DevTools or third-party tools.\n- Regularly update Next.js to the latest version for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780838399.7944586
+    "updated_at": 1780840452.1877592
   },
   "search:Performance Optimization in Next.js with Prisma:nextjs performance optimizatio_ex": {
     "content": "- **Next.js Performance Optimization**\n  - Use `next.config.js` to configure optimization settings.\n  - Enable static site generation (`getStaticProps`) for pages that don't require server-side rendering.\n  - Utilize `Image` component from Next.js for image optimization.\n  - Implement code splitting with dynamic imports (`import()`).\n  - Minimize HTTP requests by combining CSS and JavaScript files.\n  - Use SWR or React Query for data fetching to improve performance.\n  - Enable automatic static asset optimization in production mode.\n  - Utilize `next/image` for responsive images.\n  - Configure `next.config.js` with `reactStrictMode: true` for better error handling.",
     "source": "code_example",
-    "updated_at": 1780838415.5262616
+    "updated_at": 1780840454.1115007
   },
   "search:Performance Optimization in Next.js with Prisma:prisma performance": {
     "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma v5 is noted for significant performance improvements over v4.\n\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable query logging in Prisma Client.\n  - `maxQueryExecutionTime`: Set the maximum execution time for queries.",
     "source": "web_search",
-    "updated_at": 1780838422.8104868
+    "updated_at": 1780840455.9551485
   },
   "search:Performance Optimization in Next.js with Prisma:prisma performance_ex": {
     "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Creates a new migration and applies it to the database.\n\n- **Latest Versions**:\n  - Prisma: [Check latest version on npm](https://www.npmjs.com/package/prisma)\n  - Prisma Client JS: [Check latest version on npm](https://www.npmjs.com/package/@prisma/client)\n\n- **Key Config Options**:\n  - `batchSize`: Controls the number of records processed in a batch.\n    ```json\n    {\n      \"generator\": {\n        \"provider\": \"prisma-client-js\",\n        \"output\": \"./node_modules/@prisma/client\"\n      },\n      \"datasource\": {\n        \"default\": {\n          \"provider\": \"postgresql\",\n          \"url\": \"env(DATABASE_URL)\",\n          \"connectionLimit\": 10\n        }\n      }\n    }\n    ```\n  - `connectionLimit`: Limits the number of concurrent connections to the database.\n  - `queryLogging`: Enables or disables query logging for debugging.",
     "source": "code_example",
-    "updated_at": 1780838440.1130862
+    "updated_at": 1780840457.7073765
   },
   "search:Performance Optimization in Next.js with Prisma:typescript nextjs prisma": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install prisma @prisma/client`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Prisma: 4.x\n\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations.\n  - `.env.local`: For environment variables.\n  - `prisma/schema.prisma`: Defines your data model and relations.",
     "source": "web_search",
-    "updated_at": 1780838448.4328575
+    "updated_at": 1780840461.931544
   }
 }

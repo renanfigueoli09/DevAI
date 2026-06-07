@@ -2,31 +2,31 @@
   "search:DevOps Practices for React-Query + TypeScript:react-query devops": {
     "content": "- **CLI Commands**:\n  - `npm install react-query`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - React Query: v3.x\n\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global options.\n  - `useQuery`: Hook to fetch data and manage state.\n  - `useMutation`: Hook to handle side effects like form submissions or data mutations.",
     "source": "web_search",
-    "updated_at": 1780837796.8513823
+    "updated_at": 1780840111.3233385
   },
   "search:DevOps Practices for React-Query + TypeScript:react-query devops_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.23.0\n  - TanStack Query: v4.23.0\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global state management.\n  - `useQuery`: Hook to fetch data and manage its lifecycle.\n  - `refetchInterval`: Automatically refetch data at a specified interval.\n  - `staleTime`: Time in milliseconds after which data is considered stale.",
     "source": "code_example",
-    "updated_at": 1780837802.0840833
+    "updated_at": 1780840113.0753956
   },
   "search:DevOps Practices for React-Query + TypeScript:typescript ci/cd": {
     "content": "- **Install Node.js**: Ensure Node.js is installed as TypeScript requires it.\n- **CLI Commands**:\n  - `npm install -g typescript` to install the latest version of TypeScript globally.\n  - `tsc --init` to create a `tsconfig.json` file in your project directory.\n  - `tsc` to compile TypeScript files.\n- **Latest Version**: Check [TypeScript GitHub page](https://github.com/microsoft/TypeScript) for the latest release.\n- **Key Config Options**:\n  - `compilerOptions.target`: Specifies the target JavaScript version (e.g., \"ES5\", \"ES6\").\n  - `compilerOptions.module`: Specifies module code generation (e.g., \"commonjs\", \"es2015\").\n  - `include` and `exclude`: Define which files to include or exclude from compilation.\n- **CI/CD Integration**:\n  - Use a CI/CD tool like GitHub Actions, Jenkins, or GitLab CI.\n  - Add a step in your pipeline to install Node.js and TypeScript.\n  - Run the `tsc` command to compile your TypeScript code.\n  - Optionally, add tests using Jest or Mocha if you have them.",
     "source": "web_search",
-    "updated_at": 1780837811.114662
+    "updated_at": 1780840114.6512506
   },
   "search:DevOps Practices for React-Query + TypeScript:typescript ci/cd_ex": {
     "content": "- **CLI Commands**: Use `npm install -g typescript` to install the latest version of TypeScript globally.\n- **Key Config Options**: Configure `tsconfig.json` with `\"compilerOptions\": { \"target\": \"ES6\", \"module\": \"commonjs\", \"strict\": true }`.\n- **Latest Version**: Check for updates using `npm outdated typescript` and update with `npm install -g typescript@latest`.",
     "source": "code_example",
-    "updated_at": 1780837828.2183945
+    "updated_at": 1780840116.339066
   },
   "search:DevOps Practices for React-Query + TypeScript:docker react-query": {
     "content": "- **CLI Commands**:\n  - `docker run`: Runs a container from an image.\n  - `docker build`: Builds an image from a Dockerfile.\n  - `docker pull`: Pulls an image from a repository.\n  - `docker push`: Pushes an image to a repository.\n\n- **Latest Versions**:\n  - Docker Engine: [Check latest version on Docker's official website](https://docs.docker.com/engine/release-notes/)\n  - Docker Desktop: [Download latest version for Windows, Mac, or Linux](https://www.docker.com/products/docker-desktop)\n\n- **Key Config Options**:\n  - `docker run --name mycontainer`: Names the container.\n  - `docker run -p 8080:80`: Maps port 8080 on host to port 80 in the container.\n  - `docker run -v /host/path:/container/path`: Mounts a volume from the host to the container.\n  - `docker run --rm`: Automatically removes the container when it exits.",
     "source": "web_search",
-    "updated_at": 1780837844.397297
+    "updated_at": 1780840118.2488446
   },
   "search:DevOps Practices for React-Query + TypeScript:docker react-query_ex": {
     "content": "- **CLI Commands**:\n  - `docker run --name my-react-app -p 3000:3000 -v $(pwd):/app -w /app node:latest npm install`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Node.js: v18.14.2\n  - Docker: 20.10.7\n  - React Query: 3.39.2\n\n- **Key Config Options**:\n  - Environment Variables: `REACT_APP_API_URL`\n  - Docker Compose File (`docker-compose.yml`):\n    ```yaml\n    version: '3'\n    services:\n      app:\n        image: node:latest\n        command: npm start\n        volumes:\n          - .:/app\n        ports:\n          - \"3000:3000\"\n        working_dir: /app\n    ```\n  - React Query Configuration in JavaScript:\n    ```javascript\n    import { QueryClient, QueryClientProvider } from 'react-query';\n\n    const queryClient = new QueryClient();\n\n    function App() {\n      return (\n        <QueryClientProvider client={queryClient}>\n          {/* Your app components */}\n        </QueryClientProvider>\n      );\n    }\n    ```",
     "source": "code_example",
-    "updated_at": 1780837873.092426
+    "updated_at": 1780840120.1991425
   }
 }

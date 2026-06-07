@@ -2,21 +2,21 @@
   "search:kubernetes-statefulsets-advanced:kubernetes statefulsets advanc": {
     "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n  - `kubectl rollout history statefulset <statefulset-name>`\n  - `kubectl rollout undo statefulset <statefulset-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.template`: Pod template specification.\n  - `.spec.serviceName`: Name of the service to use for headless DNS records.\n  - `.spec.volumeClaimTemplates`: Templates for PersistentVolumeClaims.\n  - `.spec.updateStrategy.type`: Update strategy type (e.g., RollingUpdate, OnDelete).\n  - `.spec.updateStrategy.rollingUpdate.partition`: Partition for rolling update.",
     "source": "web_search",
-    "updated_at": 1780831292.7493703
+    "updated_at": 1780840541.441901
   },
   "search:kubernetes-statefulsets-advanced:kubernetes statefulsets advanc_ex": {
     "content": "- Use `kubectl apply -f <filename>.yaml` to create or update StatefulSet.\n- Ensure each pod has a unique identity using headless services with `spec.clusterIP: None`.\n- Configure persistent storage with PersistentVolumeClaims and volumeClaimTemplates.\n- Set ordered deployment and scaling with `spec.updateStrategy.type: RollingUpdate`.\n- Use `kubectl rollout status statefulset/<statefulset-name>` to monitor the update process.\n- For DNS caching, edit CoreDNS config map to decrease cache time.\n- Ensure stable network identifiers by using StatefulSet's ordered pod creation.",
     "source": "code_example",
-    "updated_at": 1780831294.090708
+    "updated_at": 1780840543.6667402
   },
   "search:kubernetes-statefulsets-advanced:statefulsets performance optim": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update resources.\n  - `kubectl delete -f <filename>.yaml` to remove resources.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x (as of my last update).\n  - StatefulSets: Supported in all versions of Kubernetes that support Deployments.\n\n- **Key Config Options**:\n  - `spec.replicas`: Number of replicas.\n  - `spec.template`: Pod template specification.\n  - `spec.serviceName`: Name of the service for the StatefulSet.\n  - `spec.volumeClaimTemplates`: Persistent volume claims for stateful storage.",
     "source": "web_search",
-    "updated_at": 1780831295.5686529
+    "updated_at": 1780840545.4984663
   },
   "search:kubernetes-statefulsets-advanced:statefulsets performance optim_ex": {
     "content": "- Use `kubectl apply -f example-statefulset.yaml` to create or update a StatefulSet.\n- Ensure your Kubernetes version is up-to-date for optimal performance and features.\n- Key config options include `replicas`, `volumeClaimTemplates`, and `service`.\n- For multi-region applications, consider using GKE's regional clusters with StatefulSets for consistent service hostnames.\n- Monitor StatefulSet performance using `kubectl get statefulsets` and `kubectl describe statefulset <statefulset-name>`.",
     "source": "code_example",
-    "updated_at": 1780831297.1088884
+    "updated_at": 1780840547.507634
   }
 }

@@ -2,21 +2,21 @@
   "search:kubernetes-statefulsets:kubernetes statefulsets best p": {
     "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>` to create a StatefulSet.\n  - `kubectl apply -f <filename>.yaml` to update or create a StatefulSet from a YAML file.\n  - `kubectl delete statefulset <name>` to delete a StatefulSet.\n\n- **Latest Versions**:\n  - Kubernetes v1.25 introduces new features and improvements for StatefulSets, including enhanced support for KRaft mode.\n\n- **Key Config Options**:\n  - `.spec.replicas`: Defines the number of replicas.\n  - `.spec.template`: Specifies the pod template.\n  - `.spec.serviceName`: Links to a headless service for stable DNS records.\n  - `.spec.volumeClaimTemplates`: Automates volume provisioning for each pod.",
     "source": "web_search",
-    "updated_at": 1780831235.33087
+    "updated_at": 1780840444.814219
   },
   "search:kubernetes-statefulsets:kubernetes statefulsets best p_ex": {
     "content": "- Use `kubectl apply -f <filename>.yaml` to create or update StatefulSets.\n- Ensure PersistentVolumeClaims are correctly configured in the volumeClaimTemplates section of your StatefulSet YAML.\n- For DNS caching, edit the CoreDNS config map to decrease cache duration (e.g., set `cache.max_size: 1000`).\n- Utilize KRaft for stateless applications or etcd for distributed key-value storage.\n- Implement operator patterns for custom resource management and automation.\n- Employ CSI drivers for persistent storage integration with cloud-native environments.\n- Apply security best practices, such as using network policies and RBAC.\n- Regularly perform backup strategies to ensure data safety.\n- Deploy StatefulSets in a cloud-native environment for optimal performance.",
     "source": "code_example",
-    "updated_at": 1780831237.309435
+    "updated_at": 1780840446.617098
   },
   "search:kubernetes-statefulsets:kubernetes statefulsets deploy": {
     "content": "- **CLI Commands**: Use `kubectl apply -f <filename.yaml>` to deploy StatefulSets.\n- **Latest Versions**: Ensure using Kubernetes v1.23 or later for optimal features and security.\n- **Key Config Options**:\n  - `spec.serviceName`: Define the service name for the StatefulSet.\n  - `spec.replicas`: Set the number of replicas.\n  - `spec.template.spec.containers.volumeMounts`: Mount volumes to containers.\n  - `spec.volumeClaimTemplates`: Define PersistentVolumeClaims for persistent storage.",
     "source": "web_search",
-    "updated_at": 1780831239.349645
+    "updated_at": 1780840448.3203385
   },
   "search:kubernetes-statefulsets:kubernetes statefulsets deploy_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update a StatefulSet.\n  - `kubectl get statefulsets` to list all StatefulSets in the current namespace.\n  - `kubectl describe statefulset <statefulset-name>` for detailed information about a specific StatefulSet.\n\n- **Latest Versions**:\n  - Kubernetes v1.24.x is recommended for using StatefulSets effectively, as it includes improvements and bug fixes.\n\n- **Key Config Options**:\n  - `spec.replicas`: Defines the number of replicas.\n  - `spec.template`: Specifies the pod template to use.\n  - `spec.serviceName`: Links the StatefulSet with a headless service for stable network identifiers.\n  - `volumeClaimTemplates`: Defines persistent storage claims for each pod.",
     "source": "code_example",
-    "updated_at": 1780831240.8439841
+    "updated_at": 1780840450.1954455
   }
 }

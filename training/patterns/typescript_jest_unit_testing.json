@@ -2,21 +2,21 @@
   "search:typescript+jest-unit-testing:typescript jest unit testing a": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest ts-jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.8\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"moduleFileExtensions\": [\"ts\", \"tsx\", \"js\"]`",
     "source": "web_search",
-    "updated_at": 1780831269.251694
+    "updated_at": 1780840503.002541
   },
   "search:typescript+jest-unit-testing:typescript jest unit testing a_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"collectCoverageFrom\": [\"src/**/*.{ts,tsx}\"]`",
     "source": "code_example",
-    "updated_at": 1780831271.1623728
+    "updated_at": 1780840504.7254398
   },
   "search:typescript+jest-unit-testing:typescript jest mocking techni": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @types/jest`\n  - `npx jest --init` to create a Jest configuration file\n\n- **Latest Versions**:\n  - Jest: 29.x (as of my last update)\n  - TypeScript: 5.0.x (latest stable version)\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"` for browser-like testing\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}` to transpile TypeScript files\n  - `\"setupFilesAfterEnv\": [\"./jest.setup.ts\"]` for global setup\n\n- **Mocking Techniques**:\n  - Use `jest.fn()` for creating mock functions\n  - Mock modules with `jest.mock('module-path')`\n  - Spy on methods with `.spyOn(object, method)`\n\n- **Best Practices**:\n  - Keep mocks isolated and focused on one aspect of the code\n  - Use `mockImplementation` to define custom behavior for mocks\n  - Utilize `mockReturnValueOnce` for returning different values in sequence",
     "source": "web_search",
-    "updated_at": 1780831272.9196506
+    "updated_at": 1780840506.5894253
   },
   "search:typescript+jest-unit-testing:typescript jest mocking techni_ex": {
     "content": "- Import Jest APIs explicitly in TypeScript tests.\n- Use `import {expect, jest, test} from '@jest/globals';`\n- For mocking objects, refer to Ganesh's Medium post for detailed examples.\n- Mock external services or components using Jest for controlled testing environments.\n- Apply TDD workflow with Jest through Red-Green-Refactor method.",
     "source": "code_example",
-    "updated_at": 1780831274.5412433
+    "updated_at": 1780840508.235113
   }
 }
