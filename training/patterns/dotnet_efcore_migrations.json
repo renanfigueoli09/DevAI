@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enables lazy loading for navigation properties.\n  - `MigrationsAssembly`: Specifies the assembly containing migrations.\n  - `Scaffold-DbContext`: Generates a DbContext and entity classes from an existing database.",
     "source": "code_example",
     "updated_at": 1780823776.4735255
+  },
+  "search:dotnet-efcore-migrations:dotnet efcore migrations advan": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - .NET SDK: 6.0 or later\n\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server\n    ```csharp\n    optionsBuilder.UseSqlServer(\"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\");\n    ```\n  - `MigrationsAssembly`: Specifies the assembly where migrations are stored.\n    ```csharp\n    services.AddDbContext<MyDbContext>(options =>\n        options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"))\n               .UseLazyLoadingProxies()\n               .MigrationsAssembly(typeof(MyDbContext).Assembly.FullName));\n    ```\n\n- **Advanced Techniques**:\n  - Custom SQL: Use `Add-Migration` with `-Script` flag to generate a script.\n  - Data Migrations: Apply data changes using seed methods in migration classes.\n  - Multi-Project Setup: Manage migrations across multiple projects using shared migration assemblies.",
+    "source": "web_search",
+    "updated_at": 1780827124.8251672
+  },
+  "search:dotnet-efcore-migrations:dotnet efcore migrations advan_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create a new migration.\n- **Latest Versions**: EF Core 9 introduced automatic database-wide locks during migration application.\n- **Key Config Options**:\n  - `MigrateAsync` and `Migrate` methods now automatically acquire a lock.\n  - For runtime migrations, use `Database.Migrate()` or `Database.Update()`.\n  - Reverse engineering with EF Core Power Tools CLI is available for cross-platform development.",
+    "source": "code_example",
+    "updated_at": 1780827131.0702221
+  },
+  "search:dotnet-efcore-migrations:dotnet efcore migrations best ": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create new migrations.\n- Apply migrations using `dotnet ef database update`.\n- Review and modify generated migration files before applying them.\n- Consider cleaning up old migrations to reduce compile time.\n- Ensure your project is up-to-date with the latest EF Core version for performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780827139.0108626
+  },
+  "search:dotnet-efcore-migrations:dotnet efcore migrations best _ex": {
+    "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enables lazy loading.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disables change tracking for read-only scenarios.\n  - `MigrationsAssembly`: Specifies the assembly containing migration classes.",
+    "source": "code_example",
+    "updated_at": 1780827144.2693517
   }
 }
