@@ -13,5 +13,10 @@
     "content": "- Use `rails new` to create a new Rails project.\n- Install `graphql-ruby` gem using `gem install graphql`.\n- Configure GraphQL in your Rails application by creating a `GraphQL::Schema` class.\n- Define types and queries using the `Types` module.\n- Utilize lazy execution with `Lazy` objects for efficient data fetching.\n- Implement authorization checks using middleware or custom directives.\n- Use `rails-template(mattbrictson)` for best practices in TDD, security, deployment, and productivity.\n- Regularly update gems to their latest versions using `bundle update`.\n- Monitor application performance and security with tools like `rubocop` and `brakeman`.",
     "source": "web_search",
     "updated_at": 1780834319.6241999
+  },
+  "search:rails-on-rails-graphql:graphql with ruby on rails bes_ex": {
+    "content": "- **CLI Commands**:\n  - `rails new my_graphql_app --api`: Creates a new Rails API application.\n  - `bundle add graphql-rails`: Adds GraphQL to your Gemfile.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - GraphQL-Ruby: 2.13.x\n\n- **Key Config Options**:\n  - In `config/initializers/graphql.rb`, configure the schema and query types.\n  - Use `config.graphql.endpoint = '/graphql'` to set the GraphQL endpoint.\n  - Enable batching with `config.graphql.batching = true`.",
+    "source": "code_example",
+    "updated_at": 1780834338.0734842
   }
 }
