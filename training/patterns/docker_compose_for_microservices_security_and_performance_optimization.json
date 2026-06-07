@@ -2,26 +2,26 @@
   "search:Docker Compose for Microservices Security and Performance Optimization:docker compose security": {
     "content": "- Use `docker-compose --version` to check the latest version.\n- Manage secrets securely using environment variables or Docker Secrets.\n- Apply network security by setting up custom networks and firewall rules.\n- Harden containers with non-root users, minimal privileges, and secure configurations.\n- Enable resource limits in `docker-compose.yml` for CPU and memory.\n- Disable privileged mode unless absolutely necessary.\n- Regularly scan images for vulnerabilities using tools like `docker scan`.\n- Implement health checks to ensure services are running correctly.",
     "source": "web_search",
-    "updated_at": 1780791471.3569598
+    "updated_at": 1780795900.7254856
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti": {
     "content": "- Use `kubectl top pod` to monitor resource usage of microservices.\n- Implement circuit breakers using libraries like Hystrix or Resilience4j for fault tolerance.\n- Optimize database queries with indexes and query optimization techniques.\n- Enable caching mechanisms like Redis or Memcached to reduce latency.\n- Utilize load balancers like NGINX or HAProxy for distributing traffic evenly.\n- Monitor service dependencies using tools like Prometheus and Grafana.\n- Implement microservices architecture patterns such as API Gateway, Circuit Breaker, and Service Discovery.\n- Regularly update microservice dependencies to the latest versions for security and performance improvements.\n- Use `docker stats` to monitor resource usage of Docker containers hosting microservices.",
     "source": "web_search",
-    "updated_at": 1780791472.8208284
+    "updated_at": 1780795902.047795
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:microservices performance opti_ex": {
     "content": "- Use NCache for distributed caching in Java microservices.\n- Implement load balancing strategies like round-robin, least connections, or IP hash.\n- Monitor and optimize resource usage with tools like Prometheus and Grafana.\n- Update .NET Core to the latest version for better performance.\n- Configure connection strings efficiently in microservices.\n- Use asynchronous programming patterns to improve throughput.\n- Enable gRPC for efficient communication between services.\n- Implement circuit breakers using libraries like Hystrix or Resilience4j.\n- Optimize database queries and use indexing where necessary.\n- Regularly update dependencies and security patches.",
     "source": "code_example",
-    "updated_at": 1780791474.3767927
+    "updated_at": 1780795903.540959
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:container orchestration strate": {
     "content": "- Use `kubectl` for Kubernetes operations.\n- Ensure `kubectl` is up-to-date using `curl -LO \"https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl\"`.\n- Key config options include `replicas`, `imagePullPolicy`, and `resources` in deployment YAML files.\n- For dynamic resource allocation, use Kubernetes Horizontal Pod Autoscaler (HPA) with `kubectl autoscale deployment <deployment-name> --cpu-percent=50 --min=1 --max=10`.\n- Explore advanced strategies like using Helm for package management and Istio for service mesh integration.",
     "source": "web_search",
-    "updated_at": 1780791475.7025473
+    "updated_at": 1780795904.9612577
   },
   "search:Docker Compose for Microservices Security and Performance Optimization:container orchestration strate_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy or update resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl describe pod <pod-name>` for detailed information about a pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.26\n  - Helm: v3.9\n\n- **Key Config Options**:\n  - `replicas`: Number of desired replicas in a deployment.\n  - `resources`: CPU and memory limits and requests.\n  - `nodeSelector`: Node selection criteria for pod scheduling.\n  - `service.type`: Type of service (e.g., ClusterIP, NodePort, LoadBalancer).",
     "source": "code_example",
-    "updated_at": 1780791477.428657
+    "updated_at": 1780795906.3179502
   }
 }

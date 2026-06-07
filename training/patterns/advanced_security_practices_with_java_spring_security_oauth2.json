@@ -2,51 +2,51 @@
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:oauth2 security best practices": {
     "content": "- Use `npm install express-session` for session management.\n- Implement CSRF protection using `express-csurf`.\n- Configure OAuth2 clients in your application's environment variables.\n- Ensure HTTPS is used by setting `app.use(require('https-only'))`.\n- Use `helmet` to secure HTTP headers.\n- Set up rate limiting with `express-rate-limit`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Implement JWT for stateless authentication.\n- Use environment-specific configurations in `.env` files.\n- Conduct security audits with tools like `snyk`.",
     "source": "web_search",
-    "updated_at": 1780791322.7813232
+    "updated_at": 1780795697.0531595
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring": {
     "content": "- **CLI Commands**:\n  - `mvnw spring-boot:run`: Runs the Spring Boot application.\n  \n- **Latest Versions**:\n  - Spring Boot 3.0\n  - Spring Security 6\n  \n- **Key Config Options**:\n  - JWT Secret Key for signing tokens\n  - Token Expiration Time\n  - Role-Based Access Control (RBAC) configuration",
     "source": "web_search",
-    "updated_at": 1780791323.8565898
+    "updated_at": 1780795698.2607648
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application-name.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for JWT configuration.\n  - `jwt.secret`: Secret key used to sign and verify tokens.\n  - `jwt.expiration`: Token expiration time in milliseconds.\n  - `security.oauth2.resourceserver.jwt.jwk-set-uri`: URI for the JWKS (JSON Web Key Set) endpoint if using a public key.",
     "source": "code_example",
-    "updated_at": 1780791326.589872
+    "updated_at": 1780795699.453122
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:securing apis with oauth2 and ": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6, OAuth2\n- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `./mvnw clean install`\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for security settings\n  - JWT (JSON Web Tokens) for stateless authentication\n  - OAuth2 client registration for third-party providers like LinkedIn",
     "source": "web_search",
-    "updated_at": 1780791327.6171308
+    "updated_at": 1780795700.851071
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:securing apis with oauth2 and _ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up` to start MySQL database.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 5.x\n  - OAuth2: 2.0\n\n- **Key Config Options**:\n  - `application.yml`: Configure database connection, security settings, and OAuth2 client details.\n  - `@EnableWebSecurity` and `@EnableAuthorizationServer`: Enable Spring Security and OAuth2 authorization server.\n  - `@EnableResourceServer`: Enable resource server for securing REST APIs.",
     "source": "code_example",
-    "updated_at": 1780791328.657748
+    "updated_at": 1780795702.1100352
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:compliance and auditing in a s": {
     "content": "- **FedRAMP Compliance Software:** Consider using Vanta, Drata, Secureframe, Paramify, or Telos for FedRAMP compliance.\n- **IT Compliance and Auditing in Atlanta:** Use solutions that meet regulatory requirements while ensuring seamless IT system operation.\n- **Windows Server Secure Auditing:** Implement a secure auditing framework by following best practices to enhance security posture and ensure compliance.\n- **Intrusion Prevention Systems (IPS):** Utilize IPS for eliminating blind spots across infrastructure.\n- **Cloud DLP:** Employ cloud DLP solutions for data flow monitoring and regulatory obligations adherence.",
     "source": "web_search",
-    "updated_at": 1780791329.6307595
+    "updated_at": 1780795703.348114
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:compliance and auditing in a s_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/vectorc0de/compliance-automation-examples.git`\n  - `python3 compliance-checker.py --standard CIS`\n\n- **Latest Versions**:\n  - Compliance Checker: v2.5.1\n\n- **Key Config Options**:\n  - `--standard`: Specifies the security standard to check against (e.g., CIS, NIST).\n  - `--output`: Defines the format of the output report (e.g., JSON, HTML).",
     "source": "code_example",
-    "updated_at": 1780791330.629274
+    "updated_at": 1780795704.6290727
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:oauth2 security best practices_ex": {
     "content": "- **CLI Commands with Exact Flags**:\n  - `openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048`\n  - `openssl req -new -x509 -key private_key.pem -out public_cert.pem -days 365`\n\n- **Latest Versions**:\n  - OAuth 2.0: RFC 9700\n  - OpenID Connect: 1.0\n\n- **Key Config Options**:\n  - `client_id`: Unique identifier for the client application.\n  - `client_secret`: Secret key used to authenticate requests from the client to the authorization server.\n  - `redirect_uri`: URL where the authorization server will redirect the user-agent after obtaining an authorization grant.\n  - `scope`: Specifies the set of permissions that the client is requesting.\n  - `response_type`: Indicates the mechanism to be used for returning authorization credentials from the authorization server to the client.",
     "source": "code_example",
-    "updated_at": 1780791331.739087
+    "updated_at": 1780795705.8330297
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:role-based access control (rba": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Security: 6.x\n  - Spring Boot: 3.x\n\n- **Key Config Options**:\n  - Define roles in `application.yml` or `application.properties`.\n  - Use `@PreAuthorize`, `@PostAuthorize`, and `@Secured` annotations for method-level authorization.\n  - Configure security rules in `SecurityConfig.java`.",
     "source": "web_search",
-    "updated_at": 1780791332.8475702
+    "updated_at": 1780795707.1542814
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:role-based access control (rba_ex": {
     "content": "- **CLI Commands**: None directly related to RBAC setup.\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n- **Key Config Options**:\n  - `@EnableWebSecurity`\n  - `HttpSecurity` configuration for defining access rules\n  - `UserDetailsService` implementation for managing user roles and permissions\n  - JWT (JSON Web Tokens) for stateless authentication",
     "source": "code_example",
-    "updated_at": 1780791333.792309
+    "updated_at": 1780795708.502761
   }
 }

@@ -2,6 +2,6 @@
   "search:spring+core:spring boot @valid @controller": {
     "content": "- **Spring Boot Version**: 3.1.4\n- **@Valid**: Use `@Valid` to validate request parameters.\n- **@ControllerAdvice**: Implement a global exception handler with `@ControllerAdvice`.\n- **Actuator**: Enable Actuator endpoints for monitoring and management with `management.endpoints.web.exposure.include=*`.\n- **@Async**: Mark methods as asynchronous with `@Async`, enabling them to run in separate threads.\n- **@Scheduled**: Schedule tasks using `@Scheduled` annotations, e.g., `@Scheduled(fixedRate = 5000)` for a task that runs every 5 seconds.",
     "source": "web_search",
-    "updated_at": 1780792485.8128092
+    "updated_at": 1780795805.4809818
   }
 }
