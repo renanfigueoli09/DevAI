@@ -1,0 +1,12 @@
+{
+  "search:kubernetes-statefulsets-performance-tuning:kubernetes statefulsets perfor": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale statefulsets <statefulset-name> --replicas=<number>`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulsets <statefulset-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas to maintain.\n  - `.spec.template.spec.containers`: Container specifications.\n  - `.spec.volumeClaimTemplates`: Persistent volume claims for stateful storage.\n\n- **Optimization Tips**:\n  - Use `volumeClaimTemplates` for persistent storage.\n  - Ensure proper resource allocation in `.spec.template.spec.resources`.\n  - Monitor and adjust `replicas` based on application load.",
+    "source": "web_search",
+    "updated_at": 1780820325.6033328
+  },
+  "search:kubernetes-statefulsets-performance-tuning:kubernetes statefulsets perfor_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.template`: Defines the Pod template.\n  - `.spec.replicas`: Specifies the number of replicas.\n  - `.spec.serviceName`: Links to a Headless Service for stable network identifiers.\n  - `.spec.updateStrategy`: Controls how updates are applied (RollingUpdate or OnDelete).\n  - `.spec.volumeClaimTemplates`: Defines PersistentVolumeClaims for stateful storage.",
+    "source": "code_example",
+    "updated_at": 1780820351.3711972
+  }
+}

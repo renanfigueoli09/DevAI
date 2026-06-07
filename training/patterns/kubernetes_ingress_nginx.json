@@ -13,5 +13,15 @@
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-config-file>`\n  - `kubectl edit deployment ingress-nginx-controller -n <namespace>`\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.0 (as of my last update)\n  - Kubernetes: v1.25.x\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `http2`: Enable HTTP/2 for improved performance.\n  - `connection_pool_size`: Adjust based on expected load.\n  - `proxy_buffering`: Enable or disable proxy buffering.\n  - `rate_limiting`: Configure rate limiting rules.\n\n- **Optimization Tips**:\n  - Use connection pooling to reduce latency.\n  - Tune buffer sizes for optimal data transfer.\n  - Increase worker processes to handle more connections.\n  - Implement HTTP/2 for faster data delivery.\n  - Apply rate limiting to prevent abuse and improve stability.",
     "source": "web_search",
     "updated_at": 1780816388.207672
+  },
+  "search:kubernetes-ingress-nginx:kubernetes ingress nginx perfo": {
+    "content": "- **Latest Version**: NGINX Ingress Controller for Kubernetes Release 1.4.0\n- **CLI Command to Deploy**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.4.0/deploy/static/provider/cloud/deploy.yaml\n  ```\n- **Key Config Options**:\n  - `controller.service.annotations` for custom annotations on the service.\n  - `controller.replicaCount` to set the number of replicas.\n  - `controller.nodeSelector` to specify node selection criteria.\n  - `controller.tolerations` for tolerating taints on nodes.",
+    "source": "web_search",
+    "updated_at": 1780819971.5362108
+  },
+  "search:kubernetes-ingress-nginx:kubernetes ingress nginx perfo_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingresses`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.1\n  - Kubernetes: v1.24.0\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `worker_connections`: Increase based on expected load.\n  - `proxy_buffer_size` and `proxy_buffers`: Adjust buffer sizes for better performance.\n  - `keepalive_timeout`: Increase for longer-lived connections.",
+    "source": "code_example",
+    "updated_at": 1780819995.0494957
   }
 }
