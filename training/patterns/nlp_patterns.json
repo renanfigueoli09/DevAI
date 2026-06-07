@@ -1,0 +1,22 @@
+{
+  "search:nlp+patterns:nestjs typescript entity extra": {
+    "content": "- **Latest Version of NestJS**: As of my last update, the latest stable version is 10.x.\n  \n- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n  - `nest generate service service-name`: Generates a new service.\n\n- **Key Config Options in `app.module.ts`**:\n  - `imports`: Array of modules to import.\n  - `controllers`: Array of controllers to register.\n  - `providers`: Array of providers (services) to register.\n\n- **Using TypeORM with NestJS**:\n  - Install TypeORM and its driver: `npm install @nestjs/typeorm typeorm pg` (for PostgreSQL).\n  - Configure TypeORM in `app.module.ts`:\n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { TypeOrmModule } from '@nestjs/typeorm';\n\n    @Module({\n      imports: [\n        TypeOrmModule.forRoot({\n          type: 'postgres',\n          host: 'localhost',\n          port: 5432,\n          username: 'user',\n          password: 'password',\n          database: 'database_name',\n          entities: [__dirname + '/**/*.entity{.ts,.js}'],\n          synchronize: true,\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n\n- **Entity Generation with `NestJS-Entity-Generator`**:\n  - Install the generator: `npm install -g nestjs-entity-generator`.\n  - Generate entities based on a description or schema.\n\n- **Transforming Entities to DTOs**:\n  - Use `class-transformer` and `class-validator` for mapping and validation.\n  - Example of a DTO class:\n    ```typescript\n    import { IsString, IsInt } from 'class-validator';\n\n    export class CreateUserDto {\n      @IsString()\n      name: string;\n\n      @IsInt()\n      age: number;\n    }\n    ```\n\n- **Handling Nested Data in DTOs**:\n  - Use `@Type` decorator to specify nested types.\n  - Example:\n    ```typescript\n    import { Type } from 'class-transformer';\n    import { CreateUserDto } from './create-user.dto';\n\n    export class CreateOrderDto {\n      @Type(() => CreateUserDto)\n      user: CreateUserDto;\n    }\n    ```\n\n- **Security Practices**:\n  - Use DTOs to validate and sanitize input data.\n  - Implement guards for authentication and authorization.",
+    "source": "web_search",
+    "updated_at": 1780793167.6829126
+  },
+  "search:nlp+patterns:nestjs typescript entity extra_ex": {
+    "content": "- **GitHub Repository**: [yateendra/NestJS-Entity-Generator](https://github.com/yateendra/NestJS-Entity-Generator)\n  - **Latest Version**: Not specified in the description.\n  - **Key Features**:\n    - Generates TypeScript entities with NestJS decorators.\n    - Supports relationships and best practices.\n    - Ideal for rapid API development.\n\n- **NestJS Documentation**:\n  - **Latest Version**: As of June 2024, the latest version is not specified in the description.\n  - **Key Features**:\n    - Progressive JavaScript framework.\n    - Built with TypeScript (supports pure JavaScript).\n    - Combines elements of OOP, FP, and FRP.\n\n- **TypeORM Entities with Relationships**:\n  - **Latest Version**: As of June 2024, the latest version is not specified in the description.\n  - **Key Features**:\n    - Defines entities and their relationships.\n    - Uses an e-commerce application example for illustration.",
+    "source": "code_example",
+    "updated_at": 1780793176.9018722
+  },
+  "search:nlp+patterns:common mistakes llm code gener": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate controller controller-name`\n  - `nest generate service service-name`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeScript: v4.x\n\n- **Key Config Options**:\n  - `app.module.ts`: Define application modules.\n  - `main.ts`: Entry point for the application.\n  - `.env`: Environment variables configuration.",
+    "source": "web_search",
+    "updated_at": 1780793182.9001744
+  },
+  "search:nlp+patterns:common mistakes llm code gener_ex": {
+    "content": "- **CLI Commands**: Use `npm install -g @nestjs/cli` to install the latest version of NestJS CLI.\n- **Key Config Options**:\n  - `app.module.ts`: Define your application's root module.\n  - `main.ts`: Entry point for NestJS applications.\n  - `.env`: Environment variables for configuration.",
+    "source": "code_example",
+    "updated_at": 1780793186.3734574
+  }
+}
