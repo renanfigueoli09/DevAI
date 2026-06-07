@@ -8,31 +8,31 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780818535.6692138,
+    "ts": 1780818980.113725,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780818536.2825792,
+    "ts": 1780818980.7401786,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780818536.8682897,
+    "ts": 1780818981.427986,
     "size": 867
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "topic": "nestjs_mongodb",
     "source": "code_example",
-    "ts": 1780818537.5233386,
+    "ts": 1780818982.1112404,
     "size": 830
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780818538.0954268,
+    "ts": 1780818982.807415,
     "size": 349
   },
   "qa:livros-to-Book": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780818538.8789454,
+    "ts": 1780818983.696186,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780818527.999458,
+    "ts": 1780818972.521704,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780818529.1755517,
+    "ts": 1780818973.7334528,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780818527.4025943,
+    "ts": 1780818971.919825,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780818528.5767448,
+    "ts": 1780818973.1431687,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780818529.8364606,
+    "ts": 1780818974.3668785,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780818530.4743993,
+    "ts": 1780818974.978823,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780818531.1327493,
+    "ts": 1780818975.5856352,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780818531.8448038,
+    "ts": 1780818976.2428727,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780818532.4602811,
+    "ts": 1780818976.8711014,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780818533.7450585,
+    "ts": 1780818978.166666,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780818534.3678184,
+    "ts": 1780818978.7778463,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780818534.9826949,
+    "ts": 1780818979.4476497,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -11674,5 +11674,125 @@
     "source": "code_example",
     "ts": 1780818572.233279,
     "size": 1728
+  },
+  "search:kubernetes+logging-and-monitoring:kubernetes alerting and notifi": {
+    "topic": "kubernetes_logging_and_monitoring",
+    "source": "web_search",
+    "ts": 1780818591.5540602,
+    "size": 985
+  },
+  "search:kubernetes+logging-and-monitoring:kubernetes alerting and notifi_ex": {
+    "topic": "kubernetes_logging_and_monitoring",
+    "source": "code_example",
+    "ts": 1780818596.6452997,
+    "size": 386
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio advanced concu": {
+    "topic": "fastapi_asyncio_advanced",
+    "source": "web_search",
+    "ts": 1780818604.3101327,
+    "size": 817
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio advanced concu_ex": {
+    "topic": "fastapi_asyncio_advanced",
+    "source": "code_example",
+    "ts": 1780818630.4425876,
+    "size": 677
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio performance op": {
+    "topic": "fastapi_asyncio_advanced",
+    "source": "web_search",
+    "ts": 1780818637.0925612,
+    "size": 632
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio error handling": {
+    "topic": "fastapi_asyncio_advanced",
+    "source": "web_search",
+    "ts": 1780818682.1426532,
+    "size": 646
+  },
+  "search:fastapi+asyncio-advanced:fastapi asyncio error handling_ex": {
+    "topic": "fastapi_asyncio_advanced",
+    "source": "code_example",
+    "ts": 1780818698.737495,
+    "size": 591
+  },
+  "search:Security Patterns:.net mvc security patterns": {
+    "topic": "security_patterns",
+    "source": "web_search",
+    "ts": 1780818716.3627188,
+    "size": 1416
+  },
+  "search:Security Patterns:elasticsearch setup and securi": {
+    "topic": "security_patterns",
+    "source": "web_search",
+    "ts": 1780818751.777225,
+    "size": 383
+  },
+  "search:Security Patterns:elasticsearch setup and securi_ex": {
+    "topic": "security_patterns",
+    "source": "code_example",
+    "ts": 1780818776.7926548,
+    "size": 428
+  },
+  "search:Security Patterns:kubernetes nginx ingress secur": {
+    "topic": "security_patterns",
+    "source": "web_search",
+    "ts": 1780818804.0564914,
+    "size": 2544
+  },
+  "search:Security Patterns:kubernetes nginx ingress secur_ex": {
+    "topic": "security_patterns",
+    "source": "code_example",
+    "ts": 1780818813.7269154,
+    "size": 1221
+  },
+  "search:Security Patterns:docker kubernetes advanced log": {
+    "topic": "security_patterns",
+    "source": "web_search",
+    "ts": 1780818822.290001,
+    "size": 617
+  },
+  "search:Security Patterns:docker kubernetes advanced log_ex": {
+    "topic": "security_patterns",
+    "source": "code_example",
+    "ts": 1780818832.2250106,
+    "size": 799
+  },
+  "search:Security Patterns:angular material design securi": {
+    "topic": "security_patterns",
+    "source": "web_search",
+    "ts": 1780818840.0290668,
+    "size": 656
+  },
+  "search:API Design Principles:kubernetes api design patterns": {
+    "topic": "api_design_principles",
+    "source": "web_search",
+    "ts": 1780818877.9974942,
+    "size": 788
+  },
+  "search:API Design Principles:kubernetes api design patterns_ex": {
+    "topic": "api_design_principles",
+    "source": "code_example",
+    "ts": 1780818884.1734989,
+    "size": 476
+  },
+  "search:API Design Principles:next.js prisma api design": {
+    "topic": "api_design_principles",
+    "source": "web_search",
+    "ts": 1780818892.0361154,
+    "size": 399
+  },
+  "search:API Design Principles:next.js prisma api design_ex": {
+    "topic": "api_design_principles",
+    "source": "code_example",
+    "ts": 1780818917.9234426,
+    "size": 923
+  },
+  "search:API Design Principles:fastapi restful api design": {
+    "topic": "api_design_principles",
+    "source": "web_search",
+    "ts": 1780818928.3985176,
+    "size": 579
   }
 }
