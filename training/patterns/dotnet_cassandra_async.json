@@ -1,0 +1,22 @@
+{
+  "search:dotnet+cassandra-async:dotnet cassandra async program": {
+    "content": "- Use `dotnet new` to create a new project.\n- Update your project file to target the latest .NET version, e.g., `<TargetFramework>net7.0</TargetFramework>`.\n- Implement `async` and `await` for asynchronous operations.\n- Utilize `ValueTask` for lightweight tasks where possible.\n- Avoid using `async void` methods in public APIs.\n- Use `ConfigureAwait(false)` when calling library code to prevent deadlocks.\n- Monitor and optimize your application's performance with tools like dotTrace or PerfView.\n- Follow the latest guidelines from Microsoft on async programming best practices.",
+    "source": "web_search",
+    "updated_at": 1780819027.7551544
+  },
+  "search:dotnet+cassandra-async:dotnet cassandra async program_ex": {
+    "content": "- Use the latest version of the Cassandra C# driver.\n- Implement asynchronous reads and writes using `async` and `await`.\n- Handle failure cases gracefully using try-catch blocks.\n- Configure connection pooling for efficient data loads.\n- Utilize batch operations for multiple write requests.\n- Monitor performance with metrics like latency and throughput.",
+    "source": "code_example",
+    "updated_at": 1780819031.5546663
+  },
+  "search:dotnet+cassandra-async:cassandra async queries in dot": {
+    "content": "- **Latest Version**: CassandraCSharpDriver 3.22.0\n- **CLI Command to Install**: `dotnet add package CassandraCSharpDriver --version 3.22.0`\n- **Key Config Options**:\n  - Connection String: Specifies the connection details for the Cassandra cluster.\n  - Query Timeout: Sets the maximum time a query can run before timing out.\n  - Consistency Level: Defines how many replicas must respond to a read/write request.\n- **Asynchronous Operations**: Use `IO::Async` for managing asynchronous operations, allowing concurrent execution of queries and prepared statements.",
+    "source": "web_search",
+    "updated_at": 1780819043.0051138
+  },
+  "search:dotnet+cassandra-async:cassandra async queries in dot_ex": {
+    "content": "- Use `dotnet add package CassandraCSharpDriver` to install the latest version of the Cassandra C# driver.\n- For async reads and writes, utilize methods like `ExecuteAsync()` for queries and `InsertAsync()`, `UpdateAsync()`, `DeleteAsync()` for data manipulation.\n- Configure connection strings in your app settings with necessary flags such as `Server=your_server;Port=9042;User Id=your_user;Password=your_password`.\n- Implement retry logic using `RetryPolicy` to handle transient errors effectively.\n- Monitor performance and adjust cluster size, replication factors, and consistency levels based on application needs.",
+    "source": "code_example",
+    "updated_at": 1780819050.4093525
+  }
+}

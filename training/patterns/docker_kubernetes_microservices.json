@@ -1,0 +1,12 @@
+{
+  "search:docker+kubernetes-microservices:docker kubernetes microservice": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods` to list all pods.\n  - `kubectl describe pod <pod-name>` for detailed information about a pod.\n  - `kubectl logs <pod-name>` to view logs of a pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Datadog Agent: v7.30\n\n- **Key Config Options**:\n  - Resource requests and limits in Kubernetes for better resource management.\n  - Service discovery mechanisms within Kubernetes.\n  - Datadog's `agent.yaml` configuration file for customizing agent settings.",
+    "source": "web_search",
+    "updated_at": 1780819438.1403491
+  },
+  "search:docker+kubernetes-microservices:docker kubernetes microservice_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts the Docker Compose services.\n  - `kubectl apply -f <file.yaml>`: Deploys Kubernetes resources from a YAML file.\n\n- **Latest Versions**:\n  - Docker: v24.0.1\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - Prometheus: Configure scrape intervals and targets in `prometheus.yml`.\n  - Grafana: Set up data sources and dashboards through the web UI.\n  - Microservices: Define service endpoints and dependencies in Docker Compose or Kubernetes manifests.",
+    "source": "code_example",
+    "updated_at": 1780819450.798269
+  }
+}
