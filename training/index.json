@@ -8,31 +8,31 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780834288.0272443,
+    "ts": 1780834762.269697,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780834288.7778902,
+    "ts": 1780834763.125809,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780834289.5524113,
+    "ts": 1780834763.896632,
     "size": 867
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "topic": "nestjs_mongodb",
     "source": "code_example",
-    "ts": 1780834290.296114,
+    "ts": 1780834764.7771184,
     "size": 830
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780834291.0720673,
+    "ts": 1780834765.633495,
     "size": 349
   },
   "qa:livros-to-Book": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780834292.1155233,
+    "ts": 1780834766.7224767,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780834279.0006757,
+    "ts": 1780834748.8789303,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780834280.6685543,
+    "ts": 1780834750.9785604,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780834278.1398604,
+    "ts": 1780834747.646689,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780834279.867815,
+    "ts": 1780834749.856324,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780834281.5605905,
+    "ts": 1780834751.7716935,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780834282.2418427,
+    "ts": 1780834752.5135481,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780834282.9416704,
+    "ts": 1780834753.189632,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780834283.6437683,
+    "ts": 1780834754.0055044,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780834284.3792179,
+    "ts": 1780834758.2796803,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780834285.7532618,
+    "ts": 1780834759.8211293,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780834286.4545834,
+    "ts": 1780834760.6743124,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780834287.272683,
+    "ts": 1780834761.463638,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -14704,5 +14704,167 @@
     "source": "code_example",
     "ts": 1780834338.0760434,
     "size": 471
+  },
+  "search:nodejs-express-mongodb:node.js express mongodb integr": {
+    "topic": "nodejs_express_mongodb",
+    "source": "web_search",
+    "ts": 1780834347.1185045,
+    "size": 398
+  },
+  "search:nodejs-express-mongodb:node.js express mongodb integr_ex": {
+    "topic": "nodejs_express_mongodb",
+    "source": "code_example",
+    "ts": 1780834364.5579472,
+    "size": 1255
+  },
+  "search:nodejs-express-mongodb:building restful apis with nod": {
+    "topic": "nodejs_express_mongodb",
+    "source": "web_search",
+    "ts": 1780834383.0089347,
+    "size": 488
+  },
+  "search:nodejs-express-mongodb:building restful apis with nod_ex": {
+    "topic": "nodejs_express_mongodb",
+    "source": "code_example",
+    "ts": 1780834388.9555595,
+    "size": 638
+  },
+  "search:python-fastapi-redis:fastapi redis integration for ": {
+    "topic": "python_fastapi_redis",
+    "source": "web_search",
+    "ts": 1780834403.9655142,
+    "size": 1349
+  },
+  "search:python-fastapi-redis:fastapi redis integration for _ex": {
+    "topic": "python_fastapi_redis",
+    "source": "code_example",
+    "ts": 1780834424.7893138,
+    "size": 301
+  },
+  "search:python-fastapi-redis:using fastapi with redis for c": {
+    "topic": "python_fastapi_redis",
+    "source": "web_search",
+    "ts": 1780834448.1970198,
+    "size": 1408
+  },
+  "search:python-fastapi-redis:using fastapi with redis for c_ex": {
+    "topic": "python_fastapi_redis",
+    "source": "code_example",
+    "ts": 1780834457.4868455,
+    "size": 823
+  },
+  "search:typescript-nextjs-prisma:typescript next.js prisma orm ": {
+    "topic": "typescript_nextjs_prisma",
+    "source": "web_search",
+    "ts": 1780834465.613663,
+    "size": 716
+  },
+  "search:typescript-nextjs-prisma:typescript next.js prisma orm _ex": {
+    "topic": "typescript_nextjs_prisma",
+    "source": "code_example",
+    "ts": 1780834482.2685716,
+    "size": 348
+  },
+  "search:typescript-nextjs-prisma:prisma with typescript in next": {
+    "topic": "typescript_nextjs_prisma",
+    "source": "web_search",
+    "ts": 1780834499.6268005,
+    "size": 449
+  },
+  "search:typescript-nextjs-prisma:prisma with typescript in next_ex": {
+    "topic": "typescript_nextjs_prisma",
+    "source": "code_example",
+    "ts": 1780834504.142919,
+    "size": 467
+  },
+  "search:java-spring-boot-mysql:spring boot mysql integration ": {
+    "topic": "java_spring_boot_mysql",
+    "source": "web_search",
+    "ts": 1780834523.1842768,
+    "size": 435
+  },
+  "search:java-spring-boot-mysql:spring boot mysql integration _ex": {
+    "topic": "java_spring_boot_mysql",
+    "source": "code_example",
+    "ts": 1780834537.827019,
+    "size": 507
+  },
+  "search:dotnet-ef-core-postgres:entity framework core with pos": {
+    "topic": "dotnet_ef_core_postgres",
+    "source": "web_search",
+    "ts": 1780834577.0236187,
+    "size": 742
+  },
+  "search:dotnet-ef-core-postgres:entity framework core with pos_ex": {
+    "topic": "dotnet_ef_core_postgres",
+    "source": "code_example",
+    "ts": 1780834589.4788153,
+    "size": 1252
+  },
+  "search:dotnet-ef-core-postgres:advanced entity framework core": {
+    "topic": "dotnet_ef_core_postgres",
+    "source": "web_search",
+    "ts": 1780834605.060705,
+    "size": 588
+  },
+  "search:dotnet-ef-core-postgres:advanced entity framework core_ex": {
+    "topic": "dotnet_ef_core_postgres",
+    "source": "code_example",
+    "ts": 1780834623.3880556,
+    "size": 629
+  },
+  "search:fastapi-authentication-jwt:fastapi jwt authentication tut": {
+    "topic": "fastapi_authentication_jwt",
+    "source": "web_search",
+    "ts": 1780834640.3501754,
+    "size": 525
+  },
+  "search:fastapi-authentication-jwt:fastapi jwt authentication tut_ex": {
+    "topic": "fastapi_authentication_jwt",
+    "source": "code_example",
+    "ts": 1780834645.3867674,
+    "size": 445
+  },
+  "search:fastapi-authentication-jwt:securing fastapi applications ": {
+    "topic": "fastapi_authentication_jwt",
+    "source": "web_search",
+    "ts": 1780834680.5849478,
+    "size": 2610
+  },
+  "search:fastapi-authentication-jwt:securing fastapi applications _ex": {
+    "topic": "fastapi_authentication_jwt",
+    "source": "code_example",
+    "ts": 1780834700.4190397,
+    "size": 899
+  },
+  "search:react-testing-library-react-query:testing react components with ": {
+    "topic": "react_testing_library_react_query",
+    "source": "web_search",
+    "ts": 1780834731.1107004,
+    "size": 1477
+  },
+  "search:react-testing-library-react-query:testing react components with _ex": {
+    "topic": "react_testing_library_react_query",
+    "source": "code_example",
+    "ts": 1780834737.0848486,
+    "size": 323
+  },
+  "search:react-testing-library-react-query:best practices for testing asy": {
+    "topic": "react_testing_library_react_query",
+    "source": "web_search",
+    "ts": 1780834745.8025157,
+    "size": 734
+  },
+  "search:react-testing-library-react-query:best practices for testing asy_ex": {
+    "topic": "react_testing_library_react_query",
+    "source": "code_example",
+    "ts": 1780834768.646211,
+    "size": 592
+  },
+  "search:typescript+react-query-advanced:typescript react query advance": {
+    "topic": "typescript_react_query_advanced",
+    "source": "web_search",
+    "ts": 1780834776.3809643,
+    "size": 547
   }
 }
