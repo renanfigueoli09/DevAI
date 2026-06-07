@@ -13,5 +13,15 @@
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/KenMwaura1/Fast-Api-example.git`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0.0\n  - asyncpg: v0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@localhost/dbname`\n  - Connection Pooling: Use `SQLAlchemy` with `asyncpg` for efficient connection management.\n  - ORM Choice: SQLModel or Tortoise ORM for asynchronous database operations.",
     "source": "code_example",
     "updated_at": 1780821261.3898332
+  },
+  "search:fastapi+postgresql-async:fastapi async database operati": {
+    "content": "- Use `pip install fastapi asyncpg sqlalchemy` to install necessary packages.\n- For the latest versions, check [PyPI](https://pypi.org/).\n- Key config options include:\n  - Database URL format: `postgresql+asyncpg://user:password@host/dbname`\n  - Async SQLAlchemy model definitions\n  - FastAPI routes with async functions\n- Use `uvicorn app.main:app --reload` to run the FastAPI application.\n- For efficient CRUD operations, use asynchronous SQLAlchemy ORM methods like `.create()`, `.read()`, `.update()`, `.delete()`.\n- Configure PostgreSQL settings for optimal performance and scalability.",
+    "source": "web_search",
+    "updated_at": 1780821277.2453022
+  },
+  "search:fastapi+postgresql-async:fastapi async database operati_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init alembic`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - ASGI Server: `uvicorn main:app --reload`",
+    "source": "code_example",
+    "updated_at": 1780821294.9572825
   }
 }

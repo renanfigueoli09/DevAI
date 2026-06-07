@@ -8,31 +8,31 @@
   "nlp:user-intent-patterns": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780821229.8174074,
+    "ts": 1780821689.6574776,
     "size": 1020
   },
   "nlp:user-corrections": {
     "topic": "nlp",
     "source": "code_pattern",
-    "ts": 1780821230.4236875,
+    "ts": 1780821690.5857973,
     "size": 789
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780821231.097155,
+    "ts": 1780821691.4638145,
     "size": 867
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule_ex": {
     "topic": "nestjs_mongodb",
     "source": "code_example",
-    "ts": 1780821231.7518656,
+    "ts": 1780821692.1665726,
     "size": 830
   },
   "search:nestjs+mongodb:nestjs mongoose findbyid findb": {
     "topic": "nestjs_mongodb",
     "source": "web_search",
-    "ts": 1780821232.5492558,
+    "ts": 1780821692.8961186,
     "size": 349
   },
   "qa:livros-to-Book": {
@@ -110,7 +110,7 @@
   "qa:mongodb-healthcheck": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780821233.379678,
+    "ts": 1780821693.9918654,
     "size": 210
   },
   "MongoDB healthcheck docker-compose which command": {
@@ -200,7 +200,7 @@
   "qa:mongoose-no-findOneBy": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780821222.0381417,
+    "ts": 1780821679.4622085,
     "size": 257
   },
   "NestJS Mongoose service method instead of findOneBy": {
@@ -224,7 +224,7 @@
   "qa:app-module-mongodb": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780821223.2264369,
+    "ts": 1780821680.9484553,
     "size": 222
   },
   "NestJS app.module.ts MongoDB database connection module": {
@@ -1130,61 +1130,61 @@
   "qa:mongoose-required-bang": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780821221.3029811,
+    "ts": 1780821678.6138856,
     "size": 279
   },
   "qa:mongoose-forFeature": {
     "topic": "nestjs_mongodb",
     "source": "critical_pattern",
-    "ts": 1780821222.654044,
+    "ts": 1780821680.1332693,
     "size": 221
   },
   "qa:livros-book": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780821223.959014,
+    "ts": 1780821681.776057,
     "size": 213
   },
   "qa:docker-no-src": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780821224.5698786,
+    "ts": 1780821682.5199437,
     "size": 191
   },
   "qa:usuarios-no-auth": {
     "topic": "nlp",
     "source": "critical_pattern",
-    "ts": 1780821225.2569385,
+    "ts": 1780821684.2199285,
     "size": 197
   },
   "qa:partialtype-mapped-types": {
     "topic": "nestjs",
     "source": "critical_pattern",
-    "ts": 1780821225.9653065,
+    "ts": 1780821685.1250222,
     "size": 247
   },
   "qa:docker-mongodb-only": {
     "topic": "docker",
     "source": "critical_pattern",
-    "ts": 1780821226.5379918,
+    "ts": 1780821685.7886498,
     "size": 184
   },
   "qa:ts2307-create-module": {
     "topic": "common_errors",
     "source": "critical_pattern",
-    "ts": 1780821227.8078854,
+    "ts": 1780821687.3282757,
     "size": 278
   },
   "qa:spring-document-not-entity": {
     "topic": "spring_boot_mongodb",
     "source": "critical_pattern",
-    "ts": 1780821228.4917374,
+    "ts": 1780821688.0618749,
     "size": 238
   },
   "qa:fastapi-motor-not-pymongo": {
     "topic": "python_fastapi",
     "source": "critical_pattern",
-    "ts": 1780821229.104234,
+    "ts": 1780821688.8213673,
     "size": 206
   },
   "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
@@ -12616,5 +12616,173 @@
     "source": "code_example",
     "ts": 1780821261.392878,
     "size": 478
+  },
+  "search:fastapi+postgresql-async:fastapi async database operati": {
+    "topic": "fastapi_postgresql_async",
+    "source": "web_search",
+    "ts": 1780821277.2477741,
+    "size": 591
+  },
+  "search:fastapi+postgresql-async:fastapi async database operati_ex": {
+    "topic": "fastapi_postgresql_async",
+    "source": "code_example",
+    "ts": 1780821294.9597702,
+    "size": 368
+  },
+  "search:kubernetes+redis-cluster:kubernetes redis high availabi": {
+    "topic": "kubernetes_redis_cluster",
+    "source": "web_search",
+    "ts": 1780821363.360801,
+    "size": 885
+  },
+  "search:dotnet+efcore-async:dotnet efcore async performanc": {
+    "topic": "dotnet_efcore_async",
+    "source": "web_search",
+    "ts": 1780821401.4250107,
+    "size": 439
+  },
+  "search:dotnet+efcore-async:async database operations with": {
+    "topic": "dotnet_efcore_async",
+    "source": "web_search",
+    "ts": 1780821437.8183942,
+    "size": 715
+  },
+  "search:dotnet+efcore-async:async database operations with_ex": {
+    "topic": "dotnet_efcore_async",
+    "source": "code_example",
+    "ts": 1780821441.5110357,
+    "size": 309
+  },
+  "search:dotnet+efcore-async:asynchronous entity framework ": {
+    "topic": "dotnet_efcore_async",
+    "source": "web_search",
+    "ts": 1780821461.940291,
+    "size": 745
+  },
+  "search:dotnet+efcore-async:asynchronous entity framework _ex": {
+    "topic": "dotnet_efcore_async",
+    "source": "code_example",
+    "ts": 1780821482.8879125,
+    "size": 679
+  },
+  "search:spring-data-jpa-async:spring data jpa async performa": {
+    "topic": "spring_data_jpa_async",
+    "source": "web_search",
+    "ts": 1780821501.1745296,
+    "size": 797
+  },
+  "search:spring-data-jpa-async:spring data jpa async performa_ex": {
+    "topic": "spring_data_jpa_async",
+    "source": "code_example",
+    "ts": 1780821507.6045184,
+    "size": 1293
+  },
+  "search:spring-data-jpa-async:async repository operations wi": {
+    "topic": "spring_data_jpa_async",
+    "source": "web_search",
+    "ts": 1780821517.539522,
+    "size": 952
+  },
+  "search:spring-data-jpa-async:async repository operations wi_ex": {
+    "topic": "spring_data_jpa_async",
+    "source": "code_example",
+    "ts": 1780821523.134698,
+    "size": 964
+  },
+  "search:spring-data-jpa-async:asynchronous database queries ": {
+    "topic": "spring_data_jpa_async",
+    "source": "web_search",
+    "ts": 1780821533.0137627,
+    "size": 732
+  },
+  "search:spring-data-jpa-async:asynchronous database queries _ex": {
+    "topic": "spring_data_jpa_async",
+    "source": "code_example",
+    "ts": 1780821540.2435222,
+    "size": 774
+  },
+  "search:react+redux-saga-async:react redux saga async perform": {
+    "topic": "react_redux_saga_async",
+    "source": "web_search",
+    "ts": 1780821549.30946,
+    "size": 1112
+  },
+  "search:react+redux-saga-async:react redux saga async perform_ex": {
+    "topic": "react_redux_saga_async",
+    "source": "code_example",
+    "ts": 1780821555.331756,
+    "size": 795
+  },
+  "search:react+redux-saga-async:async actions with react redux": {
+    "topic": "react_redux_saga_async",
+    "source": "web_search",
+    "ts": 1780821574.880264,
+    "size": 747
+  },
+  "search:react+redux-saga-async:async actions with react redux_ex": {
+    "topic": "react_redux_saga_async",
+    "source": "code_example",
+    "ts": 1780821598.7251253,
+    "size": 396
+  },
+  "search:react+redux-saga-async:asynchronous state management ": {
+    "topic": "react_redux_saga_async",
+    "source": "web_search",
+    "ts": 1780821605.494949,
+    "size": 429
+  },
+  "search:react+redux-saga-async:asynchronous state management _ex": {
+    "topic": "react_redux_saga_async",
+    "source": "code_example",
+    "ts": 1780821610.422319,
+    "size": 446
+  },
+  "search:dotnet-ef-core-postgresql:entity framework core with pos": {
+    "topic": "dotnet_ef_core_postgresql",
+    "source": "web_search",
+    "ts": 1780821621.899381,
+    "size": 1084
+  },
+  "search:dotnet-ef-core-postgresql:entity framework core with pos_ex": {
+    "topic": "dotnet_ef_core_postgresql",
+    "source": "code_example",
+    "ts": 1780821648.271013,
+    "size": 1004
+  },
+  "search:dotnet-ef-core-postgresql:advanced entity framework core": {
+    "topic": "dotnet_ef_core_postgresql",
+    "source": "web_search",
+    "ts": 1780821657.2309303,
+    "size": 946
+  },
+  "search:dotnet-ef-core-postgresql:advanced entity framework core_ex": {
+    "topic": "dotnet_ef_core_postgresql",
+    "source": "code_example",
+    "ts": 1780821662.9138215,
+    "size": 705
+  },
+  "search:fastapi+celery-sqlalchemy:fastapi celery integration for": {
+    "topic": "fastapi_celery_sqlalchemy",
+    "source": "web_search",
+    "ts": 1780821675.2927277,
+    "size": 431
+  },
+  "search:fastapi+celery-sqlalchemy:fastapi celery integration for_ex": {
+    "topic": "fastapi_celery_sqlalchemy",
+    "source": "code_example",
+    "ts": 1780821686.171105,
+    "size": 422
+  },
+  "search:fastapi+celery-sqlalchemy:sqlalchemy orm with celery in ": {
+    "topic": "fastapi_celery_sqlalchemy",
+    "source": "web_search",
+    "ts": 1780821707.7084298,
+    "size": 527
+  },
+  "search:fastapi+celery-sqlalchemy:sqlalchemy orm with celery in _ex": {
+    "topic": "fastapi_celery_sqlalchemy",
+    "source": "code_example",
+    "ts": 1780821722.8459442,
+    "size": 810
   }
 }
