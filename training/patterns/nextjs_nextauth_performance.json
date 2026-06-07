@@ -1,0 +1,22 @@
+{
+  "search:nextjs-nextauth-performance:next.js nextauth performance o": {
+    "content": "- **CLI Commands**: `next dev` for development, `next build` for building the project, `next start` for starting the production server.\n- **Latest Versions**: Next.js 13.5, NextAuth.js 4.12.\n- **Key Config Options**:\n  - In `next.config.js`, use `reactStrictMode: true` for better performance and error detection.\n  - In `pages/api/auth/[...nextauth].js`, configure OAuth providers like Google, Facebook, etc., using the latest provider options.\n  - Use `middleware` to protect routes, ensuring only authenticated users can access certain pages.",
+    "source": "web_search",
+    "updated_at": 1780822110.4702263
+  },
+  "search:nextjs-nextauth-performance:next.js nextauth performance o_ex": {
+    "content": "- Use `next-auth@5` for advanced authentication features.\n- Implement caching to reduce performance overhead.\n- Utilize session tokens for efficient user sessions.\n- Optimize backend operations to minimize latency.\n- Reduce the frequency of authentication checks.\n- Employ RoleGate components to render content based on user roles.\n- Protect API routes using NextAuth middleware.\n- Use `next-auth` with React 18+ and Next.js 14+.\n- Implement credentials provider for custom authentication methods.\n- Leverage OAuth providers like Google and GitHub for social login.",
+    "source": "code_example",
+    "updated_at": 1780822116.6885955
+  },
+  "search:nextjs-nextauth-performance:next.js nextauth benchmarking ": {
+    "content": "- **CLI Commands**: \n  - `npx create-next-app@latest my-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - NextAuth.js v4.x\n\n- **Key Config Options**:\n  - `providers`: Define authentication providers like Google, Facebook, etc.\n  - `secret`: A secret key for signing JWTs.\n  - `session`: Configure session management (e.g., type, maxAge).\n  - `callbacks`: Customize the behavior of callbacks like signIn, redirect, jwt.",
+    "source": "web_search",
+    "updated_at": 1780822126.982455
+  },
+  "search:nextjs-nextauth-performance:next.js nextauth benchmarking _ex": {
+    "content": "- **CLI Commands**: `npx create-next-app@latest my-next-auth-app`\n- **Latest Versions**:\n  - Next.js: 13.5\n  - NextAuth.js: 4.2.3\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for authentication.\n  - `providers`: List of OAuth providers (e.g., Google, Facebook).\n  - `secret`: Secret key for JWT signing.\n  - `session`: Session type and options (e.g., JWT, database-backed sessions).",
+    "source": "code_example",
+    "updated_at": 1780822131.4719245
+  }
+}

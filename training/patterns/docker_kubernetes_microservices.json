@@ -8,5 +8,25 @@
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts the Docker Compose services.\n  - `kubectl apply -f <file.yaml>`: Deploys Kubernetes resources from a YAML file.\n\n- **Latest Versions**:\n  - Docker: v24.0.1\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - Prometheus: Configure scrape intervals and targets in `prometheus.yml`.\n  - Grafana: Set up data sources and dashboards through the web UI.\n  - Microservices: Define service endpoints and dependencies in Docker Compose or Kubernetes manifests.",
     "source": "code_example",
     "updated_at": 1780819450.798269
+  },
+  "search:docker-kubernetes-microservices:docker kubernetes microservice": {
+    "content": "- **CLI Commands**:\n  - `docker build -t <image_name>:<tag> .`\n  - `docker run -d --name <container_name> -p <host_port>:<container_port> <image_name>:<tag>`\n  - `kubectl apply -f <file_name>.yaml`\n  - `kubectl get pods`\n  - `kubectl logs <pod_name>`\n  - `kubectl exec -it <pod_name> -- /bin/bash`\n\n- **Latest Versions**:\n  - Docker: 20.10.7\n  - Kubernetes: 1.23.4\n\n- **Key Config Options**:\n  - Dockerfile: `FROM`, `RUN`, `COPY`, `CMD`\n  - Kubernetes YAML: `apiVersion`, `kind`, `metadata`, `spec`",
+    "source": "web_search",
+    "updated_at": 1780822005.0732577
+  },
+  "search:docker-kubernetes-microservices:docker kubernetes microservice_ex": {
+    "content": "- **CLI Commands**:\n  - `docker build -t my-microservice .`\n  - `docker run -d --name my-microservice-container my-microservice`\n  - `kubectl apply -f my-service.yaml`\n  - `kubectl get pods`\n  - `kubectl logs my-microservice-pod`\n\n- **Latest Versions**:\n  - Docker: 20.10.7\n  - Kubernetes: 1.23.4\n\n- **Key Config Options**:\n  - Dockerfile: `FROM`, `RUN`, `COPY`, `CMD`\n  - Kubernetes YAML: `apiVersion`, `kind`, `metadata`, `spec`",
+    "source": "code_example",
+    "updated_at": 1780822011.1178815
+  },
+  "search:docker-kubernetes-microservices:docker kubernetes ci/cd pipeli": {
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, `docker build` to build Docker images.\n- **Latest Versions**: Ensure using the latest stable version of Kubernetes and Docker.\n- **Key Config Options**:\n  - For Kubernetes: `kubeconfig`, `namespace`.\n  - For Docker: `Dockerfile`, `docker-compose.yml`.\n\nThese commands and options are essential for setting up a CI/CD pipeline with Docker and Kubernetes.",
+    "source": "web_search",
+    "updated_at": 1780822029.149113
+  },
+  "search:docker-kubernetes-microservices:docker kubernetes ci/cd pipeli_ex": {
+    "content": "- **GitHub Actions**: Use `actions/setup-node@v3` and `actions/checkout@v3`.\n- **Docker Build**: Run `docker build -t your-image-name:tag .`\n- **Docker Push**: Execute `docker push your-image-name:tag`\n- **Kubernetes Deployment**: Apply a YAML file with `kubectl apply -f deployment.yaml`\n- **EKS Cluster**: Create using AWS Management Console or CLI.\n- **CI/CD Workflow**: Automate steps in `.github/workflows/ci-cd.yml`.\n- **Docker Hub**: Push images to Docker Hub using `docker push username/repository:tag`.\n- **Kubernetes Config**: Use `kubectl config use-context your-cluster-name`.\n- **Latest Versions**: Check [GitHub Actions](https://github.com/actions), [Docker](https://docs.docker.com/engine/release-notes/), and [Kubernetes](https://kubernetes.io/releases/) for the latest versions.\n- **Key Config Options**: For GitHub Actions, configure `on`, `jobs`, `steps`. For Kubernetes, define `apiVersion`, `kind`, `metadata`, `spec`.",
+    "source": "code_example",
+    "updated_at": 1780822045.0528822
   }
 }
