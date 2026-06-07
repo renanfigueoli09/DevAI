@@ -1,0 +1,12 @@
+{
+  "search:angular+firebase-auth:angular firebase authenticatio": {
+    "content": "- Install AngularFire via npm: `npm install @angular/fire firebase`\n- Configure Firebase in your Angular project by adding the Firebase configuration object to your environment files.\n- Use `firebase.auth()` for authentication methods like email/password, Google, Facebook, etc.\n- Implement login and sign-up components using Angular forms and services.\n- Utilize `AngularFireAuth` service for handling authentication state and user data.\n- Configure Firebase rules in the Firebase console to control access to your application's resources.\n- Use `firebase.auth().onAuthStateChanged()` to listen for authentication state changes.\n- Implement logout functionality by calling `firebase.auth().signOut()`.\n- Ensure secure password hashing and storage using Firebase Authentication.",
+    "source": "web_search",
+    "updated_at": 1780838509.2372656
+  },
+  "search:angular+firebase-auth:angular firebase authenticatio_ex": {
+    "content": "- **CLI Commands**:\n  - `ng new my-angular-app`\n  - `firebase init`\n\n- **Latest Versions**:\n  - Angular CLI: 15.2.4\n  - Firebase SDK: 9.x\n\n- **Key Config Options**:\n  - `environment.ts` for API keys and other sensitive data.\n  - `authConfig` in `app.module.ts` for Firebase authentication settings.\n  - `signInWithEmailAndPassword`, `createUserWithEmailAndPassword`, etc., for user management.",
+    "source": "code_example",
+    "updated_at": 1780838526.1925702
+  }
+}

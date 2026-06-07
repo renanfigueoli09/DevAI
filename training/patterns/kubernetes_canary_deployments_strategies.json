@@ -1,0 +1,22 @@
+{
+  "search:Kubernetes Canary Deployments Strategies:kubernetes canary": {
+    "content": "- Use `kubectl apply -f <canary-deployment-file.yaml>` to deploy a canary version of your application.\n- For Helm, use `helm upgrade --install my-release stable/my-chart --set image.tag=canary`.\n- Key config options include:\n  - `spec.strategy.canary`: Configures the canary strategy.\n  - `spec.strategy.rollingUpdate.maxUnavailable`: Specifies the maximum number of Pods that can be unavailable during an update.\n  - `spec.strategy.rollingUpdate.maxSurge`: Specifies the maximum number of Pods that can be created over the desired number of Pods.\n- Ensure your ingress controller is configured to route traffic to both the current and canary deployments.\n- Monitor the canary deployment using `kubectl get pods` and `kubectl logs <pod-name>`.\n- Use `helm rollback my-release` to revert a failed canary deployment.",
+    "source": "web_search",
+    "updated_at": 1780838356.549967
+  },
+  "search:Kubernetes Canary Deployments Strategies:kubernetes canary_ex": {
+    "content": "- **Kubernetes Canary Deployment:** Use `kubectl apply -f canary-deployment.yaml` to deploy.\n- **Latest Version:** Check [Kubernetes official site](https://kubernetes.io/docs/setup/release/version-skew-policy/) for the latest version.\n- **Key Config Options:**\n  - `spec.strategy.canary`: Defines the canary strategy.\n  - `spec.strategy.rollingUpdate.maxSurge`: Maximum number of pods that can be scheduled above the desired state during an update.\n  - `spec.strategy.rollingUpdate.maxUnavailable`: Maximum number of pods that can be unavailable during an update.\n- **CLI Commands:**\n  - `kubectl rollout status deployment/<deployment-name>`: Check the status of a deployment.\n  - `kubectl rollout undo deployment/<deployment-name>`: Rollback to the previous version if needed.\n- **Documentation:** Refer to [Kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for detailed information.",
+    "source": "code_example",
+    "updated_at": 1780838362.9446354
+  },
+  "search:Kubernetes Canary Deployments Strategies:blue-green deployment": {
+    "content": "- Use `kubectl` for Kubernetes deployments.\n- Flags include `--record` to annotate the deployment with the command used.\n- Ensure both environments are identical, including configurations and dependencies.\n- Deploy new version in a \"green\" environment.\n- Swap live traffic from \"blue\" to \"green\" using `kubectl patch`.\n- Monitor application health post-swap.\n- Rollback if necessary by swapping back to \"blue\".",
+    "source": "web_search",
+    "updated_at": 1780838384.0820768
+  },
+  "search:Kubernetes Canary Deployments Strategies:blue-green deployment_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f blue-green-deployment.yaml`\n  - `kubectl set image deployment/my-app my-app=my-app:v2 --record`\n\n- **Latest Versions**:\n  - HAProxy Ingress Controller: v1.9.0\n  - Docker Compose: 1.29.2\n\n- **Key Config Options**:\n  - `spec.strategy.blueGreen`: Configuration for blue-green deployment.\n  - `spec.strategy.blueGreen.activeService`: Service to route traffic to the active version.\n  - `spec.strategy.blueGreen.previewService`: Service to route traffic to the preview version.\n  - `spec.strategy.blueGreen.trafficRoutingPolicy`: Policy for routing traffic between versions (e.g., weighted, header-based).",
+    "source": "code_example",
+    "updated_at": 1780838391.684913
+  }
+}
