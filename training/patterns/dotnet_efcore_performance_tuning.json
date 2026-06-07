@@ -2,36 +2,36 @@
   "search:dotnet+efcore-performance-tuning:.net entity framework core per": {
     "content": "- **Use AsNoTracking**: To prevent EF Core from tracking changes to entities, use `AsNoTracking()`. Example:\n  ```bash\n  var blogs = context.Blogs.AsNoTracking().ToList();\n  ```\n\n- **Prevent N+1 Issues**: Use eager loading with `Include()` or projection with `Select()` to avoid multiple queries. Example:\n  ```csharp\n  var query = from blog in context.Blogs.Include(b => b.Posts)\n              select blog;\n  ```\n\n- **Project Only Needed Fields**: Select only the fields you need using projection. Example:\n  ```csharp\n  var blogs = await (from blog in context.Blogs\n                    select new { blog.Id, blog.Name }).ToListAsync();\n  ```\n\n- **Leverage Caching**: Use caching mechanisms like Redis or EF Core's built-in caching to reduce database hits. Example:\n  ```csharp\n  services.AddMemoryCache();\n  var cache = serviceProvider.GetService<IMemoryCache>();\n  cache.Set(\"Blogs\", blogs, TimeSpan.FromMinutes(10));\n  ```\n\n- **Compiled Queries**: Compile queries using `EF.CompileQuery()` for better performance. Example:\n  ```csharp\n  private static readonly Func<MyDbContext, int, Blog> compiledGetBlog = EF.CompileQuery((context, blogId) => context.Blogs.Find(blogId));\n  var blog = compiledGetBlog(context, 1);\n  ```\n\n- **Bulk Operations**: Use bulk operations libraries like Entity Framework Plus or Dapper for efficient data access. Example:\n  ```csharp\n  using (var transaction = context.Database.BeginTransaction())\n  {\n      try\n      {\n          context.BulkInsert(blogs);\n          transaction.Commit();\n      }\n      catch (Exception)\n      {\n          transaction.Rollback();\n          throw;\n      }\n  }\n  ```\n\n- **Update EF Core**: Always use the latest version of EF Core to benefit from performance improvements and bug fixes. Example:\n  ```bash\n  dotnet add package Microsoft.EntityFrameworkCore --version 7.0.0\n  ```\n\n- **Configure Connection String**: Optimize connection strings for better performance. Example:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\"\n  }\n  ```\n\n- **Enable Query Logging**: Use `LoggerFactory` to log queries and analyze them for optimization. Example:\n  ```csharp\n  services.AddDbContext<MyDbContext>(options =>\n      options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"))\n             .LogTo(Console.WriteLine, LogLevel.Information));\n  ```\n\n- **Use Indexes**: Ensure your database tables have appropriate indexes to speed up query performance.",
     "source": "web_search",
-    "updated_at": 1780816167.8328722
+    "updated_at": 1780823248.7771058
   },
   "search:dotnet+efcore-performance-tuning:.net entity framework core per_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to add migrations and `dotnet ef database update` to apply migrations.\n- **Latest Version**: EF Core 7.0 introduced several performance improvements and new features.\n- **Key Config Options**:\n  - `AddDbContextPool`: Set the maximum number of instances with `poolSize`.\n  - `QueryTrackingBehavior`: Configure tracking behavior with `AsNoTracking()` for read-only scenarios.\n  - `UseLazyLoadingProxies`: Enable lazy loading with `UseLazyLoadingProxies()`.\n- **Performance Tuning Tips**:\n  - Use `Include` to eager load related entities.\n  - Avoid N+1 queries by using `Select` or `Where` before `ToList`.\n  - Indexes on database columns can significantly improve query performance.",
     "source": "code_example",
-    "updated_at": 1780816169.054416
+    "updated_at": 1780823253.449405
   },
   "search:dotnet+efcore-performance-tuning:optimizing ef core queries for": {
     "content": "- Use `Include` and `ThenInclude` to load related entities efficiently.\n- Apply `AsNoTracking()` when you don't need to update the entities.\n- Optimize queries by using projections (`Select`) instead of loading entire entities.\n- Implement pagination using `Skip` and `Take`.\n- Consider using `FromSqlRaw` or `FromSqlInterpolated` for complex queries.\n- Enable query splitting with `SplitQuery()`.\n- Use `Index` on columns frequently used in WHERE clauses.\n- Monitor and analyze query performance with EF Core's logging capabilities.\n- Regularly update to the latest version of EF Core for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780816170.691075
+    "updated_at": 1780823255.4262455
   },
   "search:dotnet-efcore-performance-tuning:.net entity framework core per": {
     "content": "- **Latest Version**: EF Core 7.0 is the latest stable version as of October 2025.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n  - `dotnet ef database update` to apply migrations to the database.\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios to improve performance.\n  - `AsNoTracking()` method on queries to avoid tracking entities in memory.\n  - `MaxBatchSize(int batchSize)` to control batch size for bulk operations.\n\n- **Performance Tuning Tips**:\n  - Use `Include` and `ThenInclude` for eager loading instead of multiple separate queries.\n  - Optimize queries by using projections (`Select`) to reduce the amount of data fetched.\n  - Enable lazy loading if necessary, but be cautious with performance implications.",
     "source": "web_search",
-    "updated_at": 1780816172.1837714
+    "updated_at": 1780823257.1467645
   },
   "search:dotnet-efcore-performance-tuning:.net entity framework core per_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` - Adds an initial migration.\n  - `dotnet ef database update` - Applies migrations to the database.\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `ChangeTracker.QueryTrackingBehavior`: Set to `NoTracking` for read-only operations to reduce memory usage.\n  - `DbContextOptionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Configure tracking behavior globally.\n\nFor more detailed information, refer to the official [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/).",
     "source": "code_example",
-    "updated_at": 1780816173.7681994
+    "updated_at": 1780823258.8834743
   },
   "search:dotnet-efcore-performance-tuning:.net efcore indexing best prac": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add AddIndexes`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core 7.0\n\n- **Key Config Options**:\n  - Fluent API: Use `HasIndex` method to define indexes.\n    ```csharp\n    modelBuilder.Entity<YourEntity>()\n        .HasIndex(e => e.PropertyName);\n    ```\n  - Data Annotations: Use `[Index]` attribute on properties.\n    ```csharp\n    public class YourEntity\n    {\n        [Index]\n        public string PropertyName { get; set; }\n    }\n  ```",
     "source": "web_search",
-    "updated_at": 1780816175.3973968
+    "updated_at": 1780823260.4235036
   },
   "search:dotnet-efcore-performance-tuning:.net efcore indexing best prac_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add AddIndexes`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - Fluent API for index creation:\n    ```csharp\n    modelBuilder.Entity<YourEntity>()\n        .HasIndex(e => e.PropertyName)\n        .IsUnique();\n    ```\n  - Data Annotations for index creation:\n    ```csharp\n    [Index(\"IX_YourPropertyName\", IsUnique = true)]\n    public string PropertyName { get; set; }\n    ```",
     "source": "code_example",
-    "updated_at": 1780816176.9631138
+    "updated_at": 1780823261.759529
   }
 }
