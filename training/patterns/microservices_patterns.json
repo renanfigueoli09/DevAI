@@ -17,6 +17,6 @@
   "search:microservices+patterns:outbox pattern ddd bounded con_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new clean` to create a new .NET Clean Architecture project.\n  - `dotnet add package MediatR` for implementing the Mediator pattern.\n  - `dotnet add package MassTransit` for message bus integration.\n\n- **Latest Versions**:\n  - .NET 7\n  - MediatR 10.3.1\n  - MassTransit 6.2.4\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection strings and service buses.\n  - Use `services.AddMediatR(typeof(Startup));` in `Program.cs`.\n  - Configure MassTransit with `services.AddMassTransit(x => { ... });`.",
     "source": "code_example",
-    "updated_at": 1780792977.6111732
+    "updated_at": 1780795461.0389879
   }
 }
