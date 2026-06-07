@@ -2,41 +2,41 @@
   "search:fastapi-redis-cache:fastapi redis cache implementa": {
     "content": "- Install FastAPI and Redis using pip:\n  ```bash\n  pip install fastapi[all] redis\n  ```\n- Use `fastapi-cache` for caching with Redis:\n  ```bash\n  pip install fastapi-cache\n  ```\n- Configure FastAPI to use Redis as a cache backend in your main application file (e.g., `main.py`):\n  ```python\n  from fastapi import FastAPI\n  from fastapi_cache import FastAPICache\n  from fastapi_cache.backends.redis import RedisBackend\n  from fastapi_cache.decorator import cache\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      redis_client = Redis.from_url(\"redis://localhost:6379/0\")\n      FastAPICache.init(RedisBackend(redis_client), prefix=\"fastapi-cache\")\n\n  @app.get(\"/items/{item_id}\")\n  @cache(expire=60)\n  async def read_item(item_id: int):\n      return {\"item_id\": item_id}\n  ```\n- Key config options:\n  - `expire`: Time in seconds for cache expiration.\n  - `prefix`: Prefix for cache keys to avoid conflicts.\n- Ensure Redis server is running on `localhost:6379` or adjust the URL accordingly.\n\nFor more detailed information, refer to the GitHub repository and YouTube tutorial provided.",
     "source": "web_search",
-    "updated_at": 1780816917.5965943
+    "updated_at": 1780824072.6503174
   },
   "search:fastapi-redis-cache:fastapi redis cache implementa_ex": {
     "content": "- **Latest Version of fastapi-cache2**: 0.2.2\n- **CLI Command to Install fastapi-cache2**:\n  ```bash\n  pip install fastapi-cache2==0.2.2\n  ```\n- **Key Config Options for fastapi-cache2**:\n  - `coder`: Specifies the encoding and decoding method (e.g., `PickleCoder`).\n  - `ttl`: Time To Live in seconds, defining how long cache entries are valid.\n  - `backend`: The caching backend to use (e.g., Redis).",
     "source": "code_example",
-    "updated_at": 1780816918.9665134
+    "updated_at": 1780824073.8804097
   },
   "search:fastapi-redis-cache:redis cache strategies for fas": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For Redis caching, use `pip install redis`.\n- Configure Redis in your FastAPI app with:\n  ```python\n  from fastapi import FastAPI\n  from fastapi_cache import FastAPICache\n  from fastapi_cache.backends.redis import RedisBackend\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      redis_client = Redis.from_url(\"redis://localhost:6379/0\")\n      FastAPICache.init(RedisBackend(redis_client), prefix=\"fastapi-cache\")\n\n  @app.get(\"/items/{item_id}\")\n  @cache(ttl=60)\n  async def read_item(item_id: int):\n      return {\"item_id\": item_id}\n  ```\n- Key config options for Redis include `host`, `port`, and `db`.\n- Use HTTP cache headers for browser/CDN caching.\n- For in-memory caching, consider using Python's built-in `functools.lru_cache` or third-party libraries like `cachetools`.",
     "source": "web_search",
-    "updated_at": 1780816920.3281395
+    "updated_at": 1780824075.1362603
   },
   "search:fastapi-redis-cache:redis cache strategies for fas_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  \n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Uvicorn: v10.6.0\n  - Redis: v4.5.4\n  \n- **Key Config Options**:\n  - Redis URL: `redis://localhost:6379/0`\n  - Cache Expiry Time: `3600` seconds (1 hour)\n  - Dependency Injection for Caching",
     "source": "code_example",
-    "updated_at": 1780816921.7049594
+    "updated_at": 1780824076.3859406
   },
   "search:fastapi+redis-cache:fastapi redis cache integratio": {
     "content": "- **GitHub Repository**: [fastapi-cache](https://github.com/long2ice/fastapi-cache)\n- **Latest Version**: Check the repository for the latest release.\n- **Key Config Options**:\n  - `BACKEND`: Choose a backend like Redis, Memcache, DynamoDB, or in-memory.\n  - `CACHE_TTL`: Set the time-to-live (TTL) for cache entries.\n  - `ETAG`: Enable ETag for HTTP cache headers.\n  - `CACHE_CONTROL`: Configure Cache-Control headers.\n\n- **CLI Commands**:\n  ```bash\n  pip install fastapi-cache[redis]\n  ```\n  \n- **YouTube Tutorial**: [FastAPI Redis Tutorial](https://www.youtube.com/watch?v=example)\n- **AIOMemcached Integration**:\n  - Install: `pip install aiomemcached`\n  - Configure TTL invalidation and stale-while-revalidate strategies.\n\n- **Medium Article**: [Implementing Caching Strategies with Redis in FastAPI](https://medium.com/@example/fastapi-caching-strategies-with-redis-d1234567890)\n- **In-Memory Store (Redis)**:\n  - Check if data exists before executing heavy logic.\n  - Retrieve data from Redis and return if available.",
     "source": "web_search",
-    "updated_at": 1780816922.924447
+    "updated_at": 1780824077.595857
   },
   "search:fastapi+redis-cache:fastapi redis cache integratio_ex": {
     "content": "- **GitHub Repository**: Khailas12/Fastapi-Redis-Caching-System\n- **Latest Version of FastAPI**: Not specified in the search results, but as of my last update, it's version 0.95.0.\n- **Latest Version of Redis-py**: As of my last update, it's version 4.6.0.\n- **Key Config Options**:\n  - `redis_url`: URL for connecting to Redis server (e.g., \"redis://localhost:6379/0\").\n  - `expire_time`: Time in seconds after which cache entries expire.\n- **CLI Commands**:\n  - To install FastAPI and Redis-py: \n    ```bash\n    pip install fastapi redis\n    ```\n  - To run a FastAPI application:\n    ```bash\n    uvicorn main:app --reload\n    ```\n- **Integration Steps**:\n  - Install necessary packages.\n  - Configure Redis connection in your FastAPI app.\n  - Use decorators or middleware to cache responses.",
     "source": "code_example",
-    "updated_at": 1780816924.2164552
+    "updated_at": 1780824078.807126
   },
   "search:fastapi+redis-cache:redis fastapi caching strategi": {
     "content": "- Use `pip install fastapi uvicorn redis` to install necessary packages.\n- For Redis caching, use the `redis-py` library.\n- Implement response caching with `@cache` decorator from `fastapi_cache.decorator`.\n- Configure Redis connection in FastAPI using `RedisCacheBackend` from `fastapi_cache.backends.redis`.\n- Use `ETag` for conditional requests to reduce bandwidth and improve performance.\n- For request coalescing, use the `coalesce` option in cache decorators.\n- Implement SWR (Stale While Revalidate) caching strategy with appropriate headers.\n- Set up Redis server using Docker with command: `docker run -d --name my-redis -p 6379:6379 redis`.\n- Monitor and optimize FastAPI performance using tools like `uvicorn` with `--reload` flag for development.",
     "source": "web_search",
-    "updated_at": 1780816925.43381
+    "updated_at": 1780824080.0242455
   },
   "search:fastapi+redis-cache:redis fastapi caching strategi_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  - Redis: 4.2.3\n\n- **Key Config Options**:\n  - `redis_url`: URL for the Redis server.\n  - `max_connections`: Maximum number of connections to the Redis server.\n  - `min_connections`: Minimum number of connections to the Redis server.\n  - `ttl`: Time-to-live for cached data in seconds.",
     "source": "code_example",
-    "updated_at": 1780816926.8066106
+    "updated_at": 1780824081.2828784
   }
 }

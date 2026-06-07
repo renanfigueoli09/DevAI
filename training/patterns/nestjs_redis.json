@@ -2,41 +2,41 @@
   "search:nestjs+redis:nestjs @nestjs/cache-manager c": {
     "content": "- Install `@nestjs/cache-manager` and `cache-manager-redis-store`\n- Use `CacheModule.register()` to configure Redis cache\n- Set `ttl` (time-to-live) in seconds for cache entries\n- Ensure compatibility with NestJS version by checking `cache-manager` version\n- Example configuration:\n  ```typescript\n  CacheModule.register({\n    store: redisStore,\n    host: 'localhost',\n    port: 6379,\n    ttl: 60, // 1 minute\n  }),\n  ```\n- Use decorators like `@CacheTTL()` and `@CacheKey()` for caching methods\n- For Redis connection issues, check Redis server status and network connectivity",
     "source": "web_search",
-    "updated_at": 1780817076.468635
+    "updated_at": 1780824248.6118207
   },
   "search:nestjs+redis:nestjs @nestjs/cache-manager c_ex": {
     "content": "- Install `@nestjs/cache-manager` and `cache-manager` using npm:\n  ```bash\n  npm install @nestjs/cache-manager cache-manager\n  ```\n- Use Redis for caching by installing `cache-manager-redis-store`:\n  ```bash\n  npm install cache-manager-redis-store\n  ```\n- Import `CacheModule` in your main application file:\n  ```typescript\n  import { CacheModule } from '@nestjs/common';\n  ```\n- Configure `CacheModule` with Redis store:\n  ```typescript\n  CacheModule.register({\n    store: redisStore,\n    host: 'localhost',\n    port: 6379,\n  }),\n  ```\n- Use decorators like `@Cacheable`, `@CachePut`, and `@CacheEvict` in your service methods to manage cache operations.\n- Ensure Redis server is running on the specified host and port.\n- For production, consider using environment variables for sensitive configuration details.",
     "source": "code_example",
-    "updated_at": 1780817077.676449
+    "updated_at": 1780824250.4116309
   },
   "search:nestjs+redis:nestjs @nestjs/bull bullmodule": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/bullmq`\n  - `npm install bullmq`\n\n- **Latest Versions**:\n  - @nestjs/bullmq: v5.0.0\n  - bullmq: v2.14.0\n\n- **Key Config Options**:\n  - Queue registration using `BullModule.registerQueue()`\n  - Worker setup with `WorkerHost` pattern\n  - Integration of Bull Board for monitoring",
     "source": "web_search",
-    "updated_at": 1780817078.8588974
+    "updated_at": 1780824252.0611835
   },
   "search:nestjs+redis:nestjs @nestjs/bull bullmodule_ex": {
     "content": "- **Install Dependencies**: `npm install @nestjs/bull bull`\n- **Register Bull Module**: \n  ```typescript\n  import { BullModule } from '@nestjs/bull';\n  \n  @Module({\n    imports: [BullModule.forRoot({ redis: { host: 'localhost', port: 6379 } })],\n  })\n  export class AppModule {}\n  ```\n- **Create a Queue**:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { BullModule } from '@nestjs/bull';\n\n  @Module({\n    imports: [BullModule.registerQueue({ name: 'myqueue' })],\n  })\n  export class MyQueueModule {}\n  ```\n- **Define a Processor (Worker)**:\n  ```typescript\n  import { Processor, Process } from '@nestjs/bull';\n  import { Job } from 'bull';\n\n  @Processor('myqueue')\n  export class MyQueueProcessor {\n    @Process()\n    async handle(job: Job) {\n      console.log(`Processing job ${job.id}`);\n    }\n  }\n  ```\n- **Add Jobs to Queue**:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { InjectQueue } from '@nestjs/bull';\n  import { Queue } from 'bull';\n\n  @Injectable()\n  export class MyQueueService {\n    constructor(@InjectQueue('myqueue') private readonly myQueue: Queue) {}\n\n    async addJob(data: any) {\n      await this.myQueue.add('jobName', data);\n    }\n  }\n  ```\n- **Latest Versions**: NestJS v10, Bull v3\n- **Key Config Options**:\n  - `redis`: Configuration for Redis connection.\n  - `name`: Name of the queue.\n  - `process`: Method to handle jobs in the queue.",
     "source": "code_example",
-    "updated_at": 1780817080.1728609
+    "updated_at": 1780824253.8561773
   },
   "search:nestjs+redis:nestjs ioredis sentinel cluste": {
     "content": "- **CLI Commands**:\n  - `npm install @liaoliaots/nestjs-redis ioredis`\n  \n- **Latest Versions**:\n  - `@liaoliaots/nestjs-redis`: v4.0.0\n  - `ioredis`: v5.2.0\n\n- **Key Config Options**:\n  - `type: 'sentinel'` in connection options\n  - Sentinel nodes configuration array\n  - Redis version >= 2.8.12 for sentinel support",
     "source": "web_search",
-    "updated_at": 1780817081.353343
+    "updated_at": 1780824255.6132982
   },
   "search:nestjs+redis:nestjs ioredis sentinel cluste_ex": {
     "content": "- **GitHub Repository**: [liaoliaots/nestjs-redis](https://github.com/liaoliaots/nestjs-redis)\n- **Latest Version**: Check the repository for the latest release.\n- **Key Config Options**:\n  - `host`: Redis host address.\n  - `port`: Redis port number.\n  - `sentinelOptions`: Sentinel configuration options.\n  - `clusterOptions`: Cluster configuration options.\n- **CLI Commands**:\n  - Install: `npm install @liaoliaots/nestjs-redis`\n  - Test: `npm test` (Ensure you have the necessary tests set up)\n- **Example Usage**:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { RedisModule } from '@liaoliaots/nestjs-redis';\n\n  @Module({\n    imports: [\n      RedisModule.forRoot({\n        sentinels: [{ host: '127.0.0.1', port: 26379 }],\n        name: 'mymaster',\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- **Documentation**: Explore the [official documentation](https://github.com/liaoliaots/nestjs-redis#readme) for detailed usage and examples.",
     "source": "code_example",
-    "updated_at": 1780817082.5301156
+    "updated_at": 1780824257.4276783
   },
   "redis_cache": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/common @nestjs/core @nestjs/platform-express`\n  - `npm install --save redis`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Redis: v7.x\n\n- **Key Config Options**:\n  - `redisOptions`: Configure Redis connection options.\n  - `ttl`: Set time-to-live for cache entries.\n  - `prefix`: Define a prefix for cache keys.",
     "source": "web_research",
-    "updated_at": 1780817083.708051
+    "updated_at": 1780824259.1090386
   },
   "nestjs_cache": {
     "content": "- **CLI Commands**:\n  - `nest generate interceptor caching`\n  - `docker run --name my-redis -d redis`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Redis: v7.x\n  - @nestjs/common: v10.x\n\n- **Key Config Options**:\n  - CacheModule.register({ ttl: 60, isGlobal: true })\n  - Use `@CacheInterceptor` decorator on controllers or methods",
     "source": "web_research",
-    "updated_at": 1780817084.9377224
+    "updated_at": 1780824260.675936
   }
 }

@@ -2,26 +2,26 @@
   "search:spring-boot+jpa-optimization:spring boot jpa performance tu": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Boot 3.0, JPA 2.2, Hibernate 6.0.\n- **Key Config Options**:\n  - `spring.jpa.open-in-view: false`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n- **Performance Tuning Tips**:\n  - Avoid N+1 queries by using `@BatchSize` and explicit fetching.\n  - Use pagination for large datasets.\n  - Analyze SQL logs to identify bottlenecks.\n  - Enable second-level cache for read-heavy applications.",
     "source": "web_search",
-    "updated_at": 1780817004.8102965
+    "updated_at": 1780824154.5172389
   },
   "search:spring-boot+jpa-optimization:spring boot jpa performance tu_ex": {
     "content": "- Use `@BatchSize` annotation to configure batch size in Spring Data JPA repositories.\n- Optimize queries by using JPQL or native SQL for complex operations.\n- Implement pagination and sorting in repository methods to reduce data fetched at once.\n- Use `@Transactional` with appropriate isolation levels to manage transaction scope efficiently.\n- Monitor and analyze query performance using tools like Hibernate's Query Profiler.\n- Adjust JVM heap size based on application requirements and available resources.\n- Enable second-level cache for frequently accessed entities to reduce database hits.\n- Regularly update Spring Boot, JPA, and Hibernate libraries to benefit from performance improvements.",
     "source": "code_example",
-    "updated_at": 1780817006.13587
+    "updated_at": 1780824155.7881093
   },
   "search:spring-boot+jpa-optimization:spring boot jpa query optimiza": {
     "content": "- Use `@Query` annotation for custom JPQL or native SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Apply fetch joins to reduce N+1 query problems.\n- Utilize `@EntityGraph` for efficient data fetching.\n- Enable query hints with `@QueryHints` for specific database optimizations.\n- Use `@BatchSize` on entities for batch loading.\n- Optimize sorting by using indexed columns.\n- Consider using Spring Data JPA's `@Modifying` and `@Transactional` annotations for bulk operations.\n- Regularly update Spring Boot and JPA to the latest versions for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780817007.4055853
+    "updated_at": 1780824157.0260055
   },
   "search:spring-boot+jpa-optimization:spring boot jpa batch processi": {
     "content": "- **Add Dependencies**: Include `spring-boot-starter-batch` and `spring-data-jpa`.\n- **Configure Batch Size**: Use `spring.jpa.properties.hibernate.jdbc.batch_size=4` in `application.properties`.\n- **Enable Order Inserts**: Set `spring.jpa.properties.hibernate.order_inserts=true` for ordered inserts.\n- **Use Spring Data JPA Repositories**: Implement repositories with `@Repository` and extend `JpaRepository`.\n- **Define Batch Job**: Create a job using `@Bean` method annotated with `@Job`.\n- **Configure Steps**: Define steps within the job, each with its own reader, processor, and writer.\n- **Reader Configuration**: Use `@StepScope` for readers to handle batch processing.\n- **Processor Configuration**: Implement custom processors if data transformation is required.\n- **Writer Configuration**: Configure writers to output data, e.g., CSV or database.\n- **Run Job**: Execute the job using `JobLauncher.run(job, parameters)`.",
     "source": "web_search",
-    "updated_at": 1780817008.6662593
+    "updated_at": 1780824158.270534
   },
   "search:spring-boot+jpa-optimization:spring boot jpa batch processi_ex": {
     "content": "- Use `@EnableBatchProcessing` to enable batch processing in your Spring Boot application.\n- Configure `ItemReader`, `ItemProcessor`, and `ItemWriter` beans for custom data handling.\n- Utilize `JpaPagingItemReader` for reading large datasets efficiently.\n- Implement `@StepScope` on reader, processor, and writer beans to manage scope across steps.\n- Set `spring.jpa.properties.hibernate.jdbc.batch_size=50` in your `application.properties` for batch inserts/updates.\n- Use `@Transactional(propagation = Propagation.REQUIRES_NEW)` within step methods for transaction management.\n- Configure `JobRepository` bean with `JpaTransactionManager` for transactional support.\n- Implement `ItemWriter` to handle data output, such as writing to a CSV file or database.",
     "source": "code_example",
-    "updated_at": 1780817009.9522207
+    "updated_at": 1780824159.5014958
   }
 }

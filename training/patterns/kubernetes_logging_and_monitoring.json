@@ -2,26 +2,26 @@
   "search:kubernetes+logging-and-monitoring:kubernetes logging best practi": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- Implement centralized logging using tools like Fluentd, Fluent Bit, or Loki.\n- Configure log rotation with `logrotate` for long-term storage management.\n- Set up log retention policies in your logging solution (e.g., 30 days).\n- Use labels and annotations to organize and filter logs effectively.\n- Ensure logs are encrypted at rest and in transit using TLS.\n- Regularly update your logging agents and tools to the latest versions.\n- Implement role-based access control (RBAC) for log management.\n- Monitor log volume and performance regularly to optimize resource usage.",
     "source": "web_search",
-    "updated_at": 1780818509.328026
+    "updated_at": 1780823922.9499507
   },
   "search:kubernetes+logging-and-monitoring:kubernetes monitoring tools an": {
     "content": "- **Prometheus**: Use `kubectl apply -f prometheus.yaml` to deploy Prometheus.\n- **Grafana**: Deploy using Helm with `helm install grafana grafana/grafana`.\n- **ELK Stack**: Install Elasticsearch, Logstash, and Kibana using Docker Compose or Kubernetes manifests.\n- **Alertmanager**: Configure Alertmanager by editing the `alertmanager.yml` file.\n- **Key Config Options**:\n  - Prometheus: `scrape_interval`, `job_name`\n  - Grafana: Data sources, dashboards\n  - ELK Stack: Index patterns, logstash pipelines\n  - Alertmanager: Routing rules, notification channels",
     "source": "web_search",
-    "updated_at": 1780818549.9794233
+    "updated_at": 1780823924.1631858
   },
   "search:kubernetes+logging-and-monitoring:kubernetes monitoring tools an_ex": {
     "content": "- **Prometheus**: \n  - Install: `helm install prometheus prometheus-community/prometheus`\n  - Config: `prometheus.yml` for scrape configurations.\n\n- **Grafana**:\n  - Install: `helm install grafana grafana/grafana`\n  - Config: `values.yaml` for dashboard and data source settings.\n\n- **Loki**:\n  - Install: `helm install loki grafana/loki`\n  - Config: `loki-values.yaml` for log retention and storage configurations.\n\n- **Promtail**:\n  - Install: `helm install promtail grafana/promtail`\n  - Config: `promtail-config.yaml` for log collection and forwarding.\n\n- **OpenTelemetry**:\n  - Install: `kubectl apply -f https://github.com/open-telemetry/opentelemetry-operator/releases/latest/download/opentelemetry-operator.yaml`\n  - Config: `otel-collector-config.yaml` for tracing and metrics collection.\n\n- **Kubernetes Dashboard**:\n  - Install: `kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml`\n  - Access: `kubectl proxy`, then navigate to `http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`.\n\n- **Atmosly**:\n  - Install: Not available via Helm, refer to Atmosly's official documentation for installation.\n  - Config: Follow Atmosly’s setup guide for AI-powered monitoring configurations.\n\n- **Alerting**:\n  - Prometheus Alertmanager: `helm install prometheus-alertmanager prometheus-community/prometheus`\n  - Configure alerts in `prometheus.yml` and alert rules in `rules/`.\n\n- **Metrics Collection**:\n  - Use Kubernetes Metrics Server for resource metrics.\n  - Enable custom metrics with the Metrics API.\n\n- **Logging**:\n  - Collect logs using Promtail or Fluentd.\n  - Visualize logs with Grafana’s Loki integration.",
     "source": "code_example",
-    "updated_at": 1780818572.2308967
+    "updated_at": 1780823925.3633485
   },
   "search:kubernetes+logging-and-monitoring:kubernetes alerting and notifi": {
     "content": "- **Prometheus**: Use `kubectl apply -f prometheus.yaml` to deploy Prometheus.\n- **Alertmanager**: Deploy using `kubectl apply -f alertmanager.yaml`.\n- **Custom Rules**: Create rules in `prometheus.rules` and reload with `kubectl replace -f prometheus.rules`.\n- **Slack Notifications**: Configure Slack webhook URL in Alertmanager config.\n- **Email Notifications**: Set up SMTP server details in Alertmanager config.\n- **Pod Failures**: Use Prometheus query like `kube_pod_container_status_restarts_total{job=\"kubernetes-pods\"}` for alerts.\n- **Alertmanager Config**: Modify `alertmanager.yaml` to specify receivers and routes.\n- **Grafana Integration**: Install Grafana using Helm with `helm install grafana grafana/grafana`.\n- **Prometheus Operator**: Deploy with `kubectl apply -f prometheus-operator.yaml`.\n\n**Latest Versions:**\n- Prometheus: v2.40.0\n- Alertmanager: v0.25.0\n\n**Key Config Options:**\n- Prometheus: `scrape_configs`, `rule_files`\n- Alertmanager: `route`, `receivers`",
     "source": "web_search",
-    "updated_at": 1780818591.5515993
+    "updated_at": 1780823926.5643659
   },
   "search:kubernetes+logging-and-monitoring:kubernetes alerting and notifi_ex": {
     "content": "- **CLI Commands**: `kubectl get events`, `kubectl describe pod <pod-name>`, `kubectl logs <pod-name>`\n- **Latest Versions**: Botkube v2.5, Sysdig v2024.1\n- **Key Config Options**:\n  - Alerting rules in Prometheus: `alertmanager.yml`\n  - Service discovery in Kubernetes: `serviceMonitor.yaml`\n  - Correlation with graphs: Use Sysdig's correlation engine to correlate events and metrics.",
     "source": "code_example",
-    "updated_at": 1780818596.6429386
+    "updated_at": 1780823927.772269
   }
 }

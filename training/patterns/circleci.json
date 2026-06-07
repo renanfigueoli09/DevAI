@@ -2,11 +2,11 @@
   "search:circleci:circleci orbs jobs workflows d": {
     "content": "- Use `circleci orb add <orb_name> <version>` to install an orb.\n- For Docker, use the `docker` orb from CircleCI with version `[email protected]`.\n- Define a job using the Docker executor in your `.circleci/config.yml`:\n  ```yaml\n  jobs:\n    build-and-push:\n      executor: docker/docker\n      steps:\n        - checkout\n        - run: echo \"Building and pushing Docker image...\"\n  ```\n- Utilize `circleci orb list` to view available orbs.\n- For managing concurrency, use the `concurrency` key in your `.circleci/config.yml`.\n- Cache dependencies using the `cache` step with keys for version control.\n- Store artifacts using the `store_artifacts` step specifying paths and destination.\n- Use `circleci config validate` to check your configuration file for errors.",
     "source": "web_search",
-    "updated_at": 1780816928.0715227
+    "updated_at": 1780824082.4727693
   },
   "search:circleci:circleci orbs jobs workflows d_ex": {
     "content": "- **Install Docker Orb**: `circleci orb add circleci/docker@5`\n- **Latest Version of Docker Orb**: `@5`\n- **Key Config Options**:\n  - `docker.build`: Build a Docker image.\n  - `docker.run`: Run a Docker container.\n  - `docker.push`: Push a Docker image to a registry.\n\nExample Workflow:\n\n```yaml\nversion: 2.1\n\norbs:\n  docker: circleci/docker@5\n\njobs:\n  build-and-push-image:\n    docker:\n      - image: circleci/node:14\n        auth:\n          username: $DOCKER_USERNAME\n          password: $DOCKER_PASSWORD\n    steps:\n      - checkout\n      - run: npm install\n      - docker/build:\n          context: .\n          tags:\n            - my-app:${CIRCLE_SHA1}\n      - docker/push:\n          images:\n            - my-app:${CIRCLE_SHA1}\n\nworkflows:\n  version: 2\n  build-and-push:\n    jobs:\n      - build-and-push-image\n```\n\nThis workflow demonstrates how to use the Docker Orb to build and push a Docker image to a registry.",
     "source": "code_example",
-    "updated_at": 1780816929.2983515
+    "updated_at": 1780824083.7270815
   }
 }
