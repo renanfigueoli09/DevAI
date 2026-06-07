@@ -2,11 +2,11 @@
   "search:fastapi+kafka:fastapi aiokafka producer cons": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi aiokafka`\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - aiokafka: 23.4.0\n\n- **Key Config Options**:\n  - Producer: `bootstrap_servers`, `client_id`, `acks`, `retries`\n  - Consumer: `bootstrap_servers`, `group_id`, `auto_offset_reset`, `enable_auto_commit`",
     "source": "web_search",
-    "updated_at": 1780817926.099934
+    "updated_at": 1780825197.5662808
   },
   "search:fastapi+kafka:fastapi aiokafka producer cons_ex": {
     "content": "- Use `pip install aiokafka fastapi uvicorn` to install the necessary packages.\n- Ensure you have Kafka running and accessible.\n- For FastAPI, use `uvicorn app:app --reload` for development.\n- Key config options in `AIOKafkaProducer`: `bootstrap_servers`, `client_id`.\n- Example of a producer function:\n  ```python\n  from aiokafka import AIOKafkaProducer\n\n  async def get_producer():\n      producer = AIOKafkaProducer(\n          bootstrap_servers='localhost:9092',\n          client_id='fastapi-producer'\n      )\n      await producer.start()\n      yield producer\n      await producer.stop()\n  ```\n- Use `app.dependency_overrides` to override dependencies in FastAPI.\n- For consumer setup, use `AIOKafkaConsumer` with similar configuration options.\n- Ensure Kafka topic exists before running the application.",
     "source": "code_example",
-    "updated_at": 1780817927.4592886
+    "updated_at": 1780825198.8858857
   }
 }

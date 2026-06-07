@@ -2,21 +2,21 @@
   "search:nextjs-auth0:next.js authentication with au": {
     "content": "- Install `auth0-spa-js` using npm or yarn.\n- Use the Authorization Code Grant with PKCE for authentication.\n- Configure Auth0 domain, client ID, and audience in your application.\n- Implement `handleAuth()` to create route handlers for login, logout, and callback.\n- Secure routes by checking user authentication status.\n- Manage sessions using cookies or JWT tokens.\n- Update dependencies regularly to the latest versions for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780821923.1838503
+    "updated_at": 1780825200.1559088
   },
   "search:nextjs-auth0:next.js authentication with au_ex": {
     "content": "- **Latest Version**: @auth0/nextjs-auth0 v4.22.0\n- **Key Config Options**:\n  - `domain`: Your Auth0 domain.\n  - `clientId`: Your Auth0 client ID.\n  - `clientSecret`: Your Auth0 client secret.\n  - `audience`: The API audience for your application.\n- **CLI Commands**:\n  - To install the SDK: `npm install @auth0/nextjs-auth0`\n  - To initialize the SDK in your Next.js project, follow the steps in the [QuickStart guide](https://github.com/auth0/nextjs-auth0#quickstart).\n- **Example Configuration**:\n  ```javascript\n  // next.config.mjs\n  import { withAuth0 } from '@auth0/nextjs-auth0';\n\n  const config = {\n    auth0: {\n      domain: 'your-auth0-domain.auth0.com',\n      clientId: 'your-client-id',\n      clientSecret: 'your-client-secret',\n      audience: 'https://your-api-audience'\n    }\n  };\n\n  export default withAuth0(config);\n  ```\n- **Example Usage**:\n  ```javascript\n  // pages/api/protected.js\n  import { getSession } from '@auth0/nextjs-auth0';\n\n  export default async function handler(req, res) {\n    const session = await getSession(req, res);\n\n    if (session) {\n      res.status(200).json({ message: 'User is authenticated', user: session.user });\n    } else {\n      res.status(401).json({ message: 'User is not authenticated' });\n    }\n  }\n  ```",
     "source": "code_example",
-    "updated_at": 1780821933.215418
+    "updated_at": 1780825201.4256773
   },
   "search:nextjs-auth0:auth0 integration in next.js a": {
     "content": "- **CLI Commands**: Use `npx create-next-app@latest` to start a new Next.js project.\n- **Latest Version**: As of my last update, the latest version is v4.22.0.\n- **Key Config Options**:\n  - `domain`: Your Auth0 domain.\n  - `clientId`: Your Auth0 client ID.\n  - `clientSecret`: Your Auth0 client secret (not recommended for production).\n  - `audience`: The API audience you are protecting.\n\nFor detailed setup, refer to the [Auth0 Next.js SDK documentation](https://github.com/auth0/nextjs-auth0).",
     "source": "web_search",
-    "updated_at": 1780821940.792863
+    "updated_at": 1780825202.6422539
   },
   "search:nextjs-auth0:auth0 integration in next.js a_ex": {
     "content": "- Use `npx create-next-app [app-name]` to initialize a new Next.js project.\n- Install the Auth0 SDK for Next.js using npm or yarn.\n- Configure authentication in `[nextauth].js` file with provider details like client ID, domain, and secret.\n- Ensure Tailwind CSS is installed and configured for styling.\n- Use `nextjs-auth0` package for handling user authentication.\n- Update `pages/api/auth/[...nextauth].js` to include Auth0 configuration.\n- Run the application using `npm run dev` or `yarn dev`.\n- Deploy your Next.js app with authentication enabled on platforms like Vercel.",
     "source": "code_example",
-    "updated_at": 1780821948.79346
+    "updated_at": 1780825203.9410968
   }
 }

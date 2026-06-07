@@ -1,0 +1,7 @@
+{
+  "search:Testing Strategies for React-Native+Apollo-Client:testing react-native apollo cl": {
+    "content": "- Use Jest and React Testing Library for testing.\n- Install Apollo Client, GraphQL, and related packages using npm or yarn.\n- Mock GraphQL operations using `MockedProvider` from `@apollo/client/testing`.\n- Configure Apollo Client with necessary options like `uri`, `cache`, etc.\n- For mutations, use `renderHook` from `@testing-library/react-hooks` along with `MockedProvider`.\n- Ensure to handle loading and error states in your tests.\n- Use `fireEvent` for simulating user interactions.\n- Check the latest versions of Apollo Client and related packages on npm.\n- Refer to official documentation for detailed examples and best practices.",
+    "source": "web_search",
+    "updated_at": 1780825395.5476112
+  }
+}

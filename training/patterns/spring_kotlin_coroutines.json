@@ -2,16 +2,16 @@
   "search:spring+kotlin-coroutines:spring kotlin coroutines perfo": {
     "content": "- **CLI Commands**: Use `./gradlew build --info` to get detailed build information.\n- **Latest Versions**: Ensure you are using Spring Boot 5.2 or later for full Kotlin coroutine support.\n- **Key Config Options**:\n  - `Dispatcher`: Choose the appropriate dispatcher (`Dispatchers.Default`, `Dispatchers.IO`, `Dispatchers.Main`) based on the task type.\n  - `CoroutineScope`: Use `GlobalScope` for global tasks, but prefer creating a custom scope to manage lifecycle.\n  - `Job`: Use `Job` to cancel coroutines and manage their lifecycle.",
     "source": "web_search",
-    "updated_at": 1780817831.1494722
+    "updated_at": 1780825106.3899763
   },
   "search:spring+kotlin-coroutines:spring kotlin coroutines error": {
     "content": "- **CLI Commands**: Use `./gradlew build` to compile and run your Kotlin project.\n- **Latest Versions**: Ensure you are using the latest version of Kotlin and Spring Boot by checking their official documentation.\n- **Key Config Options**:\n  - For error handling in coroutines, use `try-catch` blocks within your coroutine functions.\n  - Configure exception handlers at the application level to manage uncaught exceptions globally.\n  - Use `CoroutineExceptionHandler` for centralized exception handling across all coroutines.",
     "source": "web_search",
-    "updated_at": 1780817832.580064
+    "updated_at": 1780825107.6176095
   },
   "search:spring+kotlin-coroutines:spring kotlin coroutines error_ex": {
     "content": "- **CLI Commands**: Use `./gradlew build` to compile your Kotlin project.\n- **Latest Versions**: Ensure you are using the latest version of Kotlin and coroutines library by checking [Maven Central](https://search.maven.org/) or [Gradle Plugin Portal](https://plugins.gradle.org/).\n- **Key Config Options**:\n  - `CoroutineExceptionHandler`: Use this to handle uncaught exceptions in a global scope.\n  - `withContext(Dispatchers.IO)`: For I/O operations, use `Dispatchers.IO` to avoid blocking the main thread.\n  - `try-catch` blocks: Implement try-catch within coroutines for local exception handling.",
     "source": "code_example",
-    "updated_at": 1780817833.8198335
+    "updated_at": 1780825108.856261
   }
 }

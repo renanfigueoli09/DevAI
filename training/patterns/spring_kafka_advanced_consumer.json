@@ -2,21 +2,21 @@
   "search:spring+kafka-advanced-consumer:spring kafka advanced consumer": {
     "content": "- **Latest Spring Kafka Version**: 3.1.x\n- **Key Config Options**:\n  - `spring.kafka.consumer.auto-offset-reset`: Determines the starting point for reading messages.\n    - Values: `earliest`, `latest`\n  - `spring.kafka.consumer.key-deserializer`: Deserializes keys from bytes to Java objects.\n  - `spring.kafka.consumer.value-deserializer`: Deserializes values from bytes to Java objects.\n- **CLI Commands**:\n  - To create a Kafka consumer application using Spring Boot, run:\n    ```bash\n    mvn archetype:generate -DgroupId=com.example -DartifactId=spring-kafka-consumer -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false\n    ```\n  - Add Spring Kafka dependency to `pom.xml`:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.kafka</groupId>\n        <artifactId>spring-kafka</artifactId>\n        <version>3.1.x</version>\n    </dependency>\n    ```\n- **Advanced Patterns**:\n  - Multi-tenancy patterns\n  - Better Connect integration\n  - Kafka Streams auto-config\n  - Enhanced request/reply patterns",
     "source": "web_search",
-    "updated_at": 1780817794.439111
+    "updated_at": 1780825075.8331676
   },
   "search:spring+kafka-advanced-consumer:spring kafka advanced consumer_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Apache Kafka: 3.4.x\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `group.id`: Consumer group ID.\n  - `auto.offset.reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n  - `enable.auto.commit`: If true, the consumer's offset will be periodically committed to Kafka.",
     "source": "code_example",
-    "updated_at": 1780817796.0168831
+    "updated_at": 1780825077.043756
   },
   "search:spring+kafka-advanced-consumer:kafka consumer error handling ": {
     "content": "- Use `@KafkaListener` annotation to define Kafka consumers.\n- Implement `ErrorHandler` interface or use `DefaultErrorHandler` for custom error handling logic.\n- Configure `errorHandler` property in `KafkaConsumerFactory`.\n- Set `autoCommitEnable` to `false` and handle offsets manually for better control.\n- Use `Acknowledgment` parameter in listener methods to commit offsets explicitly.\n- Implement `SeekToCurrentErrorHandler` for retrying failed messages.\n- Monitor Kafka consumer metrics using Spring Boot Actuator.\n- Update dependencies to the latest versions of Spring Kafka and Apache Kafka.",
     "source": "web_search",
-    "updated_at": 1780817798.045185
+    "updated_at": 1780825078.269939
   },
   "search:spring+kafka-advanced-consumer:kafka consumer error handling _ex": {
     "content": "- Use `@RetryableTopic` from Spring Kafka 2.7+ for robust error handling.\n- Implement `ErrorHandler` interface to handle exceptions in Kafka consumers.\n- Configure `spring.kafka.listener.error-handler` bean in your application properties or YAML.\n- Set `maxAttempts` and `fixedDelay` in `@RetryableTopic` for retry logic.\n- Use `Dead Letter Queue (DLQ)` for messages that fail multiple retries.\n- Ensure Kafka producer is configured to send messages to DLQ on failure.",
     "source": "code_example",
-    "updated_at": 1780817799.5183218
+    "updated_at": 1780825079.492332
   }
 }
