@@ -1,0 +1,22 @@
+{
+  "search:dotnet-entityframework-core-migration:entity framework core migratio": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.x (as of my last update)\n  - .NET SDK: 6.x or later\n\n- **Key Config Options**:\n  - `OnModelCreating`: Configure your model in the DbContext class.\n  - `Scaffold-DbContext`: Generate a new DbContext and entity classes from an existing database.\n  - `MigrationsHistoryTable`: Customize the name of the migrations history table.",
+    "source": "web_search",
+    "updated_at": 1780825898.3608382
+  },
+  "search:dotnet-entityframework-core-migration:entity framework core migratio_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `UseSqlServer` for SQL Server\n  - `MigrationsAssembly` in `appsettings.json`\n  - `Scaffold-DbContext` for reverse engineering the database schema",
+    "source": "code_example",
+    "updated_at": 1780825906.3021593
+  },
+  "search:dotnet-entityframework-core-migration:ef core migrations for large a": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n  - `dotnet ef database update` to apply migrations to the database.\n  - `dotnet ef migrations remove` to remove the last migration.\n\n- **Latest Versions**:\n  - EF Core: As of my knowledge cut-off in early 2023, the latest stable version is 7.0, but always check for updates on [Microsoft's official website](https://docs.microsoft.com/en-us/ef/core/release-notes/).\n\n- **Key Config Options**:\n  - `MigrationsHistoryTable`: Customize the name of the history table used to track migrations.\n  - `MigrationAssembly`: Specify the assembly where migrations are located.\n  - `Schemas`: Define database schemas for entities.\n\n- **Best Practices**:\n  - Use branching strategies like feature branches for development and merge into main with care.\n  - Automate migration testing in CI/CD pipelines.\n  - Regularly clean up old migrations to keep the history table manageable.",
+    "source": "web_search",
+    "updated_at": 1780825915.764374
+  },
+  "search:dotnet-entityframework-core-migration:ef core migrations for large a_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - Migration History Table (`__EFMigrationsHistory`)\n  - Migrations Directory Configuration",
+    "source": "code_example",
+    "updated_at": 1780825920.1004534
+  }
+}
