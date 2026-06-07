@@ -2,16 +2,16 @@
   "search:Security Patterns in Python-Django:python-django-security-pattern": {
     "content": "- Use `django-admin startproject` to create a new Django project.\n- Update Django to the latest version using `pip install --upgrade django`.\n- Configure security settings in `settings.py`, including:\n  - `SECRET_KEY`: Generate a secure secret key with `python -c \"import os; print(os.urandom(24).hex())\"`\n  - `DEBUG`: Set to `False` in production.\n  - `ALLOWED_HOSTS`: List all allowed hostnames.\n- Sanitize user input using Django's built-in forms and validators.\n- Use HTTPS by setting `SECURE_SSL_REDIRECT = True`.\n- Implement CSRF protection with `@csrf_exempt` only for specific views if necessary.\n- Regularly update dependencies using `pip list --outdated` and `pip install -U <package>`.\n- Utilize Django's authentication system for user management.\n- Employ Django's built-in security features like password hashing (`django.contrib.auth.hashers`) and session management.",
     "source": "web_search",
-    "updated_at": 1780833820.4496574
+    "updated_at": 1780846685.4451935
   },
   "search:Security Patterns in Python-Django:kubernetes+postgres": {
     "content": "- **Deploy Postgres to Kubernetes Cluster**:\n  - Use `kubectl apply -f postgres-deployment.yaml`\n  - Ensure StatefulSet is used for persistent storage.\n  - Apply Helm chart with `helm install my-postgres bitnami/postgresql`\n\n- **CloudNativePG**:\n  - Install operator: `kubectl apply -f https://raw.githubusercontent.com/cloudnative-pg/cloudnative-pg/main/deploy/operator.yaml`\n  - Create custom resource definition (CRD): `kubectl apply -f https://raw.githubusercontent.com/cloudnative-pg/cloudnative-pg/main/config/crd/bases/postgresql.cnpg.io_postgresqls.yaml`\n\n- **Recommended Architectures**:\n  - Use StatefulSets for persistent storage.\n  - Implement primary/standby replication using native streaming replication.\n\n- **Deploy PostgreSQL on Kubernetes**:\n  - Use `kubectl apply -f postgres-deployment.yaml`\n  - Ensure PersistentVolumeClaim (PVC) is configured for data persistence.\n  - Apply Helm chart with `helm install my-postgres bitnami/postgresql`",
     "source": "web_search",
-    "updated_at": 1780833822.4875085
+    "updated_at": 1780846687.6268308
   },
   "search:Security Patterns in Python-Django:kubernetes+postgres_ex": {
     "content": "- Use `kubectl apply -f postgres-configmap.yml` to create the ConfigMap.\n- Deploy PostgreSQL using StatefulSets with `kubectl apply -f postgres-statefulset.yaml`.\n- Ensure Kubernetes version is up-to-date for optimal compatibility.\n- Key config options include `replicas`, `storageClassName`, and `resources` in the StatefulSet YAML.\n- Use `kubectl get pods -l app=postgres` to check the status of PostgreSQL pods.\n- For persistent storage, specify a `PersistentVolumeClaim` with appropriate `accessModes`.\n- Monitor logs with `kubectl logs <pod-name>` for troubleshooting.",
     "source": "code_example",
-    "updated_at": 1780833824.2526207
+    "updated_at": 1780846689.989833
   }
 }

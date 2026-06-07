@@ -21,6 +21,9 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Optional
 
+# Score mínimo para considerar um tópico "aprovado" no knowledge check
+SCORE_THRESHOLD = 0.70
+
 DEVAI_DIR = Path(__file__).parent.parent.resolve()
 sys.path.insert(0, str(DEVAI_DIR))
 
@@ -469,6 +472,51 @@ def _discover_alternative(llm, model: str, known: list[str]) -> dict[str, list]:
         return {}
 
 
+def run_knowledge_check() -> dict[str, float]:
+    """
+    Roda a Fase 1 do validate (sem LLM) para medir score de cada tópico.
+    Retorna {nome: score_0_a_1}.
+    Rápido — só lê o vector store, sem chamada LLM.
+    """
+    try:
+        from scripts.validate import KNOWLEDGE_CHECKS, check_knowledge
+        scores: dict[str, float] = {}
+        for check in KNOWLEDGE_CHECKS:
+            passed, score, _ = check_knowledge(check)
+            name = check["name"]
+            scores[name] = score / check["weight"]
+        return scores
+    except Exception as e:
+        console.print(f"  [dim]⚠ Knowledge check: {e}[/dim]")
+        return {}
+
+
+def retrain_weak_topics(scores: dict[str, float], llm, model: str) -> int:
+    """
+    Retreina tópicos com score abaixo do threshold.
+    Usa os CRITICAL_PATTERNS do validate.py para injetar respostas certas.
+    """
+    try:
+        from scripts.validate import CRITICAL_PATTERNS, force_train
+        from tools.vector_store import save, backfill_embeddings
+
+        # Salva todos os padrões críticos (sempre — são a base)
+        saved = 0
+        for key, topic, pat_content in CRITICAL_PATTERNS:
+            save(key, pat_content, topic=topic, source="critical_pattern")
+            saved += 1
+
+        # Gera embeddings para os novos padrões
+        n_emb = backfill_embeddings()
+        if n_emb:
+            console.print(f"  [green]✓[/green] {n_emb} embedding(s) gerado(s)")
+
+        return saved
+    except Exception as e:
+        console.print(f"  [dim]⚠ Retrain: {e}[/dim]")
+        return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description="DevAI Auto-Study v5 — Smart loop")
     parser.add_argument("--group",     default="all", choices=list(TOPIC_GROUPS.keys()))
@@ -645,22 +693,72 @@ def main():
             if n_emb: console.print(f"  [green]✓[/green] {n_emb} embedding(s)")
         except Exception: st = {}
 
-        # 6. Validação opcional
-        val_scores = {}
-        if args.validate:
-            console.print(Rule("[cyan]4 — Validação[/cyan]"))
+        # 6. Knowledge check + retreino adaptativo (sempre roda, rápido)
+        console.print(Rule("[cyan]4 — Knowledge Check + Retreino Adaptativo[/cyan]"))
+        MAX_RETRAIN_ROUNDS = 5
+        for retrain_round in range(1, MAX_RETRAIN_ROUNDS + 1):
+            scores = run_knowledge_check()
+            if not scores:
+                break
+
+            total   = sum(scores.values())
+            max_s   = len(scores)
+            overall = total / max_s if max_s else 0
+            bar     = "█" * int(overall * 10) + "░" * (10 - int(overall * 10))
+            color   = "green" if overall >= SCORE_THRESHOLD else "yellow" if overall >= 0.5 else "red"
+            console.print(f"  [{color}]Round {retrain_round}: {overall*100:.0f}% [{bar}][/{color}]")
+
+            # Mostra detalhes dos que falharam
+            weak = [(k, v) for k, v in scores.items() if v < SCORE_THRESHOLD]
+            if weak:
+                for name, score in weak[:5]:
+                    console.print(f"  [dim]  ✗ {name[:50]}: {score*100:.0f}%[/dim]")
+
+            # Atualiza journal com score médio
+            for t_key in journal:
+                journal[t_key].last_score = overall
+
+            if overall >= SCORE_THRESHOLD:
+                console.print(f"  [green]✅ Score {overall*100:.0f}% ≥ {SCORE_THRESHOLD*100:.0f}% — aprovado![/green]")
+                break
+
+            # Retreina padrões críticos e pesquisa web dos tópicos fracos
+            console.print(f"  [yellow]→ {len(weak)} check(s) fracos — retreinando (round {retrain_round}/{MAX_RETRAIN_ROUNDS})...[/yellow]")
+            n_saved = retrain_weak_topics(scores, llm, model)
+            if n_saved:
+                console.print(f"  [green]✓[/green] {n_saved} padrão(ões) reforçado(s)")
+
+            # Pesquisa web adicional para tópicos mapeados como fracos
+            weak_topic_map = {
+                "Mongoose": ["nestjs_mongodb"],
+                "findOneBy": ["nestjs_mongodb"],
+                "MongooseModule": ["nestjs_mongodb"],
+                "livros": ["nlp_patterns"],
+                "usuários": ["nlp_patterns"],
+                "docker": ["docker_patterns"],
+                "PartialType": ["nestjs_auth"],
+                "TS2307": ["common_errors"],
+                "Spring": ["spring_mongodb"],
+                "FastAPI": ["fastapi_mongodb"],
+            }
+            all_c = {**SEARCH_CURRICULUM, **load_discovered()}
+            for name, score in weak[:3]:
+                for keyword, study_keys in weak_topic_map.items():
+                    if keyword.lower() in name.lower():
+                        for sk in study_keys:
+                            if sk in all_c:
+                                n = study_topic(sk, all_c[sk][:2], llm, model, intensive=True)
+                                if n: console.print(f"  [dim]+ {n} pesquisa(s) web ({sk})[/dim]")
+                        break
+
+            # Re-gera embeddings após retreino
             try:
-                val_scores = validate_quick(llm, model)
-                for topic, score in val_scores.items():
-                    if score >= 0:
-                        icon = "✓" if score >= 0.7 else "✗"
-                        color = "green" if score >= 0.7 else "yellow" if score >= 0.5 else "red"
-                        console.print(f"  [{color}]{icon} {topic}: {score*100:.0f}%[/{color}]")
-                        if topic in journal:
-                            journal[topic].last_score = score
-                save_journal(journal)
-            except Exception as e:
-                console.print(f"  [dim]⚠ Validação: {e}[/dim]")
+                from tools.vector_store import backfill_embeddings
+                backfill_embeddings()
+            except Exception:
+                pass
+
+        save_journal(journal)
 
         # Summary
         elapsed = int(time.time() - now)

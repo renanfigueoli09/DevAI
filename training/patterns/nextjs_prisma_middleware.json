@@ -1,0 +1,27 @@
+{
+  "search:nextjs+prisma-middleware:next.js prisma middleware for ": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npm install prisma --save-dev`\n\n- **Latest Versions**:\n  - Next.js: v13.5.4\n  - Prisma: v4.7.0\n\n- **Key Config Options**:\n  - In `next.config.js`, add `experimental: { middlewareDir: true }` to enable middleware.\n  - In `.env.local`, set environment variables for database connection, e.g., `DATABASE_URL=postgresql://user:password@localhost:5432/mydb`.",
+    "source": "web_search",
+    "updated_at": 1780846915.2724175
+  },
+  "search:nextjs+prisma-middleware:next.js prisma middleware for _ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma generate` to generate Prisma Client based on your schema.\n  - `prisma migrate dev --name init` to create a new migration and apply it.\n\n- **Latest Versions**:\n  - Prisma: 4.x\n  - Next.js: 13.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Define data models, relations, and custom middleware.\n  - Middleware functions in `schema.prisma` for logging and validation.",
+    "source": "code_example",
+    "updated_at": 1780846920.3350315
+  },
+  "search:nextjs+prisma-middleware:using prisma middleware with n": {
+    "content": "- Ensure you are using the latest version of Prisma and Next.js.\n- Run `npx prisma generate` after installing new Prisma Client version.\n- Use Prisma Client extensions for middleware instead of deprecated middleware feature.\n- Middleware should be placed correctly in your Next.js project, typically in a custom API route or edge function.\n- Verify that your environment is configured to run Prisma Client, especially if using Vercel Edge Functions or Edge Runtime.",
+    "source": "web_search",
+    "updated_at": 1780846928.6101274
+  },
+  "search:nextjs+prisma-middleware:using prisma middleware with n_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-blog-app`\n  - `npm install prisma`\n\n- **Latest Versions**:\n  - Next.js: 2024\n  - Prisma: 6\n\n- **Key Config Options**:\n  - Middleware for Prisma Client: Use to set or overwrite field values, validate input.\n  - Edge client in Prisma 6 reduces boilerplate by 92%.",
+    "source": "code_example",
+    "updated_at": 1780846934.8045776
+  },
+  "search:nextjs+prisma-middleware:prisma middleware patterns in ": {
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init`: Initializes a new Prisma schema and creates the initial migration.\n  - `prisma generate`: Generates the Prisma Client based on your Prisma schema.\n\n- **Latest Versions**:\n  - Prisma: 4.10.0\n  - Next.js: 13.5\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `next.config.js`: Configures Next.js, including Prisma integration.\n  - `prisma/schema.prisma`:\n    ```prisma\n    datasource db {\n      provider = \"postgresql\"\n      url      = env(\"DATABASE_URL\")\n    }\n    ```\n  - `next.config.js`:\n    ```javascript\n    const { withPrisma } = require('@prisma/middleware-nextjs');\n\n    module.exports = withPrisma({\n      // Next.js configuration options\n    });\n    ```\n\n- **Environment Variables**:\n  - `DATABASE_URL`: URL for your PostgreSQL database.",
+    "source": "web_search",
+    "updated_at": 1780846946.830121
+  }
+}

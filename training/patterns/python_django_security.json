@@ -1,0 +1,17 @@
+{
+  "search:python-django-security:django security best practices": {
+    "content": "- **CLI Commands**:\n  - `pip install django==6.0.2`\n  - `python manage.py migrate`\n  - `python manage.py createsuperuser`\n\n- **Latest Versions**:\n  - Django 6.0.2\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a strong, random secret key.\n  - `DEBUG`: Set to `False` in production.\n  - `ALLOWED_HOSTS`: Specify allowed hosts for your application.\n  - `CSRF_COOKIE_SECURE`: Set to `True` for HTTPS-only cookies.\n  - `SESSION_COOKIE_SECURE`: Set to `True` for HTTPS-only session cookies.",
+    "source": "web_search",
+    "updated_at": 1780847067.2667515
+  },
+  "search:python-django-security:django security best practices_ex": {
+    "content": "- **CLI Commands**: `python manage.py runserver` to start the Django development server.\n- **Latest Versions**: Ensure using Python 3.8 or later and Django 4.2 for security updates.\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a unique, random secret key in your settings.\n  - `DEBUG`: Set to `False` in production environments.\n  - `ALLOWED_HOSTS`: Specify allowed hosts in production.\n  - `DATABASES`: Configure database settings securely.",
+    "source": "code_example",
+    "updated_at": 1780847073.0150716
+  },
+  "search:python-django-security:django csrf protection 2025": {
+    "content": "- **CLI Commands**: Not applicable.\n- **Latest Versions**: Ensure Django is up to date using `pip install --upgrade django`.\n- **Key Config Options**:\n  - `MIDDLEWARE`: Include `'django.middleware.csrf.CsrfViewMiddleware'` in the middleware settings.\n  - `TEMPLATES[OPTIONS]['context_processors']`: Add `'django.template.context_processors.csrf'` to ensure CSRF tokens are available in templates.",
+    "source": "web_search",
+    "updated_at": 1780847111.9982219
+  }
+}
