@@ -2,21 +2,21 @@
   "search:spring-data-cassandra-async:spring data cassandra async op": {
     "content": "- **Latest Version**: Ensure you are using the latest version of Spring Data Cassandra to benefit from the most recent features and bug fixes.\n  \n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace for your Cassandra database.\n  - `spring.data.cassandra.contact-points`: Lists the contact points (hostnames or IP addresses) of your Cassandra cluster.\n\n- **CLI Commands with Exact Flags**:\n  - To create a new Spring Boot project with Spring Data Cassandra, use:\n    ```bash\n    mvn archetype:generate -DgroupId=com.example -DartifactId=spring-data-cassandra-demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false\n    ```\n  - Add the necessary dependencies to your `pom.xml` for Spring Data Cassandra:\n    ```xml\n    <dependency>\n      <groupId>org.springframework.boot</groupId>\n      <artifactId>spring-boot-starter-data-cassandra</artifactId>\n    </dependency>\n    ```\n\n- **Templates and Operations**:\n  - Use `AsyncCassandraOperations` for asynchronous operations, which can be mocked or stubbed for testing.\n  - Explore the repository style to simplify data access with Spring Data Cassandra.\n\n- **Introduction to Spring Data Cassandra**:\n  - Visit [Baeldung's guide](https://www.baeldung.com/spring-data-cassandra) for a practical introduction and hands-on examples.",
     "source": "web_search",
-    "updated_at": 1780790019.087931
+    "updated_at": 1780791656.1301146
   },
   "search:spring-data-cassandra-async:spring data cassandra async op_ex": {
     "content": "- Use `@Async` annotation in Spring to enable asynchronous operations.\n- Configure an executor bean in your Spring configuration file to manage thread pools for async tasks.\n- Add the dependency `org.springframework.data:spring-data-cassandra` to your project's `pom.xml`.\n- Ensure you have the latest version of Spring Data Cassandra, as of 2024, it might be updated frequently.\n- Use `AsyncCassandraOperations` interface for asynchronous operations in Spring Data Cassandra.\n- Implement `ReactiveCrudRepository` for reactive and non-blocking data access.\n- Configure exception handling strategies when using `@Async`.\n- Example projects can provide practical implementations and best practices.",
     "source": "code_example",
-    "updated_at": 1780790020.1951435
+    "updated_at": 1780791657.3897338
   },
   "search:spring-data-cassandra-async:cassandra with spring boot and": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `./gradlew bootRun` to run your Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data Cassandra: 3.5.0.RELEASE\n  - Reactor Core: 3.4.12\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace.\n  - `spring.data.cassandra.contact-points`: List of contact points for the cluster.\n  - `spring.data.cassandra.port`: Port number for Cassandra connection.\n  - `spring.data.cassandra.username` and `spring.data.cassandra.password`: Credentials for authentication.",
     "source": "web_search",
-    "updated_at": 1780790021.275952
+    "updated_at": 1780791658.5574572
   },
   "search:spring-data-cassandra-async:cassandra with spring boot and_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data Cassandra: 4.0.x\n  - Reactor Project: 3.4.x\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace.\n  - `spring.data.cassandra.contact-points`: Comma-separated list of contact points.\n  - `spring.data.cassandra.port`: Port number for Cassandra connection.\n  - `spring.data.cassandra.username` and `spring.data.cassandra.password`: Credentials for authentication.",
     "source": "code_example",
-    "updated_at": 1780790022.4322593
+    "updated_at": 1780791659.8332765
   }
 }
