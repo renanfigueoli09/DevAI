@@ -2,21 +2,21 @@
   "search:typescript-nextjs-authentication:typescript next.js authenticat": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`: Creates a new Next.js app.\n  - `npm install next-auth`: Installs the NextAuth.js package.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].ts`: Configuration file for authentication.\n  - `session.maxAge`: Duration of the session in seconds (default is 2592000).\n  - `providers`: List of authentication providers (e.g., Google, Facebook).\n\n- **Middleware vs. Page Component Auth**:\n  - Middleware: Best for global authentication checks across all pages.\n  - Page Component Auth: Suitable for specific page-level protection.\n\n- **Preserving Static Rendering**:\n  - Use `getServerSideProps` or `getStaticProps` with conditional rendering based on user authentication status.\n\n- **Multi-Layered Protection**:\n  - Implement both server-side and client-side validation.\n  - Use HTTPS to encrypt data in transit.",
     "source": "web_search",
-    "updated_at": 1780839502.3180056
+    "updated_at": 1780841935.0431044
   },
   "search:typescript-nextjs-authentication:typescript next.js authenticat_ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `next-auth@latest` for authentication handling.\n- Configure `pages/api/auth/[...nextauth].ts` with your provider details.\n- Utilize environment variables for sensitive data like secret keys.\n- Implement middleware in `middleware.ts` for route protection.\n- Use server components and actions for secure operations.\n- Employ TypeScript interfaces for type safety in configuration files.",
     "source": "code_example",
-    "updated_at": 1780839504.037398
+    "updated_at": 1780841937.2187157
   },
   "search:typescript-nextjs-authentication:typescript next.js jwt authent": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `jsonwebtoken` and `next-auth` using npm or yarn.\n- Configure JWT in `next.config.js`:\n  ```javascript\n  module.exports = {\n    env: {\n      NEXTAUTH_URL: process.env.NEXT_PUBLIC_APP_URL,\n      NEXTAUTH_SECRET: process.env.JWT_SECRET,\n    },\n  };\n  ```\n- Set up authentication with NextAuth by creating a `[...nextauth].js` file in the `pages/api/auth` directory.\n- Store JWT securely using HttpOnly cookies:\n  ```javascript\n  const token = jwt.sign(user, secret, { expiresIn: '1h', httpOnly: true });\n  res.setHeader('Set-Cookie', cookie.serialize(token));\n  ```\n- Protect routes with middleware in `middleware.ts`:\n  ```typescript\n  import { NextResponse } from 'next/server';\n  import { getToken } from 'next-auth/jwt';\n\n  export async function middleware(req) {\n    const token = await getToken({ req, secret: process.env.JWT_SECRET });\n    if (!token && req.nextUrl.pathname !== '/api/auth/signin') {\n      return NextResponse.redirect(new URL('/api/auth/signin', req.url));\n    }\n    return NextResponse.next();\n  }\n  ```\n- Update `next.config.js` to use the App Router:\n  ```javascript\n  export default defineConfig({\n    reactStrictMode: true,\n    experimental: {\n      appDir: true,\n    },\n  });\n  ```\n- Ensure environment variables are set in `.env.local` for production.",
     "source": "web_search",
-    "updated_at": 1780839505.7953682
+    "updated_at": 1780841939.3204494
   },
   "search:typescript-nextjs-authentication:typescript next.js jwt authent_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app --typescript`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - NextAuth.js: 4.18\n\n- **Key Config Options**:\n  - In `next.config.js`, ensure TypeScript is enabled.\n  - In `pages/api/auth/[...nextauth].ts`, configure providers (e.g., Google, GitHub).\n  - Use `getToken` in API routes to verify JWT tokens.\n  - Protect routes using middleware or custom hooks.",
     "source": "code_example",
-    "updated_at": 1780839507.7210917
+    "updated_at": 1780841942.0614772
   }
 }

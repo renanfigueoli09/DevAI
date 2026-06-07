@@ -2,11 +2,11 @@
   "search:Advanced Error Handling in FastAPI:exception handling in fastapi": {
     "content": "- Use `@app.exception_handler(YourException)` to define custom exception handlers.\n- Implement global error handlers using `@app.exception_handler(Exception)`.\n- Create custom exceptions by subclassing `HTTPException` or defining a new class.\n- Utilize HTTP status codes like 404, 500 for different types of errors.\n- Return JSON responses with error details in your exception handlers.\n- Ensure all paths and dependencies are properly wrapped to catch exceptions.\n- Use middleware for more complex error handling across the application.",
     "source": "web_search",
-    "updated_at": 1780839535.6890697
+    "updated_at": 1780841982.5311213
   },
   "search:Advanced Error Handling in FastAPI:exception handling in fastapi_ex": {
     "content": "- Use `fastapi` version 0.95.0 or later.\n- Implement exception handling using the `@app.exception_handler(Exception)` decorator.\n- Raise exceptions like `HTTPException(status_code=404, detail=\"Item not found\")`.\n- Return JSON responses with `JSONResponse(status_code=404, content={\"detail\": \"Item not found\"})`.\n- Customize error messages and status codes as needed in your exception handlers.",
     "source": "code_example",
-    "updated_at": 1780839537.2654326
+    "updated_at": 1780841984.6025426
   }
 }
