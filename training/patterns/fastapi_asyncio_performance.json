@@ -1,0 +1,17 @@
+{
+  "search:fastapi+asyncio-performance:fastapi asyncio performance op": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI.\n- Ensure your database operations are async to avoid blocking the event loop.\n- Implement `run_in_executor` for CPU-bound tasks to offload them from the asyncio event loop.\n- Update FastAPI and its dependencies to their latest versions for performance improvements.\n- Use `asyncio.create_task()` for running async functions concurrently.\n- Monitor and profile your application using tools like `asyncio.run()` with profiling enabled.\n- Optimize database queries and use connection pooling.\n- Consider using a background task queue like Celery for long-running tasks.\n- Enable HTTP/2 support in `uvicorn` to improve performance over HTTP/1.1.\n- Use middleware for common functionality like logging, authentication, and rate limiting.",
+    "source": "web_search",
+    "updated_at": 1780807931.588368
+  },
+  "search:fastapi+asyncio-performance:fastapi asyncio performance op_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --reload` for development.\n  - `uvicorn app.main:app --host 0.0.0.0 --port 8000` for production.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - Uvicorn: v10.7.0\n\n- **Key Config Options**:\n  - `asyncio.run(app)` for running the app.\n  - `app.state.cache = Cache()` for caching mechanisms.\n  - `database_url` in settings for database configuration.\n  - `max_connections` and `min_connections` for connection pool tuning.",
+    "source": "code_example",
+    "updated_at": 1780807936.7988703
+  },
+  "search:fastapi+asyncio-performance:high-performance fastapi appli": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run FastAPI apps, e.g., `uvicorn main:app --reload`.\n- **Latest Versions**: Ensure you use the latest versions of FastAPI and Uvicorn for optimal performance.\n- **Key Config Options**:\n  - `asyncio.run(app)`: For running the app asynchronously.\n  - `background_tasks.add_task()`: To add background tasks.\n  - `Depends()`: For dependency injection, enhancing modularity and reusability.",
+    "source": "web_search",
+    "updated_at": 1780807951.274601
+  }
+}

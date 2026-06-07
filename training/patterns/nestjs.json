@@ -22,7 +22,7 @@
   "qa:partialtype-mapped-types": {
     "content": "PartialType: ALWAYS from '@nestjs/mapped-types'\nCORRECT: import { PartialType } from '@nestjs/mapped-types';\nWRONG:   import { PartialType } from '@nestjs/common';   ← does NOT exist\nWRONG:   import { PartialType } from '@nestjs/swagger';  ← avoid",
     "source": "critical_pattern",
-    "updated_at": 1780807767.1319487
+    "updated_at": 1780808212.0132082
   },
   "nestjs": {
     "content": "- **CLI Commands**:\n  - `nest new <project-name>`: Scaffolds a new NestJS project.\n  - `npm i @nestjs/cli`: Installs the Nest CLI globally.\n\n- **Latest Versions**:\n  - `@nestjs/cli` version: 11.0.21\n\n- **Key Config Options**:\n  - Authentication: Use Passport and JWT for secure user authentication.\n  - Development Mode: Serve the application in development mode with `nest start --watch`.\n  - Production Build: Build and bundle the application for production with `nest build`.",
