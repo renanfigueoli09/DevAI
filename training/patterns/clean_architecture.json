@@ -28,5 +28,25 @@
     "content": "- Install Visual Studio 2022.\n- Create a .NET 7 console application project.\n- Use the latest version of C# for coding.\n- Apply DRY (Don't Repeat Yourself) by avoiding code duplication.\n- Implement KISS (Keep It Simple, Stupid) for straightforward design.\n- Follow YAGNI (You Aren't Gonna Need It) to avoid unnecessary features.",
     "source": "code_example",
     "updated_at": 1780793312.3012414
+  },
+  "search:clean-architecture:dependency injection inversion": {
+    "content": "- **CLI Commands**: Use `dotnet new` to create new projects, e.g., `dotnet new mvc -n MyProject`.\n- **Latest Versions**: Check [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) and [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core?view=aspnetcore-6.0) for the latest versions.\n- **Key Config Options**:\n  - `appsettings.json` for configuration settings.\n  - Use `[ServiceLifetime]` to specify service lifetimes (Transient, Scoped, Singleton).\n  - Configure services in `Startup.cs` or `Program.cs` using `services.AddControllers()`, `services.AddScoped<T>()`, etc.",
+    "source": "web_search",
+    "updated_at": 1780793333.916
+  },
+  "search:clean-architecture:dependency injection inversion_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install typescript --save-dev`\n  - `npx tsc --init` to initialize a TypeScript project\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - npm: 10.x\n  - TypeScript: 5.3\n\n- **Key Config Options**:\n  - In TypeScript, use `tsconfig.json` for configuration.\n  - For dependency injection in NodeJS with Typescript, consider using libraries like `inversifyjs`.\n  - Spring Boot's `@Autowired` and `@ComponentScan` annotations for managing dependencies.",
+    "source": "code_example",
+    "updated_at": 1780793339.0376112
+  },
+  "search:clean-architecture:separation of concerns layered": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build and test your project.\n- **Latest Versions**: Ensure you are using the latest version of Maven by checking [Maven Central](https://search.maven.org/).\n- **Key Config Options**:\n  - For Spring Boot, configure properties in `application.properties` or `application.yml`.\n  - For database connections, set up configurations in your `persistence.xml` or equivalent.\n  - Use environment variables for sensitive information like API keys and passwords.",
+    "source": "web_search",
+    "updated_at": 1780793346.4157891
+  },
+  "search:clean-architecture:separation of concerns layered_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc --name MyProject` to create a new ASP.NET Core MVC project.\n  - `dotnet ef migrations add InitialCreate` to add an initial migration for Entity Framework.\n\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Entity Framework Core: 6.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure application settings like connection strings.\n  - `Startup.cs` or `Program.cs`: Define middleware and services configuration.\n  - `Controllers/`: Organize controllers for handling HTTP requests.\n  - `Models/`: Define data models.\n  - `Views/`: Store Razor views.\n  - `Services/`: Implement business logic.",
+    "source": "code_example",
+    "updated_at": 1780793352.6379101
   }
 }
