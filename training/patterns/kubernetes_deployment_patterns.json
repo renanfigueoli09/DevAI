@@ -2,21 +2,21 @@
   "search:kubernetes-deployment-patterns:kubernetes deployment patterns": {
     "content": "- **CLI Commands**: Use `kubectl apply -f <filename>` to deploy applications.\n- **Latest Versions**: Kubernetes v1.26 and Helm v3.9 are recommended for the latest features and security patches.\n- **Key Config Options**:\n  - `replicas`: Define the number of pods to run.\n  - `resources`: Specify CPU and memory limits and requests.\n  - `livenessProbe` and `readinessProbe`: Ensure your application is healthy before traffic is routed to it.",
     "source": "web_search",
-    "updated_at": 1780809350.9275677
+    "updated_at": 1780815763.8808732
   },
   "search:kubernetes-deployment-patterns:kubernetes deployment patterns_ex": {
     "content": "- Use `kubectl apply -f k8s/deployment.yaml` to deploy applications.\n- Update Docker images and trigger auto-rollout using CI/CD pipelines.\n- Employ Helm Charts for efficient app deployment on Kubernetes clusters.\n- Configure GitLab CI/CD pipelines for seamless integration with Kubernetes.\n- Ensure the latest versions of tools like `kubectl`, `Docker`, and `Helm` are used.\n- Key config options include resource limits, auto-scaling policies, and environment variables in Kubernetes deployments.",
     "source": "code_example",
-    "updated_at": 1780809351.9767122
+    "updated_at": 1780815765.3330972
   },
   "search:kubernetes-deployment-patterns:advanced kubernetes deployment": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout restart deployment/<deployment-name>`\n  - `kubectl apply -f <filename>.yaml`\n  - `kubectl set image deployment/<deployment-name> <container-name>=<image>:<tag>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Helm: v3.9\n\n- **Key Config Options**:\n  - `spec.strategy.type`: RollingUpdate, Recreate\n  - `spec.strategy.rollingUpdate.maxUnavailable`: 25%\n  - `spec.strategy.rollingUpdate.maxSurge`: 25%",
     "source": "web_search",
-    "updated_at": 1780809353.187074
+    "updated_at": 1780815766.6136105
   },
   "search:kubernetes-deployment-patterns:advanced kubernetes deployment_ex": {
     "content": "- **Install NGINX Ingress Controller**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml\n  ```\n\n- **Configure Rancher Local Path Provisioner**:\n  ```yaml\n  apiVersion: storage.k8s.io/v1\n  kind: StorageClass\n  metadata:\n    name: local-path\n  provisioner: rancher.localpath Provisioner\n  volumeBindingMode: WaitForFirstConsumer\n  ```\n\n- **Install Helm** (latest version as of my last update):\n  ```bash\n  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash\n  ```\n\n- **Deploy a Helm Chart**:\n  ```bash\n  helm install my-release stable/my-chart\n  ```\n\n- **Configure Kubernetes Scheduling**:\n  ```yaml\n  apiVersion: batch/v1\n  kind: Job\n  metadata:\n    name: example-job\n  spec:\n    template:\n      spec:\n        containers:\n        - name: example-container\n          image: nginx\n          resources:\n            limits:\n              nvidia.com/gpu: 1\n        restartPolicy: Never\n  ```\n\n- **Key Config Options for StorageClass**:\n  - `provisioner`: Specifies the storage provisioner.\n  - `volumeBindingMode`: Controls when volume binding occurs.\n\n- **CLI Commands with Flags**:\n  - `kubectl apply -f <filename>`: Applies a configuration file to a resource.\n  - `helm install <release-name> <chart-name>`: Installs a Helm chart.\n\n- **Latest Versions**:\n  - Kubernetes: Check [Kubernetes official site](https://kubernetes.io/docs/setup/release/version-skew-policy/) for the latest version.\n  - Helm: Use `helm version` to check installed version, or download the latest from [Helm GitHub releases](https://github.com/helm/helm/releases).\n\n- **Key Config Options for Job**:\n  - `resources.limits.nvidia.com/gpu`: Specifies the number of GPUs required by the container.",
     "source": "code_example",
-    "updated_at": 1780809354.334572
+    "updated_at": 1780815767.9840522
   }
 }
