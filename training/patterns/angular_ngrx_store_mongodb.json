@@ -8,5 +8,10 @@
     "content": "- **Angular CLI**: `ng new my-app --routing`\n- **NGRX Store**: `npm install @ngrx/store @ngrx/effects @ngrx/router-store @ngrx/entity`\n- **MongoDB**: `mongod` to start the MongoDB server, `mongo` for the shell\n- **Latest Versions**:\n  - Angular: `v16.2.0`\n  - NGRX: `v15.4.0`\n  - MongoDB: `v6.0.3`\n- **Key Config Options**:\n  - Angular: `app.module.ts` for imports and declarations\n  - NGRX Store: `store.module.ts` for store configuration, reducers, effects\n  - MongoDB: `mongoose.connect()` for connection string",
     "source": "code_example",
     "updated_at": 1780835728.180946
+  },
+  "search:angular-ngrx-store-mongodb:ngrx store state management fo": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store` to install NgRx Store.\n  - `ng generate store <name>` to create a new store.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular and NgRx for compatibility and performance benefits.\n\n- **Key Config Options**:\n  - Define reducers in your store module.\n  - Use selectors to access parts of the state.\n  - Implement effects for side effects like HTTP requests.",
+    "source": "web_search",
+    "updated_at": 1780835734.7137222
   }
 }
