@@ -3,5 +3,10 @@
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Kafka Streams: 3.0.5\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.streams.properties.bootstrap.servers`: Kafka broker addresses.\n  - `spring.kafka.streams.properties.application.id`: Unique application ID.\n  - `spring.kafka.streams.properties.default.key.serde`: Default key serializer/deserializer.\n  - `spring.kafka.streams.properties.default.value.serde`: Default value serializer/deserializer.",
     "source": "web_search",
     "updated_at": 1780798282.0496142
+  },
+  "search:spring+kafka-streams:spring kafka streams integrati_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Apache Kafka: 3.4.1\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n\nThese actionable facts provide a quick reference for developers integrating Spring Kafka Streams in their projects.",
+    "source": "code_example",
+    "updated_at": 1780798287.777536
   }
 }
