@@ -2,11 +2,11 @@
   "search:rabbitmq+kafka:rabbitmq kafka message convers": {
     "content": "- **CLI Commands**:\n  - RabbitMQ: `rabbitmqctl start_app`, `rabbitmqctl stop_app`\n  - Kafka: `kafka-server-start.sh`, `kafka-console-producer.sh`, `kafka-console-consumer.sh`\n\n- **Latest Versions**:\n  - RabbitMQ: v3.12.0\n  - Kafka: v3.3.0\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` (e.g., `listeners.tcp.default = 5672`, `vm_memory_high_watermark.relative = 0.4`)\n  - Kafka: `server.properties` (e.g., `broker.id=0`, `listeners=PLAINTEXT://:9092`, `log.retention.hours=168`)",
     "source": "web_search",
-    "updated_at": 1780799553.758394
+    "updated_at": 1780802638.1758444
   },
   "search:rabbitmq+kafka:rabbitmq kafka message convers_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start RabbitMQ and Kafka containers.\n\n- **Latest Versions**:\n  - Spring Boot 3.4\n  - Apache Kafka 3.0.0\n  - RabbitMQ 3.8.15\n\n- **Key Config Options**:\n  - RabbitMQ: `spring.rabbitmq.host`, `spring.rabbitmq.port`\n  - Kafka: `spring.kafka.bootstrap-servers`, `spring.kafka.consumer.group-id`",
     "source": "code_example",
-    "updated_at": 1780799555.1254427
+    "updated_at": 1780802639.977635
   }
 }

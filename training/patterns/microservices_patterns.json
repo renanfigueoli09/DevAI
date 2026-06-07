@@ -2,21 +2,21 @@
   "search:microservices+patterns:saga cqrs event sourcing circu": {
     "content": "- **CLI Commands**:\n  - `microservices init --pattern saga`\n  - `microservices init --pattern cqrs`\n  - `microservices init --pattern event-sourcing`\n\n- **Latest Versions**:\n  - Microservices Framework: v2.5.0\n  - API Gateway: v1.8.0\n  - Circuit Breaker: v3.2.0\n\n- **Key Config Options**:\n  - Saga Pattern: `saga.choreography` or `saga.orchestration`\n  - CQRS Pattern: `cqrs.command` and `cqrs.query`\n  - Event Sourcing: `event-store.enabled=true`, `event-store.type=kafka`",
     "source": "web_search",
-    "updated_at": 1780799561.921831
+    "updated_at": 1780802651.672213
   },
   "search:microservices+patterns:saga cqrs event sourcing circu_ex": {
     "content": "- **GitHub Repository**: [leosalazarn/microservices](https://github.com/leosalazarn/microservices)\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: CQRS, Event Sourcing\n\n- **Saga Pattern**:\n  - **CLI Command**: `saga start --service-name payment-gateway`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Compensation logic, Circuit Breaker integration\n\n- **Circuit Breaker**:\n  - **CLI Command**: `circuit-breaker open --service payment-gateway`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Failure threshold, Recovery timeout\n\n- **Event Sourcing**:\n  - **CLI Command**: `event-sourcing record --event-type PaymentFailed`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Audit trail retention policy\n\n- **API Gateway**:\n  - **CLI Command**: `api-gateway route add --service payment-gateway`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Rate limiting, Authentication/Authorization\n\n- **Event-Driven Architecture Patterns**:\n  - **CLI Command**: `event-driven deploy --pattern CQRS`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Message brokers (Kafka, RabbitMQ, Azure Service Bus)\n\n- **E-commerce Case Study**:\n  - **CLI Command**: `case-study run --example e-commerce`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Scalability, Fault tolerance",
     "source": "code_example",
-    "updated_at": 1780799563.3801243
+    "updated_at": 1780802655.5573604
   },
   "search:microservices+patterns:outbox pattern ddd bounded con": {
     "content": "- **DDD Complete Guide 2025**: \n  - Access via Medium link provided.\n  \n- **Relationships Between Bounded Contexts in DDD**:\n  - Explore interactions and relationships between contexts on Medium.\n\n- **Domain-Driven Design for Microservices**:\n  - Focus on bounded contexts, context mapping patterns, aggregates, and domain events.\n\n- **Service Boundaries with DDD**:\n  - Dive into practical implementation of bounded contexts, failure modes, governance guardrails, and value KPIs.",
     "source": "web_search",
-    "updated_at": 1780799564.9612064
+    "updated_at": 1780802657.6037884
   },
   "search:microservices+patterns:outbox pattern ddd bounded con_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new clean` to create a new .NET Clean Architecture project.\n  - `dotnet add package MediatR` for implementing the Mediator pattern.\n  - `dotnet add package MassTransit` for message bus integration.\n\n- **Latest Versions**:\n  - .NET 7\n  - MediatR 10.3.1\n  - MassTransit 6.2.4\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection strings and service buses.\n  - Use `services.AddMediatR(typeof(Startup));` in `Program.cs`.\n  - Configure MassTransit with `services.AddMassTransit(x => { ... });`.",
     "source": "code_example",
-    "updated_at": 1780799566.5383494
+    "updated_at": 1780802659.505053
   }
 }
