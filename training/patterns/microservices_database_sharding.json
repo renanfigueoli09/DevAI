@@ -7,16 +7,16 @@
   "search:microservices+database-sharding:sharding strategies for micros": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f shard-definition.yaml` to define and deploy sharding.\n  - `kubectl get pods --all-namespaces` to check the status of all pods.\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.0\n  - PostgreSQL: 13.6\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `shard-key`: Defines the key used for sharding data.\n  - `replication-factor`: Specifies how many copies of each shard to maintain.\n  - `partition-size`: Determines the size of each partition for better distribution.",
     "source": "web_search",
-    "updated_at": 1780826644.129667
+    "updated_at": 1780832242.6363468
   },
   "search:microservices+database-sharding:performance tuning in distribu": {
     "content": "- **CLI Commands**: Use `kubectl` for managing Kubernetes clusters.\n- **Latest Versions**: Ensure using the latest version of Kubernetes, e.g., `v1.25`.\n- **Key Config Options**:\n  - `resources.requests`: Specify minimum resource requirements.\n  - `resources.limits`: Set maximum resource limits.\n  - `readinessProbe` and `livenessProbe`: Configure probes for health checks.\n  - `env`: Define environment variables.\n  - `imagePullPolicy`: Control when to pull container images.",
     "source": "web_search",
-    "updated_at": 1780826690.3882532
+    "updated_at": 1780832244.3244705
   },
   "search:microservices+database-sharding:performance tuning in distribu_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl top pod <pod-name>` to monitor resource usage.\n  - `docker stats` for real-time container performance metrics.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 24.0.5\n\n- **Key Config Options**:\n  - Redis: `maxmemory-policy allkeys-lru`\n  - Spring Cloud: `spring.cloud.loadbalancer.ribbon.enabled=false` for better performance.\n  - Container orchestration: Use `resources.limits.cpu` and `resources.requests.memory` in Kubernetes YAML files.",
     "source": "code_example",
-    "updated_at": 1780826695.4538238
+    "updated_at": 1780832246.1972587
   }
 }

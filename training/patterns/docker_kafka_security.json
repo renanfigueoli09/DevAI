@@ -2,11 +2,11 @@
   "search:docker+kafka-security:docker kafka security best pra": {
     "content": "- Use Kafka Docker images from official repositories.\n- Configure SASL/PLAIN or SASL/SCRAM for authentication.\n- Enable SSL/TLS encryption using certificates.\n- Set environment variables like `KAFKA_ADVERTISED_LISTENERS`, `KAFKA_LISTENERS`.\n- Adjust resource limits with `--memory` and `--cpus`.\n- Use Docker Compose for multi-container setups.\n- Regularly update Kafka and Docker images.\n- Implement network policies for isolation.\n- Monitor container logs and metrics using tools like Prometheus.",
     "source": "web_search",
-    "updated_at": 1780824363.6375034
+    "updated_at": 1780832602.0125334
   },
   "search:docker+kafka-security:docker kafka security best pra_ex": {
     "content": "- Use the latest Bitnami or Apache Kafka Docker images.\n- Configure TLS/SSL using `docker run` command with flags like `-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://your_host:9092,SSL://your_host:9093 -e KAFKA_SSL_KEYSTORE_LOCATION=/etc/kafka/secrets/kafka.server.keystore.jks -e KAFKA_SSL_KEYSTORE_PASSWORD=your_password`.\n- Set up SSL certificates by mounting them into the container with `-v /path/to/certs:/etc/kafka/secrets`.\n- Enable SASL/PLAIN authentication for additional security.\n- Configure `server.properties` to include settings like `listeners=SSL://0.0.0.0:9093`, `ssl.keystore.location=/etc/kafka/secrets/kafka.server.keystore.jks`, and `ssl.key.password=your_password`.\n- Use Docker Compose for multi-container setups, defining networks and volumes.\n- Regularly update the Kafka image to the latest version for security patches.",
     "source": "code_example",
-    "updated_at": 1780824365.2698476
+    "updated_at": 1780832607.4238544
   }
 }
