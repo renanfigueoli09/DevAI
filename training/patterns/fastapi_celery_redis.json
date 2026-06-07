@@ -1,0 +1,22 @@
+{
+  "search:fastapi+celery-redis:fastapi celery redis task queu": {
+    "content": "- **Install Redis**: `sudo apt-get install redis-server`\n- **FastAPI Version**: `fastapi==0.95.0`\n- **Celery Version**: `celery==5.2.3`\n- **Redis Version**: `redis==4.5.4`\n- **Docker Compose**: Use latest version compatible with your setup.\n- **Key Celery Config**:\n  - `broker_url`: Redis URL, e.g., `redis://localhost:6379/0`\n  - `result_backend`: Redis URL, e.g., `redis://localhost:6379/1`\n- **Docker Compose Example**:\n  ```yaml\n  version: '3.8'\n  services:\n    redis:\n      image: \"redis:latest\"\n      ports:\n        - \"6379:6379\"\n    fastapi:\n      build: .\n      command: uvicorn main:app --host 0.0.0.0\n      depends_on:\n        - redis\n    celery_worker:\n      build: .\n      command: celery -A tasks.celery_app worker --loglevel=info\n      depends_on:\n        - redis\n  ```\n- **CLI Commands**:\n  - `celery -A tasks.celery_app worker --loglevel=info`\n  - `docker-compose up -d`",
+    "source": "web_search",
+    "updated_at": 1780806596.5554614
+  },
+  "search:fastapi+celery-redis:fastapi celery redis task queu_ex": {
+    "content": "- **GitHub Repository**: [davidmuraya/fastapi-queues](https://github.com/davidmuraya/fastapi-queues)\n- **Dependencies**:\n  - FastAPI\n  - Celery\n  - Redis\n- **CLI Commands**:\n  ```bash\n  pip install fastapi celery redis\n  ```\n  ```bash\n  celery -A your_project_name.celery worker --loglevel=info\n  ```\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Celery: 5.2.7\n  - Redis: 4.5.8\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to Redis URL (e.g., `redis://localhost:6379/0`)\n  - `CELERY_RESULT_BACKEND`: Set to Redis URL (e.g., `redis://localhost:6379/0`)\n  - `REDIS_HOST`: Redis server address\n  - `REDIS_PORT`: Redis server port",
+    "source": "code_example",
+    "updated_at": 1780806603.052229
+  },
+  "search:fastapi+celery-redis:fastapi celery redis performan": {
+    "content": "- Deploy FastAPI, PostgreSQL, Celery, and Redis using Render.\n- Use Celery and Redis to boost FastAPI app performance.\n- Configure Celery with Redis for task management.\n- Initialize FastAPI app with Celery 5.0 and Redis 8.0 connection pooling.\n- Add startup checks for version compatibility.\n- Monitor task queues for new work with dedicated worker processes.\n- Restrict tasks to one at a time for better control.\n- Use messages for communication between clients and workers.\n- Reduce background task latency by 40% using Celery optimizations.",
+    "source": "web_search",
+    "updated_at": 1780806614.9310627
+  },
+  "search:fastapi+celery-redis:fastapi celery redis performan_ex": {
+    "content": "- **GitHub Repository**: [GregaVrbancic/fastapi-celery](https://github.com/GregaVrbancic/fastapi-celery)\n- **FastAPI Version**: Not specified in the search results.\n- **Celery Version**: Not specified in the search results.\n- **Redis Version**: Not specified in the search results.\n- **RabbitMQ Version**: Not specified in the search results.\n- **Key Config Options**:\n  - `broker_url`: URL for the message broker (e.g., `amqp://guest:guest@localhost:5672/`).\n  - `result_backend`: URL for the result backend (e.g., `redis://localhost:6379/0`).\n- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery flower --port=5555`\n- **Docker Containerization**:\n  - Use Docker Compose to define and run multi-container applications.\n  - Example `docker-compose.yml` snippet for FastAPI, Celery, and Redis.",
+    "source": "code_example",
+    "updated_at": 1780806623.7320406
+  }
+}
