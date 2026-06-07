@@ -2,21 +2,21 @@
   "search:fastapi+celery-redis-batch:fastapi celery redis batch pro": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Celery: 5.2.3\n  - Redis: 7.0.1\n\n- **Key Config Options**:\n  - `app.celery.conf.broker_url = 'redis://localhost:6379/0'`\n  - `app.celery.conf.result_backend = 'redis://localhost:6379/0'`\n  - `app.celery.conf.task_serializer = 'json'`\n  - `app.celery.conf.accept_content = ['json']`",
     "source": "web_search",
-    "updated_at": 1780838092.0193021
+    "updated_at": 1780844902.851201
   },
   "search:fastapi+celery-redis-batch:fastapi celery redis batch pro_ex": {
     "content": "- **GitHub Repository**: [mh-mukul/fastapi-celery](https://github.com/mh-mukul/fastapi-celery)\n- **Celery Configuration**:\n  - Use Redis as the message broker.\n  - Configure Celery in `celery_config.py`.\n- **Docker Integration**:\n  - Tutorial video: [FastAPI Celery, Flower and Docker](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)\n- **Key Config Options**:\n  - Broker URL: `redis://localhost:6379/0`\n  - Result Backend: `redis://localhost:6379/1`\n- **CLI Commands**:\n  - Install Celery: `pip install celery`\n  - Start Redis server: `docker run --name some-redis -d redis`\n  - Run Celery worker: `celery -A app.celery worker --loglevel=info`\n- **Latest Versions**:\n  - FastAPI: [v0.81.0](https://fastapi.tiangolo.com/)\n  - Celery: [5.2.7](https://docs.celeryproject.org/en/stable/changelog.html#celery-5-2-7)\n  - Redis: [latest stable version](https://redis.io/download)",
     "source": "code_example",
-    "updated_at": 1780838102.1863985
+    "updated_at": 1780844904.9431858
   },
   "search:fastapi+celery-redis-batch:celery redis task retries and ": {
     "content": "- **CLI Commands**:\n  - `celery worker --loglevel=info`\n  - `celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.2.7\n  - Redis: 6.2.10\n\n- **Key Config Options**:\n  - `broker_url`: URL of the message broker (e.g., `redis://localhost:6379/0`)\n  - `result_backend`: URL of the result backend (e.g., `redis://localhost:6379/0`)\n  - `task_retries`: Maximum number of retries for a task\n  - `retry_backoff`: Whether to use exponential backoff for retries\n  - `retry_jitter`: Random jitter to add to retry intervals",
     "source": "web_search",
-    "updated_at": 1780838110.224627
+    "updated_at": 1780844906.891105
   },
   "search:fastapi+celery-redis-batch:celery redis task retries and _ex": {
     "content": "- **Latest Celery Version**: 6.0\n- **Key Config Options**:\n  - `broker_url`: Set to Redis URL, e.g., `redis://localhost:6379/0`\n  - `result_backend`: Set to Redis URL for task results, e.g., `redis://localhost:6379/1`\n- **CLI Commands**:\n  - Start Celery worker: `celery -A your_project_name worker --loglevel=info`\n  - Monitor tasks: `celery -A your_project_name flower`\n- **Retry Strategies**:\n  - Use `self.retry` in task methods to retry on failure.\n  - Configure retries with `max_retries`, `countdown`, and `retry_backoff`.\n- **Backoff Strategies**:\n  - Enable exponential backoff by setting `retry_backoff=True`.\n  - Customize backoff factor with `retry_backoff_max`.\n\nThese actionable facts provide a concise guide for developers to set up, configure, and manage Celery tasks using Redis as the broker and result backend.",
     "source": "code_example",
-    "updated_at": 1780838118.340916
+    "updated_at": 1780844908.883043
   }
 }

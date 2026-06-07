@@ -2,21 +2,21 @@
   "search:typescript-eslint-rules:typescript eslint best practic": {
     "content": "- Install TypeScript ESLint using `npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin`\n- Use the latest version of ESLint by running `npm update eslint`\n- Configure ESLint with a `.eslintrc.json` file:\n  ```json\n  {\n    \"parser\": \"@typescript-eslint/parser\",\n    \"plugins\": [\"@typescript-eslint\"],\n    \"extends\": [\n      \"eslint:recommended\",\n      \"plugin:@typescript-eslint/recommended\"\n    ],\n    \"rules\": {\n      // Custom rules here\n    }\n  }\n  ```\n- Integrate Prettier for code formatting by installing `npm install --save-dev eslint-config-prettier eslint-plugin-prettier`\n- Add Prettier to ESLint configuration:\n  ```json\n  {\n    \"extends\": [\n      \"eslint:recommended\",\n      \"plugin:@typescript-eslint/recommended\",\n      \"prettier\"\n    ],\n    \"plugins\": [\"@typescript-eslint\", \"prettier\"],\n    \"rules\": {\n      \"prettier/prettier\": \"error\"\n    }\n  }\n  ```\n- Run ESLint with `npx eslint yourfile.ts` or for an entire project, use `npx eslint .`\n- Use the `--fix` flag to automatically fix linting errors: `npx eslint yourfile.ts --fix`",
     "source": "web_search",
-    "updated_at": 1780832713.5998597
+    "updated_at": 1780845119.8355181
   },
   "search:typescript-eslint-rules:typescript eslint best practic_ex": {
     "content": "- **CLI Commands**:\n  - `npx eslint --init` to set up ESLint in your project.\n  - `npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`.\n  - `eslint .` to lint all files.\n\n- **Latest Versions**:\n  - ESLint: v8.40.1\n  - TypeScript: v5.1.6\n\n- **Key Config Options**:\n  - `\"parser\": \"@typescript-eslint/parser\"` in your `.eslintrc.json`.\n  - `\"plugins\": [\"@typescript-eslint\"]` to include the TypeScript plugin.\n  - `\"extends\": \"eslint:recommended\", \"@typescript-eslint/recommended\"` for recommended rules.\n  - `\"rules\"` to override or add custom rules.",
     "source": "code_example",
-    "updated_at": 1780832715.4040852
+    "updated_at": 1780845121.733533
   },
   "search:typescript-eslint-rules:advanced typescript eslint rul": {
     "content": "- Install latest ESLint and TypeScript ESLint plugin using `npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`.\n- Initialize ESLint in your project with `npx eslint --init`, selecting \"TypeScript\" as the language.\n- Key config options include `\"parser\": \"@typescript-eslint/parser\"` and `\"plugins\": [\"@typescript-eslint\"]`.\n- Use `\"rules\"` to customize rules, e.g., `\"no-unused-vars\": [\"error\", { \"varsIgnorePattern\": \"^_\", \"argsIgnorePattern\": \"^_\" }]` for ignoring unused variables.\n- For best practices, consider using `eslint-config-prettier` and `eslint-plugin-prettier` to integrate Prettier with ESLint.\n- Update ESLint rules regularly by checking the latest versions on npm or GitHub.",
     "source": "web_search",
-    "updated_at": 1780832717.348893
+    "updated_at": 1780845123.514554
   },
   "search:typescript-eslint-rules:advanced typescript eslint rul_ex": {
     "content": "- Install `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`.\n- Use `.eslintrc.json` for configuration.\n- Enable rules like `no-explicit-any`, `prefer-template`, and `no-magic-numbers`.\n- Configure `\"parserOptions\": { \"ecmaVersion\": 2021 }`.\n- Set `\"rules\": { \"@typescript-eslint/no-unused-vars\": \"error\" }`.\n- Run ESLint with `npx eslint yourfile.ts --fix`.",
     "source": "code_example",
-    "updated_at": 1780832719.4176936
+    "updated_at": 1780845125.2469995
   }
 }

@@ -2,11 +2,11 @@
   "search:spring-data-redis-batch:spring data redis performance ": {
     "content": "- **CLI Commands**:\n  - `redis-cli --stat`: Monitor Redis server statistics in real-time.\n  - `redis-benchmark -q`: Run benchmark tests and output results in a quiet format.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data Redis: 2.7.x\n\n- **Key Config Options**:\n  - `spring.redis.host`: Set the Redis server host.\n  - `spring.redis.port`: Set the Redis server port.\n  - `spring.redis.password`: Set the Redis password if authentication is enabled.\n  - `spring.redis.jedis.pool.max-active`: Maximum number of active connections in the pool.\n  - `spring.redis.jedis.pool.min-idle`: Minimum number of idle connections in the pool.",
     "source": "web_search",
-    "updated_at": 1780832651.9696681
+    "updated_at": 1780845049.7529347
   },
   "search:spring-data-redis-batch:spring data redis performance _ex": {
     "content": "- Use `SessionCallback` interface for multiple operations in the same connection.\n- Employ Redis transactions using `multi()` method.\n- Configure Spring Boot Redis Cache via application properties or YAML.\n- Utilize Redis Streams and Pub/Sub for real-time capabilities.\n- Ensure latest versions of Spring Data Redis and Spring Boot for optimal performance.\n- Key config options include `spring.redis.host`, `spring.redis.port`, and `spring.cache.type=redis`.\n- Use CLI commands like `mvn clean install` to build projects with the latest dependencies.",
     "source": "code_example",
-    "updated_at": 1780832654.0717065
+    "updated_at": 1780845051.6882682
   }
 }

@@ -7,6 +7,6 @@
   "search:kubernetes+istio-mesh:istio traffic management and s_ex": {
     "content": "- **CLI Commands**:\n  - `istioctl install`: Installs Istio on your Kubernetes cluster.\n  - `kubectl apply -f <filename>.yaml`: Applies a configuration file to your Kubernetes cluster.\n\n- **Latest Versions**:\n  - Istio: v1.14.3 (as of my last update).\n\n- **Key Config Options**:\n  - `istio-ingressgateway`: The gateway for external traffic.\n  - `virtualservices`: Define routing rules.\n  - `destinationrules`: Configure traffic policies like retries and circuit breakers.\n\nFor detailed instructions, refer to the official Istio documentation.",
     "source": "code_example",
-    "updated_at": 1780832486.9425817
+    "updated_at": 1780844849.7855098
   }
 }

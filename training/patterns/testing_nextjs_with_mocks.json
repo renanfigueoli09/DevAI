@@ -2,21 +2,21 @@
   "search:testing-nextjs-with-mocks:unit testing in next.js with j": {
     "content": "- **CLI Commands**: `npm install --save-dev jest @testing-library/react`\n- **Latest Versions**: Jest 29.x, React Testing Library 13.x\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: For setting up files after environment setup.\n  - `testEnvironment`: Specifies the test environment to use (e.g., 'jsdom').\n  - `transformIgnorePatterns`: Patterns for files that should not be transformed by Babel.",
     "source": "web_search",
-    "updated_at": 1780835203.868534
+    "updated_at": 1780845101.818002
   },
   "search:testing-nextjs-with-mocks:unit testing in next.js with j_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - React Testing Library: 13.x\n\n- **Key Config Options**:\n  - `jest.config.js`:\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - Mocks:\n    ```javascript\n    jest.mock('module-name', () => ({\n      __esModule: true,\n      default: jest.fn(),\n    }));\n    ```",
     "source": "code_example",
-    "updated_at": 1780835209.687168
+    "updated_at": 1780845103.7645745
   },
   "search:testing-nextjs-with-mocks:mocking strategies for next.js": {
     "content": "- Use `jest.mock('module-path')` to mock modules in Jest.\n- Install `@testing-library/react` for testing React components.\n- Utilize `react-test-renderer` for rendering components to static HTML.\n- Employ `msw` (Mock Service Worker) for API mocking during development.\n- Configure Jest with a `setupFilesAfterEnv` option to run setup code after the environment is set up.\n- Use `jest-environment-jsdom` for running tests in a DOM-like environment.\n- Install and configure `eslint-plugin-jest` for linting Jest test files.\n- Utilize `react-hooks-testing-library` for testing React hooks.",
     "source": "web_search",
-    "updated_at": 1780835220.2199197
+    "updated_at": 1780845105.5547218
   },
   "search:testing-nextjs-with-mocks:mocking strategies for next.js_ex": {
     "content": "- **VS Code**: Use `code .` to open the current directory in VS Code.\n- **Code.org**: No specific CLI command; use their online platform for coding activities.\n- **Coddy.Tech**: Access interactive lessons through their website or mobile app.\n\nFor mocking strategies in Next.js components:\n- Install `jest` and `react-testing-library` using npm: `npm install --save-dev jest @testing-library/react`.\n- Configure Jest by creating a `jest.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n    testEnvironment: 'jsdom',\n  };\n  ```\n- Use `render` from `@testing-library/react` to render components and `fireEvent` for simulating user interactions.\n- Mock external APIs using `jest.mock('module-name')` or `fetch-mock`.\n\nLatest versions:\n- **VS Code**: Version 1.70 (September 2022).\n- **Jest**: Version 28.x (latest as of September 2022).\n- **React Testing Library**: Version 13.x (latest as of September 2022).\n\nKey config options:\n- `setupFilesAfterEnv`: Extends Jest's expect with additional matchers.\n- `testEnvironment`: Sets the environment for running tests, using 'jsdom' for DOM-based testing.",
     "source": "code_example",
-    "updated_at": 1780835235.12594
+    "updated_at": 1780845107.30168
   }
 }

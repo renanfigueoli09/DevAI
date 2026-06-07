@@ -2,21 +2,21 @@
   "search:spring-boot+quarkus-migration:spring boot quarkus migration ": {
     "content": "- Use `quarkus-maven-plugin` version 3.x for migration.\n- Run `mvn quarkus:create --projectGroupId=your.groupId --projectArtifactId=your-artifactId --className=com.example.YourApp`.\n- Update dependencies in `pom.xml` to Quarkus equivalents.\n- Use `quarkus-maven-plugin:generate-code` to generate code for your application.\n- Configure `application.properties` with Quarkus-specific properties.\n- Utilize `quarkus-maven-plugin:test` for running tests.\n- Deploy using `quarkus-maven-plugin:build` followed by container deployment commands like Docker.",
     "source": "web_search",
-    "updated_at": 1780832663.7250042
+    "updated_at": 1780845061.936008
   },
   "search:spring-boot+quarkus-migration:spring boot quarkus migration _ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `quarkus dev`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Quarkus: 2.13.x\n\n- **Key Config Options**:\n  - Replace `spring-boot-starter-parent` with `quarkus-bom`.\n  - Convert `@Component`, `@Autowired`, etc., to CDI/JAX-RS/Quarkus equivalents.\n  - Update build plugins in `pom.xml` or `build.gradle`.",
     "source": "code_example",
-    "updated_at": 1780832665.5226672
+    "updated_at": 1780845063.796868
   },
   "search:spring-boot+quarkus-migration:spring boot quarkus applicatio": {
     "content": "- **CLI Commands**:\n  - `mvn quarkus:create` to create a new Quarkus project.\n  - `./mvnw compile quarkus:dev` for development mode in Quarkus.\n\n- **Latest Versions**:\n  - Spring Boot: v3.0.5 (as of my last update).\n  - Quarkus: v2.14.6.Final (as of my last update).\n\n- **Key Config Options**:\n  - For Spring Boot, use `application.properties` or `application.yml`.\n  - For Quarkus, use `application.properties` or `application.yaml`.\n\n- **Performance Optimization Tips**:\n  - Use `@QuarkusMain` for Quarkus applications.\n  - Enable JFR (Java Flight Recorder) for profiling in both frameworks.\n  - Optimize database queries and reduce latency.\n  - Use caching strategies to improve response times.",
     "source": "web_search",
-    "updated_at": 1780832667.2449145
+    "updated_at": 1780845065.6771553
   },
   "search:spring-boot+quarkus-migration:spring boot quarkus applicatio_ex": {
     "content": "- **CLI Commands**: \n  - `mvn io.quarkus:quarkus-maven-plugin:create` to create a new Quarkus project.\n  - `./mvnw compile quarkus:dev` for running Quarkus in development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.14.0.Final\n\n- **Key Config Options**:\n  - Quarkus: `quarkus.http.host`, `quarkus.datasource.username`.\n  - Spring Boot: `server.port`, `spring.datasource.url`.",
     "source": "code_example",
-    "updated_at": 1780832669.01734
+    "updated_at": 1780845067.6731277
   }
 }

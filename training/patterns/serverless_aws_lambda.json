@@ -2,6 +2,6 @@
   "search:serverless-aws-lambda:building serverless applicatio": {
     "content": "- **CLI Commands**: Use `aws lambda create-function` to deploy your serverless function.\n- **Latest Versions**: AWS Lambda supports Python 3.9, Node.js 14.x, and Java 11.\n- **Key Config Options**:\n  - `Runtime`: Specifies the runtime environment for your function (e.g., `python3.9`, `nodejs14.x`).\n  - `Handler`: The entry point to your code (e.g., `index.handler`).\n  - `Role`: IAM role that grants permissions to your function.\n  - `Environment Variables`: Set environment variables using the `Environment` property.\n  - `Timeout`: Maximum time in seconds a function can run before being stopped.",
     "source": "web_search",
-    "updated_at": 1780832591.3967645
+    "updated_at": 1780844990.1672103
   }
 }
