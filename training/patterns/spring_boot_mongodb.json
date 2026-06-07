@@ -7,6 +7,26 @@
   "qa:spring-document-not-entity": {
     "content": "Spring Boot MongoDB: use @Document NOT @Entity\n@Document(collection='books') class Book { @Id String id; @NotBlank String title; }\nRepository: extends MongoRepository<Book, String>\nWRONG: @Entity, JpaRepository  ← those are JPA/PostgreSQL",
     "source": "critical_pattern",
-    "updated_at": 1780837580.3581154
+    "updated_at": 1780838046.8311918
+  },
+  "search:spring-boot-mongodb:spring boot mongodb crud opera": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `mvn clean install`: Builds and packages the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0 (as of my last update)\n  - MongoDB Driver: 4.5.1\n\n- **Key Config Options**:\n  - `spring.datasource.url`: URL for the database.\n  - `spring.datasource.username`: Username for the database.\n  - `spring.datasource.password`: Password for the database.\n  - `spring.data.mongodb.database`: Name of the MongoDB database.\n  - `spring.data.mongodb.host`: Hostname or IP address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",
+    "source": "web_search",
+    "updated_at": 1780838003.3024774
+  },
+  "search:spring-boot-mongodb:spring boot mongodb crud opera_ex": {
+    "content": "- **CLI Commands**: `mvn spring-boot:run` to run Spring Boot application.\n- **Latest Versions**: Spring Boot 3.0, MongoDB 6.0.\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `create-drop`, `update`).\n  - `spring.datasource.url`: Database URL for Spring Data JPA.",
+    "source": "code_example",
+    "updated_at": 1780838029.6129942
+  },
+  "search:spring-boot-mongodb:mongodb spring boot aggregatio": {
+    "content": "- **Latest Version**: MongoDB 6.0 was released in October 2021.\n- **CLI Commands**:\n  - `mongod --dbpath /path/to/database`: Starts the MongoDB server with a specified database path.\n  - `mongo --host <hostname> --port <port>`: Connects to a MongoDB instance using a specific host and port.\n- **Key Config Options**:\n  - `replication.enabled`: Enables or disables replication.\n  - `sharding.clusterRole`: Specifies the role of the node in a sharded cluster (e.g., configsvr, shardsvr).\n  - `security.authorization`: Enforces authentication for MongoDB operations.",
+    "source": "web_search",
+    "updated_at": 1780838050.3139987
+  },
+  "search:spring-boot-mongodb:mongodb spring boot aggregatio_ex": {
+    "content": "- **MongoDB Spring Boot Aggregation Pipelines**: Use `@Aggregation` annotation in your repository to define aggregation pipelines.\n- **Latest Version**: MongoDB Java Driver - v4.5.2, Spring Data MongoDB - v3.5.0.\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB instance.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.username` and `spring.data.mongodb.password`: Authentication credentials.\n\nThese points provide actionable information for developers working with MongoDB and Spring Boot aggregation pipelines.",
+    "source": "code_example",
+    "updated_at": 1780838074.8247993
   }
 }

@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-performance:typescript prisma performance ": {
+    "content": "- **CLI Commands**:\n  - `prisma generate --schema=./path/to/schema.prisma`\n  - `npx prisma migrate dev --name init`\n\n- **Latest Versions**:\n  - Prisma ORM: v5.0.0\n  - Drizzle ORM: v1.2.3\n\n- **Key Config Options**:\n  - `prisma.yml` for database connection settings.\n  - `schema.prisma` for defining data models and relations.\n  - Environment variables for sensitive information like database URLs.\n\nFor performance optimization:\n- Use Prisma Client's `.findUniqueOrThrow()` instead of `.findFirst()`.\n- Implement batch operations using `.findMany()` with pagination.\n- Optimize queries by selecting only necessary fields using `select` or `include`.",
+    "source": "web_search",
+    "updated_at": 1780837893.0331116
+  },
+  "search:typescript-prisma-performance:typescript prisma performance _ex": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.x\n  - Prisma Migrate: v1.x\n\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable query logging for debugging.\n  - `cache`: Configure caching strategies to improve performance.\n  - `connectionLimit`: Set the maximum number of connections in the pool.",
+    "source": "code_example",
+    "updated_at": 1780837899.483685
+  },
+  "search:typescript-prisma-performance:prisma typescript pagination b": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma ORM: Version 4.x (as of May 2025).\n  - Prisma Client: Version 4.x (as of May 2025).\n\n- **Key Config Options**:\n  - `prismaClientOptions`: Configure options for the Prisma Client instance.\n  - `paginationStrategy`: Set pagination type (`offset`, `cursor`, or `keyset`).\n  - `pageSize`: Define the number of items per page.",
+    "source": "web_search",
+    "updated_at": 1780837916.360093
+  },
+  "search:typescript-prisma-performance:prisma typescript pagination b_ex": {
+    "content": "- Use Prisma Client for database operations.\n- Implement pagination using `skip` and `take` parameters in queries.\n- Ensure consistent data order by sorting results.\n- Consider the volume of data when choosing pagination type.\n- Utilize Prisma Migrate for schema evolution.\n- Adopt an API pagination strategy that fits each endpoint's needs.",
+    "source": "code_example",
+    "updated_at": 1780837934.8829467
+  }
+}

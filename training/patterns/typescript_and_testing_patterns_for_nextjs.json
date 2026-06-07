@@ -18,5 +18,15 @@
     "content": "- **CLI Commands**:\n  - `npm init -y`\n  - `npm install --save-dev jest @types/jest ts-jest typescript`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.x\n\n- **Key Config Options**:\n  - `preset: 'ts-jest'`\n  - `testEnvironment: 'node'`",
     "source": "code_example",
     "updated_at": 1780837620.80454
+  },
+  "search:TypeScript and Testing Patterns for NextJS:unit testing nextjs": {
+    "content": "- Use `create-next-app` to create a new Next.js project.\n- Install Jest and React Testing Library using npm or yarn.\n- Configure Jest in your `package.json` with the following:\n  ```json\n  \"jest\": {\n    \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"],\n    \"testEnvironment\": \"jsdom\"\n  }\n  ```\n- Write unit tests for individual components, hooks, or functions.\n- Use `describe`, `it`, and `expect` to structure your tests.\n- For async pages in Next.js 14 with the App Router, use Jest's async testing capabilities.\n- Run tests using `npm test` or `yarn test`.",
+    "source": "web_search",
+    "updated_at": 1780837641.1056933
+  },
+  "search:TypeScript and Testing Patterns for NextJS:unit testing nextjs_ex": {
+    "content": "- **CLI Commands**: `npm test` or `yarn test`\n- **Latest Versions**: Ensure Node.js and npm are up to date using `nvm install node --latest-npm`\n- **Key Config Options**: Update `next.config.js` for custom configurations like asset paths, environment variables, etc.",
+    "source": "code_example",
+    "updated_at": 1780837660.5219488
   }
 }

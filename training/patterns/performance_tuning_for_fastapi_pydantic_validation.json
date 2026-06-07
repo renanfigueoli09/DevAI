@@ -1,0 +1,32 @@
+{
+  "search:Performance Tuning for FastAPI + Pydantic Validation:fastapi performance": {
+    "content": "- Use `uvicorn` as the ASGI server with `--workers=4` and `--threads=2`.\n- Configure Nginx to proxy requests to FastAPI, enabling keep-alive connections.\n- Implement asynchronous database queries using ORMs like SQLAlchemy or Tortoise ORM.\n- Enable caching mechanisms such as Redis for data retrieval.\n- Monitor performance using tools like Prometheus and Grafana.\n- Scale horizontally by adding more instances of your FastAPI application.",
+    "source": "web_search",
+    "updated_at": 1780837724.5363026
+  },
+  "search:Performance Tuning for FastAPI + Pydantic Validation:fastapi performance_ex": {
+    "content": "- **FastAPI Version**: Use `pip install fastapi==0.95.2`\n- **Uvicorn Version**: Use `pip install uvicorn==0.20.0`\n- **Key Config Options**:\n  - `host`: Set the host address (e.g., `--host=127.0.0.1`)\n  - `port`: Set the port number (e.g., `--port=8000`)\n  - `reload`: Enable auto-reload during development (e.g., `--reload`)\n- **CLI Command**: Run FastAPI app with Uvicorn: `uvicorn main:app --host 127.0.0.1 --port 8000 --reload`",
+    "source": "code_example",
+    "updated_at": 1780837729.653037
+  },
+  "search:Performance Tuning for FastAPI + Pydantic Validation:pydantic validation": {
+    "content": "- **Latest Version**: Pydantic v2.11\n- **CLI Commands**:\n  - `pip install pydantic`\n  - `pydantic validate-models` (for validating models)\n- **Key Config Options**:\n  - `allow_population_by_field_name`: Allows setting model fields by field name.\n  - `use_enum_values`: Controls whether to use enum values when serializing enums.",
+    "source": "web_search",
+    "updated_at": 1780837736.1590729
+  },
+  "search:Performance Tuning for FastAPI + Pydantic Validation:pydantic validation_ex": {
+    "content": "- **VS Code**: Install VS Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)\n- **Pydantic**: Install Pydantic using pip:\n  ```bash\n  pip install pydantic\n  ```\n- **Latest Version**: Check the latest version of Pydantic on [PyPI](https://pypi.org/project/pydantic/)\n- **Key Config Options**:\n  - `settings.json`: Configure VS Code settings for better development experience.\n  - `pyproject.toml`: Define project metadata and dependencies including Pydantic.",
+    "source": "code_example",
+    "updated_at": 1780837740.5539649
+  },
+  "search:Performance Tuning for FastAPI + Pydantic Validation:asyncio performance": {
+    "content": "- Use `python -m pip install asyncio` to install the latest version.\n- Key config options include setting up an event loop with `asyncio.get_event_loop()`.\n- Use `awaitable_object = await some_coroutine()` to run a coroutine asynchronously.\n- For running multiple coroutines concurrently, use `asyncio.gather(*coroutines)`.\n- To create a coroutine, define a function with the `async def` syntax.\n- Use `async for item in async_iterable:` to iterate over an asynchronous iterable.\n- The latest version of Python as of my last update is 3.14.5, but always check for the most current version on the official Python website.\n- For debugging and profiling asyncio applications, use `asyncio.run()` with the `-m` flag in the CLI: `python -m asyncio run your_script.py`.",
+    "source": "web_search",
+    "updated_at": 1780837766.041026
+  },
+  "search:Performance Tuning for FastAPI + Pydantic Validation:asyncio performance_ex": {
+    "content": "- Use `python3 -m pip install aiohttp` to install the latest version of `aiohttp`.\n- Run your script using `python3 your_script.py` to execute it.\n- Configure event loop with `asyncio.run(main())` where `main()` is your entry point coroutine.\n- Key config options include setting timeouts and handling exceptions within async functions.",
+    "source": "code_example",
+    "updated_at": 1780837782.3549898
+  }
+}
