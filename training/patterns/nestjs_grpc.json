@@ -2,21 +2,21 @@
   "search:nestjs+grpc:nestjs grpc transport.grpc pro": {
     "content": "- Install NestJS CLI globally using `npm install -g @nestjs/cli`\n- Create a new NestJS project with gRPC transport using `nest new my-grpc-project --transport grpc`\n- Import `@GrpcMethod` from `@nestjs/microservices`\n- Use `Metadata` and `ServerUnaryCall` from the `grpc` package\n- Define service name in `@GrpcMethod('HeroesService')`\n- Load Protocol Buffer files using `nest proto-loader`\n- Configure gRPC transport options in `app.module.ts`\n- Utilize four streaming modes: unary, client-stream, server-stream, and bidirectional",
     "source": "web_search",
-    "updated_at": 1780815702.183344
+    "updated_at": 1780822664.8704503
   },
   "search:nestjs+grpc:nestjs grpc transport.grpc pro_ex": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/microservices grpc`.\n- Define gRPC service methods using the `@GrpcMethod()` decorator in your service class.\n- Create `.proto` files for defining service interfaces and messages.\n- Use `nest generate microservice grpc --name heroes` to generate a gRPC microservice template.\n- Configure the microservice transport type as `grpc` in the `app.module.ts`.\n- Example proto file:\n  ```proto\n  syntax = \"proto3\";\n  package heroes;\n\n  service HeroesService {\n    rpc FindHero (FindHeroRequest) returns (Hero);\n  }\n\n  message FindHeroRequest {\n    int64 id = 1;\n  }\n\n  message Hero {\n    string name = 1;\n    int64 id = 2;\n  }\n  ```\n- Implement the gRPC service in your NestJS service:\n  ```typescript\n  import { Controller, GrpcMethod } from '@nestjs/microservices';\n  import { FindHeroRequest, Hero } from './hero.pb';\n\n  @Controller()\n  export class HeroesService {\n    @GrpcMethod('HeroesService', 'FindHero')\n    findHero(data: FindHeroRequest): Hero {\n      return { id: data.id, name: 'John Doe' };\n    }\n  }\n  ```\n- Start the gRPC microservice with `npm run start:heroes`.\n- Use a gRPC client to call the service methods defined in your `.proto` file.",
     "source": "code_example",
-    "updated_at": 1780815703.8882277
+    "updated_at": 1780822666.5491323
   },
   "search:nestjs+grpc:nestjs grpc client stub inject": {
     "content": "- Use `nest generate grpc-client` to create a gRPC client stub.\n- Ensure the latest version of NestJS is installed (`npm install -g @nestjs/cli@latest nestjs/core@latest`).\n- Import the `ClientsModule` in your module and use it to register the gRPC client.\n- Define service methods using Protocol Buffers (.proto files) for both client and server.\n- For streaming, utilize unary, server streaming, client streaming, or bidirectional RPCs as needed.\n- Enable automatic code generation by installing `@nestjs/microservices` and configuring `proto-loader`.\n- Configure the gRPC transport in your application's main file (`app.module.ts`) with options like `grpcOptions`.\n- Use `ClientGrpc` to access remote services, which can be injected into controllers or services.\n- For performance optimization, consider using streaming RPCs for long-lived data flows.",
     "source": "web_search",
-    "updated_at": 1780815708.4620485
+    "updated_at": 1780822668.2604954
   },
   "search:nestjs+grpc:nestjs grpc client stub inject_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/microservices`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - gRPC: v2.x\n\n- **Key Config Options**:\n  - Use `@ClientProxyFactory` for creating client proxies.\n  - Configure `transport: Transport.GRPC` in the microservice options.\n  - Define service methods using decorators like `@GrpcMethod('ServiceName', 'MethodName')`.",
     "source": "code_example",
-    "updated_at": 1780815710.1173182
+    "updated_at": 1780822669.9246092
   }
 }
