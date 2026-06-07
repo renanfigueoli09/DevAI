@@ -2,51 +2,51 @@
   "search:Advanced Security:security best practices nestjs": {
     "content": "- **CLI Commands**:\n  - `nest new project-name` to create a new NestJS project.\n  - `npm install @nestjs/microservices` to add microservices support.\n  - `npm install grpc-tools` for gRPC tools.\n\n- **Latest Versions**:\n  - NestJS: v10.2.4\n  - gRPC: v2.28.1\n\n- **Key Config Options**:\n  - Use `@GrpcClientOptions` decorator to configure gRPC client options.\n  - Implement JWT authentication using `passport-jwt` for securing gRPC services.\n  - Configure CORS in NestJS with `CORSModule` for cross-origin resource sharing.\n\n- **Security Practices**:\n  - Enable HTTPS by configuring SSL/TLS certificates.\n  - Use environment variables to manage sensitive information like API keys and passwords.\n  - Regularly update dependencies using `npm outdated` and `npm update`.",
     "source": "web_search",
-    "updated_at": 1780796956.4755368
+    "updated_at": 1780800150.858354
   },
   "search:Advanced Security:security best practices nestjs_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate microservice service-name --transport grpc`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - gRPC: v2.x\n\n- **Key Config Options**:\n  - `grpcOptions` in `app.module.ts` for setting up gRPC transport.\n  - `protoPath` and `packageDefinition` for defining the proto files.",
     "source": "code_example",
-    "updated_at": 1780796959.0173717
+    "updated_at": 1780800154.8240645
   },
   "search:Advanced Security:dotnet mongodb security": {
     "content": "- Install MongoDB.Driver using the command: `dotnet add package MongoDB.Driver --version 3.9.0`\n- For OIDC integration, refer to DEV Community article for detailed steps.\n- Explore GitHub repository at dotnet-school/dotnet-mongodb for advanced security features.\n- Consider EF Core MongoDB Provider for queryable encryption and vector search capabilities.",
     "source": "web_search",
-    "updated_at": 1780796963.358909
+    "updated_at": 1780800156.6833932
   },
   "search:Advanced Security:dotnet mongodb security_ex": {
     "content": "- Use `dotnet add package MongoDB.Driver` to install the latest version of the MongoDB driver.\n- Configure MongoDB connection strings securely using environment variables or Azure Key Vault.\n- Implement OIDC with EntraID for secure authentication in .NET applications connecting to MongoDB Atlas.\n- Ensure secret protection by storing sensitive information like connection strings and API keys in secure vaults.\n- Use `dotnet ef migrations add InitialCreate` to create initial database migrations.\n- Apply security best practices, such as using HTTPS, securing APIs with OAuth tokens, and regularly updating dependencies.",
     "source": "code_example",
-    "updated_at": 1780796966.2061496
+    "updated_at": 1780800158.400323
   },
   "search:Advanced Security:angular material design patter": {
     "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component <component-name>`\n\n- **Latest Versions**:\n  - Angular Material: v16.2.7\n\n- **Key Config Options**:\n  - Theme configuration in `styles.scss` using Angular Material themes.\n  - Accessibility settings through `MatAriaModule`.\n  - Form validation with `mat-form-field` and `mat-error`.",
     "source": "web_search",
-    "updated_at": 1780796970.7607212
+    "updated_at": 1780800159.8871994
   },
   "search:Advanced Security:django postgres advanced secur": {
     "content": "- Use `psycopg2` as the PostgreSQL adapter in Django.\n- Install psycopg2 using pip: `pip install psycopg2-binary`.\n- Configure database settings in `settings.py`, e.g.,:\n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django.db.backends.postgresql',\n          'NAME': 'your_db_name',\n          'USER': 'your_db_user',\n          'PASSWORD': 'your_db_password',\n          'HOST': 'localhost',\n          'PORT': '',\n      }\n  }\n  ```\n- Enable SSL for secure connections by setting `sslmode` in the connection string:\n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django.db.backends.postgresql',\n          'NAME': 'your_db_name',\n          'USER': 'your_db_user',\n          'PASSWORD': 'your_db_password',\n          'HOST': 'localhost',\n          'PORT': '',\n          'OPTIONS': {\n              'sslmode': 'require',\n          }\n      }\n  }\n  ```\n- Use Django's built-in authentication system for secure user management.\n- Implement row-level permissions using PostgreSQL policies and triggers.\n- Regularly update psycopg2 to the latest version: `pip install --upgrade psycopg2-binary`.\n- Utilize Django's ORM for database operations to avoid SQL injection risks.",
     "source": "web_search",
-    "updated_at": 1780796986.139323
+    "updated_at": 1780800161.3300998
   },
   "search:Advanced Security:django postgres advanced secur_ex": {
     "content": "- Use Django's built-in authentication system.\n- Install `django-guardian` for object-level permissions.\n- Configure PostgreSQL Row-Level Security (RLS) using SQL commands like:\n  ```sql\n  CREATE POLICY \"user_policy\" ON \"my_table\"\n  FOR SELECT USING (current_user = user_id);\n  ```\n- Use Django's `django-environ` package to manage environment variables securely.\n- Implement HTTPS by configuring your web server (e.g., Nginx or Apache).\n- Regularly update Django and PostgreSQL to the latest versions using:\n  ```bash\n  pip install --upgrade django psycopg2-binary\n  ```\n- Utilize Django's `django-cors-headers` for handling Cross-Origin Resource Sharing.\n- Employ Django's `django-storages` package with AWS S3 for secure file storage.",
     "source": "code_example",
-    "updated_at": 1780796990.0104504
+    "updated_at": 1780800162.9205453
   },
   "search:Advanced Security:java spring boot security": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `./mvnw clean package`: Packages the application into a JAR file.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Keycloak: 20.0.3\n\n- **Key Config Options**:\n  - `spring.security.user.name`: Username for default user.\n  - `spring.security.user.password`: Password for default user.\n  - `server.port`: Port number for the application server.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.",
     "source": "web_search",
-    "updated_at": 1780796995.2743416
+    "updated_at": 1780800164.421968
   },
   "search:Advanced Security:java spring boot security_ex": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `npx skills add auth0/agent-skills --skill auth0-quickstart --skill auth0-springboot-a`\n- **Key Config Options**:\n  - JWT Authentication\n  - Authorization\n  - Postgres Database\n  - Keycloak Integration",
     "source": "code_example",
-    "updated_at": 1780796997.516504
+    "updated_at": 1780800165.6370075
   },
   "search:Advanced Security:angular material design patter_ex": {
     "content": "- **CLI Commands**:\n  - `ng generate component <component-name>`\n  - `ng serve --prod`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular Core: 20.x\n  - Angular CLI: 15.x\n\n- **Key Config Options**:\n  - `angular.json`: For project configuration and environment settings.\n  - `app.module.ts`: Entry point for the application, includes declarations, imports, and bootstrap.\n  - `.env` or `environment.ts`: For managing environment-specific configurations.",
     "source": "code_example",
-    "updated_at": 1780796978.6382341
+    "updated_at": 1780800167.0086656
   }
 }
