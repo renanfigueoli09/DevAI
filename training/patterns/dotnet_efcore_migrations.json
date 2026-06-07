@@ -2,21 +2,21 @@
   "search:dotnet+efcore-migrations:ef core migrations for .net co": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - .NET Core CLI: Latest LTS version\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - `DbContext` class with `OnConfiguring` method for connection string\n  - Install `Microsoft.EntityFrameworkCore.Tools` package via NuGet",
     "source": "web_search",
-    "updated_at": 1780807569.453238
+    "updated_at": 1780810168.9823554
   },
   "search:dotnet+efcore-migrations:ef core migrations for .net co_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - Microsoft.EntityFrameworkCore.Tools: 7.0\n\n- **Key Config Options**:\n  - Connection String: Define the database connection string in `appsettings.json`.\n  - Migration Configuration: Use `OnModelCreating` to configure your model.\n  - Seed Data: Implement `SeedData` method in `DbContext` for initial data population.",
     "source": "code_example",
-    "updated_at": 1780807574.2751577
+    "updated_at": 1780810170.5996993
   },
   "search:dotnet+efcore-migrations:best practices for ef core mig": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of May 2024)\n  - .NET SDK: 6.0 or later\n\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server\n  - `UseMySql`: For MySQL\n  - `MigrationsAssembly`: Specifies the assembly containing migrations\n  - `Scaffold-DbContext`: Generates a DbContext and entity classes from an existing database",
     "source": "web_search",
-    "updated_at": 1780807600.402913
+    "updated_at": 1780810173.962564
   },
   "search:dotnet+efcore-migrations:best practices for ef core mig_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enables lazy loading for navigation properties.\n  - `MigrationsAssembly`: Specifies the assembly containing migrations.\n  - `Scaffold-DbContext`: Generates a DbContext and entity classes from an existing database.",
     "source": "code_example",
-    "updated_at": 1780807613.8566515
+    "updated_at": 1780810175.465878
   }
 }
