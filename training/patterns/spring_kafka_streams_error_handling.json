@@ -1,0 +1,7 @@
+{
+  "search:spring+kafka-streams-error-handling:spring kafka streams error han": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --describe` to inspect Kafka topics.\n- **Latest Versions**: Ensure you use the latest stable version of Spring Kafka Streams and Apache Kafka for optimal performance and security.\n- **Key Config Options**:\n  - `errorHandler`: Configure a custom error handler to manage exceptions during processing.\n  - `autoCommitIntervalMs`: Adjust this interval based on your application's requirements to control how often offsets are committed.\n  - `maxPollRecords`: Set the maximum number of records that can be fetched in one poll, balancing between memory usage and throughput.",
+    "source": "web_search",
+    "updated_at": 1780805610.7315621
+  }
+}
