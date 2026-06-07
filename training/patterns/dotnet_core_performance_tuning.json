@@ -13,5 +13,25 @@
     "content": "- Use `dotnet publish -c Release` for publishing optimized applications.\n- Enable Just-In-Time (JIT) compilation by setting `<PublishSingleFile>true</PublishSingleFile>` in your `.csproj`.\n- Utilize `GC.Server=true` and `ServerGarbageCollection=true` in the appsettings.json to enable server garbage collection.\n- Implement caching strategies using `Microsoft.Extensions.Caching.Memory` for data retrieval optimization.\n- Monitor performance with tools like dotTrace, ANTS Performance Profiler, or VisualVM.\n- Optimize database queries by indexing columns used frequently in WHERE clauses.\n- Use async/await for I/O-bound operations to prevent blocking the main thread.\n- Configure logging levels and sinks in appsettings.json to reduce log verbosity and improve performance.\n- Regularly update .NET Core SDK and runtime to benefit from performance improvements and security patches.",
     "source": "web_search",
     "updated_at": 1780824654.9499686
+  },
+  "search:dotnet+core-performance-tuning:dotnet core performance tuning": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to manage database migrations.\n- Implement async EF Core methods like `ToListAsync()` for better performance.\n- Configure Kestrel server with `kestrel:serverOptions:threadCount` in appsettings.json.\n- Utilize `async` and `await` keywords for asynchronous programming.\n- Enable caching using MemoryCache or Redis for faster data retrieval.\n- Optimize database queries by indexing frequently accessed columns.\n- Use `Parallel.ForEach()` for parallel processing of collections.\n- Implement async IO operations with `HttpClient` for non-blocking network calls.\n- Configure logging level in appsettings.json to reduce overhead.\n- Monitor performance using tools like dotTrace or PerfView.",
+    "source": "web_search",
+    "updated_at": 1780827289.3959703
+  },
+  "search:dotnet+core-performance-tuning:dotnet core performance tuning_ex": {
+    "content": "- Use `dotnet build --configuration Release` to compile your project in release mode.\n- Update to the latest .NET Core SDK for performance improvements and bug fixes.\n- Configure Kestrel server settings in `appsettings.json`:\n  ```json\n  \"Kestrel\": {\n    \"Endpoints\": {\n      \"Http\": {\n        \"Url\": \"http://*:5000\"\n      }\n    },\n    \"Limits\": {\n      \"MaxRequestBodySize\": null // Unlimited request body size\n    }\n  }\n  ```\n- Use `async` and `await` for database operations with Entity Framework Core.\n- Implement caching strategies using `Microsoft.Extensions.Caching.Memory`.\n- Optimize memory usage by using `Span<T>` and `Memory<T>` in performance-critical code.\n- Monitor application performance with tools like dotTrace or Visual Studio Profiler.\n- Enable garbage collection logging to identify memory leaks:\n  ```bash\n  dotnet run --gcserver:server --gc:concurrent --loggc\n  ```\n- Use `ThreadPool.SetMinThreads` and `ThreadPool.SetMaxThreads` for fine-grained control over thread pool size.",
+    "source": "code_example",
+    "updated_at": 1780827296.275039
+  },
+  "search:dotnet+core-performance-tuning:dotnet core optimization strat": {
+    "content": "- Use `dotnet build --configuration Release` for optimized builds.\n- Update to .NET Core 6 or later for performance improvements.\n- Configure `appsettings.json` with `\"Logging\": { \"LogLevel\": { \"Default\": \"Information\", \"Microsoft.AspNetCore\": \"Warning\" } }`.\n- Implement async programming patterns like `async/await` for I/O-bound operations.\n- Use `GC.Collect()` judiciously to manage memory, especially in long-running applications.\n- Enable Just-In-Time (JIT) compilation optimizations with the `-optimize+` flag.\n- Configure connection strings and database settings efficiently to reduce latency.\n- Monitor performance using tools like dotTrace or Visual Studio Profiler.\n- Implement caching strategies to reduce database load and improve response times.",
+    "source": "web_search",
+    "updated_at": 1780827311.636845
+  },
+  "search:dotnet+core-performance-tuning:dotnet core optimization strat_ex": {
+    "content": "- Use `dotnet new webapi -o demoswagger` to create a new ASP.NET Core Web API project.\n- Implement response compression by adding the following middleware in `Startup.cs`:\n  ```csharp\n  app.UseResponseCompression();\n  ```\n- Configure caching using the `MemoryCache` service and add it to the services collection:\n  ```csharp\n  services.AddMemoryCache();\n  ```\n- Use URL rewriting with `RewriteOptions` for routing optimization.\n- Optimize middleware pipeline by ordering middleware calls in `Startup.cs`.\n- Implement lazy loading for entities in Entity Framework Core to reduce memory usage.\n- Use async/await for I/O-bound operations to improve application responsiveness.\n- Monitor and analyze performance using tools like dotTrace or Visual Studio Profiler.\n- Regularly update .NET Core SDK and libraries to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1780827320.1877286
   }
 }

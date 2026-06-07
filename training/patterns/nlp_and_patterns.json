@@ -1,0 +1,42 @@
+{
+  "search:NLP and Patterns:advanced nlp techniques": {
+    "content": "- **CLI Commands**: Use `python -m spacy download en_core_web_sm` to download the English model.\n- **Latest Versions**: Ensure you are using the latest version of libraries like spaCy with `pip install --upgrade spacy`.\n- **Key Config Options**:\n  - For spaCy, configure pipeline components in your code: \n    ```python\n    nlp = spacy.load(\"en_core_web_sm\")\n    ```\n  - Set options for tokenization and other processing steps directly in the model configuration.",
+    "source": "web_search",
+    "updated_at": 1780827523.1132257
+  },
+  "search:NLP and Patterns:advanced nlp techniques_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/Lanor-Jephthah1/NLP-Techniques.git`\n  - `python3 -m pip install transformers`\n\n- **Latest Versions**:\n  - Transformers library: v4.28.0\n\n- **Key Config Options**:\n  - For tokenization: `tokenizer = AutoTokenizer.from_pretrained(\"bert-base-uncased\")`\n  - For model training: `model.train()`\n  - For inference: `outputs = model.generate(inputs)`",
+    "source": "code_example",
+    "updated_at": 1780827527.3759503
+  },
+  "search:NLP and Patterns:pattern recognition in nlp": {
+    "content": "- **CLI Commands**: Use `pip install pattern` to install the Pattern library.\n- **Latest Version**: As of my last update, the latest version is 3.6.2.\n- **Key Config Options**:\n  - `pattern.en.PhraseFinder()`: For finding phrases in English text.\n  - `pattern.en.RegexTokenizer()`: For tokenizing text using regular expressions.\n  - `pattern.en.StringMatcher()`: For matching strings based on patterns.",
+    "source": "web_search",
+    "updated_at": 1780827538.2121134
+  },
+  "search:NLP and Patterns:pattern recognition in nlp_ex": {
+    "content": "- **CLI Commands**: Use `python -m nltk` for Natural Language Toolkit.\n- **Latest Versions**: Ensure NLTK is up to date using `pip install --upgrade nltk`.\n- **Key Config Options**: Configure NLTK with `nltk.download()` to download necessary corpora and models.",
+    "source": "code_example",
+    "updated_at": 1780827543.25912
+  },
+  "search:NLP and Patterns:sentiment analysis with nlp": {
+    "content": "- **CLI Commands**:\n  - `python train_model.py --data_path ./data --model_name bert-base-uncased`\n  - `python predict_sentiment.py --text \"I love this product!\"`\n\n- **Latest Versions**:\n  - Python: 3.9\n  - Transformers Library: 4.15.0\n\n- **Key Config Options**:\n  - Model Selection: `bert-base-uncased`, `roberta-base`\n  - Training Epochs: 3\n  - Batch Size: 16",
+    "source": "web_search",
+    "updated_at": 1780827567.4246345
+  },
+  "search:NLP and Patterns:sentiment analysis with nlp_ex": {
+    "content": "- **GitHub Repository**: [TheodoraDsouza/ML-Sentiment-Analysis-Web-App](https://github.com/TheodoraDsouza/ML-Sentiment-Analysis-Web-App)\n- **Latest Version**: Not specified in the search results.\n- **Key Config Options**:\n  - For VADER Sentiment Analysis:\n    ```python\n    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer\n    analyzer = SentimentIntensityAnalyzer()\n    sentiment = analyzer.polarity_scores(text)\n    ```\n  - For handling emojis, use the `emoji` library.\n- **CLI Commands**: Not applicable for this project.",
+    "source": "code_example",
+    "updated_at": 1780827573.470212
+  },
+  "search:NLP and Patterns:text classification using nlp": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/Sai-Karthik7/text_classification_using_nlp.git`\n  - `cd text_classification_using_nlp`\n\n- **Latest Versions**:\n  - Python: 3.9.x\n  - TensorFlow: 2.5.x\n  - Keras: 2.6.x\n\n- **Key Config Options**:\n  - Model Architecture: LSTM or BERT\n  - Embedding Dimension: 100, 200, or 300\n  - Batch Size: 32 or 64\n  - Learning Rate: 0.001",
+    "source": "web_search",
+    "updated_at": 1780827581.5693648
+  },
+  "search:NLP and Patterns:text classification using nlp_ex": {
+    "content": "- Use TensorFlow.js for intent text classification.\n- Train model on corpus file and save in `src/nlp/nlpjs/` folder.\n- Explore Text Classification using NLP and ML on GitHub.\n- Utilize data from Natural Language Processing with Disaster Tweets on Kaggle.\n- Key config options include model architecture, learning rate, batch size.",
+    "source": "code_example",
+    "updated_at": 1780827585.7486422
+  }
+}
