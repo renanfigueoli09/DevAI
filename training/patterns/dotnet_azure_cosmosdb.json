@@ -1,0 +1,7 @@
+{
+  "search:dotnet+azure-cosmosdb:dotnet azure cosmosdb crud ope": {
+    "content": "- Use `dotnet new webapi -n CosmosDBCRUD` to create a new ASP.NET Core Web API project.\n- Install the latest version of Azure Cosmos DB SDK via NuGet: `dotnet add package Microsoft.Azure.Cosmos`.\n- Configure Cosmos DB connection string in `appsettings.json`: `\"CosmosDbConnectionString\": \"your_cosmos_db_connection_string\"`.\n- Use `[EnableCors]` attribute to enable CORS for your API.\n- Implement CRUD operations using the Azure Cosmos DB SDK, e.g., `await _container.ReadItemAsync<T>(id, new PartitionKey(partitionKey))`.\n- For Azure Functions, use `CosmosDBTrigger` and `CosmosDBOutput` bindings in function.json.\n- Ensure proper indexing on your Cosmos DB container for efficient querying.\n- Use the latest version of Azure CLI for managing resources: `az --version`.\n- Configure logging levels in `appsettings.json` to control output verbosity.",
+    "source": "web_search",
+    "updated_at": 1780798700.7125585
+  }
+}
