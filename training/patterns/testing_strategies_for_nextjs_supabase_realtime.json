@@ -2,21 +2,21 @@
   "search:testing-strategies-for-nextjs-supabase-realtime:next.js supabase realtime test": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 15.x\n  - Supabase: 2.x\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Realtime subscriptions using `supabase_client.on('postgres_changes', ...)`\n\n- **Testing Strategies**:\n  - Unit tests for components and functions\n  - Integration tests for API routes and database operations\n  - E2E tests for critical user flows",
     "source": "web_search",
-    "updated_at": 1780792085.5503793
+    "updated_at": 1780796799.0939922
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:next.js supabase realtime test_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS Client: v2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Real-time subscriptions using `supabase_client.on('postgres_changes', ...)`\n  - Authentication with `supabase_client.auth.signInWithPassword(...)`\n\nThese actionable facts provide a clear roadmap for developers to set up, configure, and utilize Next.js with Supabase for real-time applications.",
     "source": "code_example",
-    "updated_at": 1780792086.79196
+    "updated_at": 1780796800.5194516
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:real-time data handling in nex": {
     "content": "- **CLI Commands**: `npx create-next-app@latest my-realtime-app`\n- **Latest Versions**: Next.js 13, Supabase 2.0\n- **Key Config Options**:\n  - `supabaseUrl`: Your project's URL.\n  - `supabaseAnonKey`: An anonymous key for public access.\n  - `realtimeChannel`: Channel name for subscriptions.\n  - `realtimeEvent`: Event type to listen for (e.g., 'INSERT', 'UPDATE').",
     "source": "web_search",
-    "updated_at": 1780792088.0640018
+    "updated_at": 1780796803.5914254
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:real-time data handling in nex_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-real-time-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project dashboard.\n  - Real-time subscriptions using `supabase_client.on('postgres_changes', ...)`.",
     "source": "code_example",
-    "updated_at": 1780792089.1367662
+    "updated_at": 1780796804.8145013
   }
 }

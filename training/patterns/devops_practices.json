@@ -42,16 +42,16 @@
   "search:devops-practices:environment configuration stag_ex": {
     "content": "- **CLI Commands**: \n  - `dotnet publish --configuration Staging`\n  - `dotnet publish --configuration Production`\n\n- **Latest Versions**:\n  - .NET SDK 7.0\n\n- **Key Config Options**:\n  - `appsettings.Staging.json`\n  - `appsettings.Production.json`",
     "source": "code_example",
-    "updated_at": 1780794203.204451
+    "updated_at": 1780796507.1237369
   },
   "search:devops-practices:observability logging metrics ": {
     "content": "- **CLI Commands and Flags**:\n  - `kubectl logs <pod-name>` to view container logs.\n  - `kubectl get pods` to list all pods.\n  - `kubectl describe pod <pod-name>` for detailed pod information.\n\n- **Latest Versions**:\n  - Prometheus: v2.40\n  - Grafana: v9.1\n  - Jaeger: v1.30\n\n- **Key Config Options**:\n  - Prometheus: `scrape_configs` in `prometheus.yml`.\n  - Grafana: Data sources and dashboard configurations.\n  - Jaeger: Collector, Query, UI configuration files.",
     "source": "web_search",
-    "updated_at": 1780794227.7477775
+    "updated_at": 1780796509.1521702
   },
   "search:devops-practices:observability logging metrics _ex": {
     "content": "- **CLI Commands**:\n  - `otelcol --config=/path/to/config.yaml`\n  - `grafana-server --config.file=/etc/grafana/grafana.ini`\n\n- **Latest Versions**:\n  - OpenTelemetry Collector: v1.25.0\n  - Grafana: v9.3.0\n\n- **Key Config Options**:\n  - `otelcol` config: `receivers`, `exporters`, `service`\n  - `grafana.ini`: `[server]`, `[database]`, `[auth]`",
     "source": "code_example",
-    "updated_at": 1780794231.7557342
+    "updated_at": 1780796511.0189216
   }
 }

@@ -2,26 +2,26 @@
   "search:java+spring-data-jpa:java spring data jpa performan": {
     "content": "- Use Spring Boot Actuator to monitor performance metrics.\n- Enable query logging with `spring.jpa.show-sql=true` in `application.properties`.\n- Optimize queries by using named parameters and JPQL.\n- Implement pagination for large datasets with `Pageable` or `Slice`.\n- Use `@Query` annotation for complex queries to bypass default repository methods.\n- Configure connection pool settings like `spring.datasource.hikari.maximum-pool-size=20`.\n- Enable second-level caching with `@EnableCaching` and configure cache provider.\n- Monitor database performance using tools like JConsole or VisualVM.\n- Regularly update Spring Data JPA and Hibernate to the latest versions for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780792095.153433
+    "updated_at": 1780796811.4633944
   },
   "search:java+spring-data-jpa:java spring data jpa best prac": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 3.2.0.RELEASE\n  - Hibernate ORM: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the SQL dialect, e.g., `org.hibernate.dialect.MySQL5Dialect`.",
     "source": "web_search",
-    "updated_at": 1780792096.28689
+    "updated_at": 1780796812.7112653
   },
   "search:java+spring-data-jpa:java spring data jpa best prac_ex": {
     "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Data JPA and its dependencies.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development, `validate` for production.\n  - `spring.jpa.show-sql`: Set to `true` in development to log SQL queries.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect (e.g., `org.hibernate.dialect.MySQL5Dialect`).\n- **Optimization Tips**:\n  - Use `@Query` for complex queries instead of JPQL.\n  - Implement pagination and sorting in repository methods.\n  - Avoid N+1 query problems by using `@EntityGraph`.\n  - Use DTOs to reduce data transfer between layers.",
     "source": "code_example",
-    "updated_at": 1780792097.3689716
+    "updated_at": 1780796813.8801324
   },
   "search:java+spring-data-jpa:java spring data jpa security ": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x (as of my last update).\n  - Spring Data JPA: 2.7.x (check Maven Central for the latest).\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n    ```properties\n    spring.datasource.url=jdbc:mysql://localhost:3306/mydb\n    spring.datasource.username=root\n    spring.datasource.password=password\n    ```\n  - Security configuration in `SecurityConfig.java`.\n    ```java\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.authorizeRequests()\n                .antMatchers(\"/public/**\").permitAll()\n                .anyRequest().authenticated();\n        }\n    }\n    ```\n  - Entity mapping with JPA annotations.\n    ```java\n    @Entity\n    public class User {\n        @Id\n        @GeneratedValue(strategy = GenerationType.IDENTITY)\n        private Long id;\n        \n        @Column(nullable = false, unique = true)\n        private String username;\n        \n        @Column(nullable = false)\n        private String password;\n    }\n    ```\n  - Repository interfaces for data access.\n    ```java\n    public interface UserRepository extends JpaRepository<User, Long> {\n        User findByUsername(String username);\n    }\n    ```\n\nThese actionable facts should help developers set up and configure a Spring Boot application with Spring Data JPA and basic security.",
     "source": "web_search",
-    "updated_at": 1780792098.6724482
+    "updated_at": 1780796815.100185
   },
   "search:java+spring-data-jpa:java spring data jpa security _ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `git clone https://github.com/spring-projects/spring-data-examples.git` to clone the repository.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Data JPA: 2.7.5\n  - Spring Security: 6.0.4\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for production environments.\n  - `spring.security.user.name`: Default security user name.\n  - `spring.security.user.password`: Default security user password.",
     "source": "code_example",
-    "updated_at": 1780792099.8600945
+    "updated_at": 1780796816.5316548
   }
 }

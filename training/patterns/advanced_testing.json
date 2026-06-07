@@ -1,37 +1,52 @@
 {
   "search:Advanced Testing:typescript nextjs testing adva": {
-    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install --save-dev cypress playwright vitest jest`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Cypress: v12.0.0\n  - Playwright: v1.24.0\n  - Vitest: v0.27.0\n  - Jest: v28.1.3\n\n- **Key Config Options**:\n  - `tsconfig.json`: Enable strict mode, use type-safe routing, define environment variable types.\n  - Cypress: Configure `cypress.json` for custom commands and plugins.\n  - Playwright: Use `playwright.config.ts` to set up browser configurations.\n  - Vitest: Customize `vitest.config.ts` for test environments and coverage reports.\n  - Jest: Modify `jest.config.js` for advanced testing features like mock functions.",
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install cypress --save-dev`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Cypress: v12.8\n\n- **Key Config Options**:\n  - `tsconfig.json`: Enable strict mode, type-safe routing, and environment variable types.\n  - `next.config.js`: Configure API routes, dynamic routing, and authentication tests.",
     "source": "web_search",
-    "updated_at": 1780796359.7663705
+    "updated_at": 1780796884.6114664
   },
   "search:Advanced Testing:typescript nextjs testing adva_ex": {
-    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9\n  - Jest: 27.5\n\n- **Key Config Options**:\n  - In `tsconfig.json`, ensure `\"jsx\": \"react-jsx\"` and `\"moduleResolution\": \"node\"`\n  - In `jest.config.js`, add `\"testEnvironment\": \"jsdom\"`, `\"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]`",
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9\n  - Jest: 27.5\n  - React Testing Library: 13.4\n\n- **Key Config Options**:\n  - `jest.config.ts` for Jest configuration.\n  - `tsconfig.json` for TypeScript settings.\n  - `.babelrc` or `babel.config.js` for Babel configuration if needed.",
     "source": "code_example",
-    "updated_at": 1780796361.3627348
+    "updated_at": 1780796888.1045525
   },
   "search:Advanced Testing:fastapi asyncio websockets tes": {
-    "content": "- Use `TestClient` from FastAPI to test WebSockets.\n- Connect to WebSocket using `with TestClient(app) as client:`.\n- For async testing, use `httpx.AsyncClient` with `pytest-asyncio`.\n- Configure the async event loop for tests in your pytest configuration file.\n- Test async route handlers that use async SQLAlchemy.\n- Use `httpx-ws` or Starlette's test client to write WebSocket tests.\n- Ensure proper connection management and authentication in WebSocket servers.\n- Scale WebSocket connections using Redis for multi-worker environments.\n- Deploy WebSocket servers with FastAPI on production platforms.",
+    "content": "- Use `TestClient` to test WebSockets in FastAPI.\n- Example command: `pytest --asyncio-mode=auto your_test_file.py`.\n- Ensure you have the latest versions of FastAPI, Starlette, and httpx for compatibility.\n- Key config options include setting up an async event loop with `pytest-asyncio`.\n- For WebSocket tests, use `httpx-ws` or the Starlette test client's WebSocket capabilities.",
     "source": "web_search",
-    "updated_at": 1780796362.8858693
+    "updated_at": 1780796916.4402335
   },
   "search:Advanced Testing:fastapi asyncio websockets tes_ex": {
-    "content": "- Install FastAPI, Uvicorn, Websockets, Pytest, and pytest-asyncio using pip.\n- Use `pytest` for testing WebSocket applications.\n- Employ `httpx` for making HTTP requests in tests.\n- Set up a basic WebSocket application for testing by defining routes and handling connections.\n- Assert response status codes to validate API endpoints.\n- Utilize Chanx testing utilities for comprehensive WebSocket testing.\n- Test message flows and broadcasting using pytest fixtures and asynchronous functions.\n- Handle exceptions like `asyncio.TimeoutError` during WebSocket tests.\n- Ensure proper setup of FastAPI, Uvicorn, and Websockets versions for compatibility.",
+    "content": "- Install FastAPI, Uvicorn, Websockets, Pytest, and Pytest-Asyncio using pip.\n- Use `pytest` for testing WebSocket applications.\n- Employ `httpx` for making HTTP requests in tests.\n- Set up a basic WebSocket application for testing by defining routes and handling connections.\n- Assert response status codes to validate the API's behavior.\n- Utilize Chanx testing utilities for comprehensive WebSocket testing.\n- Test message flows and broadcasting using pytest fixtures.\n- Handle exceptions like `asyncio.TimeoutError` during WebSocket communication.\n- Configure FastAPI for state management, authentication, and multi-worker scaling.",
     "source": "code_example",
-    "updated_at": 1780796364.3918896
+    "updated_at": 1780796920.871666
   },
   "search:Advanced Testing:spring kotlin jpa testing": {
-    "content": "- **CLI Commands**:\n  - `./mvnw test` to run tests in a Maven project.\n  - `./gradlew test` for Gradle projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kotlin: 1.9.x\n  - Spring Data JPA: 3.2.x\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `create-drop` for testing environments.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
+    "content": "- **CLI Commands**:\n  - `./gradlew test` to run tests.\n  - `./mvnw clean install` for Maven projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kotlin: 1.9.x\n  - Spring Data JPA: 3.2.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database configurations.\n  - Use `@DataJpaTest` for testing repositories without full application context.\n  - Configure `spring.jpa.hibernate.ddl-auto=update` for development environments.\n\n- **Testing Frameworks**:\n  - JUnit 5\n  - Mockito for mocking dependencies\n\n- **Database Testing**:\n  - In-memory databases like H2 for quick tests.\n  - Use `@Sql` annotation to initialize database state before tests.",
     "source": "web_search",
-    "updated_at": 1780796365.782705
+    "updated_at": 1780796927.2989156
   },
   "search:Advanced Testing:python fastapi authentication ": {
-    "content": "- Use `uvicorn` to run FastAPI applications locally.\n- For testing, use `pytest` along with `TestClient`.\n- Install dependencies using pip:\n  ```bash\n  pip install fastapi uvicorn pytest testclient\n  ```\n- Create a test file (e.g., `test_main.py`) and import necessary modules.\n- Use `TestClient` to simulate HTTP requests to your FastAPI app.\n- For authentication, include the token in the headers of your requests.\n- Example:\n  ```python\n  from fastapi.testclient import TestClient\n  from main import app\n\n  client = TestClient(app)\n\n  def test_read_main():\n      response = client.get(\"/\")\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"Hello World\"}\n  ```\n- For testing protected routes, include the token in the headers:\n  ```python\n  def test_protected_route():\n      response = client.get(\"/protected\", headers={\"Authorization\": \"Bearer your_token_here\"})\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"This is a protected route\"}\n  ```\n- Ensure your FastAPI app has proper authentication middleware set up.\n- For more advanced testing, consider using `pytest` fixtures for setup and teardown.",
+    "content": "- Use `uvicorn` to run FastAPI applications locally.\n- For testing, install `pytest` and `fastapi-testclient`.\n- Create a test file with `.test.py` extension.\n- Import `TestClient` from `fastapi.testclient`.\n- Initialize the client with your FastAPI app instance.\n- Use `client.post('/auth', data={'username': 'user', 'password': 'pass'})` to simulate authentication and get a token.\n- Store the token in a variable for subsequent requests.\n- Add headers with the token for authenticated requests, e.g., `headers={\"Authorization\": f\"Bearer {token}\"}`.\n- Use `client.get('/protected-endpoint', headers=headers)` to test protected routes.\n- Run tests using `pytest` command.",
     "source": "web_search",
-    "updated_at": 1780796367.0435097
+    "updated_at": 1780796942.748794
   },
   "search:Advanced Testing:python fastapi authentication _ex": {
-    "content": "- Use `pip install fastapi uvicorn python-multipart` to install FastAPI, Uvicorn, and Python Multipart.\n- For authentication, use `pip install passlib[bcrypt] python-jose[cryptography]`.\n- Create a new FastAPI project with `fastapi create-app myproject`.\n- Configure the database connection in your main application file (e.g., `main.py`).\n- Implement user registration, login, and logout endpoints.\n- Use JWT for token-based authentication. Install `python-jose[cryptography]` and generate a secret key.\n- Set up middleware to handle authentication tokens on each request.\n- Test the authentication flow using tools like Postman or curl.\n- Ensure your application is secure by validating user input and handling exceptions properly.",
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install `fastapi`, `python-multipart`, and `passlib[bcrypt]`.\n- For authentication, use JWT tokens with `python-jose[cryptography]`.\n- Configure the secret key and algorithm in your application settings.\n- Implement user registration, login, and logout endpoints.\n- Use Pydantic models for data validation.\n- Test authentication using tools like Postman or cURL.\n- Ensure middleware is used to handle authentication globally.",
     "source": "code_example",
-    "updated_at": 1780796368.3190699
+    "updated_at": 1780796949.861778
+  },
+  "search:Advanced Testing:react native redux saga testin": {
+    "content": "- Use `redux-saga-test` library for syntactic sugar in step-by-step tests.\n- For manual iteration, use `.next()` method on the generator returned by `fromGenerator`.\n- Ensure you have the latest versions of `redux`, `react-redux`, and `redux-saga` installed.\n- Key config options include middleware setup with `applyMiddleware(sagaMiddleware)` in your store configuration.\n- For React Native testing, consider using Jest along with `redux-mock-store` for mocking Redux stores.",
+    "source": "web_search",
+    "updated_at": 1780796905.2671895
+  },
+  "search:Advanced Testing:react native redux saga testin_ex": {
+    "content": "- Use `npm install redux-saga` or `yarn add redux-saga` to install the latest version.\n- For testing sagas, consider using libraries like `redux-saga-test-plan`.\n- Initialize a saga with `createSagaMiddleware()`.\n- Configure your store with `applyMiddleware(sagaMiddleware)`.\n- Use `sagaMiddleware.run(yourSaga)` to start the saga.\n- To test sagas step-by-step, use `runSaga` from `redux-saga-test-plan`.\n- For full saga testing, run the saga and assert on its effects using `expectSaga`.\n- Key config options include middleware setup and saga initialization.",
+    "source": "code_example",
+    "updated_at": 1780796911.3929553
+  },
+  "search:Advanced Testing:spring kotlin jpa testing_ex": {
+    "content": "- **GitHub Repository**: [bastman/kotlin-spring-jpa-examples](https://github.com/bastman/kotlin-spring-jpa-examples)\n- **CLI Commands**:\n  - `git clone https://github.com/bastman/kotlin-spring-jpa-examples.git`\n  - `cd kotlin-spring-jpa-examples`\n  - `./mvnw clean install` (for Maven projects)\n  - `./gradlew build` (for Gradle projects)\n- **Latest Versions**:\n  - Kotlin: 1.8.20\n  - Spring Boot: 3.1.4\n  - JPA: 2.2\n  - Hibernate: 6.2.5.Final\n  - QueryDSL: 5.0.0\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - `@EntityScan`, `@EnableJpaRepositories`, and `@SpringBootApplication` annotations in main application class.\n  - Repository interfaces extending `JpaRepository` for data access.",
+    "source": "code_example",
+    "updated_at": 1780796934.1415892
   }
 }

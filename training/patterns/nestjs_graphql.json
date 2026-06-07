@@ -2,21 +2,21 @@
   "search:nestjs+graphql:nestjs graphql apollodriver @o": {
     "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate resolver <resolver-name> --type <type-name>`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Apollo Server: v4.x\n\n- **Key Config Options**:\n  - `GraphQLModule.forRoot({ typePaths: ['./**/*.graphql'], resolvers })`\n  - `@ObjectType()` for defining GraphQL types\n  - `@Resolver()` for creating GraphQL resolvers",
     "source": "web_search",
-    "updated_at": 1780791869.3980408
+    "updated_at": 1780796565.5083177
   },
   "search:nestjs+graphql:nestjs graphql apollodriver @o_ex": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/graphql @nestjs/apollo @apollo/server graphql`\n  - `nest new nestjs-query-getting-started`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Apollo Server: 4.x\n\n- **Key Config Options**:\n  - Use `@ObjectType` to define GraphQL types.\n  - Use `@Resolver` to create resolvers for your GraphQL schema.",
     "source": "code_example",
-    "updated_at": 1780791870.7654393
+    "updated_at": 1780796566.8655653
   },
   "search:nestjs+graphql:nestjs graphql @subscription d": {
     "content": "- **CLI Commands**:\n  - `nest generate subscription <name>` to create a new subscription.\n  - `nest g module <module-name>` to generate a new module.\n\n- **Latest Versions**:\n  - NestJS: v10.x (as of my last update in October 2023, but check the official NestJS website for the most current version).\n  - GraphQL Module for NestJS: @nestjs/graphql@10.x\n  - DataLoader: dataloader@2.x\n\n- **Key Config Options**:\n  - In `main.ts`, use `GraphQLModule.forRootAsync` to configure GraphQL with DataLoader.\n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { GraphQLModule } from '@nestjs/graphql';\n    import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';\n\n    @Module({\n      imports: [\n        GraphQLModule.forRootAsync<ApolloDriverConfig>({\n          driver: ApolloDriver,\n          useFactory: () => ({\n            typePaths: ['./**/*.graphql'],\n            context: ({ req }) => ({ user: req.user }),\n            dataSources: () => ({\n              // Define your data sources here\n            }),\n          }),\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Use `DataLoader` in resolvers to batch and cache database queries.\n    ```typescript\n    import DataLoader from 'dataloader';\n\n    const userLoader = new DataLoader(async (userIds) => {\n      // Fetch users from the database based on userIds\n      return await User.findByIds(userIds);\n    });\n\n    export { userLoader };\n    ```\n\n- **Additional Tips**:\n  - Ensure your WebSocket adapter is correctly set up for subscriptions.\n  - Use `@nestjs/platform-ws` if you're using WebSockets.\n  - Check the official NestJS documentation and community forums for any updates or best practices.",
     "source": "web_search",
-    "updated_at": 1780791871.8442328
+    "updated_at": 1780796568.30429
   },
   "search:nestjs+graphql:nestjs graphql @subscription d_ex": {
     "content": "- Use `@nestjs/graphql` version 13.0.0 or later.\n- Install `apollo-dataloader` for efficient data loading.\n- Configure `dataloader` in your GraphQL module:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { GraphQLModule } from '@nestjs/graphql';\n  import DataLoader from 'dataloader';\n\n  @Module({\n    imports: [\n      GraphQLModule.forRoot({\n        typePaths: ['./**/*.graphql'],\n        context: ({ req }) => ({ user: req.user }),\n        resolvers: {\n          Query: {\n            users: async (_, { ids }, { dataloader }) => await dataloader.loadMany(ids),\n          },\n        },\n        dataSources: () => ({\n          userLoader: new DataLoader(async (ids) => {\n            // Fetch users from database\n            return users;\n          }),\n        }),\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Use `@Subscription` decorator for real-time subscriptions.\n- Implement `upload` functionality using `GraphQLUpload` scalar type.\n- Configure Redis and RabbitMQ as caching and messaging solutions respectively.\n- Apply JWT authentication for secure API access.\n- Utilize ESLint 9 for code quality checks.",
     "source": "code_example",
-    "updated_at": 1780791873.1399183
+    "updated_at": 1780796569.5202856
   }
 }

@@ -2,16 +2,16 @@
   "search:kubernetes+nginx-ingress-controller:kubernetes nginx ingress contr": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f nginx-ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is 1.2.3.\n\n- **Key Config Options**:\n  - `controller.service.annotations` for custom annotations.\n  - `controller.replicaCount` to set the number of replicas.\n  - `controller.nodeSelector` for node selection.\n  - `controller.tolerations` for tolerating taints.",
     "source": "web_search",
-    "updated_at": 1780791874.4556258
+    "updated_at": 1780796573.4717836
   },
   "search:kubernetes+nginx-ingress-controller:nginx as a reverse proxy in ku": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f nginx-reverse-proxy.yaml`\n  \n- **Latest Versions**:\n  - Nginx: 1.25.x\n  - Kubernetes: 1.26.x\n\n- **Key Config Options**:\n  - `service.beta.kubernetes.io/nginx.ingress.class`: Specifies the ingress class to use.\n  - `nginx.ingress.kubernetes.io/rewrite-target`: Rewrites the target URL.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: Sets the backend protocol (HTTP/HTTPS).",
     "source": "web_search",
-    "updated_at": 1780791876.0029032
+    "updated_at": 1780796574.691193
   },
   "search:kubernetes+nginx-ingress-controller:nginx as a reverse proxy in ku_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f nginx-reverse-proxy.yaml`\n  - `kubectl get svc`\n  - `kubectl describe svc <service-name>`\n\n- **Latest Versions**:\n  - Nginx: 1.25.0 (as of my last update)\n  - Kubernetes: 1.26.x\n\n- **Key Config Options**:\n  - `nginx.conf`: Configuration file for Nginx.\n  - `server_name`: Specifies the server name(s).\n  - `location`: Defines a location block that matches a specific URI pattern.\n  - `proxy_pass`: Passes requests to another server.",
     "source": "code_example",
-    "updated_at": 1780791877.5327082
+    "updated_at": 1780796576.0167046
   }
 }
