@@ -3,5 +3,10 @@
     "content": "- Use `pip install Flask-SQLAlchemy` to install the latest version.\n- Configure your database URI in `app.config['SQLALCHEMY_DATABASE_URI']`.\n- Enable query logging with `app.config['SQLALCHEMY_ECHO'] = True` for debugging.\n- Utilize `subqueryload` for efficient loading of related objects.\n- Employ `DebugToolbarExtension` from `flask_debugtoolbar` to monitor and optimize queries.\n- Optimize bulk inserts using SQLAlchemy's built-in drivers or third-party extensions supporting the new bulk infrastructure.",
     "source": "web_search",
     "updated_at": 1780836196.7321973
+  },
+  "search:flask-sqlalchemy-performance:flask sqlalchemy performance o_ex": {
+    "content": "- **CLI Commands**: Use `flask run` to start the Flask application.\n- **Latest Versions**: Ensure you are using the latest version of Flask and SQLAlchemy by running `pip install --upgrade flask sqlalchemy`.\n- **Key Config Options**:\n  - Set `SQLALCHEMY_TRACK_MODIFICATIONS = False` in your config to improve performance.\n  - Use connection pooling with `SQLALCHEMY_POOL_SIZE` and `SQLALCHEMY_MAX_OVERFLOW`.",
+    "source": "code_example",
+    "updated_at": 1780836213.7994754
   }
 }
