@@ -1,0 +1,12 @@
+{
+  "search:nextjs+supabase-storage:nextjs supabase storage integr": {
+    "content": "- **Install Supabase Client**: `npm install @supabase/supabase-js`\n- **Initialize Supabase**: \n  ```javascript\n  import { createClient } from '@supabase/supabase-js';\n  \n  const supabaseUrl = 'your-supabase-url';\n  const supabaseAnonKey = 'your-anon-key';\n  \n  const supabase = createClient(supabaseUrl, supabaseAnonKey);\n  ```\n- **Upload File**:\n  ```javascript\n  async function uploadFile(file) {\n    const { data, error } = await supabase.storage.from('bucket-name').upload('file-path', file);\n    if (error) throw error;\n    return data;\n  }\n  ```\n- **Retrieve File URL**:\n  ```javascript\n  async function getFileUrl(path) {\n    const { data, error } = await supabase.storage.from('bucket-name').createSignedUrl('path-to-file', 3600);\n    if (error) throw error;\n    return data.signedUrl;\n  }\n  ```\n- **Key Config Options**:\n  - `supabaseUrl`: Your Supabase project URL.\n  - `supabaseAnonKey`: Anonymous key for public access.\n  - `bucket-name`: Name of the storage bucket.\n\nThese steps and commands provide a clear guide on integrating Supabase Storage with Next.js, focusing on file uploads and retrieval.",
+    "source": "web_search",
+    "updated_at": 1780820898.9823434
+  },
+  "search:nextjs+supabase-storage:nextjs supabase storage integr_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js @supabase/ssr`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS: v2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project settings.\n  - Cookie options for server-side auth (`@supabase/ssr`).\n  - Bucket permissions (public, private) in Supabase Storage.",
+    "source": "code_example",
+    "updated_at": 1780820903.5379524
+  }
+}
