@@ -68,5 +68,20 @@
     "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v13.3.7\n\n- **Key Config Options**:\n  - `theme`: Define a theme in `styles.scss` using prebuilt themes or custom palettes.\n  - `icons`: Use icons from the Material Icons library by specifying them in your component templates.\n  - `typography`: Customize typography styles through the `mat-typography-config` token.",
     "source": "code_example",
     "updated_at": 1780809702.8163064
+  },
+  "search:angular-material-design-patterns:angular material design patter": {
+    "content": "- **Angular Material UI Component Library**: Use `ng add @angular/material` to install Angular Material.\n- **Material Design 3**: No specific CLI command; update your project's stylesheets and components according to the latest guidelines.\n- **Angular 2025 Coding Standards**: Update your codebase using the new style guide by running `ng update --migrate-only`.\n- **GitHub Showcase**: Clone the repository with `git clone https://github.com/jdavis-software/angular-modern-patterns-showcase.git` and explore the interactive sections.",
+    "source": "web_search",
+    "updated_at": 1780814252.8598714
+  },
+  "search:angular-material-design-patterns:angular material theming strat": {
+    "content": "- Use `ng add @angular/material` to set up Angular Material.\n- Update Angular and Angular Material to the latest version using `npm update`.\n- Configure themes in `src/styles.scss` with SCSS variables.\n- Key config options include primary, accent, and warn colors.\n- Utilize `mat-palette` for defining color palettes.\n- Import prebuilt themes like `indigo-pink`, `deeppurple-amber`, etc., from `@angular/material`.\n- Customize theme by extending a prebuilt palette with `extendPalette`.\n- Apply the theme to your app in `src/styles.scss` using `@include angular-material-theme($theme);`.",
+    "source": "web_search",
+    "updated_at": 1780814290.1182148
+  },
+  "search:angular-material-design-patterns:angular material theming strat_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate theme --name=my-theme`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular Material: v16.x\n\n- **Key Config Options**:\n  - `angular.json`: Define custom themes under the `styles` array.\n  - `theme.scss`: Customize color palettes and typography.\n  - `app.module.ts`: Import `MatThemeModule` with your theme configuration.",
+    "source": "code_example",
+    "updated_at": 1780814294.671272
   }
 }
