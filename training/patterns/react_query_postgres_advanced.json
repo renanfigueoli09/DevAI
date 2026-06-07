@@ -18,5 +18,10 @@
     "content": "- **React Query**: Use `useQuery` and `useMutation` hooks to manage data fetching and caching.\n- **PostgreSQL Caching**:\n  - **pg_buffercache**: Tracks which pages are currently in memory.\n  - **Shared Buffers**: Configured via `shared_buffers` in `postgresql.conf`.\n  - **Query Caching**: Use `PREPARE` statements for repeated queries.\n  - **Materialized Views**: Precomputed tables that can be refreshed periodically.\n- **CLI Commands**:\n  - `psql --command=\"SELECT * FROM pg_buffercache;\"`: Check buffer cache usage.\n  - `pg_ctl restart -D /path/to/data/directory`: Restart PostgreSQL with new configuration.\n- **Latest Versions**:\n  - React Query: v4.0.0\n  - PostgreSQL: v15.0\n- **Key Config Options**:\n  - `shared_buffers`: Adjust based on system memory (e.g., 25% of total RAM).\n  - `work_mem`: Increase for larger queries.\n  - `maintenance_work_mem`: For large maintenance operations.",
     "source": "code_example",
     "updated_at": 1780814793.7529082
+  },
+  "search:react-query+postgres-advanced:react query and postgresql rea": {
+    "content": "- **CLI Commands**:\n  - `brew install dozer` (for macOS using Homebrew)\n  \n- **Latest Versions**:\n  - React Query: v4.x\n  - PostgreSQL: v15.x\n  \n- **Key Config Options**:\n  - For React Query, use `onMutate` for optimistic updates.\n  - For real-time data with tRPC and React Query, consider using `useEffect` or custom hooks to handle subscriptions.",
+    "source": "web_search",
+    "updated_at": 1780814811.7021801
   }
 }
