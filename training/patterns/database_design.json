@@ -2,61 +2,61 @@
   "search:database-design:when to use mongodb vs postgre": {
     "content": "- **CLI Commands**:\n  - PostgreSQL: `psql` and `pgAdmin`\n  - MongoDB: `mongo` shell\n\n- **Latest Versions**:\n  - PostgreSQL: 15\n  - MongoDB: 7.0\n\n- **Key Config Options**:\n  - PostgreSQL: `max_connections`, `shared_buffers`, `work_mem`\n  - MongoDB: `replicaSet`, `sharding`, `wiredTigerCacheSizeGB`",
     "source": "web_search",
-    "updated_at": 1780824549.6009755
+    "updated_at": 1780832889.2147722
   },
   "search:database-design:when to use mongodb vs postgre_ex": {
     "content": "- **CLI Commands**:\n  - MongoDB: `mongod --dbpath /path/to/database`\n  - PostgreSQL: `pg_ctl start -D /path/to/data_directory`\n\n- **Latest Versions**:\n  - MongoDB: 6.0\n  - PostgreSQL: 14\n\n- **Key Config Options**:\n  - MongoDB: `bindIp`, `storage.wiredTiger.cacheSizeGB`\n  - PostgreSQL: `listen_addresses`, `shared_buffers`",
     "source": "code_example",
-    "updated_at": 1780824550.8905492
+    "updated_at": 1780832890.6953619
   },
   "search:database-design:database normalization denorma": {
     "content": "- **CLI Commands**:\n  - `CREATE TABLE` with constraints.\n  - `ALTER TABLE` to add or drop columns.\n\n- **Latest Versions**:\n  - PostgreSQL 15\n  - MySQL 8.0\n  - SQL Server 2022\n\n- **Key Config Options**:\n  - Normalization level (1NF, 2NF, 3NF, BCNF).\n  - Denormalization strategies (pre-aggregation, materialized views).\n  - Indexing for read-heavy queries.\n  - Partitioning large tables.",
     "source": "web_search",
-    "updated_at": 1780824552.1092062
+    "updated_at": 1780832892.3146367
   },
   "search:database-design:database normalization denorma_ex": {
     "content": "- **CLI Commands**: Use `db normalize` and `db denormalize` with specific flags like `--force` for denormalization.\n- **Latest Versions**: Ensure using the latest database management system version, e.g., PostgreSQL 15 or MySQL 8.0.\n- **Key Config Options**:\n  - For normalization: Set `normalize_level` to `3NF` or higher in your configuration file.\n  - For denormalization: Enable `denormalize_mode` and specify the tables to denormalize using `--tables=table1,table2`.\n- **Trade-offs**: Balance between data integrity (normalization) and performance (denormalization). Monitor query execution times and data consistency issues.",
     "source": "code_example",
-    "updated_at": 1780824553.3369465
+    "updated_at": 1780832893.8929725
   },
   "search:database-design:nosql vs sql use cases pros co": {
     "content": "- **CLI Commands**:\n  - `sqlcmd` for SQL Server\n  - `mongo` for MongoDB\n  - `cqlsh` for Cassandra\n\n- **Latest Versions**:\n  - SQL Server: 2024\n  - MongoDB: 7.0\n  - Cassandra: 4.10\n\n- **Key Config Options**:\n  - SQL Server: `max_connections`, `memory_limit`\n  - MongoDB: `replica_set`, `sharding`\n  - Cassandra: `num_tokens`, `hinted_handoff_enabled`",
     "source": "web_search",
-    "updated_at": 1780824557.597822
+    "updated_at": 1780832895.5673728
   },
   "search:database-design:nosql vs sql use cases pros co_ex": {
     "content": "- **CLI Commands**:\n  - `sqlcmd`: For SQL Server.\n  - `mongo`: For MongoDB.\n\n- **Latest Versions**:\n  - SQL Server: Version 2024.\n  - MongoDB: Version 7.0.\n\n- **Key Config Options**:\n  - SQL Server: `max_connections`, `memory_limit`.\n  - MongoDB: `replica_set`, `sharding`.",
     "source": "code_example",
-    "updated_at": 1780824558.908984
+    "updated_at": 1780832897.1746814
   },
   "search:database-design:database indexing strategies p": {
     "content": "- Use `CREATE INDEX` or `ALTER TABLE ... ADD INDEX` to add indexes.\n- Choose B-tree, hash, or composite indexes based on use case.\n- Monitor index performance with `EXPLAIN ANALYZE`.\n- Regularly review and optimize indexes using tools like `pg_stat_user_indexes`.\n- Consider partial indexes for large tables.\n- Use GIN (Generalized Inverted Index) for full-text search.\n- Avoid over-indexing to prevent performance degradation.\n- Update statistics regularly with `ANALYZE` command.",
     "source": "web_search",
-    "updated_at": 1780824560.1870317
+    "updated_at": 1780832898.6621757
   },
   "search:database-design:database indexing strategies p_ex": {
     "content": "- Use `CREATE INDEX` to add indexes.\n- Consider B-tree, hash, and composite indexes based on query patterns.\n- Evaluate index trade-offs for performance.\n- Implement effective indexing patterns for high-performance databases.\n- Monitor and adjust indexes regularly.\n- Utilize database-specific tools like `EXPLAIN` for optimization.\n- Keep database software up-to-date with latest versions.",
     "source": "code_example",
-    "updated_at": 1780824561.5108185
+    "updated_at": 1780832900.156306
   },
   "search:database-design:data modeling patterns embedde": {
     "content": "- **CLI Commands**: Use `mongo` shell or MongoDB Compass.\n- **Latest Versions**: Ensure MongoDB version is up-to-date, check [MongoDB official website](https://www.mongodb.com/try/download/community).\n- **Key Config Options**:\n  - `replicaSet`: For high availability and data redundancy.\n  - `sharding`: For horizontal scaling and large datasets.\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory for better performance.",
     "source": "web_search",
-    "updated_at": 1780824562.83652
+    "updated_at": 1780832901.5937696
   },
   "search:database-design:data modeling patterns embedde_ex": {
     "content": "- **CLI Commands**: `mongo` shell or MongoDB Compass for database interaction.\n- **Latest Versions**: Ensure using MongoDB 5.x or later for the best performance and features.\n- **Key Config Options**:\n  - `replicaSet`: For high availability and data redundancy.\n  - `sharding`: To distribute data across multiple servers.\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory to optimize read/write performance.",
     "source": "code_example",
-    "updated_at": 1780824564.133164
+    "updated_at": 1780832902.9542575
   },
   "search:database-design:schema design decisions relati": {
     "content": "- Use `CREATE TABLE` statements with explicit column definitions.\n- Employ foreign keys to enforce referential integrity.\n- Optimize queries using indexes on frequently queried columns.\n- Regularly update database schemas with migrations.\n- Monitor and analyze query performance for optimization.\n- Consider partitioning large tables for better scalability.\n- Utilize ACID transactions for data consistency.\n- Ensure data normalization to reduce redundancy.\n- Use `ALTER TABLE` commands to modify existing schema.",
     "source": "web_search",
-    "updated_at": 1780824565.395857
+    "updated_at": 1780832904.3114977
   },
   "search:database-design:schema design decisions relati_ex": {
     "content": "- Use SQL commands like `CREATE TABLE`, `ALTER TABLE` to design and modify relational database schemas.\n- For MySQL, ensure you are using the latest version for optimal performance and security.\n- Key configuration options include `innodb_buffer_pool_size`, `query_cache_size`, and `max_connections`.\n- CLI command example: `mysql -u username -p -h hostname -D database_name`\n- Example SQL commands:\n  ```sql\n  CREATE TABLE users (\n      id INT AUTO_INCREMENT PRIMARY KEY,\n      name VARCHAR(255) NOT NULL,\n      email VARCHAR(255) UNIQUE NOT NULL\n  );\n  ALTER TABLE users ADD COLUMN age INT;\n  ```\n- MongoDB schema design focuses on optimizing for data locality and application queries rather than strict normalization.\n- For relational database schemas, consider using constraints like `FOREIGN KEY`, `UNIQUE`, and `NOT NULL` to enforce data integrity.",
     "source": "code_example",
-    "updated_at": 1780824566.610881
+    "updated_at": 1780832905.736345
   }
 }

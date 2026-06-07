@@ -2,11 +2,11 @@
   "search:nextjs+core:next.js 15 app router server a": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app --use-yarn`\n  - `yarn dev` for development\n  - `yarn build` for building the app\n  - `yarn start` to run the production server\n\n- **Latest Versions**:\n  - Next.js 15\n  - React 18.2 (or later)\n\n- **Key Config Options**:\n  - `middleware.js`: Define middleware for global request handling.\n  - `next.config.js`: Configure ISR, edge runtime, and other settings.\n  - `app/page.js` or `pages/index.js`: Entry points for server actions and rendering.\n\n- **Important Features**:\n  - Server Actions: Execute functions on the server without blocking the browser.\n  - Streaming: Render components incrementally as they become available.\n  - ISR (Incremental Static Regeneration): Update static pages in the background.",
     "source": "web_search",
-    "updated_at": 1780824522.846831
+    "updated_at": 1780832837.4459682
   },
   "search:nextjs+core:next.js 15 app router server a_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm run dev` for development server\n\n- **Latest Versions**:\n  - Next.js 15\n  - App Router\n  - Server Actions\n  - Middleware\n  - ISR (Incremental Static Regeneration)\n\n- **Key Config Options**:\n  - `middleware.js`: For intercepting routes\n  - `next.config.js`: Configuration for ISR, server actions, and other settings\n  - `app/` directory: For using the App Router",
     "source": "code_example",
-    "updated_at": 1780824524.1993937
+    "updated_at": 1780832838.8732624
   }
 }

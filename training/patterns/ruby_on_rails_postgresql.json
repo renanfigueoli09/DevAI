@@ -2,21 +2,21 @@
   "search:ruby-on-rails-postgresql:ruby on rails postgresql migra": {
     "content": "- Use `rails db:migrate` to run migrations.\n- For PostgreSQL, use `rails g model ModelName column_name:type` for generating models.\n- To handle UUID primary keys, add `primary_key: :uuid` in the migration file.\n- Index non-key columns using `add_index :table_name, :column_name`.\n- Use `deferrable: true` to manage foreign key constraints.\n- For database functions, specify them directly in migrations (e.g., `execute \"ALTER TABLE table_name ADD COLUMN column_name DEFAULT random()::integer\"`)\n- Check migration status with `rails db:migrate:status`\n- Ensure PostgreSQL version compatibility with Rails by checking the official Rails documentation for specific versions.",
     "source": "web_search",
-    "updated_at": 1780824492.9363444
+    "updated_at": 1780832799.582804
   },
   "search:ruby-on-rails-postgresql:ruby on rails postgresql migra_ex": {
     "content": "- Use `rails db:migrate` to run migrations.\n- Ensure PostgreSQL version compatibility with Rails.\n- Configure database.yml with Neon Postgres details.\n- Utilize Docker for containerized development.\n- Check latest Ruby on Rails and PostgreSQL versions regularly.\n- Employ Active Record for schema changes.\n- Review migration files for syntax and logic.\n- Use `rails db:rollback` to undo migrations.\n- Monitor logs for errors during migration processes.",
     "source": "code_example",
-    "updated_at": 1780824494.3470197
+    "updated_at": 1780832801.2450342
   },
   "search:ruby-on-rails-postgresql:ruby on rails postgresql query": {
     "content": "- **CLI Commands**:\n  - `rails db:migrate` to run migrations.\n  - `rails db:seed` to load seed data.\n\n- **Latest Versions**:\n  - Ruby on Rails 7.1 introduced improved SQL caching.\n  - PostgreSQL 14 offers enhanced full-text search capabilities.\n\n- **Key Config Options**:\n  - Enable eager loading in models using `.includes()`.\n  - Use `index: true` for columns frequently used in queries.\n  - Configure cache stores in `config/environments/production.rb`, e.g., `config.cache_store = :redis_cache_store`.\n\n- **Optimization Techniques**:\n  - Eager Loading: `Post.find(1).comments.includes(:author)`\n  - Indexing: `add_index :users, :email, unique: true`\n  - Caching: `Rails.cache.fetch(\"key\", expires_in: 5.minutes) { expensive_method }`",
     "source": "web_search",
-    "updated_at": 1780824495.6806476
+    "updated_at": 1780832803.2747467
   },
   "search:ruby-on-rails-postgresql:ruby on rails postgresql query_ex": {
     "content": "- Use `rails db:migrate` to update your database schema.\n- Employ `pg_stat_activity` and `EXPLAIN ANALYZE` for query profiling.\n- Implement caching strategies like fragment caching or page caching.\n- Utilize PostgreSQL's Full Text Search (FTS) with GIN indexes for efficient search queries.\n- Consider using `LIMIT` and `OFFSET` judiciously to paginate results efficiently.\n- Optimize database connections by adjusting `pool` size in `config/database.yml`.\n- Use eager loading (`includes`) to reduce N+1 query problems.\n- Regularly update Rails and PostgreSQL to the latest stable versions for performance improvements and security patches.",
     "source": "code_example",
-    "updated_at": 1780824496.9429145
+    "updated_at": 1780832805.482619
   }
 }

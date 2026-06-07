@@ -12,6 +12,6 @@
   "search:Node.js + Express Performance Tuning:node.js and mongodb integratio_ex": {
     "content": "- **CLI Commands**:\n  - `npm init` to create a new Node.js project.\n  - `npm install express mongoose body-parser cors --save` for essential packages.\n\n- **Latest Versions**:\n  - Node.js: v16.x or later.\n  - MongoDB: Latest stable version (e.g., v5.0).\n  - Express: ^4.17.1.\n  - Mongoose: ^5.12.3.\n\n- **Key Config Options**:\n  - In `app.js`, set up middleware like `express.json()` and `cors()`.\n  - Configure MongoDB connection in `.env` file with `MONGO_URI=your_mongodb_uri`.\n  - Use environment variables for sensitive data like database credentials.\n  - Implement error handling using middleware functions.",
     "source": "code_example",
-    "updated_at": 1780824480.7205465
+    "updated_at": 1780832787.4600377
   }
 }

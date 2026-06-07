@@ -2,16 +2,16 @@
   "search:spring-data-jpa:spring data jpa performance tu": {
     "content": "- Use `@QueryHints` to optimize query performance.\n- Set Hibernate batch size using `spring.jpa.properties.hibernate.jdbc.batch_size`.\n- Enable HikariCP for efficient database connection pooling with `spring.datasource.type=com.zaxxer.hikari.HikariDataSource`.\n- Monitor and tune JVM settings like `-Xmx`, `-Xms`, and GC options.\n- Use Spring Boot Actuator to monitor application performance metrics.\n- Implement caching strategies using `@Cacheable` and `@CacheEvict`.\n- Optimize database schema design for better query performance.\n- Regularly update dependencies to the latest versions, e.g., Spring Boot 3.0, Hibernate 6.0.\n- Profile applications using tools like VisualVM or JProfiler for detailed insights.\n- Adjust thread pool settings in `application.properties` for optimal concurrency.",
     "source": "web_search",
-    "updated_at": 1780824745.9942818
+    "updated_at": 1780833140.1266398
   },
   "search:spring-data-jpa:spring data jpa performance tu_ex": {
     "content": "- Use query hints to optimize specific queries.\n- Set `batch_size` in Spring Data JPA configurations for batch inserts.\n- Ensure the latest version of Spring Data JPA and Hibernate for performance improvements.\n- Configure cache settings appropriately to balance read and write operations.\n- Monitor database connection pool sizes and adjust as necessary.\n- Utilize second-level caching for frequently accessed data.\n- Optimize entity mappings by avoiding lazy loading where possible.\n- Use `@Query` annotations for native SQL queries when JPA is not sufficient.\n- Regularly analyze and optimize database schema and indexes.",
     "source": "code_example",
-    "updated_at": 1780824747.199887
+    "updated_at": 1780833141.9313486
   },
   "search:spring-data-jpa:spring data jpa security patte": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Data JPA: 3.2.1.RELEASE\n  - Spring Security: 6.0.4.RELEASE\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (e.g., `create-drop`, `update`).\n  - `spring.security.user.name`: Default security user name.\n  - `spring.security.user.password`: Default security user password.",
     "source": "web_search",
-    "updated_at": 1780824748.4357316
+    "updated_at": 1780833143.8599043
   }
 }
