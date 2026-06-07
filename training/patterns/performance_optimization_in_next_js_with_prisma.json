@@ -2,12 +2,12 @@
   "search:Performance Optimization in Next.js with Prisma:nextjs performance optimizatio": {
     "content": "- Use `next build` to optimize your application.\n- Implement lazy loading with `next/image`.\n- Utilize the `Image` component for image optimization.\n- Enable static generation with `getStaticProps` and `getStaticPaths`.\n- Leverage server-side rendering (SSR) with `getServerSideProps`.\n- Minimize HTTP requests by combining CSS and JavaScript files.\n- Use `next.config.js` to configure advanced settings like asset paths and caching.\n- Monitor performance using Next.js DevTools or third-party tools.\n- Regularly update Next.js to the latest version for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780840452.1877592
+    "updated_at": 1780843106.8294013
   },
   "search:Performance Optimization in Next.js with Prisma:nextjs performance optimizatio_ex": {
     "content": "- **Next.js Performance Optimization**\n  - Use `next.config.js` to configure optimization settings.\n  - Enable static site generation (`getStaticProps`) for pages that don't require server-side rendering.\n  - Utilize `Image` component from Next.js for image optimization.\n  - Implement code splitting with dynamic imports (`import()`).\n  - Minimize HTTP requests by combining CSS and JavaScript files.\n  - Use SWR or React Query for data fetching to improve performance.\n  - Enable automatic static asset optimization in production mode.\n  - Utilize `next/image` for responsive images.\n  - Configure `next.config.js` with `reactStrictMode: true` for better error handling.",
     "source": "code_example",
-    "updated_at": 1780840454.1115007
+    "updated_at": 1780843108.5478945
   },
   "search:Performance Optimization in Next.js with Prisma:prisma performance": {
     "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma v5 is noted for significant performance improvements over v4.\n\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable query logging in Prisma Client.\n  - `maxQueryExecutionTime`: Set the maximum execution time for queries.",

@@ -7,6 +7,6 @@
   "search:gitlab-ci:gitlab ci stages artifacts cac_ex": {
     "content": "- **CLI Commands**:\n  - `docker buildx build --cache-from type=registry,ref=<registry>/<image>:<tag> --push <path>`\n  - `gitlab-runner exec docker --privileged`\n\n- **Latest Versions**:\n  - GitLab CI/CD: Latest stable version as of Jan 2026\n  - Docker Buildx: Latest stable version as of Jan 2026\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml`:\n    ```yaml\n    stages:\n      - build\n      - test\n\n    cache:\n      key: $CI_COMMIT_REF_SLUG\n      paths:\n        - .docker/\n\n    build_job:\n      stage: build\n      script:\n        - docker buildx build --cache-from type=registry,ref=<registry>/<image>:<tag> --push .\n\n    test_job:\n      stage: test\n      script:\n        - docker run <registry>/<image>:<tag>\n    ```",
     "source": "code_example",
-    "updated_at": 1780840406.7979822
+    "updated_at": 1780843053.5815868
   }
 }
