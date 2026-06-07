@@ -2,21 +2,21 @@
   "search:fastapi+asyncio-redis:fastapi asyncio redis integrat": {
     "content": "- **GitHub Repository**: [serafinovsky/fastapi-redis-utils](https://github.com/serafinovsky/fastapi-redis-utils)\n- **Latest Version**: Not specified in the search results.\n- **Key Config Options**:\n  - `RedisManager`: Async Redis manager with connection pooling.\n  - FastAPI Dependencies: Ready-to-use dependencies for integrating Redis.\n\nFor detailed instructions, consider visiting the [FastAPI and Redis Tutorial](https://www.oneuptime.com/blog/fastapi-and-redis-tutorial/) or checking out the [How to Integrate Redis with FastAPI](https://oneuptime.com/how-to-integrate-redis-with-fastapi) guide.",
     "source": "web_search",
-    "updated_at": 1780831724.0168931
+    "updated_at": 1780843788.597808
   },
   "search:fastapi+asyncio-redis:fastapi asyncio redis integrat_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/username/fastapi-redis-example.git`\n  - `pip install fastapi[all] redis`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Redis: 4.5.3\n\n- **Key Config Options**:\n  - `REDIS_URL`: Connection string for Redis.\n  - `LIFESPAN`: Use FastAPI's lifespan feature to manage Redis connection lifecycle.",
     "source": "code_example",
-    "updated_at": 1780831725.5435588
+    "updated_at": 1780843790.4402127
   },
   "search:fastapi+asyncio-redis:using redis with fastapi and a": {
     "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --host 0.0.0.0 --port 8000`\n  - `pip install fastapi[all] redis[asyncio]`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Redis OM Python: 2.1.0\n  - Uvicorn: 10.6.0\n\n- **Key Config Options**:\n  - `app.state.redis`: Store the Redis instance in app state for easy access.\n  - `@app.on_event(\"startup\")`: Use to initialize Redis connection on startup.\n  - `@app.on_event(\"shutdown\")`: Use to close Redis connection on shutdown.",
     "source": "web_search",
-    "updated_at": 1780831729.6076303
+    "updated_at": 1780843792.5515792
   },
   "search:fastapi+asyncio-redis:using redis with fastapi and a_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  - Redis-py: 4.2.2\n\n- **Key Config Options**:\n  - `app = FastAPI()`\n  - `redis_client = await aioredis.create_redis_pool('redis://localhost')`\n  - `@app.on_event(\"startup\")`: For connecting to Redis during app startup.\n  - `@app.on_event(\"shutdown\")`: For closing the Redis connection during app shutdown.",
     "source": "code_example",
-    "updated_at": 1780831731.1458075
+    "updated_at": 1780843794.399082
   }
 }

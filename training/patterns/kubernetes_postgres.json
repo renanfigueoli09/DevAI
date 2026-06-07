@@ -2,26 +2,26 @@
   "search:kubernetes+postgres:kubernetes postgresql high ava": {
     "content": "- **Latest Version**: CloudNativePG 1.29.1 and 1.28.3\n- **Key Config Options**:\n  - `replicas`: Number of PostgreSQL instances.\n  - `storageClass`: Storage class for persistent volumes.\n  - `resources`: CPU and memory limits and requests.\n- **CLI Commands**:\n  ```bash\n  kubectl apply -f cloudnativepg.yaml\n  kubectl get pods\n  kubectl describe pod <pod-name>\n  ```\n- **High Availability**: Enabled by default with multiple replicas.\n- **Disaster Recovery**: Automated backups and failover mechanisms provided by the operator.",
     "source": "web_search",
-    "updated_at": 1780831817.6983433
+    "updated_at": 1780843903.5229151
   },
   "search:kubernetes+postgres:kubernetes postgresql high ava_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f postgresql-ha.yaml`\n  - `kubectl get pods`\n  - `kubectl describe pod <pod-name>`\n\n- **Latest Versions**:\n  - PostgreSQL Operator: v1.7.0\n  - Kubernetes: v1.23.4\n\n- **Key Config Options**:\n  - Replication Factor: 3\n  - Storage Class: `standard`\n  - Resource Limits: CPU, Memory",
     "source": "code_example",
-    "updated_at": 1780831819.046801
+    "updated_at": 1780843905.1898363
   },
   "search:kubernetes+postgres:kubernetes postgresql backup a": {
     "content": "- Use `kubectl exec` to connect to PostgreSQL pod.\n- Employ `pg_dump` and `psql` for backup and restore.\n- Ensure PersistentVolumeClaim (PVC) for data persistence.\n- Utilize Stash for policy-based backup and restore.\n- Check Portworx for efficient Kubernetes-native backups.\n- Apply latest versions of PostgreSQL, Kubernetes, and tools.\n- Configure `backupSchedule` in Stash CRD for automated backups.\n- Use `kubectl port-forward` to access PostgreSQL service locally.\n- Monitor backup jobs with `kubectl get jobs`.\n- Restore data using `kubectl apply -f restore.yaml`.",
     "source": "web_search",
-    "updated_at": 1780831820.5610552
+    "updated_at": 1780843906.918857
   },
   "search:kubernetes+postgres:kubernetes postgresql backup a_ex": {
     "content": "- Use `kubectl create cronjob` to schedule backups.\n- Example command: \n  ```bash\n  kubectl create cronjob postgresql-backup --image=postgres:latest --schedule=\"*/5 * * * *\" -- /usr/bin/pg_dump -U username dbname > /backup/dbname.sql\n  ```\n- Ensure `pg_dump` and `psql` are available in the image.\n- Use `--restart=OnFailure` to handle failures gracefully.\n- Set environment variables for credentials securely.\n- Configure persistent storage using PersistentVolumeClaims (PVCs).\n- Example PVC:\n  ```yaml\n  apiVersion: v1\n  kind: PersistentVolumeClaim\n  metadata:\n    name: postgresql-pvc\n  spec:\n    accessModes:\n      - ReadWriteOnce\n    resources:\n      requests:\n        storage: 10Gi\n  ```\n- Use `kubectl apply -f` to create the PVC.\n- For restoration, use a similar CronJob with `pg_restore`.\n- Ensure backup and restore scripts are tested in development.",
     "source": "code_example",
-    "updated_at": 1780831821.921371
+    "updated_at": 1780843908.5650399
   },
   "search:kubernetes+postgres:kubernetes postgresql performa": {
     "content": "- **CLI Commands**:\n  - `kubectl create namespace my-postgres-ns`\n  - `kubectl apply -f postgres-deployment.yaml`\n  - `kubectl get pods -n my-postgres-ns`\n  - `kubectl port-forward pod/postgres-pod 5432:5432`\n\n- **Latest Versions**:\n  - PostgreSQL: 15\n  - Kubernetes: v1.24\n\n- **Key Config Options**:\n  - `replicas`: Number of PostgreSQL pods.\n  - `resources`: CPU and memory limits.\n  - `storageClass`: Persistent storage class for data volumes.\n  - `livenessProbe`: Ensures the container is running.\n  - `readinessProbe`: Checks if the application is ready to accept traffic.",
     "source": "web_search",
-    "updated_at": 1780831823.362349
+    "updated_at": 1780843910.3914297
   }
 }

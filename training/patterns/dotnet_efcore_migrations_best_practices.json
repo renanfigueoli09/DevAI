@@ -2,11 +2,11 @@
   "search:dotnet-efcore-migrations-best-practices:entity framework core migratio": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create a new migration.\n- **Latest Versions**: Ensure you are using the latest version of Entity Framework Core and your database provider.\n- **Key Config Options**:\n  - `MaxBatchSize`: Set in `appsettings.json` to control the number of commands sent to the database per batch.\n  - `CommandTimeout`: Configure in `DbContextOptionsBuilder` to set a timeout for command execution.\n  - `UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)`: Optimize query splitting behavior for better performance.",
     "source": "web_search",
-    "updated_at": 1780836943.816323
+    "updated_at": 1780843810.0118785
   },
   "search:dotnet-efcore-migrations-best-practices:entity framework core migratio_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server databases.\n  - `MigrationsAssembly`: Specifies the assembly containing migrations.\n  - `Scaffold-DbContext`: Generates a DbContext and entity classes from an existing database.",
     "source": "code_example",
-    "updated_at": 1780836966.2803023
+    "updated_at": 1780843811.6553802
   }
 }

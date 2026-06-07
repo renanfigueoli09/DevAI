@@ -2,16 +2,16 @@
   "search:azure-devops-ci-cd:azure devops ci/cd pipelines 2": {
     "content": "- **CLI Commands**: Use `az pipelines create` to set up a new pipeline.\n- **Latest Versions**: Azure Pipelines are always updated, check the [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-yaml?view=azure-devops) for the latest version details.\n- **Key Config Options**:\n  - `trigger`: Define when to trigger the pipeline (e.g., on push or pull request).\n  - `pool`: Specify the agent pool to run the pipeline jobs.\n  - `steps`: List of tasks and scripts to execute in the pipeline.",
     "source": "web_search",
-    "updated_at": 1780831824.7158444
+    "updated_at": 1780843912.3817556
   },
   "search:azure-devops-ci-cd:azure devops ci/cd pipelines 2_ex": {
     "content": "- **CLI Commands**:\n  - `az pipelines create --name \"MyPipeline\" --repository \"my-repo\" --branch \"main\" --yml-path \"azure-pipelines.yml\"`\n  - `az pipelines show --id <pipeline-id>`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v0.214.0\n  - Azure Pipelines YAML Schema: v3\n\n- **Key Config Options**:\n  - `trigger`: Specifies when the pipeline should run.\n  - `pool`: Defines the agent pool to use for running jobs.\n  - `steps`: List of tasks and scripts to execute in the pipeline.\n  - `variables`: Define variables that can be used throughout the pipeline.",
     "source": "code_example",
-    "updated_at": 1780831826.297052
+    "updated_at": 1780843914.3382323
   },
   "search:azure-devops-ci-cd:azure devops ci/cd best practi": {
     "content": "- **CLI Commands**: Use `az devops` for Azure DevOps operations.\n- **Latest Versions**: Ensure you are using the latest version of Azure CLI and Azure DevOps services.\n- **Key Config Options**:\n  - For pipelines, use YAML files to define steps and triggers.\n  - Configure variables in Azure Pipelines for environment-specific settings.\n  - Use `az devops project create` to set up a new project.\n  - Utilize `az pipelines create` to create a pipeline from a repository.\n- **Performance Tips**:\n  - Optimize build times by caching dependencies.\n  - Leverage Azure's global infrastructure for faster deployments.\n  - Monitor pipeline performance with Azure DevOps Analytics.",
     "source": "web_search",
-    "updated_at": 1780831827.7810113
+    "updated_at": 1780843915.9704401
   }
 }

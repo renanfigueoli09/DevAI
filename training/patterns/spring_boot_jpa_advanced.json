@@ -2,21 +2,21 @@
   "search:spring-boot+jpa-advanced:spring boot jpa performance op": {
     "content": "- Use `save` instead of `saveAndFlush` in loops.\n- Implement lazy loading to reduce data fetched from the database.\n- Batch updates using `@Modifying` and `@Query`.\n- Configure `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Enable second-level cache with `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`.\n- Use `@EntityGraph` for fetching related entities efficiently.\n- Optimize queries by avoiding N+1 selects.\n- Implement custom repository methods for complex queries.\n- Monitor and analyze performance using tools like Spring Boot Actuator.",
     "source": "web_search",
-    "updated_at": 1780831873.9735024
+    "updated_at": 1780843972.2614686
   },
   "search:spring-boot+jpa-advanced:spring boot jpa performance op_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot and JPA.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.dialect`: Set the appropriate database dialect for better performance.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging purposes.\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`: Increase batch size for bulk operations.\n  - `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true`: Order inserts and updates to reduce the number of database round trips.",
     "source": "code_example",
-    "updated_at": 1780831875.443654
+    "updated_at": 1780843973.9511735
   },
   "search:spring-boot+jpa-advanced:spring boot jpa best practices": {
     "content": "- Use the latest version of Spring Boot and Spring Data JPA.\n- Implement `equals` and `hashCode` methods in entity classes for proper caching and comparison.\n- Avoid using `@Data` annotation in entity classes to prevent potential issues with Hibernate's lazy loading.\n- Ensure consistent ID types across your entities (e.g., use `Long` or `UUID`).\n- Use `@EntityListeners(AuditingEntityListener.class)` for automatic auditing of entity changes.\n- Configure JPA properties in `application.properties` or `application.yml`.\n- Enable Spring Data JPA repositories by extending `JpaRepository` or `CrudRepository`.\n- Utilize `@Query` annotations for complex queries to improve performance and readability.\n- Implement batch processing using `@Modifying` and `@Transactional` for large data operations.",
     "source": "web_search",
-    "updated_at": 1780831877.0743215
+    "updated_at": 1780843975.6423452
   },
   "search:spring-boot+jpa-advanced:spring boot jpa best practices_ex": {
     "content": "- Use `spring-boot-starter-data-jpa` dependency for JPA integration.\n- Configure database connection properties in `application.properties` or `application.yml`.\n- Implement repository interfaces extending `JpaRepository` or `CrudRepository`.\n- Utilize Spring Data JPA's query derivation to simplify custom queries.\n- Apply pagination and sorting using `Pageable` and `Sort` parameters.\n- Use `@Entity`, `@Table`, `@Column`, and other JPA annotations for entity design.\n- Implement transaction management with `@Transactional` annotation.\n- Optimize performance by configuring Hibernate properties like `hibernate.dialect`, `hibernate.show_sql`.\n- Regularly update dependencies to the latest versions for security and features.",
     "source": "code_example",
-    "updated_at": 1780831878.6684818
+    "updated_at": 1780843977.3925285
   }
 }

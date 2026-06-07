@@ -2,21 +2,21 @@
   "search:python-fastapi-redis:fastapi redis integration for ": {
     "content": "- **Install FastAPI and Uvicorn**:\n  ```bash\n  pip install fastapi uvicorn[standard]\n  ```\n\n- **Install Redis**:\n  ```bash\n  brew install redis  # For macOS\n  sudo apt-get install redis-server  # For Ubuntu\n  ```\n\n- **Start Redis Server**:\n  ```bash\n  redis-server\n  ```\n\n- **Create FastAPI App**:\n  ```python\n  from fastapi import FastAPI, WebSocket\n  app = FastAPI()\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket):\n      await websocket.accept()\n      while True:\n          data = await websocket.receive_text()\n          await websocket.send_text(f\"Message text was: {data}\")\n  ```\n\n- **Run FastAPI App**:\n  ```bash\n  uvicorn main:app --reload\n  ```\n\n- **Install aioredis**:\n  ```bash\n  pip install aioredis\n  ```\n\n- **Integrate Redis in FastAPI**:\n  ```python\n  import aioredis\n\n  redis = aioredis.from_url(\"redis://localhost\")\n\n  @app.on_event(\"startup\")\n  async def startup():\n      await redis.ping()\n\n  @app.on_event(\"shutdown\")\n  async def shutdown():\n      await redis.close()\n  ```\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Uvicorn: 10.6.0\n  - aioredis: 2.3.0\n\n- **Key Config Options**:\n  - `redis://localhost`: Redis URL for connection.\n  - `--reload`: Enables auto-reload during development.\n\nThese steps provide a basic setup for integrating FastAPI with Redis, suitable for real-time applications.",
     "source": "web_search",
-    "updated_at": 1780834403.9628417
+    "updated_at": 1780844094.0687635
   },
   "search:python-fastapi-redis:fastapi redis integration for _ex": {
     "content": "- **FastAPI Version**: 0.95.2\n- **Redis Version**: 7.0.3\n- **CLI Commands**:\n  - `fastapi create-app myproject`\n  - `redis-server --version`\n- **Key Config Options**:\n  - FastAPI: `app = FastAPI()`, `uvicorn.run(app, host=\"127.0.0.1\", port=8000)`\n  - Redis: `redis-cli ping`, `redis-cli set key value`",
     "source": "code_example",
-    "updated_at": 1780834424.7868335
+    "updated_at": 1780844096.6221535
   },
   "search:python-fastapi-redis:using fastapi with redis for c": {
     "content": "- Install Redis using `sudo apt-get install redis-server`\n- Start Redis service with `sudo systemctl start redis-server`\n- Connect to Redis from FastAPI using `pip install fastapi[all] redis`\n- Use `fastapi-cache` for caching: `pip install fastapi-cache`\n- Configure `fastapi-cache` in your FastAPI app:\n  ```python\n  from fastapi_cache import FastAPICache\n  from fastapi_cache.backends.redis import RedisBackend\n  from fastapi_cache.decorator import cache\n\n  @app.on_event(\"startup\")\n  async def startup():\n      redis = Redis.from_url(\"redis://localhost:6379/0\")\n      FastAPICache.init(RedisBackend(redis), prefix=\"fastapi-cache\")\n\n  @cache(expire=60)\n  async def get_data():\n      # Your data retrieval logic here\n      pass\n  ```\n- Use `redis-py` for Redis operations in Python:\n  ```python\n  import redis\n\n  r = redis.Redis(host='localhost', port=6379, db=0)\n  r.set('foo', 'bar')\n  value = r.get('foo')\n  ```\n- Ensure Redis is running and accessible at `redis://localhost:6379/0`\n- Use `pip install aioredis` for asynchronous Redis operations with FastAPI\n- Configure Redis Queue in your FastAPI app:\n  ```python\n  from rq import Queue, Connection\n\n  def enqueue_job():\n      with Connection(redis.from_url('redis://localhost:6379/0')):\n          q = Queue()\n          q.enqueue(your_task_function)\n  ```\n- Monitor Redis performance using `redis-cli --stat` or Redis monitoring tools like RedisInsight",
     "source": "web_search",
-    "updated_at": 1780834448.1943965
+    "updated_at": 1780844099.0351338
   },
   "search:python-fastapi-redis:using fastapi with redis for c_ex": {
     "content": "- **Install FastAPI and Redis**: Use `pip install fastapi uvicorn redis`\n- **Connect to Redis**: Import `redis` and create a client instance with `client = redis.Redis(host='localhost', port=6379, db=0)`\n- **Cache Data**: Use `client.set('key', 'value')` for setting data and `client.get('key')` for retrieving data\n- **Asynchronous Redis Client**: Use `redis.asyncio.Redis` for asynchronous operations\n- **FastAPI Cache Middleware**: Install `fastapi-cache` with `pip install fastapi-cache`\n- **Configure Cache Backend**: Set up a cache backend in FastAPI using `from fastapi_cache import FastAPICache, get_cache_key`\n- **Cache Decorator**: Use `@cache(expire=60)` to cache responses for 60 seconds\n- **GitHub Repository**: Check out [fastapi-cache](https://github.com/long2ice/fastapi-cache) for more details and examples",
     "source": "code_example",
-    "updated_at": 1780834457.4842353
+    "updated_at": 1780844101.3288407
   }
 }

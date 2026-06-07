@@ -2,16 +2,16 @@
   "search:Advanced Error Handling in React-Native-Firebase-Authentication:react-native-firebase-authenti": {
     "content": "- Use `firebase.auth().signInWithEmailAndPassword(email, password)` for email/password authentication.\n- Handle errors using `.catch(error => { ... })` after the authentication call.\n- Common error codes include:\n  - `auth/invalid-email`\n  - `auth/user-not-found`\n  - `auth/wrong-password`\n- Update Firebase SDK to latest version using `npm install --save @react-native-firebase/app`.\n- Ensure you have the correct configuration in your `firebase.json` file.\n- Use `react-native-error-boundary` for catching and handling errors gracefully in React Native components.",
     "source": "web_search",
-    "updated_at": 1780831676.8106475
+    "updated_at": 1780843742.0891683
   },
   "search:Advanced Error Handling in React-Native-Firebase-Authentication:react-native-firebase-authenti_ex": {
     "content": "- Install `@react-native-firebase/app` and `@react-native-firebase/auth`.\n- Use `firebase.auth().signInWithEmailAndPassword(email, password)` for authentication.\n- Handle errors using try-catch blocks.\n- Display custom alerts with error codes:\n  ```javascript\n  switch (error.code) {\n    case 'auth/invalid-email':\n      alert('The email address is invalid.');\n      break;\n    case 'auth/user-not-found':\n      alert('No user found with this email.');\n      break;\n    case 'auth/wrong-password':\n      alert('Wrong password provided.');\n      break;\n    default:\n      alert('An error occurred. Please try again later.');\n  }\n  ```\n- Ensure Firebase is properly configured in your project.\n- Update dependencies regularly using `npm update` or `yarn upgrade`.",
     "source": "code_example",
-    "updated_at": 1780831678.298771
+    "updated_at": 1780843743.8963323
   },
   "search:Advanced Error Handling in React-Native-Firebase-Authentication:firebase authentication error ": {
     "content": "- Use `firebase login` to authenticate via the Firebase CLI.\n- Ensure your project is correctly configured in the Firebase console.\n- Check for updates by running `npm install -g firebase-tools`.\n- Verify authentication provider settings, such as email/password or Google sign-in.\n- Review Firebase Authentication documentation for any breaking changes.\n- Implement error handling using try-catch blocks around authentication calls.\n- Use `FirebaseAuthException` to catch and handle errors in Flutter applications.\n- Ensure your project's dependencies are up-to-date with the latest versions of Firebase SDKs.",
     "source": "web_search",
-    "updated_at": 1780831681.5645888
+    "updated_at": 1780843745.5129864
   }
 }
