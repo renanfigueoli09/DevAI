@@ -1,0 +1,12 @@
+{
+  "search:Security Practices:spring postgres security": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Docker containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Security: 6.1.x\n  - PostgreSQL: 15.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.datasource.username=myuser`\n  - `spring.datasource.password=mypassword`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.security.user.name=admin`\n  - `spring.security.user.password=password`",
+    "source": "web_search",
+    "updated_at": 1780808250.7566423
+  },
+  "search:Security Practices:spring postgres security_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/bezkoder/spring-boot-security-postgresql.git`\n  - `cd spring-boot-security-postgresql`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Security: 6.1.x\n  - PostgreSQL: 15.x\n\n- **Key Config Options**:\n  - `application.properties`:\n    ```properties\n    spring.datasource.url=jdbc:postgresql://localhost:5432/mydb\n    spring.datasource.username=myuser\n    spring.datasource.password=mypassword\n    spring.jpa.hibernate.ddl-auto=update\n    ```\n  - JWT Configuration:\n    ```java\n    @Bean\n    public JwtEncoder jwtEncoder() {\n        return new NimbusJwtEncoder(new ImmutableSecret<>(secretKey.getBytes()));\n    }\n    ```\n  - Security Configuration:\n    ```java\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.authorizeRequests()\n                .antMatchers(\"/api/public/**\").permitAll()\n                .anyRequest().authenticated();\n        }\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1780808257.6943502
+  }
+}
