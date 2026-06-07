@@ -1,0 +1,7 @@
+{
+  "search:graphql-spring-boot:graphql with spring boot 2023": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot 2.7.x\n  - Spring for GraphQL 1.0.x\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, database connection, etc.\n  - `GraphQLSchema`: Define your GraphQL schema using Java classes.\n  - `@QueryMapping`, `@MutationMapping`: Annotate methods to define query and mutation endpoints.\n\n- **Dependencies**:\n  - Add `spring-boot-starter-graphql` to your `pom.xml`.\n  - Include `spring-data-jpa` for database integration if needed.",
+    "source": "web_search",
+    "updated_at": 1780826805.8536925
+  }
+}
