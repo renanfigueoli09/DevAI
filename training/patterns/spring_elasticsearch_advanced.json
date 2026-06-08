@@ -12,11 +12,11 @@
   "search:spring+elasticsearch-advanced:elasticsearch security in spri": {
     "content": "- **CLI Commands**:\n  - `elasticsearch-plugin install <plugin-name>` to install plugins.\n  - `curl -X GET \"localhost:9200/_cat/nodes?v\"` to check Elasticsearch nodes.\n\n- **Latest Versions**:\n  - Elasticsearch 8.x\n  - Spring Boot 3.0\n  - Spring Security 6\n\n- **Key Config Options**:\n  - Authentication: Use `xpack.security.enabled` in `elasticsearch.yml`.\n  - Encryption: Configure SSL/TLS for communication.\n  - Access Control: Set up roles and users via `xpack.security.authc.realms`.\n\nThese actionable facts provide a concise overview of essential configurations and commands for securing Elasticsearch within Spring Boot applications.",
     "source": "web_search",
-    "updated_at": 1780935275.2204697
+    "updated_at": 1780937484.293018
   },
   "search:spring+elasticsearch-advanced:elasticsearch security in spri_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Elasticsearch 8.x\n  - Spring Boot 3.0\n  - Spring Security 6.0\n\n- **Key Config Options**:\n  - Elasticsearch URL: `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - JWT Secret Key: `jwt.secret=yourSecretKey`\n  - CRUD Operations in Spring Boot + Elasticsearch: Define repositories and services for CRUD operations.",
     "source": "code_example",
-    "updated_at": 1780935277.3679888
+    "updated_at": 1780937487.736659
   }
 }

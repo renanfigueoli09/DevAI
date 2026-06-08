@@ -2,21 +2,21 @@
   "search:Advanced Error Handling in DevOps:devops error handling": {
     "content": "- Use `az pipelines run` to trigger pipeline runs.\n- Check logs with `az pipelines logs show --run-id <run_id>`.\n- Set error handling in YAML using `continueOnError: true`.\n- Update Azure DevOps CLI to latest version using `az upgrade`.\n- Configure pipeline variables in the Azure DevOps UI or via YAML.\n- Use `az devops project list` to find project IDs.\n- Monitor pipeline status with `az pipelines show --id <pipeline_id>`.\n- Utilize Azure DevOps REST API for advanced automation tasks.",
     "source": "web_search",
-    "updated_at": 1780937303.3813918
+    "updated_at": 1780937834.8317444
   },
   "search:Advanced Error Handling in DevOps:devops error handling_ex": {
     "content": "- Use `az pipelines run --pipeline-id <pipeline_id> --branch <branch_name>` to trigger a pipeline.\n- For Azure DevOps YAML, use `steps` section for defining tasks and `catchError` for error handling.\n- Update Azure CLI to latest version using `az upgrade`.\n- Key config options in Azure Pipelines include `trigger`, `pool`, and `variables`.\n- Use `try-catch` blocks in shell scripts with `-e` flag to exit on errors immediately.\n- For troubleshooting, check pipeline logs via `az pipelines runs show --id <run_id> --query \"logsUrl\" -o tsv`.",
     "source": "code_example",
-    "updated_at": 1780937306.0428882
+    "updated_at": 1780937837.161182
   },
   "search:Advanced Error Handling in DevOps:ci/cd error management": {
     "content": "- **AWS**: Use `aws --version` to check the latest version.\n- **Docker**: Run `docker --version` for the latest version.\n- **Kubernetes**: Execute `kubectl version --client` and `kubectl version --server` for client and server versions, respectively.\n- **GitLab CI/CD**: Ensure runners are registered with correct tags. Use `gitlab-runner register` command.\n- **Terraform Azure**: Verify network access to Storage Accounts after Private Endpoint configuration. Check Terraform documentation for the latest syntax.\n- **Conductr AI**: Integrate early Dev and CI/CD for security, error management, and PII protection. Refer to Conductr AI's official documentation for setup instructions.",
     "source": "web_search",
-    "updated_at": 1780937309.172682
+    "updated_at": 1780937839.4912
   },
   "search:Advanced Error Handling in DevOps:ci/cd error management_ex": {
     "content": "- **CLI Commands**: Use `git push` to trigger CI/CD.\n- **Latest Versions**: Ensure using the latest version of tools like Jenkins, GitLab CI, or GitHub Actions.\n- **Key Config Options**:\n  - Set up environment variables in your CI/CD tool for sensitive data.\n  - Configure build triggers based on commit messages or tags.\n  - Use `docker-compose` for multi-container applications.\n  - Implement parallel testing to speed up the pipeline.\n  - Enable auto-scaling for load testing environments.",
     "source": "code_example",
-    "updated_at": 1780937312.5863652
+    "updated_at": 1780937842.1910963
   }
 }

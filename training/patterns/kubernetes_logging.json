@@ -2,21 +2,21 @@
   "search:kubernetes+logging:kubernetes logging best practi": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- Implement structured logging using JSON format for easier parsing and querying.\n- Configure log rotation in your logging solution to manage disk space.\n- Avoid logging sensitive information directly; use environment variables or secure vaults.\n- Include contextual information such as timestamps, container ID, and pod name in logs.\n- Use centralized logging solutions like Fluentd, Fluent Bit, or Elasticsearch for better visibility and analysis.\n- Regularly update your logging tools and configurations to the latest versions for security and performance improvements.\n- Implement log aggregation and monitoring using tools like Prometheus and Grafana.\n- Ensure that all pods are configured with appropriate resource limits to prevent excessive logging.",
     "source": "web_search",
-    "updated_at": 1780937250.8938086
+    "updated_at": 1780937784.4190328
   },
   "search:kubernetes+logging:kubernetes logging best practi_ex": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- Implement structured logging using JSON format for easier parsing and querying.\n- Configure log rotation with tools like Fluentd or Fluent Bit to manage log size and retention.\n- Avoid logging sensitive information directly in application code; use environment variables or secrets instead.\n- Use labels and annotations on Kubernetes resources to correlate logs across different components.\n- Deploy a centralized logging solution such as Elasticsearch, Logstash, and Kibana (ELK stack) for better visibility and analysis.\n- Ensure that log messages include contextual information like timestamps, pod names, and container IDs for easier debugging.\n- Regularly update your logging tools and configurations to leverage the latest features and security patches.",
     "source": "code_example",
-    "updated_at": 1780937254.2819517
+    "updated_at": 1780937786.9910862
   },
   "search:kubernetes+logging:elastic stack with kubernetes ": {
     "content": "- **Install ECK using Helm**:\n  ```bash\n  helm repo add elastic https://helm.elastic.co\n  helm install eck elastic/eck --set eck.version=latest\n  ```\n\n- **Key Config Options**:\n  - `eck.version`: Specifies the version of Elastic Cloud on Kubernetes to deploy.\n  - `elasticsearch.replicas`: Number of Elasticsearch replicas.\n  - `kibana.enabled`: Enables or disables Kibana deployment.\n\n- **Latest Version**: Check [Elastic Helm Charts](https://helm.elastic.co/) for the latest version.\n\n- **Upgrading Stack**:\n  ```bash\n  helm upgrade eck elastic/eck --set eck.version=latest\n  ```\n\n- **Apply Kubernetes Manifests**:\n  - Download and apply manifests from [Elastic GitHub](https://github.com/elastic/cloud-on-k8s).\n\n- **Cert Manager for Certificates**:\n  ```bash\n  kubectl apply -f https://github.com/jetstack/cert-manager/releases/latest/download/cert-manager.yaml\n  ```\n\n- **Nginx Ingress Controller**:\n  ```bash\n  helm install nginx-ingress stable/nginx-ingress --set controller.replicaCount=2\n  ```\n\n- **Elasticsearch and Kibana Helm Charts**:\n  - Use `helm install elasticsearch elastic/elasticsearch` and `helm install kibana elastic/kibana`.\n\n- **Monitor Kubernetes Applications**:\n  ```bash\n  kubectl get pods --all-namespaces\n  kubectl logs <pod-name> -n <namespace>\n  ```\n\n- **Elastic Agent for Fleet Management**:\n  ```bash\n  helm install elastic-agent elastic/elastic-agent --set agent.version=latest\n  ```\n\n- **Logstash Helm Chart**:\n  ```bash\n  helm install logstash elastic/logstash --set logstash.version=latest\n  ```\n\nThese commands and configurations provide a comprehensive setup for deploying the Elastic Stack on Kubernetes using Helm charts.",
     "source": "web_search",
-    "updated_at": 1780937257.3502028
+    "updated_at": 1780937789.7311306
   },
   "search:kubernetes+logging:elastic stack with kubernetes _ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f https://download.elastic.co/downloads/eck/2.3.0/all-in-one.yaml` to deploy ECK Operator.\n  - `helm repo add elastic https://helm.elastic.co`\n  - `helm install elasticsearch elastic/elasticsearch --set replicas=3`\n\n- **Latest Versions**:\n  - Elastic Cloud on Kubernetes (ECK): 2.3.0\n  - Elasticsearch: 7.17\n\n- **Key Config Options**:\n  - `replicas`: Number of Elasticsearch nodes.\n  - `resources`: CPU and memory limits for each node.\n  - `storageClass`: Storage class for persistent volumes.",
     "source": "code_example",
-    "updated_at": 1780937260.2657592
+    "updated_at": 1780937792.492419
   }
 }
