@@ -7,6 +7,6 @@
   "search:python-django-authentication:django authentication with oau_ex": {
     "content": "- Install Django OAuth Toolkit using pip: `pip install django-oauth-toolkit`\n- Add 'oauth2_provider' to your INSTALLED_APPS in settings.py.\n- Run migrations with: `python manage.py migrate oauth2_provider`\n- Configure the authentication backends in settings.py:\n  ```python\n  AUTHENTICATION_BACKENDS = (\n      'oauth2_provider.backends.OAuth2Backend',\n      'django.contrib.auth.backends.ModelBackend',\n  )\n  ```\n- Set up OAuth2 applications through Django admin or by creating models.\n- Use `@permission_required` decorator for view-level permissions.\n- Configure the OAuth2 provider settings in settings.py:\n  ```python\n  OAUTH2_PROVIDER = {\n      'ACCESS_TOKEN_EXPIRE_SECONDS': 3600,\n      'SCOPES': {'read': 'Read scope', 'write': 'Write scope'},\n  }\n  ```\n- Use `oauth2_provider.contrib.rest_framework.OAuth2Authentication` for authentication in views.\n- Test OAuth2 endpoints using tools like Postman or curl.",
     "source": "code_example",
-    "updated_at": 1780935208.961865
+    "updated_at": 1780937409.5475104
   }
 }
