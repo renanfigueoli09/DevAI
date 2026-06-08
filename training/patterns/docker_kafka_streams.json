@@ -2,21 +2,21 @@
   "search:docker+kafka-streams:docker kafka streams integrati": {
     "content": "- **CLI Commands**:\n  - `docker run --name kafka -p 9092:9092 bitnami/kafka`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Kafka: 3.3.1\n  - Confluent Platform: 7.3.0\n\n- **Key Config Options**:\n  - `broker.id`: Unique identifier for the broker.\n  - `listeners`: Network address and port to listen on.\n  - `zookeeper.connect`: Zookeeper connection string.\n  - `num.partitions`: Number of partitions per topic.",
     "source": "web_search",
-    "updated_at": 1780923308.064478
+    "updated_at": 1780930805.3219805
   },
   "search:docker+kafka-streams:docker kafka streams integrati_ex": {
     "content": "- **CLI Commands**:\n  - `docker exec -ti kafka /opt/kafka/bin/kafka-console-producer.sh --bootstrap-server :9092 --topic demo`\n  - `docker exec -ti kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server :9092 --topic demo`\n\n- **Latest Versions**:\n  - Kafka Streams: 5.4.0\n  - Docker: Latest stable version\n\n- **Key Config Options**:\n  - `bootstrap.servers`: The list of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `group.id`: Consumer group ID for Kafka Streams.",
     "source": "code_example",
-    "updated_at": 1780923309.9625776
+    "updated_at": 1780930808.1486187
   },
   "search:docker+kafka-streams:kafka streams with docker comp": {
     "content": "- **Install Docker Compose**: Ensure Docker Compose is installed on your machine.\n  \n- **Clone Repository**: \n  ```bash\n  git clone https://github.com/conduktor/kafka-stack-docker-compose.git\n  cd kafka-stack-docker-compose\n  ```\n\n- **Pull Latest Images**:\n  ```bash\n  docker-compose pull\n  ```\n\n- **Start Kafka Stack**:\n  ```bash\n  docker-compose up -d\n  ```\n\n- **Key Config Options**:\n  - `KAFKA_BROKER_ID`: Unique identifier for each broker.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string.\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n\n- **Access Kafka UI**:\n  Open your browser and navigate to `http://localhost:9021` to access the Kafka UI.\n\n- **Stop Kafka Stack**:\n  ```bash\n  docker-compose down\n  ```\n\n- **View Logs**:\n  ```bash\n  docker-compose logs -f\n  ```\n\n- **Scale Brokers**:\n  ```bash\n  docker-compose up --scale kafka=3\n  ```\n\n- **Check Network Configuration**: Ensure Docker network settings are correctly configured for inter-container communication.",
     "source": "web_search",
-    "updated_at": 1780923311.8680522
+    "updated_at": 1780930810.4974167
   },
   "search:docker+kafka-streams:kafka streams with docker comp_ex": {
     "content": "- Clone the repository: `git clone https://github.com/confluentinc/kafka-streams-examples.git`\n- Navigate to the example directory: `cd kafka-streams-examples/docker-compose`\n- Start Kafka and Zookeeper services: `docker-compose up -d`\n- Access Confluent Control Center: Open a browser and go to `http://localhost:9021`\n- Key config options in `docker-compose.yml`:\n  - `KAFKA_ADVERTISED_LISTENERS`: Set the advertised listeners for Kafka\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connect Kafka to Zookeeper\n  - `KAFKA_STREAMS_APPLICATION_ID`: Define the application ID for Kafka Streams\n- Use Confluent Control Center to manage and monitor your Kafka streams.\n- For development, use a single-node setup in `docker-compose.yml`.\n- For production, configure a 3-broker cluster as per the guide.",
     "source": "code_example",
-    "updated_at": 1780923313.7425263
+    "updated_at": 1780930813.7476685
   }
 }

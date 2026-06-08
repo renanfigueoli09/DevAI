@@ -2,7 +2,7 @@
   "search:Angular Material Design Patterns:angular material design patter": {
     "content": "- **CLI Commands**:\n  - `ng new my-angular-app --style=scss`\n  - `ng add @angular/material`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Material: 13.3.7\n\n- **Key Config Options**:\n  - `angular.json`: Configure paths, styles, and scripts.\n  - `app.module.ts`: Import `MatModule` for components like `MatTooltip`.\n  - `styles.scss`: Include theme variables and mixins from `@angular/material`.",
     "source": "web_search",
-    "updated_at": 1780923324.5714676
+    "updated_at": 1780930825.0027792
   },
   "search:Angular Material Design Patterns:angular material design patter_ex": {
     "content": "- Use `ng new` to create a new Angular project.\n- Install Angular Material using `ng add @angular/material`.\n- Choose your preferred theme during installation.\n- Import the required modules in your app module.\n- Use `mat-sidenav` for creating side navigation menus.\n- Utilize `mat-list` and `mat-list-item` for list items within the sidenav.\n- For mini variant, apply custom CSS to reduce size.\n- Update Angular and Material versions using `ng update @angular/core @angular/cli @angular/material`.\n- Configure theming in `styles.scss` with custom palettes.",
