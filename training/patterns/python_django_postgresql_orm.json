@@ -2,21 +2,21 @@
   "search:python-django-postgresql-orm:django orm with postgresql 202": {
     "content": "- **Latest Django Version**: As of my last update in October 2023, the latest stable version is 4.2. However, for the most current version, check the [Django official website](https://www.djangoproject.com/download/).\n  \n- **CLI Commands**:\n  - To create a new Django project: `django-admin startproject myproject`\n  - To run migrations: `python manage.py migrate`\n  - To start the development server: `python manage.py runserver`\n\n- **Key Config Options in `settings.py` for PostgreSQL**:\n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django.db.backends.postgresql',\n          'NAME': 'mydatabase',\n          'USER': 'myuser',\n          'PASSWORD': 'mypassword',\n          'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n          'PORT': '5432',\n      }\n  }\n  ```\n\n- **Optimizing Django ORM Performance**:\n  - Use `select_related` for single-valued relationships.\n  - Use `prefetch_related` for multi-valued relationships.\n  - Create appropriate indexes in PostgreSQL to speed up queries.\n\n- **Security Note**: Always update Django and its dependencies to the latest versions to mitigate security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780948638.2631404
+    "updated_at": 1780956356.0866547
   },
   "search:python-django-postgresql-orm:django orm with postgresql 202_ex": {
     "content": "- Use `pip install django psycopg2-binary` to install Django and PostgreSQL adapter.\n- Create a new Django project using `django-admin startproject myproject`.\n- Define models in `models.py`, e.g., `class Book(models.Model): title = models.CharField(max_length=100) author = models.CharField(max_length=100)`.\n- Apply migrations with `python manage.py makemigrations` and `python manage.py migrate`.\n- Use Django ORM for database operations, e.g., `Book.objects.create(title=\"Django\", author=\"John Doe\")`.\n- Optimize queries using `select_related` and `prefetch_related` to avoid N+1 issues.\n- Create indexes in PostgreSQL with `CREATE INDEX idx_book_title ON book (title);`.\n- Use Django's built-in admin interface for CRUD operations, accessible at `/admin/`.",
     "source": "code_example",
-    "updated_at": 1780948683.6376429
+    "updated_at": 1780956358.209422
   },
   "search:python-django-postgresql-orm:advanced django orm queries 20": {
     "content": "- **CLI Commands**: Use `python manage.py shell` to interact with Django ORM directly.\n- **Latest Versions**: Ensure you are using the latest stable version of Django for optimal performance and security.\n- **Key Config Options**:\n  - `DATABASES`: Configure your database settings in `settings.py`.\n  - `USE_TZ`: Set to `True` if your application uses time zones.\n  - `TIME_ZONE`: Specify the timezone for your application.\n\nFor advanced queries, consider using:\n- **Annotations**: Use `annotate()` to add calculated fields to QuerySets.\n- **Aggregations**: Utilize `aggregate()` for computing summary values like sum, average, etc.\n- **Optimization Techniques**:\n  - **Select Related**: Use `select_related()` to perform SQL joins and fetch related objects in a single query.\n  - **Prefetch Related**: Use `prefetch_related()` for fetching related objects using separate queries and combining them at the application level.\n\nAlways profile your queries with Django’s built-in tools like `django.db.connection.queries` to identify bottlenecks.",
     "source": "web_search",
-    "updated_at": 1780948699.7619338
+    "updated_at": 1780956360.5897496
   },
   "search:python-django-postgresql-orm:advanced django orm queries 20_ex": {
     "content": "- **CLI Commands**: Use `python manage.py shell` to interact with Django ORM directly.\n- **Latest Versions**: Ensure using Django 4.x for the most recent features and security updates.\n- **Key Config Options**:\n  - `DATABASES`: Configure database settings in `settings.py`.\n  - `TIME_ZONE`: Set the timezone in `settings.py`.\n  - `USE_I18N` and `USE_L10N`: Enable internationalization and localization if needed.",
     "source": "code_example",
-    "updated_at": 1780948731.2533615
+    "updated_at": 1780956362.6343892
   }
 }

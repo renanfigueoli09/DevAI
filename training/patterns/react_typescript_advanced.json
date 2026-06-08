@@ -2,16 +2,16 @@
   "search:react+typescript-advanced:typescript in react performanc": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-prettier prettier`\n\n- **Latest Versions**:\n  - React: 18.2\n  - TypeScript: 5.0\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure compiler options, include paths, and specify JSX.\n  - `.eslintrc.js`: Set up ESLint rules for TypeScript, including prettier integration.\n  - `prettier.config.js`: Define Prettier formatting rules.\n\n- **Performance Tips**:\n  - Use React.memo for functional components to prevent unnecessary re-renders.\n  - Implement lazy loading for large components or modules using `React.lazy` and `Suspense`.\n  - Optimize rendering by avoiding unnecessary state updates and using shouldComponentUpdate lifecycle method (if necessary).\n  - Utilize Intersection Observer API for lazy loading images and other resources.",
     "source": "web_search",
-    "updated_at": 1780946166.6257405
+    "updated_at": 1780956256.3773983
   },
   "search:react+typescript-advanced:typescript in react performanc_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @types/react @types/react-dom`\n\n- **Latest Versions**:\n  - React: 18.x\n  - TypeScript: 4.x\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript options like `jsx`, `moduleResolution`, and `strict`.\n  - Environment variables in `.env` files for development settings.",
     "source": "code_example",
-    "updated_at": 1780946171.7045646
+    "updated_at": 1780956258.6296182
   },
   "search:react+typescript-advanced:react typescript testing strat": {
     "content": "- **CLI Commands**:\n  - `npm create vite@latest my-react-app --template react-ts`\n  - `npx create-next-app@latest my-next-app --typescript`\n\n- **Latest Versions**:\n  - Vite: 4.x\n  - React: 18.x\n  - TypeScript: 5.x\n  - Jest: 29.x\n  - Testing Library: 13.x\n\n- **Key Config Options**:\n  - `vite.config.ts`: Configure Vite for TypeScript and React.\n  - `tsconfig.json`: Define TypeScript compiler options.\n  - `jest.config.js`: Set up Jest for testing with React Testing Library.",
     "source": "web_search",
-    "updated_at": 1780946175.0658402
+    "updated_at": 1780956261.017399
   }
 }
