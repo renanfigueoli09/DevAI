@@ -2,16 +2,16 @@
   "search:Kafka Integration and Performance Tuning in .NET Applications:dotnet kafka integration": {
     "content": "- **Install Confluent Kafka Library**: `dotnet add package Confluent.Kafka`\n- **Create New Web API Project**: `dotnet new webapi -n KafkaProducerConsumer`\n- **Navigate to Project Directory**: `cd KafkaProducerConsumer`\n- **Key Config Options**:\n  - `BootstrapServers`: List of Kafka broker addresses.\n  - `ClientId`: Unique identifier for the client.\n  - `GroupId`: Identifier for consumer group (if applicable).\n- **Latest Version**: Check [NuGet](https://www.nuget.org/packages/Confluent.Kafka/) for the latest version and update accordingly.\n- **Example Producer Code**:\n  ```csharp\n  using Confluent.Kafka;\n  \n  var config = new ProducerConfig { BootstrapServers = \"localhost:9092\" };\n  \n  using (var producer = new ProducerBuilder<Null, string>(config).Build())\n  {\n      try\n      {\n          var result = await producer.ProduceAsync(\"my-topic\", new Message<Null, string> { Value = \"Hello World!\" });\n          Console.WriteLine($\"Message delivered to {result.TopicPartitionOffset}\");\n      }\n      catch (ProduceException<Null, string> e)\n      {\n          Console.WriteLine($\"Delivery failed: {e.Error.Reason}\");\n      }\n  }\n  ```\n- **Example Consumer Code**:\n  ```csharp\n  using Confluent.Kafka;\n  \n  var config = new ConsumerConfig { BootstrapServers = \"localhost:9092\", GroupId = \"my-group\" };\n  \n  using (var consumer = new ConsumerBuilder<Ignore, string>(config).Build())\n  {\n      consumer.Subscribe(\"my-topic\");\n      \n      try\n      {\n          while (true)\n          {\n              var consumeResult = consumer.Consume();\n              Console.WriteLine($\"Consumed message '{consumeResult.Message.Value}' at: '{consumeResult.TopicPartitionOffset}'.\");\n          }\n      }\n      catch (ConsumeException e)\n      {\n          Console.WriteLine($\"Error occured: {e.Error.Reason}\");\n      }\n  }\n  ```",
     "source": "web_search",
-    "updated_at": 1780842601.2812455
+    "updated_at": 1780921356.6852844
   },
   "search:Kafka Integration and Performance Tuning in .NET Applications:dotnet kafka integration_ex": {
     "content": "- Install Confluent.Kafka via NuGet: `dotnet add package Confluent.Kafka`\n- Use latest version of Confluent.Kafka (as of my last update, it's 2.3.0)\n- Key config options for producer:\n  - `BootstrapServers`: List of Kafka broker addresses\n  - `ClientId`: Unique identifier for the client\n  - `SecurityProtocol`: Security protocol to use (e.g., Ssl)\n  - `SslCaLocation`: Path to CA certificate file if using SSL\n- Key config options for consumer:\n  - `BootstrapServers`: List of Kafka broker addresses\n  - `GroupId`: Consumer group ID\n  - `AutoOffsetReset`: Behavior when there is no initial offset in Kafka or current offset doesn't exist any more (e.g., Earliest, Latest)\n  - `EnableAutoCommit`: Whether to automatically commit offsets",
     "source": "code_example",
-    "updated_at": 1780842602.9701753
+    "updated_at": 1780921359.1883392
   },
   "search:Kafka Integration and Performance Tuning in .NET Applications:kafka performance tuning strat": {
     "content": "- **CLI Commands**: Use `kafka-topics.sh --describe` to check topic configurations.\n- **Latest Versions**: Ensure using Kafka 3.x for the latest features and performance improvements.\n- **Key Config Options**:\n  - `num.partitions`: Number of partitions per topic.\n  - `replication.factor`: Replication factor for each partition.\n  - `message.max.bytes`: Maximum message size.\n  - `batch.size`: Producer batch size.\n  - `linger.ms`: Time to wait before sending a batch.\n  - `fetch.min.bytes`: Minimum bytes to fetch in consumer requests.",
     "source": "web_search",
-    "updated_at": 1780842605.1665776
+    "updated_at": 1780921361.4099684
   }
 }

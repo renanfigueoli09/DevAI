@@ -2,21 +2,21 @@
   "search:dotnet-core-performance-analysis:.net core performance profilin": {
     "content": "- **MiniProfiler**: \n  - CLI command: `dotnet add package MiniProfiler.AspNetCore`\n  - Latest version: Check NuGet for the latest version.\n  - Key config options: Configure in `Startup.cs` with services.AddMiniProfiler() and middleware.UseMiniProfiler()\n\n- **Visual Studio Profiling Tools**:\n  - Memory Usage: Available in Visual Studio 2023.\n  - CLI command: Not directly available via CLI, use Visual Studio IDE.\n\n- **Intel® VTune™ Amplifier 2018**:\n  - Enhancements for .NET Core on Intel chips.\n  - Latest version: Check Intel's website for the latest version.\n  - Key config options: Configure in the tool itself or through command-line arguments.\n\n- **Visual Studio Code**:\n  - Create an F# \"Hello World\" app using `dotnet new console -lang F#`.\n  - Latest version: Check Visual Studio Code updates.\n  - Key config options: Configure settings.json for .NET development.",
     "source": "web_search",
-    "updated_at": 1780841792.0065475
+    "updated_at": 1780920860.5271246
   },
   "search:dotnet-core-performance-analysis:.net core performance profilin_ex": {
     "content": "- **Visual Studio Profiling Tools**: Use `dotnet-trace` for collecting traces.\n  - Command: `dotnet-trace collect --process-id <PID>`\n  \n- **Intel VTune Profiler**:\n  - Latest Version: Ensure you have the latest version installed from Intel's website.\n  - Key Config Options: \n    - `-collect hotspots`\n    - `-report output.html`\n\n- **.NET Core Performance Counters**: Use `dotnet-counters` for real-time performance monitoring.\n  - Command: `dotnet-counters monitor --process-id <PID> --counters System.Runtime.*`\n\n- **Application Insights**:\n  - Latest Version: Ensure you have the latest SDK installed via NuGet.\n  - Key Config Options:\n    - Instrumentation key in `appsettings.json`\n    - Logging configuration for detailed insights\n\n- **BenchmarkDotNet**: Use BenchmarkDotNet for microbenchmarking.\n  - Install via NuGet\n  - Command: Run benchmarks with `dotnet run --project <ProjectName>`\n\n- **GC Performance Tuning**:\n  - Key Config Options:\n    - `-gcserver`\n    - `-Server`\n\n- **Memory Profiling**: Use dotMemory or JetBrains dotMemory for memory leak detection.\n  - Commands vary, refer to respective tool documentation\n\n- **Profiling with `perf` (Linux)**:\n  - Command: `perf record -p <PID> -g`\n  - Analyze with `perf report`\n\n- **Logging and Monitoring**: Use Serilog or NLog for structured logging.\n  - Configure in `appsettings.json` for centralized logging\n\nThese tools provide a robust set of options to diagnose, monitor, and optimize .NET Core applications.",
     "source": "code_example",
-    "updated_at": 1780841793.969138
+    "updated_at": 1780920861.9795048
   },
   "search:dotnet-core-performance-analysis:.net core memory management be": {
     "content": "- Use `dotnet gc` command to analyze garbage collection.\n- Implement IDisposable pattern for managing unmanaged resources.\n- Avoid creating large objects on the stack; use heap instead.\n- Set `gcServer=true` in appsettings.json for better performance.\n- Monitor memory usage with tools like dotMemory or VisualVM.\n- Use `GC.Collect()` sparingly, as it can disrupt normal garbage collection.\n- Implement object pooling for frequently created objects to reduce GC pressure.\n- Ensure all event handlers are unsubscribed when no longer needed.\n- Regularly update .NET Core and related libraries to benefit from performance improvements.",
     "source": "web_search",
-    "updated_at": 1780841795.8986483
+    "updated_at": 1780920863.3774273
   },
   "search:dotnet-core-performance-analysis:.net core memory management be_ex": {
     "content": "- **CLI Commands**: Use `dotnet gc` to analyze garbage collection behavior.\n- **Latest Versions**: Ensure using .NET Core 7 or later for improved memory management features.\n- **Key Config Options**:\n  - `GC.Server=true`: Enables server GC for better performance in long-running applications.\n  - `COMPlus_GCHeapHardLimit=<size>`: Sets a hard limit on the heap size to prevent excessive memory usage.\n  - `COMPlus_GCHeapHardLimitPercent=<percentage>`: Sets a percentage-based hard limit on the heap size.",
     "source": "code_example",
-    "updated_at": 1780841797.989295
+    "updated_at": 1780920864.9144342
   }
 }

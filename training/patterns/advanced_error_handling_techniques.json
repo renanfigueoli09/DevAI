@@ -17,16 +17,16 @@
   "search:Advanced Error Handling Techniques:logging best practices_ex": {
     "content": "- Use Serilog Library for Logging in ASP.NET Core.\n- Configure Python logging with `logging` module.\n- Set log levels using `basicConfig(level=)` method.\n- Utilize file handlers to save logs (`FileHandler`, `RotatingFileHandler`).\n- Implement exception handling with `try-except` blocks.\n- Use structured logging for better data extraction and analysis.\n- Rotate log files periodically to prevent disk space issues.\n- Enable logging in production environments for debugging and monitoring.\n- Regularly review and clean up old log files.",
     "source": "code_example",
-    "updated_at": 1780841785.4613864
+    "updated_at": 1780920856.7709143
   },
   "search:Advanced Error Handling Techniques:exception chaining": {
     "content": "- **CLI Commands**: Not directly applicable to programming languages.\n- **Latest Versions**:\n  - Python 3.14.5 (as of my last update)\n- **Key Config Options**:\n  - In Java, use `Throwable.initCause(Throwable cause)` or the constructor that accepts a cause.\n  - In Python, use `raise NewException from OriginalException` to chain exceptions.\n  - Use `from None` in Python to disable automatic exception chaining.",
     "source": "web_search",
-    "updated_at": 1780841787.427155
+    "updated_at": 1780920857.9146962
   },
   "search:Advanced Error Handling Techniques:exception chaining_ex": {
     "content": "- Use `try-catch` blocks to handle exceptions.\n- For Java, use `throw new Exception(\"message\", cause)` to chain exceptions.\n- In Python, use `raise NewException from OriginalException`.\n- Ensure all exceptions are caught and handled appropriately to prevent program crashes.\n- Keep exception messages clear and informative for debugging.",
     "source": "code_example",
-    "updated_at": 1780841789.2941976
+    "updated_at": 1780920859.3232226
   }
 }

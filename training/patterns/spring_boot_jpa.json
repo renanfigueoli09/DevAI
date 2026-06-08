@@ -2,21 +2,21 @@
   "search:spring-boot+jpa:spring boot jpa repository 202": {
     "content": "- **CLI Commands**: \n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (e.g., `create-drop`, `update`).",
     "source": "web_search",
-    "updated_at": 1780841822.918619
+    "updated_at": 1780920877.4523928
   },
   "search:spring-boot+jpa:spring boot jpa repository 202_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n  - Hibernate: 5.6.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development, `create-drop` for testing.",
     "source": "code_example",
-    "updated_at": 1780841825.498296
+    "updated_at": 1780920878.5663893
   },
   "search:spring-boot+jpa:spring boot jpa performance tu": {
     "content": "- **CLI Commands**: Use `mvn clean install` for building projects.\n- **Latest Versions**: Spring Boot 3.1, JPA 2.4, Hibernate 6.2.\n- **Key Config Options**:\n  - `spring.jpa.open-in-view: false`\n  - `spring.data.jpa.repository.query-timeout`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "web_search",
-    "updated_at": 1780841827.729056
+    "updated_at": 1780920879.6366515
   },
   "search:spring-boot+jpa:spring boot jpa performance tu_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Hibernate: 6.2.4.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.generate_statistics=true`",
     "source": "code_example",
-    "updated_at": 1780841830.2001495
+    "updated_at": 1780920880.6357944
   }
 }

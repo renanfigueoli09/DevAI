@@ -2,21 +2,21 @@
   "search:nestjs+rabbitmq:nestjs rabbitmq transport.rmq ": {
     "content": "- **CLI Commands**:\n  - `nest generate microservice rabbitmq <name>` to create a new RabbitMQ microservice.\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/microservices: v10.x\n  \n- **Key Config Options**:\n  - `host`: The hostname of the RabbitMQ server.\n  - `port`: The port number on which the RabbitMQ server is running.\n  - `username`: The username for authentication.\n  - `password`: The password for authentication.\n  - `queue`: The name of the queue to use.",
     "source": "web_search",
-    "updated_at": 1780842579.8806667
+    "updated_at": 1780921328.9947531
   },
   "search:nestjs+rabbitmq:nestjs rabbitmq transport.rmq _ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate microservice service-name --transport rabbitmq`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - RabbitMQ Transport: nestjs/microservices-rabbitmq@latest\n\n- **Key Config Options**:\n  - `url`: Connection URL for RabbitMQ server.\n  - `exchange`: Name of the exchange to use.\n  - `queue`: Name of the queue to use.\n  - `routingKey`: Routing key for message routing.",
     "source": "code_example",
-    "updated_at": 1780842581.6048067
+    "updated_at": 1780921331.4392784
   },
   "search:nestjs+rabbitmq:nestjs rabbitmq dead letter ex": {
     "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=dlx type=direct`\n  - `rabbitmqadmin declare queue name=my_queue arguments='{\"x-dead-letter-exchange\":\"dlx\", \"x-dead-letter-routing-key\":\"my_routing_key\"}'`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - NestJS: 9.x\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the DLX name.\n  - `x-dead-letter-routing-key`: Specifies the routing key for messages in the DLX.\n  - `x-message-ttl`: Sets the time-to-live for messages in the queue.",
     "source": "web_search",
-    "updated_at": 1780842583.8428555
+    "updated_at": 1780921333.370323
   },
   "search:nestjs+rabbitmq:nestjs rabbitmq dead letter ex_ex": {
     "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=some.exchange.name type=direct`\n  - `rabbitmqadmin declare queue name=notification_queue arguments='{\"x-dead-letter-exchange\":\"some.exchange.name\"}'`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - NestJS: 9.x\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the DLX for a queue.\n  - `x-dead-letter-routing-key`: Optional, specifies the routing key for messages sent to the DLX.\n  - `x-max-length`: Limits the number of messages in a queue before messages are dropped.",
     "source": "code_example",
-    "updated_at": 1780842585.7078657
+    "updated_at": 1780921336.0701451
   }
 }

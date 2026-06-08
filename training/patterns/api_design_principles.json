@@ -2,12 +2,12 @@
   "search:API Design Principles:kubernetes api design patterns": {
     "content": "- Use `kubectl` command-line tool for interacting with Kubernetes API.\n- Ensure you have the latest version of `kubectl` installed to leverage the most recent features and security patches.\n- Key configuration options include setting up RBAC roles and bindings for secure access.\n- For accessing Kubernetes APIs, use HTTP/HTTPS protocols with appropriate authentication (e.g., token-based).\n- Consider using custom resource definitions (CRDs) to extend Kubernetes API capabilities.\n- Implement patterns like Singleton, Capability, Lifecycle, Auto-Pilot in your operators for better management and scalability.\n- Align API routes with resource types for cleaner mappings between UI views and Kubernetes APIs.\n- Monitor API usage and performance regularly to optimize and scale accordingly.",
     "source": "web_search",
-    "updated_at": 1780920625.8685486
+    "updated_at": 1780921888.9491801
   },
   "search:API Design Principles:kubernetes api design patterns_ex": {
     "content": "- **CLI Commands**: `kubectl get pods`, `kubectl apply -f <filename>`, `kubectl delete pod <podname>`\n- **Latest Versions**: Ensure Kubernetes is up to date using `kubectl version --client` and check for updates on the official Kubernetes website.\n- **Key Config Options**:\n  - `replicas`: Number of desired replicas in a deployment.\n  - `image`: Docker image used by the container.\n  - `resources`: CPU and memory limits and requests.\n  - `ports`: Exposed ports for services.",
     "source": "code_example",
-    "updated_at": 1780920627.0961425
+    "updated_at": 1780921891.0018947
   },
   "search:API Design Principles:next.js prisma api design": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npm install prisma --save-dev`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n\n- **Key Config Options**:\n  - `.env.local`: Define environment variables for database connection.\n  - `prisma/schema.prisma`: Define your data model and relations.\n  - `next.config.js`: Configure Next.js settings, including API routes.",

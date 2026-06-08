@@ -2,21 +2,21 @@
   "search:Advanced Spring Security Practices with Kotlin and Springdoc-OpenAPI:spring security kotlin": {
     "content": "- **Latest Version**: Spring Security 5.7.x\n- **Key Config Options**:\n  - `http.authorizeRequests()`\n  - `http.csrf().disable()`\n  - `http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)`\n  - `http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)`\n- **CLI Commands**: None specific to Spring Security Kotlin\n- **Example Configuration**:\n```kotlin\n@EnableWebSecurity\nclass WebSecurityConfig : WebSecurityConfigurerAdapter() {\n    override fun configure(http: HttpSecurity) {\n        http.authorizeRequests()\n            .antMatchers(\"/api/public/**\").permitAll()\n            .anyRequest().authenticated()\n            .and()\n            .csrf().disable()\n            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)\n    }\n}\n```",
     "source": "web_search",
-    "updated_at": 1780841859.6238964
+    "updated_at": 1780920894.614398
   },
   "search:Advanced Spring Security Practices with Kotlin and Springdoc-OpenAPI:spring security kotlin_ex": {
     "content": "- **Latest Versions**: Spring Security 5.7, Spring Boot 3.5, Kotlin 2.0\n- **CLI Commands**:\n  - `./gradlew build`\n  - `./gradlew bootRun`\n- **Key Config Options**:\n  - `http.authorizeRequests()`: Configure URL access rules.\n  - `http.csrf().disable()`: Disable CSRF protection for simplicity in development.\n  - `http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)`: Manage session creation policy.\n  - `@EnableWebSecurity`: Enable Spring Security configuration.\n  - `@Bean`: Define beans for security configurations.",
     "source": "code_example",
-    "updated_at": 1780841861.6566067
+    "updated_at": 1780920895.5342
   },
   "search:Advanced Spring Security Practices with Kotlin and Springdoc-OpenAPI:springdoc openapi advanced usa": {
     "content": "- Use `mvn clean install` to build your project.\n- Add dependency: `implementation(\"org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.12\")`.\n- Ensure Spring Boot version compatibility with `springdoc-openapi`.\n- Access documentation via `/swagger-ui.html`.\n- Configure `springdoc-openapi` properties in `application.properties` or `application.yml`.",
     "source": "web_search",
-    "updated_at": 1780841863.6901114
+    "updated_at": 1780920896.465125
   },
   "search:Advanced Spring Security Practices with Kotlin and Springdoc-OpenAPI:springdoc openapi advanced usa_ex": {
     "content": "- Use `springdoc-openapi` library for generating API documentation.\n- For Spring Boot v3, use `springdoc-openapi` version 2.\n- Add dependency to your `pom.xml` or `build.gradle`.\n- Configure Swagger UI by adding properties in `application.properties` or `application.yml`.\n- Use annotations like `@Tag`, `@Operation`, `@Parameter` for detailed documentation.\n- Run application and access Swagger UI at `/swagger-ui.html`.\n- Latest version can be found on [GitHub](https://github.com/springdoc/springdoc-openapi).\n- Key config options include `springdoc.api-docs.path` and `springdoc.swagger-ui.path`.",
     "source": "code_example",
-    "updated_at": 1780841865.5775032
+    "updated_at": 1780920897.3922608
   }
 }

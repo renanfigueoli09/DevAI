@@ -2,16 +2,16 @@
   "search:microservices+security:microservices security best pr": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <file.yaml>` to deploy resources in Kubernetes.\n  - `docker-compose up` for local development of microservices.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kubernetes: 1.27.x\n\n- **Key Config Options**:\n  - Authentication: OAuth 2.0, JWT (JSON Web Tokens).\n  - Authorization: Role-Based Access Control (RBAC).\n  - API Security: Use HTTPS for secure communication.\n  - Encryption: Encrypt sensitive data at rest and in transit using TLS/SSL.",
     "source": "web_search",
-    "updated_at": 1780920500.4689837
+    "updated_at": 1780921632.221537
   },
   "search:microservices+security:microservices security best pr_ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts microservices using Docker Compose.\n  - `kubectl apply -f deployment.yaml`: Deploys microservices on Kubernetes.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Kubernetes: 1.27.0\n  - OAuth2: 2.0.0\n\n- **Key Config Options**:\n  - `spring.security.oauth2.client.registration`: Configuration for OAuth2 client registration.\n  - `kubernetes.io/service-account.name`: Service account name for Kubernetes authentication.\n  - `oauth2.resourceserver.jwt.jwk-set-uri`: URI for JWT keys in OAuth2 resourceserver.",
     "source": "code_example",
-    "updated_at": 1780920501.556656
+    "updated_at": 1780921634.241799
   },
   "search:microservices+security:microservices authentication p": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**: Ensure using the latest version of your microservices framework and libraries.\n- **Key Config Options**:\n  - JWT (JSON Web Tokens) for secure token-based authentication.\n  - OAuth 2.0 for authorization flows.\n  - API Gateway for managing authentication and routing requests.\n  - Token Exchange patterns for secure identity sharing across services.",
     "source": "web_search",
-    "updated_at": 1780920502.4876204
+    "updated_at": 1780921636.08602
   }
 }

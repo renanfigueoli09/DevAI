@@ -1,7 +1,7 @@
 # DevAI Validation Report
-*2026-06-08 09:13*
+*2026-06-08 09:31*
 
-## Score: 61% `[████████████░░░░░░░░]`  (29.4/48.0)
+## Score: 62% `[████████████░░░░░░░░]`  (30.0/48.0)
 
 ### Knowledge Check (vector store): 16.0/34.0
 | Check | Score | OK |
@@ -20,10 +20,10 @@
 | Spring MongoDB: @Document não @Entity | 0.0/2 | ❌ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
 
-### Generation Check (LLM): 13.4/14.0
+### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
 |---|---|---|
-| schema.ts Mongoose strict mode | 3.4/4 | ❌ |
+| schema.ts Mongoose strict mode | 4.0/4 | ✅ |
 | service.ts Mongoose CRUD | 4.0/4 | ✅ |
 | dto.ts PartialType correto | 3.0/3 | ✅ |
 | docker-compose MongoDB only | 3.0/3 | ✅ |
@@ -37,7 +37,6 @@
 - **MongoDB healthcheck: mongosh ping** — found=['mongosh', 'ping'] missing=[] wrong=['pg_isready']
 - **Spring MongoDB: @Document não @Entity** — found=['@Document', 'MongoRepository'] missing=[] wrong=['@Entity', 'JpaRepository']
 - **FastAPI: AsyncIOMotorClient (não pymongo)** — found=['AsyncIOMotorClient', 'motor'] missing=[] wrong=['MongoClient', 'pymongo']
-- **schema.ts Mongoose strict mode** — found=['@Schema', '@Prop', 'title!:'] missing=['HydratedDocument'] wrong=[]
 
 ## Fix
 ```bash
