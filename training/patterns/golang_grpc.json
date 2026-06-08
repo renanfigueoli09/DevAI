@@ -2,31 +2,31 @@
   "search:golang-grpc:grpc performance tuning 2024": {
     "content": "- **CLI Commands**: Use `grpcurl` to test and debug gRPC services.\n- **Latest Versions**: Ensure using the latest gRPC version for performance improvements.\n- **Key Config Options**:\n  - Increase `max_concurrent_streams` in server settings.\n  - Optimize protobuf schema for smaller message sizes.\n  - Enable compression (e.g., gzip) to reduce network latency.\n  - Adjust `write_buffer_size` and `read_buffer_size` on both client and server.\n- **Network Configurations**: Use a high-speed, low-latency network.\n- **Caching**: Implement caching strategies to reduce redundant data requests.",
     "source": "web_search",
-    "updated_at": 1780844563.844321
+    "updated_at": 1780932870.440222
   },
   "search:golang-grpc:grpc performance tuning 2024_ex": {
     "content": "- Use the latest version of gRPC and its dependencies.\n- Implement server-side garbage collection (GC) for high-concurrency applications.\n- Utilize connection pooling to manage multiple connections efficiently.\n- Adjust the `grpc.max_concurrent_streams` option in your client configuration.\n- Enable compression on both the client and server sides using gzip or deflate.\n- Optimize message serialization by reducing field sizes and using efficient data types.\n- Use a load balancer to distribute traffic evenly across servers.\n- Monitor performance metrics such as latency, throughput, and error rates.\n- Regularly update and patch your gRPC library and related dependencies.",
     "source": "code_example",
-    "updated_at": 1780844565.5274546
+    "updated_at": 1780932872.440916
   },
   "search:golang-grpc:grpc security patterns 2024": {
     "content": "- **CLI Commands**:\n  - `protoc --grpc_python_out=. your_service.proto`\n  - `openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365`\n\n- **Latest Versions**:\n  - gRPC: v1.52.0\n  - Protocol Buffers (protobuf): v3.17.3\n\n- **Key Config Options**:\n  - Use TLS for secure communication.\n  - Implement authentication mechanisms like OAuth2 or JWT.\n  - Enable server-side encryption for data in transit.\n  - Configure access control lists (ACLs) to restrict access.\n  - Regularly update and patch gRPC libraries.",
     "source": "web_search",
-    "updated_at": 1780844567.2713573
+    "updated_at": 1780932874.4184022
   },
   "search:golang-grpc:grpc security patterns 2024_ex": {
     "content": "- **CLI Commands**: Use `dotnet new grpc` to create a new gRPC project.\n- **Latest Versions**: Ensure using the latest .NET SDK and gRPC packages for compatibility and security updates.\n- **Key Config Options**:\n  - Enable TLS by configuring `appsettings.json` with SSL settings.\n  - Implement token propagation in interceptors for secure authentication.\n  - Configure logging levels in `appsettings.json` to monitor security events.",
     "source": "code_example",
-    "updated_at": 1780844569.1786797
+    "updated_at": 1780932876.2956767
   },
   "search:golang-grpc:grpc error handling strategies": {
     "content": "- **CLI Commands**: Use `grpcurl` to test gRPC services and handle errors.\n- **Latest Versions**: Ensure using the latest version of gRPC libraries for optimal performance and security.\n- **Key Config Options**:\n  - `grpc.max_send_message_length`: Set maximum message size.\n  - `grpc.max_receive_message_length`: Set maximum received message size.\n  - `grpc.keepalive_time_ms`: Configure keep-alive time in milliseconds.\n  - `grpc.keepalive_timeout_ms`: Set keep-alive timeout in milliseconds.",
     "source": "web_search",
-    "updated_at": 1780844571.0430925
+    "updated_at": 1780932878.5796413
   },
   "search:golang-grpc:grpc error handling strategies_ex": {
     "content": "- **CLI Commands**: `grpcurl`, `protoc`\n- **Latest Versions**: `grpcurl v1.8.7`, `protoc v3.21.5`\n- **Key Config Options**:\n  - `server_address`: Specifies the gRPC server address.\n  - `plaintext`: Enables plaintext communication (not recommended for production).\n  - `insecure`: Disables TLS verification (use with caution).",
     "source": "code_example",
-    "updated_at": 1780844572.6321182
+    "updated_at": 1780932880.4578655
   }
 }

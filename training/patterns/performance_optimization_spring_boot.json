@@ -2,16 +2,16 @@
   "search:performance-optimization-spring-boot:spring boot performance optimi": {
     "content": "- **Latest Version**: Spring Boot 2.7 & 5.3\n- **CLI Commands**:\n  - `mvn clean install` for building projects.\n  - `java -jar your-application.jar --spring.profiles.active=prod` to run with specific profiles.\n- **Key Config Options**:\n  - `server.port`: Set the port number.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `spring.jpa.hibernate.ddl-auto`: Control schema generation (e.g., `update`).\n  - `spring.cache.type`: Specify cache type (e.g., `redis`, `caching`).\n  - `spring.thymeleaf.cache`: Enable or disable Thymeleaf template caching.",
     "source": "web_search",
-    "updated_at": 1780844420.2696817
+    "updated_at": 1780932705.309223
   },
   "search:performance-optimization-spring-boot:high performance spring boot a": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your Spring Boot application.\n  - `java -jar target/your-application.jar` to run your application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x (as of my last update)\n  - Java: 17 or later\n\n- **Key Config Options**:\n  - `server.port`: Set the port number for your application.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `spring.jpa.hibernate.ddl-auto`: Control schema generation (e.g., `update`, `create-drop`).\n  - `logging.level.root`: Adjust logging levels for debugging or production.",
     "source": "web_search",
-    "updated_at": 1780844422.0698555
+    "updated_at": 1780932707.688389
   },
   "search:performance-optimization-spring-boot:high performance spring boot a_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Java: 21\n\n- **Key Config Options**:\n  - `server.port`: Specifies the port number for the server.\n  - `spring.datasource.url`: Database connection URL.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation strategy.\n  - `logging.level.root`: Sets the logging level.",
     "source": "code_example",
-    "updated_at": 1780844423.737829
+    "updated_at": 1780932709.967633
   }
 }

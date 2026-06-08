@@ -2,31 +2,31 @@
   "search:spring-cloud-gateway-performance:spring cloud gateway performan": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your Spring Cloud Gateway project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot and Spring Cloud Gateway, which can be found on [Spring's official website](https://spring.io/projects/spring-boot).\n- **Key Config Options**:\n  - `server.port`: Specify the port number for your gateway application.\n  - `spring.cloud.gateway.routes`: Define routes to forward requests to different services.\n  - `spring.cloud.gateway.discovery.locator.enabled`: Enable service discovery using Spring Cloud Netflix Eureka or similar.\n  - `spring.cloud.gateway.httpclient.pool.max-idle-connections`: Configure the maximum number of idle connections in the HTTP client pool.",
     "source": "web_search",
-    "updated_at": 1780844583.0852911
+    "updated_at": 1780932890.2732677
   },
   "search:spring-cloud-gateway-performance:spring cloud gateway performan_ex": {
     "content": "- **Latest Version**: Spring Cloud Gateway 3.2.0\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Target URI\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate (e.g., Path=/example)\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter (e.g., RewritePath=/example/(?<segment>.*), /$\\{segment})",
     "source": "code_example",
-    "updated_at": 1780844585.452297
+    "updated_at": 1780932892.3863661
   },
   "search:spring-cloud-gateway-performance:high throughput with spring cl": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 4.2.9\n  - Spring Cloud Netflix: 4.2.5\n  - Spring Cloud Config: 4.2.8\n  - Spring Cloud Build: 4.2.6\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`\n  - `spring.cloud.gateway.routes[0].uri`\n  - `spring.cloud.gateway.routes[0].predicates[0]`\n  - `spring.cloud.gateway.filters[0].name`\n  - `spring.cloud.gateway.filters[0].args`\n\n- **Starter Dependency**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.cloud</groupId>\n      <artifactId>spring-cloud-starter-gateway</artifactId>\n  </dependency>\n  ```\n\n- **Build System Setup**:\n  - For Maven: `https://projects.spring.io/spring-cloud`\n  - For Gradle: `https://projects.spring.io/spring-cloud`",
     "source": "web_search",
-    "updated_at": 1780844588.1738555
+    "updated_at": 1780932894.618305
   },
   "search:spring-cloud-gateway-performance:high throughput with spring cl_ex": {
     "content": "- **Latest Version**: Spring Boot 3.x, Spring Cloud Gateway 2024\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id=example_route`\n  - `spring.cloud.gateway.routes[0].uri=http://localhost:8081`\n  - `spring.cloud.gateway.routes[0].predicates[0]=Path=/example/**`\n  - `spring.cloud.gateway.filters[0]=RewritePath=/example/(?<segment>.*), /$\\{segment}`\n- **Dependencies**:\n  ```xml\n  <dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-webflux</artifactId>\n  </dependency>\n  <dependency>\n    <groupId>org.springframework.cloud</groupId>\n    <artifactId>spring-cloud-starter-gateway</artifactId>\n  </dependency>\n  ```\n- **Security**:\n  - Use Spring Security for securing the API Gateway.\n- **Rate Limiting**:\n  - Configure rate limiting using `RequestRateLimiter` filter.",
     "source": "code_example",
-    "updated_at": 1780844590.617365
+    "updated_at": 1780932896.6559722
   },
   "search:spring-cloud-gateway-performance:optimizing api gateways in a m": {
     "content": "- **CLI Commands**: Use `kubectl apply -f <filename>.yaml` to deploy API Gateway configurations.\n- **Latest Versions**: Ensure using the latest version of your API gateway software for optimal performance and security, e.g., Kong 2.6.0 or Envoy 1.23.1.\n- **Key Config Options**:\n  - `upstream`: Define the backend services to which requests are forwarded.\n  - `rate-limiting`: Configure rate limits to prevent abuse.\n  - `security`: Implement authentication and authorization mechanisms like JWT, OAuth.\n  - `logging`: Set up logging for request and response details.\n  - `caching`: Enable caching to reduce latency and load on backend services.",
     "source": "web_search",
-    "updated_at": 1780844593.0055766
+    "updated_at": 1780932898.6087499
   },
   "search:spring-cloud-gateway-performance:optimizing api gateways in a m_ex": {
     "content": "- **CLI Commands**: Use `kubectl` for managing Kubernetes resources.\n- **Latest Versions**: Ensure using the latest stable version of your API Gateway software, e.g., AWS API Gateway, Azure API Management, or Kong.\n- **Key Config Options**:\n  - Routing rules based on request paths.\n  - Load balancing across microservices.\n  - Security configurations like authentication and authorization.\n  - Rate limiting to prevent abuse.",
     "source": "code_example",
-    "updated_at": 1780844595.16574
+    "updated_at": 1780932900.7756093
   }
 }

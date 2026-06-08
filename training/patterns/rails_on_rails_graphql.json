@@ -2,21 +2,21 @@
   "search:rails-on-rails-graphql:ruby on rails graphql api deve": {
     "content": "- **CLI Commands**:\n  - `rails new my_graphql_api --api`\n  - `bundle add graphql-ruby`\n  - `rails generate graphql:install`\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - GraphQL-Ruby: 2.14.x\n\n- **Key Config Options**:\n  - In `config/initializers/graphql.rb`, configure the schema and authentication.\n  - Use Devise for user authentication by adding `gem 'devise'` and running migrations.\n  - Configure database settings in `config/database.yml`.",
     "source": "web_search",
-    "updated_at": 1780844399.7014494
+    "updated_at": 1780932681.7891407
   },
   "search:rails-on-rails-graphql:ruby on rails graphql api deve_ex": {
     "content": "- **CLI Commands**:\n  - `rails new my_graphql_api --api`: Creates a new Rails API application.\n  - `bundle add graphql-ruby graphql-devise graphql-client`: Installs GraphQL and related gems.\n\n- **Latest Versions**:\n  - Ruby: 3.2.0 (as of October 2023)\n  - Rails: 7.0.6 (as of October 2023)\n  - GraphQL-Ruby: 2.14.0 (as of October 2023)\n\n- **Key Config Options**:\n  - `config/initializers/graphql.rb`: Configure GraphQL schema and types.\n  - `config/routes.rb`: Define the API routes for GraphQL.\n  - `app/controllers/application_controller.rb`: Ensure authentication is handled properly.\n  - `.env` or `config/application.yml`: Store environment-specific variables like database credentials.",
     "source": "code_example",
-    "updated_at": 1780844401.4112895
+    "updated_at": 1780932683.8799353
   },
   "search:rails-on-rails-graphql:graphql with ruby on rails bes": {
     "content": "- Use `rails new` to create a new Rails project.\n- Install `graphql-ruby` gem using `gem install graphql`.\n- Configure GraphQL in your Rails application by creating a `GraphQL::Schema` class.\n- Define types and queries using the `Types` module.\n- Utilize lazy execution with `Lazy` objects for efficient data fetching.\n- Implement authorization checks using middleware or custom directives.\n- Use `rails-template(mattbrictson)` for best practices in TDD, security, deployment, and productivity.\n- Regularly update gems to their latest versions using `bundle update`.\n- Monitor application performance and security with tools like `rubocop` and `brakeman`.",
     "source": "web_search",
-    "updated_at": 1780844403.2518077
+    "updated_at": 1780932686.4619918
   },
   "search:rails-on-rails-graphql:graphql with ruby on rails bes_ex": {
     "content": "- **CLI Commands**:\n  - `rails new my_graphql_app --api`: Creates a new Rails API application.\n  - `bundle add graphql-rails`: Adds GraphQL to your Gemfile.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - GraphQL-Ruby: 2.13.x\n\n- **Key Config Options**:\n  - In `config/initializers/graphql.rb`, configure the schema and query types.\n  - Use `config.graphql.endpoint = '/graphql'` to set the GraphQL endpoint.\n  - Enable batching with `config.graphql.batching = true`.",
     "source": "code_example",
-    "updated_at": 1780844405.255041
+    "updated_at": 1780932688.920251
   }
 }

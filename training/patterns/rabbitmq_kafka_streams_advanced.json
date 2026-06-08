@@ -12,11 +12,11 @@
   "search:rabbitmq+kafka-streams-advanced:rabbitmq kafka streams perform": {
     "content": "- **Latest Versions**: \n  - Kafka: 4.0 KRaft GA\n  - RabbitMQ: 4.2\n\n- **Key Config Options**:\n  - **Kafka**: `num.partitions`, `replication.factor`, `message.max.bytes`\n  - **RabbitMQ**: `queue.durable`, `exchange.type`, `binding.key`\n\n- **CLI Commands**:\n  - Kafka Producer: \n    ```bash\n    kafka-console-producer.sh --broker-list localhost:9092 --topic test-topic\n    ```\n  - RabbitMQ Producer:\n    ```bash\n    rabbitmqadmin publish exchange=amq.default routing_key=test_queue payload=\"Hello, World!\"\n    ```\n\n- **Performance Benchmark**:\n  - Kafka: 1M msgs/s\n  - RabbitMQ: 50K msgs/s",
     "source": "web_search",
-    "updated_at": 1780844361.7247775
+    "updated_at": 1780932625.9400346
   },
   "search:rabbitmq+kafka-streams-advanced:rabbitmq kafka streams perform_ex": {
     "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=my_exchange type=direct`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n\n- **Latest Versions**:\n  - RabbitMQ Streams: 4.2\n  - Apache Kafka: 4.0 KRaft GA\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` settings for high-throughput, such as `vm_memory_high_watermark.relative`\n  - Kafka: `server.properties` configurations like `num.partitions`, `replication.factor`, and `message.max.bytes`",
     "source": "code_example",
-    "updated_at": 1780844363.3665
+    "updated_at": 1780932628.5923488
   }
 }
