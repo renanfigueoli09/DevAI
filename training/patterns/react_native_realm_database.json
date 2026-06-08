@@ -2,11 +2,11 @@
   "search:react-native+realm-database:react native realm database se": {
     "content": "- **CLI Commands**:\n  - `realm-cli init`: Initialize a new Realm project.\n  - `realm-cli sync`: Sync your app with the Realm database.\n\n- **Latest Versions**:\n  - Realm JS: v12.0.0\n  - React Native: v0.70.0\n\n- **Key Config Options**:\n  - Encryption Key: Securely encrypt your database using a unique key.\n  - MongoDB Realm Authentication: Implement secure authentication for your users.\n  - Environment Variables: Use `react-native-dotenv` or `react-native-config` to manage sensitive data like API keys securely.",
     "source": "web_search",
-    "updated_at": 1780842788.9845738
+    "updated_at": 1780923420.6436982
   },
   "search:react-native+realm-database:react native realm database se_ex": {
     "content": "- **Install Realm CLI**: `npm install -g realm-cli`\n- **Initialize a new Realm project**: `realm init --path my-realm-project`\n- **Latest Realm version**: Check [Realm GitHub releases](https://github.com/realm/realm-js/releases)\n- **Key config options**:\n  - `schema`: Define your data model.\n  - `sync`: Enable synchronization with a Realm Object Server.\n  - `encryptionKey`: Securely encrypt the database.\n- **CLI commands**:\n  - `realm migrate --path my-realm-project`\n  - `realm export --path my-realm-project`\n  - `realm import --path my-realm-project`",
     "source": "code_example",
-    "updated_at": 1780842791.1903546
+    "updated_at": 1780923422.2903712
   }
 }

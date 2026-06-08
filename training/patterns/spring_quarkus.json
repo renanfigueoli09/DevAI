@@ -2,21 +2,21 @@
   "search:spring+quarkus:spring boot quarkus microservi": {
     "content": "- **Spring Boot**:\n  - Latest Version: Spring Boot 3.x\n  - Key Config Options: `application.properties` or `application.yml`\n  - CLI Command: `mvn spring-boot:run`\n\n- **Quarkus**:\n  - Latest Version: Quarkus 2.10\n  - Key Config Options: `application.properties` or `application.yaml`\n  - CLI Command: `./mvnw compile quarkus:dev`\n\n- **Micronaut**:\n  - Latest Version: Micronaut 3.x\n  - Key Config Options: `application.yml`\n  - CLI Command: `./gradlew run`",
     "source": "web_search",
-    "updated_at": 1780842741.4111278
+    "updated_at": 1780923359.6348164
   },
   "search:spring+quarkus:spring boot quarkus microservi_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw quarkus:dev` for development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Quarkus: 3.10.x\n\n- **Key Config Options**:\n  - `quarkus.http.host`: Set the HTTP host.\n  - `quarkus.http.port`: Set the HTTP port.\n  - `quarkus.datasource.username`: Database username.\n  - `quarkus.datasource.password`: Database password.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for the database.",
     "source": "code_example",
-    "updated_at": 1780842743.7406027
+    "updated_at": 1780923361.764076
   },
   "search:spring+quarkus:spring boot quarkus performanc": {
     "content": "- **CLI Commands**:\n  - `mvn clean package` for building Spring Boot and Quarkus applications.\n  - `quarkus dev` for running Quarkus in development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0 (as of my last update)\n  - Quarkus: 2.14.0.Final (as of my last update)\n\n- **Key Config Options**:\n  - Spring Boot: `server.port` for setting the server port.\n  - Quarkus: `quarkus.http.port` for setting the HTTP port.\n\nFor detailed performance tuning, consider reviewing official documentation and community resources specific to each framework.",
     "source": "web_search",
-    "updated_at": 1780842745.7314386
+    "updated_at": 1780923363.814814
   },
   "search:spring+quarkus:spring boot quarkus performanc_ex": {
     "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:2.13.4.Final:create`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - Quarkus: 2.13.4.Final\n\n- **Key Config Options**:\n  - Spring Boot: `server.port`, `spring.datasource.url`\n  - Quarkus: `quarkus.http.port`, `quarkus.datasource.jdbc.url`",
     "source": "code_example",
-    "updated_at": 1780842747.4230943
+    "updated_at": 1780923366.005114
   }
 }

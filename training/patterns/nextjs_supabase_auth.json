@@ -2,11 +2,11 @@
   "search:nextjs+supabase-auth:next.js supabase jwt token man": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase JS Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n    ```plaintext\n    SUPABASE_URL=your-supabase-url\n    SUPABASE_ANON_KEY=your-anon-key\n    ```\n  - JWT Token Management in API routes or middleware\n    ```javascript\n    const { createClient } = require('@supabase/supabase-js');\n    const supabaseUrl = process.env.SUPABASE_URL;\n    const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;\n    const supabase = createClient(supabaseUrl, supabaseAnonKey);\n\n    export default async function handler(req, res) {\n      if (req.method === 'POST') {\n        const { token } = req.body;\n        const { data, error } = await supabase.auth.signInWithPassword({\n          email: 'user@example.com',\n          password: 'password'\n        });\n        if (error) {\n          return res.status(401).json({ error: error.message });\n        }\n        res.status(200).json(data);\n      }\n    }\n    ```",
     "source": "web_search",
-    "updated_at": 1780842838.607731
+    "updated_at": 1780923471.9941235
   },
   "search:nextjs+supabase-auth:next.js supabase jwt token man_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS Client: v2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your Supabase project.\n  - JWT Configuration in `next.config.js` for handling authentication tokens.\n  - Environment variables for sensitive information like API keys.",
     "source": "code_example",
-    "updated_at": 1780842840.4327638
+    "updated_at": 1780923473.7824676
   }
 }

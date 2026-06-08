@@ -2,16 +2,16 @@
   "search:golang-gorm-performance-tuning:gorm performance tuning techni": {
     "content": "- **CLI Commands**: Use `gorm.io/gorm` version 2.x.\n- **Key Config Options**:\n  - `AutoMigrate`: Automates schema migration.\n  - `Logger`: Customizes logging for better performance insights.\n  - `DryRun`: Enables dry run mode to simulate queries without executing them.\n  - `Preload`: Eager loads associations to reduce N+1 query issues.",
     "source": "web_search",
-    "updated_at": 1780843120.8829947
+    "updated_at": 1780923747.2576835
   },
   "search:golang-gorm-performance-tuning:gorm indexing and query optimi": {
     "content": "- Use `db.Index()` and `db.NotIndex()` to create or drop indexes.\n- Employ `db.Select(\"field\")` to select specific fields, reducing data transfer.\n- Utilize prepared statements with `db.Exec()` for performance improvements.\n- Implement batch operations using `db.CreateInBatches()`.\n- Apply index hints in GORM queries for optimizer guidance.\n- Monitor query performance with `db.Debug().Find(&result)`.\n- Ensure proper indexing on frequently queried fields.\n- Update to the latest GORM version for bug fixes and performance enhancements.",
     "source": "web_search",
-    "updated_at": 1780843122.8933887
+    "updated_at": 1780923749.7543595
   },
   "search:golang-gorm-performance-tuning:gorm indexing and query optimi_ex": {
     "content": "- **CLI Commands**: Use `gorm migrate` to create tables and indexes.\n- **Latest Versions**: Ensure using the latest GORM version for optimal performance and features.\n- **Key Config Options**:\n  - `index`: Define table indexes using tags like `index`, `uniqueIndex`.\n  - `class`: Specify index class (e.g., BTREE, HASH).\n  - `type`: Set index type (e.g., B-Tree, Hash).\n  - `w`: Weight for the index.\n- **Query Optimization**:\n  - Select specific fields to reduce data transfer.\n  - Use prepared statements for repeated queries.\n  - Leverage GORM's hooks and scopes for cleaner code.",
     "source": "code_example",
-    "updated_at": 1780843124.7265058
+    "updated_at": 1780923752.4196186
   }
 }

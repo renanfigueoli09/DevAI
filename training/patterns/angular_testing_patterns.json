@@ -2,21 +2,21 @@
   "search:angular+testing-patterns:angular testing best practices": {
     "content": "- **CLI Commands**:\n  - `ng test`: Runs unit tests.\n  - `ng e2e`: Runs end-to-end tests.\n  - `ng build --prod`: Builds the app for production.\n\n- **Latest Versions**:\n  - Angular CLI: v16.0.0\n  - Angular Core: v16.0.0\n\n- **Key Config Options**:\n  - `angular.json`: Configuration file for project settings.\n  - `tsconfig.json`: TypeScript configuration file.\n  - `karma.conf.js`: Karma test runner configuration.",
     "source": "web_search",
-    "updated_at": 1780842800.3531656
+    "updated_at": 1780923431.1461945
   },
   "search:angular+testing-patterns:angular testing best practices_ex": {
     "content": "- Use Angular CLI to generate tests (`ng generate component <component-name> --spec`)\n- Install Vitest and JSDOM for testing (`npm install vitest jsdom --save-dev`)\n- Configure `angular.json` with Vitest as the test runner:\n  ```json\n  \"test\": {\n    \"builder\": \"@angular-devkit/build-angular:karma\",\n    \"options\": {\n      \"polyfills\": [\n        \"zone.js\"\n      ],\n      \"main\": \"src/test.ts\",\n      \"tsConfig\": \"src/tsconfig.spec.json\",\n      \"karmaConfig\": \"src/karma.conf.js\",\n      \"assets\": [\n        \"src/favicon.ico\",\n        \"src/assets\"\n      ],\n      \"styles\": [\n        \"src/styles.css\"\n      ],\n      \"scripts\": []\n    },\n    \"configurations\": {\n      \"production\": {\n        \"fileReplacements\": [\n          {\n            \"replace\": \"src/environments/environment.ts\",\n            \"with\": \"src/environments/environment.prod.ts\"\n          }\n        ]\n      }\n    }\n  }\n  ```\n- Use Jest for mocking services:\n  ```typescript\n  import { TestBed } from '@angular/core/testing';\n  import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';\n  import { MyService } from './my.service';\n\n  describe('MyService', () => {\n    let service: MyService;\n    let httpMock: HttpTestingController;\n\n    beforeEach(() => {\n      TestBed.configureTestingModule({\n        imports: [HttpClientTestingModule],\n        providers: [MyService]\n      });\n      service = TestBed.inject(MyService);\n      httpMock = TestBed.inject(HttpTestingController);\n    });\n\n    afterEach(() => {\n      httpMock.verify();\n    });\n\n    it('should be created', () => {\n      expect(service).toBeTruthy();\n    });\n\n    it('should fetch data from the server', () => {\n      const mockData = { key: 'value' };\n      service.getData().subscribe(data => {\n        expect(data).toEqual(mockData);\n      });\n      const req = httpMock.expectOne('https://api.example.com/data');\n      expect(req.request.method).toBe('GET');\n      req.flush(mockData);\n    });\n  });\n  ```\n- Use `ng test` to run tests with Vitest.",
     "source": "code_example",
-    "updated_at": 1780842802.018321
+    "updated_at": 1780923433.0146651
   },
   "search:angular+testing-patterns:unit and integration testing i": {
     "content": "- Use `ng test` to run unit tests.\n- Use `ng e2e` for end-to-end testing.\n- Update Angular version using `ng update @angular/core`.\n- Configure `karma.conf.js` for Karma test runner settings.\n- Utilize `TestBed.configureTestingModule()` for setting up test environments.\n- Employ `HttpClientTestingModule` for mocking HTTP requests in unit tests.\n- Use `async` and `fakeAsync` for testing asynchronous code.\n- Implement `beforeEach`, `afterEach`, `it`, and `expect` for writing tests.\n- Ensure coverage by running `ng test --code-coverage`.",
     "source": "web_search",
-    "updated_at": 1780842804.1197143
+    "updated_at": 1780923435.2366643
   },
   "search:angular+testing-patterns:unit and integration testing i_ex": {
     "content": "- **CLI Commands**:\n  - `ng test`: Runs unit tests.\n  - `ng e2e`: Runs end-to-end tests.\n\n- **Latest Versions**:\n  - Angular CLI: Version 16.x\n  - Jasmine: Version 4.x\n  - Karma: Version 6.x\n\n- **Key Config Options**:\n  - `angular.json`: Configuration file for project settings.\n  - `karma.conf.js`: Configuration file for Karma test runner.\n  - `tsconfig.spec.json`: TypeScript configuration for tests.",
     "source": "code_example",
-    "updated_at": 1780842805.8817797
+    "updated_at": 1780923437.5876398
   }
 }

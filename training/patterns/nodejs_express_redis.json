@@ -2,11 +2,11 @@
   "search:nodejs-express-redis:node.js express redis caching ": {
     "content": "- Install Node.js and npm.\n- Install Redis locally or access an external server.\n- Use `npm install express redis axios` to install dependencies.\n- Configure Redis client in your Express app:\n  ```javascript\n  const redis = require('redis');\n  const client = redis.createClient({\n    url: 'redis://localhost:6379'\n  });\n  ```\n- Implement caching strategies:\n  - Basic Caching Strategy:\n    ```javascript\n    app.get('/data', async (req, res) => {\n      const data = await fetchDataFromAPI();\n      client.setex('data_key', 3600, JSON.stringify(data)); // Cache for 1 hour\n      res.json(data);\n    });\n    ```\n  - Middleware Caching:\n    ```javascript\n    app.use(async (req, res, next) => {\n      const data = await client.get('data_key');\n      if (data) {\n        return res.json(JSON.parse(data));\n      }\n      next();\n    });\n    ```\n- Monitor and optimize cache performance using Redis commands like `INFO`, `KEYS *`, and `FLUSHALL`.\n- Consider using Redis clusters for high availability and scalability.\n- Regularly update Node.js, Express, and Redis to the latest versions for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780842807.6148148
+    "updated_at": 1780923439.4742188
   },
   "search:nodejs-express-redis:node.js express redis caching _ex": {
     "content": "- **CLI Commands**:\n  - `npm install express redis`\n  - `redis-cli ping` to check Redis server connection\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: ^4.18.2\n  - Redis: ^4.6.3\n\n- **Key Config Options**:\n  - In `app.js`: \n    ```javascript\n    const express = require('express');\n    const redis = require('redis');\n    const app = express();\n    const client = redis.createClient();\n\n    // Connect to Redis\n    client.on('connect', () => {\n      console.log('Connected to Redis...');\n    });\n\n    // Middleware for caching\n    app.use((req, res, next) => {\n      const key = req.originalUrl;\n      client.get(key, (err, reply) => {\n        if (reply) {\n          res.send(reply);\n        } else {\n          res.on('finish', () => {\n            client.setex(key, 3600, res.body); // Cache for 1 hour\n          });\n          next();\n        }\n      });\n    });\n\n    app.get('/', (req, res) => {\n      res.send('Hello World!');\n    });\n\n    app.listen(3000, () => {\n      console.log('Server is running on port 3000');\n    });\n    ```",
     "source": "code_example",
-    "updated_at": 1780842809.3281364
+    "updated_at": 1780923441.2954538
   }
 }
