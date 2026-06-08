@@ -2,11 +2,11 @@
   "search:spring+kotlin-springdoc-openapi-advanced:spring kotlin springdoc openap": {
     "content": "- **Latest Version**: `springdoc-openapi` v1.8.0 supports Spring Boot 2.x and 1.x.\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Specifies the path for API documentation (default `/v3/api-docs`).\n  - `springdoc.swagger-ui.path`: Specifies the path for Swagger UI (default `/swagger-ui.html`).\n- **CLI Commands**:\n  - To add `springdoc-openapi-kotlin` to your project using Maven, run:\n    ```bash\n    mvn dependency:add -DgroupId=org.springdoc -DartifactId=springdoc-openapi-kotlin -Dversion=1.8.0\n    ```\n  - To enable Swagger UI for a Spring Boot application, add the following dependency in `pom.xml`:\n    ```xml\n    <dependency>\n        <groupId>io.swagger.ui</groupId>\n        <artifactId>swagger-ui-core</artifactId>\n        <version>3.54.2</version>\n    </dependency>\n    ```\n- **Integration with Spring Boot**:\n  - Ensure your `pom.xml` includes the necessary dependencies for Spring Boot and OpenAPI.\n  - Configure properties in `application.properties` or `application.yml` to customize paths and other settings.",
     "source": "web_search",
-    "updated_at": 1780922507.5555835
+    "updated_at": 1780930072.3876922
   },
   "search:spring+kotlin-springdoc-openapi-advanced:spring kotlin springdoc openap_ex": {
     "content": "- **Latest Version**: `org.springdoc:springdoc-openapi-starter-webmvc-api:2.0.3`\n- **CLI Command**:\n  ```bash\n  mvn dependency:add -DgroupId=org.springdoc -DartifactId=springdoc-openapi-starter-webmvc-api -Dversion=2.0.3\n  ```\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Custom path for OpenAPI documentation in JSON format.\n    ```yaml\n    springdoc:\n      api-docs:\n        path: /custom/api-docs\n    ```\n  - `springdoc.swagger-ui.path`: Custom path for Swagger UI.\n    ```yaml\n    springdoc:\n      swagger-ui:\n        path: /custom/swagger-ui.html\n    ```",
     "source": "code_example",
-    "updated_at": 1780922510.3703566
+    "updated_at": 1780930074.6450531
   }
 }

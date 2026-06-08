@@ -2,21 +2,21 @@
   "search:spring-data-jpa-advanced-querying:spring data jpa advanced query": {
     "content": "- Use `@Query` annotation for custom JPQL or native SQL queries.\n- Employ method naming conventions to derive query methods in repositories.\n- Leverage Specifications for complex, reusable query logic.\n- Utilize Projections to return specific fields from entities.\n- Configure `Pageable` and `Sort` parameters for pagination and sorting.\n- Use `@EnableJpaRepositories` to specify custom repository interfaces.\n- Ensure database schema is up-to-date with entity mappings.\n- Check Spring Data JPA documentation for the latest features and best practices.",
     "source": "web_search",
-    "updated_at": 1780922123.1912768
+    "updated_at": 1780929699.3480687
   },
   "search:spring-data-jpa-advanced-querying:spring data jpa advanced query_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 3.2.0.RELEASE\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect.",
     "source": "code_example",
-    "updated_at": 1780922124.556904
+    "updated_at": 1780929701.3120418
   },
   "search:spring-data-jpa-advanced-querying:spring data jpa criteria api 2": {
     "content": "- Use `spring-boot-starter-data-jpa` in your `pom.xml` or `build.gradle`.\n- Ensure JPA provider like Hibernate is included.\n- Utilize `@EnableJpaRepositories` to specify repository packages if necessary.\n- For dynamic queries, use `CriteriaBuilder`, `CriteriaQuery`, and `Root` from `javax.persistence.criteria`.\n- Example of creating a specification:\n  ```java\n  public Specification<MyEntity> hasName(String name) {\n      return new Specification<MyEntity>() {\n          @Override\n          public Predicate toPredicate(Root<MyEntity> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {\n              return criteriaBuilder.equal(root.get(\"name\"), name);\n          }\n      };\n  }\n  ```\n- Apply specifications in repository methods:\n  ```java\n  List<MyEntity> findByName(String name);\n  ```\n- For complex queries, combine multiple specifications using `Specification.where()` and `.and()`.\n- Ensure your entity classes are correctly mapped with JPA annotations.\n- Check the latest Spring Data JPA version on [Maven Central](https://search.maven.org/artifact/org.springframework.data/spring-data-jpa).\n- Use IDE features like code completion for `CriteriaBuilder` methods to avoid errors.",
     "source": "web_search",
-    "updated_at": 1780922126.5635417
+    "updated_at": 1780929703.2314453
   },
   "search:spring-data-jpa-advanced-querying:spring data jpa criteria api 2_ex": {
     "content": "- **CLI Commands**: Not applicable in this context.\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.x\n  - Hibernate ORM: 6.2.x\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `create`, `update`, `none`).\n  - `spring.jpa.show-sql`: Enables SQL logging for debugging.\n  - `spring.jpa.properties.hibernate.dialect`: Specifies the database dialect.",
     "source": "code_example",
-    "updated_at": 1780922128.4400434
+    "updated_at": 1780929705.0970728
   }
 }
