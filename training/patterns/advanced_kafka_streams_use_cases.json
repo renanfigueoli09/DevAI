@@ -1,0 +1,32 @@
+{
+  "search:Advanced Kafka Streams Use Cases:kafka streams use cases": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of broker addresses.\n  - `key.deserializer`: Deserializer for keys in messages.\n  - `value.deserializer`: Deserializer for values in messages.\n  - `auto.offset.reset`: Strategy to reset offset on startup (e.g., earliest, latest).",
+    "source": "web_search",
+    "updated_at": 1780945052.3285692
+  },
+  "search:Advanced Kafka Streams Use Cases:kafka streams use cases_ex": {
+    "content": "- Use `git clone https://github.com/confluentinc/kafka-streams-examples.git` to get the latest examples.\n- Ensure Kafka and Kafka Streams are up-to-date by checking their official documentation for the latest version.\n- Key config options include:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `application.id`: Unique identifier for the application.\n  - `default.key.serde` and `default.value.serde`: Serdes for keys and values.\n- Use `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1` to create a topic.\n- For running examples, use commands like `mvn clean package exec:java -Dexec.mainClass=\"com.example.StreamsExample\"` from the example directory.",
+    "source": "code_example",
+    "updated_at": 1780945059.035831
+  },
+  "search:Advanced Kafka Streams Use Cases:stream processing kafka": {
+    "content": "- **Latest Version**: Kafka Streams is part of Apache Kafka, which has multiple releases. As of my last update in October 2023, the latest version is Kafka 3.4.1.\n  \n- **CLI Commands**:\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topic_name> --from-beginning`\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `key.deserializer`: Deserializer for key data.\n  - `value.deserializer`: Deserializer for value data.\n  - `auto.offset.reset`: Controls the starting offset if no initial offset is found or an existing offset does not exist.\n  - `enable.auto.commit`: If true, enables auto commit of offsets.\n\n- **Python Libraries**:\n  - Use `confluent_kafka` library for Kafka Streams in Python. Install via pip: `pip install confluent-kafka`.\n\n- **Kafka Streams API**:\n  - Use the Kafka Streams API to build stream processing applications. The API provides high-level abstractions for building complex data pipelines.\n\n- **Fault Tolerance**:\n  - Kafka Streams automatically handles fault tolerance by maintaining state across multiple instances and recovering from failures.\n\n- **Data Parallelism**:\n  - Kafka Streams leverages Kafka's own capabilities for parallel processing, allowing you to scale your stream processing applications horizontally.",
+    "source": "web_search",
+    "updated_at": 1780945070.0811613
+  },
+  "search:Advanced Kafka Streams Use Cases:stream processing kafka_ex": {
+    "content": "- **CLI Commands**: `kafka-topics --bootstrap-server <broker> --create --topic <topic-name>`\n- **Latest Versions**: Kafka Streams 3.4.0, Confluent Platform 7.2.0\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for what to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server.",
+    "source": "code_example",
+    "updated_at": 1780945075.8667324
+  },
+  "search:Advanced Kafka Streams Use Cases:real-time data processing": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server <broker_address> --replication-factor <replication_factor> --partitions <num_partitions>`\n  - `kafka-console-producer.sh --broker-list <broker_address> --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server <broker_address> --topic <topic_name> --from-beginning`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Apache Flink: 1.15.2\n  - Redis: 7.0.8\n  - Apache Ignite: 2.12.0\n\n- **Key Config Options**:\n  - Kafka Producer: `bootstrap.servers`, `key.serializer`, `value.serializer`\n  - Kafka Consumer: `bootstrap.servers`, `group.id`, `auto.offset.reset`\n  - Flink: `parallelism.default`, `state.backend`, `taskmanager.memory.process.size`\n  - Redis: `maxmemory`, `maxmemory-policy`, `appendonly`",
+    "source": "web_search",
+    "updated_at": 1780945085.539363
+  },
+  "search:Advanced Kafka Streams Use Cases:real-time data processing_ex": {
+    "content": "- Use Kafka for real-time data ingestion.\n- Employ Apache Spark for complex data processing and analysis.\n- For Node.js, use streams for real-time data transformation.\n- Install latest Kafka version using `brew install kafka` or `apt-get install kafka`.\n- Configure Kafka with `server.properties`, setting `listeners=PLAINTEXT://:9092` and `advertised.listeners=PLAINTEXT://localhost:9092`.\n- Use Spark Streaming for real-time data processing, ensuring Spark is installed via `brew install apache-spark` or `apt-get install apache-spark`.\n- Configure Spark with `spark-defaults.conf`, setting `spark.streaming.kafka.consumer.group.id=myGroup` and `spark.streaming.kafka.checkpointDir=/path/to/checkpoint/dir`.\n- For Node.js streams, use `process.stdin.pipe(uppercaseTransform).pipe(process.stdout)` for real-time data transformation.\n- Monitor Kafka topics using `kafka-topics.sh --bootstrap-server localhost:9092 --list`.\n- Monitor Spark jobs using Spark UI accessible at `http://localhost:4040`.",
+    "source": "code_example",
+    "updated_at": 1780945092.645487
+  }
+}

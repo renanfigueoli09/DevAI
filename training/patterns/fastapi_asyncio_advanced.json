@@ -2,26 +2,26 @@
   "search:fastapi+asyncio-advanced:fastapi asyncio advanced concu": {
     "content": "- Use `uvicorn` to run FastAPI applications with async capabilities.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- Configure ASGI concurrency in FastAPI by setting the `workers` parameter in your Uvicorn command, e.g., `uvicorn main:app --workers 4`.\n- For advanced concurrency patterns, consider using AnyIO or Trio alongside FastAPI.\n- Benchmark async patterns to identify performance bottlenecks and optimize accordingly.\n- Explore FastAPI's background tasks for asynchronous ML inference without blocking the main application thread.\n- Refer to FastAPI documentation for ASGI concurrency details: [FastAPI ASGI Concurrency](https://fastapi.tiangolo.com/advanced/asgi-concurrency/)\n- Utilize asyncio whitepapers and MLPerf 2025 reports for further learning on advanced async patterns.",
     "source": "web_search",
-    "updated_at": 1780934036.3202899
+    "updated_at": 1780942704.2866411
   },
   "search:fastapi+asyncio-advanced:fastapi asyncio advanced concu_ex": {
     "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For advanced concurrency, use AnyIO or Trio with FastAPI.\n- Latest versions:\n  - FastAPI: 0.95.1\n  - Uvicorn: 10.6.0\n  - AnyIO: 3.4.0\n  - Trio: 0.20.0\n- Key config options in `uvicorn` include:\n  - `--host`: Set the host to listen on (e.g., `--host 0.0.0.0`).\n  - `--port`: Set the port number (e.g., `--port 8000`).\n  - `--reload`: Enable auto-reload during development.\n- Use async endpoints in FastAPI by defining functions with `async def`.\n- For optimal performance, consider using asynchronous database connections and background tasks.",
     "source": "code_example",
-    "updated_at": 1780934038.6053562
+    "updated_at": 1780942706.2991183
   },
   "search:fastapi+asyncio-advanced:fastapi asyncio performance op": {
     "content": "- Use FastAPI version 0.97.0 or later.\n- Implement async/await patterns for non-blocking operations.\n- Enable caching mechanisms like Redis or Memcached to reduce database load.\n- Optimize database queries using SQLAlchemy's ORM capabilities.\n- Configure ASGI server settings, e.g., `uvicorn` with `--limit-max-requests-per-connection 100`.\n- Use environment variables for configuration management.\n- Implement rate limiting to prevent abuse and improve performance.\n- Monitor application metrics using tools like Prometheus and Grafana.\n- Regularly update dependencies to benefit from security patches and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780934040.8482196
+    "updated_at": 1780942708.6789641
   },
   "search:fastapi+asyncio-advanced:fastapi asyncio error handling": {
     "content": "- Use `uvicorn` for running FastAPI applications.\n- Update to the latest version of FastAPI using pip: `pip install fastapi --upgrade`.\n- Implement error handling with `try-except` blocks in your endpoints.\n- Utilize dependency injection for managing dependencies efficiently.\n- Configure logging using Python's built-in `logging` module.\n- Use `asyncio.sleep()` for simulating I/O operations without blocking the event loop.\n- Monitor application performance with tools like `fastapi-middleware`.\n- Implement rate limiting to prevent abuse and ensure fair usage.\n- Regularly update your FastAPI app dependencies to benefit from security patches.",
     "source": "web_search",
-    "updated_at": 1780934042.930645
+    "updated_at": 1780942711.2102497
   },
   "search:fastapi+asyncio-advanced:fastapi asyncio error handling_ex": {
     "content": "- Use `uvicorn` for running FastAPI applications.\n- Install FastAPI using pip: `pip install fastapi`.\n- Utilize ASGI servers like `uvicorn` or `daphne` for deployment.\n- Implement error handling with Python's exception handling mechanisms.\n- Configure logging to capture application errors and exceptions.\n- Use middleware for cross-cutting concerns such as authentication and rate limiting.\n- Optimize performance by using async/await syntax where applicable.\n- Ensure your code is type-checked using tools like `mypy`.\n- Deploy your FastAPI app in a containerized environment using Docker.",
     "source": "code_example",
-    "updated_at": 1780934045.068335
+    "updated_at": 1780942713.1718326
   }
 }

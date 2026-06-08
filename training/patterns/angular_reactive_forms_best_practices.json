@@ -1,0 +1,22 @@
+{
+  "search:angular-reactive-forms-best-practices:angular reactive forms best pr": {
+    "content": "- Use `ng generate form` to create new forms.\n- Update Angular to the latest version for the best features and security patches.\n- Configure form controls using `formControlName` in your template.\n- Implement validation rules with `Validators.required`, `Validators.email`, etc., directly in your component.\n- Utilize `FormArray` for dynamic form arrays.\n- Employ `FormGroup` to group related form controls together.\n- Use `patchValue` and `setValue` to update form values programmatically.\n- Enable asynchronous validators using `asyncValidator`.\n- Optimize performance by disabling unnecessary form control updates.",
+    "source": "web_search",
+    "updated_at": 1780945464.444292
+  },
+  "search:angular-reactive-forms-best-practices:angular reactive forms best pr_ex": {
+    "content": "- Use `ng generate form` to create new reactive forms.\n- Update Angular to the latest version for best practices and security patches.\n- Employ `FormBuilder` for cleaner code and easier form management.\n- Utilize `FormGroup` and `FormControl` for nested form structures.\n- Implement dynamic forms using `*ngFor` with `FormArray`.\n- Enable validation through `Validators` in `FormControl`, `FormGroup`, or `FormArray`.\n- Use `patchValue()` to update form values without triggering validations.\n- Optimize performance by disabling unnecessary form controls.\n- Employ `async` pipe for asynchronous data binding in forms.",
+    "source": "code_example",
+    "updated_at": 1780945471.6197722
+  },
+  "search:angular-reactive-forms-best-practices:angular reactive forms validat": {
+    "content": "- **CLI Commands**:\n  - `ng generate form <form-name>`: Generates a new reactive form.\n  - `ng generate service <service-name>`: Creates a service for handling form data.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - `formControlName`: Binds a control to a specific form control in the form group.\n  - `Validators`: Built-in validators like `required`, `email`, `minLength`.\n  - `AsyncValidators`: Asynchronous validators for complex validation logic.\n\n- **Optimization Tips**:\n  - Use `async` pipe for displaying validation errors asynchronously.\n  - Implement lazy validation to reduce unnecessary checks.",
+    "source": "web_search",
+    "updated_at": 1780945481.0901258
+  },
+  "search:angular-reactive-forms-best-practices:angular reactive forms validat_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate form <form-name>`: Generates a new reactive form.\n  - `ng generate service <service-name>`: Creates a service to manage form data.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - `formControlName`: Binds a control in the component class to a DOM element.\n  - `Validators.required`: Ensures the field is not empty.\n  - `Validators.email`: Validates the input as an email address.\n  - `asyncValidators`: Asynchronously validates the form control.",
+    "source": "code_example",
+    "updated_at": 1780945487.9627407
+  }
+}

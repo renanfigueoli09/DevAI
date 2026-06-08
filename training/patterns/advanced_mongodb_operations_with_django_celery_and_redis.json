@@ -2,6 +2,6 @@
   "search:Advanced MongoDB Operations with Django Celery and Redis:django celery redis advanced": {
     "content": "- **Install Celery**: `pip install celery`\n- **Install Redis**: `brew install redis` or use Docker\n- **Configure Django**:\n  - Add `'celery_app'` to `INSTALLED_APPS`\n  - Configure `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n  - Configure `CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'`\n- **Create Celery App**: \n  ```python\n  # celery_app/__init__.py\n  from __future__ import absolute_import, unicode_literals\n  import os\n  from celery import Celery\n\n  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')\n\n  app = Celery('your_project')\n  app.config_from_object('django.conf:settings', namespace='CELERY')\n  app.autodiscover_tasks()\n  ```\n- **Define Tasks**:\n  ```python\n  # tasks.py in one of your apps\n  from celery import shared_task\n\n  @shared_task\n  def send_email_task(subject, message, to_email):\n      # Email sending logic here\n      pass\n  ```\n- **Run Celery Worker**: `celery -A your_project worker --loglevel=info`\n- **Run Redis Server**: `redis-server` or use Docker\n- **Enqueue Tasks**:\n  ```python\n  from .tasks import send_email_task\n\n  send_email_task.delay('Subject', 'Message', 'example@example.com')\n  ```\n- **Latest Versions**:\n  - Celery: Check [Celery GitHub](https://github.com/celery/celery)\n  - Redis: Check [Redis Downloads](https://redis.io/download)",
     "source": "web_search",
-    "updated_at": 1780932695.1534657
+    "updated_at": 1780941437.5096197
   }
 }

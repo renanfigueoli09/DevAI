@@ -2,11 +2,11 @@
   "search:python-django-orm:django orm performance tuning ": {
     "content": "- Use Django's `select_related` and `prefetch_related` to avoid N+1 queries.\n- Utilize the latest version of Django for performance improvements.\n- Employ `annotate()` and `aggregate()` for complex query optimizations.\n- Enable database indexing on frequently queried fields.\n- Monitor and analyze SQL queries using Django Debug Toolbar.\n- Use `F()` expressions for in-database calculations.\n- Optimize QuerySets by reducing complexity and filtering early.\n- Regularly update third-party packages to benefit from performance enhancements.",
     "source": "web_search",
-    "updated_at": 1780932582.4257147
+    "updated_at": 1780941331.1264975
   },
   "search:python-django-orm:django orm performance tuning _ex": {
     "content": "- Use Django Debug Toolbar to identify N+1 queries.\n- Apply `select_related` and `prefetch_related` for efficient database joins.\n- Utilize `only()` and `defer()` to reduce the amount of data fetched from the database.\n- Ensure you are using the latest version of Django ORM (as of my last update, it's 4.2).\n- Regularly review and optimize your queries using Django's query profiling tools.\n- Consider using caching mechanisms like Redis or Memcached for frequently accessed data.\n- Implement batch processing techniques to handle large datasets efficiently.\n- Use `bulk_create()` and `bulk_update()` for bulk operations instead of individual save/update calls.\n- Optimize database indexes on fields that are frequently queried.",
     "source": "code_example",
-    "updated_at": 1780932584.8396661
+    "updated_at": 1780941333.3855567
   }
 }

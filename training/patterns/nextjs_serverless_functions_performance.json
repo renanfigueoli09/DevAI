@@ -2,21 +2,21 @@
   "search:nextjs+serverless-functions-performance:next.js serverless functions p": {
     "content": "- **CLI Commands**:\n  - `next build`: Optimizes and prepares your application for production.\n  - `next start`: Starts the Next.js server in production mode.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Next.js to benefit from performance improvements and bug fixes. Check [Next.js GitHub](https://github.com/vercel/next.js) for the latest release.\n\n- **Key Config Options**:\n  - `serverRuntimeConfig`: For sensitive environment variables that should not be exposed on the client.\n  - `publicRuntimeConfig`: For public environment variables accessible on both server and client.\n  - `images.loader`: Specifies the image loader to use (e.g., `next/image`).\n  - `images.path`: The base path for images if using a custom domain.\n\n- **Performance Tips**:\n  - Use `next/image` for optimized image delivery.\n  - Implement lazy loading with `loading=\"lazy\"` in `<Image>` tags.\n  - Minimize the number of HTTP requests by combining CSS and JavaScript files.\n  - Enable server-side rendering (SSR) or static site generation (SSG) for better performance.",
     "source": "web_search",
-    "updated_at": 1780933085.8052697
+    "updated_at": 1780941808.6230748
   },
   "search:nextjs+serverless-functions-performance:next.js serverless functions p_ex": {
     "content": "- **CLI Commands**: Use `next dev` for development and `next build` followed by `next start` for production.\n- **Latest Versions**: Ensure you are using the latest version of Next.js, which can be checked via `npm list next`.\n- **Key Config Options**:\n  - `next.config.js`: Configure settings like `output: 'standalone'` for better performance in production.\n  - `serverRuntimeConfig` and `publicRuntimeConfig`: Securely pass environment variables to your serverless functions.\n  - `images`: Optimize image loading with `domains`, `loader`, and `unoptimized`.\n- **Performance Tips**:\n  - Use `getStaticProps` for static generation when possible.\n  - Implement `getServerSideProps` for dynamic data fetching on each request.\n  - Utilize `next/image` for optimized images.\n  - Minimize HTTP requests by combining CSS and JavaScript files.",
     "source": "code_example",
-    "updated_at": 1780933088.412232
+    "updated_at": 1780941811.0266814
   },
   "search:nextjs+serverless-functions-performance:next.js serverless functions e": {
     "content": "- **CLI Commands**: Use `next dev` for development, `next build` for building the project, and `next start` to start the server.\n- **Latest Versions**: Ensure you are using the latest version of Next.js by running `npm install next@latest`.\n- **Key Config Options**:\n  - `serverRuntimeConfig`: For sensitive environment variables that should not be exposed on the client side.\n  - `publicRuntimeConfig`: For public environment variables accessible on both server and client sides.\n  - `rewrites`, `redirects`, `headers`: For custom routing and headers in Next.js.",
     "source": "web_search",
-    "updated_at": 1780933093.6031015
+    "updated_at": 1780941813.4710329
   },
   "search:nextjs+serverless-functions-performance:next.js serverless functions e_ex": {
     "content": "- **CLI Commands**: Use `npm install -g serverless` to install Serverless Framework globally.\n- **Latest Version**: Check for the latest version using `serverless --version`.\n- **Key Config Options**:\n  - `service`: Define your service name in `serverless.yml`.\n  - `provider`: Specify the cloud provider (e.g., `aws`, `azure`).\n  - `functions`: Define your serverless functions.\n  - `plugins`: Add plugins for additional functionality.",
     "source": "code_example",
-    "updated_at": 1780933096.6064353
+    "updated_at": 1780941815.4273436
   }
 }

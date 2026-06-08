@@ -2,31 +2,31 @@
   "search:python-django-rest-auth:django rest framework authenti": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.2\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK = {\n      'DEFAULT_AUTHENTICATION_CLASSES': [\n          'rest_framework.authentication.SessionAuthentication',\n          'rest_framework.authentication.TokenAuthentication',\n      ],\n  }`\n  - `INSTALLED_APPS = [\n      ...\n      'rest_framework',\n      'rest_framework.authtoken',  # For Token Authentication\n  ]`",
     "source": "web_search",
-    "updated_at": 1780933015.5931046
+    "updated_at": 1780941750.3622177
   },
   "search:python-django-rest-auth:django rest framework authenti_ex": {
     "content": "- Use `pip install djangorestframework` to install the latest version of Django REST Framework.\n- For JWT authentication, use `pip install djangorestframework-simplejwt`.\n- In your settings.py, add `'rest_framework'` and `'rest_framework_simplejwt'` to `INSTALLED_APPS`.\n- Configure JWT in settings.py with options like `SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),\n    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),\n}`.\n- Use `python manage.py migrate` to apply migrations for the authentication system.\n- Implement custom user models by extending `AbstractUser` or `AbstractBaseUser`.\n- Apply authentication in your views using decorators like `@api_view(['GET'])` and `@authentication_classes([JWTAuthentication])`.\n- Test your API endpoints with tools like Postman or curl, including headers for JWT tokens.",
     "source": "code_example",
-    "updated_at": 1780933018.350276
+    "updated_at": 1780941752.6685278
   },
   "search:python-django-rest-auth:django rest framework security": {
     "content": "- Use Django REST Framework version 3.14 or later.\n- Implement authentication using `TokenAuthentication`, `SessionAuthentication`, or `BasicAuthentication`.\n- Enable HTTPS to secure data transmission.\n- Set up CSRF protection with `django.middleware.csrf.CsrfViewMiddleware`.\n- Configure permissions in your views using `IsAuthenticated`, `IsAdminUser`, etc.\n- Use Django's built-in user model for authentication and authorization.\n- Regularly update dependencies and apply security patches.\n- Implement rate limiting to prevent abuse.\n- Use Django's `@api_view` decorator for API endpoints.",
     "source": "web_search",
-    "updated_at": 1780933020.9101315
+    "updated_at": 1780941754.6875393
   },
   "search:python-django-rest-auth:django rest framework security_ex": {
     "content": "- **CLI Commands**:\n  - `python manage.py test --settings=your_project.settings.test`\n  - `pip install django-rest-framework==3.14.2`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK = {\n      'DEFAULT_AUTHENTICATION_CLASSES': [\n          'rest_framework.authentication.BasicAuthentication',\n          'rest_framework.authentication.SessionAuthentication',\n      ],\n      'DEFAULT_PERMISSION_CLASSES': [\n          'rest_framework.permissions.IsAuthenticated',\n      ],\n  }`\n  - `CORS_ORIGIN_ALLOW_ALL = True` (for development)\n  - `SECURE_SSL_REDIRECT = True`\n  - `SESSION_COOKIE_SECURE = True`\n  - `CSRF_COOKIE_SECURE = True`\n\n- **Testing**:\n  - Use Django's built-in testing framework.\n  - Install and use tools like `pytest-django` for more advanced testing.\n\n- **Security Best Practices**:\n  - Implement proper authentication and authorization mechanisms.\n  - Use HTTPS to secure data in transit.\n  - Regularly update dependencies and libraries.",
     "source": "code_example",
-    "updated_at": 1780933023.4525447
+    "updated_at": 1780941756.7716541
   },
   "search:python-django-rest-auth:django rest framework testing ": {
     "content": "- Use `python manage.py test` to run tests.\n- For DRF testing, use `APIClient` from `rest_framework.test`.\n- Ensure Django and DRF are up-to-date using pip:\n  ```bash\n  pip install --upgrade django djangorestframework\n  ```\n- Key config options in `settings.py` include:\n  - `INSTALLED_APPS`: Add `'rest_framework'`.\n  - `REST_FRAMEWORK`: Configure default settings like authentication, permissions, etc.\n- Use `pytest-django` for more advanced testing with fixtures and plugins.",
     "source": "web_search",
-    "updated_at": 1780933025.6369965
+    "updated_at": 1780941759.0164738
   },
   "search:python-django-rest-auth:django rest framework testing _ex": {
     "content": "- Use `pytest-django` for comprehensive Django testing.\n- Install `django-rest-testing` via pip: `pip install django-rest-testing`.\n- Utilize `APIClient` from `rest_framework.test` for making requests.\n- Employ `factory_boy` for creating test data efficiently.\n- Configure `settings.py` with `REST_FRAMEWORK` for API settings.\n- Run tests using `pytest` command.\n- Ensure coverage with `coverage run manage.py test`.\n- Use `DRF Test Utils` for advanced testing features.\n- Keep `django-rest-framework` and dependencies up-to-date.",
     "source": "code_example",
-    "updated_at": 1780933028.1042686
+    "updated_at": 1780941761.1194007
   }
 }

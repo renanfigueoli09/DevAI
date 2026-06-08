@@ -2,31 +2,31 @@
   "search:spring-data-jpa-batch:spring data jpa batch processi": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n  - MySQL Driver: 8.0.x\n  - Lombok: 1.18.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.use_sql_comments=false`",
     "source": "web_search",
-    "updated_at": 1780934206.2931647
+    "updated_at": 1780942868.348488
   },
   "search:spring-data-jpa-batch:spring data jpa batch processi_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Java 17\n  - Spring Data JPA 3.x\n  - MySQL Connector/J 8.0.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for schema management.\n  - `spring.batch.job.enabled`: Enable batch jobs.",
     "source": "code_example",
-    "updated_at": 1780934208.7147076
+    "updated_at": 1780942870.6915724
   },
   "search:spring-data-jpa-batch:batch processing with spring d": {
     "content": "- Use `spring-boot-starter-batch` for batch processing.\n- Configure batch in `application.properties` or `application.yml`.\n- Set `spring.batch.job.enabled=false` to disable default job execution.\n- Use `@EnableBatchProcessing` annotation in main class.\n- Implement `ItemReader`, `ItemProcessor`, and `ItemWriter` interfaces.\n- Use `JdbcBatchItemWriter` for batch inserts with Spring Data JPA.\n- Configure `batchSize` in writer properties.\n- Example:\n  ```java\n  @Bean\n  public JdbcBatchItemWriter<MyEntity> writer(DataSource dataSource) {\n      JdbcBatchItemWriter<MyEntity> writer = new JdbcBatchItemWriter<>();\n      writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>());\n      writer.setSql(\"INSERT INTO my_table (column1, column2) VALUES (:column1, :column2)\");\n      writer.setDataSource(dataSource);\n      return writer;\n  }\n  ```\n- Use `@StepScope` for step-specific beans.\n- Configure transaction management with `@Transactional`.\n- Monitor batch jobs using Spring Boot Actuator.",
     "source": "web_search",
-    "updated_at": 1780934211.769727
+    "updated_at": 1780942873.061819
   },
   "search:spring-data-jpa-batch:batch processing with spring d_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.1.0\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "code_example",
-    "updated_at": 1780934214.6584437
+    "updated_at": 1780942875.425471
   },
   "search:spring-data-jpa-batch:optimizing batch operations in": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.0.RELEASE\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `@Transactional` on repository methods for batch operations.\n  - `EntityManager.flush()` and `EntityManager.clear()` to manage persistence context.",
     "source": "web_search",
-    "updated_at": 1780934217.196792
+    "updated_at": 1780942877.764349
   },
   "search:spring-data-jpa-batch:optimizing batch operations in_ex": {
     "content": "- Use `@Transactional` annotation to manage transactions.\n- Set Hibernate properties like `hibernate.jdbc.batch_size` and `hibernate.order_inserts=true`, `hibernate.order_updates=true`.\n- Employ `EntityManager.flush()` and `EntityManager.clear()` strategically for batch operations.\n- Utilize Spring Data JPA's `saveAll()` method for batch inserts.\n- Configure `spring.jpa.properties.hibernate.dialect` to match your database.\n- Monitor performance with tools like JProfiler or VisualVM.\n- Adjust the number of threads in your application server if necessary.\n- Ensure proper indexing on columns used frequently in queries.",
     "source": "code_example",
-    "updated_at": 1780934220.5691245
+    "updated_at": 1780942879.8391538
   }
 }

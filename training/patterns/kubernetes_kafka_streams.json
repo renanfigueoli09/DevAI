@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-kafka-streams:kubernetes kafka streams integ": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f kafka-deployment.yaml`\n  - `helm install my-kafka bitnami/kafka`\n\n- **Latest Versions**:\n  - Kafka: 3.3.1\n  - Kubernetes: 1.24.0\n\n- **Key Config Options**:\n  - `replicas`: Number of Kafka brokers.\n  - `storageClass`: Storage class for Kafka data persistence.\n  - `resources`: CPU and memory limits/requests for each broker.",
+    "source": "web_search",
+    "updated_at": 1780945426.4841862
+  },
+  "search:kubernetes-kafka-streams:kubernetes kafka streams integ_ex": {
+    "content": "- **GitHub Repository**: kafka-examples/README.adoc at master - GitHub\n  - Confluent For Kubernetes deployment with ArgoCD.\n  - Easily install and sync Confluent Platform components.\n\n- **Medium Article**: Training a Machine Learning Model on a Kafka Stream - Medium\n  - Step-by-step approach for integrating Kafka streams and machine learning models.\n  - Practical code examples provided.\n\n- **GKE Deployment Guide**: Deploy Apache Kafka to GKE using Strimzi | Kubernetes Engine\n  - NAME: strimzi-operator\n  - NAMESPACE: kafka\n  - REVISION: 1\n  - UPDATED: 2023\n  - STATUS: READY\n  - CHART: strimzi-kafka-operator\n  - APP VERSION: latest\n\n- **CLI Commands**:\n  ```sh\n  # Install Strimzi Operator\n  kubectl create namespace kafka\n  helm repo add strimzi https://strimzi.io/charts\n  helm install my-cluster strimzi/strimzi-kafka-operator --namespace kafka\n\n  # Deploy Kafka Cluster\n  kubectl apply -f examples/kafka/kafka-persistent.yaml\n  ```\n\n- **Latest Versions**:\n  - Strimzi Operator: latest\n  - Confluent Platform: latest\n  - Apache Kafka: latest\n\n- **Key Config Options**:\n  - `replicas`: Number of broker instances.\n  - `storageClass`: Storage class for persistent storage.\n  - `resources`: CPU and memory limits and requests.",
+    "source": "code_example",
+    "updated_at": 1780945436.861075
+  },
+  "search:kubernetes-kafka-streams:kubernetes kafka streams perfo": {
+    "content": "- **Reduce Rebalance Downtime**: Use `rebalance.timeout.ms` and `session.timeout.ms` to optimize Kafka Streams rebalance times.\n- **KafkaStreams Error**: Ensure correct permissions for `/var/data/state-store`. Use `chmod -R 755 /var/data/state-store`.\n- **High-Availability Setup**: Utilize PersistentVolumes (PVs) and PersistentVolumeClaims (PVCs) for stateful storage.\n- **Kafka Streams Version**: Use the latest version, currently 3.1.0.\n- **Key Config Options**:\n  - `num.stream.threads`: Number of threads used by Kafka Streams application.\n  - `state.cleanup.delay.ms`: Delay before cleaning up old state store data.\n  - `application.id`: Unique identifier for the Kafka Streams application.\n- **CLI Commands**:\n  - `kubectl apply -f kafka-streams-deployment.yaml` to deploy a Kafka Streams app on Kubernetes.\n  - `kubectl get pods` to check the status of your Kafka Streams pods.\n  - `kubectl logs <pod-name>` to view logs for troubleshooting.",
+    "source": "web_search",
+    "updated_at": 1780945446.4499722
+  },
+  "search:kubernetes-kafka-streams:kubernetes kafka streams perfo_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources on Kubernetes.\n  - `kubectl get pods` to list all running pods.\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.1\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `auto.offset.reset`: Set to `earliest` or `latest` based on your needs.\n  - `max.poll.records`: Adjust the number of records processed per poll cycle.\n  - `rebalance.timeout.ms`: Increase this value if rebalance times are too short.",
+    "source": "code_example",
+    "updated_at": 1780945452.818239
+  }
+}

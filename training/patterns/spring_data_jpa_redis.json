@@ -2,16 +2,16 @@
   "search:spring-data-jpa-redis:spring data jpa redis integrat": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n  - Redis: 6.2.x\n\n- **Key Config Options**:\n  - `spring.redis.host`: Redis server host.\n  - `spring.redis.port`: Redis server port.\n  - `spring.data.jpa.properties.hibernate.cache.use_second_level_cache`: Enable second-level cache.\n  - `spring.data.jpa.properties.hibernate.cache.region.factory_class`: Specify the cache region factory class (e.g., `org.springframework.data.redis.cache.RedisCacheRegionFactory`).\n  - `spring.data.redis.repositories.enabled`: Enable Redis repositories.",
     "source": "web_search",
-    "updated_at": 1780932635.2112012
+    "updated_at": 1780941377.7283683
   },
   "search:spring-data-jpa-redis:spring data jpa redis caching ": {
     "content": "- Use `@EnableCaching` annotation in your configuration class to enable caching.\n- Configure `RedisCacheManager` bean for Redis caching:\n  ```java\n  @Bean\n  public RedisCacheManager cacheManager(RedisConnectionFactory connectionFactory) {\n      return RedisCacheManager.builder(connectionFactory)\n          .cacheDefaults(CacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofMinutes(10)))\n          .build();\n  }\n  ```\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations on your repository methods.\n- Ensure Redis is running and accessible from your application.\n- Update Spring Data JPA to version 2.7.x or later for the latest features and improvements.\n- Update Spring Data Redis to version 2.7.x or later for the latest features and improvements.\n- Key config options include `entryTtl` (time-to-live) for cache entries, `cacheDefaults` for default cache settings, and `RedisConnectionFactory` for connecting to Redis.",
     "source": "web_search",
-    "updated_at": 1780932637.3769932
+    "updated_at": 1780941380.0719218
   },
   "search:spring-data-jpa-redis:spring data jpa redis caching _ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Data JPA: 3.2.x\n  - Redis: 7.0.x\n\n- **Key Config Options**:\n  - `spring.cache.type=redis`\n  - `spring.redis.host=localhost`\n  - `spring.redis.port=6379`\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.springframework.boot.orm.jpa.hibernate.SpringCacheRegionFactory`",
     "source": "code_example",
-    "updated_at": 1780932639.5394847
+    "updated_at": 1780941382.170326
   }
 }

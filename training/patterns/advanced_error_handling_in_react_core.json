@@ -1,0 +1,32 @@
+{
+  "search:Advanced Error Handling in React + Core:react error handling": {
+    "content": "- Use `React.createErrorBoundary` to create an error boundary.\n- Implement the `componentDidCatch` lifecycle method in class components or use a functional component with `useEffect`.\n- Install and use `react-error-boundary` for easier error handling.\n- Update React to the latest version for better error handling features.\n- Configure your development environment to log errors effectively.\n- Use try-catch blocks within event handlers and async functions.\n- Implement global error handling using middleware or a custom hook.\n- Test error handling in different scenarios to ensure robustness.",
+    "source": "web_search",
+    "updated_at": 1780945172.381068
+  },
+  "search:Advanced Error Handling in React + Core:react error handling_ex": {
+    "content": "- Use `npm install react-error-boundary` to install the Error Boundary package.\n- Implement an error boundary component using `<ErrorBoundary>` from `react-error-boundary`.\n- Catch errors in child components by wrapping them with the error boundary.\n- Configure the error boundary to display a fallback UI when an error occurs.\n- Log errors using `onError` prop for further analysis.\n- Use `useEffect` to handle side effects and cleanup after errors.\n- For global error handling, consider using React's Context API or Redux.",
+    "source": "code_example",
+    "updated_at": 1780945179.092245
+  },
+  "search:Advanced Error Handling in React + Core:core-js error handling": {
+    "content": "- Use `structuredClone()` or `postMessage()` to clone or copy errors between Workers.\n- For MVC in ASP.NET Core, apply HTTP verb attributes like `[HttpGet]` and `[HttpPost]`.\n- Ensure custom error handling pages are accessible by unauthenticated users for better user experience.\n- For new projects, consider using core-js for its ergonomic syntax and performance benefits.\n- Resolve conflicts with other libraries by manually adding conflicting entries.",
+    "source": "web_search",
+    "updated_at": 1780945188.5959146
+  },
+  "search:Advanced Error Handling in React + Core:core-js error handling_ex": {
+    "content": "- **MDN Web Docs**: For JavaScript error handling, use `throw new Error('message')` to throw errors and `try...catch` blocks to handle them.\n- **Node.js Documentation**: Node.js handles errors through the `Error` object. Use `process.on('uncaughtException', callback)` to catch unhandled exceptions.\n- **GitHub Issue**: For WebAssembly errors, ensure your environment supports WebAssembly and check for compatibility issues with your codebase.\n\n**Key Config Options:**\n- None specific mentioned in the search results.\n\n**CLI Commands:**\n- None specific mentioned in the search results.",
+    "source": "code_example",
+    "updated_at": 1780945196.1631513
+  },
+  "search:Advanced Error Handling in React + Core:react error boundaries": {
+    "content": "- **CLI Commands**: N/A\n- **Latest Versions**: React 18.x\n- **Key Config Options**:\n  - `componentDidCatch`: Method to log errors and update state.\n  - `getDerivedStateFromError`: Static method to render fallback UI after an error occurs.",
+    "source": "web_search",
+    "updated_at": 1780945202.9868262
+  },
+  "search:Advanced Error Handling in React + Core:react error boundaries_ex": {
+    "content": "- **CLI Commands**: None directly related to error boundaries.\n- **Latest Versions**: React 18 introduced improvements and new features, including better support for concurrent mode and improved error handling.\n- **Key Config Options**:\n  - `componentDidCatch`: A lifecycle method in class components that logs errors or updates state when an error occurs in a child component.\n  - `useErrorBoundary`: A hook introduced in React 18 to handle errors in function components.",
+    "source": "code_example",
+    "updated_at": 1780945210.686556
+  }
+}

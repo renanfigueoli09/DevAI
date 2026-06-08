@@ -1,0 +1,22 @@
+{
+  "search:django+celery-redis-performance:django celery redis performanc": {
+    "content": "- **CLI Commands**:\n  - `celery worker --disable-prefetch`\n  - `celery -A your_project_name worker --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n  - Django: 4.2\n\n- **Key Config Options**:\n  - Broker URL (e.g., `redis://localhost:6379/0`)\n  - Result Backend URL (e.g., `redis://localhost:6379/1`)\n  - Worker Concurrency (`--concurrency=4`)",
+    "source": "web_search",
+    "updated_at": 1780944402.8278096
+  },
+  "search:django+celery-redis-performance:django celery redis performanc_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to `redis://localhost:6379/0`\n  - `CELERY_RESULT_BACKEND`: Set to `redis://localhost:6379/0`\n  - `CELERY_ACCEPT_CONTENT`: Set to `['json']`\n  - `CELERY_TASK_SERIALIZER`: Set to `'json'`",
+    "source": "code_example",
+    "updated_at": 1780944408.9021046
+  },
+  "search:django+celery-redis-performance:celery with django and redis: ": {
+    "content": "- **CLI Commands**:\n  - `celery -A myproject worker --loglevel=info`\n  - `celery -A myproject beat`\n\n- **Latest Versions**:\n  - Celery: 5.2.7\n  - Redis: 6.3.8\n\n- **Key Config Options**:\n  - `broker_url`: URL of the message broker (e.g., `redis://localhost:6379/0`)\n  - `result_backend`: URL of the result backend (e.g., `redis://localhost:6379/1`)\n  - `task_serializer`: Serialization method for tasks (e.g., `json`)\n  - `accept_content`: List of accepted content types (e.g., `['json']`)",
+    "source": "web_search",
+    "updated_at": 1780944417.0339823
+  },
+  "search:django+celery-redis-performance:celery with django and redis: _ex": {
+    "content": "- **Install Celery and Redis**:\n  ```bash\n  pip install celery redis\n  ```\n\n- **Configure Celery in Django**:\n  - Create a `celery.py` file in your project's main directory.\n  - Add the following configuration:\n    ```python\n    from __future__ import absolute_import, unicode_literals\n    import os\n    from celery import Celery\n\n    # set the default Django settings module for the 'celery' program.\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')\n\n    app = Celery('your_project')\n    app.config_from_object('django.conf:settings', namespace='CELERY')\n    app.autodiscover_tasks()\n    ```\n\n- **Configure Redis**:\n  - Install Redis server if not already installed.\n  - Start the Redis server.\n\n- **Update Django Settings**:\n  ```python\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n\n- **Create a Celery Task**:\n  - In one of your apps, create a tasks.py file.\n  - Define a task function:\n    ```python\n    from celery import shared_task\n\n    @shared_task\n    def send_email_task(subject, message, to_email):\n        # Email sending logic here\n        pass\n    ```\n\n- **Run Celery Worker**:\n  ```bash\n  celery -A your_project worker --loglevel=info\n  ```\n\n- **Trigger the Task**:\n  - In a view or another part of your code, call the task:\n    ```python\n    from .tasks import send_email_task\n\n    def some_view(request):\n        send_email_task.delay('Subject', 'Message', 'example@example.com')\n        return HttpResponse(\"Email sent\")\n    ```\n\n- **Monitor Celery Tasks**:\n  - Use Flower for monitoring and managing Celery tasks.\n  ```bash\n  pip install flower\n  celery -A your_project flower --port=5555\n  ```\n\n- **Docker Setup** (optional):\n  - Create a `docker-compose.yml` file for Redis and Celery.\n  - Example configuration:\n    ```yaml\n    version: '3'\n    services:\n      redis:\n        image: \"redis:alpine\"\n      web:\n        build: .\n        command: python manage.py runserver 0.0.0.0:8000\n        volumes:\n          - .:/code\n        ports:\n          - \"8000:8000\"\n        depends_on:\n          - redis\n      celery:\n        build: .\n        command: celery -A your_project worker --loglevel=info\n        volumes:\n          - .:/code\n        depends_on:\n          - redis\n    ```\n\n- **Latest Versions**:\n  - Celery: 5.2.x\n  - Redis: 7.0.x",
+    "source": "code_example",
+    "updated_at": 1780944431.9722273
+  }
+}

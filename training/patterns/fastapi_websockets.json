@@ -1,0 +1,22 @@
+{
+  "search:fastapi-websockets:fastapi websocket real-time co": {
+    "content": "- Install FastAPI using pip: `pip install fastapi`\n- Install Uvicorn, an ASGI server, to run your FastAPI app: `pip install uvicorn`\n- Create a new FastAPI project with the CLI: `fastapi createapp mychatapp`\n- Define WebSocket endpoints in your FastAPI application:\n  ```python\n  from fastapi import FastAPI, WebSocket\n\n  app = FastAPI()\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket):\n      await websocket.accept()\n      while True:\n          data = await websocket.receive_text()\n          await websocket.send_text(f\"Message text was: {data}\")\n  ```\n- Run your FastAPI application with Uvicorn: `uvicorn mychatapp.main:app --reload`\n- Key configuration options for Uvicorn include:\n  - `--host`: The host to bind the server to (e.g., `0.0.0.0`).\n  - `--port`: The port to listen on (default is `8000`).\n  - `--reload`: Automatically reloads the server when code changes are detected.\n- For production environments, consider using ASGI servers like Gunicorn or Daphne instead of Uvicorn for better performance and scalability.",
+    "source": "web_search",
+    "updated_at": 1780944794.3376684
+  },
+  "search:fastapi-websockets:fastapi websocket real-time co_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI application.\n  \n- **Latest Versions**:\n  - FastAPI: v0.85.2\n  - Uvicorn: v0.19.0\n  \n- **Key Config Options**:\n  - `websocket_url`: Define the WebSocket URL in your FastAPI app.\n  - `max_size`: Set the maximum message size for WebSocket connections.\n  - `ping_interval` and `ping_timeout`: Configure ping settings to keep the connection alive.",
+    "source": "code_example",
+    "updated_at": 1780944799.7003527
+  },
+  "search:fastapi-websockets:fastapi websocket security bes": {
+    "content": "- Use `uvicorn` to run FastAPI applications with WebSocket support.\n- Implement authentication using JWT tokens or OAuth2.\n- Apply rate limiting with libraries like `fastapi-limiter`.\n- Validate input data using Pydantic models for security.\n- Configure CORS with `fastapi.middleware.cors.CORSMiddleware`.\n- Use Redis for multi-worker scaling and connection management.\n- Deploy applications on platforms like AWS, GCP, or Heroku.\n- Monitor WebSocket connections using tools like Prometheus and Grafana.",
+    "source": "web_search",
+    "updated_at": 1780944816.0611238
+  },
+  "search:fastapi-websockets:fastapi websocket security bes_ex": {
+    "content": "- **FastAPI Version**: Ensure using the latest version of FastAPI, as of my last update, it's `0.95.2`.\n- **Security Best Practices**:\n  - Use HTTPS to secure your WebSocket connections.\n  - Implement authentication and authorization mechanisms like OAuth2 or JWT for WebSocket routes.\n- **Cookie Handling in WebSockets**: Ensure cookies are sent with the WebSocket connection if required by your application logic.\n- **CLI Commands**:\n  - `uvicorn app:app --host 0.0.0.0 --port 8000` to run a FastAPI application using Uvicorn.\n  - `hypercorn app:app --bind 0.0.0.0:8000` for running with Hypercorn, another ASGI server.\n- **Key Config Options**:\n  - `allow_origins`: Specify the origins allowed to connect via WebSocket.\n  - `allow_credentials`: Set to `True` if your application uses cookies or HTTP authentication.\n  - `allow_methods`: Define the methods that are allowed in WebSocket requests.",
+    "source": "code_example",
+    "updated_at": 1780944825.7880998
+  }
+}

@@ -2,21 +2,21 @@
   "search:nodejs-express-mongodb:node.js express mongodb integr": {
     "content": "- **CLI Commands**:\n  - `npm install --save express mongoose`\n  - `npm test` (for Jest tests)\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.18.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - MongoDB URI in `.env`: `MONGO_URI=mongodb://localhost:27017/mydatabase`\n  - Express middleware: `app.use(express.json())`, `app.use(cors())`\n  - Mongoose schema options: `{ timestamps: true }`",
     "source": "web_search",
-    "updated_at": 1780933160.6408966
+    "updated_at": 1780941869.7332134
   },
   "search:nodejs-express-mongodb:node.js express mongodb integr_ex": {
     "content": "- Install Node.js using `nvm install node --latest-npm`\n- Initialize a new project with `npm init -y`\n- Install Express, MongoDB, and other dependencies:\n  ```bash\n  npm install express mongoose body-parser cors dotenv multer imagekitio\n  ```\n- Configure MongoDB connection in `.env`:\n  ```\n  MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/mydatabase?retryWrites=true&w=majority\n  ```\n- Set up basic Express server in `app.js`:\n  ```javascript\n  const express = require('express');\n  const mongoose = require('mongoose');\n  const bodyParser = require('body-parser');\n  const cors = require('cors');\n\n  const app = express();\n  app.use(bodyParser.json());\n  app.use(cors());\n\n  // Connect to MongoDB\n  mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });\n\n  // Define routes\n  app.get('/', (req, res) => {\n    res.send('Hello World!');\n  });\n\n  const PORT = process.env.PORT || 5000;\n  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));\n  ```\n- Configure Multer for file uploads:\n  ```javascript\n  const multer = require('multer');\n  const storage = multer.memoryStorage();\n  const upload = multer({ storage: storage });\n  ```\n- Use ImageKit for image processing and hosting.",
     "source": "code_example",
-    "updated_at": 1780933163.1228852
+    "updated_at": 1780941873.0042782
   },
   "search:nodejs-express-mongodb:building restful apis with nod": {
     "content": "- **CLI Commands**:\n  - `npm init` to create a new Node.js project.\n  - `npm install express mongoose body-parser cors --save` to install necessary dependencies.\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: ^4.18.2\n  - Mongoose: ^7.6.3\n\n- **Key Config Options**:\n  - `app.use(bodyParser.json())` for parsing JSON bodies.\n  - `app.use(cors())` for enabling Cross-Origin Resource Sharing.\n  - MongoDB connection string in `.env`: `MONGO_URI=mongodb://localhost:27017/mydatabase`.",
     "source": "web_search",
-    "updated_at": 1780933165.674701
+    "updated_at": 1780941875.289382
   },
   "search:nodejs-express-mongodb:building restful apis with nod_ex": {
     "content": "- **CLI Commands**:\n  - `npm init` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors jsonwebtoken bcrypt` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: v4.18.x\n  - Mongoose: v7.x\n  - Body-parser: v1.20.x\n  - Cors: v2.8.x\n  - Jsonwebtoken: v9.x\n  - Bcrypt: v5.x\n\n- **Key Config Options**:\n  - Express app configuration: `app.use(cors())`, `app.use(bodyParser.json())`.\n  - Mongoose connection: `mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })`.\n  - JWT secret key: `const jwtSecret = 'your_secret_key';`.",
     "source": "code_example",
-    "updated_at": 1780933168.2493184
+    "updated_at": 1780941877.3042266
   }
 }

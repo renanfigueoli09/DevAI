@@ -1,0 +1,32 @@
+{
+  "search:Optimizing Performance with Dotnet Core and EFCore Migrations:dotnet core performance": {
+    "content": "- **CLI Commands**:\n  - `dotnet build --configuration Release`\n  - `dotnet publish --self-contained false`\n\n- **Latest Versions**:\n  - .NET Core 3.0\n  - ASP.NET Core 8\n\n- **Key Config Options**:\n  - `UseHardwareIntrinsics` in Startup.cs for enabling hardware intrinsics.\n  - `ASPNETCORE_ENVIRONMENT=Production` for production environment settings.\n  - `ConnectionStrings:DefaultConnection` for database connection strings.",
+    "source": "web_search",
+    "updated_at": 1780945267.5320084
+  },
+  "search:Optimizing Performance with Dotnet Core and EFCore Migrations:dotnet core performance_ex": {
+    "content": "- Use `dotnet-trace` and `dotnet-counters` for profiling.\n- Enable metrics in ASP.NET Core with `AddMetrics()` and configure OpenTelemetry or Prometheus exporters.\n- Consider using MemoryCache over LazyCache for better performance.\n- For high-performance GUID encoding, use APIs like `Convert.ToBase64String(byte[])`.\n- Ensure you are using the latest versions of .NET Core and related libraries to benefit from optimizations.",
+    "source": "code_example",
+    "updated_at": 1780945273.9764512
+  },
+  "search:Optimizing Performance with Dotnet Core and EFCore Migrations:efcore migrations": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Creates a new migration.\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n\n- **Latest Versions**:\n  - EF Core: As of my last update, the latest stable version is 7.0. For the most current version, check [Microsoft's official website](https://docs.microsoft.com/en-us/ef/core/release-notes).\n\n- **Key Config Options**:\n  - `OnModelCreating(ModelBuilder modelBuilder)`: Used to configure the model.\n  - `UseSqlServer(string connectionString)`: Specifies the SQL Server provider and connection string.\n  - `MigrationsAssembly(string assemblyName)`: Specifies the assembly containing migrations.",
+    "source": "web_search",
+    "updated_at": 1780945282.0925171
+  },
+  "search:Optimizing Performance with Dotnet Core and EFCore Migrations:efcore migrations_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  \n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - Migration Configuration in `DbContext`",
+    "source": "code_example",
+    "updated_at": 1780945290.0758047
+  },
+  "search:Optimizing Performance with Dotnet Core and EFCore Migrations:entity framework core performa": {
+    "content": "- Use `EF.CompileQuery` to compile queries for better performance.\n- Implement batch updates and deletes using EF Core extensions like `EntityFrameworkCore.BulkExtensions`.\n- Utilize DTOs for data transfer in ASP.NET Core applications to reduce data size and improve performance.\n- Optimize lazy loading by enabling it only when necessary, as of Entity Framework Core 3.0.\n- Configure DbContext options in the `OnConfiguring` method or through dependency injection.\n- Use `AsNoTracking()` for read-only operations to avoid tracking entities in memory.\n- Monitor and analyze query performance using EF Core's logging capabilities.\n- Update to the latest version of Entity Framework Core for access to new features and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780945300.536229
+  },
+  "search:Optimizing Performance with Dotnet Core and EFCore Migrations:entity framework core performa_ex": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- Apply migrations using `dotnet ef database update`.\n- Enable lazy loading by setting `LazyLoadingEnabled = true` in DbContext options.\n- Optimize queries with `.AsNoTracking()` for read-only operations.\n- Use `Include()` for eager loading of related entities.\n- Configure indexes on frequently queried columns to improve performance.\n- Monitor and analyze query execution plans using SQL Server Profiler or EF Core's logging capabilities.\n- Update Entity Framework Core to the latest version for performance improvements and bug fixes.\n- Use batching with `DbContext.Database.ExecuteSqlRawBatchAsync()` for bulk operations.",
+    "source": "code_example",
+    "updated_at": 1780945306.35629
+  }
+}

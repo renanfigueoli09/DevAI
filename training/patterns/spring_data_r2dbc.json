@@ -1,0 +1,32 @@
+{
+  "search:spring-data-r2dbc:spring data r2dbc with postgre": {
+    "content": "- **Latest Version**: Spring Data R2DBC 3.4.0, PostgreSQL JDBC Driver 42.5.0\n- **CLI Commands**:\n  - `./mvnw clean install` for Maven projects\n  - `./gradlew build` for Gradle projects\n- **Key Config Options**:\n  - `spring.r2dbc.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.r2dbc.username=myuser`\n  - `spring.r2dbc.password=mypassword`\n  - `spring.r2dbc.properties.cache-prepared-statements=true`",
+    "source": "web_search",
+    "updated_at": 1780944482.8840363
+  },
+  "search:spring-data-r2dbc:spring data r2dbc with postgre_ex": {
+    "content": "- **Latest Version**: Spring Data R2DBC 1.6, PostgreSQL JDBC Driver 43.3.0\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for PostgreSQL.\n  - `spring.r2dbc.username`: Database username.\n  - `spring.r2dbc.password`: Database password.\n  - `spring.r2dbc.properties.cache-prepared-statements=true`: Caches prepared statements to improve performance.\n- **CLI Commands**:\n  ```bash\n  # Initialize a new Spring Boot project with R2DBC and PostgreSQL\n  spring init --dependencies=r2dbc,postgresql my-r2dbc-project\n\n  # Run the application\n  ./mvnw spring-boot:run\n  ```\n- **Example Code Snippet**:\n  ```java\n  @Repository\n  public interface UserRepository extends ReactiveCrudRepository<User, Long> {\n      Mono<User> findByUsername(String username);\n  }\n  ```\n\nThese actionable facts provide a clear guide for developers to set up and use Spring Data R2DBC with PostgreSQL effectively.",
+    "source": "code_example",
+    "updated_at": 1780944490.9245224
+  },
+  "search:spring-data-r2dbc:spring data r2dbc with mongodb": {
+    "content": "- **Latest Versions**:\n  - Spring Data R2DBC: 1.5.18\n  - Spring Data MongoDB: 4.1.6\n\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for the database.\n  - `spring.r2dbc.username`: Username for the database.\n  - `spring.r2dbc.password`: Password for the database.\n\n- **CLI Commands with Exact Flags**:\n  - To run a Spring Boot application using R2DBC: \n    ```bash\n    ./mvnw spring-boot:run -Dspring-boot.run.arguments=\"--spring.r2dbc.url=r2dbc:mongodb://localhost/testdb --spring.r2dbc.username=user --spring.r2dbc.password=pass\"\n    ```\n  - To build a Docker image of your Spring Boot application:\n    ```bash\n    docker build -t my-spring-app .\n    ```\n  - To run the Docker container:\n    ```bash\n    docker run -p 8080:8080 my-spring-app\n    ```",
+    "source": "web_search",
+    "updated_at": 1780944500.3114443
+  },
+  "search:spring-data-r2dbc:spring data r2dbc with mongodb_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/example/spring-data-mongodb.git`\n  - `git clone https://github.com/example/spring-data-r2dbc.git`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Data R2DBC: 1.4.6\n  - MongoDB: 6.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri=mongodb://localhost:27017/mydatabase`\n  - `spring.r2dbc.url=r2dbc:mongo://localhost:27017/mydatabase`\n  - `spring.security.user.name=admin`\n  - `spring.security.user.password=password`",
+    "source": "code_example",
+    "updated_at": 1780944507.5791523
+  },
+  "search:spring-data-r2dbc:r2dbc performance optimization": {
+    "content": "- Use `spring-boot-starter-data-r2dbc` for dependency management.\n- Ensure Project Reactor is included as it's a core dependency.\n- For query optimization, consider using named parameters and batch operations.\n- Enable entity graphs to reduce the number of queries by fetching related entities in a single query.\n- Implement optimistic locking with `@Version` annotation on your entity class.\n- Use Spring Data R2DBC's reactive methods for non-blocking database access.\n- Configure connection pool size in `application.yml` or `application.properties`.\n- Monitor performance using metrics provided by Micrometer and Spring Boot Actuator.",
+    "source": "web_search",
+    "updated_at": 1780944515.9024782
+  },
+  "search:spring-data-r2dbc:r2dbc performance optimization_ex": {
+    "content": "- **CLI Commands**: Use `r2dbc-cli` for interactive R2DBC queries.\n- **Latest Versions**: Ensure using the latest Spring Data R2DBC and R2DBC drivers.\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for your database.\n  - `spring.r2dbc.username`: Database username.\n  - `spring.r2dbc.password`: Database password.\n  - `spring.r2dbc.properties.cache-prepared-statements`: Enable caching of prepared statements.\n  - `spring.r2dbc.pool.max-size`: Set the maximum pool size.",
+    "source": "code_example",
+    "updated_at": 1780944522.7985475
+  }
+}

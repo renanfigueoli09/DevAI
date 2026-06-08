@@ -2,11 +2,31 @@
   "search:typescript+jest-testing:typescript jest mocking and sp": {
     "content": "- **CLI Commands**:\n  - `jest --watch` to run tests in watch mode.\n  - `jest --coverage` to generate a coverage report.\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test environment has been set up.\n  - `transformIgnorePatterns`: An array of regexp pattern strings that are matched against all source file paths before transformation. Files matching the following patterns will not be transformed.\n  - `testEnvironment`: The test environment (e.g., 'jsdom', 'node') to use for running tests.",
     "source": "web_search",
-    "updated_at": 1780932332.6924748
+    "updated_at": 1780941120.133649
   },
   "search:typescript+jest-testing:typescript jest mocking and sp_ex": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"setupFilesAfterEnv\": [\"./jest.setup.ts\"]`",
     "source": "code_example",
-    "updated_at": 1780932335.0069351
+    "updated_at": 1780941122.575139
+  },
+  "search:typescript-jest-testing:typescript jest testing patter": {
+    "content": "- Jest version 30 is now available.\n- Updated moduleFileExtensions to include .mts, .cts, .ts, .tsx, .js, and .jsx.\n- Use `--testMatch` or `--testRegex` with updated patterns for ESM and TypeScript modules.\n- Configure Jest in `jest.config.ts` for TypeScript support.\n- Install type definitions using `@types/jest`.\n- For Express applications, use ES Modules (ESM) with Jest.\n- Implement modern test ID conventions for React/TypeScript/Next.js apps.",
+    "source": "web_search",
+    "updated_at": 1780943802.0126815
+  },
+  "search:typescript-jest-testing:typescript jest testing patter_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest ts-jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.8.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"collectCoverageFrom\": [\"src/**/*.{ts,tsx}\"]`",
+    "source": "code_example",
+    "updated_at": 1780943809.4318538
+  },
+  "search:typescript-jest-testing:typescript jest mocking 2025": {
+    "content": "- **Latest Jest Version**: As of my last update, the latest version is 29.x.\n  \n- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Key Config Options in `jest.config.ts`**:\n  - `moduleFileExtensions`: Array of file extensions to use when resolving modules. Example: `['ts', 'tsx', 'js']`.\n  - `transform`: Object mapping from glob patterns to a transformer. Example: `{ '\\\\.(ts|tsx)$': 'ts-jest' }`.\n  - `testEnvironment`: String that specifies the test environment to use. Example: `'node'`.\n\n- **Mocking with Jest and TypeScript**:\n  - Use `jest.fn()` to create mock functions.\n  - Use `mockImplementation` or `mockReturnValue` to define behavior.\n\n- **Example of Mocking a Fetch Call**:\n  ```typescript\n  global.fetch = jest.fn(() => Promise.resolve({ json: () => Promise.resolve({ data: 'mocked' }) }));\n  ```\n\n- **Using TypeScript with Jest**:\n  - Ensure your `tsconfig.json` includes `\"types\": [\"jest\"]`.\n  - Use `import { mock } from 'vitest-mock'` for more advanced mocking capabilities.\n\n- **Auto-Mocking Based on Types/Objects**:\n  - Jest can automatically mock objects based on their types, simplifying the setup process.\n\n- **Easy Control of Behavior**:\n  - Jest provides methods like `.mockReturnValue`, `.mockImplementation`, and `.mockRejectedValue` to control the behavior of mocks dynamically.",
+    "source": "web_search",
+    "updated_at": 1780943821.0151546
+  },
+  "search:typescript-jest-testing:typescript jest mocking 2025_ex": {
+    "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.x\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\"\n  - `setupFilesAfterEnv`: [\"./jest.setup.js\"]\n  - `transformIgnorePatterns`: [\"/node_modules/(?!(your-package)/)\"]",
+    "source": "code_example",
+    "updated_at": 1780943825.1281214
   }
 }

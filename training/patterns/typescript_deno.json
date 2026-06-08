@@ -1,0 +1,22 @@
+{
+  "search:typescript+deno:typescript deno web developmen": {
+    "content": "- **CLI Commands**: Use `deno run --check` to type check TypeScript code.\n- **Latest Version**: Deno 2.6 introduced tsgo for faster development.\n- **Key Config Options**: Avoid using `tsconfig.json` in Deno-first projects; existing workspaces can use it out-of-the-box.",
+    "source": "web_search",
+    "updated_at": 1780944088.919297
+  },
+  "search:typescript+deno:typescript deno web developmen_ex": {
+    "content": "- **CLI Commands**:\n  - `deno run --allow-net index.ts` to run a TypeScript script with network access.\n  - `deno install -f https://deno.land/std@v0.204.0/http/file_server.ts -n file_server` to install the Deno file server.\n\n- **Latest Versions**:\n  - Deno: v1.30.0\n  - TypeScript support in Deno: Built-in since v1.0\n\n- **Key Config Options**:\n  - `--allow-net`: Allows network access.\n  - `--allow-read`: Allows reading files from the file system.\n  - `--allow-write`: Allows writing to files on the file system.\n  - `--allow-env`: Allows accessing environment variables.",
+    "source": "code_example",
+    "updated_at": 1780944096.1154094
+  },
+  "search:typescript+deno:typescript deno security best ": {
+    "content": "- Use `deno run --allow-read --allow-write --allow-net` to specify permissions.\n- Update Deno to the latest version using `deno upgrade`.\n- Configure security settings in your project's `tsconfig.json`.\n- Implement JSDoc comments for better documentation and user success.",
+    "source": "web_search",
+    "updated_at": 1780944111.2719197
+  },
+  "search:typescript+deno:typescript deno security best _ex": {
+    "content": "- Use `deno run --allow-read --allow-write --allow-net` to specify permissions at runtime.\n- Update Deno to the latest version using `deno upgrade`.\n- Configure `tsconfig.json` with `\"strict\": true` for TypeScript security.\n- Implement runtime permission requests as shown in the DEV Community example.\n- Use `--unstable` flag for experimental features if needed.\n- Ensure all dependencies are from trusted sources.\n- Regularly update Deno and its ecosystem to patch vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780944116.727829
+  }
+}

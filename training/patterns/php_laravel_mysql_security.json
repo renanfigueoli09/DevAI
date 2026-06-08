@@ -1,0 +1,22 @@
+{
+  "search:php-laravel-mysql-security:laravel mysql security best pr": {
+    "content": "- **CLI Commands**:\n  - `php artisan make:model User --migration` to create a model and migration file.\n  - `php artisan migrate` to run migrations.\n  - `php artisan db:seed` to seed the database.\n\n- **Latest Versions**:\n  - Laravel 10.x (as of my last update in October 2023).\n\n- **Key Config Options**:\n  - `.env` file for environment-specific settings like database credentials, application key, etc.\n  - `config/database.php` for configuring database connections and other database-related settings.",
+    "source": "web_search",
+    "updated_at": 1780944274.489949
+  },
+  "search:php-laravel-mysql-security:laravel mysql security best pr_ex": {
+    "content": "- Use Laravel's built-in security features like CSRF protection, XSS protection, and authentication.\n- Update Laravel to the latest version regularly using `composer update laravel/framework`.\n- Configure `.env` file securely by setting environment variables for database credentials, application key, etc.\n- Implement middleware for handling authentication and authorization.\n- Use Eloquent ORM for database interactions to prevent SQL injection.\n- Sanitize user inputs using Laravel's validation features.\n- Regularly run security audits with tools like `php artisan security:check`.\n- Enable HTTPS by configuring your web server (e.g., Nginx, Apache).\n- Implement rate limiting to protect against brute-force attacks.",
+    "source": "code_example",
+    "updated_at": 1780944281.0854032
+  },
+  "search:php-laravel-mysql-security:php laravel mysql secure codin": {
+    "content": "- **CLI Commands**:\n  - `php artisan migrate`: Runs migrations.\n  - `php artisan make:model User -mcr`: Creates a model, migration, and controller for the User resource.\n\n- **Latest Versions**:\n  - Laravel: 10.x (as of my last update in October 2024)\n  - PHP: 8.2 (latest stable as of my last update)\n\n- **Key Config Options**:\n  - `.env` file: Contains environment-specific settings like database credentials.\n  - `config/database.php`: Defines database connections and other database-related configurations.\n  - `routes/web.php`: Manages web routes for your application.\n\nThese points provide actionable guidance for developers working with Laravel, focusing on security, version management, and configuration.",
+    "source": "web_search",
+    "updated_at": 1780944292.4165812
+  },
+  "search:php-laravel-mysql-security:php laravel mysql secure codin_ex": {
+    "content": "- **CLI Commands**:\n  - `php artisan make:migration create_users_table --create=users`\n  - `php artisan migrate`\n\n- **Latest Versions**:\n  - Laravel 10.x\n\n- **Key Config Options**:\n  - `.env` file for environment-specific settings.\n  - `config/app.php` for application configuration.\n  - `config/database.php` for database connection settings.",
+    "source": "code_example",
+    "updated_at": 1780944297.7479672
+  }
+}

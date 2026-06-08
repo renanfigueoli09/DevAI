@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-postgresql-advanced:ruby on rails postgresql advan": {
+    "content": "- Use `rails db:migrate` to apply migrations.\n- Update gems using `bundle update`.\n- Configure PostgreSQL in `config/database.yml`.\n- Use `ActiveRecord::Base.connection.exec_query(\"SELECT * FROM table_name\")` for raw SQL queries.\n- Implement eager loading with `.includes(:association)`.\n- Utilize `where.not(column: value)` for negated conditions.\n- Employ `order(created_at: :desc).limit(10)` for efficient pagination.\n- Use `EXPLAIN ANALYZE` in PostgreSQL to analyze query performance.",
+    "source": "web_search",
+    "updated_at": 1780946110.398626
+  },
+  "search:ruby-on-rails-postgresql-advanced:ruby on rails postgresql advan_ex": {
+    "content": "- **CLI Commands**:\n  - `rails db:migrate`: Migrates the database schema.\n  - `rails db:create`: Creates a new database.\n  - `rails db:drop`: Drops the current database.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x (as of my last update)\n  - PostgreSQL: 14.x (as of my last update)\n\n- **Key Config Options**:\n  - In `config/database.yml`, specify the adapter, database name, username, and password.\n    ```yaml\n    default: &default\n      adapter: postgresql\n      encoding: unicode\n      pool: <%= ENV.fetch(\"RAILS_MAX_THREADS\") { 5 } %>\n      username: your_username\n      password: your_password\n      host: localhost\n    ```\n  - Use `pg_search` gem for advanced text search capabilities.\n    ```ruby\n    # Gemfile\n    gem 'pg_search'\n\n    # Run bundle install\n\n    # Model\n    class Article < ApplicationRecord\n      include PgSearch::Model\n      pg_search_scope :search_by_title_and_content, against: [:title, :content]\n    end\n    ```\n  - Use `ransack` for more complex queries and search forms.\n    ```ruby\n    # Gemfile\n    gem 'ransack'\n\n    # Controller\n    def index\n      @q = Article.ransack(params[:q])\n      @articles = @q.result(distinct: true)\n    end\n\n    # View (form)\n    <%= form_with(model: @q, url: articles_path, method: :get) do |f| %>\n      <%= f.label :title_cont, \"Title contains\" %>\n      <%= f.search_field :title_cont %>\n      <%= f.submit \"Search\" %>\n    <% end %>\n    ```",
+    "source": "code_example",
+    "updated_at": 1780946112.584153
+  },
+  "search:ruby-on-rails-postgresql-advanced:high performance ruby on rails": {
+    "content": "- Install PostgreSQL using `sudo apt-get install postgresql postgresql-contrib`\n- Ensure Ruby is installed (`ruby -v`)\n- Use Rails version 7 or later for best compatibility\n- Add `gem 'pg'` to your Gemfile and run `bundle install`\n- Configure database.yml with PostgreSQL credentials\n- Set up Active Record models using PostgreSQL arrays if needed\n- Migrate the database schema using `rails db:migrate`\n- Run tests with `rails test`\n- Monitor performance with tools like pg_stat_statements",
+    "source": "web_search",
+    "updated_at": 1780946114.6576316
+  },
+  "search:ruby-on-rails-postgresql-advanced:high performance ruby on rails_ex": {
+    "content": "- Use `rails new myapp --database=postgresql` to create a new Rails app with PostgreSQL.\n- Ensure you have the latest version of Ruby and Rails installed using `rbenv install ruby-version` and `gem install rails`.\n- Configure your database.yml file for production settings:\n  ```yaml\n  production:\n    adapter: postgresql\n    encoding: unicode\n    pool: <%= ENV.fetch(\"RAILS_MAX_THREADS\") { 5 } %>\n    username: myappuser\n    password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>\n    host: localhost\n  ```\n- Use `pg_stat_activity` to monitor database performance.\n- Enable `pg_trgm` extension for full-text search capabilities with `CREATE EXTENSION pg_trgm;`.\n- Optimize queries using indexes and EXPLAIN ANALYZE.\n- Configure Rails caching strategies like fragment caching, action caching, or page caching.\n- Use `rails db:migrate:status` to check the status of your migrations.\n- Monitor memory usage with `pg_stat_activity` and adjust `work_mem` settings in PostgreSQL.",
+    "source": "code_example",
+    "updated_at": 1780946116.6994827
+  }
+}

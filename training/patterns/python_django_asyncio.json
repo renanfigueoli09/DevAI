@@ -1,0 +1,32 @@
+{
+  "search:python-django-asyncio:django asyncio for high perfor": {
+    "content": "- Install Django using pip: `pip install django`\n- Create a new Django project: `django-admin startproject myproject`\n- Run the development server: `python manage.py runserver`\n- Create a new app within your project: `python manage.py startapp myapp`\n- Define models in `models.py` and apply migrations: `python manage.py makemigrations`, `python manage.py migrate`\n- Create views in `views.py` and connect them to URLs in `urls.py`\n- Use Django ORM for database interactions\n- Configure settings in `settings.py`, including database, security, and static files\n- Deploy using a WSGI server like Gunicorn: `gunicorn myproject.wsgi:application --bind 0.0.0.0:8000`",
+    "source": "web_search",
+    "updated_at": 1780944531.1711674
+  },
+  "search:python-django-asyncio:django asyncio for high perfor_ex": {
+    "content": "- Use `python -m pip install Django==4.2` to install the latest version of Django.\n- To create an asynchronous view, use `async def my_view(request):`.\n- Configure ASGI server with `uvicorn myproject.asgi:application --reload`.\n- Key config options in `settings.py`: `ASGI_APPLICATION`, `DATABASES['default']['ENGINE'] = 'django.db.backends.asyncpg'` for async PostgreSQL.\n- Use `aiohttp.ClientSession()` for asynchronous HTTP requests.\n- Implement `async def fetch_data(url):` to perform non-blocking I/O operations.\n- Deploy with `gunicorn -k uvicorn.workers.UvicornWorker myproject.asgi:application`.\n- Monitor performance using Django Debug Toolbar or custom logging.",
+    "source": "code_example",
+    "updated_at": 1780944537.8171177
+  },
+  "search:python-django-asyncio:asynchronous django views and ": {
+    "content": "- Django 3.1 introduced support for async views, middleware, and tests.\n- Use `python manage.py runserver --async` to start the asynchronous server.\n- Key configuration option: `ASGI_APPLICATION = 'myproject.asgi.application'`.\n- Async views can be defined using `async def my_view(request):`.\n- Middleware can be adapted for async support by checking debug logs for \"Asynchronous handler adapted for middleware\".\n- Integrate async views with existing synchronous code seamlessly.\n- Use `await` to call asynchronous functions within your views.",
+    "source": "web_search",
+    "updated_at": 1780944545.309466
+  },
+  "search:python-django-asyncio:asynchronous django views and _ex": {
+    "content": "- **Latest Django Version**: As of my last update, the latest stable version is 4.2.\n- **Async Views Support**: Ensure your Django project is using a version >= 3.1 to utilize async views.\n- **Key Config Options**:\n  - `MIDDLEWARE`: Configure middleware in settings.py.\n  - `ASGI_APPLICATION`: Set this to point to your ASGI application entry point.\n- **CLI Commands**:\n  - To create an asynchronous view, use Django's built-in command: `python manage.py startapp myapp`.\n  - Run the development server with async support: `uvicorn myproject.asgi:application --reload`.\n\nThese actionable facts provide a clear path for developers to implement and configure asynchronous views and middleware in their Django projects.",
+    "source": "code_example",
+    "updated_at": 1780944551.3827777
+  },
+  "search:python-django-asyncio:optimizing django with asyncio": {
+    "content": "- **CLI Commands**:\n  - `pip install django-asyncio`\n  - `python manage.py runserver_async`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - asyncio: 3.8\n\n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to your project's ASGI application.\n  - `DATABASES['default']['ENGINE']`: Use `'django.db.backends.asyncpg'` for PostgreSQL.\n  - `CACHES['default']['BACKEND']`: Use `'django.core.cache.backends.asyncmemcached.AsyncMemcachedCache'`.",
+    "source": "web_search",
+    "updated_at": 1780944558.9087434
+  },
+  "search:python-django-asyncio:optimizing django with asyncio_ex": {
+    "content": "- Use `cProfile` to profile Django applications.\n- Consider using the latest version of `asgiref`.\n- Optimize database queries and use asynchronous database libraries like `aiomysql` or `aiopg`.\n- Implement caching strategies for frequently accessed data.\n- Utilize Django's built-in support for asynchronous views with `async` and `await`.\n- Use middleware to handle asynchronous tasks efficiently.\n- Configure your web server (e.g., Nginx) to handle asynchronous requests properly.\n- Monitor performance using tools like Prometheus and Grafana.",
+    "source": "code_example",
+    "updated_at": 1780944574.8009644
+  }
+}

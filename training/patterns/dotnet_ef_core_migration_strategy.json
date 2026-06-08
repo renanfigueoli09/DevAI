@@ -2,21 +2,21 @@
   "search:dotnet-ef-core-migration-strategy:.net entity framework core mig": {
     "content": "- **Latest Version**: Entity Framework Core 6.0 and .NET Core 3.1 or later.\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n  - `dotnet ef migrations script`\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - `OnModelCreating` method in DbContext for model configurations\n  - `Scaffold-DbContext` command to generate models from an existing database",
     "source": "web_search",
-    "updated_at": 1780934128.0929294
+    "updated_at": 1780942798.4126086
   },
   "search:dotnet-ef-core-migration-strategy:.net entity framework core mig_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - .NET Core 6.0\n  - Entity Framework Core 6.0\n\n- **Key Config Options**:\n  - ConnectionStrings in `appsettings.json`\n  - DbContext configuration in `Startup.cs` or `Program.cs`\n  - Migration history table (`__EFMigrationsHistory`)",
     "source": "code_example",
-    "updated_at": 1780934130.047574
+    "updated_at": 1780942800.371025
   },
   "search:dotnet-ef-core-migration-strategy:entity framework core migratio": {
     "content": "- **Latest Version**: Entity Framework Core 7.0 is the latest stable version as of my last update.\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration with the specified name.\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n  - `dotnet ef migrations remove`: Removes the most recent migration from the project and updates the project to reflect this change.\n- **Key Config Options**:\n  - `UseSqlServer`: Configures the DbContext to use SQL Server as the database provider.\n  - `MigrationsAssembly`: Specifies the assembly that contains the migrations.\n  - `ModelBuilder`: Used in `OnModelCreating` to configure the model and its relationships.",
     "source": "web_search",
-    "updated_at": 1780934132.1108575
+    "updated_at": 1780942802.3950956
   },
   "search:dotnet-ef-core-migration-strategy:entity framework core migratio_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core 6.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - Connection String: Define the connection string in your `appsettings.json` or directly in the DbContext.\n  - Migration History Table: Customize the name and schema of the migration history table using the `MigrationsHistoryTable` option.",
     "source": "code_example",
-    "updated_at": 1780934134.3352506
+    "updated_at": 1780942805.1691856
   }
 }

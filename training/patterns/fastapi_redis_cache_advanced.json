@@ -1,0 +1,22 @@
+{
+  "search:fastapi-redis-cache-advanced:fastapi redis cache advanced t": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi-cache`\n  - `pip install redis`\n\n- **Latest Versions**:\n  - FastAPI Cache: v0.2.3\n  - Redis: v7.0.5\n\n- **Key Config Options**:\n  - `CACHE_URL`: URL for the cache backend (e.g., `redis://localhost:6379/0`)\n  - `BACKEND`: Cache backend type (e.g., `redis`, `memcached`, `dynamodb`)\n  - `TIMEOUT`: Default timeout for cached items in seconds",
+    "source": "web_search",
+    "updated_at": 1780945538.689986
+  },
+  "search:fastapi-redis-cache-advanced:fastapi redis cache advanced t_ex": {
+    "content": "- Install required libraries using pip:\n  ```bash\n  pip install fastapi uvicorn redis fastapi-cache\n  ```\n- Use the following command to run your FastAPI app with caching:\n  ```bash\n  uvicorn main:app --reload\n  ```\n- Key configuration options for `fastapi_cache` include:\n  - `CACHE_KEY_PREFIX`: Prefix for cache keys.\n  - `BACKEND_URL`: URL of the Redis server.\n  - `CODER`: Coder to serialize/deserialize cached data (e.g., `PickleCoder`).\n- Example of using request method, URL, and query string as a cache key:\n  ```python\n  from fastapi_cache import FastAPICache\n  from fastapi_cache.backends.redis import RedisBackend\n  from fastapi_cache.decorator import cache\n\n  @cache(key_prefix=\"my_key\", coder=PickleCoder)\n  async def my_endpoint(request: Request):\n      # Endpoint logic here\n  ```\n- Ensure your Redis server is running and accessible at the specified URL.\n- For production environments, consider using environment variables to manage sensitive information like `BACKEND_URL`.",
+    "source": "code_example",
+    "updated_at": 1780945546.1335542
+  },
+  "search:fastapi-redis-cache-advanced:fastapi redis cache performanc": {
+    "content": "- Use `pip install fastapi redis` to install FastAPI and Redis.\n- For Redis client connection pooling, use the `redis-py` library with the `ConnectionPool` class.\n- Monitor cache metrics using tools like Prometheus or RedisInsight for performance optimization.\n- Configure Redis in your FastAPI app by setting up a `Redis` instance with appropriate parameters such as host, port, and database index.\n- Implement caching strategies based on request frequency and data freshness.\n- Use the `@cache` decorator from libraries like `fastapi-cache` to simplify caching logic.\n- Regularly update dependencies to their latest versions for performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1780945554.9593668
+  },
+  "search:fastapi-redis-cache-advanced:fastapi redis cache performanc_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - Uvicorn: 10.7.0\n  - Redis-py: 4.5.4\n\n- **Key Config Options**:\n  - `redis_url`: URL for connecting to the Redis server.\n  - `cache_timeout`: Time in seconds that cached data remains valid.\n  - `max_connections`: Maximum number of connections to the Redis server.",
+    "source": "code_example",
+    "updated_at": 1780945560.4302294
+  }
+}

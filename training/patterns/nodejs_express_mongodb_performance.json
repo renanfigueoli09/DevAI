@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-mongodb-performance:node.js express mongodb perfor": {
+    "content": "- Use MongoDB Atlas for managed, scalable MongoDB deployments.\n- Implement indexing on frequently queried fields to speed up data retrieval.\n- Utilize connection pooling in Node.js applications with libraries like `mongoose` or `mongodb`.\n- Monitor and analyze query performance using MongoDB's built-in profiling tools.\n- Optimize Express.js routes by reducing middleware usage where possible.\n- Use caching mechanisms like Redis for frequently accessed data.\n- Regularly update Node.js, Express.js, and MongoDB to the latest stable versions.\n- Implement rate limiting to prevent abuse and improve system stability.\n- Consider sharding for large datasets across multiple servers.\n- Utilize environment variables for sensitive configuration settings.",
+    "source": "web_search",
+    "updated_at": 1780944170.7090595
+  },
+  "search:nodejs-express-mongodb-performance:node.js express mongodb perfor_ex": {
+    "content": "- Use `npm install express mongoose` to install Express and Mongoose.\n- Ensure MongoDB is running locally or use a cloud service like MongoDB Atlas.\n- Implement caching with Redis for frequently accessed data.\n- Optimize queries by using indexes in MongoDB.\n- Use connection pooling with Mongoose to manage database connections efficiently.\n- Enable compression middleware (`app.use(compression())`) to reduce response sizes.\n- Monitor performance using tools like `pm2` for process management and `New Relic` for application monitoring.\n- Implement rate limiting to prevent abuse and improve security.\n- Regularly update dependencies to the latest versions using `npm update`.\n- Use environment variables for sensitive information (`dotenv` package).\n- Optimize server responses by reducing unnecessary data and using efficient serialization.",
+    "source": "code_example",
+    "updated_at": 1780944177.0832536
+  },
+  "search:nodejs-express-mongodb-performance:high traffic node.js express m": {
+    "content": "- **Node.js**: Install using `nvm install node --lts`\n- **Express**: Install via npm with `npm install express`\n- **MongoDB**: Use `mongosh` for the latest shell, or download from [MongoDB website](https://www.mongodb.com/try/download/community)\n- **Mongoose**: Install with `npm install mongoose`\n- **Environment Variables**: Use `.env` file and load with `dotenv.config()`\n- **Database Connection**: Use `mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })`\n- **High Performance**: Ensure MongoDB is properly indexed and use efficient queries\n- **Deployment**: Consider using platforms like Heroku or AWS for zero-downtime deployments\n- **Monitoring**: Use tools like New Relic or Datadog for performance monitoring",
+    "source": "web_search",
+    "updated_at": 1780944185.8112752
+  },
+  "search:nodejs-express-mongodb-performance:high traffic node.js express m_ex": {
+    "content": "- Use `npm install express mongoose` to install Express.js and Mongoose.\n- Configure MongoDB connection in Express using `mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })`.\n- Set up Nginx as a reverse proxy with the following configuration:\n  ```nginx\n  server {\n      listen 80;\n      server_name yourdomain.com;\n\n      location /api/ {\n          proxy_pass http://localhost:3000/;\n          proxy_http_version 1.1;\n          proxy_set_header Upgrade $http_upgrade;\n          proxy_set_header Connection 'upgrade';\n          proxy_set_header Host $host;\n          proxy_cache_bypass $http_upgrade;\n      }\n  }\n  ```\n- Use `docker-compose.yml` to define and run multi-container Docker applications:\n  ```yaml\n  version: '3'\n  services:\n    web:\n      image: node:16\n      volumes:\n        - .:/usr/src/app\n      working_dir: /usr/src/app\n      command: npm start\n    mongo:\n      image: mongo:latest\n      volumes:\n        - mongo-data:/data/db\n  volumes:\n    mongo-data:\n  ```\n- Monitor Node.js memory usage with `node --inspect-brk app.js` and use Chrome DevTools for debugging.\n- Implement caching strategies in Express using middleware like `express-cache-middleware`.\n- Optimize MongoDB queries by indexing frequently queried fields.",
+    "source": "code_example",
+    "updated_at": 1780944195.1357696
+  }
+}

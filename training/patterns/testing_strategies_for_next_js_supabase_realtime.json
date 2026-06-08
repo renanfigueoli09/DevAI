@@ -1,0 +1,32 @@
+{
+  "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing": {
+    "content": "- **CLI Commands**:\n  - `npx next dev`: Start the Next.js development server.\n  - `npm test` or `yarn test`: Run tests using Jest.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Jest: v27.4\n\n- **Key Config Options**:\n  - `jest.config.js`: Customize Jest configuration for testing.\n  - `next.config.js`: Configure Next.js settings, including test environment setup.",
+    "source": "web_search",
+    "updated_at": 1780945218.312687
+  },
+  "search:Testing Strategies for Next.js + Supabase-Realtime:next.js testing_ex": {
+    "content": "- Use `node-mocks-http` to create mock request and response objects.\n- For testing routes in Next.js, run tests using a test runner like Jest or Mocha.\n- Ensure you have the latest version of Next.js installed for compatibility with the latest features and bug fixes.\n- Key config options include setting up Jest in your `package.json` under the `scripts` section to run tests automatically.\n- For unit testing components that use the `useRouter` hook, utilize React Testing Library or Enzyme.\n- To test API routes in Next.js 13+, use libraries like Supertest for making HTTP requests and assertions.\n- Ensure your project has a comprehensive coverage report by configuring Jest's `coverageReporters` option in your `jest.config.js`.\n- For testing the App Router, focus on mocking server-side logic using tools like MSW (Mock Service Worker).\n- Regularly update dependencies to avoid breaking changes and take advantage of new features.",
+    "source": "code_example",
+    "updated_at": 1780945225.1431282
+  },
+  "search:Testing Strategies for Next.js + Supabase-Realtime:supabase realtime testing": {
+    "content": "- **CLI Commands**: \n  - `supabase init` to initialize a new project.\n  - `supabase deploy` to deploy your project.\n\n- **Latest Versions**:\n  - Supabase CLI: v2.3.4\n  - Supabase Realtime: v1.5.0\n\n- **Key Config Options**:\n  - `realtime_url`: The URL for the realtime service.\n  - `schema`: Specifies the database schema to use.\n  - `jwt_secret`: Secret key for JWT authentication.\n\nThese details should help developers set up and test Supabase Realtime effectively.",
+    "source": "web_search",
+    "updated_at": 1780945234.9401746
+  },
+  "search:Testing Strategies for Next.js + Supabase-Realtime:supabase realtime testing_ex": {
+    "content": "- **CLI Commands**:\n  - `pnpm nx test:e2e auth-js`\n  - `pnpm nx test:e2e realtime-js`\n  - `pnpm nx run`\n\n- **Latest Versions**:\n  - Supabase CLI: v1.11.4\n\n- **Key Config Options**:\n  - `.env.local` in the example directory for custom local Supabase setup",
+    "source": "code_example",
+    "updated_at": 1780945240.1109612
+  },
+  "search:Testing Strategies for Next.js + Supabase-Realtime:unit testing in next.js": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n  - `npx create-next-app@latest my-next-app --typescript`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Jest: v29.0.3\n  - React Testing Library: v14.0.0\n\n- **Key Config Options**:\n  - `jest.config.js`: Configure Jest settings like test environment, transform paths, and module mocks.\n  - `next.config.js`: Enable TypeScript for testing with `typescript: true`.\n  - `.env.local`: Set environment variables for testing configurations.\n\n- **Testing Frameworks**:\n  - **Unit Testing**: Jest + React Testing Library\n  - **End-to-End Testing**: Cypress or Playwright",
+    "source": "web_search",
+    "updated_at": 1780945250.7556508
+  },
+  "search:Testing Strategies for Next.js + Supabase-Realtime:unit testing in next.js_ex": {
+    "content": "- Install dependencies: `npm i -D vitest @testing-library/react @testing-library/jest-dom`\n- Configure Jest in your project:\n  ```json\n  {\n    \"testEnvironment\": \"jsdom\",\n    \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]\n  }\n  ```\n- Use `vitest` for running tests: `npx vitest`\n- For Next.js router testing, use `jest.mock('next/router')` and mock the necessary methods.\n- Example of a simple test:\n  ```javascript\n  import { render } from '@testing-library/react';\n  import MyComponent from '../path/to/MyComponent';\n\n  test('renders correctly', () => {\n    const { getByText } = render(<MyComponent />);\n    expect(getByText(/example text/i)).toBeInTheDocument();\n  });\n  ```\n- Ensure your tests are isolated and do not rely on global state.",
+    "source": "code_example",
+    "updated_at": 1780945259.4636457
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-kafka-advanced-consumer:spring boot kafka advanced con": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kafka: 3.0.x\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Offset reset policy (e.g., earliest, latest).\n  - `spring.kafka.consumer.key-deserializer`: Key deserializer class.\n  - `spring.kafka.consumer.value-deserializer`: Value deserializer class.",
+    "source": "web_search",
+    "updated_at": 1780944056.6166449
+  },
+  "search:spring-boot-kafka-advanced-consumer:spring boot kafka advanced con_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic example-topic --from-beginning` to consume messages from a Kafka topic.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.\n  - `spring.kafka.consumer.key-deserializer`: Deserializer for keys.\n  - `spring.kafka.consumer.value-deserializer`: Deserializer for values.",
+    "source": "code_example",
+    "updated_at": 1780944065.746409
+  },
+  "search:spring-boot-kafka-advanced-consumer:spring boot kafka performance ": {
+    "content": "- **Latest Version of Spring Boot**: 3.x\n- **Latest Version of Kafka**: 3.4.x\n- **Key Config Options**:\n  - `spring.kafka.producer.batch-size`: Adjust batch size for producer performance.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.\n  - `spring.kafka.consumer.enable-auto-commit`: Enable or disable auto commit.\n  - `spring.kafka.consumer.max-poll-records`: Limit records per poll.\n- **CLI Commands**:\n  - `mvn clean install`: Build project with Maven.\n  - `./gradlew build`: Build project with Gradle.\n- **Performance Tuning Tips**:\n  - Optimize message size to balance between performance and broker timeout.\n  - Use Confluent Schema Registry for schema evolution in Kafka.",
+    "source": "web_search",
+    "updated_at": 1780944074.3672671
+  },
+  "search:spring-boot-kafka-advanced-consumer:spring boot kafka performance _ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server localhost:9092 --create --topic example-topic --partitions 3 --replication-factor 1`\n  - `kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group my-group`\n\n- **Latest Versions**:\n  - Spring Boot: 4.0\n  - Kafka: 3.3\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.enable-auto-commit`: Set to `false` for manual offset management.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.\n  - `spring.kafka.consumer.batch-size`: Increase batch size for better throughput.\n  - `spring.kafka.producer.linger.ms`: Increase linger time for batching messages.\n  - `spring.kafka.producer.buffer-memory`: Adjust buffer memory based on available resources.",
+    "source": "code_example",
+    "updated_at": 1780944081.8094184
+  }
+}

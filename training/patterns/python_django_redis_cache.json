@@ -1,0 +1,22 @@
+{
+  "search:python-django-redis-cache:django redis cache for high tr": {
+    "content": "- Install django-redis using pip: `pip install django-redis`\n- Update settings.py to configure Redis cache:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Use the cache in your views:\n  ```python\n  from django.core.cache import cache\n\n  def my_view(request):\n      # Get cached data\n      value = cache.get('my_key')\n      if value is None:\n          # Compute or fetch data\n          value = compute_or_fetch_data()\n          # Set cache for next time\n          cache.set('my_key', value, timeout=300)\n      return render(request, 'my_template.html', {'value': value})\n  ```\n- Ensure Redis server is running locally or on a remote server.\n- Monitor and tune Redis performance using tools like `redis-cli` and `MONITOR`.",
+    "source": "web_search",
+    "updated_at": 1780944204.5046227
+  },
+  "search:python-django-redis-cache:django redis cache for high tr_ex": {
+    "content": "- Install Redis using `sudo apt-get install redis-server`\n- Update Django settings to use Redis as cache backend:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Ensure Redis server is running with `sudo systemctl start redis-server`\n- Check Redis version with `redis-cli --version`\n- Configure Celery for asynchronous task handling:\n  ```python\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n- Install Celery and Redis packages using `pip install celery redis`\n- Start Celery worker with `celery -A your_project_name worker --loglevel=info`",
+    "source": "code_example",
+    "updated_at": 1780944214.4995792
+  },
+  "search:python-django-redis-cache:python django redis caching st": {
+    "content": "- Install `django-cacheops` using pip: `pip install django-cacheops`\n- Configure Redis as the cache backend in `settings.py`:\n  ```python\n  CACHES = {\n      'default': {\n          'BACKEND': 'django_redis.cache.RedisCache',\n          'LOCATION': 'redis://127.0.0.1:6379/1',\n          'OPTIONS': {\n              'CLIENT_CLASS': 'django_redis.client.DefaultClient',\n          }\n      }\n  }\n  ```\n- Use `CACHEOPS_REDIS` for ORM caching:\n  ```python\n  CACHEOPS = {\n      'app.model': {'ops': 'all', 'timeout': 300},\n  }\n  ```\n- Install Redis server and ensure it's running.\n- For API caching in DRF, use middleware or decorators provided by `django-cacheops`.\n- Monitor cache hit/miss ratios to optimize caching strategies.",
+    "source": "web_search",
+    "updated_at": 1780944223.8998854
+  },
+  "search:python-django-redis-cache:python django redis caching st_ex": {
+    "content": "- Install Redis server: `sudo apt-get install redis-server`\n- Install Redis Python client: `pip install redis`\n- Install Django-Redis: `pip install django-redis`\n- Configure Redis in Django settings:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Test cache by creating a view:\n  ```python\n  from django.core.cache import cache\n\n  def my_view(request):\n      if 'my_key' in cache:\n          value = cache.get('my_key')\n      else:\n          value = 'Computed Value'\n          cache.set('my_key', value, timeout=30)\n      return HttpResponse(value)\n  ```\n- Use `redis-cli` for manual testing: `redis-cli ping`\n- Monitor Redis performance with `redis-cli info stats`\n\nLatest versions as of my last update in October 2023:\n- Django: 4.1\n- Redis: 7.0\n- django-redis: 5.1",
+    "source": "code_example",
+    "updated_at": 1780944232.2796893
+  }
+}

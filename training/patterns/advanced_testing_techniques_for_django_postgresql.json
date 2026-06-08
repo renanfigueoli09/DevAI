@@ -1,0 +1,32 @@
+{
+  "search:Advanced Testing Techniques for Django + PostgreSQL:django testing": {
+    "content": "- Use `python manage.py test` to run tests.\n- Place tests in `tests.py` or within a `tests/` directory inside your app.\n- Utilize Django's `TestCase` class for writing tests.\n- Employ `setUpTestData` for one-time setup of data.\n- Leverage `setUp` and `tearDown` methods for per-test setup/cleanup.\n- Use `assertEqual`, `assertTrue`, etc., for assertions.\n- Configure test settings in `settings.py`.\n- Consider using Django's `LiveServerTestCase` for integration tests.",
+    "source": "web_search",
+    "updated_at": 1780944883.1727328
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:django testing_ex": {
+    "content": "- Use `python manage.py test` to run tests.\n- Ensure Django is up-to-date using `pip install --upgrade django`.\n- Configure `INSTALLED_APPS` in settings.py to include 'django.contrib.auth', 'django.contrib.contenttypes', etc.\n- Utilize `pytest-django` for more advanced testing features if needed.\n- Mock external services with libraries like `unittest.mock` or `responses`.\n- Use `assertTemplateUsed(response, 'template_name.html')` to check template usage in views.\n- Implement `setUp()` and `tearDown()` methods for setup and teardown operations in tests.",
+    "source": "code_example",
+    "updated_at": 1780944891.3352318
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:postgres advanced queries": {
+    "content": "- Use `psql` command-line tool for interacting with PostgreSQL.\n- For advanced queries, explore Common Table Expressions (CTEs) using the `WITH` clause.\n- Recursive CTEs allow querying hierarchical data structures efficiently.\n- Materialize CTEs to improve query performance by caching intermediate results.\n- Data-modifying statements within CTEs can be used for complex operations like updates and deletes.\n- For latest versions, check PostgreSQL official website or use package managers like `apt` or `yum`.\n- Key configuration options include `max_connections`, `shared_buffers`, and `work_mem`.\n- Use `EXPLAIN ANALYZE` to understand and optimize query performance.",
+    "source": "web_search",
+    "updated_at": 1780944898.7946794
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:postgres advanced queries_ex": {
+    "content": "- Use `psql` command-line tool for PostgreSQL database access.\n- Connect using URI format: `postgresql://username:password@host:port/database`.\n- For example, to connect as user `fred` on localhost:\n  ```sh\n  psql \"postgresql://fred:@localhost/mydatabase\"\n  ```\n- Latest versions can be found at [PostgreSQL official website](https://www.postgresql.org/download/).\n- Key config options include:\n  - `max_connections`: Maximum number of concurrent connections.\n  - `shared_buffers`: Memory for caching data and indexes.\n  - `work_mem`: Memory used for sorting operations.\n- Use `EXPLAIN` to analyze query performance. For example:\n  ```sql\n  EXPLAIN SELECT * FROM mytable WHERE id = 1;\n  ```\n- Consider using indexing on frequently queried columns to improve performance.\n- Regularly update and patch PostgreSQL to benefit from security fixes and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1780944909.249921
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:unit testing django": {
+    "content": "- Use `pytest` for Django unit testing.\n- Install via pip: `pip install pytest-django`.\n- Run tests with: `pytest`.\n- Key config in `settings.py`: `INSTALLED_APPS += ['django_pytest']`.\n- Use fixtures for setup and teardown.\n- Example test file structure: `tests/test_models.py`.\n- Mock dependencies using `unittest.mock` or `pytest-mock`.\n- Coverage report with: `pytest --cov=myapp`.\n- Latest pytest version as of my last update is 7.4.0.\n- Key config options in `pytest.ini`: `[pytest]`, `DJANGO_SETTINGS_MODULE = myproject.settings`.",
+    "source": "web_search",
+    "updated_at": 1780944916.5500364
+  },
+  "search:Advanced Testing Techniques for Django + PostgreSQL:unit testing django_ex": {
+    "content": "- Use `python manage.py test` to run Django's built-in testing framework.\n- For Pytest, install it using `pip install pytest-django`.\n- Run Pytest tests with the command `pytest`.\n- Key config options in `settings.py`: `INSTALLED_APPS`, `DATABASES`, and `TEST_RUNNER`.\n- Use `pytest.mark.django_db` for database access in tests.\n- For Selenium testing, ensure ChromeDriver is installed and accessible via PATH.\n- Configure Selenium WebDriver in your test setup with `webdriver.Chrome()`.",
+    "source": "code_example",
+    "updated_at": 1780944921.6357207
+  }
+}

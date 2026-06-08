@@ -1,0 +1,22 @@
+{
+  "search:golang-microservices:golang microservices with grpc": {
+    "content": "- **CLI Commands**: `go get google.golang.org/grpc` to install gRPC.\n- **Latest Versions**: Check the latest version on [Go Modules](https://pkg.go.dev/google.golang.org/grpc).\n- **Key Config Options**:\n  - `grpc.WithInsecure()`: For development without TLS.\n  - `grpc.WithTransportCredentials(credentials.NewTLS(...))`: For secure connections using TLS.",
+    "source": "web_search",
+    "updated_at": 1780944673.130619
+  },
+  "search:golang-microservices:golang microservices with grpc_ex": {
+    "content": "- **CLI Commands**: `go get google.golang.org/grpc`\n- **Latest Versions**: gRPC v1.54.0, Go v1.19.3\n- **Key Config Options**:\n  - `grpc.WithInsecure()`: For development without TLS.\n  - `grpc.WithTLSConfig(tls.Config{})`: For secure communication with TLS.\n  - `server.Serve(lis)`: Starts the gRPC server on a listener.",
+    "source": "code_example",
+    "updated_at": 1780944680.2509103
+  },
+  "search:golang-microservices:golang microservices with rest": {
+    "content": "- **CLI Commands**:\n  - `go version` to check the current Go version.\n  - `go install <package>@latest` to install the latest version of a package.\n  - `go run <file.go>` to run a Go file directly.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is Go 1.20.3. Check [Go's official website](https://golang.org/dl/) for the most current version.\n\n- **Key Config Options**:\n  - `GOPATH`: The workspace directory where your Go code lives.\n  - `GOROOT`: The root of the Go installation.\n  - `GO11MODULE=on` to enable Go modules for dependency management.",
+    "source": "web_search",
+    "updated_at": 1780944688.6735008
+  },
+  "search:golang-microservices:golang microservices with rest_ex": {
+    "content": "- **CLI Commands**:\n  - `go mod init <module_name>`: Initializes a new Go module.\n  - `go get <package_name>`: Downloads and installs the specified package.\n  - `go run <file.go>`: Compiles and runs the Go program.\n\n- **Latest Versions**:\n  - Go 1.20 (as of my last update)\n\n- **Key Config Options**:\n  - `ListenAndServe(\":8080\", nil)`: Starts a web server on port 8080.\n  - `gin.SetMode(gin.ReleaseMode)`: Sets the Gin framework to release mode for production.\n  - `fiber.New()`: Creates a new Fiber application instance.",
+    "source": "code_example",
+    "updated_at": 1780944695.4878044
+  }
+}

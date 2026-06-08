@@ -1,0 +1,22 @@
+{
+  "search:dotnet-mvc-performance-tuning:.net mvc performance tuning be": {
+    "content": "- **CLI Commands**:\n  - `dotnet build --configuration Release`\n  - `dotnet publish --self-contained false`\n\n- **Latest Versions**:\n  - ASP.NET Core 6.0\n  - Entity Framework Core 6.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure logging, connection strings, and other settings.\n  - `Startup.cs` or `Program.cs`: Set up services and middleware.\n  - `web.config`: Configure IIS settings if deploying to Windows Server.\n\n- **Performance Tuning Tips**:\n  - Use async data access: `ToListAsync()`, `ToArrayAsync()`.\n  - Implement caching for frequently accessed data.\n  - Optimize database queries using LINQ and Entity Framework Core features.\n  - Minimize HTTP requests by combining files and using sprites.\n  - Enable compression in `web.config` or through middleware.",
+    "source": "web_search",
+    "updated_at": 1780945569.476895
+  },
+  "search:dotnet-mvc-performance-tuning:.net mvc performance tuning be_ex": {
+    "content": "- Use `dotnet build --optimize` to compile your application in release mode.\n- Update .NET SDK and runtime to the latest version for performance improvements.\n- Enable caching mechanisms like Output Caching, Fragment Caching, or Response Caching in ASP.NET MVC.\n- Optimize database queries using LINQ to SQL or Entity Framework with eager loading and lazy loading strategies.\n- Minify CSS and JavaScript files to reduce load times.\n- Use `async` and `await` for asynchronous programming to improve responsiveness.\n- Configure IIS settings such as increasing the `maxRequestLength` and `executionTimeout`.\n- Implement server-side optimizations like reducing HTTP requests, using sprites, and optimizing images.\n- Utilize client-side techniques like lazy loading, content delivery networks (CDNs), and browser caching.",
+    "source": "code_example",
+    "updated_at": 1780945575.458905
+  },
+  "search:dotnet-mvc-performance-tuning:optimizing .net mvc applicatio": {
+    "content": "- **CLI Commands with Exact Flags**:\n  - `dotnet new mvc --framework net8.0`\n  - `dotnet publish -c Release`\n\n- **Latest Versions**:\n  - .NET Framework: .NET 8.0\n  - ASP.NET Core MVC: Latest version compatible with .NET 8.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure logging, connection strings, and other settings.\n  - `Startup.cs` (or `Program.cs` in .NET 6+): Set up middleware, services, and routing.\n  - `web.config`: For IIS hosting configuration.",
+    "source": "web_search",
+    "updated_at": 1780945587.1712067
+  },
+  "search:dotnet-mvc-performance-tuning:optimizing .net mvc applicatio_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet publish --configuration Release --runtime <RID>`: Publishes the application for a specific runtime.\n  - `dotnet ef migrations add InitialCreate`: Adds an initial migration to the database.\n\n- **Latest Versions**:\n  - ASP.NET Core 10\n  - .NET 8\n\n- **Key Config Options**:\n  - `appsettings.json`:\n    ```json\n    {\n      \"Kestrel\": {\n        \"Endpoints\": {\n          \"Http\": {\n            \"Url\": \"http://*:5000\"\n          }\n        }\n      },\n      \"Logging\": {\n        \"LogLevel\": {\n          \"Default\": \"Information\",\n          \"Microsoft.AspNetCore\": \"Warning\"\n        }\n      }\n    }\n    ```\n  - `Startup.cs`:\n    ```csharp\n    public void ConfigureServices(IServiceCollection services)\n    {\n        services.AddControllersWithViews();\n        services.AddDbContext<ApplicationDbContext>(options =>\n            options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\")));\n    }\n\n    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n    {\n        if (env.IsDevelopment())\n        {\n            app.UseDeveloperExceptionPage();\n        }\n        else\n        {\n            app.UseExceptionHandler(\"/Home/Error\");\n            app.UseHsts();\n        }\n\n        app.UseHttpsRedirection();\n        app.UseStaticFiles();\n\n        app.UseRouting();\n\n        app.UseAuthorization();\n\n        app.UseEndpoints(endpoints =>\n        {\n            endpoints.MapControllerRoute(\n                name: \"default\",\n                pattern: \"{controller=Home}/{action=Index}/{id?}\");\n        });\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1780945597.3869247
+  }
+}

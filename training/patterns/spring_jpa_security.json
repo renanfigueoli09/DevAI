@@ -2,21 +2,21 @@
   "search:spring+jpa-security:spring jpa security best pract": {
     "content": "- Use `@EnableJpaAuditing` to enable auditing in your Spring Data JPA application.\n- Configure `spring.jpa.properties.hibernate.dialect` for optimal database performance.\n- Implement `@PreAuthorize` and `@PostAuthorize` annotations for method-level security.\n- Utilize Spring Security's `HttpSecurity` to configure authentication and authorization rules.\n- Use `@EnableGlobalMethodSecurity(prePostEnabled = true)` to enable global method security.\n- Configure `spring.security.user.name` and `spring.security.user.password` in your application properties for basic authentication.\n- Implement custom user details service by extending `UserDetailsService`.\n- Use Spring Security's `WebSecurityConfigurerAdapter` to customize web security configuration.\n- Enable CSRF protection using `http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())`.\n- Regularly update dependencies to the latest versions for security patches and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780846561.6763225
+    "updated_at": 1780943591.6221066
   },
   "search:spring+jpa-security:spring jpa security best pract_ex": {
     "content": "- Use `spring-boot-starter-security` and `spring-boot-starter-data-jpa` in your `pom.xml`.\n- Implement JWT authentication by adding dependencies for `jjwt-api`, `jjwt-impl`, and `jjwt-jackson`.\n- Configure Spring Security to use JWT with `WebSecurityConfigurerAdapter` or Java configuration.\n- Use `@EnableJpaRepositories` and `@EntityScan` annotations in your main application class.\n- Define custom repositories extending `JpaRepository` for data access.\n- Implement user authentication using `UserDetailsService` and `PasswordEncoder`.\n- Configure CORS settings to allow cross-origin requests if needed.\n- Update dependencies to the latest versions regularly, e.g., Spring Boot 3.0 and Spring Security 6.",
     "source": "code_example",
-    "updated_at": 1780846563.969214
+    "updated_at": 1780943593.710986
   },
   "search:spring+jpa-security:spring jpa security with oauth": {
     "content": "- **Latest Version**: Spring Security 6, Spring Authorization Server 2024\n- **Key Config Options**:\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`\n  - `spring.security.oauth2.client.registration.<registration-id>.client-id`\n  - `spring.security.oauth2.client.registration.<registration-id>.client-secret`\n  - `spring.security.oauth2.client.registration.<registration-id>.authorization-grant-type`\n- **CLI Commands**:\n  - `mvn clean install` for building the project\n  - `java -jar target/your-application.jar` to run the application\n- **Extensibility**: Supports multiple authorization servers and resources.\n- **GitHub Repository**: Caltalys/spring-security-oauth2-password-jpa-implementation",
     "source": "web_search",
-    "updated_at": 1780846566.0290387
+    "updated_at": 1780943596.0514228
   },
   "search:spring+jpa-security:spring jpa security with oauth_ex": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6, OAuth2\n- **Key Config Options**:\n  - `application.yml` for security settings\n  - `@EnableWebSecurity` for enabling web security\n  - `HttpSecurity` for configuring HTTP security rules\n  - `JwtAuthenticationFilter` for JWT authentication\n  - `TokenProvider` for token generation and validation\n- **CLI Commands**:\n  ```bash\n  mvn clean install\n  ```\n  ```bash\n  java -jar target/your-application.jar\n  ```\n- **Additional Resources**:\n  - [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)\n  - [Spring Security Documentation](https://spring.io/projects/spring-security)\n  - [OAuth2 Specification](https://oauth.net/2/)",
     "source": "code_example",
-    "updated_at": 1780846567.9455483
+    "updated_at": 1780943598.1884618
   }
 }

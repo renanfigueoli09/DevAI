@@ -2,31 +2,31 @@
   "search:Performance Tuning:dotnet-entity-framework-core-p": {
     "content": "- Use `dotnet ef migrations add <MigrationName>` to manage database schema changes.\n- Apply `AsNoTracking()` for read-only queries to reduce memory usage and improve performance.\n- Implement compiled queries with `CompiledQuery.Compile` for repeated executions of the same query.\n- Utilize split queries by setting `SplitQueryEnabled = true` in `DbContextOptionsBuilder`.\n- Employ batch operations like `FromSqlRaw` or `ExecuteSqlRaw` for bulk data manipulation.\n- Enable `LeftJoin` operator for complex join scenarios to optimize performance.\n- Monitor and adjust connection string settings, such as `Pooling=true`, for better performance.\n- Regularly update EF Core to the latest version using `dotnet add package Microsoft.EntityFrameworkCore --version <LatestVersion>`.\n- Configure logging with `Logging.AddConsole()` or `Logging.AddDebug()` for detailed query execution insights.",
     "source": "web_search",
-    "updated_at": 1780932754.0372505
+    "updated_at": 1780941493.7788887
   },
   "search:Performance Tuning:dotnet-entity-framework-core-p_ex": {
     "content": "- **Install .NET SDK**: `dotnet --version`\n- **Create New Project**: `dotnet new mvc -n MyProject`\n- **Update Entity Framework Core**: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.0`\n- **Configure DbContext**: In `appsettings.json`, add connection string:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Server=(localdb)\\\\mssqllocaldb;Database=MyProjectDb;Trusted_Connection=True;\"\n  }\n  ```\n- **Migrate Database**: \n  - Add Migration: `dotnet ef migrations add InitialCreate`\n  - Update Database: `dotnet ef database update`\n- **Optimize Queries**:\n  - Use Eager Loading: `.Include(e => e.RelatedEntity)`\n  - Avoid N+1 Query Problem\n- **Use Indexes**: Define indexes in your DbContext model to speed up data retrieval.\n- **Enable Profiling**: Use SQL Server Profiler or Entity Framework Core Logging for performance analysis.\n- **Configure Connection Pooling**: Ensure connection pooling is enabled by default in EF Core.",
     "source": "code_example",
-    "updated_at": 1780932756.090952
+    "updated_at": 1780941496.139936
   },
   "search:Performance Tuning:react-query-performance-optimi": {
     "content": "- Use `react-query` version 3.x or later.\n- Implement caching strategies using `useQuery` and `useMutation`.\n- Configure `refetchOnWindowFocus` to `false` for better performance when the app is not in focus.\n- Set `staleTime` to control how long data should be considered fresh.\n- Use `keepPreviousData` to keep previous data while fetching new data.\n- Implement `suspense: true` and use React Suspense for loading states.\n- Optimize queries by using `enabled` flag conditionally.\n- Configure `retry` and `retryDelay` based on your application's needs.\n- Use `queryClient.invalidateQueries` to manually invalidate queries when necessary.",
     "source": "web_search",
-    "updated_at": 1780932757.9122362
+    "updated_at": 1780941498.4018512
   },
   "search:Performance Tuning:react-query-performance-optimi_ex": {
     "content": "- **CLI Commands**: N/A\n- **Latest Versions**:\n  - React Query: v4.x\n  - TanStack Query: v5.x\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n    ```javascript\n    useQuery('key', fetchData);\n    ```\n  - `useMutation`: For updating data.\n    ```javascript\n    useMutation(updateData);\n    ```\n  - `useInfiniteQuery`: For handling infinite lists.\n    ```javascript\n    useInfiniteQuery('key', fetchMoreData, {\n      getNextPageParam: (lastPage) => lastPage.nextCursor,\n    });\n    ```\n  - `refetchInterval`: For background refetching.\n    ```javascript\n    useQuery('key', fetchData, { refetchInterval: 1000 });\n    ```\n  - `staleTime`: To control when data is considered stale.\n    ```javascript\n    useQuery('key', fetchData, { staleTime: 5000 });\n    ```\n  - `cacheTime`: For controlling the cache duration.\n    ```javascript\n    useQuery('key', fetchData, { cacheTime: 10000 });\n    ```\n  - `suspense`: To enable suspense mode for better performance.\n    ```javascript\n    <Suspense fallback={<div>Loading...</div>}>\n      <MyComponent />\n    </Suspense>\n    ```",
     "source": "code_example",
-    "updated_at": 1780932759.844863
+    "updated_at": 1780941500.699557
   },
   "search:Performance Tuning:fastapi-asyncio-performance-tu": {
     "content": "- **FastAPI Version**: As of my last update, the latest stable version is 0.95.2.\n  \n- **CLI Commands**:\n  - `uvicorn main:app --reload` for development mode.\n  - `uvicorn main:app --host 0.0.0.0 --port 8000` to specify host and port.\n\n- **Key Config Options**:\n  - `debug`: Enable or disable debug mode (`debug=True`).\n  - `reload`: Automatically reload the server on code changes (`reload=True`).\n  - `host`: Specify the host address (`--host 0.0.0.0`).\n  - `port`: Specify the port number (`--port 8000`).\n\n- **Performance Tuning**:\n  - Use asynchronous endpoints for I/O-bound tasks.\n  - Optimize database queries and use connection pooling.\n  - Configure Uvicorn with appropriate worker classes (`--workers 4`).\n  - Enable caching mechanisms for frequently accessed data.",
     "source": "web_search",
-    "updated_at": 1780932762.3083248
+    "updated_at": 1780941502.8209012
   },
   "search:Performance Tuning:fastapi-asyncio-performance-tu_ex": {
     "content": "- Use `uvicorn` with the `--reload` flag for development.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For production, use a WSGI server like Gunicorn or Uvicorn with ASGI support.\n- Key config options in FastAPI include:\n  - `app = FastAPI()`\n  - `@app.get(\"/\")`: Define routes using decorators.\n  - `async def read_root()`: Use async functions for route handlers.\n- For performance tuning, consider using `uvloop` and `aioredis`.\n- Example of running an app with Uvicorn: `uvicorn main:app --host 0.0.0.0 --port 8000`.\n- FastAPI supports asynchronous operations natively, making it suitable for I/O-bound tasks.\n- Use async libraries like SQLAlchemy with FastAPI for database interactions.\n- For production environments, consider using ASGI servers that support Uvicorn, such as Gunicorn or Daphne.",
     "source": "code_example",
-    "updated_at": 1780932764.5390081
+    "updated_at": 1780941505.131816
   }
 }

@@ -2,36 +2,36 @@
   "search:NextJS and TypeScript:typescript best practices for ": {
     "content": "- **CLI Commands**:\n  - `next dev`: Starts the development server.\n  - `next build`: Builds the application for production.\n  - `next start`: Starts the production server.\n  - `next typegen`: Generates TypeScript types.\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript settings for your project.\n  - `next.config.js`: Customize Next.js behavior, including API routes and asset handling.\n  - `pages/api`: Define server-side functions using TypeScript.",
     "source": "web_search",
-    "updated_at": 1780932711.9716487
+    "updated_at": 1780941453.810596
   },
   "search:NextJS and TypeScript:typescript best practices for _ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Ensure TypeScript is enabled by selecting it during the initial setup or manually adding `tsconfig.json`.\n- For best practices, refer to the official Next.js documentation and community resources like GitHub repositories.\n- Utilize the Next.js App Router for modern routing patterns.\n- Implement global error handling in API routes using middleware functions.\n- Use type annotations for props, state, and return types in components.\n- Follow ESLint rules specific to Next.js and TypeScript for code quality.\n- Leverage Next.js's built-in image optimization feature with `next/image`.\n- Configure environment variables through `.env.local` files for security and flexibility.",
     "source": "code_example",
-    "updated_at": 1780932714.2467477
+    "updated_at": 1780941455.9218402
   },
   "search:NextJS and TypeScript:advanced nextjs features": {
     "content": "- **CLI Commands**:\n  - `next dev`: Starts the development server.\n  - `next build`: Builds your application for production.\n  - `next start`: Starts a Node.js server that serves your built application.\n\n- **Latest Versions**:\n  - NextJS: Version 13.5 (as of my last update).\n\n- **Key Config Options**:\n  - `next.config.js`: Configuration file to customize the behavior of your Next.js app.\n    - `output`: Specifies the output type (`'standalone'`, `'export'`).\n    - `reactStrictMode`: Enables React Strict Mode for development.\n    - `images`: Configures image optimization settings.\n\n- **Advanced Features**:\n  - **Serverless Functions**: Use `getServerSideProps` or `getStaticProps` for server-side rendering.\n  - **API Routes**: Create API endpoints with `pages/api`.\n  - **Dynamic Routing**: Support dynamic routes using `[slug].js` syntax.\n  - **Custom Server**: Extend the default Next.js server with custom Node.js code.\n\n- **Deployment**:\n  - Deploy to Vercel or AWS for production hosting.",
     "source": "web_search",
-    "updated_at": 1780932716.2799995
+    "updated_at": 1780941458.1850984
   },
   "search:NextJS and TypeScript:advanced nextjs features_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`: Creates a new Next.js app.\n  - `npm run dev`: Starts the development server.\n\n- **Latest Versions**:\n  - Next.js: v13.x\n\n- **Key Config Options**:\n  - `next.config.js`: Configuration file for customizing Next.js settings.\n  - `appDir`: Enables the App Router for a more structured project layout.",
     "source": "code_example",
-    "updated_at": 1780932718.4030666
+    "updated_at": 1780941460.28603
   },
   "search:NextJS and TypeScript:performance optimization with ": {
     "content": "- Use `next build --optimize` for optimized builds.\n- Implement lazy loading with `next/image`.\n- Utilize `getStaticProps` and `getServerSideProps` for data fetching.\n- Enable automatic static optimization with `output: 'export'` in `next.config.js`.\n- Minimize CSS bundle size by using `purgecss` or `tailwindcss`.\n- Optimize images using the Next.js Image component.\n- Use `next/image` for responsive images.\n- Implement server-side rendering (SSR) to improve performance.\n- Monitor and analyze performance with tools like Lighthouse and WebPageTest.",
     "source": "web_search",
-    "updated_at": 1780932720.6964612
+    "updated_at": 1780941462.3023005
   },
   "search:NextJS and TypeScript:testing nextjs applications": {
     "content": "- **Sencha Test 2.4.0**: Use Sencha Studio for testing Ext JS applications.\n- **Frameworks and Tools**:\n  - **Best Testing Tool**: Sencha Test, Selenium WebDriver, Cypress.\n  - **Automation on CI**: Jenkins, Travis CI, GitLab CI.\n- **Testing Sencha Touch Applications**:\n  - Implement automatic login for comprehensive testing.\n- **Unit Testing with Jasmine**:\n  - Use Jasmine Framework for unit testing ExtJS applications.\n  - Follow the MVC approach and Behavior Driven Testing principles.",
     "source": "web_search",
-    "updated_at": 1780932722.8329294
+    "updated_at": 1780941464.6330624
   },
   "search:NextJS and TypeScript:testing nextjs applications_ex": {
     "content": "- **CLI Commands**:\n  - `npm test`: Runs tests using the default testing framework.\n  - `next dev --turbo`: Starts the Next.js development server with Turbo mode enabled.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Jest: v29.0.3\n  - React Testing Library: v14.0.0\n\n- **Key Config Options**:\n  - `jest.config.js`: Configuration file for Jest.\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - `next.config.js`: Configuration file for Next.js.\n    ```javascript\n    module.exports = {\n      reactStrictMode: true,\n      compilerOptions: {\n        jsx: \"preserve\",\n      },\n    };\n    ```",
     "source": "code_example",
-    "updated_at": 1780932725.1006284
+    "updated_at": 1780941466.9561129
   }
 }

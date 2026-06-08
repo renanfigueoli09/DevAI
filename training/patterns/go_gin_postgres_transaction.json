@@ -1,0 +1,22 @@
+{
+  "search:go-gin-postgres-transaction:go gin postgresql transaction ": {
+    "content": "- **CLI Commands**: Use `go get -u github.com/gin-gonic/gin` to update Gin.\n- **Latest Versions**: Gin v1.8.2, PostgreSQL v14.5.\n- **Key Config Options**:\n  - Set up database connection with `sql.Open(\"postgres\", \"user=yourusername dbname=yourdbname sslmode=disable\")`.\n  - Begin transaction: `tx, err := db.Begin()`.\n  - Commit transaction: `err = tx.Commit()`.\n  - Rollback transaction: `err = tx.Rollback()`.",
+    "source": "web_search",
+    "updated_at": 1780944304.864944
+  },
+  "search:go-gin-postgres-transaction:go gin postgresql transaction _ex": {
+    "content": "- **CLI Commands**: `go get -u github.com/gin-gonic/gin` to update Gin framework.\n- **Latest Versions**: Gin v1.8.2, PostgreSQL v14.5.\n- **Key Config Options**:\n  - In Gin: Use `gin.SetMode(gin.ReleaseMode)` for production.\n  - In PostgreSQL: Configure connection string with `host`, `port`, `user`, `password`, and `dbname`.\n  - Transaction Management: Use `db.Begin()`, `tx.Exec()`, `tx.Commit()`, or `tx.Rollback()` in Go.",
+    "source": "code_example",
+    "updated_at": 1780944310.0634809
+  },
+  "search:go-gin-postgres-transaction:high performance go gin with p": {
+    "content": "- **Latest Version**: PostgreSQL 18\n- **CLI Commands**:\n  - `pgbench -i` to initialize a benchmark database.\n  - `pgbench -c <clients> -T <seconds>` for concurrent clients and duration.\n- **Key Config Options**:\n  - `work_mem`: Sets the maximum amount of memory to be used by any single operation (sort, hash table).\n  - `maintenance_work_mem`: Sets the maximum amount of memory to be used by maintenance operations like VACUUM, CREATE INDEX, etc.\n  - `shared_buffers`: Sets the portion of system memory dedicated to PostgreSQL shared buffers.",
+    "source": "web_search",
+    "updated_at": 1780944318.323496
+  },
+  "search:go-gin-postgres-transaction:high performance go gin with p_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/postgres`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - GORM: v2.3.6\n  - PostgreSQL Driver for GORM: v1.4.5\n\n- **Key Config Options**:\n  - `gin.SetMode(gin.ReleaseMode)` for production mode.\n  - `gorm.Open(postgres.Open(\"user=username dbname=dbname password=password sslmode=disable\"), &gorm.Config{})` to connect to PostgreSQL.\n  - Use `db.Transaction(func(tx *gorm.DB) error { ... })` for transactions.",
+    "source": "code_example",
+    "updated_at": 1780944325.144659
+  }
+}

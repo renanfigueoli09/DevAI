@@ -1,0 +1,32 @@
+{
+  "search:python-flask-security:flask security best practices ": {
+    "content": "- **Use Flask-Security**: For enhanced security features.\n- **Latest Version**: Flask-Security 5.8.1 (as of May 21, 2026).\n- **Key Config Options**:\n  - `SECURITY_PASSWORD_SALT`: Salt for password hashing.\n  - `SECURITY_REGISTERABLE`: Enable user registration.\n  - `SECURITY_RECOVERABLE`: Enable password recovery.\n  - `SECURITY_TRACKABLE`: Track user access times.\n- **Use a WAF**: Implement a web application firewall (WAF) using NGINX or Apache with enabled WAF modules for enhanced protection.\n- **CLI Commands**:\n  - `flask db upgrade`: Migrate database schema.\n  - `flask security init`: Initialize Flask-Security configuration.",
+    "source": "web_search",
+    "updated_at": 1780943921.639834
+  },
+  "search:python-flask-security:flask security best practices _ex": {
+    "content": "- Use Flask-Security version 5.8.1 or later.\n- Set `SECURITY_PASSWORD_SALT` to a strong, random value in your configuration.\n- Enable CSRF protection by setting `WTF_CSRF_ENABLED = True`.\n- Configure email settings for password reset and other security notifications.\n- Implement rate limiting using Flask-Limiter to prevent brute-force attacks.\n- Use HTTPS to encrypt data transmitted between the client and server.\n- Regularly update dependencies and Flask-Security to patch known vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780943926.8673568
+  },
+  "search:python-flask-security:flask security authentication ": {
+    "content": "- **Flask-Security**: \n  - Latest version: 5.8.1\n  - Installation: `pip install Flask-Security`\n  - Basic configuration:\n    ```python\n    app.config['SECURITY_PASSWORD_SALT'] = 'your_salt'\n    app.config['SECURITY_REGISTERABLE'] = True\n    app.config['SECURITY_TRACKABLE'] = True\n    ```\n\n- **Flask API Security**:\n  - Key practices: Use HTTPS, JWT for authentication, rate limiting.\n  - Example of JWT configuration in Flask:\n    ```python\n    from flask_jwt_extended import JWTManager\n\n    app.config['JWT_SECRET_KEY'] = 'your_secret_key'\n    jwt = JWTManager(app)\n    ```\n\n- **Building a Secure Flask Authentication System**:\n  - Use `Flask-Security` for authentication.\n  - Implement password hashing with bcrypt.\n  - Enable user registration and account activation.\n  - Configure session management securely.",
+    "source": "web_search",
+    "updated_at": 1780943937.6335807
+  },
+  "search:python-flask-security:flask security authentication _ex": {
+    "content": "- **Install Flask-Security**: `pip install Flask-Security`\n- **Latest Version**: Check on [PyPI](https://pypi.org/project/Flask-Security/)\n- **Key Config Options**:\n  - `SECURITY_PASSWORD_SALT`: Salt for password hashing.\n  - `SECURITY_REGISTERABLE`: Enable user registration.\n  - `SECURITY_RECOVERABLE`: Enable password recovery.\n  - `SECURITY_TRACKABLE`: Track user access times.\n  - `SECURITY_TWO_FACTOR`: Enable two-factor authentication.\n- **CLI Commands**:\n  - `flask db init`: Initialize the database.\n  - `flask db migrate`: Create migration scripts.\n  - `flask db upgrade`: Apply migrations to the database.\n- **Example Configuration**:\n  ```python\n  from flask import Flask\n  from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin\n\n  app = Flask(__name__)\n  app.config['SECRET_KEY'] = 'super-secret'\n  app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'\n  app.config['SECURITY_PASSWORD_SALT'] = 'your-salt-here'\n\n  # Define models\n  class User(UserMixin, db.Model):\n      pass\n\n  class Role(RoleMixin, db.Model):\n      pass\n\n  user_datastore = SQLAlchemyUserDatastore(db, User, Role)\n  security = Security(app, user_datastore)\n\n  if __name__ == '__main__':\n      app.run(debug=True)\n  ```",
+    "source": "code_example",
+    "updated_at": 1780943947.1128614
+  },
+  "search:python-flask-security:flask security authorization p": {
+    "content": "- **Latest Version**: Flask 3.1.x\n- **CLI Commands**:\n  - `flask run`: Runs the application.\n  - `flask shell`: Opens an interactive Python shell with the app context.\n  - `flask db init`: Initializes a new database migration repository.\n  - `flask db migrate`: Creates a new migration script from your models to the database.\n  - `flask db upgrade`: Applies all migrations to the database.\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for securely signing the session cookie.\n  - `SQLALCHEMY_DATABASE_URI`: The URI of the database to connect to.\n  - `DEBUG`: Enables or disables debug mode.",
+    "source": "web_search",
+    "updated_at": 1780943954.7355177
+  },
+  "search:python-flask-security:flask security authorization p_ex": {
+    "content": "- **CLI Commands**:\n  - `flask run`: Runs the Flask application.\n  - `flask shell`: Opens an interactive Python shell with context.\n\n- **Latest Versions**:\n  - Flask: 3.1.x\n  - Flask-BasicAuth: Latest version as of Feb 7, 2024\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Required for session management and CSRF protection.\n  - `SQLALCHEMY_DATABASE_URI`: Specifies the database URI for SQLAlchemy.\n  - `BASIC_AUTH_USERNAME` and `BASIC_AUTH_PASSWORD`: Credentials for basic authentication.",
+    "source": "code_example",
+    "updated_at": 1780943961.3892055
+  }
+}

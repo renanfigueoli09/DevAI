@@ -1,0 +1,32 @@
+{
+  "search:dotnet-entityframework-core-performance:entity framework core performa": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations and `dotnet ef database update` to apply them.\n- **Latest Versions**: Ensure you are using the latest stable version of Entity Framework Core, which as of my last update is 7.x. Check [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) for the most current version.\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` to improve performance when querying read-only data.\n  - `AsSplitQuery()` to split large queries into smaller ones, reducing memory usage and improving performance.\n  - `UseLazyLoadingProxies(true)` for lazy loading if needed but be cautious as it can lead to increased complexity and potential issues with circular references.\n  - Configure connection strings in `appsettings.json` and use dependency injection to manage DbContext instances efficiently.",
+    "source": "web_search",
+    "updated_at": 1780943878.2268026
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core performa_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef` to interact with Entity Framework Core.\n- **Latest Version**: EF Core 7.0 was released in March 2023.\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `MaxBatchSize(int batchSize)` to control batch size for bulk operations.",
+    "source": "code_example",
+    "updated_at": 1780943882.4248807
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core query op": {
+    "content": "- Install EF Core provider via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- Use `.Include()` to eager load related entities.\n- Apply `.AsNoTracking()` for read-only queries to improve performance.\n- Utilize `.Where()`, `.OrderBy()`, and `.Select()` for efficient querying.\n- Employ `.FromSqlRaw()` or `.FromSqlInterpolated()` for raw SQL queries.\n- Configure logging with `optionsBuilder.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));`\n- Use `.AsSplitQuery()` to split large queries into multiple smaller ones.\n- Monitor and analyze query performance using EF Core's built-in logging and profiling tools.",
+    "source": "web_search",
+    "updated_at": 1780943892.8782628
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core query op_ex": {
+    "content": "- Use `EF.CompileAsyncQuery` to compile LINQ expressions into an asynchronous query.\n- Ensure your queries are as specific as possible to reduce the amount of data fetched from the database.\n- Utilize eager loading with `.Include()` to fetch related entities in a single query, reducing the number of round-trips to the database.\n- Apply `AsNoTracking()` when you don't need to update the entities back to the database, which can improve performance by not tracking changes.\n- Use `Select` to project only the required fields instead of fetching entire entities.\n- Consider using `FromSqlRaw` or `FromSqlInterpolated` for complex queries that cannot be expressed with LINQ.\n- Monitor and analyze query performance using tools like SQL Server Profiler or EF Core's built-in logging capabilities.\n- Regularly update Entity Framework Core to the latest version to benefit from performance improvements, bug fixes, and new features.",
+    "source": "code_example",
+    "updated_at": 1780943900.4687884
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core indexing": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core 7\n\n- **Key Config Options**:\n  - `Index` in model builder: `.HasIndex(e => e.PropertyName)`\n  - Disable automatic index creation for foreign keys: Use Fluent API to explicitly control indexing.\n  - Consider composite indexes for related columns to improve query performance.",
+    "source": "web_search",
+    "updated_at": 1780943908.0562954
+  },
+  "search:dotnet-entityframework-core-performance:entity framework core indexing_ex": {
+    "content": "- **Entity Framework Core Indexing Strategies**: Use `db.Index` in your model configuration to define indexes.\n- **Latest Version**: EF Core 7.0 as of my last update.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`: Adds a new migration with the name \"InitialCreate\".\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n- **Key Config Options**:\n  - `IsUnique = true` for unique indexes.\n  - `Name = \"CustomIndexName\"` to specify a custom index name.\n  - `IncludeProperties = new[] { \"Property1\", \"Property2\" }` to include additional properties in the index.",
+    "source": "code_example",
+    "updated_at": 1780943913.7359424
+  }
+}

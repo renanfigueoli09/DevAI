@@ -1,0 +1,22 @@
+{
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy orm tutoria": {
+    "content": "- Use `pip install fastapi sqlalchemy databases[postgresql] alembic pydantic` to install necessary packages.\n- FastAPI version: 0.95.0 as of my last update.\n- SQLAlchemy ORM version: 1.4.32 as of my last update.\n- Alembic version: 1.7.6 as of my last update.\n- Pydantic version: 1.8.2 as of my last update.\n- Create a database URL like `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`.\n- Use `engine = create_engine(SQLALCHEMY_DATABASE_URL)` to create an engine instance.\n- Configure session with `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`.\n- Define models using SQLAlchemy ORM classes.\n- Create Pydantic models for data validation and serialization.\n- Use FastAPI's dependency injection to manage database sessions.\n- Implement CRUD operations in FastAPI endpoints.\n- Utilize Alembic for migrations with `alembic init alembic` and configure it in your project.",
+    "source": "web_search",
+    "updated_at": 1780944335.358474
+  },
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy orm tutoria_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy databases pydantic`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - Pydantic: 1.10.7\n\n- **Key Config Options**:\n  - Database URL (e.g., `SQLALCHEMY_DATABASE_URL = \"sqlite:///./test.db\"`)\n  - Dependency injection for database sessions\n  - Use of Pydantic models for data validation and settings management",
+    "source": "code_example",
+    "updated_at": 1780944341.131566
+  },
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy migrations ": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a new migration script based on changes detected.\n  - `alembic upgrade head`: Applies all migrations to the database.\n  - `alembic downgrade -1`: Reverts the last applied migration.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: Specifies the database URL.\n  - `alembic.ini`: Configuration file for Alembic, including paths to migration scripts and environment settings.\n  - `env.py`: Script used by Alembic to run migrations, where you define your target metadata.",
+    "source": "web_search",
+    "updated_at": 1780944350.1522727
+  },
+  "search:fastapi+sqlalchemy-orm:fastapi sqlalchemy migrations _ex": {
+    "content": "- Use `alembic` for migrations.\n- Install latest FastAPI (`pip install fastapi`) and SQLAlchemy (`pip install sqlalchemy`).\n- Configure database URL in `settings.py`.\n- Initialize Alembic with `alembic init alembic`.\n- Update `alembic.ini` with your database URL.\n- Create migration scripts with `alembic revision --autogenerate -m \"message\"`.\n- Apply migrations with `alembic upgrade head`.\n- Use environment variables for sensitive data like database URLs.\n- Implement dependency injection in FastAPI to manage database sessions.",
+    "source": "code_example",
+    "updated_at": 1780944364.124096
+  }
+}

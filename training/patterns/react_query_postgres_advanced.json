@@ -2,31 +2,31 @@
   "search:react-query+postgres-advanced:react query with postgresql ad": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `staleTime`: Time in milliseconds after which a query is considered stale.\n  - `refetchInterval`: Interval at which the query should refetch data.\n  - `useQuery` options: `queryKey`, `queryFn`, `initialData`, `onSuccess`, `onError`.",
     "source": "web_search",
-    "updated_at": 1780932485.0641253
+    "updated_at": 1780941250.0786057
   },
   "search:react-query+postgres-advanced:react query with postgresql ad_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `queryClient`: Manages the cache and provides methods to interact with it.\n  - `useQuery`: Hook for fetching data.\n  - `useMutation`: Hook for updating data.\n  - `refetchInterval`: Automatically refetches the query at specified intervals.",
     "source": "code_example",
-    "updated_at": 1780932487.7330701
+    "updated_at": 1780941252.0823271
   },
   "search:react-query+postgres-advanced:react query and postgresql cac": {
     "content": "- Install pgpool-II or pgbouncer using `sudo apt-get install pgpool2` or `sudo apt-get install pgbouncer`.\n- Configure shared buffers in PostgreSQL by setting `shared_buffers = '4GB'` in the `postgresql.conf` file.\n- Use React Query for data fetching and caching. Latest version: `npm install react-query@latest`.\n- Implement Zod for form validation. Latest version: `npm install zod@latest`.\n- Utilize Chakra UI for component styling. Latest version: `npm install @chakra-ui/react@latest`.\n- Employ React Hook Form for handling forms. Latest version: `npm install react-hook-form@latest`.\n- Configure connection pool size in pgpool-II or pgbouncer using the `-max_pool` flag.\n- Optimize queries to avoid N+1 problems by fetching related data in a single query.\n- Use Chakra UI's components to build user interfaces efficiently.",
     "source": "web_search",
-    "updated_at": 1780932492.3548605
+    "updated_at": 1780941254.2253046
   },
   "search:react-query+postgres-advanced:react query and postgresql cac_ex": {
     "content": "- **React Query**: Use `useQuery` and `useMutation` hooks to manage data fetching and caching.\n- **PostgreSQL Caching**:\n  - **pg_buffercache**: Tracks which pages are currently in memory.\n  - **Shared Buffers**: Configured via `shared_buffers` in `postgresql.conf`.\n  - **Query Caching**: Use `PREPARE` statements for repeated queries.\n  - **Materialized Views**: Precomputed tables that can be refreshed periodically.\n- **CLI Commands**:\n  - `psql --command=\"SELECT * FROM pg_buffercache;\"`: Check buffer cache usage.\n  - `pg_ctl restart -D /path/to/data/directory`: Restart PostgreSQL with new configuration.\n- **Latest Versions**:\n  - React Query: v4.0.0\n  - PostgreSQL: v15.0\n- **Key Config Options**:\n  - `shared_buffers`: Adjust based on system memory (e.g., 25% of total RAM).\n  - `work_mem`: Increase for larger queries.\n  - `maintenance_work_mem`: For large maintenance operations.",
     "source": "code_example",
-    "updated_at": 1780932495.4434955
+    "updated_at": 1780941256.4258952
   },
   "search:react-query+postgres-advanced:react query and postgresql rea": {
     "content": "- **CLI Commands**:\n  - `brew install dozer` (for macOS using Homebrew)\n  \n- **Latest Versions**:\n  - React Query: v4.x\n  - PostgreSQL: v15.x\n  \n- **Key Config Options**:\n  - For React Query, use `onMutate` for optimistic updates.\n  - For real-time data with tRPC and React Query, consider using `useEffect` or custom hooks to handle subscriptions.",
     "source": "web_search",
-    "updated_at": 1780932498.0965092
+    "updated_at": 1780941258.5880418
   },
   "search:react-query+postgres-advanced:react query and postgresql rea_ex": {
     "content": "- **Install PostgreSQL**: `sudo apt-get install postgresql`\n- **Create Database**: `createdb mydatabase`\n- **Connect to Database**: `psql -d mydatabase`\n- **Install Node.js**: `curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs`\n- **Install Express**: `npm install express`\n- **Install pg (PostgreSQL client)**: `npm install pg`\n- **Install React Query**: `npm install react-query`\n- **Create a Node.js Server**:\n  ```javascript\n  const express = require('express');\n  const { Pool } = require('pg');\n  const app = express();\n  const pool = new Pool({\n    user: 'youruser',\n    host: 'localhost',\n    database: 'mydatabase',\n    password: 'yourpassword',\n    port: 5432,\n  });\n\n  app.get('/messages', async (req, res) => {\n    const client = await pool.connect();\n    try {\n      const result = await client.query('SELECT * FROM messages');\n      res.json(result.rows);\n    } finally {\n      client.release();\n    }\n  });\n\n  app.listen(3000, () => console.log('Server running on port 3000'));\n  ```\n- **Create a React Component**:\n  ```javascript\n  import { useQuery } from 'react-query';\n  import axios from 'axios';\n\n  const fetchMessages = async () => {\n    const response = await axios.get('http://localhost:3000/messages');\n    return response.data;\n  };\n\n  function Messages() {\n    const { data, isLoading, error } = useQuery('messages', fetchMessages);\n\n    if (isLoading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error.message}</div>;\n\n    return (\n      <ul>\n        {data.map(message => (\n          <li key={message.id}>{message.content}</li>\n        ))}\n      </ul>\n    );\n  }\n\n  export default Messages;\n  ```\n- **Real-time Updates**: Use WebSockets or Server-Sent Events (SSE) to push updates from the server to the client.",
     "source": "code_example",
-    "updated_at": 1780932500.5705457
+    "updated_at": 1780941261.0215669
   }
 }

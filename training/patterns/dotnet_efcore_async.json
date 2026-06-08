@@ -2,26 +2,26 @@
   "search:dotnet+efcore-async:dotnet efcore async performanc": {
     "content": "- Use `dotnet ef dbcontext optimize --output-dir <directory> --namespace <namespace>` to generate the model.\n- Install EF Core using `dotnet add package Microsoft.EntityFrameworkCore.Sqlite` or specify a preview version with `--version`.\n- For API performance optimization, use asynchronous programming in ASP.NET Core to avoid blocking threads.\n- Real-world case studies show that async programming improves scalability rather than speed.",
     "source": "web_search",
-    "updated_at": 1780933985.7899463
+    "updated_at": 1780942652.797896
   },
   "search:dotnet+efcore-async:async database operations with": {
     "content": "- Use `dotnet new mvc -n AsyncDbApp` to create a new MVC project.\n- Install EF Core provider for your database using `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`.\n- Update DbContext with async methods like `ToListAsync()`, `CountAsync()`.\n- Configure connection strings in `appsettings.json`.\n- Use `await` keyword when calling async methods to ensure non-blocking execution.\n- Ensure all database operations are wrapped in try-catch blocks for error handling.\n- Consider using dependency injection for managing DbContext instances.\n- For large data sets, use pagination and filtering to reduce load times.\n- Monitor performance with tools like SQL Server Profiler or EF Core's logging capabilities.",
     "source": "web_search",
-    "updated_at": 1780933988.0621643
+    "updated_at": 1780942655.0542543
   },
   "search:dotnet+efcore-async:async database operations with_ex": {
     "content": "- **Latest EF Core Version**: EF Core 7\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - DbContext Configuration in `Startup.cs` or `Program.cs`\n  - Migrations for Database Schema Changes",
     "source": "code_example",
-    "updated_at": 1780933990.2245448
+    "updated_at": 1780942656.9213479
   },
   "search:dotnet+efcore-async:asynchronous entity framework ": {
     "content": "- **Latest Version**: Entity Framework Core 7.0 as of my last update.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` to improve performance by not tracking entities.\n  - `AsNoTracking()` for query results without change tracking.\n  - `ToListAsync()`, `FirstOrDefaultAsync()`, etc., for asynchronous querying.\n\n- **Performance Tips**:\n  - Use `Include` and `ThenInclude` for eager loading.\n  - Apply filters in the database using `.Where`.\n  - Avoid fetching unnecessary data with projections (`Select`).",
     "source": "web_search",
-    "updated_at": 1780933992.1241307
+    "updated_at": 1780942658.9162104
   },
   "search:dotnet+efcore-async:asynchronous entity framework _ex": {
     "content": "- Use `ToListAsync()`, `FirstOrDefaultAsync()`, etc., for asynchronous queries.\n- Always await async calls immediately or use separate DbContext instances for parallel operations.\n- Ensure your project targets .NET Core 3.0 or later for best performance with EF Core.\n- Consider using `DbContextOptionsBuilder` to configure options like logging and connection strings.\n- For high-performance scenarios, enable query tracking by setting `ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking`.\n- Use `AsNoTracking()` when you don't need to track changes in the entities.\n- Monitor performance with tools like Entity Framework Profiler for identifying bottlenecks.",
     "source": "code_example",
-    "updated_at": 1780933994.0491183
+    "updated_at": 1780942661.1699085
   }
 }

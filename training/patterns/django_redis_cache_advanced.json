@@ -2,21 +2,21 @@
   "search:django+redis-cache-advanced:advanced django redis cache te": {
     "content": "- **CLI Commands**:\n  - `pip install django-redis`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CACHES = {\n        'default': {\n            'BACKEND': 'django_redis.cache.RedisCache',\n            'LOCATION': 'redis://127.0.0.1:6379/1',\n            'OPTIONS': {\n                'CLIENT_CLASS': 'django_redis.client.DefaultClient',\n            }\n        }\n    }`\n  - `CACHES['default']['LOCATION']`: Redis server URL.\n  - `CACHES['default']['OPTIONS']['CLIENT_CLASS']`: Client class for connecting to Redis.",
     "source": "web_search",
-    "updated_at": 1780933598.9635768
+    "updated_at": 1780942309.8354673
   },
   "search:django+redis-cache-advanced:advanced django redis cache te_ex": {
     "content": "- **CLI Commands**:\n  - `sudo service redis-server restart`: Restart Redis server.\n  \n- **Latest Versions**:\n  - django-redis: Not specified in the text, but typically follows the latest stable version of Django and redis-py.\n\n- **Key Config Options**:\n  - Connection string format: Uses standard URL notation for better interoperability.\n  - Cache API usage: For storing and retrieving data from Redis cache.",
     "source": "code_example",
-    "updated_at": 1780933601.6599908
+    "updated_at": 1780942312.291052
   },
   "search:django+redis-cache-advanced:django redis cache performance": {
     "content": "- Install Redis using `sudo apt-get install redis-server` on Ubuntu.\n- Ensure Redis is running by checking its status with `sudo systemctl status redis`.\n- Add `django-redis` to your project's requirements.txt and run `pip install -r requirements.txt`.\n- Configure Django settings in `settings.py`:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Use `@cache_page` decorator for caching views:\n  ```python\n  from django.views.decorators.cache import cache_page\n\n  @cache_page(60 * 15)  # Cache this view for 15 minutes\n  def my_view(request):\n      ...\n  ```\n- Utilize `cache.set`, `cache.get`, and other methods in your views or services:\n  ```python\n  from django.core.cache import cache\n\n  cache.set('my_key', 'my_value')\n  value = cache.get('my_key')\n  ```\n- Monitor Redis performance using tools like `redis-cli` with commands such as `INFO memory` and `MONITOR`.\n- Regularly update Django and `django-redis` to the latest versions for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780933604.3745515
+    "updated_at": 1780942314.4183204
   },
   "search:django+redis-cache-advanced:using redis as a cache backend": {
     "content": "- Install Redis using `sudo apt-get install redis-server` on Ubuntu.\n- Start Redis server with `redis-server`.\n- Connect to Redis from Django using `pip install django-redis`.\n- Configure Django settings in `settings.py`: \n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Use cache in Django views:\n  ```python\n  from django.core.cache import cache\n\n  def my_view(request):\n      if 'my_key' in cache:\n          value = cache.get('my_key')\n      else:\n          value = compute_expensive_operation()\n          cache.set('my_key', value, timeout=300)\n      return render(request, 'my_template.html', {'value': value})\n  ```\n- Monitor Redis performance with `redis-cli --stat` or `redis-cli info`.\n- Update Django and django-redis to latest versions using `pip install -U django django-redis`.",
     "source": "web_search",
-    "updated_at": 1780933607.405737
+    "updated_at": 1780942316.416533
   }
 }

@@ -2,11 +2,11 @@
   "search:spring-cloud-streams-kafka:spring cloud streams kafka err": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.4.0\n  - Apache Kafka Streams: 3.0.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Controls the offset reset policy (e.g., earliest, latest).\n  - `spring.cloud.stream.error.default.destination`: Specifies a default error topic for failed messages.",
     "source": "web_search",
-    "updated_at": 1780932882.3384767
+    "updated_at": 1780941626.7315671
   },
   "search:spring-cloud-streams-kafka:spring cloud streams kafka err_ex": {
     "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Kafka Streams: 3.4.0\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.cloud.stream.error.enabled`: Enables error handling.\n  - `spring.cloud.stream.error.destination`: Specifies the Kafka topic for error messages.",
     "source": "code_example",
-    "updated_at": 1780932884.3418062
+    "updated_at": 1780941628.7702541
   }
 }

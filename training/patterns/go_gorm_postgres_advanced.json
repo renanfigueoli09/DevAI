@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-postgres-advanced:go gorm postgresql advanced te": {
+    "content": "- **CLI Commands**:\n  - `go get gorm.io/driver/postgres`\n  - `go get gorm.io/gorm`\n\n- **Latest Versions**:\n  - GORM: v2.34.0\n  - PostgreSQL Driver for GORM: v1.4.5\n\n- **Key Config Options**:\n  - DSN (Data Source Name): `host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai`\n  - Auto Migration: `db.AutoMigrate(&User{})`\n  - Preload Associations: `db.Preload(\"Profile\").Find(&users)`\n  - Transactions: `tx := db.Begin(); tx.Create(&user); tx.Commit()`\n  - Scopes: Define reusable query functions.\n  - Hooks: Implement lifecycle callbacks for models.",
+    "source": "web_search",
+    "updated_at": 1780944441.6054096
+  },
+  "search:go-gorm-postgres-advanced:go gorm postgresql advanced te_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n  - `go get gorm.io/driver/postgres`\n  - `go get gorm.io/gorm`\n\n- **Latest Versions**:\n  - GORM: v1.23.6\n  - PostgreSQL Driver for GORM: v1.4.0\n\n- **Key Config Options**:\n  - `dsn`: Data Source Name, e.g., `host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai`\n  - `autoMigrate`: Automatically migrate schema\n  - `logger`: Custom logger for GORM operations",
+    "source": "code_example",
+    "updated_at": 1780944456.6237476
+  },
+  "search:go-gorm-postgres-advanced:gorm with go and postgresql: b": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `go get -u gorm.io/driver/postgres` to install PostgreSQL driver for GORM.\n\n- **Latest Versions**:\n  - GORM: v2.16.0\n  - PostgreSQL Driver for GORM: v1.4.5\n\n- **Key Config Options**:\n  - `dsn`: Data Source Name, e.g., `host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai`\n  - `gorm.DB.AutoMigrate(&User{})` for automatic schema migration.\n  - `gorm.DB.Create(&user)` to insert a new record.\n  - `gorm.DB.Find(&users, \"name = ?\", \"jinzhu\")` to query records.",
+    "source": "web_search",
+    "updated_at": 1780944468.8124082
+  },
+  "search:go-gorm-postgres-advanced:gorm with go and postgresql: b_ex": {
+    "content": "- Use `go get -u gorm.io/gorm` to install the latest version of GORM.\n- Install PostgreSQL using `brew install postgresql` on macOS or `sudo apt-get install postgresql` on Ubuntu.\n- Initialize a new Go module with `go mod init your_module_name`.\n- Set up a connection string in your Go code: `dsn := \"host=localhost user=your_user password=your_password dbname=your_db port=5432 sslmode=disable TimeZone=Asia/Shanghai\"`\n- Migrate your database schema using GORM's migration feature with `db.AutoMigrate(&YourModel{})`.\n- Use the `go run` command to execute Go code directly from the source file: `go run main.go`.\n- Configure environment variables for sensitive data like database credentials.\n- Utilize `.env` files for managing configuration settings, and load them using packages like `github.com/joho/godotenv`.\n- For debugging, use `db.Debug().Create(&YourModel{})` to log SQL queries.\n- Ensure your Go code is formatted with `go fmt` before committing.",
+    "source": "code_example",
+    "updated_at": 1780944475.8161206
+  }
+}

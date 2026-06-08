@@ -2,21 +2,21 @@
   "search:django+celery-rabbitmq:django celery rabbitmq integra": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts the Docker containers.\n  - `celery -A my_project worker --loglevel=info`: Runs a Celery worker.\n  - `celery -A my_project beat --loglevel=info`: Runs a Celery beat scheduler.\n\n- **Latest Versions**:\n  - Django: 4.1\n  - Celery: 5.2\n  - RabbitMQ: 3.8\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL = 'amqp://guest@localhost//'`: Specifies the broker URL for Celery.\n  - `CELERY_RESULT_BACKEND = 'rpc://'`: Sets the backend where task results are stored.\n  - `CELERY_ACCEPT_CONTENT = ['json']`: Defines accepted content types for tasks.",
     "source": "web_search",
-    "updated_at": 1780933529.0903034
+    "updated_at": 1780942244.6550229
   },
   "search:django+celery-rabbitmq:django celery rabbitmq integra_ex": {
     "content": "- **Install Django**: `pip install django`\n- **Install Celery**: `pip install celery`\n- **Install RabbitMQ**: Download and run from [RabbitMQ official site](https://www.rabbitmq.com/download.html)\n- **Configure Celery in Django**:\n  - Create a file `celery.py` in your project root.\n  - Add the following code:\n    ```python\n    import os\n    from celery import Celery\n\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')\n    app = Celery('your_project')\n    app.config_from_object('django.conf:settings', namespace='CELERY')\n    app.autodiscover_tasks()\n    ```\n- **Configure RabbitMQ in Celery**:\n  - In `celery.py`, add the broker URL:\n    ```python\n    app.conf.broker_url = 'amqp://localhost//'\n    ```\n- **Create a Celery Task**:\n  - Create a file `tasks.py` in one of your apps.\n  - Define a task:\n    ```python\n    from celery import shared_task\n\n    @shared_task\n    def add(x, y):\n        return x + y\n    ```\n- **Run Celery Worker**:\n  - In the terminal, run: `celery -A your_project worker --loglevel=info`\n- **Test the Task**:\n  - Run a Django shell and call the task:\n    ```python\n    from your_app.tasks import add\n    result = add.delay(4, 6)\n    print(result.get())  # Outputs: 10\n    ```\n- **Latest Versions**: Ensure you use the latest versions of Django, Celery, and RabbitMQ for compatibility and security.\n- **Key Config Options**:\n  - `broker_url`: Specifies the message broker URL (e.g., RabbitMQ).\n  - `task_serializer`: Serialization method for task arguments (default is JSON).\n  - `result_backend`: Backend to store task results (e.g., Redis, Django database).",
     "source": "code_example",
-    "updated_at": 1780933531.0775068
+    "updated_at": 1780942246.7126906
   },
   "search:django+celery-rabbitmq:django celery rabbitmq perform": {
     "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - RabbitMQ: 3.8\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to `amqp://guest@localhost//` for local development.\n  - `CELERY_RESULT_BACKEND`: Use `rpc://` for result storage.\n  - `CELERY_WORKER_CONCURRENCY`: Adjust based on CPU cores (e.g., `4`).\n  - `CELERY_TASK_ACKS_LATE`: Set to `True` for delayed task acknowledgment.\n  - `RABBITMQ_QUEUE_OPTIONS`: Configure queue persistence and memory limits.",
     "source": "web_search",
-    "updated_at": 1780933532.8152316
+    "updated_at": 1780942249.0903683
   },
   "search:django+celery-rabbitmq:django celery rabbitmq perform_ex": {
     "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - RabbitMQ: 3.10\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to `amqp://guest@localhost//` for local development.\n  - `CELERY_RESULT_BACKEND`: Set to `redis://localhost:6379/0`.\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types, e.g., `['json']`.\n  - `CELERY_TASK_SERIALIZER`: Serialization method, e.g., `'json'`.",
     "source": "code_example",
-    "updated_at": 1780933534.7060978
+    "updated_at": 1780942251.3471973
   }
 }

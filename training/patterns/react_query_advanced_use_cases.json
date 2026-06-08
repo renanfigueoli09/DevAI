@@ -1,0 +1,22 @@
+{
+  "search:react-query-advanced-use-cases:advanced react query use cases": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Version**: React Query v4.0.0\n- **Key Config Options**:\n  - `queryClient`: Custom instance for managing query state.\n  - `useQuery`: Hook for fetching data with automatic caching and invalidation.\n  - `useMutation`: Hook for handling side effects like form submissions or data updates.\n  - `useInfiniteQuery`: Hook for implementing infinite scrolling.\n- **Advanced Patterns**:\n  - **Pagination**: Use `getNextPageParam` to fetch more data as the user scrolls.\n  - **Cache Invalidation**: Invalidate queries when data changes using `invalidateQueries`.\n  - **Optimistic Updates**: Update UI immediately and then update server asynchronously.",
+    "source": "web_search",
+    "updated_at": 1780945645.0901678
+  },
+  "search:react-query-advanced-use-cases:advanced react query use cases_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app`  \n  - Flags: `--template typescript`\n\n- **Latest Version**: React Query v4.23.0\n\n- **Key Config Options**:\n  - `queryClient`: Centralized place to configure and manage query behavior.\n  - `useQuery`: Hook for fetching data with automatic caching, refetching, and error handling.\n  - `useMutation`: Hook for performing side effects like form submissions or data updates.\n  - `useInfiniteQuery`: Hook for fetching infinite lists of data.",
+    "source": "code_example",
+    "updated_at": 1780945651.7702813
+  },
+  "search:react-query-advanced-use-cases:optimizing react query for lar": {
+    "content": "- Use `react-query@latest` for efficient data fetching and caching.\n- Implement virtualization with libraries like `react-window` or `react-virtualized`.\n- Set up performance monitoring using tools like `React Profiler` or third-party services.\n- Optimize database queries to reduce load times.\n- Utilize `useMemo` and `useCallback` for memoizing expensive calculations and functions.\n- Implement server-side rendering (SSR) with Next.js for better initial load times.\n- Use `react-query`'s `refetchOnWindowFocus` option to control refetching behavior.\n- Consider using `react-query`'s `staleTime` and `cacheTime` options to manage cache lifetimes.\n- Employ lazy loading techniques for components and data.",
+    "source": "web_search",
+    "updated_at": 1780945661.2601833
+  },
+  "search:react-query-advanced-use-cases:optimizing react query for lar_ex": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app` to set up a new React project.\n- **Latest Versions**: React Query v4.0.0, TanStack Query v5.0.0.\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global state management.\n  - `useQuery`: Hook to fetch data and manage state.\n  - `useInfiniteQuery`: Hook for fetching infinite lists.\n  - `useMutation`: Hook for managing side effects.\n  - `refetchOnWindowFocus`: Control refetching behavior on window focus.",
+    "source": "code_example",
+    "updated_at": 1780945667.983695
+  }
+}

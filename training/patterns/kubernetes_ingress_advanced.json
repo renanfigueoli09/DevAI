@@ -2,11 +2,11 @@
   "search:kubernetes+ingress-advanced:kubernetes ingress performance": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy or update resources.\n  - `kubectl get ingress` to list all Ingress resources.\n  - `kubectl describe ingress <ingress-name>` for detailed information about an Ingress resource.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is Kubernetes 1.27, released in March 2023. Always check the official Kubernetes website for the most current version.\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: To increase the maximum body size allowed by the proxy.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: To specify the backend protocol, e.g., HTTP or HTTPS.\n\nFor performance optimization in Kubernetes Ingress:\n- Ensure that your Ingress controller is up to date and configured with the latest features.\n- Use annotations like `nginx.ingress.kubernetes.io/rewrite-target` for efficient URL routing.\n- Adjust resource limits and requests based on your application's needs.\n- Monitor and tune the Ingress controller logs for any bottlenecks or issues.\n\nFor more detailed information, refer to the official Kubernetes documentation and community resources.",
     "source": "web_search",
-    "updated_at": 1780934248.2894413
+    "updated_at": 1780942901.5089316
   },
   "search:kubernetes+ingress-advanced:kubernetes ingress performance_ex": {
     "content": "- **Latest Kubernetes Version**: 1.31\n- **NGINX Ingress Controller Version**: Not specified, but recommended to use the latest stable version.\n- **HAProxy Ingress Controller Version**: Not specified, but recommended to use HAProxy 3.0 for enhanced features.\n- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-controller-yaml-file>`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n- **Key Config Options**:\n  - NGINX: `use-forwarded-headers`, `proxy-body-size`, `client-max-body-size`\n  - HAProxy: `stats enable`, `stats uri /haproxy?stats`, `timeout connect`, `timeout client`\n\nThese actionable facts provide a clear path for developers to optimize Kubernetes Ingress performance in 2025, leveraging the latest tools and configurations.",
     "source": "code_example",
-    "updated_at": 1780934250.627369
+    "updated_at": 1780942903.749951
   }
 }

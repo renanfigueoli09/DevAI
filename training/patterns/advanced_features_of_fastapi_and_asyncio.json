@@ -1,0 +1,22 @@
+{
+  "search:Advanced Features of FastAPI and asyncio:fastapi advanced features": {
+    "content": "- **CLI Commands**: `uvicorn main:app --reload`\n- **Latest Version**: Check on [FastAPI GitHub](https://github.com/tiangolo/fastapi/releases)\n- **Key Config Options**:\n  - `debug`: Enable debug mode for development.\n  - `host`: Specify the host to run the server on (e.g., `0.0.0.0`).\n  - `port`: Set the port number (default is 8000).\n  - `reload`: Automatically reload the server on code changes.",
+    "source": "web_search",
+    "updated_at": 1780944979.8637214
+  },
+  "search:Advanced Features of FastAPI and asyncio:fastapi advanced features_ex": {
+    "content": "- **FastAPI Version**: Use `pip install fastapi==0.95.0`\n- **Uvicorn Version**: Run with `uvicorn main:app --reload` for development\n- **Dependency Injection**: Define dependencies in the path operation function using `Depends()`\n- **Background Tasks**: Add background tasks with `BackgroundTasks.add_task()`\n- **Security**: Use OAuth2 and JWT for authentication, e.g., `oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")`\n- **Database Integration**: Connect to databases using SQLAlchemy or Tortoise ORM\n- **CORS Configuration**: Enable CORS in FastAPI with `app.add_middleware(CORSMiddleware, allow_origins=[\"*\"])`\n- **Rate Limiting**: Implement rate limiting with `FastAPI` middleware or third-party packages like `fastapi-limiter`\n- **Testing**: Use Pytest for testing FastAPI applications\n- **Swagger UI**: Access documentation at `/docs` and ReDoc at `/redoc`\n- **Environment Variables**: Load environment variables using `python-dotenv`",
+    "source": "code_example",
+    "updated_at": 1780944987.1575716
+  },
+  "search:Advanced Features of FastAPI and asyncio:websockets fastapi": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run your FastAPI application with WebSocket support.\n  ```bash\n  uvicorn main:app --host 0.0.0.0 --port 8000 --ws-max-size 10485760\n  ```\n- **Latest Versions**: Ensure you are using the latest versions of FastAPI and Uvicorn for compatibility.\n  ```bash\n  pip install fastapi uvicorn\n  ```\n- **Key Config Options**:\n  - `--host`: Specifies the host to run on (e.g., `0.0.0.0`).\n  - `--port`: Specifies the port to listen on (e.g., `8000`).\n  - `--ws-max-size`: Sets the maximum size of WebSocket messages in bytes (default is 1MB).\n\nThese steps and commands will help you set up and run a FastAPI application with WebSocket support effectively.",
+    "source": "web_search",
+    "updated_at": 1780945028.6336577
+  },
+  "search:Advanced Features of FastAPI and asyncio:websockets fastapi_ex": {
+    "content": "- Install FastAPI using pip: `pip install fastapi`\n- Install Uvicorn for ASGI server: `pip install uvicorn`\n- Create a new FastAPI project with:\n  ```bash\n  mkdir my_fastapi_project\n  cd my_fastapi_project\n  echo \"from fastapi import FastAPI, WebSocket\" > main.py\n  ```\n- Define a WebSocket route in your `main.py`:\n  ```python\n  app = FastAPI()\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket):\n      await websocket.accept()\n      while True:\n          data = await websocket.receive_text()\n          await websocket.send_text(f\"Message text was: {data}\")\n  ```\n- Run the application with Uvicorn:\n  ```bash\n  uvicorn main:app --reload\n  ```\n- Access your WebSocket server at `ws://127.0.0.1:8000/ws`\n- Key config options include setting up middleware, handling exceptions, and configuring CORS for production environments.",
+    "source": "code_example",
+    "updated_at": 1780945044.1261005
+  }
+}

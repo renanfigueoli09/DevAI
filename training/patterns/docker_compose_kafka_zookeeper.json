@@ -2,16 +2,16 @@
   "search:docker-compose-kafka-zookeeper:docker compose kafka zookeeper": {
     "content": "- Use `docker-compose` version 3.8 or higher.\n- Kafka image: `confluentinc/cp-kafka:latest`\n- Zookeeper image: ` wurstmeister/zookeeper:latest`\n- Key config options:\n  - `KAFKA_BROKER_ID`: Unique broker ID\n  - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers\n- Example `docker-compose.yml` snippet:\n```yaml\nversion: '3.8'\nservices:\n  zookeeper:\n    image: wurstmeister/zookeeper\n  kafka:\n    image: confluentinc/cp-kafka:latest\n    environment:\n      KAFKA_BROKER_ID: 1\n      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092\n```\n- Run `docker-compose up -d` to start the services.\n- Check Kafka logs with `docker-compose logs kafka`.\n- For monitoring, consider integrating with tools like Prometheus and Grafana.",
     "source": "web_search",
-    "updated_at": 1780933796.0969927
+    "updated_at": 1780942467.1110878
   },
   "search:docker-compose-kafka-zookeeper:kafka zookeeper docker perform": {
     "content": "- Use a 3-5 machine Zookeeper ensemble solely dedicated to Kafka.\n- Configure Kafka brokers to automatically recover from Zookeeper unavailability.\n- Employ Confluent images for Docker-compose setup with 3 Zookeepers and 3 Kafka Brokers.\n- Utilize a bespoke Kafka load testing tool configured via YAML.\n- Consider using multiple ZooKeepers for increased fault tolerance.\n- Each Kafka server should ideally have its own dedicated ZooKeeper.\n- Monitor performance metrics regularly to optimize configurations.",
     "source": "web_search",
-    "updated_at": 1780933799.369571
+    "updated_at": 1780942469.5584614
   },
   "search:docker-compose-kafka-zookeeper:kafka zookeeper docker perform_ex": {
     "content": "- Use `docker-compose` to set up Kafka and Zookeeper.\n- Example `docker-compose.yml` version: '3'.\n- Services include `zookeeper` and `kafka`.\n- Image for `zookeeper`: `confluentinc/cp-zookeeper:latest`.\n- Environment variables: `ZOOKEEPER_CLIENT_PORT`, `ZOOKEEPER_TICK_TIME`.\n- Port mapping: `2181:2181`.\n- Kafka supports mode without ZooKeeper since version 2.8.0.\n- Confluent Platform 7.5 deprecates ZooKeeper.\n- Use Docker image for Kafka including Zookeeper from GitHub repository.",
     "source": "code_example",
-    "updated_at": 1780933802.100249
+    "updated_at": 1780942471.6149087
   }
 }

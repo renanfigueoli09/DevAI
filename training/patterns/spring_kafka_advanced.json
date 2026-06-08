@@ -2,11 +2,11 @@
   "search:spring+kafka-advanced:spring kafka advanced patterns": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Boot 3.x\n  - Kafka 3.x\n  - Spring Cloud Stream 4.x\n\n- **Key Config Options**:\n  - `spring.kafka.producer.key-serializer` and `value-serializer`: Specify serializers for keys and values.\n  - `spring.kafka.consumer.group-id`: Define the consumer group ID.\n  - `spring.cloud.stream.bindings.input.destination`: Specify the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specify the Kafka topic for output bindings.",
     "source": "web_search",
-    "updated_at": 1780934379.734747
+    "updated_at": 1780943010.235282
   },
   "search:spring+kafka-advanced:spring kafka advanced patterns_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Kafka: 2.8.3\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.producer.key-serializer`: Key serializer class.\n  - `spring.kafka.producer.value-serializer`: Value serializer class.",
     "source": "code_example",
-    "updated_at": 1780934382.6161168
+    "updated_at": 1780943012.1861002
   }
 }

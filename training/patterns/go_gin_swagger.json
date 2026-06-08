@@ -1,0 +1,32 @@
+{
+  "search:go-gin-swagger:gin framework swagger integrat": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u github.com/swaggo/gin-swagger`\n  - `go get -u github.com/swaggo/files`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - Gin-Swagger: v1.5.2\n  - Swagger-Files: v2.4.3\n\n- **Key Config Options**:\n  - `gin.SetMode(gin.ReleaseMode)` for production mode\n  - `swagger.URL = \"http://localhost:8080/swagger/doc.json\"` to set the Swagger JSON URL",
+    "source": "web_search",
+    "updated_at": 1780944584.526965
+  },
+  "search:go-gin-swagger:gin framework swagger integrat_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u github.com/swaggo/gin-swagger`\n  - `go get -u github.com/swaggo/files`\n\n- **Latest Versions**:\n  - Gin Framework: v1.8.0\n  - Swagger: v2.4.3\n\n- **Key Config Options**:\n  - `gin.SetMode(gin.ReleaseMode)` for production\n  - `swagger.URL = \"http://localhost:8080/swagger/doc.json\"` to set the URL for Swagger documentation",
+    "source": "code_example",
+    "updated_at": 1780944598.4630024
+  },
+  "search:go-gin-swagger:generating api documentation w": {
+    "content": "- Use `swag init` to generate Swagger documentation.\n- Specify instance name with `--instanceName`.\n- Install Gin and Swagger via Go modules:\n  ```bash\n  go get -u github.com/gin-gonic/gin\n  go get -u github.com/swaggo/gin-swagger\n  ```\n- Import necessary packages in your Go code.\n- Use annotations to document API endpoints.\n- Run `swag init` after adding documentation.\n- Serve Swagger UI with Gin middleware:\n  ```go\n  r := gin.Default()\n  swaggerURL := ginSwagger.URL(\"http://localhost:8080/swagger/doc.json\")\n  r.GET(\"/swagger/*any\", ginSwagger.WrapHandler(swaggerURL))\n  ```\n- Ensure unique instance names for multiple Swagger instances.\n- Check latest versions on [GitHub](https://github.com/swaggo/gin-swagger) and [Go Modules](https://pkg.go.dev/github.com/gin-gonic/gin).",
+    "source": "web_search",
+    "updated_at": 1780944609.7067847
+  },
+  "search:go-gin-swagger:generating api documentation w_ex": {
+    "content": "- Use `go get -u github.com/swaggo/gin-swagger` to install the latest version of gin-swagger.\n- Annotate your API code with Swagger tags to document endpoints, parameters, and responses.\n- Initialize gin-swagger in your main function by importing it and using its middleware.\n- Run your Go application as usual, and access the Swagger UI at `/swagger/index.html` to view the generated documentation.",
+    "source": "code_example",
+    "updated_at": 1780944616.1024082
+  },
+  "search:go-gin-swagger:optimizing rest apis with gin ": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/swaggo/gin-swagger`\n  - `go get -u github.com/swaggo/files`\n\n- **Latest Versions**:\n  - Gin: v1.8.2\n  - Swagger: v1.5.5\n\n- **Key Config Options**:\n  - Use `// @title` for API title.\n  - Use `// @version` for API version.\n  - Use `// @description` for API description.\n  - Use `// @host` to specify the host.\n  - Use `// @BasePath` to set the base path.",
+    "source": "web_search",
+    "updated_at": 1780944624.1769955
+  },
+  "search:go-gin-swagger:optimizing rest apis with gin _ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u github.com/swaggo/gin-swagger`\n  - `go get -u github.com/swaggo/files`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - Swagger: v2.4.0\n\n- **Key Config Options**:\n  - Gin Router: Use `gin.Default()` for default middleware setup.\n  - Swagger Integration: Configure routes with `gin-swagger.WrapHandler(swaggerFiles.Handler)`.\n  - Middleware: Implement custom middleware using `router.Use()`.",
+    "source": "code_example",
+    "updated_at": 1780944629.5445182
+  }
+}

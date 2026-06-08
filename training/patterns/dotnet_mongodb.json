@@ -2,11 +2,11 @@
   "search:dotnet+mongodb:asp.net core mongodb.driver im": {
     "content": "- **Create Web API**: Use `dotnet new webapi -n ProductsAPI`\n- **Install MongoDB Driver**: Run `dotnet add package MongoDB.Driver --version 2.13.0`\n- **Configure Connection String**: Set `ConnectionString` in `appsettings.json`\n- **IMongoCollection Methods**:\n  - `InsertOneAsync()`\n  - `ReplaceOneAsync()`\n  - `DeleteOneAsync()`\n- **Filtering Documents**: Use `Builders<T>.Filter.Ne(\"fieldName\", value)`\n- **Latest Version**: MongoDB.Driver v2.13.0\n- **Key Config Options**:\n  - `ConnectionString` in `appsettings.json`\n  - `IMongoClient` for database operations",
     "source": "web_search",
-    "updated_at": 1780934177.6689184
+    "updated_at": 1780942845.777512
   },
   "search:dotnet+mongodb:asp.net core mongodb.driver im_ex": {
     "content": "- Install MongoDB Driver for .NET using `dotnet add package MongoDB.Driver`\n- Configure MongoDB connection in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"MongoDB\": \"mongodb://localhost:27017\"\n  }\n  ```\n- Create a MongoDB service for database connection:\n  ```csharp\n  public class MongoDbService : IMongoDbService\n  {\n      private readonly IMongoDatabase _database;\n\n      public MongoDbService(IOptions<MongoDbSettings> mongoDbSettings)\n      {\n          var client = new MongoClient(mongoDbSettings.Value.ConnectionString);\n          _database = client.GetDatabase(mongoDbSettings.Value.DatabaseName);\n      }\n\n      public IMongoCollection<T> GetCollection<T>(string collectionName)\n      {\n          return _database.GetCollection<T>(collectionName);\n      }\n  }\n  ```\n- Key config options in `appsettings.json`:\n  ```json\n  \"MongoDbSettings\": {\n    \"ConnectionString\": \"mongodb://localhost:27017\",\n    \"DatabaseName\": \"exampledb\"\n  }\n  ```\n\nNote: Ensure MongoDB is running and accessible at the specified connection string.",
     "source": "code_example",
-    "updated_at": 1780934180.461865
+    "updated_at": 1780942848.3445776
   }
 }

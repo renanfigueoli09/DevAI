@@ -2,11 +2,11 @@
   "search:Advanced Error Handling in Spring Boot:spring boot error handling": {
     "content": "- Use `@ControllerAdvice` to handle exceptions globally across the application.\n- Implement `ErrorController` to customize error handling for browsers and RESTful requests.\n- Utilize `@ExceptionHandler` within a class annotated with `@ControllerAdvice` to handle specific exceptions.\n- Configure custom error pages by creating HTML files in the `src/main/resources/static/error` directory.\n- Use `@ResponseStatus` to specify HTTP status codes on exception classes.\n- Enable detailed error logging by setting `server.error.include-message=always` and `server.error.include-binding-errors=always` in `application.properties`.\n- For REST APIs, return custom JSON responses using `ResponseEntity` or `@RestControllerAdvice`.\n- Update Spring Boot version to the latest stable release for access to new features and improvements.\n- Use `@ResponseBody` on methods to ensure that exceptions are returned as JSON rather than HTML.",
     "source": "web_search",
-    "updated_at": 1780846591.1835663
+    "updated_at": 1780943623.0374687
   },
   "search:Advanced Error Handling in Spring Boot:spring boot error handling_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build a Spring Boot project.\n- **Latest Version**: As of my last update, the latest stable version is 3.2.5.RELEASE.\n- **Key Config Options**:\n  - `server.port`: Specifies the port number on which the application should run.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.\n  - `logging.level.root`: Controls the logging level for the entire application.",
     "source": "code_example",
-    "updated_at": 1780846593.5348992
+    "updated_at": 1780943625.5204856
   }
 }

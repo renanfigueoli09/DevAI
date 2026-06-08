@@ -1,0 +1,32 @@
+{
+  "search:Error Handling in Next.js + Supabase Storage:nextjs error handling": {
+    "content": "- Use `next dev` to start the development server.\n- Implement custom error handling using `error.tsx` in your app directory.\n- Utilize `notFound()` function for handling not found errors gracefully.\n- For production, use `next build` followed by `next start`.\n- Key config options include `next.config.js` for customizing Next.js settings.\n- Check the latest version of Next.js on [official website](https://nextjs.org/docs/getting-started/installation).\n- Implement error boundaries using React's Error Boundary component for more granular control.",
+    "source": "web_search",
+    "updated_at": 1780944833.4332616
+  },
+  "search:Error Handling in Next.js + Supabase Storage:nextjs error handling_ex": {
+    "content": "- Use `next error` to create an error boundary in Next.js.\n- Implement global error handling by creating a file named `_error.js` or `_app.js`.\n- For server actions, use JavaScript's `try/catch` statements to handle errors gracefully.\n- Redirects can be called outside of the `catch` block if needed.\n- Always define a global error handler for robust error management.\n- Avoid using `global-error` unless necessary.\n- Implement recovery logic in error handling to improve user experience.",
+    "source": "code_example",
+    "updated_at": 1780944838.8007858
+  },
+  "search:Error Handling in Next.js + Supabase Storage:supabase storage error handlin": {
+    "content": "- Review Supabase Storage error codes and their meanings.\n- Use `error.hint` from `supabase-js` for detailed debugging.\n- Check `error.statusCode` and structured error names for HTTP status and specific issues.\n- Ensure permissions are correctly set in Row Level Security (RLS).\n- Verify bucket configuration, including existence, name, and file size limits.\n- Confirm the correct path is used in `getPublicUrl`.\n- Use the upsert flag when uploading files to avoid errors.\n- Test uploads on different devices and browsers for compatibility issues.\n- Update `supabase-js` to the latest version for bug fixes and improvements.",
+    "source": "web_search",
+    "updated_at": 1780944846.9959533
+  },
+  "search:Error Handling in Next.js + Supabase Storage:supabase storage error handlin_ex": {
+    "content": "- **Supabase Storage Error Handling Example**:\n  - Use `try-catch` blocks to handle errors.\n  - Check the error code for specific issues like file type restrictions or storage limits.\n\n- **CLI Commands**:\n  - `supabase storage upload`: Upload files with options like `--path` and `--content-type`.\n  - `supabase storage download`: Download files using `--path`.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Supabase CLI for compatibility and features.\n\n- **Key Config Options**:\n  - `storage_access_key_id`: Your access key ID.\n  - `storage_secret_access_key`: Your secret access key.\n  - `storage_region`: The region where your storage bucket is located.",
+    "source": "code_example",
+    "updated_at": 1780944861.9434931
+  },
+  "search:Error Handling in Next.js + Supabase Storage:error logging nextjs": {
+    "content": "- **CLI Commands**:\n  - `next dev --fetch-logging` to enable fetch logging.\n  - `next build` for building the project.\n  - `next start` for starting the production server.\n\n- **Latest Versions**:\n  - Ensure using the latest version of Next.js for compatibility with logging tools like Sentry or Datadog.\n\n- **Key Config Options**:\n  - In `next.config.js`, use `webpack` to customize logging behavior.\n  - Configure `serverRuntimeConfig` and `publicRuntimeConfig` for environment-specific settings.",
+    "source": "web_search",
+    "updated_at": 1780944869.2846642
+  },
+  "search:Error Handling in Next.js + Supabase Storage:error logging nextjs_ex": {
+    "content": "- Ensure using `next dev` for development mode.\n- Use `console.log()` for client-side logging and `console.error()` for errors.\n- For server-side logging, use `console.log()` or `console.error()`.\n- Check Next.js version compatibility with your codebase.\n- Review API routes for correct data handling and error management.\n- Utilize `next.config.js` for configuring environment variables and other settings.\n- Use `getServerSideProps` or `getStaticProps` for server-side rendering.\n- Ensure proper error handling in asynchronous functions using `try-catch`.\n- Deploy to a production environment with `next build && next start`.",
+    "source": "code_example",
+    "updated_at": 1780944875.4203587
+  }
+}

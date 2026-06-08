@@ -1,22 +1,22 @@
 {
   "search:testing-strategies-for-nextjs-supabase-realtime:next.js supabase realtime test": {
-    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-project`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 15.x\n  - Supabase: 2.x\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Realtime subscriptions using `supabase_client.on('postgres_changes', ...)`\n\n- **Testing Strategies**:\n  - Unit tests for components and functions\n  - Integration tests for API routes and database operations\n  - E2E tests for critical user flows",
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `supabase init`\n\n- **Latest Versions**:\n  - Next.js 15\n  - Supabase 2025\n\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations.\n  - `.env.local`: For environment variables, e.g., `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.\n  - Supabase Realtime subscriptions: Configure in your Next.js components or API routes.",
     "source": "web_search",
-    "updated_at": 1780846418.8350596
+    "updated_at": 1780945911.4651315
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:next.js supabase realtime test_ex": {
-    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS Client: v2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key in `.env.local`\n  - Real-time subscriptions using `supabase_client.on('postgres_changes', ...)`\n  - Authentication with `supabase_client.auth.signInWithPassword(...)`\n\nThese actionable facts provide a clear roadmap for developers to set up, configure, and utilize Next.js with Supabase for real-time applications.",
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `supabase start`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase: v2.0\n\n- **Key Config Options**:\n  - Database URL (`DATABASE_URL`)\n  - API Key (`NEXT_PUBLIC_SUPABASE_ANON_KEY`)\n  - Real-time subscriptions in `supabase-js`",
     "source": "code_example",
-    "updated_at": 1780846427.4665055
+    "updated_at": 1780945916.7087202
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:real-time data handling in nex": {
-    "content": "- **CLI Commands**: `npx create-next-app@latest my-realtime-app`\n- **Latest Versions**: Next.js 13, Supabase 2.0\n- **Key Config Options**:\n  - `supabaseUrl`: Your project's URL.\n  - `supabaseAnonKey`: An anonymous key for public access.\n  - `realtimeChannel`: Channel name for subscriptions.\n  - `realtimeEvent`: Event type to listen for (e.g., 'INSERT', 'UPDATE').",
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-real-time-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase: v2.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project dashboard.\n  - Real-time channel subscriptions using `supabase_client.from('table_name').on('*', payload => { ... }).subscribe()`.\n  - Presence tracking with `supabase_client.channel('presence-channel').track({ user_id: 'user123' })`.",
     "source": "web_search",
-    "updated_at": 1780846430.8724453
+    "updated_at": 1780945925.2201414
   },
   "search:testing-strategies-for-nextjs-supabase-realtime:real-time data handling in nex_ex": {
-    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-real-time-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Supabase Client: 2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project dashboard.\n  - Real-time subscriptions using `supabase_client.on('postgres_changes', ...)`.",
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-real-time-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 15.x\n  - Supabase: 2.0\n\n- **Key Config Options**:\n  - Supabase URL and Key from your project dashboard.\n  - Real-time subscriptions using `onAuthStateChange` for user authentication events.\n  - Querying data with Supabase client, e.g., `supabase_client.from('table_name').select('*')`.",
     "source": "code_example",
-    "updated_at": 1780846433.4232147
+    "updated_at": 1780945932.3716478
   }
 }

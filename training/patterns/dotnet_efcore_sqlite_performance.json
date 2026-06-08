@@ -1,0 +1,22 @@
+{
+  "search:dotnet+efcore-sqlite-performance:optimizing entity framework co": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - SQLite: 3.42\n\n- **Key Config Options**:\n  - Use WAL mode for better performance: `optionsBuilder.UseSqlite(\"Data Source=yourfile.db;Cache=Shared;Mode=WAL\")`\n  - Set command timeout: `optionsBuilder.CommandTimeout(60)`\n  - Securely store connection strings in environment variables or Azure Key Vault.",
+    "source": "web_search",
+    "updated_at": 1780945675.508434
+  },
+  "search:dotnet+efcore-sqlite-performance:optimizing entity framework co_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n  - `dotnet ef migrations add InitialCreate --context YourDbContextName`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - SQLite: 3.41.2\n\n- **Key Config Options**:\n  - Connection String: `options.UseSqlite(\"Data Source=yourdatabase.db\")`\n  - Migrations: Enable migrations with `dotnet ef migrations add InitialCreate` and apply them with `dotnet ef database update`\n  - Performance Tuning: Use `WriteSerialization` for concurrent writes, and consider using `AutomaticTransactionUpgrades` for better performance.",
+    "source": "code_example",
+    "updated_at": 1780945681.8655539
+  },
+  "search:dotnet+efcore-sqlite-performance:entity framework core and sqli": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n\n- **Latest Versions**:\n  - EF Core: Version 10 (EF10) is expected in 2026.\n  - SQLite: Latest version as of now is 3.41.2, but check for updates regularly.\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enables lazy loading for navigation properties.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disables change tracking to improve performance in read-heavy scenarios.\n  - `MaxBatchSize`: Limits the number of entities processed per batch, useful for large datasets.",
+    "source": "web_search",
+    "updated_at": 1780945692.784246
+  },
+  "search:dotnet+efcore-sqlite-performance:entity framework core and sqli_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new console -n EFCoreSQLiteApp`\n  - `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - SQLite: 3.41.2\n\n- **Key Config Options**:\n  - Connection String: `options.UseSqlite(\"Data Source=MyDatabase.db\")`\n  - Migration Configuration: `Add-Migration InitialCreate` and `Update-Database`\n  - Model Building: Override `OnModelCreating` in DbContext to configure entities",
+    "source": "code_example",
+    "updated_at": 1780945698.3862746
+  }
+}

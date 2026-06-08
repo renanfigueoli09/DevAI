@@ -1,0 +1,22 @@
+{
+  "search:nodejs-sequelize:node.js sequelize orm crud ope": {
+    "content": "- **Install Sequelize**: `npm install sequelize`\n- **Install Database Driver**: For MySQL, use `npm install mysql2`\n- **Initialize Sequelize**: Create a new instance with `new Sequelize('database', 'username', 'password', { dialect: 'mysql' })`\n- **Define Models**: Use `sequelize.define` to create models. Example:\n  ```javascript\n  const User = sequelize.define('User', {\n    firstName: {\n      type: DataTypes.STRING,\n      allowNull: false\n    },\n    lastName: {\n      type: DataTypes.STRING\n    }\n  });\n  ```\n- **Sync Models**: `await sequelize.sync({ force: true })` to create tables.\n- **Create Records**: Use `.create()` method. Example:\n  ```javascript\n  const jane = await User.create({\n    firstName: 'Jane',\n    lastName: 'Doe'\n  });\n  ```\n- **Read Records**: Use `.findAll()`, `.findOne()`, or `.findByPk()`. Example:\n  ```javascript\n  const users = await User.findAll();\n  ```\n- **Update Records**: Use `.update()` method. Example:\n  ```javascript\n  await jane.update({ lastName: 'Smith' });\n  ```\n- **Delete Records**: Use `.destroy()` method. Example:\n  ```javascript\n  await jane.destroy();\n  ```\n- **Transaction Support**: Use `sequelize.transaction` for transactions.\n- **Latest Version**: Check [npm](https://www.npmjs.com/package/sequelize) for the latest version.",
+    "source": "web_search",
+    "updated_at": 1780944735.9356155
+  },
+  "search:nodejs-sequelize:node.js sequelize orm crud ope_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install sequelize`\n  - `npm install mysql2` or `pg`, depending on the database\n\n- **Latest Versions**:\n  - Sequelize: v7.x\n  - MySQL2: v3.x\n  - PostgreSQL (pg): v8.x\n\n- **Key Config Options**:\n  - `host`: Database host address\n  - `port`: Database port number\n  - `username`: Database username\n  - `password`: Database password\n  - `database`: Database name",
+    "source": "code_example",
+    "updated_at": 1780944750.1290457
+  },
+  "search:nodejs-sequelize:node.js sequelize migrations a": {
+    "content": "- **CLI Commands**:\n  - `sequelize seed:generate --name create_users-dev.js`\n  - `sequelize seed:generate --name create_users-prod.js`\n  - `sequelize fixtures`\n\n- **Latest Versions**:\n  - Ensure using the latest version of Sequelize and its CLI.\n\n- **Key Config Options**:\n  - Define database configurations in `config/config.json`.\n  - Use `.env` for environment-specific variables.\n  - Configure migration options in `config/seeders.config.js`.",
+    "source": "web_search",
+    "updated_at": 1780944766.0445743
+  },
+  "search:nodejs-sequelize:node.js sequelize migrations a_ex": {
+    "content": "- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes Sequelize in your project.\n  - `npx sequelize-cli model:create --name User --attributes username:string,email:string`: Creates a new model named \"User\".\n  - `npx sequelize-cli migration:create --name create-users-table`: Creates a new migration file for creating the \"users\" table.\n  - `npx sequelize-cli db:migrate`: Applies all pending migrations.\n  - `npx sequelize-cli seed:generate --name users`: Generates a new seed file named \"users\".\n  - `npx sequelize-cli db:seed:all`: Runs all seed files.\n\n- **Latest Versions**:\n  - Sequelize CLI: v6.2.0\n  - Sequelize ORM: v6.31.0\n\n- **Key Config Options**:\n  - `config/config.json`: Contains database connection settings and migration/seed options.\n  - `models/user.js`: Defines the User model with attributes like username and email.\n  - `migrations/20240101000000-create-users-table.js`: Migration file defining how to create the \"users\" table.\n  - `seeds/20240101000000-users.js`: Seed file defining initial data for the \"users\" table.",
+    "source": "code_example",
+    "updated_at": 1780944774.1973279
+  }
+}

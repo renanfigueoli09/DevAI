@@ -1,0 +1,32 @@
+{
+  "search:Performance Analysis Techniques for Dotnet Core Applications:dotnet core performance analys": {
+    "content": "- **PerfView**: Use `dotnet-trace collect` to start collecting traces.\n- **dotnet-counters**: Monitor performance counters with `dotnet-counters monitor -p <pid>`.\n- **Trace**: Utilize `dotnet-trace trace -p <pid>` for detailed performance analysis.\n- **Latest PerfView Version**: Check [Microsoft Learn](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/perfview) for the latest version.\n- **Key Config Options**:\n  - `-c`: Specify a configuration file.\n  - `-o`: Output directory for trace files.\n  - `--duration`: Set the duration of the trace collection.",
+    "source": "web_search",
+    "updated_at": 1780945371.3055253
+  },
+  "search:Performance Analysis Techniques for Dotnet Core Applications:dotnet core performance analys_ex": {
+    "content": "- Use `dotnet benchmark` for performance analysis.\n- Ensure Entity Framework Core is updated to the latest version.\n- Configure benchmarks in a separate console app project.\n- Utilize NBomber for comprehensive testing.\n- Set up projects in subfolders for better organization.\n- Monitor key metrics like CPU, memory usage, and response time.",
+    "source": "code_example",
+    "updated_at": 1780945376.4845312
+  },
+  "search:Performance Analysis Techniques for Dotnet Core Applications:profiling tools": {
+    "content": "- **CLI Commands**: Use `gprof` for C/C++ applications.\n- **Latest Versions**: Check the official websites of tools like AppDynamics, Arm MAP, and IBM's profiling tools for the latest versions.\n- **Key Config Options**:\n  - For `gprof`, use `-pg` to profile and `-p` to print the report.\n  - For AppDynamics, configure API keys and application settings through their web interface or SDKs.\n  - For Arm MAP, set up profiling sessions with specific flags like `-profile` for CPU usage.",
+    "source": "web_search",
+    "updated_at": 1780945384.7846713
+  },
+  "search:Performance Analysis Techniques for Dotnet Core Applications:profiling tools_ex": {
+    "content": "- **Secoda Profiling Tools**: Use `secoda-profiler` command.\n- **C/C++ Profiling**:\n  - **gprof**: Compile with `-pg`, then run and use `gprof`.\n  - **Intel VTune**: Use `vtune-amplifier-xe` for performance analysis.\n- **Python Profiling**:\n  - **cProfile**: Run scripts with `python -m cProfile script.py`.\n  - **line_profiler**: Install via pip, then run with `kernprof -l -v script.py`.\n  - **memory_profiler**: Install via pip, then use `@profile` decorators in code.",
+    "source": "code_example",
+    "updated_at": 1780945392.6201706
+  },
+  "search:Performance Analysis Techniques for Dotnet Core Applications:memory leak detection": {
+    "content": "- Use `Valgrind` for memory leak detection in C/C++ applications.\n- Run `valgrind --tool=memcheck --leak-check=full ./your_program`.\n- For Windows, use `Visual Studio Debugger` to identify memory leaks.\n- Set breakpoints and step through code to observe memory usage.\n- Utilize `Performance Monitor` (perfmon) for monitoring memory usage over time.\n- Check `Event Viewer` for any related error messages or warnings.\n- Use `Process Explorer` from Sysinternals to inspect memory usage by processes.\n- For Python, use the `memory_profiler` library with `pip install memory_profiler`.\n- Decorate functions with `@profile` and run your script to identify leaks.\n- Regularly update development tools and libraries to benefit from performance improvements.",
+    "source": "web_search",
+    "updated_at": 1780945411.1246736
+  },
+  "search:Performance Analysis Techniques for Dotnet Core Applications:memory leak detection_ex": {
+    "content": "- Use `dotnet trace` to capture traces of .NET applications.\n- Analyze traces using `dotnet sos` (Symbol Server) for memory leak detection.\n- Implement `GC.Collect()` and `GC.WaitForPendingFinalizers()` in your code to force garbage collection.\n- Monitor memory usage with tools like Visual Studio's Diagnostic Tools or dotMemory.\n- Use the latest versions of .NET Core SDK and later for better memory management features.\n- Configure app settings to enable detailed logging, which can help identify memory leaks.\n- Regularly update dependencies and libraries to avoid known memory leak issues.",
+    "source": "code_example",
+    "updated_at": 1780945418.9699407
+  }
+}

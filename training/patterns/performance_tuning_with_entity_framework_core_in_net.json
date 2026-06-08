@@ -1,0 +1,32 @@
+{
+  "search:Performance Tuning with Entity Framework Core in .NET:efcore performance tuning": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` and `dotnet ef database update` to manage migrations.\n- **Latest Version**: EF Core 9 is the latest version as of my last update.\n- **Key Config Options**:\n  - `QuerySplittingBehavior`: Set to `SplitQuery` or `SingleQuery` in `DbContextOptionsBuilder`.\n  - `UseLazyLoadingProxies`: Enable lazy loading for improved performance.\n  - `MaxBatchSize`: Configure the maximum batch size for bulk operations.\n  - `EnableSensitiveDataLogging`: Disable sensitive data logging in production environments.",
+    "source": "web_search",
+    "updated_at": 1780944929.5809567
+  },
+  "search:Performance Tuning with Entity Framework Core in .NET:efcore performance tuning_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef` to interact with Entity Framework Core.\n- **Latest Version**: Check the latest version on [Microsoft's EF Core GitHub page](https://github.com/dotnet/efcore).\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure database connection and options.\n  - `OnModelCreating`: Define model configurations.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Optimize read-only queries for better performance.",
+    "source": "code_example",
+    "updated_at": 1780944935.412779
+  },
+  "search:Performance Tuning with Entity Framework Core in .NET:.net entity framework core opt": {
+    "content": "- Use `dotnet ef` CLI to manage Entity Framework Core migrations and updates.\n- Ensure latest version of EF Core installed via NuGet, e.g., `Install-Package Microsoft.EntityFrameworkCore`.\n- Optimize queries by using `.AsNoTracking()`, `.Include()`, and `.Where()` methods judiciously.\n- Configure DbContext options in `Startup.cs` or `Program.cs` for connection pooling, logging, etc.\n- Use lazy loading with caution to avoid performance issues.\n- Enable query splitting with `SplitQueryEnabled = true` in DbContext options for better performance.\n- Monitor database queries using EF Core's built-in logging capabilities.\n- Consider using raw SQL queries for complex operations where Entity Framework might not be efficient.\n- Regularly review and refactor code to eliminate unnecessary data fetching.",
+    "source": "web_search",
+    "updated_at": 1780944944.5234914
+  },
+  "search:Performance Tuning with Entity Framework Core in .NET:.net entity framework core opt_ex": {
+    "content": "- Use the latest version of Entity Framework Core.\n- Apply `AsNoTracking()` when you don't need to modify entities.\n- Implement lazy loading for related data using `.Include()`.\n- Use raw SQL queries with `FromSqlRaw()` or `FromSqlInterpolated()` for complex scenarios.\n- Optimize database indexes and schema design.\n- Configure connection strings in `appsettings.json` for better performance.\n- Use batching to reduce the number of round-trips to the database.\n- Implement caching strategies to store frequently accessed data.\n- Monitor and analyze query execution plans using SQL Server Profiler or similar tools.",
+    "source": "code_example",
+    "updated_at": 1780944950.8079736
+  },
+  "search:Performance Tuning with Entity Framework Core in .NET:sql server indexing": {
+    "content": "- **CLI Commands**: Use `CREATE INDEX` and `DROP INDEX`. For example, to create an index on the `LastName` column in the `Employees` table:\n  ```sql\n  CREATE INDEX idx_lastname ON Employees(LastName);\n  ```\n  To drop this index:\n  ```sql\n  DROP INDEX idx_lastname ON Employees;\n  ```\n\n- **Latest Versions**: SQL Server 2024 introduces several new features and improvements, including enhanced query performance, better support for AI and machine learning, and more efficient indexing.\n\n- **Key Config Options**:\n  - `MAXDOP`: Specifies the maximum degree of parallelism to use when executing a query.\n    ```sql\n    SET MAXDOP 4;\n    ```\n  - `STATISTICS IO` and `STATISTICS TIME`: Enable detailed performance information during query execution.\n    ```sql\n    SET STATISTICS IO ON;\n    SET STATISTICS TIME ON;\n    ```\n  - `FILLFACTOR`: Specifies the percentage of space on each page to be filled with data before SQL Server considers a page full.\n    ```sql\n    CREATE INDEX idx_lastname ON Employees(LastName) WITH (FILLFACTOR = 90);\n    ```\n\n- **Additional Tips**:\n  - Regularly review and optimize indexes using `sp_updatestats` and `DBCC SHOW_STATISTICS`.\n  - Monitor index usage with dynamic management views like `sys.dm_db_index_usage_stats`.",
+    "source": "web_search",
+    "updated_at": 1780944962.2957428
+  },
+  "search:Performance Tuning with Entity Framework Core in .NET:sql server indexing_ex": {
+    "content": "- **CLI Commands**: Use `CREATE INDEX` to create an index on a table or view.\n  ```sql\n  CREATE INDEX idx_name ON table_name (column1, column2);\n  ```\n- **Latest Versions**: SQL Server 2022 and Azure SQL Database are the latest versions as of my last update.\n- **Key Config Options**:\n  - `MAXDOP`: Maximum Degree of Parallelism. Set to control parallel query execution.\n    ```sql\n    ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 4;\n    ```\n  - `SORT_IN_TEMPDB`: Specifies whether sort operations should use tempdb.\n    ```sql\n    ALTER DATABASE SCOPED CONFIGURATION SET SORT_IN_TEMPDB = ON;\n    ```\n  - `QUERY_OPTIMIZER_HOTFIXES`: Enables or disables query optimizer hotfixes.\n    ```sql\n    ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON;\n    ```",
+    "source": "code_example",
+    "updated_at": 1780944971.4880223
+  }
+}

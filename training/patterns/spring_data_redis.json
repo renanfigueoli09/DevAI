@@ -1,0 +1,32 @@
+{
+  "search:spring-data-redis:spring data redis best practic": {
+    "content": "- **Latest Version**: Spring Data Redis 2.7.3, released on August 18, 2023.\n- **Key Config Options**:\n  - `spring.redis.host`: Specifies the hostname of the Redis server.\n  - `spring.redis.port`: Specifies the port number of the Redis server.\n  - `spring.redis.password`: Specifies the password for authenticating with the Redis server.\n  - `spring.redis.lettuce.pool.max-active`: Maximum number of connections in the pool.\n- **CLI Commands**:\n  - To start a Redis server: `redis-server`\n  - To connect to a Redis server using CLI: `redis-cli -h <hostname> -p <port>`\n- **Actionable Fact**: Use `spring.redis.lettuce.pool.max-active` to manage connection pooling effectively, especially in high-load scenarios.\n- **Actionable Fact**: Consider using Redis OM Spring for easier mapping of Java objects to Redis JSON or hash keys, enhancing development efficiency.",
+    "source": "web_search",
+    "updated_at": 1780943834.1633918
+  },
+  "search:spring-data-redis:spring data redis best practic_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn install`\n  - `mvn clean`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Data Redis: 2.6.4\n\n- **Key Config Options**:\n  - `spring.redis.host=localhost`\n  - `spring.redis.port=6379`\n  - `spring.session.store-type=redis`",
+    "source": "code_example",
+    "updated_at": 1780943839.873295
+  },
+  "search:spring-data-redis:spring data redis transactions": {
+    "content": "- To enable transaction support in Spring Data Redis, set `setEnableTransactionSupport(true)` on your `RedisTemplate`.\n- Use `@Transactional` or `TransactionTemplate` for managing transactions.\n- Commands issued during a transaction are queued and applied with `EXEC`, rolled back with `DISCARD`.\n- Ensure you have the latest version of Spring Data Redis to benefit from improvements and bug fixes.",
+    "source": "web_search",
+    "updated_at": 1780943847.0414028
+  },
+  "search:spring-data-redis:spring data redis transactions_ex": {
+    "content": "- Use `@Transactional` annotation to mark Redis transactional methods.\n- Ensure Spring Data Redis version is up-to-date, e.g., `2.6.4.RELEASE`.\n- Configure Redis connection properties in `application.properties` or `application.yml`.\n- Utilize `RedisTemplate` for executing commands within transactions.\n- Example of a transaction method:\n  ```java\n  @Transactional\n  public void performTransaction() {\n      redisTemplate.multi();\n      try {\n          redisTemplate.opsForValue().increment(\"counter\");\n          redisTemplate.opsForSet().add(\"setKey\", \"value\");\n      } catch (Exception e) {\n          redisTemplate.discard();\n          throw e;\n      }\n      redisTemplate.exec();\n  }\n  ```\n- Key config options in `application.properties`:\n  ```properties\n  spring.redis.host=localhost\n  spring.redis.port=6379\n  spring.redis.password=\n  ```\n- Use `redis-cli --version` to check the latest Redis CLI version.\n- For debugging, enable transaction logging by setting `spring.data.redis.debug-level=TRACE`.",
+    "source": "code_example",
+    "updated_at": 1780943855.3515441
+  },
+  "search:spring-data-redis:spring data redis caching stra": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data Redis: 2.6.x\n\n- **Key Config Options**:\n  - `spring.redis.host`: Redis server host.\n  - `spring.redis.port`: Redis server port.\n  - `spring.cache.type`: Set to `redis`.\n  - `spring.cache.redis.time-to-live`: TTL for cache entries in milliseconds.\n  - `spring.cache.redis.use-key-prefix`: Enable key prefixing.",
+    "source": "web_search",
+    "updated_at": 1780943863.2467797
+  },
+  "search:spring-data-redis:spring data redis caching stra_ex": {
+    "content": "- **CLI Commands**:\n  - `redis-cli ping`: Checks if Redis server is running.\n  - `redis-cli set key value`: Sets a new key-value pair in Redis.\n\n- **Latest Versions**:\n  - Spring Data Redis: 2.7.0.RELEASE (as of my last update)\n  - Spring Boot: 3.1.4 (as of my last update)\n\n- **Key Config Options**:\n  - `spring.redis.host`: Redis server host.\n  - `spring.redis.port`: Redis server port.\n  - `spring.cache.type`: Set to `redis` for using Redis as the cache manager.\n  - `spring.cache.redis.time-to-live`: Time-to-live duration for cache entries in milliseconds.",
+    "source": "code_example",
+    "updated_at": 1780943868.8307056
+  }
+}

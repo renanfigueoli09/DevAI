@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-mysql-batch-insert:go gorm mysql batch insert 202": {
+    "content": "- **Latest Version**: GORM 2.0\n- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/mysql`\n- **Key Config Options**:\n  - `CreateInBatches`: Specify batch size for efficient inserts.\n    ```go\n    db.CreateInBatches(users, 100)\n    ```\n  - `AutoMigrate`: Automatically migrate schema.\n    ```go\n    db.AutoMigrate(&User{})\n    ```\n- **Efficient Batch Insert**:\n  - Pass a slice to the `Create` method for single SQL statement.\n    ```go\n    db.Create(&users)\n    ```\n  - Use `CreateInBatches` with specified batch size for large datasets.",
+    "source": "web_search",
+    "updated_at": 1780945143.004896
+  },
+  "search:go-gorm-mysql-batch-insert:go gorm mysql batch insert 202_ex": {
+    "content": "- Use `db.Create(&users)` for batch inserts in GORM.\n- Set `BATCH_SIZE` to configure the size of the group for batch inserts.\n- Ensure MySQL supports passing arrays as parameters for efficient bulk operations.\n- Check your database driver's documentation for compatibility with array parameter passing.\n- Example CLI command: `go run main.go --dsn \"user:password@tcp(127.0.0.1:3306)/dbname\" --batch-size 50`.\n- Key config options in GORM include `db.DB().Set(\"gorm:insert_option\", \"ON DUPLICATE KEY UPDATE\")` for handling duplicates.\n- Latest versions of GORM and MySQL should be used for optimal performance and security.\n- Consult the official GORM documentation for the most up-to-date batch insert methods and configurations.",
+    "source": "code_example",
+    "updated_at": 1780945149.3249652
+  },
+  "search:go-gorm-mysql-batch-insert:batch operations in go gorm wi": {
+    "content": "- Use `gorm.io/gorm` version 2.x for Go GORM.\n- For batch inserts, use the `CreateInBatches` method.\n- Example:\n  ```go\n  db.CreateInBatches(users, 100)\n  ```\n- Ensure MySQL driver is up to date (e.g., `github.com/go-sql-driver/mysql`).\n- Key config options include:\n  - `DB.Set(\"gorm:bulk_insert_limit\", 500)` for setting batch size.\n  - `db.DB().SetMaxIdleConns(10)` and `db.DB().SetMaxOpenConns(100)` for connection pool management.",
+    "source": "web_search",
+    "updated_at": 1780945156.778593
+  },
+  "search:go-gorm-mysql-batch-insert:batch operations in go gorm wi_ex": {
+    "content": "- **CLI Commands**: Not applicable for Go GORM.\n- **Latest Versions**:\n  - GORM: v2.36.0\n  - MySQL Connector/Go: v8.0.27\n- **Key Config Options**:\n  - `gorm.DB`: For database operations.\n  - `BatchSize`: In `FindInBatches`, specifies the batch size for processing records.\n  - `AutoMigrate`: Automatically migrates schema to match models.\n  - `Raw`: Executes raw SQL queries.",
+    "source": "code_example",
+    "updated_at": 1780945162.4028723
+  }
+}

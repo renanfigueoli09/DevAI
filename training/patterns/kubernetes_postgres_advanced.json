@@ -2,21 +2,21 @@
   "search:kubernetes+postgres-advanced:kubernetes postgresql high ava": {
     "content": "- Deploy PostgreSQL on Kubernetes using `kubectl apply -f postgres-ha.yaml`\n- Use at least one standby node for replication.\n- Configure synchronous replication for high availability.\n- Set up tolerations to ensure pods are scheduled on appropriate nodes.\n- Use `pgBouncer` for connection pooling and load balancing.\n- Upgrade Kubernetes to the latest version (1.24 as of 2024).\n- Monitor with tools like Prometheus and Grafana for HA performance metrics.\n- Perform Jepsen tests to validate high availability setup.",
     "source": "web_search",
-    "updated_at": 1780932928.1765335
+    "updated_at": 1780941673.6645815
   },
   "search:kubernetes+postgres-advanced:kubernetes postgresql high ava_ex": {
     "content": "- Use `kubectl apply -f <manifest-file>` to deploy PostgreSQL on Kubernetes.\n- Ensure your Kubernetes cluster has at least three nodes for high availability.\n- Configure PostgreSQL with replication by setting up a primary and multiple replicas.\n- Utilize tools like Patroni or Helm charts for managing PostgreSQL clusters in Kubernetes.\n- Key config options include `replicas`, `storage`, and `resources` in the deployment manifest.\n- Use `kubectl get pods -l app=<app-label>` to check the status of your PostgreSQL pods.\n- For monitoring, integrate Prometheus and Grafana with your Kubernetes cluster.\n- Regularly update your PostgreSQL version using Helm or manual updates to ensure security patches.",
     "source": "code_example",
-    "updated_at": 1780932930.240549
+    "updated_at": 1780941675.5234962
   },
   "search:kubernetes+postgres-advanced:kubernetes postgresql backup a": {
     "content": "- **CLI Commands**:\n  - `kubectl exec <pod-name> -- pg_dump -U <username> -d <database-name> > backup.sql`\n  - `kubectl cp <pod-name>:/path/to/backup.sql /local/path/`\n\n- **Latest Versions**:\n  - PostgreSQL: 15.2\n  - Kubernetes: 1.27.0\n\n- **Key Config Options**:\n  - `volumeClaimTemplate`: Define storage for backups.\n  - `schedule`: Set backup frequency using cron syntax.\n  - `resources`: Allocate CPU and memory for backup jobs.\n\n- **Backup Tools**:\n  - `pg_dump` for logical backups.\n  - `pg_basebackup` for physical backups.",
     "source": "web_search",
-    "updated_at": 1780932932.2088041
+    "updated_at": 1780941677.5322366
   },
   "search:kubernetes+postgres-advanced:kubernetes postgresql backup a_ex": {
     "content": "- **Kubernetes PostgreSQL Backup and Restore Strategies**\n  - **Backup**:\n    - Use `pg_dump` to create backups.\n      ```bash\n      kubectl exec <pod-name> -- pg_dumpall -U postgres > backup.sql\n      ```\n    - Schedule backups using Kubernetes CronJobs.\n      ```yaml\n      apiVersion: batch/v1beta1\n      kind: CronJob\n      metadata:\n        name: postgres-backup\n      spec:\n        schedule: \"0 2 * * *\" # Daily at 2 AM\n        jobTemplate:\n          spec:\n            template:\n              spec:\n                containers:\n                - name: backup-container\n                  image: bitnami/postgresql:latest\n                  command: [\"bash\", \"-c\"]\n                  args: [\"pg_dumpall -U postgres > /backups/backup.sql && tar czvf /backups/backup.tar.gz /backups\"]\n                  volumeMounts:\n                  - name: backup-volume\n                    mountPath: /backups\n                volumes:\n                - name: backup-volume\n                  emptyDir: {}\n    ```\n  - **Restore**:\n    - Use `pg_restore` to restore backups.\n      ```bash\n      kubectl exec <pod-name> -- pg_restore -U postgres -d mydatabase backup.tar.gz\n      ```\n    - Restore from a file using `psql`.\n      ```bash\n      kubectl exec <pod-name> -- psql -U postgres -d mydatabase -f /path/to/backup.sql\n      ```\n\n- **Latest Versions**:\n  - PostgreSQL: 15.3\n  - Kubernetes: v1.27.0\n\n- **Key Config Options**:\n  - `pg_dumpall`: Dumps all databases.\n  - `pg_restore`: Restores a backup created by pg_dump.\n  - `CronJob`: Schedules periodic tasks in Kubernetes.\n  - `emptyDir`: A temporary volume for data that is deleted when the Pod is terminated.",
     "source": "code_example",
-    "updated_at": 1780932934.1695976
+    "updated_at": 1780941679.8166792
   }
 }

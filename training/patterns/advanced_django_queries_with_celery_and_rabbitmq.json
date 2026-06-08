@@ -1,0 +1,32 @@
+{
+  "search:Advanced Django Queries with Celery and RabbitMQ:django queries": {
+    "content": "- Use `python manage.py shell` to interact with your Django models.\n- For asynchronous queries, use methods like `aget()` or `adelete()`.\n- To filter data, use `filter(field=value)` in QuerySets.\n- Order results using `order_by('field')`.\n- Update data with `update(field=new_value)`.\n- Delete records with `delete()`.\n- Use Django ORM for database operations without raw SQL.\n- Explore query expressions for complex queries (`F`, `Q` objects).\n- Check the latest Django version on [Django's official website](https://www.djangoproject.com/download/).",
+    "source": "web_search",
+    "updated_at": 1780945314.752985
+  },
+  "search:Advanced Django Queries with Celery and RabbitMQ:django queries_ex": {
+    "content": "- Use `python manage.py shell` to open Django's interactive shell.\n- To create an object, instantiate it using keyword arguments and call `save()`.\n- For querying, use Django ORM methods like `filter()`, `exclude()`, `order_by()`, etc.\n- Latest versions can be found on the official Django website.\n- Key config options include `DATABASES` in settings.py for database configurations.",
+    "source": "code_example",
+    "updated_at": 1780945322.3387747
+  },
+  "search:Advanced Django Queries with Celery and RabbitMQ:celery tasks": {
+    "content": "- **Latest Version**: Celery 5.6.3\n- **CLI Commands**:\n  - `celery -A proj worker --loglevel=info`\n  - `celery -A proj beat --loglevel=info`\n- **Key Config Options**:\n  - `broker_url`: Specifies the URL of the message broker (e.g., Redis, RabbitMQ).\n  - `result_backend`: Specifies where to store task results.\n  - `task_serializer`: Serialization method for tasks (e.g., json, pickle).\n  - `accept_content`: List of accepted serialization formats.",
+    "source": "web_search",
+    "updated_at": 1780945331.8678582
+  },
+  "search:Advanced Django Queries with Celery and RabbitMQ:celery tasks_ex": {
+    "content": "- **Latest Version**: Celery 5.6.3\n- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n- **Key Config Options**:\n  - `broker_url`: Specifies the message broker URL (e.g., `redis://localhost:6379/0`).\n  - `result_backend`: Specifies the backend to store task results (e.g., `rpc://`, `redis://localhost:6379/0`).\n  - `task_serializer`: Serialization method for tasks (default is `json`).\n  - `accept_content`: List of accepted content types.\n  - `timezone`: Timezone for scheduling.",
+    "source": "code_example",
+    "updated_at": 1780945338.3347118
+  },
+  "search:Advanced Django Queries with Celery and RabbitMQ:rabbitmq integration in django": {
+    "content": "- Install RabbitMQ using `sudo apt-get install rabbitmq-server` on Ubuntu.\n- Ensure RabbitMQ is running with `sudo systemctl status rabbitmq-server`.\n- Install `pika` library for Python using `pip install pika`.\n- Configure Django settings in `settings.py`:\n  ```python\n  RABBITMQ_HOST = 'localhost'\n  RABBITMQ_PORT = 5672\n  RABBITMQ_USER = 'guest'\n  RABBITMQ_PASSWORD = 'guest'\n  ```\n- Create a connection to RabbitMQ using Pika:\n  ```python\n  import pika\n  credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)\n  connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, port=RABBITMQ_PORT, credentials=credentials))\n  channel = connection.channel()\n  ```\n- Declare a queue:\n  ```python\n  channel.queue_declare(queue='my_queue')\n  ```\n- Publish messages to the queue:\n  ```python\n  channel.basic_publish(exchange='',\n                        routing_key='my_queue',\n                        body='Hello World!')\n  print(\" [x] Sent 'Hello World!'\")\n  connection.close()\n  ```\n- Consume messages from the queue in a consumer script:\n  ```python\n  import pika\n\n  def callback(ch, method, properties, body):\n      print(f\" [x] Received {body}\")\n\n  channel.basic_consume(queue='my_queue',\n                        on_message_callback=callback,\n                        auto_ack=True)\n\n  print(' [*] Waiting for messages. To exit press CTRL+C')\n  channel.start_consuming()\n  ```\n- Ensure RabbitMQ management plugin is enabled with `sudo rabbitmq-plugins enable rabbitmq_management`.\n- Access RabbitMQ management UI at `http://localhost:15672` using default credentials (guest/guest).",
+    "source": "web_search",
+    "updated_at": 1780945351.1998613
+  },
+  "search:Advanced Django Queries with Celery and RabbitMQ:rabbitmq integration in django_ex": {
+    "content": "- **Install RabbitMQ**: Use `sudo apt-get install rabbitmq-server` on Ubuntu.\n- **Install pika**: Run `pip install pika`.\n- **Create Django Project**: Start with `django-admin startproject myproject`.\n- **Configure RabbitMQ in Django**:\n  - Add `'djcelery'` to `INSTALLED_APPS`.\n  - Configure Celery in settings: \n    ```python\n    CELERY_BROKER_URL = 'amqp://localhost//'\n    CELERY_RESULT_BACKEND = 'rpc://'\n    ```\n- **Create a Task**: Define tasks in a file like `tasks.py`:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def add(x, y):\n      return x + y\n  ```\n- **Run Celery Worker**: Use `celery -A myproject worker --loglevel=info`.\n- **Send Task**: Call the task in your views or other parts of Django:\n  ```python\n  from .tasks import add\n\n  result = add.delay(4, 6)\n  print(result.get(timeout=1))\n  ```\n- **Latest pika Version**: Check [pika GitHub](https://github.com/pika/pika) for the latest version.\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: URL to RabbitMQ broker.\n  - `CELERY_RESULT_BACKEND`: Backend to store task results.",
+    "source": "code_example",
+    "updated_at": 1780945363.4804895
+  }
+}
