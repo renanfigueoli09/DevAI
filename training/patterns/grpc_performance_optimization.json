@@ -2,31 +2,31 @@
   "search:gRPC Performance Optimization:grpc performance tuning best p": {
     "content": "- Use latest gRPC version (v2.x as of my last update).\n- Enable compression (`grpc.enable_http2_permessage_deflate`).\n- Optimize protobuf schema for size and efficiency.\n- Implement caching strategies to reduce latency.\n- Adjust network configurations for optimal throughput.\n- Use `grpc.max_concurrent_streams` to control concurrency.\n- Monitor performance with tools like `gRPC Benchmark`.\n- Utilize `grpc.keepalive_time_ms` and `grpc.keepalive_timeout_ms` for connection management.\n- Enable server-side streaming if applicable for efficient data transfer.",
     "source": "web_search",
-    "updated_at": 1780921750.891018
+    "updated_at": 1780929346.77357
   },
   "search:gRPC Performance Optimization:grpc performance tuning best p_ex": {
     "content": "- **CLI Commands**: Use `grpcurl` for testing and debugging.\n- **Latest Versions**: Ensure using gRPC version 2.45 or later for the best performance features.\n- **Key Config Options**:\n  - `max_concurrent_streams`: Set to control the number of concurrent streams per connection.\n  - `idle_timeout`: Adjust the timeout for idle connections.\n  - `keepalive_time`: Configure keep-alive time to maintain long-lived connections.\n  - `keepalive_timeout`: Define the timeout for keep-alive pings.\n  - `max_send_message_length` and `max_receive_message_length`: Set limits on message sizes.",
     "source": "code_example",
-    "updated_at": 1780921753.8648975
+    "updated_at": 1780929349.1819966
   },
   "search:gRPC Performance Optimization:grpc load balancing strategies": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <envoy-config-file>` to deploy Envoy as a load balancer.\n  - `grpcurl -plaintext localhost:50051 list` to list services available on the gRPC server.\n\n- **Latest Versions**:\n  - gRPC: v1.46.3\n  - Envoy: v1.21.0\n\n- **Key Config Options**:\n  - `round_robin`: Distributes requests evenly across servers.\n  - `random`: Selects a random server for each request.\n  - DNS-based resolution: Periodically updates the list of available servers based on DNS changes.\n  - Envoy configuration: Specifies routes and load balancing policies.",
     "source": "web_search",
-    "updated_at": 1780921756.6672428
+    "updated_at": 1780929351.6586432
   },
   "search:gRPC Performance Optimization:grpc load balancing strategies_ex": {
     "content": "- **CLI Commands**:\n  - `docker build -t grpc-server .`\n  - `docker run -p 50051:50051 grpc-server`\n\n- **Latest Versions**:\n  - gRPC: v2.47.0\n  - Protocol Buffers: v3.19.4\n\n- **Key Config Options**:\n  - Load Balancing Policy: `round_robin`, `pick_first`\n  - xDS (x-Distributed Service) for dynamic load balancing and endpoint management.\n  - Proxy Load Balancer options: L7 (Application) vs L4 (Transport).",
     "source": "code_example",
-    "updated_at": 1780921759.4143937
+    "updated_at": 1780929354.0930367
   },
   "search:gRPC Performance Optimization:grpc security patterns 2023": {
     "content": "- Use `dotnet grpc` to scaffold gRPC services.\n- Implement TLS for transport security using `--https-port`.\n- Configure mTLS by setting up client and server certificates.\n- Utilize interceptors for token propagation with `Grpc.Core.Interceptors`.\n- Enable audit logging through middleware or custom interceptors.\n- Update gRPC packages to the latest version via NuGet.\n- Review and apply security patches regularly.\n- Implement role-based access control (RBAC) using metadata in headers.\n- Monitor gRPC services for anomalies using observability tools.",
     "source": "web_search",
-    "updated_at": 1780921762.177265
+    "updated_at": 1780929356.386608
   },
   "search:gRPC Performance Optimization:grpc security patterns 2023_ex": {
     "content": "- Use `openssl` to generate SSL certificates and keys.\n- For Java, use the following command to create a self-signed certificate:\n  ```bash\n  keytool -genkeypair -alias mygrpcserver -keyalg RSA -keysize 2048 -validity 365 -keystore server.jks\n  ```\n- In your gRPC server code, configure SSL/TLS using the generated keystore:\n  ```java\n  ServerBuilder<?> builder = NettyServerBuilder.forPort(50051)\n      .sslContext(SslContextBuilder.forServer(serverKeyCertChainFile, serverPrivateKeyFile).build());\n  ```\n- For mutual TLS, ensure both client and server have certificates.\n- Use the `--grpc.ssl_target_name_override` flag when running your gRPC client to override the target name for certificate validation.\n- In Go, use `google.golang.org/grpc/credentials/tls` package to set up TLS credentials:\n  ```go\n  creds := credentials.NewTLS(&tls.Config{\n      Certificates: []tls.Certificate{cert},\n      ClientAuth:   tls.RequireAndVerifyClientCert,\n  })\n  conn, err := grpc.Dial(\"localhost:50051\", grpc.WithTransportCredentials(creds))\n  ```\n- For ALTS transport security, use the `io.grpc.alts.AltsServerBuilder` and `io.grpc.alts.AltsCredentials` classes.\n- Ensure your gRPC server is configured with appropriate permissions for ALTS credentials.",
     "source": "code_example",
-    "updated_at": 1780921764.5820775
+    "updated_at": 1780929358.8363733
   }
 }

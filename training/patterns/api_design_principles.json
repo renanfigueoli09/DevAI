@@ -2,26 +2,26 @@
   "search:API Design Principles:kubernetes api design patterns": {
     "content": "- Use `kubectl` command-line tool for interacting with Kubernetes API.\n- Ensure you have the latest version of `kubectl` installed to leverage the most recent features and security patches.\n- Key configuration options include setting up RBAC roles and bindings for secure access.\n- For accessing Kubernetes APIs, use HTTP/HTTPS protocols with appropriate authentication (e.g., token-based).\n- Consider using custom resource definitions (CRDs) to extend Kubernetes API capabilities.\n- Implement patterns like Singleton, Capability, Lifecycle, Auto-Pilot in your operators for better management and scalability.\n- Align API routes with resource types for cleaner mappings between UI views and Kubernetes APIs.\n- Monitor API usage and performance regularly to optimize and scale accordingly.",
     "source": "web_search",
-    "updated_at": 1780921888.9491801
+    "updated_at": 1780929480.1985066
   },
   "search:API Design Principles:kubernetes api design patterns_ex": {
     "content": "- **CLI Commands**: `kubectl get pods`, `kubectl apply -f <filename>`, `kubectl delete pod <podname>`\n- **Latest Versions**: Ensure Kubernetes is up to date using `kubectl version --client` and check for updates on the official Kubernetes website.\n- **Key Config Options**:\n  - `replicas`: Number of desired replicas in a deployment.\n  - `image`: Docker image used by the container.\n  - `resources`: CPU and memory limits and requests.\n  - `ports`: Exposed ports for services.",
     "source": "code_example",
-    "updated_at": 1780921891.0018947
+    "updated_at": 1780929482.403541
   },
   "search:API Design Principles:next.js prisma api design": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npm install prisma --save-dev`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n\n- **Key Config Options**:\n  - `.env.local`: Define environment variables for database connection.\n  - `prisma/schema.prisma`: Define your data model and relations.\n  - `next.config.js`: Configure Next.js settings, including API routes.",
     "source": "web_search",
-    "updated_at": 1780921893.1463194
+    "updated_at": 1780929484.5569124
   },
   "search:API Design Principles:next.js prisma api design_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Prisma: 4.0\n\n- **Key Config Options**:\n  - In `next.config.js`, ensure you have the following to enable API routes:\n    ```javascript\n    module.exports = {\n      reactStrictMode: true,\n      async rewrites() {\n        return [\n          {\n            source: '/api/:function*',\n            destination: '/api/prisma/[...function]',\n          },\n        ];\n      },\n    };\n    ```\n  - In `prisma/schema.prisma`, define your data models and relations.\n  - Use environment variables in `.env.local` for database connection strings:\n    ```plaintext\n    DATABASE_URL=\"postgresql://user:password@localhost:5432/mydb\"\n    ```\n\n- **Additional Tips**:\n  - Run `npx prisma migrate dev --name init` to create the initial migration.\n  - Use Prisma Client in your API routes for database operations.",
     "source": "code_example",
-    "updated_at": 1780921895.3553138
+    "updated_at": 1780929486.910998
   },
   "search:API Design Principles:fastapi restful api design": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Creates a new FastAPI project.\n  - `uvicorn run app:app --reload`: Runs the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0 (as of my last update)\n  - Uvicorn: v10.7.0\n\n- **Key Config Options**:\n  - `title`: Sets the title of the API documentation.\n  - `description`: Provides a description for the API documentation.\n  - `version`: Specifies the version of the API.\n  - `contact`: Includes contact information for the API maintainer.\n  - `license_info`: Adds license details to the API documentation.",
     "source": "web_search",
-    "updated_at": 1780921897.5227969
+    "updated_at": 1780929489.03733
   }
 }

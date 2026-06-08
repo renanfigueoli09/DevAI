@@ -2,21 +2,21 @@
   "search:nextjs+mongodb-advanced:next.js mongodb advanced queri": {
     "content": "- **CLI Commands**:\n  - `npm install mongoose` to install Mongoose, the MongoDB object modeling tool.\n  - `mongoimport --db yourDatabase --collection yourCollection --file path/to/your/file.json` for importing data into MongoDB.\n\n- **Latest Versions**:\n  - Node.js: v18.14.0\n  - MongoDB: v6.0\n\n- **Key Config Options**:\n  - Mongoose Connection String: `mongoose.connect('mongodb://localhost:27017/yourDatabase');`\n  - Indexing: Use `.createIndex()` method on a schema to create an index.\n  - Aggregation Framework: Utilize `$lookup`, `$match`, `$sort`, and `$limit` stages for complex data processing.",
     "source": "web_search",
-    "updated_at": 1780921657.1905544
+    "updated_at": 1780929242.8412318
   },
   "search:nextjs+mongodb-advanced:next.js mongodb advanced queri_ex": {
     "content": "- **CLI Commands**:\n  - `mongo` to connect to MongoDB.\n  - `db.collection.find(query, projection)` for querying documents.\n  - `db.collection.aggregate(pipeline)` for advanced data aggregation.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - MongoDB: 6.0\n\n- **Key Config Options**:\n  - Connection URI: `mongodb://localhost:27017/mydatabase`\n  - Indexing: `{ field: 1 }` for ascending order, `-1` for descending.\n  - Aggregation Pipeline Stages: `$match`, `$group`, `$sort`, `$limit`.",
     "source": "code_example",
-    "updated_at": 1780921659.0962055
+    "updated_at": 1780929246.1079443
   },
   "search:nextjs+mongodb-advanced:mongodb next.js aggregation fr": {
     "content": "- **CLI Commands**:\n  - `npm install @mongodb-js/nextjs-mongodb`\n  - `npx create-next-app@latest --example with-mongodb my-project`\n\n- **Latest Versions**:\n  - Next.js: 15 (App Router)\n  - MongoDB Node.js Driver: Latest stable version\n\n- **Key Config Options**:\n  - `MONGODB_URI`: Connection string for MongoDB\n  - `NEXT_PUBLIC_MONGODB_DB`: Database name\n  - `next.config.js`: Configuration file for Next.js project",
     "source": "web_search",
-    "updated_at": 1780921661.1348796
+    "updated_at": 1780929248.75393
   },
   "search:nextjs+mongodb-advanced:mongodb next.js aggregation fr_ex": {
     "content": "- **GitHub Repository**: [faisalamin001/nextjs-mongodb-aggregation](https://github.com/faisalamin001/nextjs-mongodb-aggregation)\n- **CLI Commands**:\n  - `npm install @mongodb-js/mongodb-next`\n  - `npx create-next-app@latest my-app --typescript`\n- **Latest Versions**:\n  - MongoDB Node.js Driver: v4.5.0\n  - Next.js: v13.5.3\n- **Key Config Options**:\n  - `mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })`\n  - `next.config.js`: Configure API routes, environment variables, and more.\n  - MongoDB Atlas: Use for hosting and managing MongoDB databases in the cloud.",
     "source": "code_example",
-    "updated_at": 1780921663.1466627
+    "updated_at": 1780929251.8133676
   }
 }
