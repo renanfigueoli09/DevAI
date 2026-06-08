@@ -2,21 +2,21 @@
   "search:spring+kafka-streams:spring kafka streams integrati": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Kafka Streams: 3.0.5\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.kafka.streams.properties.bootstrap.servers`: Kafka broker addresses.\n  - `spring.kafka.streams.properties.application.id`: Unique application ID.\n  - `spring.kafka.streams.properties.default.key.serde`: Default key serializer/deserializer.\n  - `spring.kafka.streams.properties.default.value.serde`: Default value serializer/deserializer.",
     "source": "web_search",
-    "updated_at": 1780931660.6786387
+    "updated_at": 1780940386.6935961
   },
   "search:spring+kafka-streams:spring kafka streams integrati_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Apache Kafka: 3.4.1\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n\nThese actionable facts provide a quick reference for developers integrating Spring Kafka Streams in their projects.",
     "source": "code_example",
-    "updated_at": 1780931662.8152335
+    "updated_at": 1780940390.0470083
   },
   "search:spring+kafka-streams:spring kafka streams windowing": {
     "content": "- **CLI Commands**: \n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Kafka Streams: 3.0.x\n\n- **Key Config Options**:\n  - `windowSize`: Duration of the window in milliseconds.\n  - `advanceBy`: Duration to advance the window by, useful for overlapping windows.\n  - `timeWindowedStore`: Store type for time-based windows.\n  - `sessionWindowedStore`: Store type for session-based windows.",
     "source": "web_search",
-    "updated_at": 1780931665.217964
+    "updated_at": 1780940393.2579308
   },
   "search:spring+kafka-streams:spring kafka streams windowing_ex": {
     "content": "- **GitHub Repository**: [acasado666/sample-spring-boot-kafka-windowing](https://github.com/acasado666/sample-spring-boot-kafka-windowing)\n- **Latest Version**: Not specified in the search results.\n- **Key Config Options**:\n  - `windowSize`: Duration of a window (e.g., 10 seconds).\n  - `advanceBy`: Time interval between windows (e.g., 5 seconds).\n  - `gracePeriod`: Time to allow late data (e.g., 2 minutes).\n\nExample CLI Command:\n```bash\nmvn clean install\n```\n\nNote: Ensure you have the necessary dependencies and configurations in your `pom.xml` or `build.gradle`.",
     "source": "code_example",
-    "updated_at": 1780931667.287025
+    "updated_at": 1780940396.011863
   }
 }

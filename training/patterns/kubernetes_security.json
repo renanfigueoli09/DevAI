@@ -2,21 +2,21 @@
   "search:kubernetes+security:kubernetes security best pract": {
     "content": "- **RBAC Configuration**: Use `kubectl create role` and `kubectl create rolebinding` to define roles and bindings.\n- **Pod Security Standards**: Apply PodSecurityPolicies with `psp.yaml` using `apiVersion: policy/v1beta1`.\n- **Network Policies**: Implement network policies with YAML files like `network-policy.yaml` using `apiVersion: networking.k8s.io/v1`.\n- **Secret Management**: Use `kubectl create secret generic my-secret --from-literal=my-key=my-value`.\n- **Cluster Hardening**: Enable audit logging and encryption at rest.\n- **Compliance**: Follow CIS Kubernetes Benchmark with `kube-bench run`.\n- **Image Scanning**: Integrate tools like Trivy or Clair for scanning container images.\n- **Security Contexts**: Set security contexts in pod and container definitions using `securityContext` field.\n- **Update Kubernetes**: Always use the latest stable version, check for updates with `kubectl version --short`.\n- **Regular Audits**: Conduct regular security audits and penetration testing.",
     "source": "web_search",
-    "updated_at": 1780931348.7248125
+    "updated_at": 1780940046.4380462
   },
   "search:kubernetes+security:kubernetes security best pract_ex": {
     "content": "- Use `kubectl` version 25.0 or later.\n- Implement RBAC using `kubectl create rolebinding` and `kubectl create clusterrolebinding`.\n- Apply Pod Security Standards with `psp.yaml` configuration:\n  ```yaml\n  apiVersion: policy/v1beta1\n  kind: PodSecurityPolicy\n  metadata:\n    name: restricted-psp\n  spec:\n    privileged: false\n    allowPrivilegeEscalation: false\n    defaultAddCapabilities: []\n    requiredDropCapabilities: [\"ALL\"]\n    volumes:\n      - \"configMap\"\n      - \"emptyDir\"\n      - \"persistentVolumeClaim\"\n      - \"secret\"\n    hostNetwork: false\n    hostPorts:\n      - min: 1024\n        max: 65535\n    hostPID: false\n    runAsUser:\n      rule: \"MustRunAsNonRoot\"\n    seLinux:\n      rule: \"RunAsAny\"\n    supplementalGroups:\n      rule: \"MustRunAs\"\n      ranges:\n        - min: 1\n          max: 65535\n    fsGroup:\n      rule: \"MustRunAs\"\n      ranges:\n        - min: 1\n          max: 65535\n  ```\n- Use `kubectl apply -f psp.yaml` to create the Pod Security Policy.\n- Configure Network Policies with YAML files like `network-policy.yaml`:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: NetworkPolicy\n  metadata:\n    name: default-deny-all\n  spec:\n    podSelector: {}\n    policyTypes:\n      - Ingress\n      - Egress\n  ```\n- Apply Network Policies with `kubectl apply -f network-policy.yaml`.\n- Manage secrets using `kubectl create secret generic my-secret --from-literal=password=my-password` or `kubectl create secret tls my-tls-secret --cert=path/to/cert.pem --key=path/to/key.pem`.\n- Ensure cluster hardening by updating the Kubernetes API server and controller manager configurations.\n- Use `kubeadm init` with the latest version for a secure initial setup.\n- Regularly update all components to their latest versions using `kubectl apply -f <component>-manifest.yaml`.",
     "source": "code_example",
-    "updated_at": 1780931351.4736712
+    "updated_at": 1780940048.3996284
   },
   "search:kubernetes+security:kubernetes security compliance": {
     "content": "- **Latest Version**: Kubernetes v1.35 is scheduled for release on December 17, 2025.\n  \n- **CLI Commands**:\n  - `kubectl apply -f <file.yaml>` to apply a configuration file.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n  - `kubectl delete pod <pod-name> -n <namespace>` to delete a pod.\n\n- **Key Config Options**:\n  - RBAC (Role-Based Access Control) for fine-grained access control.\n  - Pod Security Standards to enforce security policies on pods.\n  - Network Policies to control network traffic between pods and services.\n  - Secrets Management for secure handling of sensitive data.\n  - Cluster Hardening to enhance the overall security posture.\n\n- **Compliance**:\n  - Based on CIS Kubernetes Benchmark for compliance standards.\n  - Use Wiz.io's Kubernetes cheat sheet for actionable advice and strategies.",
     "source": "web_search",
-    "updated_at": 1780931354.3648248
+    "updated_at": 1780940050.6157513
   },
   "search:kubernetes+security:kubernetes security compliance_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <policy-file>.yaml`\n  - `kubecomply scan --cluster=<cluster-name>`\n\n- **Latest Versions**:\n  - Kubernetes Security Checklist: 2025\n  - GitHub - nickfluxk/kubecomply: Feb 19, 2026\n\n- **Key Config Options**:\n  - RBAC (Role-Based Access Control)\n  - Pod Security Standards\n  - Network Policies\n  - Secrets Management\n  - Cluster Hardening",
     "source": "code_example",
-    "updated_at": 1780931356.8627264
+    "updated_at": 1780940053.1425014
   }
 }

@@ -2,12 +2,12 @@
   "search:Advanced Spring + Kotlin Coroutines:spring kotlin coroutines advan": {
     "content": "- Add dependencies to `build.gradle.kts`:\n  ```kotlin\n  implementation(\"org.jetbrains.kotlinx:kotlinx-coroutines-core\")\n  implementation(\"org.jetbrains.kotlinx:kotlinx-coroutines-reactor\")\n  ```\n- Use Kotlin Coroutines for non-blocking Spring Boot applications.\n- Compare reactive and coroutine approaches in building non-blocking applications.\n- Set up a Spring Boot 3 project with Kotlin coroutines, PostgreSQL, and Docker.\n- Expose a reactive REST API using Kotlin Flows and coroutines.\n- Check out the GitHub repository: [hantsy/spring-kotlin-coroutines-sample](https://github.com/hantsy/spring-kotlin-coroutines-sample) for practical examples.",
     "source": "web_search",
-    "updated_at": 1780931703.385626
+    "updated_at": 1780940441.9415796
   },
   "search:Advanced Spring + Kotlin Coroutines:spring kotlin coroutines advan_ex": {
     "content": "- Use `./mvnw spring-boot:run` to run the Spring Boot application.\n- Ensure you have Kotlin and Coroutines dependencies in your `build.gradle.kts` or `pom.xml`.\n- For reactive REST API, use `spring-boot-starter-webflux` along with Kotlin Coroutines.\n- Configure `application.properties` for database connections if using Spring Data.\n- Use `@EnableWebFlux` to enable reactive web support.\n- Implement non-blocking services by using `suspend` functions and `CoroutineScope`.\n- For testing, use `WebTestClient` from Spring WebFlux Test.\n- Keep your application stateless to fully leverage the benefits of Coroutines.\n- Update dependencies regularly to use the latest versions for security and performance improvements.",
     "source": "code_example",
-    "updated_at": 1780931705.4468024
+    "updated_at": 1780940445.0131447
   },
   "search:Advanced Spring + Kotlin Coroutines:kotlin coroutines for spring d": {
     "content": "- **CLI Commands**:\n  - `./gradlew run` to run the application.\n  - `./gradlew build` to build the project.\n\n- **Latest Versions**:\n  - Kotlin Coroutines: 1.7.32\n  - Spring Boot: 2.6.4\n\n- **Key Config Options**:\n  - `spring.main.task-executor.core-pool-size`: Sets the core pool size of the task executor.\n  - `spring.main.task-executor.max-pool-size`: Sets the maximum pool size of the task executor.\n  - `spring.main.task-executor.queue-capacity`: Sets the capacity of the queue used by the task executor.",

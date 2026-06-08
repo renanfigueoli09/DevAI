@@ -7,16 +7,16 @@
   "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error _ex": {
     "content": "- Use `kubectl get statefulsets` to list StatefulSets.\n- Check logs with `kubectl logs <statefulset-name>-<index>`.\n- Inspect events with `kubectl describe statefulset <statefulset-name>`.\n- Use `kubectl rollout status statefulset <statefulset-name>` for deployment status.\n- Apply changes with `kubectl apply -f <manifest-file>`.\n- Scale StatefulSets with `kubectl scale statefulset <statefulset-name> --replicas=<new-replicas>`.",
     "source": "code_example",
-    "updated_at": 1780937010.6366482
+    "updated_at": 1780939906.394732
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:statefulset failure recovery": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`",
     "source": "web_search",
-    "updated_at": 1780937013.4459312
+    "updated_at": 1780939908.8801222
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:statefulset failure recovery_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl rollout restart statefulset <statefulset-name>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n  - Kueue v0.15\n\n- **Key Config Options**:\n  - `.spec.template.spec.volumes`\n  - `.spec.volumeClaimTemplates`\n  - `.spec.updateStrategy.type`",
     "source": "code_example",
-    "updated_at": 1780937015.8943756
+    "updated_at": 1780939911.0530338
   }
 }
