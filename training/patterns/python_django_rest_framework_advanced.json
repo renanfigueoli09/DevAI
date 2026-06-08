@@ -2,31 +2,31 @@
   "search:python-django-rest-framework-advanced:django rest framework advanced": {
     "content": "- **CLI Commands**:\n  - `django-admin startproject myproject`\n  - `python manage.py runserver`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django 4.2\n\n- **Key Config Options**:\n  - `settings.py`: Database, Debug mode, Installed apps, Middleware, Templates\n  - `urls.py`: URL routing configuration",
     "source": "web_search",
-    "updated_at": 1780930747.0764022
+    "updated_at": 1780936573.474481
   },
   "search:python-django-rest-framework-advanced:django rest framework advanced_ex": {
     "content": "- **Code.org**: Not directly related to Django REST Framework.\n- **Visual Studio Code**:\n  - Latest version: [Check on official website](https://code.visualstudio.com/)\n  - CLI commands with exact flags:\n    ```bash\n    code --version\n    code --install-extension <extension-id>\n    ```\n- **Codecademy**: Not directly related to Django REST Framework.",
     "source": "code_example",
-    "updated_at": 1780930749.8314435
+    "updated_at": 1780936576.1817687
   },
   "search:python-django-rest-framework-advanced:django rest framework custom s": {
     "content": "- **CLI Commands**:\n  - `django-admin startproject <project_name>`\n  - `python manage.py runserver`\n  - `python manage.py migrate`\n  - `python manage.py createsuperuser`\n\n- **Latest Versions**:\n  - Django: 4.1 (as of my last update)\n  - Django REST Framework: 3.14\n\n- **Key Config Options**:\n  - `settings.py`: Configure database, security settings, installed apps, middleware.\n  - `urls.py`: Define URL patterns for your application.\n  - `serializers.py`: Customize serializers to control the output of model instances.",
     "source": "web_search",
-    "updated_at": 1780930752.6264014
+    "updated_at": 1780936578.5569153
   },
   "search:python-django-rest-framework-advanced:django rest framework custom s_ex": {
     "content": "- **Django REST Framework**: Version 3.14.2\n- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py startapp myapp`\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py for customization\n  - Authentication classes, permission classes, and pagination classes",
     "source": "code_example",
-    "updated_at": 1780930754.9077172
+    "updated_at": 1780936581.0850809
   },
   "search:python-django-rest-framework-advanced:django rest framework authenti": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.2\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py\n    ```python\n    REST_FRAMEWORK = {\n        'DEFAULT_AUTHENTICATION_CLASSES': [\n            'rest_framework.authentication.BasicAuthentication',\n            'rest_framework.authentication.SessionAuthentication',\n        ],\n        'DEFAULT_PERMISSION_CLASSES': [\n            'rest_framework.permissions.IsAuthenticated',\n        ],\n    }\n    ```\n  - `INSTALLED_APPS` in settings.py\n    ```python\n    INSTALLED_APPS = [\n        ...\n        'rest_framework',\n        ...\n    ]\n    ```",
     "source": "web_search",
-    "updated_at": 1780930757.487541
+    "updated_at": 1780936583.6802802
   },
   "search:python-django-rest-framework-advanced:django rest framework authenti_ex": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: 3.14.2\n\n- **Key Config Options**:\n  - `REST_FRAMEWORK` in settings.py for authentication and permissions\n  - Authentication classes like `TokenAuthentication`, `SessionAuthentication`\n  - Permission classes like `IsAuthenticated`, `IsAdminUser`",
     "source": "code_example",
-    "updated_at": 1780930759.6426823
+    "updated_at": 1780936586.5726259
   }
 }

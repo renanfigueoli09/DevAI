@@ -2,31 +2,31 @@
   "search:dotnet-ef-core-sqlserver:ef core sql server performance": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - SQL Server: Latest LTS version\n\n- **Key Config Options**:\n  - ConnectionString in `appsettings.json`: `\"Server=your_server;Database=your_database;User Id=your_user;Password=your_password;\"`\n  - Use `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only operations to improve performance.\n  - Enable lazy loading by setting `LazyLoadingEnabled = true` in the DbContext options.",
     "source": "web_search",
-    "updated_at": 1780930704.6804097
+    "updated_at": 1780936534.4653494
   },
   "search:dotnet-ef-core-sqlserver:ef core sql server performance_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- **Latest Versions**: Ensure you are using the latest version of EF Core and SQL Server by running `dotnet tool update --global dotnet-ef`.\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or use environment variables.\n  - Logging: Enable detailed logging for performance analysis with `options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));`\n  - Query Caching: Use `context.Database.SetQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);` to disable tracking for read-only operations.",
     "source": "code_example",
-    "updated_at": 1780930707.235359
+    "updated_at": 1780936537.0027397
   },
   "search:dotnet-ef-core-sqlserver:ef core sql server security en": {
     "content": "- **Install EF Core SQL Server Provider**: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- **Update to Latest Version**: Check [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) for the latest version and update using `dotnet upgrade` or manually edit `.csproj`.\n- **Key Configuration Options**:\n  - Connection String: Define in `appsettings.json` and use `optionsBuilder.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"))`\n  - HierarchyId Support: Use `Microsoft.EntityFrameworkCore.SqlServer.HierarchyId` for hierarchical data.\n- **CLI Commands**:\n  - Migrate Database: `dotnet ef migrations add InitialCreate --context YourDbContextName`\n  - Update Database: `dotnet ef database update`\n  - Scaffold Model from Database: `dotnet ef dbcontext scaffold \"YourConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models`",
     "source": "web_search",
-    "updated_at": 1780930709.8204532
+    "updated_at": 1780936539.5208926
   },
   "search:dotnet-ef-core-sqlserver:ef core sql server security en_ex": {
     "content": "- **Install EF Core SQL Server**: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- **Update to Latest Version**: `dotnet update package Microsoft.EntityFrameworkCore.SqlServer --prerelease`\n- **Key Config Options**:\n  - `optionsBuilder.UseSqlServer(connectionString)`\n  - `optionsBuilder.EnableSensitiveDataLogging()`\n  - `optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information)`\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`",
     "source": "code_example",
-    "updated_at": 1780930711.9747632
+    "updated_at": 1780936542.1651413
   },
   "search:dotnet-ef-core-sqlserver:ef core sql server migrations ": {
     "content": "- **CLI Commands**: \n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration.\n  - `dotnet ef database update`: Applies the latest migration to the database.\n\n- **Latest Versions**:\n  - Ensure you are using the latest stable version of EF Core and SQL Server provider for optimal performance and security.\n\n- **Key Config Options**:\n  - `UseSqlServer`: Specifies the connection string for SQL Server.\n  - `MigrationsAssembly`: Points to the assembly containing migration classes.\n  - `Scaffold-DbContext`: Generates a DbContext class based on an existing database schema.",
     "source": "web_search",
-    "updated_at": 1780930714.3128443
+    "updated_at": 1780936544.544552
   },
   "search:dotnet-ef-core-sqlserver:ef core sql server migrations _ex": {
     "content": "- **CLI Commands**:\n  - `Add-Migration InitialCreate`\n  - `Update-Database`\n\n- **Latest Versions**:\n  - EF Core 7.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - Migrations Directory Configuration",
     "source": "code_example",
-    "updated_at": 1780930716.7186668
+    "updated_at": 1780936546.9813726
   }
 }

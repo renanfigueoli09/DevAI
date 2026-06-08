@@ -2,16 +2,16 @@
   "search:nextjs+supabase-authentication:next.js supabase authenticatio": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS Client: v2.0.0\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your Supabase project.\n  - Environment variables for security (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).\n  - Authentication routes in Next.js (e.g., `/api/auth/[...nextauth]`).",
     "source": "web_search",
-    "updated_at": 1780930633.7692778
+    "updated_at": 1780936460.4444406
   },
   "search:nextjs+supabase-authentication:next.js supabase authenticatio_ex": {
     "content": "- Use `npx create-next-app@latest --example with-supabase` to create a new Next.js app pre-configured with Supabase.\n- Ensure you have the latest versions of Node.js and npm installed.\n- Key config options include setting up environment variables for Supabase URL and anon/public API keys in `.env.local`.\n- Create an OAuth callback endpoint at `auth/callback/route.ts` to handle authentication responses from providers.\n- Utilize Supabase client functions within Next.js components or server-side logic as needed.",
     "source": "code_example",
-    "updated_at": 1780930636.1339126
+    "updated_at": 1780936463.1081312
   },
   "search:nextjs+supabase-authentication:supabase authentication with n": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-auth-app`\n  - `npm install @supabase/supabase-js next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Supabase JS: v2.0.0\n  - NextAuth.js: v4.0.0\n\n- **Key Config Options**:\n  - Supabase URL and anon key in `.env.local`\n    ```plaintext\n    SUPABASE_URL=your-supabase-url\n    SUPABASE_ANON_KEY=your-supabase-anon-key\n    ```\n  - NextAuth.js configuration in `pages/api/auth/[...nextauth].js`\n    ```javascript\n    import NextAuth from 'next-auth';\n    import Providers from 'next-auth/providers';\n\n    export default NextAuth({\n      providers: [\n        Providers.Supabase({\n          clientId: process.env.SUPABASE_URL,\n          clientSecret: process.env.SUPABASE_ANON_KEY,\n        }),\n      ],\n      session: {\n        strategy: 'jwt',\n      },\n    });\n    ```\n\n- **Security Tips**:\n  - Use environment variables for sensitive keys.\n  - Implement role-based access control (RBAC).\n  - Regularly update dependencies to patch security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780930638.3923619
+    "updated_at": 1780936465.7618167
   }
 }
