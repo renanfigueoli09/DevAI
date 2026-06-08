@@ -2,11 +2,11 @@
   "search:nodejs-express-mysql:express mysql security pattern": {
     "content": "- **MySQL Security Patterns 2023**: Focus on using the latest MySQL version to ensure security.\n  \n- **CLI Commands**:\n  - `mysql_secure_installation`: Secure your MySQL installation by setting a root password, removing anonymous users, disallowing root login remotely, and removing test databases.\n  - `mysqldump --single-transaction --quick --lock-tables=false`: Backup databases efficiently without locking tables.\n\n- **Latest Versions**:\n  - MySQL 8.0: Latest stable version with enhanced security features like improved authentication plugins and row-level encryption.\n\n- **Key Config Options**:\n  - `bind-address`: Set to `127.0.0.1` or `::1` to restrict access to the local machine.\n  - `skip-networking`: Disable network access if not needed, enhancing security by limiting connections to the local socket only.\n  - `max_connections`: Limit the number of concurrent connections to prevent abuse and resource exhaustion.\n\n- **Additional Recommendations**:\n  - Use SSL/TLS for encrypted communication between clients and servers.\n  - Regularly update MySQL and all plugins to patch known vulnerabilities.\n  - Implement user-level privileges to restrict access based on roles.",
     "source": "web_search",
-    "updated_at": 1780920933.3248765
+    "updated_at": 1780922416.724567
   },
   "search:nodejs-express-mysql:express mysql integration with": {
     "content": "- Download and install Microsoft® SQL Server® 2022 Express using LocalDB.\n- Use the `mysql` module for integrating MySQL with Node.js Express.\n- Automate MySQL and Redis integration using Buddy's CI/CD platform.\n- For Node.js + Express + Redis, create a single client for the life of the application.\n- Call `close()` on the redis client when stopping your application to ensure proper cleanup.",
     "source": "web_search",
-    "updated_at": 1780920934.2220738
+    "updated_at": 1780922418.810379
   }
 }

@@ -2,61 +2,61 @@
   "search:microservices+patterns:saga cqrs event sourcing circu": {
     "content": "- **CLI Commands**:\n  - `microservices init --pattern saga`\n  - `microservices init --pattern cqrs`\n  - `microservices init --pattern event-sourcing`\n\n- **Latest Versions**:\n  - Microservices Framework: v2.5.0\n  - API Gateway: v1.8.0\n  - Circuit Breaker: v3.2.0\n\n- **Key Config Options**:\n  - Saga Pattern: `saga.choreography` or `saga.orchestration`\n  - CQRS Pattern: `cqrs.command` and `cqrs.query`\n  - Event Sourcing: `event-store.enabled=true`, `event-store.type=kafka`",
     "source": "web_search",
-    "updated_at": 1780920690.7847774
+    "updated_at": 1780922012.6019914
   },
   "search:microservices+patterns:saga cqrs event sourcing circu_ex": {
     "content": "- **GitHub Repository**: [leosalazarn/microservices](https://github.com/leosalazarn/microservices)\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: CQRS, Event Sourcing\n\n- **Saga Pattern**:\n  - **CLI Command**: `saga start --service-name payment-gateway`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Compensation logic, Circuit Breaker integration\n\n- **Circuit Breaker**:\n  - **CLI Command**: `circuit-breaker open --service payment-gateway`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Failure threshold, Recovery timeout\n\n- **Event Sourcing**:\n  - **CLI Command**: `event-sourcing record --event-type PaymentFailed`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Audit trail retention policy\n\n- **API Gateway**:\n  - **CLI Command**: `api-gateway route add --service payment-gateway`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Rate limiting, Authentication/Authorization\n\n- **Event-Driven Architecture Patterns**:\n  - **CLI Command**: `event-driven deploy --pattern CQRS`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Message brokers (Kafka, RabbitMQ, Azure Service Bus)\n\n- **E-commerce Case Study**:\n  - **CLI Command**: `case-study run --example e-commerce`\n  - **Latest Version**: Not specified in the snippet.\n  - **Key Config Options**: Scalability, Fault tolerance",
     "source": "code_example",
-    "updated_at": 1780920692.1279092
+    "updated_at": 1780922015.206557
   },
   "search:microservices+patterns:outbox pattern ddd bounded con": {
     "content": "- **DDD Complete Guide 2025**: \n  - Access via Medium link provided.\n  \n- **Relationships Between Bounded Contexts in DDD**:\n  - Explore interactions and relationships between contexts on Medium.\n\n- **Domain-Driven Design for Microservices**:\n  - Focus on bounded contexts, context mapping patterns, aggregates, and domain events.\n\n- **Service Boundaries with DDD**:\n  - Dive into practical implementation of bounded contexts, failure modes, governance guardrails, and value KPIs.",
     "source": "web_search",
-    "updated_at": 1780920693.3575637
+    "updated_at": 1780922017.940238
   },
   "search:microservices+patterns:outbox pattern ddd bounded con_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new clean` to create a new .NET Clean Architecture project.\n  - `dotnet add package MediatR` for implementing the Mediator pattern.\n  - `dotnet add package MassTransit` for message bus integration.\n\n- **Latest Versions**:\n  - .NET 7\n  - MediatR 10.3.1\n  - MassTransit 6.2.4\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection strings and service buses.\n  - Use `services.AddMediatR(typeof(Startup));` in `Program.cs`.\n  - Configure MassTransit with `services.AddMassTransit(x => { ... });`.",
     "source": "code_example",
-    "updated_at": 1780920694.7962697
+    "updated_at": 1780922020.3802736
   },
   "search:Microservices Patterns:microservices patterns spring ": {
     "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:2.13.4.Final:create`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Quarkus: 2.13.4.Final\n  - Spring Boot: 2.6.5\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Set the HTTP port for your application.\n  - `quarkus.datasource.username`: Database username.\n  - `quarkus.datasource.password`: Database password.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for the database.",
     "source": "web_search",
-    "updated_at": 1780920696.104728
+    "updated_at": 1780922022.533715
   },
   "search:Microservices Patterns:microservices patterns spring _ex": {
     "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:create -DprojectGroupId=com.example -DprojectArtifactId=my-quarkus-app`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Quarkus: 3.0.0.Final\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Specifies the port on which the application will listen.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for database connection.\n  - `quarkus.datasource.username` and `quarkus.datasource.password`: Database credentials.\n  - `quarkus.resteasy.path`: Base path for REST endpoints.",
     "source": "code_example",
-    "updated_at": 1780920697.2454872
+    "updated_at": 1780922024.8736553
   },
   "search:Microservices Patterns:microservices patterns fastapi": {
     "content": "- **FastAPI**: Version 0.95.0\n- **SQLAlchemy**: Version 2.0.0\n- **Redis**: Version 7.0.0\n- **Docker**: Latest version\n\n**CLI Commands:**\n- `fastapi create-app myproject`\n- `uvicorn myproject.main:app --reload`\n\n**Key Config Options:**\n- FastAPI:\n  - `title`: Application title.\n  - `description`: Application description.\n  - `version`: API version.\n\n- SQLAlchemy:\n  - `SQLALCHEMY_DATABASE_URL`: Database URL.\n  - `engine`: Connection engine.\n\n- Redis:\n  - `REDIS_HOST`: Host address.\n  - `REDIS_PORT`: Port number.",
     "source": "web_search",
-    "updated_at": 1780920698.48443
+    "updated_at": 1780922027.1374295
   },
   "search:Microservices Patterns:microservices patterns fastapi_ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app my_project`\n  - `uvicorn my_project.main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - CORS origins in `main.py`: `app.add_middleware(CORSMiddleware, allow_origins=[\"*\"], allow_credentials=True, allow_methods=[\"*\"], allow_headers=[\"*\"])`",
     "source": "code_example",
-    "updated_at": 1780920699.2358747
+    "updated_at": 1780922028.7205133
   },
   "search:Microservices Patterns:microservices patterns nextjs ": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- For serverless authentication, consider using AWS Cognito or Firebase Authentication.\n- Implement microservices by creating separate Next.js applications for each service.\n- Utilize API Gateway and Lambda functions for deploying microservices on AWS.\n- Configure environment variables in `.env.local` for sensitive information like database URLs and API keys.\n- Use `next-auth.js` for handling authentication within a Next.js application.\n- For state management across microservices, consider using Redis or a shared database.\n- Implement JWT (JSON Web Tokens) for secure communication between microservices.\n- Deploy each microservice as a separate AWS Lambda function with API Gateway triggers.",
     "source": "web_search",
-    "updated_at": 1780920700.541571
+    "updated_at": 1780922031.032422
   },
   "search:Microservices Patterns:microservices patterns nextjs _ex": {
     "content": "- **CLI Commands**: Use `npx create-next-app@latest` to start a new Next.js project.\n- **Latest Versions**: Ensure you are using the latest version of Next.js by running `npm install next@latest`.\n- **Key Config Options**:\n  - `next.config.js`: Configure your project settings such as output type, asset prefix, and more.\n  - Environment Variables: Use `.env.local` to manage sensitive information like API keys.",
     "source": "code_example",
-    "updated_at": 1780920701.9380708
+    "updated_at": 1780922033.2185104
   },
   "search:Microservices Patterns:microservices patterns gitlab-": {
     "content": "- Use `gitlab-ci.yml` to define CI/CD pipelines.\n- Update GitLab Runner to latest version using `sudo gitlab-runner upgrade`.\n- Implement dynamic child pipelines with `include` directive in `.gitlab-ci.yml`.\n- Utilize DAG (Directed Acyclic Graph) for complex pipeline logic.\n- Key config options include `stages`, `script`, and `only/except`.\n- Use `cache` to speed up builds by caching dependencies.\n- Employ `artifacts` to share files between jobs.\n- Monitor pipeline performance with GitLab's built-in analytics.\n- Ensure security by using `variables` for sensitive data.\n- Regularly update GitLab CI templates for best practices.",
     "source": "web_search",
-    "updated_at": 1780920703.2820206
+    "updated_at": 1780922035.3735015
   },
   "search:Microservices Patterns:microservices patterns gitlab-_ex": {
     "content": "- **CLI Commands**:\n  - `gitlab-runner register`: Registers a new runner.\n  - `gitlab-runner unregister --all-runners`: Unregisters all runners.\n\n- **Latest Versions**:\n  - GitLab Runner: v16.4.0\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml`: Main configuration file for defining CI/CD pipelines.\n  - `image`: Specifies the Docker image to use for pipeline jobs.\n  - `services`: Defines services (like databases) required by jobs.\n  - `script`: Commands executed in the job environment.",
     "source": "code_example",
-    "updated_at": 1780920704.7150605
+    "updated_at": 1780922037.4380157
   }
 }

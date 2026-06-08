@@ -2,21 +2,21 @@
   "search:azure-devops-pipelines:azure devops pipelines ci/cd 2": {
     "content": "- Use `az pipelines create` to create a pipeline.\n- Specify the repository and branch using `--repository` and `--branch`.\n- Set the YAML file path with `--file-path`.\n- For Azure Kubernetes Service (AKS), use `az aks create --name <cluster-name> --resource-group <resource-group>`.\n- Deploy to AKS using `kubectl apply -f <manifest-file.yaml>`.\n- Use Bicep for infrastructure as code with `az deployment group create --resource-group <resource-group> --template-file <bicep-file.bicep>`.\n- Configure pipeline variables in Azure DevOps UI or use `-v` flag in CLI.\n- Monitor pipeline status with `az pipelines run list --project <project-name>`.\n- Update pipeline YAML to trigger on specific events like push or pull request.",
     "source": "web_search",
-    "updated_at": 1780920754.2142837
+    "updated_at": 1780922115.4373517
   },
   "search:azure-devops-pipelines:azure devops pipelines ci/cd 2_ex": {
     "content": "- **CLI Commands**:\n  - `az devops service-endpoint create --name <endpoint-name> --type <service-type> --url <service-url>`\n  - `az pipelines create --name <pipeline-name> --repository <repo-url> --branch <branch-name>`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v0.216.0\n  - Azure Pipelines YAML Schema: v2\n\n- **Key Config Options**:\n  - Service Connections: Define connections to external services like GitHub, Azure Resource Manager.\n  - Repositories: Specify the source code repository for your pipeline.\n  - Triggers: Set up triggers for CI/CD (e.g., on push, pull request).\n  - Jobs and Steps: Define the steps to be executed in a job.\n  - Artifacts: Manage build artifacts for deployment.",
     "source": "code_example",
-    "updated_at": 1780920755.3620043
+    "updated_at": 1780922117.3576148
   },
   "search:azure-devops-pipelines:azure devops pipelines securit": {
     "content": "- Use Azure CLI for managing resources securely.\n- Update Azure DevOps to the latest version for security patches.\n- Configure service connections using Azure Active Directory for authentication.\n- Set up pipeline permissions to restrict access based on roles.\n- Encrypt sensitive data in pipelines using Azure Key Vault.\n- Implement branch policies to control code merges and deployments.\n- Monitor pipeline activity with Azure Security Center.\n- Regularly review and update pipeline configurations.",
     "source": "web_search",
-    "updated_at": 1780920756.5158525
+    "updated_at": 1780922119.2590127
   },
   "search:azure-devops-pipelines:azure devops pipelines securit_ex": {
     "content": "- Use `az devops pipeline create` to create a new pipeline.\n- Specify the repository and branch using `--repository` and `--branch`.\n- For .NET Core projects, use `dotnet build` for building the project.\n- Run unit tests with `dotnet test`.\n- Leverage Azure Artifacts for package management.\n- Use `az acr login` to log in to an Azure Container Registry.\n- Deploy using `docker push <image-name>` and `kubectl apply -f deployment.yaml`.\n- Ensure security by integrating tools like SonarQube for code quality checks.\n- Utilize Azure Key Vault for managing secrets securely.",
     "source": "code_example",
-    "updated_at": 1780920757.7605243
+    "updated_at": 1780922121.1263244
   }
 }
