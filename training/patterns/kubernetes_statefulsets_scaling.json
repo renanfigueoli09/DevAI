@@ -2,11 +2,11 @@
   "search:kubernetes-statefulsets-scaling:statefulsets performance tunin": {
     "content": "- **CLI Commands**: Use `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n- **Latest Versions**: Ensure Kubernetes is up to date, latest version recommended for performance improvements.\n- **Key Config Options**:\n  - `podManagementPolicy`: Set to `Parallel` for faster deployment and scaling.\n  - `updateStrategy.type`: Use `RollingUpdate` with appropriate parameters like `partition`.\n  - `volumeClaimTemplates`: Define persistent storage templates for stateful applications.",
     "source": "web_search",
-    "updated_at": 1780843695.9163148
+    "updated_at": 1780931847.1422713
   },
   "search:kubernetes-statefulsets-scaling:statefulsets performance tunin_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n\n- **Latest Versions**:\n  - Kubernetes v1.24.x\n\n- **Key Config Options**:\n  - `.spec.replicas`: Defines the number of replicas.\n  - `.spec.template`: Specifies the pod template for the stateful set.\n  - `.spec.serviceName`: Links to a headless service that provides DNS names for each pod.\n  - `.spec.updateStrategy`: Controls how updates are applied to pods.",
     "source": "code_example",
-    "updated_at": 1780843697.7750568
+    "updated_at": 1780931849.9594352
   }
 }

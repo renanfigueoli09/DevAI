@@ -2,16 +2,16 @@
   "search:docker+k8s-security:docker kubernetes security bes": {
     "content": "- Use `kubectl` with `--context` to specify your Kubernetes cluster.\n- Apply PodSecurityPolicy via YAML files, even though deprecated in Kubernetes 1.25, for backward compatibility.\n- Implement Network Policies using `NetworkPolicy` objects to control traffic between pods.\n- Utilize `PodDisruptionBudgets` to ensure application availability during maintenance or upgrades.\n- Enable `MutatingAdmissionWebhook` and `ValidatingAdmissionWebhook` for advanced policy enforcement.\n- Use `RBAC (Role-Based Access Control)` to manage permissions effectively.\n- Regularly update Kubernetes, Docker, and all related components to the latest versions.\n- Employ image scanning tools like Trivy or Clair to detect vulnerabilities in container images.\n- Configure `seccomp` profiles to restrict the capabilities of containers for enhanced security.",
     "source": "web_search",
-    "updated_at": 1780843704.0864172
+    "updated_at": 1780931857.5162783
   },
   "search:docker+k8s-security:securing docker containers in ": {
     "content": "- Use `kubectl apply -f <network-policy-file>` to enforce network policies in Kubernetes.\n- Implement `PodSecurityPolicies` using `kubectl create -f <pod-security-policy-file>` for enhanced security at the pod level.\n- Update Docker images regularly with `docker pull <image-name>:latest`.\n- Utilize `docker scan --file <Dockerfile> <image-name>:<tag>` to check for vulnerabilities in your Docker images.\n- Apply Kubernetes RBAC (Role-Based Access Control) using `kubectl create rolebinding <role-binding-name> --role=<role-name> --user=<user-name>`.\n- Enable encryption at rest and in transit for data within Kubernetes clusters.\n- Use `docker-compose` with security best practices, such as setting environment variables securely.\n- Regularly update Kubernetes to the latest version using `kubectl apply -f <kubernetes-version-file>`.\n- Implement `SecurityContexts` in your pod specifications to restrict privileges.\n- Utilize `KubeArmor` for runtime security and policy enforcement.",
     "source": "web_search",
-    "updated_at": 1780843705.93237
+    "updated_at": 1780931859.6385193
   },
   "search:docker+k8s-security:securing docker containers in _ex": {
     "content": "- Use `docker scan` for image scanning.\n- Implement Kubernetes RBAC to manage access control.\n- Utilize `kubectl apply -f <config-file>` for applying configurations.\n- Enable `seccomp` and `apparmor` profiles in Pod security policies.\n- Regularly update Docker and Kubernetes to the latest versions.\n- Employ secrets management tools like HashiCorp Vault or AWS Secrets Manager.\n- Use `docker-compose` for multi-container applications with security considerations.\n- Implement network policies using `NetworkPolicy` resources in Kubernetes.\n- Monitor container runtime with tools like Falco or Sysdig.\n- Utilize `podSecurityPolicies` to enforce security standards across the cluster.",
     "source": "code_example",
-    "updated_at": 1780843708.0601647
+    "updated_at": 1780931861.7820578
   }
 }

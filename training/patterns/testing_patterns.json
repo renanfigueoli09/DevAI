@@ -2,61 +2,61 @@
   "search:testing-patterns:unit testing nestjs jest mock ": {
     "content": "- **CLI Commands**: `nest generate service <service-name>` to create a new service.\n- **Latest Versions**: NestJS v10, Jest v29.\n- **Key Config Options**:\n  - `imports`: Array of modules the current module imports.\n  - `controllers`: Array of controllers the current module uses.\n  - `providers`: Array of providers that will be instantiated by the IoC container.\n  - `exports`: Array of providers that are exported from the current module.",
     "source": "web_search",
-    "updated_at": 1780843710.379529
+    "updated_at": 1780931864.062113
   },
   "search:testing-patterns:unit testing nestjs jest mock _ex": {
     "content": "- Use `nest generate service <service-name>` to create a new service.\n- Install Jest and NestJS testing utilities via npm: `npm install --save-dev @nestjs/testing jest`.\n- Mock services in tests using the `Test.createTestingModule` method.\n- Configure Jest in your project by creating a `jest.config.js` file.\n- Use `describe`, `it`, and `expect` for writing test cases.\n- Run tests with the command: `npm run test`.\n- Update NestJS to the latest version using npm commands.\n- Key config options include `imports`, `providers`, and `controllers`.",
     "source": "code_example",
-    "updated_at": 1780843712.3038015
+    "updated_at": 1780931866.5485034
   },
   "search:testing-patterns:integration testing nestjs sup": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Create a new NestJS project.\n  - `npm run test:e2e`: Run end-to-end tests.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - `test.e2e.json`: Configuration file for E2E testing.\n  - `jest-e2e.config.ts`: Jest configuration for E2E tests.",
     "source": "web_search",
-    "updated_at": 1780843714.5521262
+    "updated_at": 1780931868.9833982
   },
   "search:testing-patterns:integration testing nestjs sup_ex": {
     "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate controller <controller-name>`\n  - `nest generate service <service-name>`\n  - `npm run test:e2e`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - Use Jest for unit tests.\n  - Use Supertest for E2E testing with `app.listen()` to start the server.\n  - Mock services and controllers using Nest's dependency injection system.",
     "source": "code_example",
-    "updated_at": 1780843716.5835478
+    "updated_at": 1780931871.4023135
   },
   "search:testing-patterns:unit testing spring boot junit": {
     "content": "- **CLI Commands**:\n  - `mvn test` to run tests.\n  - `mvn clean install` for a full build and test.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - JUnit 5: 5.9.1\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `@SpringBootTest`: For loading the full application context.\n  - `@MockBean`: To inject mock beans into your tests.\n  - `@TestInstance(TestInstance.Lifecycle.PER_CLASS)`: To reuse test instances across multiple tests.\n  - `@AutoConfigureMockMvc`: For testing web applications with MockMvc.",
     "source": "web_search",
-    "updated_at": 1780843718.5509446
+    "updated_at": 1780931873.9896865
   },
   "search:testing-patterns:unit testing spring boot junit_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `mvn test`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - JUnit 5: 5.9.2\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `@SpringBootTest` for full application context\n  - `@WebMvcTest` for testing controllers\n  - `@MockBean` to mock Spring beans\n  - `@InjectMocks` to inject mocks into the test class",
     "source": "code_example",
-    "updated_at": 1780843720.5361674
+    "updated_at": 1780931876.618752
   },
   "search:testing-patterns:fastapi pytest async testing f": {
     "content": "- Install FastAPI, Pytest, and pytest-asyncio using pip: `pip install fastapi pytest pytest-asyncio`\n- Use Poetry or uv for dependency resolution.\n- For async testing with FastAPI, use the `pytest-asyncio` plugin.\n- Set up an environment for testing by installing necessary packages.\n- Create fixtures for your tests to manage resources like database sessions.\n- Use the `TestClient` from FastAPI to simulate HTTP requests in your tests.\n- Override dependencies using the `Depends` feature in Pytest.\n- Structure async tests for FastAPI endpoints that involve async database calls.",
     "source": "web_search",
-    "updated_at": 1780843722.6597404
+    "updated_at": 1780931879.6349645
   },
   "search:testing-patterns:fastapi pytest async testing f_ex": {
     "content": "- Use `pytest` for testing FastAPI applications.\n- Install `fastapi`, `uvicorn`, and `pytest` using pip.\n- Create a test file with `.py` extension, e.g., `test_main.py`.\n- Import `TestClient` from `fastapi.testclient`.\n- Initialize the client with your FastAPI app instance.\n- Use async fixtures for database connections.\n- Override dependencies in tests using `app.dependency_overrides`.\n- Run tests locally with `pytest` command.\n- For asynchronous testing, use `asyncio.run()`.\n- Ensure all test files start with `test_` prefix.\n- Utilize pytest's built-in assertion features for validation.",
     "source": "code_example",
-    "updated_at": 1780843724.731172
+    "updated_at": 1780931882.6040287
   },
   "search:testing-patterns:test driven development tdd ex": {
     "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest v29.3.1\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\"\n  - `transformIgnorePatterns`: [\"node_modules/(?!@testing-library/react)\"]\n  - `setupFilesAfterEnv`: [\"./setupTests.js\"]",
     "source": "web_search",
-    "updated_at": 1780843726.6559582
+    "updated_at": 1780931885.77225
   },
   "search:testing-patterns:test driven development tdd ex_ex": {
     "content": "- **CLI Commands**: `pytest` for running tests, `unittest` for Python's built-in testing framework.\n- **Latest Versions**: Ensure using the latest version of Python and testing frameworks like `pytest` or `unittest`.\n- **Key Config Options**:\n  - For `pytest`, configure in `pytest.ini` or `.ini` files.\n  - For `unittest`, use configuration through `unittest.TestLoader` or command-line options.",
     "source": "code_example",
-    "updated_at": 1780843728.3363802
+    "updated_at": 1780931889.0604422
   },
   "search:testing-patterns:testing mongodb in-memory mong": {
     "content": "- Install `@shelf/jest-mongodb` using `npm i @shelf/jest-mongodb`\n- Use `mongodb-memory-server` for in-memory MongoDB testing\n- Latest version of `@shelf/jest-mongodb`: 6.0.2 (as of March 2023)\n- Key config options: \n  - `mongoInstanceOpts`: Customize MongoDB instance options\n  - `dbPath`: Specify the path to store the database files\n  - `instance`: Access the MongoDB instance for advanced configurations",
     "source": "web_search",
-    "updated_at": 1780843730.285316
+    "updated_at": 1780931892.019114
   },
   "search:testing-patterns:testing mongodb in-memory mong_ex": {
     "content": "- Use `npm install jest-mongodb --save-dev` to install the latest version of `jest-mongodb`.\n- Configure Jest in your project by adding a `setupFilesAfterEnv` entry in `jest.config.js` pointing to `jest-mongodb/setup`.\n- For in-memory MongoDB testing, use the `mongo-memory-server` package. Install it with `npm install mongo-memory-server --save-dev`.\n- Initialize the in-memory server in your Jest setup file:\n  ```javascript\n  const { MongoMemoryServer } = require('mongodb-memory-server');\n\n  let mongoServer;\n\n  beforeAll(async () => {\n    mongoServer = await MongoMemoryServer.create();\n    const uri = mongoServer.getUri();\n\n    // Configure MongoDB URI for your application\n  });\n\n  afterAll(async () => {\n    if (mongoServer) {\n      await mongoServer.stop();\n    }\n  });\n  ```\n- Key config options in `jest.config.js`:\n  - `setupFilesAfterEnv`: Array of paths to files that run before each test.\n  - `testEnvironment`: Set to `'node'` for Node.js environment.\n  - `transformIgnorePatterns`: Exclude node_modules from transformation if not necessary.",
     "source": "code_example",
-    "updated_at": 1780843732.1870353
+    "updated_at": 1780931894.63403
   }
 }

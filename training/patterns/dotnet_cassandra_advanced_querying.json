@@ -2,21 +2,21 @@
   "search:dotnet+cassandra-advanced-querying:dotnet cassandra advanced quer": {
     "content": "- **Latest Version of DataStax C# Driver**: As of my last update, the latest version is 3.24.0.\n  \n- **CLI Commands**:\n  - `dotnet add package CassandraCSharpDriver --version 3.24.0`\n  - `dotnet tool install --global dotnet-cqlsh`\n\n- **Key Config Options**:\n  - Connection String: `Server=your_server_address;Port=9042;Keyspace=your_keyspace;Username=your_username;Password=your_password;`\n  - SSL Mode: `SslMode.Require` for secure connections.\n  - Consistency Level: Set to `ConsistencyLevel.LocalQuorum` for high availability.\n\n- **Additional Resources**:\n  - [DataStax C# Driver Documentation](https://docs.datastax.com/en/developer/csharp-driver/latest/)\n  - [GitHub Repository](https://github.com/datastax/csharp-driver)",
     "source": "web_search",
-    "updated_at": 1780843525.5418348
+    "updated_at": 1780931678.5578253
   },
   "search:dotnet+cassandra-advanced-querying:dotnet cassandra advanced quer_ex": {
     "content": "- **Latest Version**: DataStax C# Driver for Apache Cassandra v3.24.0\n- **CLI Commands**:\n  - `dotnet add package CassandraCSharpDriver`\n  - `cqlsh` for interactive querying\n- **Key Config Options**:\n  - Connection string: `Server=your_server_address;Port=9042;Username=your_username;Password=your_password`\n  - Consistency level: `ConsistencyLevel.Quorum`\n  - Query timeout: `QueryOptions.DefaultTimeout = TimeSpan.FromSeconds(30);`",
     "source": "code_example",
-    "updated_at": 1780843527.6022124
+    "updated_at": 1780931680.9323897
   },
   "search:dotnet+cassandra-advanced-querying:dotnet cassandra data modeling": {
     "content": "- Use the latest version of Cassandra to ensure access to the most recent features and security patches.\n- Employ the DataStax Enterprise for advanced features like management tools, analytics, and support.\n- Utilize the `cqlsh` command-line interface with flags such as `-u username -p password` for secure connections.\n- Configure key options in `cassandra.yaml`, including `num_tokens` for node distribution and `endpoint_snitch` for network topology awareness.\n- Implement a consistent data model using wide rows, where each row represents an entity and columns represent attributes.\n- Use partition keys to ensure efficient data distribution across nodes.\n- Apply clustering columns to sort data within partitions for faster range queries.\n- Regularly monitor and tune your Cassandra cluster using tools like `nodetool` and DataStax OpsCenter.\n- Implement proper indexing strategies, such as secondary indexes or materialized views, to support complex query patterns.\n- Ensure data consistency by setting appropriate replication factors and consistency levels in your application code.",
     "source": "web_search",
-    "updated_at": 1780843530.1496363
+    "updated_at": 1780931683.0147958
   },
   "search:dotnet+cassandra-advanced-querying:dotnet cassandra data modeling_ex": {
     "content": "- **CLI Commands**: Use `dotnet add package DataStax.Cassandra` to install the latest version of the DataStax C# Driver for Apache Cassandra.\n- **Latest Version**: Check the [GitHub repository](https://github.com/datastax/csharp-driver) for the most recent release.\n- **Key Config Options**:\n  - `Cluster`: Define your cluster with nodes and contact points.\n  - `Keyspace`: Specify the keyspace to use in your schema.\n  - `Table`: Design tables based on query patterns, ensuring proper partitioning and clustering columns.",
     "source": "code_example",
-    "updated_at": 1780843532.0779684
+    "updated_at": 1780931685.2518668
   }
 }
