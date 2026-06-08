@@ -2,26 +2,26 @@
   "search:spring+security-advanced:spring security advanced authe": {
     "content": "- **Latest Versions**: Spring Boot 3.1, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `java -jar target/your-application.jar` to run the application.\n- **Key Config Options**:\n  - JWT Authentication: Enable JWT in your security configuration with `httpSecurity.oauth2ResourceServer().jwt()`.\n  - OAuth2 Configuration: Use `@EnableAuthorizationServer` and configure client details.\n  - Multi-Factor Authentication (MFA): Implement MFA using Spring Security's built-in support or third-party libraries like Google Authenticator.",
     "source": "web_search",
-    "updated_at": 1780922882.276316
+    "updated_at": 1780930392.6781335
   },
   "search:spring+security-advanced:spring security advanced authe_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Security: 6.x\n  - Spring Boot: 3.x\n\n- **Key Config Options**:\n  - `application.properties`: Configure security settings like `spring.security.user.name` and `spring.security.user.password`.\n  - `WebSecurityConfigurerAdapter`: Customize authentication and authorization rules.\n  - JWT (JSON Web Token): Use for stateless authentication, configure with `spring.security.jwt.secret`.\n\n- **Additional Resources**:\n  - [Spring Security Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)\n  - [Spring Boot Security Guide](https://spring.io/guides/gs/securing-web/)\n\nThese actionable facts should help developers set up and configure advanced authentication mechanisms in their Spring Security applications.",
     "source": "code_example",
-    "updated_at": 1780922883.6776214
+    "updated_at": 1780930394.6789808
   },
   "search:spring+security-advanced:spring security oauth2.0 imple": {
     "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6.0\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n- **Key Config Options**:\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: URI for the JWK set.\n  - `spring.security.oauth2.client.registration.<provider>.client-id`: Client ID for OAuth2 provider.\n  - `spring.security.oauth2.client.registration.<provider>.client-secret`: Client secret for OAuth2 provider.",
     "source": "web_search",
-    "updated_at": 1780922885.5752106
+    "updated_at": 1780930396.5234084
   },
   "search:spring+security-advanced:spring security oauth2.0 imple_ex": {
     "content": "- **Latest Versions**: Spring Boot 3.1, Spring Security 6\n- **Key Config Options**:\n  - `application.yml`/`application.properties`: Configure OAuth2 client details.\n  - `SecurityConfig.java`: Define security configurations including OAuth2 login and JWT.\n- **CLI Commands**:\n  - `mvn clean install`: Build the project.\n  - `java -jar target/your-application.jar`: Run the application.\n- **OAuth2 Client Details**: \n  - Register your application with Google, Facebook, etc., to get client ID and secret.\n  - Configure these details in `application.yml` or through environment variables.\n- **JWT Authentication**:\n  - Use Spring Security's JWT support for secure authentication.\n  - Implement a custom `JwtDecoder` if needed for specific token validation logic.",
     "source": "code_example",
-    "updated_at": 1780922887.3281507
+    "updated_at": 1780930398.433061
   },
   "search:spring+security-advanced:spring security jwt token mana": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for JWT secret, token expiration time.\n  - `@EnableWebSecurity` to enable Spring Security configuration.\n  - `HttpSecurity` bean for configuring security rules.\n  - `JwtAuthenticationFilter` for handling JWT authentication.",
     "source": "web_search",
-    "updated_at": 1780922889.6319864
+    "updated_at": 1780930400.2279685
   }
 }

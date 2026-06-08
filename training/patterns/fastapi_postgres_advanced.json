@@ -2,21 +2,21 @@
   "search:fastapi+postgres-advanced:fastapi postgresql advanced qu": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/Tenacity-Dev/fastapi-sqlalchemy2-alembic-postgresql.git`\n  - `pip install fastapi sqlalchemy alembic asyncpg sqlmodel tortoise`\n\n- **Latest Versions**:\n  - FastAPI: 0.108.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.7.5\n  - Asyncpg: 0.26.0\n  - SQLModel: 0.0.4\n  - Tortoise ORM: 0.19.3\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@localhost/dbname`\n  - Alembic Configuration: `alembic.ini` and migration scripts in `migrations/versions`\n  - SQLModel Settings: Define models using Pydantic for data validation and SQLAlchemy ORM for database interactions\n  - Tortoise ORM Settings: Configure models, connections, and migrations",
     "source": "web_search",
-    "updated_at": 1780922930.4173696
+    "updated_at": 1780930441.4231672
   },
   "search:fastapi+postgres-advanced:fastapi postgresql advanced qu_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/Tenacity-Dev/fastapi-sqlalchemy2-alembic-postgresql.git`\n  - `pip install fastapi sqlalchemy alembic psycopg2`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.8.1\n  - Psycopg2: 2.9.1\n\n- **Key Config Options**:\n  - Database URL: `postgresql+psycopg2://user:password@localhost/dbname`\n  - ASGI Server: `uvicorn main:app --reload`\n  - ORM Configuration: Use SQLModel or Tortoise for ORM operations.\n  - Connection Pooling: Configure connection pool settings in SQLAlchemy.",
     "source": "code_example",
-    "updated_at": 1780922932.511162
+    "updated_at": 1780930443.481155
   },
   "search:fastapi+postgres-advanced:fastapi postgresql transaction": {
     "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - SQLAlchemy: v1.4.32\n  - PostgreSQL: v15.2\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Connection Pooling: Use `QueuePool` with `max_overflow=10`, `pool_size=10`.\n  - Transaction Management: Use `sessionmaker(autocommit=False, autoflush=False, bind=engine)` for manual transaction control.",
     "source": "web_search",
-    "updated_at": 1780922934.9000416
+    "updated_at": 1780930445.3196726
   },
   "search:fastapi+postgres-advanced:fastapi postgresql transaction_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/KenMwaura1/Fast-Api-example.git`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0.0\n  - PostgreSQL: v14.3\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection: Use `Depends` for managing database sessions.\n  - Asynchronous Operations: Utilize `asyncpg` or `aiopg` for asynchronous PostgreSQL connections.",
     "source": "code_example",
-    "updated_at": 1780922937.2351067
+    "updated_at": 1780930447.1346858
   }
 }

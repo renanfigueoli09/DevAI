@@ -2,31 +2,31 @@
   "search:Testing Next.js with Authentication:nextjs authentication testing": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- For JWT authentication, consider using libraries like `next-auth` or `jsonwebtoken`.\n- Update your `pages/api/auth/[...nextauth].js` for authentication logic with `next-auth`.\n- Key config options in `next.config.js`: `reactStrictMode`, `images`, and `compilerOptions`.\n- Implement route protection by wrapping pages with `[...slug].js` in the `app` directory.\n- Use environment variables in `.env.local` for sensitive information like secret keys.\n- For session management, configure `session.maxAge` and `session.strategy` in `next-auth` options.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Test authentication flows locally with `npm run dev`.",
     "source": "web_search",
-    "updated_at": 1780922670.761998
+    "updated_at": 1780930216.6970599
   },
   "search:Testing Next.js with Authentication:nextjs authentication testing_ex": {
     "content": "- **Clone the repository and install dependencies**:\n  ```bash\n  git clone https://github.com/nextauthjs/next-auth-example.git\n  cd next-auth-example\n  npm install\n  ```\n\n- **Configure your local environment**:\n  - Copy `.env.local.example` to `.env.local`.\n  - Set `NEXTAUTH_URL`, `DATABASE_URL`, and other necessary variables.\n\n- **Latest versions**:\n  - Next.js: 13.5\n  - NextAuth.js: 4.0\n\n- **Key config options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for authentication providers.\n  - `middleware.js`: Define routes that require authentication.\n  - `.env.local`: Environment variables for security and configuration.\n\n- **CLI commands with exact flags**:\n  ```bash\n  npm run dev\n  ```\n  Runs the development server on `http://localhost:3000`.\n\n  ```bash\n  npm run build\n  ```\n  Builds the application for production.\n\n  ```bash\n  npm start\n  ```\n  Starts the production server.",
     "source": "code_example",
-    "updated_at": 1780922675.298768
+    "updated_at": 1780930218.902198
   },
   "search:Testing Next.js with Authentication:serverless authentication next": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm run dev` to start the development server\n\n- **Latest Versions**:\n  - Next.js v13.5\n  - React v18.2\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for NextAuth.js.\n  - `security.headers`: Middleware to set security headers.\n  - `session.maxAge`: Duration of the session in seconds.\n\nFor more detailed information, refer to the official [Next.js Authentication Guide](https://next-auth.js.org/getting-started).",
     "source": "web_search",
-    "updated_at": 1780922678.9825358
+    "updated_at": 1780930220.8616085
   },
   "search:Testing Next.js with Authentication:serverless authentication next_ex": {
     "content": "- **GitHub Repository**: [scottjason/nextjs-authentication-boilerplate](https://github.com/scottjason/nextjs-authentication-boilerplate)\n  - Latest Version: Not specified in the snippet.\n  - Key Config Options:\n    - JWT Authentication\n    - Edge Middleware\n    - Serverless API Routes\n    - NextJS, Typescript, Prisma, PostgreSQL, Tailwind\n\n- **Clerk Integration**:\n  - CLI Command: `npx create-next-app@latest --example with-clerk`\n  - Latest Version: Not specified in the snippet.\n  - Key Config Options:\n    - Authentication\n    - Session Management\n    - Authorization\n    - Neon Database\n\n- **Smashing Magazine Article**:\n  - SDKs Mentioned: Not specified in the snippet.\n  - Key Concepts:\n    - Client-side and Server-side Authentication\n    - API Routes on Backend\n    - React Context with React Hooks on Frontend",
     "source": "code_example",
-    "updated_at": 1780922681.7985797
+    "updated_at": 1780930222.7302618
   },
   "search:Testing Next.js with Authentication:unit tests for auth in nextjs": {
     "content": "- **CLI Commands**:\n  - `npm test` or `yarn test` to run tests.\n  - `next dev` for development mode.\n\n- **Latest Versions**:\n  - Next.js v13.5\n  - Jest v29.0.3\n  - React Testing Library v14.0.0\n\n- **Key Config Options**:\n  - In `jest.config.js`, set up the test environment and transform options.\n  - Use `setupFilesAfterEnv` for global setup.\n  - Configure `testMatch` to specify which files to include in testing.\n\n- **Example Jest Configuration**:\n  ```javascript\n  module.exports = {\n    preset: 'next/jest',\n    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],\n    testEnvironment: 'jsdom',\n    transform: {\n      '^.+\\\\.tsx?$': 'ts-jest',\n    },\n    testMatch: ['**/__tests__/**/*.test.(ts|tsx)|**/?(*.)+(spec).(ts|tsx)'],\n  };\n  ```\n\n- **Mocking Auth0 Authentication**:\n  - Use `jest.mock('auth0-spa-js')` to mock the Auth0 library.\n  - Configure mocks for authentication methods like `loginWithRedirect`, `logout`.\n\n- **Testing Middleware with NextAuth.js**:\n  - Create a mock request and response object using libraries like `supertest`.\n  - Test middleware logic by calling it with the mocked objects.\n\n- **Running Tests in CI/CD**:\n  - Add `npm test` or `yarn test` to your `package.json` scripts.\n  - Configure your CI/CD pipeline to run tests automatically on code pushes.",
     "source": "web_search",
-    "updated_at": 1780922684.9378965
+    "updated_at": 1780930224.6690314
   },
   "search:Testing Next.js with Authentication:unit tests for auth in nextjs_ex": {
     "content": "- **CLI Commands**: `npm run dev` to start the Next.js development server.\n- **Latest Versions**: Ensure using latest Next.js and related packages for compatibility.\n- **Key Config Options**:\n  - `next.config.js`: Configure project settings like output, webpack rules, etc.\n  - `pages/api/auth/[...nextauth].js`: Define authentication routes and providers.",
     "source": "code_example",
-    "updated_at": 1780922688.2321072
+    "updated_at": 1780930226.4773142
   }
 }
