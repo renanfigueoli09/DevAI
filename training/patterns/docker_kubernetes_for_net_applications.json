@@ -1,0 +1,22 @@
+{
+  "search:Docker + Kubernetes for .NET Applications:.net docker containerization 2": {
+    "content": "- **CLI Commands**:\n  - `docker run --name mycontainer -d mcr.microsoft.com/dotnet/sdk:7.0`\n  - `docker build -t myapp .`\n  - `docker push myapp`\n\n- **Latest Versions**:\n  - Docker Desktop: 4.13.2\n  - .NET SDK: 7.0\n\n- **Key Config Options**:\n  - `-d` for detached mode\n  - `-p` to publish ports\n  - `--name` to assign a name",
+    "source": "web_search",
+    "updated_at": 1780948016.4273608
+  },
+  "search:Docker + Kubernetes for .NET Applications:.net docker containerization 2_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name mycontainer -d myimage`\n  - `docker build -t myimage .`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Docker Engine: v25.0.0\n  - Docker Compose: v1.29.2\n\n- **Key Config Options**:\n  - `Dockerfile`: Defines the image.\n  - `docker-compose.yml`: Manages multi-container applications.\n  - Environment Variables: Set with `-e` flag in `docker run`.",
+    "source": "code_example",
+    "updated_at": 1780948022.7244515
+  },
+  "search:Docker + Kubernetes for .NET Applications:kubernetes deployment strategi": {
+    "content": "- Use `kubectl apply -f deployment.yaml` to deploy ASP.NET Core applications.\n- Ensure your Dockerfile is optimized for .NET Core applications.\n- Set environment variables using the `env` field in your deployment YAML.\n- Utilize readiness and liveness probes for better application health management.\n- Scale your deployments with `kubectl scale deployment <deployment-name> --replicas=<number>`.\n- Monitor your deployments with Kubernetes Dashboard or third-party tools like Prometheus and Grafana.\n- Use Helm charts to manage complex applications and their dependencies.\n- Keep your Kubernetes cluster up-to-date with the latest version for security patches.",
+    "source": "web_search",
+    "updated_at": 1780948046.6498196
+  },
+  "search:Docker + Kubernetes for .NET Applications:kubernetes deployment strategi_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy applications.\n- For canary deployments, use Istio and Helm together.\n- Implement automated rollbacks with `helm rollback <release-name> <revision-number>` based on logs or metrics.\n- Key config options include `replicas`, `image`, and `ports`.\n- Ensure Kubernetes version compatibility with your application requirements.",
+    "source": "code_example",
+    "updated_at": 1780948052.3061123
+  }
+}

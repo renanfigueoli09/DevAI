@@ -8,5 +8,15 @@
     "content": "- **CLI Commands**: \n  - `npm install --save-dev jest`\n  - `npx mocha test`\n  - `npm install --save-dev chai`\n\n- **Latest Versions**:\n  - Jest: 29.6.3\n  - Mocha: 10.2.0\n  - Chai: 4.3.7\n\n- **Key Config Options**:\n  - Jest: `\"testEnvironment\": \"node\"`\n  - Mocha: `{\"reporter\": \"spec\"}`\n  - Chai: `expect` or `should` style",
     "source": "code_example",
     "updated_at": 1780939572.289347
+  },
+  "search:Advanced Testing Strategies for Node.js Applications:end-to-end testing with cypres": {
+    "content": "- **Cypress**: \n  - Install: `npm install cypress --save-dev`\n  - Run tests: `npx cypress open` or `npx cypress run`\n  - Latest version: [Check on npm](https://www.npmjs.com/package/cypress)\n  - Key config options: `baseUrl`, `defaultCommandTimeout`, `viewportWidth`, `viewportHeight`\n\n- **Puppeteer**:\n  - Install: `npm install puppeteer --save-dev`\n  - Run script: `node script.js` (where `script.js` is your Puppeteer script)\n  - Latest version: [Check on npm](https://www.npmjs.com/package/puppeteer)\n  - Key config options: `headless`, `args`, `defaultViewport`, `ignoreHTTPSErrors`\n\n- **Comparison**:\n  - Cypress: Ideal for testing user interactions and workflows, real-time feedback.\n  - Puppeteer: Excels at browser automation tasks like web scraping and rendering.",
+    "source": "web_search",
+    "updated_at": 1780948330.2309582
+  },
+  "search:Advanced Testing Strategies for Node.js Applications:end-to-end testing with cypres_ex": {
+    "content": "- **Cypress**: \n  - Install: `npm install cypress --save-dev`\n  - Run tests: `npx cypress open` or `npx cypress run`\n  - Key config options: `cypress.json`, `cypress/plugins/index.js`\n\n- **Puppeteer**:\n  - Install: `npm install puppeteer --save-dev`\n  - Launch browser: `const browser = await puppeteer.launch({ headless: false })`\n  - Key config options: `puppeteer.launch()`, `page.goto()`\n\n- **Playwright**:\n  - Install: `npm install playwright --save-dev`\n  - Run tests: `npx playwright test`\n  - Key config options: `playwright.config.js`, `test/example.spec.ts`",
+    "source": "code_example",
+    "updated_at": 1780948352.1944885
   }
 }

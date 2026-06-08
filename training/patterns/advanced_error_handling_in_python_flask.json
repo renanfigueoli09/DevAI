@@ -1,12 +1,22 @@
 {
   "search:Advanced Error Handling in Python Flask:python flask error handling be": {
-    "content": "- Use Flask's `@app.errorhandler` decorator to define custom error handlers.\n- Implement structured logging using libraries like `logging`.\n- Raise custom exceptions from your business logic and handle them in the error handler.\n- Return JSON responses for errors with HTTP status codes.\n- Utilize Flask extensions like `Flask-RESTful` for REST API development.\n- Configure centralized monitoring tools to track application errors.\n- Follow industry best practices for error handling, such as logging all exceptions.",
+    "content": "- **CLI Commands**: Use `flask run` to start the Flask development server.\n- **Latest Versions**: Ensure Flask is up-to-date using `pip install flask --upgrade`.\n- **Key Config Options**:\n  - `app.config['DEBUG']`: Set to `True` for development, `False` for production.\n  - `app.config['SECRET_KEY']`: A secret key for securely signing the session cookie.\n  - `app.config['SQLALCHEMY_DATABASE_URI']`: Database URI for SQLAlchemy integration.",
     "source": "web_search",
-    "updated_at": 1780943088.4567707
+    "updated_at": 1780948084.381814
   },
   "search:Advanced Error Handling in Python Flask:python flask error handling be_ex": {
-    "content": "- Use `@app.errorhandler(Exception)` to define custom error handlers.\n- Implement structured logging using libraries like `logging` or `structlog`.\n- Utilize Flask's built-in HTTP exception classes (`HTTPException`) for common errors.\n- Create custom exception classes for application-specific errors.\n- Register custom exceptions with the app using `app.register_error_handler()`.\n- Use `@app.errorhandler(404)` to handle 404 Not Found errors.\n- Implement centralized monitoring using tools like Sentry or Rollbar.\n- Ensure error handlers return appropriate HTTP status codes and messages.",
+    "content": "- Use `@app.errorhandler(Exception)` to define custom error handlers.\n- Import `jsonify` from `flask`.\n- Ensure Flask version is up-to-date using `pip install --upgrade flask`.\n- Configure logging in Flask with `logging.basicConfig()` for better error tracking.\n- Use `app.config['DEBUG'] = False` in production environments.\n- Implement structured logging to capture detailed error information.\n- Regularly update dependencies and security patches.",
     "source": "code_example",
-    "updated_at": 1780943091.0235267
+    "updated_at": 1780948107.7514472
+  },
+  "search:Advanced Error Handling in Python Flask:flask exception handling with ": {
+    "content": "- **CLI Commands**:\n  - `flask run`: Runs the Flask application.\n  - `gunicorn -w 4 app:app`: Runs the Flask application with Gunicorn, specifying 4 worker processes.\n\n- **Latest Versions**:\n  - Flask: 3.1.x\n  - Sentry SDK for Python: Latest version\n\n- **Key Config Options**:\n  - `app.logger.addHandler(file_handler)`: Adds a file handler to the app logger.\n  - `@app.errorhandler(404)`: Decorator to handle 404 errors.\n  - `@app.errorhandler(Exception)`: General decorator to handle all exceptions.\n\n- **Logging Configuration**:\n  - Use `logging.basicConfig` for basic configuration.\n  - Configure log levels and formats using `file_handler.setLevel` and `file_handler.setFormatter`.\n\n- **Monitoring with Sentry**:\n  - Install Sentry SDK: `pip install --upgrade sentry-sdk`\n  - Initialize Sentry in your Flask app: `sentry_sdk.init(dsn=\"your_dsn_here\")`\n\n- **Error Handling Strategies**:\n  - Use `@app.errorhandler` to catch and handle specific exceptions.\n  - Implement a generic error handler for all unhandled exceptions.\n\n- **Gunicorn Configuration**:\n  - Adjust worker class, timeout, and other parameters as needed in the Gunicorn command.",
+    "source": "web_search",
+    "updated_at": 1780948121.609039
+  },
+  "search:Advanced Error Handling in Python Flask:flask exception handling with _ex": {
+    "content": "- **Flask Exception Handling**: Use `@app.errorhandler(Exception)` to catch exceptions.\n- **Logging Configuration**:\n  - Flask: Configure `app.logger` with a file handler.\n    ```python\n    from logging.handlers import RotatingFileHandler\n    handler = RotatingFileHandler('flask.log', maxBytes=10000, backupCount=3)\n    app.logger.addHandler(handler)\n    ```\n  - Gunicorn: Use `--capture-output` and configure error log path.\n    ```bash\n    gunicorn --capture-output -w 4 -b 127.0.0.1:8000 myapp:app\n    ```\n- **Systemd Configuration**:\n  - Set `StandardOutput=journal` and `StandardError=journal`.\n    ```ini\n    [Service]\n    StandardOutput=journal\n    StandardError=journal\n    ```\n- **Custom Exception Handler**: Create a custom exception handler class.\n  ```python\n  class CustomFlaskApp(Flask):\n      def handle_exception(self, e):\n          # Log the exception (e.g., send to Sentry)\n          app.logger.error(f\"Exception occurred: {e}\")\n          return super().handle_exception(e)\n  ```\n- **Latest Versions**:\n  - Flask: 3.1.x\n  - Gunicorn: 20.1.0\n  - PythonTutorials.net (as of 2025-11)",
+    "source": "code_example",
+    "updated_at": 1780948157.947736
   }
 }

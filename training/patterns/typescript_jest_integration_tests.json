@@ -10,13 +10,13 @@
     "updated_at": 1780941554.1988747
   },
   "search:typescript+jest-integration-tests:unit and integration testing i": {
-    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest --init` to set up Jest configuration.\n  - `npm run test` to execute tests.\n\n- **Latest Versions**:\n  - Jest: v29.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - `testEnvironment`: Set to `\"node\"` for Node.js environment.\n  - `transformIgnorePatterns`: Exclude node_modules from transformation.\n  - `setupFilesAfterEnv`: Path to setup files after Jest environment is initialized.",
+    "content": "- Use `npm test` or `yarn test` to run tests.\n- Install Jest and TypeScript using `npm install --save-dev jest @types/jest`.\n- Configure Jest in `jest.config.ts` with options like `testEnvironment: 'node'`, `moduleFileExtensions: ['ts', 'tsx', 'js']`, etc.\n- For integration testing, consider using Supertest for HTTP requests.\n- Install Supertest with `npm install --save-dev supertest`.\n- Use `async/await` in test cases for better readability and handling of asynchronous operations.\n- Configure TypeScript compiler options in `tsconfig.json` to include `\"outDir\": \"./dist\"`, `\"rootDir\": \"./src\"`, etc.\n- For mocking, use Jest's built-in mocking capabilities or third-party libraries like `ts-mockito`.\n- Run integration tests with a command like `npm run test:integration` in your `package.json`.",
     "source": "web_search",
-    "updated_at": 1780941556.3649893
+    "updated_at": 1780946958.1026764
   },
   "search:typescript+jest-integration-tests:unit and integration testing i_ex": {
-    "content": "- **CLI Commands**:\n  - `npm test` to run unit tests.\n  - `npm run integration-test` to run integration tests.\n\n- **Latest Versions**:\n  - Jest: Latest version as of my last update is 29.x.\n  - TypeScript: Latest version as of my last update is 5.0.x.\n  - Axios: Latest version as of my last update is 1.3.x.\n\n- **Key Config Options**:\n  - Jest configuration in `jest.config.js` for test environment setup.\n  - TypeScript configuration in `tsconfig.json` for project settings.\n  - Add `\"test\": \"jest\"` and `\"integration-test\": \"jest --runInBand --testPathPattern=integration\"` to `package.json`.",
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest --init` to create a Jest configuration file\n\n- **Latest Versions**:\n  - Jest: 29.0.3\n  - TypeScript: 5.1.6\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"` in `jest.config.js`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}` to transpile TypeScript files with Jest",
     "source": "code_example",
-    "updated_at": 1780941558.482927
+    "updated_at": 1780947005.1003673
   }
 }

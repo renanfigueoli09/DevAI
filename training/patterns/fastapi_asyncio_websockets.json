@@ -20,13 +20,23 @@
     "updated_at": 1780946079.9637268
   },
   "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf": {
-    "content": "- Use `uvicorn` as your ASGI server for FastAPI applications.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- For WebSocket performance, consider using an executor to offload CPU-bound tasks:\n  ```bash\n  python -m uvicorn main:app --workers 4 --host 0.0.0.0 --port 8000\n  ```\n- Implement background tasks for non-blocking operations like ML inference.\n- Use `asyncio.gather` to run multiple asynchronous tasks concurrently, ensuring efficient data handling:\n  ```python\n  await asyncio.gather(read_from_socket(websocket), get_data_and_send())\n  ```\n- Configure the number of workers in `uvicorn` based on your server's CPU cores for optimal performance.",
+    "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --host 0.0.0.0 --port 8000`\n  - `pip install fastapi[all]`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Uvicorn: 10.6.0\n\n- **Key Config Options**:\n  - `max_connections`: Set the maximum number of concurrent connections.\n  - `timeout_keep_alive`: Define the timeout for keep-alive connections.\n  - Use Redis for multi-worker scaling and message broadcasting.",
     "source": "web_search",
-    "updated_at": 1780940806.1042914
+    "updated_at": 1780947155.3542597
   },
   "search:fastapi+asyncio-websockets:fastapi asyncio websocket perf_ex": {
-    "content": "- Use `uvicorn` with the `--host` flag to specify the host, e.g., `uvicorn main:app --host 0.0.0.0`.\n- Upgrade FastAPI to version 0.95.0 or later for improved performance.\n- Configure Redis for WebSocket scalability by setting up a connection pool in your application code.\n- Implement background tasks using `BackgroundTasks` to offload CPU-bound work, e.g., `@app.post(\"/background-task\") async def create_task(background_tasks: BackgroundTasks):`.\n- Use `asyncio.Semaphore` to manage concurrent access and prevent blocking, e.g., `sem = asyncio.Semaphore(10)`.\n- Enable compression in FastAPI using middleware like `CompressMiddleware`, e.g., `app.add_middleware(CompressMiddleware, minimum_size=1024)`.\n- Monitor performance with tools like `asyncio`'s `run_in_executor` to offload blocking tasks to a thread pool, e.g., `await asyncio.to_thread(some_blocking_function)`.",
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run FastAPI app in development mode.\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n  \n- **Key Config Options**:\n  - `max_connections`: Set the maximum number of concurrent connections allowed.\n  - `timeout_keep_alive`: Configure the timeout for keep-alive connections.\n  - `workers`: Specify the number of worker processes to use (e.g., `--workers 4`).\n  \n- **Performance Optimization Tips**:\n  - Use `asyncio` for handling asynchronous operations efficiently.\n  - Implement connection pooling for database interactions.\n  - Monitor and optimize network latency using tools like `ping` and `traceroute`.\n  - Scale horizontally by adding more worker processes.",
     "source": "code_example",
-    "updated_at": 1780940808.3687696
+    "updated_at": 1780947164.1429496
+  },
+  "search:fastapi+asyncio-websockets:fastapi asyncio websockets tut": {
+    "content": "- **Install FastAPI**: `pip install fastapi`\n- **Run FastAPI App**: `uvicorn main:app --reload`\n- **WebSocket Endpoint**: Define in your FastAPI app using `@app.websocket(\"/ws\")`\n- **Receive Messages**: Use `async for message in websocket.iter_messages():`\n- **Send Messages**: Use `await websocket.send_text(\"Hello, world!\")`\n- **AsyncIO Version**: Ensure you're using Python 3.7+ with asyncio support\n- **Latest FastAPI Version**: Check [PyPI](https://pypi.org/project/fastapi/) for the latest version\n- **Key Config Options**:\n  - `--reload`: Enables auto-reload during development\n  - `--host`: Specifies the host to run on (e.g., `0.0.0.0`)\n  - `--port`: Specifies the port to run on (default is 8000)\n- **Example Code**:\n  ```python\n  from fastapi import FastAPI, WebSocket\n\n  app = FastAPI()\n\n  @app.websocket(\"/ws\")\n  async def websocket_endpoint(websocket: WebSocket):\n      await websocket.accept()\n      while True:\n          data = await websocket.receive_text()\n          await websocket.send_text(f\"Message text was: {data}\")\n  ```",
+    "source": "web_search",
+    "updated_at": 1780947133.727028
+  },
+  "search:fastapi+asyncio-websockets:fastapi asyncio websockets tut_ex": {
+    "content": "- Use `uvicorn` to run your FastAPI application with websockets support.\n- Install the latest version of FastAPI using pip: `pip install fastapi`.\n- Ensure Python 3.10+ is installed for compatibility.\n- Key config options include setting up WebSocket routes in your FastAPI app.\n- Example CLI command to run a FastAPI app with websockets: `uvicorn main:app --host 0.0.0.0 --port 8000`.\n- For production, consider using ASGI servers like Uvicorn or Hypercorn for better performance and scalability.\n- Explore the FastAPI documentation for more advanced features and best practices in building real-time applications with websockets.",
+    "source": "code_example",
+    "updated_at": 1780947144.0875137
   }
 }

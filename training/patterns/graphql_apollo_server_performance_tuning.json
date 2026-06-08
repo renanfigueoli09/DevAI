@@ -1,12 +1,22 @@
 {
   "search:GraphQL + Apollo Server Performance Tuning:apollo server performance opti": {
-    "content": "- **Latest Version**: Apollo Server 4\n- **Key Config Options**:\n  - `cacheControl`\n  - `dataLoader`\n  - `subscriptions`\n  - `observability`\n- **CLI Commands**:\n  - `apollo service:push --endpoint=https://your-endpoint.com/graphql`\n  - `apollo client:create --name=MyClient`\n- **Optimization Techniques**:\n  - Use DataLoader for batching and caching\n  - Implement Apollo Cache Control for efficient data fetching\n  - Enable subscriptions for real-time updates\n  - Utilize observability tools for performance monitoring",
+    "content": "- **CLI Commands**: Use `node --inspect-brk` to start Node.js in debug mode.\n- **Latest Versions**: Ensure using the latest LTS version of Node.js for performance improvements.\n- **Key Config Options**:\n  - For Apollo Server, use `cacheControl: true` to enable caching.\n  - Implement batching with `batching: true` for efficient data fetching.\n  - Use `maxBatchSize` and `timeoutMs` to control batch size and timeout.",
     "source": "web_search",
-    "updated_at": 1780942260.8544378
+    "updated_at": 1780948187.5850573
   },
   "search:GraphQL + Apollo Server Performance Tuning:apollo server performance opti_ex": {
-    "content": "- **CLI Commands**: Use `npx create-apollo-server` to set up a new Apollo Server project.\n- **Latest Versions**: Ensure using the latest version of Apollo Server, currently at v3.x.\n- **Key Config Options**:\n  - `cache`: Configure caching with options like `ttl` (time-to-live) and `maxSize`.\n  - `introspection`: Enable or disable introspection based on environment.\n  - `playground`: Enable or customize the GraphQL Playground for development.",
+    "content": "- **Server-side Rendering (SSR):** Use Apollo Client for server-side rendering to improve initial load times.\n  - Example command: `npx create-next-app@latest my-apollo-app`\n  - Key config option: `ApolloClient` with `ssrMode: true`\n\n- **Node.js Performance Optimization:** Implement advanced techniques for Node.js performance in 2025.\n  - Latest versions: Use the latest LTS version of Node.js (e.g., v18.x).\n  - Key config options: `--max-old-space-size=4096` to increase memory allocation.\n\n- **Apollo Client Integration:** Integrate Apollo Client with Next.js for seamless GraphQL operations.\n  - Example command: `npm install @apollo/client graphql`\n  - Key config option: Use `withApollo` HOC for server-side rendering.\n\n- **GitHub Example:** Refer to the `next-apollo-example` repository for a practical integration.\n  - Repository URL: [adamsoffer/next-apollo-example](https://github.com/adamsoffer/next-apollo-example)\n  - Key config option: Wrap pages with `withApollo` HOC for Apollo Client setup.\n\nThese actionable facts provide concrete steps and configurations to optimize Apollo Server performance in a Node.js environment.",
     "source": "code_example",
-    "updated_at": 1780942263.0785594
+    "updated_at": 1780948204.6944013
+  },
+  "search:GraphQL + Apollo Server Performance Tuning:graphql server scalability str": {
+    "content": "- **CLI Commands**: Use `npm install -g apollo-server-cli` to install the latest version of Apollo Server CLI.\n- **Key Config Options**:\n  - `maxBatchSize`: Set this in your server configuration to control the maximum number of queries batched together.\n  - `cacheControl`: Enable caching for improved performance and scalability.\n  - `dataLoader`: Utilize DataLoader for batching database queries, reducing latency.\n- **Latest Versions**: Ensure you are using the latest versions of GraphQL libraries such as Apollo Server and GraphQL.js.\n- **Batch Loading Strategy**: Implement DataLoader to batch multiple queries into one request, optimizing data retrieval.",
+    "source": "web_search",
+    "updated_at": 1780948231.135374
+  },
+  "search:GraphQL + Apollo Server Performance Tuning:graphql server scalability str_ex": {
+    "content": "- **CLI Commands**:\n  - `graphql-cli init` to initialize a new GraphQL project.\n  - `graphql-cli generate` to generate types from your schema.\n\n- **Latest Versions**:\n  - GraphQL.js: v16.3.0\n  - Apollo Server: v3.5.0\n\n- **Key Config Options**:\n  - `maxFieldLength`: Limits the length of a field name.\n  - `cacheControl`: Enables caching for GraphQL queries.\n  - `introspection`: Controls whether introspection is enabled on your schema.",
+    "source": "code_example",
+    "updated_at": 1780948237.8493679
   }
 }

@@ -1,13 +1,13 @@
 {
   "search:typescript-nestjs-mongoose:nestjs mongoose integration 20": {
-    "content": "- **CLI Commands**:\n  - `nest generate module database`\n  - `nest generate service user`\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Mongoose: ^7.3.2\n\n- **Key Config Options**:\n  - `uri`: MongoDB connection string.\n  - `useNewUrlParser`: Set to true to use the new URL parser.\n  - `useUnifiedTopology`: Set to true to use the new Server Discovery and Monitoring engine.\n  - `useCreateIndex`: Set to false to disable automatic index creation.",
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - `MongooseModule.forRoot(uri, options)`\n    - `uri`: MongoDB connection string.\n    - `options`: Additional configuration options like `useNewUrlParser`, `useUnifiedTopology`.\n  - Schema Definition:\n    ```typescript\n    import { Schema } from 'mongoose';\n\n    const userSchema = new Schema({\n      name: String,\n      email: String,\n      age: Number,\n    });\n    ```\n  - CRUD Operations:\n    - Create: `await this.userModel.create(user)`\n    - Read: `await this.userModel.find(query)`\n    - Update: `await this.userModel.updateOne(query, update)`\n    - Delete: `await this.userModel.deleteOne(query)`",
     "source": "web_search",
-    "updated_at": 1780939534.6044867
+    "updated_at": 1780948943.824106
   },
   "search:typescript-nestjs-mongoose:nestjs mongoose integration 20_ex": {
-    "content": "- **Install Mongoose**: `npm install mongoose`\n- **Generate Service**: `nest generate service example`\n- **Schema Definition**: Use the `@Schema` decorator to define your model.\n- **MongoDB Connection**: Configure in `app.module.ts` with `MongooseModule.forRoot()`.\n- **Prerequisites**: Node.js, MongoDB, and NestJS CLI.",
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - `MongooseModule.forRoot(uri, options)`\n    - `uri`: MongoDB connection string.\n    - `options`: Additional configuration options like useNewUrlParser, useUnifiedTopology, etc.",
     "source": "code_example",
-    "updated_at": 1780939536.6987062
+    "updated_at": 1780948950.7870107
   },
   "search:typescript-nestjs-mongoose:mongoose crud operations with ": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure MongoDB connection using `MongooseModule.forRoot()`.\n  - Define schemas and models in separate files.\n  - Use `@nestjs/common` decorators for controller actions (e.g., `@Get`, `@Post`, `@Put`, `@Delete`).",
