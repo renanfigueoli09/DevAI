@@ -2,17 +2,17 @@
   "search:Testing:azure-devops testing methodolo": {
     "content": "- **CLI Commands**:\n  - `az devops test run create --project <project-name> --test-plan-id <test-plan-id> --configuration-id <config-id>`\n  - `npx playwright test --config playwright.config.v1.ts`\n  - `az pipelines runs update --id <run-id> --properties '{\"system.debug\": \"true\"}'`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v0.254.0\n  - Playwright: v1.32.0\n\n- **Key Config Options**:\n  - `playwright.config.v1.ts`: Specifies test configurations, browser settings, and other environment-specific details.\n  - `system.debug`: Enables debug mode in Azure DevOps pipeline runs for detailed logging.",
     "source": "web_search",
-    "updated_at": 1780921044.4996693
+    "updated_at": 1780922691.1203032
   },
   "search:Testing:azure-devops testing methodolo_ex": {
     "content": "- **CLI Commands**:\n  - `az devops project create --name <project-name>`\n  - `az pipelines create --name <pipeline-name> --repository <repo-url>`\n\n- **Latest Versions**:\n  - Azure DevOps CLI: v1.0.0\n  - Azure Pipelines YAML Schema: v2.0\n\n- **Key Config Options**:\n  - `trigger`: Define build triggers in `.azure-pipelines.yml`\n  - `pool`: Specify the agent pool for pipeline jobs\n  - `steps`: List of tasks to run during the pipeline",
     "source": "code_example",
-    "updated_at": 1780921045.4277916
+    "updated_at": 1780922693.8765478
   },
   "search:Testing:gitlab-ci-pipelines-advanced t": {
     "content": "- **CLI Commands**: Use `gitlab-ci-lint` to validate `.gitlab-ci.yml`.\n- **Latest Versions**: Ensure you use the latest GitLab Runner and GitLab CI/CD features.\n- **Key Config Options**:\n  - `parallel`: Enable parallel jobs for faster builds.\n  - `cache`: Utilize caching to speed up subsequent pipeline runs.\n  - `artifacts`: Store build artifacts for later stages or external access.\n  - `only` and `except`: Control when jobs run based on branches, tags, etc.",
     "source": "web_search",
-    "updated_at": 1780921046.5804725
+    "updated_at": 1780922696.4187903
   },
   "search:Testing:gitlab-ci-pipelines-advanced t_ex": {
     "content": "- Use `gitlab-runner register` to register a new runner.\n- Update GitLab Runner to the latest version using `sudo apt-get update && sudo apt-get install gitlab-runner`.\n- Configure `.gitlab-ci.yml` with `image: <docker_image>` to specify the Docker image for the pipeline stages.\n- Utilize `cache` in `.gitlab-ci.yml` to cache dependencies and speed up builds.\n- Employ `artifacts` to store build artifacts that can be used in subsequent jobs or stages.\n- Implement parallel jobs by setting `parallel: <number_of_jobs>` under a job definition.\n- Use `only` and `except` keywords to control when jobs run based on branches, tags, or schedules.\n- Configure `variables` in `.gitlab-ci.yml` for environment-specific settings.\n- Enable `trigger` to manually trigger pipelines from another project.\n- Utilize `include` to reuse common configurations across multiple projects.",
