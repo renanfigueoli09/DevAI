@@ -2,7 +2,7 @@
   "search:python-asyncio-websockets:python asyncio websockets tuto": {
     "content": "- **CLI Commands**:\n  - `python3 --version` to check Python version.\n  - `pip install asyncio` to install the asyncio library.\n\n- **Latest Versions**:\n  - Python 3.11 is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - Use `asyncio.run(main())` to run an asynchronous program.\n  - Configure WebSocket server with `websockets.serve(handler, \"localhost\", 8765)`.\n  - Handle incoming messages in a handler function using `async def handler(websocket, path):`.",
     "source": "web_search",
-    "updated_at": 1780843822.66891
+    "updated_at": 1780932021.2456307
   },
   "search:python-asyncio-websockets:python asyncio websockets tuto_ex": {
     "content": "- Create virtual environment: `conda create --name myNewEnv python=3.7`\n- Install websockets package: `conda install -n myNewEnv websockets`\n- Latest version of websockets: 16.0\n- Key config options:\n  - Server: `websockets.serve(handler, \"localhost\", 8765)`\n  - Client: `async with websockets.connect(\"ws://localhost:8765\") as websocket:`",

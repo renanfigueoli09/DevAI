@@ -2,16 +2,16 @@
   "search:dotnet-entity-framework-core-performance-tuning:entity framework core performa": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  \n- **Latest Versions**:\n  - Entity Framework Core 7.0\n  \n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`\n  - `UseLazyLoadingProxies()`\n  - `MaxBatchSize(int batchSize)`",
     "source": "web_search",
-    "updated_at": 1780843813.1470177
+    "updated_at": 1780932003.7295704
   },
   "search:dotnet-entity-framework-core-performance-tuning:entity framework core performa_ex": {
     "content": "- **Latest Version**: EF Core 7.0 as of my last update.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n  - `dotnet ef database update` to apply the migration to the database.\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure options for the DbContext.\n  - `OnModelCreating(ModelBuilder modelBuilder)`: Override this method to configure entity types and relationships.\n  - `UseSqlServer`, `UseMySQL`, etc.: Specify the database provider in your DbContext configuration.",
     "source": "code_example",
-    "updated_at": 1780843815.2945797
+    "updated_at": 1780932006.6999626
   },
   "search:dotnet-entity-framework-core-performance-tuning:optimizing entity framework co": {
     "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef database update`\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `AsNoTracking()`: For read-only queries to reduce memory usage.\n  - `Select()`: To project only required fields, reducing data transfer.\n  - `Include()`: To eager load related entities, avoiding N+1 problem.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Global setting for tracking behavior.",
     "source": "web_search",
-    "updated_at": 1780843817.262723
+    "updated_at": 1780932009.6480615
   }
 }

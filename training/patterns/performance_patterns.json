@@ -37,21 +37,21 @@
   "search:performance-patterns:pagination cursor-based offset_ex": {
     "content": "- **CLI Commands**: Use `curl` or Postman to test API endpoints.\n- **Latest Versions**: Check the latest Node.js version using `node -v`.\n- **Key Config Options**:\n  - For cursor-based pagination, use a unique identifier like an ID or timestamp from the last item of the previous page.\n  - Set the limit for the number of items per page to control data flow.",
     "source": "code_example",
-    "updated_at": 1780843782.0623317
+    "updated_at": 1780931960.5771492
   },
   "search:performance-patterns:lazy loading eager loading str": {
     "content": "- **CLI Commands**:\n  - `ng generate module <module-name> --lazy`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - Angular Core: 16.x\n\n- **Key Config Options**:\n  - `app-routing.module.ts`: Define routes with `{ loadChildren: () => import('./module/module.module').then(m => m.ModuleModule) }`\n  - `angular.json`: Configure build options for production.",
     "source": "web_search",
-    "updated_at": 1780843783.5629814
+    "updated_at": 1780931962.9171512
   },
   "search:performance-patterns:lazy loading eager loading str_ex": {
     "content": "- **Eager Loading**: Fetches related data upfront.\n- **Lazy Loading**: Loads data only when accessed.\n- **Explicit Loading**: Manually and on-demand loading of data.\n- Latest versions:\n  - .NET Core: 7.0\n  - Entity Framework Core: 6.0\n- Key config options:\n  - `Include()`: For eager loading.\n  - `LazyLoadingEnabled`: For enabling lazy loading in EF Core.\n  - `Load()`: For explicit loading.\n\nCLI commands with exact flags:\n- Enable lazy loading in EF Core:\n  ```bash\n  dotnet ef DbContext add <DbContextName> --lazy-loading-enabled\n  ```\n- Explicitly load related data:\n  ```bash\n  db.Entry(entity).Collection(e => e.RelatedEntities).Load();\n  ```\n\nThese actionable facts provide a clear guide for developers to implement and manage data loading strategies effectively in their projects.",
     "source": "code_example",
-    "updated_at": 1780843785.2883222
+    "updated_at": 1780931965.3253787
   },
   "search:performance-patterns:connection pooling database pe": {
     "content": "- Django 5.1 released August 7, 2024, with native connection pooling.\n- Deploy the fix in under 10 minutes.\n- Connection pooling reduces database connection overhead by 60-80%.\n- Response times improve by 10-30% with connection pooling.\n- Node.js applications can benefit from connection pooling to reuse connections.\n- Key config options for connection pooling include maxPoolSize, minPoolSize, and idleTimeoutMillis.",
     "source": "web_search",
-    "updated_at": 1780843787.034664
+    "updated_at": 1780931967.4760065
   }
 }

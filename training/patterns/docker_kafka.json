@@ -2,26 +2,26 @@
   "search:docker+kafka:docker kafka cluster managemen": {
     "content": "- **CLI Commands**:\n  - `docker network create kafka-net`\n  - `docker-compose up -d` to start the cluster\n  - `docker-compose down` to stop the cluster\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Docker Compose: 1.29.2\n\n- **Key Config Options**:\n  - `KAFKA_BROKER_ID`: Unique identifier for each broker in the cluster.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string to ZooKeeper (if using ZK mode).\n  - `KAFKA_CLUSTER_ID`: Unique identifier for the Kafka cluster (required in KRaft mode).",
     "source": "web_search",
-    "updated_at": 1780843796.5521948
+    "updated_at": 1780931978.7272897
   },
   "search:docker+kafka:docker kafka security best pra": {
     "content": "- Use Kafka Docker images from official repositories.\n- Set up SASL/PLAIN authentication using `KAFKA_OPTS` environment variable.\n- Configure SSL/TLS for secure communication with `listeners`, `advertised.listeners`, and `security.inter.broker.protocol`.\n- Enable resource management in Docker with `--memory` and `--cpu-shares`.\n- Use persistent storage for Kafka data with Docker volumes.\n- Monitor Kafka cluster health using tools like Prometheus and Grafana.\n- Regularly update Kafka and Docker images to the latest versions.\n- Implement network isolation using Docker networks.\n- Configure logging with `KAFKA_LOG4J_OPTS` for better visibility.",
     "source": "web_search",
-    "updated_at": 1780843798.492209
+    "updated_at": 1780931980.9196863
   },
   "search:docker+kafka:docker kafka security best pra_ex": {
     "content": "- Use `docker exec -ti kafka /opt/kafka/bin/kafka-console-producer.sh --bootstrap-server :9092 --topic demo` to start a Kafka producer.\n- For TLS/SSL, ensure you have the correct certificates and volumes mounted in your `docker-compose.yml`.\n- Key config options include `listeners`, `advertised.listeners`, `ssl.keystore.location`, and `ssl.truststore.location`.\n- Latest versions of Docker and Kafka should be used for optimal performance and security.\n- Monitor resource usage with `docker stats` to ensure autoscaling is effective.\n- Use `docker-compose up -d` to start services in detached mode.\n- For development, consider using the `dockersamples/kafka-dev` repository for sample applications.",
     "source": "code_example",
-    "updated_at": 1780843800.4923692
+    "updated_at": 1780931983.199694
   },
   "search:docker+kafka:docker kafka monitoring and lo": {
     "content": "- **CLI Commands**:\n  - `docker run --log-driver=kafka --log-opt kafka-broker=kafka:9092 --log-opt kafka-topic=logs my_image`\n  - `docker logs -f <container_id>`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Docker: 25.0\n\n- **Key Config Options**:\n  - `kafka-broker`: Kafka broker address.\n  - `kafka-topic`: Kafka topic for logging.\n  - `log-driver`: Set to `kafka` for Kafka logging driver.\n  - `log-opt`: Additional options for the Kafka logging driver.",
     "source": "web_search",
-    "updated_at": 1780843802.3640938
+    "updated_at": 1780931985.720774
   },
   "search:docker+kafka:docker kafka monitoring and lo_ex": {
     "content": "- **CLI Commands**:\n  - `docker run --name kafka-monitor -d wurstmeister/kafka`\n  - `docker logs kafka-monitor`\n\n- **Latest Versions**:\n  - Kafka: 3.3.1\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Set the advertised listeners for Kafka.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Specify the Zookeeper connection string.\n  - `KAFKA_CREATE_TOPICS`: Define topics to be created on startup.",
     "source": "code_example",
-    "updated_at": 1780843804.2179222
+    "updated_at": 1780931987.8205867
   }
 }
