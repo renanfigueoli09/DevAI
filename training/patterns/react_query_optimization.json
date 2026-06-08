@@ -2,21 +2,21 @@
   "search:react-query-optimization:react query performance optimi": {
     "content": "- **CLI Commands**: `npm install react-query`\n- **Latest Version**: As of my last update, the latest version is 4.x.\n- **Key Config Options**:\n  - `queryClient`: Manages query state and cache.\n  - `useQuery`: Hook for fetching data.\n  - `useMutation`: Hook for updating data.\n  - `refetchInterval`: Automatically refetches data at specified intervals.",
     "source": "web_search",
-    "updated_at": 1780931033.5354407
+    "updated_at": 1780936880.0360188
   },
   "search:react-query-optimization:react query performance optimi_ex": {
     "content": "- **React Query**: Use `useQuery` and `useMutation` hooks for efficient data fetching.\n- **Throttle/Debounce**: Implement using libraries like Lodash (`_.throttle`, `_.debounce`) or native JavaScript methods.\n- **Next.js Server Components**: Utilize server components for better performance by rendering on the server.\n- **React Virtual DOM**: Ensure minimal re-renders by using keys and memoization techniques.\n- **Code Splitting**: Use dynamic imports with `import()` to split code into smaller chunks.\n- **Lazy Loading**: Implement lazy loading for images, videos, and other resources.\n- **Optimize Images**: Use tools like Next.js Image component or libraries like Sharp for efficient image handling.\n- **Avoid Inline Styles**: Use CSS Modules or styled-components for better performance.\n- **Batch Updates**: Use `useReducer` instead of multiple state updates to batch them together.",
     "source": "code_example",
-    "updated_at": 1780931035.5321236
+    "updated_at": 1780936882.0901587
   },
   "search:react-query-optimization:optimizing react query for lar": {
     "content": "- Use `react-query@latest` for optimized data fetching.\n- Implement pagination using `useInfiniteQuery`.\n- Utilize `staleTime` and `refetchInterval` to control refetching behavior.\n- Apply `keepPreviousData` to maintain previous data during refetches.\n- Employ `suspense: true` with React Query Client Provider for better performance.\n- Use `queryClient.invalidateQueries` to manually invalidate queries.\n- Implement `useIsFetching` and `useQueryStatus` hooks for conditional rendering.\n- Consider using `react-window` or `react-virtualized` for virtualized lists.\n- Monitor performance with tools like React DevTools and Chrome's Performance tab.",
     "source": "web_search",
-    "updated_at": 1780931037.5208998
+    "updated_at": 1780936884.0200577
   },
   "search:react-query-optimization:optimizing react query for lar_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `queryClient`: Configure options for the query client.\n  - `useQuery`: Use this hook to fetch data and manage state.\n  - `useInfiniteQuery`: For handling infinite pagination.\n  - `refetchOnWindowFocus`: Control refetching behavior on window focus.",
     "source": "code_example",
-    "updated_at": 1780931039.578888
+    "updated_at": 1780936886.0263233
   }
 }

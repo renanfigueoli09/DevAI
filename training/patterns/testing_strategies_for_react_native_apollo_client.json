@@ -2,11 +2,11 @@
   "search:Testing Strategies for React-Native+Apollo-Client:testing react-native apollo cl": {
     "content": "- Use Jest and React Testing Library for testing.\n- Install Apollo Client, GraphQL, and related packages using npm or yarn.\n- Mock GraphQL operations using `MockedProvider` from `@apollo/client/testing`.\n- Configure Apollo Client with necessary options like `uri`, `cache`, etc.\n- For mutations, use `renderHook` from `@testing-library/react-hooks` along with `MockedProvider`.\n- Ensure to handle loading and error states in your tests.\n- Use `fireEvent` for simulating user interactions.\n- Check the latest versions of Apollo Client and related packages on npm.\n- Refer to official documentation for detailed examples and best practices.",
     "source": "web_search",
-    "updated_at": 1780931279.1641479
+    "updated_at": 1780937088.460315
   },
   "search:Testing Strategies for React-Native+Apollo-Client:testing react-native apollo cl_ex": {
     "content": "- **CLI Commands**: `npx create-react-native-app my-app`, `npm install @apollo/client graphql`\n- **Latest Versions**: Apollo Client v3.x, React Native v0.68.x\n- **Key Config Options**:\n  - `ApolloClient`: `uri`, `cache`\n  - `MockedProvider`: `addTypename`, `defaultOptions`\n  - `useQuery`/`useMutation`: `fetchPolicy`, `errorPolicy`\n- **Testing Setup**: \n  ```bash\n  npm install --save-dev @testing-library/react-native jest\n  ```\n- **Example Mock Query**:\n  ```javascript\n  import { MockedProvider } from '@apollo/client/testing';\n  const mocks = [\n    {\n      request: { query: GET_USER, variables: { id: '1' } },\n      result: { data: { user: { id: '1', name: 'John Doe' } } }\n    }\n  ];\n  ```\n- **Testing Query**:\n  ```javascript\n  import { render, screen } from '@testing-library/react-native';\n  import { useQuery } from '@apollo/client';\n  import GET_USER from './queries/getUser';\n\n  const UserComponent = () => {\n    const { data, loading, error } = useQuery(GET_USER);\n    if (loading) return <Text>Loading...</Text>;\n    if (error) return <Text>Error</Text>;\n    return <Text>{data.user.name}</Text>;\n  };\n\n  test('renders user name', async () => {\n    render(\n      <MockedProvider mocks={mocks} addTypename={false}>\n        <UserComponent />\n      </MockedProvider>\n    );\n    expect(screen.getByText('John Doe')).toBeInTheDocument();\n  });\n  ```",
     "source": "code_example",
-    "updated_at": 1780931281.6701152
+    "updated_at": 1780937090.9745486
   }
 }

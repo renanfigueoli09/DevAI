@@ -2,21 +2,21 @@
   "search:TypeScript GraphQL:typescript graphql api develop": {
     "content": "- **CLI Commands**:\n  - `npm install typegraphql graphql-tools`\n  - `npx create-next-app@latest my-graphql-app --typescript`\n\n- **Latest Versions**:\n  - TypeGraphQL: v2.0.0\n  - GraphQL Tools: v13.0.0\n\n- **Key Config Options**:\n  - `typeDefs`: Define your GraphQL schema using type definitions.\n  - `resolvers`: Implement resolvers for each field in the schema.\n  - `context`: Pass context data to resolvers, e.g., authentication tokens, database connections.\n  - `schemaDirectives`: Extend GraphQL with custom directives.",
     "source": "web_search",
-    "updated_at": 1780931149.7160826
+    "updated_at": 1780936990.0164046
   },
   "search:TypeScript GraphQL:typescript graphql api develop_ex": {
     "content": "- **CLI Commands**:\n  - `npm init -y`\n  - `npm install express graphql express-graphql typescript @types/node --save`\n\n- **Latest Versions**:\n  - Node.js: v16.x or later\n  - Express: ^4.18.2\n  - GraphQL: ^15.7.0\n  - Apollo Server: ^3.11.0\n\n- **Key Config Options**:\n  - `server.listen({ port: 4000 }, () => console.log('Server ready at http://localhost:4000/graphql'))`\n  - Define GraphQL schema using `typeDefs` and resolvers with `resolvers`.\n  - Use Apollo Server for easy setup and integration.",
     "source": "code_example",
-    "updated_at": 1780931151.8949294
+    "updated_at": 1780936991.88604
   },
   "search:TypeScript GraphQL:graphql typescript performance": {
     "content": "- Use the latest version of GraphQL and TypeGraphQL.\n- Implement Dataloader for batching queries to reduce database hits.\n- Optimize GraphQL schema by removing unnecessary fields.\n- Use JSON variables in database queries for complex data retrieval.\n- Monitor performance using tools like Apollo Tracing or GraphiQL.\n- Regularly update dependencies and benchmark performance.",
     "source": "web_search",
-    "updated_at": 1780931154.04182
+    "updated_at": 1780936993.7287447
   },
   "search:TypeScript GraphQL:graphql typescript performance_ex": {
     "content": "- Use `TypeGraphQL` to integrate TypeScript with GraphQL.\n- Install `gql.tada` for magical GraphQL query engine in TypeScript.\n- Explore latest TypeScript performance tuning techniques from official docs.\n- Implement static typing throughout your application using TypeScript.\n- Optimize code execution and reduce memory usage by following best practices.",
     "source": "code_example",
-    "updated_at": 1780931156.6738224
+    "updated_at": 1780936995.5785189
   }
 }

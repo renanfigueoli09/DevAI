@@ -2,21 +2,21 @@
   "search:docker+kubernetes-statefulsets:docker kubernetes statefulsets": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update a StatefulSet.\n  - `kubectl get statefulsets` to list all StatefulSets in the current namespace.\n  - `kubectl describe statefulset <statefulset-name>` for detailed information about a specific StatefulSet.\n\n- **Latest Versions**:\n  - Docker: Latest version as of October 2025 is [Docker Version].\n  - Kubernetes: Latest version as of October 2025 is [Kubernetes Version].\n\n- **Key Config Options**:\n  - `spec.serviceName`: Specifies the name of a service that should be created for this StatefulSet.\n  - `spec.replicas`: Defines the number of replicas to run.\n  - `spec.template.spec.containers.volumeMounts`: Mounts volumes into containers.\n  - `spec.updateStrategy.type`: Determines how updates are applied (RollingUpdate or OnDelete).\n  - `spec.podManagementPolicy`: Controls how Pods are created and deleted (OrderedReady, Parallel).",
     "source": "web_search",
-    "updated_at": 1780931198.4414237
+    "updated_at": 1780937030.1972978
   },
   "search:docker+kubernetes-statefulsets:docker kubernetes statefulsets_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replicas>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - StatefulSet API Version: apps/v1\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.selector.matchLabels`: Label selector for the pods.\n  - `.spec.template`: Pod template specification.\n  - `.spec.serviceName`: Headless service name.\n  - `.spec.volumeClaimTemplates`: PersistentVolumeClaims for each pod.\n\n- **Best Practices**:\n  - Use Persistent Volumes (PVs) and Persistent Volume Claims (PVCs).\n  - Ensure each pod has its own dedicated PV.\n  - Use remote storage solutions like EBS, GCS, or Azure Disk.\n  - Manage stateful applications with stable identities.",
     "source": "code_example",
-    "updated_at": 1780931200.8788571
+    "updated_at": 1780937032.0374722
   },
   "search:docker+kubernetes-statefulsets:kubernetes statefulsets for pe": {
     "content": "- **CLI Commands**:\n  - `kubectl create statefulset <statefulset-name> --image=<image-name>`\n  - `kubectl apply -f <statefulset-yaml-file>`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - StatefulSets: Available in all versions of Kubernetes\n\n- **Key Config Options**:\n  - `spec.serviceName`: Defines the service name for the StatefulSet.\n  - `spec.replicas`: Specifies the number of replicas.\n  - `spec.template.spec.containers.volumeMounts`: Mounts volumes to containers.\n  - `spec.volumeClaimTemplates`: Defines PersistentVolumeClaims for each pod.",
     "source": "web_search",
-    "updated_at": 1780931203.6515899
+    "updated_at": 1780937033.8946218
   },
   "search:docker+kubernetes-statefulsets:kubernetes statefulsets for pe_ex": {
     "content": "- Use `kubectl apply -f statefulset.yaml` to create or update a StatefulSet.\n- Ensure each pod has a unique hostname using the `spec.template.metadata.annotations[\"pod.alpha.kubernetes.io/hostname\"]`.\n- Allocate persistent storage with `PersistentVolumeClaims` in the pod specification.\n- Deploy StatefulSets sequentially by setting `spec.updateStrategy.type = \"RollingUpdate\"` and `spec.updateStrategy.rollingUpdate.partition`.\n- Monitor StatefulSet status using `kubectl get statefulset <statefulset-name> -o yaml`.\n- Update StatefulSet configurations without disrupting existing pods by modifying the `.spec.template` field.\n- Use `kubectl rollout status statefulset/<statefulset-name>` to check the progress of a rolling update.\n- For DNS caching issues, adjust CoreDNS configuration in the ConfigMap with `kubectl edit configmap coredns -n kube-system`.\n- Ensure StatefulSets are properly configured for ordered deployment and scaling by setting appropriate `.spec.replicas` values.",
     "source": "code_example",
-    "updated_at": 1780931206.7039526
+    "updated_at": 1780937035.8272014
   }
 }

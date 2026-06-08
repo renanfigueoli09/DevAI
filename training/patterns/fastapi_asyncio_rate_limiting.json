@@ -2,21 +2,21 @@
   "search:fastapi-asyncio-rate-limiting:fastapi asyncio rate limiting ": {
     "content": "- Use `fastapi-limiter` for rate limiting in FastAPI.\n- Install via pip: `pip install fastapi-limiter`\n- Redis is required for `fastapi-limiter`.\n- Import necessary modules:\n  ```python\n  import aioredis\n  from fastapi_limiter import FastAPILimiter\n  ```\n- Initialize the limiter:\n  ```python\n  app = FastAPI()\n  async def init():\n      redis = await aioredis.from_url(\"redis://localhost\")\n      await FastAPILimiter.init(redis)\n  app.on_event(\"startup\")(init)\n  ```\n- Apply rate limiting to routes:\n  ```python\n  from fastapi_limiter.depends import RateLimiter\n\n  @app.get(\"/items/\")\n  async def read_items(rate_limit: RateLimiter = Depends()):\n      return {\"message\": \"Items\"}\n  ```\n- Key config options include `max_requests` and `time_window`.\n- Consider using the token bucket algorithm for balanced burst handling and fairness.",
     "source": "web_search",
-    "updated_at": 1780936616.483589
+    "updated_at": 1780937348.08658
   },
   "search:fastapi-asyncio-rate-limiting:fastapi asyncio rate limiting _ex": {
     "content": "- **GitHub Project**: nazneenprojects/news_api_rate_limiting\n  - Focuses on News API Rate limiting using FastAPI, Asyncio, SQLModel.\n  \n- **Rate Limiting in Python Web Applications**:\n  - Implementing rate limiting in FastAPI with a middleware-based limiter.\n  - Example code provided for a simple middleware-based limiter.\n\n- **Python Rate Limiting for APIs**:\n  - Discusses various strategies for API rate limiting.\n  - Mentions choosing an algorithm that fits traffic patterns.\n\n- **FastAPI AsyncIO Rate Limiting Strategies**:\n  - Use `slowapi` (Flask-style limiter for FastAPI).\n  - Configure environment variables for rate limiting settings.",
     "source": "code_example",
-    "updated_at": 1780936618.2096086
+    "updated_at": 1780937350.2651784
   },
   "search:fastapi-asyncio-rate-limiting:rate limiting techniques for f": {
     "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI using pip: `pip install fastapi`.\n- For rate limiting, consider using middleware like the one in [2].\n- Key config options include setting the maximum number of requests (`max_req`) and the time window (`window`) in seconds.\n- Use `HTTPException` to handle rate limit exceeded errors.\n- Middleware should be added to FastAPI app with `app.add_middleware(RateLimiterMiddleware)`.\n- Ensure your middleware is thread-safe if handling concurrent requests.",
     "source": "web_search",
-    "updated_at": 1780936619.667758
+    "updated_at": 1780937351.7314243
   },
   "search:fastapi-asyncio-rate-limiting:rate limiting techniques for f_ex": {
     "content": "- **CLI Commands**: Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- **Latest Version**: Check the latest version on [PyPI](https://pypi.org/project/fastapi/) or use `fastapi.__version__` in your code.\n- **Key Config Options**:\n  - `rate_limiting`: Enable rate limiting by setting a limit (e.g., `rate_limiting=100/minute`).\n  - `dependency`: Use FastAPI's dependency injection to apply rate limits globally or per endpoint.\n  - `background_tasks`: Utilize background tasks for asynchronous processing without blocking the main request thread.",
     "source": "code_example",
-    "updated_at": 1780936622.9455757
+    "updated_at": 1780937353.1351929
   }
 }
