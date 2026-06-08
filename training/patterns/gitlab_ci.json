@@ -2,11 +2,11 @@
   "search:gitlab-ci:gitlab ci stages artifacts cac": {
     "content": "- Use `gitlab-runner cache` to manage cache in GitLab CI/CD.\n- Cache is stored on the runner and can be uploaded to S3 if distributed caching is enabled.\n- Artifacts are used to pass intermediate build files between stages, not dependencies.\n- To pass artifacts to another stage, configure them in the `.gitlab-ci.yml` file under the `artifacts` section.\n- Use `docker push` command to push Docker images to a registry.\n- For separating Kaniko Docker build and push into stages, ensure you have a GitLab Runner with the docker executor and access to a container registry.\n- Key config options for `.gitlab-ci.yml`: `stages`, `script`, `artifacts`, `cache`.\n- Latest versions of GitLab CI/CD can be found on the official GitLab website.",
     "source": "web_search",
-    "updated_at": 1780937004.1028686
+    "updated_at": 1780939899.0220513
   },
   "search:gitlab-ci:gitlab ci stages artifacts cac_ex": {
     "content": "- **CLI Commands**:\n  - `docker buildx build --cache-from type=registry,ref=<registry>/<image>:<tag> --push <path>`\n  - `gitlab-runner exec docker --privileged`\n\n- **Latest Versions**:\n  - GitLab CI/CD: Latest stable version as of Jan 2026\n  - Docker Buildx: Latest stable version as of Jan 2026\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml`:\n    ```yaml\n    stages:\n      - build\n      - test\n\n    cache:\n      key: $CI_COMMIT_REF_SLUG\n      paths:\n        - .docker/\n\n    build_job:\n      stage: build\n      script:\n        - docker buildx build --cache-from type=registry,ref=<registry>/<image>:<tag> --push .\n\n    test_job:\n      stage: test\n      script:\n        - docker run <registry>/<image>:<tag>\n    ```",
     "source": "code_example",
-    "updated_at": 1780937006.2514534
+    "updated_at": 1780939901.4072042
   }
 }

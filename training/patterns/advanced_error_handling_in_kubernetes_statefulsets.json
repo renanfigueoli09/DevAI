@@ -2,7 +2,7 @@
   "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error ": {
     "content": "- Use `kubectl describe statefulset <statefulset-name>` to get detailed information about the StatefulSet.\n- Check pod status with `kubectl get pods -l app=<app-label>`.\n- Inspect PVCs and PVs using `kubectl get pvc` and `kubectl get pv`, respectively.\n- Apply changes to a StatefulSet with `kubectl apply -f <statefulset-file.yaml>`.\n- Use `kubectl rollout restart statefulset/<statefulset-name>` for rolling updates.\n- Monitor logs with `kubectl logs <pod-name>`.\n- Check node conditions using `kubectl get nodes --show-labels`.\n- Apply network policies with `kubectl apply -f <network-policy-file.yaml>`.",
     "source": "web_search",
-    "updated_at": 1780937008.4303324
+    "updated_at": 1780939903.8116782
   },
   "search:Advanced Error Handling in Kubernetes StatefulSets:kubernetes statefulsets error _ex": {
     "content": "- Use `kubectl get statefulsets` to list StatefulSets.\n- Check logs with `kubectl logs <statefulset-name>-<index>`.\n- Inspect events with `kubectl describe statefulset <statefulset-name>`.\n- Use `kubectl rollout status statefulset <statefulset-name>` for deployment status.\n- Apply changes with `kubectl apply -f <manifest-file>`.\n- Scale StatefulSets with `kubectl scale statefulset <statefulset-name> --replicas=<new-replicas>`.",

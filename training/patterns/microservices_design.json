@@ -37,11 +37,11 @@
   "search:microservices-design:idempotency distributed system": {
     "content": "- **CLI Commands**: Use `curl` or `httpie` for making HTTP requests.\n  - Example: `curl -X POST https://api.example.com/resource -H \"Content-Type: application/json\" -d '{\"key\":\"value\"}'`\n  \n- **Latest Versions**:\n  - Node.js: v18.14.0\n  - Python: 3.10.9\n  - Java: 17.0.6\n  \n- **Key Config Options**:\n  - Database connection pool size: `maxPoolSize=20`\n  - Retry attempts for idempotent operations: `retryAttempts=5`\n  - Timeout for network requests: `timeout=30s`",
     "source": "web_search",
-    "updated_at": 1780936959.0671294
+    "updated_at": 1780939843.5689034
   },
   "search:microservices-design:idempotency distributed system_ex": {
     "content": "- Use `curl` or `Postman` to send requests with an `Idempotency-Key` header.\n- Ensure your server stores outcomes against this key for idempotency checks.\n- Implement a deduplication store like Redis or DynamoDB to track processed keys.\n- Consider using the Saga Pattern for distributed transactions, especially in e-commerce platforms.\n- For production-grade implementation, use frameworks that support idempotency out-of-the-box (e.g., Spring Cloud).\n- Be aware of failure scenarios and implement appropriate fallback strategies.\n- Test your system thoroughly with various edge cases to ensure idempotency is maintained.",
     "source": "code_example",
-    "updated_at": 1780936961.118786
+    "updated_at": 1780939846.0722501
   }
 }
