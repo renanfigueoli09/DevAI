@@ -2,31 +2,31 @@
   "search:Performance Optimization:fastapi sqlalchemy performance": {
     "content": "- Use `fastapi-sqlalchemy-monitor` middleware for seamless performance tracking.\n- Set `pool_size` and `max_overflow` in SQLAlchemy engine based on load tests.\n- Enable `pool_pre_ping` to check stale connections.\n- Set `pool_recycle` to prevent long-lived connection issues.\n- Monitor active connections during load testing.\n- Use indexing and caching strategies for database queries.\n- Consider using SQLModel for ORM, which supports multiple databases.",
     "source": "web_search",
-    "updated_at": 1780841767.448241
+    "updated_at": 1780920846.818065
   },
   "search:Performance Optimization:fastapi sqlalchemy performance_ex": {
     "content": "- Use SQLAlchemy's `index` and `unique` parameters when defining models to optimize database queries.\n- Implement caching mechanisms like Redis or Memcached for frequently accessed data.\n- Utilize FastAPI's built-in dependency injection to reuse database sessions across requests.\n- Monitor query performance using middleware like `fastapi-sqlalchemy-monitor`.\n- Apply the `selectinload` and `joinedload` options in SQLAlchemy to reduce N+1 query problems.\n- Regularly update FastAPI, SQLAlchemy, and other dependencies to their latest versions for performance improvements.\n- Configure database connection pooling with SQLAlchemy's `create_engine` function using parameters like `pool_size`, `max_overflow`, and `pool_recycle`.\n- Use async databases with FastAPI and SQLAlchemy for better scalability under high concurrency.",
     "source": "code_example",
-    "updated_at": 1780841769.1798556
+    "updated_at": 1780920847.804624
   },
   "search:Performance Optimization:spring quarkus performance opt": {
     "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:2.13.6.Final:create` for Quarkus project creation.\n  - `./mvnw clean package` to build a Quarkus application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Quarkus: 2.13.6.Final\n\n- **Key Config Options**:\n  - For Quarkus, configure `quarkus.http.host` and `quarkus.http.port`.\n  - For Spring Boot, use `server.address` and `server.port`.\n\n- **Build-Time Optimization**:\n  - Use `@QuarkusMain` for Quarkus applications to reduce startup time.\n  - Configure `spring-boot-maven-plugin` in Maven for optimized builds.\n\n- **Memory Utilization**:\n  - Monitor memory usage with `jstat -gcutil <pid> 1000 5` for both frameworks.",
     "source": "web_search",
-    "updated_at": 1780841771.02841
+    "updated_at": 1780920848.858461
   },
   "search:Performance Optimization:spring quarkus performance opt_ex": {
     "content": "- **CLI Commands**: \n  - `mvn io.quarkus:quarkus-maven-plugin:create` to create a new Quarkus project.\n  - `./mvnw compile quarkus:dev` for running Quarkus in development mode.\n\n- **Latest Versions**:\n  - Quarkus: Check the latest version on [Quarkus GitHub](https://github.com/quarkusio/quarkus).\n  - Spring Boot: Check the latest version on [Spring Boot Release Notes](https://spring.io/projects/spring-boot#release-notes).\n\n- **Key Config Options**:\n  - Quarkus: `quarkus.http.host` and `quarkus.http.port`.\n  - Spring Boot: `server.address` and `server.port`.",
     "source": "code_example",
-    "updated_at": 1780841773.0651984
+    "updated_at": 1780920849.903701
   },
   "search:Performance Optimization:gitlab-ci performance optimiza": {
     "content": "- **CLI Commands**:\n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `gitlab-runner exec`: Runs a job locally for testing.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Latest stable version as of my last update.\n  - GitLab Runner: Latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `cache`: Caches dependencies to speed up builds.\n  - `artifacts`: Stores build artifacts for later use.\n  - `only`/`except`: Specifies when jobs should run.",
     "source": "web_search",
-    "updated_at": 1780841775.3144562
+    "updated_at": 1780920851.0076094
   },
   "search:Performance Optimization:gitlab-ci performance optimiza_ex": {
     "content": "- Use `git clone --depth 1` to perform shallow cloning.\n- Update GitLab Runner to the latest version.\n- Configure `.gitlab-ci.yml` with `cache` directives for job-specific caching.\n- Implement parallel jobs using `parallel: true`.\n- Utilize `artifacts.cache` for persistent cache across pipeline stages.\n- Enable `only` and `except` in `.gitlab-ci.yml` to control job execution conditions.\n- Use `image` directive to specify a lightweight Docker image for faster builds.\n- Monitor pipeline performance with GitLab's built-in analytics tools.",
     "source": "code_example",
-    "updated_at": 1780841777.499786
+    "updated_at": 1780920852.1406415
   }
 }
