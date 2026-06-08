@@ -2,21 +2,21 @@
   "search:PostgreSQL Performance Tuning for .NET Applications:dotnet postgres performance": {
     "content": "- **CLI Commands**:\n  - `dotnet add package Npgsql`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - .NET 7\n  - PostgreSQL 14\n  - Npgsql 6.0\n\n- **Key Config Options**:\n  - ConnectionString: `Server=your_server;Port=5432;Database=your_db;User Id=your_user;Password=your_password;`\n  - Pooling: Enable connection pooling for better performance.\n  - Timeout: Set a timeout value to avoid long waits.",
     "source": "web_search",
-    "updated_at": 1780936524.8421266
+    "updated_at": 1780939371.3278956
   },
   "search:PostgreSQL Performance Tuning for .NET Applications:dotnet postgres performance_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - .NET 7\n  - PostgreSQL 15\n\n- **Key Config Options**:\n  - ConnectionString: `Server=localhost;Port=5432;Database=mydatabase;User Id=myuser;Password=mypassword;`\n  - Pooling: `Pooling=true;MinPoolSize=10;MaxPoolSize=100;`\n  - Timeout: `CommandTimeout=30;`",
     "source": "code_example",
-    "updated_at": 1780936527.1517828
+    "updated_at": 1780939373.6339445
   },
   "search:PostgreSQL Performance Tuning for .NET Applications:entity framework core postgres": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - Npgsql: 6.0\n\n- **Key Config Options**:\n  - Connection String: Ensure it's optimized for PostgreSQL.\n  - Indexing: Use indexes on frequently queried columns.\n  - Query Caching: Enable query caching if applicable.\n  - Asynchronous Operations: Use async methods to improve performance.\n  - Batch Inserts/Updates: Use batch operations for large data sets.",
     "source": "web_search",
-    "updated_at": 1780936529.5042522
+    "updated_at": 1780939375.7976484
   },
   "search:PostgreSQL Performance Tuning for .NET Applications:entity framework core postgres_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n\n- **Latest Versions**:\n  - Entity Framework Core: 6.0\n  - Npgsql (PostgreSQL provider): 7.0\n\n- **Key Config Options**:\n  - Connection string in `appsettings.json`: `\"Server=localhost;Port=5432;Database=mydb;User Id=myuser;Password=mypassword;\"`\n  - Indexing: Use Fluent API or Data Annotations to create indexes.\n  - Query optimization: Use `.AsNoTracking()`, `.Include()`, and `.Where()` for efficient querying.",
     "source": "code_example",
-    "updated_at": 1780936532.02711
+    "updated_at": 1780939377.9863915
   }
 }

@@ -2,21 +2,21 @@
   "search:microservices+resilience-patterns:microservices resilience patte": {
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**:\n  - Kubernetes: v1.27.3\n  - Docker: 20.10.17\n  - Helm: v3.9.4\n- **Key Config Options**:\n  - Kubernetes Deployment replicas: `replicas: 3`\n  - Docker Compose services: Define each microservice as a service.\n  - Helm charts: Use `values.yaml` for configuration overrides.",
     "source": "web_search",
-    "updated_at": 1780936805.3712814
+    "updated_at": 1780939629.90207
   },
   "search:microservices+resilience-patterns:microservices resilience patte_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new microservice`\n  - `resilience4j retry --add-policy myRetryPolicy`\n  - `resilience4j circuitbreaker --add-policy myCircuitBreakerPolicy`\n\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Resilience4j: 1.8.0\n\n- **Key Config Options**:\n  - Retry: maxAttempts, waitDuration\n  - Circuit Breaker: failureRateThreshold, waitDurationInOpenState\n  - Timeout: timeoutDuration\n  - Fallback: fallbackMethod\n  - Bulkhead: maxConcurrentCalls, maxWaitDuration",
     "source": "code_example",
-    "updated_at": 1780936807.3625915
+    "updated_at": 1780939632.8210158
   },
   "search:microservices+resilience-patterns:circuit breaker pattern in mic": {
     "content": "- **CLI Commands**: Use `resilience4j circuitbreaker` for managing circuit breakers.\n- **Latest Version**: Check the latest version on [Maven Central](https://search.maven.org/artifact/io.github.resilience4j/resilience4j-circuitbreaker).\n- **Key Config Options**:\n  - `failureRateThreshold`: Sets the threshold of failures to trigger a circuit breaker.\n  - `waitDurationInOpenState`: Duration for which the circuit remains open before transitioning to half-open state.\n  - `permittedNumberOfCallsInHalfOpenState`: Number of calls allowed in half-open state before fully opening again.",
     "source": "web_search",
-    "updated_at": 1780936809.5579836
+    "updated_at": 1780939635.6575644
   },
   "search:microservices+resilience-patterns:circuit breaker pattern in mic_ex": {
     "content": "- **CLI Commands**: Use `curl` or `wget` to test microservices endpoints.\n- **Latest Versions**: Ensure using Resilience4j v2.7.0 for circuit breaker functionality.\n- **Key Config Options**:\n  - `failureRateThreshold`: Set to 50% to trigger the circuit breaker.\n  - `waitDurationInOpenState`: Configure to 30 seconds before attempting a recovery.\n  - `permittedNumberOfCallsInHalfOpenState`: Set to 10 calls during half-open state.",
     "source": "code_example",
-    "updated_at": 1780936811.4874825
+    "updated_at": 1780939638.3499732
   }
 }

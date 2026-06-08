@@ -2,16 +2,16 @@
   "search:spring+kafka-consumer-groups:spring kafka consumer groups 2": {
     "content": "- **CLI Commands**: `mvn spring-boot:run` to run Spring Boot application.\n- **Latest Versions**: Spring for Apache Kafka 4.0.0, Spring Boot 2.7.x.\n- **Key Config Options**:\n  - `spring.kafka.consumer.group-id`: Defines the consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Controls what to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g., data has been deleted).\n  - `spring.kafka.consumer.heartbeat.interval.ms`: The expected time between heartbeats sent by the consumer to the broker.\n  - `spring.kafka.consumer.max.poll.records`: Maximum number of records returned in a single call to poll().",
     "source": "web_search",
-    "updated_at": 1780936739.354018
+    "updated_at": 1780939559.9367762
   },
   "search:spring+kafka-consumer-groups:spring kafka transaction manag": {
     "content": "- Use Spring Boot version 2.7.x or later for Kafka transactions.\n- Enable Kafka transactions in producer configuration by setting `enable.idempotence=true` and `transactional.id=unique-id`.\n- Configure consumer to join the same transaction group as producers using `group.id`.\n- For JPA integration, use `@Transactional` on listener methods.\n- Use Spring's `KafkaTransactionManager` for managing transactions across Kafka and other resources.\n- Ensure Kafka broker version is 2.4 or later for full transaction support.\n- Monitor Kafka transaction metrics to troubleshoot issues.\n- Consider using `@KafkaListener(errorHandler = \"errorHandler\")` for custom error handling in listeners.\n- Update Spring Boot dependencies regularly to benefit from latest features and security patches.",
     "source": "web_search",
-    "updated_at": 1780936741.6782875
+    "updated_at": 1780939561.9918814
   },
   "search:spring+kafka-consumer-groups:spring kafka transaction manag_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your Spring Kafka project.\n- **Latest Versions**: Ensure you use the latest version of Spring Boot and Spring Kafka, as of my last update in October 2023, these are typically found on [Maven Central](https://search.maven.org/).\n- **Key Config Options**:\n  - `spring.kafka.producer.transaction-id-prefix`: Prefix for transaction IDs.\n  - `spring.kafka.consumer.enable-auto-commit`: Set to false if using manual commit.\n  - `spring.kafka.producer.acks`: Configure acknowledgment mode (e.g., `all`).\n  - `spring.kafka.producer.retries`: Number of retries on failure.\n- **Additional Tips**: Enable Spring Boot's auto-configuration for Kafka by including the appropriate dependencies in your `pom.xml`.",
     "source": "code_example",
-    "updated_at": 1780936743.9879174
+    "updated_at": 1780939563.9382572
   }
 }

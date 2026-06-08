@@ -2,21 +2,21 @@
   "search:typescript+jest:typescript jest testing framew": {
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - Vitest: 0.30\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for DOM testing.\n  - `transform`: Configure Babel for TypeScript support.\n  - `setupFilesAfterEnv`: Path to setup files after environment is configured.",
     "source": "web_search",
-    "updated_at": 1780936549.3356705
+    "updated_at": 1780939394.188358
   },
   "search:typescript+jest:typescript jest testing framew_ex": {
     "content": "- Install Jest using `npm install --save-dev jest`\n- Configure Jest in your project by creating a `jest.config.js` file.\n- Use TypeScript for testing with the `ts-jest` package, installed via `npm install --save-dev ts-jest @types/jest`.\n- Set up your test environment in `jest.config.js`:\n  ```javascript\n  module.exports = {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Write tests using the `.test.ts` or `.spec.ts` file extension.\n- Run tests with `npm test` or `npx jest`.\n- Use TypeScript features like interfaces, types, and generics in your tests.\n- Update Jest to the latest version for bug fixes and new features.",
     "source": "code_example",
-    "updated_at": 1780936551.795755
+    "updated_at": 1780939396.5277653
   },
   "search:typescript+jest:jest mocking techniques 2025": {
     "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.0.3\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\"\n  - `setupFilesAfterEnv`: [\"./jest.setup.js\"]\n  - `transformIgnorePatterns`: [\"/node_modules/(?!(axios|lodash)/)\"]\n  - `coverageDirectory`: \"./coverage\"",
     "source": "web_search",
-    "updated_at": 1780936554.254364
+    "updated_at": 1780939398.63815
   },
   "search:typescript+jest:jest mocking techniques 2025_ex": {
     "content": "- Jest version: 29.0.3\n- PyTest version: 7.4.0\n- Key Jest config options:\n  - `testEnvironment`: \"jsdom\"\n  - `setupFilesAfterEnv`: [\"./jest.setup.js\"]\n  - `moduleNameMapper`: Maps module paths to mock implementations.\n- CLI commands:\n  - `npm install --save-dev jest`\n  - `npx jest --watchAll` for continuous testing\n  - `npx jest --coverage` to generate code coverage report",
     "source": "code_example",
-    "updated_at": 1780936556.6287494
+    "updated_at": 1780939400.923068
   }
 }

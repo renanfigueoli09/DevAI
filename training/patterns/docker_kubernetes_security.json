@@ -2,21 +2,21 @@
   "search:docker+kubernetes-security:docker kubernetes security bes": {
     "content": "- Use `kubectl rollout restart deployment/<deployment-name>` to perform Kubernetes rolling updates.\n- Install and use Kured (`kured --image=weaveworks/kured:v2.5.0`) for automated node reboots during kernel upgrades.\n- Implement network policies using `kubectl apply -f <network-policy-file.yaml>`.\n- Use `docker run --security-opt seccomp=<profile>` to restrict container capabilities.\n- Enable Kubernetes RBAC (Role-Based Access Control) by creating roles and role bindings with `kubectl create role <role-name> --verb=get,list,watch --resource=pods`.\n- Regularly update Docker images using `docker pull <image-name>:latest` and apply security patches.\n- Utilize `docker-compose.yml` for defining multi-container applications securely.\n- Configure Kubernetes secrets using `kubectl create secret generic <secret-name> --from-literal=<key>=<value>`.\n- Implement image scanning with tools like Trivy (`trivy image <image-name>:tag`) to detect vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780936872.2117443
+    "updated_at": 1780939721.621105
   },
   "search:docker+kubernetes-security:docker kubernetes security bes_ex": {
     "content": "- **CLI Commands**:\n  - `docker scan <image_name>` to scan Docker images.\n  - `kubectl create secret generic <secret-name> --from-literal=<key>=<value>` for creating Kubernetes secrets.\n  - `kubectl apply -f <file.yaml>` to apply configurations.\n\n- **Latest Versions**:\n  - Docker: v24.0\n  - Kubernetes: v1.27\n\n- **Key Config Options**:\n  - Use `--network=host` in `docker run` for better performance but less isolation.\n  - Set `seccompProfile` to `RuntimeDefault` or `unconfined` in Pod specifications.\n  - Enable `PodSecurityPolicy` for stricter control over pod configurations.",
     "source": "code_example",
-    "updated_at": 1780936874.0529962
+    "updated_at": 1780939724.577076
   },
   "search:docker+kubernetes-security:kubernetes rbac for docker con": {
     "content": "- **CLI Commands**:\n  - `kubectl create role <role-name> --verb=<verbs> --resource=<resources>`\n  - `kubectl create rolebinding <role-binding-name> --role=<role-name> --user=<user>`\n  - `kubectl apply -f rbac-config.yaml`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Open Policy Agent (OPA): v0.34\n\n- **Key Config Options**:\n  - `apiVersion: rbac.authorization.k8s.io/v1`\n  - `kind: Role`\n  - `metadata.name`: Name of the role\n  - `rules`: List of rules defining permissions\n  - `kind: RoleBinding`\n  - `subjects`: List of users, groups, or service accounts to bind to the role",
     "source": "web_search",
-    "updated_at": 1780936875.96759
+    "updated_at": 1780939727.0298467
   },
   "search:docker+kubernetes-security:kubernetes rbac for docker con_ex": {
     "content": "- Use `kubectl create role` and `kubectl create clusterrole` to define roles.\n- Assign roles using `kubectl create rolebinding` and `kubectl create clusterrolebinding`.\n- Specify permissions in YAML files for roles and clusterroles.\n- Use `--dry-run=client -o yaml` with `kubectl apply` to preview changes without applying them.\n- Ensure RBAC is enabled by default in Kubernetes clusters.\n- Key config options include `apiVersion`, `kind`, `metadata.name`, `rules`.\n- Latest versions can be found on the official Kubernetes documentation.",
     "source": "code_example",
-    "updated_at": 1780936878.0163505
+    "updated_at": 1780939729.4937692
   }
 }

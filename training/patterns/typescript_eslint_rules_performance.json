@@ -2,21 +2,21 @@
   "search:typescript-eslint-rules-performance:typescript eslint performance ": {
     "content": "- **GitHub Link**: [typescript-eslint/performance](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#performance)\n- **Latest Version**: Ensure you are using the latest version of `typescript-eslint` and its related packages.\n- **Key Config Options**:\n  - `parserOptions.projectService`: Use this for better performance compared to `parserOptions.project`.\n  - `cacheLocation`: Configure ESLint to cache results in a specific location to improve performance.\n  - `overrides`: Define overrides for different file types or directories to tailor performance settings.\n\n- **CLI Command**: Run ESLint with the following command:\n  ```bash\n  eslint --config-file .eslintrc.js --ext .ts,.tsx src/\n  ```\n  \n- **Performance Tips**:\n  - Avoid using `parserOptions.project` if possible.\n  - Utilize caching mechanisms to store linting results.\n  - Optimize ESLint configuration for your project's specific needs.",
     "source": "web_search",
-    "updated_at": 1780936450.2063951
+    "updated_at": 1780939305.2939076
   },
   "search:typescript-eslint-rules-performance:typescript eslint performance _ex": {
     "content": "- Install `typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`.\n- Configure `.eslintrc.js` to include one or more `tsconfig.json` files.\n- Use `hyperfine` for benchmarking performance, install via `brew install hyperfine` or `winget install hyperfine`.\n- Ensure TypeScript is set to strict mode in your project configuration.\n- For React projects with Vite, consider using the setup guide from YouTube video mentioned.",
     "source": "code_example",
-    "updated_at": 1780936452.7004352
+    "updated_at": 1780939307.559523
   },
   "search:typescript-eslint-rules-performance:typescript eslint best practic": {
     "content": "- Install ESLint globally using `npm install -g eslint`\n- Initialize an ESLint configuration file in your project directory with `eslint --init` and follow the prompts to set up a configuration tailored for TypeScript.\n- Use the latest version of TypeScript by ensuring you have the latest Node.js installed, as it supports the latest TypeScript features.\n- Install necessary plugins for TypeScript support with `npm install eslint-plugin-typescript @typescript-eslint/parser`\n- Configure ESLint in your project's `.eslintrc` file to include TypeScript parser and rules:\n  ```json\n  {\n    \"parser\": \"@typescript-eslint/parser\",\n    \"plugins\": [\"@typescript-eslint\"],\n    \"extends\": [\n      \"eslint:recommended\",\n      \"plugin:@typescript-eslint/recommended\"\n    ]\n  }\n  ```\n- Use the `--fix` flag with ESLint commands to automatically fix linting errors that can be fixed programmatically.\n- Run ESLint on your project using `npx eslint . --ext .ts,.tsx`\n- Consider using a formatter like Prettier for consistent code style, which can be integrated with ESLint through the `eslint-config-prettier` and `eslint-plugin-prettier` plugins.\n- Regularly update ESLint and its plugins to benefit from new features and security patches.",
     "source": "web_search",
-    "updated_at": 1780936454.9624183
+    "updated_at": 1780939309.776844
   },
   "search:typescript-eslint-rules-performance:typescript eslint best practic_ex": {
     "content": "- Install ESLint globally using `npm install -g eslint`\n- Initialize ESLint in your project with `eslint --init` and follow the prompts to set up a configuration file.\n- Use the latest version of TypeScript, which can be installed via npm: `npm install typescript@latest`.\n- Configure ESLint for TypeScript by installing necessary plugins: `npm install eslint-plugin-typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`.\n- Add TypeScript-specific rules to your `.eslintrc` file:\n  ```json\n  {\n    \"parser\": \"@typescript-eslint/parser\",\n    \"plugins\": [\"@typescript-eslint\"],\n    \"extends\": [\n      \"eslint:recommended\",\n      \"plugin:@typescript-eslint/recommended\"\n    ]\n  }\n  ```\n- Use the `--ext .ts,.tsx` flag with ESLint to lint TypeScript and JSX files.\n- Consider using a formatter like Prettier for consistent code style, which can be integrated with ESLint through plugins.\n- Run ESLint on your project by executing `eslint . --ext .ts,.tsx`.\n- For large projects, consider enabling caching with the `--cache` flag to speed up linting processes.",
     "source": "code_example",
-    "updated_at": 1780936457.6251714
+    "updated_at": 1780939311.9677517
   }
 }

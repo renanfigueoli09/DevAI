@@ -2,21 +2,21 @@
   "search:Advanced Error Handling in NextJS + MongoDB:nextjs error handling": {
     "content": "- Use `next.config.js` to configure error handling.\n- Implement custom error pages by creating `pages/500.js`.\n- Utilize `_error.js` for both server-side and client-side errors.\n- Avoid using try/catch blocks in Server Functions; instead, throw errors.\n- For expected errors, handle them with hooks or context providers.\n- Customize the static 500 page by creating a `pages/500.js`.\n- Ensure error handling is consistent across your application.",
     "source": "web_search",
-    "updated_at": 1780936440.8477983
+    "updated_at": 1780939295.0210245
   },
   "search:Advanced Error Handling in NextJS + MongoDB:nextjs error handling_ex": {
     "content": "- Use `next error` to create an `error.tsx` file in your Next.js project.\n- Implement the `ErrorBoundary` component for more granular control over error handling.\n- Utilize the `notFound` function to handle 404 errors gracefully.\n- Ensure you have the latest version of Next.js (v13.5 or later) for optimal error handling features.\n- Configure your `next.config.js` with appropriate settings for production environments.\n- Use `process.env.NODE_ENV` to conditionally render fallback UIs during development and production.\n- Implement server-side rendering (SSR) and static generation (SSG) strategies to handle errors effectively.",
     "source": "code_example",
-    "updated_at": 1780936443.2519565
+    "updated_at": 1780939297.7266107
   },
   "search:Advanced Error Handling in NextJS + MongoDB:error logging nextjs": {
     "content": "- Install @sentry/nextjs@7.105.0 using npm.\n- Create sentry.server.config.ts for server-side error logging configuration.\n- Use ErrorBoundary class component for client-side error handling in Next.js.\n- Implement route-specific error management with nextjs-centralized-error-handler.\n- Monitor and resolve errors in Next.js applications using Sentry.\n- Configure Sentry for performance monitoring to detect and resolve issues.",
     "source": "web_search",
-    "updated_at": 1780936445.481091
+    "updated_at": 1780939300.239338
   },
   "search:Advanced Error Handling in NextJS + MongoDB:error logging nextjs_ex": {
     "content": "- **CLI Commands**: Use `next build` to compile your Next.js application.\n- **Latest Versions**: Ensure you are using the latest version of Node.js and Next.js for optimal performance.\n- **Key Config Options**:\n  - `next.config.js`: Configure your project settings such as asset paths, webpack configurations, and more.\n  - `loggingConfig`: Customize logging levels and formats in `next.config.js` to better track errors.",
     "source": "code_example",
-    "updated_at": 1780936447.715015
+    "updated_at": 1780939302.6894689
   }
 }

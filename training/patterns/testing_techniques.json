@@ -2,36 +2,36 @@
   "search:Testing Techniques:spring postgres testing": {
     "content": "- **CLI Commands**:\n  - `docker run --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Testcontainers: 1.17.6\n  - PostgreSQL Driver: 42.5.1\n\n- **Key Config Options**:\n  - `application.properties`: \n    ```properties\n    spring.datasource.url=jdbc:tc:postgresql:latest:///mydatabase\n    spring.datasource.username=postgres\n    spring.datasource.password=mysecretpassword\n    ```\n  - `pom.xml` dependencies:\n    ```xml\n    <dependency>\n        <groupId>org.testcontainers</groupId>\n        <artifactId>testcontainers</artifactId>\n        <version>1.17.6</version>\n        <scope>test</scope>\n    </dependency>\n    <dependency>\n        <groupId>org.postgresql</groupId>\n        <artifactId>postgresql</artifactId>\n        <version>42.5.1</version>\n        <scope>runtime</scope>\n    </dependency>\n    ```",
     "source": "web_search",
-    "updated_at": 1780936921.5467694
+    "updated_at": 1780939793.0737662
   },
   "search:Testing Techniques:spring postgres testing_ex": {
     "content": "- **Dependencies**: Spring Boot, Lombok, FlyWay, Spring Data JPA, PostgreSQL Driver, Testcontainers.\n- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up -d` to start the PostgreSQL container.\n  - `docker-compose down` to stop the PostgreSQL container.\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Lombok: 1.18.26\n  - FlyWay: 9.5.0\n  - Spring Data JPA: 2.7.4\n  - PostgreSQL Driver: 42.3.1\n  - Testcontainers: 1.17.6\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - `testcontainers` configuration in the test class to manage the PostgreSQL container.\n  - Assertions for HTTP status codes and response body content.",
     "source": "code_example",
-    "updated_at": 1780936923.4003673
+    "updated_at": 1780939795.5886002
   },
   "search:Testing Techniques:fastapi sqlalchemy testing": {
     "content": "- Use `pytest` for testing FastAPI applications.\n- Integrate SQLAlchemy with FastAPI using the latest version, typically `2.0`.\n- Employ `fastapi.testclient.TestClient` to simulate HTTP requests.\n- For real PostgreSQL testing, use fixtures without mocking the entire database layer.\n- Install necessary packages: `pip install fastapi sqlalchemy pytest asyncpg`.\n- Configure your database URL in environment variables or directly in code.\n- Use `pytest.fixture` for setting up and tearing down test environments.\n- Example of a simple test function:\n  ```python\n  from fastapi.testclient import TestClient\n  from main import app  # Assuming FastAPI app is defined in 'main.py'\n\n  client = TestClient(app)\n\n  def test_read_root():\n      response = client.get(\"/\")\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"Hello World\"}\n  ```\n- Ensure your database migrations are up-to-date before running tests.\n- Use `pytest-xdist` for parallel testing to speed up the process.",
     "source": "web_search",
-    "updated_at": 1780936925.313661
+    "updated_at": 1780939798.549478
   },
   "search:Testing Techniques:fastapi sqlalchemy testing_ex": {
     "content": "- **CLI Commands**:\n  - `pytest` for running tests.\n  - `alembic init <env_name>` to initialize Alembic environment.\n  - `alembic revision --autogenerate -m \"message\"` to generate migration scripts.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - SQLAlchemy: v2.0.0\n  - Pydantic: v1.10.7\n  - Alembic: v1.8.3\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL` for database connection string.\n  - `get_db()` function to provide a dependency for database sessions.\n  - `alembic.ini` configuration file for Alembic settings.",
     "source": "code_example",
-    "updated_at": 1780936927.2340395
+    "updated_at": 1780939801.9918146
   },
   "search:Testing Techniques:nextjs serverless-authenticati": {
     "content": "- **NextAuth.js**: Use `next-auth` package.\n- **Authentication Providers**: Supports over 50 providers like GitHub, Google, Facebook.\n- **Upstash Redis Adapter**: For serverless storage with Redis.\n- **Serverless Deployment**:\n  - Deploy client to Cloudfront & Lambda@Edge using `serverless-nextjs`.\n  - Run `yarn deploy:staging` for deployment.\n- **Auth0 Integration**:\n  - Use `@auth0/nextjs-auth0` package.\n  - Configure Auth0 in your Next.js app.\n- **Serverless Functions**:\n  - Implement authentication and authorization logic securely.\n  - Process form submissions using serverless functions.",
     "source": "web_search",
-    "updated_at": 1780936929.3370805
+    "updated_at": 1780939804.8485487
   },
   "search:Testing Techniques:gitlab-ci testing": {
     "content": "- **Install gitlab-ci-local**: `gitlab-ci-local install`\n- **Lint .gitlab-ci.yml**: `gitlab-ci-local lint path/to/.gitlab-ci.yml`\n- **Run GitLab CI locally**: `gitlab-ci-local run path/to/.gitlab-ci.yml`\n- **Latest GitLab CE Version**: 18.10\n- **Key Config Options**:\n  - `stages`: Define stages in the pipeline.\n  - `script`: Commands to execute.\n  - `services`: Docker services to use.\n  - `artifacts`: Files to save for later stages.\n  - `cache`: Cache directories between jobs.\n- **Install GitLab Runner**: `curl https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash`\n- **Register GitLab Runner**: `sudo gitlab-runner register` (follow prompts with your GitLab instance URL and token)\n- **Multi-stage Pipeline Example**:\n  ```yaml\n  stages:\n    - build\n    - test\n    - deploy\n\n  build_job:\n    stage: build\n    script:\n      - echo \"Building the project...\"\n  \n  test_job:\n    stage: test\n    script:\n      - echo \"Running tests...\"\n  \n  deploy_job:\n    stage: deploy\n    script:\n      - echo \"Deploying the application...\"\n  ```",
     "source": "web_search",
-    "updated_at": 1780936931.5042973
+    "updated_at": 1780939807.6052501
   },
   "search:Testing Techniques:gitlab-ci testing_ex": {
     "content": "- Use `gitlab-ci.yml` to define CI/CD pipelines.\n- To test changes, create feature branches and push them to GitLab.\n- Utilize GitLab's merge request functionality to display test reports directly.\n- Generate reports such as code coverage and static analysis results.\n- Example projects like [sample-ci-python](https://github.com/ginomempin/sample-ci-python) provide practical CI/CD implementations.\n- For local testing, refer to the [Baeldung guide](https://www.baeldung.com/gitlab-ci-local-testing).\n- Ensure your `gitlab-ci.yml` includes stages like `test`, `deploy`, etc.\n- Use GitLab's latest version for access to new features and improvements.",
     "source": "code_example",
-    "updated_at": 1780936933.3860583
+    "updated_at": 1780939810.0006523
   }
 }
