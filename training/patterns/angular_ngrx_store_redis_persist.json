@@ -2,31 +2,31 @@
   "search:angular-ngrx-store-redis-persist:persisting angular ngrx store ": {
     "content": "- **CLI Commands**: `ng add @ngrx/store`, `ng generate store <name>`\n- **Latest Versions**: Ensure using the latest Angular and NgRx versions for compatibility.\n- **Key Config Options**:\n  - `createFeatureSelector` for selecting parts of the state.\n  - `createSelector` for deriving new state from existing state.\n  - Use `@ngrx/data` for data persistence across components.",
     "source": "web_search",
-    "updated_at": 1780935814.1566665
+    "updated_at": 1780938635.1214964
   },
   "search:angular-ngrx-store-redis-persist:persisting angular ngrx store _ex": {
     "content": "- **CLI Commands**:\n  - `ng generate module app-store --module=app`\n  - `ng generate store counter --module=app-store`\n\n- **Latest Versions**:\n  - Angular CLI: v15.2.4\n  - @ngrx/store: v16.0.0\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `StoreModule.forRoot({})` and `EffectsModule.forRoot([])`.\n  - Define reducers in a separate file (e.g., `counter.reducer.ts`) and include them in the `StoreModule.forRoot()`.\n  - Use `@ngrx/effects` for handling side effects.\n  - Configure Redis as a backend store using libraries like `ngx-redis-store`.\n\n- **Additional Notes**:\n  - Ensure proper state persistence by integrating with Redis or other storage solutions.\n  - Implement selectors to access state data efficiently in components.",
     "source": "code_example",
-    "updated_at": 1780935816.8113708
+    "updated_at": 1780938637.4924915
   },
   "search:angular-ngrx-store-redis-persist:using redis for state manageme": {
     "content": "- **CLI Commands**: Use `ng generate store` to create an NGRX store.\n- **Latest Versions**: Ensure Angular and NGRX are up-to-date using `npm update`.\n- **Key Config Options**:\n  - In `app.module.ts`, import `StoreModule.forRoot(reducers)` for the root store.\n  - Define reducers in a separate file, e.g., `reducers/index.ts`.\n  - Use `@ngrx/effects` for side effects management with `EffectModule.forRoot([Effects])`.",
     "source": "web_search",
-    "updated_at": 1780935819.1335292
+    "updated_at": 1780938639.929004
   },
   "search:angular-ngrx-store-redis-persist:using redis for state manageme_ex": {
     "content": "- **Install Redis**: `sudo apt-get install redis-server`\n- **Check Redis Status**: `redis-cli ping` should return \"PONG\"\n- **Angular CLI**: `npm install -g @angular/cli@latest`\n- **NGRX Store**: Install via npm: `ng add @ngrx/store`\n- **Key Config Options**:\n  - `state`: Define your state structure.\n  - `actions`: Create actions to describe changes.\n  - `reducers`: Implement reducers to handle state transitions.\n  - `effects`: Use effects for side effects like API calls.\n- **Latest Versions**: Ensure you use the latest versions of Angular, NGRX, and Redis for optimal performance and security.",
     "source": "code_example",
-    "updated_at": 1780935821.5728953
+    "updated_at": 1780938642.7464058
   },
   "search:angular-ngrx-store-redis-persist:advanced state persistence str": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create NgRx store.\n  - `ng add @ngrx/store` to set up NgRx in an Angular project.\n\n- **Latest Versions**:\n  - Angular: v16.x\n  - NgRx: v15.x\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `StoreModule.forRoot({})`.\n  - Define reducers and actions in separate files.\n  - Use `Effects` for side effects management.\n  - Configure `localStorage` or `sessionStorage` for state persistence.",
     "source": "web_search",
-    "updated_at": 1780935824.3247297
+    "updated_at": 1780938645.7043204
   },
   "search:angular-ngrx-store-redis-persist:advanced state persistence str_ex": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create NgRx store.\n  - `ng generate effect <name>` to create NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 17.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `StoreModule.forRoot({})` and `EffectsModule.forRoot([])`.\n  - Define reducers in a separate file, e.g., `reducers/index.ts`.\n  - Use `@ngrx/store-devtools` for development tools.\n  - Configure `environment.ts` to enable or disable devtools based on environment.",
     "source": "code_example",
-    "updated_at": 1780935826.6909008
+    "updated_at": 1780938648.120798
   }
 }
