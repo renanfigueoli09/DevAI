@@ -187,13 +187,30 @@ def _summarize(topic: str, raw_results: list[dict], llm, model: str) -> str:
 
 def research_topic(topic: str, llm, model: str, force: bool = False) -> str:
     """
-    Pesquisa um tópico. Usa cache se disponível.
+    Pesquisa um tópico.
+    Ordem: 1) cache interno → 2) vector store (training) → 3) web search
     Máximo 2 queries por tópico para não travar.
     """
     if not force:
+        # 1. Cache interno (KB)
         cached = _retrieve(topic)
         if cached:
             return cached
+
+        # 2. Vector store (training store) — usa o que já foi aprendido
+        try:
+            from tools.vector_store import search_relevant
+            vs_result = search_relevant(
+                f"{topic} patterns best practices",
+                limit=3,
+                exclude_topics=["docker","devops"] if "docker" not in topic else [],
+            )
+            if vs_result and len(vs_result) > 200:
+                # Salva no cache interno para reutilizar na mesma sessão
+                _store(topic, vs_result)
+                return vs_result
+        except Exception:
+            pass
 
     queries = TOPIC_QUERIES.get(topic, [f"{topic} best practices 2025"])
 
@@ -317,42 +334,75 @@ def research_for_task(
     if all_topics_count == 0:
         return ""
 
-    console.print(f"\n[dim]🔍 Pesquisando {all_topics_count} tópico(s): "
-                  f"{', '.join(list(sorted(topics_needed))[:3] + list(custom_searches.keys())[:3])}[/dim]")
+    # ── Training first: consulta o vector store antes de ir para a web ────────
+    training_hits = {}
+    try:
+        from tools.vector_store import search_relevant
+        # Busca contexto relevante para a descrição completa
+        _query = f"{task_description} {' '.join(stacks)}"
+        _exclude = [] if task_type in ("infra","docker") else ["docker","devops","kubernetes"]
+        _training = search_relevant(_query, limit=5, exclude_topics=_exclude)
+        if _training and len(_training) > 100:
+            training_hits["training_store"] = _training
+            console.print(f"  [green]✓[/green] Training store: {len(_training)} chars")
+    except Exception:
+        pass
 
-    results = {}
-    total_searches = len(topics_needed) + len(custom_searches)
-    with Progress(SpinnerColumn(), TextColumn("{task.description}"),
-                  console=console, transient=True) as p:
-        task = p.add_task("Pesquisando...", total=total_searches)
+    # Se o training tem conteúdo suficiente, reduz pesquisas web
+    TRAINING_THRESHOLD = 800  # chars mínimos para considerar treinamento suficiente
+    training_is_sufficient = sum(len(v) for v in training_hits.values()) >= TRAINING_THRESHOLD
 
-        # Tópicos gerais
-        for topic in sorted(topics_needed):
-            p.update(task, description=f"[dim]Pesquisando {topic}...[/dim]")
-            content_r = research_topic(topic, llm, model)
-            if content_r:
-                results[topic] = content_r
-            p.advance(task)
-
-        # Tópicos específicos da descrição (winston, swagger, mongodb, etc.)
-        for topic_key, query in custom_searches.items():
-            if topic_key in results:  # já pesquisado
-                p.advance(task)
-                continue
-            p.update(task, description=f"[dim]Pesquisando {topic_key}...[/dim]")
-            # Pesquisa direta com query específica
-            cached = _retrieve(topic_key)
+    if training_is_sufficient:
+        console.print(f"  [dim]→ Treinamento suficiente — pesquisa web reduzida[/dim]")
+        # Só pesquisa na web se não tiver no training
+        topics_to_search = set()
+        for topic in topics_needed:
+            cached = _retrieve(topic)
             if cached:
-                results[topic_key] = cached
+                training_hits[topic] = cached
             else:
-                from tools.web_research import web_search
-                raw = web_search(query, max_results=4)
-                if raw:
-                    summary = _summarize(query, raw, llm, model)
-                    if summary:
-                        _store(topic_key, summary)
-                        results[topic_key] = summary
-            p.advance(task)
+                topics_to_search.add(topic)
+        # Limita ainda mais pesquisas web quando training está bom
+        topics_needed = set(list(topics_to_search)[:2])
+        custom_searches = dict(list(custom_searches.items())[:2])
+    else:
+        console.print(f"  [dim]🔍 Pesquisando {all_topics_count} tópico(s): "
+                      f"{', '.join(list(sorted(topics_needed))[:3] + list(custom_searches.keys())[:2])}[/dim]")
+
+    results = {**training_hits}
+    total_searches = len(topics_needed) + len(custom_searches)
+
+    if total_searches > 0:
+        with Progress(SpinnerColumn(), TextColumn("{task.description}"),
+                      console=console, transient=True) as p:
+            task_p = p.add_task("Pesquisando...", total=total_searches)
+
+            # Tópicos gerais
+            for topic in sorted(topics_needed):
+                p.update(task_p, description=f"[dim]Pesquisando {topic}...[/dim]")
+                content_r = research_topic(topic, llm, model)
+                if content_r:
+                    results[topic] = content_r
+                p.advance(task_p)
+
+            # Tópicos específicos da descrição
+            for topic_key, query in custom_searches.items():
+                if topic_key in results:
+                    p.advance(task_p)
+                    continue
+                p.update(task_p, description=f"[dim]Pesquisando {topic_key}...[/dim]")
+                cached = _retrieve(topic_key)
+                if cached:
+                    results[topic_key] = cached
+                else:
+                    from tools.web_research import web_search
+                    raw = web_search(query, max_results=4)
+                    if raw:
+                        summary = _summarize(query, raw, llm, model)
+                        if summary:
+                            _store(topic_key, summary)
+                            results[topic_key] = summary
+                p.advance(task_p)
 
     if not results:
         return ""
