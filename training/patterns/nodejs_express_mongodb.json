@@ -17,6 +17,6 @@
   "search:nodejs-express-mongodb:building restful apis with nod_ex": {
     "content": "- **CLI Commands**:\n  - `npm init` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors jsonwebtoken bcrypt` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: v4.18.x\n  - Mongoose: v7.x\n  - Body-parser: v1.20.x\n  - Cors: v2.8.x\n  - Jsonwebtoken: v9.x\n  - Bcrypt: v5.x\n\n- **Key Config Options**:\n  - Express app configuration: `app.use(cors())`, `app.use(bodyParser.json())`.\n  - Mongoose connection: `mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })`.\n  - JWT secret key: `const jwtSecret = 'your_secret_key';`.",
     "source": "code_example",
-    "updated_at": 1780844874.944853
+    "updated_at": 1780933168.2493184
   }
 }
