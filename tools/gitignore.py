@@ -230,8 +230,18 @@ JWT_EXPIRES_IN=7d
 """ if has_auth else ""
 
     redis_section = ""
-    if extra_services and "redis" in extra_services:
-        redis_section = """
+    if extra_services:
+        has_sentinel = any(s in str(extra_services).lower() for s in ["sentinel","redis-sentinel"])
+        has_redis    = any(s in str(extra_services).lower() for s in ["redis"])
+        if has_sentinel:
+            redis_section = f"""
+# Redis Sentinel
+REDIS_SENTINEL_HOSTS=localhost:26379,localhost:26380,localhost:26381
+REDIS_SENTINEL_NAME=mymaster
+REDIS_PASS=redis_pass
+"""
+        elif has_redis:
+            redis_section = """
 # Redis
 REDIS_URL=redis://localhost:6379
 """

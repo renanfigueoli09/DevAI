@@ -52,8 +52,15 @@ def step_shared_files(ctx: dict, **_):
     _db_type = detect_database(intent.description)
     _has_auth = _has_auth_requested(intent.description)
     _desc = intent.description.lower()
-    _extra = [s for s, kws in [("redis",["redis","cache","bull"]),("kafka",["kafka","rabbitmq"])]
-              if any(k in _desc for k in kws)]
+    _extra = []
+    if any(k in _desc for k in ["redis-sentinel","sentinel","redis sentinel"]):
+        _extra.append("redis-sentinel")
+    elif any(k in _desc for k in ["redis","cache","bull"]):
+        _extra.append("redis")
+    if any(k in _desc for k in ["kafka","rabbitmq","amqp"]):
+        _extra.append("kafka")
+    if any(k in _desc for k in ["elasticsearch","elastic"]):
+        _extra.append("elasticsearch")
     write_env_example(stack, project_path, intent.project_name,
                       db_type=_db_type, has_auth=_has_auth, extra_services=_extra)
 
@@ -132,15 +139,43 @@ def step_domain(ctx: dict, **_):
     llm          = ctx["llm"]
     research_ctx = ctx.get("research_ctx", "")
 
-    from tools.domain_extractor import extract_domain
+    from tools.domain_extractor import extract_domain, _has_auth_requested
+    from tools.db_strategy import detect_database
 
-    # Enriquece descrição com contexto pesquisado
-    enriched = intent.description
-    if research_ctx:
-        enriched = f"{intent.description}\n\n[CONTEXT FROM RESEARCH]:\n{research_ctx[:1000]}"
+    # ── REGRA: detecção determinística SEMPRE na descrição original ──────────
+    original_desc = intent.description
 
-    domain = extract_domain(enriched, llm)
+    # Detecta banco e auth na descrição — sem contaminação do research_ctx
+    db_type  = detect_database(original_desc)
+    has_auth = _has_auth_requested(original_desc)
+
+    # ── Clarificação interativa — pergunta o que não ficou claro ─────────────
+    try:
+        from tools.clarifier import clarify_if_needed
+        stack = intent.backend_stack or intent.frontend_stack or "nestjs"
+        clarification = clarify_if_needed(original_desc, stack, interactive=True)
+
+        # Respostas do usuário têm prioridade sobre detecção automática
+        if clarification.db_type:
+            db_type = clarification.db_type
+        if clarification.has_auth is not None:
+            has_auth = clarification.has_auth
+        if clarification.extra_services:
+            ctx["extra_services"] = clarification.extra_services
+        if clarification.asked_anything:
+            console.print(f"  [green]✓[/green] Confirmado: {db_type} | auth={has_auth} | extras={clarification.extra_services}")
+    except Exception as _ce:
+        console.print(f"  [dim]⚠ Clarifier: {_ce}[/dim]")
+
+    # Extrai entidades e domínio com a descrição LIMPA (sem research_ctx)
+    domain = extract_domain(original_desc, llm)
+
+    # Força os valores determinísticos/confirmados pelo usuário
+    domain["db_type"]  = db_type
+    domain["has_auth"] = has_auth
+
     ctx["domain"] = domain
+    console.print(f"  Banco: {db_type} | Auth: {has_auth} | Idioma: {domain.get('language','portuguese')}")
     return domain
 
 
@@ -161,15 +196,12 @@ def step_generate_backend(ctx: dict, **_):
     from tools.file_writer import write_files
     from tools.db_strategy import detect_database
 
-    # Route to correct manifest based on database
-    effective_stack = stack
-    if stack == "nestjs":
-        db_type = domain.get("db_type") or detect_database(intent.description)
-        if db_type == "mongodb":
-            effective_stack = "nestjs-mongo"
+    # Detecta db_type — descrição tem prioridade sobre LLM domain (evita default postgres)
+    db_type = detect_database(intent.description) or domain.get("db_type") or "postgres"
+    # Garante que o domain também tem o db_type correto para uso posterior
+    domain["db_type"] = db_type
 
-    db_type = domain.get("db_type", "postgres")
-    specs = get_manifest(effective_stack, intent.project_name, entities, has_auth, db_type=db_type)
+    specs = get_manifest(stack, intent.project_name, entities, has_auth, db_type=db_type)
 
     # Filtra o que o scaffold já criou
     specs = [s for s in specs if not (path / s.path).exists()]
@@ -209,6 +241,25 @@ def step_generate_backend(ctx: dict, **_):
         domain=domain,
         llm=llm, output_path=path,
     )
+    # Se gerou poucos arquivos ou nenhum, auto-estuda e tenta de novo
+    if not files or len(files) < 2:
+        console.print(f"  [yellow]→ Poucos arquivos gerados — estudando {stack}+{db_type}...[/yellow]")
+        try:
+            from scripts.study import study_topic, SEARCH_CURRICULUM
+            study_key = f"{stack}_{db_type}".replace("-","_")
+            searches  = SEARCH_CURRICULUM.get(study_key, [])[:3]
+            if searches:
+                from tools.llm_client import OllamaClient
+                from config import MODEL_CODE
+                _llm = OllamaClient()
+                study_topic(study_key, searches, _llm, MODEL_CODE, intensive=True)
+                console.print(f"  [green]✓[/green] Estudado: {study_key}")
+                # Tenta gerar novamente
+                files = generate_files(specs, stack, intent.project_name,
+                                       desc, domain, llm, path)
+        except Exception as _se:
+            console.print(f"  [dim]⚠ Auto-study: {_se}[/dim]")
+
     if files:
         write_files(files, base_path=path, confirm=False, preview=False)
 
@@ -536,15 +587,8 @@ def step_save_context(ctx: dict, **_):
 
 
 def step_git_commit(ctx: dict, **_):
-    """Commit inicial."""
-    project_path = ctx["project_path"]
-    intent       = ctx["intent"]
-
-    _run(["git", "add", "-A"], project_path)
-    _run(["git", "commit", "-m",
-          f"feat: scaffold {intent.combo or intent.backend_stack} — {intent.project_name}"],
-         project_path, silent=False)
-    return {"committed": True}
+    """Commit inicial — desabilitado (usuário decide quando commitar)."""
+    return {"committed": False}
 
 
 def step_generate_feature(ctx: dict, **_):

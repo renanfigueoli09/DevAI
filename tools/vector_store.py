@@ -184,6 +184,47 @@ def save(
     _save_index(idx)
 
 
+def search_multi(
+    queries: list[str],
+    limit_per_query: int = 3,
+    exclude_topics: Optional[list] = None,
+) -> str:
+    """
+    Busca múltiplas queries e combina resultados únicos.
+    Muito mais eficaz que uma única query.
+    """
+    seen_keys = set()
+    all_lines = []
+    for q in queries:
+        result = search_relevant(q, limit=limit_per_query, exclude_topics=exclude_topics)
+        if result:
+            for block in result.split("\n["):
+                key_match = block.split("]")[0].strip("[ ")
+                if key_match and key_match not in seen_keys:
+                    seen_keys.add(key_match)
+                    all_lines.append(block)
+    return "\n[".join(all_lines) if all_lines else ""
+
+
+def search_for_stack(stack: str, db_type: str, entity: str = "",
+                     file_type: str = "", limit: int = 5) -> str:
+    """
+    Busca especializada para geração de código:
+    combina queries por stack+db, file_type, entity e padrões de código.
+    """
+    excl = ["docker","devops","kubernetes","github-actions","cicd"]
+    queries = [
+        f"{stack} {db_type} {file_type} {entity}".strip(),
+        f"{stack} {db_type} schema service module pattern",
+        f"{stack} {db_type} crud example",
+    ]
+    if entity:
+        queries.append(f"{stack} {db_type} {entity} typescript")
+    if file_type:
+        queries.append(f"{stack} {file_type} {db_type}")
+    return search_multi(queries[:4], limit_per_query=3, exclude_topics=excl)
+
+
 def search_relevant(
     description: str,
     limit: int = 5,

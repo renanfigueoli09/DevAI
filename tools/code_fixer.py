@@ -143,6 +143,21 @@ TS_FIXES: list[tuple[str, str, str]] = [
      r"this\.([A-Za-z]+Service)\.findById\(",
      r"this.\1.findOne("),
 
+    # Mongoose: export missing from schema class (TS2459)
+    ("schema-class-no-export",
+     r"(\n@Schema[^\n]*\n)class (\w+) \{",
+     r"\1export class \2 {"),
+
+    # Mongoose: old pattern "Book & Document" -> HydratedDocument<Book>
+    ("schema-hydratedDocument",
+     r"export type (\w+)Document = \w+ & Document;",
+     r"export type \1Document = HydratedDocument<\1>;"),
+
+    # Mongoose: replace "import { Document } from mongoose" with HydratedDocument
+    ("schema-import-hydratedDocument",
+     r"\{ Document \} from 'mongoose'",
+     r"{ HydratedDocument } from 'mongoose'"),
+
     # auth.module: '../users/users.module' → '../user/user.module' (plural fix)
     # Suporta aspas simples e duplas
     ("users.module plural single-quote",

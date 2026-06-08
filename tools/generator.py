@@ -665,6 +665,104 @@ def _get_template(stack: str, file_type: str) -> str:
     return ""
 
 
+def _build_db_rules(stack: str, db_type: str) -> str:
+    """
+    Gera regras específicas para stack+banco a partir de:
+    1. db_strategy.py (determinístico)
+    2. vector store (treinamento)
+    3. Fallback para web search se sem treinamento
+    Se o banco for desconhecido, estuda antes de gerar.
+    """
+    rules_lines = []
+
+    # 1. Regras determinísticas do db_strategy
+    try:
+        from tools.db_strategy import get_strategy
+        strat = get_strategy(db_type)
+        rules_lines.append(f"DATABASE: {db_type} | ORM/ODM: {strat.orm}")
+        rules_lines.append(f"Docker image: {strat.docker_image} | Port: {strat.docker_port}")
+
+        # Regras específicas por ORM
+        orm_rules = {
+            "mongoose": [
+                "- Schema: @Schema @Prop HydratedDocument SchemaFactory",
+                "- Required: @Prop({required:true}) → field!: Type (!) | Optional: @Prop() → field?: Type (?)",
+                "- Service: @InjectModel(Entity.name) private model: Model<EntityDocument>",
+                "- CRUD: new this.model(dto).save() | findById(id) | findByIdAndUpdate(id,{$set:dto},{new:true}) | findByIdAndDelete(id)",
+                "- Module: MongooseModule.forFeature([{name:Entity.name, schema:EntitySchema}])",
+                "- AppModule: MongooseModule.forRoot(MONGODB_URI)",
+                "- NEVER: findOneBy @InjectRepository Repository< TypeOrmModule",
+            ],
+            "typeorm": [
+                "- Entity: @Entity @Column @PrimaryGeneratedColumn('uuid')",
+                "- Service: @InjectRepository(Entity) private repo: Repository<Entity>",
+                "- CRUD: repo.find() | repo.findOne({where:{id}}) | repo.save(repo.create(dto)) | repo.delete(id)",
+                "- Module: TypeOrmModule.forFeature([Entity])",
+                "- AppModule: TypeOrmModule.forRootAsync({useFactory:(config)=>({type,host,port,...})})",
+                "- NEVER: findById @InjectModel Model< MongooseModule",
+            ],
+            "sequelize": [
+                "- Model: @Table @Column @PrimaryKey @AutoIncrement",
+                "- Service: @InjectModel(Entity) private model: typeof Entity",
+                "- CRUD: Entity.findAll() | Entity.findByPk(id) | Entity.create(dto) | Entity.update(dto,{where:{id}})",
+            ],
+            "motor": [
+                "- Client: AsyncIOMotorClient(MONGODB_URI)",
+                "- CRUD: await db.collection.find().to_list() | insert_one(dto) | update_one({'_id':id},{$set:dto}) | delete_one({'_id':id})",
+                "- Use ObjectId for _id conversion",
+            ],
+            "sqlalchemy": [
+                "- Model: class Entity(Base): __tablename__=... id:Mapped[int]=mapped_column(primary_key=True)",
+                "- Session: async with AsyncSession as session: session.add(obj) await session.commit()",
+                "- Query: await session.execute(select(Entity).where(Entity.id==id))",
+            ],
+            "efcore": [
+                "- Entity: public class Entity { public Guid Id {get;set;} = Guid.NewGuid(); }",
+                "- Context: DbContext with DbSet<Entity>",
+                "- CRUD: await _context.Entities.ToListAsync() | FindAsync(id) | Add(entity) | SaveChangesAsync()",
+            ],
+        }
+
+        for rule in orm_rules.get(strat.orm, [f"- Use {strat.orm} patterns for {db_type}"]):
+            rules_lines.append(rule)
+
+    except Exception:
+        rules_lines.append(f"DATABASE: {db_type}")
+
+    # 2. Busca padrões no vector store para complementar
+    try:
+        from tools.vector_store import search_relevant
+        q = f"{stack} {db_type} schema service module pattern"
+        vs_result = search_relevant(q, limit=2, exclude_topics=["docker","devops","cicd"])
+        if vs_result and len(vs_result) > 100:
+            # Extrai só as linhas de código dos padrões
+            code_lines = [l for l in vs_result.split("\n")
+                         if any(c in l for c in ["@","class ","def ","import ","Model","Repository","Schema"])
+                         and not l.startswith("===") and not l.startswith("[")]
+            if code_lines:
+                rules_lines.append("WORKING REFERENCE PATTERNS:")
+                rules_lines.extend(code_lines[:8])
+    except Exception:
+        pass
+
+    # 3. Se treinamento insuficiente, estuda antes de gerar
+    if len(rules_lines) < 5:
+        try:
+            from tools.vector_store import search_relevant, save
+            from tools.web_research import web_search
+            console.print(f"  [yellow]→ Sem treinamento para {stack}+{db_type} — pesquisando...[/yellow]")
+            results = web_search(f"{stack} {db_type} CRUD example 2025", max_results=3)
+            if results:
+                content_web = "\n".join(str(r) for r in results[:2])[:1000]
+                save(f"auto:{stack}_{db_type}", content_web,
+                     topic=f"{stack}_{db_type}", source="auto_pre_generate")
+                rules_lines.append(f"Auto-studied: {stack} + {db_type}")
+        except Exception:
+            pass
+
+    return "\n".join(rules_lines)
+
+
 def generate_files(
     specs: list[FileSpec],
     stack: str,
@@ -681,6 +779,7 @@ def generate_files(
     generated = []
     entities = domain.get("entities", [])
     has_auth = domain.get("has_auth", False)
+    db_type  = domain.get("db_type", "postgres") or "postgres"
 
     # Contexto compartilhado (pequeno, para todos os arquivos)
     shared_ctx = (
@@ -780,24 +879,26 @@ def generate_files(
             training_ref = ""
             training_found = False
             try:
-                from tools.vector_store import search_relevant
-                _excl = ["docker","devops","kubernetes","github-actions","nginx","gitlab","cicd"]
-                _ent  = entity or (spec.entity if spec.entity else "")
-                _db   = db_type or ""
-                _ft   = spec.file_type or ""
-                _query = f"{stack} {_db} {_ft} {_ent}".strip()
-                _training = search_relevant(_query, limit=3, exclude_topics=_excl)
+                from tools.vector_store import search_for_stack
+                _ent = entity or (spec.entity if spec.entity else "")
+                _ft  = spec.file_type or ""
+                _training = search_for_stack(
+                    stack=stack,
+                    db_type=db_type or "postgres",
+                    entity=_ent,
+                    file_type=_ft,
+                    limit=5,
+                )
                 if _training and len(_training) > 80:
-                    # Remove header lines, keep code content
                     _lines = [l for l in _training.split("\n")
                               if not l.startswith("===") and not l.startswith("[search:")]
-                    training_ref = "\n".join(_lines[:30]).strip()
+                    training_ref = "\n".join(_lines[:40]).strip()
                     training_found = True
-                    console.print(f"  [dim]✓ Training: {len(training_ref)} chars para {_ft or _ent}[/dim]")
+                    console.print(f"  [dim]✓ Training: {len(training_ref)} chars [{_ft or _ent}][/dim]")
                 else:
-                    console.print(f"  [dim]○ Training vazio para: {_query[:40]}[/dim]")
+                    console.print(f"  [dim]○ Training vazio: {stack}+{db_type}+{_ft}[/dim]")
             except Exception as _te:
-                console.print(f"  [dim]⚠ Training error: {_te}[/dim]")
+                console.print(f"  [dim]⚠ Training: {_te}[/dim]")
 
             training_section = (
                 f"=== TRAINING REFERENCE (adapt for {entity or spec.entity or 'this entity'}) ===\n"
@@ -836,18 +937,19 @@ Write the COMPLETE content of "{spec.path}".
 Return ONLY a JSON object (no markdown around it):
 {{"path": "{spec.path}", "content": "full file content with \\n for newlines"}}"""
 
+            # ── Regras dinâmicas por banco detectado ─────────────────────────────
+            # Usa db_strategy + vector store — funciona para QUALQUER banco
+            db_rules = _build_db_rules(stack, db_type or "postgres")
+
             system = (
-                "You write production-ready source code.\n"
+                f"You write production-ready {stack} source code.\n"
                 "Return ONLY a raw JSON: {\"path\": \"...\", \"content\": \"...\"}\n"
-                "RULES:\n"
-                "- PartialType: ALWAYS from '@nestjs/mapped-types', never @nestjs/common\n"
-                "- class-validator (IsString,IsEmail,etc): from 'class-validator'\n"
-                "- TypeORM create: use 'this.repo.create(dto as any)' not 'this.repo.create(dto)'\n"
-                "- DTO imports: use './entity.dto' not './dto'\n"
-                "- JwtAuthGuard: from '../auth/jwt.guard' not 'guards/jwt-auth.guard'\n"
-                "- Service method: findOne(id) not findById(id)\n"
-                "- Module: import entity from './entity.entity' (same dir)\n"
-                "No markdown, no ``` around the JSON."
+                f"\n{db_rules}\n"
+                "UNIVERSAL RULES:\n"
+                "- PartialType: ALWAYS from '@nestjs/mapped-types', NEVER @nestjs/common\n"
+                "- class-validator decorators from 'class-validator'\n"
+                "- TypeScript strict: required→field!:Type optional→field?:Type\n"
+                "- No markdown, no ``` around the JSON."
             )
 
             resp = llm.chat(

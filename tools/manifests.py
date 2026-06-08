@@ -673,9 +673,20 @@ def get_manifest(stack: str, name: str, entities: list[str], has_auth: bool,
                  api_port: int = 3001, db_type: str = "postgres", **kwargs) -> list[FileSpec]:
     kwargs["db_type"] = db_type
     pkg = _pkg(name, stack)
-    # Detect database from context (passed in name/pkg for now, override via db_type kwarg)
+
+    # ── NestJS: roteia pelo banco detectado ───────────────────────────────
+    if stack == "nestjs":
+        from tools.db_strategy import get_strategy
+        strat = get_strategy(db_type)
+        if strat.is_nosql:
+            # MongoDB, Cassandra, etc → usa manifest Mongoose
+            return nestjs_mongoose_manifest(name, pkg, entities, has_auth)
+        else:
+            # PostgreSQL, MySQL, SQLite, MariaDB → usa manifest TypeORM
+            return nestjs_manifest(name, pkg, entities, has_auth, db_type=db_type)
+
+    # ── Outras stacks ─────────────────────────────────────────────────────
     dispatch = {
-        "nestjs":          lambda n,p,e,a: nestjs_manifest(n,p,e,a, db_type=kwargs.get("db_type","postgres")),
         "nestjs-mongo":    nestjs_mongoose_manifest,
         "spring-boot":     spring_boot_manifest,
         "python":          python_manifest,
@@ -687,7 +698,7 @@ def get_manifest(stack: str, name: str, entities: list[str], has_auth: bool,
     }
     fn = dispatch.get(stack)
     if not fn:
-        raise ValueError(f"Stack '{stack}' sem manifest. Disponíveis: {', '.join(dispatch)}")
+        raise ValueError(f"Stack '{stack}' sem manifest. Disponíveis: nestjs, {', '.join(dispatch)}")
     return fn(name, pkg, entities, has_auth)
 
 

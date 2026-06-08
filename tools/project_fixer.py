@@ -498,13 +498,20 @@ def fix_code_errors_with_llm(
                 for e in file_errors[:6]
             )
 
-            # Consulta training store para contexto adicional
+            # Consulta training com múltiplas queries para cada erro
             training_hint = ""
             try:
-                from tools.vector_store import search_relevant
-                hint = search_relevant(f"{stack} {error_list[:80]}", limit=2)
-                if hint:
-                    training_hint = f"\nTRAINING CONTEXT:\n{hint[:250]}\n"
+                from tools.vector_store import search_multi
+                queries = []
+                for e in file_errors[:3]:
+                    code = e.get("code","")
+                    msg  = e.get("message","")[:60]
+                    queries.append(f"{stack} {code} {msg} fix")
+                    queries.append(f"{stack} {code} solution TypeScript")
+                result = search_multi(queries[:4], limit_per_query=2,
+                                     exclude_topics=["docker","devops","cicd"])
+                if result and len(result) > 50:
+                    training_hint = f"\nTRAINING (how to fix these errors):\n{result[:400]}\n"
             except Exception:
                 pass
 

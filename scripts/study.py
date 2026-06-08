@@ -273,7 +273,21 @@ def save_code_patterns() -> int:
     from tools.vector_store import save
     # Import patterns from the old v4 patterns list condensed
     PATTERNS = [
-      {"key":"pattern:nestjs+mongodb:schema","topic":"nestjs-mongodb","content":"// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?"},
+      {"key":"pattern:nestjs+mongodb:schema","topic":"nestjs-mongodb","content":"""// book.schema.ts — CORRECT Mongoose NestJS pattern
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { HydratedDocument } from 'mongoose';  // HydratedDocument, NOT Document
+
+export type BookDocument = HydratedDocument<Book>;  // NOT Book & Document
+
+@Schema({ timestamps: true })
+export class Book {  // MUST have export keyword
+  @Prop({ required: true }) title!: string;   // required → ! (non-null assertion)
+  @Prop({ required: true }) author!: string;  // required → !
+  @Prop() description?: string;               // optional → ?
+  @Prop({ default: true }) isActive?: boolean; // optional with default → ?
+}
+export const BookSchema = SchemaFactory.createForClass(Book);
+// RULES: 1) export class 2) HydratedDocument not Document 3) required=! optional=?"""},
       {"key":"pattern:nestjs+mongodb:service","topic":"nestjs-mongodb","content":"// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}"},
       {"key":"pattern:nestjs+mongodb:module","topic":"nestjs-mongodb","content":"// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}"},
       {"key":"pattern:nestjs+mongodb:app-module","topic":"nestjs","content":"// app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI||'mongodb://localhost:27017/app'). ONLY add modules that exist. NOT JwtModule/Redis/Kafka unless requested."},

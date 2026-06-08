@@ -232,6 +232,10 @@ def _has_auth_requested(description: str) -> bool:
 
 
 def extract_domain(description: str, llm) -> dict:
+    # Remove qualquer contexto de pesquisa injetado — usa só a descrição original
+    if "[CONTEXT FROM RESEARCH]" in description:
+        description = description.split("[CONTEXT FROM RESEARCH]")[0].strip()
+
     # Normaliza a descrição (expande abreviações informais do usuário)
     try:
         from tools.user_profile import normalize_description, learn_from_description
