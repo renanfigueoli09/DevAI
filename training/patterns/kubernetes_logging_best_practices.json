@@ -2,31 +2,31 @@
   "search:Kubernetes Logging Best Practices:kubernetes logging": {
     "content": "- **CLI Commands**:\n  - `kubectl get pods`: Lists all pods in the current namespace.\n  - `kubectl logs <pod-name>`: Displays logs for a specific pod.\n  - `kubectl describe pod <pod-name>`: Provides detailed information about a pod.\n\n- **Latest Versions**: Check [Kubernetes Release Page](https://kubernetes.io/releases/) for the latest version.\n\n- **Key Config Options**:\n  - `replicas`: Specifies the number of pods to run.\n  - `image`: Defines the container image to use.\n  - `resources`: Allocates resources like CPU and memory.\n  - `volumeMounts`: Mounts volumes into containers.",
     "source": "web_search",
-    "updated_at": 1780923475.8909268
+    "updated_at": 1780930985.1927016
   },
   "search:Kubernetes Logging Best Practices:kubernetes logging_ex": {
     "content": "- Deploy fluentd as a DaemonSet using `kubectl apply -f fluentd.yaml`\n- Use the latest version of fluent/fluentd Docker image\n- Configure fluentd to collect container logs\n- Apply monitoring with kube-state-metrics for Kubernetes metrics\n- Ensure centralized logging setup with fluentd and daemonset",
     "source": "code_example",
-    "updated_at": 1780923478.0037277
+    "updated_at": 1780930987.2771869
   },
   "search:Kubernetes Logging Best Practices:logging in kubernetes": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For multiple containers in a pod, use `kubectl logs <pod-name> -c <container-name>`.\n- To follow log output in real-time, add `-f` flag: `kubectl logs -f <pod-name>`.\n- Use `kubectl get pods --all-namespaces` to list all pods across namespaces.\n- For advanced logging, consider using Fluentd or Fluent Bit with Elasticsearch for centralized log management.\n- Configure log rotation and retention policies in your logging stack.\n- Ensure that your logging solution is secure by encrypting sensitive data in logs.\n- Use `kubectl describe pod <pod-name>` to get detailed information about a pod's logs and events.",
     "source": "web_search",
-    "updated_at": 1780923480.125776
+    "updated_at": 1780930989.159001
   },
   "search:Kubernetes Logging Best Practices:logging in kubernetes_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl logs --tail=50 <pod-name>` to view the last 50 lines of logs.\n  - `kubectl logs -f <pod-name>` to follow log output in real-time.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Fluentd: v1.14\n  - Elasticsearch: v8.3\n  - Kibana: v8.3\n\n- **Key Config Options**:\n  - `fluent.conf` for Fluentd configuration.\n  - `elasticsearch.yml` for Elasticsearch settings.\n  - `kibana.yml` for Kibana configuration.\n  - `logrotate` for log management and rotation.\n\n- **Deployment Example**:\n  ```yaml\n  apiVersion: apps/v1\n  kind: DaemonSet\n  metadata:\n    name: fluentd-elasticsearch\n  spec:\n    selector:\n      matchLabels:\n        app: fluentd-elasticsearch\n    template:\n      metadata:\n        labels:\n          app: fluentd-elasticsearch\n      spec:\n        containers:\n        - name: fluentd-elasticsearch\n          image: fluent/fluentd-kubernetes-daemonset:v1.14-debian-elasticsearch8-2.5\n          resources:\n            limits:\n              memory: 200Mi\n            requests:\n              cpu: 100m\n              memory: 200Mi\n          volumeMounts:\n          - name: varlog\n            mountPath: /var/log\n          - name: varlibdockercontainers\n            mountPath: /var/lib/docker/containers\n            readOnly: true\n        volumes:\n        - name: varlog\n          hostPath:\n            path: /var/log\n        - name: varlibdockercontainers\n          hostPath:\n            path: /var/lib/docker/containers\n  ```",
     "source": "code_example",
-    "updated_at": 1780923482.3433857
+    "updated_at": 1780930991.431533
   },
   "search:Kubernetes Logging Best Practices:kube logs": {
     "content": "- **CLI Commands**: `kubectl get pods`, `kubectl logs <pod-name>`, `kubectl describe pod <pod-name>`\n- **Latest Version**: Kubernetes v1.27.3 (as of my last update)\n- **Key Config Options**:\n  - `apiVersion`: Specifies the version of the API.\n  - `kind`: Defines the type of resource.\n  - `metadata.name`: The name of the resource.\n  - `spec.containers`: Describes the containers in a pod.",
     "source": "web_search",
-    "updated_at": 1780923484.5433378
+    "updated_at": 1780930993.5481927
   },
   "search:Kubernetes Logging Best Practices:kube logs_ex": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>`\n  - `kubectl logs --tail=50 <pod-name>`\n\n- **Latest Versions**:\n  - Logging Operator: v2.3.0\n\n- **Key Config Options**:\n  - `app: nginx`\n  - `gcs-output-sample`\n  - `s3-output-example`",
     "source": "code_example",
-    "updated_at": 1780923486.1072097
+    "updated_at": 1780930996.0333252
   }
 }

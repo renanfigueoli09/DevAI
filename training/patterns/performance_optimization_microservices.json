@@ -2,16 +2,16 @@
   "search:performance-optimization-microservices:microservices performance opti": {
     "content": "- Use `kubectl top pod` to monitor resource usage in Kubernetes.\n- Implement load balancing strategies like round-robin, least connections, or IP hash for microservices.\n- Utilize caching mechanisms such as Redis or Memcached to reduce database load.\n- Employ gRPC over HTTP/2 for efficient communication between microservices.\n- Apply circuit breaker patterns using libraries like Hystrix or Resilience4j to prevent cascading failures.\n- Optimize database queries and use connection pooling to enhance performance.\n- Enable asynchronous processing with message brokers like Kafka or RabbitMQ.\n- Monitor service latency and throughput using tools like Prometheus and Grafana.\n- Implement automated scaling with Kubernetes Horizontal Pod Autoscaler (HPA).\n- Regularly update microservices dependencies to the latest versions for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780923628.4583597
+    "updated_at": 1780931134.3996644
   },
   "search:performance-optimization-microservices:high availability in microserv": {
     "content": "- Use Amazon DynamoDB for high availability and fault tolerance.\n- Implement circuit breakers using libraries like Hystrix or Resilience4j.\n- Configure load balancers such as AWS ELB or NGINX to distribute traffic evenly.\n- Utilize Kubernetes for orchestration, enabling self-healing and scaling.\n- Set up automated backups and disaster recovery plans.\n- Monitor service health with tools like Prometheus and Grafana.\n- Implement retries and exponential backoff strategies in client code.\n- Use distributed tracing systems like Jaeger or Zipkin for debugging.\n- Ensure data consistency across microservices using eventual consistency patterns.",
     "source": "web_search",
-    "updated_at": 1780923630.7452204
+    "updated_at": 1780931136.5854423
   },
   "search:performance-optimization-microservices:high availability in microserv_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/PramithaMJ/fully-completed-microservices-Java.git`\n  \n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Java: 17\n  - Spring Cloud: 2023.0.1\n\n- **Key Config Options**:\n  - `application.yml` for service configuration\n  - `@EnableDiscoveryClient` for service discovery\n  - `@LoadBalanced` for load balancing",
     "source": "code_example",
-    "updated_at": 1780923632.7576303
+    "updated_at": 1780931138.6071436
   }
 }
