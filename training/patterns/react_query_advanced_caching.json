@@ -2,16 +2,16 @@
   "search:react-query-advanced-caching:react query advanced caching s": {
     "content": "- **CLI Commands**: `npx create-react-app my-app` to create a new React app.\n- **Latest Version**: As of my last update, the latest stable version is 18.x.\n- **Key Config Options**:\n  - `react.config.js`: For customizing build configurations.\n  - Environment variables: `.env`, `.env.development`, `.env.production` for managing environment-specific settings.",
     "source": "web_search",
-    "updated_at": 1780929261.7147849
+    "updated_at": 1780935013.032546
   },
   "search:react-query-advanced-caching:react query advanced caching s_ex": {
     "content": "- **CLI Commands**: Not applicable directly to React Query.\n- **Latest Versions**: Ensure using the latest version of React Query for optimal features and security updates. Check [TanStack/query GitHub](https://github.com/TanStack/query) for the latest release.\n- **Key Config Options**:\n  - `queryCache`: Manages caching strategies, including `maxAge` (time in ms until data is considered stale).\n  - `refetchInterval`: Automatically refetches queries at specified intervals.\n  - `staleTime`: Defines how long a query result should be considered fresh before re-fetching.\n  - `invalidateQueries`: Allows invalidating specific queries to trigger refetching.",
     "source": "code_example",
-    "updated_at": 1780929264.2883587
+    "updated_at": 1780935015.1778188
   },
   "search:react-query-advanced-caching:react query cache invalidation": {
     "content": "- **CLI Commands**: `npx create-react-app my-app`\n- **Latest Version**: React 18.2.0\n- **Key Config Options**:\n  - `react-query` version: 3.39.2\n  - `useQuery` for fetching data\n  - `useMutation` for updating data\n  - `invalidateQueries` to manually invalidate cache",
     "source": "web_search",
-    "updated_at": 1780929266.2996974
+    "updated_at": 1780935017.4972255
   }
 }

@@ -2,7 +2,7 @@
   "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract": {
     "content": "- Use TypeScript's strong typing system to catch errors early.\n- Implement input validation using libraries like Zod or Yup.\n- Utilize environment variables for sensitive data, e.g., `dotenv`.\n- Employ HTTPS for all network communications.\n- Regularly update dependencies and use tools like Snyk for security audits.\n- Conduct code reviews focusing on security practices.\n- Use TypeScript's `noImplicitAny` flag to enforce type safety.\n- Implement rate limiting to prevent abuse.\n- Secure sensitive data using encryption techniques.",
     "source": "web_search",
-    "updated_at": 1780846183.9171448
+    "updated_at": 1780934574.292949
   },
   "search:Security Practices for TypeScript and Next.js Authentication:typescript security best pract_ex": {
     "content": "- Use `tsc --strict` to enforce strict type checking.\n- Update TypeScript to the latest version using `npm install typescript@latest`.\n- Configure ESLint with a secure ruleset, e.g., `eslint-config-airbnb-typescript`.\n- Implement input validation and sanitization for all user inputs.\n- Use HTTPS for all network communications.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Employ code reviews to catch security vulnerabilities early.\n- Utilize TypeScript's type system to prevent runtime errors.\n- Enable source maps in production for easier debugging.",

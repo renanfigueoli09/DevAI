@@ -2,21 +2,21 @@
   "search:Advanced Error Handling in .NET + PostgreSQL:exception management dotnet po": {
     "content": "- Install `EntityFrameworkCore.Exceptions.PostgreSQL` via NuGet: `dotnet add package EntityFrameworkCore.Exceptions.PostgreSQL --version 10.0.1`\n- Create a new folder named `Exceptions` in your project.\n- Define custom exceptions within the `Exceptions` namespace, e.g., `namespace ErrorManage { public class CustomException : Exception { public CustomException(string message) : base(message) { } } }`.\n- Configure PostgreSQL connection strings in your `appsettings.json`, e.g., `\"ConnectionStrings\": { \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;\" }`.\n- Use Entity Framework Core to interact with PostgreSQL, ensuring you have the necessary packages installed and configured.\n- Implement global exception handling in your .NET 6 Web API by creating a middleware or using built-in features like `app.UseExceptionHandler(\"/error\")`.",
     "source": "web_search",
-    "updated_at": 1780929234.3112624
+    "updated_at": 1780934990.3917637
   },
   "search:Advanced Error Handling in .NET + PostgreSQL:exception management dotnet po_ex": {
     "content": "- Install EntityFrameworkCore.Exceptions.PostgreSQL via NuGet: `dotnet add package EntityFrameworkCore.Exceptions.PostgreSQL`\n- Use middleware for global exception handling in .NET 6 Web API:\n  ```csharp\n  app.UseExceptionHandler(\"/error\");\n  ```\n- Configure PostgreSQL connection string in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;\"\n  }\n  ```\n- Apply migrations to your database:\n  ```bash\n  dotnet ef migrations add InitialCreate\n  dotnet ef database update\n  ```\n- Use `try-catch` blocks in your service methods for specific exception handling.",
     "source": "code_example",
-    "updated_at": 1780929236.265731
+    "updated_at": 1780934992.0379095
   },
   "search:Advanced Error Handling in .NET + PostgreSQL:database error handling strate": {
     "content": "- Use `knex.js` for database operations.\n- Implement custom error classes in Node.js to handle specific errors more precisely.\n- Catch and handle 'DatabaseError' in Django by implementing strategies tailored to the specific cause of the error.\n- Utilize `try-catch` blocks around database queries in Knex.js to catch and handle errors effectively.\n- Configure logging for database operations in Django using middleware or a logging library like `django-logging`.\n- Use `pg-promise` for PostgreSQL database interactions with built-in error handling capabilities.\n- Implement retry logic for transient database errors in Knex.js using the `retry-as-promised` package.\n- Monitor database performance and errors using tools like Prometheus and Grafana.\n- Regularly update dependencies to ensure compatibility and security, including `knex.js`, `pg-promise`, and other related packages.",
     "source": "web_search",
-    "updated_at": 1780929238.2320077
+    "updated_at": 1780934994.0291939
   },
   "search:Advanced Error Handling in .NET + PostgreSQL:database error handling strate_ex": {
     "content": "- Use `try-catch` blocks in SQL queries to handle exceptions.\n- Implement logging mechanisms to capture error details.\n- Regularly update database drivers and libraries to the latest version.\n- Configure connection pooling to manage database connections efficiently.\n- Utilize parameterized queries to prevent SQL injection attacks.\n- Monitor database performance using tools like Prometheus or Grafana.\n- Schedule regular backups of your database.\n- Use `ROLLBACK` statements to revert transactions in case of errors.\n- Implement retry logic for transient failures.\n- Analyze error logs to identify and fix common issues.",
     "source": "code_example",
-    "updated_at": 1780929239.9899976
+    "updated_at": 1780934995.8637595
   }
 }

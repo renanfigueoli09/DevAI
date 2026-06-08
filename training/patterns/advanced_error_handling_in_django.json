@@ -2,16 +2,16 @@
   "search:Advanced Error Handling in Django:django error handling": {
     "content": "- Use `get_object_or_404` for handling object not found errors.\n- Implement custom error handlers in Django views using `@exception_handler`.\n- Configure `DEBUG = False` in settings.py to hide sensitive information.\n- Set `ALLOWED_HOSTS` with your domain names to prevent HTTP Host header attacks.\n- Use middleware like `CommonMiddleware` for handling common HTTP errors.\n- Utilize Django's built-in logging framework for error tracking.\n- Implement try-except blocks within views for more granular control over exceptions.\n- Regularly update Django and its dependencies to benefit from security patches.",
     "source": "web_search",
-    "updated_at": 1780929453.691209
+    "updated_at": 1780935217.0265331
   },
   "search:Advanced Error Handling in Django:django error handling_ex": {
     "content": "- Use `python manage.py runserver` to start the Django development server.\n- For handling exceptions, use try-except blocks in your views.\n- Utilize Django's built-in middleware like `CommonMiddleware` for error handling.\n- Employ `get_list_or_404()` and `require_http_methods()` for shortcuts.\n- Configure DEBUG mode in settings.py to control error display.\n- Use logging for more sophisticated error tracking.\n- Implement custom 404 and 500 error views by creating templates named `404.html` and `500.html`.\n- Update Django to the latest version using `pip install --upgrade django`.",
     "source": "code_example",
-    "updated_at": 1780929455.920612
+    "updated_at": 1780935219.8654454
   },
   "search:Advanced Error Handling in Django:django exception handling best": {
     "content": "- Use `try-except` blocks in your views to catch exceptions.\n- Raise custom exceptions using `raise CustomException(\"Error message\")`.\n- Handle exceptions globally with middleware or decorators like `@exception_handler`.\n- Configure `DEBUG = False` and specify allowed hosts in `settings.py`.\n- Create custom error templates for 404, 500, etc., in the templates directory.\n- Use Django REST framework's built-in exception handling to manage errors gracefully.\n- Implement serializers for JSON responses to customize error messages.",
     "source": "web_search",
-    "updated_at": 1780929458.5029044
+    "updated_at": 1780935222.226687
   }
 }
