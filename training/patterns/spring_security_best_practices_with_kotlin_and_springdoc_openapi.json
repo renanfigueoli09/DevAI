@@ -37,6 +37,6 @@
   "search:Spring Security Best Practices with Kotlin and Springdoc-OpenAPI:jwt authentication in spring b_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Java 21 (as of Jan 5, 2026)\n  - Spring Boot 3.0 (as of May 5, 2026)\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for JWT secret and token expiration.\n  - Security configuration class to enable JWT authentication.\n  - UserDetailsService implementation for user authentication logic.\n  - Controller annotations like `@PreAuthorize` for securing endpoints.",
     "source": "code_example",
-    "updated_at": 1780922586.4478042
+    "updated_at": 1780930141.4924262
   }
 }

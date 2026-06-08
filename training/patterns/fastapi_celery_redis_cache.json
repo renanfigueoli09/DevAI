@@ -2,21 +2,21 @@
   "search:fastapi+celery-redis-cache:fastapi celery redis cache int": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Celery: 5.3.1\n  - Redis: 7.0.4\n\n- **Key Config Options**:\n  - Celery Broker URL: `redis://localhost:6379/0`\n  - Celery Result Backend: `redis://localhost:6379/0`\n  - FastAPI Dependency Injection: Use `Depends` for task submission.\n  - Redis Cache Keys: Define unique keys for caching data.",
     "source": "web_search",
-    "updated_at": 1780922588.7233193
+    "updated_at": 1780930143.440089
   },
   "search:fastapi+celery-redis-cache:fastapi celery redis cache int_ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up` to start all services.\n  - `celery -A app.celery worker --loglevel=info` to run Celery workers.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - Celery: 5.2.7\n  - Redis: 6.2.6\n\n- **Key Config Options**:\n  - `broker_url = 'redis://localhost:6379/0'` in `celery_config.py`\n  - `result_backend = 'redis://localhost:6379/1'` in `celery_config.py`\n  - Use Docker Compose to manage services.",
     "source": "code_example",
-    "updated_at": 1780922591.6853275
+    "updated_at": 1780930145.5606372
   },
   "search:fastapi+celery-redis-cache:fastapi celery with redis brok": {
     "content": "- **Install FastAPI, Celery, Redis**:\n  ```bash\n  pip install fastapi celery redis\n  ```\n\n- **Set up Redis**:\n  - Use Docker:\n    ```bash\n    docker run --name some-redis -d redis:latest\n    ```\n  - Or directly from the operating system.\n\n- **Configure Celery with Redis Broker**:\n  ```python\n  app = Celery('tasks', broker='redis://localhost:6379/0')\n  ```\n\n- **Create a FastAPI application**:\n  ```python\n  from fastapi import FastAPI\n\n  app = FastAPI()\n\n  @app.post(\"/task/\")\n  def create_task():\n      task.delay()\n      return {\"message\": \"Task created\"}\n  ```\n\n- **Define Celery tasks**:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def task():\n      # Task logic here\n      pass\n  ```\n\n- **Run Celery worker**:\n  ```bash\n  celery -A your_project_name worker --loglevel=info\n  ```\n\n- **Monitor Celery workers with Flower**:\n  - Install Flower:\n    ```bash\n    pip install flower\n    ```\n  - Run Flower:\n    ```bash\n    celery -A your_project_name flower\n    ```\n\n- **Key Config Options**:\n  - `broker_url`: Redis URL.\n  - `result_backend`: Redis URL for storing task results.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Celery: 5.2.7\n  - Redis: 6.2.6",
     "source": "web_search",
-    "updated_at": 1780922594.364257
+    "updated_at": 1780930147.6660888
   },
   "search:fastapi+celery-redis-cache:fastapi celery with redis brok_ex": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery flower`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.1\n  - Celery: 5.2.7\n  - Redis: 6.2.6\n\n- **Key Config Options**:\n  - Broker URL: `redis://localhost:6379/0`\n  - Result Backend: `redis://localhost:6379/0`\n  - Flower URL: `http://localhost:5555`",
     "source": "code_example",
-    "updated_at": 1780922596.5425022
+    "updated_at": 1780930150.1537385
   }
 }
