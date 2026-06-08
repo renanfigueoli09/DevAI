@@ -1,59 +1,107 @@
 {
-  "score": 5.5,
+  "score": 61.3,
   "results": [
     {
-      "topic": "nestjs-mongodb",
+      "topic": "Mongoose: required=! optional=?",
+      "study_key": "mongoose:_required=!_optional=?",
       "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 15
+      "passed": false
     },
     {
-      "topic": "nestjs-typeorm",
-      "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 4
+      "topic": "findOneBy n\u00e3o existe no Mongoose",
+      "study_key": "findoneby_n\u00e3o_existe_no_mongoose",
+      "pass_rate": 1.0,
+      "passed": true
     },
     {
-      "topic": "nestjs-auth",
+      "topic": "MongooseModule.forFeature (n\u00e3o TypeOrmModule)",
+      "study_key": "mongoosemodule.forfeature_(n\u00e3o_typeormmodule)",
       "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 5
+      "passed": false
     },
     {
-      "topic": "nestjs-core",
+      "topic": "app.module MongoDB = MongooseModule.forRoot",
+      "study_key": "app.module_mongodb_=_mongoosemodule.forroot",
       "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 4
+      "passed": false
     },
     {
-      "topic": "nlp",
-      "pass_rate": 0.222,
-      "score": 3.33,
-      "max": 15
+      "topic": "livros \u2192 Book (n\u00e3o Livros)",
+      "study_key": "livros_\u2192_book_(n\u00e3o_livros)",
+      "pass_rate": 1.0,
+      "passed": true
     },
     {
-      "topic": "docker",
-      "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 4
+      "topic": "docker config n\u00e3o cria src/docker/",
+      "study_key": "docker_patterns",
+      "pass_rate": 1.0,
+      "passed": true
     },
     {
-      "topic": "spring-mongodb",
-      "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 4
+      "topic": "usu\u00e1rios \u2260 auth (has_auth=false)",
+      "study_key": "usu\u00e1rios_\u2260_auth_(has_auth=false)",
+      "pass_rate": 1.0,
+      "passed": true
     },
     {
-      "topic": "fastapi",
+      "topic": "PartialType de @nestjs/mapped-types",
+      "study_key": "partialtype_de_@nestjs/mapped_types",
       "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 4
+      "passed": false
     },
     {
-      "topic": "common-errors",
+      "topic": "MongoDB healthcheck: mongosh ping",
+      "study_key": "mongodb_healthcheck:_mongosh_ping",
       "pass_rate": 0.0,
-      "score": 0.0,
-      "max": 6
+      "passed": false
+    },
+    {
+      "topic": "docker only = sem Redis/Kafka",
+      "study_key": "docker_patterns",
+      "pass_rate": 1.0,
+      "passed": true
+    },
+    {
+      "topic": "TS2307 module not found \u2192 criar arquivo",
+      "study_key": "ts2307_module_not_found_\u2192_criar_arquivo",
+      "pass_rate": 1.0,
+      "passed": true
+    },
+    {
+      "topic": "Spring MongoDB: @Document n\u00e3o @Entity",
+      "study_key": "spring_mongodb:_@document_n\u00e3o_@entity",
+      "pass_rate": 0.0,
+      "passed": false
+    },
+    {
+      "topic": "FastAPI: AsyncIOMotorClient (n\u00e3o pymongo)",
+      "study_key": "fastapi_mongodb",
+      "pass_rate": 0.0,
+      "passed": false
+    },
+    {
+      "topic": "schema.ts Mongoose strict mode",
+      "study_key": "schema.ts_mongoose_strict_mode",
+      "pass_rate": 0.857,
+      "passed": false
+    },
+    {
+      "topic": "service.ts Mongoose CRUD",
+      "study_key": "service.ts_mongoose_crud",
+      "pass_rate": 1.0,
+      "passed": true
+    },
+    {
+      "topic": "dto.ts PartialType correto",
+      "study_key": "dto.ts_partialtype_correto",
+      "pass_rate": 1.0,
+      "passed": true
+    },
+    {
+      "topic": "docker-compose MongoDB only",
+      "study_key": "docker_patterns",
+      "pass_rate": 1.0,
+      "passed": true
     }
   ]
 }
