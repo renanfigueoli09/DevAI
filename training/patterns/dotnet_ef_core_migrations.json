@@ -2,11 +2,11 @@
   "search:dotnet-ef-core-migrations:ef core migrations best practi": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core 6.x\n\n- **Key Config Options**:\n  - `UseSqlServer` for SQL Server\n  - `MigrationsDirectory` to specify the directory for migration files",
     "source": "web_search",
-    "updated_at": 1780956291.303175
+    "updated_at": 1780961167.7607403
   },
   "search:dotnet-ef-core-migrations:ef core migrations best practi_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of May 2024)\n\n- **Key Config Options**:\n  - `UseSqlServer` for SQL Server\n  - `MigrationsAssembly` to specify the assembly containing migrations\n  - `Scaffold-DbContext` for reverse engineering an existing database",
     "source": "code_example",
-    "updated_at": 1780956293.3990502
+    "updated_at": 1780961169.9083827
   }
 }
