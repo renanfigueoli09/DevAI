@@ -2,26 +2,26 @@
   "search:nextjs-prisma-authentication:prisma jwt authentication in n": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @prisma/client jsonwebtoken next-auth`\n\n- **Latest Versions**:\n  - Next.js: 20.3\n  - Prisma: 5.0\n  - JWT: 9.0\n\n- **Key Config Options**:\n  - In `next.config.js`, set up environment variables for JWT secret.\n  - Configure `next-auth` in `pages/api/auth/[...nextauth].js` with Prisma adapter and JWT strategy.\n  - Define routes in `pages` directory, use `[...slug]` for dynamic routing.",
     "source": "web_search",
-    "updated_at": 1780935355.45656
+    "updated_at": 1780938087.8412855
   },
   "search:nextjs-prisma-authentication:prisma jwt authentication in n_ex": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`\n  - `npm install prisma @prisma/client @next-auth/prisma-adapter`\n\n- **Latest Versions**:\n  - Prisma: v5.x\n  - NextAuth.js: v4.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data models.\n  - `pages/api/auth/[...nextauth].js`: Configure authentication options.",
     "source": "code_example",
-    "updated_at": 1780935357.343542
+    "updated_at": 1780938090.1354752
   },
   "search:nextjs+prisma-authentication:nextjs prisma authentication 2": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @auth/core prisma`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Auth.js: 2025.1\n  - Prisma: 4.6\n\n- **Key Config Options**:\n  - `AUTH_SECRET`: Set a secret for JWT signing.\n  - `DATABASE_URL`: Configure your database URL (e.g., PostgreSQL).\n  - `NEXTAUTH_URL`: Set the base URL of your application.\n  - `NEXTAUTH_PROVIDERS`: Define authentication providers like Google, GitHub, etc.",
     "source": "web_search",
-    "updated_at": 1780935359.307411
+    "updated_at": 1780938092.488329
   },
   "search:nextjs+prisma-authentication:nextjs prisma authentication 2_ex": {
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma generate`: Generates the Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Auth.js: V5\n  - Prisma: 4.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model.\n  - `next.config.js`: Configuration for Next.js project.\n  - `prisma/client`: Generated Prisma Client for database interactions.",
     "source": "code_example",
-    "updated_at": 1780935361.1887958
+    "updated_at": 1780938094.9864745
   },
   "search:nextjs+prisma-authentication:nextjs prisma jwt authenticati": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install prisma @prisma/client jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Prisma: 4.x\n  - JSON Web Tokens (JWT): 8.5.x\n\n- **Key Config Options**:\n  - `.env.local`: Define environment variables like `DATABASE_URL`, `JWT_SECRET`.\n  - `prisma/schema.prisma`: Define your data models and relationships.\n  - `pages/api/auth/[...nextauth].js`: Configure NextAuth.js with Prisma adapter.\n  - JWT Configuration: Set up JWT signing and verification in server-side code.",
     "source": "web_search",
-    "updated_at": 1780935363.72043
+    "updated_at": 1780938097.5273445
   }
 }

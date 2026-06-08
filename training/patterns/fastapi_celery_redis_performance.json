@@ -2,31 +2,31 @@
   "search:fastapi+celery-redis-performance:fastapi celery redis performan": {
     "content": "- **CLI Commands**:\n  - `celery -A your_project_name.celery worker --loglevel=info`\n  - `celery -A your_project_name.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.89.1\n  - Celery: 5.2.7\n  - Redis: 6.3.4\n\n- **Key Config Options**:\n  - `broker_url = 'redis://localhost:6379/0'`\n  - `result_backend = 'redis://localhost:6379/0'`\n  - `task_serializer = 'json'`\n  - `accept_content = ['json']`",
     "source": "web_search",
-    "updated_at": 1780935633.8967817
+    "updated_at": 1780938408.958336
   },
   "search:fastapi+celery-redis-performance:fastapi celery redis performan_ex": {
     "content": "- **GitHub Repository**: [GregaVrbancic/fastapi-celery](https://github.com/GregaVrbancic/fastapi-celery)\n- **FastAPI Version**: Latest stable version as of your query date.\n- **Celery Version**: Latest stable version as of your query date.\n- **Redis Version**: Latest stable version as of your query date.\n- **RabbitMQ**: For message broker, use the latest RabbitMQ server.\n- **Flower**: For monitoring Celery tasks, use the latest Flower version.\n- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n  - `docker-compose up` to run FastAPI, Celery, and Redis containers.\n- **Key Config Options**:\n  - In `app.py`, configure Celery with the broker URL (e.g., `broker_url = 'amqp://guest@localhost//'`).\n  - Configure Redis as the backend for Celery tasks.\n  - Set up Flower to monitor tasks at `http://localhost:5555`.\n\nThese points provide actionable steps and configurations for integrating FastAPI with Celery and Redis, optimizing performance through asynchronous task handling.",
     "source": "code_example",
-    "updated_at": 1780935635.6737149
+    "updated_at": 1780938411.1568086
   },
   "search:fastapi+celery-redis-performance:celery task management with fa": {
     "content": "- **CLI Commands**:\n  - `celery -A your_project_name.celery_app worker --loglevel=info`\n  - `celery -A your_project_name.celery_app beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - Celery: 5.2.7\n  - Redis: 6.2.6\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to Redis URL, e.g., `redis://localhost:6379/0`\n  - `CELERY_RESULT_BACKEND`: Set to Redis URL for task results, e.g., `redis://localhost:6379/1`\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types, e.g., `['json']`\n  - `CELERY_TASK_SERIALIZER`: Serializer for tasks, e.g., `'json'`\n  - `CELERY_RESULT_SERIALIZER`: Serializer for results, e.g., `'json'`",
     "source": "web_search",
-    "updated_at": 1780935637.5759373
+    "updated_at": 1780938413.520834
   },
   "search:fastapi+celery-redis-performance:celery task management with fa_ex": {
     "content": "- **GitHub Repository**: [davidmuraya/fastapi-queues](https://github.com/davidmuraya/fastapi-queues)\n- **Latest Versions**:\n  - FastAPI: `0.95.2`\n  - Celery: `5.3.1`\n  - Redis: `7.0.0`\n- **Key Config Options**:\n  - FastAPI: `app = FastAPI()`\n  - Celery: `celery_app = Celery('tasks', broker='redis://localhost:6379/0')`\n  - Redis: `redis-cli ping` should return `PONG`\n- **CLI Commands**:\n  - Install dependencies: `pip install fastapi celery redis`\n  - Start Redis server: `redis-server`\n  - Run Celery worker: `celery -A tasks.celery_app worker --loglevel=info`\n  - Test task execution: `curl \"http://127.0.0.1:8000/tasks/add?x=4&y=5\"`\n- **Docker Containerization**:\n  - Dockerfile for FastAPI: `FROM tiangolo/uvicorn-gunicorn-fastapi`\n  - Docker Compose file for Celery and Redis.\n- **Monitoring and Error Handling**:\n  - Use Flower for monitoring Celery tasks (`celery flower --broker=redis://localhost:6379/0`).\n  - Implement error handling in Celery tasks using `@app.task(bind=True, max_retries=3)`.\n\nThese steps provide a concrete guide for setting up and managing background task queues with FastAPI, Celery, and Redis.",
     "source": "code_example",
-    "updated_at": 1780935639.7230308
+    "updated_at": 1780938415.7348695
   },
   "search:fastapi+celery-redis-performance:redis caching strategies for f": {
     "content": "- Use `fastapi-cache2` for caching in FastAPI applications.\n- Install via pip: `pip install fastapi-cache2`\n- Configure Redis as the cache backend:\n  ```bash\n  REDIS_URL=redis://localhost:6379/0\n  ```\n- Set up caching in your FastAPI app:\n  ```python\n  from fastapi_cache import FastAPICache\n  from fastapi_cache.backends.redis import RedisBackend\n\n  @app.on_event(\"startup\")\n  async def startup():\n      redis = Redis.from_url(REDIS_URL)\n      FastAPICache.init(RedisBackend(redis), prefix=\"fastapi-cache\")\n  ```\n- Use decorators to cache endpoints:\n  ```python\n  from fastapi_cache.decorator import cache\n\n  @app.get(\"/items/{item_id}\")\n  @cache(expire=60)  # Cache for 60 seconds\n  async def read_item(item_id: int):\n      return {\"item_id\": item_id}\n  ```\n- Monitor and optimize caching:\n  - Use Redis monitoring tools to check cache hit/miss rates.\n  - Adjust `expire` times based on usage patterns.",
     "source": "web_search",
-    "updated_at": 1780935641.4944248
+    "updated_at": 1780938417.756621
   },
   "search:fastapi+celery-redis-performance:redis caching strategies for f_ex": {
     "content": "- Use `pip install fastapi[all] redis` to install FastAPI and Redis.\n- Implement caching using the `fastapi-cache` library:\n  ```bash\n  pip install fastapi-cache\n  ```\n- Configure Redis in your FastAPI app:\n  ```python\n  from fastapi_cache import FastAPICache\n  from fastapi_cache.backends.redis import RedisBackend\n  from fastapi_cache.decorator import cache\n\n  @app.on_event(\"startup\")\n  async def startup():\n      redis = Redis.from_url(\"redis://localhost:6379/0\")\n      FastAPICache.init(RedisBackend(redis), prefix=\"fastapi-cache\")\n\n  @app.get(\"/items/{item_id}\")\n  @cache(expire=60)\n  async def read_item(item_id: int):\n      return {\"item_id\": item_id}\n  ```\n- Key config options:\n  - `expire`: Time in seconds for cache expiration.\n  - `prefix`: Prefix for cache keys to avoid conflicts.\n- Use asynchronous code with FastAPI and Redis for better performance.",
     "source": "code_example",
-    "updated_at": 1780935643.2478905
+    "updated_at": 1780938419.8378458
   }
 }
