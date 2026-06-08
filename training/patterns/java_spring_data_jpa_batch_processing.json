@@ -2,21 +2,21 @@
   "search:java-spring-data-jpa-batch-processing:java spring data jpa batch pro": {
     "content": "- **Latest Version**: Java SE 17 LTS\n- **CLI Commands**:\n  - `java --version` to check the installed version.\n  - `javac --version` to check the compiler version.\n- **Key Config Options**:\n  - `-Xmx<size>`: Set maximum memory allocation pool for a Java Virtual Machine (JVM).\n  - `-Xms<size>`: Set initial memory allocation pool for a JVM.\n  - `-XX:+UseG1GC`: Use the G1 Garbage Collector.\n- **Batch Processing in Spring Data JPA**:\n  - Use `@Modifying` and `@Query` annotations with `nativeQuery = true` for batch updates.\n  - Configure `spring.jpa.properties.hibernate.jdbc.batch_size=50` in `application.properties`.\n  - Use `EntityManager.flush()` and `EntityManager.clear()` to manage transactions manually.",
     "source": "web_search",
-    "updated_at": 1780843875.0740347
+    "updated_at": 1780932097.6074514
   },
   "search:java-spring-data-jpa-batch-processing:java spring data jpa batch pro_ex": {
     "content": "- Use `@EnableBatchProcessing` in your Spring Boot application.\n- Configure batch processing properties in `application.properties` or `application.yml`.\n- Utilize `JpaItemWriter` for batch inserts.\n- Set `spring.jpa.properties.hibernate.jdbc.batch_size=50` for batch size.\n- Enable `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true`.\n- Use `@Transactional` on your repository methods for batch operations.\n- Ensure `EntityManagerFactory` is configured to support batch processing.",
     "source": "code_example",
-    "updated_at": 1780843876.9520807
+    "updated_at": 1780932099.8564
   },
   "search:java-spring-data-jpa-batch-processing:java spring data jpa large dat": {
     "content": "- **Latest Version**: As of my last update in October 2023, the latest stable version of Java is Java SE 21.\n  \n- **CLI Commands**:\n  - `java -version`: Checks the installed Java version.\n  - `javac -version`: Checks the installed Java compiler version.\n  - `java -jar your-application.jar`: Runs a JAR file.\n\n- **Key Config Options**:\n  - `-Xmx<size>`: Sets the maximum memory allocation pool for a Java Virtual Machine (JVM).\n  - `-Xms<size>`: Sets the initial memory allocation pool for a JVM.\n  - `-D<name>=<value>`: Sets system properties. For example, `-Dspring.profiles.active=dev`.\n\n- **Spring Data JPA**:\n  - `@Entity`: Marks a class as a JPA entity.\n  - `@Repository`: Indicates that an interface is a repository, allowing Spring to manage it.\n  - `@Query`: Allows for custom SQL queries in repositories.\n\n- **Large Data Handling**:\n  - Use pagination: `Pageable` and `PageRequest`.\n  - Batch processing: `@Modifying`, `@BatchSize`.\n  - Indexing: Ensure proper indexing on database columns to improve query performance.\n  - Caching: Utilize Spring Cache abstraction for caching frequently accessed data.\n\n- **Dependencies**:\n  - Add Spring Data JPA dependency in your `pom.xml` or `build.gradle`.\n\n```xml\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-data-jpa</artifactId>\n</dependency>\n```\n\n```groovy\nimplementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n```\n\n- **Performance Tuning**:\n  - Optimize database queries.\n  - Use connection pooling (e.g., HikariCP).\n  - Monitor and tune JVM settings.\n\nThese actionable facts should help a developer effectively manage large data handling in Java Spring Data JPA applications.",
     "source": "web_search",
-    "updated_at": 1780843878.9857557
+    "updated_at": 1780932102.290222
   },
   "search:java-spring-data-jpa-batch-processing:java spring data jpa large dat_ex": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Version**: Ensure you are using the latest version of Spring Boot and JPA, typically found on [Spring's official website](https://spring.io/projects/spring-boot).\n- **Key Config Options**:\n  - `spring.datasource.url`: Database connection URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for development.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.",
     "source": "code_example",
-    "updated_at": 1780843880.8059914
+    "updated_at": 1780932104.579015
   }
 }

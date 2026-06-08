@@ -2,11 +2,11 @@
   "search:spring+kotlin-springdoc-openapi:kotlin springdoc openapi docum": {
     "content": "- **Latest Version**: `springdoc-openapi-kotlin` version 2024.3.1\n- **Key Config Options**:\n  - `@OpenAPIDefinition`: Define global API metadata.\n  - `@Operation`: Describe individual endpoints.\n  - `@Parameter`: Document parameters.\n  - `@ApiResponse`: Define response details.\n- **CLI Commands**:\n  ```bash\n  # Add dependency to build.gradle.kts for Kotlin\n  implementation(\"org.springdoc:springdoc-openapi-kotlin:2024.3.1\")\n  \n  # Run Spring Boot application with OpenAPI documentation enabled\n  ./gradlew bootRun --args='--springdoc.api-docs.path=/v3/api-docs'\n  ```\n- **Documentation**: \n  - [SpringDoc GitHub](https://github.com/springdoc/springdoc-openapi)\n  - [OpenAPI 3 Documentation](https://swagger.io/docs/specification/overview/)\n- **License**: Apache 2.0",
     "source": "web_search",
-    "updated_at": 1780843860.2395635
+    "updated_at": 1780932079.9572713
   },
   "search:spring+kotlin-springdoc-openapi:kotlin springdoc openapi docum_ex": {
     "content": "- **CLI Commands**:\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Springdoc-openapi: 1.6.8 (as of my last update).\n  - Kotlin: 1.9.0 (latest stable version).\n\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Specifies the path for the API documentation.\n  - `springdoc.swagger-ui.path`: Sets the path for Swagger UI.\n  - `springdoc.api-docs.enabled`: Enables or disables the generation of API docs.",
     "source": "code_example",
-    "updated_at": 1780843862.2340534
+    "updated_at": 1780932082.2255976
   }
 }

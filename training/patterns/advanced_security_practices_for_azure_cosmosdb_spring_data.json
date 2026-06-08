@@ -2,31 +2,31 @@
   "search:Advanced Security Practices for Azure CosmosDB Spring Data:data encryption": {
     "content": "- **CLI Commands**:\n  - `openssl enc -aes-256-cbc -salt -in plaintext.txt -out encrypted.bin`\n  - `gpg --symmetric --cipher-algo AES256 plaintext.txt`\n\n- **Latest Versions**:\n  - OpenSSL: 3.0.0\n  - GPG: 2.3.4\n\n- **Key Config Options**:\n  - OpenSSL: `-aes-256-cbc`, `-salt`\n  - GPG: `--symmetric`, `--cipher-algo AES256`",
     "source": "web_search",
-    "updated_at": 1780844222.4847183
+    "updated_at": 1780932460.9196963
   },
   "search:Advanced Security Practices for Azure CosmosDB Spring Data:data encryption_ex": {
     "content": "- **CLI Commands**: Use `openssl enc -aes-256-cbc -salt` for encryption and `openssl enc -d -aes-256-cbc -in encryptedfile.enc` for decryption.\n- **Latest Versions**: Ensure using OpenSSL 3.x or later for the best security features.\n- **Key Config Options**:\n  - `-aes-256-cbc`: Specifies AES-256 in CBC mode.\n  - `-salt`: Adds a salt to the encryption process for better security.\n  - `-in encryptedfile.enc`: Specifies the input file for decryption.",
     "source": "code_example",
-    "updated_at": 1780844224.5823107
+    "updated_at": 1780932463.376873
   },
   "search:Advanced Security Practices for Azure CosmosDB Spring Data:access control policies": {
     "content": "- **CLI Commands**:\n  - `gcloud projects create <PROJECT_ID>`\n  - `gcloud iam roles create <ROLE_NAME> --file=<POLICY_FILE>.json`\n  - `gcloud projects add-iam-policy-binding <PROJECT_ID> --member=\"user:<EMAIL>\" --role=\"<ROLE_NAME>\"`\n  \n- **Latest Versions**:\n  - Google Cloud SDK: v380.0.0\n  - Apigee API Platform: v1.25\n  \n- **Key Config Options**:\n  - `POLICY_FILE.json` should define the access rules.\n  - `<EMAIL>` is the user's email address.\n  - `<ROLE_NAME>` specifies the role to assign, e.g., `roles/viewer`.",
     "source": "web_search",
-    "updated_at": 1780844226.7682495
+    "updated_at": 1780932465.7849333
   },
   "search:Advanced Security Practices for Azure CosmosDB Spring Data:access control policies_ex": {
     "content": "- **CLI Commands:** Use `aws iam create-policy` to create an access control policy.\n- **Latest Versions:** Ensure you are using the latest version of AWS CLI and IAM services for compatibility.\n- **Key Config Options:** Include `Version`, `Statement`, `Effect`, `Action`, and `Resource` in your policy document.",
     "source": "code_example",
-    "updated_at": 1780844229.1862495
+    "updated_at": 1780932467.8086874
   },
   "search:Advanced Security Practices for Azure CosmosDB Spring Data:audit logging and monitoring": {
     "content": "- **Microsoft Audit Logging**: Use `Get-AuditLog` cmdlet to retrieve audit logs.\n- **Datadog Audit Logging**: Enable logging through Datadog Agent configuration with `datadog.yaml`.\n- **Immuta Audit Logging Policy**: Define policies in Immuta's policy editor under \"Audit Logs.\"\n- **Sonar Audit Logging Best Practices**: Implement logging at key points using frameworks like SLF4J or Log4j.\n- **Latest Versions**:\n  - Microsoft: Check for updates via PowerShell with `Get-Module -ListAvailable`.\n  - Datadog: Update through the Datadog Agent installer.\n  - Immuta: Refer to Immuta's release notes on their website.\n  - SonarQube: Use Maven or Gradle commands like `mvn clean install` or `gradle build`.",
     "source": "web_search",
-    "updated_at": 1780844231.5757284
+    "updated_at": 1780932469.9852455
   },
   "search:Advanced Security Practices for Azure CosmosDB Spring Data:audit logging and monitoring_ex": {
     "content": "- **CLI Commands**: Use `auditctl` to manage audit rules.\n- **Latest Versions**: Ensure using the latest version of logging frameworks like SLF4J and Logback for Java applications.\n- **Key Config Options**:\n  - Set log levels in configuration files (e.g., `logback.xml`).\n  - Configure log rotation policies to prevent log file size from growing indefinitely.",
     "source": "code_example",
-    "updated_at": 1780844233.6432583
+    "updated_at": 1780932472.4033682
   }
 }
