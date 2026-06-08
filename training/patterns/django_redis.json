@@ -2,16 +2,16 @@
   "search:django+redis:django redis caching 2025": {
     "content": "- **CLI Commands**:\n  - `pip install django-redis`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis-py: 4.5.4\n  - Django-Redis: 5.1.0\n\n- **Key Config Options**:\n  - `CACHES = {\n        \"default\": {\n            \"BACKEND\": \"django_redis.cache.RedisCache\",\n            \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n            \"OPTIONS\": {\n                \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            }\n        }\n    }`\n  - `CACHES['default']['LOCATION']`: Redis server URL\n  - `CACHES['default']['OPTIONS']['CLIENT_CLASS']`: Client class for connecting to Redis",
     "source": "web_search",
-    "updated_at": 1780936062.2228289
+    "updated_at": 1780938853.1694393
   },
   "search:django+redis:django redis session managemen": {
     "content": "- **CLI Commands**:\n  - `pip install django-redis-sessions-fork`\n  - `python setup.py install`\n\n- **Latest Versions**:\n  - Not specified in the provided text.\n\n- **Key Config Options**:\n  - Set session engine to `redis_sessions_fork.session`",
     "source": "web_search",
-    "updated_at": 1780936066.144932
+    "updated_at": 1780938855.3719547
   },
   "search:django+redis:django redis session managemen_ex": {
     "content": "- **CLI Commands**:\n  - `pip install django-redis`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.0\n  - django-redis: 5.3\n\n- **Key Config Options**:\n  - `SESSION_ENGINE = 'django.contrib.sessions.backends.cache'`\n  - `SESSION_CACHE_ALIAS = 'default'`\n  - `CACHES = {\n      'default': {\n          'BACKEND': 'django_redis.cache.RedisCache',\n          'LOCATION': 'redis://127.0.0.1:6379/1',\n          'OPTIONS': {\n              'CLIENT_CLASS': 'django_redis.client.DefaultClient',\n          }\n      }\n  }`\n  - `SESSION_COOKIE_AGE = 1800` (30 minutes)\n  - `SESSION_EXPIRE_AT_BROWSER_CLOSE = True`",
     "source": "code_example",
-    "updated_at": 1780936069.1668553
+    "updated_at": 1780938857.5240679
   }
 }

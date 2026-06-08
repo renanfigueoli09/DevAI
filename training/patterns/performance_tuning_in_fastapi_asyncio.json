@@ -2,21 +2,21 @@
   "search:Performance Tuning in FastAPI Asyncio:asyncio optimization technique": {
     "content": "- Use `asyncio.gather()` for concurrent execution of multiple tasks.\n- Employ `asyncio.create_task()` for running coroutines concurrently.\n- Optimize event loop with `asyncio.run()`.\n- Integrate thread pools using `concurrent.futures.ThreadPoolExecutor` for CPU-bound tasks.\n- Implement robust error handling with `try-except` blocks in asynchronous code.\n- Use `asyncio.sleep(0)` to yield control back to the event loop.\n- Monitor performance with tools like `asyncio.run()` and `asyncio.create_task()`.\n- Keep Python and asyncio libraries up-to-date for latest features and optimizations.",
     "source": "web_search",
-    "updated_at": 1780936072.1147027
+    "updated_at": 1780938859.7002494
   },
   "search:Performance Tuning in FastAPI Asyncio:asyncio optimization technique_ex": {
     "content": "- Use `asyncio.run()` to run the main entry point of your asyncio application.\n- For FastAPI, use `asyncpg` for database operations instead of synchronous libraries.\n- Configure `asyncpg` with a connection pool size that matches your expected load.\n- Use `async_sessionmaker` from SQLAlchemy for managing async sessions efficiently.\n- Set `keepalives_idle`, `keepalives_interval`, and `keepalives_count` in PostgreSQL to optimize network connections.\n- Monitor performance using tools like `asyncio.run()` with profiling enabled.\n- Update libraries regularly, especially `asyncpg` and `fastapi`, to benefit from performance improvements and security patches.",
     "source": "code_example",
-    "updated_at": 1780936075.0640423
+    "updated_at": 1780938861.8301628
   },
   "search:Performance Tuning in FastAPI Asyncio:database performance tuning": {
     "content": "- Use `EXPLAIN` to analyze query performance.\n- Update statistics with `UPDATE STATISTICS table_name`.\n- Create indexes using `CREATE INDEX index_name ON table_name(column_name)`.\n- Monitor resource usage with `top`, `htop`, or `iostat`.\n- Optimize queries by rewriting them for better performance.\n- Use `innodb_buffer_pool_size` in MySQL for better memory allocation.\n- Enable query caching if applicable.\n- Regularly analyze and optimize database schema.",
     "source": "web_search",
-    "updated_at": 1780936077.9425685
+    "updated_at": 1780938864.485114
   },
   "search:Performance Tuning in FastAPI Asyncio:database performance tuning_ex": {
     "content": "- **CLI Commands**: Use `VACUUM`, `ANALYZE`, and `REINDEX` to optimize PostgreSQL performance.\n- **Latest Versions**: Ensure using the latest version of PostgreSQL for optimal features and bug fixes.\n- **Key Config Options**:\n  - `shared_buffers`: Adjust based on available memory, typically set to 25% to 50% of total RAM.\n  - `autovacuum_max_workers`: Balance vacuum performance with regular database operations.\n  - `maintenance_work_mem`: Increase for faster VACUUM and ANALYZE operations.",
     "source": "code_example",
-    "updated_at": 1780936080.9903276
+    "updated_at": 1780938867.7681918
   }
 }

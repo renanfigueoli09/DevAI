@@ -2,21 +2,21 @@
   "search:Advanced Testing Techniques for Django+Redis-Cache:django redis cache testing": {
     "content": "- Install `django-redis` using pip: `pip install django-redis`\n- Ensure Redis server is running locally or use a remote instance.\n- Configure Django settings to use Redis as the cache backend:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Install `hiredis-py` for improved performance:\n  ```bash\n  pip install hiredis\n  ```\n- Use the following test function to verify Redis cache functionality:\n  ```python\n  from django.core.cache import cache\n\n  def test_redis_cache():\n      cache.set('test_key', 'test_value')\n      assert cache.get('test_key') == 'test_value'\n  ```\n- Run tests using Django's testing framework:\n  ```bash\n  python manage.py test\n  ```\n- Ensure Redis server is accessible at `127.0.0.1:6379` or update the `LOCATION` setting accordingly.\n- Use GitHub Actions for continuous integration and deployment, including running tests.",
     "source": "web_search",
-    "updated_at": 1780936261.9806526
+    "updated_at": 1780939053.2077324
   },
   "search:Advanced Testing Techniques for Django+Redis-Cache:django redis cache testing_ex": {
     "content": "- Install `django-redis` using pip: `pip install django-redis`\n- Add `'django_redis.cache.RedisCache'` to your `CACHES` setting in Django.\n- Configure Redis URL in settings.py, e.g., `CACHES = {'default': {'BACKEND': 'django_redis.cache.RedisCache', 'LOCATION': 'redis://127.0.0.1:6379/1'}}`\n- Use `@cache_page` decorator for caching views.\n- For testing, use `pytest-django` and mock Redis with `redis-mock`.\n- Run tests with: `pytest --cov=your_project_name`\n- Ensure Docker Compose includes Redis service:\n  ```yaml\n  services:\n    redis:\n      image: \"redis:latest\"\n      ports:\n        - \"6379:6379\"\n  ```\n- Start Docker containers with: `docker-compose up`",
     "source": "code_example",
-    "updated_at": 1780936264.053726
+    "updated_at": 1780939055.9466841
   },
   "search:Advanced Testing Techniques for Django+Redis-Cache:unit testing with django and r": {
     "content": "- Use `pytest` for writing and running tests in Django.\n- Install `redis-py` for Redis integration.\n- Mock Redis connections using `unittest.mock`.\n- Configure Django settings to use a test database.\n- Run tests with `python manage.py test`.\n- Utilize `pytest-django` for enhanced testing capabilities.\n- Key config options include `CACHES` in `settings.py`.\n- Ensure Redis server is running before executing tests.",
     "source": "web_search",
-    "updated_at": 1780936266.0853264
+    "updated_at": 1780939059.1803322
   },
   "search:Advanced Testing Techniques for Django+Redis-Cache:unit testing with django and r_ex": {
     "content": "- Use `python manage.py test` to run unit tests in Django.\n- Ensure Redis is installed and running locally or use Docker for a consistent environment.\n- Configure Redis settings in your Django project's `settings.py`.\n- Utilize the `redis-py` library for interacting with Redis in your Django application.\n- Write tests using Python’s `unittest` framework, focusing on isolated components like functions, methods, or classes.\n- For integration testing with Redis, mock Redis calls to avoid actual network operations during tests.",
     "source": "code_example",
-    "updated_at": 1780936268.130275
+    "updated_at": 1780939061.6142325
   }
 }
