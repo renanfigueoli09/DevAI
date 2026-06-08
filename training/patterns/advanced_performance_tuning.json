@@ -2,51 +2,51 @@
   "search:Advanced Performance Tuning:kubernetes logging and monitor": {
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>`\n  - `kubectl get pods --all-namespaces`\n  - `kubectl describe pod <pod-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.3\n  - Loki: v2.4.0\n  - Prometheus: v2.40.0\n  - Grafana: v9.1.6\n\n- **Key Config Options**:\n  - Loki: `server.wal-dir`, `schema_config.config`\n  - Prometheus: `scrape_configs`, `rule_files`\n  - Grafana: `datasources`, `dashboards`",
     "source": "web_search",
-    "updated_at": 1780929766.9765017
+    "updated_at": 1780935540.6616483
   },
   "search:Advanced Performance Tuning:kubernetes logging and monitor_ex": {
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For advanced logging, consider Fluent Bit as it supports Kubernetes natively and is lightweight.\n- To deploy Fluent Bit in a Kubernetes cluster, use the Helm chart: `helm install fluent-bit bitnami/fluent-bit`.\n- Key configuration options for Fluent Bit include `flush`, `logstash_format`, and `output`.\n- For monitoring, Prometheus Operator can be used to set up monitoring with minimal configuration.\n- Deploy Prometheus using Helm: `helm install prometheus stable/prometheus-operator`.\n- Key configuration options for Prometheus include `serviceMonitorSelector` and `podMonitorSelector`.\n- Grafana can be integrated with Prometheus for visualization. Install it via Helm: `helm install grafana stable/grafana`.\n- Key configuration options for Grafana include `adminPassword`, `datasource`, and `dashboard`.\n- Use `kubectl top node` to monitor resource usage of nodes.\n- For cost optimization, consider using Kubernetes autoscaling based on CPU or memory metrics.",
     "source": "code_example",
-    "updated_at": 1780929768.7231843
+    "updated_at": 1780935542.3145735
   },
   "search:Advanced Performance Tuning:fastapi asyncio websockets per": {
     "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install latest versions of FastAPI and Uvicorn using pip:\n  ```bash\n  pip install fastapi uvicorn --upgrade\n  ```\n- Configure Uvicorn with multiple workers for scaling:\n  ```bash\n  uvicorn main:app --workers 4\n  ```\n- Use Redis for connection management and multi-worker scaling.\n- Implement async generators for efficient WebSocket communication.\n- Monitor performance using tools like `asyncio` and `uvicorn`.\n- Adjust worker class in Uvicorn configuration for better performance:\n  ```bash\n  uvicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker\n  ```\n- Enable keep-alive connections to improve WebSocket performance.\n- Use connection pooling with Redis for efficient management of WebSocket connections.",
     "source": "web_search",
-    "updated_at": 1780929770.500705
+    "updated_at": 1780935544.1578338
   },
   "search:Advanced Performance Tuning:fastapi asyncio websockets per_ex": {
     "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For WebSocket performance, consider using `websockets` library alongside FastAPI.\n- Key config options in `uvicorn` include `--host`, `--port`, and `--reload` for development.\n- To handle multiple connections efficiently, use an asynchronous event loop with `asyncio`.\n- Ensure your application is designed to handle concurrent connections by using `async/await`.\n- For production environments, consider deploying FastAPI applications on platforms like AWS Lambda or Docker containers.",
     "source": "code_example",
-    "updated_at": 1780929772.368331
+    "updated_at": 1780935545.9407964
   },
   "search:Advanced Performance Tuning:spring kotlin jpa performance ": {
     "content": "- Use `./gradlew build` to build your project.\n- Ensure Kotlin version is at least 1.5.31 for best compatibility.\n- Update Spring Boot and JPA dependencies to their latest versions in `build.gradle.kts`.\n- Configure `application.properties` or `application.yml` with necessary JPA properties like:\n  ```properties\n  spring.jpa.hibernate.ddl-auto=update\n  spring.jpa.show-sql=true\n  ```\n- Use `@EntityScan` to specify the package where your JPA entities are located.\n- Implement repository interfaces extending `JpaRepository` for database operations.\n- Consider using Spring Data JPA's query derivation or named queries for efficient data retrieval.\n- Optimize entity classes by avoiding lazy loading unless necessary and using `@BatchSize` for collections.\n- Monitor application performance with tools like Spring Boot Actuator and adjust configurations accordingly.",
     "source": "web_search",
-    "updated_at": 1780929774.465164
+    "updated_at": 1780935547.7657173
   },
   "search:Advanced Performance Tuning:spring kotlin jpa performance _ex": {
     "content": "- Use `./gradlew build` to compile and run your Kotlin Spring Boot project.\n- Ensure you are using the latest stable versions of Kotlin, Spring Boot, and JPA.\n- Configure database connection properties in `application.properties` or `application.yml`.\n- Enable query caching with `spring.jpa.properties.hibernate.cache.use_query_cache=true`.\n- Use `@Query` annotations for custom JPQL queries to improve performance.\n- Implement pagination using `Pageable` in your repository methods.\n- Optimize entity relationships by using eager fetching where necessary.\n- Configure Hibernate's second-level cache for entities and collections.\n- Monitor application performance with tools like Spring Boot Actuator.",
     "source": "code_example",
-    "updated_at": 1780929776.6690297
+    "updated_at": 1780935549.7350035
   },
   "search:Advanced Performance Tuning:python fastapi authentication ": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`: Creates a new FastAPI project.\n  - `uvicorn myapp.main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `JWT_SECRET_KEY`: Secret key for JWT token generation.\n  - `ALGORITHM`: Algorithm used for encoding/decoding JWT tokens (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiry time for access tokens.",
     "source": "web_search",
-    "updated_at": 1780929778.6202593
+    "updated_at": 1780935551.5628717
   },
   "search:Advanced Performance Tuning:python fastapi authentication _ex": {
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For JWT authentication, use `pip install python-jose[cryptography]`.\n- Implement stateless tokens for improved performance.\n- Configure the secret key in your environment variables or `.env` file.\n- Use a cache system like Redis for token validation checks to reduce latency.\n- Apply route-scoped guards to limit authentication scope.\n- Monitor and optimize your API using tools like FastAPI's built-in metrics endpoint.\n- Regularly update FastAPI and its dependencies to benefit from performance improvements and security patches.",
     "source": "code_example",
-    "updated_at": 1780929780.4788272
+    "updated_at": 1780935553.5912213
   },
   "search:Advanced Performance Tuning:nodejs sequelize performance t": {
     "content": "- **CLI Commands**:\n  - `sequelize-cli model:create --name User`\n  - `sequelize-cli db:migrate`\n\n- **Latest Versions**:\n  - Sequelize ORM: v7.x\n  - Node.js: v18.x\n\n- **Key Config Options**:\n  - `pool`: Configure connection pool settings.\n  - `logging`: Enable or disable query logging.\n  - `define`: Set default options for model definitions.",
     "source": "web_search",
-    "updated_at": 1780929782.3098223
+    "updated_at": 1780935555.4465463
   },
   "search:Advanced Performance Tuning:nodejs sequelize performance t_ex": {
     "content": "- Use `npx sequelize-cli init` to initialize Sequelize.\n- Update Sequelize to the latest version using `npm update sequelize`.\n- Configure database connection in `config/config.json`.\n- Use `sequelize model:create --name User --attributes username:string,email:string` to create a new model.\n- Optimize queries with `.include` for eager loading and `.where` for filtering.\n- Utilize `async/await` for cleaner async code: `const users = await User.findAll();`.\n- Enable logging by setting `logging: console.log` in config to debug queries.\n- Use indexes on frequently queried columns to improve performance.\n- Regularly run migrations with `npx sequelize-cli db:migrate`.",
     "source": "code_example",
-    "updated_at": 1780929784.1325026
+    "updated_at": 1780935557.4349554
   }
 }

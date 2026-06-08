@@ -2,11 +2,11 @@
   "search:dotnet+ef-core:entity framework core migratio": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0 (as of my last update in October 2023)\n  - Entity Framework Extensions: Check the official website for the latest version.\n\n- **Key Config Options**:\n  - Connection String: Define your database connection string in `appsettings.json`.\n  - Migration History Table: Customize the name and schema of the migration history table using `MigrationsHistoryTable` option.\n  - Migrations Folder: Specify a custom folder for migrations using `Scaffold-DbContext` or `Add-Migration`.",
     "source": "web_search",
-    "updated_at": 1780930101.2893302
+    "updated_at": 1780935869.1662555
   },
   "search:dotnet+ef-core:entity framework core migratio_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - Entity Framework Core: [Check latest version on NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)\n  - .NET SDK: [Check latest version on Microsoft website](https://dotnet.microsoft.com/download)\n\n- **Key Config Options**:\n  - `DbContext` class configuration\n  - Connection string in `appsettings.json`\n  - Migration history table (`__EFMigrationsHistory`)",
     "source": "code_example",
-    "updated_at": 1780930103.7973049
+    "updated_at": 1780935871.3379364
   }
 }

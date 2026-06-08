@@ -2,21 +2,21 @@
   "search:dotnet+kafka-streams:dotnet kafka streams processin": {
     "content": "- Use `dotnet add package Confluent.Kafka` to install the latest version of the Kafka client.\n- For Kafka Streams, consider using Streamiz for .NET as it provides a comprehensive stream processing library.\n- Key config options include `BootstrapServers`, `GroupId`, and `AutoOffsetReset`.\n- To run a Kafka Streams application, use the command: `dotnet run --project YourProjectName.csproj`.\n- Ensure your Kafka cluster is up and running with the latest version (e.g., 3.0 or later).\n- For high-throughput applications, consider using Task Parallel Library (TPL) for parallel processing.\n- Materialized views can be implemented using Kafka Streams or ksqlDB for real-time data transformations.\n- Always check the official documentation for the most accurate and up-to-date information: [Confluent Documentation](https://docs.confluent.io/platform/current/dotnet/overview.html).",
     "source": "web_search",
-    "updated_at": 1780930076.8837576
+    "updated_at": 1780935846.3998914
   },
   "search:dotnet+kafka-streams:dotnet kafka streams processin_ex": {
     "content": "- **GitHub Repository**: [LGouellec/streamiz](https://github.com/LGouellec/streamiz)\n- **Latest Version**: Not specified in the search results.\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers to connect to.\n  - `group.id`: Consumer group ID for consumer applications.\n  - `auto.offset.reset`: Behavior when there is no initial offset or current offset does not exist anymore (e.g., `earliest`, `latest`).\n- **CLI Commands**:\n  - To produce messages: `dotnet run --project Streamiz.Kafka.Streams.Examples.Producer`\n  - To consume messages: `dotnet run --project Streamiz.Kafka.Streams.Examples.Consumer`\n\nThese points provide a concise overview of actionable facts for developers working with .NET and Kafka Streams.",
     "source": "code_example",
-    "updated_at": 1780930079.3699672
+    "updated_at": 1780935848.8383985
   },
   "search:dotnet+kafka-streams:kafka streams with .net exampl": {
     "content": "- **Latest Version**: Confluent.Kafka 2.5.0\n- **CLI Commands**:\n  - `dotnet add package Confluent.Kafka --version 2.5.0`\n  - `dotnet new console -n KafkaStreamApp`\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `group.id`: Consumer group ID for consumer applications.\n  - `auto.offset.reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n- **Example Usage**:\n  ```csharp\n  using Confluent.Kafka;\n\n  var config = new ProducerConfig { BootstrapServers = \"localhost:9092\" };\n  using (var producer = new ProducerBuilder<Null, string>(config).Build())\n  {\n      try\n      {\n          var result = await producer.ProduceAsync(\"my-topic\", new Message<Null, string> { Value = \"Hello World!\" });\n          Console.WriteLine($\"Message sent to topic: {result.TopicPartitionOffset}\");\n      }\n      catch (KafkaException e)\n      {\n          Console.WriteLine($\"Delivery failed: {e.Error.Reason}\");\n      }\n  }\n  ```",
     "source": "web_search",
-    "updated_at": 1780930082.212092
+    "updated_at": 1780935851.2305803
   },
   "search:dotnet+kafka-streams:kafka streams with .net exampl_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic example-topic`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - .NET Core: 7.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `group.id`: Consumer group ID for Kafka Streams.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n\nThese actionable facts provide a quick reference for setting up and running Apache Kafka Streams with .NET.",
     "source": "code_example",
-    "updated_at": 1780930084.4519486
+    "updated_at": 1780935853.4599712
   }
 }

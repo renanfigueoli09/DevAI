@@ -2,36 +2,36 @@
   "search:code-quality:code review checklist backend ": {
     "content": "- Use `git diff` to compare changes between commits.\n- Ensure all code compiles without warnings using `mvn clean install`.\n- For Flutter, use `flutter analyze` for static analysis.\n- Update dependencies with `npm update` or `yarn upgrade`.\n- Configure environment variables in `.env` files.\n- Use `docker-compose up -d` to start services in Docker.\n- Run tests with `pytest` for Python projects.\n- Ensure code coverage meets project standards using `coverage.py`.",
     "source": "web_search",
-    "updated_at": 1780930007.9440918
+    "updated_at": 1780935769.0178814
   },
   "search:code-quality:code review checklist backend _ex": {
     "content": "- Use `git diff` to compare changes between commits.\n- Run `npm audit fix` to update dependencies and fix known vulnerabilities.\n- Utilize `eslint --fix` for automatic code formatting and linting corrections.\n- Employ `jest` or `mocha` for unit testing, ensuring all tests pass before merging.\n- Use `docker-compose up -d` to start services in a Docker environment.\n- Implement `terraform apply` to manage infrastructure as code changes.\n- Configure `.editorconfig` for consistent coding styles across editors.\n- Utilize `cypress run` for end-to-end testing of web applications.\n- Apply `prettier --write` to format code according to project standards.\n- Ensure `npm outdated` shows no outdated packages before merging.",
     "source": "code_example",
-    "updated_at": 1780930010.2292106
+    "updated_at": 1780935771.0181699
   },
   "search:code-quality:anti-patterns to avoid backend": {
     "content": "- **CLI Commands**: Use `git commit --amend` to correct the last commit.\n- **Latest Versions**: Check for the latest Node.js version using `nvm install node --lts`.\n- **Key Config Options**: For Express.js, use `app.set('trust proxy', true)` in production environments.\n- **CLI Commands**: Use `npm outdated` to check for outdated packages and `npm update` to update them.\n- **Latest Versions**: Ensure your database driver is up-to-date by checking the official documentation.\n- **Key Config Options**: For MongoDB, configure connection options like `useNewUrlParser: true` and `useUnifiedTopology: true`.\n- **CLI Commands**: Use `docker-compose up -d` to start services in detached mode.\n- **Latest Versions**: Check for the latest version of Docker using `docker --version`.\n- **Key Config Options**: For AWS S3, configure bucket policies and CORS settings through the AWS Management Console or CLI.\n- **CLI Commands**: Use `kubectl apply -f deployment.yaml` to deploy applications on Kubernetes.",
     "source": "web_search",
-    "updated_at": 1780930012.308753
+    "updated_at": 1780935772.9233227
   },
   "search:code-quality:anti-patterns to avoid backend_ex": {
     "content": "- Avoid using mutable default arguments in Python functions.\n- Use the `asyncio` library for asynchronous programming to improve performance.\n- Implement proper error handling and logging throughout your codebase.\n- Follow the Single Responsibility Principle (SRP) when designing classes.\n- Utilize dependency injection frameworks like `Django` or `FastAPI` for better maintainability.\n- Regularly update libraries and dependencies to their latest versions using tools like `pip`.\n- Use environment variables for sensitive information instead of hardcoding them.\n- Implement unit tests and integration tests to ensure code quality.\n- Refactor complex list comprehensions into simpler, more readable functions.\n- Monitor application performance using tools like `Prometheus` or `Grafana`.",
     "source": "code_example",
-    "updated_at": 1780930014.5608435
+    "updated_at": 1780935775.3097062
   },
   "search:code-quality:refactoring patterns legacy co": {
     "content": "- **VSCode 2025 AI Refactoring Tools**: Use `vscode-refactor` extension.\n- **Latest Codex Patterns**: Check [Medium article](https://medium.com/@exampleuser/10-codex-patterns-that-fixed-my-legacy-code) for real examples and copy-paste prompts.\n- **Complete Guide on Refactoring Legacy Code**: Visit [kodesage.ai](https://www.kodesage.ai/guide-to-refactoring-legacy-code).\n- **Refactoring Techniques**: Stay updated with the latest in AI-driven refactoring techniques through resources like [TechCrunch](https://techcrunch.com/tag/refactoring/).",
     "source": "web_search",
-    "updated_at": 1780930016.7664382
+    "updated_at": 1780935777.7234025
   },
   "search:code-quality:refactoring patterns legacy co_ex": {
     "content": "- **Devnexus 2025**: Attend the event to learn about testing legacy code and refactoring patterns.\n- **GitHub Copilot X's sprintf Refactoring Patterns**:\n  - Use GitHub Copilot X for converting legacy formatting approaches into cleaner syntax.\n  - Real-world examples available in C, PHP.\n- **Refactor Legacy Code Prompt**:\n  - Modernize outdated code patterns or deprecated APIs.\n  - Improve code readability and maintainability.",
     "source": "code_example",
-    "updated_at": 1780930019.2902107
+    "updated_at": 1780935780.3164315
   },
   "search:code-quality:technical debt identification ": {
     "content": "- **TechDebt 2025 Conference**: Attend the TechDebt 2025 conference to learn about the latest research and best practices in identifying, addressing, and managing technical debt.\n  \n- **BEACon-TD Study**: Review the BEACon-TD study published on August 1, 2025, which advances the classification of technical debt types across software projects. This can help developers identify specific areas for improvement.\n\n- **DATAPRISE Tech Debt Matrix**: Use the DATAPRISE Tech Debt Prioritization Matrix to prioritize and manage technical debt effectively. This tool helps IT leaders understand the impact of technical debt on project health and costs.\n\n- **CLI Commands**: Utilize CLI commands with exact flags to automate the identification and resolution of technical debt. For example, use `git blame` to track changes and identify areas that may require refactoring.\n\n- **Latest Versions**: Ensure you are using the latest versions of development tools and libraries to reduce technical debt. Regularly update your dependencies to benefit from performance improvements and security patches.\n\n- **Key Config Options**: Review key configuration options in your development environment to optimize performance and reduce inefficiencies. For instance, adjust JVM settings or configure build tools for faster compilation times.\n\n- **Code Reviews**: Conduct regular code reviews to identify and address technical debt proactively. Encourage developers to refactor code during code reviews to maintain high standards of quality.\n\n- **Automated Tools**: Integrate automated tools into your development workflow to detect and manage technical debt. Tools like SonarQube or ESLint can help automate the detection of common coding patterns that lead to technical debt.\n\n- **Documentation**: Maintain up-to-date documentation for your codebase, including comments and README files. This helps new developers understand the context and purpose of existing code, reducing the likelihood of introducing technical debt.\n\n- **Performance Metrics**: Implement performance metrics to monitor the impact of technical debt on application performance. Regularly review these metrics to identify areas that require optimization.",
     "source": "web_search",
-    "updated_at": 1780930021.349606
+    "updated_at": 1780935782.5869935
   }
 }

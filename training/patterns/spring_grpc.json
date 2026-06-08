@@ -2,11 +2,11 @@
   "search:spring+grpc:spring boot grpc grpc-spring-b": {
     "content": "- Add dependency: `implementation 'net.devh:grpc-spring-boot-starter'`\n- Use annotation: `@GrpcService`\n- Configure server port in `application.properties`: `grpc.server.port=50051`\n- Enable gRPC client auto-configuration: `spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration`\n- Latest version as of 2023: Check [Maven Central](https://search.maven.org/artifact/net.devh/grpc-spring-boot-starter)\n- Key config options:\n  - `grpc.server.port`: Port for gRPC server\n  - `grpc.client.<client-name>.address`: Address of the gRPC client\n  - `grpc.client.<client-name>.usePlaintext`: Use plaintext connection (default is secure)",
     "source": "web_search",
-    "updated_at": 1780929755.5362856
+    "updated_at": 1780935529.6800725
   },
   "search:spring+grpc:spring boot grpc grpc-spring-b_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew build` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - gRPC: 1.54.0\n  - grpc-spring-boot-starter: 2.9.0\n\n- **Key Config Options**:\n  - `server.port`: Define the port for the gRPC server.\n  - `grpc.server.insecure-port`: Specify the insecure port for the server.\n  - `grpc.client.default-channel-name`: Set the default channel name for clients.\n  - `grpc.client.default-max-inbound-message-size`: Configure the maximum inbound message size.",
     "source": "code_example",
-    "updated_at": 1780929757.5627794
+    "updated_at": 1780935531.487977
   }
 }
