@@ -2,31 +2,31 @@
   "search:react-query+typescript:react query typescript usage 2": {
     "content": "- **CLI Commands**: Not applicable for React Query.\n- **Latest Versions**:\n  - TypeScript v4.1 or greater\n  - React Query v3.x (as of my last update)\n- **Key Config Options**:\n  - `useQuery`: For fetching data, supports generics to define the type of data expected.\n  - `useMutation`: For updating data, supports options like `onSuccess`, `onError`.\n  - `queryClient`: Manages query state and cache, provides methods like `setQueryData`, `invalidateQueries`.\n- **TypeScript Usage**:\n  - Ensure TypeScript v4.1 or greater is installed.\n  - Use generics in `useQuery` to define data types.\n  - Utilize TypeScript for type-safe options in `useMutation`.\n\nFor detailed information, refer to the official React Query documentation and TypeScript integration guide.",
     "source": "web_search",
-    "updated_at": 1780841462.9983857
+    "updated_at": 1780920633.890317
   },
   "search:react-query+typescript:react query typescript usage 2_ex": {
     "content": "- **CLI Commands**: Not applicable for this topic.\n- **Latest Versions**:\n  - React Query: v4.28.0\n  - Axios: v1.6.5\n  - TypeScript: v5.3.3\n- **Key Config Options**:\n  - `useQuery`: For fetching data and handling state.\n    ```typescript\n    useQuery('key', fetchData);\n    ```\n  - `useMutation`: For updating data.\n    ```typescript\n    useMutation(updateData);\n    ```\n  - `queryClient.invalidateQueries`: To refetch queries after mutations.\n    ```typescript\n    queryClient.invalidateQueries('key');\n    ```\n  - `staleTime`: Time in milliseconds before a cached response is considered stale.\n    ```typescript\n    useQuery('key', fetchData, { staleTime: 5000 });\n    ```\n  - `refetchInterval`: Interval in milliseconds to refetch the query periodically.\n    ```typescript\n    useQuery('key', fetchData, { refetchInterval: 1000 });\n    ```\n  - `onSuccess`, `onError`, `onSettled`: Callbacks for handling different states of the query.\n    ```typescript\n    useQuery('key', fetchData, {\n      onSuccess: (data) => console.log(data),\n      onError: (error) => console.error(error),\n      onSettled: () => console.log('settled'),\n    });\n    ```\n  - `useInfiniteQuery`: For handling infinite data fetching.\n    ```typescript\n    useInfiniteQuery('key', fetchNextPage);\n    ```\n- **Additional Resources**:\n  - [React Query Documentation](https://react-query.tanstack.com/docs)\n  - [TypeScript Documentation](https://www.typescriptlang.org/docs)\n  - GitHub Repository: [devffex/react-query-implementations](https://github.com/devffex/react-query-implementations)",
     "source": "code_example",
-    "updated_at": 1780841465.4199631
+    "updated_at": 1780920635.5737016
   },
   "search:react-query+typescript:react query typescript error h": {
     "content": "- **CLI Commands:** None mentioned.\n- **Latest Versions:** Not specified in the text.\n- **Key Config Options:**\n  - `useQuery`: Handles fetching data and error handling.\n  - `useMutation`: Manages side effects with robust error handling.\n  - `onError`: Callback for handling errors.\n  - `onSuccess`: Callback for successful operations.\n  - `onSettled`: Callback after the promise settles, regardless of success or failure.",
     "source": "web_search",
-    "updated_at": 1780841467.390717
+    "updated_at": 1780920636.7028913
   },
   "search:react-query+typescript:react query typescript error h_ex": {
     "content": "- **CLI Commands**: N/A\n- **Latest Versions**: React Query v4, TypeScript v5\n- **Key Config Options**:\n  - `useQuery`: \n    - `onError`: Function to handle errors.\n    - `errorRetry`: Number of retries on error.\n    - `retryDelay`: Delay between retries in milliseconds.\n  - Error Types: \n    - `isFetching`: Boolean indicating if data is being fetched.\n    - `isLoading`: Boolean indicating if data is loading.\n    - `isError`: Boolean indicating if an error occurred.\n    - `error`: The error object returned by the query.",
     "source": "code_example",
-    "updated_at": 1780841469.412159
+    "updated_at": 1780920638.120549
   },
   "search:react-query+typescript:react query typescript perform": {
     "content": "- **CLI Commands**: Use `npm install @tanstack/react-query` to install the latest version.\n- **Key Config Options**:\n  - `notifyOnChangeProps`: Set to `['data']` to optimize rendering performance by only notifying observers when data changes.\n  - `staleTime`: Configure how long data should be considered fresh before refetching. Default is 0 (always refetch).\n  - `refetchInterval`: Automatically refetch at a specified interval, useful for real-time updates.\n- **Latest Version**: As of my last update in October 2023, the latest version is 4.x. Check [TanStack Query's GitHub page](https://github.com/TanStack/query) for the most current version and release notes.",
     "source": "web_search",
-    "updated_at": 1780841471.1637652
+    "updated_at": 1780920639.3309944
   },
   "search:react-query+typescript:react query typescript perform_ex": {
     "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of React Query and TypeScript by running `npm install react-query@latest typescript@latest`.\n- **Key Config Options**:\n  - In your `tsconfig.json`, ensure you have `\"module\": \"ESNext\"` and `\"target\": \"ESNext\"` for optimal performance.\n  - Use `useQuery` with `refetchInterval` to automatically refetch data at regular intervals.\n  - Implement `staleTime` to control how long data should be considered fresh before refetching.\n  - Utilize `keepPreviousData` in `useQuery` to keep the previous data while fetching new data.",
     "source": "code_example",
-    "updated_at": 1780841472.9603806
+    "updated_at": 1780920640.673005
   }
 }

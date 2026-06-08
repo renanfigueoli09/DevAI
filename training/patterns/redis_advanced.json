@@ -2,11 +2,11 @@
   "search:redis+advanced:redis streams sentinel cluster": {
     "content": "- **GitHub Repository**: [kjeongh/ioredis](https://github.com/kjeongh/ioredis)\n- **Latest Version**: Not specified in the provided text, but you can check on GitHub or npm.\n- **Key Config Options**:\n  - `sentinel`: For connecting to a Redis Sentinel cluster.\n  - `cluster`: For connecting to a Redis Cluster.\n  - `luaScriptCacheSize`: Controls the size of the Lua script cache.\n  - `connectTimeout`: Sets the connection timeout in milliseconds.\n\n### Example CLI Commands\n- **Connect to a Redis Sentinel Cluster**:\n  ```sh\n  ioredis --sentinel <host>:<port> --name <master-name>\n  ```\n- **Connect to a Redis Cluster**:\n  ```sh\n  ioredis --cluster <host1>:<port1>,<host2>:<port2>,<host3>:<port3>\n  ```\n\n### Example Lua Script Execution\n```js\nconst redis = require('ioredis');\nconst client = new redis();\n\nclient.eval(\"return 'Hello, Redis!'\", 0).then(result => {\n  console.log(result); // Output: Hello, Redis!\n});\n```\n\n### Pub/Sub Example\n```js\nconst redis = require('ioredis');\nconst pubClient = new redis();\nconst subClient = new redis();\n\nsubClient.subscribe('channel1', (err, count) => {\n  if (err) throw err;\n  console.log(`Subscribed to ${count} channels`);\n});\n\npubClient.publish('channel1', 'Hello World!', (err, result) => {\n  if (err) throw err;\n  console.log(`${result} messages published`);\n});\n```\n\n### Additional Notes\n- Ensure you have Node.js installed.\n- Install `ioredis` using npm:\n  ```sh\n  npm install ioredis\n  ```\n- For more detailed configuration and usage, refer to the [ioredis documentation](https://github.com/luin/ioredis).",
     "source": "web_search",
-    "updated_at": 1780841419.6722975
+    "updated_at": 1780920602.8638833
   },
   "search:redis+advanced:redis streams sentinel cluster_ex": {
     "content": "- **Latest Version of ioredis**: v4.x\n- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> [<host>:<port> ...] --cluster-replicas <replicas>`\n  - `redis-cli sentinel monitor <master-name> <ip> <port> <quorum>`\n- **Key Config Options for ioredis**:\n  - `sentinel`: Enable Sentinel mode.\n  - `cluster`: Enable Cluster mode.\n  - `luaScriptCacheSize`: Set the size of the Lua script cache.\n\nFor more detailed information, refer to the official documentation and GitHub repository.",
     "source": "code_example",
-    "updated_at": 1780841421.4760692
+    "updated_at": 1780920604.1792204
   }
 }

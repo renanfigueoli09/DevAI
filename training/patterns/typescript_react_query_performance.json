@@ -2,36 +2,36 @@
   "search:typescript-react-query-performance:typescript react query perform": {
     "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**:\n  - React Query: v4.x\n  - TanStack Query: v5.x\n- **Key Config Options**:\n  - `staleTime`: Time in milliseconds after which data is considered stale and can be refetched.\n  - `cacheTime`: Time in milliseconds for which data is kept in the cache before being removed.\n  - `refetchInterval`: Interval at which data is automatically refetched.\n  - `refetchOnWindowFocus`: Boolean to control whether data should be refetched when the window regains focus.",
     "source": "web_search",
-    "updated_at": 1780841595.654036
+    "updated_at": 1780920727.780851
   },
   "search:typescript-react-query-performance:react query with typescript be": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React: 20.0.0\n  - TypeScript: 5.1.6\n  - React Query: 4.0.0\n\n- **Key Config Options**:\n  - In `react-query`, use `useQuery` for fetching data.\n  - Use `useMutation` for updating data.\n  - Configure `queryClient` with options like `defaultOptions`.\n  - Set up `ReactQueryDevtools` for development to monitor queries and mutations.",
     "source": "web_search",
-    "updated_at": 1780841597.5311723
+    "updated_at": 1780920729.0738347
   },
   "search:typescript-react-query-performance:react query with typescript be_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React 2025, TypeScript 4.x, Next.js 14\n- **Key Config Options**:\n  - `react-query` hooks for data fetching and state management.\n  - `Material-UI` or `Ant Design` components with TypeScript support.\n  - `Next.js` server components for improved performance.",
     "source": "code_example",
-    "updated_at": 1780841599.3595965
+    "updated_at": 1780920730.2130942
   },
   "search:typescript+react-query-performance:typescript react query perform": {
     "content": "- **CLI Commands**: `tsc --init` to initialize a TypeScript project, `tsc -w` to watch for file changes and compile automatically.\n- **Latest Versions**: Ensure using the latest version of TypeScript by running `npm install typescript@latest`.\n- **Key Config Options**:\n  - `compilerOptions.target`: Specifies the target JavaScript version (e.g., \"ES6\").\n  - `compilerOptions.module`: Defines module code generation (e.g., \"commonjs\" for Node.js).\n  - `include` and `exclude`: Specify files to include or exclude from compilation.\n  - `outDir`: Directories to output generated JavaScript files.",
     "source": "web_search",
-    "updated_at": 1780841601.2016397
+    "updated_at": 1780920730.8385246
   },
   "search:typescript+react-query-performance:typescript react query perform_ex": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React: 18.x\n  - TypeScript: 4.x\n  - React Query: 3.x\n- **Key Config Options**:\n  - In `react-query`, use `useQuery` for fetching data.\n  - Configure `queryClient` with options like `defaultOptions`.\n  - Use `refetchOnWindowFocus` to control refetch behavior on window focus.",
     "source": "code_example",
-    "updated_at": 1780841602.957312
+    "updated_at": 1780920732.4366992
   },
   "search:typescript+react-query-performance:react query for typescript bes": {
     "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of React, React Query, and TypeScript for optimal performance and features.\n- **Key Config Options**:\n  - In `tsconfig.json`, set `\"strict\": true` for strict type checking.\n  - Use `\"esModuleInterop\": true` to enable interoperability with CommonJS modules.\n  - Configure `\"skipLibCheck\": true` in production builds to speed up compilation.",
     "source": "web_search",
-    "updated_at": 1780841604.7889936
+    "updated_at": 1780920733.7637513
   },
   "search:typescript+react-query-performance:react query for typescript bes_ex": {
     "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of React and React Query by running `npm update react react-query`.\n- **Key Config Options**:\n  - For React Query, configure options like `useQuery`, `useMutation`, and `useInfiniteQuery` to manage data fetching and state.\n  - Use TypeScript interfaces or types for props and states to ensure type safety.\n  - Configure the React Query client with options such as `defaultOptions` for global settings.",
     "source": "code_example",
-    "updated_at": 1780841606.9054556
+    "updated_at": 1780920735.0808098
   }
 }

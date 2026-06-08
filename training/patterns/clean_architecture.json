@@ -2,51 +2,51 @@
   "search:clean-architecture:clean architecture backend nes": {
     "content": "- **NestJS**:\n  - Latest Version: NestJS v10.x\n  - CLI Command: `nest new project-name`\n  - Key Config Options: `app.module.ts`, `main.ts`\n\n- **FastAPI**:\n  - Latest Version: FastAPI 0.78.x\n  - CLI Command: `uvicorn main:app --reload`\n  - Key Config Options: `main.py`, `pyproject.toml`\n\n- **Spring Boot**:\n  - Latest Version: Spring Boot 3.1.x\n  - CLI Command: `mvn spring-boot:run`\n  - Key Config Options: `application.properties`, `pom.xml`",
     "source": "web_search",
-    "updated_at": 1780841668.5628154
+    "updated_at": 1780920775.05231
   },
   "search:clean-architecture:clean architecture backend nes_ex": {
     "content": "- **NestJS**: Use `nest new project-name` to create a new project.\n- **Spring Boot**: Initialize with `spring init --dependencies=web,actuator project-name`.\n- **FastAPI**: Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n\n**Key Config Options**:\n- **NestJS**: Configure in `app.module.ts` or `.env` files.\n- **Spring Boot**: Define properties in `application.properties` or `application.yml`.\n- **FastAPI**: Use environment variables for configuration.\n\n**Latest Versions**:\n- NestJS: Check [npm](https://www.npmjs.com/package/nest) for the latest version.\n- Spring Boot: Refer to [Maven Central](https://search.maven.org/) for the latest release.\n- FastAPI: Check [PyPI](https://pypi.org/project/fastapi/) for the most recent version.\n\n**CLI Commands with Exact Flags**:\n- **NestJS**: `nest generate module users` to create a new module.\n- **Spring Boot**: `mvn spring-boot:run` to run the application.\n- **FastAPI**: `uvicorn main:app --reload` to start the server in development mode.",
     "source": "code_example",
-    "updated_at": 1780841670.4281933
+    "updated_at": 1780920776.2135293
   },
   "search:clean-architecture:solid principles typescript ne": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n  - `nest generate service service-name`: Generates a new service.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - TypeScript: v4.9.5\n\n- **Key Config Options**:\n  - `app.module.ts`: Entry point for the application, defines modules.\n  - `main.ts`: Bootstraps the application.\n  - `controllers/`: Contains controller classes with route handlers.\n  - `services/`: Contains service classes with business logic.\n  - `providers/`: Contains provider classes that can be injected into other components.",
     "source": "web_search",
-    "updated_at": 1780841672.3175128
+    "updated_at": 1780920777.3990417
   },
   "search:clean-architecture:solid principles typescript ne_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate module module-name`\n  - `nest generate controller controller-name`\n  - `nest generate service service-name`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeScript: v4.9\n\n- **Key Config Options**:\n  - `app.module.ts`: Define application modules.\n  - `main.ts`: Entry point of the application.\n  - `service.ts`: Implement business logic.\n  - `controller.ts`: Handle HTTP requests and responses.\n  - `module.ts`: Organize related components.",
     "source": "code_example",
-    "updated_at": 1780841674.0156658
+    "updated_at": 1780920778.7318642
   },
   "search:clean-architecture:dry yagni kiss principles code": {
     "content": "- **DRY (Don't Repeat Yourself)**: Avoid duplicating code by using functions, classes, and modules.\n- **KISS (Keep It Simple, Stupid)**: Write simple, understandable code to reduce complexity.\n- **YAGNI (You Aren't Gonna Need It)**: Only implement features that are currently necessary.\n- **CLI Commands**: Use `git commit -m \"Your message\"` for version control. Update dependencies with `npm update`.\n- **Latest Versions**: Check the latest versions of libraries using `npm outdated` and update them accordingly.\n- **Key Config Options**:\n  - For React: `react-scripts start`, `react-scripts build`, `react-scripts test`\n  - For Node.js: `node app.js`, `nodemon app.js` for development\n  - For Python: `python manage.py runserver`, `pip install -r requirements.txt`\n- **Adaptation**: Apply principles flexibly based on project needs.",
     "source": "web_search",
-    "updated_at": 1780841675.7773376
+    "updated_at": 1780920780.4729044
   },
   "search:clean-architecture:dry yagni kiss principles code_ex": {
     "content": "- Install Visual Studio 2022.\n- Create a .NET 7 console application project.\n- Use the latest version of C# for coding.\n- Apply DRY (Don't Repeat Yourself) by avoiding code duplication.\n- Implement KISS (Keep It Simple, Stupid) for straightforward design.\n- Follow YAGNI (You Aren't Gonna Need It) to avoid unnecessary features.",
     "source": "code_example",
-    "updated_at": 1780841677.5575998
+    "updated_at": 1780920781.8564165
   },
   "search:clean-architecture:dependency injection inversion": {
     "content": "- **CLI Commands**: Use `dotnet new` to create new projects, e.g., `dotnet new mvc -n MyProject`.\n- **Latest Versions**: Check [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) and [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core?view=aspnetcore-6.0) for the latest versions.\n- **Key Config Options**:\n  - `appsettings.json` for configuration settings.\n  - Use `[ServiceLifetime]` to specify service lifetimes (Transient, Scoped, Singleton).\n  - Configure services in `Startup.cs` or `Program.cs` using `services.AddControllers()`, `services.AddScoped<T>()`, etc.",
     "source": "web_search",
-    "updated_at": 1780841679.2575867
+    "updated_at": 1780920782.9992263
   },
   "search:clean-architecture:dependency injection inversion_ex": {
     "content": "- **CLI Commands**:\n  - `npm install typescript --save-dev`\n  - `npx tsc --init` to initialize a TypeScript project\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - npm: 10.x\n  - TypeScript: 5.3\n\n- **Key Config Options**:\n  - In TypeScript, use `tsconfig.json` for configuration.\n  - For dependency injection in NodeJS with Typescript, consider using libraries like `inversifyjs`.\n  - Spring Boot's `@Autowired` and `@ComponentScan` annotations for managing dependencies.",
     "source": "code_example",
-    "updated_at": 1780841680.781166
+    "updated_at": 1780920784.1104124
   },
   "search:clean-architecture:separation of concerns layered": {
     "content": "- **CLI Commands**: Use `mvn clean install` to build and test your project.\n- **Latest Versions**: Ensure you are using the latest version of Maven by checking [Maven Central](https://search.maven.org/).\n- **Key Config Options**:\n  - For Spring Boot, configure properties in `application.properties` or `application.yml`.\n  - For database connections, set up configurations in your `persistence.xml` or equivalent.\n  - Use environment variables for sensitive information like API keys and passwords.",
     "source": "web_search",
-    "updated_at": 1780841682.4670987
+    "updated_at": 1780920785.3832746
   },
   "search:clean-architecture:separation of concerns layered_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new mvc --name MyProject` to create a new ASP.NET Core MVC project.\n  - `dotnet ef migrations add InitialCreate` to add an initial migration for Entity Framework.\n\n- **Latest Versions**:\n  - .NET SDK: 7.0\n  - Entity Framework Core: 6.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure application settings like connection strings.\n  - `Startup.cs` or `Program.cs`: Define middleware and services configuration.\n  - `Controllers/`: Organize controllers for handling HTTP requests.\n  - `Models/`: Define data models.\n  - `Views/`: Store Razor views.\n  - `Services/`: Implement business logic.",
     "source": "code_example",
-    "updated_at": 1780841684.1796145
+    "updated_at": 1780920786.547572
   }
 }
