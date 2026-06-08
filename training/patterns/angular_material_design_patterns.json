@@ -57,31 +57,31 @@
   "search:angular+material-design-patterns:angular material design patter_ex": {
     "content": "- **CLI Commands**:\n  - `ng new my-project --preset=angular`\n  - `ng add @angular/material`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Material: 15.0.3\n\n- **Key Config Options**:\n  - `theme`: Define a theme in `styles.scss` using Angular Material themes.\n  - `layoutDirection`: Set layout direction for responsive design using `MatLayoutModule`.\n  - `breakpoints`: Use `BreakpointObserver` to observe and react to different screen sizes.",
     "source": "code_example",
-    "updated_at": 1780930850.2274776
+    "updated_at": 1780936682.8115494
   },
   "search:angular+material-design-patterns:material design patterns in an": {
     "content": "- **CLI Commands**: Use `ng add @angular/material` to install Angular Material.\n- **Latest Versions**: Ensure Angular and Angular Material are up-to-date using `npm update`.\n- **Key Config Options**:\n  - `theme`: Define your theme in `styles.scss` or `styles.css`.\n  - `iconRegistry`: Register icons for use across the application.\n  - `animationMode`: Set animation mode globally in `app.module.ts`.",
     "source": "web_search",
-    "updated_at": 1780930852.2182891
+    "updated_at": 1780936685.2362542
   },
   "search:angular+material-design-patterns:material design patterns in an_ex": {
     "content": "- **CLI Commands**:\n  - `ng add @angular/material`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular Material: v13.3.7\n\n- **Key Config Options**:\n  - `theme`: Define a theme in `styles.scss` using prebuilt themes or custom palettes.\n  - `icons`: Use icons from the Material Icons library by specifying them in your component templates.\n  - `typography`: Customize typography styles through the `mat-typography-config` token.",
     "source": "code_example",
-    "updated_at": 1780930854.0995483
+    "updated_at": 1780936688.3670936
   },
   "search:angular-material-design-patterns:angular material design patter": {
     "content": "- **Angular Material UI Component Library**: Use `ng add @angular/material` to install Angular Material.\n- **Material Design 3**: No specific CLI command; update your project's stylesheets and components according to the latest guidelines.\n- **Angular 2025 Coding Standards**: Update your codebase using the new style guide by running `ng update --migrate-only`.\n- **GitHub Showcase**: Clone the repository with `git clone https://github.com/jdavis-software/angular-modern-patterns-showcase.git` and explore the interactive sections.",
     "source": "web_search",
-    "updated_at": 1780930856.14752
+    "updated_at": 1780936690.9802585
   },
   "search:angular-material-design-patterns:angular material theming strat": {
     "content": "- Use `ng add @angular/material` to set up Angular Material.\n- Update Angular and Angular Material to the latest version using `npm update`.\n- Configure themes in `src/styles.scss` with SCSS variables.\n- Key config options include primary, accent, and warn colors.\n- Utilize `mat-palette` for defining color palettes.\n- Import prebuilt themes like `indigo-pink`, `deeppurple-amber`, etc., from `@angular/material`.\n- Customize theme by extending a prebuilt palette with `extendPalette`.\n- Apply the theme to your app in `src/styles.scss` using `@include angular-material-theme($theme);`.",
     "source": "web_search",
-    "updated_at": 1780930858.2499113
+    "updated_at": 1780936693.3845532
   },
   "search:angular-material-design-patterns:angular material theming strat_ex": {
     "content": "- **CLI Commands**:\n  - `ng generate theme --name=my-theme`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular Material: v16.x\n\n- **Key Config Options**:\n  - `angular.json`: Define custom themes under the `styles` array.\n  - `theme.scss`: Customize color palettes and typography.\n  - `app.module.ts`: Import `MatThemeModule` with your theme configuration.",
     "source": "code_example",
-    "updated_at": 1780930860.205975
+    "updated_at": 1780936695.7087007
   }
 }
