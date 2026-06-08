@@ -12,11 +12,11 @@
   "search:Advanced Spring + Kotlin Coroutines:kotlin coroutines for spring d": {
     "content": "- **CLI Commands**:\n  - `./gradlew run` to run the application.\n  - `./gradlew build` to build the project.\n\n- **Latest Versions**:\n  - Kotlin Coroutines: 1.7.32\n  - Spring Boot: 2.6.4\n\n- **Key Config Options**:\n  - `spring.main.task-executor.core-pool-size`: Sets the core pool size of the task executor.\n  - `spring.main.task-executor.max-pool-size`: Sets the maximum pool size of the task executor.\n  - `spring.main.task-executor.queue-capacity`: Sets the capacity of the queue used by the task executor.",
     "source": "web_search",
-    "updated_at": 1780931707.6245568
+    "updated_at": 1780940448.037691
   },
   "search:Advanced Spring + Kotlin Coroutines:kotlin coroutines for spring d_ex": {
     "content": "- Use `./mvnw spring-boot:run` to run Spring Boot application.\n- Ensure Spring Boot version is at least 2.4 for full coroutine support.\n- Add dependencies in `build.gradle.kts`:\n  ```kotlin\n  implementation(\"org.springframework.boot:spring-boot-starter-webflux\")\n  implementation(\"io.projectreactor.kotlin:reactor-kotlin-extensions\")\n  ```\n- Use `@EnableWebFlux` annotation on main class to enable reactive web support.\n- Utilize `@GetMapping`, `@PostMapping`, etc., with `suspend` functions for coroutine-based handlers.\n- Configure application properties in `application.properties` or `application.yml`.\n- For non-blocking behavior, use `Mono` and `Flux` instead of traditional `CompletableFuture` and `ListenableFuture`.",
     "source": "code_example",
-    "updated_at": 1780931709.6193612
+    "updated_at": 1780940450.2520466
   }
 }
