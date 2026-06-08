@@ -37,26 +37,26 @@
   "search:database-design:database indexing strategies p_ex": {
     "content": "- Use `CREATE INDEX` to add indexes.\n- Consider B-tree, hash, and composite indexes based on query patterns.\n- Evaluate index trade-offs for performance.\n- Implement effective indexing patterns for high-performance databases.\n- Monitor and adjust indexes regularly.\n- Utilize database-specific tools like `EXPLAIN` for optimization.\n- Keep database software up-to-date with latest versions.",
     "source": "code_example",
-    "updated_at": 1780845464.5802884
+    "updated_at": 1780933763.559028
   },
   "search:database-design:data modeling patterns embedde": {
     "content": "- **CLI Commands**: Use `mongo` shell or MongoDB Compass.\n- **Latest Versions**: Ensure MongoDB version is up-to-date, check [MongoDB official website](https://www.mongodb.com/try/download/community).\n- **Key Config Options**:\n  - `replicaSet`: For high availability and data redundancy.\n  - `sharding`: For horizontal scaling and large datasets.\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory for better performance.",
     "source": "web_search",
-    "updated_at": 1780845466.661126
+    "updated_at": 1780933766.2586172
   },
   "search:database-design:data modeling patterns embedde_ex": {
     "content": "- **CLI Commands**: `mongo` shell or MongoDB Compass for database interaction.\n- **Latest Versions**: Ensure using MongoDB 5.x or later for the best performance and features.\n- **Key Config Options**:\n  - `replicaSet`: For high availability and data redundancy.\n  - `sharding`: To distribute data across multiple servers.\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory to optimize read/write performance.",
     "source": "code_example",
-    "updated_at": 1780845468.8117812
+    "updated_at": 1780933768.391884
   },
   "search:database-design:schema design decisions relati": {
     "content": "- Use `CREATE TABLE` statements with explicit column definitions.\n- Employ foreign keys to enforce referential integrity.\n- Optimize queries using indexes on frequently queried columns.\n- Regularly update database schemas with migrations.\n- Monitor and analyze query performance for optimization.\n- Consider partitioning large tables for better scalability.\n- Utilize ACID transactions for data consistency.\n- Ensure data normalization to reduce redundancy.\n- Use `ALTER TABLE` commands to modify existing schema.",
     "source": "web_search",
-    "updated_at": 1780845470.6123223
+    "updated_at": 1780933770.8658268
   },
   "search:database-design:schema design decisions relati_ex": {
     "content": "- Use SQL commands like `CREATE TABLE`, `ALTER TABLE` to design and modify relational database schemas.\n- For MySQL, ensure you are using the latest version for optimal performance and security.\n- Key configuration options include `innodb_buffer_pool_size`, `query_cache_size`, and `max_connections`.\n- CLI command example: `mysql -u username -p -h hostname -D database_name`\n- Example SQL commands:\n  ```sql\n  CREATE TABLE users (\n      id INT AUTO_INCREMENT PRIMARY KEY,\n      name VARCHAR(255) NOT NULL,\n      email VARCHAR(255) UNIQUE NOT NULL\n  );\n  ALTER TABLE users ADD COLUMN age INT;\n  ```\n- MongoDB schema design focuses on optimizing for data locality and application queries rather than strict normalization.\n- For relational database schemas, consider using constraints like `FOREIGN KEY`, `UNIQUE`, and `NOT NULL` to enforce data integrity.",
     "source": "code_example",
-    "updated_at": 1780845472.4799
+    "updated_at": 1780933773.3102796
   }
 }

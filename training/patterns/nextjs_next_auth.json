@@ -2,21 +2,21 @@
   "search:nextjs-next-auth:next.js authentication with ne": {
     "content": "- **Latest Version**: NextAuth.js v4.x, Next.js v13.x\n- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n- **Key Config Options**:\n  - `providers`: Configure authentication providers (e.g., Google, Facebook).\n  - `secret`: A secret key for signing JWT tokens.\n  - `session`: Configure session management options (e.g., strategy, maxAge).\n  - `callbacks`: Customize the behavior of callbacks like signIn, redirect, and jwt.",
     "source": "web_search",
-    "updated_at": 1780845474.690541
+    "updated_at": 1780933775.722852
   },
   "search:nextjs-next-auth:next.js authentication with ne_ex": {
     "content": "- Install NextAuth.js using `npm install next-auth@latest`\n- Initialize NextAuth.js in your project by creating an `[...nextauth].js` file in the `pages/api/auth/` directory.\n- Configure providers like Google, Facebook, etc., in the `options.providers` array within the `[...nextauth].js` file.\n- Use `signIn()` and `signOut()` functions to handle authentication in your components.\n- Protect routes using middleware or custom guards by checking for user session.\n- Customize the sign-in page by creating a `/pages/api/auth/signin.js` file.\n- Configure JWT or database sessions in the `options.session` object of `[...nextauth].js`.\n- Update dependencies regularly with `npm update next-auth`.",
     "source": "code_example",
-    "updated_at": 1780845476.856653
+    "updated_at": 1780933777.986971
   },
   "search:nextjs-next-auth:implementing secure authentica": {
     "content": "- Use `next-auth` for authentication in Next.js.\n- Install via npm: `npm install next-auth@latest`.\n- Configure `pages/api/auth/[...nextauth].js` with your provider details.\n- For JWT, set `jwt: true` in the options.\n- Protect routes using middleware or getServerSideProps.\n- Use cookies for session management by default.\n- Implement email magic links with libraries like `magic-link-auth`.\n- Ensure to handle CSRF tokens and secure HTTP-only cookies.",
     "source": "web_search",
-    "updated_at": 1780845478.8249795
+    "updated_at": 1780933780.755722
   },
   "search:nextjs-next-auth:implementing secure authentica_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  \n- **Latest Versions**:\n  - Next.js 2023\n  \n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js` for authentication setup.\n  - Environment variables for secret keys (`NEXTAUTH_SECRET`).\n  - Middleware for protected routes.",
     "source": "code_example",
-    "updated_at": 1780845480.5844917
+    "updated_at": 1780933783.214725
   }
 }
