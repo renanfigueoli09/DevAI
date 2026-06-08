@@ -2,36 +2,36 @@
   "pattern:nestjs+kafka:setup": {
     "content": "// Kafka: app.connectMicroservice({transport:Transport.KAFKA,options:{client:{brokers:[KAFKA_BROKER]},consumer:{groupId:'app-group',allowAutoTopicCreation:true}}}). Producer: ClientKafka.emit(topic,data). Consumer: @EventPattern('topic') handle(@Payload() data){}",
     "source": "code_pattern",
-    "updated_at": 1780932224.4205012
+    "updated_at": 1780940979.702833
   },
   "search:nestjs+kafka:nestjs kafka clientkafka emit ": {
     "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/microservices`.\n- Configure Kafka in `app.module.ts`:\n  ```typescript\n  import { ClientsModule, Transport } from '@nestjs/microservices';\n\n  const kafkaConfig = {\n    transport: Transport.KAFKA,\n    options: {\n      client: {\n        brokers: ['localhost:9092'],\n      },\n      consumer: {\n        groupId: 'test-group',\n      },\n    },\n  };\n\n  @Module({\n    imports: [ClientsModule.register([kafkaConfig])],\n  })\n  export class AppModule {}\n  ```\n- Use `@EventPattern` for event-driven communication.\n- Use `emit()` method to send messages:\n  ```typescript\n  import { ClientKafka } from '@nestjs/microservices';\n\n  @Injectable()\n  export class KafkaService {\n    constructor(private readonly client: ClientKafka) {}\n\n    sendMessage(message: any) {\n      this.client.emit('event_name', message);\n    }\n  }\n  ```\n- Ensure Kafka broker is running and accessible.\n- Check for latest versions on [NestJS official website](https://nestjs.com/) or [npm page](https://www.npmjs.com/package/@nestjs/microservices).",
     "source": "web_search",
-    "updated_at": 1780932226.7628732
+    "updated_at": 1780940982.583607
   },
   "search:nestjs+kafka:nestjs kafka clientkafka emit _ex": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/microservices`\n  - `nest generate microservice kafka --name my-kafka-service`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - KafkaJS: v2.x\n\n- **Key Config Options**:\n  - `bootstrapMicroservice`: Configure Kafka client options.\n  - `@EventPattern`: Define the event pattern for message handling.\n  - `emit`: Send messages to a Kafka topic.",
     "source": "code_example",
-    "updated_at": 1780932229.1637363
+    "updated_at": 1780940985.3860054
   },
   "search:nestjs+kafka:nestjs kafka error retry dead ": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/microservices`\n  - `npm install kafka-node`\n\n- **Latest Versions**:\n  - NestJS: 9.x\n  - Kafka Node: 8.x\n\n- **Key Config Options**:\n  - `retryAttempts`: Number of retry attempts before moving to the DLQ.\n  - `retryDelay`: Delay between retries in milliseconds.\n  - `deadLetterQueueTopic`: Topic name for storing failed messages.\n\n- **Example Configuration**:\n  ```typescript\n  import { KafkaOptions, Transport } from '@nestjs/microservices';\n\n  const kafkaConfig: KafkaOptions = {\n    transport: Transport.KAFKA,\n    options: {\n      client: {\n        brokers: ['localhost:9092'],\n      },\n      consumer: {\n        groupId: 'my-group',\n      },\n      producer: {},\n      retryAttempts: 5,\n      retryDelay: 1000,\n      deadLetterQueueTopic: 'my-dlq-topic',\n    },\n  };\n  ```",
     "source": "web_search",
-    "updated_at": 1780932231.1109025
+    "updated_at": 1780940988.8461435
   },
   "search:nestjs+kafka:nestjs kafka error retry dead _ex": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/kafka`\n  - `kafdrop` for Kafka monitoring\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Kafka: 3.0.x\n\n- **Key Config Options**:\n  - `brokers`: List of Kafka broker addresses.\n  - `retryAttempts`: Number of retry attempts before moving to the dead-letter queue.\n  - `deadLetterQueueTopicName`: Name of the dead-letter queue topic.\n\nExample configuration in NestJS:\n\n```typescript\nimport { Module } from '@nestjs/common';\nimport { ClientsModule, Transport } from '@nestjs/microservices';\n\n@Module({\n  imports: [\n    ClientsModule.register([\n      {\n        name: 'KAFKA_SERVICE',\n        transport: Transport.KAFKA,\n        options: {\n          client: {\n            brokers: ['broker1:9092', 'broker2:9092'],\n          },\n          consumer: {\n            groupId: 'my-group',\n            retryAttempts: 5,\n            deadLetterQueueTopicName: 'dead-letter-queue',\n          },\n        },\n      },\n    ]),\n  ],\n})\nexport class AppModule {}\n```\n\nThis setup ensures that messages failing processing are retried up to 5 times before being moved to the `dead-letter-queue` topic.",
     "source": "code_example",
-    "updated_at": 1780932233.0533874
+    "updated_at": 1780940991.3604038
   },
   "search:nestjs+kafka:nestjs kafka transaction idemp": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/microservices`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Kafka: 3.x\n\n- **Key Config Options**:\n  - `transport: Transport.KAFKA`\n  - `options: { client: { brokers: ['localhost:9092'] }, consumer: { groupId: 'test-group' } }`",
     "source": "web_search",
-    "updated_at": 1780932235.1778152
+    "updated_at": 1780940994.025508
   },
   "search:nestjs+kafka:nestjs kafka transaction idemp_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate microservice service-name --transport kafka`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Kafka: v3.x\n\n- **Key Config Options**:\n  - `bootstrapModule` in `main.ts`: Configure the Kafka consumer.\n  - `retryAttempts` and `retryInterval` for message retries.\n  - Ensure each Nest application has a unique reply topic partition.",
     "source": "code_example",
-    "updated_at": 1780932237.4365418
+    "updated_at": 1780940996.8091774
   }
 }

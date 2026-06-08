@@ -2,7 +2,7 @@
   "search:nlp+transformers:nlp transformers for sentiment": {
     "content": "- Install transformers library: `pip install transformers==4.28.0`\n- Use model: `from transformers import pipeline`\n- Initialize sentiment analysis pipeline: `sentiment_pipeline = pipeline(\"sentiment-analysis\")`\n- Analyze text: `result = sentiment_pipeline(\"I love this product!\")`\n- Key config options:\n  - `model`: Specify the transformer model, e.g., `\"distilbert-base-uncased-finetuned-sst-2-english\"`\n  - `device`: Set device for computation (e.g., `-1` for CPU, `0` for GPU)\n  - `max_length`: Maximum length of input text\n  - `truncation`: Whether to truncate the input text if it exceeds max_length",
     "source": "web_search",
-    "updated_at": 1780932275.8360105
+    "updated_at": 1780941053.254688
   },
   "search:nlp+transformers:nlp transformers for sentiment_ex": {
     "content": "- Use `pip install transformers` to install the latest version of the Transformers library.\n- For sentiment analysis, use models like `bert-base-uncased-finetuned-sst-2-english`.\n- Initialize a model with `from transformers import BertTokenizer, BertForSequenceClassification`\n- Tokenize text using `tokenizer.encode_plus(text, return_tensors='pt')`\n- Pass tokenized input to the model for prediction.\n- Use `model.eval()` for evaluation mode and `torch.no_grad()` to disable gradient computation.\n- For deployment, consider using Flask or FastAPI with a transformer-based sentiment analysis endpoint.",

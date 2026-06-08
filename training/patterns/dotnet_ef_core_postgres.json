@@ -2,21 +2,21 @@
   "search:dotnet-ef-core-postgres:entity framework core with pos": {
     "content": "- Install Npgsql via NuGet: `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- Update Entity Framework Core to latest version: `dotnet tool update --global dotnet-ef`\n- Use the following DbContext configuration:\n```csharp\npublic class MyDbContext : DbContext\n{\n    public DbSet<MyEntity> MyEntities { get; set; }\n\n    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n    {\n        optionsBuilder.UseNpgsql(\"Host=myhost;Database=mydatabase;Username=myuser;Password=mypassword\");\n    }\n}\n```\n- Run migrations: `dotnet ef migrations add InitialCreate`\n- Update database schema: `dotnet ef database update`\n- Key config options:\n  - Connection string\n  - Migrations directory\n  - Model builder configuration",
     "source": "web_search",
-    "updated_at": 1780931836.3404741
+    "updated_at": 1780940586.9176548
   },
   "search:dotnet-ef-core-postgres:entity framework core with pos_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet new webapi -n MyProject`\n  - `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - .NET Core: 6.0\n  - Entity Framework Core: 6.0\n  - PostgreSQL: 14\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: `\"DefaultConnection\": \"Host=localhost;Port=5432;Database=mydatabase;Username=myuser;Password=mypassword\"`\n  - DbContext Configuration: \n    ```csharp\n    public class MyDbContext : DbContext\n    {\n        public DbSet<MyEntity> MyEntities { get; set; }\n\n        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n        {\n            optionsBuilder.UseNpgsql(Configuration.GetConnectionString(\"DefaultConnection\"));\n        }\n    }\n  ```\n  - Migration Configuration: \n    ```csharp\n    public class MyDbContext : DbContext\n    {\n        public DbSet<MyEntity> MyEntities { get; set; }\n\n        protected override void OnModelCreating(ModelBuilder modelBuilder)\n        {\n            modelBuilder.Entity<MyEntity>(entity =>\n            {\n                entity.ToTable(\"MyEntities\");\n                entity.HasKey(e => e.Id);\n            });\n        }\n    }\n  ```",
     "source": "code_example",
-    "updated_at": 1780931839.0652585
+    "updated_at": 1780940589.5204227
   },
   "search:dotnet-ef-core-postgres:advanced entity framework core": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - PostgreSQL Driver: Npgsql 6.0\n\n- **Key Config Options**:\n  - Connection String: `Server=localhost;Port=5432;Database=mydb;Username=myuser;Password=mypassword;`\n  - Migrations Enabled: `Scaffold-DbContext \"Server=localhost;Port=5432;Database=mydb;Username=myuser;Password=mypassword;\" Npgsql.EntityFrameworkCore.PostgreSQL`\n  - Model Building: Override `OnModelCreating` in DbContext to configure entity relationships and properties.",
     "source": "web_search",
-    "updated_at": 1780931841.9124305
+    "updated_at": 1780940592.1822817
   },
   "search:dotnet-ef-core-postgres:advanced entity framework core_ex": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- **Latest Versions**: Ensure you are using the latest version of Entity Framework Core and PostgreSQL.EntityFrameworkCore by running `dotnet add package Microsoft.EntityFrameworkCore.PostgreSQL`.\n- **Key Config Options**:\n  - ConnectionString: Configure in `appsettings.json` with `\"ConnectionStrings\": { \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_pass;\" }`\n  - DbContext: Define your context class inheriting from `DbContext`.\n  - Migrations: Apply migrations using `dotnet ef database update`.",
     "source": "code_example",
-    "updated_at": 1780931844.6188314
+    "updated_at": 1780940594.635856
   }
 }

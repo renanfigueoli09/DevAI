@@ -2,11 +2,11 @@
   "search:nestjs+websocket:nestjs @websocketgateway @subs": {
     "content": "- **CLI Commands**:\n  - `nest generate gateway my-gateway`\n  - `nest build`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - @nestjs/websockets: 10.x\n\n- **Key Config Options**:\n  - `@WebSocketGateway({ cors: true })` for enabling CORS.\n  - `WsAdapter` for using the WebSocket adapter.\n  - JWT authentication with guards and interceptors.",
     "source": "web_search",
-    "updated_at": 1780932049.2002826
+    "updated_at": 1780940765.111316
   },
   "search:nestjs+websocket:nestjs @websocketgateway @subs_ex": {
     "content": "- **CLI Commands**:\n  - `nest generate gateway my-gateway`\n  - `nest generate controller my-controller`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/websockets: v10.x\n\n- **Key Config Options**:\n  - `@WebSocketGateway({ cors: true })`: Enable CORS for WebSocket connections.\n  - `@SubscribeMessage('eventName')`: Decorator to handle incoming messages on a specific event.\n  - `WsAdapter`: Adapter for handling WebSocket connections, e.g., `new WsAdapter(app)`.\n  - JWT Authentication: Implement JWT middleware for secure WebSocket communication.",
     "source": "code_example",
-    "updated_at": 1780932052.9933755
+    "updated_at": 1780940767.3267837
   }
 }

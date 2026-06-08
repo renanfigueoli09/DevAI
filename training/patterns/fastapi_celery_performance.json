@@ -2,21 +2,21 @@
   "search:fastapi+celery-performance:fastapi celery performance opt": {
     "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.89.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - Broker URL (e.g., `redis://localhost:6379/0`)\n  - Result Backend (e.g., `redis://localhost:6379/0`)\n  - Worker Concurrency (`--concurrency=4`)",
     "source": "web_search",
-    "updated_at": 1780932178.0732856
+    "updated_at": 1780940918.4247785
   },
   "search:fastapi+celery-performance:fastapi celery performance opt_ex": {
     "content": "- **CLI Commands**:\n  - `celery -A your_project_name worker --loglevel=info`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - FastAPI: v0.97.0\n  - Celery: v5.2.3\n  - Redis: v6.2.6\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to Redis URL, e.g., `redis://localhost:6379/0`\n  - `CELERY_RESULT_BACKEND`: Set to Redis URL, e.g., `redis://localhost:6379/0`\n  - `workers`: Number of worker processes to run, e.g., `--concurrency=4`",
     "source": "code_example",
-    "updated_at": 1780932179.9624274
+    "updated_at": 1780940922.9983768
   },
   "search:fastapi+celery-performance:celery task scheduling with fa": {
     "content": "- **Install Celery**: `pip install celery`\n- **Install Redis**: `docker run -d --name redis -p 6379:6379 redis`\n- **Create Celery App**:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='redis://localhost:6379/0')\n  ```\n- **Define Task**:\n  ```python\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Run Celery Worker**: `celery -A tasks worker --loglevel=info`\n- **FastAPI Integration**:\n  ```python\n  from fastapi import FastAPI\n  from celery.result import AsyncResult\n\n  app = FastAPI()\n\n  @app.post(\"/add/\")\n  async def add_numbers(x: int, y: int):\n      task = add.delay(x, y)\n      return {\"task_id\": task.id}\n\n  @app.get(\"/status/{task_id}\")\n  async def get_task_status(task_id: str):\n      result = AsyncResult(task_id)\n      return {\"state\": result.state}\n  ```\n- **Docker Compose**:\n  ```yaml\n  version: '3'\n  services:\n    web:\n      build: .\n      ports:\n        - \"8000:8000\"\n      depends_on:\n        - redis\n    worker:\n      build: .\n      command: celery -A tasks worker --loglevel=info\n      depends_on:\n        - redis\n    redis:\n      image: \"redis:latest\"\n  ```\n- **Key Config Options**:\n  - `broker`: URL of the message broker (e.g., Redis).\n  - `backend`: URL of the result backend (e.g., Redis).\n  - `task_serializer`: Serialization method for tasks.\n  - `result_serializer`: Serialization method for results.",
     "source": "web_search",
-    "updated_at": 1780932182.226525
+    "updated_at": 1780940925.8297129
   },
   "search:fastapi+celery-performance:celery task scheduling with fa_ex": {
     "content": "- Use `celery` and `fastapi` together for task scheduling.\n- Install Celery using pip: `pip install celery`.\n- Set up a Celery app in your FastAPI project:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='redis://localhost:6379/0')\n  ```\n- Define tasks with decorators:\n  ```python\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n- Trigger tasks from FastAPI endpoints:\n  ```python\n  from fastapi import FastAPI\n\n  app = FastAPI()\n\n  @app.post(\"/add/\")\n  async def read_root():\n      result = add.delay(4, 6)\n      return {\"task_id\": result.id}\n  ```\n- Monitor task status using Celery Flower: `celery flower --broker=redis://localhost:6379/0`.\n- Configure Celery with Redis as the broker and backend:\n  ```python\n  app.conf.update(\n      broker_url='redis://localhost:6379/0',\n      result_backend='redis://localhost:6379/0'\n  )\n  ```\n- Use `APScheduler` for more complex scheduling needs.\n- For production, ensure Redis is properly configured and accessible.",
     "source": "code_example",
-    "updated_at": 1780932184.2602918
+    "updated_at": 1780940928.4244275
   }
 }

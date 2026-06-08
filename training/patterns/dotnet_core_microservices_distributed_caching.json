@@ -2,6 +2,6 @@
   "search:dotnet-core-microservices-distributed-caching:distributed caching in .net co": {
     "content": "- **NCache**: \n  - Install via NuGet: `dotnet add package NCache`\n  - Configure in `appsettings.json`:\n    ```json\n    \"Caching\": {\n      \"Provider\": \"NCache\",\n      \"ConnectionString\": \"Server=your_server_address;Port=40000\"\n    }\n  ```\n- **Redis**:\n  - Install via NuGet: `dotnet add package StackExchange.Redis`\n  - Configure in `appsettings.json`:\n    ```json\n    \"Caching\": {\n      \"Provider\": \"Redis\",\n      \"ConnectionString\": \"your_redis_connection_string\"\n    }\n  ```\n- **Key Config Options**:\n  - Cache Expiration Time\n  - Cache Key Prefixes\n  - Cache Eviction Policies",
     "source": "web_search",
-    "updated_at": 1780932239.947619
+    "updated_at": 1780941002.8270493
   }
 }

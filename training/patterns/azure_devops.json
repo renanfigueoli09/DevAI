@@ -2,11 +2,11 @@
   "search:azure-devops:azure devops pipelines task do": {
     "content": "- Use `az acr login --name <your-acr-name>` to log in to your Azure Container Registry.\n- For building Docker images, use the command:\n  ```bash\n  docker build -t <your-image-name>:<tag> .\n  ```\n- Push the image to ACR with:\n  ```bash\n  docker push <your-acr-name>.azurecr.io/<your-image-name>:<tag>\n  ```\n- In Azure DevOps, configure a pipeline using the \"Build a Docker image\" template.\n- Replace placeholders in the YAML file with your specific details (e.g., registry name, image name).\n- Key config options include:\n  - `dockerfile`: Path to the Dockerfile.\n  - `context`: Build context.\n  - `imageNames`: Names of the images to build and push.\n- Ensure you have an Azure Container Registry (ACR) set up and configured in your Azure DevOps project.\n- For deploying to Azure App Service, use the \"Azure Web App\" task with appropriate settings for Docker deployment.",
     "source": "web_search",
-    "updated_at": 1780932220.3688421
+    "updated_at": 1780940974.0466754
   },
   "search:azure-devops:azure devops pipelines task do_ex": {
     "content": "- **CLI Commands**:\n  - `az pipelines create --name \"MyPipeline\" --repository \"my-repo\" --branch \"main\"`\n  - `docker build -t myimage:latest .`\n  - `docker push myregistry/myimage:latest`\n\n- **Latest Versions**:\n  - Azure Pipelines Task Docker@2\n  - Docker CLI v23.0\n\n- **Key Config Options**:\n  - `Dockerfile`: Path to the Dockerfile.\n  - `tags`: Tags for the Docker image.\n  - `dockerRegistryEndpoint`: Endpoint of the container registry.",
     "source": "code_example",
-    "updated_at": 1780932222.329814
+    "updated_at": 1780940977.1099815
   }
 }

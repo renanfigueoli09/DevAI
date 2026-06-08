@@ -2,21 +2,21 @@
   "search:nestjs+elasticsearch:nestjs @elastic/elasticsearch ": {
     "content": "- Install Elasticsearch module via npm: `npm install @nestjs/elasticsearch`\n- Use the latest version of NestJS and Elasticsearch.\n- Configure the ElasticsearchModule in your app.module.ts:\n```typescript\n@Module({\n  imports: [\n    ElasticsearchModule.register({\n      node: 'http://localhost:9200',\n    }),\n  ],\n})\nexport class AppModule {}\n```\n- To index data, use `ElasticsearchService`:\n```typescript\nthis.elasticsearchService.index({ index: 'my-index', body: { title: 'test' } });\n```\n- For searching, use the `search` method:\n```typescript\nconst result = await this.elasticsearchService.search({\n  index: 'my-index',\n  body: {\n    query: {\n      match: { title: 'test' },\n    },\n  },\n});\n```\n- Key config options include `node`, `username`, and `password`.\n- For maintaining data synchronization, consider using NestJS's event-driven architecture to trigger reindexing on entity updates.",
     "source": "web_search",
-    "updated_at": 1780931824.295479
+    "updated_at": 1780940576.089364
   },
   "search:nestjs+elasticsearch:nestjs @elastic/elasticsearch _ex": {
     "content": "- **CLI Commands**:\n  - `npm install @nestjs/elasticsearch`\n  - `nest generate module elasticsearch`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - @elastic/elasticsearch: v8.x\n\n- **Key Config Options**:\n  - `host`: Elasticsearch server URL.\n  - `port`: Elasticsearch server port.\n  - `username` and `password`: Authentication credentials if required.",
     "source": "code_example",
-    "updated_at": 1780931826.9995492
+    "updated_at": 1780940578.9574454
   },
   "search:nestjs+elasticsearch:nestjs elasticsearch mapping a": {
     "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/your_index_name/_search?pretty\" -H 'Content-Type: application/json' -d'\n    {\n      \"aggs\": {\n        \"date_histogram\": {\n          \"histogram\": {\n            \"field\": \"date\",\n            \"interval\": \"month\"\n          }\n        }\n      }\n    }'\n\n- **Latest Versions**:\n  - Elasticsearch: 8.4\n  - NestJS: 10.2\n\n- **Key Config Options**:\n  - `index.mapping.total_fields.limit`: Set to increase the limit of total fields in an index.\n  - `cluster.routing.allocation.cluster_concurrent_rebalance`: Controls the number of concurrent shard rebalances allowed per cluster.\n  - `search.max_buckets`: Limits the maximum number of buckets that can be returned by a single aggregation.",
     "source": "web_search",
-    "updated_at": 1780931829.4243622
+    "updated_at": 1780940581.699487
   },
   "search:nestjs+elasticsearch:nestjs elasticsearch mapping a_ex": {
     "content": "- **Install the package**: `npm install @codemask-labs/nestjs-elasticsearch`\n- **Latest version**: Check on [npm](https://www.npmjs.com/package/@codemask-labs/nestjs-elasticsearch)\n- **Key config options**:\n  - `indexName`: The name of your Elasticsearch index.\n  - `schema`: Define the schema for your documents.\n  - `settings`: Configure settings like number of shards and replicas.\n- **CLI commands**: Not applicable for this package. Use it as a module in your NestJS application.\n- **Example usage**:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { ElasticsearchModule } from '@codemask-labs/nestjs-elasticsearch';\n\n  @Module({\n    imports: [\n      ElasticsearchModule.register({\n        host: 'localhost:9200',\n        indexName: 'my_index',\n        schema: {\n          properties: {\n            title: { type: 'text' },\n            description: { type: 'text' },\n            price: { type: 'float' }\n          }\n        }\n      })\n    ]\n  })\n  export class AppModule {}\n  ```\n- **Aggregation example**:\n  ```typescript\n  import { ElasticsearchService } from '@codemask-labs/nestjs-elasticsearch';\n\n  constructor(private readonly elasticsearchService: ElasticsearchService) {}\n\n  async getAggregations() {\n    const result = await this.elasticsearchService.search({\n      index: 'my_index',\n      body: {\n        size: 0,\n        aggs: {\n          price_stats: {\n            stats: { field: 'price' }\n          }\n        }\n      }\n    });\n    return result.aggregations.price_stats;\n  }\n  ```",
     "source": "code_example",
-    "updated_at": 1780931833.2265954
+    "updated_at": 1780940584.3223708
   }
 }

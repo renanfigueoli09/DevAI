@@ -2,31 +2,31 @@
   "search:kubernetes+redis-advanced:kubernetes redis cluster manag": {
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>`: Apply configuration to a resource.\n  - `kubectl get pods`: List all pods in the current namespace.\n  - `kubectl scale deployment/<deployment-name> --replicas=<number>`: Scale a deployment.\n\n- **Latest Versions**:\n  - Kubernetes v1.24 (as of my last update).\n\n- **Key Config Options**:\n  - `spec.replicas`: Number of desired pods.\n  - `spec.template.spec.containers`: Define the container specifications.\n  - `spec.serviceName`: Link to a service for exposing the deployment.\n\nFor managing Redis clusters in Kubernetes, consider using Helm charts or custom resource definitions (CRDs) tailored for Redis.",
     "source": "web_search",
-    "updated_at": 1780932242.373149
+    "updated_at": 1780941005.8280616
   },
   "search:kubernetes+redis-advanced:kubernetes redis cluster manag_ex": {
     "content": "- **GitHub Repository**: OT-CONTAINER-KIT/redis-operator\n- **Latest Version**: Not specified in the provided text, but can be found on GitHub.\n- **CLI Commands**:\n  - `kubectl exec -it redis-cluster-0 -- redis-cli --cluster check :6379`\n- **Key Config Options**:\n  - Redis configuration through a ConfigMap\n  - Cluster mode setup using Kubernetes resources",
     "source": "code_example",
-    "updated_at": 1780932244.452514
+    "updated_at": 1780941008.7548528
   },
   "search:kubernetes+redis-advanced:advanced kubernetes redis conf": {
     "content": "- Deploy Redis Cluster on Kubernetes using `kubectl apply -f redis-cluster.yaml`\n- Use `redis-config` ConfigMap to set maxmemory 2mb\n- Manage Redis clusters with SAP/redis-operator\n- Redis Enterprise for Kubernetes release 6.4.2-4 supports Redis Enterprise Software 6.4.2",
     "source": "web_search",
-    "updated_at": 1780932246.4364622
+    "updated_at": 1780941012.8873577
   },
   "search:kubernetes+redis-advanced:advanced kubernetes redis conf_ex": {
     "content": "- Deploy Redis cluster across two Kubernetes clusters using `kubectl apply -f <deployment-file.yaml>`.\n- Use environment variables to reference podIP in deployment templates.\n- For Bitnami Redis, use the following command:\n  ```\n  helm install my-redis bitnami/redis --set image.tag=19.0.2\n  ```\n- Key config options include `replicaCount`, `master.persistence.size`, and `slave.persistence.size`.\n- Ensure network policies allow communication between Kubernetes clusters.\n- Use `kubectl get pods -o wide` to find podIPs for environment variables.\n- For time series modules, consider using RedisTimeSeries or other compatible modules.",
     "source": "code_example",
-    "updated_at": 1780932248.4849195
+    "updated_at": 1780941019.9185507
   },
   "search:kubernetes+redis-advanced:redis in kubernetes for high a": {
     "content": "- Use `helm install` command to deploy Redis Sentinel Cluster.\n- Specify the latest version of the Bitnami Redis Helm Chart.\n- Configure persistence for data durability with `--set persistence.enabled=true`.\n- Set up replica sets for high availability using `--set replicaCount=2`.\n- Enable Redis Sentinel by setting `--set sentinel.enabled=true`.\n- Adjust resource limits and requests in values.yaml for optimal performance.\n- Monitor the cluster status with `helm list` and check logs with `kubectl logs <pod-name>`.\n- Regularly update Helm chart to benefit from latest features and security patches.",
     "source": "web_search",
-    "updated_at": 1780932251.3005614
+    "updated_at": 1780941022.8318582
   },
   "search:kubernetes+redis-advanced:redis in kubernetes for high a_ex": {
     "content": "- Use `helm install` to deploy Redis Sentinel.\n- Specify the latest version of the Bitnami Redis Helm Chart.\n- Configure replica sets for high availability.\n- Utilize persistent storage for data persistence.\n- Set up Redis Sentinel for failover mechanism.\n- Monitor Redis cluster health using Kubernetes dashboard or tools like Prometheus and Grafana.",
     "source": "code_example",
-    "updated_at": 1780932253.7416005
+    "updated_at": 1780941025.196361
   }
 }

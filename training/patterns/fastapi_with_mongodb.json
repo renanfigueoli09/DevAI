@@ -2,31 +2,31 @@
   "search:FastAPI with MongoDB:fastapi with mongodb crud oper": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn motor pymongo`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n  - Motor: v2.3.0\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Database Name: `mydatabase`\n  - Collection Name: `students`\n  - FastAPI App Instance: `app = FastAPI()`\n  - Motor Client: `client = motor.motor_asyncio.AsyncIOMotorClient(\"mongodb://localhost:27017\")`",
     "source": "web_search",
-    "updated_at": 1780932117.577989
+    "updated_at": 1780940831.8897703
   },
   "search:FastAPI with MongoDB:fastapi with mongodb crud oper_ex": {
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn pymongo`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Pydantic: 1.10.7\n  - MongoDB: 4.4\n\n- **Key Config Options**:\n  - Database URL: `mongodb://localhost:27017`\n  - Collection Name: `items`\n  - Model Fields: Define using Pydantic models with validators and types.",
     "source": "code_example",
-    "updated_at": 1780932119.7277431
+    "updated_at": 1780940834.682788
   },
   "search:FastAPI with MongoDB:mongodb performance tuning for": {
     "content": "- Install FastAPI and Uvicorn using Poetry: `$ poetry add fastapi 'uvicorn[standard]'`\n- Use the latest version of FastAPI: `^0.103.2`\n- Key config options for performance tuning:\n  - Database connection pool size\n  - Caching strategies (e.g., Redis, Memcached)\n  - Asynchronous patterns (e.g., async/await)\n  - Deployment configurations (e.g., load balancing)",
     "source": "web_search",
-    "updated_at": 1780932121.8360512
+    "updated_at": 1780940836.9577858
   },
   "search:FastAPI with MongoDB:mongodb performance tuning for_ex": {
     "content": "- **CLI Commands**:\n  - `poetry add fastapi 'uvicorn[standard]'`: Adds FastAPI and Uvicorn to your project.\n  - `uvicorn main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: ^0.103.2\n  - Uvicorn: ^0.23.2\n\n- **Key Config Options**:\n  - MongoDB Connection String: Customize based on your environment (local, Atlas).\n  - Pydantic Models: Define data models for validation and serialization.\n  - FastAPI Security: Implement authentication and authorization using OAuth2 or JWT.",
     "source": "code_example",
-    "updated_at": 1780932124.0663488
+    "updated_at": 1780940839.7661507
   },
   "search:FastAPI with MongoDB:fastapi and mongodb security p": {
     "content": "- **CLI Commands**:\n  - `poetry init`: Initialize a new project.\n  - `poetry add fastapi motor python-jose passlib`: Add dependencies to your project.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.1\n  - Motor: v2.3.1\n  - Python-Jose: v3.2.0\n  - Passlib: v1.7.4\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://username:password@host:port/database`\n  - JWT Secret Key: Generate a secure secret key for JWT encoding.\n  - Password Hashing Algorithm: Use algorithms like bcrypt provided by Passlib.\n\nThese actionable facts should help developers set up and configure FastAPI with MongoDB securely.",
     "source": "web_search",
-    "updated_at": 1780932126.261502
+    "updated_at": 1780940842.18791
   },
   "search:FastAPI with MongoDB:fastapi and mongodb security p_ex": {
     "content": "- **CLI Commands**:\n  - `git clone https://github.com/Youngestdev/fastapi-mongo.git`\n  - `docker run -d -p 27017:27017 mongo`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - PyMongo: 4.3.0\n\n- **Key Config Options**:\n  - MongoDB URI in `.env.dev`: `MONGO_URI=mongodb://localhost:27017/mydatabase`\n  - JWT Secret Key: `JWT_SECRET_KEY=your_secret_key_here`",
     "source": "code_example",
-    "updated_at": 1780932128.6976893
+    "updated_at": 1780940844.6265185
   }
 }
