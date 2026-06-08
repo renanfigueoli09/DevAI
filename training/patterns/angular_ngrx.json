@@ -2,21 +2,21 @@
   "search:angular+ngRx:angular ngrx state management ": {
     "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version of NgRx is 15.0.0.\n\n- **Key Config Options**:\n  - `initialState`: Defines the initial state of the store.\n  - `reducers`: Maps actions to functions that return new states.\n  - `effects`: Handles side effects and asynchronous operations.\n  - `actions`: Define events that can change the state.",
     "source": "web_search",
-    "updated_at": 1780921141.465675
+    "updated_at": 1780922907.8739603
   },
   "search:angular+ngRx:angular ngrx state management _ex": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the root module for global state management.\n  - `EffectsModule.forRoot(effects)` to register effects globally.\n  - `@ngrx/store-devtools` for development tools.",
     "source": "code_example",
-    "updated_at": 1780921142.3909783
+    "updated_at": 1780922909.606789
   },
   "search:angular+ngRx:angular ngrx performance optim": {
     "content": "- **CLI Commands**:\n  - `ng generate store <name>`: Generates a new NgRx store.\n  - `ng generate effect <name>`: Generates a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular: v17.0.0\n  - NgRx: v15.0.0\n\n- **Key Config Options**:\n  - `storeFreeze`: Prevents accidental mutation of the store state.\n  - `runtimeChecks`: Enables runtime checks for development and disables them in production.\n  - `developmentMode`: Controls whether Angular's development mode is enabled.\n\n- **Performance Optimization Tips**:\n  - Call services directly from effects instead of dispatching through effects.\n  - Use `select` operators to filter and map store state efficiently.\n  - Implement lazy loading for NgRx reducers and effects.\n  - Optimize selectors by memoizing them with libraries like `reselect`.",
     "source": "web_search",
-    "updated_at": 1780921142.6260936
+    "updated_at": 1780922911.6193094
   },
   "search:angular+ngRx:angular ngrx performance optim_ex": {
     "content": "- Use `ng update` to update Angular and ngRx to their latest versions.\n- Implement NgRX Entities for efficient state management.\n- Dispatch service calls directly from effects instead of through actions for performance improvements.\n- Utilize lazy loading in routing to optimize initial load times.\n- Minimize the use of selectors that perform heavy computations or fetch data unnecessarily.\n- Enable production mode with `ng serve --prod` for better performance.\n- Use `@ngrx/store-devtools` for debugging and optimization in development.\n- Optimize change detection strategies by using `ChangeDetectionStrategy.OnPush`.\n- Consider server-side rendering (SSR) to improve initial load times.",
     "source": "code_example",
-    "updated_at": 1780921143.5364652
+    "updated_at": 1780922913.463823
   }
 }

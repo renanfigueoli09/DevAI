@@ -2,51 +2,51 @@
   "search:Security:spring+jpa-security advanced s": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/spring-security-jpa-<version>.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n  - JPA/Hibernate: 2.1\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, security settings.\n  - `@EnableWebSecurity`: Enables Spring Security configuration.\n  - `UserDetailsService`: Implement to provide user-specific data.\n  - `PasswordEncoder`: For password encoding and verification.\n  - `HttpSecurity`: Customize web security configurations.",
     "source": "web_search",
-    "updated_at": 1780921117.1897016
+    "updated_at": 1780922859.5139973
   },
   "search:Security:spring+jpa-security advanced s_ex": {
     "content": "- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options for JWT Authentication in Spring Boot**:\n  - `application.yml` or `application.properties`:\n    ```yaml\n    security:\n      jwt:\n        secret: yourSecretKey\n        token-validity-in-seconds: 86400\n    ```\n  - Enable Web Security Configuration:\n    ```java\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.csrf().disable()\n                .authorizeRequests()\n                .antMatchers(\"/api/auth/**\").permitAll()\n                .anyRequest().authenticated();\n        }\n    }\n    ```\n\n- **CLI Commands**:\n  - Create a new Spring Boot project with JPA and Security:\n    ```bash\n    spring init --dependencies=web,data-jpa,security my-spring-boot-project\n    ```\n  - Run the application:\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n\n- **Additional Resources**:\n  - [Baeldung Spring Data JPA](https://www.baeldung.com/spring-data-jpa)\n  - [GeeksforGeeks Spring Data JPA](https://www.geeksforgeeks.org/spring-data-jpa/)\n  - [YouTube Video on JWT Authentication with Spring Boot and Spring Security](https://www.youtube.com/watch?v=your-video-id)",
     "source": "code_example",
-    "updated_at": 1780921118.2743354
+    "updated_at": 1780922861.4656358
   },
   "search:Security:angular-unit-testing-best-prac": {
     "content": "- Use Angular CLI to generate unit tests (`ng generate component <component-name> --spec`)\n- Ensure latest Angular version for best practices and security updates (`ng update @angular/core @angular/cli`)\n- Key config options in `karma.conf.js`: `browsers`, `singleRun`, `autoWatch`\n- Mock services using Jasmine's `spyOn` or `createSpyObj`\n- Use `HttpClientTestingModule` for mocking HTTP requests\n- Implement robust input validation and use HTTPS encryption\n- Utilize JWT authentication for secure user sessions\n- Apply strict Content Security Policy (CSP) to mitigate XSS attacks\n- Run security tests as part of CI/CD pipeline (`ng test --watch=false`)\n- Leverage OWASP practices for comprehensive security testing",
     "source": "web_search",
-    "updated_at": 1780921119.253368
+    "updated_at": 1780922863.9039762
   },
   "search:Security:angular-unit-testing-best-prac_ex": {
     "content": "- Use `ng test` to run unit tests.\n- Ensure Angular CLI is up-to-date using `npm install -g @angular/cli`.\n- Configure `karma.conf.js` for custom Karma settings.\n- Utilize Jasmine and Jest as testing frameworks.\n- Mock services with `HttpClientTestingModule`.\n- Apply `async` and `fakeAsync` for asynchronous testing.\n- Use `TestBed.configureTestingModule` to configure test modules.\n- Implement coverage reporting with `ng test --code-coverage`.\n- Review Angular's official documentation for the latest best practices.",
     "source": "code_example",
-    "updated_at": 1780921120.1583564
+    "updated_at": 1780922865.8749971
   },
   "search:Security:circleci security practices": {
     "content": "- **CLI Commands**:\n  - `circleci context create <context-name> --description \"Description of the context\"`\n  - `circleci context set-variable <context-name> -n <variable-name> -v <value>`\n  - `circleci config validate`\n\n- **Latest Versions**:\n  - CircleCI CLI: v2.1.0\n  - CircleCI Server: v4.3.0\n\n- **Key Config Options**:\n  - `version`: Specifies the version of the configuration file.\n  - `jobs`: Defines the jobs to be run in the pipeline.\n  - `workflows`: Defines the workflows that trigger jobs.\n  - `context`: Specifies the context for environment variables and secrets.\n  - `steps`: Defines the steps within a job, such as running commands or using Docker images.",
     "source": "web_search",
-    "updated_at": 1780921121.0287125
+    "updated_at": 1780922867.8949425
   },
   "search:Security:circleci security practices_ex": {
     "content": "- **CLI Commands**: Use `circleci config validate` to check your configuration file.\n- **Latest Version**: Ensure you are using the latest version of CircleCI CLI by running `circleci update`.\n- **Key Config Options**:\n  - `environment`: Define environment variables securely in your `.circleci/config.yml`.\n  - `jobs`: Configure jobs with specific steps and dependencies.\n  - `workflows`: Automate workflows to run jobs in a defined order.\n  - `parameters`: Use parameters for dynamic configuration values.\n- **Security Practices**:\n  - Store secrets using CircleCI's environment variables or the Secrets Manager.\n  - Regularly update dependencies and plugins.\n  - Implement code scanning tools within your CI pipeline.",
     "source": "code_example",
-    "updated_at": 1780921121.8431842
+    "updated_at": 1780922869.6858711
   },
   "search:Security:spring+kafka-advanced security": {
     "content": "- Use `kafka-topics.sh --create` to create topics with SSL security protocol.\n- Set `security.protocol=SSL` in Kafka producer and consumer configurations.\n- Configure SSL certificates using `ssl.keystore.location`, `ssl.keystore.password`, `ssl.truststore.location`, and `ssl.truststore.password`.\n- Use SASL mechanisms like `SASL_PLAINTEXT` or `SASL_SSL` for additional security.\n- Update Kafka to the latest version for enhanced security features.\n- Configure Spring Boot with `spring.kafka.security.protocol=SSL` and provide SSL properties in `application.properties`.\n- Implement custom encryption using Avro schemas for secure data transmission.\n- Regularly update and rotate SSL certificates to maintain security.",
     "source": "web_search",
-    "updated_at": 1780921122.7618754
+    "updated_at": 1780922871.4282706
   },
   "search:Security:spring+kafka-advanced security_ex": {
     "content": "- Use Spring Boot version 3.x or later.\n- Ensure Kafka brokers are configured with SSL/TLS.\n- Configure Kafka producer and consumer properties in `application.properties`:\n  ```properties\n  spring.kafka.bootstrap-servers=ssl://localhost:9093\n  spring.kafka.producer.security.protocol=SASL_SSL\n  spring.kafka.consumer.security.protocol=SASL_SSL\n  ```\n- Set SASL mechanism to PLAIN or SCRAM-SHA-256.\n  ```properties\n  spring.kafka.sasl.mechanism=SCRAM-SHA-256\n  ```\n- Configure JAAS file for authentication:\n  ```java\n  System.setProperty(\"java.security.auth.login.config\", \"/path/to/jaas.conf\");\n  ```\n- Example JAAS configuration (`jaas.conf`):\n  ```plaintext\n  KafkaClient {\n    org.apache.kafka.common.security.scram.ScramLoginModule required\n    username=\"your_username\"\n    password=\"your_password\";\n  };\n  ```\n- Use Spring Security for role-based access control.\n- Ensure Kafka topics are properly secured with ACLs (Access Control Lists).\n- Regularly update and patch Spring Boot and Kafka to address security vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780921123.8918364
+    "updated_at": 1780922873.1794045
   },
   "search:Security:kafka+kstream security protoco": {
     "content": "- Use `kafka-topics.sh --bootstrap-server <broker_address> --command-config /path/to/security.properties --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n- Set `security.protocol=SSL` in your Kafka client configuration.\n- Ensure SSL certificates are correctly configured and accessible by the Kafka clients.\n- Use `kafka-consumer-groups.sh --bootstrap-server <broker_address> --command-config /path/to/security.properties --describe --group <group_name>` to monitor consumer groups.\n- Key config options include:\n  - `ssl.truststore.location`\n  - `ssl.truststore.password`\n  - `ssl.keystore.location`\n  - `ssl.keystore.password`\n- Latest versions can be found on the [Apache Kafka release page](https://kafka.apache.org/downloads).\n- For Kafka Streams, ensure you have the correct security configurations in your application properties or YAML file.\n- Use `ksqlDB` for stream processing with enhanced security features.",
     "source": "web_search",
-    "updated_at": 1780921124.8808305
+    "updated_at": 1780922874.830326
   },
   "search:Security:kafka+kstream security protoco_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker_address> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-console-producer.sh --broker-list <broker_address> --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server <broker_address> --topic <topic_name> --from-beginning`\n\n- **Latest Versions**:\n  - Kafka: 3.0.0\n  - Kafka Streams: 3.0.0\n\n- **Key Config Options**:\n  - `security.protocol`: Set to `SSL` or `SASL_SSL` for secure connections.\n  - `ssl.truststore.location`: Path to the truststore file.\n  - `ssl.truststore.password`: Password for the truststore.\n  - `sasl.mechanism`: Mechanism like `PLAIN`, `SCRAM-SHA-256`, or `SCRAM-SHA-512`.\n  - `sasl.jaas.config`: JAAS configuration for SASL authentication.",
     "source": "code_example",
-    "updated_at": 1780921125.75599
+    "updated_at": 1780922876.5219731
   }
 }

@@ -2,31 +2,31 @@
   "search:Advanced Security Practices in NextJS + Prisma:nextjs security": {
     "content": "- **CLI Commands**:\n  - `npx next dev --port <PORT>` to start the development server on a specific port.\n  - `npm run build` to build your Next.js application for production.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Next.js by running `npm install next@latest`.\n\n- **Key Config Options**:\n  - `security.headers`: Configure security headers in `next.config.js`.\n    ```javascript\n    module.exports = {\n      async headers() {\n        return [\n          {\n            source: '/(.*)',\n            headers: [\n              { key: 'Content-Security-Policy', value: \"default-src 'self'\" },\n              { key: 'X-Frame-Options', value: 'SAMEORIGIN' },\n              // Add other security headers as needed\n            ],\n          },\n        ];\n      },\n    };\n    ```\n  - `next.config.js`: Configure Next.js settings including API routes, asset optimization, and more.\n\n- **Security Practices**:\n  - Implement CSRF protection using cookies.\n  - Use HTTPS for all communications.\n  - Regularly update dependencies to patch security vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780921166.058173
+    "updated_at": 1780922959.624095
   },
   "search:Advanced Security Practices in NextJS + Prisma:nextjs security_ex": {
     "content": "- **CLI Commands**:\n  - `npx next dev` to start the development server.\n  - `next build` to build your application for production.\n  - `next export` to statically export your Next.js app.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Next.js by running `npm install next@latest`.\n\n- **Key Config Options**:\n  - Security Headers: Configure security headers in `next.config.js`.\n    ```javascript\n    module.exports = {\n      async headers() {\n        return [\n          {\n            source: '/(.*)',\n            headers: [\n              { key: 'Content-Security-Policy', value: \"default-src 'self'\" },\n              { key: 'X-Frame-Options', value: 'SAMEORIGIN' },\n              { key: 'X-XSS-Protection', value: '1; mode=block' },\n              { key: 'X-Content-Type-Options', value: 'nosniff' },\n            ],\n          },\n        ];\n      },\n    };\n    ```\n  - Environment Variables: Use environment variables for sensitive data.\n    ```javascript\n    // .env.local\n    API_KEY=your_api_key_here\n    ```\n\n- **Best Practices**:\n  - Implement server-side rendering (SSR) and static generation (SSG) to improve security.\n  - Regularly update dependencies using `npm outdated` and `npm update`.\n  - Use HTTPS for all communications.\n  - Sanitize user inputs to prevent XSS attacks.",
     "source": "code_example",
-    "updated_at": 1780921166.9025378
+    "updated_at": 1780922961.5520003
   },
   "search:Advanced Security Practices in NextJS + Prisma:prisma security": {
     "content": "- **Prisma Cloud**: Use `prisma cloud login` to authenticate.\n- **Latest Version**: Check the [Palo Alto Networks website](https://www.paloaltonetworks.com/prisma/cloud) for the latest version.\n- **Key Config Options**:\n  - `apiToken`: For authentication.\n  - `url`: Prisma Cloud API endpoint.\n  - `profile`: Specify the profile to use.",
     "source": "web_search",
-    "updated_at": 1780921167.7749033
+    "updated_at": 1780922963.6765249
   },
   "search:Advanced Security Practices in NextJS + Prisma:prisma security_ex": {
     "content": "- Update Prisma client to latest version using `npm update @prisma/client`\n- Ensure Prisma is up-to-date for security patches\n- Use Prisma ORM to prevent SQL injections\n- Example project repository available on GitHub: [prisma/prisma-examples](https://github.com/prisma/prisma-examples)\n- Integrate Wrangler with Hono and Prisma for Cloudflare Workers\n- Follow step-by-step instructions in the respective documentation",
     "source": "code_example",
-    "updated_at": 1780921168.8691108
+    "updated_at": 1780922965.9252908
   },
   "search:Advanced Security Practices in NextJS + Prisma:graphql security": {
     "content": "- Use `graphql.security` tool to run common security tests on your GraphQL endpoint.\n- Implement transport protocol security, such as HTTPS.\n- Review and enforce GraphQL schema validation.\n- Apply rate limiting to prevent abuse.\n- Secure authentication mechanisms like JWT or OAuth.\n- Regularly update libraries and dependencies.\n- Monitor API usage for anomalies.\n- Enable query complexity limits to prevent denial-of-service attacks.",
     "source": "web_search",
-    "updated_at": 1780921169.8239639
+    "updated_at": 1780922967.8458745
   },
   "search:Advanced Security Practices in NextJS + Prisma:graphql security_ex": {
     "content": "- **GraphQL Security Best Practices**\n  - Use `@auth` directive to control access.\n  - Implement role-based access control (RBAC).\n  - Validate user input using GraphQL schema.\n\n- **CLI Commands with Exact Flags**\n  - `npm install graphql-tools --save`\n  - `npx create-react-app my-app`\n\n- **Latest Versions**\n  - GraphQL: v16.0.0\n  - Apollo Server: v3.7.0\n\n- **Key Config Options**\n  - `context`: Pass additional data to resolvers.\n  - `resolvers`: Define the logic for each field in your schema.\n  - `typeDefs`: Define the structure of your GraphQL API.\n\nThese points provide actionable facts for developers working with GraphQL, focusing on security best practices and essential tools.",
     "source": "code_example",
-    "updated_at": 1780921170.7498758
+    "updated_at": 1780922969.9501195
   }
 }

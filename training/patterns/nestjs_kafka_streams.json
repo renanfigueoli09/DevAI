@@ -2,11 +2,11 @@
   "search:NestJS + Kafka Streams:nestjs kafka streams performan": {
     "content": "- Use `npx @nestjs/cli new kafka-nestjs` to create a new NestJS project.\n- Ensure Docker is installed and running for development.\n- Create a `docker-compose.yml` file for setting up Kafka and other services.\n- For Kafka Streams, consider using the latest version of `kafkajs`.\n- Key configuration options include `brokers`, `clientId`, and `groupId` in Kafka producer and consumer setup.\n- Use `@nestjs/microservices` package to integrate NestJS with Kafka for event-driven architecture.\n- Explore GitHub repositories like `saransh-khobragade/NestJS-Kafka-boilerplate-2025` for practical examples.\n- For real-time data sync, utilize MongoDB Change Streams in conjunction with Kafka.",
     "source": "web_search",
-    "updated_at": 1780921156.0638871
+    "updated_at": 1780922939.4018123
   },
   "search:NestJS + Kafka Streams:nestjs kafka streams performan_ex": {
     "content": "- **NestJS Kafka Streams Performance Tuning**\n  - Use latest NestJS version: `nestjs/nest-cli@latest`\n  - Install KafkaJS: `npm install kafka-node`\n  - Key config options:\n    - `consumer`: `{ groupId: 'my-group', autoCommit: true, fetchMaxWaitMs: 100 }`\n    - `producer`: `{ acks: 'all', retries: 25 }`\n  - CLI commands:\n    - Start NestJS app: `nest start`\n    - Generate a new module: `nest generate module myModule`\n    - Generate a new service: `nest generate service myService`",
     "source": "code_example",
-    "updated_at": 1780921157.0389302
+    "updated_at": 1780922941.5064652
   }
 }
