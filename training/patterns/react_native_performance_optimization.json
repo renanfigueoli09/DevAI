@@ -2,21 +2,21 @@
   "search:react-native-performance-optimization:react native performance optim": {
     "content": "- **CLI Commands**:\n  - `react-native performance monitor` to enable the built-in performance monitor.\n  - `adb shell input keyevent 82` to shake the device and open the developer menu.\n\n- **Latest Versions**:\n  - React Native: Ensure you are using the latest stable version for performance improvements.\n  - Expo: If using Expo, update to the latest SDK version.\n\n- **Key Config Options**:\n  - `initialNumToRender`: Set this in FlatList to specify how many items should be rendered initially.\n  - `maxToRenderPerBatch`: Adjust this to control how many items are rendered per batch during scrolling.\n  - `updateCellsBatchingPeriod`: Use this to set the time interval for batching updates.\n\n- **Additional Tips**:\n  - Implement virtualization in FlatList using `keyExtractor` and `getItemLayout`.\n  - Use `useCallback` and `useMemo` to memoize functions and values that do not change frequently.\n  - Optimize images by using libraries like `react-native-fast-image`.",
     "source": "web_search",
-    "updated_at": 1780845298.9459705
+    "updated_at": 1780933610.3265903
   },
   "search:react-native-performance-optimization:react native performance optim_ex": {
     "content": "- **React Native Performance Optimization Techniques 2023**\n  - Use `react-native-reanimated` for smooth animations.\n  - Implement lazy loading for components with `React.lazy()` and `Suspense`.\n  - Optimize images using libraries like `react-native-fast-image`.\n  - Utilize `useCallback` and `useMemo` to memoize functions and values.\n  - Avoid re-rendering unnecessary components by using `React.PureComponent` or `React.memo`.\n  - Use `FlatList` for efficient list rendering instead of `ScrollView`.\n  - Implement server-side rendering (SSR) with libraries like `react-native-webview`.\n  - Profile your app using React Native Debugger or Chrome DevTools.\n  - Upgrade to the latest version of React Native CLI and dependencies.",
     "source": "code_example",
-    "updated_at": 1780845301.37606
+    "updated_at": 1780933613.1220024
   },
   "search:react-native-performance-optimization:react native profiling and deb": {
     "content": "- **CLI Commands**:\n  - `npx react-native init <ProjectName>`: Initializes a new React Native project.\n  - `react-native run-android`: Runs the app on an Android emulator or device.\n  - `react-native run-ios`: Runs the app on an iOS simulator or device.\n\n- **Latest Versions**:\n  - React Native CLI: v7.0.3\n  - React: v18.2.0\n\n- **Key Config Options**:\n  - `metro.config.js`: Configuration file for Metro Bundler.\n  - `app.json`: Configuration file for app metadata and settings.\n  - `.env`: Environment variables for development and production environments.\n\nThese actionable facts provide a concise overview of essential tools, commands, and configurations for React Native development as of 2023.",
     "source": "web_search",
-    "updated_at": 1780845303.66638
+    "updated_at": 1780933616.6707494
   },
   "search:react-native-performance-optimization:react native profiling and deb_ex": {
     "content": "- **React Native Profiling and Debugging Tools**\n  - **Latest Version**: React Native 0.72\n  - **CLI Commands**:\n    - `react-native start`: Starts the Metro Bundler.\n    - `react-native run-android`: Runs your app on an Android emulator or device.\n    - `react-native run-ios`: Runs your app on an iOS simulator or device.\n    - `react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res`\n  - **Key Config Options**:\n    - `metro.config.js`: Customizes the Metro Bundler configuration.\n    - `android/app/build.gradle`: Manages dependencies and configurations for Android projects.\n    - `ios/Podfile`: Defines CocoaPods dependencies and project settings.",
     "source": "code_example",
-    "updated_at": 1780845306.2837594
+    "updated_at": 1780933619.4565544
   }
 }

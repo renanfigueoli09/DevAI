@@ -2,6 +2,6 @@
   "search:kubernetes+redis-cluster:kubernetes redis high availabi": {
     "content": "- Use `kubectl apply -f redis-ha.yaml` to deploy Redis in Kubernetes.\n- Ensure Kubernetes version is at least 1.8+ with Beta APIs enabled.\n- Configure Persistent Volume Provisioner support in your infrastructure.\n- Utilize the Redis Helm chart for deploying a highly available setup: `helm install my-redis stable/redis --set replicaCount=2`.\n- Key config options include:\n  - `replicaCount`: Number of replicas (default is 1).\n  - `persistence.enabled`: Enable persistent storage (default is true).\n  - `persistence.size`: Size of the persistent volume.\n  - `resources.requests.memory` and `resources.limits.memory`: Memory limits for Redis pods.\n- For Redis Sentinel, use `helm install my-sentinel stable/redis --set sentinel.enabled=true`.\n- Monitor Redis health with `kubectl get pods` and `kubectl logs <pod-name>`.\n- Scale out by updating the `replicaCount` in your Helm release.",
     "source": "web_search",
-    "updated_at": 1780845401.3677373
+    "updated_at": 1780933690.5839314
   }
 }

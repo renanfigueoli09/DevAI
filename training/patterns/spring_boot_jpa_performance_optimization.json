@@ -2,16 +2,16 @@
   "search:Spring Boot JPA Performance Optimization:jpa performance tuning": {
     "content": "- Use `@BatchSize` annotation to configure batch fetching size.\n- Enable second-level cache using `@EnableCaching` and `hibernate.cache.use_second_level_cache=true`.\n- Optimize queries by using JPQL or native SQL instead of entity graphs.\n- Adjust Hibernate settings like `hibernate.jdbc.batch_size`, `hibernate.order_inserts`, and `hibernate.order_updates`.\n- Use `@EntityGraph` for fetching related entities in a single query.\n- Configure connection pool properties such as `maxPoolSize`, `minPoolSize`, and `idleTimeout`.\n- Monitor and analyze performance using tools like JProfiler, VisualVM, or Hibernate's built-in statistics.\n- Regularly update dependencies to the latest versions to benefit from performance improvements and bug fixes.",
     "source": "web_search",
-    "updated_at": 1780845275.5252466
+    "updated_at": 1780933579.3373504
   },
   "search:Spring Boot JPA Performance Optimization:jpa performance tuning_ex": {
     "content": "- Use Spring Boot's `@EnableCaching` annotation to enable caching.\n- Configure cache manager in `application.properties` or `application.yml`.\n- Implement batch processing using `@BatchSize` in entity mappings.\n- Adjust Hibernate properties like `hibernate.jdbc.batch_size` and `hibernate.order_inserts=true`.\n- Use second-level cache with EhCache or Caffeine for improved read performance.\n- Optimize queries to avoid N+1 selects by using JPQL joins or fetch joins.\n- Enable lazy loading for associations that are not always needed.\n- Monitor and tune database connections using connection pool settings like `spring.datasource.hikari.maximum-pool-size`.\n- Regularly update Hibernate and Spring Boot to the latest versions for performance improvements.",
     "source": "code_example",
-    "updated_at": 1780845277.4794695
+    "updated_at": 1780933582.1966991
   },
   "search:Spring Boot JPA Performance Optimization:spring boot database optimizat": {
     "content": "- Use `spring-boot-starter-data-jpa` for database access.\n- Configure data source properties in `application.properties` or `application.yml`.\n- Implement pagination and sorting in repositories to reduce query load.\n- Use batch processing for large data operations.\n- Optimize SQL queries using indexes and proper joins.\n- Enable lazy loading to minimize initial data fetches.\n- Regularly monitor database performance with tools like JConsole or VisualVM.\n- Consider using connection pooling (e.g., HikariCP) for better resource management.\n- Upgrade Spring Boot and dependencies regularly for security patches and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780845279.6799572
+    "updated_at": 1780933585.299574
   }
 }

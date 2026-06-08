@@ -2,21 +2,21 @@
   "search:Docker and Kubernetes Security Best Practices:docker security best practices": {
     "content": "- Use non-root users in Docker containers by specifying `USER` in the Dockerfile.\n- Ensure all layers are immutable and only include necessary files.\n- Utilize multi-stage builds to reduce image size and minimize attack surface.\n- Implement least privilege by running containers with minimal permissions.\n- Secure secrets using environment variables or Docker Secrets.\n- Limit resource usage with `--memory`, `--cpu-shares`, and other flags in the CLI.\n- Enable network isolation by using Docker networks and security groups.\n- Regularly update base images and dependencies to patch vulnerabilities.\n- Utilize Docker Content Trust (DCT) for verifying image integrity.\n- Implement automated scanning tools like Snyk or Trivy for continuous security checks.",
     "source": "web_search",
-    "updated_at": 1780845282.0055754
+    "updated_at": 1780933588.2228098
   },
   "search:Docker and Kubernetes Security Best Practices:docker security best practices_ex": {
     "content": "- Use `docker pull <image>:<tag>` to fetch the latest version of an image.\n- Employ `docker run --rm -it <image>:<tag> /bin/bash` for interactive testing.\n- Apply security settings with `--security-opt seccomp=unconfined`.\n- Utilize `docker-compose up -d` for multi-container setups.\n- Implement network isolation using `docker network create my-network`.\n- Use `docker commit <container_id> my-new-image:latest` to save changes as a new image.\n- Regularly update Docker and all images with `docker pull --update-only`.\n- Configure volumes for data persistence with `docker run -v /host/path:/container/path`.\n- Monitor container health with `docker ps --filter status=running`.",
     "source": "code_example",
-    "updated_at": 1780845284.2089286
+    "updated_at": 1780933590.9272864
   },
   "search:Docker and Kubernetes Security Best Practices:kubernetes security guidelines": {
     "content": "- **CLI Commands**:\n  - `kubectl create deployment <deployment-name> --image=<image-name>`\n  - `kubectl scale deployment <deployment-name> --replicas=<number>`\n  - `kubectl get pods`\n  - `kubectl describe pod <pod-name>`\n  - `kubectl logs <pod-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.0 (as of my last update)\n\n- **Key Config Options**:\n  - `replicas`: Defines the number of Pods that should be running at any given time.\n  - `imagePullPolicy`: Specifies when to pull an image for a container.\n  - `resources`: Allocates resources like CPU and memory to containers.\n  - `securityContext`: Configures security options such as privileges, capabilities, and SELinux settings.",
     "source": "web_search",
-    "updated_at": 1780845286.361896
+    "updated_at": 1780933593.578077
   },
   "search:Docker and Kubernetes Security Best Practices:kubernetes security guidelines_ex": {
     "content": "- Use `kubectl` for Kubernetes management.\n- Ensure your cluster is up-to-date with the latest version.\n- Implement RBAC (Role-Based Access Control) for secure access.\n- Utilize Network Policies to control traffic flow.\n- Enable encryption for sensitive data in transit and at rest.\n- Regularly update all components, including nodes, pods, and images.\n- Use `kubectl apply -f <filename>` to deploy or update resources.\n- Monitor cluster health with `kubectl top node` and `kubectl top pod`.\n- Implement image scanning tools like Trivy for vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780845288.7295434
+    "updated_at": 1780933596.5587554
   }
 }

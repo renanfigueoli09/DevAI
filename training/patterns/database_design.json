@@ -2,37 +2,37 @@
   "search:database-design:when to use mongodb vs postgre": {
     "content": "- **CLI Commands**:\n  - PostgreSQL: `psql` and `pgAdmin`\n  - MongoDB: `mongo` shell\n\n- **Latest Versions**:\n  - PostgreSQL: 15\n  - MongoDB: 7.0\n\n- **Key Config Options**:\n  - PostgreSQL: `max_connections`, `shared_buffers`, `work_mem`\n  - MongoDB: `replicaSet`, `sharding`, `wiredTigerCacheSizeGB`",
     "source": "web_search",
-    "updated_at": 1780845450.1651742
+    "updated_at": 1780933746.5227673
   },
   "search:database-design:when to use mongodb vs postgre_ex": {
     "content": "- **CLI Commands**:\n  - MongoDB: `mongod --dbpath /path/to/database`\n  - PostgreSQL: `pg_ctl start -D /path/to/data_directory`\n\n- **Latest Versions**:\n  - MongoDB: 6.0\n  - PostgreSQL: 14\n\n- **Key Config Options**:\n  - MongoDB: `bindIp`, `storage.wiredTiger.cacheSizeGB`\n  - PostgreSQL: `listen_addresses`, `shared_buffers`",
     "source": "code_example",
-    "updated_at": 1780845452.6745338
+    "updated_at": 1780933749.2389474
   },
   "search:database-design:database normalization denorma": {
     "content": "- **CLI Commands**:\n  - `CREATE TABLE` with constraints.\n  - `ALTER TABLE` to add or drop columns.\n\n- **Latest Versions**:\n  - PostgreSQL 15\n  - MySQL 8.0\n  - SQL Server 2022\n\n- **Key Config Options**:\n  - Normalization level (1NF, 2NF, 3NF, BCNF).\n  - Denormalization strategies (pre-aggregation, materialized views).\n  - Indexing for read-heavy queries.\n  - Partitioning large tables.",
     "source": "web_search",
-    "updated_at": 1780845454.5532942
+    "updated_at": 1780933751.518096
   },
   "search:database-design:database normalization denorma_ex": {
     "content": "- **CLI Commands**: Use `db normalize` and `db denormalize` with specific flags like `--force` for denormalization.\n- **Latest Versions**: Ensure using the latest database management system version, e.g., PostgreSQL 15 or MySQL 8.0.\n- **Key Config Options**:\n  - For normalization: Set `normalize_level` to `3NF` or higher in your configuration file.\n  - For denormalization: Enable `denormalize_mode` and specify the tables to denormalize using `--tables=table1,table2`.\n- **Trade-offs**: Balance between data integrity (normalization) and performance (denormalization). Monitor query execution times and data consistency issues.",
     "source": "code_example",
-    "updated_at": 1780845456.7803643
+    "updated_at": 1780933753.703438
   },
   "search:database-design:nosql vs sql use cases pros co": {
     "content": "- **CLI Commands**:\n  - `sqlcmd` for SQL Server\n  - `mongo` for MongoDB\n  - `cqlsh` for Cassandra\n\n- **Latest Versions**:\n  - SQL Server: 2024\n  - MongoDB: 7.0\n  - Cassandra: 4.10\n\n- **Key Config Options**:\n  - SQL Server: `max_connections`, `memory_limit`\n  - MongoDB: `replica_set`, `sharding`\n  - Cassandra: `num_tokens`, `hinted_handoff_enabled`",
     "source": "web_search",
-    "updated_at": 1780845458.9376364
+    "updated_at": 1780933756.2354138
   },
   "search:database-design:nosql vs sql use cases pros co_ex": {
     "content": "- **CLI Commands**:\n  - `sqlcmd`: For SQL Server.\n  - `mongo`: For MongoDB.\n\n- **Latest Versions**:\n  - SQL Server: Version 2024.\n  - MongoDB: Version 7.0.\n\n- **Key Config Options**:\n  - SQL Server: `max_connections`, `memory_limit`.\n  - MongoDB: `replica_set`, `sharding`.",
     "source": "code_example",
-    "updated_at": 1780845461.0213954
+    "updated_at": 1780933758.2901492
   },
   "search:database-design:database indexing strategies p": {
     "content": "- Use `CREATE INDEX` or `ALTER TABLE ... ADD INDEX` to add indexes.\n- Choose B-tree, hash, or composite indexes based on use case.\n- Monitor index performance with `EXPLAIN ANALYZE`.\n- Regularly review and optimize indexes using tools like `pg_stat_user_indexes`.\n- Consider partial indexes for large tables.\n- Use GIN (Generalized Inverted Index) for full-text search.\n- Avoid over-indexing to prevent performance degradation.\n- Update statistics regularly with `ANALYZE` command.",
     "source": "web_search",
-    "updated_at": 1780845462.858817
+    "updated_at": 1780933760.8233678
   },
   "search:database-design:database indexing strategies p_ex": {
     "content": "- Use `CREATE INDEX` to add indexes.\n- Consider B-tree, hash, and composite indexes based on query patterns.\n- Evaluate index trade-offs for performance.\n- Implement effective indexing patterns for high-performance databases.\n- Monitor and adjust indexes regularly.\n- Utilize database-specific tools like `EXPLAIN` for optimization.\n- Keep database software up-to-date with latest versions.",

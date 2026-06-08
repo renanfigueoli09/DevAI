@@ -2,11 +2,11 @@
   "search:docker-compose-advanced:docker compose advanced usage ": {
     "content": "- Use `docker compose` CLI for Compose V2.\n- Ensure Docker Desktop settings are updated to use Compose V2.\n- Master advanced techniques like volumes, networks, and secrets.\n- For production, combine Docker Compose with advanced features like scaling and security configurations.\n- Key config options include `services`, `networks`, `volumes`, and `secrets`.\n- Latest version as of my last update is 2.19.0 (check for updates regularly).\n- Use `docker compose up` to start services, `docker compose down` to stop them.\n- Implement best practices for security, scalability, and reliability in production deployments.",
     "source": "web_search",
-    "updated_at": 1780844926.546983
+    "updated_at": 1780933229.1414568
   },
   "search:docker-compose-advanced:docker compose advanced usage _ex": {
     "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the `docker-compose.yml` file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `docker-compose up`.\n  - `docker-compose pull`: Pulls images for services defined in the `docker-compose.yml`.\n\n- **Latest Versions**:\n  - Docker Compose: Version 1.29.2 (as of my last update).\n\n- **Key Config Options**:\n  - `services`: Defines the services to be run.\n  - `networks`: Manages networks for service communication.\n  - `volumes`: Manages data persistence across container restarts and redeploys.\n  - `build`: Specifies how to build images from Dockerfiles.\n  - `depends_on`: Ensures that a service is started before another, without waiting for the service to be fully ready.",
     "source": "code_example",
-    "updated_at": 1780844928.3082373
+    "updated_at": 1780933232.038379
   }
 }
