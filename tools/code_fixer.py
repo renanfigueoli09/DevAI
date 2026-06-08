@@ -158,6 +158,17 @@ TS_FIXES: list[tuple[str, str, str]] = [
      r"\{ Document \} from 'mongoose'",
      r"{ HydratedDocument } from 'mongoose'"),
 
+    # Remove JwtAuthGuard import when auth module doesn't exist (TS2307)
+    # This happens when LLM adds auth guard without it being requested
+    ("remove-jwtauthguard-import",
+     r"import \{ JwtAuthGuard \} from '[^']*jwt\.guard';?\n?",
+     ""),
+
+    # Remove @UseGuards(JwtAuthGuard) decorator when guard removed
+    ("remove-useGuards-JwtAuthGuard",
+     r"@UseGuards\(JwtAuthGuard\)\n?",
+     ""),
+
     # auth.module: '../users/users.module' → '../user/user.module' (plural fix)
     # Suporta aspas simples e duplas
     ("users.module plural single-quote",

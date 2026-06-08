@@ -287,9 +287,23 @@ def fix_wrong_import_paths(project_path: Path, errors: list[dict]) -> list[str]:
         console.print(f"  [dim]→ {n} arquivo(s) com fixes determinísticos[/dim]")
 
     # Agrupa erros por arquivo (só erros de path relativo)
-    # First pass: create missing module files before trying to fix imports
+    # First pass: handle missing modules
     for e in errors:
         mod = e.get("module", "")
+        if e.get("type") == "missing_module" and mod.startswith("."):
+            # Special case: jwt.guard missing = auth not requested, just remove the import
+            if "jwt.guard" in mod or "jwt-auth.guard" in mod or "auth.guard" in mod:
+                # Find and remove the import from the file
+                fpath = _resolve_path(e.get("file",""), project_path)
+                if fpath and fpath.exists():
+                    fc = fpath.read_text(encoding="utf-8", errors="ignore")
+                    import re as _re
+                    fc = _re.sub(r"import \{[^}]*JwtAuthGuard[^}]*\} from '[^']*';?\n?", "", fc)
+                    fc = _re.sub(r"@UseGuards\(JwtAuthGuard\)\n?\s*", "", fc)
+                    fpath.write_text(fc, encoding="utf-8")
+                    console.print(f"  [green]✓[/green] Removido JwtAuthGuard de {fpath.name} (auth não pedida)")
+                continue  # don't try to create jwt.guard file
+
         if e.get("type") == "missing_module" and ".module" in mod and mod.startswith("."):
             # Extract entity name from path like './book/book.module'
             parts = mod.strip("./").split("/")

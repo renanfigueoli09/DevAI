@@ -138,13 +138,130 @@ def _should_ask(conf: dict, key: str, threshold: float = 0.6) -> bool:
 
 # ── Perguntas interativas ──────────────────────────────────────────────────────
 
-DB_OPTIONS = [
-    ("1", "MongoDB",    "mongodb"),
-    ("2", "PostgreSQL", "postgres"),
-    ("3", "MySQL",      "mysql"),
-    ("4", "SQLite",     "sqlite"),
-    ("5", "Cassandra",  "cassandra"),
-]
+def _load_db_options() -> list[tuple[str, str, str, str]]:
+    """
+    Carrega bancos disponíveis dinamicamente:
+    1. Todos do db_strategy.py (suportados nativamente)
+    2. Bancos extras do training store (estudados mas não no strategy)
+    3. Indica cobertura de treinamento para cada um
+    Retorna: [(num, label, db_type, coverage_icon)]
+    """
+    options = []
+
+    # Bancos nativos do db_strategy
+    NATIVE_LABELS = {
+        "postgres":  "PostgreSQL",
+        "mysql":     "MySQL",
+        "mongodb":   "MongoDB",
+        "sqlite":    "SQLite",
+        "mariadb":   "MariaDB",
+        "cassandra": "Cassandra",
+    }
+
+    # Bancos extras conhecidos (não no strategy mas estudados)
+    EXTRA_LABELS = {
+        "dynamodb":   "DynamoDB",
+        "firestore":  "Firestore",
+        "supabase":   "Supabase (PostgreSQL)",
+        "planetscale":"PlanetScale (MySQL)",
+        "cockroachdb":"CockroachDB (PostgreSQL)",
+        "redis":      "Redis (cache only)",
+    }
+
+    # Mede cobertura no training store
+    def _coverage(db_key: str) -> str:
+        try:
+            from tools.vector_store import search_relevant
+            result = search_relevant(f"nestjs {db_key} schema service CRUD", limit=2)
+            if not result or len(result) < 100:
+                result = search_relevant(f"spring {db_key} repository", limit=1)
+            chars = len(result) if result else 0
+            if chars > 800:  return "✅"   # bem treinado
+            if chars > 200:  return "⚠️ "  # treinamento parcial
+            return "📚"                     # pouco ou sem treinamento
+        except Exception:
+            return "❓"
+
+    # Monta lista com nativos primeiro
+    all_dbs = list(NATIVE_LABELS.items())
+
+    # Adiciona extras que foram estudados no training
+    try:
+        from tools.vector_store import search_relevant
+        for db_key, label in EXTRA_LABELS.items():
+            result = search_relevant(f"{db_key} schema CRUD", limit=1)
+            if result and len(result) > 100:
+                all_dbs.append((db_key, label))
+    except Exception:
+        pass
+
+    for i, (db_key, label) in enumerate(all_dbs, 1):
+        cov = _coverage(db_key)
+        options.append((str(i), label, db_key, cov))
+
+    return options
+
+
+def _ask_db(suggestion: str | None = None) -> str:
+    """Pergunta qual banco de dados usar. Lista é dinâmica — lida do training store."""
+    options = _load_db_options()
+
+    console.print("\n  [cyan]Banco de dados não identificado — qual usar?[/cyan]")
+    console.print("  [dim]✅ bem treinado  ⚠️  parcial  📚 pouco treinamento[/dim]\n")
+
+    for num, label, db_key, cov in options:
+        hint = " [dim](último usado)[/dim]" if db_key == suggestion else ""
+        console.print(f"    {num}) {cov} {label}{hint}")
+
+    valid = [n for n,_,_,_ in options]
+    while True:
+        choice = Prompt.ask(f"  Escolha [1-{len(options)}]", default="").strip()
+        if choice in valid:
+            db_type = next(v for n,_,v,_ in options if n == choice)
+            # Se pouco treinado, auto-estuda antes de continuar
+            cov_icon = next(c for n,_,v,c in options if n == choice)
+            if "📚" in cov_icon:
+                console.print(f"  [yellow]→ Pouco treinamento para {db_type} — estudando...[/yellow]")
+                _auto_study_db(db_type)
+            return db_type
+        console.print(f"  [red]Digite um número entre 1 e {len(options)}[/red]")
+
+
+def _auto_study_db(db_type: str) -> None:
+    """Auto-estuda um banco antes de gerar código para ele."""
+    try:
+        from scripts.study import study_topic, SEARCH_CURRICULUM, load_discovered
+        from tools.llm_client import OllamaClient
+        from config import MODEL_CODE
+
+        all_c = {**SEARCH_CURRICULUM, **load_discovered()}
+        # Tenta chaves no formato nestjs_mongodb, spring_postgres, etc.
+        keys_to_try = [
+            f"nestjs_{db_type}", f"spring_{db_type}",
+            f"fastapi_{db_type}", f"{db_type}_advanced",
+        ]
+        llm = OllamaClient()
+        found = False
+        for key in keys_to_try:
+            if key in all_c:
+                console.print(f"  [dim]📚 Estudando {key}...[/dim]")
+                study_topic(key, all_c[key][:3], llm, MODEL_CODE, intensive=True)
+                found = True
+                break
+        if not found:
+            # Pesquisa direta na web
+            from tools.web_research import web_search
+            from tools.research_agent import _summarize
+            from tools.vector_store import save
+            q = f"NestJS {db_type} CRUD schema service module example 2025"
+            results = web_search(q, max_results=4)
+            if results:
+                summary = _summarize(q, results, llm, MODEL_CODE)
+                if summary:
+                    save(f"auto:{db_type}", summary, topic=f"nestjs_{db_type}", source="auto_study")
+                    console.print(f"  [green]✓[/green] {db_type} estudado e salvo no training")
+    except Exception as e:
+        console.print(f"  [dim]⚠ Auto-study: {e}[/dim]")
 
 ARCH_OPTIONS = [
     ("1", "REST API (padrão)", "rest"),
@@ -161,20 +278,6 @@ SERVICE_OPTIONS = [
     ("elasticsearch",  "Elasticsearch (busca)"),
 ]
 
-
-def _ask_db(suggestion: str | None = None) -> str:
-    """Pergunta qual banco de dados usar. Nunca usa default silencioso."""
-    console.print("\n  [cyan]Banco de dados não identificado — qual usar?[/cyan]")
-    for num, label, val in DB_OPTIONS:
-        hint = " [dim](último usado)[/dim]" if val == suggestion else ""
-        console.print(f"    {num}) {label}{hint}")
-    # Sem default — força o usuário a escolher
-    valid = [n for n,_,_ in DB_OPTIONS]
-    while True:
-        choice = Prompt.ask("  Escolha [1-5]", default="").strip()
-        if choice in valid:
-            return next(v for n,_,v in DB_OPTIONS if n == choice)
-        console.print("  [red]Digite um número entre 1 e 5[/red]")
 
 
 def _ask_auth() -> bool:

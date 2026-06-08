@@ -131,8 +131,27 @@ KNOWLEDGE_CHECKS = [
 ]
 
 
+def _strip_negations(text: str) -> str:
+    """Remove linhas que negam termos (NEVER, NOT, don't use, não use)."""
+    import re
+    lines = text.split("\n")
+    # Remove lines where the term appears in a negation context
+    cleaned = []
+    for line in lines:
+        ll = line.lower()
+        is_negation = any(neg in ll for neg in [
+            "never", "not ", "don't", "avoid", "instead", "wrong:",
+            "não use", "não é", "errado", "proibido", "forbidden",
+            "← typeorm", "← wrong", "(typeorm", "typeorm only",
+        ])
+        cleaned.append("" if is_negation else line)
+    return "\n".join(cleaned)
+
+
 def check_knowledge(check: dict) -> tuple[bool, float, str]:
-    """Verifica se o vector store tem a informação correta."""
+    """Verifica se o vector store tem a informação correta.
+    Ignora termos que aparecem em contexto de negação (NEVER, NOT, etc.)
+    """
     from tools.vector_store import search_relevant
 
     all_content = ""
@@ -140,8 +159,12 @@ def check_knowledge(check: dict) -> tuple[bool, float, str]:
         result = search_relevant(q, limit=3)
         all_content += result.lower() + "\n"
 
+    # For must_not: strip negation context before checking
+    # "NEVER use TypeOrmModule" should NOT count as TypeOrmModule being present
+    content_for_must_not = _strip_negations(all_content)
+
     found   = [kw for kw in check["must_find"] if kw.lower() in all_content]
-    wrong   = [kw for kw in check["must_not"]  if kw.lower() in all_content]
+    wrong   = [kw for kw in check["must_not"]  if kw.lower() in content_for_must_not]
     missing = [kw for kw in check["must_find"] if kw.lower() not in all_content]
 
     w = check["weight"]
@@ -451,6 +474,78 @@ def write_report(k_score, k_max, g_score, g_max, k_results, g_results) -> None:
     (DEVAI_DIR / "training" / "validation_report.md").write_text(
         "\n".join(lines), encoding="utf-8")
 
+    # JSON for shell coordination (train_and_validate.sh reads this)
+    # Maps check NAME keywords → study curriculum keys (must match SEARCH_CURRICULUM)
+    _KEYWORD_TO_STUDY = {
+        "mongoose":           "nestjs_mongodb",
+        "mongoosemodule":     "nestjs_mongodb",
+        "injectmodel":        "nestjs_mongodb",
+        "schema.ts":          "nestjs_mongodb",
+        "service.ts":         "nestjs_mongodb",
+        "app.module mongodb": "nestjs_mongodb",
+        "findoneBy":          "nestjs_mongodb",
+        "partialtype":        "nestjs_auth",
+        "jwtauthguard":       "nestjs_auth",
+        "docker":             "docker_patterns",
+        "healthcheck":        "docker_patterns",
+        "mongosh":            "docker_patterns",
+        "redis/kafka":        "docker_patterns",
+        "livros":             "nlp_patterns",
+        "usuários":           "nlp_patterns",
+        "has_auth":           "nlp_patterns",
+        "src/docker":         "nlp_patterns",
+        "@document":          "spring_mongodb",
+        "spring":             "spring_mongodb",
+        "asynciomotorclient": "fastapi_mongodb",
+        "fastapi":            "fastapi_mongodb",
+        "ts2307":             "common_errors",
+        "module not found":   "common_errors",
+    }
+
+    def _resolve_study_key(name: str) -> str:
+        nl = name.lower()
+        for kw, key in _KEYWORD_TO_STUDY.items():
+            if kw in nl:
+                return key
+        import re as _re
+        return _re.sub(r"[^\w]", "_", nl)[:30].strip("_")
+
+    import json as _json
+    # k_results and g_results are dicts — use .get() not .attribute
+    all_results = k_results + g_results
+    total = k_score + g_score
+    maxt  = k_max + g_max
+    pct   = round(total / maxt * 100, 1) if maxt else 0
+
+    # Group by topic to get pass_rate per topic
+    topic_scores: dict = {}
+    for r in all_results:
+        name = r.get("name","unknown")
+        topic = name  # use check name as topic identifier
+        if topic not in topic_scores:
+            topic_scores[topic] = {"score": 0, "max": 0, "passed": True}
+        topic_scores[topic]["score"] += r.get("score", 0)
+        topic_scores[topic]["max"]   += r.get("max", 1)
+        if not r.get("passed", True):
+            topic_scores[topic]["passed"] = False
+
+    # Map known weak topics to study keys
+    def _study_key(name: str) -> str:
+        return _resolve_study_key(name)
+
+    results_json = [
+        {"topic": name,
+         "study_key": _study_key(name),
+         "pass_rate": round(v["score"] / v["max"], 3) if v["max"] else 0,
+         "passed": v["passed"]}
+        for name, v in topic_scores.items()
+        if v["max"] > 0
+    ]
+
+    (DEVAI_DIR / "training" / "validation_report.json").write_text(
+        _json.dumps({"score": pct, "results": results_json}, indent=2),
+        encoding="utf-8")
+
 
 def main():
     parser = argparse.ArgumentParser(description="DevAI Validator v2")
@@ -459,6 +554,10 @@ def main():
     parser.add_argument("--knowledge",  action="store_true", help="Só fase 1 (sem LLM)")
     parser.add_argument("--generation", action="store_true", help="Só fase 2 (com LLM)")
     parser.add_argument("--topic",      nargs="+")
+    parser.add_argument("--loop",       action="store_true",
+                        help="Loop até atingir score mínimo, depois estuda novos tópicos indefinidamente")
+    parser.add_argument("--min-score",  type=int, default=70,
+                        help="Score mínimo para passar para expansão (default: 70)")
     args = parser.parse_args()
 
     console.print(Panel.fit(
@@ -543,6 +642,89 @@ def main():
     if args.rounds > 1:
         console.print(Panel.fit(f"[bold green]Melhor score: {best:.0f}%[/bold green]",
                                 border_style="green"))
+
+    # Modo loop: continua até atingir o score mínimo, depois expande
+    if args.loop:
+        min_score = args.min_score
+        fix_attempt = 0
+        max_fix = 50
+
+        while best < min_score and fix_attempt < max_fix:
+            fix_attempt += 1
+            console.print(Rule(f"[yellow]Loop Fix {fix_attempt} — score {best:.0f}% < {min_score}%[/yellow]"))
+
+            # Estuda os tópicos fracos
+            weak = [r.get("study_key", r.get("topic","")) for r in
+                    json.loads((DEVAI_DIR/"training"/"validation_report.json").read_text()).get("results",[])
+                    if not r.get("passed", True) and r.get("study_key")]
+            if weak:
+                console.print(f"  [yellow]→ Estudando fracos: {', '.join(weak[:4])}[/yellow]")
+                try:
+                    from scripts.study import study_topic, SEARCH_CURRICULUM, load_discovered, load_llm
+                    all_c = {**SEARCH_CURRICULUM, **load_discovered()}
+                    _llm, _model = load_llm()
+                    for wk in weak[:3]:
+                        if wk in all_c:
+                            study_topic(wk, all_c[wk][:3], _llm, _model, intensive=True)
+                            console.print(f"  [green]✓[/green] {wk} estudado")
+                except Exception as _e:
+                    console.print(f"  [dim]⚠ Study: {_e}[/dim]")
+
+            # Re-valida
+            results2 = []
+            k2 = k3 = g2 = g3 = 0.0
+            kr2 = gr2 = []
+            if not args.generation:
+                console.print(Rule("[cyan]Knowledge Check[/cyan]"))
+                k2, k3, kr2 = run_knowledge_phase()
+            if not args.knowledge and llm:
+                console.print(Rule("[cyan]Generation Check[/cyan]"))
+                g2, g3, gr2 = run_generation_phase(llm, model)
+            best2 = (k2+g2)/(k3+g3)*100 if (k3+g3) else 0
+            best = max(best, best2)
+            write_report(k2, k3, g2, g3, kr2, gr2)
+            console.print(f"  Score: {best2:.0f}% (melhor: {best:.0f}%)")
+
+            # Commit
+            try:
+                from tools.vector_store import auto_commit
+                auto_commit(f"🧠 training: loop fix {fix_attempt} score={best2:.0f}%")
+            except Exception: pass
+
+            if best2 >= min_score:
+                console.print(f"[green]✅ Score {best2:.0f}% ≥ {min_score}% — iniciando expansão![/green]")
+                break
+
+        # Fase de expansão: estuda novos tópicos indefinidamente
+        if best >= min_score:
+            expand = 1
+            console.print(Rule("[bold cyan]Expansão contínua[/bold cyan]"))
+            while True:
+                _t = time.strftime('%H:%M')
+                console.print(f"  [cyan]── Expansão {expand} — {_t} ──[/cyan]")
+                try:
+                    from scripts.study import main as study_main, TOPIC_GROUPS
+                    import sys as _sys
+                    old_argv = _sys.argv
+                    _sys.argv = ["study.py","--group","all","--intensive"]
+                    try: study_main()
+                    except SystemExit: pass
+                    _sys.argv = old_argv
+                except Exception as _e:
+                    console.print(f"  [dim]⚠ Expand: {_e}[/dim]")
+
+                # Revalida a cada 3 ciclos
+                if expand % 3 == 0:
+                    console.print("  [dim]→ Re-validando...[/dim]")
+                    k2, k3, kr2 = run_knowledge_phase()
+                    score_now = k2/k3*100 if k3 else 0
+                    console.print(f"  Knowledge: {score_now:.0f}%")
+                    try:
+                        from tools.vector_store import auto_commit
+                        auto_commit(f"🧠 training: expand {expand}")
+                    except Exception: pass
+
+                expand += 1
 
     return 0 if best >= 70 else 1
 

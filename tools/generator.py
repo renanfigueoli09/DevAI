@@ -941,6 +941,13 @@ Return ONLY a JSON object (no markdown around it):
             # Usa db_strategy + vector store — funciona para QUALQUER banco
             db_rules = _build_db_rules(stack, db_type or "postgres")
 
+            auth_rule = (
+                "- DO NOT import JwtAuthGuard, AuthGuard, @UseGuards, or any auth "
+                "decorator — auth was NOT requested in this project\n"
+            ) if not has_auth else (
+                "- JwtAuthGuard: import from '../auth/jwt.guard'\n"
+            )
+
             system = (
                 f"You write production-ready {stack} source code.\n"
                 "Return ONLY a raw JSON: {\"path\": \"...\", \"content\": \"...\"}\n"
@@ -949,6 +956,7 @@ Return ONLY a JSON object (no markdown around it):
                 "- PartialType: ALWAYS from '@nestjs/mapped-types', NEVER @nestjs/common\n"
                 "- class-validator decorators from 'class-validator'\n"
                 "- TypeScript strict: required→field!:Type optional→field?:Type\n"
+                f"{auth_rule}"
                 "- No markdown, no ``` around the JSON."
             )
 
