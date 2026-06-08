@@ -2,16 +2,16 @@
   "search:docker+nginx-proxy:docker nginx proxy setup 2025": {
     "content": "- **CLI Commands**:\n  - `docker run -d --name nginx-proxy -p 80:80 -p 443:443 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Nginx Proxy: v2.1.0\n  - Docker Compose: v2.18.0\n\n- **Key Config Options**:\n  - `VIRTUAL_HOST`: Set the hostname for which this container should serve.\n  - `LETSENCRYPT_EMAIL`: Email address for Let's Encrypt certificate renewal notifications.\n  - `DEFAULT_HOST`: Default host to redirect to if no VIRTUAL_HOST is specified.\n\nThese commands and options provide a straightforward setup for using Nginx as a reverse proxy with Docker, including automatic SSL handling.",
     "source": "web_search",
-    "updated_at": 1780846739.4483016
+    "updated_at": 1780934013.2730765
   },
   "search:docker+nginx-proxy:docker nginx proxy setup 2025_ex": {
     "content": "- Use `docker pull nginx:latest` to get the latest Nginx image.\n- Run container with `docker run -d --name mynginx -p 80:80 -p 443:443 nginx:latest`.\n- Mount custom config file with `-v /path/to/nginx.conf:/etc/nginx/nginx.conf`.\n- Expose ports 80 and 443 for HTTP and HTTPS respectively.\n- Use `docker exec -it mynginx bash` to access the container shell.\n- Configure SSL by mounting certificates with `-v /path/to/certs:/etc/nginx/ssl`.\n- Restart Nginx in the container with `docker exec mynginx nginx -s reload`.",
     "source": "code_example",
-    "updated_at": 1780846746.2944002
+    "updated_at": 1780934015.8700793
   },
   "search:docker+nginx-proxy:docker nginx reverse proxy 202": {
     "content": "- **CLI Commands**:\n  - `docker run -d --name nginx-proxy -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock jwilder/nginx-proxy`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Nginx Proxy: v2.1.0\n  - Docker Compose: v2.17.3\n\n- **Key Config Options**:\n  - `VIRTUAL_HOST`: Set the virtual host for a container.\n  - `LETSENCRYPT_EMAIL`: Email address for Let's Encrypt SSL certificates.\n  - `DEFAULT_HOST`: Default host to redirect if no VIRTUAL_HOST is set.",
     "source": "web_search",
-    "updated_at": 1780846753.4232304
+    "updated_at": 1780934018.2109792
   }
 }

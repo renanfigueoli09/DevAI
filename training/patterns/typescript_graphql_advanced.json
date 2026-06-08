@@ -2,31 +2,31 @@
   "search:typescript-graphql-advanced:typescript graphql advanced qu": {
     "content": "- **CLI Commands**:\n  - `npm install @graphql-tools/schema`\n  - `npx graphql-codegen init`\n\n- **Latest Versions**:\n  - GraphQL Tools: v12.0.0\n  - Apollo Server: v3.7.0\n\n- **Key Config Options**:\n  - `typeDefs`: Define your GraphQL schema.\n  - `resolvers`: Implement the resolvers for your schema.\n  - `context`: Pass context data to your resolvers.",
     "source": "web_search",
-    "updated_at": 1780845717.4450474
+    "updated_at": 1780934067.6971436
   },
   "search:typescript-graphql-advanced:typescript graphql advanced qu_ex": {
     "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install typegraphql graphql-tools`\n\n- **Latest Versions**:\n  - TypeScript: 5.2.2\n  - GraphQL: 16.3.0\n  - TypeGraphQL: 1.4.0\n\n- **Key Config Options**:\n  - Define GraphQL schema using TypeScript interfaces and classes.\n  - Use `@ObjectType`, `@Field`, `@InputType` decorators for type definitions.\n  - Implement resolvers with `@Resolver`, `@Query`, `@Mutation`, `@Args` decorators.",
     "source": "code_example",
-    "updated_at": 1780845719.1995423
+    "updated_at": 1780934069.872858
   },
   "search:typescript-graphql-advanced:typescript graphql subscriptio": {
     "content": "- **CLI Commands**: `tsc` (TypeScript compiler)\n- **Latest Version**: Check [GitHub](https://github.com/microsoft/TypeScript/releases) for the latest version.\n- **Key Config Options**:\n  - `tsconfig.json`\n  - `\"compilerOptions\"`\n    - `\"target\": \"ES6\"` (or later)\n    - `\"module\": \"commonjs\"` or `\"esnext\"`\n    - `\"strict\": true`\n    - `\"esModuleInterop\": true`\n    - `\"skipLibCheck\": true`\n    - `\"forceConsistentCasingInFileNames\": true`",
     "source": "web_search",
-    "updated_at": 1780845721.2850294
+    "updated_at": 1780934072.1128945
   },
   "search:typescript-graphql-advanced:typescript graphql subscriptio_ex": {
     "content": "- **Install graphql-subscriptions**: `npm install graphql-subscriptions graphql` or `yarn add graphql-subscriptions graphql`\n- **Network Transport for Subscriptions**: Use `subscriptions-transport-ws` or `graphql-ws`\n- **NestJS Integration**: Install both packages (`subscriptions-transport-ws` and `graphql-ws`) for real-time functionality\n- **Node.js Tutorial**: Implement GraphQL subscriptions with Node.js, Express & Prisma",
     "source": "code_example",
-    "updated_at": 1780845723.3514197
+    "updated_at": 1780934074.3539474
   },
   "search:typescript-graphql-advanced:typescript graphql error handl": {
     "content": "- **Apollo GraphQL Docs**: Use `executionOptions` to configure error handling.\n- **Mastering GraphQL Error Handling**: Focus on client-side and server-side strategies.\n- **GraphQL Error Handling Done Right**: YouTube video for practical insights.\n- **Stack Overflow**: Integrate error handling in Express-GraphQL by setting HTTP status codes.\n\n**Key Config Options:**\n- `executionOptions`: Configure variable coercion errors.\n- Client-side: Use TypeScript with Codegen for typesafe error handling.\n- Server-side: Customize HTTP status codes based on GraphQL errors.",
     "source": "web_search",
-    "updated_at": 1780845725.229819
+    "updated_at": 1780934076.225732
   },
   "search:typescript-graphql-advanced:typescript graphql error handl_ex": {
     "content": "- **CLI Commands**:\n  - `npm install graphql-tools` to install GraphQL tools.\n  - `npx graphql-codegen init` to initialize GraphQL code generation.\n\n- **Latest Versions**:\n  - GraphQL.js: v16.3.0\n  - Apollo Server: v3.5.0\n\n- **Key Config Options**:\n  - In `graphql-tools`, use `makeExecutableSchema` for schema creation.\n  - In Apollo Server, configure error handling with `formatError`.\n  - Use TypeScript interfaces and types to define your GraphQL schema and resolvers.",
     "source": "code_example",
-    "updated_at": 1780845726.966398
+    "updated_at": 1780934078.7418315
   }
 }

@@ -2,21 +2,21 @@
   "search:Optimizing Entity Framework Core Performance with .NET:efcore performance optimizatio": {
     "content": "- **CLI Commands**: Use `dotnet ef migrations add <name>` to create migrations and `dotnet ef database update` to apply them.\n- **Latest Versions**: Ensure using the latest EF Core version for performance improvements.\n- **Key Config Options**:\n  - `QuerySplittingBehavior`: Set to `SplitQueryByDefault` or `SingleQueryPerRawSqlQuery` in `DbContextOptionsBuilder`.\n  - `UseLazyLoadingProxies`: Enable lazy loading with `options.UseLazyLoadingProxies()`.\n  - `EnableSensitiveDataLogging`: Use for debugging but disable in production.\n- **Bulk Operations**: Consider using `ExecuteUpdate` and `ExecuteDelete` methods for bulk data operations.\n- **Query Optimization**:\n  - Avoid N+1 queries by using eager loading with `.Include()` or projection with `.Select()`.\n  - Use compiled queries to cache query plans.\n- **Memory Management**: Monitor and optimize memory usage with tools like dotMemory.\n- **Logging**: Enable detailed logging for performance analysis with `options.EnableSensitiveDataLogging(true)`.",
     "source": "web_search",
-    "updated_at": 1780845840.1621094
+    "updated_at": 1780934194.6709595
   },
   "search:Optimizing Entity Framework Core Performance with .NET:efcore performance optimizatio_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  \n- **Latest Versions**:\n  - EF Core 7.0\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only operations\n  - `AsSplitQueries()` to enable split queries for better performance in many-to-many relationships\n  - `UseLazyLoadingProxies()` for lazy loading, but be cautious of potential issues with large object graphs",
     "source": "code_example",
-    "updated_at": 1780845842.884453
+    "updated_at": 1780934197.63405
   },
   "search:Optimizing Entity Framework Core Performance with .NET:.net entity framework core spe": {
     "content": "- Use `AsNoTracking()` to avoid memory/time overhead when querying large datasets.\n- Implement asynchronous methods (`ToListAsync()`, `FirstOrDefaultAsync()`) for non-blocking operations.\n- Utilize `DbContextFactory` for managing DbContext lifetimes efficiently.\n- Enable query splitting with `SplitQuery = true` in `AddDbContextOptions`.\n- Use compiled queries for repetitive queries to improve performance.\n- Optimize database schema and indexing for faster data retrieval.\n- Consider using bulk operations libraries like Entity Framework Plus or Dapper for batch inserts/updates/deletes.\n- Monitor and analyze query execution plans using SQL Server Profiler or EF Core's logging capabilities.\n- Regularly update EF Core and related packages to the latest versions for performance improvements.",
     "source": "web_search",
-    "updated_at": 1780845845.6603084
+    "updated_at": 1780934200.246851
   },
   "search:Optimizing Entity Framework Core Performance with .NET:.net entity framework core spe_ex": {
     "content": "- Use `AddDbContextPool` with appropriate `poolSize`.\n- Enable query tracking (`AsNoTracking`) when not needed.\n- Optimize queries to reduce complexity.\n- Use raw SQL for performance-critical operations.\n- Index database columns used in queries.\n- Monitor and analyze query execution plans.\n- Update Entity Framework Core to the latest version.\n- Configure connection strings with optimal settings.",
     "source": "code_example",
-    "updated_at": 1780845848.744275
+    "updated_at": 1780934203.6332161
   }
 }
