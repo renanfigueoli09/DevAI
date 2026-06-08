@@ -2,21 +2,21 @@
   "search:spring+kafka-transaction-management:spring kafka transaction manag": {
     "content": "- **Enable Transactions in Spring Boot Kafka**:\n  - Use `@Transactional` annotation on your service methods.\n  - Configure Kafka producer and consumer properties for transactions.\n\n- **Key Configuration Options**:\n  - Producer: `transaction.id.prefix`\n  - Consumer: `enable.auto.commit`, `auto.offset.reset`\n\n- **CLI Commands**:\n  - None specific to enabling transactions, but use Maven or Gradle commands to build your project.\n  \n- **Latest Versions**:\n  - Spring Boot: 3.1.x\n  - Kafka: 3.0.x\n\n- **Example Configuration**:\n  ```yaml\n  spring:\n    kafka:\n      producer:\n        transaction-id-prefix: my-app-\n      consumer:\n        enable-auto-commit: false\n        auto-offset-reset: earliest\n  ```\n\n- **Additional Resources**:\n  - [Spring Kafka Transactions Guide](https://spring.io/guides/gs/kafka-transactions/)\n  - [Baeldung Spring for Apache Kafka](https://www.baeldung.com/spring-kafka)",
     "source": "web_search",
-    "updated_at": 1780929579.0955634
+    "updated_at": 1780935345.6396494
   },
   "search:spring+kafka-transaction-management:spring kafka transaction manag_ex": {
     "content": "- Use `@Transactional` annotation in Spring Kafka to manage transactions.\n- Ensure Kafka broker version is at least 2.3 for transaction support.\n- Configure `ChainedTransactionManager` if using multiple transactional resources.\n- Set `transaction.id.prefix` in Kafka producer properties.\n- Enable transaction management in your Spring Boot application with `@EnableTransactionManagement`.\n- Use `KafkaTemplate` for sending messages within transactions.\n- Handle exceptions to ensure proper rollback of transactions.",
     "source": "code_example",
-    "updated_at": 1780929581.0149179
+    "updated_at": 1780935347.6982746
   },
   "search:spring+kafka-transaction-management:spring kafka exactly once sema": {
     "content": "- **CLI Commands**: \n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start services.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.enable-auto-commit`: Set to `false`.\n  - `spring.kafka.producer.transaction-id-prefix`: Unique prefix for transaction IDs.\n  - `spring.kafka.listener.transaction-manager`: Reference to a `KafkaAwareTransactionManager`.",
     "source": "web_search",
-    "updated_at": 1780929583.0842397
+    "updated_at": 1780935349.736953
   },
   "search:spring+kafka-transaction-management:spring kafka exactly once sema_ex": {
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Spring Kafka: 2.8.0\n  - Apache Kafka: 3.0.0\n\n- **Key Config Options**:\n  - Producer: `transactional.id`\n  - Consumer: `enable.auto.commit` set to `false`, `isolation.level` set to `read_committed`\n  - Broker: `transaction.state.log.replication.factor`, `transaction.state.log.min.isr`",
     "source": "code_example",
-    "updated_at": 1780929585.1785524
+    "updated_at": 1780935351.6907775
   }
 }
