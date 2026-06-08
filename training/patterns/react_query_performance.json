@@ -2,21 +2,21 @@
   "search:react-query-performance:react query performance optimi": {
     "content": "- **CLI Commands**: Use `npm install @tanstack/react-query` or `yarn add @tanstack/react-query`.\n- **Latest Version**: Check the latest version on [NPM](https://www.npmjs.com/package/@tanstack/react-query).\n- **Key Config Options**:\n  - `queryClient`: Configure global query options.\n  - `useQuery`: Customize query behavior with options like `refetchInterval`, `staleTime`, and `cacheTime`.\n  - `useMutation`: Configure mutation options such as `onSuccess`, `onError`, and `onSettled`.",
     "source": "web_search",
-    "updated_at": 1780921410.7567668
+    "updated_at": 1780923246.98333
   },
   "search:react-query-performance:react query performance optimi_ex": {
     "content": "- Use `react-query@latest` for the most up-to-date features and performance improvements.\n- Implement `useQuery` with `staleTime` to control how long data should be considered fresh.\n- Utilize `refetchInterval` for automatically refetching data at regular intervals.\n- Employ `keepPreviousData` to keep the previous data while fetching new data, enhancing user experience.\n- Apply `suspense: true` in your React component to handle loading states gracefully.\n- Configure `cacheTime` to control how long data is cached before being removed.\n- Use `onSuccess`, `onError`, and `onSettled` callbacks for side effects after query completion.\n- Implement `queryClient.invalidateQueries` to manually invalidate specific queries when necessary.\n- Consider using `useMutation` with `onMutate` and `onError` hooks for handling mutations efficiently.",
     "source": "code_example",
-    "updated_at": 1780921412.8294723
+    "updated_at": 1780923249.1499612
   },
   "search:react-query-performance:react query caching patterns 2": {
     "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Version of React Query**: v4.23.0\n- **Key Config Options**:\n  - `queryClient`: Manages the cache and lifecycle of queries.\n  - `useQuery`: Hook for fetching data with automatic caching.\n  - `refetchInterval`: Automatically refetches data at a specified interval.\n  - `staleTime`: Time in milliseconds after which data is considered stale.",
     "source": "web_search",
-    "updated_at": 1780921414.7310977
+    "updated_at": 1780923251.4899895
   },
   "search:react-query-performance:react query caching patterns 2_ex": {
     "content": "- **Latest Version**: React Query v4.x\n- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install react-query@latest`\n- **Key Config Options**:\n  - `queryClient`: Customizes the query client instance.\n  - `defaultOptions`: Sets default options for all queries.\n  - `staleTime`: Defines how long a query result is considered stale.\n  - `refetchInterval`: Automatically refetches data at specified intervals.",
     "source": "code_example",
-    "updated_at": 1780921416.9156058
+    "updated_at": 1780923253.571733
   }
 }

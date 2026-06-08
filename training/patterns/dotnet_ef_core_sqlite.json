@@ -2,16 +2,16 @@
   "search:dotnet-ef-core-sqlite:dotnet ef core sqlite performa": {
     "content": "- **Latest Version**: .NET Core 10.0.1 (Release Date: December 9, 2025)\n- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n  - `dotnet ef migrations remove` to remove the last migration.\n- **Key Config Options**:\n  - `ConnectionStrings:DefaultConnection`: Define your SQLite connection string in `appsettings.json`.\n  - `UseLazyLoadingProxies`: Enable lazy loading for entities.\n  - `MaxBatchSize`: Set the maximum batch size for commands.\n  - `EnableSensitiveDataLogging`: Log sensitive data for debugging purposes.",
     "source": "web_search",
-    "updated_at": 1780921404.3564668
+    "updated_at": 1780923240.4449577
   },
   "search:dotnet-ef-core-sqlite:dotnet ef core sqlite performa_ex": {
     "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - SQLite: 3.42.0\n\n- **Key Config Options**:\n  - `ConnectionStrings`: Define connection strings in `appsettings.json`.\n  - `UseSqlite`: Use the SQLite provider in your DbContext.\n  - `MigrationsAssembly`: Specify the migrations assembly if not using the default location.",
     "source": "code_example",
-    "updated_at": 1780921406.6336973
+    "updated_at": 1780923242.574144
   },
   "search:dotnet-ef-core-sqlite:dotnet ef core sqlite migratio": {
     "content": "- **Latest EF Core Version**: As of my last update, the latest stable version is EF Core 7.0.\n- **SQLite Migrations CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n  - `dotnet ef database update` to apply migrations to the database.\n  - `dotnet ef migrations remove` to remove the last migration.\n  - `dotnet ef migrations script` to generate a SQL script of pending migrations.\n- **Key Config Options**:\n  - In `appsettings.json`, configure SQLite connection string under `ConnectionStrings`.\n    ```json\n    \"ConnectionStrings\": {\n      \"DefaultConnection\": \"Data Source=yourdatabase.db\"\n    }\n    ```\n  - Use `DbContextOptionsBuilder` in your DbContext to specify the connection string.\n    ```csharp\n    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n    {\n        optionsBuilder.UseSqlite(Configuration.GetConnectionString(\"DefaultConnection\"));\n    }\n    ```\n- **Best Practices**:\n  - Always keep migrations under version control.\n  - Regularly update EF Core and SQLite packages to benefit from new features and security patches.\n  - Use meaningful names for migrations to track changes easily.",
     "source": "web_search",
-    "updated_at": 1780921408.6488307
+    "updated_at": 1780923244.7042117
   }
 }
