@@ -1,0 +1,17 @@
+{
+  "search:go-gorm-migration:go gorm migrations best practi": {
+    "content": "- Use `go run filename_timestamp_create_users_table.go` to apply migrations.\n- Adhere to best practices for clarity and maintainability in manual migration scripts.\n- Check the official GORM documentation for using Atlas with GORM.\n- For other Go-based migration tools, use GORM's generic DB interface.\n- Migrate reads migrations from sources and applies them in correct order to a database.\n- Drivers are \"dumb,\" while migrate glues everything together.\n- Ensure bulletproof logic when using migrate.\n- Key config options include specifying the database driver and connection string.",
+    "source": "web_search",
+    "updated_at": 1781035124.5220823
+  },
+  "search:go-gorm-migration:go gorm migrations best practi_ex": {
+    "content": "- Use `golang-migrate/migrate` for database migrations.\n- Install `migrate` via `go get -u github.com/golang-migrate/migrate/v4/cmd/migrate`.\n- Create migration files using SQL or Go functions.\n- Apply migrations with `migrate -path ./db/migrations -database \"your_database_url\" up`.\n- Rollback migrations with `migrate -path ./db/migrations -database \"your_database_url\" down`.\n- Use `go-gormigrate/gormigrate` for GORM-based migrations.\n- Install via `go get github.com/go-gormigrate/gormigrate/v2`.\n- Configure GORM migration options in your Go code.\n- Ensure schema versioning and rollback support with `gormigrate`.",
+    "source": "code_example",
+    "updated_at": 1781035130.5271914
+  },
+  "search:go-gorm-migration:go gorm migration strategies 2": {
+    "content": "- **CLI Commands**: Use `gorm migrate` for database migrations.\n- **Latest Versions**:\n  - GORM: v2.30.0\n  - Atlas: v1.5.0\n  - gormigrate: v3.0.0\n- **Key Config Options**:\n  - GORM: `AutoMigrate`, `CreateTable`, `DropTable`\n  - Atlas: `MigrationDir`, `DatabaseURL`\n  - gormigrate: `TableName`, `VersionColumn`",
+    "source": "web_search",
+    "updated_at": 1781035147.0588944
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-relations:typescript prisma one-to-many ": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration and applies it to the database.\n\n- **Latest Versions**:\n  - Prisma: 4.10.0 (as of my last update)\n  - Node.js: LTS versions recommended\n\n- **Key Config Options**:\n  - `@relation(name, fields, references)`: Defines a one-to-many relationship.\n  - `onDelete: Cascade` or `onDelete: SetNull`: Specifies the behavior when deleting related records.\n  - `unique`: Ensures that the foreign key has a unique constraint for one-to-one relationships.",
+    "source": "web_search",
+    "updated_at": 1781035063.7208304
+  },
+  "search:typescript-prisma-relations:typescript prisma one-to-many _ex": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma: 4.x\n  - TypeScript: 5.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and relations.\n  - `generator client`: Specifies the generator for Prisma Client.\n  - `datasource db`: Configures the database connection.",
+    "source": "code_example",
+    "updated_at": 1781035079.7308843
+  },
+  "search:typescript-prisma-relations:typescript prisma many-to-many": {
+    "content": "- **CLI Commands**:\n  - `prisma db push`: Pushes the Prisma schema to your database.\n  - `prisma generate`: Generates the Prisma Client based on your Prisma schema.\n\n- **Latest Versions**:\n  - Prisma: [Check latest version](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference)\n  - Node.js: [Check latest LTS version](https://nodejs.org/en/download/releases/)\n\n- **Key Config Options**:\n  - `@relation`: Defines a many-to-many relationship between two models.\n  - `@@id([field1, field2])`: Specifies composite primary keys for the join table.\n  - `@@index([field1, field2], { unique: true })`: Ensures uniqueness of the composite key in the join table.",
+    "source": "web_search",
+    "updated_at": 1781035089.6983094
+  },
+  "search:typescript-prisma-relations:typescript prisma many-to-many_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and relations.\n  - `@relation` attribute for defining many-to-many relationships.\n  - `prisma-client-js` for interacting with the database.",
+    "source": "code_example",
+    "updated_at": 1781035114.0170999
+  }
+}
