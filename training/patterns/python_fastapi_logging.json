@@ -1,0 +1,22 @@
+{
+  "search:python-fastapi-logging:fastapi logging best practices": {
+    "content": "- Use `uvicorn` to run FastAPI applications with logging enabled.\n- Configure logging in your FastAPI app using Python's built-in `logging` module.\n- Set the root logging level to `DEBUG` for detailed output during development.\n- Integrate with external log management systems like ELK Stack or Splunk for centralized logging.\n- Use middleware to capture and log request details, including headers, body, and response time.\n- Implement structured logging using JSON format for easier parsing and analysis.\n- Regularly review and rotate log files to prevent disk space issues.\n- Ensure that sensitive information is not logged, especially in production environments.",
+    "source": "web_search",
+    "updated_at": 1781039750.9377568
+  },
+  "search:python-fastapi-logging:fastapi logging best practices_ex": {
+    "content": "- Use `uvicorn` with the `--log-level` flag to set logging level, e.g., `uvicorn main:app --log-level debug`.\n- Install `python-multipart` for handling file uploads.\n- Configure logging in FastAPI using Python's built-in `logging` module.\n- Set up structured logging by formatting logs as JSON.\n- Use environment variables to manage log levels and output destinations.\n- Implement request tracing with middleware or third-party libraries like `fastapi-trace`.\n- Regularly rotate log files to prevent disk space issues, e.g., using `logrotate`.\n- Consider centralized logging solutions for large-scale applications, such as ELK Stack or Splunk.",
+    "source": "code_example",
+    "updated_at": 1781039774.8796473
+  },
+  "search:python-fastapi-logging:logging in fastapi application": {
+    "content": "- Use `uvicorn.run(app, log_level=\"debug\")` to start FastAPI with debug logging.\n- Configure logging in your FastAPI app using Python's built-in `logging` module.\n- Set up a basic logger configuration with `logging.basicConfig(level=logging.DEBUG)`.\n- For file logging, use `logging.FileHandler('filename.log')` and set appropriate log level.\n- Use `uvicorn.run(app, access_log=False)` to disable the default access log if not needed.\n- For JSON formatted logs, configure a custom formatter in your logger setup.\n- Implement middleware for centralized logging across all routes.\n- Consider using external services like ELK Stack or Splunk for centralized and advanced logging.",
+    "source": "web_search",
+    "updated_at": 1781039786.5146847
+  },
+  "search:python-fastapi-logging:logging in fastapi application_ex": {
+    "content": "- Use `uvicorn.run` to run FastAPI applications.\n- Set up logging in FastAPI using Python's built-in `logging` module.\n- Configure logging level and format in the main application file.\n- Override Uvicorn's default logging formatter for better log details.\n- Example CLI command: `uvicorn myapp.main:app --reload`\n- Latest versions: Ensure you use compatible versions of FastAPI, Uvicorn, and Python.\n- Key config options include `logging.basicConfig` and custom formatter definitions.",
+    "source": "code_example",
+    "updated_at": 1781039794.4089265
+  }
+}

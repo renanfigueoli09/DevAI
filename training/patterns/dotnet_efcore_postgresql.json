@@ -8,5 +8,15 @@
     "content": "- Install PostgreSQL EF Core provider: `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- Install EF Core tools: `dotnet add package Microsoft.EntityFrameworkCore.Tools`\n- Update database with migration tool: `dotnet ef migrations update`\n- Introduce new entities and create a second migration: `dotnet ef migrations add InitialCreate`\n- Reset the database schema: `dotnet ef database drop --force` followed by `dotnet ef database update`\n- View applied migrations: `dotnet ef migrations list`\n\nLatest versions:\n- Npgsql.EntityFrameworkCore.PostgreSQL: v9.0.4\n- Microsoft.EntityFrameworkCore.Tools: v7.0.0\n\nKey config options:\n- Connection string in appsettings.json\n- DbMigrationsOptions for configuration",
     "source": "code_example",
     "updated_at": 1780940894.8359642
+  },
+  "search:dotnet+efcore-postgresql:entity framework core postgres": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - Npgsql: 7.0\n\n- **Key Config Options**:\n  - Connection String: Ensure it includes the correct PostgreSQL server details.\n  - Pooling: Enable connection pooling for better performance (`Pooling=true`).\n  - Timeout: Set a reasonable timeout value to avoid long waits (`ConnectionTimeout=30`).",
+    "source": "web_search",
+    "updated_at": 1781039695.379012
+  },
+  "search:dotnet+efcore-postgresql:entity framework core postgres_ex": {
+    "content": "- Use the latest version of Entity Framework Core and Npgsql.\n- Configure connection pooling in your `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;MaxPoolSize=100;\"\n  }\n  ```\n- Enable batching for multiple commands in a single transaction:\n  ```csharp\n  using (var context = new YourDbContext())\n  {\n    context.Database.UseBatchExecution();\n    // Perform your operations here\n  }\n  ```\n- Use `AsNoTracking()` when you don't need to update entities from the query results.\n- Indexes on frequently queried columns in PostgreSQL can significantly improve performance.\n- Monitor and analyze queries using tools like pgAdmin or psql's `\\d` command.\n- Consider using raw SQL commands for complex operations where EF Core might not perform optimally.",
+    "source": "code_example",
+    "updated_at": 1781039701.795546
   }
 }

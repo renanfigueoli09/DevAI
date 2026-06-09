@@ -1,0 +1,22 @@
+{
+  "search:react-native-sqlite-performance:react native sqlite performanc": {
+    "content": "- **CLI Commands**: Use `npx react-native init MyProject` to create a new React Native project.\n- **Latest Versions**:\n  - SQLCipher: Check [GitHub](https://github.com/sqlcipher/sqlcipher) for the latest version.\n  - react-native-quick-sqlite: Check [npm](https://www.npmjs.com/package/react-native-quick-sqlite) for the latest version.\n  - OP-SQLite: Check [GitHub](https://github.com/andpor/op-sqlite) for the latest version.\n  - WatermelonDB: Check [npm](https://www.npmjs.com/package/watermelondb) for the latest version.\n- **Key Config Options**:\n  - SQLCipher: Use `--target sqlcipher` during compilation.\n  - react-native-quick-sqlite: Configure through React Native's configuration files.\n  - OP-SQLite: Utilize intuitive APIs and hooks provided by the library.\n  - WatermelonDB: Set up with a schema and use reactive queries for data handling.",
+    "source": "web_search",
+    "updated_at": 1781039870.1790388
+  },
+  "search:react-native-sqlite-performance:react native sqlite performanc_ex": {
+    "content": "- Use `react-native-sqlite-storage` library for SQLite integration.\n- Install latest version via npm or yarn (`npm install react-native-sqlite-storage`).\n- Enable SQLCipher for enhanced security and performance.\n- Configure database options in your React Native project:\n  - `name`: Database name.\n  - `location`: Storage location (default is 'default').\n- Use `db.transaction()` for batch operations to improve performance.\n- Implement custom tokenizers and extensions if needed.\n- For JSONB support, ensure the library version supports it.\n- Utilize `db.interrupt()` to interrupt long-running queries.\n- Consider using JSI for better performance in complex queries.\n- Compare performance with older bridge-based architectures.",
+    "source": "code_example",
+    "updated_at": 1781039879.390388
+  },
+  "search:react-native-sqlite-performance:sqlite database management in ": {
+    "content": "- **CLI Commands**:\n  - `expo install expo-sqlite`\n  - `npm install react-native-sqlite-storage`\n\n- **Latest Versions**:\n  - Expo SQLite: Version not specified in the search results.\n  - React Native SQLite Storage: Latest version as of Feb 23, 2025.\n\n- **Key Config Options**:\n  - Database name\n  - Version\n  - Display name\n  - Size",
+    "source": "web_search",
+    "updated_at": 1781039886.0941026
+  },
+  "search:react-native-sqlite-performance:sqlite database management in _ex": {
+    "content": "- **GitHub - andpor/react-native-sqlite-storage**: Use `npm install react-native-sqlite-storage` to install.\n- **SQLite - Expo Documentation**: Install via `expo install expo-sqlite`.\n- **React Tutorial for Beginners - YouTube**: Not directly related, but useful for learning React 18 with TypeScript.\n\n**Key Config Options:**\n- For `react-native-sqlite-storage`: No specific flags needed during installation.\n- For `expo-sqlite`: No additional configuration required beyond installing the package.\n\n**Latest Versions:**\n- Ensure you use the latest versions of both packages for compatibility and security updates.",
+    "source": "code_example",
+    "updated_at": 1781039891.6617095
+  }
+}
