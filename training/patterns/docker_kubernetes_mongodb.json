@@ -1,0 +1,12 @@
+{
+  "search:docker+kubernetes-mongodb:docker kubernetes mongodb depl": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources.\n  - `kubectl get pods,svc` to check deployment status.\n\n- **Latest Versions**:\n  - MongoDB: 6.0\n  - MongoExpress: 0.54.0\n\n- **Key Config Options**:\n  - Use `Secrets` for sensitive data like passwords.\n  - Configure `PersistentVolumeClaims` for persistent storage.\n  - Utilize `ConfigMaps` for configuration settings.",
+    "source": "web_search",
+    "updated_at": 1781026620.681031
+  },
+  "search:docker+kubernetes-mongodb:docker kubernetes mongodb depl_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy MongoDB on Kubernetes.\n- Ensure you have the latest version of the MongoDB Kubernetes Operator installed, typically available via Helm charts.\n- Key configuration options include setting up a replica set with `replicas: 3` in your deployment YAML.\n- For Prometheus monitoring, use the provided Operator's Prometheus integration and ensure it's enabled in your deployment configuration.\n- Backup your MongoDB database using `mongodump` before deploying to Kubernetes.\n- Ensure all necessary permissions are granted for the MongoDB service account within your Kubernetes cluster.",
+    "source": "code_example",
+    "updated_at": 1781026634.148577
+  }
+}
