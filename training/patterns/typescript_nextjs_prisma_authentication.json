@@ -1,0 +1,17 @@
+{
+  "search:typescript-nextjs-prisma-authentication:typescript next.js prisma auth": {
+    "content": "- **Clone the project:** `git clone https://github.com/huv1k/nextjs-auth-prisma`\n- **Install dependencies:** `yarn install` or `npm install`\n- **Key config options:**\n  - `prisma/schema.prisma`: Define your data models.\n  - `pages/api/auth/[...nextauth].ts`: Configure NextAuth.js with Prisma adapter.\n  - `.env.local`: Set environment variables for database connection and credentials.\n\n**Latest versions:**\n- Next.js: 13.5\n- Prisma: 4.0\n- Auth.js: 2.0\n\n**CLI commands with exact flags:**\n- `npx prisma init` to initialize a new Prisma project.\n- `yarn dev` or `npm run dev` to start the Next.js development server.",
+    "source": "web_search",
+    "updated_at": 1781026747.6143446
+  },
+  "search:typescript-nextjs-prisma-authentication:typescript next.js prisma jwt ": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install prisma @prisma/client jsonwebtoken bcryptjs`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Prisma: 4.x\n  - JWT: 9.x\n\n- **Key Config Options**:\n  - `.env.local`: Define environment variables like `DATABASE_URL`, `JWT_SECRET`.\n  - `prisma/schema.prisma`: Define your data models.\n  - `pages/api/auth/[...nextauth].ts`: Configure NextAuth.js with Prisma adapter and JWT strategy.\n  - Middleware for authentication checks.",
+    "source": "web_search",
+    "updated_at": 1781026794.645113
+  },
+  "search:typescript-nextjs-prisma-authentication:typescript next.js prisma jwt _ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install @prisma/client next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Prisma: 4.0\n  - NextAuth.js: 4.0\n\n- **Key Config Options**:\n  - `next.config.js`: Configure API routes and server settings.\n  - `prisma/schema.prisma`: Define your database schema.\n  - `.env.local`: Store environment variables like JWT secret, Prisma connection string.\n  - `pages/api/auth/[...nextauth].ts`: NextAuth.js configuration for authentication providers.",
+    "source": "code_example",
+    "updated_at": 1781026809.111411
+  }
+}

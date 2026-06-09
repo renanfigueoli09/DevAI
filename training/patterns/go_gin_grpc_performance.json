@@ -1,0 +1,12 @@
+{
+  "search:go-gin-grpc-performance:go gin grpc performance tuning": {
+    "content": "- **CLI Commands**:\n  - `go get github.com/gin-gonic/gin`\n  - `go get google.golang.org/grpc`\n\n- **Latest Versions**:\n  - Gin Framework: v1.8.2\n  - gRPC Go: v1.54.0\n\n- **Key Config Options**:\n  - Gin Router: Use `httprouter` for better performance.\n  - gRPC Server: Configure with `grpc.ServerOptions`.\n  - Middleware: Implement custom middleware for logging, authentication, etc.\n\n- **Performance Tuning Tips**:\n  - Use connection pooling in gRPC.\n  - Optimize request handling and response sizes.\n  - Monitor and adjust resource limits (CPU, memory).",
+    "source": "web_search",
+    "updated_at": 1781026898.0158665
+  },
+  "search:go-gin-grpc-performance:go gin grpc performance tuning_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get google.golang.org/grpc`\n\n- **Latest Versions**:\n  - Gin v1.8.2\n  - gRPC v1.50.0\n\n- **Key Config Options**:\n  - Gin: `gin.SetMode(gin.ReleaseMode)`\n  - gRPC: `grpc.WithInsecure()`, `grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(1<<30))`",
+    "source": "code_example",
+    "updated_at": 1781026906.742953
+  }
+}
