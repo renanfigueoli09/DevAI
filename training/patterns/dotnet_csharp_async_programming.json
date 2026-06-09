@@ -1,0 +1,22 @@
+{
+  "search:dotnet+csharp-async-programming:c# async programming best prac": {
+    "content": "- Use `async` and `await` keywords to write asynchronous code.\n- Return types should be `Task`, `ValueTask`, or avoid `void`.\n- Apply naming conventions with an \"Async\" suffix for methods.\n- Handle exceptions using `try-catch` blocks, and consider `ConfigureAwait(false)` in non-UI threads.\n- Use `Task.FromException` to create tasks that represent failed operations.\n- Ensure proper disposal of resources within asynchronous methods.\n- Monitor performance using tools like `async` profiler or built-in .NET diagnostics.",
+    "source": "web_search",
+    "updated_at": 1781033792.3367436
+  },
+  "search:dotnet+csharp-async-programming:c# async programming best prac_ex": {
+    "content": "- Use `dotnet new console -lang C#` to create a new C# console application.\n- Update Visual Studio or .NET SDK to the latest version for optimal async performance and features.\n- Implement `async/await` in methods using the `async` keyword and `await` operator for asynchronous operations.\n- Avoid blocking calls within async methods; use `Task.Run()` for CPU-bound tasks if necessary.\n- Configure project settings to enable native IAsyncEnumerable support by setting `<EnableNativeIAsyncEnumerable>true</EnableNativeIAsyncEnumerable>` in your `.csproj`.\n- Use `ValueTask<T>` instead of `Task<T>` when the result is not always needed, as it can reduce allocations and improve performance.\n- Monitor application performance using tools like dotTrace or PerfView to identify bottlenecks in async code.\n- Follow best practices for error handling within async methods, such as using try-catch blocks around await expressions.",
+    "source": "code_example",
+    "updated_at": 1781033801.2520382
+  },
+  "search:dotnet+csharp-async-programming:dotnet async programming perfo": {
+    "content": "- **CLI Commands**:\n  - `dotnet build --configuration Release`\n  - `dotnet publish --self-contained false`\n\n- **Latest Versions**:\n  - .NET 10\n  - C# 12\n\n- **Key Config Options**:\n  - Tiered JIT: Enabled by default in .NET 10.\n  - ReadyToRun (R2R) Compilation: `dotnet publish --self-contained false`\n  - Native AOT Compilation: `dotnet publish --self-contained true --runtime <RID>`\n  - GC Modes: Server, Workstation\n  - Profile Guided Optimization (PGO): Use `dotnet publish --self-contained false` with PGO enabled.\n  - ThreadPool Tuning: Adjust via configuration files or environment variables.",
+    "source": "web_search",
+    "updated_at": 1781033826.79117
+  },
+  "search:dotnet+csharp-async-programming:dotnet async programming perfo_ex": {
+    "content": "- **CLI Commands**: Use `dotnet build --configuration Release` to compile your project in release mode.\n- **Latest Versions**: Ensure you are using the latest .NET SDK and runtime versions for optimal performance.\n- **Key Config Options**:\n  - Set `ThreadPool.SetMinThreads` and `ThreadPool.SetMaxThreads` to manage thread pool size.\n  - Use `ConfigureAwait(false)` in async methods where possible to avoid unnecessary context capture.\n  - Optimize I/O operations by using asynchronous streams (`IAsyncEnumerable<T>`) for better performance.",
+    "source": "code_example",
+    "updated_at": 1781033840.9050522
+  }
+}

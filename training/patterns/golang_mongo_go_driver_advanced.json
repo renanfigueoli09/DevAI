@@ -1,0 +1,12 @@
+{
+  "search:golang-mongo-go-driver-advanced:mongodb go driver advanced usa": {
+    "content": "- **Latest Version**: mongo-go-driver v2.2\n- **CLI Commands**:\n  - `go get go.mongodb.org/mongo-driver/v2`\n  - `go mod tidy` for managing dependencies\n- **Key Config Options**:\n  - Connection URI: `mongodb://username:password@host:port/database`\n  - Timeout settings: `context.WithTimeout(context.Background(), time.Duration)`\n  - Transaction options: `session.StartTransaction(options.TransactionOptions{})`\n  - Change stream options: `collection.Watch(options.ChangeStreamOptions{})`",
+    "source": "web_search",
+    "updated_at": 1781033851.6137474
+  },
+  "search:golang-mongo-go-driver-advanced:mongodb go driver advanced usa_ex": {
+    "content": "- Use `go get go.mongodb.org/mongo-driver` to install the latest MongoDB Go driver.\n- For connecting to MongoDB, use `clientOptions := options.Client().ApplyURI(\"mongodb://localhost:27017\")`.\n- To find documents, execute `collection.Find(ctx, filter)`.\n- Insert a document with `collection.InsertOne(ctx, document)`.\n- Update documents using `collection.UpdateMany(ctx, filter, update)`.\n- Delete documents with `collection.DeleteMany(ctx, filter)`.\n- Monitor data changes by setting up change streams.\n- Use `ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)` for operations with timeouts.",
+    "source": "code_example",
+    "updated_at": 1781033860.2341855
+  }
+}
