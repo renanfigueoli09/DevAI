@@ -1,0 +1,12 @@
+{
+  "search:dotnet-core-performance-monitoring:optimizing dotnet core applica": {
+    "content": "- Use `dotnet build --configuration Release` to compile your application in release mode.\n- Implement caching strategies using `MemoryCache` or `IDistributedCache`.\n- Optimize SQL queries with tools like Entity Framework Profiler.\n- Enable compression by configuring `UseResponseCompression()` in `Startup.cs`.\n- Monitor performance with `dotnet-trace` and `dotnet-counters`.\n- Use `async/await` for asynchronous programming to improve responsiveness.\n- Configure connection strings efficiently, using connection pooling.\n- Update .NET Core to the latest LTS version for performance improvements.\n- Utilize `IHttpClientFactory` for managing HTTP requests efficiently.\n- Implement logging with Serilog or NLog for better monitoring and debugging.",
+    "source": "web_search",
+    "updated_at": 1781038069.7095606
+  },
+  "search:dotnet-core-performance-monitoring:optimizing dotnet core applica_ex": {
+    "content": "- Use `dotnet add package DotFramework.Core.Web.Optimization --version 4.2.2` to install the latest version of the optimization package.\n- Implement async/await for asynchronous operations to improve performance and responsiveness.\n- Utilize efficient algorithms and data structures to reduce computational complexity.\n- Enable SIMD (Single Instruction, Multiple Data) optimizations in .NET 8 for high-performance applications.\n- Configure application settings in `appsettings.json` for optimal performance tuning.\n- Monitor and profile your application using tools like dotTrace or Visual Studio Profiler.\n- Implement caching strategies to reduce database load and improve response times.\n- Optimize database queries for faster data retrieval.\n- Use dependency injection (DI) to manage object lifetimes and improve testability.",
+    "source": "code_example",
+    "updated_at": 1781038085.0496566
+  }
+}

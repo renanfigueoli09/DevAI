@@ -1,0 +1,17 @@
+{
+  "search:typescript-graphql-error-handling:typescript graphql error handl": {
+    "content": "- **CLI Commands**:\n  - `npm install typegraphql graphql-tools`\n  - `npx create-next-app@latest my-app --typescript`\n\n- **Latest Versions**:\n  - TypeScript: v5.0.0\n  - GraphQL: v16.3.0\n  - TypeGraphQL: v2.0.0\n\n- **Key Config Options**:\n  - Define custom error classes for specific errors.\n  - Use `@FieldError` decorator to mark fields that can return errors.\n  - Configure Apollo Server with `formatError` function for custom error formatting.\n  - Implement union types in GraphQL schema for handling multiple possible error types.",
+    "source": "web_search",
+    "updated_at": 1781037967.1945758
+  },
+  "search:typescript-graphql-error-handling:advanced typescript graphql er": {
+    "content": "- **CLI Commands**:\n  - `npm install @apollo/server graphql`\n  - `npx apollo server start`\n\n- **Latest Versions**:\n  - Apollo Server: v3.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - `typeDefs`: Define your GraphQL schema.\n  - `resolvers`: Implement the resolvers for your schema.\n  - `context`: Provide context to your resolvers.\n  - `plugins`: Use plugins for additional functionality like logging.",
+    "source": "web_search",
+    "updated_at": 1781038006.0061743
+  },
+  "search:typescript-graphql-error-handling:advanced typescript graphql er_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install graphql-tools`\n  - `npx graphql-codegen init`\n\n- **Latest Versions**:\n  - GraphQL Tools: v12.0.0\n  - GraphQL Code Generator: v3.0.0\n\n- **Key Config Options**:\n  - `typeDefs`: Path to your GraphQL schema file.\n  - `resolvers`: Path to your resolver files.\n  - `plugins`: Array of plugins for code generation, e.g., `typescript`, `typescript-resolvers`.",
+    "source": "code_example",
+    "updated_at": 1781038021.225834
+  }
+}
