@@ -1,7 +1,22 @@
 {
-  "generated_at": 1781021568.0265274,
+  "generated_at": 1781023946.486176,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "typescript-graphql-prisma: padrões de código",
+      "queries": [
+        "typescript-graphql-prisma pattern code example",
+        "typescript-graphql-prisma"
+      ],
+      "must_find": [
+        "@latest",
+        "@realtime"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-graphql-prisma"
+    },
     {
       "name": "nestjs-typeorm: padrões de código",
       "queries": [
@@ -46,21 +61,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "typescript-graphql-server"
-    },
-    {
-      "name": "typescript-graphql-subscriptions: padrões de código",
-      "queries": [
-        "typescript-graphql-subscriptions pattern code example",
-        "typescript-graphql-subscriptions"
-      ],
-      "must_find": [
-        "@latest",
-        "@realtime"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-graphql-subscriptions"
     }
   ]
 }

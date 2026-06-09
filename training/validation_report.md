@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-09 13:16*
+*2026-06-09 13:57*
 
 ## Score: 90% `[██████████████████░░]`  (47.0/52.0)
 
@@ -19,10 +19,10 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| typescript-graphql-prisma: padrões de código | 1.0/1 | ✅ |
 | nestjs-typeorm: padrões de código | 1.0/1 | ✅ |
 | go-gorm-redis-cache: cache | 1.0/1 | ✅ |
 | typescript-graphql-server: padrões de código | 1.0/1 | ✅ |
-| typescript-graphql-subscriptions: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
