@@ -8,5 +8,40 @@
     "content": "- **CLI Commands**:\n  - `ng serve --prod` to build and serve the application in production mode.\n  - `ng xi18n` to extract i18n messages from your source code.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - `angular.json`: Configure the `i18n` section to specify the locale and translation files.\n    ```json\n    \"projects\": {\n      \"your-project-name\": {\n        \"architect\": {\n          \"build\": {\n            \"options\": {\n              \"i18nLocale\": \"en-US\",\n              \"i18nFile\": \"src/locale/messages.en-US.xlf\"\n            }\n          },\n          \"serve\": {\n            \"options\": {\n              \"browserTarget\": \"your-project-name:build\"\n            }\n          }\n        }\n      }\n    }\n  ```\n  - `src/locale/messages.en-US.xlf`: Translation file for English (United States).\n\n- **Performance Optimization Tips**:\n  - Use lazy loading for modules to reduce initial load time.\n  - Optimize component rendering by using `OnPush` change detection strategy.\n  - Minimize the number of bindings and use structural directives wisely.",
     "source": "code_example",
     "updated_at": 1780940762.972092
+  },
+  "search:Angular+i18n-Performance:angular i18n performance tunin": {
+    "content": "- Use `ng serve --configuration=ar` to serve the application in Arabic.\n- Use `ng serve --configuration=en-US` to serve the application in English (United States).\n- Use `ng serve --configuration=fr` to serve the application in French.\n- Install dependencies with `npm install`.\n- Clone the repository using `git clone https://github.com/localizely/angular-i18n-example.git`.\n- Navigate to the project directory with `cd angular-i18n-example`.\n- Run the development server with `ng serve --configuration=ar --open` (or another locale).\n- For performance optimization, consider using `ChangeDetectorRef` and managing component state efficiently.\n- Utilize Angular's built-in i18n features for internationalization.",
+    "source": "web_search",
+    "updated_at": 1781027887.6884773
+  },
+  "search:Angular+i18n-Performance:angular i18n performance tunin_ex": {
+    "content": "- **CLI Commands**:\n  - `ng serve --configuration= --open`\n  - `npm install`\n\n- **Latest Versions**:\n  - Angular CLI: [Check latest version](https://angular.io/cli)\n  - Angular Core: [Check latest version](https://angular.io/guide/releases)\n\n- **Key Config Options**:\n  - `src/locale/messages.xlf` for translation files.\n  - `angular.json` for configuration settings, including i18n options.",
+    "source": "code_example",
+    "updated_at": 1781027901.4396474
+  },
+  "search:Angular+i18n-Performance:angular i18n lazy loading": {
+    "content": "- Use `ng add @angular/localize` to add i18n support.\n- For lazy loading, use `transloco` or `ngx-atomic-i18n`.\n- Transloco example:\n  - Install: `npm install @ngneat/transloco`\n  - Add to `app.module.ts`: `TranslocoModule.forRoot({ langs: { en: () => import('./assets/i18n/en.json') } })`\n  - Use in component: `<p>{{ 'welcome' | transloco }}</p>`\n- ngx-atomic-i18n example:\n  - Install: `npm install ngx-atomic-i18n`\n  - Add to `app.module.ts`: `NgxAtomicI18nModule.forRoot({ langs: { en: () => import('./assets/i18n/en.json') } })`\n  - Use in component: `<p>{{ 'welcome' | translate }}</p>`\n- Latest versions:\n  - Transloco: v4.0.0\n  - ngx-atomic-i18n: v2.0.0",
+    "source": "web_search",
+    "updated_at": 1781027919.2308774
+  },
+  "search:Angular+i18n-Performance:angular i18n lazy loading_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngx-translate/core` to install ngx-translate.\n  - `ng generate module app-i18n --module=app` to create an i18n module.\n  - `ng serve --configuration=i18n-en` to run the application with a specific locale.\n\n- **Latest Versions**:\n  - Angular: v16.2.0\n  - ngx-translate: v19.0.0\n\n- **Key Config Options**:\n  - `src/environments/environment.ts`: Configure the default language.\n  - `src/assets/i18n/`: Place JSON files for each locale (e.g., `en.json`, `fr.json`).\n  - `app.module.ts`: Import `TranslateModule.forRoot()` and provide a loader for translations.",
+    "source": "code_example",
+    "updated_at": 1781027927.5986867
+  },
+  "search:Angular+i18n-Performance:angular i18n with large datase": {
+    "content": "- **CLI Commands**:\n  - `ng serve --configuration=ar` to run the app in Arabic locale.\n  - `ng serve --configuration=en-US` to run the app in US English locale.\n  - `ng serve --configuration=fr` to run the app in French locale.\n\n- **Latest Versions**:\n  - Angular: Latest version as of my last update is 16.x, but it's recommended to check for the latest stable version on [Angular's official website](https://angular.io/).\n  - `@angular/localize`: Latest version as of my last update is 16.0.0, but it's recommended to check for the latest stable version on [npm](https://www.npmjs.com/package/@angular/localize).\n\n- **Key Config Options**:\n  - In `angular.json`, configure different locales under the `configurations` section.\n  - Use `i18nLocale` and `i18nFormat` in your `angular.json` to specify default locale and format for i18n.\n  - Utilize `@angular/localize` for runtime internationalization, which supports signals-first approach and is SSR-safe.",
+    "source": "web_search",
+    "updated_at": 1781027936.9491212
+  },
+  "search:Angular+i18n-Performance:angular i18n testing and debug": {
+    "content": "- **CLI Commands**:\n  - `ng serve --configuration= --open` (pass one of supported locales ar, en-US, or fr)\n  - `git clone`\n  - `cd angular-i18n-example`\n  - `npm install`\n\n- **Latest Versions**:\n  - Angular: Latest version\n  - Transloco: Latest version\n\n- **Key Config Options**:\n  - Configuration flags for i18n in Angular CLI\n  - Locale settings for different regions",
+    "source": "web_search",
+    "updated_at": 1781028007.7961032
+  },
+  "search:Angular+i18n-Performance:angular i18n testing and debug_ex": {
+    "content": "- Use `ng xi18n` to extract i18n messages.\n- Update `angular.json` with `\"i18n\"` configuration.\n- Install `@angular/localize` for internationalization.\n- Use `ng serve --configuration=fr` for locale-specific builds.\n- Configure `src/locale/messages.fr.xlf` for French translations.\n- Run tests with `ng test --configuration=fr`.\n- Debug using `ng serve --live-reload=false` for better insights.",
+    "source": "code_example",
+    "updated_at": 1781028014.0257263
   }
 }

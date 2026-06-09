@@ -18,5 +18,40 @@
     "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v2.4.0\n  - NGINX Ingress Controller: v1.1.0\n\n- **Key Config Options**:\n  - TLS Configuration: `tls` section in ingress resource\n  - Authentication and Authorization: Use annotations like `nginx.ingress.kubernetes.io/auth-type`\n  - Rate Limiting: Configure via annotations like `nginx.ingress.kubernetes.io/limit-rps`\n  - Path-Based Routing: Define multiple paths under a single rule",
     "source": "code_example",
     "updated_at": 1780942857.3511767
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress best practi": {
+    "content": "- Use `kubectl apply -f ingress.yaml` to create or update an Ingress resource.\n- Ensure your Kubernetes version is up-to-date for the latest features and security patches.\n- Configure TLS termination with the `tls` section in your Ingress resource, specifying secret names and hosts.\n- Set the `nginx.ingress.kubernetes.io/rewrite-target: /$1` annotation to rewrite URLs as needed.\n- Use the `nginx.ingress.kubernetes.io/backend-protocol: HTTP` annotation for backend services that do not support HTTPS.\n- Implement path-based routing with the `paths` field in your Ingress resource.\n- Enable rate limiting using annotations like `nginx.ingress.kubernetes.io/limit-rpm: \"100\"` to control traffic.\n- Use the `nginx.ingress.kubernetes.io/auth-type: basic` annotation for basic authentication.\n- Monitor and log Ingress traffic with annotations such as `nginx.ingress.kubernetes.io/log-format-upstream: '$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\" $upstream_response_time'`.",
+    "source": "web_search",
+    "updated_at": 1781027723.885664
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress best practi_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v2.4.1\n\n- **Key Config Options**:\n  - `spec.rules[].host`: Define the host for routing.\n  - `spec.rules[].http.paths[]`: Specify paths and backend services.\n  - `metadata.annotations[\"nginx.ingress.kubernetes.io/rewrite-target\"]`: For path rewriting.\n  - `metadata.annotations[\"nginx.ingress.kubernetes.io/backend-protocol\"]`: Set backend protocol (e.g., HTTP, HTTPS).",
+    "source": "code_example",
+    "updated_at": 1781027737.7819424
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress performance": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <ingress-controller-yaml>`\n  - `kubectl edit deployment <nginx-ingress-controller>`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.1\n\n- **Key Config Options**:\n  - `worker_processes`: Adjust based on CPU cores.\n  - `worker_connections`: Increase for higher concurrency.\n  - `keepalive_timeout`: Set to balance between connection reuse and resource usage.\n  - `proxy_read_timeout` and `proxy_send_timeout`: Adjust based on backend response times.",
+    "source": "web_search",
+    "updated_at": 1781027754.0305696
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress security co": {
+    "content": "- Use `kubectl apply -f ingress.yaml` to deploy an Ingress resource.\n- Ensure NGINX Ingress Controller is installed using `helm install nginx-ingress stable/nginx-ingress`.\n- Update the Ingress resource with TLS configuration:\n  ```yaml\n  tls:\n  - hosts:\n    - example.com\n    secretName: example-tls-secret\n  ```\n- Key config options include `nginx.ingress.kubernetes.io/rewrite-target` for URL rewriting.\n- Use `kubectl get ingress` to check the status of your Ingress resources.\n- For Content Security Policy, add annotations like `nginx.ingress.kubernetes.io/content-security-policy`.\n- Ensure that the TLS secret is created using `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt` and then applied to your Ingress resource.\n- Regularly update the NGINX Ingress Controller to the latest version for security patches.",
+    "source": "web_search",
+    "updated_at": 1781027793.3969436
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress security co_ex": {
+    "content": "- Use `kubectl apply -f <ingress-file.yaml>` to deploy an Ingress resource.\n- Ensure your Ingress controller is up-to-date, e.g., NGINX Ingress Controller v1.2.1.\n- Apply SSL/TLS using annotations like `nginx.ingress.kubernetes.io/ssl-redirect: \"true\"` and `nginx.ingress.kubernetes.io/ssl-secret: <secret-name>`.\n- Use `kubectl create secret tls <secret-name> --key <path-to-key> --cert <path-to-cert>` to create a TLS secret.\n- Configure custom annotations for NGINX, e.g., `nginx.ingress.kubernetes.io/proxy-body-size: \"10m\"` to increase the body size limit.\n- Deploy NGINX App Protect by referencing it in your Ingress resource with annotations like `nginx.ingress.kubernetes.io/app-protect-enabled: \"true\"`.\n- Monitor and log traffic using annotations such as `nginx.ingress.kubernetes.io/log-format-main` for custom logging configurations.",
+    "source": "code_example",
+    "updated_at": 1781027805.2611191
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress with tls te": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v1.2.1\n  - Nginx Ingress Controller: v1.1.0\n\n- **Key Config Options**:\n  - `tls`: Specifies TLS configuration for the Ingress.\n    ```yaml\n    tls:\n      - hosts:\n          - example.com\n        secretName: example-tls-secret\n    ```\n  - `ingressClassName`: Specifies the class of ingress controller to use.\n    ```yaml\n    metadata:\n      annotations:\n        nginx.ingress.kubernetes.io/ingress.class: \"nginx\"\n    ```\n  - `rules`: Defines routing rules for traffic.\n    ```yaml\n    rules:\n      - host: example.com\n        http:\n          paths:\n            - path: /\n              pathType: Prefix\n              backend:\n                service:\n                  name: example-service\n                  port:\n                    number: 80\n    ```",
+    "source": "web_search",
+    "updated_at": 1781027825.0259612
+  },
+  "search:Kubernetes+Ingress:kubernetes ingress with tls te_ex": {
+    "content": "- Use `kubectl apply -f <ingress-file.yaml>` to deploy the Ingress resource.\n- Ensure your Kubernetes version supports the networking.k8s.io/v1 API version for Ingress resources.\n- Set `kubernetes.io/ingress.class: nginx` in annotations to specify the NGINX ingress controller.\n- Use TLS termination by providing a secret with TLS certificates and keys:\n  ```yaml\n  tls:\n    - hosts:\n        - example.com\n      secretName: example-tls-secret\n  ```\n- Configure path-based routing using `rules` section in Ingress resource:\n  ```yaml\n  rules:\n    - host: example.com\n      http:\n        paths:\n          - path: /voting\n            pathType: Prefix\n            backend:\n              service:\n                name: voting-service\n                port:\n                  number: 80\n          - path: /results\n            pathType: Prefix\n            backend:\n              service:\n                name: results-service\n                port:\n                  number: 80\n  ```\n- Ensure the secret `example-tls-secret` is created with your TLS certificate and key.\n- Use `kubectl get ingress <ingress-name> -o yaml` to verify the Ingress resource configuration.",
+    "source": "code_example",
+    "updated_at": 1781027843.7741756
   }
 }

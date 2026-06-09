@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=my_exchange type=direct`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n\n- **Latest Versions**:\n  - RabbitMQ Streams: 4.2\n  - Apache Kafka: 4.0 KRaft GA\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` settings for high-throughput, such as `vm_memory_high_watermark.relative`\n  - Kafka: `server.properties` configurations like `num.partitions`, `replication.factor`, and `message.max.bytes`",
     "source": "code_example",
     "updated_at": 1780941371.260374
+  },
+  "search:RabbitMQ+kafka-streams-advanced:rabbitmq kafka streams integra": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare queue name=my_queue durable=true`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.14\n  - Kafka: 3.3\n\n- **Key Config Options**:\n  - RabbitMQ: `queue.durable`, `exchange.type`\n  - Kafka: `bootstrap.servers`, `key.deserializer`, `value.deserializer`",
+    "source": "web_search",
+    "updated_at": 1781028311.742371
+  },
+  "search:RabbitMQ+kafka-streams-advanced:rabbitmq kafka streams integra_ex": {
+    "content": "- **Add Dependencies**: For Spring Boot, add `spring-boot-starter-amqp` for RabbitMQ and `org.springframework.kafka:spring-kafka` for Kafka.\n- **RabbitMQ Configuration**:\n  - `spring.rabbitmq.host`: Set the host of your RabbitMQ server.\n  - `spring.rabbitmq.port`: Set the port (default is 5672).\n  - `spring.rabbitmq.username` and `spring.rabbitmq.password`: Authentication credentials.\n- **Kafka Configuration**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka broker addresses.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.\n- **CLI Commands**:\n  - For RabbitMQ: `rabbitmqctl start_app`\n  - For Kafka: `kafka-server-start.sh config/server.properties`\n- **Latest Versions**: Check [Spring Boot](https://start.spring.io/), [RabbitMQ](https://www.rabbitmq.com/download.html), and [Kafka](https://kafka.apache.org/downloads) for the latest versions.\n- **Key Config Options**:\n  - RabbitMQ: `queue`, `exchange`, `binding`.\n  - Kafka: `topic`, `partition`, `replication-factor`.",
+    "source": "code_example",
+    "updated_at": 1781028329.6657736
+  },
+  "search:RabbitMQ+kafka-streams-advanced:rabbitmq kafka streams with la": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqctl stream create <stream_name> --nodes <node_list>`\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server <broker_address> --partitions <num_partitions> --replication-factor <replication_factor>`\n\n- **Latest Versions**:\n  - RabbitMQ Streams: v1.0\n  - Apache Kafka: v3.2\n\n- **Key Config Options**:\n  - RabbitMQ Streams: `stream.replicas`, `stream.partitions`\n  - Apache Kafka: `num.partitions`, `replication.factor`",
+    "source": "web_search",
+    "updated_at": 1781028410.0631986
+  },
+  "search:RabbitMQ+kafka-streams-advanced:rabbitmq kafka streams with la_ex": {
+    "content": "- **RabbitMQ**: \n  - Latest Version: RabbitMQ 3.12.x\n  - Key Config Options: `rabbitmq.conf`, `vm_memory_high_watermark.relative`\n  - CLI Commands:\n    ```bash\n    rabbitmqctl start_app\n    rabbitmqctl stop_app\n    rabbitmqctl status\n    ```\n\n- **Kafka**:\n  - Latest Version: Kafka 3.2.x\n  - Key Config Options: `server.properties`, `log.retention.hours`\n  - CLI Commands:\n    ```bash\n    kafka-server-start.sh config/server.properties\n    kafka-server-stop.sh\n    kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1\n    ```\n\n- **Kafka Streams**:\n  - Latest Version: Kafka Streams 3.2.x\n  - Key Config Options: `application.id`, `bootstrap.servers`\n  - Example Code Snippet (Java):\n    ```java\n    Properties props = new Properties();\n    props.put(StreamsConfig.APPLICATION_ID_CONFIG, \"my-stream-app\");\n    props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, \"localhost:9092\");\n\n    KStream<String, String> stream = builder.stream(\"input-topic\", Consumed.with(Serdes.String(), Serdes.String()));\n\n    stream.filter((key, value) -> value.contains(\"important\"))\n          .to(\"output-topic\", Produced.with(Serdes.String(), Serdes.String()));\n    ```\n\nThese actionable facts provide a concise overview of setting up and configuring RabbitMQ, Kafka, and Kafka Streams for handling large datasets.",
+    "source": "code_example",
+    "updated_at": 1781028420.7090256
   }
 }

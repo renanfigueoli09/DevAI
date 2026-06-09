@@ -18,5 +18,55 @@
     "content": "- **CLI Commands**: Use `mvn clean install` to ensure your project is up-to-date.\n- **Latest Versions**: Hibernate 6.6 and Spring Boot 2.7 are recommended for optimal performance.\n- **Key Config Options**:\n  - `hibernate.jdbc.batch_size`: Set to a value like 50 for batch updates.\n  - `hibernate.order_inserts=true` and `hibernate.order_updates=true` to reduce the number of statements.\n  - `hibernate.cache.use_second_level_cache=true` with an appropriate cache provider (e.g., Ehcache).\n  - `spring.jpa.properties.hibernate.dialect`: Use the correct dialect for your database.\n- **Performance Tuning Tips**:\n  - Avoid N+1 query problems by using joins or fetch profiles.\n  - Optimize SQL queries to reduce complexity and execution time.\n  - Regularly monitor and analyze performance metrics with tools like JProfiler or VisualVM.",
     "source": "code_example",
     "updated_at": 1780976435.1815624
+  },
+  "search:Spring+Hibernate:spring hibernate performance o": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `docker-compose up` to start Docker containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Hibernate: 6.1.x\n  - Ehcache: 3.9.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory`\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb?useSSL=false&serverTimezone=UTC`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect`",
+    "source": "web_search",
+    "updated_at": 1781028023.0539978
+  },
+  "search:Spring+Hibernate:spring hibernate performance o_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start services.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.2.1.Final\n  - Angular: 17.0.0\n\n- **Key Config Options**:\n  - Enable second-level cache in `application.properties`: \n    ```properties\n    spring.jpa.properties.hibernate.cache.use_second_level_cache=true\n    ```\n  - Configure cache region for collections:\n    ```properties\n    hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory\n    ```\n  - Optimize Hibernate query cache settings:\n    ```properties\n    hibernate.cache.use_query_cache=true\n    hibernate.query_cache_factory_class=org.hibernate.cache.ehcache.EhCacheQueryCacheFactory\n    ```\n\n- **Additional Tips**:\n  - Use `@BatchSize` to control batch size for collections.\n  - Implement lazy loading where possible.\n  - Regularly review and optimize SQL queries.",
+    "source": "code_example",
+    "updated_at": 1781028030.2930183
+  },
+  "search:Spring+Hibernate:spring hibernate security best": {
+    "content": "- Use BCrypt for password encoding.\n- Restrict CORS by configuring `CorsConfiguration`.\n- Enable CSRF protection in Spring Security.\n- Configure Hibernate to use natural IDs for entities.\n- Update dependencies regularly using Maven or Gradle.\n- Implement role-based access control (RBAC).\n- Use HTTPS for all communication.\n- Regularly update and patch frameworks/libraries.",
+    "source": "web_search",
+    "updated_at": 1781028036.8207865
+  },
+  "search:Spring+Hibernate:spring hibernate security best_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Security: 6.1.x\n  - Hibernate: 6.2.x\n  - MySQL Connector/J: 8.0.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - Security configuration in Java using `WebSecurityConfigurerAdapter`.\n  - Entity classes annotated with JPA annotations like `@Entity`, `@Table`, etc.\n  - Repository interfaces extending `JpaRepository` for data access.",
+    "source": "code_example",
+    "updated_at": 1781028043.9304173
+  },
+  "search:Spring+Hibernate:spring hibernate orm with larg": {
+    "content": "- Use `@Query` annotation with `nativeQuery = true` for large datasets.\n- Implement pagination using `Pageable` and `Slice`.\n- Utilize `ScrollableResults` for forward-only scrolling through large result sets.\n- Configure Hibernate's second-level cache to reduce database hits.\n- Enable batch processing in Hibernate to improve performance during bulk operations.\n- Use `@EntityGraph` to fetch related entities efficiently.\n- Monitor and tune query execution plans using tools like Hibernate SQL logging.\n- Consider using a connection pool with appropriate settings for large datasets.",
+    "source": "web_search",
+    "updated_at": 1781028052.2275307
+  },
+  "search:Spring+Hibernate:spring hibernate orm with larg_ex": {
+    "content": "- Use `@Query` annotation in Spring Data JPA to write custom queries.\n- Implement `JpaSpecificationExecutor` for complex query building.\n- Configure `hibernate.jdbc.batch_size` in `application.properties` for batch processing.\n- Use `@Transactional(propagation = Propagation.REQUIRED)` on service methods.\n- Enable Hibernate second-level cache with `hibernate.cache.use_second_level_cache=true`.\n- Utilize `@EntityGraph` to fetch related entities efficiently.\n- Implement `AuditListener` for entity auditing.\n- Configure `spring.jpa.properties.hibernate.dialect` based on your database.\n- Use `@Modifying` and `@Query` for executing update/delete queries in batch.",
+    "source": "code_example",
+    "updated_at": 1781028068.0064092
+  },
+  "search:Spring+Hibernate:spring hibernate transaction m": {
+    "content": "- Use `@Transactional` annotation to manage transactions in Spring.\n- Ensure your project includes the latest version of Spring and Hibernate dependencies.\n- Configure `HibernateTransactionManager` for transaction management with a single `SessionFactory`.\n- Utilize `@Autowired` to inject `SessionFactory` into your service layer.\n- Set isolation levels using `@Transactional(isolation = Isolation.READ_COMMITTED)`.\n- Handle exceptions within transactions using `rollbackFor` and `noRollbackFor` attributes.\n- Enable declarative transaction management with `<tx:annotation-driven />` in XML configuration or `@EnableTransactionManagement` in Java config.\n- Monitor transaction performance using Spring's built-in metrics and logging.",
+    "source": "web_search",
+    "updated_at": 1781028087.0005069
+  },
+  "search:Spring+Hibernate:spring hibernate transaction m_ex": {
+    "content": "- Use `@Transactional` annotation to manage transactions in Spring.\n- Ensure Hibernate is configured correctly in your Spring application context.\n- Check for latest versions of Spring and Hibernate regularly.\n- Configure transaction management in `application.properties` or `application.yml`.\n- Utilize `@EnableTransactionManagement` to enable declarative transaction management.\n- Use `PlatformTransactionManager` for custom transaction management needs.\n- Handle exceptions within transactions using `rollbackFor` and `noRollbackFor`.\n- Monitor transaction performance with Spring's built-in metrics.",
+    "source": "code_example",
+    "updated_at": 1781028108.9172578
+  },
+  "search:Spring+Hibernate:spring hibernate caching strat": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Hibernate: 6.x\n  - EhCache: 3.x\n\n- **Key Config Options**:\n  - Enable second-level cache in `application.properties`: \n    ```properties\n    spring.jpa.properties.hibernate.cache.use_second_level_cache=true\n    ```\n  - Specify the cache provider:\n    ```properties\n    spring.jpa.properties.hibernate.cache.region.factory_class=org.springframework.boot.orm.jpa.hibernate.SpringCacheRegionFactory\n    ```\n  - Configure EhCache in `src/main/resources/ehcache.xml` or use Spring Boot's auto-configuration.",
+    "source": "web_search",
+    "updated_at": 1781028118.6242535
+  },
+  "search:Spring+Hibernate:spring hibernate caching strat_ex": {
+    "content": "- Use `@EnableCaching` annotation in Spring Boot to enable caching.\n- Configure cache manager in `application.properties` or `application.yml`.\n- Example of EhCache configuration:\n  ```yaml\n  spring:\n    cache:\n      type: ehcache\n      ehcache:\n        config: classpath:ehcache.xml\n  ```\n- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations on methods.\n- Configure cache eviction policies in EhCache XML or properties file.\n- Example of a simple cacheable method:\n  ```java\n  @Service\n  public class UserService {\n      @Cacheable(\"users\")\n      public User getUserById(Long id) {\n          // Retrieve user from database\n      }\n  }\n  ```\n- Monitor cache statistics using `@CacheStatistics` annotation or EhCache management console.\n- Ensure EhCache version is compatible with Hibernate and Spring Boot versions.",
+    "source": "code_example",
+    "updated_at": 1781028133.5374846
   }
 }
