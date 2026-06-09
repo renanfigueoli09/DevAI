@@ -1,0 +1,27 @@
+{
+  "search:nextjs-authentication-patterns:advanced authentication patter": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 20.5.3\n  - NextAuth.js: 4.10.2\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Custom authentication logic.\n  - `session.maxAge`: Session duration in seconds (e.g., `3600` for 1 hour).\n  - `providers`: Array of authentication providers (e.g., `[CredentialsProvider, GoogleProvider]`).",
+    "source": "web_search",
+    "updated_at": 1781041457.349698
+  },
+  "search:nextjs-authentication-patterns:advanced authentication patter_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 20.2.3\n  - NextAuth.js: 4.15.6\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration file for authentication.\n  - `providers`: List of authentication providers (e.g., Google, Facebook).\n  - `secret`: A secret key used to sign JWT tokens.\n  - `session`: Session management options (e.g., strategy, maxAge).",
+    "source": "code_example",
+    "updated_at": 1781041465.3760033
+  },
+  "search:nextjs-authentication-patterns:next.js authentication with su": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-supabase-app`\n  - `npm install @supabase/supabase-js`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Supabase Client: 2.0.x\n\n- **Key Config Options**:\n  - Supabase URL and Anon Key from your project settings.\n  - Environment variables for security (e.g., `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).\n  - Authentication providers (Email/Password, Google, GitHub, etc.).\n  - Route protection using middleware in Next.js App Router.",
+    "source": "web_search",
+    "updated_at": 1781041486.211622
+  },
+  "search:nextjs-authentication-patterns:security best practices for ne": {
+    "content": "- Use `next-auth` for authentication.\n- Install via npm: `npm install next-auth@latest`.\n- Configure in `_app.js`: \n```javascript\nimport { SessionProvider } from \"next-auth/react\";\n\nfunction MyApp({ Component, pageProps }) {\n  return (\n    <SessionProvider session={pageProps.session}>\n      <Component {...pageProps} />\n    </SessionProvider>\n  );\n}\n\nexport default MyApp;\n```\n- Use `getServerSideProps` for server-side rendering:\n```javascript\nimport { getServerSession } from \"next-auth/react\";\nimport { authOptions } from \"@/pages/api/auth/[...nextauth]\";\n\nexport async function getServerSideProps(context) {\n  const session = await getServerSession(context.req, context.res, authOptions);\n  \n  if (!session) {\n    return {\n      redirect: {\n        destination: \"/login\",\n        permanent: false,\n      },\n    };\n  }\n\n  return {\n    props: { session },\n  };\n}\n```\n- Use `useSession` in components:\n```javascript\nimport { useSession } from \"next-auth/react\";\n\nfunction Profile() {\n  const { data: session, status } = useSession();\n\n  if (status === \"loading\") return <p>Loading...</p>;\n  if (!session) return <p>Not signed in</p>;\n\n  return (\n    <div>\n      Signed in as {session.user.email}\n    </div>\n  );\n}\n\nexport default Profile;\n```\n- Implement JWT for secure token handling.\n- Use environment variables for sensitive data (`NEXTAUTH_URL`, `NEXTAUTH_SECRET`).\n- Regularly update dependencies and libraries.",
+    "source": "web_search",
+    "updated_at": 1781041511.8398838
+  },
+  "search:nextjs-authentication-patterns:security best practices for ne_ex": {
+    "content": "- Use `next-auth` for JWT authentication in Next.js.\n- Install via npm: `npm install next-auth`.\n- Configure in `pages/api/auth/[...nextauth].js`.\n- Set `secret` and `providers` (e.g., Google, GitHub).\n- Enable `session` to use JWT sessions.\n- Use `jwt` option for custom JWT handling.\n- Implement CSRF protection with `csrfToken: true`.\n- Ensure environment variables for secrets (`NEXTAUTH_SECRET`).\n- Regularly update dependencies using `npm update next-auth`.",
+    "source": "code_example",
+    "updated_at": 1781041519.0291162
+  }
+}

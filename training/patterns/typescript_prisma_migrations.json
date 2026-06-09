@@ -1,0 +1,22 @@
+{
+  "search:typescript+prisma-migrations:typescript prisma migrations b": {
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init` to create initial migration.\n  - `npx prisma migrate dev --name <migration-name>` for subsequent migrations.\n\n- **Latest Versions**:\n  - Prisma: v5.x (as of latest update)\n  - Node.js: v16.x or later\n\n- **Key Config Options**:\n  - `schema`: Defines the data model.\n  - `datasource`: Specifies the database connection details.\n  - `generator`: Configures the Prisma Client generator.",
+    "source": "web_search",
+    "updated_at": 1781041380.3446543
+  },
+  "search:typescript+prisma-migrations:prisma migrations with typescr": {
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init` to create initial migration.\n  - `npx prisma generate` to generate Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: 5.0.0 (as of the latest update)\n  - Next.js: 13.5.4\n\n- **Key Config Options**:\n  - In `prisma/schema.prisma`, define data models and relations.\n  - Use `schema.generator` to specify the output directory for Prisma Client.\n  - Configure database connection in `next.config.js` or `.env.local`.",
+    "source": "web_search",
+    "updated_at": 1781041404.9403014
+  },
+  "search:typescript+prisma-migrations:advanced prisma migrations str": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Create and apply a new migration.\n  - `prisma migrate deploy`: Apply migrations to the database.\n  - `prisma migrate reset`: Reset the database and apply migrations.\n\n- **Latest Versions**:\n  - Prisma Migrate: Version 2.0\n  - Prisma Client: Version 4.0\n\n- **Key Config Options**:\n  - `schema`: Define your data model in a `.prisma` file.\n  - `migrationsDirectory`: Specify the directory for migration files (default is `./prisma/migrations`).\n  - `provider`: Set the database provider (e.g., `postgresql`, `mysql`).",
+    "source": "web_search",
+    "updated_at": 1781041431.8245
+  },
+  "search:typescript+prisma-migrations:advanced prisma migrations str_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Create and apply migrations.\n  - `prisma migrate deploy`: Deploy migrations to the database.\n  - `prisma migrate reset`: Reset the database and apply all migrations.\n\n- **Latest Versions**:\n  - Prisma CLI: v5.0\n  - Prisma Migrate: v1.2\n\n- **Key Config Options**:\n  - `schema`: Path to your Prisma schema file.\n  - `provider`: Database provider (e.g., `postgresql`, `mysql`).\n  - `migrationsDirectory`: Directory where migrations are stored.",
+    "source": "code_example",
+    "updated_at": 1781041440.2199569
+  }
+}
