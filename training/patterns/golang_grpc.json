@@ -28,5 +28,25 @@
     "content": "- **CLI Commands**: `grpcurl`, `protoc`\n- **Latest Versions**: `grpcurl v1.8.7`, `protoc v3.21.5`\n- **Key Config Options**:\n  - `server_address`: Specifies the gRPC server address.\n  - `plaintext`: Enables plaintext communication (not recommended for production).\n  - `insecure`: Disables TLS verification (use with caution).",
     "source": "code_example",
     "updated_at": 1780941624.5959222
+  },
+  "search:golang+grpc:go grpc microservices patterns": {
+    "content": "- Clone the repository using `git clone https://github.com/hollowdll/go-grpc-microservices.git`\n- Open three terminal windows for each microservice.\n- Navigate to each service directory and run `go run main.go` to start them simultaneously.\n- For Go gRPC Microservices Architecture Best Practices, refer to official Go gRPC documentation.\n- To create a simple microservice with Go and gRPC:\n  - Define the service using `.proto` files.\n  - Implement the service in Go.\n  - Use `protoc-gen-go` to generate Go code from `.proto`.\n  - Run the server using `go run main.go`.\n- For building communication between two microservices, use gRPC's client-server model:\n  - Define the service interface and messages in a `.proto` file.\n  - Generate Go code for both the client and server.\n  - Implement the client to call the server methods.\n  - Run both the client and server applications.",
+    "source": "web_search",
+    "updated_at": 1781047264.9617903
+  },
+  "search:golang+grpc:go grpc microservices patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `protoc --go_out=. path/to/your/protofile.proto`\n  - `go mod tidy`\n\n- **Latest Versions**:\n  - Go: 1.20.x\n  - Protocol Buffers: 3.19.x\n  - gRPC: 1.54.x\n\n- **Key Config Options**:\n  - Service Discovery: Use Consul or Eureka for service registration and discovery.\n  - Load Balancing: Implement round-robin, least connections, or IP hash strategies.\n  - Error Handling: Use Go's error handling mechanisms with custom error types.\n  - Observability: Integrate Prometheus for metrics and Jaeger for tracing.",
+    "source": "code_example",
+    "updated_at": 1781047272.2207665
+  },
+  "search:golang+grpc:go grpc performance tuning 202": {
+    "content": "- Use the latest version of gRPC Go by running `go get google.golang.org/grpc@latest`\n- Optimize HTTP/2 settings with flags like `-http2-max-streams` and `-http2-min-timeout`\n- Implement connection pooling using `grpc.WithBlock()` and `grpc.WithBalancerName(\"round_robin\")`\n- Enable compression with `grpc.WithDefaultCallOptions(grpc.UseCompressor(\"gzip\"))`\n- Configure keepalive with `grpc.WithKeepaliveParams(keepalive.ClientParameters{Time: 10 * time.Second})`\n- Adjust flow control settings using `grpc.WithWriteBufferSize()` and `grpc.WithReadBufferSize()`\n- Optimize protobuf schema for better performance\n- Use caching strategies to reduce latency\n- Benchmark gRPC services using tools like `ab` (Apache Bench) or custom benchmarks",
+    "source": "web_search",
+    "updated_at": 1781047289.9387188
+  },
+  "search:golang+grpc:go grpc performance tuning 202_ex": {
+    "content": "- **CLI Commands**:\n  - `go get google.golang.org/grpc`\n  - `protoc --go_out=. path/to/your/protofile.proto`\n\n- **Latest Versions**:\n  - gRPC Go: v1.54.0 (as of my last update)\n  - Protocol Buffers Compiler (`protoc`): v3.21.6\n\n- **Key Config Options**:\n  - `grpc.WithInsecure()`: For development environments without TLS.\n  - `grpc.WithBlock()`: Blocks until the connection is up.\n  - `grpc.WithTimeout(time.Second * 5)`: Sets a timeout for RPC calls.\n  - `grpc.MaxCallRecvMsgSize(size int)` and `grpc.MaxCallSendMsgSize(size int)`: Adjusts message size limits.",
+    "source": "code_example",
+    "updated_at": 1781047305.5229735
   }
 }

@@ -1,0 +1,17 @@
+{
+  "search:rust+wasm:rust webassembly performance o": {
+    "content": "- **CLI Commands**:\n  - `cargo build --release` for optimized Rust builds.\n  - `wasm-pack build --target web` to compile Rust code to WebAssembly.\n\n- **Latest Versions**:\n  - Rust: 1.65.0 (as of my last update)\n  - wasm-pack: 0.14.0\n\n- **Key Config Options**:\n  - Use `#[wasm_bindgen]` for interfacing Rust with JavaScript.\n  - Employ `cargo-wasm-bindgen` for easier WebAssembly bindings.\n  - Optimize memory management with Rust's ownership and borrowing rules.\n  - Utilize SIMD instructions via crates like `stdsimd`.\n  - Enable caching strategies in your web application to reduce load times.",
+    "source": "web_search",
+    "updated_at": 1781047223.5320072
+  },
+  "search:rust+wasm:rust webassembly performance o_ex": {
+    "content": "- Use `cargo build --release` to compile Rust code for production.\n- Optimize factorial function using iterators instead of recursion.\n- Configure WebAssembly optimization levels in your build script.\n- Utilize Rust's `wasm-bindgen` for efficient JavaScript bindings.\n- Employ Rust's `rayon` crate for parallel processing.\n- Monitor performance with tools like `wasmtime` and `cargo-benchcmp`.\n- Ensure memory safety to avoid runtime errors.\n- Use `wasm-pack` for packaging and distributing WebAssembly modules.\n- Keep dependencies up-to-date using `cargo update`.\n- Test performance on target browsers and devices.",
+    "source": "code_example",
+    "updated_at": 1781047232.3545063
+  },
+  "search:rust+wasm:rust webassembly security best": {
+    "content": "- Use `cargo build --release` to compile Rust code into WebAssembly.\n- Enable security features in your compiler by using the latest version of Rust and enabling specific flags during compilation.\n- Implement bounds checking to prevent direct memory manipulation.\n- Utilize sandboxing techniques provided by WebAssembly to isolate applications.\n- Regularly update dependencies and use static analysis tools for security audits.\n- Follow secure coding practices, such as avoiding global variables and minimizing side effects.",
+    "source": "web_search",
+    "updated_at": 1781047242.8396595
+  }
+}

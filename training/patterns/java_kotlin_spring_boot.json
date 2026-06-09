@@ -1,0 +1,17 @@
+{
+  "search:java+kotlin-spring-boot:java kotlin spring boot advanc": {
+    "content": "- Use Spring Initializr to generate a new Spring Boot project with Kotlin support.\n- For Kotlin Spring Boot, use primary constructors for dependency injection and data classes for DTOs.\n- Update imports from `javax.validation` to `jakarta.validation` if using Spring 3.x or later.\n- Explore GitHub repositories like `kotlin-springboot` for development patterns and idioms specific to Kotlin applications.\n- Consider using the `spring-boot-starter-validation` dependency for validation in your project.",
+    "source": "web_search",
+    "updated_at": 1781047351.6774085
+  },
+  "search:java+kotlin-spring-boot:java kotlin spring boot advanc_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Kotlin: 1.8.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for configuration settings.\n  - `spring.jpa.hibernate.ddl-auto` to control schema generation (e.g., `create-drop`, `update`).\n  - `spring.datasource.url`, `spring.datasource.username`, and `spring.datasource.password` for database connection details.",
+    "source": "code_example",
+    "updated_at": 1781047367.337038
+  },
+  "search:java+kotlin-spring-boot:java kotlin spring boot perfor": {
+    "content": "- Use Spring Initializr to generate a new project tailored to your needs.\n- For performance analysis, consider using tools like yCrash or custom APIs to simulate issues.\n- To fix AMD performance tuning issues, refer to YouTube video linked in the search results.\n- Upgrade to the latest version of Spring Boot for better performance and features.\n- Tune JVM settings such as heap size, garbage collection algorithms, and other flags specific to your application's needs.\n- Explore using Virtual Threads in Web MVC stack on JDK 21 for improved concurrency and performance.\n- Monitor application performance regularly using built-in metrics or third-party tools.",
+    "source": "web_search",
+    "updated_at": 1781047375.7886548
+  }
+}
