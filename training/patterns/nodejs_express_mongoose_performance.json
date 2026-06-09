@@ -1,0 +1,17 @@
+{
+  "search:nodejs-express-mongoose-performance:express mongoose performance o": {
+    "content": "- **CLI Commands**: Use `npm install mongoose@latest` to update Mongoose.\n- **Latest Version**: Ensure you are using the latest version of Mongoose for performance improvements and bug fixes.\n- **Key Config Options**:\n  - `useNewUrlParser: true`\n  - `useUnifiedTopology: true`\n  - `bufferCommands: false` (to avoid buffering timeouts)\n  - `poolSize: 10` (adjust based on your application's needs)",
+    "source": "web_search",
+    "updated_at": 1781011353.4125843
+  },
+  "search:nodejs-express-mongoose-performance:express mongoose performance o_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `npx create-node-app my-app`\n\n- **Latest Versions**:\n  - Express: v4.18.2\n  - Mongoose: v7.6.3\n\n- **Key Config Options**:\n  - MongoDB connection string in `.env` file\n  - Schema definition for models using Mongoose\n  - Middleware for request validation and error handling",
+    "source": "code_example",
+    "updated_at": 1781011358.5095227
+  },
+  "search:nodejs-express-mongoose-performance:mongoose query optimization te": {
+    "content": "- **CLI Commands**: Use `npm install mongoose@latest` to update Mongoose.\n- **Latest Versions**: Ensure you are using the latest version of Mongoose for optimal performance and security.\n- **Key Config Options**:\n  - `.select('-_id')`: Exclude `_id` from query results.\n  - `.find({ field: 'value' })`: Query documents where `field` equals `value`.\n  - `.sort({ field: 1 })`: Sort results by `field` in ascending order (1) or descending order (-1).\n  - `.limit(10)`: Limit the number of results to 10.\n  - `.skip(5)`: Skip the first 5 documents.",
+    "source": "web_search",
+    "updated_at": 1781011368.227189
+  }
+}

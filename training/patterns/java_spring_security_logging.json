@@ -1,0 +1,22 @@
+{
+  "search:java-spring-security-logging:spring security logging strate": {
+    "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `mvn clean install` for building the project.\n- **Key Config Options**:\n  - `application.properties`: Configure server port, security settings, and more.\n  - `spring.security.user.name` and `spring.security.user.password`: Set default user credentials.\n  - `spring.security.oauth2.client.registration.*`: Configure OAuth2 clients.\n  - `spring.security.jwt.secret`: JWT secret key for token signing.",
+    "source": "web_search",
+    "updated_at": 1781011311.102502
+  },
+  "search:java-spring-security-logging:spring security logging strate_ex": {
+    "content": "- **Latest Versions**:\n  - Spring Boot 3.0\n  - Spring Security 6.0\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n  - `spring.security.user.name`\n  - `spring.security.user.password`\n\n- **CLI Commands with Exact Flags**:\n  - `mvn clean install`\n  - `java -jar target/your-application-name.jar`\n\n- **Example Code Snippet for JWT Authentication**:\n  ```java\n  @EnableWebSecurity\n  public class SecurityConfig extends WebSecurityConfigurerAdapter {\n      @Override\n      protected void configure(HttpSecurity http) throws Exception {\n          http.authorizeRequests()\n              .antMatchers(\"/api/public/**\").permitAll()\n              .anyRequest().authenticated()\n              .and()\n              .httpBasic();\n      }\n  }\n  ```\n\n- **Example Code Snippet for Log Annotation**:\n  ```java\n  @Retention(RetentionPolicy.RUNTIME)\n  @Target(ElementType.METHOD)\n  public @interface Log {\n  }\n\n  @Aspect\n  @Component\n  public class LoggingAspect {\n\n      @Before(\"@annotation(Log)\")\n      public void logMethodExecution(JoinPoint joinPoint) {\n          System.out.println(\"Executing method: \" + joinPoint.getSignature().getName());\n      }\n  }\n  ```",
+    "source": "code_example",
+    "updated_at": 1781011321.4461594
+  },
+  "search:java-spring-security-logging:spring security auditing with ": {
+    "content": "- **CLI Commands**: \n  - `curl -X PUT \"localhost:9200/_cluster/settings\" -H 'Content-Type: application/json' -d'{\"persistent\": {\"xpack.security.audit.enabled\": true}}'`\n  \n- **Latest Versions**:\n  - Elasticsearch: 8.4.x\n  - Spring Data Elasticsearch: 4.3.x\n\n- **Key Config Options**:\n  - `xpack.security.audit.enabled`: Enables auditing.\n  - `xpack.security.audit.logfile.events.emit_request_body`: Logs request bodies in audit logs.\n  - `cluster.update.settings`: Use to ensure dynamic auditing settings are consistent across all nodes.",
+    "source": "web_search",
+    "updated_at": 1781011329.1957223
+  },
+  "search:java-spring-security-logging:spring security auditing with _ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Data Elasticsearch: 4.x\n  - Spring Security: 6.x\n\n- **Key Config Options**:\n  - Enable auditing in entity classes with `@EnableJpaAuditing` and `@EntityListeners(AuditingEntityListener.class)`\n  - Configure auditing metadata using `@CreatedDate`, `@LastModifiedDate`, `@CreatedBy`, `@LastModifiedBy`\n  - Implement `Persistable` interface for entities\n  - Enable Elasticsearch audit logging in Spring Security configuration",
+    "source": "code_example",
+    "updated_at": 1781011337.5109687
+  }
+}

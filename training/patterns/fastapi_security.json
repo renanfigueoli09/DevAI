@@ -1,0 +1,12 @@
+{
+  "search:fastapi+security:fastapi oauth2 authentication ": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2, use `pip install python-multipart`.\n- Create a new FastAPI project with `fastapi create myproject`.\n- Define your API routes in `main.py`, e.g., `@app.post(\"/token\")` for token generation.\n- Use `OAuth2PasswordBearer` for password-based authentication.\n- Implement JWT token creation and validation using libraries like `python-jose[cryptography]`.\n- Configure database models for user management, e.g., SQLAlchemy or Tortoise ORM.\n- Set up environment variables for sensitive information like secret keys and database URLs.\n- Test your API with tools like Postman or curl to ensure authentication works as expected.",
+    "source": "web_search",
+    "updated_at": 1781011289.564011
+  },
+  "search:fastapi+security:fastapi oauth2 authentication _ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2 authentication, use `OAuth2PasswordBearer` for password flow and `OAuth2PasswordRequestForm` for form data handling.\n- To generate JWT tokens, consider using libraries like `python-jose[cryptography]`.\n- Key config options include setting the token URL (`tokenUrl`) in your FastAPI app's security scheme.\n- For video tutorials, visit https://go.prettyprinted.co/ to learn about implementing authentication with OAuth2 and JSON web tokens (JWT) in FastAPI apps using Tortoise ORM.",
+    "source": "code_example",
+    "updated_at": 1781011295.576214
+  }
+}

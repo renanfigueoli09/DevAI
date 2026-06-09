@@ -1,0 +1,22 @@
+{
+  "search:kafka+error-handling:kafka error handling patterns ": {
+    "content": "- Use `spring.kafka.consumer.error-handler` to configure error handling strategies.\n- Implement custom error handlers by extending `ErrorHandler`.\n- Utilize `SeekToCurrentErrorHandler` for retrying failed messages.\n- Configure a Dead Letter Topic (DLT) using `DeadLetterPublishingRecoverer`.\n- Set `max.poll.interval.ms` to control the maximum time between invocations of poll() when using Kafka consumers.\n- Adjust `retries` and `retry.backoff.ms` in producer configurations for retry logic.\n- Monitor error metrics using Spring Boot Actuator for proactive error handling.\n- Ensure proper logging with `logging.level.org.springframework.kafka=DEBUG` for debugging purposes.",
+    "source": "web_search",
+    "updated_at": 1781011198.8124552
+  },
+  "search:kafka+error-handling:kafka error handling patterns _ex": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --describe` to check topic details.\n- **Latest Versions**: Ensure Kafka and related libraries are up-to-date for the best performance and security.\n- **Key Config Options**:\n  - `delivery.timeout.ms`: Maximum time in milliseconds that the producer will wait for an acknowledgment from the server before considering the message as failed.\n  - `retries`: Number of times to retry sending a message on failure.\n  - `retry.backoff.ms`: Time to wait before attempting to resend a message after a failure.",
+    "source": "code_example",
+    "updated_at": 1781011221.615992
+  },
+  "search:kafka+error-handling:kafka fault tolerance strategi": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker_address> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker_address> --describe --group <consumer_group_id>`\n- **Latest Versions**:\n  - Apache Kafka: 3.4.0\n- **Key Config Options**:\n  - `replication.factor`: Number of replicas for each partition.\n  - `min.insync.replicas`: Minimum number of in-sync replicas required before a write is considered successful.\n  - `acks`: Controls the guarantee of message delivery.",
+    "source": "web_search",
+    "updated_at": 1781011229.75908
+  },
+  "search:kafka+error-handling:kafka fault tolerance strategi_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 3 --partitions 5`\n  - `kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group my-group`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Kafka Connect: 3.4.1\n\n- **Key Config Options**:\n  - `replication.factor`: Number of replicas for each partition.\n  - `min.insync.replicas`: Minimum number of in-sync replicas required before a write is considered successful.\n  - `acks`: Controls the guarantee provided to the producer about how many acknowledgments the leader has received from in-sync replicas.",
+    "source": "code_example",
+    "updated_at": 1781011236.3917346
+  }
+}
