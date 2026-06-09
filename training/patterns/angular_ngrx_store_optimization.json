@@ -1,0 +1,32 @@
+{
+  "search:angular-ngrx-store-optimization:optimizing ngrx store for larg": {
+    "content": "- **CLI Commands**: \n  - `ng add @ngrx/store`\n  - `ng generate store <feature-name>`\n\n- **Latest Versions**:\n  - Angular CLI: v18.x\n  - NgRx: v15.x\n\n- **Key Config Options**:\n  - `actionsRoot`: Specifies the root path for actions.\n  - `reducersRoot`: Specifies the root path for reducers.\n  - `effectsRoot`: Specifies the root path for effects.",
+    "source": "web_search",
+    "updated_at": 1781026039.9029155
+  },
+  "search:angular-ngrx-store-optimization:optimizing ngrx store for larg_ex": {
+    "content": "- Use the latest version of NgRx.\n- Install NgRx using Angular CLI: `ng add @ngrx/store`.\n- Configure NgRx Store in your Angular project by creating actions, reducers, and effects.\n- Utilize Action creators for better readability and maintainability.\n- Implement selectors to optimize state access and improve performance.\n- Use the `@MemoizedSelector` decorator for memoization.\n- Optimize performance by reducing redundant state changes.\n- Configure NgRx DevTools for easier debugging and monitoring.",
+    "source": "code_example",
+    "updated_at": 1781026044.7151718
+  },
+  "search:angular-ngrx-store-optimization:state management patterns with": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx Store to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store with the specified name.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version of NgRx is 15.0.0.\n\n- **Key Config Options**:\n  - `initialState`: Defines the initial state of the store.\n  - `reducers`: Maps actions to reducers that modify the state.\n  - `effects`: Handles side effects and asynchronous operations.\n  - `metaReducers`: Transforms the state before it is returned by the store.",
+    "source": "web_search",
+    "updated_at": 1781026054.4689841
+  },
+  "search:angular-ngrx-store-optimization:state management patterns with_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store` to install NgRx.\n  - `ng generate store <feature-name>` to create a new store.\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the main module for root reducers.\n  - `EffectsModule.forRoot(effects)` for root effects.\n  - `Action creators` to define actions.\n  - `Reducers` to handle state transitions.\n  - `Selectors` to access parts of the state.",
+    "source": "code_example",
+    "updated_at": 1781026070.871768
+  },
+  "search:angular-ngrx-store-optimization:performance tuning ngrx effect": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular and NgRx for optimal performance and features. Check [Angular](https://angular.io/) and [NgRx](https://ngrx.io/) official websites for updates.\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure the NgRx store with reducers, effects, and meta-reducers.\n    ```typescript\n    import { StoreModule } from '@ngrx/store';\n    import { EffectsModule } from '@ngrx/effects';\n    import { reducer } from './path-to-reducer';\n    import { MyEffect } from './path-to-effect';\n\n    @NgModule({\n      imports: [\n        StoreModule.forRoot({ myFeatureKey: reducer }),\n        EffectsModule.forRoot([MyEffect]),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Use `metaReducers` for global state transformations.\n    ```typescript\n    import { StoreDevtoolsModule } from '@ngrx/store-devtools';\n    import { environment } from '../environments/environment';\n\n    const metaReducers: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];\n\n    @NgModule({\n      imports: [\n        StoreModule.forRoot(reducers, { metaReducers }),\n        EffectsModule.forRoot(effects),\n        StoreDevtoolsModule.instrument({ logOnly: environment.production }),\n      ],\n    })\n    export class AppModule {}\n    ```",
+    "source": "web_search",
+    "updated_at": 1781026092.9659653
+  },
+  "search:angular-ngrx-store-optimization:performance tuning ngrx effect_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: v18.x\n  - NgRx: v15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` for root reducers configuration.\n  - `EffectsModule.forRoot(effects)` for root effects registration.\n  - `createEffect(() => ...)` decorator for defining effects.",
+    "source": "code_example",
+    "updated_at": 1781026101.4917865
+  }
+}

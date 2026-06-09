@@ -1,0 +1,32 @@
+{
+  "search:spring-cloud-gateway-performance-tuning:spring cloud gateway performan": {
+    "content": "- Use `mvn spring-boot:run` or `gradle bootRun` to start Spring Cloud Gateway.\n- Specify memory limits in Kubernetes using `resources.limits.memory`.\n- Set Metaspace and Code Cache sizes with JVM flags:\n  - `-XX:MaxMetaspaceSize=140m`\n  - `-XX:ReservedCodeCacheSize=240m`\n- Monitor performance metrics using Spring Boot Actuator endpoints.\n- Update to the latest stable version of Spring Cloud Gateway for bug fixes and improvements.\n- Configure route predicates and filters for optimal routing and processing.\n- Use `spring.cloud.gateway.discovery.locator.enabled=true` if routes are dynamically discovered from service registries.",
+    "source": "web_search",
+    "updated_at": 1781025973.0560648
+  },
+  "search:spring-cloud-gateway-performance-tuning:spring cloud gateway performan_ex": {
+    "content": "- Use `mvn clean install` to build the project.\n- Update Spring Cloud Gateway to version 3.1.4.RELEASE for the latest features and performance improvements.\n- Enable metrics by adding `management.endpoints.web.exposure.include=*` in your application properties.\n- Configure routing using Java code with `RouteLocator`.\n- Monitor performance using built-in metrics endpoints like `/actuator/metrics`.\n- Optimize latency by configuring server timeouts and connection pool sizes.\n- Use Spring Boot Actuator for detailed monitoring and management of the application.",
+    "source": "code_example",
+    "updated_at": 1781025979.7826486
+  },
+  "search:spring-cloud-gateway-performance-tuning:load balancing strategies with": {
+    "content": "- **CLI Commands**:\n  - `curl -X GET \"http://localhost:8080/your-service-name\"` to test load balancing.\n  \n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.4.x\n  - Spring Cloud LoadBalancer: 2021.0.5\n  \n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].uri=lb://your-service-name`\n  - `spring.cloud.loadbalancer.ribbon.enabled=false` to disable Ribbon.\n  - `spring.cloud.loadbalancer.discovery.locator.lower-case-service-id=true` for case-insensitive service discovery.",
+    "source": "web_search",
+    "updated_at": 1781025989.3386712
+  },
+  "search:spring-cloud-gateway-performance-tuning:load balancing strategies with_ex": {
+    "content": "- **CLI Commands**:\n  - `spring cloud gateway route add <route-name> --uri=<target-uri>`\n  - `spring cloud gateway route update <route-name> --uri=<new-target-uri>`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.1.0.RELEASE\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Target URI\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate (e.g., Path=/example)\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter (e.g., RewritePath=/example/(?<segment>.*), /$\\{segment})",
+    "source": "code_example",
+    "updated_at": 1781026004.943005
+  },
+  "search:spring-cloud-gateway-performance-tuning:caching mechanisms in spring c": {
+    "content": "- **Add Spring Boot Caching Dependency**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.boot</groupId>\n      <artifactId>spring-boot-starter-cache</artifactId>\n  </dependency>\n  ```\n\n- **Enable Caching in Application**:\n  ```java\n  @SpringBootApplication\n  @EnableCaching\n  public class MyApplication {\n      public static void main(String[] args) {\n          SpringApplication.run(MyApplication.class, args);\n      }\n  }\n  ```\n\n- **Configure Cache Manager (e.g., Redis)**:\n  ```yaml\n  spring:\n    cache:\n      type: redis\n      redis:\n        host: localhost\n        port: 6379\n  ```\n\n- **Use @Cacheable Annotation**:\n  ```java\n  @Service\n  public class MyService {\n      @Cacheable(\"myCache\")\n      public String getCachedData(String key) {\n          // Expensive operation\n          return \"Cached Data\";\n      }\n  }\n  ```\n\n- **Configure Cache Expiration**:\n  ```yaml\n  spring:\n    cache:\n      redis:\n        time-to-live: 3600s\n  ```\n\n- **Use @CachePut Annotation for Updates**:\n  ```java\n  @Service\n  public class MyService {\n      @CachePut(value = \"myCache\", key = \"#key\")\n      public String updateCachedData(String key, String value) {\n          return value;\n      }\n  }\n  ```\n\n- **Use @CacheEvict Annotation for Removals**:\n  ```java\n  @Service\n  public class MyService {\n      @CacheEvict(value = \"myCache\", key = \"#key\")\n      public void removeCachedData(String key) {\n          // Logic to remove data\n      }\n  }\n  ```\n\n- **Supported Cache Types**:\n  - `simple`: In-memory cache.\n  - `caffeine`: High-performance in-memory cache.\n  - `redis`: Distributed cache using Redis.\n\n- **Latest Version of Spring Boot Caching**:\n  Check [Maven Central](https://search.maven.org/artifact/org.springframework.boot/spring-boot-starter-cache) for the latest version.",
+    "source": "web_search",
+    "updated_at": 1781026019.6102035
+  },
+  "search:spring-cloud-gateway-performance-tuning:caching mechanisms in spring c_ex": {
+    "content": "- **CLI Commands**: `spring cloud gateway route add <route-name> --uri=<uri> --predicates=Path=/<path>`\n- **Latest Versions**: Spring Cloud Gateway 3.x, Spring Boot 2.7.x\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Destination URI.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Routing predicate, e.g., Path=/example.\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter to apply, e.g., RewritePath=/old-path/(?<segment>.*), /new-path/$\\{segment}.\n- **Caching Mechanisms**: Use Spring Cache abstraction with annotations like `@Cacheable`, `@CachePut`, and `@CacheEvict` on Gateway routes or services.",
+    "source": "code_example",
+    "updated_at": 1781026029.1155272
+  }
+}
