@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-performance-tuning:ruby on rails performance tuni": {
+    "content": "- Use `rails server -e production` to run Rails in production mode.\n- Update Ruby and Rails to the latest stable versions for performance improvements.\n- Configure database connections in `config/database.yml` with appropriate settings like pool size.\n- Implement caching strategies using `Rails.cache.fetch('key', expires_in: 1.hour) { expensive_method }`.\n- Use `Bullet` gem to reduce N+1 queries by automatically identifying them and suggesting fixes.\n- Optimize ActiveRecord queries with eager loading (`includes`) and avoiding raw SQL where possible.\n- Utilize `rack-mini-profiler` for detailed performance analysis in development.\n- Implement background jobs using Sidekiq or Resque to offload tasks from the main request thread.\n- Monitor application performance using tools like New Relic or Skylight for real-time insights.",
+    "source": "web_search",
+    "updated_at": 1781010896.2814763
+  },
+  "search:ruby-on-rails-performance-tuning:ruby on rails performance tuni_ex": {
+    "content": "- Use `rails server` in production mode (`RAILS_ENV=production rails server`)\n- Upgrade Ruby to version 3.4.5 and Rails to version 8.0.2\n- Configure Puma as the default application server for better concurrency\n- Warm up your application with `rails runner \"YourModel.all\"`\n- Monitor performance using tools like New Relic or Skylight",
+    "source": "code_example",
+    "updated_at": 1781010917.8300343
+  },
+  "search:ruby-on-rails-performance-tuning:ruby on rails caching strategi": {
+    "content": "- **CLI Commands**:\n  - `rails cache:clear`: Clears all cached data.\n  - `rails dev:cache`: Enables caching in development mode.\n\n- **Latest Versions**:\n  - Rails 7.0.6\n\n- **Key Config Options**:\n  - `config.cache_store`: Specifies the cache store (e.g., `:memory_store`, `:file_store`, `:redis_cache_store`).\n  - `config.action_controller.perform_caching`: Enables caching for controllers.\n  - `config.action_view.cache_template_loading`: Caches template loading in development.",
+    "source": "web_search",
+    "updated_at": 1781010936.6877732
+  },
+  "search:ruby-on-rails-performance-tuning:ruby on rails caching strategi_ex": {
+    "content": "- **CLI Commands**: `rails cache:clear`, `rails dev:cache`\n- **Latest Version**: Ruby on Rails 7.0\n- **Key Config Options**:\n  - `config.cache_classes`: Boolean, controls whether classes and instances are cached across requests.\n  - `config.action_controller.perform_caching`: Boolean, enables or disables caching of controller actions.\n  - `config.cache_store`: Specifies the cache store to use (e.g., `:memory_store`, `:file_store`, `:redis_cache_store`).",
+    "source": "code_example",
+    "updated_at": 1781010960.6095452
+  }
+}
