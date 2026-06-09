@@ -1,0 +1,17 @@
+{
+  "search:kubernetes-mongodb-statefulsets:kubernetes mongodb statefulset": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get pods --selector app=mongodb`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - MongoDB Operator for Kubernetes: v0.9.0\n\n- **Key Config Options**:\n  - `replicas`: Number of MongoDB instances.\n  - `volumeClaimTemplates`: Persistent storage configuration.\n  - `service`: Headless service for stable network identities.\n\nExample `statefulset.yaml` snippet:\n\n```yaml\napiVersion: apps/v1\nkind: StatefulSet\nmetadata:\n  name: mongodb\nspec:\n  serviceName: \"mongodb\"\n  replicas: 3\n  selector:\n    matchLabels:\n      app: mongodb\n  template:\n    metadata:\n      labels:\n        app: mongodb\n    spec:\n      containers:\n      - name: mongo\n        image: mongo:latest\n        ports:\n        - containerPort: 27017\n        volumeMounts:\n        - name: data\n          mountPath: /data/db\n  volumeClaimTemplates:\n  - metadata:\n      name: data\n    spec:\n      accessModes: [ \"ReadWriteOnce\" ]\n      resources:\n        requests:\n          storage: 1Gi\n```\n\nThis setup ensures MongoDB is managed as a stateful application in Kubernetes, providing persistence and scalability.",
+    "source": "web_search",
+    "updated_at": 1781013672.470658
+  },
+  "search:kubernetes-mongodb-statefulsets:kubernetes mongodb deployment ": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy MongoDB using YAML files.\n- For production, consider using a replica set for high availability and data redundancy.\n- Ensure TLS certificates are managed via Kubernetes secrets (`kubernetes.io/tls`).\n- Disable authentication by setting `spec.security.auth.enabled: false` if not required.\n- Use the latest version of MongoDB Operator (1.13.0 as of the last update).\n- For web applications, deploy both the application and MongoDB on the same Kubernetes cluster for simplicity.\n- Utilize Mongo Express for a web-based MongoDB admin interface (`https://github.com/MarkDM/k8s_mongo_deployment`).",
+    "source": "web_search",
+    "updated_at": 1781013708.862845
+  },
+  "search:kubernetes-mongodb-statefulsets:kubernetes mongodb deployment _ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl get pods`\n  - `kubectl describe pod <pod-name>`\n  - `kubectl scale deployment <deployment-name> --replicas=3`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - MongoDB: 6.0\n  - Mongo Express: 0.54\n\n- **Key Config Options**:\n  - `replicas`: Number of pods to run.\n  - `resources`: CPU and memory limits and requests.\n  - `storageClass`: Storage class for persistent volume claims.\n  - `secretName`: Name of the secret containing MongoDB credentials.",
+    "source": "code_example",
+    "updated_at": 1781013724.875683
+  }
+}
