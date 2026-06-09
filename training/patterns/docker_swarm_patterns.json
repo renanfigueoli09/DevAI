@@ -1,0 +1,22 @@
+{
+  "search:docker-swarm-patterns:docker swarm advanced patterns": {
+    "content": "- **CLI Commands**: `docker swarm init`, `docker service create --replicas <num> <image>`, `docker service scale <service_name>=<new_replicas>`\n- **Latest Versions**: Docker Engine v25.x, Swarm Mode natively supported.\n- **Key Config Options**:\n  - `--constraint`: Apply placement constraints to services.\n  - `--network`: Specify the network for the service.\n  - `--publish`: Map ports from the service to the host.\n  - `--restart-condition`: Define restart conditions for tasks.",
+    "source": "web_search",
+    "updated_at": 1781019575.4958231
+  },
+  "search:docker-swarm-patterns:docker swarm advanced patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `docker swarm init`: Initialize a new swarm.\n  - `docker swarm join --token <TOKEN> <MANAGER-IP>:<PORT>`: Join a swarm as a worker.\n  - `docker service create --replicas <NUM> --name <SERVICE-NAME> <IMAGE>`: Create and scale a service.\n\n- **Latest Versions**:\n  - Docker Engine: Latest stable version (as of my last update).\n  - Docker Swarm: Integrated with Docker Engine, no separate versioning.\n\n- **Key Config Options**:\n  - `--replicas`: Number of replicas for the service.\n  - `--publish`: Map ports from the service to the host.\n  - `--constraint`: Schedule services based on node attributes.\n  - `--update-delay`: Delay between updates during a rolling update.",
+    "source": "code_example",
+    "updated_at": 1781019584.2156408
+  },
+  "search:docker-swarm-patterns:docker swarm for microservices": {
+    "content": "- **CLI Commands**: `docker swarm init`, `docker service create --replicas <num> <image>`, `docker service scale <service_name>=<new_replicas>`\n- **Latest Versions**: Docker Swarm is part of Docker Engine, so check the latest version on [Docker's official website](https://docs.docker.com/engine/release-notes/).\n- **Key Config Options**:\n  - `replicas`: Number of replicas for a service.\n  - `networks`: Define networks for services to communicate.\n  - `deploy`: Deployment options like placement constraints, update strategy, and rollback policy.",
+    "source": "web_search",
+    "updated_at": 1781019592.483015
+  },
+  "search:docker-swarm-patterns:docker swarm for microservices_ex": {
+    "content": "- **CLI Commands**:\n  - `docker swarm init`: Initialize a new swarm.\n  - `docker service create --replicas <num> <image>`: Create and run a service with multiple replicas.\n  - `docker service scale <service_name>=<new_replicas>`: Scale the number of replicas for a service.\n\n- **Latest Versions**:\n  - Docker Engine: [Check latest version](https://docs.docker.com/engine/release-notes/)\n  - Docker Swarm: Built into Docker Engine, no separate versioning.\n\n- **Key Config Options**:\n  - `docker-compose.yml`: Define services, networks, and volumes.\n  - Service Discovery: Use Docker's built-in DNS for service discovery.\n  - Load Balancing: Automatically balanced across all nodes in the swarm.",
+    "source": "code_example",
+    "updated_at": 1781019599.170702
+  }
+}

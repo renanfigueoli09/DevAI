@@ -1,0 +1,22 @@
+{
+  "search:react-native-graphql-client:react native graphql client in": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-native-app my-app`\n  - `npm install @apollo/client graphql`\n\n- **Latest Versions**:\n  - React Native: 0.70.5\n  - Apollo Client: v3.6.1\n\n- **Key Config Options**:\n  - `ApolloClient`: Configure with `uri` and `cache`.\n  - `HttpLink`: Set up with the GraphQL endpoint URL.\n  - `InMemoryCache`: Use for caching data locally.\n\n- **Additional Tools**:\n  - Install React Native Apollo devtools via Flipper: \n    ```bash\n    npm install react-native-apollo-devtools\n    ```\n  - Run Flipper and add the plugin.",
+    "source": "web_search",
+    "updated_at": 1781019617.1807172
+  },
+  "search:react-native-graphql-client:react native graphql client in_ex": {
+    "content": "- **CLI Command**: `npx react-native init MyGraphQLApp --template react-native-template-typescript`\n- **Navigate to Project Directory**: `cd MyGraphQLApp`\n- **Install Apollo Client**: `npm install @apollo/client graphql`\n- **Apollo Configuration**:\n  - Create `ApolloClient` instance.\n  - Provide it with a `HttpLink` pointing to your GraphQL server.\n  - Use `InMemoryCache` for caching.\n- **Integrate Apollo in App**:\n  - Wrap your app component with `ApolloProvider`.\n  - Pass the `ApolloClient` instance as a prop.\n- **Example Query**:\n  ```javascript\n  import { gql } from '@apollo/client';\n\n  const GET_DATA = gql`\n    query GetData {\n      data {\n        id\n        name\n      }\n    }\n  `;\n  ```\n- **Use Query Hook**:\n  - Import `useQuery` from `@apollo/client`.\n  - Use it in your component to fetch and display data.\n- **Error Handling**: Check for errors in the query result to handle failures gracefully.",
+    "source": "code_example",
+    "updated_at": 1781019635.5021079
+  },
+  "search:react-native-graphql-client:graphql with react native perf": {
+    "content": "- Use `npx react-native init MyGraphQLApp --template react-native-template-typescript` to create a new React Native project with TypeScript.\n- Install Apollo Client and related packages using npm or yarn.\n- Configure Apollo Client in your app by setting up the `ApolloClient`, `InMemoryCache`, and `HttpLink`.\n- Use `react-native-apollo-client-devtools` for debugging and monitoring GraphQL queries in development.\n- Implement caching strategies to optimize performance, such as `fetchPolicy: 'cache-first'`.\n- Utilize fragments for reusable query parts and improve code organization.\n- Employ pagination techniques with `@connection` directives for efficient data loading.\n- Monitor network requests using Apollo Client Devtools to identify bottlenecks.\n- Regularly update dependencies to the latest versions for security and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781019643.4669683
+  },
+  "search:react-native-graphql-client:graphql with react native perf_ex": {
+    "content": "- Use `npx react-native init MyGraphQLApp --template react-native-template-typescript`\n- Install Apollo Client and React Native Apollo using npm or yarn\n- Configure Apollo Client with your GraphQL endpoint\n- Enable GraphQL subscriptions for real-time data updates\n- Utilize Apollo Client Devtools for debugging and performance monitoring\n- Implement Multipart Protocol for handling large file uploads\n- Ensure API Gateway is configured to support GraphQL Subscriptions\n- Use TypeScript for type safety in React Native components\n- Optimize network requests by batching and caching queries",
+    "source": "code_example",
+    "updated_at": 1781019650.7472622
+  }
+}

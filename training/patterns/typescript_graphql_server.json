@@ -1,0 +1,22 @@
+{
+  "search:typescript-graphql-server:building a graphql server with": {
+    "content": "- Use `npm init` to create a new Node.js project.\n- Install dependencies using `npm install --save graphql apollo-server-express express type-graphql prisma @prisma/client`.\n- Initialize Prisma with `npx prisma init`.\n- Update your `package.json` scripts for development and production.\n- Configure Apollo Server in an Express app:\n  ```javascript\n  const { ApolloServer, gql } = require('apollo-server-express');\n  const express = require('express');\n\n  const typeDefs = gql`\n    type Query {\n      hello: String\n    }\n  `;\n\n  const resolvers = {\n    Query: {\n      hello: () => 'Hello world!',\n    },\n  };\n\n  const server = new ApolloServer({ typeDefs, resolvers });\n  const app = express();\n  server.applyMiddleware({ app });\n\n  app.listen({ port: 4000 }, () =>\n    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)\n  );\n  ```\n- Use `npx prisma migrate dev --name init` to create the initial migration.\n- Define your data models in `prisma/schema.prisma`.\n- Run Prisma Client with `npm run db:push`.\n- For authentication, use middleware like `jsonwebtoken` and integrate it into Apollo Server.\n- Implement filtering, pagination, and subscriptions using GraphQL directives and libraries.",
+    "source": "web_search",
+    "updated_at": 1781019525.920196
+  },
+  "search:typescript-graphql-server:building a graphql server with_ex": {
+    "content": "- **CLI Commands**:\n  - `npm init graphql-server`\n  - `yarn add type-graphql apollo-server-express express`\n\n- **Latest Versions**:\n  - TypeScript: v5.3.2\n  - Apollo Server: v4.0.0\n  - TypeGraphQL: v1.6.0\n\n- **Key Config Options**:\n  - `typeDefs`: GraphQL schema definition.\n  - `resolvers`: Functions that resolve the data for queries and mutations.\n  - `context`: Object passed to every resolver function, useful for authentication and authorization.\n  - `subscriptions`: Configuration for handling real-time data.",
+    "source": "code_example",
+    "updated_at": 1781019541.9858444
+  },
+  "search:typescript-graphql-server:typescript and apollo server b": {
+    "content": "- Use `npm install apollo-server-express graphql-tools` to set up Apollo Server with Express.\n- Ensure TypeScript definitions are installed via `@types/graphql`.\n- Utilize `apollo-codegen` for generating TypeScript types from GraphQL schemas.\n- Implement resolvers using TypeScript interfaces and classes for type safety.\n- Handle errors gracefully in resolvers using try-catch blocks.\n- Optimize performance by using DataLoader for batching database queries.\n- Configure Apollo Server with options like `context`, `resolvers`, and `typeDefs`.\n- Monitor server performance using Apollo's built-in metrics and logging capabilities.",
+    "source": "web_search",
+    "updated_at": 1781019549.6055331
+  },
+  "search:typescript-graphql-server:typescript and apollo server b_ex": {
+    "content": "- Use `npm install @apollo/server graphql` to install Apollo Server and GraphQL.\n- For TypeScript, run `npm install --save-dev typescript @types/node`.\n- Initialize a new TypeScript project with `tsc --init`.\n- Define your schema using GraphQL SDL or TypeScript interfaces.\n- Implement resolvers in TypeScript ensuring they match the schema.\n- Use ApolloServer from `@apollo/server` to create and start the server.\n- Configure CORS if needed using `cors` middleware.\n- For testing, use Jest along with `graphql-tools` for mocks and test utilities.\n- Ensure type safety by leveraging TypeScript's static typing features in your resolvers.",
+    "source": "code_example",
+    "updated_at": 1781019557.509231
+  }
+}
