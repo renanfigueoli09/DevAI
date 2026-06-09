@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-migration-best-practices:prisma migrations best practic": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Creates a new migration file based on the changes in your Prisma schema.\n  - `prisma migrate deploy`: Applies all pending migrations to the database.\n  - `prisma migrate resolve --applied <migration-name>`: Marks a migration as applied if it was manually created or applied outside of Prisma Migrate.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Prisma CLI and Prisma Client by running `npm install prisma@latest`.\n\n- **Key Config Options**:\n  - `schema`: Specifies the path to your Prisma schema file.\n  - `migrationsDir`: Defines the directory where migration files are stored (default is `prisma/migrations`).\n  - `shadowDatabaseUrl`: Points to a separate database used for tracking migration states and history.\n\n- **Best Practices**:\n  - Regularly run `prisma migrate dev` after making changes to your Prisma schema.\n  - Use `prisma migrate deploy` before deploying your application to ensure all migrations are applied.\n  - Manually resolve any conflicts or issues with migrations using `prisma migrate resolve --applied <migration-name>`.",
+    "source": "web_search",
+    "updated_at": 1781016102.4183085
+  },
+  "search:typescript-prisma-migration-best-practices:prisma migrations best practic_ex": {
+    "content": "- **Latest Prisma Version**: As of my last update, the latest version is 4.x. Check [Prisma's official website](https://www.prisma.io/docs/) for the most current version.\n  \n- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Creates a new migration based on schema changes.\n  - `prisma migrate deploy`: Applies migrations to the database.\n  - `prisma migrate reset`: Resets the database and applies all migrations.\n\n- **Key Config Options in `schema.prisma`**:\n  - `datasource db`: Defines the database connection string.\n  - `generator client`: Specifies the Prisma Client generator configuration.\n  - `migrationsDirectory`: Path to the directory where migrations are stored (default is `.prisma/migrations`).\n\n- **Best Practices**:\n  - Always run `prisma migrate dev` before deploying changes to ensure your schema and database are in sync.\n  - Use meaningful names for migrations (`--name <migration-name>`).\n  - Regularly review and test migrations to avoid data loss or corruption.\n  - Keep your `schema.prisma` file clean and organized.",
+    "source": "code_example",
+    "updated_at": 1781016110.990074
+  },
+  "search:typescript-prisma-migration-best-practices:advanced prisma migration stra": {
+    "content": "- **CLI Commands**: `prisma migrate dev --name <migration-name>`, `prisma migrate deploy`\n- **Latest Version**: Prisma 4.x\n- **Key Config Options**:\n  - `schema`: Path to your Prisma schema file.\n  - `provider`: Database provider (e.g., `postgresql`, `mysql`).\n  - `migrationsDirectory`: Directory where migration files are stored.",
+    "source": "web_search",
+    "updated_at": 1781016117.6713774
+  },
+  "search:typescript-prisma-migration-best-practices:advanced prisma migration stra_ex": {
+    "content": "- Use `prisma migrate dev` for development environments.\n- Apply migrations in production using `prisma migrate deploy`.\n- Check migration status with `prisma migrate status`.\n- Resolve conflicts with `prisma migrate resolve`.\n- Generate a diff between migrations using `prisma migrate diff`.\n- Reset the database to a clean state with `prisma migrate reset`.\n- Ensure your Prisma schema is optimized for scalability and efficiency.\n- Follow best practices for managing large-scale software projects.",
+    "source": "code_example",
+    "updated_at": 1781016130.6499429
+  }
+}

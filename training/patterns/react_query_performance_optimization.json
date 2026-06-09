@@ -8,5 +8,10 @@
     "content": "- **CLI Commands**: `npx create-react-app my-app`\n- **Latest Versions**:\n  - React Query: v4.x\n  - Material React Table: v3.x\n  - TanStack Query: v5.x\n- **Key Config Options**:\n  - `fetchPolicy`: Determines how data is fetched (e.g., cacheFirst, networkOnly).\n  - `staleTime`: Sets the time in milliseconds before data becomes stale.\n  - `refetchInterval`: Automatically refetches data at specified intervals.",
     "source": "code_example",
     "updated_at": 1780943240.540459
+  },
+  "search:react-query-performance-optimization:react query performance optimi": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `queryClient.setQueryDefaults`: Set default options for all queries.\n  - `useQuery`: Configure query behavior with options like `staleTime`, `refetchInterval`.\n  - `useMutation`: Customize mutation behavior with options like `onSuccess`, `onError`.",
+    "source": "web_search",
+    "updated_at": 1781016145.662891
   }
 }

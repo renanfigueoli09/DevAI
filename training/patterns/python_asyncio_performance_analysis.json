@@ -1,0 +1,22 @@
+{
+  "search:python-asyncio-performance-analysis:analyzing python asyncio perfo": {
+    "content": "- Use `time` command to measure execution time.\n- For asyncio, consider using `uvloop` as an alternative event loop implementation for better performance.\n- Install `uvloop` via pip: `pip install uvloop`.\n- Replace the default event loop with `uvloop` in your script:\n  ```python\n  import asyncio\n  import uvloop\n\n  asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())\n  ```\n- For benchmarking, use `asyncio.gather()` to run multiple tasks concurrently.\n- Example of running a synchronous and asynchronous task using `time`:\n  ```bash\n  time python sync_script.py\n  time python async_script.py\n  ```\n- Key configuration options for asyncio include setting the event loop policy and adjusting the number of concurrent tasks.",
+    "source": "web_search",
+    "updated_at": 1781016062.1688504
+  },
+  "search:python-asyncio-performance-analysis:analyzing python asyncio perfo_ex": {
+    "content": "- Use `python -m asyncio` for running asyncio programs.\n- Install the latest version of Python using `pyenv install <version>` and set it as global with `pyenv global <version>`.\n- Enable asyncio debug mode by setting the environment variable: `export PYTHONASYNCIODEBUG=1`.\n- Key config options include:\n  - `loop.set_debug(True)` for debugging purposes.\n  - `asyncio.get_event_loop().run_until_complete()` to run a coroutine until it completes.\n  - Use `asyncio.create_task()` to schedule coroutines concurrently.",
+    "source": "code_example",
+    "updated_at": 1781016068.0123062
+  },
+  "search:python-asyncio-performance-analysis:optimizing python asyncio appl": {
+    "content": "- Use `asyncio.run()` to run the main entry point of your application.\n- Employ `async/await` syntax for defining asynchronous functions and calling them.\n- Configure event loops with `asyncio.new_event_loop()` and set it as the current loop using `asyncio.set_event_loop()`.\n- Integrate thread pools for CPU-bound tasks using `concurrent.futures.ThreadPoolExecutor`.\n- Monitor performance using tools like `asyncio.Task.all_tasks()` to track all running tasks.\n- Optimize event loop by adjusting parameters such as `loop.slow_callback_duration` and `loop.time_function`.\n- Use `uvloop` library for faster event loops in Python 3.5+.\n- Implement connection pooling with libraries like `aiomysql` or `asyncpg` for database operations.\n- Benchmark your application using tools like `asyncio-benchmark` to identify bottlenecks.\n- Follow best practices such as avoiding blocking I/O and ensuring proper error handling.",
+    "source": "web_search",
+    "updated_at": 1781016076.4501524
+  },
+  "search:python-asyncio-performance-analysis:optimizing python asyncio appl_ex": {
+    "content": "- Use `asyncio` version 3.13 and `aiohttp` version 3.10 for optimal performance.\n- Implement a throughput benchmarking script to measure RPS, latency, and error rate.\n- Utilize multithreading in conjunction with asyncio for near-linear throughput improvement.\n- Monitor CPU utilization and ensure minimal overhead during high-concurrency workloads.\n- Employ profiling tools like `cProfile` or `asyncio.profiler` to identify bottlenecks.\n- Adjust event loop policies using `asyncio.set_event_loop_policy()` if necessary.\n- Consider using `uvloop` as an alternative event loop for better performance.",
+    "source": "code_example",
+    "updated_at": 1781016083.4486506
+  }
+}
