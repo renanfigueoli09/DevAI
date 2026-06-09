@@ -1,0 +1,12 @@
+{
+  "search:react-query-mutations:optimizing react query mutatio": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.23.0\n  - Axios: v1.6.5\n- **Key Config Options**:\n  - `useQuery`: `refetchInterval`, `staleTime`, `cacheTime`\n  - `useMutation`: `onSuccess`, `onError`, `onSettled`\n  - `queryClient`: `setQueryDefaults`, `setMutationDefaults`",
+    "source": "web_search",
+    "updated_at": 1781010612.7359145
+  },
+  "search:react-query-mutations:optimizing react query mutatio_ex": {
+    "content": "- Use `useMutation` hook from React Query to handle mutations.\n- For optimistic updates, utilize the `onMutate` option in `useMutation`.\n- Ensure your server returns a token for authentication purposes.\n- Update cache directly using `onMutate` for immediate UI changes.\n- Check latest version of React Query by running `npm list react-query` or `yarn list react-query`.\n- Configure `refetchOnWindowFocus: false` to prevent unnecessary refetches on focus.",
+    "source": "code_example",
+    "updated_at": 1781010618.8378592
+  }
+}
