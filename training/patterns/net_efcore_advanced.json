@@ -1,0 +1,42 @@
+{
+  "search:.NET + EFCore Advanced:efcore advanced": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `AddDbContextPool`: Sets the maximum number of context instances in the pool.\n    ```csharp\n    services.AddDbContextPool<MyDbContext>(options =>\n        options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\")));\n    ```\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Improves performance by not tracking changes to entities retrieved from the database.\n    ```csharp\n    var users = context.Users.AsNoTracking().ToList();\n    ```\n  - `Split Queries`: Allows EF Core to split a single LINQ query into multiple SQL queries, which can improve performance in some scenarios.\n    ```csharp\n    var (users, orders) = await context.Users.Include(u => u.Orders).ToListAsync();\n    ```",
+    "source": "web_search",
+    "updated_at": 1781024897.848488
+  },
+  "search:.NET + EFCore Advanced:efcore advanced_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Server=.;Database=MyDb;Trusted_Connection=True;\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - ConnectionStrings in `appsettings.json`\n  - DbContext configuration in `Startup.cs` or `Program.cs`\n  - Fluent API for entity configurations",
+    "source": "code_example",
+    "updated_at": 1781024904.589068
+  },
+  "search:.NET + EFCore Advanced:entity framework core advanced": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext info`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `AddDbContextPool`: Sets the maximum number of context instances in the pool.\n  - `ChangeTrackingStrategy`: Controls how change tracking works.\n  - `UseLazyLoadingProxies`: Enables lazy loading for navigation properties.\n  - `MigrationsHistoryTable`: Specifies a custom table name for migration history.",
+    "source": "web_search",
+    "updated_at": 1781024912.3130133
+  },
+  "search:.NET + EFCore Advanced:entity framework core advanced_ex": {
+    "content": "- **Install Entity Framework Core**: Use `dotnet add package Microsoft.EntityFrameworkCore`\n- **Add Database Provider**: For SQL Server, use `Microsoft.EntityFrameworkCore.SqlServer`; for SQLite, use `Microsoft.EntityFrameworkCore.Sqlite`.\n- **Latest Version**: Check [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) for the latest version.\n- **Key Config Options**:\n  - `DbContext`: Define your data model and database connection.\n  - `OnConfiguring`: Configure the DbContext in code.\n  - `OnModelCreating`: Customize the model configuration.\n- **Raw SQL Queries**: Use `FromSqlRaw()` method to execute raw SQL queries. Example: \n  ```csharp\n  var blogs = context.Blogs.FromSqlRaw(\"SELECT * FROM Blogs WHERE Url LIKE {0}\", \"%example%\");\n  ```\n- **Parameterized Queries**: Ensure security by using parameterized queries with `FromSqlRaw()`.\n- **Migrations**: Manage database schema changes with EF Core migrations. Commands:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`",
+    "source": "code_example",
+    "updated_at": 1781024922.5020368
+  },
+  "search:.NET + EFCore Advanced:database migrations efcore": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.x (as of my last update)\n  - .NET CLI: Latest LTS version\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure connection strings and other settings.\n  - `DbContext`: Define your data model and database context.\n  - `OnModelCreating`: Customize the model configuration.",
+    "source": "web_search",
+    "updated_at": 1781024939.0241966
+  },
+  "search:.NET + EFCore Advanced:database migrations efcore_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - .NET SDK: 6.0 (as of my last update)\n\n- **Key Config Options**:\n  - `UseSqlServer` for SQL Server\n  - `UseMySql` for MySQL\n  - `UseNpgsql` for PostgreSQL\n  - `MigrationsAssembly` to specify the assembly containing migrations",
+    "source": "code_example",
+    "updated_at": 1781024944.912194
+  },
+  "search:.NET + EFCore Advanced:query optimization efcore": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef query --raw`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - Entity Framework Tools: 6.0\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only queries\n  - `AsSplitQueries()` to split large queries into multiple smaller ones\n  - `FromSqlRaw` or `FromSqlInterpolated` for raw SQL queries",
+    "source": "web_search",
+    "updated_at": 1781024952.9704804
+  },
+  "search:.NET + EFCore Advanced:query optimization efcore_ex": {
+    "content": "- Use `Include` for eager loading to avoid N+1 queries.\n- Example: `db.Orders.Include(o => o.Customer).ToList();`\n- Consider using `AsNoTracking()` if you don't need to modify the entities.\n- Use `Select` to project only the necessary fields, reducing data transfer.\n- Enable query splitting with `SplitQuery = true` in EF Core options for better performance on large datasets.\n- Use `FromSqlRaw` or `FromSqlInterpolated` for raw SQL queries when Entity Framework's LINQ capabilities are insufficient.\n- Optimize joins by ensuring proper indexing on the join fields.\n- Consider using `async` methods (`ToListAsync`, `FirstOrDefaultAsync`) to improve responsiveness in web applications.",
+    "source": "code_example",
+    "updated_at": 1781024961.2885435
+  }
+}

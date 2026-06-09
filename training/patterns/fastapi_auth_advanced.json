@@ -1,0 +1,22 @@
+{
+  "search:FastAPI + Auth Advanced:fastapi authentication": {
+    "content": "- Install `python-spnego` using pip: `pip install python-spnego`\n- Import necessary modules in your FastAPI app:\n  ```python\n  from fastapi import Depends, HTTPException, status\n  from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials\n  from spnego import SpnegoServerContext\n  ```\n- Define a dependency for authentication:\n  ```python\n  security = HTTPBearer()\n\n  async def get_current_user(token: HTTPAuthorizationCredentials = Depends(security)):\n      context = SpnegoServerContext()\n      try:\n          context.step(token.credentials)\n      except Exception as e:\n          raise HTTPException(\n              status_code=status.HTTP_401_UNAUTHORIZED,\n              detail=\"Invalid authentication credentials\",\n              headers={\"WWW-Authenticate\": \"Bearer\"},\n          )\n      return {\"username\": context.username}\n  ```\n- Protect your routes with the dependency:\n  ```python\n  @app.get(\"/protected\", dependencies=[Depends(get_current_user)])\n  async def protected_route():\n      return {\"message\": \"This is a protected route\"}\n  ```\n\nNote: Ensure your environment supports SPNEGO and that necessary Kerberos/NTLM configurations are in place.",
+    "source": "web_search",
+    "updated_at": 1781024753.4720974
+  },
+  "search:FastAPI + Auth Advanced:jwt fastapi": {
+    "content": "- Install `fastapi-jwt` using pip: `pip install fastapi-jwt`\n- Use `authlib` or `python_jose` for JWT handling.\n- For OAuth2 with JWT tokens, use FastAPI's built-in support.\n- Implement JWT authentication in FastAPI by creating a dependency function.\n- Key config options include secret key, algorithm, and token expiration time.\n- Ensure to hash passwords before storing them.\n- Use middleware for JWT validation on routes.\n- Test your API endpoints using tools like Postman or curl.",
+    "source": "web_search",
+    "updated_at": 1781024788.806705
+  },
+  "search:FastAPI + Auth Advanced:jwt fastapi_ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI along with all dependencies.\n- For JWT authentication, use `pip install python-jose[cryptography]`.\n- Create a new FastAPI project using `fastapi create-app myproject`.\n- Define your models and schemas in Pydantic for data validation.\n- Implement OAuth2 password flow with JWT tokens in FastAPI.\n- Use `uvicorn` to run your FastAPI application: `uvicorn myproject.main:app --reload`.\n- Configure database settings in a `.env` file, e.g., `DATABASE_URL=sqlite:///./test.db`.\n- Hash passwords using `bcrypt` for security.\n- Store user data securely in a database like SQLite or PostgreSQL.\n- Protect routes with JWT tokens by adding dependencies to your endpoints.",
+    "source": "code_example",
+    "updated_at": 1781024794.7222764
+  },
+  "search:FastAPI + Auth Advanced:security fastapi": {
+    "content": "- Install FastAPI-Security using pip: `pip install fastapi-security`\n- Use APIKeyHeader for authentication.\n- Implement OAuth2PasswordBearer for token-based authentication.\n- Configure security schemes in your FastAPI app.\n- Utilize Depends to inject security dependencies.\n- Ensure HTTPS is used for production environments.\n- Regularly update FastAPI and its dependencies.\n- Implement rate limiting to prevent abuse.\n- Use environment variables for sensitive information.",
+    "source": "web_search",
+    "updated_at": 1781024806.0033252
+  }
+}

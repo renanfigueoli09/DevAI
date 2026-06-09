@@ -18,5 +18,35 @@
     "content": "- Use `@RetryableTopic` from Spring Kafka 2.7+ for robust error handling.\n- Implement `ErrorHandler` interface to handle exceptions in Kafka consumers.\n- Configure `spring.kafka.listener.error-handler` bean in your application properties or YAML.\n- Set `maxAttempts` and `fixedDelay` in `@RetryableTopic` for retry logic.\n- Use `Dead Letter Queue (DLQ)` for messages that fail multiple retries.\n- Ensure Kafka producer is configured to send messages to DLQ on failure.",
     "source": "code_example",
     "updated_at": 1780943340.0934596
+  },
+  "search:Spring + Kafka Advanced Consumer:kafka consumer spring": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning` to consume messages from a Kafka topic.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n  - `spring.kafka.consumer.key-deserializer`: Deserializer class for key that implements `Deserializer`.\n  - `spring.kafka.consumer.value-deserializer`: Deserializer class for value that implements `Deserializer`.",
+    "source": "web_search",
+    "updated_at": 1781025053.3723352
+  },
+  "search:Spring + Kafka Advanced Consumer:kafka consumer spring_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `group.id`: Consumer group ID.\n  - `key.deserializer` and `value.deserializer`: Deserializers for key and value types.\n  - `auto.offset.reset`: Strategy to reset offset on startup (e.g., earliest, latest).",
+    "source": "code_example",
+    "updated_at": 1781025061.9282365
+  },
+  "search:Spring + Kafka Advanced Consumer:spring kafka advanced": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.producer.key-serializer`: Key serializer class.\n  - `spring.kafka.producer.value-serializer`: Value serializer class.",
+    "source": "web_search",
+    "updated_at": 1781025069.7625272
+  },
+  "search:Spring + Kafka Advanced Consumer:message processing kafka": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh` to create, delete, and describe topics.\n- **Latest Version**: Apache Kafka 3.4.0 as of my last update.\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `group.id`: The consumer group ID.\n  - `key.deserializer`/`value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on the server. Options include `earliest`, `latest`, and `none`.",
+    "source": "web_search",
+    "updated_at": 1781025099.7217767
+  },
+  "search:Spring + Kafka Advanced Consumer:message processing kafka_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic example-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic example-topic --from-beginning`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - Spring Boot `application.properties`:\n    ```properties\n    spring.kafka.bootstrap-servers=localhost:9092\n    spring.kafka.consumer.group-id=my-group\n    spring.kafka.consumer.auto-offset-reset=earliest\n    spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer\n    spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer\n    ```\n  - Kafka `server.properties`:\n    ```properties\n    listeners=PLAINTEXT://localhost:9092\n    num.network.threads=3\n    num.io.threads=8\n    socket.send.buffer.bytes=102400\n    socket.receive.buffer.bytes=102400\n    socket.request.max.bytes=104857600\n    log.dirs=/tmp/kafka-logs\n    num.partitions=1\n    num.recovery.threads.per.data.dir=1\n    offsets.topic.replication.factor=1\n    transaction.state.log.replication.factor=1\n    transaction.state.log.min.isr=1\n    ```",
+    "source": "code_example",
+    "updated_at": 1781025112.4857605
+  },
+  "search:Spring + Kafka Advanced Consumer:error handling kafka": {
+    "content": "- Use `kafka-console-consumer.sh` with `--consumer.config <path_to_config>` to run a Kafka consumer with custom configurations.\n- Set `error.max.commit.interval.ms` in the consumer configuration to control how often offsets are committed.\n- Implement `DeadLetterPublishingRecoverer` for sending bad records to a Dead Letter Topic (DLT).\n- Use `SeekToCurrentErrorHandler` to skip bad records and continue processing.\n- Configure `max.poll.records` to limit the number of messages processed in one poll, aiding in error handling.\n- Set `auto.offset.reset` to `earliest` or `latest` based on your application's needs.\n- Monitor Kafka consumer metrics using tools like JMX or Prometheus for proactive error detection.",
+    "source": "web_search",
+    "updated_at": 1781025130.7687469
   }
 }

@@ -1,0 +1,27 @@
+{
+  "search:Testing Patterns for FastAPI:fastapi testing": {
+    "content": "- Use `uvicorn` to run your FastAPI application during tests.\n- Install `pytest` and `fastapi-testclient` for testing.\n- Create test functions with names starting with `test_`.\n- Utilize `TestClient` from `fastapi.testclient` to make requests to your API endpoints.\n- Ensure your tests are isolated, mocking dependencies as needed.\n- Use `pytest.mark.asyncio` for asynchronous tests if required.\n- Check the latest versions of FastAPI and its testing utilities on their official documentation.\n- Review the FastAPI testing guide for best practices and strategies.",
+    "source": "web_search",
+    "updated_at": 1781024827.9542904
+  },
+  "search:Testing Patterns for FastAPI:fastapi testing_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install `pytest` and `fastapi-testclient` for testing.\n- Write unit tests using `pytest`.\n- Use `fastapi-testclient` for making requests in tests.\n- Configure test environment variables in `.env` file.\n- Run tests with `pytest` command.\n- Example of a simple test:\n  ```python\n  from fastapi.testclient import TestClient\n  from main import app\n\n  client = TestClient(app)\n\n  def test_read_main():\n      response = client.get(\"/\")\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"Hello World\"}\n  ```\n- Use `pytest-mock` for mocking dependencies.\n- Configure logging in tests using `logging.config`.\n- Run tests with coverage using `coverage run -m pytest` and `coverage report`.",
+    "source": "code_example",
+    "updated_at": 1781024835.1606488
+  },
+  "search:Testing Patterns for FastAPI:pytest fastapi": {
+    "content": "- Use `pytest` to test FastAPI applications.\n- Create a `TestClient` by passing your FastAPI application to it.\n- Write tests using functions with names starting with `test_`.\n- Utilize fixtures for setup and teardown.\n- Employ parameterized tests for multiple scenarios.\n- Patch external services during testing.\n- Use model factories for generating test data.\n- Test databases can be used for isolation.\n- Consider using FastAPI's built-in test client for unit tests.",
+    "source": "web_search",
+    "updated_at": 1781024842.4031382
+  },
+  "search:Testing Patterns for FastAPI:unit tests fastapi": {
+    "content": "- Use `pytest` for testing FastAPI applications.\n- Install `fastapi`, `uvicorn`, and `pytest-fastapi` using pip:\n  ```bash\n  pip install fastapi uvicorn pytest-fastapi\n  ```\n- Create a test file, e.g., `test_main.py`.\n- Import `TestClient` from `fastapi.testclient` in your test file.\n- Instantiate `TestClient` with your FastAPI app instance.\n- Use `client.get`, `client.post`, etc., to simulate HTTP requests.\n- Assert expected responses using standard Python assertions or `pytest` matchers.\n- Run tests using the command:\n  ```bash\n  pytest\n  ```\n- For advanced testing, consider using `Apidog` for API documentation and testing.",
+    "source": "web_search",
+    "updated_at": 1781024879.1688085
+  },
+  "search:Testing Patterns for FastAPI:unit tests fastapi_ex": {
+    "content": "- Use `pytest` for testing FastAPI applications.\n- Install `fastapi`, `uvicorn`, and `pytest` using pip.\n- Run tests with the command: `pytest -v`.\n- Key config options include `test_client` from `fastapi.testclient`.\n- For asynchronous endpoints, use `async def test_endpoint()`.\n- Ensure your FastAPI app is running in a separate process for testing.\n- Use fixtures to set up and tear down test environments.\n- Check the latest versions of FastAPI and pytest on their respective websites.",
+    "source": "code_example",
+    "updated_at": 1781024888.5960014
+  }
+}
