@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 13:03*
+*2026-06-09 13:16*
 
-## Score: 91% `[██████████████████░░]`  (53.0/58.0)
+## Score: 90% `[██████████████████░░]`  (47.0/52.0)
 
-### Knowledge Check (vector store): 39.0/44.0
+### Knowledge Check (vector store): 33.0/38.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,16 +19,10 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
-| nestjs + mongodb: padrões de código | 1.0/1 | ✅ |
-| nestjs + mongodb: não usa TypeORM | 1.0/1 | ✅ |
-| nestjs + postgres: padrões de código | 1.0/1 | ✅ |
-| nestjs + mysql: padrões de código | 1.0/1 | ✅ |
-| nestjs + redis: cache | 1.0/1 | ✅ |
-| nestjs + elasticsearch: padrões de código | 1.0/1 | ✅ |
-| nestjs + kafka: padrões de código | 1.0/1 | ✅ |
-| nestjs + kafka: producer consumer | 1.0/1 | ✅ |
-| nestjs + rabbitmq: padrões de código | 1.0/1 | ✅ |
-| nestjs + graphql: padrões de código | 1.0/1 | ✅ |
+| nestjs-typeorm: padrões de código | 1.0/1 | ✅ |
+| go-gorm-redis-cache: cache | 1.0/1 | ✅ |
+| typescript-graphql-server: padrões de código | 1.0/1 | ✅ |
+| typescript-graphql-subscriptions: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |

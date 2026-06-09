@@ -1,79 +1,26 @@
 {
-  "generated_at": 1781020853.2881758,
+  "generated_at": 1781021568.0265274,
   "studied_count": 636,
   "checks": [
     {
-      "name": "nestjs + mongodb: padrões de código",
+      "name": "nestjs-typeorm: padrões de código",
       "queries": [
-        "nestjs+mongodb pattern code example",
-        "nestjs + mongodb"
-      ],
-      "must_find": [
-        "@nestjs",
-        "@Schema",
-        ".findById(",
-        ".save("
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+mongodb"
-    },
-    {
-      "name": "nestjs + mongodb: não usa TypeORM",
-      "queries": [
-        "nestjs+mongodb schema service"
-      ],
-      "must_find": [
-        "Mongoose",
-        "mongo",
-        "@Schema"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+mongodb"
-    },
-    {
-      "name": "nestjs + postgres: padrões de código",
-      "queries": [
-        "nestjs+postgres pattern code example",
-        "nestjs + postgres"
+        "nestjs-typeorm pattern code example",
+        "nestjs-typeorm"
       ],
       "must_find": [
         "@injectreposito",
-        "@InjectRepository",
-        ".findOne(",
-        ".save("
+        "@InjectRepository"
       ],
       "must_not": [],
       "weight": 1,
       "dynamic": true,
-      "source_topic": "nestjs+postgres"
+      "source_topic": "nestjs-typeorm"
     },
     {
-      "name": "nestjs + mysql: padrões de código",
+      "name": "go-gorm-redis-cache: cache",
       "queries": [
-        "nestjs+mysql pattern code example",
-        "nestjs + mysql"
-      ],
-      "must_find": [
-        "@nestjs",
-        "@Entity"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+mysql"
-    },
-    {
-      "name": "nestjs + redis: cache",
-      "queries": [
-        "nestjs+redis cache redis example"
+        "go-gorm-redis-cache cache redis example"
       ],
       "must_find": [
         "redis",
@@ -83,74 +30,13 @@
       "must_not": [],
       "weight": 1,
       "dynamic": true,
-      "source_topic": "nestjs+redis"
+      "source_topic": "go-gorm-redis-cache"
     },
     {
-      "name": "nestjs + elasticsearch: padrões de código",
+      "name": "typescript-graphql-server: padrões de código",
       "queries": [
-        "nestjs+elasticsearch pattern code example",
-        "nestjs + elasticsearch"
-      ],
-      "must_find": [
-        "@nestjs",
-        "@elastic"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+elasticsearch"
-    },
-    {
-      "name": "nestjs + kafka: padrões de código",
-      "queries": [
-        "nestjs+kafka pattern code example",
-        "nestjs + kafka"
-      ],
-      "must_find": [
-        "@EventPattern",
-        "@Payload",
-        ".emit("
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+kafka"
-    },
-    {
-      "name": "nestjs + kafka: producer consumer",
-      "queries": [
-        "nestjs+kafka producer consumer example"
-      ],
-      "must_find": [
-        "kafka",
-        "producer",
-        "consumer"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+kafka"
-    },
-    {
-      "name": "nestjs + rabbitmq: padrões de código",
-      "queries": [
-        "nestjs+rabbitmq pattern code example",
-        "nestjs + rabbitmq"
-      ],
-      "must_find": [
-        "@rabbitli",
-        "@RabbitListener"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs+rabbitmq"
-    },
-    {
-      "name": "nestjs + graphql: padrões de código",
-      "queries": [
-        "nestjs+graphql pattern code example",
-        "nestjs + graphql"
+        "typescript-graphql-server pattern code example",
+        "typescript-graphql-server"
       ],
       "must_find": [
         "@latest",
@@ -159,7 +45,22 @@
       "must_not": [],
       "weight": 1,
       "dynamic": true,
-      "source_topic": "nestjs+graphql"
+      "source_topic": "typescript-graphql-server"
+    },
+    {
+      "name": "typescript-graphql-subscriptions: padrões de código",
+      "queries": [
+        "typescript-graphql-subscriptions pattern code example",
+        "typescript-graphql-subscriptions"
+      ],
+      "must_find": [
+        "@latest",
+        "@realtime"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-graphql-subscriptions"
     }
   ]
 }
