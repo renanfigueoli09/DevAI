@@ -1,0 +1,22 @@
+{
+  "search:fastapi-sqlalchemy-performance:fastapi sqlalchemy performance": {
+    "content": "- **CLI Commands**:\n  - `alembic revision --autogenerate -m \"message\"` to generate migrations.\n  - `uvicorn main:app --reload` for development.\n\n- **Latest Versions**:\n  - FastAPI: 0.100.2\n  - SQLAlchemy: 2.0.7\n\n- **Key Config Options**:\n  - Use `asyncpg` or `aiopg` for PostgreSQL.\n  - Enable connection pooling with SQLAlchemy's `create_engine`.\n  - Implement caching using Redis or Memcached.\n  - Optimize queries by adding indexes and avoiding N+1 issues.\n  - Configure ASGI server settings like `workers` in `uvicorn`.",
+    "source": "web_search",
+    "updated_at": 1781042624.0826907
+  },
+  "search:fastapi-sqlalchemy-performance:fastapi sqlalchemy performance_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app locally.\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0\n  \n- **Key Config Options**:\n  - Use `Index()` for database indexing.\n  - Implement caching mechanisms like Redis or Memcached.\n  - Enable pagination in queries using `LimitOffsetPage`.\n  - Configure database connection pooling with SQLAlchemy's `create_engine`.",
+    "source": "code_example",
+    "updated_at": 1781042633.1563785
+  },
+  "search:fastapi-sqlalchemy-performance:optimizing fastapi with sqlalc": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all] sqlalchemy`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection for database sessions.\n  - Use of `asyncpg` for PostgreSQL support.\n  - Caching with Redis or Memcached for query results.",
+    "source": "web_search",
+    "updated_at": 1781042642.9757164
+  },
+  "search:fastapi-sqlalchemy-performance:optimizing fastapi with sqlalc_ex": {
+    "content": "- Use `uvicorn` to run your FastAPI app with the command: `uvicorn main:app --reload`\n- Install FastAPI and SQLAlchemy using pip:\n  ```bash\n  pip install fastapi sqlalchemy\n  ```\n- For database connection, use an environment variable for the database URL.\n- Configure SQLAlchemy models by inheriting from `sqlalchemy.ext.declarative.declarative_base()`.\n- Use `asyncpg` as the async PostgreSQL driver with FastAPI and SQLAlchemy.\n- Implement caching using Redis or Memcached to optimize query performance.\n- For profiling queries, use tools like `SQLAlchemy Profiler` or `PyCharm's built-in profiler`.\n- Ensure your database schema is optimized by adding appropriate indexes.\n- Use Dependency Injection for managing dependencies in your FastAPI application.\n- Consider using an ORM like SQLAlchemy for easier database interactions and management.",
+    "source": "code_example",
+    "updated_at": 1781042650.4301682
+  }
+}

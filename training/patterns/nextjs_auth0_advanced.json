@@ -1,0 +1,17 @@
+{
+  "search:nextjs-auth0-advanced:advanced nextjs authentication": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install Auth0 SDK via npm: `npm install @auth0/nextjs-auth0`.\n- Configure environment variables in `.env.local`: `AUTH0_SECRET`, `AUTH0_BASE_URL`, `AUTH0_ISSUER_BASE_URL`, `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`.\n- Implement authentication by wrapping your pages with the `withApiAuthRequired` higher-order component.\n- Define protected routes using the `useUser` hook to check if a user is authenticated.\n- Use the `getServerSideProps` function for server-side rendering and secure data fetching.\n- Update `next.config.js` to configure custom domains and other settings.\n- Ensure your application complies with security best practices, such as using HTTPS and protecting sensitive information.",
+    "source": "web_search",
+    "updated_at": 1781042659.4138808
+  },
+  "search:nextjs-auth0-advanced:advanced nextjs authentication_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @auth0/nextjs-auth0`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Auth0 SDK for Next.js: v2.0\n\n- **Key Config Options**:\n  - `AUTH0_ISSUER_BASE_URL`: Your Auth0 domain.\n  - `AUTH0_CLIENT_ID`: Your Auth0 client ID.\n  - `AUTH0_CLIENT_SECRET`: Your Auth0 client secret.\n  - `AUTH0_AUDIENCE`: The API audience for your application.",
+    "source": "code_example",
+    "updated_at": 1781042665.416282
+  },
+  "search:nextjs-auth0-advanced:securing nextjs applications w": {
+    "content": "- **Create Auth0 Application**: Use `auth0.com` to create an application.\n- **Install Dependencies**: Run `npm install @auth0/nextjs-auth0`.\n- **Configure Environment Variables**: Set `AUTH0_ISSUER_BASE_URL`, `AUTH0_CLIENT_ID`, and `AUTH0_CLIENT_SECRET` in `.env.local`.\n- **Initialize Auth0 SDK**: Use `Auth0NextjsHandler` to initialize the SDK.\n- **Protect Routes**: Apply `[...auth].js` for protected routes.\n- **Key Config Options**:\n  - `issuerBaseURL`: The base URL of your Auth0 domain.\n  - `audience`: The API audience you want to secure.\n  - `clientID`: Your application's client ID.\n  - `clientSecret`: Your application's client secret.\n- **Latest Version**: Ensure using the latest version of `@auth0/nextjs-auth0` for security patches and features.\n\nFor more detailed information, refer to the [Auth0 Next.js SDK Quickstarts](https://auth0.com/docs/quickstart/webapp/nextjs).",
+    "source": "web_search",
+    "updated_at": 1781042678.3896997
+  }
+}
