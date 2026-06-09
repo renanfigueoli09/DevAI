@@ -1,0 +1,12 @@
+{
+  "search:typescript-async-await-patterns:typescript async/await pattern": {
+    "content": "- **CLI Commands**: `npm install typescript --save-dev`\n- **Latest Version**: TypeScript 5.x\n- **Key Config Options**:\n  - `compilerOptions.target`: Set to `\"ES2017\"` or later for async/await support.\n  - `compilerOptions.module`: Use `\"commonjs\"` or `\"esnext\"`.\n  - `compilerOptions.outDir`: Specify the output directory for compiled JavaScript files.",
+    "source": "web_search",
+    "updated_at": 1781013131.3666117
+  },
+  "search:typescript-async-await-patterns:typescript async/await pattern_ex": {
+    "content": "- **CLI Commands**: `tsc --init` to initialize TypeScript project, `tsc` to compile TypeScript files.\n- **Latest Versions**: Ensure using the latest Node.js and TypeScript versions for optimal performance.\n- **Key Config Options**:\n  - `target`: Specifies the ECMAScript target version (e.g., \"ES6\").\n  - `module`: Defines module code generation (e.g., \"commonjs\", \"esnext\").\n  - `strict`: Enables all strict type-checking options.\n  - `esModuleInterop`: Allows importing CommonJS modules in ES6 style.\n  - `skipLibCheck`: Skips type checking of declaration files.",
+    "source": "code_example",
+    "updated_at": 1781013155.0991902
+  }
+}

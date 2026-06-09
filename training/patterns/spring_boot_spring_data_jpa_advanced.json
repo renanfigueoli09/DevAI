@@ -1,0 +1,17 @@
+{
+  "search:spring-boot-spring-data-jpa-advanced:spring boot spring data jpa ad": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 2.7.4\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for production environments.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.",
+    "source": "web_search",
+    "updated_at": 1781012892.5857868
+  },
+  "search:spring-boot-spring-data-jpa-advanced:spring boot spring data jpa ad_ex": {
+    "content": "- **Latest Version of Spring Boot**: As of my last update, the latest stable version is 2.7.x.\n- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs a Spring Boot application.\n  - `mvn clean install`: Cleans and builds the project.\n- **Key Config Options in `application.properties`/`application.yml`**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `update`, `create-drop`).\n- **Using Spring Data JPA @Query Annotation**:\n  ```java\n  @Repository\n  public interface UserRepository extends JpaRepository<User, Long> {\n      @Query(\"SELECT u FROM User u WHERE u.email = ?1\")\n      Optional<User> findByEmail(String email);\n  }\n  ```\n- **Dynamic Queries with Specifications**:\n  ```java\n  public Specification<User> hasName(String name) {\n      return (root, query, criteriaBuilder) -> \n          criteriaBuilder.equal(root.get(\"name\"), name);\n  }\n\n  List<User> users = userRepository.findAll(hasName(\"John\"));\n  ```\n- **QueryDSL for Type-Safe Queries**:\n  - Add dependency: `implementation 'com.querydsl:querydsl-jpa'`\n  - Generate QueryDSL classes using Maven or Gradle.\n  ```java\n  QUser user = QUser.user;\n  List<User> users = queryFactory.selectFrom(user)\n      .where(user.name.eq(\"John\"))\n      .fetch();\n  ```\n- **Spring Boot DevTools**:\n  - Improves development experience with auto-reload, live reload, and more.\n  - Add dependency: `implementation 'org.springframework.boot:spring-boot-devtools'`\n- **MySQL Driver**:\n  - Use the latest MySQL Connector/J driver for compatibility.\n  - Dependency: `implementation 'mysql:mysql-connector-java'`",
+    "source": "code_example",
+    "updated_at": 1781012902.9993718
+  },
+  "search:spring-boot-spring-data-jpa-advanced:spring boot spring data jpa pe": {
+    "content": "- Use `@Query` annotation for custom SQL queries.\n- Enable second-level cache using `@EnableCaching` and configure it in `application.properties`.\n- Optimize entity mappings by avoiding lazy loading where possible.\n- Batch updates using `@Modifying` and `@BatchSize` annotations.\n- Use `@EntityGraph` to fetch related entities efficiently.\n- Configure connection pool size based on application load.\n- Enable query derivation for dynamic queries.\n- Monitor performance with Spring Boot Actuator endpoints.\n- Regularly update dependencies to the latest versions.",
+    "source": "web_search",
+    "updated_at": 1781012910.0244305
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "search:kafka-streams-sql-integration:kafka streams sql integration ": {
+    "content": "- **Latest Version of ksqlDB**: As of June 28, 2023.\n- **CLI Command for Creating a Stream**:\n  ```bash\n  ksql> CREATE STREAM my_stream (id INT, name VARCHAR) WITH (KAFKA_TOPIC='my_topic', VALUE_FORMAT='JSON');\n  ```\n- **Key Config Options for Kafka Streams**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `application.id`: Unique identifier for the application.\n  - `default.key.serde` and `default.value.serde`: Serdes for keys and values.\n\nThese actionable facts provide a concise guide for developers integrating Kafka Streams with SQL.",
+    "source": "web_search",
+    "updated_at": 1781013076.482659
+  },
+  "search:kafka-streams-sql-integration:kafka streams sql integration _ex": {
+    "content": "- **Kafka Streams SQL Integration**: Apache Kafka Streams now supports SQL queries directly on streams, enabling real-time data processing and analytics.\n- **CLI Commands**:\n  - `kafka-streams-sql-start.sh`: Starts the Kafka Streams SQL service.\n  - `kafka-streams-sql-submit.sh`: Submits a SQL query to the Kafka Streams SQL service.\n- **Latest Versions**: Ensure using the latest version of Kafka Streams and Kafka for compatibility and performance improvements.\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `application.id`: Unique identifier for the application.\n  - `default.key.serde` and `default.value.serde`: Serdes for keys and values in streams.\n- **Example Usage**:\n  ```sql\n  CREATE STREAM orders (order_id BIGINT, customer_id INT, amount DOUBLE) WITH (KAFKA_TOPIC='orders', VALUE_FORMAT='json');\n  SELECT order_id, customer_id, SUM(amount) AS total_amount FROM orders GROUP BY order_id, customer_id;\n  ```\n- **Integration with Spring Kafka**: For easier development, consider using Spring Kafka's `@KafkaListener` and `KafkaTemplate`.\n- **Alternative Projects**:\n  - **Goka**: Extends Flink for real-time SQL with stream-dimension join support.\n  - **SVIX Webhooks**: Not directly related to Kafka Streams but useful for handling webhooks in real-time applications.",
+    "source": "code_example",
+    "updated_at": 1781013085.6153286
+  },
+  "search:kafka-streams-sql-integration:real-time data processing with": {
+    "content": "- **Latest Kafka Streams Version**: 3.4.0\n- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the Kafka Streams application.\n  - `bootstrap.servers`: List of Kafka brokers to connect to.\n  - `default.key.serde` and `default.value.serde`: Serdes for key and value types.\n- **ksqlDB Version**: 0.26.0\n- **CLI Commands**:\n  - `ksql --server http://localhost:8088`\n  - `CREATE STREAM my_stream (id INT, name VARCHAR) WITH (KAFKA_TOPIC='my-topic', VALUE_FORMAT='JSON');`\n  - `SELECT * FROM my_stream;`",
+    "source": "web_search",
+    "updated_at": 1781013095.362592
+  }
+}
