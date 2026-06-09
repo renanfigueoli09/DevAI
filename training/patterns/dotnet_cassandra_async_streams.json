@@ -1,0 +1,12 @@
+{
+  "search:dotnet+cassandra-async-streams:dotnet cassandra async streams": {
+    "content": "- Use `dotnet add package DataStax.Cassandra` to install the latest version of the DataStax C# Driver for Apache Cassandra.\n- For async streams, use `await foreach` to consume them safely and efficiently.\n- Configure connection options in your application's configuration file (e.g., `appsettings.json`) under the `Cassandra` section.\n- Handle exceptions thrown by async void methods using try-catch blocks around the method call or subscribing to the `Task.Exception` property.\n- Ensure that all asynchronous operations are awaited to prevent potential deadlocks and ensure proper resource management.",
+    "source": "web_search",
+    "updated_at": 1781020215.0073736
+  },
+  "search:dotnet+cassandra-async-streams:dotnet cassandra async streams_ex": {
+    "content": "- **CLI Commands**: Use `dotnet add package DataStax.Cassandra` to install the latest version of the DataStax C# Driver for Apache Cassandra.\n- **Latest Versions**: Ensure you are using the latest versions of both the DataStax C# Driver and .NET Core/5+ to benefit from the most recent features and bug fixes.\n- **Key Config Options**:\n  - `MaxConcurrentRequests`: Set this option in your connection string or configuration to control the number of concurrent requests per connection.\n  - `SocketTimeout`: Configure this in your connection settings to specify how long to wait for a response before timing out.\n  - `RetryPolicy`: Implement and configure a retry policy to handle transient errors gracefully.",
+    "source": "code_example",
+    "updated_at": 1781020220.855007
+  }
+}

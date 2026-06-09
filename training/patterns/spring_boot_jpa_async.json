@@ -1,0 +1,27 @@
+{
+  "search:spring-boot+jpa-async:spring boot jpa async performa": {
+    "content": "- Use `@Async` and `@EnableAsync` to enable asynchronous processing in Spring Boot.\n- Configure JPA properties like `spring.jpa.properties.hibernate.jdbc.batch_size=50` for batch updates.\n- Utilize `@QueryHints` for optimizing specific queries.\n- Implement pagination (`Pageable`) to limit the number of records fetched from the database.\n- Use `@EntityGraph` to fetch related entities in a single query, reducing N+1 issues.\n- Monitor and analyze performance using tools like Spring Boot Actuator and JProfiler.\n- Ensure proper indexing on frequently queried columns in your database.\n- Regularly update dependencies to their latest versions for performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781019909.4464364
+  },
+  "search:spring-boot+jpa-async:spring boot jpa async error ha": {
+    "content": "- Use Spring Boot's `@Async` annotation to handle asynchronous tasks.\n- Configure task executors in `application.properties` or `application.yml`.\n- Implement custom exception handlers using `@ControllerAdvice` and `@ExceptionHandler`.\n- Utilize `@Transactional` for managing transactions in async methods.\n- Ensure proper error logging and monitoring for async operations.\n- Use `CompletableFuture` for more complex asynchronous tasks.\n- Consider using Spring Retry for handling transient failures.\n- Update dependencies to the latest versions regularly.\n- Review Spring Boot's official documentation for best practices.",
+    "source": "web_search",
+    "updated_at": 1781019945.1346052
+  },
+  "search:spring-boot+jpa-async:spring boot jpa async error ha_ex": {
+    "content": "- Use `@Async` annotation on methods that need asynchronous execution.\n- Configure thread pool size in `application.properties` or `application.yml`.\n  ```properties\n  spring.task.execution.pool.core-size=5\n  spring.task.execution.pool.max-size=10\n  ```\n- Handle exceptions using `@Async`'s `errorHandler` attribute or a global exception handler.\n- Use `CompletableFuture` for more complex asynchronous operations.\n- Ensure thread safety when accessing shared resources in async methods.\n- Monitor and log async task execution to diagnose issues.\n- Consider using Spring Boot Actuator for monitoring async tasks.",
+    "source": "code_example",
+    "updated_at": 1781019959.8077717
+  },
+  "search:spring-boot+jpa-async:spring boot jpa async testing ": {
+    "content": "- Use `@Async` annotation to enable asynchronous method execution in Spring Boot.\n- Configure `TaskExecutor` bean for custom thread pool settings.\n- Implement `@EnableAsync` on your main application class or configuration class.\n- Ensure JPA repository methods are not annotated with `@Async`, as it may lead to unexpected behavior.\n- Use `CompletableFuture` for asynchronous operations that return a result.\n- Test asynchronous methods using `@TestExecutionListeners` and `@DirtiesContext`.\n- Consider using `@DataJpaTest` for testing JPA repositories without full application context.\n- Utilize `@Async` with `@Transactional` to handle transactions in asynchronous methods.",
+    "source": "web_search",
+    "updated_at": 1781019967.598124
+  },
+  "search:spring-boot+jpa-async:spring boot jpa async testing _ex": {
+    "content": "- Use `@Async` annotation to enable asynchronous method execution in Spring Boot.\n- Configure async task executor using `TaskExecutor` bean, e.g., `ConcurrentTaskExecutor`.\n- Set core pool size and max pool size for the executor.\n- Handle exceptions using `@Async`'s `exceptionHandler` attribute or global exception handling.\n- Use `CompletableFuture` for more complex asynchronous operations.\n- Ensure database transactions are managed properly in async methods.\n- Test async methods with `@EnableAsync` and `@AsyncTestConfiguration`.\n- Update Spring Boot to version 3.0 and Spring Security to version 6.0 for the latest features.\n- Utilize Postgres as the database for JWT authentication examples.",
+    "source": "code_example",
+    "updated_at": 1781019974.5263388
+  }
+}

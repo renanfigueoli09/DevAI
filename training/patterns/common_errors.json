@@ -17,7 +17,7 @@
   "qa:ts2307-create-module": {
     "content": "TS2307 Cannot find module './book/book.module': CREATE src/book/book.module.ts\n@Module({\n  imports: [MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],\n  providers: [BookService], controllers: [BookController], exports: [BookService]\n}) export class BookModule {}",
     "source": "critical_pattern",
-    "updated_at": 1781019783.1007078
+    "updated_at": 1781020227.1980288
   },
   "search:common+errors:nestjs ts2307 ts2339 ts2551 ty": {
     "content": "- **CLI Commands**:\n  - `ng serve` to restart the Angular server.\n  - `yarn add @types/node@12 --dev --tilde` to install Node.js type definitions.\n\n- **Latest Versions**:\n  - TypeScript: Latest version as of my last update (not specified in the search results).\n  - Angular CLI: Latest version as of my last update (not specified in the search results).\n\n- **Key Config Options**:\n  - No specific config options mentioned in the search results.",

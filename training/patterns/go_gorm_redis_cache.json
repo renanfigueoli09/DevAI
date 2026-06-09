@@ -1,0 +1,17 @@
+{
+  "search:go-gorm-redis-cache:go gorm redis cache integratio": {
+    "content": "- **CLI Commands**:\n  - `go get github.com/gin-gonic/gin`\n  - `go get gorm.io/gorm`\n  - `go get github.com/go-redis/redis/v8`\n\n- **Latest Versions**:\n  - Gin: v1.7.4\n  - GORM: v2.0.13\n  - Redis: v8.5.0\n\n- **Key Config Options**:\n  - GORM: `gorm.Open(sqlite.Open(\"test.db\"), &gorm.Config{})`\n  - Redis: `redis.NewClient(&redis.Options{Addr: \"localhost:6379\", Password: \"\", DB: 0})`\n  - Cache Invalidation: Use hooks or middleware to invalidate cache on data changes.",
+    "source": "web_search",
+    "updated_at": 1781019991.3928323
+  },
+  "search:go-gorm-redis-cache:go gorm redis cache performanc": {
+    "content": "- **GitHub Repository**: [go-gorm/caches](https://github.com/go-gorm/caches)\n- **Latest Version**: v4 (as of April 25, 2024)\n- **Key Config Options**:\n  - `MaxIdleConns`: Maximum number of idle connections.\n  - `MinIdleConns`: Minimum number of idle connections.\n  - `ConnMaxLifetime`: Maximum lifetime of a connection.\n  - `PoolSize`: Maximum number of open connections to the database.\n\n- **CLI Commands**:\n  ```sh\n  go get github.com/go-gorm/caches/v4\n  ```\n\n- **Redis Caching in Go**:\n  - Install Redis: `sudo apt-get install redis-server`\n  - Connect to Redis: Use `redis-cli` or integrate with your Go application using a Redis client library like `go-redis/redis`.\n\n- **Example Configuration**:\n  ```go\n  import (\n      \"github.com/go-gorm/caches/v4\"\n      \"gorm.io/driver/sqlite\"\n      \"gorm.io/gorm\"\n  )\n\n  func main() {\n      cache, _ := caches.NewRedisCache(caches.RedisConfig{\n          Addr:     \"localhost:6379\",\n          Password: \"\",\n          DB:       0,\n      })\n\n      db, _ := gorm.Open(sqlite.Open(\"test.db\"), &gorm.Config{})\n      db.Use(cache)\n  }\n  ```\n\n- **Performance Tuning Tips**:\n  - Adjust `MaxIdleConns` and `MinIdleConns` based on your application's load.\n  - Set a reasonable `ConnMaxLifetime` to prevent connection leaks.\n  - Monitor Redis performance using tools like `redis-cli --stat` or third-party monitoring solutions.",
+    "source": "web_search",
+    "updated_at": 1781020033.149589
+  },
+  "search:go-gorm-redis-cache:go gorm redis cache performanc_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u github.com/go-redis/redis/v8`\n\n- **Latest Versions**:\n  - GORM: v2.34.0\n  - Redis Go Client: v8.10.0\n\n- **Key Config Options**:\n  - GORM:\n    - `gorm.DB.Session(&gorm.Session{Logger: logger.New(...)})`\n    - `gorm.DB.Set(\"gorm:auto_preload\", true)`\n  - Redis:\n    - `redis.Options{Addr: \"localhost:6379\", DB: 0}`\n    - `client.Ping().Result()`\n    - `client.Set(ctx, key, value, time.Duration(expiration)).Err()`",
+    "source": "code_example",
+    "updated_at": 1781020041.9056337
+  }
+}

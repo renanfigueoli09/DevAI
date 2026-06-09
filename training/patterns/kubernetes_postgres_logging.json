@@ -1,0 +1,12 @@
+{
+  "search:kubernetes+postgres-logging:kubernetes postgresql logging ": {
+    "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name> -n <namespace>` to view logs.\n  - `kubectl exec -it <pod-name> -n <namespace> -- psql` to access PostgreSQL.\n\n- **Latest Versions**:\n  - PostgreSQL: 14.5\n  - CrunchyData/postgres-operator: v4.7.0\n\n- **Key Config Options**:\n  - `logging_collector = on`\n  - `log_directory = 'pg_log'`\n  - `log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'`",
+    "source": "web_search",
+    "updated_at": 1781020123.9958205
+  },
+  "search:kubernetes+postgres-logging:kubernetes postgresql logging _ex": {
+    "content": "- Use `kubectl` to manage PostgreSQL pods in Kubernetes.\n- Ensure your Kubernetes cluster is at the latest version for optimal performance.\n- Configure PostgreSQL using environment variables or a ConfigMap.\n- Set `PGDATA` environment variable to specify the data directory.\n- Adjust `shared_buffers` and `work_mem` based on your workload.\n- Use `kubectl logs <pod-name>` to check PostgreSQL logs.\n- Monitor resource usage with `kubectl top pod <pod-name>`.\n- Regularly update PostgreSQL to the latest minor version for performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781020105.9167073
+  }
+}
