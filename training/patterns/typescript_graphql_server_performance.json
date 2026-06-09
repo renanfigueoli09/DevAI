@@ -1,0 +1,12 @@
+{
+  "search:typescript-graphql-server-performance:typescript graphql server secu": {
+    "content": "- Use `npm install @nestjs/graphql graphql-tools` to install NestJS GraphQL dependencies.\n- Update NestJS and GraphQL libraries to their latest versions for security patches.\n- Implement input validation using `class-validator` and `class-transformer`.\n- Configure authentication with JWTs using `@nestjs/jwt`.\n- Apply authorization using guards like `RolesGuard` and roles-based access control (RBAC).\n- Secure configuration by setting environment variables and using `.env` files.\n- Avoid the N+1 query problem by using GraphQL's batching capabilities or Prisma's `include` option.\n- Optimize performance with selective data fetching using `select`.\n- Implement filtering, sorting, and pagination for large datasets efficiently.",
+    "source": "web_search",
+    "updated_at": 1781033053.0127497
+  },
+  "search:typescript-graphql-server-performance:typescript graphql server secu_ex": {
+    "content": "- Use TypeScript for GraphQL server development.\n- Implement HTTP response headers for enhanced security.\n- Apply security best practices in Node.js applications.\n- Maintain code quality using linting tools.\n- Avoid the N+1 Query Problem by understanding and addressing related nested data retrieval efficiently.",
+    "source": "code_example",
+    "updated_at": 1781033059.4941576
+  }
+}
