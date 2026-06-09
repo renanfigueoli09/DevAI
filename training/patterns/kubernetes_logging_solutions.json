@@ -1,0 +1,12 @@
+{
+  "search:kubernetes-logging-solutions:elasticsearch, fluentd, and ki": {
+    "content": "- **Install Helm**: `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`\n- **Add Elastic Helm Repository**: `helm repo add elastic https://helm.elastic.co`\n- **Update Helm Repositories**: `helm repo update`\n- **Deploy Elasticsearch**: `helm install elasticsearch elastic/elasticsearch --set replicas=1 --set persistence.enabled=true --set persistence.size=20Gi`\n- **Deploy Fluentd**: `helm install fluentd elastic/fluentd --set elasticsearch.hosts[0]=elasticsearch-master --set elasticsearch.port=9200`\n- **Deploy Kibana**: `helm install kibana elastic/kibana --set service.type=NodePort`\n- **Access Kibana**: `kubectl port-forward svc/kibana 5601:5601`\n- **Key Config Options**:\n  - Elasticsearch: `replicas`, `persistence.enabled`, `persistence.size`\n  - Fluentd: `elasticsearch.hosts`, `elasticsearch.port`\n  - Kibana: `service.type`\n\nLatest versions as of my last update in October 2023, but it's recommended to check the official Elastic Helm charts for the most current versions.",
+    "source": "web_search",
+    "updated_at": 1781018547.5120974
+  },
+  "search:kubernetes-logging-solutions:elasticsearch, fluentd, and ki_ex": {
+    "content": "- **Latest Versions**: Elasticsearch 8.x, Fluentd 2.x, Kibana 8.x\n- **CLI Commands**:\n  - `kubectl apply -f <efk-stack-yaml-file>`\n  - `kubectl get pods`\n  - `kubectl logs <pod-name>`\n- **Key Config Options**:\n  - Elasticsearch: `discovery.type: single-node` for development\n  - Fluentd: `elasticsearch.hosts` to specify Elasticsearch endpoint\n  - Kibana: `elasticsearch.hosts` to connect to Elasticsearch",
+    "source": "code_example",
+    "updated_at": 1781018553.6216743
+  }
+}

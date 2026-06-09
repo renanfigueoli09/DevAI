@@ -18,5 +18,15 @@
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - NextAuth.js: 4.2\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].ts`: Configuration file for authentication.\n  - `secret`: A secret key used to sign JWT tokens.\n  - `providers`: List of authentication providers (e.g., Google, Facebook).\n  - `jwt`: Configuration for JWT token generation and validation.",
     "source": "code_example",
     "updated_at": 1780966906.7421873
+  },
+  "search:typescript+nextjs-authentication:jwt-based authentication in ne": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `next-auth` and `prisma` using npm or yarn.\n- Configure `next-auth` with JWT strategy in `pages/api/auth/[...nextauth].ts`.\n- Set up Prisma schema for user authentication tables.\n- Run `npx prisma migrate dev --name init` to create initial database migrations.\n- Use `next-auth/react` package for client-side components and hooks.\n- Configure environment variables for secret keys and database connection strings in `.env.local`.\n- Implement JWT-based session management by setting `jwt: true` in `pages/api/auth/[...nextauth].ts`.\n- Deploy your Next.js app using Vercel or another hosting service.",
+    "source": "web_search",
+    "updated_at": 1781018598.5921466
+  },
+  "search:typescript+nextjs-authentication:jwt-based authentication in ne_ex": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install necessary packages like `jsonwebtoken` for JWT handling.\n- Create a middleware file (`middleware.ts`) in the root directory for authentication logic.\n- Configure the middleware to check for JWT tokens and validate them.\n- Set up routes that require authentication by checking the presence of valid JWTs.\n- Use environment variables to store secret keys securely.\n- Implement cookie-based sessions if needed, using `next-auth` or custom session management.\n- Test your authentication flow locally using development tools like Postman or cURL.\n- Deploy your Next.js application on platforms like Vercel for production use.",
+    "source": "code_example",
+    "updated_at": 1781018615.2211292
   }
 }
