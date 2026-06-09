@@ -28,5 +28,25 @@
     "content": "- **CLI Commands**:\n  - `poetry install --dev`\n  - Run FastAPI app: `uvicorn main:app --reload`\n  - Run Celery worker: `celery -A tasks.celery worker --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - RabbitMQ for task queue\n  - Redis for Celery backend\n  - Flower for monitoring Celery tasks",
     "source": "code_example",
     "updated_at": 1780941323.9766169
+  },
+  "search:fastapi-celery-async-tasks:fastapi celery async tasks tut": {
+    "content": "- Use `pip install fastapi celery redis` to install FastAPI, Celery, and Redis.\n- For Docker, use the following commands:\n  - `docker-compose up --build`\n  - `docker-compose down`\n- Key Celery config options include:\n  - `broker_url`: URL for message broker (e.g., `redis://localhost:6379/0`).\n  - `result_backend`: URL for result backend (e.g., `redis://localhost:6379/1`).\n- Use `celery -A app.celery worker --loglevel=info` to start the Celery worker.\n- For testing, use:\n  - Unit tests with `pytest`.\n  - Integration tests with `pytest-celery`.\n- FastAPI background tasks can be created using `BackgroundTasks`.\n- To offload time-consuming tasks in a FastAPI application, integrate Celery as shown in the tutorial.",
+    "source": "web_search",
+    "updated_at": 1781018067.860234
+  },
+  "search:fastapi-celery-async-tasks:fastapi celery async tasks tut_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Start FastAPI, Celery, and Redis containers.\n  - `celery -A worker.celery worker --loglevel=info`: Run Celery worker.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - Celery: v5.2.7\n  - Redis: v6.2.6\n\n- **Key Config Options**:\n  - `broker_url = 'redis://localhost:6379/0'`: Configure Celery to use Redis as the message broker.\n  - `result_backend = 'redis://localhost:6379/1'`: Set Redis as the backend for storing task results.",
+    "source": "code_example",
+    "updated_at": 1781018082.4021125
+  },
+  "search:fastapi-celery-async-tasks:fastapi celery task scheduling": {
+    "content": "- **CLI Commands**:\n  - `celery -A your_project_name.celery worker --loglevel=info`\n  - `celery -A your_project_name.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - `broker_url`: URL of the message broker (e.g., Redis, RabbitMQ).\n  - `result_backend`: URL of the result backend to store task results.\n  - `timezone`: Timezone for scheduling tasks.\n  - `enable_utc`: Whether to use UTC timezone.",
+    "source": "web_search",
+    "updated_at": 1781018091.7872689
+  },
+  "search:fastapi-celery-async-tasks:fastapi celery task scheduling_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.84.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - `app.celery.conf.broker_url`: URL of the message broker (e.g., Redis, RabbitMQ).\n  - `app.celery.conf.result_backend`: URL of the result backend (e.g., Redis, SQLAlchemy).\n  - `app.celery.conf.timezone`: Timezone for scheduling tasks.\n  - `app.celery.conf.enable_utc`: Whether to use UTC time.",
+    "source": "code_example",
+    "updated_at": 1781018115.3942523
   }
 }

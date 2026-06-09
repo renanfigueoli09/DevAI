@@ -1,0 +1,12 @@
+{
+  "search:typescript-eslint-nextjs:typescript eslint with next.js": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`: Creates a new Next.js project with TypeScript.\n  - `npm install eslint-config-next @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`: Installs necessary ESLint packages for Next.js and TypeScript.\n\n- **Latest Versions**:\n  - Ensure you are using the latest versions of `eslint`, `eslint-config-next`, `@typescript-eslint/parser`, and `@typescript-eslint/eslint-plugin` to benefit from the most recent features and bug fixes.\n\n- **Key Config Options**:\n  - In your `.eslintrc.json` or `eslint.config.js`, extend `eslint-config-next` for Next.js-specific rules.\n  - Use `parser: '@typescript-eslint/parser'` and `plugins: ['@typescript-eslint']` to enable TypeScript parsing and linting.\n  - Consider enabling the \"flat config\" approach by creating an `.eslintrc.cjs` file with a configuration object.\n\n- **Opt-Out of ESLint During Builds**:\n  - To opt-out of ESLint reporting errors during builds, modify your `next.config.js` to include `{ eslint: { ignoreDuringBuilds: true } }`.",
+    "source": "web_search",
+    "updated_at": 1781017961.9373426
+  },
+  "search:typescript-eslint-nextjs:next.js typescript eslint conf": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-next-ts-app --typescript`\n  - `npm install --save-dev eslint @next/eslint-plugin-next eslint-config-next eslint-plugin-react eslint-plugin-react-hooks`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - ESLint: 8.29.0\n  - @next/eslint-plugin-next: 13.5.0\n\n- **Key Config Options**:\n  - `eslint-config-next`: Base configuration with Next.js rules.\n  - `eslint-plugin-react`: Recommended rule-set for React.\n  - `eslint-plugin-react-hooks`: Rules for React Hooks.\n\nFor detailed instructions, refer to the official documentation links provided in the search results.",
+    "source": "web_search",
+    "updated_at": 1781017998.2324812
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:docker-kubernetes-microservices-advanced:advanced docker kubernetes mic": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f kafka-client.yml`\n  - `kubectl exec -it kafka-client -- /bin`\n\n- **Latest Versions**:\n  - Docker: v24.0.6\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - `replicas`: Defines the number of pod replicas.\n  - `imagePullPolicy`: Specifies when to pull an image (`Always`, `IfNotPresent`, `Never`).\n  - `resources`: Allocates resources like CPU and memory to containers.\n  - `serviceType`: Determines how services are exposed (e.g., `ClusterIP`, `NodePort`, `LoadBalancer`).",
+    "source": "web_search",
+    "updated_at": 1781018036.6952405
+  },
+  "search:docker-kubernetes-microservices-advanced:advanced docker kubernetes mic_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name my-microservice -d my-image`\n  - `kubectl apply -f deployment.yaml`\n\n- **Latest Versions**:\n  - Docker: 20.10.7\n  - Kubernetes: 1.23.4\n\n- **Key Config Options**:\n  - Docker Compose: `services`, `networks`, `volumes`\n  - Kubernetes Deployment: `replicas`, `selector`, `template`\n  - Kubernetes Service: `type`, `ports`, `selector`",
+    "source": "code_example",
+    "updated_at": 1781018043.5631828
+  },
+  "search:docker-kubernetes-microservices-advanced:docker kubernetes microservice": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl scale deployment/<deployment-name> --replicas=<number>` to scale a deployment.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Docker: 20.10\n\n- **Key Config Options**:\n  - Resource Limits (`resources.limits.cpu`, `resources.limits.memory`)\n  - Requests (`resources.requests.cpu`, `resources.requests.memory`)\n  - Node Selector for Pod Placement\n  - Horizontal Pod Autoscaler (HPA) with target CPU utilization",
+    "source": "web_search",
+    "updated_at": 1781018052.023458
+  },
+  "search:docker-kubernetes-microservices-advanced:docker kubernetes microservice_ex": {
+    "content": "- Use `kubectl apply -f kafka-client.yml` to deploy Kafka client.\n- Execute `kubectl exec -it kafka-client -- /bin/bash` to access the Kafka client pod.\n- For microservices performance, consider using Kubernetes version 23.x and Docker version 20.x.\n- Key config options include resource limits (`resources.limits.cpu`, `resources.limits.memory`) and requests (`resources.requests.cpu`, `resources.requests.memory`).",
+    "source": "code_example",
+    "updated_at": 1781018057.51799
+  }
+}
