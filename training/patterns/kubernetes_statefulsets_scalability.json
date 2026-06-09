@@ -13,5 +13,45 @@
     "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get pods --selector app=myapp`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `volumeClaimTemplates`: Defines PVCs for each Pod.\n  - `serviceAccountName`: Assigns a service account to the StatefulSet.\n  - `updateStrategy.type`: Specifies update strategy (e.g., RollingUpdate, OnDelete).",
     "source": "web_search",
     "updated_at": 1780938850.9777858
+  },
+  "search:Kubernetes StatefulSets Scalability:kubernetes statefulsets": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>`\n  - `kubectl delete statefulset <name>`\n  - `kubectl scale statefulset <name> --replicas=<number>`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <name>`\n\n- **Latest Versions**:\n  - StatefulSets are available in all Kubernetes versions since 1.5.\n\n- **Key Config Options**:\n  - `.spec serviceName`: The name of the service used to expose the StatefulSet.\n  - `.spec replicas`: Number of desired Pods.\n  - `.spec selector.matchLabels`: Label selector for Pods.\n  - `.spec template.metadata.labels`: Labels for Pods.\n  - `.spec template.spec.containers`: Container specifications.",
+    "source": "web_search",
+    "updated_at": 1781025843.5310721
+  },
+  "search:Kubernetes StatefulSets Scalability:kubernetes statefulsets_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>` to create a StatefulSet.\n  - `kubectl get statefulsets` to list all StatefulSets.\n  - `kubectl describe statefulset <name>` for detailed information about a StatefulSet.\n\n- **Latest Versions**:\n  - Kubernetes v1.24 introduces new features and improvements in StatefulSets.\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas to maintain.\n  - `.spec.template`: Pod template specification.\n  - `.spec.serviceName`: Name of the service that exposes the StatefulSet.\n  - `.spec.volumeClaimTemplates`: Persistent volume claims for each pod.",
+    "source": "code_example",
+    "updated_at": 1781025851.2032852
+  },
+  "search:Kubernetes StatefulSets Scalability:statefulset scalability": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale statefulset <statefulset-name> --replicas=<number>`\n  - `kubectl get pods --selector app=<app-label>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `spec.replicas`: Defines the desired number of replicas.\n  - `spec.template`: Describes the pod template for the StatefulSet.\n  - `spec.serviceName`: Specifies the name of a service to create for this set.\n  - `volumeClaimTemplates`: Automates the creation and management of PersistentVolumeClaims.",
+    "source": "web_search",
+    "updated_at": 1781025856.8155725
+  },
+  "search:Kubernetes StatefulSets Scalability:statefulset scalability_ex": {
+    "content": "- **Create StatefulSet:** `kubectl apply -f statefulset.yaml`\n- **Scale StatefulSet:** `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n- **Update StatefulSet:** `kubectl rollout restart statefulset <statefulset-name>`\n- **Delete StatefulSet:** `kubectl delete statefulset <statefulset-name>`\n- **Create Service for StatefulSet:** `kubectl apply -f service.yaml`\n- **HPA with StatefulSet:** Configure HPA to scale based on metrics like CPU or memory usage.\n- **Key Config Options:**\n  - `.spec.replicas`: Number of replicas\n  - `.spec.template`: Pod template specification\n  - `.spec.serviceName`: Service name for the StatefulSet\n  - `.spec.updateStrategy`: Update strategy (e.g., RollingUpdate)\n- **Latest Versions:** Ensure using latest Kubernetes version for optimal features and security.\n- **CLI Commands with Exact Flags:** Use `kubectl get statefulsets` to list, `kubectl describe statefulset <statefulset-name>` for details.",
+    "source": "code_example",
+    "updated_at": 1781025862.2151344
+  },
+  "search:Kubernetes StatefulSets Scalability:kubernetes storage classes": {
+    "content": "- **CLI Commands**:\n  - `kubectl get storageclass`\n  - `kubectl describe storageclass <storage-class-name>`\n  - `kubectl create storageclass <name> --provisioner=<provisioner> --reclaim-policy=<policy>`\n\n- **Latest Versions**: Ensure you are using the latest version of Kubernetes and StorageClass to benefit from the most recent features and security patches.\n\n- **Key Config Options**:\n  - `provisioner`: Specifies the storage provisioner.\n  - `reclaimPolicy`: Defines how volumes are reclaimed (e.g., Retain, Delete).\n  - `parameters`: Additional parameters for the provisioner.",
+    "source": "web_search",
+    "updated_at": 1781025868.6554515
+  },
+  "search:Kubernetes StatefulSets Scalability:kubernetes storage classes_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get storageclass`: Lists all StorageClasses in the cluster.\n  - `kubectl describe storageclass <storage-class-name>`: Describes a specific StorageClass.\n  - `kubectl create -f <path-to-storageclass-yaml>`: Creates a new StorageClass from a YAML file.\n\n- **Latest Versions**:\n  - As of my last update, Kubernetes 1.27 is the latest stable version. Ensure compatibility with your cluster's version when using StorageClasses.\n\n- **Key Config Options**:\n  - `provisioner`: Specifies the provisioner for dynamic provisioning.\n  - `parameters`: Additional parameters passed to the provisioner.\n  - `reclaimPolicy`: Defines how volumes are reclaimed (e.g., Retain, Delete).\n  - `volumeBindingMode`: Controls when volume binding occurs (e.g., Immediate, WaitForFirstConsumer).",
+    "source": "code_example",
+    "updated_at": 1781025873.4324412
+  },
+  "search:Kubernetes StatefulSets Scalability:statefulset deployment strateg": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `spec serviceName`: Headless service name.\n  - `spec replicas`: Number of replicas.\n  - `spec template spec containers`: Pod specification.\n  - `spec volumeClaimTemplates`: Persistent volume claims for stateful data.\n\nThese commands and configurations are essential for deploying, managing, and scaling stateful applications in Kubernetes.",
+    "source": "web_search",
+    "updated_at": 1781025881.9530196
+  },
+  "search:Kubernetes StatefulSets Scalability:statefulset deployment strateg_ex": {
+    "content": "- Use `kubectl rollout status statefulset/<statefulset-name>` to check the status of a StatefulSet update.\n- To disable automated rolling updates, set `.spec.updateStrategy.type` to `OnDelete`.\n- For ordered and graceful deployment and scaling, ensure `.spec.updateStrategy.rollingUpdate.partition` is configured correctly.\n- Use `kubectl patch statefulset <statefulset-name> -p '{\"spec\":{\"updateStrategy\":{\"type\":\"RollingUpdate\",\"rollingUpdate\":{\"partition\":<number>}}}}'` to update the partition for ordered updates.\n- For Cassandra example, use `gce-pd` storage class for persistent data.\n- Ensure that your StatefulSet has a unique network identifier and stable storage.\n- Use `kubectl apply -f <statefulset-yaml-file>` to deploy or update a StatefulSet with custom configurations.",
+    "source": "code_example",
+    "updated_at": 1781025892.6584866
   }
 }

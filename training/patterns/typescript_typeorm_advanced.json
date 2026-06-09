@@ -18,5 +18,35 @@
     "content": "- **TypeScript Version**: Use the latest LTS version to take advantage of performance improvements and new features.\n- **TypeORM Version**: Update to the latest stable release for enhanced performance and bug fixes.\n- **CLI Commands**:\n  - `npm install typeorm --save`\n  - `npx typeorm migration:generate --name MigrationName`\n  - `npx typeorm migration:run`\n- **Key Config Options**:\n  - `entities`: Specify the path to your entity files.\n  - `migrations`: Set the path for migration files.\n  - `synchronize`: Enable or disable database schema synchronization (use with caution in production).\n  - `logging`: Configure logging levels for better performance monitoring.",
     "source": "code_example",
     "updated_at": 1780943399.31836
+  },
+  "search:TypeScript TypeORM Advanced:typeorm advanced usage": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of TypeORM to access all features and bug fixes.\n- **CLI Commands**:\n  - `typeorm migration:create -n <migration-name>`: Create a new migration file.\n  - `typeorm migration:run`: Execute pending migrations.\n  - `typeorm migration:revert`: Revert the last executed migration.\n- **Key Config Options**:\n  - `entities`: Array of entity classes or glob patterns to load entities from.\n  - `migrations`: Array of migration classes or glob patterns to load migrations from.\n  - `synchronize`: Automatically synchronize schema with entities (not recommended for production).\n  - `logging`: Enable logging for SQL queries and other operations.",
+    "source": "web_search",
+    "updated_at": 1781025708.4786582
+  },
+  "search:TypeScript TypeORM Advanced:typeorm advanced usage_ex": {
+    "content": "- **CLI Commands**: `typeorm init`, `typeorm migration:create -n MigrationName`\n- **Latest Version**: Check [TypeORM GitHub](https://github.com/typeorm/typeorm) for the latest version.\n- **Key Config Options**:\n  - `entities`: Array of entity classes or directories containing entity classes.\n  - `migrations`: Array of migration classes or directories containing migration classes.\n  - `synchronize`: Boolean to automatically synchronize schema with entities.",
+    "source": "code_example",
+    "updated_at": 1781025714.7288067
+  },
+  "search:TypeScript TypeORM Advanced:typeorm entity relations": {
+    "content": "- **CLI Commands**: `typeorm migration:create -n CreateUsersTable`\n- **Latest Versions**: Ensure using the latest stable version of TypeORM.\n- **Key Config Options**:\n  - `entities`: Array of entity classes or directories containing entities.\n  - `migrations`: Directory where migrations are stored.\n  - `synchronize`: Automatically synchronize schema with entities (not recommended for production).\n  - `logging`: Enable logging to debug queries and events.",
+    "source": "web_search",
+    "updated_at": 1781025735.0813918
+  },
+  "search:TypeScript TypeORM Advanced:typeorm entity relations_ex": {
+    "content": "- Use `nest generate entity <entity-name>` to create new entities.\n- Install TypeORM and its dependencies using npm or yarn.\n- Define relationships between entities using decorators like @OneToOne, @OneToMany, etc.\n- Configure the connection in `ormconfig.json` or use environment variables for sensitive information.\n- Ensure that primary keys are correctly decorated with @PrimaryGeneratedColumn() or @PrimaryColumn().\n- Use TypeORM's repository pattern to interact with your database.\n- Update TypeORM and related packages to their latest versions for bug fixes and new features.",
+    "source": "code_example",
+    "updated_at": 1781025740.168827
+  },
+  "search:TypeScript TypeORM Advanced:typeorm migrations": {
+    "content": "- **CLI Commands**:\n  - `typeorm migration:create` creates a new migration file.\n  - `typeorm migration:generate` generates a migration file based on entity changes.\n  - `typeorm migration:run` applies migrations to the database.\n  - `typeorm migration:revert` undoes the last applied migration.\n\n- **Latest Versions**:\n  - Ensure using the latest stable version of TypeORM for compatibility and features.\n\n- **Key Config Options**:\n  - `migrationsDir`: Specifies the directory where migration files are stored.\n  - `entitiesDir`: Defines the directory containing entity classes.\n  - `synchronize`: Set to `false` in production to avoid schema synchronization issues.",
+    "source": "web_search",
+    "updated_at": 1781025750.5390341
+  },
+  "search:TypeScript TypeORM Advanced:typeorm migrations_ex": {
+    "content": "- **Latest Version**: TypeORM v0.3.24\n- **CLI Commands**:\n  - `typeorm migration:create -n CreateUsersTable`\n  - `typeorm migration:generate -n UpdateUserEmail`\n  - `typeorm migration:run`\n  - `typeorm migration:revert`\n- **Key Config Options**:\n  - `migrationsDir`: Directory where migrations are stored.\n  - `entitiesDir`: Directory where entity classes are located.\n  - `synchronize`: Automatically synchronize schema with entities (not recommended for production).\n  - `logging`: Enable or disable query logging.",
+    "source": "code_example",
+    "updated_at": 1781025756.320905
   }
 }

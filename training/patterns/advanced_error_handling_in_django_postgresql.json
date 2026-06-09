@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Django + PostgreSQL:django error handling": {
+    "content": "- Use `python manage.py runserver` to start the Django development server.\n- For error reporting, configure `LOGGING` in settings.py to specify log levels and handlers.\n- Implement custom exceptions by extending Django's built-in exceptions or Python’s base Exception class.\n- Use Django REST framework's exception handling mechanism for more control over error responses.\n- Configure middleware like `django.middleware.common.CommonMiddleware` for global request/response processing.",
+    "source": "web_search",
+    "updated_at": 1781025636.0714707
+  },
+  "search:Advanced Error Handling in Django + PostgreSQL:postgres error handling": {
+    "content": "- Use `RAISE` statement to handle errors in PL/pgSQL.\n- Set `exit_on_error` to `on` in PostgreSQL configuration to terminate sessions on any error.\n- Check PostgreSQL documentation for the latest version and detailed error handling features.\n- Utilize `psql` command-line tool with flags like `-v ON_ERROR_STOP=1` to stop execution on errors.",
+    "source": "web_search",
+    "updated_at": 1781025657.0344226
+  },
+  "search:Advanced Error Handling in Django + PostgreSQL:postgres error handling_ex": {
+    "content": "- Use `psql` command-line tool to interact with PostgreSQL.\n- For error handling in PL/pgSQL, use the `EXCEPTION` block.\n- Raise errors using the `RAISE` statement with specific error types like `NOT FOUND`, `INVALID SQL STATEMENT`.\n- Catch exceptions and handle them within the `EXCEPTION` block.\n- Key config options include `log_error_verbosity` and `log_statement` for debugging.\n- Ensure PostgreSQL is updated to the latest version for security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781025664.979029
+  },
+  "search:Advanced Error Handling in Django + PostgreSQL:postgresql transaction managem": {
+    "content": "- **CLI Commands**: \n  - `COMMIT`: Ends the current transaction and saves all changes.\n  - `ROLLBACK`: Aborts the current transaction, discarding any changes made.\n\n- **Latest Versions**:\n  - PostgreSQL 15 is the latest stable version as of my last update. Ensure you are using a secure and up-to-date version for your database management.\n\n- **Key Config Options**:\n  - `autocommit`: Controls whether each statement is automatically committed.\n  - `transaction_isolation`: Sets the default isolation level for transactions (e.g., READ COMMITTED, SERIALIZABLE).\n  - `default_transaction_read_only`: Specifies if new transactions should be read-only by default.",
+    "source": "web_search",
+    "updated_at": 1781025686.1046393
+  }
+}

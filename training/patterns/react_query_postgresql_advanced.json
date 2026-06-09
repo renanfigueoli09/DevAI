@@ -1,0 +1,42 @@
+{
+  "search:React Query + PostgreSQL Advanced:react query postgresql": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app`\n  - `npm install pg`\n\n- **Latest Versions**:\n  - React: v18.x\n  - Node.js: v16.x or later\n  - PostgreSQL: v14.x\n\n- **Key Config Options**:\n  - Database URL in `.env`: `REACT_APP_DB_URL=postgres://user:password@localhost:5432/mydb`\n  - Use `pg` library to connect and query the database.\n  - Implement a backend server using Node.js and Express to handle API requests.",
+    "source": "web_search",
+    "updated_at": 1781025773.12095
+  },
+  "search:React Query + PostgreSQL Advanced:react query postgresql_ex": {
+    "content": "- **Setting up PostgreSQL**: Use `psql` command-line tool.\n- **Creating a Database**: Run `CREATE DATABASE mydb;`.\n- **Connecting to a Database**: Use `psql -d mydb`.\n- **Node.js and Express Setup**:\n  ```bash\n  npm init -y\n  npm install express pg cors body-parser\n  ```\n- **PostgreSQL Connection**:\n  ```javascript\n  const { Client } = require('pg');\n  const client = new Client({\n    user: 'your_user',\n    host: 'localhost',\n    database: 'mydb',\n    password: 'your_password',\n    port: 5432,\n  });\n  ```\n- **React App Setup**:\n  ```bash\n  npx create-react-app myapp\n  cd myapp\n  npm install axios react-query\n  ```\n- **Querying Data with React Query**:\n  ```javascript\n  import { useQuery } from 'react-query';\n  const fetchPosts = async () => {\n    const res = await axios.get('http://localhost:5000/posts');\n    return res.data;\n  };\n  const Posts = () => {\n    const { data, isLoading, error } = useQuery('posts', fetchPosts);\n    if (isLoading) return 'Loading...';\n    if (error) return 'An error has occurred: ' + error.message;\n    return (\n      <ul>\n        {data.map((post) => (\n          <li key={post.id}>{post.title}</li>\n        ))}\n      </ul>\n    );\n  };\n  ```\n- **Latest Versions**:\n  - PostgreSQL: 15\n  - Node.js: 18\n  - React: 18\n  - Express: 4.18\n  - Axios: 0.27\n  - React Query: 3.36",
+    "source": "code_example",
+    "updated_at": 1781025783.8364797
+  },
+  "search:React Query + PostgreSQL Advanced:react query performance": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**:\n  - React Query: v4.27.0\n  - TanStack Config: v1.0.0\n- **Key Config Options**:\n  - `queryCache`: Manages the caching of queries.\n  - `mutationCache`: Manages the caching of mutations.\n  - `staleTime`: Defines how long a query result is considered stale before refetching.\n  - `refetchInterval`: Automatically refetches a query at specified intervals.",
+    "source": "web_search",
+    "updated_at": 1781025794.0261993
+  },
+  "search:React Query + PostgreSQL Advanced:react query performance_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app`\n- **Latest Versions**: React Query v4.x, TanStack Query v5.x\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global settings.\n  - `useQuery`: Fetches data and handles caching.\n  - `useMutation`: Manages mutations (create/update/delete).\n  - `fetchPolicy`: Controls how often to refetch data.",
+    "source": "code_example",
+    "updated_at": 1781025802.3898516
+  },
+  "search:React Query + PostgreSQL Advanced:postgres caching": {
+    "content": "- Use `pg_prewarm` to preload data into the cache.\n- Configure `work_mem` and `shared_buffers` for better performance.\n- Implement caching strategies like query result caching with extensions like `pg_buffercache`.\n- Utilize PostgreSQL's JSONB type for efficient NoSQL-like operations.\n- Monitor cache hit rates using `pg_stat_user_tables` and adjust accordingly.",
+    "source": "web_search",
+    "updated_at": 1781025809.885223
+  },
+  "search:React Query + PostgreSQL Advanced:postgres caching_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install node-cache`\n  - `npm install userver`\n\n- **Latest Versions**:\n  - `node-cache`: v5.2.3\n  - `userver`: v1.0.0\n\n- **Key Config Options**:\n  - `node-cache`:\n    - `stdTTL`: Default TTL for cache entries.\n    - `checkperiod`: Interval to check and remove expired items.\n  - `userver::PostgreCache`:\n    - `chunk-size`: Number of rows per request.\n    - `max-rows`: Maximum number of rows to fetch.",
+    "source": "code_example",
+    "updated_at": 1781025817.7001636
+  },
+  "search:React Query + PostgreSQL Advanced:react query hooks": {
+    "content": "- **CLI Commands**: Not applicable for React Query.\n- **Latest Version**: As of my last update, the latest version is 4.x. Check [TanStack Query's official GitHub page](https://github.com/TanStack/query) for the most current version.\n- **Key Config Options**:\n  - `queryClient`: Manages the cache and provides methods to interact with it.\n  - `useQuery`: Hook for fetching data, supports options like `queryKey`, `fetchFn`, `initialData`, etc.\n  - `useMutation`: Hook for managing side effects, supports options like `mutationFn`, `onSuccess`, `onError`, etc.\n  - `useInfiniteQuery`: Hook for handling infinite lists, similar to `useQuery` but with pagination support.",
+    "source": "web_search",
+    "updated_at": 1781025825.7975066
+  },
+  "search:React Query + PostgreSQL Advanced:react query hooks_ex": {
+    "content": "- Use `npm install @tanstack/react-query` or `yarn add @tanstack/react-query` to install React Query.\n- Import `useQuery` from `@tanstack/react-query`.\n- Key config options include:\n  - `queryKey`: Unique identifier for the query.\n  - `queryFn`: Function that fetches data.\n  - `initialData`: Initial data to display while fetching.\n  - `staleTime`: Time in milliseconds after which data is considered stale.\n  - `refetchInterval`: Interval at which data should be refetched automatically.\n- Example usage:\n  ```javascript\n  import { useQuery } from '@tanstack/react-query';\n\n  const fetchPosts = async () => {\n    const response = await fetch('https://api.example.com/posts');\n    return response.json();\n  };\n\n  function Posts() {\n    const { data, isLoading, isError } = useQuery(['posts'], fetchPosts);\n\n    if (isLoading) return 'Loading...';\n    if (isError) return 'An error has occurred!';\n\n    return (\n      <ul>\n        {data.map(post => (\n          <li key={post.id}>{post.title}</li>\n        ))}\n      </ul>\n    );\n  }\n  ```\n- For pagination, use `useInfiniteQuery` with `getNextPageParam`.\n- To handle validation and retries, consider using additional libraries like `zod` for data shape validation.",
+    "source": "code_example",
+    "updated_at": 1781025833.8325844
+  }
+}
