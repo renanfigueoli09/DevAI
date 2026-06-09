@@ -1,0 +1,22 @@
+{
+  "search:python-fastapi-asyncpg:fastapi with asyncpg for postg": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `asyncpg install`: Install the AsyncPG library for PostgreSQL.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - AsyncPG: v0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host:port/database`\n  - ASGI Server: Use `uvicorn` with the flag `--reload` for development.\n  - Dependency Injection: Define dependencies in your FastAPI application using Pydantic models.",
+    "source": "web_search",
+    "updated_at": 1781035290.4012127
+  },
+  "search:python-fastapi-asyncpg:fastapi with asyncpg for postg_ex": {
+    "content": "- **GitHub Repository**: [jordic/fastapi_asyncpg](https://github.com/jordic/fastapi_asyncpg)\n- **Latest Version of FastAPI**: 0.98.0\n- **Latest Version of AsyncPG**: 0.27.0\n- **Key Config Options**:\n  - `DATABASE_URL`: Connection string for PostgreSQL.\n  - `pool_size`: Number of connections in the connection pool.\n  - `max_overflow`: Maximum number of connections allowed beyond the pool size.\n- **CLI Commands**:\n  ```bash\n  pip install fastapi asyncpg sqlalchemy databases\n  ```\n- **Example Code Snippet**:\n  ```python\n  from fastapi import FastAPI\n  from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession\n  from sqlalchemy.orm import sessionmaker\n\n  DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"\n\n  engine = create_async_engine(DATABASE_URL, pool_size=10, max_overflow=20)\n  async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      async with engine.begin() as conn:\n          await conn.run_sync(Base.metadata.create_all)\n\n  @app.get(\"/\")\n  async def read_root():\n      async with async_session() as session:\n          result = await session.execute(select(User))\n          return {\"users\": [user for user in result.scalars()]}\n\n  from models import User\n  ```\n\nThis summary provides actionable facts and a concrete example of how to integrate FastAPI with AsyncPG for PostgreSQL, including the latest versions, key configuration options, CLI commands, and an example code snippet.",
+    "source": "code_example",
+    "updated_at": 1781035301.3286662
+  },
+  "search:python-fastapi-asyncpg:async programming in fastapi w": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi`\n  - `pip install asyncpg`\n\n- **Latest Versions**:\n  - FastAPI: v0.82.0\n  - AsyncPG: v0.26.0\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `DATABASE_URL = \"postgresql+asyncpg://user:password@host/dbname\"`\n  - Asynchronous route handlers: Use `async def` for path operation functions.\n  - Dependency injection with async context managers.\n\nFor more detailed information, refer to the provided links.",
+    "source": "web_search",
+    "updated_at": 1781035311.4028208
+  },
+  "search:python-fastapi-asyncpg:async programming in fastapi w_ex": {
+    "content": "- Install FastAPI and AsyncPG using pip:\n  ```\n  pip install fastapi asyncpg\n  ```\n\n- Create an asynchronous database connection in your FastAPI app:\n  ```python\n  from fastapi import FastAPI\n  import asyncpg\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      global db_connection\n      db_connection = await asyncpg.connect(user='user', password='password', database='database', host='127.0.0.1')\n  ```\n\n- Use `asyncpg` to execute queries:\n  ```python\n  @app.get(\"/items/\")\n  async def read_items():\n      query = \"SELECT * FROM items\"\n      result = await db_connection.fetch(query)\n      return result\n  ```\n\n- Close the database connection on app shutdown:\n  ```python\n  @app.on_event(\"shutdown\")\n  async def shutdown():\n      await db_connection.close()\n  ```\n\n- Ensure your FastAPI app is configured to handle asynchronous requests by running it with Uvicorn:\n  ```\n  uvicorn main:app --host 0.0.0.0 --port 8000\n  ```\n\n- Latest versions as of my last update are FastAPI 0.102.0 and AsyncPG 0.25.0, but check for the latest on their respective PyPI pages.\n\n- Key config options include database credentials (`user`, `password`, `database`, `host`), connection pool settings, and SSL configurations if needed.",
+    "source": "code_example",
+    "updated_at": 1781035333.2998753
+  }
+}

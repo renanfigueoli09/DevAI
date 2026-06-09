@@ -1,0 +1,22 @@
+{
+  "search:dotnet-entityframeworkcore-performance:entity framework core performa": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef dbcontext pool-size <number>` to set the maximum number of instances in the context pool.\n  \n- **Latest Versions**:\n  - EF Core 9.0 is expected to be released by October 2025, introducing significant performance enhancements and new features.\n\n- **Key Config Options**:\n  - `AddDbContextPool` with a specified `poolSize` for managing DbContext instances efficiently.\n  - Use of `AsNoTracking()` for read-only operations to reduce memory usage.\n  - Implementing batching using `FromSqlRaw` or `FromSqlInterpolated` for large data sets.\n  - Configuring lazy loading vs. eager loading based on application needs and performance considerations.\n\n- **Performance Tools**:\n  - Use of EF Core Profiler for diagnosing performance bottlenecks.\n  - Monitoring tools like Application Insights to track and optimize query execution times.",
+    "source": "web_search",
+    "updated_at": 1781035251.326613
+  },
+  "search:dotnet-entityframeworkcore-performance:entity framework core performa_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add InitialCreate` to create initial migrations.\n- **Latest Versions**: Ensure using EF Core 7.0 or later for the best performance improvements.\n- **Key Config Options**:\n  - `AddDbContextPool`: Set poolSize to optimize context reuse (e.g., `services.AddDbContextPool<YourContext>(options => options.UseSqlServer(connectionString), 100);`).\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Use for read-only operations to avoid tracking changes.\n  - `AsNoTracking()`: Apply to queries where entities are not modified to reduce memory usage.",
+    "source": "code_example",
+    "updated_at": 1781035257.1412442
+  },
+  "search:dotnet-entityframeworkcore-performance:advanced entity framework core": {
+    "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `DbContext` configuration in `appsettings.json`\n  - Connection string management\n  - Use of `Include()` for eager loading\n  - Projection queries for optimized data retrieval",
+    "source": "web_search",
+    "updated_at": 1781035276.0636725
+  },
+  "search:dotnet-entityframeworkcore-performance:advanced entity framework core_ex": {
+    "content": "- Install EF Core provider via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- Use SQL queries in EF Core:\n  - For EF Core 7.0 and later, use `FromSqlRaw` or `FromSqlInterpolated`.\n  - For older versions, use `FromSqlRaw` with parameter placeholders.\n- Key config options for DbContext:\n  - Connection string: `optionsBuilder.UseSqlServer(\"YourConnectionString\")`\n  - Eager loading using `Include()`: `context.Entities.Include(e => e.RelatedEntities)`\n  - Projection to select specific fields: `context.Entities.Select(e => new { e.Id, e.Name })`",
+    "source": "code_example",
+    "updated_at": 1781035281.6200395
+  }
+}
