@@ -1,0 +1,22 @@
+{
+  "search:fastapi-asyncio-performance-tuning:fastapi asyncio performance op": {
+    "content": "- Use `uvicorn` for running FastAPI applications.\n- Employ `asyncio.create_task()` to run tasks concurrently.\n- Utilize `asyncio.gather()` to wait for multiple tasks to complete.\n- For synchronous SDKs, use a thread pool with `run_in_threadpool()`.\n- Consider using `pytest_asyncio` for testing asynchronous code in FastAPI.\n- Ensure your database sessions are managed asynchronously.\n- Monitor performance differences between `run_in_threadpool()` and `run_in_executor()`.",
+    "source": "web_search",
+    "updated_at": 1781036593.078406
+  },
+  "search:fastapi-asyncio-performance-tuning:fastapi asyncio performance op_ex": {
+    "content": "- Use `uvicorn` with the `--reload` flag for development.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For production, use ASGI servers like `gunicorn` or `daphne`.\n- Configure worker processes in Gunicorn with `-w` flag, e.g., `gunicorn -w 4 myapp:app`.\n- Use `asyncio.sleep()` for I/O-bound tasks to allow the event loop to handle other requests.\n- Offload CPU-intensive tasks using multiprocessing libraries like `concurrent.futures`.\n- For database operations, use async databases like `SQLAlchemy` with async drivers.\n- Test FastAPI applications with `pytest-asyncio` for asynchronous testing.",
+    "source": "code_example",
+    "updated_at": 1781036602.379821
+  },
+  "search:fastapi-asyncio-performance-tuning:high-performance fastapi appli": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run FastAPI applications, e.g., `uvicorn main:app --reload`.\n- **Latest Versions**: Check [FastAPI's GitHub page](https://github.com/tiangolo/fastapi) for the latest version.\n- **Key Config Options**:\n  - `asyncio`: Utilize Python’s asyncio library for asynchronous programming.\n  - `dependencies`: Use FastAPI’s dependency injection system to manage dependencies efficiently.\n  - `middleware`: Implement middleware for cross-cutting concerns like logging and authentication.\n  - `security`: Leverage FastAPI’s security features, such as OAuth2 and JWT tokens.",
+    "source": "web_search",
+    "updated_at": 1781036620.1401253
+  },
+  "search:fastapi-asyncio-performance-tuning:high-performance fastapi appli_ex": {
+    "content": "- **GitHub Repositories**:\n  - Fastapi-SQLA: `pip install fastapi-sqla`\n  - FastAPIwee: `pip install fastapiwee`\n\n- **Optimization Techniques**:\n  - Use `asyncio` for asynchronous operations.\n  - Implement caching mechanisms like Redis or Memcached.\n  - Optimize database queries using SQLAlchemy's ORM capabilities.\n\n- **Key Configurations**:\n  - Set environment variables for production settings (`ENV=prod`).\n  - Configure logging levels in your FastAPI app.\n  - Use middleware for request and response processing.\n\n- **CLI Commands**:\n  - `uvicorn main:app --reload` for development mode.\n  - `gunicorn -w 4 main:app` for production with Gunicorn.\n\n- **Latest Versions**:\n  - Check the latest versions of FastAPI, SQLAlchemy, and other dependencies on their respective GitHub pages or PyPI.",
+    "source": "code_example",
+    "updated_at": 1781036626.421081
+  }
+}

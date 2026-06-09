@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-statefulsets-postgresql:kubernetes statefulsets for po": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy PostgreSQL StatefulSet.\n- Ensure your StatefulSet YAML specifies a unique hostname for each pod using `metadata.name`.\n- Set `volumeClaimTemplates` in the StatefulSet to define persistent storage for each pod.\n- Configure `replicas` in the StatefulSet to specify the number of PostgreSQL instances.\n- Use `readinessProbe` and `livenessProbe` to monitor the health of your PostgreSQL pods.\n- Ensure network policies allow communication between StatefulSet pods.\n- Update your application's connection string to use the stable DNS names provided by Kubernetes for StatefulSets.\n- Consider using a ConfigMap to manage configuration files like `postgresql.conf`.\n- For high availability, ensure your StatefulSet is scheduled on multiple nodes and consider using an external load balancer.",
+    "source": "web_search",
+    "updated_at": 1781036711.7037709
+  },
+  "search:kubernetes-statefulsets-postgresql:kubernetes statefulsets for po_ex": {
+    "content": "- Use `kubectl apply -f statefulset.yaml` to deploy PostgreSQL StatefulSet.\n- Ensure `apiVersion: apps/v1` and `kind: StatefulSet`.\n- Define `spec.replicas: 3` for a 3-replica cluster.\n- Use `volumeClaimTemplates` for persistent storage.\n- Set `service.alpha.kubernetes.io/amazon-ebs-csi-driver` for AWS EBS volumes.\n- Configure `readinessProbe` and `livenessProbe` for health checks.\n- Apply network policies with `networking.k8s.io/pod-network-policy`.\n- Use `kubectl scale statefulset <statefulset-name> --replicas=3` to scale.\n- Monitor with `kubectl get pods -w` or `kubectl logs <pod-name>`.",
+    "source": "code_example",
+    "updated_at": 1781036736.8045824
+  },
+  "search:kubernetes-statefulsets-postgresql:deploying postgresql with kube": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy PostgreSQL StatefulSet.\n- Ensure your Kubernetes cluster is at least version 1.9 for StatefulSets support.\n- Key configuration options include:\n  - `replicas`: Number of replicas for the PostgreSQL deployment.\n  - `storageClassName`: Name of the storage class for persistent volume claims.\n  - `volumeClaimTemplates`: Template for PVCs to request storage.\n- Use Helm charts for easier deployment and management. Install Helm with `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`.\n- Deploy PostgreSQL using a Helm chart with the command: `helm install my-postgres bitnami/postgresql --set persistence.enabled=true,persistence.storageClass=<storage-class-name>,replicaCount=3`.\n- Monitor deployment status with `kubectl get pods` and check logs with `kubectl logs <pod-name>`.\n- For high availability, ensure StatefulSet is configured for ordered pod creation and deletion.",
+    "source": "web_search",
+    "updated_at": 1781036756.951853
+  },
+  "search:kubernetes-statefulsets-postgresql:deploying postgresql with kube_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy PostgreSQL using StatefulSets.\n- Ensure your Kubernetes environment is up and running before deploying.\n- Create a PersistentVolumeClaim (PVC) for data persistence.\n- Key config options include:\n  - `spec.serviceName`: Defines the headless service name.\n  - `spec.replicas`: Number of replicas for the StatefulSet.\n  - `spec.template.spec.containers.volumeMounts`: Mounts PVC to container storage.\n- Use `kubectl get pods` to check if the PostgreSQL pods are running.\n- For production, consider using a secure connection method like TLS/SSL.\n- Ensure your NFS share is properly configured and accessible by Kubernetes nodes.",
+    "source": "code_example",
+    "updated_at": 1781036764.0118163
+  }
+}

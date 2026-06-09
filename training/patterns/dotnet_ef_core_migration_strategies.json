@@ -1,0 +1,22 @@
+{
+  "search:dotnet-ef-core-migration-strategies:advanced ef core migration str": {
+    "content": "- Use `dotnet ef database update` to apply migrations.\n- For async migration, use `dotnet ef database update --context YourDbContextName`.\n- EF Core 9+ automatically acquires a lock during migration for protection against corruption.\n- Key config options include `UseSqlServer`, `UseMySQL`, and `UseNpgsql` in `OnConfiguring` method.\n- Consider using `MigrateAsync` for async operations in production environments.\n- For detailed guides, refer to Milan Jovanovic's articles on EF Core migrations.",
+    "source": "web_search",
+    "updated_at": 1781036642.6570518
+  },
+  "search:dotnet-ef-core-migration-strategies:advanced ef core migration str_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script --idempotent`\n\n- **Latest Versions**:\n  - EF Core: Version 7.x (as of my last update)\n  - .NET CLI: Latest LTS version\n\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server\n  - `UseMySql`: For MySQL\n  - `UseNpgsql`: For PostgreSQL\n  - `MigrationsAssembly`: Specifies the assembly containing migrations",
+    "source": "code_example",
+    "updated_at": 1781036660.1550286
+  },
+  "search:dotnet-ef-core-migration-strategies:best practices for managing en": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create a new migration.\n- Apply migrations using `dotnet ef database update`.\n- Rollback migrations with `dotnet ef database update <PreviousMigration>`.\n- To remove the latest migration, use `dotnet ef migrations remove`.\n- For advanced scenarios like table splits, consider using data annotations or Fluent API in your DbContext.\n- Ensure your project file includes `<PackageReference Include=\"Microsoft.EntityFrameworkCore.Design\" Version=\"<LatestVersion>\" />` for EF Core tools.\n- Configure DbContext options in `Startup.cs` or `Program.cs`, e.g., `.UseSqlServer(\"YourConnectionString\")`.\n- Regularly review and clean up old migrations to maintain a manageable migration history.",
+    "source": "web_search",
+    "updated_at": 1781036682.2286007
+  },
+  "search:dotnet-ef-core-migration-strategies:best practices for managing en_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server.\n  - `MigrationsAssembly`: Specifies the assembly containing migration classes.\n  - `Scaffold-DbContext`: Generates entity types and DbContext based on an existing database.",
+    "source": "code_example",
+    "updated_at": 1781036690.964627
+  }
+}
