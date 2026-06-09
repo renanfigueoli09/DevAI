@@ -1,0 +1,22 @@
+{
+  "search:FastAPI+SQLAlchemy Advanced Topics:fastapi sqlalchemy advanced": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy sqlmodel`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.13\n  - SQLModel: 0.0.6\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - FastAPI app instance: `app = FastAPI()`\n  - SQLAlchemy engine creation: `engine = create_engine(SQLALCHEMY_DATABASE_URL)`\n  - SessionLocal for database operations: `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`",
+    "source": "web_search",
+    "updated_at": 1781038372.2625465
+  },
+  "search:FastAPI+SQLAlchemy Advanced Topics:fastapi sqlalchemy advanced_ex": {
+    "content": "- Use `pip install fastapi sqlalchemy databases[postgresql]` to install necessary packages.\n- For FastAPI + SQLAlchemy, consider using the latest version of FastAPI and SQLAlchemy.\n- Key config options include database URL (`SQLALCHEMY_DATABASE_URL`), model relationships, and session management.\n- Example CLI command for running a FastAPI application: `uvicorn main:app --reload`.\n- Dependency injection can be used to manage dependencies in FastAPI applications with SQLAlchemy.",
+    "source": "code_example",
+    "updated_at": 1781038379.286395
+  },
+  "search:FastAPI+SQLAlchemy Advanced Topics:sqlalchemy performance optimiz": {
+    "content": "- Use SQLAlchemy's latest version.\n- Apply eager loading using `joinedload`, `subqueryload`, or `selectinload`.\n- Avoid N+1 queries by using batch loading with `enable_eagerloads(True)`.\n- Optimize query structure to reduce complexity.\n- Utilize connection pooling (`pool_size`, `max_overflow`).\n- Enable query logging for performance analysis.\n- Use indexing on database tables.\n- Consider using raw SQL when necessary for complex queries.\n- Regularly benchmark and profile your SQLAlchemy usage.",
+    "source": "web_search",
+    "updated_at": 1781038389.379207
+  },
+  "search:FastAPI+SQLAlchemy Advanced Topics:sqlalchemy performance optimiz_ex": {
+    "content": "- **CLI Commands**: `sqlacmd` for interactive querying and analysis.\n- **Latest Versions**: Ensure using SQLAlchemy version 2.x or later for the most recent features and optimizations.\n- **Key Config Options**:\n  - `query_cache_size`: Set to control the size of the query cache.\n  - `echo`: Enable logging SQL queries for debugging and optimization.\n  - `pool_pre_ping`: Automatically check connection health before using them.",
+    "source": "code_example",
+    "updated_at": 1781038393.7855887
+  }
+}

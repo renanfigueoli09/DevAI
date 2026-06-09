@@ -1,0 +1,22 @@
+{
+  "search:Kubernetes StatefulSets MySQL Performance Tuning:kubernetes statefulsets": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <statefulset-name> --image=<image-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<number-of-replicas>`\n  - `kubectl delete statefulset <statefulset-name>`\n\n- **Latest Versions**:\n  - StatefulSet is available in Kubernetes v1.5 and later.\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas.\n  - `.spec.template`: Pod template specification.\n  - `.spec.serviceName`: Name of the service to use for headless DNS records.\n  - `.spec.volumeClaimTemplates`: PersistentVolumeClaims for each Pod.",
+    "source": "web_search",
+    "updated_at": 1781038399.663026
+  },
+  "search:Kubernetes StatefulSets MySQL Performance Tuning:kubernetes statefulsets_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>` to create a StatefulSet.\n  - `kubectl get statefulsets` to list all StatefulSets.\n  - `kubectl describe statefulset <name>` for detailed information about a StatefulSet.\n  - `kubectl scale statefulset <name> --replicas=<number>` to scale the number of replicas.\n\n- **Latest Versions**:\n  - Kubernetes v1.24 is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `.spec serviceName`: Specifies the name of a service that must exist before creating these pods.\n  - `.spec replicas`: Defines the desired number of replicas for this StatefulSet.\n  - `.spec selector.matchLabels`: Label selector to ensure the StatefulSet manages only those Pods.\n  - `.spec template`: Template describing the Pods managed by the StatefulSet.",
+    "source": "code_example",
+    "updated_at": 1781038404.404679
+  },
+  "search:Kubernetes StatefulSets MySQL Performance Tuning:mysql performance tuning": {
+    "content": "- **CLI Commands**:\n  - `mysqltuner.pl` for performance analysis.\n  - `pt-query-digest` to analyze slow queries.\n\n- **Latest Versions**:\n  - MySQL 8.0.x\n\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on available RAM.\n  - `query_cache_type`: Set to OFF in MySQL 5.7+ for better performance.\n  - `max_connections`: Increase if your application requires more concurrent connections.\n  - `thread_cache_size`: Adjust based on the number of threads.\n  - `innodb_log_file_size`: Larger size can improve write performance but increases recovery time.\n\n- **Additional Tips**:\n  - Use EXPLAIN to understand query execution plans.\n  - Optimize indexes for faster data retrieval.\n  - Regularly analyze and optimize tables with `ANALYZE TABLE` and `OPTIMIZE TABLE`.",
+    "source": "web_search",
+    "updated_at": 1781038423.2179506
+  },
+  "search:Kubernetes StatefulSets MySQL Performance Tuning:mysql performance tuning_ex": {
+    "content": "- Use `mysqltuner.pl` for automated performance tuning.\n- Update MySQL to the latest version, e.g., `sudo apt-get install mysql-server=8.4`.\n- Adjust key configuration options in `my.cnf`:\n  - Increase `innodb_buffer_pool_size`\n  - Set `query_cache_type = 1` and `query_cache_size`\n  - Enable `thread_cache_size`\n  - Optimize `max_connections`\n- Use `EXPLAIN` to analyze query performance.\n- Implement proper indexing on frequently queried columns.\n- Monitor performance with tools like `pt-query-digest`.\n- Regularly update and patch MySQL for security and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781038447.5440931
+  }
+}

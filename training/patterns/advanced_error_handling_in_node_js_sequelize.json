@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Node.js-Sequelize:nodejs error handling": {
+    "content": "- Use `try-catch` blocks to handle synchronous errors.\n- Implement async/await with `try-catch` for asynchronous code.\n- Create custom error classes by extending the built-in `Error` class.\n- Utilize Express middleware for centralized error handling.\n- Configure logging using libraries like `winston` or `pino`.\n- Set environment variables for different stages (development, production).\n- Use tools like `nodemon` for development to restart server on code changes.\n- Implement rate limiting with packages like `express-rate-limit`.\n- Regularly update Node.js and dependencies to mitigate security vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781038329.138943
+  },
+  "search:Advanced Error Handling in Node.js-Sequelize:nodejs error handling_ex": {
+    "content": "- Use `try...catch` blocks around code that might throw errors.\n- Implement middleware functions to handle errors globally.\n- Create custom error classes by extending the built-in `Error` class.\n- Utilize libraries like `express-async-errors` for handling async errors in Express applications.\n- Set up a centralized error handler function with parameters: `(err, req, res, next)`.\n- Return appropriate HTTP status codes and error messages from your error handler.\n- Use logging frameworks like `winston` or `pino` to log errors for debugging and monitoring purposes.\n- Ensure all custom errors include relevant details such as a message, code, and stack trace.",
+    "source": "code_example",
+    "updated_at": 1781038335.2968123
+  },
+  "search:Advanced Error Handling in Node.js-Sequelize:sequelize error management": {
+    "content": "- Use `sequelize.errors` to access custom error classes.\n- Implement try-catch blocks around Sequelize operations.\n- Utilize transactions for multiple operations to ensure data consistency.\n- Configure logging levels in Sequelize for better debugging.\n- Update Sequelize to the latest version using npm: `npm update sequelize`.\n- Review Sequelize documentation for best practices and examples.",
+    "source": "web_search",
+    "updated_at": 1781038342.1380346
+  },
+  "search:Advanced Error Handling in Node.js-Sequelize:sequelize error management_ex": {
+    "content": "- **CLI Commands**: Not applicable in this context.\n- **Latest Versions**: Ensure using the latest version of Sequelize and Node.js for compatibility and security updates.\n- **Key Config Options**:\n  - `logging`: Function to log SQL queries or false to disable logging.\n  - `define`: Object with default options for model definitions.\n  - `sync`: Options to control how models are synchronized with the database.\n  - `transaction`: Options to configure transaction behavior.",
+    "source": "code_example",
+    "updated_at": 1781038348.3642242
+  }
+}
