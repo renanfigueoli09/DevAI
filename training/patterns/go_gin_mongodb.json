@@ -1,0 +1,22 @@
+{
+  "search:go-gin-mongodb:go gin mongodb crud operations": {
+    "content": "- **CLI Commands**:\n  - `go get github.com/gin-gonic/gin` to install Gin Gonic.\n  - `go get go.mongodb.org/mongo-driver/mongo` for MongoDB driver.\n\n- **Latest Versions**:\n  - Gin Gonic: v1.8.2 (as of my last update).\n  - MongoDB Driver: v1.10.3 (as of my last update).\n\n- **Key Config Options**:\n  - In `user.go`, define controller functions for CRUD operations.\n  - Use input validation to ensure data integrity.\n  - Connect to MongoDB using the driver and perform CRUD operations based on query conditions.",
+    "source": "web_search",
+    "updated_at": 1781015727.5360856
+  },
+  "search:go-gin-mongodb:go gin mongodb crud operations_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u go.mongodb.org/mongo-driver/mongo`\n  - `go get -u go.mongodb.org/mongo-driver/mongo/options`\n\n- **Latest Versions**:\n  - Gin: v1.8.2\n  - MongoDB Go Driver: v1.10.3\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://username:password@host:port/database`\n  - Gin Router Configuration: `router := gin.Default()`\n  - MongoDB Client Options: `clientOptions := options.Client().ApplyURI(uri)`",
+    "source": "code_example",
+    "updated_at": 1781015745.0705948
+  },
+  "search:go-gin-mongodb:go gin mongodb performance opt": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u go.mongodb.org/mongo-driver/mongo`\n\n- **Latest Versions**:\n  - Gin Framework: v1.8.2\n  - MongoDB Go Driver: v1.10.3\n\n- **Key Config Options**:\n  - Gin Router: Use `gin.New()` for a new router instance.\n  - MongoDB Connection: Configure connection string with options like `maxPoolSize` and `minPoolSize`.\n  - Middleware: Implement custom middleware using `router.Use()`.",
+    "source": "web_search",
+    "updated_at": 1781015753.2895718
+  },
+  "search:go-gin-mongodb:go gin mongodb performance opt_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u go.mongodb.org/mongo-driver/mongo`\n\n- **Latest Versions**:\n  - Gin v1.8.2\n  - MongoDB Go Driver v1.10.3\n\n- **Key Config Options**:\n  - Set up MongoDB connection string in environment variables.\n  - Use `httprouter` for better performance.\n  - Implement middleware for logging and error handling.\n  - Configure database indexes for faster query performance.\n  - Use goroutines for concurrent operations.\n  - Optimize request handlers by minimizing allocations.",
+    "source": "code_example",
+    "updated_at": 1781015775.0004833
+  }
+}
