@@ -1,0 +1,22 @@
+{
+  "search:docker+kubernetes-performance-tuning:docker kubernetes performance ": {
+    "content": "- **Prometheus**: Use `kubectl apply -f https://raw.githubusercontent.com/coreos/prometheus-operator/master/bundle.yaml` to install.\n- **Grafana**: Deploy using Helm with `helm repo add grafana https://grafana.github.io/helm-charts && helm install grafana grafana/grafana`.\n- **Metrics Server**: Install via `kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml`.\n- **Kubectl**: Use `kubectl top nodes` and `kubectl top pods` for resource usage.\n- **Resource Tuning**: Adjust CPU and memory limits in Kubernetes manifests using `resources: {limits: {cpu: \"1\", memory: \"2Gi\"}, requests: {cpu: \"0.5\", memory: \"1Gi\"}}`.\n- **Kubernetes Labels**: Apply labels to Docker containers for better monitoring with `docker run --label app=myapp myimage`.\n\n**Latest Versions**:\n- Prometheus Operator: Check [GitHub](https://github.com/coreos/prometheus-operator/releases)\n- Metrics Server: Check [GitHub](https://github.com/kubernetes-sigs/metrics-server/releases)\n\n**Key Config Options**:\n- Prometheus: Configure `scrape_configs` in the Prometheus configuration file.\n- Grafana: Customize dashboards and data sources through the web interface or by editing JSON files.\n- Metrics Server: Adjust resource requests and limits based on your cluster's needs.",
+    "source": "web_search",
+    "updated_at": 1781018225.8684347
+  },
+  "search:docker+kubernetes-performance-tuning:docker kubernetes performance _ex": {
+    "content": "- **Prometheus**: Use `docker run -d --name prometheus -p 9090:9090 prom/prometheus`\n- **Grafana**: Run with `docker run -d --name grafana -p 3000:3000 grafana/grafana`\n- **Datadog Agent**: Deploy using `docker run -d --cgroup-driver=systemd -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc/:/host/proc/:ro -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro -e DD_API_KEY=<your_api_key> datadog/agent`\n- **Portainer**: Start with `docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce`\n- **Dozzle**: Run Dozzle with `docker run -d --name dozzle -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock amir20/dozzle`\n- **Netdata**: Deploy Netdata using `docker run -d --name netdata -p 19999:19999 -v /proc:/host/proc:ro -v /sys:/host/sys:ro -v /var/run/docker.sock:/host/var/run/docker.sock -v /etc/passwd:/host/etc/passwd:ro -v /etc/group:/host/etc/group:ro -v /etc/timezone:/host/etc/timezone:ro -t --cap-add SYS_PTRACE --security-opt apparmor=unconfined quay.io/netdata/netdata`\n- **Uptime-Kuma**: Run Uptime-Kuma with `docker run -d --name uptime-kuma -p 3001:3001 louislam/uptime-kuma`",
+    "source": "code_example",
+    "updated_at": 1781018237.8196137
+  },
+  "search:docker+kubernetes-performance-tuning:kubernetes resource allocation": {
+    "content": "- **CLI Commands**: Use `kubectl apply -f <filename>` to deploy applications.\n- **Latest Versions**: Ensure Kubernetes is updated to the latest version for optimal performance and security.\n- **Key Config Options**:\n  - `resources.requests`: Specifies minimum resource requirements.\n  - `resources.limits`: Defines maximum resource limits.\n  - `nodeSelector`: Assigns pods to specific nodes based on labels.\n  - `affinity`: Controls pod scheduling through rules like node affinity.",
+    "source": "web_search",
+    "updated_at": 1781018255.087144
+  },
+  "search:docker+kubernetes-performance-tuning:kubernetes resource allocation_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl autoscale deployment <deployment-name> --cpu-percent=<threshold> --min=<min-pods> --max=<max-pods>`\n  - `kubectl apply -f <resource-file.yaml>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27\n  - Helm v3.9\n\n- **Key Config Options**:\n  - `resources.requests.cpu`\n  - `resources.requests.memory`\n  - `resources.limits.cpu`\n  - `resources.limits.memory`\n  - `autoscaling.v1.HorizontalPodAutoscaler`",
+    "source": "code_example",
+    "updated_at": 1781018277.221502
+  }
+}

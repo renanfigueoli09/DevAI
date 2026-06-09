@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+junit-5:spring boot junit 5 testing st": {
+    "content": "- **CLI Commands**: Use `mvn test` to run tests in Maven projects.\n- **Latest Versions**: JUnit 5.9, Mockito 4.0.\n- **Key Config Options**:\n  - `@TestInstance(TestInstance.Lifecycle.PER_CLASS)` for class-level lifecycle management.\n  - `@ParameterizedTest` for parameterized testing.\n  - `@Nested` for nested tests.\n  - `@MockBean` for mocking Spring beans in tests.",
+    "source": "web_search",
+    "updated_at": 1781018182.3801515
+  },
+  "search:spring-boot+junit-5:spring boot junit 5 testing st_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn test` to run tests using Maven.\n  - `gradle test` to run tests using Gradle.\n\n- **Latest Versions**:\n  - Spring Boot 3.4.5\n  - JDK 24\n\n- **Key Config Options**:\n  - Use `@SpringBootTest` for full integration testing with a running application context.\n  - Employ `@MockBean` and `@InjectMocks` for mocking dependencies in tests.\n  - Utilize `@Testcontainers` for testing with real database instances.",
+    "source": "code_example",
+    "updated_at": 1781018188.2040799
+  },
+  "search:spring-boot+junit-5:spring boot junit 5 mockito ad": {
+    "content": "- Use `mvn clean install` to build your project.\n- Add Mockito dependency in `pom.xml`: `<dependency><groupId>org.mockito</groupId><artifactId>mockito-junit-jupiter</artifactId><version>4.0.0</version><scope>test</scope></dependency>`\n- Annotate test classes with `@ExtendWith(MockitoExtension.class)` for JUnit 5.\n- Use `@Mock` to create mock objects and `@InjectMocks` for the object under test.\n- Configure Spring Boot tests with `@SpringBootTest` and `@AutoConfigureMockMvc`.\n- Run tests using IDE or command: `mvn test -Dtest=YourTestClass`.\n- Key config options include `spring.test.annotation.excludeFilters` to exclude certain tests.\n- Ensure Mockito version compatibility with JUnit 5.",
+    "source": "web_search",
+    "updated_at": 1781018196.8044047
+  },
+  "search:spring-boot+junit-5:spring boot junit 5 mockito ad_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn test` to run tests.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - JUnit 5: 5.8.x\n  - Mockito: 4.x\n\n- **Key Config Options**:\n  - Add `spring-boot-starter-test` dependency in `pom.xml`.\n  - Use `@SpringBootTest` for full application context tests.\n  - Utilize `@MockBean` to mock Spring beans.\n  - Employ `@InjectMocks` to inject mocks into the test class.",
+    "source": "code_example",
+    "updated_at": 1781018212.9189377
+  }
+}
