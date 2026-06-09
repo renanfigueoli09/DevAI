@@ -1,0 +1,17 @@
+{
+  "search:python-fastapi-asyncio-performance-analysis:python fastapi asyncio perform": {
+    "content": "- Use `pytest_asyncio` for testing FastAPI applications with async database sessions.\n- Ensure you are using the latest version of FastAPI and SQLAlchemy to leverage performance improvements.\n- Configure your FastAPI app to use asynchronous database connections for better I/O performance.\n- Implement concurrency patterns like `asyncio.gather()` to handle multiple requests simultaneously.\n- Monitor application performance using tools like `uvicorn` with the `--reload` flag during development.\n- Key config options include setting up an async session factory in SQLAlchemy and configuring FastAPI's lifespan events for database connections.",
+    "source": "web_search",
+    "updated_at": 1781030252.6362035
+  },
+  "search:python-fastapi-asyncio-performance-analysis:python fastapi asyncio perform_ex": {
+    "content": "- Use `pytest_asyncio` for testing FastAPI with async database sessions.\n- Employ `AsyncClient` for setting up test clients in FastAPI tests.\n- Avoid blocking the event loop by using executors for CPU-bound tasks.\n- Utilize asyncio's `run_in_executor(None, func)` to offload blocking I/O operations.\n- Consider using `asyncio.gather()` for running multiple coroutines concurrently.\n- Implement connection pooling for database sessions to improve performance.\n- Use middleware for logging and request/response processing in FastAPI applications.\n- Monitor application performance with tools like `uvicorn`'s built-in metrics or third-party solutions.\n- Keep FastAPI, Python, and related libraries up-to-date for the latest features and security patches.",
+    "source": "code_example",
+    "updated_at": 1781030268.6111672
+  },
+  "search:python-fastapi-asyncio-performance-analysis:analyzing python fastapi async": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development.\n  - `pytest` to run tests.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Starlette: 0.21.3\n  - Uvicorn: 10.7.0\n\n- **Key Config Options**:\n  - `asyncio.run(app)`: For running the app.\n  - `TestClient` for testing FastAPI applications.\n  - `pytest_asyncio` for asynchronous tests in pytest.",
+    "source": "web_search",
+    "updated_at": 1781030285.0326061
+  }
+}

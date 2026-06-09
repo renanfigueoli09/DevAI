@@ -1,0 +1,12 @@
+{
+  "search:ruby-on-rails-graphql-security:securing ruby on rails graphql": {
+    "content": "- **CLI Commands**:\n  - `rails generate graphql:install`\n  - `rails g graphql:object <ObjectName>`\n  - `rails g graphql:mutation <MutationName>`\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - GraphQL-Ruby: 2.13.x\n\n- **Key Config Options**:\n  - `config/initializers/graphql.rb`: Configure GraphQL settings.\n  - `config/routes.rb`: Mount the GraphQL API route.\n  - `.env`: Set environment variables for JWT, email configurations, etc.",
+    "source": "web_search",
+    "updated_at": 1781030471.0501359
+  },
+  "search:ruby-on-rails-graphql-security:securing ruby on rails graphql_ex": {
+    "content": "- **CLI Commands**:\n  - `rails generate graphql:install`\n  \n- **Latest Versions**:\n  - As of my last update, the latest version of `graphql-ruby` is 2.0.3.\n\n- **Key Config Options**:\n  - Define types and queries in `app/graphql/types`.\n  - Configure routes in `config/routes.rb` with `mount GraphQL::Rails::Engine => '/graphql'`.",
+    "source": "code_example",
+    "updated_at": 1781030476.493853
+  }
+}

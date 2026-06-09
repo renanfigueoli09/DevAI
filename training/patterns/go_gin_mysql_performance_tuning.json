@@ -1,0 +1,12 @@
+{
+  "search:go-gin-mysql-performance-tuning:optimizing go gin mysql applic": {
+    "content": "- Use `go mod init <module_name>` to initialize a new Go module.\n- Install Gin and GORM using `go get -u github.com/gin-gonic/gin` and `go get -u gorm.io/gorm`.\n- For MySQL, use the driver with `go get -u gorm.io/driver/mysql`.\n- Set up your database connection string in the format: `username:password@tcp(host:port)/dbname?charset=utf8mb4&parseTime=True&loc=Local`.\n- Initialize GORM with MySQL using `gorm.Open(mysql.Open(dsn), &gorm.Config{})`.\n- Define your models and use GORM's schema migration to create tables.\n- Implement CRUD operations in Gin routes, e.g., `c.GET(\"/users\", getUsers)`, `c.POST(\"/users\", createUser)`, etc.\n- Use middleware for handling common tasks like logging, authentication, and error handling.\n- Configure Gin with `gin.SetMode(gin.ReleaseMode)` for production environments.\n- Monitor performance using tools like pprof or New Relic.",
+    "source": "web_search",
+    "updated_at": 1781030416.0306547
+  },
+  "search:go-gin-mysql-performance-tuning:optimizing go gin mysql applic_ex": {
+    "content": "- Use `go run main.go` to start the application.\n- Ensure MySQL is running and accessible.\n- Install GORM for Go using `go get -u gorm.io/gorm`.\n- Connect to MySQL with GORM in your code:\n  ```go\n  import (\n      \"gorm.io/driver/mysql\"\n      \"gorm.io/gorm\"\n  )\n\n  func main() {\n      dsn := \"user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local\"\n      db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})\n      if err != nil {\n          panic(\"failed to connect database\")\n      }\n  }\n  ```\n- Use `docker-compose.yml` for project setup.\n- Configure Docker Compose with MySQL and Gin services:\n  ```yaml\n  version: '3'\n  services:\n    db:\n      image: mysql:latest\n      environment:\n        MYSQL_ROOT_PASSWORD: rootpassword\n        MYSQL_DATABASE: dbname\n    app:\n      build: .\n      ports:\n        - \"8080:8080\"\n      depends_on:\n        - db\n  ```\n- Use `go get -u gorm.io/gorm` to update GORM.\n- Ensure MySQL server is running and accessible at the specified address and port.",
+    "source": "code_example",
+    "updated_at": 1781030425.45248
+  }
+}
