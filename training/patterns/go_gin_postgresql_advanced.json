@@ -1,0 +1,22 @@
+{
+  "search:go-gin-postgresql-advanced:go gin postgresql advanced que": {
+    "content": "- **CLI Commands**:\n  - `psql --version`\n  - `pg_dump --version`\n  - `pg_restore --version`\n\n- **Latest Versions**:\n  - Go: v1.20.3\n  - Gin: v1.8.0\n  - PostgreSQL: 15.4\n\n- **Key Config Options**:\n  - GIN Indexes for JSONB fields.\n  - Use `jsonb_path_ops` for efficient querying.\n  - Configure JWT authentication with `github.com/dgrijalva/jwt-go`.\n  - Set up Docker containers using official PostgreSQL images.",
+    "source": "web_search",
+    "updated_at": 1781038615.5032122
+  },
+  "search:go-gin-postgresql-advanced:go gin postgresql advanced que_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/aliml92/realworld-gin-sqlc.git`\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u github.com/jinzhu/gorm`\n  - `psql -U postgres -h localhost`\n\n- **Latest Versions**:\n  - Gin: v1.8.0\n  - GORM: v2.34.0\n  - PostgreSQL: 15.4\n\n- **Key Config Options**:\n  - Database connection string: `host=localhost user=postgres dbname=mydb sslmode=disable`\n  - Gin mode: `gin.SetMode(gin.ReleaseMode)`\n  - SQLC code generation: `sqlc generate`",
+    "source": "code_example",
+    "updated_at": 1781038637.5470078
+  },
+  "search:go-gin-postgresql-advanced:go gin postgresql performance ": {
+    "content": "- **CLI Commands**:\n  - `go mod init <module_name>`\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/postgres`\n\n- **Latest Versions**:\n  - Gin: v1.8.2\n  - GORM: v2.0.13\n  - PostgreSQL: 15\n\n- **Key Config Options**:\n  - Use connection pooling with GORM.\n  - Implement indexing strategies like BTree, GIN, GiST, and BRIN for efficient querying.\n  - Optimize queries to avoid full table scans.\n  - Regularly analyze and vacuum your database.",
+    "source": "web_search",
+    "updated_at": 1781038645.6367815
+  },
+  "search:go-gin-postgresql-advanced:go gin postgresql performance _ex": {
+    "content": "- Install packages: `go get github.com/gin-gonic/gin`, `go get gorm.io/gorm`, `go get gorm.io/driver/postgres`\n- PostgreSQL schema file: `db.sql`\n- Golang code file: `main.go`\n- Use latest versions of Gin, GORM, and PostgreSQL\n- Key config options for performance:\n  - Enable connection pooling in PostgreSQL\n  - Optimize query caching\n  - Use appropriate indexing strategies (e.g., GIN indexes for array queries)\n  - Adjust Go's garbage collection settings",
+    "source": "code_example",
+    "updated_at": 1781038652.2454915
+  }
+}

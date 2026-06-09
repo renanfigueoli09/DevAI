@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-mongodb:typescript prisma mongodb crud": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init` to initialize Prisma project.\n  - `prisma migrate dev --name init` to create initial migration.\n\n- **Latest Versions**:\n  - TypeScript: v5.x\n  - Prisma: v4.x\n  - MongoDB: v6.x\n\n- **Key Config Options**:\n  - In `prisma/schema.prisma`, define models with TypeScript types.\n  - Use environment variables for database connection strings (`DATABASE_URL`).\n  - Configure `schema.prisma` to use MongoDB with Prisma Client.",
+    "source": "web_search",
+    "updated_at": 1781038670.0700588
+  },
+  "search:typescript-prisma-mongodb:typescript prisma mongodb crud_ex": {
+    "content": "- **CLI Commands**:\n  - `npm init -y`\n  - `npm install typescript prisma @prisma/client`\n\n- **Latest Versions**:\n  - TypeScript: v5.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - Define data model in `schema.prisma`\n  - Use Prisma Client for CRUD operations",
+    "source": "code_example",
+    "updated_at": 1781038684.2675698
+  },
+  "search:typescript-prisma-mongodb:typescript prisma mongodb migr": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Creates a new migration based on schema changes.\n  - `prisma migrate deploy`: Applies migrations to the database.\n  - `prisma db pull`: Updates Prisma schema based on the current state of the database.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Prisma CLI and Prisma Client by running `npm install prisma@latest`.\n\n- **Key Config Options**:\n  - In your `schema.prisma`, configure the MongoDB connection string under `datasource db`.\n    ```prisma\n    datasource db {\n      provider = \"mongodb\"\n      url      = env(\"DATABASE_URL\")\n    }\n    ```\n  - Set environment variables in `.env` file.\n    ```\n    DATABASE_URL=\"mongodb+srv://<username>:<password>@cluster0.mongodb.net/mydatabase?retryWrites=true&w=majority\"\n    ```\n\n- **Additional Tips**:\n  - Use `prisma migrate status` to check the current migration state.\n  - For MongoDB, avoid using Prisma's built-in migrations (`migrate`) and instead use MongoDB-specific tools for schema changes.",
+    "source": "web_search",
+    "updated_at": 1781038698.4584823
+  },
+  "search:typescript-prisma-mongodb:typescript prisma mongodb migr_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates a new migration based on your schema changes.\n  - `prisma generate`: Generates the Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: v4.10.0\n  - MongoDB Node.js Driver: v5.3.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prisma.migrate`: Manages migrations for your database schema.\n  - `prisma.client`: Provides type-safe queries to interact with the database.\n\nFor more detailed information, refer to the official Prisma documentation: [Prisma Documentation](https://www.prisma.io/docs)",
+    "source": "code_example",
+    "updated_at": 1781038712.6623628
+  }
+}
