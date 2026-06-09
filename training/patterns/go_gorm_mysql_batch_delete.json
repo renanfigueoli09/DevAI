@@ -1,0 +1,27 @@
+{
+  "search:go-gorm-mysql-batch-delete:go gorm mysql batch delete ope": {
+    "content": "- **CLI Commands**: Not applicable for GORM operations.\n- **Latest Version**: Ensure using the latest version of GORM and MySQL driver to avoid bugs and take advantage of new features.\n- **Key Config Options**:\n  - `gorm.DB`: The primary interface for interacting with the database.\n  - `.Delete()`: Method for deleting records, supports batch deletion by passing a slice or struct pointer.\n  - `.Where()`: Specifies conditions for the delete operation.\n  - `.BatchSize(int)`: Sets the number of records to be deleted in each batch (useful for large datasets).\n- **Example Code**:\n  ```go\n  // Batch delete using GORM\n  err := db.Where(\"status = ?\", \"inactive\").Delete(&User{}).Error\n  if err != nil {\n      log.Fatal(err)\n  }\n  ```\n- **Soft Deletes**: Use `.Unscoped().Delete()` to bypass soft deletes and permanently remove records.\n- **Batch Size**: For large datasets, use `.BatchSize(100)` to control the number of records deleted in each batch.\n- **Error Handling**: Always check for errors after performing database operations.",
+    "source": "web_search",
+    "updated_at": 1781046623.5089812
+  },
+  "search:go-gorm-mysql-batch-delete:go gorm mysql batch delete ope_ex": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: Ensure you are using the latest version of GORM and MySQL driver by checking their official repositories.\n- **Key Config Options**:\n  - `DriverName`: Specify the database driver, e.g., `\"mysql\"`.\n  - `DSN`: Define the Data Source Name for connecting to MySQL, e.g., `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`.\n  - `AutoMigrate`: Automatically migrate schema with `db.AutoMigrate(&YourModel{})`.\n- **Batch Delete Operations**: Use `db.Where(\"condition\").Delete(&YourModel{})` to delete records in batches.",
+    "source": "code_example",
+    "updated_at": 1781046630.8180346
+  },
+  "search:go-gorm-mysql-batch-delete:go gorm mysql batch delete per": {
+    "content": "- Ensure GORM version is up to date.\n- Use `db.Where(\"id IN ?\", ids).Delete(&User{})` for batch deletion with conditions.\n- Enable `AllowGlobalUpdate` mode if necessary, but be cautious of potential risks.\n- Consider using raw SQL for bulk operations when performance becomes an issue.\n- Review and optimize database schema for better query performance.",
+    "source": "web_search",
+    "updated_at": 1781046637.441268
+  },
+  "search:go-gorm-mysql-batch-delete:go gorm mysql batch delete per_ex": {
+    "content": "- Use `gorm.io/gorm` version 2.x for the latest features and performance improvements.\n- For batch deletion, use `db.Where(\"condition\").Delete(&Model{})`.\n- Ensure MySQL is up to date with the latest stable version for optimal performance.\n- Consider using `db.Exec(\"DELETE FROM table_name WHERE condition\")` for bulk deletes when GORM's methods are not sufficient.\n- Enable connection pooling in MySQL by setting `pool_size` and other relevant options in your DSN.\n- Use `db.Find(&models, \"condition\").Delete(&models)` to delete multiple records based on a query.\n- Monitor and adjust the `max_allowed_packet` size in MySQL for large data operations.\n- For very large datasets, consider partitioning tables or using sharding strategies.\n- Regularly analyze and optimize your MySQL queries and indexes.",
+    "source": "code_example",
+    "updated_at": 1781046647.5440602
+  },
+  "search:go-gorm-mysql-batch-delete:go gorm mysql batch delete sec": {
+    "content": "- **CLI Commands**: Ensure `go get -u gorm.io/gorm` and `go get -u gorm.io/driver/mysql` for the latest GORM and MySQL driver versions.\n- **Latest Versions**: Check [GORM GitHub](https://github.com/go-gorm/gorm) and [MySQL Go Driver GitHub](https://github.com/go-sql-driver/mysql) for the most recent releases.\n- **Key Config Options**:\n  - `gorm.DB` instance creation: Use `gorm.Open(mysql.Open(dsn), &gorm.Config{})`.\n  - Batch delete with conditions: Use `db.Where(\"status = ?\", \"inactive\").Delete(&User{})`.\n  - Prepared statements: Enable by default in the MySQL driver, can be disabled using `sql.Register(\"mysql\", mysql.NewMySQLDriver())`.",
+    "source": "web_search",
+    "updated_at": 1781046655.809696
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "search:fastapi-redis-py-sync:fastapi redis py sync performa": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - Redis-py: 4.5.4\n\n- **Key Config Options**:\n  - Use `async_lru` for caching in FastAPI.\n  - Configure Redis connection pooling with `redis.ConnectionPool`.\n  - Set appropriate TTL (Time To Live) values for cache entries using `expire` method.\n  - Enable async connections to Redis by using `redis.Redis.from_url(\"redis://localhost\")`.",
+    "source": "web_search",
+    "updated_at": 1781046430.2402613
+  },
+  "search:fastapi-redis-py-sync:fastapi redis py sync performa_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Redis-py: v4.1.3\n\n- **Key Config Options**:\n  - `redis.StrictRedis(host='localhost', port=6379, db=0)`\n  - `app.state.redis = redis_client`\n  - Use `asyncio` for asynchronous operations with Redis.\n  - Implement caching strategies like LRU (Least Recently Used) for efficient data retrieval.",
+    "source": "code_example",
+    "updated_at": 1781046445.6469874
+  },
+  "search:fastapi-redis-py-sync:fastapi redis py sync security": {
+    "content": "- Use `pip install fastapi redis`\n- FastAPI version: 0.95.0\n- Redis-py version: 4.6.3\n- CLI commands:\n  - `uvicorn main:app --reload`\n- Key config options:\n  - `redis.StrictRedis(host='localhost', port=6379, db=0)`\n  - Use connection pooling for better performance\n  - Implement cache decorators for caching logic\n  - Set appropriate TTL (Time To Live) strategies",
+    "source": "web_search",
+    "updated_at": 1781046465.6818275
+  },
+  "search:fastapi-redis-py-sync:fastapi redis py sync security_ex": {
+    "content": "- Use `pip install fastapi redis`\n- FastAPI version: 0.98.0\n- Redis-py version: 4.5.4\n- Key config options:\n  - `redis.StrictRedis(host='localhost', port=6379, db=0)`\n  - `app.state.redis = redis.StrictRedis(...)`\n- CLI commands:\n  - `uvicorn main:app --reload`\n- Security best practices:\n  - Use environment variables for sensitive data\n  - Implement rate limiting\n  - Regularly update dependencies",
+    "source": "code_example",
+    "updated_at": 1781046471.1453116
+  },
+  "search:fastapi-redis-py-sync:fastapi redis py sync testing ": {
+    "content": "- Use `pip install fastapi[all] redis` to install FastAPI and Redis libraries.\n- For testing, use `pytest` along with `httpx` for asynchronous requests.\n- Initialize a synchronous Redis client in your FastAPI app using `redis.Redis(host='localhost', port=6379, db=0)`.\n- Use `@app.on_event(\"startup\")` to initialize the Redis connection once at startup.\n- For testing module-scoped clients, use `pytest` fixtures with `scope=\"module\"` to ensure they are initialized only once per module.\n- Implement caching strategies using Redis by setting and getting keys with expiration times.\n- For session management, update the session expiration time on every request using Redis's `EXPIRE` command.\n- Use Docker for containerizing your FastAPI app with Redis, ensuring consistent environments across development and production.",
+    "source": "web_search",
+    "updated_at": 1781046482.7606668
+  },
+  "search:fastapi-redis-py-sync:fastapi redis py sync testing _ex": {
+    "content": "- Use `fastapiredis/containers.py` from Dependency Injector for FastAPI and Redis integration.\n- For synchronous Redis in async FastAPI, use a module-scoped client initialized at module load time.\n- Consider using `redis-py` version that supports asyncio to avoid blocking the event loop.\n- Set up your environment with Docker for Redis.\n- Key config options include setting up Redis connection pool and configuring Dependency Injector containers.",
+    "source": "code_example",
+    "updated_at": 1781046490.5029578
+  }
+}

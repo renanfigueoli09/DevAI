@@ -1,0 +1,7 @@
+{
+  "search:typescript-react-query-authentication:typescript react query authent": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @tanstack/react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for caching and invalidation.\n  - `useQuery`: Hook to fetch data with automatic caching and refetching.\n  - `useMutation`: Hook to handle side effects like form submissions or data updates.\n  - `useInfiniteQuery`: Hook for fetching infinite lists of data.\n\n- **Performance Optimization Tips**:\n  - Use `staleTime` to control how long data should be considered fresh.\n  - Implement `refetchOnWindowFocus` and `refetchInterval` based on your application's needs.\n  - Utilize `keepPreviousData` to keep the previous data while fetching new data.",
+    "source": "web_search",
+    "updated_at": 1781046546.839255
+  }
+}
