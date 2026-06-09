@@ -1,0 +1,12 @@
+{
+  "search:dotnet-core-ef-core-migrations:dotnet core ef core migration ": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - .NET: 8.0 (as of my last update in October 2023)\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure connection strings.\n  - `DbContext`: Define your data model and database context.\n  - `OnModelCreating`: Customize the model configuration.",
+    "source": "web_search",
+    "updated_at": 1781043346.0988803
+  },
+  "search:dotnet-core-ef-core-migrations:dotnet core ef core migration _ex": {
+    "content": "- **CLI Commands**: \n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of .NET Core and EF Core to take advantage of the most recent features and bug fixes.\n\n- **Key Config Options**:\n  - Connection string in `appsettings.json` for database configuration.\n  - `OnModelCreating` method in your DbContext class for model configuration.",
+    "source": "code_example",
+    "updated_at": 1781043352.132828
+  }
+}
