@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-statefulsets-error-handling:kubernetes statefulsets error ": {
+    "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl logs <pod-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n\n- **Key Config Options**:\n  - `replicas`: Number of replicas.\n  - `volumeClaimTemplates`: PersistentVolumeClaims for stable storage.\n  - `service`: Service configuration for stateful applications.",
+    "source": "web_search",
+    "updated_at": 1781044393.3369043
+  },
+  "search:kubernetes-statefulsets-error-handling:kubernetes statefulsets error _ex": {
+    "content": "- Use `kubectl describe statefulset <statefulset-name>` to get detailed information about the StatefulSet.\n- Check events with `kubectl get events --sort-by=.metadata.creationTimestamp` for recent issues.\n- Inspect pod logs using `kubectl logs <pod-name>`.\n- Verify storage claims with `kubectl get pvc`.\n- Use `kubectl rollout status statefulset/<statefulset-name>` to monitor deployment progress.\n- Apply changes with `kubectl apply -f <manifest-file>.yaml`.\n- Scale StatefulSets with `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`.",
+    "source": "code_example",
+    "updated_at": 1781044402.6227968
+  },
+  "search:kubernetes-statefulsets-error-handling:advanced kubernetes statefulse": {
+    "content": "- Use `kubectl get statefulsets` to list StatefulSets.\n- Check pod status with `kubectl describe pod <pod-name>`.\n- Inspect logs using `kubectl logs <pod-name>`.\n- Verify PVCs with `kubectl get pvc`.\n- Use `kubectl rollout restart statefulset <statefulset-name>` for restarts.\n- Ensure correct storage class and access modes in StatefulSet spec.\n- Monitor events with `kubectl get events --sort-by=.metadata.creationTimestamp`.\n- Utilize `kubectl patch` to update StatefulSet configurations.\n- Check resource requests and limits in the deployment.\n- Use `kubectl top statefulset <statefulset-name>` for resource usage insights.",
+    "source": "web_search",
+    "updated_at": 1781044413.137475
+  },
+  "search:kubernetes-statefulsets-error-handling:advanced kubernetes statefulse_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl logs <pod-name>`\n  - `kubectl exec -it <pod-name> -- /bin/sh`\n\n- **Latest Versions**:\n  - Kubernetes v1.31\n\n- **Key Config Options**:\n  - `spec.template`: Defines the pod template.\n  - `spec.replicas`: Specifies the number of replicas.\n  - `spec.volumeClaimTemplates`: Defines persistent volume claims for each replica.\n  - `spec.serviceName`: Links to a headless service for stable network identities.",
+    "source": "code_example",
+    "updated_at": 1781044421.6439724
+  }
+}

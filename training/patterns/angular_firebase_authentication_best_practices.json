@@ -28,5 +28,20 @@
     "content": "- **CLI Commands**:\n  - `ng new my-angular-app`\n  - `firebase init`\n\n- **Latest Versions**:\n  - Angular CLI: v15.x\n  - Firebase SDK: v9.x\n\n- **Key Config Options**:\n  - Firebase project setup in Firebase Console\n  - Authentication methods (Google, Email/Password)\n  - Security rules for Firestore and Realtime Database",
     "source": "code_example",
     "updated_at": 1780944047.964457
+  },
+  "search:angular-firebase-authentication-best-practices:angular firebase authenticatio": {
+    "content": "- Use `ng new my-angular-app` to create a new Angular project.\n- Install Firebase using `npm install firebase @angular/fire`.\n- Import `provideFirebaseApp, provideAuth` from `@angular/fire/app` and `@angular/fire/auth` in your `app.module.ts`.\n- Configure Firebase by adding the config object in `environment.ts` and use it with `provideFirebaseApp()`.\n- Use `authState` observable to manage user authentication state.\n- For Google sign-in, configure Google provider in Firebase console and use `signInWithPopup()` method.\n- Ensure security rules are set up in Firebase Realtime Database or Firestore for data protection.\n- Update Angular CLI to the latest version using `npm install -g @angular/cli`.\n- Use `ng update` to update your project dependencies to their latest versions.",
+    "source": "web_search",
+    "updated_at": 1781044316.857251
+  },
+  "search:angular-firebase-authentication-best-practices:best practices for angular fir": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/fire`\n  - `npm install firebase`\n\n- **Latest Versions**:\n  - Angular CLI: v15.x\n  - Firebase SDK: v9.x\n  - AngularFire: v7.x\n\n- **Key Config Options**:\n  - Firebase project settings (API keys, auth domain, database URL)\n  - Environment variables for sensitive data (e.g., `environment.ts`)\n  - Authentication providers (email/password, Google, Facebook, etc.)\n  - Firestore rules for data security",
+    "source": "web_search",
+    "updated_at": 1781044339.3302486
+  },
+  "search:angular-firebase-authentication-best-practices:best practices for angular fir_ex": {
+    "content": "- **CLI Commands**:\n  - `ng new my-angular-app`\n  - `firebase init`\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - Firebase SDK: 9.x\n\n- **Key Config Options**:\n  - `environment.ts` for Firebase configuration.\n  - `AngularFireAuthModule` for authentication services.\n  - `Router Guards` for route protection.",
+    "source": "code_example",
+    "updated_at": 1781044345.1503663
   }
 }

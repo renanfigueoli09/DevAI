@@ -1,0 +1,22 @@
+{
+  "search:react-native-performance-optimization-for-ios:react native performance optim": {
+    "content": "- **CLI Commands**: Use `react-native upgrade` to update React Native and its dependencies.\n- **Latest Versions**: Ensure you are using the latest stable version of React Native CLI, which as of my last update is `7.x`.\n- **Key Config Options**:\n  - `metro.config.js`: Customize Metro Bundler settings for faster builds.\n  - `react-native.config.js`: Configure project-specific settings for plugins and libraries.\n  - `Info.plist` (iOS): Adjust settings like `UIBackgroundModes` for better performance in background tasks.",
+    "source": "web_search",
+    "updated_at": 1781044353.7790039
+  },
+  "search:react-native-performance-optimization-for-ios:react native performance optim_ex": {
+    "content": "- **CLI Commands**: Use `react-native upgrade` to keep dependencies up-to-date.\n- **Latest Versions**: React Native v0.72, React v18.2.\n- **Key Config Options**:\n  - `metro.config.js`: Adjust transformer and resolver settings for faster builds.\n  - `react-native.config.js`: Define project-specific configurations like asset paths.\n  - `Info.plist` (iOS): Optimize app icon sizes and other metadata for better performance on iOS devices.",
+    "source": "code_example",
+    "updated_at": 1781044358.7668061
+  },
+  "search:react-native-performance-optimization-for-ios:advanced react native performa": {
+    "content": "- **CLI Commands**:\n  - `react-native upgrade`: Ensures your project is up-to-date.\n  - `react-native link`: Links native modules to your project.\n\n- **Latest Versions**:\n  - React Native: v0.72.0 (as of October 2025)\n  - Expo: v48.0.0 (for managed workflow)\n\n- **Key Config Options**:\n  - `metro.config.js`: Customize Metro bundler settings.\n  - `react-native.config.js`: Define project-specific configurations for React Native CLI.\n  - `Info.plist` and `AndroidManifest.xml`: Adjust platform-specific performance settings.\n\n- **Performance Tips**:\n  - Use `FlatList` instead of `ScrollView` for large lists.\n  - Implement lazy loading to reduce initial render time.\n  - Optimize images with `react-native-fast-image`.\n  - Use `useMemo` and `useCallback` to memoize expensive computations.\n  - Profile your app using React DevTools and Instruments for iOS.",
+    "source": "web_search",
+    "updated_at": 1781044380.328339
+  },
+  "search:react-native-performance-optimization-for-ios:advanced react native performa_ex": {
+    "content": "- **CLI Commands**: `react-native upgrade` to update to the latest version, `react-native link <package-name>` for linking native modules.\n- **Latest Versions**: React Native CLI v6.0, React Native v0.70.0.\n- **Key Config Options**:\n  - `metro.config.js`: For customizing Metro Bundler settings like asset resolution and transformer options.\n  - `react-native.config.js`: To define project-specific configurations for libraries that use CocoaPods or Carthage.\n  - `Info.plist` (iOS): For setting app metadata, permissions, and other iOS-specific configurations.",
+    "source": "code_example",
+    "updated_at": 1781044386.451891
+  }
+}
