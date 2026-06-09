@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+kotlin:spring boot kotlin rest api 20": {
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=web,data-jpa,actuator,kotlin-reactive-web my-spring-boot-kotlin-app`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kotlin: 1.6.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection, server port, etc.\n  - Use `@SpringBootApplication` to enable auto-configuration and component scanning.\n  - Configure data source in `application.properties` with properties like `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`.\n  - Enable Swagger documentation by adding `springfox-swagger2` and `springfox-swagger-ui` dependencies.",
+    "source": "web_search",
+    "updated_at": 1781037207.0590014
+  },
+  "search:spring-boot+kotlin:spring boot kotlin rest api 20_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Kotlin: 1.9.x\n  - Spring Boot: 3.2.x\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, database URL, etc.\n  - `@RestController` and `@RequestMapping`: Define REST endpoints.\n  - `@Autowired`: Dependency injection for services and repositories.\n  - `@Entity`, `@Repository`, `@Service`: Annotations for data access and business logic.",
+    "source": "code_example",
+    "updated_at": 1781037211.566216
+  },
+  "search:spring-boot+kotlin:kotlin coroutines in spring bo": {
+    "content": "- **CLI Commands**:\n  - `./gradlew bootRun` to run Spring Boot application.\n  - `./gradlew build` to build the project.\n\n- **Latest Versions**:\n  - Kotlin: 2.3.4\n  - Spring Boot: 2025.1.0\n  - R2DBC: 0.8.6.RELEASE\n\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for the database.\n  - `spring.r2dbc.username`: Database username.\n  - `spring.r2dbc.password`: Database password.\n  - `spring.r2dbc.pool.max-size`: Maximum size of the connection pool.",
+    "source": "web_search",
+    "updated_at": 1781037218.4265115
+  },
+  "search:spring-boot+kotlin:kotlin coroutines in spring bo_ex": {
+    "content": "- **CLI Commands**:\n  - `./gradlew bootRun` to run Spring Boot application.\n  - `./gradlew build` to build the project.\n\n- **Latest Versions**:\n  - Kotlin: 1.9.x\n  - Spring Boot: 2025 (as of now, this is a future version)\n\n- **Key Config Options**:\n  - `spring.main.task-executor.core-pool-size`: Defines the core pool size for task execution.\n  - `spring.main.task-executor.max-pool-size`: Defines the maximum pool size for task execution.\n  - `spring.main.task-executor.queue-capacity`: Defines the capacity of the queue used by the task executor.",
+    "source": "code_example",
+    "updated_at": 1781037224.418628
+  }
+}
