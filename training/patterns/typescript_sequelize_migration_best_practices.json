@@ -1,0 +1,17 @@
+{
+  "search:typescript-sequelize-migration-best-practices:typescript sequelize migration": {
+    "content": "- Use Sequelize CLI for database migrations.\n- Install `sequelize-cli-typescript` for TypeScript support.\n- Initialize migrations using `npx sequelize-cli init-ts`.\n- Run migrations with `npx sequelize-cli db:migrate`.\n- Revert migrations with `npx sequelize-cli db:migrate:undo`.\n- Key config options in `config/config.ts`: `username`, `password`, `database`, `host`, `dialect`.\n- Ensure TypeScript is installed and configured in your project.\n- Use `ts-node` for running Sequelize CLI commands if necessary.",
+    "source": "web_search",
+    "updated_at": 1781030968.7444205
+  },
+  "search:typescript-sequelize-migration-best-practices:best practices for managing ty": {
+    "content": "- **CLI Commands**:\n  - `npx sequelize-cli init` to initialize Sequelize.\n  - `npx sequelize-cli model:create --name User --attributes username:string,email:string,password:string` to create a new model.\n  - `npx sequelize-cli db:migrate` to apply migrations.\n  - `npx sequelize-cli db:migrate:undo` to undo the last migration.\n\n- **Latest Versions**:\n  - Sequelize CLI: v6.4.1\n  - Umzug (migration library): v2.0.0\n\n- **Key Config Options**:\n  - `config/config.json`: Define database connection details.\n  - `models/User.ts`: Define model attributes and associations.\n  - `migrations/xxxx_xx_xx_create_user.js`: Write migration scripts for schema changes.",
+    "source": "web_search",
+    "updated_at": 1781031010.227064
+  },
+  "search:typescript-sequelize-migration-best-practices:best practices for managing ty_ex": {
+    "content": "- Use `sequelize-cli` version 6.3.5 or later.\n- Initialize Sequelize with TypeScript using the command: `npx sequelize-cli init --type ts`.\n- Configure `config/config.json` for database connection details.\n- Create migrations using: `npx sequelize-cli migration:generate --name create-users-table`.\n- Apply migrations with: `npx sequelize-cli db:migrate`.\n- Rollback migrations with: `npx sequelize-cli db:migrate:undo`.\n- Key config options include `dialect`, `host`, `username`, and `password`.",
+    "source": "code_example",
+    "updated_at": 1781031016.3338356
+  }
+}

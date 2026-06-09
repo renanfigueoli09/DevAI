@@ -1,0 +1,12 @@
+{
+  "search:java-spring-boot-caching:java spring boot caching strat": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `mvn spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Maven: 4.0.0\n\n- **Key Config Options**:\n  - `spring.cache.type`: Specifies the cache type (e.g., `simple`, `caching-provider`)\n  - `spring.cache.cache-names`: Comma-separated list of cache names to be created\n  - `spring.cache.cache-manager`: Fully qualified name of the CacheManager bean",
+    "source": "web_search",
+    "updated_at": 1781031035.3633473
+  },
+  "search:java-spring-boot-caching:java spring boot caching strat_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the Spring Boot application.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x (as of my last update)\n  - Cache Manager: Spring Framework's ConcurrentMapCacheManager\n\n- **Key Config Options**:\n  - `@EnableCaching`: Enables caching in a Spring Boot application.\n  - `cache.type=CONCURRENT_MAP`: Specifies the cache manager type to use, e.g., in-memory cache.\n  - `spring.cache.cache-names`: Comma-separated list of cache names to be created automatically.",
+    "source": "code_example",
+    "updated_at": 1781031041.6315203
+  }
+}

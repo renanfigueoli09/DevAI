@@ -1,0 +1,22 @@
+{
+  "search:golang-redis-performance:golang redis performance optim": {
+    "content": "- Use `go-redis` version 9.12 or later for optimal performance.\n- Set custom buffer sizes using the `-bufsize` flag, e.g., `go run main.go -bufsize=32768`.\n- Connect to Redis server in Go applications using `go-redis/client/v7`.\n- Perform essential database operations like GET, SET, DEL using `go-redis/client/v7`.\n- Use Redis as a cache for Golang REST API by storing frequently accessed data.\n- Integrate Redis with Docker and Kubernetes for more flexible and scalable environments.",
+    "source": "web_search",
+    "updated_at": 1781030915.344921
+  },
+  "search:golang-redis-performance:golang redis performance optim_ex": {
+    "content": "- Use `go get github.com/go-redis/redis/v8` to install the latest version of the Redis Go client.\n- Configure buffer sizes using `ReadBufferSize` and `WriteBufferSize` in your Redis client configuration:\n  ```go\n  rdb := redis.NewClient(&redis.Options{\n      Addr:     \"localhost:6379\",\n      Password: \"\", // no password set\n      DB:       0,  // use default DB\n      ReadBufferSize:  32 * 1024,\n      WriteBufferSize: 32 * 1024,\n  })\n  ```\n- For high-throughput applications or large pipelines, adjust buffer sizes as needed.\n- Use `redis.Pipelined` for batch operations to improve performance:\n  ```go\n  var pipe redis.Pipeline\n  err := rdb.Pipelined(ctx, func(pipe redis.Pipeliner) error {\n      pipe.Set(ctx, \"key\", \"value\", 0)\n      pipe.Get(ctx, \"key\")\n      return nil\n  })\n  ```\n- Monitor and tune Redis performance using tools like `redis-cli --stat` or third-party monitoring solutions.\n- Consider using Redis Cluster for distributed caching to handle large datasets and high traffic.",
+    "source": "code_example",
+    "updated_at": 1781030926.878402
+  },
+  "search:golang-redis-performance:golang redis benchmarking best": {
+    "content": "- Use `redis-benchmark-go` for benchmarking Redis in Go.\n- Command: `$ redis-benchmark-go --help`\n- Flags:\n  - `-a string`: Password for Redis Auth.\n  - `-c uint`: Number of clients (default 50).\n  - `-d uint`: Data size of the expanded string `__data__`.\n- Latest version: Check GitHub repository for the most recent release.\n- Key config options include setting the number of clients and data size to tailor benchmarks to specific use cases.",
+    "source": "web_search",
+    "updated_at": 1781030933.8341706
+  },
+  "search:golang-redis-performance:golang redis benchmarking best_ex": {
+    "content": "- Use `redis-benchmark` tool for benchmarking Redis in Go.\n- Example command: `redis-benchmark -d 10 -t get,set`.\n- Ensure you have the latest version of the `go-redis` client library, typically found on GitHub.\n- Key configuration options include `-d` (duration), `-t` (tests to run), and `-q` (quiet mode).\n- Monitor applications using tools like Uptrace for automatic alerts via email, Slack, Telegram.",
+    "source": "code_example",
+    "updated_at": 1781030941.0656064
+  }
+}

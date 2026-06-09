@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-logging:ruby on rails logging patterns": {
+    "content": "- **CLI Commands**:\n  - `rails server`: Starts the Rails development server.\n  - `rails console`: Opens the Rails interactive console.\n  - `rails generate`: Generates new code, such as models or controllers.\n\n- **Latest Versions**:\n  - Ruby on Rails 7.1\n\n- **Key Config Options**:\n  - `config.log_level`: Sets the log level (e.g., `:debug`, `:info`, `:warn`).\n  - `config.logger`: Specifies a custom logger.\n  - `config.log_formatter`: Defines how logs are formatted.\n  - `config.log_tags`: Adds tags to log messages for better filtering.",
+    "source": "web_search",
+    "updated_at": 1781031088.2466495
+  },
+  "search:ruby-on-rails-logging:ruby on rails logging patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `rails server`: Runs the Rails development server.\n  - `rails console`: Opens an interactive Ruby shell for your application.\n\n- **Latest Versions**:\n  - Ruby on Rails 7.1\n\n- **Key Config Options**:\n  - `config.log_level`: Sets the log level (e.g., `:debug`, `:info`, `:warn`).\n  - `config.logger`: Specifies a custom logger class.\n  - `config.log_formatter`: Defines how logs are formatted.\n\nFor structured logging, consider using gems like **Semantic Logger** or **Logcraft**.",
+    "source": "code_example",
+    "updated_at": 1781031110.5771012
+  },
+  "search:ruby-on-rails-logging:best practices for ruby on rai": {
+    "content": "- Use `rails log:clear` to clear the logs.\n- Set log level in `config/environments/development.rb`: `config.log_level = :debug`.\n- Utilize `Rails.logger.info`, `Rails.logger.warn`, etc., for different log levels.\n- Configure log rotation with `logrotate` or similar tools.\n- Use `ActiveSupport::Notifications` for custom logging.\n- Implement structured logging using libraries like `json_logger`.\n- Monitor logs in real-time with tools like Loggly, SigNoz.\n- Regularly review and clean up old logs to prevent disk space issues.",
+    "source": "web_search",
+    "updated_at": 1781031118.547485
+  },
+  "search:ruby-on-rails-logging:best practices for ruby on rai_ex": {
+    "content": "- **CLI Commands**:\n  - `rails new app_name --api`: Create a new Rails API application.\n  - `rails generate scaffold ModelName attribute:type`: Generate a model, views, and controller.\n\n- **Latest Versions**:\n  - Ruby on Rails: 8.1\n\n- **Key Config Options**:\n  - `config.log_level = :debug` in `config/environments/development.rb` for detailed logs.\n  - `config.logger = ActiveSupport::Logger.new(STDOUT)` to log to the console.\n  - `config.log_formatter = ::Logger::Formatter.new` for standard log formatting.",
+    "source": "code_example",
+    "updated_at": 1781031126.9672241
+  }
+}
