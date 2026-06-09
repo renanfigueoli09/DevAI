@@ -1,8 +1,8 @@
 {
   "search:spring-boot-kotlin-jpa:spring boot kotlin jpa 2025": {
-    "content": "- **Upgrade IntelliJ IDEA**: To version 2025.3 to benefit from Kotlin 2 support.\n- **Spring Boot Version**: 4.0\n- **Kotlin Version**: 2.2\n- **Dependencies**:\n  - `spring-boot-starter-data-jpa`\n  - `kotlin-reflect`\n- **CLI Commands**:\n  ```bash\n  ./gradlew build --refresh-dependencies\n  ```\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - Entity classes annotated with JPA annotations like `@Entity`, `@Id`, etc.\n  - Repository interfaces extending `JpaRepository` or `CrudRepository`.",
+    "content": "- **Maven Central:** `dev.mbo:spring-kotlin-jpa:2025.7.7`\n- **Spring Boot Tutorial for Beginners [2025]:** Available on YouTube\n- **GitHub Repository:** `thorlauridsen/spring-boot-kotlin-jpa`\n- **Key Config Options:**\n  - `spring.datasource.url`\n  - `spring.datasource.username`\n  - `spring.datasource.password`\n  - `spring.jpa.hibernate.ddl-auto`\n- **CLI Commands:**\n  ```bash\n  mvn clean install\n  ./gradlew build\n  ```\n- **Latest Versions:** Check Maven Central for the latest version of `dev.mbo:spring-kotlin-jpa`.\n- **Spring Boot Version:** Spring Boot 3.0 (as of 2025)\n- **Kotlin Module:** Jackson Kotlin module for JSON serialization and deserialization.\n- **Swagger Documentation:** Provided by Springdoc for API documentation.",
     "source": "web_search",
-    "updated_at": 1780943587.263391
+    "updated_at": 1780968616.2550309
   },
   "search:spring-boot-kotlin-jpa:spring boot kotlin jpa 2025_ex": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `./gradlew bootRun`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Kotlin: 1.8.x\n  - JPA: 2.2\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database configurations.\n  - `@EntityScan`, `@EnableJpaRepositories`, and `DataSource` bean definitions in Spring Boot configuration classes.\n  - Repository interfaces extending `JpaRepository` or `CrudRepository`.",

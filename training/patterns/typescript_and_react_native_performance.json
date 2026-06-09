@@ -1,22 +1,32 @@
 {
   "search:TypeScript and React Native Performance:typescript react native perfor": {
-    "content": "- Use `react-native init` to create a new project.\n- Update React Native to the latest version using `npx react-native upgrade`.\n- Optimize FlatList performance by avoiding inline functions and using keys.\n- Enable Hermes engine for better performance with `hermes-engine-android` and `hermes-engine-ios`.\n- Utilize `react-native-reanimated` for smooth animations.\n- Implement lazy loading in images with libraries like `react-native-fast-image`.\n- Use `react-native-screens` to improve navigation performance.\n- Monitor app performance using React Native Performance Monitor or similar tools.\n- Ensure proper state management to avoid unnecessary re-renders.",
+    "content": "- **CLI Commands**:\n  - `npx react-native performance`\n  - `npx react-native optimize`\n\n- **Latest Versions**:\n  - React Native: v0.72.3\n  - TypeScript: v5.1.6\n\n- **Key Config Options**:\n  - `metro.config.js`: Adjusts Metro bundler settings for better performance.\n  - `react-native.config.js`: Customizes React Native project configuration.\n  - `tsconfig.json`: TypeScript compiler options for optimization.",
     "source": "web_search",
-    "updated_at": 1780942546.164393
+    "updated_at": 1780969563.9836638
   },
   "search:TypeScript and React Native Performance:typescript react native perfor_ex": {
-    "content": "- **CLI Commands**:\n  - `npx react-native init MyProject --template typescript`\n  - `npm install @react-navigation/native`\n  - `npm install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`\n\n- **Latest Versions**:\n  - React Native: v0.69\n  - TypeScript: v4.7\n\n- **Key Config Options**:\n  - `metro.config.js`: Configure Metro bundler for better performance.\n  - `react-native.config.js`: Define project-specific configurations.\n  - `tsconfig.json`: Adjust TypeScript settings for optimal build times and code quality.\n\n- **Performance Optimization Tips**:\n  - Use `React.memo` for functional components to prevent unnecessary re-renders.\n  - Implement lazy loading with `React.lazy` and `Suspense`.\n  - Optimize images using libraries like `react-native-fast-image`.\n  - Use `useCallback` and `useMemo` to memoize functions and values.",
+    "content": "- **CLI Commands**:\n  - `npx react-native upgrade`: To keep your project up-to-date.\n  - `react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/`\n\n- **Latest Versions**:\n  - React Native: v0.71\n  - TypeScript: v4.8\n\n- **Key Config Options**:\n  - `metro.config.js`: For customizing Metro bundler settings.\n    ```javascript\n    module.exports = {\n      transformer: {\n        getTransformOptions: async () => ({\n          transform: {\n            experimentalImportSupport: false,\n            inlineRequires: true,\n          },\n        }),\n      },\n    };\n    ```\n  - `react-native.config.js`: For configuring React Native CLI plugins.\n    ```javascript\n    module.exports = {\n      dependencies: {\n        'react-native': {\n          platforms: {\n            ios: null, // disable iOS platform\n          },\n        },\n      },\n    };\n    ```\n\n- **Performance Optimization Tips**:\n  - Use `FlatList` for large lists and set `keyExtractor`.\n  - Implement `shouldComponentUpdate` or use `React.memo` for functional components.\n  - Avoid unnecessary re-renders by using `useCallback` and `useMemo`.",
     "source": "code_example",
-    "updated_at": 1780942548.0348752
+    "updated_at": 1780969581.667775
   },
   "search:TypeScript and React Native Performance:react native state management ": {
-    "content": "- **CLI Commands**: \n  - `npx react-native init <ProjectName>`\n  - `npm install --save @react-navigation/native`\n  - `npm install --save @react-navigation/stack`\n\n- **Latest Versions**:\n  - React Native: v0.71.2\n  - React Navigation: v6.0.0\n\n- **Key Config Options**:\n  - `initialRouteName`: Specifies the initial route to display.\n  - `headerShown`: Controls whether the header is shown or not.\n  - `stackPresentation`: Defines how the stack should be presented (modal, card).",
+    "content": "- **CLI Commands**: `npx react-native init MyProject`\n- **Latest Versions**:\n  - React Native: v0.72.6\n  - Redux Toolkit: v1.8.5\n  - Zustand: v4.3.9\n  - Jotai: v2.0.0\n  - React Query: v3.39.3\n- **Key Config Options**:\n  - For Redux Toolkit, use `configureStore` for setting up the store.\n  - For Zustand, initialize with a state object.\n  - For Jotai, create atoms to manage state.\n  - For React Query, use `useQuery` and `useMutation` hooks.",
     "source": "web_search",
-    "updated_at": 1780942549.9885364
+    "updated_at": 1780969589.4061954
   },
   "search:TypeScript and React Native Performance:react native state management _ex": {
-    "content": "- **CLI Commands**:\n  - `npx create-react-native-app my-app`\n  - `npm install @pmndrs/zustand`\n\n- **Latest Versions**:\n  - React Native: v0.68.x\n  - Zustand: v4.3.x\n\n- **Key Config Options**:\n  - For Zustand, initialize a store with `create` function.\n  - Use hooks like `useStore` to access and update state within components.",
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyProject`\n  - `npm install react-hook-form`\n\n- **Latest Versions**:\n  - React Native: 0.69.x\n  - React Hook Form: 7.x\n\n- **Key Config Options**:\n  - In React Native, use `useState` for state management.\n  - For form validation with React Hook Form, configure the `useForm` hook with options like `mode`, `resolver`, and `defaultValues`.",
     "source": "code_example",
-    "updated_at": 1780942552.1613033
+    "updated_at": 1780969594.218859
+  },
+  "search:TypeScript and React Native Performance:react native testing strategie": {
+    "content": "- **CLI Commands**: Use `expo init` to create a new React Native project.\n- **Latest Versions**: Ensure you are using the latest versions of Jest, React Testing Library, and React Native.\n- **Key Config Options**:\n  - Configure Jest in your `package.json` with `\"jest\": { \"preset\": \"react-native\" }`.\n  - Use `react-native-testing-library` for rendering components and interacting with them.\n  - Mock AsyncStorage using `jest.mock('react-native-async-storage', () => ({ getItem: jest.fn(), setItem: jest.fn() }));`.",
+    "source": "web_search",
+    "updated_at": 1780969601.352031
+  },
+  "search:TypeScript and React Native Performance:react native testing strategie_ex": {
+    "content": "- **CLI Commands**:\n  - `react-native test`: Runs tests using Jest.\n  - `jest --watchAll`: Watches all files for changes and runs tests on file save.\n\n- **Latest Versions**:\n  - React Native: v0.71.x\n  - Jest: v29.x\n\n- **Key Config Options**:\n  - `testMatch`: Specifies patterns of test files to be run.\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the Jest environment has been set up.\n  - `transformIgnorePatterns`: Patterns for files to ignore during transformation.",
+    "source": "code_example",
+    "updated_at": 1780969616.095468
   }
 }

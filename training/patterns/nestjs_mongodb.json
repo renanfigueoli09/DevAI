@@ -1,18 +1,18 @@
 {
   "pattern:nestjs+mongodb:schema": {
-    "content": "// schema.ts: @Schema({timestamps:true}) class Book { @Prop({required:true}) title!: string; @Prop() description?: string; } // required→!, optional→?",
+    "content": "// book.schema.ts — CORRECT Mongoose NestJS pattern\nimport { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\nimport { HydratedDocument } from 'mongoose';  // HydratedDocument, NOT Document\n\nexport type BookDocument = HydratedDocument<Book>;  // NOT Book & Document\n\n@Schema({ timestamps: true })\nexport class Book {  // MUST have export keyword\n  @Prop({ required: true }) title!: string;   // required → ! (non-null assertion)\n  @Prop({ required: true }) author!: string;  // required → !\n  @Prop() description?: string;               // optional → ?\n  @Prop({ default: true }) isActive?: boolean; // optional with default → ?\n}\nexport const BookSchema = SchemaFactory.createForClass(Book);\n// RULES: 1) export class 2) HydratedDocument not Document 3) required=! optional=?",
     "source": "code_pattern",
-    "updated_at": 1780943716.0586038
+    "updated_at": 1780966327.982959
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780943717.1240673
+    "updated_at": 1780966329.1817405
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780943718.3213665
+    "updated_at": 1780966331.8846939
   },
   "qa:mongoose-required-bang": {
     "content": "@Prop({required:true}) → field!: string  (! = required, NON-NULL ASSERTION)\n@Prop() → field?: string  (? = optional)\nNEVER: @Prop({required:true}) field?: string  (WRONG)\nNEVER: @Prop({required:true}) field: string   (WRONG, needs !)\nRULE: required=! | optional=? | NO EXCEPTIONS",

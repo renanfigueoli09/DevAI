@@ -1,8 +1,8 @@
 {
   "search:spring-boot+jpa-batch:spring boot jpa batch processi": {
-    "content": "- **CLI Commands**: Use `mvn clean install` for building the project.\n- **Latest Versions**: Spring Boot 3.2, Spring Data JPA 2.7.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Hibernate: 6.2.0.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=100`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
     "source": "web_search",
-    "updated_at": 1780943124.1073654
+    "updated_at": 1780969153.149422
   },
   "search:spring-boot+jpa-batch:spring boot jpa batch processi_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Data JPA: 3.2.5\n  - H2 Database: 1.4.200\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection details.\n  - `@EnableBatchProcessing` annotation in main class.\n  - `JobBuilderFactory` and `StepBuilderFactory` for defining batch jobs and steps.\n  - `ItemReader`, `ItemProcessor`, and `ItemWriter` interfaces for customizing data processing logic.",
@@ -10,13 +10,13 @@
     "updated_at": 1780943126.2931151
   },
   "search:spring-boot+jpa-batch:batch processing with spring b": {
-    "content": "- **CLI Commands**: `mvn spring-boot:run` to run Spring Boot application.\n- **Latest Versions**: Spring Boot 3, Spring Data JPA 2.7.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` for building and packaging the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0 (as of my last update)\n  - Spring Data JPA: 3.1.0\n  - Spring Batch: 5.0.0\n\n- **Key Config Options**:\n  - `@EnableBatchProcessing`: Enables Spring Batch processing.\n  - `JobRepository`: Manages the state and metadata of batch jobs.\n  - `JobLauncher`: Executes batch jobs.\n  - `ItemReader`, `ItemProcessor`, `ItemWriter`: Components for reading, processing, and writing data.\n\n- **Performance Tips**:\n  - Use `@EnableTransactionManagement` to manage transactions efficiently.\n  - Configure `BatchConfigurer` for custom job repository and job launcher.\n  - Optimize database queries using `@QueryHint`.\n\nThese points should help developers set up and optimize batch processing in Spring Boot with JPA.",
     "source": "web_search",
-    "updated_at": 1780943128.1437256
+    "updated_at": 1780969176.8296103
   },
   "search:spring-boot+jpa-batch:batch processing with spring b_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` for building and packaging the project.\n\n- **Latest Versions**:\n  - Spring Boot 3.0.x (as of my last update)\n  - JPA 2.2\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.batch.job.enabled=true`\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Batch: 5.1.0\n  - JPA (Hibernate): 6.2.0\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, batch job parameters.\n  - `@EnableBatchProcessing`: Enables Spring Batch processing capabilities.\n  - `JobBuilderFactory` and `StepBuilderFactory`: Used to define jobs and steps.\n  - `ItemReader`, `ItemProcessor`, `ItemWriter`: Define the data reading, processing, and writing logic.",
     "source": "code_example",
-    "updated_at": 1780943130.4085298
+    "updated_at": 1780969183.5391138
   }
 }

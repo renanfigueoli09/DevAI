@@ -1,12 +1,22 @@
 {
   "search:fastapi+celery-rabbitmq:celery rabbitmq for distribute": {
-    "content": "- **Install Celery and RabbitMQ**:\n  ```bash\n  pip install celery\n  sudo apt-get install rabbitmq-server\n  ```\n\n- **Configure Celery with RabbitMQ**:\n  - Set `broker_url` to `amqp://localhost`\n  - Set `result_backend` to `rpc://localhost`\n\n- **Create a Celery app**:\n  ```python\n  from celery import Celery\n\n  app = Celery('tasks', broker='amqp://localhost', backend='rpc://localhost')\n  ```\n\n- **Define a task**:\n  ```python\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n\n- **Run the Celery worker**:\n  ```bash\n  celery -A app worker --loglevel=info\n  ```\n\n- **Call the task asynchronously**:\n  ```python\n  result = add.delay(4, 6)\n  print(result.get(timeout=1))\n  ```\n\n- **Install FastAPI and Uvicorn**:\n  ```bash\n  pip install fastapi uvicorn\n  ```\n\n- **Create a FastAPI app**:\n  ```python\n  from fastapi import FastAPI\n\n  app = FastAPI()\n\n  @app.post(\"/add/\")\n  async def add_numbers(x: int, y: int):\n      result = add.delay(x, y)\n      return {\"task_id\": result.id}\n  ```\n\n- **Run the FastAPI server**:\n  ```bash\n  uvicorn main:app --reload\n  ```\n\n- **Monitor tasks**:\n  - Use Celery Flower for real-time monitoring.\n  - Install and run Flower:\n    ```bash\n    pip install flower\n    celery -A app flower\n    ```\n  - Access Flower at `http://localhost:5555`",
+    "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.2.7\n  - RabbitMQ: 3.8.14\n\n- **Key Config Options**:\n  - Broker URL: `broker_url = 'amqp://guest@localhost//'`\n  - Result Backend: `result_backend = 'rpc://'`\n  - Task Queue Name: `task_queue_name = 'tasks'`",
     "source": "web_search",
-    "updated_at": 1780939681.7269545
+    "updated_at": 1780969215.8177466
   },
   "search:fastapi+celery-rabbitmq:celery rabbitmq for distribute_ex": {
-    "content": "- **CLI Commands**:\n  - `celery -A app worker --loglevel=info`\n  - `celery -A app beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.87.0\n  - Celery: 5.2.3\n  - RabbitMQ: 3.11.4\n\n- **Key Config Options**:\n  - `app.conf.broker_url = 'amqp://guest@localhost//'`\n  - `app.conf.result_backend = 'rpc://'`",
+    "content": "- **Install Celery**: `pip install celery`\n- **Install FastAPI**: `pip install fastapi`\n- **Install RabbitMQ**: Download and install from [RabbitMQ official site](https://www.rabbitmq.com/download.html)\n- **Configure Celery**:\n  - Create a file named `celery.py` with the following content:\n    ```python\n    from celery import Celery\n\n    app = Celery('tasks', broker='amqp://guest@localhost//')\n    ```\n- **Create FastAPI Application**:\n  - Create a file named `main.py` with the following content:\n    ```python\n    from fastapi import FastAPI\n    from celery import Celery\n\n    app = FastAPI()\n    celery_app = Celery('tasks', broker='amqp://guest@localhost//')\n\n    @app.post(\"/enqueue/\")\n    async def enqueue_task():\n        result = celery_app.send_task('tasks.add', args=(4, 6))\n        return {\"task_id\": result.id}\n    ```\n- **Define Celery Task**:\n  - Create a file named `tasks.py` with the following content:\n    ```python\n    from celery import shared_task\n\n    @shared_task\n    def add(x, y):\n        return x + y\n    ```\n- **Run RabbitMQ**: Start RabbitMQ server using the command: `rabbitmq-server`\n- **Run Celery Worker**: Run Celery worker with the command: `celery -A celery_app worker --loglevel=info`\n- **Run FastAPI Application**: Run FastAPI application with the command: `uvicorn main:app --reload`\n\n**Key Config Options**:\n- `broker='amqp://guest@localhost//'`: RabbitMQ broker URL.\n- `result_backend='rpc://'`: Backend to store task results.\n\nThese steps provide a basic setup for using Celery with RabbitMQ and FastAPI. Adjust configurations based on your production environment.",
     "source": "code_example",
-    "updated_at": 1780939684.2464368
+    "updated_at": 1780969227.374958
+  },
+  "search:fastapi+celery-rabbitmq:fastapi celery rabbitmq integr": {
+    "content": "- **CLI Commands**:\n  - `docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management`\n  - `celery -A your_project.celery worker --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - Celery: 5.2.4\n  - RabbitMQ: 3.11.7\n\n- **Key Config Options**:\n  - `broker_url = 'amqp://guest:guest@localhost:5672/'`\n  - `result_backend = 'rpc://'`\n  - `task_serializer = 'json'`\n  - `accept_content = ['json']`",
+    "source": "web_search",
+    "updated_at": 1780969192.3995872
+  },
+  "search:fastapi+celery-rabbitmq:fastapi celery rabbitmq integr_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Celery: 5.2.7\n  - RabbitMQ: 3.8.x\n\n- **Key Config Options**:\n  - `app.config.update({\"broker_url\": \"amqp://guest@localhost//\", \"result_backend\": \"redis://localhost\"})`\n  - `celery.conf.beat_schedule` for periodic tasks",
+    "source": "code_example",
+    "updated_at": 1780969199.5887601
   }
 }

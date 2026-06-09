@@ -2,61 +2,61 @@
   "pattern:error:module-not-found": {
     "content": "// TS2307 './book/book.module' not found: CREATE src/book/book.module.ts with @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780943741.3680696
+    "updated_at": 1780966357.6687903
   },
   "pattern:error:findOneBy-mongoose": {
     "content": "// TS2551 Model.findOneBy does not exist: findOneBy is TypeORM-only. Mongoose uses: findById(id), findOne({field:value}), findByIdAndUpdate, findByIdAndDelete. NEVER use findOneBy with Mongoose.",
     "source": "code_pattern",
-    "updated_at": 1780943742.6407444
+    "updated_at": 1780966358.9577518
   },
   "pattern:error:partialtype": {
     "content": "// PartialType import: ALWAYS from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist there). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import {PartialType} from '@nestjs/mapped-types'",
     "source": "code_pattern",
-    "updated_at": 1780943743.7439861
+    "updated_at": 1780966360.2896113
   },
   "qa:ts2307-create-module": {
     "content": "TS2307 Cannot find module './book/book.module': CREATE src/book/book.module.ts\n@Module({\n  imports: [MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],\n  providers: [BookService], controllers: [BookController], exports: [BookService]\n}) export class BookModule {}",
     "source": "critical_pattern",
-    "updated_at": 1780964662.427849
+    "updated_at": 1780966206.554395
   },
   "search:common+errors:nestjs ts2307 ts2339 ts2551 ty": {
-    "content": "- Install Node.js type definitions using `npm install @types/node --save-dev`\n- Use the correct import statement for 'events': `import { EventEmitter } from 'events';`\n- For Vue project errors, ensure TypeScript is properly configured in `tsconfig.json` and check for missing imports.\n- Update NestJS to the latest version using `npm update @nestjs/core`.\n- Check Nuxt 3 build logs for specific error messages and resolve them accordingly.\n- Use `tsc --watch` during development for real-time type checking.\n- Ensure all dependencies are up-to-date with `npm update`.\n- Review TypeScript configuration in `tsconfig.json`, especially `compilerOptions`.\n- For Vue project, use `vue-tsc` instead of `tsc` for better compatibility.",
+    "content": "- **CLI Commands**:\n  - `ng serve` to restart the Angular server.\n  - `yarn add @types/node@12 --dev --tilde` to install Node.js type definitions.\n\n- **Latest Versions**:\n  - TypeScript: Latest version as of my last update (not specified in the search results).\n  - Angular CLI: Latest version as of my last update (not specified in the search results).\n\n- **Key Config Options**:\n  - No specific config options mentioned in the search results.",
     "source": "web_search",
-    "updated_at": 1780941588.2545364
+    "updated_at": 1780966555.120146
   },
   "search:common+errors:nestjs ts2307 ts2339 ts2551 ty_ex": {
-    "content": "- **CLI Commands**:\n  - `npm install --save-dev @types/node`\n  - `npm install --save-dev @nestjs/cli`\n\n- **Latest Versions**:\n  - TypeScript: v5.x\n  - NestJS: v10.x\n\n- **Key Config Options**:\n  - `tsconfig.json`: Ensure `moduleResolution` is set to `node`.\n  - `nest-cli.json`: Configure the project root and other options.\n  - `.env`: Define environment variables for configuration.",
+    "content": "- **CLI Commands**:\n  - `npm install typescript --save-dev`\n  - `npx tsc --init` to create a `tsconfig.json`\n\n- **Latest Versions**:\n  - TypeScript 5.x\n\n- **Key Config Options**:\n  - `\"strict\": true` for enabling all strict type-checking options\n  - `\"esModuleInterop\": true` for compatibility with CommonJS/AMD modules\n  - `\"skipLibCheck\": true` to skip type checking of declaration files",
     "source": "code_example",
-    "updated_at": 1780941590.5886722
+    "updated_at": 1780966560.0231469
   },
   "search:common+errors:mongoose findoneby does not ex": {
-    "content": "- **Latest Mongoose Version**: v9.6.3\n- **Key Config Options**:\n  - `useNewUrlParser`: Set to true for MongoDB connection.\n  - `useUnifiedTopology`: Set to true for MongoDB topology management.\n- **Actionable CLI Commands**:\n  - To install the latest version of Mongoose: `npm install mongoose@latest`\n  - To update your project's Mongoose dependency in `package.json` and run the installation: `npm update mongoose`\n- **Fixing `findById()` Issues**:\n  - Ensure you are using the correct syntax for `findById()`. Example: `Model.findById(id).exec()`\n  - Check if the document exists by logging the result after executing the query.\n- **Adopting Async/Await**:\n  - Replace callback-based queries with async/await. Example:\n    ```javascript\n    const doc = await Model.findById(id);\n    ```\n  - Handle errors using try/catch blocks around your async code.",
+    "content": "- Ensure you are using Mongoose version 9.6.3 or later.\n- Use `findById()` method correctly by passing a valid MongoDB ObjectId as the argument.\n- Check if the document exists in the database before calling `findById()`.\n- Verify that the ID passed to `findById()` is not null or undefined.\n- Ensure that the collection name and model are correctly defined.\n- If using Mongoose v9.6.3, be aware of casting behavior on update operations.\n- Use `findOne()` instead if you need more complex query conditions.\n- Check for middleware interference that might affect findById() operation.\n- Review error messages for clues on what might be going wrong with the findById() call.",
     "source": "web_search",
-    "updated_at": 1780941592.9167583
+    "updated_at": 1780966569.5498896
   },
   "search:common+errors:mongoose findoneby does not ex_ex": {
-    "content": "- Use `Model.findById()` instead of `findOneById()`.\n- Ensure you have the latest version of Mongoose installed.\n- The `_id` field is used to identify documents in MongoDB.\n- No additional middleware is triggered by `findById()`.\n- Replace `findOneById(id)` with `findById(id)`.",
+    "content": "- Ensure you are using the latest version of Mongoose.\n- Use `findById` correctly by passing a valid MongoDB ObjectId as an argument.\n- Check if your schema includes an `_id` field, even though it's usually auto-generated.\n- Refer to the official Mongoose documentation for any specific issues or updates: [Mongoose Documentation](http://mongoosejs.com/docs/)\n- If encountering \"DocumentNotFoundError\" with invalid IDs, this is a known bug and will be fixed in future releases.",
     "source": "code_example",
-    "updated_at": 1780941594.9888184
+    "updated_at": 1780966575.629669
   },
   "search:common+errors:nestjs module missing app.modu": {
-    "content": "- Ensure `node_modules` is clean and up-to-date by running:\n  ```bash\n  rm -rf node_modules package-lock.json\n  npm install\n  ```\n- Verify the latest versions of NestJS packages:\n  ```bash\n  npm install @nestjs/core@latest @nestjs/common@latest\n  ```\n- Check for circular imports in barrel files.\n- Ensure all modules are correctly exported and imported.",
+    "content": "- Install the latest version of `@nestjs/core` and `@nestjs/common` using npm:\n  ```bash\n  npm install @nestjs/core @nestjs/common --save\n  ```\n- Ensure that your `app.module.ts` file is correctly importing the necessary modules from `@nestjs/core`.\n- If you encounter issues with specific internal modules (services, controllers), verify their export statements in their respective files.\n- Check for any typos in module names or paths within your import statements.",
     "source": "web_search",
-    "updated_at": 1780941596.86261
+    "updated_at": 1780966593.4600992
   },
   "search:common+errors:nestjs module missing app.modu_ex": {
-    "content": "- Ensure your module is correctly exported in its respective file.\n- Use the command `npm install <module-name>` to add missing modules to your `node_modules` directory and update your `package.json`.\n- For internal modules like services or controllers, verify they are properly exported using decorators like `@Injectable()` or `@Controller()`.\n- If deploying to production, consider using generic services for consistency and reduce boilerplate.\n- For alias paths in NestJS v9, ensure you have configured the `paths` option in your `tsconfig.json` file. Example:\n  ```json\n  \"compilerOptions\": {\n    \"baseUrl\": \".\",\n    \"paths\": {\n      \"@/*\": [\"src/*\"]\n    }\n  }\n  ```\n- Use the command `npm install --save-dev @types/node` to ensure you have type definitions for Node.js.\n- Check your `app.module.ts` file for any typos or incorrect module imports.\n- Ensure all dependencies are correctly listed in your `package.json`.\n- If using a monorepo, verify that the module is correctly linked and accessible within your project structure.",
+    "content": "- Ensure `@nestjs/core` and `@nestjs/common` are installed using npm or yarn.\n- Use the NestJS CLI to generate modules, controllers, and services with commands like `nest g module <name>` and `nest g controller <name>`.\n- Verify that your `app.module.ts` file correctly imports all necessary modules and providers.\n- Check for typos in import paths and ensure they match exactly with the installed packages.\n- Update to the latest versions of NestJS and its dependencies using npm or yarn.\n- Review the official NestJS documentation for best practices and examples.\n- Ensure that your `package.json` file includes all required dependencies.\n- Use environment variables for configuration settings to keep sensitive information out of your codebase.",
     "source": "code_example",
-    "updated_at": 1780941599.0725045
+    "updated_at": 1780966600.7663887
   },
   "search:common+errors:partialtype @nestjs/mapped-typ": {
-    "content": "- Use `npm install @nestjs/mapped-types` to install the latest version.\n- Import `PartialType` from `@nestjs/common`.\n- Example usage:\n  ```typescript\n  import { PartialType } from '@nestjs/common';\n\n  export class CreateUserDto {\n    name: string;\n    email: string;\n  }\n\n  export class UpdateUserDto extends PartialType(CreateUserDto) {}\n  ```\n- Ensure you are using the latest version of `@nestjs/common` for compatibility.\n- Check the official NestJS documentation for any breaking changes or updates.",
+    "content": "- Use `npm install @nestjs/mapped-types` to install the latest version.\n- Import `PartialType` from `@nestjs/mapped-types`.\n- Example usage:\n  ```typescript\n  import { PartialType } from '@nestjs/mapped-types';\n  import { CreateRoomDto } from './create-room.dto';\n\n  export class UpdateRoomDto extends PartialType(CreateRoomDto) {}\n  ```\n- Ensure your DTOs are properly typed to maintain metadata.\n- Check NestJS documentation for the latest features and best practices.",
     "source": "web_search",
-    "updated_at": 1780941601.0011463
+    "updated_at": 1780966607.9635122
   },
   "search:common+errors:partialtype @nestjs/mapped-typ_ex": {
-    "content": "- Use `npm install @nestjs/mapped-types` to install the latest version.\n- Import `PartialType` from `@nestjs/common`.\n- Example usage:\n  ```typescript\n  import { PartialType } from '@nestjs/common';\n\n  export class CreateDto {\n    title: string;\n    description: string;\n  }\n\n  export class UpdateDto extends PartialType(CreateDto) {}\n  ```\n- Ensure DTOs are validated using `class-validator` and `class-transformer`.\n- Key config options include:\n  - `@ApiProperty({ required: false })` for optional properties in DTOs.\n  - Use `PartialType`, `PickType`, and `OmitType` to create variants of entity types efficiently.",
+    "content": "- Use `@nestjs/mapped-types` for creating partial types.\n- Install latest `@nestjs/common` and `@nestjs/core`.\n- Import `PartialType` from `@nestjs/mapped-types`.\n- Example usage:\n  ```typescript\n  import { PartialType } from '@nestjs/mapped-types';\n  import { CreateUserDto } from './create-user.dto';\n\n  export class UpdateUserDto extends PartialType(CreateUserDto) {}\n  ```\n- Ensure you have the correct version of `class-validator` and `class-transformer`.\n- Use `npm install @nestjs/common@latest @nestjs/core@latest @nestjs/mapped-types@latest class-validator@latest class-transformer@latest`.",
     "source": "code_example",
-    "updated_at": 1780941603.2152233
+    "updated_at": 1780966615.6454768
   }
 }

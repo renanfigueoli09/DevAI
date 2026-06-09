@@ -2,21 +2,21 @@
   "search:React + Next.js Authentication Best Practices:react nextjs authentication be": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  \n- **Latest Versions**:\n  - Next.js: 13.x\n  \n- **Key Config Options**:\n  - Middleware for authentication: Use `middleware.js` to handle auth routes.\n  - Environment variables for secrets (`NEXTAUTH_URL`, `NEXTAUTH_SECRET`).\n  - Session management with `next-auth`.\n  - Role-based access control (RBAC) using custom hooks and context.",
     "source": "web_search",
-    "updated_at": 1780963514.527769
+    "updated_at": 1780966013.272081
   },
   "search:React + Next.js Authentication Best Practices:react nextjs authentication be_ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `next-auth@5` for authentication.\n- Configure `pages/api/auth/[...nextauth].js` with OAuth providers, credentials, and session management.\n- Implement middleware in `middleware.js` for route protection.\n- Use Role-Based Access Control (RBAC) for fine-grained permissions.\n- Enable magic links for passwordless authentication.\n- Utilize JWT tokens for stateless sessions.",
     "source": "code_example",
-    "updated_at": 1780963516.6122327
+    "updated_at": 1780966015.2034814
   },
   "search:React + Next.js Authentication Best Practices:securing react applications wi": {
     "content": "- **Authentication**: Use Clerk for authentication in Next.js applications.\n- **XSS Prevention**: Implement `next/head` and `react-dom/server` to sanitize HTML content.\n- **CSRF Protection**: Utilize `csrf-nextjs` package for CSRF protection.\n- **Data Handling**: Employ `next-connect` for secure API routes.\n- **Login Screen**: Create a `ProtectedPage` component using Next.js context.\n- **Higher Order Components (HOCs)**: Use HOCs to implement authenticated routes in NextJS.\n- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install clerk`\n  - `npm install csrf-nextjs`\n  - `npm install next-connect`\n- **Latest Versions**: Ensure using the latest versions of Next.js, Clerk, and other dependencies for security updates.\n- **Key Config Options**:\n  - `next.config.js`: Configure server-side rendering options.\n  - `.env.local`: Set environment variables for sensitive information.",
     "source": "web_search",
-    "updated_at": 1780963518.669889
+    "updated_at": 1780966017.273229
   },
   "search:React + Next.js Authentication Best Practices:securing react applications wi_ex": {
     "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Implement authentication using libraries like `next-auth` or `firebase-admin`.\n- Configure environment variables in `.env.local` for sensitive data.\n- Utilize `getServerSideProps` and `getStaticProps` for server-side rendering.\n- Enable HTTPS by setting up SSL certificates.\n- Use Content Security Policy (CSP) to mitigate XSS attacks.\n- Implement rate limiting with middleware like `next-rate-limit`.\n- Regularly update dependencies using `npm outdated` and `npm update`.",
     "source": "code_example",
-    "updated_at": 1780963520.6534274
+    "updated_at": 1780966019.3861682
   }
 }

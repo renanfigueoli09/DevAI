@@ -10,13 +10,13 @@
     "updated_at": 1780942171.2790546
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips": {
-    "content": "- Use `React.memo` to prevent unnecessary re-renders.\n- Implement `useEffect` cleanup to terminate subscriptions and asynchronous tasks.\n- Avoid using `ListView`, opt for more efficient alternatives like `FlatList`.\n- Utilize `react-native-screens` for better performance in navigation.\n- Enable Hermes engine for faster JavaScript execution with `--hermes-engine` flag.\n- Use `react-native-reanimated` for smooth animations.\n- Optimize images by compressing and using appropriate formats.\n- Minimize global state management to reduce re-renders.\n- Use `useCallback` and `useMemo` to memoize functions and values.",
+    "content": "- Use `react-native link` to resolve library dependencies.\n- Implement lazy loading for components using `React.lazy()` and `Suspense`.\n- Optimize images with libraries like `react-native-fast-image`.\n- Enable Hermes engine by setting `\"hermesEnabled\": true` in `android/app/build.gradle`.\n- Use `FlatList` instead of `ScrollView` for large lists.\n- Minimize re-renders using `React.memo()` and `useCallback()`.\n- Implement shouldComponentUpdate or use PureComponent for class components.\n- Utilize React Native Profiler to identify bottlenecks.\n- Upgrade to the latest version of React Native CLI (`npx react-native@latest init`).\n- Use `react-native-gesture-handler` for smooth gesture handling.",
     "source": "web_search",
-    "updated_at": 1780942173.3789434
+    "updated_at": 1780971747.3027272
   },
   "search:Advanced Performance Optimization in TypeScript and React Native:react native performance tips_ex": {
-    "content": "- Use `react-native link` to link native modules.\n- Update React Native to the latest version using `npx react-native upgrade`.\n- Implement memoization with `React.memo` or `useMemo`.\n- Utilize `FlatList` for efficient list rendering.\n- Enable Hermes engine by setting `\"hermesEnabled\": true` in `android/app/build.gradle`.\n- Optimize bridge performance by reducing unnecessary props and state updates.\n- Use `react-native-reanimated` for smooth animations.\n- Implement lazy loading with `React.lazy` and `Suspense`.\n- Profile your app using React DevTools for identifying bottlenecks.",
+    "content": "- Use React Native CLI version 7.x or later.\n- Implement lazy loading for components and images using `React.lazy` and `Suspense`.\n- Optimize image sizes using tools like ImageOptim or TinyPNG.\n- Enable Hermes engine by setting `\"hermesEnabled\": true` in your `android/app/build.gradle`.\n- Use FlatList instead of ScrollView for lists with large data sets.\n- Implement shouldComponentUpdate or PureComponent to prevent unnecessary re-renders.\n- Use React Native Reanimated for smooth animations without blocking the UI thread.\n- Enable developer menu optimizations by setting `\"devSupport\": false` in your `android/app/src/main/AndroidManifest.xml`.\n- Profile and optimize using React DevTools and Chrome DevTools.\n- Update dependencies regularly to benefit from performance improvements.",
     "source": "code_example",
-    "updated_at": 1780942175.8992274
+    "updated_at": 1780971756.067094
   }
 }

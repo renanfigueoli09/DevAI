@@ -2,21 +2,21 @@
   "search:gitlab-ci-pipelines-advanced:gitlab ci pipelines advanced u": {
     "content": "- **CLI Commands**: \n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `gitlab-runner register`: Registers a runner with GitLab.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Version 15.0\n  - GitLab Runner: Version 15.0\n\n- **Key Config Options**:\n  - `stages`: Defines the stages of your pipeline.\n  - `script`: Specifies the commands to run in a job.\n  - `only` and `except`: Controls when jobs should run based on branches or tags.\n  - `cache`: Caches dependencies to speed up subsequent builds.",
     "source": "web_search",
-    "updated_at": 1780963487.08119
+    "updated_at": 1780965980.0884166
   },
   "search:gitlab-ci-pipelines-advanced:gitlab ci pipelines advanced u_ex": {
     "content": "- **CLI Commands**:\n  - `gitlab-ci-lint`: Validates `.gitlab-ci.yml` files.\n  - `gitlab-runner register`: Registers a new runner with GitLab.\n\n- **Latest Versions**:\n  - GitLab CI/CD: Version 15.0\n  - GitLab Runner: Version 14.0\n\n- **Key Config Options**:\n  - `stages`: Defines the stages in your pipeline.\n  - `script`: Commands to run during a job.\n  - `image`: Specifies the Docker image for the job.\n  - `only/except`: Controls when jobs are executed based on branches or tags.",
     "source": "code_example",
-    "updated_at": 1780963489.0458722
+    "updated_at": 1780965982.2148232
   },
   "search:gitlab-ci-pipelines-advanced:optimizing gitlab ci pipelines": {
     "content": "- Use `gitlab-runner exec` to execute jobs locally.\n- Update GitLab Runner to the latest version using `sudo gitlab-runner upgrade`.\n- Enable caching in `.gitlab-ci.yml` with `cache:` section.\n- Utilize Kubernetes runners for parallel execution and scalability.\n- Configure runner autoscaling in Kubernetes for dynamic resource allocation.\n- Optimize pipeline configuration by minimizing stages and jobs.\n- Use `buildkit` for faster builds in Docker images.\n- Monitor pipeline performance using GitLab's built-in analytics.\n- Regularly update GitLab and runners to benefit from performance improvements.",
     "source": "web_search",
-    "updated_at": 1780963490.97142
+    "updated_at": 1780965984.3948894
   },
   "search:gitlab-ci-pipelines-advanced:optimizing gitlab ci pipelines_ex": {
     "content": "- Use `stages` and `needs` to parallelize pipeline stages.\n- Employ YAML anchors, !reference tags, and `extends` for cleaner configuration files.\n- Ensure runners are properly configured and scaled.\n- Optimize job scripts for faster execution.\n- Utilize caching mechanisms like `cache` keyword in `.gitlab-ci.yml`.\n- Monitor pipeline performance with GitLab's built-in analytics.\n- Regularly update GitLab to the latest version for performance improvements.\n- Fine-tune specific tools (NPM, PNPM, Yarn, Maven, Gradle) based on project needs.",
     "source": "code_example",
-    "updated_at": 1780963492.9273326
+    "updated_at": 1780965986.5570402
   }
 }

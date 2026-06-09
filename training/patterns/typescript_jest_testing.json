@@ -1,13 +1,13 @@
 {
   "search:typescript+jest-testing:typescript jest mocking and sp": {
-    "content": "- **CLI Commands**:\n  - `jest --watch` to run tests in watch mode.\n  - `jest --coverage` to generate a coverage report.\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test environment has been set up.\n  - `transformIgnorePatterns`: An array of regexp pattern strings that are matched against all source file paths before transformation. Files matching the following patterns will not be transformed.\n  - `testEnvironment`: The test environment (e.g., 'jsdom', 'node') to use for running tests.",
+    "content": "- Use `npm install --save-dev jest` to install Jest.\n- Run tests with `npx jest`.\n- Mock functions using `jest.fn()`.\n- Spy on methods with `jest.spyOn()`.\n- Set mock implementations with `.mockImplementation()`.\n- Access call arguments with `.mock.calls`.\n- Retrieve the number of calls with `.mock.callCount`.\n- Use `.mockReset()` to reset a mock.\n- Configure mocks with `mockReturnValue`, `mockResolvedValue`, etc.\n- Update Jest version using `npm update jest`.",
     "source": "web_search",
-    "updated_at": 1780941120.133649
+    "updated_at": 1780968909.4509814
   },
   "search:typescript+jest-testing:typescript jest mocking and sp_ex": {
-    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"setupFilesAfterEnv\": [\"./jest.setup.ts\"]`",
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @types/jest`\n  - `npx jest --init` to create a Jest configuration file\n\n- **Latest Versions**:\n  - Jest: 29.x (as of my last update)\n  - TypeScript: 5.0.x (latest stable version)\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"` for Node.js environment\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}` to transpile TypeScript files\n  - `\"setupFilesAfterEnv\": [\"<rootDir>/jest.setup.ts\"]` for setup files",
     "source": "code_example",
-    "updated_at": 1780941122.575139
+    "updated_at": 1780968923.9639614
   },
   "search:typescript-jest-testing:typescript jest testing patter": {
     "content": "- Jest version 30 is now available.\n- Updated moduleFileExtensions to include .mts, .cts, .ts, .tsx, .js, and .jsx.\n- Use `--testMatch` or `--testRegex` with updated patterns for ESM and TypeScript modules.\n- Configure Jest in `jest.config.ts` for TypeScript support.\n- Install type definitions using `@types/jest`.\n- For Express applications, use ES Modules (ESM) with Jest.\n- Implement modern test ID conventions for React/TypeScript/Next.js apps.",
@@ -28,5 +28,15 @@
     "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.x\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\"\n  - `setupFilesAfterEnv`: [\"./jest.setup.js\"]\n  - `transformIgnorePatterns`: [\"/node_modules/(?!(your-package)/)\"]",
     "source": "code_example",
     "updated_at": 1780943825.1281214
+  },
+  "search:typescript+jest-testing:typescript jest testing framew": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - Vitest: 0.34\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for browser-like environment.\n  - `transform`: Configure Babel or TypeScript transformations.\n  - `setupFilesAfterEnv`: Array of paths to files that run before each test file.\n  - `snapshotSerializers`: Array of custom serializers for snapshots.",
+    "source": "web_search",
+    "updated_at": 1780968895.0179737
+  },
+  "search:typescript+jest-testing:typescript jest testing framew_ex": {
+    "content": "- Install Jest using npm: `npm install --save-dev jest`\n- Configure Jest in your project by creating a `jest.config.js` file.\n- Use TypeScript with Jest by installing `ts-jest`: `npm install --save-dev ts-jest @types/jest`\n- Run tests with the CLI command: `npx jest`\n- Key config options include:\n  - `testEnvironment`: Set to \"node\" for Node.js environment\n  - `transform`: Use `ts-jest` for TypeScript files\n  - `moduleFileExtensions`: Include 'ts', 'tsx' in addition to default extensions",
+    "source": "code_example",
+    "updated_at": 1780968901.643735
   }
 }

@@ -1,42 +1,52 @@
 {
   "search:api-design:api design naming conventions ": {
-    "content": "- **CLI Commands**: Use `curl -I http://example.com` to check HTTP status codes.\n- **Latest Versions**: Ensure using the latest version of your HTTP client and server libraries for compatibility.\n- **Key Config Options**:\n  - For servers: Configure `server.listen(port, callback)` in Node.js with Express.js.\n  - For clients: Set `axios.defaults.baseURL = 'http://example.com'` to manage base URLs.",
+    "content": "- Use `curl` or Postman to test API endpoints.\n- Ensure your API uses standard HTTP methods like GET, POST, PUT, DELETE.\n- Implement proper error handling using standard HTTP status codes (e.g., 200 for success, 404 for not found).\n- Apply versioning in your API URLs (e.g., /api/v1/resource) to maintain backward compatibility.\n- Use OAuth or JWT for secure authentication and authorization.\n- Document your API with Swagger or OpenAPI to generate interactive documentation automatically.\n- Implement rate limiting to prevent abuse of your API.\n- Regularly update dependencies and libraries to their latest versions using `npm update` or `pip install --upgrade`.\n- Monitor API performance and usage through logs and analytics tools.",
     "source": "web_search",
-    "updated_at": 1780941917.6186225
+    "updated_at": 1780966739.9573052
   },
   "search:api-design:api design naming conventions _ex": {
-    "content": "- **CLI Commands**: Use `curl` or `wget` to test HTTP requests.\n- **Latest Versions**: Check the latest versions of libraries like Axios, Fetch API, and others on their respective GitHub repositories.\n- **Key Config Options**:\n  - For Axios: Set headers with `{headers: {key: value}}`.\n  - For Fetch API: Use `.then(response => response.json())` to parse JSON responses.",
+    "content": "- **CLI Commands**: Use `curl -I <URL>` to check HTTP status codes.\n- **Latest Versions**: Ensure using the latest version of your API client or library for compatibility and security updates.\n- **Key Config Options**:\n  - For error handling, implement a structured error response format including `status`, `message`, and `data`.\n  - Use consistent naming conventions for API endpoints to improve readability and maintainability.",
     "source": "code_example",
-    "updated_at": 1780941919.852624
+    "updated_at": 1780966744.686171
   },
   "search:api-design:openapi swagger documentation ": {
-    "content": "- Use `openapi-generator-cli` to generate Swagger documentation.\n- Specify array of strings as body parameters using the schema object in OpenAPI 3.x.\n- Configure auto generation with tools like Swagger Codegen or Springdoc.\n- Set up a central \"OpenAPI Gateway Service\" for multiple APIs.\n- Utilize `springdoc.swagger-ui.urls` in application.yml to manage API document URLs.\n- Ensure your documentation is comprehensive, accurate, and up-to-date.\n- Use the latest version of OpenAPI Specification (3.0 or later).\n- Follow best practices for configuring auto generation to improve developer experience.\n- Promote API adoption by maintaining well-documented endpoints.",
+    "content": "- Use `openapi-generator-cli` for generating API documentation.\n- Ensure your OpenAPI specification is in version 3.0.0.\n- Configure the `springdoc.swagger-ui.urls` property in `application.yml`.\n- Implement a dedicated \"OpenAPI Gateway Service\" for centralizing documentation.\n- Use `@Api` and `@ApiOperation` annotations for Swagger documentation in Spring Boot.\n- Update your dependencies to the latest versions regularly.\n- Run `openapi-generator-cli generate -i openapi.yaml -g <generator-name> -o output-dir` to generate documentation.\n- Set `springdoc.swagger-ui.path=/swagger-ui.html` to customize the path of Swagger UI.",
     "source": "web_search",
-    "updated_at": 1780941922.1609688
+    "updated_at": 1780966754.9967535
   },
   "search:api-design:openapi swagger documentation _ex": {
-    "content": "- **CLI Commands**: Use `openapi-generator-cli` to generate client and server stubs from OpenAPI specifications.\n  - Example: `openapi-generator-cli generate -i example.yaml -g python -o ./python-client`\n  \n- **Latest Versions**:\n  - OpenAPI Generator CLI: v6.0.1\n  - Swagger UI: v4.5.0\n\n- **Key Config Options**:\n  - `info.title`: Title of the API.\n  - `info.version`: Version of the API.\n  - `paths`: Defines the operations available on the API.\n  - `components.schemas`: Contains reusable components like schemas, parameters, and responses.\n\nThese actionable facts should help developers implement OpenAPI Swagger documentation effectively in 2025.",
+    "content": "- Use `openapi-generator-cli` version 5.4.0 or later.\n- Install via npm: `npm install @openapitools/openapi-generator-cli`.\n- Generate documentation with: `openapi-generator generate -i path/to/your/api.yaml -g html2 -o docs`.\n- Add examples using the `example` keyword in your OpenAPI spec.\n- Ensure Swagger UI is used for interactive testing and documentation.\n- Use GitHub Copilot for AI-assisted code generation.\n- Host generated documentation on platforms like ReadTheDocs or GitHub Pages.\n- Integrate with CI/CD pipelines for automated updates.",
     "source": "code_example",
-    "updated_at": 1780941924.7782714
+    "updated_at": 1780966760.4005148
   },
   "search:api-design:api authentication strategies ": {
-    "content": "- **CLI Commands**:\n  - `npm install jsonwebtoken` to install JWT library.\n  - `npm install passport passport-jwt passport-oauth2` for Passport.js strategies.\n\n- **Latest Versions**:\n  - JSON Web Token (JWT): v9.0.0\n  - Passport.js: v1.0.0\n\n- **Key Config Options**:\n  - JWT: Secret key (`jwtSecret`) for signing tokens.\n  - OAuth2: Client ID, Client Secret, Authorization URL, Access Token URL.\n\nThese actionable facts provide a clear guide for developers to implement and configure JWT and OAuth strategies in their applications.",
+    "content": "- **CLI Commands**: Use `curl` or Postman to test API endpoints.\n- **Latest Versions**:\n  - JWT: Version 3.2.1\n  - OAuth: Version 2.0.5\n- **Key Config Options**:\n  - JWT: Secret key, issuer, audience, expiration time.\n  - OAuth: Client ID, client secret, authorization URL, token endpoint, redirect URI.",
     "source": "web_search",
-    "updated_at": 1780941927.0680141
+    "updated_at": 1780966768.5288455
   },
   "search:api-design:api authentication strategies _ex": {
-    "content": "- **JWT Authentication**:\n  - Use `jsonwebtoken` package.\n  - Generate token: `jwt.sign(payload, secretOrPrivateKey, { expiresIn })`.\n  - Verify token: `jwt.verify(token, secretOrPublicKey)`.\n\n- **OAuth Authentication**:\n  - Implement using OAuth2 library like `passport-oauth2`.\n  - Configure strategy: `new OAuth2Strategy(options, callback)`.\n  - Authenticate requests: Use middleware to handle OAuth tokens.\n\n- **Key Config Options**:\n  - JWT: `secretOrPrivateKey`, `expiresIn`.\n  - OAuth: `clientID`, `clientSecret`, `callbackURL`.\n\n- **CLI Commands**:\n  - Install packages: `npm install jsonwebtoken passport-oauth2`.\n\n- **Latest Versions**:\n  - As of my last update, the latest versions are `jsonwebtoken@9.0.1` and `passport-oauth2@5.0.0`.",
+    "content": "- **CLI Commands**: `npm install jsonwebtoken` for JWT, `npm install passport passport-oauth2` for OAuth.\n- **Latest Versions**: As of my last update in October 2023, the latest versions are:\n  - `jsonwebtoken@9.5.1`\n  - `passport@0.6.0`\n  - `passport-oauth2@4.1.0`\n- **Key Config Options**:\n  - For JWT: Secret key for signing tokens (`JWT_SECRET`), token expiration time (`expiresIn`).\n  - For OAuth: Client ID, client secret, authorization URL, token URL, redirect URI.\n- **Client Storage**: JWTs are stored in local storage or cookies. OAuth typically uses session cookies or tokens stored in memory.\n- **Subsequent Requests**:\n  - JWT: Sent in the `Authorization` header as a Bearer token (`Bearer <token>`).\n  - OAuth: Tokens can be sent in various ways, including headers, query parameters, or body data, depending on the implementation.",
     "source": "code_example",
-    "updated_at": 1780941929.4781
+    "updated_at": 1780966776.3050818
   },
   "search:api-design:rate limiting throttling api g": {
-    "content": "- **CLI Command**: `aws apigateway update-stage --rest-api-id <api-id> --stage-name <stage-name> --patch-operations op=replace,path=/throttleSettings/burstLimit,value=<new-burst-limit>,op=replace,path=/throttleSettings/rateLimit,value=<new-rate-limit>`\n  - **Flags**: `--rest-api-id`, `--stage-name`, `--patch-operations`\n  \n- **Latest Version**: As of my knowledge cutoff in October 2023, the latest version is not specified. Always check the official AWS documentation for the most current version.\n  \n- **Key Config Options**:\n  - `burstLimit`: Maximum number of requests that can be made within a given time period.\n  - `rateLimit`: Average rate at which requests are allowed to be processed over a longer period.\n\nFor detailed information, refer to the [AWS API Gateway documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html).",
+    "content": "- **CLI Commands**: Use `aws apigateway` or `az network application-gateway` for AWS and Azure respectively.\n- **Latest Versions**: Check the official documentation for the latest versions of API Gateway services.\n- **Key Config Options**:\n  - Rate Limiting: Set limits on requests per minute (e.g., `rate(100/minute)`) in your gateway configuration.\n  - Throttling: Configure throttling to delay excessive requests (e.g., `throttle(500/minute)`).\n  - Security: Implement authentication and authorization mechanisms like OAuth, JWT, or API Keys.\n  - Protocol Translation: Ensure compatibility with different protocols using protocol translation features.\n  - Request Shaping: Shape incoming requests to match expected formats using request mapping templates.",
     "source": "web_search",
-    "updated_at": 1780941931.8018324
+    "updated_at": 1780966785.028163
   },
   "search:api-design:rate limiting throttling api g_ex": {
-    "content": "- **CLI Commands**: Use `aws apigateway update-stage` to configure rate limiting and throttling.\n- **Latest Versions**: Ensure using the latest AWS CLI version for compatibility with API Gateway features.\n- **Key Config Options**:\n  - `throttleSettings.burstLimit`: Maximum number of requests allowed in a given time period.\n  - `throttleSettings.rateLimit`: Number of requests per second allowed from a single source.\n  - `methodSettings[].throttlingBurstLimit` and `methodSettings[].throttlingRateLimit`: Configure throttling settings at the method level.",
+    "content": "- **CLI Commands**: Use `aws apigateway update-stage` to configure rate limits.\n  - Flags: `--rest-api-id`, `--stage-name`, `--patch-operations op=replace,path=/methodSettings/GET/{proxy+}/throttlingRateLimit,value=100`, `op=replace,path=/methodSettings/GET/{proxy+}/throttlingBurstLimit,value=200`\n  \n- **Latest Versions**: Ensure using the latest version of AWS CLI (v2.7.36 as of my last update).\n  - Update via: `pip install --upgrade awscli`\n\n- **Key Config Options**:\n  - `throttlingRateLimit`: Maximum number of requests per second.\n  - `throttlingBurstLimit`: Maximum number of concurrent requests.\n\n- **Dynamic Adjustments**: Implement dynamic adjustments using AWS Lambda and CloudWatch Events to monitor and adjust rate limits based on traffic patterns.",
     "source": "code_example",
-    "updated_at": 1780941933.8462348
+    "updated_at": 1780966790.2581623
+  },
+  "search:api-design:rest api best practices versio": {
+    "content": "- **API Versioning**: Use URL path versioning, e.g., `/v1/resource`.\n- **Pagination**: Implement cursor-based pagination using `next_page_url` and `previous_page_url`.\n- **CLI Commands**:\n  - `curl -X GET \"https://api.example.com/v1/resource?page=2&limit=10\" -H \"Authorization: Bearer <token>\"`\n- **Latest Versions**:\n  - REST API Design Patterns: May 30, 2025\n  - Versioning Best Practices in REST API Design: Speakeasy (latest version as of search date)\n  - Best practices for RESTful web API design: Azure - Microsoft Learn (May 8, 2025)\n  - Designing Robust REST APIs: Principles, Idempotency, Pagination: May 5, 2025\n- **Key Config Options**:\n  - `next_page_url`: URL for the next page of results.\n  - `previous_page_url`: URL for the previous page of results.\n  - `limit`: Maximum number of items per page.",
+    "source": "web_search",
+    "updated_at": 1780966726.0373068
+  },
+  "search:api-design:rest api best practices versio_ex": {
+    "content": "- **CLI Commands**: Use `curl` or Postman for testing API endpoints.\n- **Latest Versions**:\n  - REST API Versioning: v2.0\n  - Pagination Library: v3.5\n- **Key Config Options**:\n  - `Accept-Version`: Specify the version of the API in the request header.\n  - `Page-Size`: Define the number of items per page for pagination.\n  - `Page-Number`: Specify the current page number for pagination.",
+    "source": "code_example",
+    "updated_at": 1780966730.9496033
   }
 }

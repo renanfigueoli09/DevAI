@@ -1,8 +1,8 @@
 {
   "search:java-spring-security-advanced:spring security advanced confi": {
-    "content": "- **Latest Version**: Spring Security 6+\n  \n- **Key Config Options**:\n  - `http.authorizeRequests()`\n  - `http.csrf().disable()` for disabling CSRF protection\n  - `http.formLogin()` for form-based login\n  \n- **CLI Commands**:\n  - `mvn clean install` to build the project with Spring Security\n  - `java -jar target/your-application.jar` to run the application\n\n- **Configuration Tips**:\n  - Use `@EnableWebSecurity` to enable web security configuration.\n  - Configure authentication and authorization using Java-based configuration or XML.\n\n- **Documentation**: Refer to [Spring Security 6+ Guide](https://spring.io/guides/gs/securing-web/) for detailed setup and best practices.",
+    "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6.0, Postgres 15.\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n- **Key Config Options**:\n  - JWT Authentication: Use `@EnableWebSecurity`, configure `HttpSecurity` for JWT handling.\n  - Authorization: Define roles and permissions in `application.yml`.\n  - Database Configuration: Set up data source properties in `application.properties` or `application.yml`.",
     "source": "web_search",
-    "updated_at": 1780943186.983556
+    "updated_at": 1780971366.1401732
   },
   "search:java-spring-security-advanced:spring security oauth2 impleme": {
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n- **Key Config Options**:\n  - `spring.security.oauth2.client.registration.google.client-id`\n  - `spring.security.oauth2.client.registration.google.client-secret`\n  - `spring.security.oauth2.client.registration.google.redirect-uri-template`\n  - `spring.security.oauth2.resourceserver.jwt.issuer-uri`",
@@ -13,5 +13,10 @@
     "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for OAuth2 configuration.\n  - `spring.security.oauth2.client.registration.google.client-id`\n  - `spring.security.oauth2.client.registration.google.client-secret`\n  - `spring.security.oauth2.client.registration.google.redirect-uri`\n- **CLI Commands**:\n  - `mvn clean install` to build the project\n  - `java -jar target/your-application-name.jar` to run the application",
     "source": "code_example",
     "updated_at": 1780943191.8552265
+  },
+  "search:java-spring-security-advanced:spring security advanced confi_ex": {
+    "content": "- Use `mvn spring-boot:run` to run the Spring Boot application.\n- Ensure you have the latest version of Spring Security by including `<spring-security.version>6.2.3</spring-security.version>` in your `pom.xml`.\n- Key config options include:\n  - `http.authorizeRequests()`: Customize URL access rules.\n  - `http.formLogin()`: Configure login page and behavior.\n  - `http.logout()`: Customize logout functionality.\n- For custom authentication, implement a class that extends `AuthenticationProvider` or `UserDetailsService`.\n- Use `@EnableWebSecurity` to enable Spring Security configuration.\n- Consider using `@PreAuthorize`, `@PostAuthorize`, and `@Secured` for method-level security.\n- Ensure your application has the necessary dependencies in `pom.xml`:\n  ```xml\n  <dependencies>\n    <dependency>\n      <groupId>org.springframework.boot</groupId>\n      <artifactId>spring-boot-starter-security</artifactId>\n    </dependency>\n    <!-- Other dependencies -->\n  </dependencies>\n  ```\n- For advanced configuration, refer to the [Spring Security documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/).",
+    "source": "code_example",
+    "updated_at": 1780971373.7865775
   }
 }

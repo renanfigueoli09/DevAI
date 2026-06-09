@@ -1,12 +1,22 @@
 {
   "search:python-django-authentication:django authentication with oau": {
-    "content": "- **Latest Version of Django-OAuth2**: 4.2\n- **CLI Command to Install Django-OAuth2**:\n  ```bash\n  pip install django-oauth2==4.2\n  ```\n- **Key Config Options in `settings.py`**:\n  - `INSTALLED_APPS`: Add `'oauth2_provider'`\n  - `AUTHENTICATION_BACKENDS`: Include `'oauth2_provider.backends.OAuth2Backend'`\n  - `OAUTH2_PROVIDER_APPLICATION_MODEL`: Set to `'oauth2_provider.Application'`\n- **CLI Command to Migrate Database**:\n  ```bash\n  python manage.py migrate oauth2_provider\n  ```\n- **Key URLs for OAuth2 Endpoints**:\n  - Token Endpoint: `/o/token/`\n  - Authorization Endpoint: `/o/authorize/`\n- **Recommended Grant Types**: `password`, `client_credentials`, `authorization_code`\n- **CLI Command to Create a New Application**:\n  ```bash\n  python manage.py oauth2_provider_application create --name \"MyApp\" --client_type confidential --authorization_grant_type authorization_code\n  ```\n- **Key Environment Variables**:\n  - `OAUTH2_PROVIDER_APPLICATION_MODEL`: Set to `'oauth2_provider.Application'`\n  - `OAUTH2_PROVIDER_ACCESS_TOKEN_EXPIRE_SECONDS`: Set token expiration time in seconds",
+    "content": "- **Latest Version of django-oauth2**: 4.2\n- **CLI Commands**:\n  - `pip install django-oauth2`\n  - `python manage.py migrate oauth2_provider`\n- **Key Config Options**:\n  - `OAUTH2_PROVIDER_APPLICATION_MODEL`: Specify the model to use for storing OAuth applications.\n  - `OAUTH2_PROVIDER_ACCESS_TOKEN_EXPIRE_SECONDS`: Set the expiration time for access tokens.\n  - `OAUTH2_PROVIDER_AUTHORIZATION_CODE_EXPIRE_SECONDS`: Set the expiration time for authorization codes.",
     "source": "web_search",
-    "updated_at": 1780963617.089171
+    "updated_at": 1780967842.074351
   },
   "search:python-django-authentication:django authentication with oau_ex": {
-    "content": "- Install Django OAuth Toolkit using pip: `pip install django-oauth-toolkit`\n- Add 'oauth2_provider' to your INSTALLED_APPS in settings.py.\n- Run migrations with: `python manage.py migrate oauth2_provider`\n- Configure the authentication backends in settings.py:\n  ```python\n  AUTHENTICATION_BACKENDS = (\n      'oauth2_provider.backends.OAuth2Backend',\n      'django.contrib.auth.backends.ModelBackend',\n  )\n  ```\n- Set up OAuth2 applications through Django admin or by creating models.\n- Use `@permission_required` decorator for view-level permissions.\n- Configure the OAuth2 provider settings in settings.py:\n  ```python\n  OAUTH2_PROVIDER = {\n      'ACCESS_TOKEN_EXPIRE_SECONDS': 3600,\n      'SCOPES': {'read': 'Read scope', 'write': 'Write scope'},\n  }\n  ```\n- Use `oauth2_provider.contrib.rest_framework.OAuth2Authentication` for authentication in views.\n- Test OAuth2 endpoints using tools like Postman or curl.",
+    "content": "- Install Django OAuth Toolkit using pip: `pip install django-oauth-toolkit`\n- Add `'oauth2_provider'` to your `INSTALLED_APPS` in settings.py.\n- Configure authentication classes in settings.py:\n  ```python\n  REST_FRAMEWORK = {\n      'DEFAULT_AUTHENTICATION_CLASSES': (\n          'oauth2_provider.contrib.rest_framework.OAuth2Authentication',\n      )\n  }\n  ```\n- Run migrations: `python manage.py migrate oauth2_provider`\n- Create OAuth2 applications using Django admin or the provided API.\n- Use the generated client ID and secret for authentication in your requests.",
     "source": "code_example",
-    "updated_at": 1780963618.9044833
+    "updated_at": 1780967848.736678
+  },
+  "search:python-django-authentication:python django authentication b": {
+    "content": "- Use Django's built-in `auth` app for handling user authentication.\n- Update Django to the latest version for security patches and features.\n- Configure `AUTH_USER_MODEL` in settings.py if using a custom user model.\n- Utilize Django’s `authenticate()` and `login()` functions for user login.\n- Implement password hashing by setting `PASSWORD_HASHERS` in settings.py.\n- Use Django's `logout()` function to handle user logout.\n- Apply permissions and groups for fine-grained access control.\n- Enable CSRF protection using Django's built-in middleware.\n- Regularly update dependencies and security patches.\n- Test authentication flows thoroughly in development.",
+    "source": "web_search",
+    "updated_at": 1780967827.2378201
+  },
+  "search:python-django-authentication:python django authentication b_ex": {
+    "content": "- Use `python manage.py createsuperuser` to create an admin user.\n- Update Django version to the latest stable release for security and features.\n- Configure authentication backends in `settings.py` under `AUTHENTICATION_BACKENDS`.\n- Utilize Django's built-in forms like `AuthenticationForm` and `UserCreationForm` for login and registration.\n- Implement custom authentication by extending `django.contrib.auth.backends.ModelBackend`.\n- Use `@login_required` decorator to protect views that require user authentication.\n- Customize user model by inheriting from `AbstractUser` or `AbstractBaseUser`.\n- Configure permissions in `settings.py` under `AUTH_PERMISSIONS`.\n- Utilize Django's template tags like `{% if user.is_authenticated %}` for conditional rendering based on user authentication.",
+    "source": "code_example",
+    "updated_at": 1780967834.0292366
   }
 }

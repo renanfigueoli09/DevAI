@@ -1,12 +1,12 @@
 {
   "search:typescript-nextjs-prisma-migration:prisma migration strategies fo": {
-    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init` to create the initial migration.\n  - `npx prisma migrate dev --name <migration-name>` for subsequent migrations.\n  - `npx prisma migrate deploy` to apply migrations to production.\n\n- **Latest Versions**:\n  - Prisma: v4.10.0\n  - Next.js: v13.5\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model.\n  - `prismaClientOptions`: Configure the Prisma Client for advanced use cases.\n  - `migrationsDir`: Specify the directory for migration files.\n\nFor more detailed information, refer to the official Prisma and Next.js documentation.",
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name <migration-name>`: Creates and applies migrations.\n  - `npx prisma migrate deploy`: Applies pending migrations without creating new ones.\n\n- **Latest Versions**:\n  - Prisma: Ensure using the latest version for compatibility and features. Check [Prisma official website](https://www.prisma.io/) for updates.\n  \n- **Key Config Options**:\n  - `prisma.config.ts`: Configure your Prisma client settings, including database URL.\n  - `.env`: Define environment variables like `DATABASE_URL` for local development.\n\n- **Integration Tips**:\n  - Use Next.js API routes to interact with Prisma migrations safely and efficiently.",
     "source": "web_search",
-    "updated_at": 1780941326.3049889
+    "updated_at": 1780967695.883542
   },
   "search:typescript-nextjs-prisma-migration:prisma migration strategies fo_ex": {
-    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates a new migration based on your schema changes.\n\n- **Latest Versions**:\n  - Node.js: Version 20 or higher.\n  - Prisma: Latest version as of the documentation update date.\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prismaClient` in TypeScript for interacting with the database.",
+    "content": "- **Install Prisma**: `npm install prisma --save-dev`\n- **Initialize Prisma**: `npx prisma init`\n- **Generate Prisma Client**: `npx prisma generate`\n- **Create Migration**: `npx prisma migrate dev --name init`\n- **Update Schema**: Modify `prisma/schema.prisma`\n- **Run Migrations**: `npx prisma migrate dev --name <migration-name>`\n- **Prisma Client Usage**: Import and use Prisma Client in your Next.js API routes or pages.\n- **Key Config Options**:\n  - `datasource url`: Database connection string.\n  - `generator client`: Configuration for the Prisma Client generator.\n\nLatest versions as of my last update: Ensure you are using the latest versions by running `npm outdated` and updating dependencies accordingly.",
     "source": "code_example",
-    "updated_at": 1780941328.6927686
+    "updated_at": 1780967705.5221877
   }
 }

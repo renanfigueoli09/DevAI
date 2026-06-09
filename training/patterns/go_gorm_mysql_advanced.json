@@ -1,17 +1,22 @@
 {
   "search:go-gorm-mysql-advanced:go gorm mysql advanced queries": {
-    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `go get -u gorm.io/driver/mysql` to install MySQL driver for GORM.\n\n- **Latest Versions**:\n  - GORM: v1.23.6\n  - MySQL Driver for GORM: v1.4.0\n\n- **Key Config Options**:\n  - `gorm.DB`: The main struct representing the database connection.\n  - `.Find(&users)`: To retrieve records from the database.\n  - `.Where(\"name = ?\", \"jinzhu\")`: To filter records based on conditions.\n  - `.Order(\"age desc\")`: To sort records in a specific order.\n  - `.Limit(10)`: To limit the number of records returned.\n  - `.Offset(20)`: To skip a certain number of records before starting to return results.",
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: Check the latest version on [GORM GitHub](https://github.com/go-gorm/gorm).\n- **Key Config Options**:\n  - `gorm.DB`: The main database connection object.\n  - `.Find(&users)`: Retrieve all records from the users table.\n  - `.Where(\"name = ?\", \"jinzhu\")`: Filter records by a condition.\n  - `.Limit(10)`: Limit the number of results returned.\n  - `.Offset(5)`: Skip a certain number of records before starting to return results.",
     "source": "web_search",
-    "updated_at": 1780940673.8639824
+    "updated_at": 1780967908.3492615
   },
   "search:go-gorm-mysql-advanced:go gorm mysql advanced queries_ex": {
-    "content": "- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.3.6\n  - MySQL Driver for GORM: v1.4.0\n\n- **Key Config Options**:\n  - DSN (Data Source Name): `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Auto Migration: `db.AutoMigrate(&User{})`\n  - Eager Loading: `db.Preload(\"Posts\").Find(&users)`\n  - Scopes: \n    ```go\n    func WhereAgeGreaterThan(age int) func(db *gorm.DB) *gorm.DB {\n        return func(db *gorm.DB) *gorm.DB {\n            return db.Where(\"age > ?\", age)\n        }\n    }\n    ```\n  - Indexing and Normalization for Optimized Queries",
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.34.0\n  - MySQL Driver for Go: v1.6.0\n\n- **Key Config Options**:\n  - `dsn`: Data Source Name, e.g., `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - `autoMigrate`: Automatically migrate schema to match models.\n  - `logger`: Custom logger for GORM operations.\n  - `poolSize`: Maximum number of connections in the pool.",
     "source": "code_example",
-    "updated_at": 1780940676.240646
+    "updated_at": 1780967915.585643
   },
   "search:go-gorm-mysql-advanced:gorm performance tuning with m": {
-    "content": "- **GORM Performance Tuning Tips**:\n  - Disable default debug mode to reduce logging overhead.\n  - Use `Preload` sparingly to avoid N+1 query issues.\n\n- **MySQL Configuration for Performance**:\n  - Increase `innodb_buffer_pool_size` to at least 50% of your system memory.\n  - Adjust `query_cache_type` and `query_cache_size` based on workload.\n  - Enable `innodb_flush_log_at_trx_commit=2` for better performance under heavy write loads.\n\n- **Latest Versions**:\n  - GORM: Check the latest version on [GORM GitHub](https://github.com/go-gorm/gorm).\n  - MySQL: Use the latest stable version available from [MySQL Downloads](https://dev.mysql.com/downloads/mysql/).\n\n- **Key Config Options for GORM and MySQL**:\n  - `gorm.DB.SetLogger`: Customize logger to reduce log output.\n  - `sql.DB.SetMaxOpenConns`: Set maximum open connections.\n  - `sql.DB.SetMaxIdleConns`: Set maximum idle connections.\n  - `sql.DB.SetConnMaxLifetime`: Set connection lifetime.",
+    "content": "- **CLI Commands**: Use `mysqltuner.pl` for MySQL tuning.\n- **Latest Versions**: GORM v2.34, MySQL 8.4.\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on your system's memory.\n  - `query_cache_size`: Set to a non-zero value if query caching is beneficial.\n  - `max_connections`: Increase for higher concurrency.\n  - `thread_cache_size`: Adjust based on the number of concurrent connections.",
     "source": "web_search",
-    "updated_at": 1780940678.4751198
+    "updated_at": 1780967932.592273
+  },
+  "search:go-gorm-mysql-advanced:gorm performance tuning with m_ex": {
+    "content": "- **GitHub Repository**: [go-gorm/mysql](https://github.com/go-gorm/mysql)\n- **MySQL Reference Manual**: [Optimization](https://dev.mysql.com/doc/refman/8.4/en/optimization.html)\n- **GORM Performance Tips**: [Performance Tuning](https://gorm.io/docs/performance.html)\n\n**Actionable Facts for Developers:**\n\n- **CLI Commands**:\n  - `mysqladmin --version` to check MySQL server version.\n  - `mysqldump --help` for backup and restore options.\n\n- **Latest Versions**:\n  - GORM: [v2.30.0](https://github.com/go-gorm/gorm/releases/tag/v2.30.0)\n  - MySQL: [8.4](https://dev.mysql.com/doc/refman/8.4/en/news.html)\n\n- **Key Config Options**:\n  - `gorm.DB.SetLogger`: Customize logger.\n  - `gorm.DB.Logger.LogMode`: Set log mode (e.g., `logger.Info`, `logger.Warn`).\n  - `gorm.DB.DB().SetMaxIdleConns`: Set maximum idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns`: Set maximum open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime`: Set connection max lifetime.",
+    "source": "code_example",
+    "updated_at": 1780967952.8064604
   }
 }

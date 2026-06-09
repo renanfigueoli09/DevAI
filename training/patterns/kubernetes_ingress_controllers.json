@@ -1,17 +1,22 @@
 {
   "search:kubernetes+ingress-controllers:kubernetes ingress controllers": {
-    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress-controller.yaml` to deploy an Ingress controller.\n  - `kubectl get ingresses` to list all Ingress resources.\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.0\n  - Traefik: v2.6.0\n  - HAProxy Ingress Controller: v1.9.4\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `traefik.ingress.kubernetes.io/router.entrypoints`: Specifies the entrypoint for routing.\n  - `haproxy-ingress.github.io/configuration/annotations#backend-maxconn`: Sets the maximum number of connections per backend server.",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingresses`\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.1\n  - Traefik: v2.5.4\n  - HAProxy Ingress Controller: v0.8.3\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `traefik.ingress.kubernetes.io/router.entrypoints`: Define entry points for routing.\n  - `haproxy.ingress.kubernetes.io/backend-maxconn`: Set maximum connections per backend server.",
     "source": "web_search",
-    "updated_at": 1780941408.765659
+    "updated_at": 1780971263.085273
   },
   "search:kubernetes+ingress-controllers:kubernetes ingress controllers_ex": {
-    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v2.4.1\n\n- **Key Config Options**:\n  - `tls`: Specify TLS configuration for SSL termination.\n  - `rules`: Define routing rules for incoming traffic.\n  - `ingressClassName`: Specify the ingress class to use.\n\nThese commands, versions, and options provide a concise overview of actionable facts for configuring Kubernetes Ingress Controllers.",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Gloo: v2.7.0 (as of my last update)\n  - NGINX Ingress Controller: v1.5.1\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: To specify the backend protocol (HTTP or HTTPS).\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: To set the maximum allowed body size for requests.",
     "source": "code_example",
-    "updated_at": 1780941410.7510448
+    "updated_at": 1780971269.5842583
   },
   "search:kubernetes+ingress-controllers:setting up and configuring kub": {
-    "content": "- **Latest Version**: Kubernetes Ingress Controller v2.4.0\n- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n- **Key Config Options**:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: Ingress`\n  - `metadata.name`: Ingress resource name\n  - `spec.rules`: Defines routing rules\n  - `spec.tls`: Configures TLS settings",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes Ingress Controller: v2.4.1\n  - Nginx Ingress Controller: v1.7.0\n\n- **Key Config Options**:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: Ingress`\n  - `metadata.name`: ingress-name\n  - `spec.rules[].host`: example.com\n  - `spec.rules[].http.paths[].pathType`: Prefix\n  - `spec.rules[].http.paths[].backend.service`: service-name\n  - `spec.tls`: Enable TLS with secretName",
     "source": "web_search",
-    "updated_at": 1780941412.7586956
+    "updated_at": 1780971277.814378
+  },
+  "search:kubernetes+ingress-controllers:setting up and configuring kub_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <ingress-resource-file.yaml>`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - NGINX Ingress Controller: v1.5.x\n\n- **Key Config Options**:\n  - `apiVersion`: Specifies the API version of the resource.\n  - `kind`: Defines the type of resource, e.g., `Ingress`.\n  - `metadata.name`: Name of the ingress resource.\n  - `spec.rules`: Defines routing rules for traffic.\n  - `spec.tls`: Configures TLS termination and certificates.",
+    "source": "code_example",
+    "updated_at": 1780971286.1959038
   }
 }

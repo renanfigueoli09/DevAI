@@ -1,22 +1,32 @@
 {
   "search:python-django-async:django async middleware 2023": {
-    "content": "- **Latest Version**: Django 6.0\n- **Key Config Options**:\n  - `MIDDLEWARE`: Ensure your middleware is compatible with async support.\n  - `ASGI_APPLICATION`: Set to the ASGI application entry point for async views.\n- **CLI Commands**:\n  - `python manage.py runserver` (for development)\n  - `gunicorn --workers 4 myproject.asgi:application` (for production, using Gunicorn with ASGI)\n- **Actionable Facts**:\n  - Django now supports async views and middleware.\n  - Use `async def` for view functions.\n  - Middleware must be compatible with async contexts.\n  - Ensure your database operations are async-compatible.",
+    "content": "- Django now supports asynchronous views, middleware, and ORM.\n- To enable async support in Django, use the `--async` flag when running development server (`python manage.py runserver --async`).\n- Latest version of Django is 4.2 as of my last update.\n- Key config options include setting `ASGI_APPLICATION` in your settings file to point to an ASGI application instance.\n- Third-party libraries like `django-async-middleware` can be used for additional async middleware support.\n- For testing async views, use the `pytest-django` library with async fixtures and test functions.",
     "source": "web_search",
-    "updated_at": 1780940064.3732376
+    "updated_at": 1780967369.0184617
   },
   "search:python-django-async:django async middleware 2023_ex": {
-    "content": "- Django 3.0 and later support asynchronous views.\n- Use `python manage.py runserver` to start the server, no special flags required for async support.\n- Key middleware components include AuthenticationMiddleware, SessionMiddleware, etc.\n- For async HTTP requests in Django, use libraries like `aiohttp`.\n- Install `aiohttp` using pip: `pip install aiohttp`.\n- Example of an async view:\n  ```python\n  import asyncio\n  from django.http import JsonResponse\n\n  async def my_async_view(request):\n      await asyncio.sleep(1)  # Simulate a delay\n      return JsonResponse({'message': 'Hello, world!'})\n  ```\n- Configure the URLconf to include your async views.\n- Ensure Django is configured for asynchronous handling in settings if needed.",
+    "content": "- **Latest Version**: Django 4.2 introduced full support for asynchronous views and middleware.\n  \n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to the ASGI callable of your project, typically `myproject.asgi.application`.\n  - `MIDDLEWARE`: Include `django.middleware.common.AsyncMiddleware` if you need async middleware.\n\n- **CLI Commands**:\n  - `python manage.py runserver --asgi`: Run Django with ASGI support.\n  \n- **Actionable Facts**:\n  - Use asynchronous views for handling requests concurrently.\n  - Implement custom async middleware to perform tasks before/after request processing.\n  - Ensure all dependencies are compatible with Django's async features.",
     "source": "code_example",
-    "updated_at": 1780940066.6092968
+    "updated_at": 1780967375.9552546
   },
   "search:python-django-async:django async orm 2023": {
-    "content": "- **CLI Commands**:\n  - `python -m pip install django-async-orm`\n  - `python manage.py runserver` for WSGI, or `uvicorn myproject.asgi:application` for ASGI\n\n- **Latest Versions**:\n  - Django Async ORM: Not specified in the search results\n  - Django: Latest stable version as of my last update (3.2.x)\n\n- **Key Config Options**:\n  - Use ASGI server like `uvicorn` instead of WSGI for async capabilities\n  - Ensure your project is configured to run under ASGI if you intend to use async views",
+    "content": "- **Latest Django Version**: As of my last update, the latest stable version is Django 4.2.\n- **Async ORM Support**:\n  - Introduced in Django 4.1 with async-capable class-based views and initial async ORM methods.\n  - Continued development in Django 4.2 and 5.0.\n- **Installation of django-async-orm**: \n  ```bash\n  python -m pip install django-async-orm\n  ```\n- **Usage Example**:\n  ```python\n  from django_async_orm import AsyncModel\n\n  class MyModel(AsyncModel):\n      name = models.CharField(max_length=100)\n  ```\n- **Key Config Options**:\n  - Ensure your Django project is configured to use ASGI instead of WSGI.\n  - Use `ASGI_APPLICATION` in your settings.py file, e.g., `myproject.asgi.application`.\n- **Patterns and Best Practices**:\n  - Always use the async version of ORM methods when working within an async context.\n  - Be cautious with database operations to avoid blocking the event loop.",
     "source": "web_search",
-    "updated_at": 1780940068.719903
+    "updated_at": 1780967384.9489408
   },
   "search:python-django-async:django async orm 2023_ex": {
-    "content": "- **CLI Commands**:\n  - `python -m pip install django-async-orm`\n  \n- **Latest Versions**:\n  - Django Async ORM is in active development, no specific version mentioned.\n  \n- **Key Config Options**:\n  - Asynchronous views can be written using async and await syntax.\n  - Performance penalties when running under WSGI.",
+    "content": "- Django version: 4.0 and later\n- Async ORM support expected in future releases\n- Use `django-async-orm` for async capabilities\n- Install via pip: `pip install django-async-orm`\n- Example model method: `class MyModel(models.Model): name = models.CharField(max_length=250)`\n- Key config options: None noted",
     "source": "code_example",
-    "updated_at": 1780940071.0277088
+    "updated_at": 1780967389.3009224
+  },
+  "search:python-django-async:django async views 2023": {
+    "content": "- Django 4.2 and 5.0 introduced async-capable class-based views and ORM methods.\n- Asynchronous views in Django are not the primary focus; they are an addition to handle I/O-bound tasks efficiently.\n- For testing asynchronous views, use `AsyncTestClient`.\n- Async support in Django REST Framework is being considered but not yet implemented as of Mar 24, 2021.",
+    "source": "web_search",
+    "updated_at": 1780967354.2799027
+  },
+  "search:python-django-async:django async views 2023_ex": {
+    "content": "- **Latest Version**: Django 3.0 and later versions support asynchronous views.\n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to the ASGI callable of your project, e.g., `myproject.asgi.application`.\n  - `MIDDLEWARE`: Ensure middleware is compatible with async requests if using ASGI.\n- **CLI Commands**: None specific for enabling async views; ensure Django version is up-to-date.\n- **Coding Samples**:\n  ```python\n  # Example of an asynchronous view in Django\n  from django.http import JsonResponse\n  from django.views import View\n\n  class AsyncView(View):\n      async def get(self, request):\n          data = await some_async_function()\n          return JsonResponse(data)\n  ```\n- **Performance Considerations**: Asynchronous views will perform better under ASGI compared to WSGI.",
+    "source": "code_example",
+    "updated_at": 1780967361.5503213
   }
 }

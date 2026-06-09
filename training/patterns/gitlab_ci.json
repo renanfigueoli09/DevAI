@@ -1,12 +1,12 @@
 {
   "search:gitlab-ci:gitlab ci stages artifacts cac": {
-    "content": "- Use `gitlab-runner cache` to manage cache in GitLab CI/CD.\n- Cache is stored on the runner and can be uploaded to S3 if distributed caching is enabled.\n- Artifacts are used to pass intermediate build files between stages, not dependencies.\n- To pass artifacts to another stage, configure them in the `.gitlab-ci.yml` file under the `artifacts` section.\n- Use `docker push` command to push Docker images to a registry.\n- For separating Kaniko Docker build and push into stages, ensure you have a GitLab Runner with the docker executor and access to a container registry.\n- Key config options for `.gitlab-ci.yml`: `stages`, `script`, `artifacts`, `cache`.\n- Latest versions of GitLab CI/CD can be found on the official GitLab website.",
+    "content": "- Use `--build-arg BUILDKIT_INLINE_CACHE=1` to enable inline caching in Docker builds.\n- For artifacts, use `docker push $CI_REGISTRY_IMAGE:$VERSION`.\n- Configure cache policy with `cache: policy: pull-push`.\n- Set artifact expiration with `expire_in: 1h`.\n- Specify paths for artifacts with `paths: - node_modules`.\n- Use the latest Docker version (as of July 2025).\n- Employ the `docker-container` build driver for registry caching.\n- Ensure `needs: - package` in deployment stages to depend on previous jobs.",
     "source": "web_search",
-    "updated_at": 1780939899.0220513
+    "updated_at": 1780966423.9148939
   },
   "search:gitlab-ci:gitlab ci stages artifacts cac_ex": {
-    "content": "- **CLI Commands**:\n  - `docker buildx build --cache-from type=registry,ref=<registry>/<image>:<tag> --push <path>`\n  - `gitlab-runner exec docker --privileged`\n\n- **Latest Versions**:\n  - GitLab CI/CD: Latest stable version as of Jan 2026\n  - Docker Buildx: Latest stable version as of Jan 2026\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml`:\n    ```yaml\n    stages:\n      - build\n      - test\n\n    cache:\n      key: $CI_COMMIT_REF_SLUG\n      paths:\n        - .docker/\n\n    build_job:\n      stage: build\n      script:\n        - docker buildx build --cache-from type=registry,ref=<registry>/<image>:<tag> --push .\n\n    test_job:\n      stage: test\n      script:\n        - docker run <registry>/<image>:<tag>\n    ```",
+    "content": "- **CLI Commands**:\n  - `gitlab-ci` for managing CI/CD configurations.\n  - `docker build --cache-from <image>` to use a cache image.\n  - `docker push <image>` to push an image to the GitLab registry.\n\n- **Latest Versions**:\n  - GitLab: Latest stable version as of my last update.\n  - Docker: Latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml`: Defines CI/CD pipeline stages and jobs.\n  - `stages`: Specifies the sequence of jobs to run.\n  - `cache`: Configures caching for speeding up builds.\n  - `services`: Declares Docker services needed by jobs.\n  - `image`: Specifies the Docker image used for the job.",
     "source": "code_example",
-    "updated_at": 1780939901.4072042
+    "updated_at": 1780966431.9872482
   }
 }

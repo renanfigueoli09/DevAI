@@ -1,17 +1,22 @@
 {
   "search:typescript+sequelize:typescript sequelize orm crud ": {
-    "content": "- **CLI Commands**: `npm install sequelize-cli --save-dev`\n- **Latest Versions**: Ensure using the latest stable version of Sequelize and TypeScript.\n- **Key Config Options**:\n  - `define`: Model definition options.\n  - `options`: Database connection options (e.g., host, port, username, password).\n  - `sync`: Synchronize models with the database.",
+    "content": "- **CLI Commands**:\n  - `npm install sequelize --save`\n  - `npm install @types/sequelize --save-dev`\n\n- **Latest Versions**:\n  - Sequelize v6.x\n\n- **Key Config Options**:\n  - `define`: Define models with attributes and options.\n  - `sync`: Synchronize models to the database.\n  - `transaction`: Manage transactions for atomic operations.",
     "source": "web_search",
-    "updated_at": 1780940325.0294666
+    "updated_at": 1780969236.89252
   },
   "search:typescript+sequelize:typescript sequelize orm crud _ex": {
-    "content": "- **CLI Commands**: `npm install sequelize-cli -g`\n- **Latest Versions**:\n  - Sequelize: v6.x\n  - Express: v4.x\n  - TypeScript: v5.x\n- **Key Config Options**:\n  - Database URL in `config.json`: `\"dialect\": \"mysql\", \"host\": \"localhost\", \"port\": 3306, \"username\": \"root\", \"password\": \"\", \"database\": \"test\"`\n  - Sequelize Models: Define models using TypeScript interfaces.\n  - Migrations: Use `sequelize-cli` to create and apply migrations.",
+    "content": "- **CLI Commands**:\n  - `npm install sequelize-cli --save-dev`\n  - `npx sequelize-cli init`\n\n- **Latest Versions**:\n  - Sequelize: v6.x\n  - Sequelize-Typescript: v2.x\n\n- **Key Config Options**:\n  - `config/config.json`: Database connection settings.\n  - `models/yourModel.ts`: Define your model with TypeScript interfaces.",
     "source": "code_example",
-    "updated_at": 1780940327.4198213
+    "updated_at": 1780969244.2979228
   },
   "search:typescript+sequelize:typescript sequelize migration": {
-    "content": "- **CLI Commands**:\n  - `npx sequelize-cli init` to initialize Sequelize.\n  - `npx sequelize-cli model:create --name User --attributes username:string,email:string` to create a new model.\n  - `npx sequelize-cli migration:generate --name add-email-to-users` to generate a migration file.\n  - `npx sequelize-cli db:migrate` to apply migrations.\n\n- **Latest Versions**:\n  - Sequelize CLI: v7.0.0\n  - Sequelize: v6.32.1\n\n- **Key Config Options**:\n  - `config/config.json`: Define database connection settings and migration paths.\n  - `models/User.ts`: Define your models with TypeScript interfaces.\n  - `migrations/xxxx_xx_xx_add_email_to_users.js`: Write migration scripts to alter the database schema.",
+    "content": "- **CLI Commands**:\n  - `npx sequelize-cli init --config path/to/your/config.json`\n  - `npx sequelize-cli db:migrate`\n  - `npx sequelize-cli db:migrate:undo`\n\n- **Latest Versions**:\n  - Sequelize CLI: v7.0.0\n  - Umzug: v2.10.0\n\n- **Key Config Options**:\n  - `\"parserOptions\": { \"project\": \"./tsconfig.json\" }` in `tsconfig.json`\n  - Ensure TypeScript is installed (`npm install typescript --save-dev`)\n  - Configure Sequelize CLI to use TypeScript by setting up a custom configuration file",
     "source": "web_search",
-    "updated_at": 1780940330.0118613
+    "updated_at": 1780969253.3131967
+  },
+  "search:typescript-sequelize:typescript sequelize migration": {
+    "content": "- Use Umzug library for TypeScript migrations.\n- Install `sequelize-cli` and `umzug`.\n- Configure `umzug` in your project to use Sequelize.\n- Create migration files with `.ts` extension.\n- Run migrations using `npx sequelize-cli db:migrate`.\n- Revert migrations using `npx sequelize-cli db:migrate:undo`.\n- Ensure TypeScript is configured correctly for migration files.\n- Use latest versions of `sequelize`, `sequelize-cli`, and `umzug`.",
+    "source": "web_search",
+    "updated_at": 1780968760.2790687
   }
 }

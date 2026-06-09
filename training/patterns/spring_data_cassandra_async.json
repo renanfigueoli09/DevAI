@@ -10,9 +10,9 @@
     "updated_at": 1780941306.4213157
   },
   "search:spring-data-cassandra-async:cassandra with spring boot and": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `./gradlew bootRun` to run your Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data Cassandra: 3.5.0.RELEASE\n  - Reactor Core: 3.4.12\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace.\n  - `spring.data.cassandra.contact-points`: List of contact points for the cluster.\n  - `spring.data.cassandra.port`: Port number for Cassandra connection.\n  - `spring.data.cassandra.username` and `spring.data.cassandra.password`: Credentials for authentication.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data Cassandra: 3.4\n  - Reactor Core: 3.5\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace.\n  - `spring.data.cassandra.contact-points`: List of contact points for the cluster.\n  - `spring.data.cassandra.port`: Port number for Cassandra connection.\n  - `spring.data.cassandra.username` and `spring.data.cassandra.password`: Credentials for authentication.",
     "source": "web_search",
-    "updated_at": 1780941308.704667
+    "updated_at": 1780968945.5487633
   },
   "search:spring-data-cassandra-async:cassandra with spring boot and_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data Cassandra: 4.0.x\n  - Reactor Project: 3.4.x\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace.\n  - `spring.data.cassandra.contact-points`: Comma-separated list of contact points.\n  - `spring.data.cassandra.port`: Port number for Cassandra connection.\n  - `spring.data.cassandra.username` and `spring.data.cassandra.password`: Credentials for authentication.",

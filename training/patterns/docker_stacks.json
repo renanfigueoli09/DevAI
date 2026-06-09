@@ -1,0 +1,12 @@
+{
+  "search:docker+stacks:docker-compose nestjs spring f": {
+    "content": "- **NestJS**: Version 10.x, use `nest new project-name`\n- **Spring Boot**: Version 3.x, use `spring init --dependencies=web,data-mongodb project-name`\n- **FastAPI**: Version 0.75.x, use `fastapi create project-name`\n- **.NET**: Version 6.x, use `dotnet new mvc -n project-name`\n- **MongoDB**: Use official MongoDB Docker image with latest version\n- **Redis**: Use official Redis Docker image with latest version\n- **Kafka**: Use Confluentinc/cp-kafka:latest Docker image\n- **Docker Compose**: Version 1.29.x, use `docker-compose up -d`\n- **Key Config Options**:\n  - MongoDB URI in `.env` or `appsettings.json`\n  - Redis URL in `.env` or `appsettings.json`\n  - Kafka bootstrap servers in `application.properties`",
+    "source": "web_search",
+    "updated_at": 1780966373.55054
+  },
+  "search:docker+stacks:docker-compose nestjs spring f_ex": {
+    "content": "- **NestJS**: Use `nest new project-name` to create a new project.\n- **Spring Boot**: Initialize with Spring Initializr, select dependencies like Web, Data MongoDB, and Kafka.\n- **FastAPI**: Create a new FastAPI app using `fastapi create-app myproject`.\n- **.NET**: Install .NET SDK and use `dotnet new webapi -n MyProject` to create a new project.\n- **MongoDB**: Use official MongoDB Docker image with `docker run -d --name mongo -p 27017:27017 mongo`.\n- **Redis**: Run Redis using `docker run -d --name redis -p 6379:6379 redis`.\n- **Kafka**: Start Kafka with Zookeeper using Docker Compose:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: wurstmeister/zookeeper\n    kafka:\n      image: wurstmeister/kafka\n      ports:\n        - \"9092:9092\"\n      environment:\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n  ```\n- **Docker Compose**: Use `docker-compose up -d` to start services in detached mode.\n- **GitHub Actions**: Configure CI/CD with a `.github/workflows/main.yml` file.",
+    "source": "code_example",
+    "updated_at": 1780966382.6948376
+  }
+}

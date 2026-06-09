@@ -1,12 +1,22 @@
 {
   "search:nodejs-express-mongoose:node.js express mongoose crud ": {
-    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors --save` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - Express: 4.18.x\n  - Mongoose: 6.x\n\n- **Key Config Options**:\n  - MongoDB connection string in `.env`: `MONGO_URI=mongodb://localhost:27017/mydatabase`\n  - Middleware for parsing JSON bodies: `app.use(bodyParser.json())`\n  - Enabling CORS for all routes: `app.use(cors())`",
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `mongod --dbpath /data/db`\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - Express: ^4.18.2\n  - Mongoose: ^7.0.0\n\n- **Key Config Options**:\n  - PORT in `config.env`: Set the port number for your server.\n  - MONGO_URI in `config.env`: URL for MongoDB connection.\n  - Schema definitions in Mongoose to define data models.",
     "source": "web_search",
-    "updated_at": 1780963495.8913894
+    "updated_at": 1780971305.481682
   },
   "search:nodejs-express-mongoose:node.js express mongoose crud _ex": {
-    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.18.x\n  - Mongoose: 7.6.x\n\n- **Key Config Options**:\n  - MongoDB connection string in `mongoose.connect()`.\n  - Middleware for parsing JSON and URL-encoded bodies with `app.use(bodyParser.json())` and `app.use(bodyParser.urlencoded({ extended: true }))`.\n  - CORS configuration with `app.use(cors())`.",
+    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express mongoose body-parser cors` to install necessary packages.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - npm: 9.x\n  - Express: 4.18.x\n  - Mongoose: 6.x\n\n- **Key Config Options**:\n  - `app.use(bodyParser.json())` for parsing JSON bodies.\n  - `app.use(cors())` for enabling Cross-Origin Resource Sharing.\n  - MongoDB connection URI in the format `mongodb://<username>:<password>@<host>:<port>/<database>`.",
     "source": "code_example",
-    "updated_at": 1780963497.849015
+    "updated_at": 1780971312.5439343
+  },
+  "search:nodejs-express-mongoose:node.js express mongoose schem": {
+    "content": "- **CLI Commands**: `npm install mongoose@latest`\n- **Latest Version**: Mongoose v9.6.3\n- **Key Config Options**:\n  - `type`: Specifies the data type of a field.\n  - `required`: Ensures the field is not null or undefined.\n  - `minlength` and `maxlength`: Define the minimum and maximum length for string fields.\n  - ES modules: Use `\"type\": \"module\"` in `package.json`.",
+    "source": "web_search",
+    "updated_at": 1780971321.2082133
+  },
+  "search:nodejs-express-mongoose:node.js express mongoose schem_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install mongoose --save`\n  - `npm init -y` to initialize a new Node.js project\n\n- **Latest Versions**:\n  - Mongoose: v7.x\n  - Express: v4.x\n\n- **Key Config Options**:\n  - `mongoose.connect('mongodb://localhost/myapp', { useNewUrlParser: true, useUnifiedTopology: true })`\n  - Schema definition using `new mongoose.Schema({...})`\n  - Validation rules in schema (`type`, `required`, `minLength`, etc.)\n  - Middleware for pre-save hooks\n  - Model creation with `mongoose.model('ModelName', schema)`",
+    "source": "code_example",
+    "updated_at": 1780971344.895894
   }
 }

@@ -10,9 +10,9 @@
     "updated_at": 1780942521.51516
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:ngrx state management best pra": {
-    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create NgRx store.\n  - `ng generate effect <name>` to create NgRx effect.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.4\n  - NgRx: v15.0.0\n\n- **Key Config Options**:\n  - Store Configuration: Define initial state and reducers.\n  - Effects Configuration: Use `@Effect` decorator to handle side effects.\n  - Selectors Configuration: Create functions to select parts of the state for components.",
+    "content": "- Use `ng generate @ngrx/schematics feature <feature-name>` to generate NgRx state features.\n- Leverage the NgRx 80/20 Rule for efficient state management.\n- Ensure actions are immutable and only update through actions for predictable state management.\n- Utilize a centralized store as the single source of truth in your application.\n- Keep effects small, handling one side effect per effect to maintain clarity and manageability.",
     "source": "web_search",
-    "updated_at": 1780942523.5989947
+    "updated_at": 1780968078.0952759
   },
   "search:Enhancing Angular + ngrx Performance for Large Applications:ngrx state management best pra_ex": {
     "content": "- **CLI Commands**:\n  - `ng generate store <path>/<name>` to create an NgRx store.\n  - `ng generate effect <path>/<name>` to create an NgRx effect.\n\n- **Latest Versions**:\n  - Angular: v16.2.0\n  - NgRx: v15.4.0\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure the store with `StoreModule.forRoot(reducers)` and `EffectsModule.forRoot([effects])`.\n  - Use `@ngrx/store-devtools` for development tools.\n  - Implement selectors in `selectors.ts` to access state slices.\n  - Define reducers in `reducers.ts` to handle state changes based on actions.",

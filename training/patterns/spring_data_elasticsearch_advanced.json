@@ -1,22 +1,22 @@
 {
   "search:spring-data-elasticsearch-advanced:spring data elasticsearch adva": {
-    "content": "- **Latest Version**: Spring Data Elasticsearch 5.5, Elasticsearch 8.18\n- **CLI Commands**:\n  - `mvn spring-boot:run` for running the application\n  - `curl -X GET \"localhost:9200/your_index/_search?pretty\"` for querying Elasticsearch\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=elasticsearch`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
+    "content": "- **CLI Commands**: Use `curl` or `Postman` to interact with Elasticsearch.\n- **Latest Versions**: Spring Boot 3.x, Spring Data Elasticsearch 4.x, Elasticsearch 8.x.\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: URL of the Elasticsearch cluster.\n  - `spring.elasticsearch.rest.username`: Username for authentication.\n  - `spring.elasticsearch.rest.password`: Password for authentication.\n  - `spring.data.elasticsearch.cluster-name`: Name of the Elasticsearch cluster.",
     "source": "web_search",
-    "updated_at": 1780938282.5184798
+    "updated_at": 1780971938.311096
   },
   "search:spring-data-elasticsearch-advanced:spring data elasticsearch adva_ex": {
-    "content": "- **CLI Commands**: `mvn spring-boot:run` to run the application.\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Elasticsearch: 7.16.3\n  - Spring Data Elasticsearch: 4.2.2\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris`: Specifies the Elasticsearch cluster URI.\n  - `spring.data.elasticsearch.cluster-name`: Defines the name of the Elasticsearch cluster.\n  - `spring.elasticsearch.username` and `spring.elasticsearch.password`: For authentication if required.",
+    "content": "- Use `QueryBuilders` in Spring Data Elasticsearch for complex queries.\n- Implement SQL-like CASE statements using QueryBuilders.\n- Ensure JSqlParser is on the classpath for more complex queries.\n- Declare a `countQuery` for pagination and sorting in your code.\n- Utilize the query bar in Elastic Docs for advanced data filtering.\n- Pass APM queries as URL parameters for easy access.",
     "source": "code_example",
-    "updated_at": 1780938284.5007102
+    "updated_at": 1780971946.460004
   },
   "search:spring-data-elasticsearch-advanced:elasticsearch integration with": {
-    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to check Elasticsearch indices.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Elasticsearch: 8.5.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=my-application-cluster`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=password`",
+    "content": "- Use `docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e \"discovery.type=single-node\" docker.elastic.co/elasticsearch/elasticsearch:7.10.2` to start Elasticsearch with Docker.\n- Add `spring-boot-starter-data-elasticsearch` dependency in your `pom.xml`.\n- Configure Elasticsearch connection in `application.properties`: `spring.elasticsearch.rest.uris=http://localhost:9200`.\n- Use `@Document(indexName = \"your_index_name\")` annotation on your entity class to map it to an Elasticsearch index.\n- Implement a repository interface extending `ElasticsearchRepository` for CRUD operations.\n- For visualizations, use Kibana (available in the same Docker container) at `http://localhost:5601`.\n- Ensure proper handling of exceptions and errors during integration.\n- Regularly update Elasticsearch and Spring Boot Starter Data Elasticsearch to the latest versions for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780938286.5037935
+    "updated_at": 1780971974.8132389
   },
   "search:spring-data-elasticsearch-advanced:elasticsearch integration with_ex": {
-    "content": "- **CLI Commands**:\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"`\n  - `curl -X PUT \"localhost:9200/my_index\" -H 'Content-Type: application/json' -d'\n    {\n      \"mappings\": {\n        \"properties\": {\n          \"field1\": { \"type\": \"text\" },\n          \"field2\": { \"type\": \"keyword\" }\n        }\n      }\n    }'\n\n- **Latest Versions**:\n  - Elasticsearch: 9.0.0\n  - Spring Boot: 3.0.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.elasticsearch.rest.username=elastic`\n  - `spring.elasticsearch.rest.password=password`",
+    "content": "- **CLI Commands**:\n  - `docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e \"discovery.type=single-node\" docker.elastic.co/elasticsearch/elasticsearch:7.10.2`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Elasticsearch: 7.10.2\n  - Spring Boot: 2.5.4\n  - Spring Data Elasticsearch: 3.4.0\n\n- **Key Config Options**:\n  - `spring.elasticsearch.rest.uris=http://localhost:9200`\n  - `spring.data.elasticsearch.cluster-name=my-application`\n  - `spring.data.elasticsearch.username=elastic`\n  - `spring.data.elasticsearch.password=changeme`",
     "source": "code_example",
-    "updated_at": 1780938288.4123244
+    "updated_at": 1780971989.2763555
   }
 }

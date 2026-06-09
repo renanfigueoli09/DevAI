@@ -1,22 +1,32 @@
 {
   "search:fastapi+database-optimization:fastapi orm optimization 2025": {
-    "content": "- **fastapi-orm**: Install via `pip install fastapi-orm==1.2.3`\n- **FastAPI + PostgreSQL**: Use SQLModel or Tortoise ORM for async support.\n- **FastAPI Best Practices**: Key patterns include dependency injection, error handling, and deployment strategies.\n- **FastAPI Performance Optimization Guide**: Focus on async programming, caching, database tuning, and production deployment tips.",
+    "content": "- Use SQLModel or Tortoise ORM for FastAPI projects.\n- Install SQLModel using pip: `pip install sqlmodel`.\n- Install Tortoise ORM using pip: `pip install tortoise-orm`.\n- For SQLModel, use the following key config options:\n  - `SQLALCHEMY_DATABASE_URL`: Database URL (e.g., \"sqlite:///./test.db\").\n  - `engine_options`: Additional engine options.\n- For Tortoise ORM, use the following key config options:\n  - `TORTOISE_ORM`: Dictionary with database configurations.\n    - `connections`: Connection details.\n    - `apps`: Application settings.\n- To optimize ORM queries in FastAPI:\n  - Use async ORMs like SQLModel or Tortoise.\n  - Avoid N+1 queries by using eager loading.\n  - Configure connection pooling for efficient database connections.",
     "source": "web_search",
-    "updated_at": 1780943678.0414677
+    "updated_at": 1780968507.1435344
   },
   "search:fastapi+database-optimization:fastapi orm optimization 2025_ex": {
-    "content": "- **GitHub Repository:** Alqudimi/FastApiOrm\n  - **Latest Version:** Not specified in the snippet.\n  - **Key Features:** Async support, automatic Pydantic integration, Django-like syntax.\n\n- **FastAPI Performance Optimization Guide**\n  - **CLI Commands:** `uvicorn app:app --reload`\n    - Flags:\n      - `--reload`: Enables auto-reload during development.\n  - **Latest Version:** Not specified in the snippet.\n  - **Key Config Options:** `asyncio.run(app)`\n    - Ensures FastAPI runs within an asyncio event loop.\n\n- **FastAPI + PostgreSQL: Tuning ORM Queries**\n  - **CLI Commands:** `psql -U username -d database_name`\n    - Flags:\n      - `-U`: Specifies the username.\n      - `-d`: Specifies the database name.\n  - **Latest Version:** Not specified in the snippet.\n  - **Key Config Options:** Connection pooling\n    - Use libraries like `asyncpg` for efficient connection management.",
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/tiangolo/fastapi-sqlalchemy.git`\n  - `pip install fastapi sqlalchemy alembic`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.1\n  - SQLAlchemy: v1.4.32\n  - Alembic: v1.7.6\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Tortoise ORM: `TORTOISE_ORM = {\n      'connections': {'default': 'sqlite:///db.sqlite3'},\n      'apps': {\n          'models': {\n              'models': ['__main__'],\n              'default_connection': 'default',\n          },\n      },\n  }`",
     "source": "code_example",
-    "updated_at": 1780943680.1482444
+    "updated_at": 1780968515.1930492
   },
   "search:fastapi+database-optimization:database indexing for fastapi ": {
-    "content": "- **CLI Commands**: Use `fastapi-pagination` library to simplify pagination.\n- **Latest Version**: Check [PyPI](https://pypi.org/project/fastapi-pagination/) for the latest version.\n- **Key Config Options**:\n  - `index=True` in SQLModel fields to create indexes for faster lookups.\n  - Configure caching strategies using FastAPI's built-in caching mechanisms or third-party libraries like `fastapi-cache`.\n  - Use async programming for database queries to improve performance.",
+    "content": "- **CLI Commands**: Use `fastapi` to create new projects.\n- **Latest Versions**: FastAPI v2025.1, SQLAlchemy v2025.1, Pydantic v2025.1.\n- **Key Config Options**:\n  - `SQLAlchemy`: Set `check_same_thread=False` for SQLite.\n  - `FastAPI`: Use `asyncio` for asynchronous operations.\n  - `Caching`: Implement caching strategies like Redis or Memcached.\n  - `Database Indexing`: Add indexes on frequently queried columns.",
     "source": "web_search",
-    "updated_at": 1780943682.2669678
+    "updated_at": 1780968527.7053666
   },
   "search:fastapi+database-optimization:database indexing for fastapi _ex": {
-    "content": "- **CLI Commands**: `fastapi run` for development, `uvicorn app.main:app --reload` for production.\n- **Latest Versions**: FastAPI v0.98.0, SQLAlchemy v2.0.0, MongoEngine v3.1.0.\n- **Key Config Options**:\n  - Database URL in `.env`: `DATABASE_URL=postgresql://user:password@localhost/dbname`.\n  - Indexing in SQLAlchemy: Use `db.Index` or `__table_args__ = (Index('idx_name', 'column'),)`.\n  - Caching with FastAPI: Use `fastapi-cache` for caching responses.\n  - Pagination with SQL: Implement using `limit()` and `offset()`.",
+    "content": "- **CLI Commands**:\n  - `fastapi create-app myproject`\n  - `uvicorn myproject.main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.85.0\n  - SQLAlchemy: v1.4.32\n  - Pydantic: v1.9.0\n\n- **Key Config Options**:\n  - `database_url`: Define your database connection URL.\n  - `indexing`: Use SQLAlchemy ORM for defining models and relationships.\n  - `caching`: Implement caching using libraries like Redis or Memcached.\n  - `pagination`: Use FastAPI's built-in pagination support.",
     "source": "code_example",
-    "updated_at": 1780943684.638825
+    "updated_at": 1780968533.4815948
+  },
+  "search:fastapi+database-optimization:query caching with fastapi and": {
+    "content": "- **CLI Commands**:\n  - `fastapi run app:app --reload`\n  - `alembic revision --autogenerate -m \"message\"`\n\n- **Latest Versions**:\n  - FastAPI: 0.78.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL in `.env`: `DATABASE_URL=postgresql://user:password@localhost/dbname`\n  - Cache Configuration in `main.py`:\n    ```python\n    from fastapi import FastAPI, Depends\n    from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession\n    from sqlalchemy.orm import sessionmaker\n\n    DATABASE_URL = \"sqlite:///./test.db\"\n    engine = create_async_engine(DATABASE_URL, future=True)\n    async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)\n\n    app = FastAPI()\n\n    @app.get(\"/\")\n    async def read_root(session: AsyncSession = Depends(async_session)):\n        # Use session to query database\n        pass\n    ```",
+    "source": "web_search",
+    "updated_at": 1780968545.6553779
+  },
+  "search:fastapi+database-optimization:query caching with fastapi and_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create-app my_fastapi_project`\n  - `uvicorn my_fastapi_project.main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Cache Configuration: Use Redis or Memcached for caching.\n  - Indexing: Create indexes on frequently queried columns in your database schema.",
+    "source": "code_example",
+    "updated_at": 1780968552.4848819
   }
 }

@@ -8,5 +8,15 @@
     "content": "- Use `kubectl apply -f <filename>.yaml` to create or update a StatefulSet.\n- Ensure the YAML file specifies `apiVersion: apps/v1`, `kind: StatefulSet`.\n- Define `spec.template.spec.containers` with necessary Redis configurations.\n- Set `volumeClaimTemplates` for persistent storage per pod.\n- Use `kubectl get statefulsets` to check the status of your StatefulSet.\n- For Redis, configure persistence by setting `appendonly yes` in `redis.conf`.\n- Adjust `maxmemory` and other settings as needed in `redis.conf`.\n- Update DNS caching time in CoreDNS config map for faster resolution.",
     "source": "code_example",
     "updated_at": 1780941981.498406
+  },
+  "search:docker+kubernetes-redis:docker kubernetes redis deploy": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Redis on Kubernetes.\n- Ensure the Docker image is compatible with your Kubernetes cluster's architecture.\n- Specify resource limits and requests in the deployment YAML file for optimal performance.\n- Set the desired replica count to ensure high availability.\n- Expose Redis using a Kubernetes service of type `ClusterIP`, `NodePort`, or `LoadBalancer`.\n- Configure persistence by setting up PersistentVolumeClaims (PVCs) if needed.\n- Use environment variables for configuring Redis settings like password, port, etc.\n- Update the deployment with `kubectl apply -f <filename>.yaml` after making changes to the YAML file.\n- Monitor the deployment status using `kubectl get pods`.\n- Scale the deployment by updating the `replicas` field in the YAML and applying it again.",
+    "source": "web_search",
+    "updated_at": 1780967782.40439
+  },
+  "search:docker+kubernetes-redis:docker kubernetes redis deploy_ex": {
+    "content": "- Use `kubectl apply -f redis-deployment.yaml` to deploy Redis on Kubernetes.\n- Ensure the latest version of Redis is used by pulling from the official Docker Hub repository.\n- Key configuration options include setting up persistence, replicas for high availability, and resource limits.\n- Example YAML file (`redis-deployment.yaml`) should specify the correct image tag (e.g., `image: redis:latest`).\n- Use `kubectl get pods` to check if the Redis pod is running.\n- For persistent storage, use a PersistentVolumeClaim in your deployment configuration.\n- To scale Redis, adjust the `replicas` field in your deployment YAML and apply changes with `kubectl apply -f <filename>`.\n- Monitor Redis performance using Kubernetes metrics or third-party tools like Prometheus.",
+    "source": "code_example",
+    "updated_at": 1780967797.583688
   }
 }

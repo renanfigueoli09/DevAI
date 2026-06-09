@@ -1,23 +1,23 @@
 {
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.4.RELEASE\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.cloud.stream.security.enabled=true`\n  - `spring.cloud.stream.security.jaas.config=classpath:jaas.conf`\n  - `spring.cloud.stream.security.oauth2.resource.server.jwt.key-value=<your-jwt-key>`",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `./gradlew test` for running tests.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.5.RELEASE\n  - Spring Security: 5.7.4\n\n- **Key Config Options**:\n  - `spring.cloud.stream.security.enabled`: Enable or disable security.\n  - `spring.cloud.stream.security.user.name`: Username for authentication.\n  - `spring.cloud.stream.security.user.password`: Password for authentication.\n  - `management.endpoints.web.exposure.include`: Specify which endpoints to expose.",
     "source": "web_search",
-    "updated_at": 1780939980.3575652
+    "updated_at": 1780970936.3325996
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:spring cloud stream security_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `docker-compose up` for running Kafka and Zookeeper.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic to consume from.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic to produce messages to.\n  - `spring.security.user.name` and `spring.security.user.password`: For securing the application endpoints.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - Spring Cloud Stream: 3.1.4\n  - Spring Security: 5.6.3\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the name of the input destination.\n  - `spring.cloud.stream.security.oauth2.resource.jwt.key-uri`: URI to fetch the public key for JWT validation.\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: URI to fetch the JWK set for JWT validation.",
     "source": "code_example",
-    "updated_at": 1780939982.542944
+    "updated_at": 1780970953.109555
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies": {
-    "content": "- **CLI Commands**: Use `top`, `htop`, `iostat`, `vmstat` for monitoring system performance.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries to benefit from performance improvements.\n- **Key Config Options**:\n  - For Node.js: Adjust `--max-old-space-size` in the command line to increase memory allocation.\n  - For Python: Use `-O` flag for optimized code execution.\n  - For Apache: Increase `MaxRequestWorkers` in `httpd.conf`.\n  - For Nginx: Adjust `worker_processes` and `worker_connections` in `nginx.conf`.",
+    "content": "- **Database Performance Tuning Strategies for Analytics**: Use `EXPLAIN` to understand query execution plans, and consider indexing strategies like B-trees or hash indexes.\n- **Strategies for tuning Spark job performance**: Utilize `spark-submit --conf spark.executor.memory=4g --conf spark.driver.memory=2g` to allocate memory efficiently.\n- **The 15 Most Effective Windows CPU Performance Tuning Strategies**: Adjust the `Processor Affinity` setting in Task Manager to limit processes to specific CPUs.\n- **Performance Tuning Strategies for Archive Processing**: Implement batch processing during off-peak hours to reduce competition with normal application processing.",
     "source": "web_search",
-    "updated_at": 1780939984.604124
+    "updated_at": 1780970965.323276
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:performance tuning strategies_ex": {
-    "content": "- **CLI Commands**: Use `gprof` or `perf` for profiling.\n- **Latest Versions**: Ensure using the latest compiler and runtime versions.\n- **Key Config Options**:\n  - `-O2` or `-O3` flags in GCC for optimization levels.\n  - Enable Just-In-Time (JIT) compilation if applicable.\n  - Use efficient data structures and algorithms.",
+    "content": "- Use `node --inspect` to profile Node.js applications.\n- Implement caching strategies like Redis or Memcached.\n- Explore worker threads for CPU-bound tasks using `worker_threads`.\n- Optimize database queries and use indexing.\n- Enable clustering with `cluster` module for better performance.\n- Manage memory efficiently by avoiding global variables.\n- Use a profiler like `v8-profiler-next` to identify bottlenecks.\n- Monitor application performance with tools like New Relic or Datadog.\n- Regularly benchmark changes using tools like `autocannon`.\n- Keep Node.js and dependencies up-to-date with latest versions.",
     "source": "code_example",
-    "updated_at": 1780939986.8319921
+    "updated_at": 1780970971.385173
   },
   "search:Advanced Spring Cloud Stream with Security and Performance Tuning:stream processing optimization": {
     "content": "- Use `node --stream` to enable streaming mode in Node.js.\n- Update Node.js to the latest version for performance improvements and bug fixes.\n- Configure stream processing applications with optimal buffer sizes using `highWaterMark`.\n- Employ `pipeline()` method from `stream` module for efficient data flow between streams.\n- Monitor latency by implementing `latencyAwareOperatorPlacement` strategies.\n- Utilize `Demeter` framework for resource-efficient distributed stream processing.\n- Set checkpoint intervals in distributed systems using a utilization model like the one described in \"Future Gener.\"",

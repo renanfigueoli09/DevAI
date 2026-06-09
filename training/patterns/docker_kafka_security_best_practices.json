@@ -1,17 +1,22 @@
 {
   "search:docker+kafka-security-best-practices:docker kafka security best pra": {
-    "content": "- Use the latest Kafka Docker images from Bitnami or Apache.\n- Configure SASL/PLAIN authentication using `KAFKA_SASL_ENABLED=true` and `KAFKA_PLAINTEXT_LISTENERS=PLAINTEXT://`.\n- Enable TLS/SSL with `KAFKA_SSL_ENABLED=true`, providing paths to certificates in the environment variables.\n- Use Docker Compose for multi-container setups, ensuring network isolation.\n- Set resource limits using `deploy.resources.limits.cpu` and `deploy.resources.limits.memory`.\n- Configure log retention policies with `log.retention.hours` and `log.retention.bytes`.\n- Monitor Kafka cluster health using Prometheus and Grafana dashboards.\n- Regularly update Docker images and dependencies to mitigate security vulnerabilities.",
+    "content": "- Use the latest Apache Kafka Docker image (`apache/kafka`).\n- For SSL/TLS encryption, follow the guide in [3] for setting up certificates.\n- Configure resource limits and requests using `--memory` and `--cpus`.\n- Enable persistence by mounting volumes to store data.\n- Set up network isolation with Docker's networking features.\n- Use environment variables for configuration (`KAFKA_ADVERTISED_LISTENERS`, `KAFKA_ZOOKEEPER_CONNECT`).\n- Regularly update the Kafka image to patch security vulnerabilities.\n- Monitor Kafka using tools like Prometheus and Grafana.",
     "source": "web_search",
-    "updated_at": 1780940272.518829
+    "updated_at": 1780967072.6016169
   },
   "search:docker+kafka-security-best-practices:docker kafka security best pra_ex": {
-    "content": "- Use `docker pull bitnami/kafka` to get the latest Bitnami Kafka image.\n- Run Kafka with TLS/SSL by mounting SSL certificates:\n  ```bash\n  docker run -v /path/to/certs:/certs bitnami/kafka:latest \\\n    --ssl.enabled true \\\n    --ssl.keystore.location /certs/server.keystore.jks \\\n    --ssl.keystore.password keystorepass \\\n    --ssl.key.password keypass\n  ```\n- Configure Kafka to use SASL/PLAIN for authentication:\n  ```bash\n  docker run -e KAFKA_SASL_ENABLED_MECHANISMS=PLAIN \\\n    -e KAFKA_PLAIN_PASSWORD=my-secret-pw bitnami/kafka:latest\n  ```\n- Use `docker-compose` with a custom `docker-compose.yml` file to manage Kafka services:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: wurstmeister/zookeeper\n    kafka:\n      image: wurstmeister/kafka\n      ports:\n        - \"9092:9092\"\n      environment:\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n  ```\n- Key config options for Kafka include `num.partitions`, `replication.factor`, and `ssl.enabled`.\n- Ensure Docker volumes are used to persist data across container restarts.\n- Regularly update the Kafka image to the latest version using `docker pull bitnami/kafka:latest`.",
+    "content": "- Use `docker run` to start Kafka containers.\n- Specify `-p` to map ports, e.g., `-p 9092:9092`.\n- Utilize `--name` for container naming.\n- Employ `docker-compose` for multi-container setups.\n- Configure TLS/SSL with volumes and environment variables.\n- Use `docker exec` to interact with running containers.\n- Set up resource limits with `--memory` and `--cpu-shares`.\n- Monitor container health with `docker ps -a --filter status=running`.\n- Update Kafka version by pulling the latest image from Docker Hub.",
     "source": "code_example",
-    "updated_at": 1780940275.3831801
+    "updated_at": 1780967080.9110465
   },
   "search:docker+kafka-security-best-practices:securing kafka in docker conta": {
-    "content": "- Use `docker run` to start a Kafka container.\n- Specify the latest Bitnami Kafka image from Docker Hub.\n- Enable SASL/PLAIN authentication by setting environment variables like `KAFKA_AUTH_ENABLED`, `KAFKA_SASL_PLAINTEXT_LISTENER_NAME`, and `KAFKA_USERS`.\n- Configure mutual TLS using certificates generated with OpenSSL.\n- Set up Access Control Lists (ACLs) for fine-grained access control.\n- Use the Kafka CLI within Docker containers to manage topics, produce/consume messages securely.",
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 bitnami/kafka`\n  - `docker exec -it kafka bash`\n\n- **Latest Versions**:\n  - Kafka: 3.8\n  - Docker: 24.x\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for the broker.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string.\n  - `KAFKA_SSL_ENABLED`: Enable SSL encryption.\n  - `KAFKA_SASL_ENABLED_MECHANISMS`: SASL mechanisms to enable.",
     "source": "web_search",
-    "updated_at": 1780940278.850651
+    "updated_at": 1780967090.8917804
+  },
+  "search:docker+kafka-security-best-practices:securing kafka in docker conta_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 bitnami/kafka`\n  - `docker exec -it kafka kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Kafka: 4.0.0\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for the broker.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string.\n  - `KAFKA_BROKER_ID`: Unique ID for each broker in the cluster.",
+    "source": "code_example",
+    "updated_at": 1780967099.1246347
   }
 }

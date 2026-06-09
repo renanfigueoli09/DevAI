@@ -1,22 +1,22 @@
 {
   "search:Advanced Spring Boot Security with Elasticsearch Integration:spring boot security elasticse": {
-    "content": "- **CLI Commands**:\n  - `elasticsearch.bat` to run Elasticsearch.\n  \n- **Latest Versions**:\n  - Elasticsearch 8.7.0\n  \n- **Key Config Options**:\n  - Enable security in `application.yaml`.\n  - Configure HTTPS for secure connections.\n  - Use Spring Boot Starter Data Elasticsearch dependency.\n  - Define connection details in `ElasticsearchConfiguration` class.",
+    "content": "- Use the Java API Client for Elasticsearch 8.7.0.\n- Configure your Spring Boot app to use HTTPS with Elasticsearch 8.7.0.\n- Add `spring-boot-starter-data-elasticsearch` dependency in Maven.\n- Extend `ElasticsearchConfiguration` class to define secured connection details.\n- Enable security in `application.yaml` with username and password.\n- Use the High Level Rest Client for secure communication.\n- Ensure certificates are correctly configured for HTTPS.",
     "source": "web_search",
-    "updated_at": 1780938327.2641156
+    "updated_at": 1780968028.8887022
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:spring boot security elasticse_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n  - Elasticsearch: 7.x\n\n- **Key Config Options**:\n  - `spring.data.elasticsearch.username` and `spring.data.elasticsearch.password`\n  - `spring.security.user.name` and `spring.security.user.password`\n  - `application.yaml` for JWT configuration",
+    "content": "- Add `spring-boot-starter-data-elasticsearch` to your Maven `pom.xml`.\n- Configure Elasticsearch security in `application.yaml`:\n  ```yaml\n  spring:\n    elasticsearch:\n      rest:\n        uris: http://localhost:9200\n        username: your_username\n        password: your_password\n  ```\n- Use Spring Security for authentication and authorization.\n- Add dependencies for Spring Security to your Maven `pom.xml`.\n- Configure security in `application.yaml` or Java configuration class.\n- Implement JWT (JSON Web Tokens) for stateless authentication.\n- Use Spring Boot 3.0 with Spring Security 6 for the latest features.\n- Ensure Elasticsearch is running and accessible at specified URI.\n- Check Elasticsearch documentation for version-specific configurations.",
     "source": "code_example",
-    "updated_at": 1780938329.7116492
+    "updated_at": 1780968036.6217623
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:elasticsearch authentication a": {
-    "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name <domain-name> --elasticsearch-version <version> --ebs-options VolumeSize=<size> --instance-type <type> --security-group-ids <group-id> --vpc-options SubnetIds=<subnet-id>`\n  - `curl -X GET \"http://<host>:9200/_cat/nodes?v\"`\n  - `curl -X PUT \"http://<host>:9200/<index>/_doc/1\" -H 'Content-Type: application/json' -d '{ \"field\": \"value\" }'`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5\n  - AWS Elasticsearch Service: 8.5\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Enables security features.\n  - `xpack.security.authc.realms.file.file1.path`: Path to the file realm configuration.\n  - `xpack.security.authorization.enabled`: Enables role-based access control (RBAC).\n  - `xpack.security.audit.enabled`: Enables auditing of security events.",
+    "content": "- **CLI Commands**:\n  - `elasticsearch-cli api_key create --name <key_name> --role <role_name>`\n  - `curl -X POST \"http://localhost:9200/_security/api_key\" -H 'Content-Type: application/json' -d '{\"name\": \"<key_name>\", \"role_descriptors\": {\"<role_name>\": {}}}'`\n\n- **Latest Versions**:\n  - Elasticsearch: v8.4.3\n  - Kibana: v8.4.3\n\n- **Key Config Options**:\n  - `xpack.security.enabled`: Enable security features.\n  - `xpack.security.authc.api_key.enabled`: Enable API key authentication.\n  - `xpack.security.authorization.enabled`: Enable role-based access control (RBAC).",
     "source": "web_search",
-    "updated_at": 1780938332.4087393
+    "updated_at": 1780968048.2832594
   },
   "search:Advanced Spring Boot Security with Elasticsearch Integration:elasticsearch authentication a_ex": {
-    "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name <domain-name> --elasticsearch-version <version> --access-policies file://<policy-file>`\n  - `aws es update-service-software-options --domain-name <domain-name> --automated-update-type MAINTENANCE`\n\n- **Latest Versions**:\n  - Elasticsearch: 8.5\n  - AWS Elasticsearch Service: 1.0\n\n- **Key Config Options**:\n  - `accessPolicies`: Define IAM policies for domain access.\n  - `ebsOptions`: Configure EBS storage options.\n  - `instanceType`: Specify the instance type for nodes.\n  - `nodeCount`: Set the number of nodes in the cluster.",
+    "content": "- **CLI Commands**:\n  - `aws es create-domain --domain-name my-domain --elasticsearch-version 7.10 --ebs-options VolumeSize=20 --instance-type m5.large.elasticsearch`\n  - `aws es update-service-software-options --domain-name my-domain --automated-update-available true`\n\n- **Latest Versions**:\n  - Elasticsearch: 7.10\n  - AWS CLI: 2.x\n\n- **Key Config Options**:\n  - `ebsOptions`: Configure EBS storage options.\n  - `instanceType`: Specify the instance type for your domain.\n  - `automatedUpdateAvailable`: Enable automated updates to the service software.",
     "source": "code_example",
-    "updated_at": 1780938334.9030423
+    "updated_at": 1780968054.7133858
   }
 }

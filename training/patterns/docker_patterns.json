@@ -1,0 +1,7 @@
+{
+  "search:docker+patterns:docker-compose healthcheck dep": {
+    "content": "- **Docker Compose Health Checks**: Use `healthcheck` in your service definition to specify how Docker should check if the container is healthy.\n- **depends_on**: In version 3, use `restart: on-failure` instead of `depends_on` for controlling restart behavior based on failure.\n- **Multi-stage Security**: Implement multi-stage builds in your Dockerfile to reduce image size and improve security by only including necessary files.\n- **CLI Commands**:\n  - `docker-compose up --build`: Build images before starting containers.\n  - `docker-compose down`: Stop and remove containers, networks, volumes, and images created by docker-compose.\n- **Key Config Options**:\n  - `healthcheck`: Define a command to check the health of your container.\n  - `restart: on-failure`: Automatically restart the container if it fails.\n  - `depends_on`: Specify dependencies between services (use `restart: on-failure` instead in version 3).\n- **Latest Versions**: Ensure you are using the latest stable versions of Docker and Docker Compose to benefit from the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1780966300.9998097
+  }
+}

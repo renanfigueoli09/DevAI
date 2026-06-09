@@ -1,17 +1,22 @@
 {
   "search:dotnet+csharp-performance-tuning:.net c# performance tuning tec": {
-    "content": "- Use `nameof` operator instead of `ToString()` for better performance.\n- Implement asynchronous programming using `async` and `await` to improve responsiveness.\n- Utilize bitmasks for efficient data manipulation.\n- Consider using reflection sparingly due to its performance overhead.\n- Optimize loops by minimizing operations inside the loop.\n- Use LINQ efficiently, avoiding unnecessary operations.\n- Configure ASP.NET Core with minimal middleware for better performance.\n- Enable Just-In-Time (JIT) compilation optimizations in Visual Studio.\n- Monitor and profile applications using tools like dotTrace or ANTS Performance Profiler.",
+    "content": "- **CLI Commands**:\n  - `dotnet new blazorserver` for creating a new Blazor Server project.\n  - `dotnet add package MudBlazor` to install MudBlazor in your project.\n\n- **Latest Versions**:\n  - .NET 8 is the latest stable version as of my last update. Ensure you are using the latest updates by running `dotnet upgrade`.\n\n- **Key Config Options**:\n  - For MudBlazor, ensure you have the correct theme and configuration set up in your `_Imports.razor` file.\n  - Configure PostgreSQL connection strings in your `appsettings.json` file.\n\nThese points should help in effectively using MudBlazor and PostgreSQL with .NET C#.",
     "source": "web_search",
-    "updated_at": 1780940214.7582173
+    "updated_at": 1780971234.7947996
   },
   "search:dotnet+csharp-performance-tuning:.net c# performance tuning tec_ex": {
-    "content": "- **CLI Commands**:\n  - `dotnet build --configuration Release`\n  - `dotnet publish --self-contained false`\n\n- **Latest Versions**:\n  - .NET 8\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure logging, caching, and other settings.\n  - `Program.cs`/`Startup.cs`: Set up services and middleware for the application.",
+    "content": "- **CLI Commands**: Use `dotnet build --configuration Release` for optimized builds.\n- **Latest Versions**: .NET 8 is the latest version as of July 2024.\n- **Key Config Options**:\n  - `GC.Server=true`: Enables server garbage collection.\n  - `COMPlus_GCHeapHardLimit=1G`: Sets a hard limit on the heap size.\n  - `DOTNET_TC_MAX_CPU_COUNT`: Limits the number of CPUs for thread pool threads.",
     "source": "code_example",
-    "updated_at": 1780940216.966225
+    "updated_at": 1780971239.309695
   },
   "search:dotnet+csharp-performance-tuning:c# memory management in .net a": {
-    "content": "- **CLI Commands**: Use `dotnet gc` to analyze garbage collection.\n- **Latest Versions**: Ensure using .NET 7 or later for improved memory management features.\n- **Key Config Options**:\n  - `gcServer=true`: Enables the server GC mode for better performance on large applications.\n  - `gcConcurrent=true`: Enables concurrent garbage collection.\n  - `COMPlus_GCHeapHardLimitMB=2048`: Sets a hard limit of 2GB for the heap size.",
+    "content": "- **CLI Commands**:\n  - `dotnet build`: Builds the project.\n  - `dotnet run`: Runs the application.\n  - `dotnet publish`: Publishes the application.\n\n- **Latest Versions**:\n  - .NET 7: Latest stable version as of my last update. Check [official website](https://dotnet.microsoft.com/download/dotnet/7.0) for updates.\n\n- **Key Config Options**:\n  - `appsettings.json`: Configuration file for settings.\n  - `GCSettings.LatencyMode`: Adjusts garbage collection latency mode.\n  - `ObjectPool<T>`: Provides a pool of objects to reuse, reducing memory allocations.\n\nFor detailed information on each point, refer to the official .NET documentation and community resources.",
     "source": "web_search",
-    "updated_at": 1780940219.0800135
+    "updated_at": 1780971246.9114244
+  },
+  "search:dotnet+csharp-performance-tuning:c# memory management in .net a_ex": {
+    "content": "- **CLI Commands**: Use `dotnet build` and `dotnet publish` for building and publishing .NET applications.\n- **Latest Versions**: Ensure you are using the latest version of .NET SDK, which can be checked with `dotnet --version`.\n- **Key Config Options**:\n  - `GC.Server`: Enables server garbage collection for better performance on large heaps.\n  - `COMPlus_GCHeapHardLimit`: Sets a hard limit on the size of the managed heap.\n  - `COMPlus_GCHeapHardLimitPercent`: Specifies the percentage of physical memory that can be used by the managed heap.",
+    "source": "code_example",
+    "updated_at": 1780971252.1437624
   }
 }

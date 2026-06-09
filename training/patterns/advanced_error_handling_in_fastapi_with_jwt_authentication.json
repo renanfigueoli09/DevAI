@@ -1,23 +1,23 @@
 {
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling": {
-    "content": "- Use `@app.exception_handler()` to add custom exception handling.\n- Middleware can be used to handle errors globally across the application.\n- Ensure error responses are well-documented and consistent with success responses using Pydantic models.\n- Implement global error handlers in FastAPI for better API consumer experience.",
+    "content": "- Use `HTTPException` for custom errors in FastAPI.\n- Implement custom exception handlers using `@app.exception_handler`.\n- Validate data using Pydantic models to handle input errors gracefully.\n- Ensure all exceptions are caught and handled, returning meaningful HTTP responses.\n- Utilize middleware for global error handling across the application.",
     "source": "web_search",
-    "updated_at": 1780941263.1744947
+    "updated_at": 1780970665.5272455
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:fastapi error handling_ex": {
-    "content": "- Use `uvicorn` to run FastAPI apps.\n- Implement custom exception handlers using `@app.exception_handler`.\n- Utilize Python's built-in exceptions like `HTTPException`.\n- Configure error responses with JSON schemas for consistency.\n- Update FastAPI to the latest version for bug fixes and improvements.\n- Key config options include `debug=True` during development.\n- Use middleware for global error handling across all routes.",
+    "content": "- Use `@app.exception_handler(Exception)` to define custom exception handlers.\n- For example, create a handler for `HTTPException` using `@app.exception_handler(HTTPException)`.\n- To handle specific exceptions like `UnicornException`, use `@app.exception_handler(UnicornException)`.\n- Return a JSON response with the status code and detail in your exception handler function.\n- Use `fastapi.HTTPException(status_code=404, detail=\"Item not found\")` to raise HTTP exceptions.\n- Configure logging by setting up `uvicorn.run(app, log_level=\"info\")`.\n- Ensure all path operations have proper error handling to avoid server errors.",
     "source": "code_example",
-    "updated_at": 1780941265.4128048
+    "updated_at": 1780970679.3474374
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi": {
-    "content": "- Use `openssl rand -base64 32` to generate a secure secret key.\n- Implement JWT signing with the HS256 algorithm for security.\n- Store the secret key securely, not in code or version control.\n- Set an appropriate expiration time (`exp`) in JWTs using libraries like `jsonwebtoken`.\n- Validate JWTs on each request by checking signature and expiration.\n- Use HTTPS to secure transmission of JWTs.\n- Implement token revocation mechanisms if needed.\n- Regularly update dependencies and libraries used for JWT handling.",
+    "content": "- Use `jsonwebtoken` package for handling JWT in Node.js.\n- Set secret key securely, preferably using environment variables.\n- Implement token expiration to enhance security.\n- Validate tokens on every request to ensure authenticity.\n- Avoid storing sensitive information in JWTs.\n- Consider using refresh tokens for long-lived sessions.\n- Monitor and log JWT usage for anomaly detection.\n- Regularly update dependencies to mitigate vulnerabilities.",
     "source": "web_search",
-    "updated_at": 1780941267.7436566
+    "updated_at": 1780970695.8435354
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi": {
-    "content": "- Use `uvicorn` as the ASGI server to run your FastAPI application.\n- Override default exception handlers by defining custom exception handlers in your FastAPI app.\n- Implement global exception handling using middleware or decorators for consistent error responses.\n- Utilize Python's built-in exceptions like `HTTPException` for HTTP errors and create custom exceptions for application-specific errors.\n- Configure logging to capture and log exceptions, aiding in debugging and monitoring.",
+    "content": "- Use `HTTPException` for custom errors.\n- Implement global exception handling using middleware or decorators.\n- Define custom exception classes to handle specific error scenarios.\n- Utilize Starlette's exception handlers for default error responses.\n- Example: \n  ```python\n  from fastapi import FastAPI, HTTPException\n\n  app = FastAPI()\n\n  @app.exception_handler(404)\n  async def not_found_exception_handler(request, exc):\n      return JSONResponse(\n          status_code=exc.status_code,\n          content={\"message\": \"Item not found\"},\n      )\n\n  @app.get(\"/items/{item_id}\")\n  async def read_item(item_id: int):\n      if item_id not in [1, 2, 3]:\n          raise HTTPException(status_code=404, detail=\"Item not found\")\n      return {\"item_id\": item_id}\n  ```\n- For robust error handling, consider using middleware.\n- Example of custom exception class:\n  ```python\n  from fastapi import FastAPI, Request\n\n  app = FastAPI()\n\n  class CustomException(Exception):\n      def __init__(self, message: str):\n          self.message = message\n\n  @app.exception_handler(CustomException)\n  async def custom_exception_handler(request: Request, exc: CustomException):\n      return JSONResponse(\n          status_code=400,\n          content={\"message\": exc.message},\n      )\n\n  @app.get(\"/custom\")\n  async def read_custom():\n      raise CustomException(\"This is a custom exception.\")\n  ```\n- FastAPI version: Ensure you are using the latest stable version for optimal functionality and security.",
     "source": "web_search",
-    "updated_at": 1780941269.731676
+    "updated_at": 1780970715.603897
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:exception handling in fastapi_ex": {
     "content": "- Use `HTTPException` from `fastapi` to raise exceptions.\n- Register exception handlers using the `@app.exception_handler(HTTPException)` decorator.\n- Handle custom exceptions by registering them with Starlette's `HTTPException`.\n- For more detailed error handling, consider using Pydantic models for validation errors.\n- FastAPI automatically handles common HTTP errors like 404 and 500.\n- Use middleware to handle global exceptions if needed.\n- Ensure all exception handlers return responses in a consistent format.",
@@ -25,8 +25,8 @@
     "updated_at": 1780941271.8829324
   },
   "search:Advanced Error Handling in FastAPI with JWT Authentication:jwt authentication best practi_ex": {
-    "content": "- Use `openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048` to generate a private key.\n- Use `openssl rsa -pubout -in private.key -out public.key` to derive the public key from the private key.\n- Install `pyjwt` using pip with the command `pip install pyjwt`.\n- For JWT signing, use the following Python code snippet:\n  ```python\n  import jwt\n  encoded_jwt = jwt.encode({\"some\": \"payload\"}, \"secret\", algorithm=\"HS256\")\n  ```\n- For JWT decoding and verification, use this Python code snippet:\n  ```python\n  decoded_jwt = jwt.decode(encoded_jwt, \"secret\", algorithms=[\"HS256\"])\n  ```\n- Ensure your secret key is kept secure and not exposed in your source code.\n- Use HTTPS to protect JWTs during transmission.\n- Implement token expiration with the `exp` claim to enhance security.\n- Regularly rotate your secret keys for added security.",
+    "content": "- Use the latest version of `JWTAuditor` for secure JWT implementation.\n- For .NET, follow Duende's guide to secure your API with JWTs.\n- Implement JWT authentication using libraries like `System.IdentityModel.Tokens.Jwt`.\n- Configure token expiration and refresh mechanisms in your application.\n- Store secret keys securely, preferably using environment variables or a secure vault.\n- Validate tokens on the server side before processing requests.\n- Use HTTPS to encrypt data transmitted between client and server.\n- Implement rate limiting to prevent brute-force attacks.\n- Regularly update dependencies and libraries to mitigate vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780941274.0666502
+    "updated_at": 1780970700.604969
   }
 }

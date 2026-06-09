@@ -1,12 +1,12 @@
 {
   "search:react-native-firebase-authentication-advanced:react native firebase authenti": {
-    "content": "- **CLI Commands**:\n  - `npx react-native init MyProject`\n  - `npm install @react-native-firebase/app @react-native-firebase/auth`\n\n- **Latest Versions**:\n  - React Native CLI: 7.0.3\n  - @react-native-firebase/app: 15.2.0\n  - @react-native-firebase/auth: 14.0.0\n\n- **Key Config Options**:\n  - `apiKey`: Your Firebase project's API key.\n  - `authDomain`: Your Firebase project's authentication domain.\n  - `projectId`: Your Firebase project ID.\n  - `storageBucket`: Your Firebase storage bucket name.\n  - `messagingSenderId`: Your Firebase messaging sender ID.",
+    "content": "- Install Firebase Authentication using `npm install @react-native-firebase/app` and `npm install @react-native-firebase/auth`.\n- Configure Firebase in your React Native project by adding the Firebase Android BoM to `android/app/build.gradle`.\n- Use the latest versions of `@react-native-firebase/app` and `@react-native-firebase/auth` for compatibility.\n- Key config options include setting up authentication methods like email/password, phone numbers, Google, Facebook, and Twitter.",
     "source": "web_search",
-    "updated_at": 1780938613.2287982
+    "updated_at": 1780971094.7753124
   },
   "search:react-native-firebase-authentication-advanced:react native firebase authenti_ex": {
-    "content": "- **CLI Commands**:\n  - `expo install @react-native-firebase/app`\n  - `expo install @react-native-firebase/auth`\n\n- **Latest Versions**:\n  - Firebase SDK for React Native: v14.x\n  - Expo CLI: v5.x\n\n- **Key Config Options**:\n  - Firebase project setup in Firebase Console\n  - Android and iOS project configurations (google-services.json, GoogleService-Info.plist)\n  - Authentication methods: Email/Password, Phone Number, Google, Facebook",
+    "content": "- **CLI Commands**: `npx react-native init MyProject` to create a new React Native project.\n- **Latest Versions**: Ensure Firebase SDK is up-to-date using `npm install --save @react-native-firebase/app`.\n- **Key Config Options**:\n  - Email/Password Authentication: Enable in Firebase Console, use `firebase.auth().createUserWithEmailAndPassword(email, password)` for sign-up and `signInWithEmailAndPassword` for login.\n  - Google Sign-In: Install `@react-native-google-signin/google-signin`, configure Google Cloud Platform, then use `GoogleSignin.signIn()` to authenticate.\n  - Phone Authentication: Enable in Firebase Console, use `firebase.auth().signInWithPhoneNumber(phoneNumber)` to initiate the verification process.",
     "source": "code_example",
-    "updated_at": 1780938615.387079
+    "updated_at": 1780971101.9974358
   }
 }

@@ -1,13 +1,13 @@
 {
   "search:python-fastapi-authentication:fastapi authentication best pr": {
-    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2, use the `fastapi-oauthlib` package with `pip install fastapi_oauthlib`.\n- For JWT, ensure you have `python-jose[cryptography]` installed via `pip install python-jose[cryptography]`.\n- Implement password hashing using `bcrypt`, install it with `pip install bcrypt`.\n- Configure your FastAPI app to use OAuth2 and JWT by setting up the necessary routes and dependencies.\n- Use environment variables for sensitive information like secret keys, tokens, and database credentials.\n- For production, ensure HTTPS is used to secure all communications.\n- Regularly update FastAPI, `fastapi-oauthlib`, and other packages to their latest versions to benefit from security patches and new features.",
+    "content": "- Use `pip install fastapi uvicorn python-multipart passlib[bcrypt]` to install FastAPI, Uvicorn, and necessary libraries.\n- For JWT authentication, use `python -m pip install python-jose[cryptography]`.\n- Implement password hashing with `passlib.context.CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")`.\n- Configure your database connection string in `.env` file.\n- Use `uvicorn main:app --reload` to run FastAPI application during development.\n- For production, use `uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4`.\n- Implement OAuth2 with password and JWT tokens for secure user authentication.\n- Use environment variables for sensitive data like secret keys and database URLs.\n- Regularly update dependencies using `pip install -r requirements.txt --upgrade` to ensure security patches.",
     "source": "web_search",
-    "updated_at": 1780941282.5899012
+    "updated_at": 1780969913.8371894
   },
   "search:python-fastapi-authentication:fastapi authentication best pr_ex": {
-    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2 JWT authentication, use `pip install python-multipart`.\n- Set up Tortoise ORM with `pip install tortoise-orm`.\n- Configure security settings in your FastAPI app using environment variables for sensitive data like secret keys.\n- Implement JWT token generation and verification using libraries like `python-jose[cryptography]`.\n- Use password hashing with `passlib` for storing user passwords securely.\n- Integrate Tortoise ORM models for database operations related to authentication.\n- Enable CORS in your FastAPI app using `fastapi.middleware.cors.CORSMiddleware`.\n- Regularly update dependencies and libraries to ensure security patches are applied.",
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - Pydantic: 1.10.9\n  - SQLAlchemy: 1.4.36\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Secret key for JWT encoding.\n  - `ALGORITHM`: Algorithm used for JWT encoding (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiration time for access tokens in minutes.\n  - `DATABASE_URL`: URL for database connection.",
     "source": "code_example",
-    "updated_at": 1780941284.5259125
+    "updated_at": 1780969921.4279263
   },
   "search:python+fastapi-authentication:python fastapi jwt authenticat": {
     "content": "- **CLI Commands**:\n  - `fastapi create` (for creating new FastAPI projects)\n  - `uvicorn run main:app --reload` (to run the FastAPI app with auto-reload)\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.36\n  - Pydantic: 1.9.0\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Secret key for JWT encoding/decoding.\n  - `ALGORITHM`: Algorithm used for JWT encoding (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiration time for access tokens in minutes.\n  - Database connection string: For example, `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`",
@@ -33,5 +33,10 @@
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- Implement OAuth2/JWT for authentication using `fastapi.security.OAuth2PasswordBearer`.\n- Set up CORS with `fastapi.middleware.cors.CORSMiddleware` for secure cross-origin requests.\n- Validate input data using Pydantic models to ensure data integrity.\n- Apply rate limiting with `fastapi_limiter` to prevent abuse and denial-of-service attacks.\n- Configure security headers like Content Security Policy (CSP) and Strict Transport Security (HSTS) in your FastAPI app.\n- Use environment variables for sensitive information such as secret keys, database credentials, and API tokens.\n- Regularly update FastAPI and its dependencies using `pip install --upgrade fastapi`.\n- Implement logging and auditing to track user activities and detect potential security breaches.",
     "source": "web_search",
     "updated_at": 1780941295.045556
+  },
+  "search:python-fastapi-authentication:jwt authentication with fastap": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Pydantic: v1.10.7\n\n- **Key Config Options**:\n  - JWT Secret Key: Generate a secure secret key using `openssl rand -hex 32`\n  - Token Expiration Time (e.g., 15 minutes): `ACCESS_TOKEN_EXPIRE_MINUTES = 15`\n  - Algorithm: `ALGORITHM = \"HS256\"`\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`",
+    "source": "web_search",
+    "updated_at": 1780969929.7175562
   }
 }

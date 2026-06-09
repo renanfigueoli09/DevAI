@@ -1,12 +1,12 @@
 {
   "search:github-actions+ci:github actions nestjs spring d": {
-    "content": "- **CLI Commands**:\n  - `docker build --cache-from <image> --tag <new-image>`\n  - `npm install -g @actions/checkout`\n  - `npm install -g @actions/cache`\n\n- **Latest Versions**:\n  - GitHub Actions: Latest version as of my last update.\n  - NestJS: v10.0.0\n  - Spring Boot: 3.2.0\n  - Docker: Latest stable version\n\n- **Key Config Options**:\n  - `matrix` for parallel builds in GitHub Actions.\n  - `cache` step to reuse Docker layers.\n  - `steps` for defining workflow steps in YAML.\n\nFor more detailed information, refer to the official documentation of each tool.",
+    "content": "- Use `docker build` command to build Docker images.\n- Update GitHub Actions workflow file to use the latest version of actions/checkout@v3 and actions/setup-node@v3.\n- Configure caching for dependencies using `actions/cache@v3`.\n- Implement matrix strategy in GitHub Actions to run jobs on multiple configurations.\n- Use `docker-compose` for multi-service applications if needed.\n- Ensure Dockerfile is correctly configured for your Spring Boot application.\n- Set up environment variables securely using GitHub Secrets.\n- Utilize SonarQube Scan Action for code quality and security analysis.\n- Review Stack Overflow questions tagged with 'building-github-actions' for additional insights.",
     "source": "web_search",
-    "updated_at": 1780939686.8339605
+    "updated_at": 1780966409.345185
   },
   "search:github-actions+ci:github actions nestjs spring d_ex": {
-    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save-dev @nestjs/cli`\n\n- **Latest Versions**:\n  - NestJS CLI: v9.x\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - GitHub Actions Workflow file (`workflow.yml`)\n  - Dockerfile for NestJS application\n  - Cache strategy in GitHub Actions to speed up builds",
+    "content": "- **CLI Commands**:\n  - `docker build --cache-from <image_name> --tag <new_image_name>`\n  - `docker push <image_name>`\n  - `gh workflow run <workflow_file>`\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Docker: v24.0.0\n  - GitHub Actions: Latest\n\n- **Key Config Options**:\n  - `matrix.node-version`: Define Node.js versions for testing.\n  - `env.DOCKER_IMAGE`: Specify the Docker image name.\n  - `steps.cache`: Configure cache steps in GitHub Actions.\n  - `jobs.build.strategy.matrix`: Use matrix strategy for different configurations.",
     "source": "code_example",
-    "updated_at": 1780939689.684307
+    "updated_at": 1780966415.6647584
   }
 }

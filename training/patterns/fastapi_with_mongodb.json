@@ -10,23 +10,23 @@
     "updated_at": 1780940834.682788
   },
   "search:FastAPI with MongoDB:mongodb performance tuning for": {
-    "content": "- Install FastAPI and Uvicorn using Poetry: `$ poetry add fastapi 'uvicorn[standard]'`\n- Use the latest version of FastAPI: `^0.103.2`\n- Key config options for performance tuning:\n  - Database connection pool size\n  - Caching strategies (e.g., Redis, Memcached)\n  - Asynchronous patterns (e.g., async/await)\n  - Deployment configurations (e.g., load balancing)",
+    "content": "- **CLI Commands**:\n  - `docker pull mongodb/mongo`\n  - `poetry add fastapi 'uvicorn[standard]'`\n\n- **Latest Versions**:\n  - FastAPI: ^0.103.2\n  - Uvicorn: ^0.23\n\n- **Key Config Options**:\n  - Use Beanie ODM for MongoDB integration.\n  - Leverage FastAPI's asynchronous capabilities and Pydantic data validation for high-performance APIs.",
     "source": "web_search",
-    "updated_at": 1780940836.9577858
+    "updated_at": 1780969652.341343
   },
   "search:FastAPI with MongoDB:mongodb performance tuning for_ex": {
-    "content": "- **CLI Commands**:\n  - `poetry add fastapi 'uvicorn[standard]'`: Adds FastAPI and Uvicorn to your project.\n  - `uvicorn main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: ^0.103.2\n  - Uvicorn: ^0.23.2\n\n- **Key Config Options**:\n  - MongoDB Connection String: Customize based on your environment (local, Atlas).\n  - Pydantic Models: Define data models for validation and serialization.\n  - FastAPI Security: Implement authentication and authorization using OAuth2 or JWT.",
+    "content": "- Use `poetry add fastapi 'uvicorn[standard]'` to install FastAPI and Uvicorn.\n- For MongoDB, use the latest version of Motor with `pip install motor`.\n- Configure MongoDB connection string in your FastAPI app.\n- Set up a virtual environment using Poetry for project isolation.\n- Ensure you have the correct Python version (e.g., 3.11) installed.\n- Use `uvicorn main:app --reload` to run your FastAPI application locally with auto-reload.\n- For production, use `uvicorn main:app --host 0.0.0.0 --port 8000`.\n- Monitor performance using tools like MongoDB Atlas or local monitoring solutions.\n- Optimize queries and indexes for better performance in MongoDB.\n- Consider asynchronous operations with Motor to handle I/O-bound tasks efficiently.",
     "source": "code_example",
-    "updated_at": 1780940839.7661507
+    "updated_at": 1780969668.4830656
   },
   "search:FastAPI with MongoDB:fastapi and mongodb security p": {
-    "content": "- **CLI Commands**:\n  - `poetry init`: Initialize a new project.\n  - `poetry add fastapi motor python-jose passlib`: Add dependencies to your project.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.1\n  - Motor: v2.3.1\n  - Python-Jose: v3.2.0\n  - Passlib: v1.7.4\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://username:password@host:port/database`\n  - JWT Secret Key: Generate a secure secret key for JWT encoding.\n  - Password Hashing Algorithm: Use algorithms like bcrypt provided by Passlib.\n\nThese actionable facts should help developers set up and configure FastAPI with MongoDB securely.",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn pymongo`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - PyMongo: 4.3.0\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Database Name: `mydatabase`\n  - Collection Name: `mycollection`\n  - JWT Secret Key: `your-secret-key`\n  - JWT Algorithm: `HS256`",
     "source": "web_search",
-    "updated_at": 1780940842.18791
+    "updated_at": 1780969686.9508796
   },
   "search:FastAPI with MongoDB:fastapi and mongodb security p_ex": {
-    "content": "- **CLI Commands**:\n  - `git clone https://github.com/Youngestdev/fastapi-mongo.git`\n  - `docker run -d -p 27017:27017 mongo`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - PyMongo: 4.3.0\n\n- **Key Config Options**:\n  - MongoDB URI in `.env.dev`: `MONGO_URI=mongodb://localhost:27017/mydatabase`\n  - JWT Secret Key: `JWT_SECRET_KEY=your_secret_key_here`",
+    "content": "- **CLI Commands**:\n  - `mkdir fastAPI`\n  - `cd fastAPI`\n  - `python -m venv fastAPI`\n  - `source fastAPI/bin/activate` (Linux)\n  - `pip install fastapi uvicorn pydantic pymongo`\n\n- **Latest Versions**:\n  - FastAPI: 0.78.0\n  - Uvicorn: 10.6.0\n  - Pydantic: 1.9.2\n  - PyMongo: 4.3.0\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - FastAPI Dependency Injection: Use `Depends` for managing dependencies.\n  - PyMongo CRUD Operations: Implement create, read, update, and delete methods using PyMongo's API.",
     "source": "code_example",
-    "updated_at": 1780940844.6265185
+    "updated_at": 1780969696.5613103
   }
 }
