@@ -1,0 +1,22 @@
+{
+  "search:dotnet-efcore-sqlserver-performance:entity framework core sql serv": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update` to apply migrations.\n  - `dotnet ef migrations add <MigrationName>` to create a new migration.\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0 (as of my last update in October 2023).\n  - SQL Server: Latest version varies, check Microsoft's official website for the most current release.\n\n- **Key Config Options**:\n  - `AsNoTracking()` for read-only queries to reduce memory usage and improve performance.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` globally if applicable.\n  - Indexes on frequently queried columns in SQL Server to speed up data retrieval.",
+    "source": "web_search",
+    "updated_at": 1781024282.1202996
+  },
+  "search:dotnet-efcore-sqlserver-performance:entity framework core sql serv_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  \n- **Latest Versions**:\n  - EF Core 7.0 (as of my last update in October 2023)\n  \n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only operations to improve performance.\n  - `UseLazyLoadingProxies()` for lazy loading, but be cautious as it can introduce additional complexity and potential issues.\n  - `UseNpgsql` or `UseSqlServer` with appropriate connection strings and options for SQL Server specific optimizations.",
+    "source": "code_example",
+    "updated_at": 1781024290.730128
+  },
+  "search:dotnet-efcore-sqlserver-performance:dotnet efcore with sql server ": {
+    "content": "- Install EF Core provider via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- Use latest EF Core version: Ensure your project targets .NET 6 or later for the best experience.\n- Key config options:\n  - Connection string in `appsettings.json`: `\"Server=.\\SQLExpress;Database=SchoolDB;Trusted_Connection=True;\"`\n  - DbContext configuration in `Startup.cs` or `Program.cs`:\n    ```csharp\n    services.AddDbContext<SchoolContext>(options =>\n        options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\")));\n    ```\n- Utilize `DateOnly` and `TimeOnly` with EF Core 6+ for better date handling.\n- Explore advanced techniques like `SelectMany` in EF Core for complex data queries.",
+    "source": "web_search",
+    "updated_at": 1781024299.4129186
+  },
+  "search:dotnet-efcore-sqlserver-performance:dotnet efcore with sql server _ex": {
+    "content": "- **Install EFCore SQL Server Provider**: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- **Latest Version**: Check on [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/)\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or use environment variables.\n  - DbContext Configuration: Define your `DbContext` class with DbSet properties.\n  - Migrations: Use `dotnet ef migrations add InitialCreate` and `dotnet ef database update`.\n  - Query Performance**: Use `.AsNoTracking()`, `.Include()`, `.Where()`, etc., for efficient querying.",
+    "source": "code_example",
+    "updated_at": 1781024305.6437197
+  }
+}
