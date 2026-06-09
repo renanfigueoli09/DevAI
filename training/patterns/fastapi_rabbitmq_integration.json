@@ -1,0 +1,22 @@
+{
+  "search:fastapi-rabbitmq-integration:fastapi rabbitmq integration t": {
+    "content": "- **CLI Commands**:\n  - `docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management`\n  \n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - pika: 1.2.0\n  - Celery: 5.2.3\n  \n- **Key Config Options**:\n  - RabbitMQ Management UI: Access via `http://localhost:15672` with default credentials (guest/guest)\n  - FastAPI Endpoint for RabbitMQ: Define an endpoint to handle incoming REST calls and publish messages.\n  - Celery Configuration: Set up Celery with RabbitMQ as the broker, e.g., `celery -A tasks.celery_app worker --loglevel=info`.",
+    "source": "web_search",
+    "updated_at": 1781039024.25299
+  },
+  "search:fastapi-rabbitmq-integration:fastapi rabbitmq integration t_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn pika`\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  - Pika: 1.2.0\n  \n- **Key Config Options**:\n  - RabbitMQ Connection URL (e.g., `amqp://guest:guest@localhost:5672/`)\n  - Queue Name\n  - Exchange Type\n  - Routing Key",
+    "source": "code_example",
+    "updated_at": 1781039029.1013534
+  },
+  "search:fastapi-rabbitmq-integration:rabbitmq message queue in fast": {
+    "content": "- **Install RabbitMQ**: `sudo apt-get install rabbitmq-server`\n- **Install Celery**: `pip install celery`\n- **Install FastAPI and Uvicorn**: `pip install fastapi uvicorn`\n- **Key Config Options**:\n  - RabbitMQ: `broker_url = 'amqp://localhost'`, `result_backend = 'rpc://'`\n  - Celery: `app.conf.update(broker_url='amqp://localhost', result_backend='rpc://')`\n- **CLI Commands**:\n  - Start RabbitMQ Server: `sudo systemctl start rabbitmq-server`\n  - Stop RabbitMQ Server: `sudo systemctl stop rabbitmq-server`\n  - Enable RabbitMQ Server on Boot: `sudo systemctl enable rabbitmq-server`\n- **Latest Versions**: Ensure using latest versions of FastAPI, Celery, and RabbitMQ for optimal performance.\n- **Startup/Shutdown Events**:\n  ```python\n  @app.on_event(\"startup\")\n  async def startup():\n      await broker.connect()\n\n  @app.on_event(\"shutdown\")\n  async def shutdown():\n      await broker.close()\n  ```\n- **Example Handler**:\n  ```python\n  @broker.handle(queue=\"fastapi\")\n  async def base_handler(body):\n      print(f\"This is the queue result :: {body}\")\n  ```\n\nThese actionable facts provide a clear guide for integrating RabbitMQ with FastAPI applications, ensuring efficient message handling and asynchronous operations.",
+    "source": "web_search",
+    "updated_at": 1781039048.8080409
+  },
+  "search:fastapi-rabbitmq-integration:rabbitmq message queue in fast_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management`\n  - `pip install fastapi uvicorn celery pika`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - Celery: 5.2.7\n  - Pika: 1.2.0\n\n- **Key Config Options**:\n  - RabbitMQ URL: `amqp://guest:guest@localhost:5672`\n  - Celery Broker URL: `pyamqp://guest:guest@localhost:5672//`\n  - Celery Result Backend: `rpc://`",
+    "source": "code_example",
+    "updated_at": 1781039054.7309842
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:typescript-eslint-performance-tuning:typescript eslint performance ": {
+    "content": "- Use `eslint --config-file .eslintrc.js` to specify the configuration file.\n- Update ESLint and TypeScript ESLint plugins to their latest versions using `npm update eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`.\n- Enable caching with `--cache` flag for faster subsequent runs.\n- Configure `parserOptions.project` in `.eslintrc.js` to point to your tsconfig.json file for type-aware linting.\n- Use `eslint --ext .ts,.tsx` to specify the extensions to lint.\n- Disable rules that are not critical with `\"rules\": { \"ruleName\": \"off\" }`.\n- Utilize `--max-warnings 0` to treat warnings as errors if needed.\n- Consider using a `.eslintignore` file to exclude unnecessary directories or files from linting.",
+    "source": "web_search",
+    "updated_at": 1781038972.2941535
+  },
+  "search:typescript-eslint-performance-tuning:typescript eslint performance _ex": {
+    "content": "- **CLI Commands**: Use `eslint --debug` to enable all ESLint debug logs on the command line.\n- **Key Config Options**:\n  - `parserOptions.debugLevel`: Set to true for a shortcut to log levels for eslint, typescript, and/or typescript-eslint.\n- **Latest Versions**: Ensure you are using the latest versions of TypeScript, ESLint, and typescript-eslint for optimal performance.\n- **File Inclusion**: Include all files in your tsconfig.json to avoid linting issues.",
+    "source": "code_example",
+    "updated_at": 1781038985.960933
+  }
+}
