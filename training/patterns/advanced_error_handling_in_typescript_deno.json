@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in TypeScript + Deno:typescript error handling": {
+    "content": "- Use `try/catch` blocks for synchronous code.\n- For asynchronous code, use `async/await` and `try/catch`.\n- Create custom errors by extending the built-in `Error` class.\n- Utilize type guards to handle different types of errors gracefully.\n- Implement error handling in async functions using `.catch()` or `try/catch`.\n- Use TypeScript's type system to catch type-related errors at compile time.\n- Configure your IDE for better error highlighting and navigation.\n- Update TypeScript to the latest version for improved error handling features.",
+    "source": "web_search",
+    "updated_at": 1781033991.7070446
+  },
+  "search:Advanced Error Handling in TypeScript + Deno:typescript error handling_ex": {
+    "content": "- Use `try-catch` blocks to handle errors gracefully.\n- Utilize `throw new Error('message')` for custom error messages.\n- Employ `finally` block for cleanup actions.\n- Check TypeScript version with `tsc -v`.\n- Update TypeScript using `npm install typescript@latest`.\n- Configure `tsconfig.json` for better error handling:\n  ```json\n  {\n    \"compilerOptions\": {\n      \"strict\": true,\n      \"noImplicitAny\": true,\n      \"module\": \"commonjs\",\n      \"target\": \"es6\"\n    }\n  }\n  ```\n- Use `console.error` to log errors in production.\n- Implement logging libraries like Winston for more advanced error tracking.",
+    "source": "code_example",
+    "updated_at": 1781033998.0405664
+  },
+  "search:Advanced Error Handling in TypeScript + Deno:deno error handling": {
+    "content": "- **CLI Commands**: Use `deno run --allow-read` to run scripts with read permissions.\n- **Latest Version**: Ensure Deno is up-to-date by running `deno upgrade`.\n- **Key Config Options**:\n  - `--allow-net`: Allows network access.\n  - `--allow-write`: Allows file writing.\n  - `--allow-env`: Allows environment variable access.",
+    "source": "web_search",
+    "updated_at": 1781034012.552483
+  },
+  "search:Advanced Error Handling in TypeScript + Deno:async error handling": {
+    "content": "- Use `try...catch` blocks around your async functions to catch errors.\n- Ensure promises are properly rejected and caught using `.catch()` or `await`.\n- For C#, use `try...catch` within asynchronous methods with the `async` keyword.\n- Utilize `Task.WhenAll` for handling multiple tasks and their exceptions together.\n- Consider logging errors for better debugging and monitoring.\n- Use `ConfigureAwait(false)` to avoid unnecessary context capture in async/await chains.\n- Keep your error handling consistent across different parts of your application.",
+    "source": "web_search",
+    "updated_at": 1781034042.340269
+  }
+}

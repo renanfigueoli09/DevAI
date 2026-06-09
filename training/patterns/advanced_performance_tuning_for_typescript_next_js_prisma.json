@@ -1,0 +1,32 @@
+{
+  "search:Advanced Performance Tuning for TypeScript + Next.js + Prisma:typescript performance": {
+    "content": "- **CLI Commands**:\n  - `tsc --incremental` to enable incremental compilation.\n  - `tsc --watch` for real-time type checking and compilation.\n\n- **Latest Versions**:\n  - TypeScript 5.2 as of the latest update.\n\n- **Key Config Options**:\n  - `compilerOptions.target`: Specifies the target ECMAScript version (e.g., \"ES6\").\n  - `compilerOptions.module`: Defines module code generation (e.g., \"commonjs\", \"esnext\").\n  - `compilerOptions.outDir`: Specifies the output directory for generated JavaScript files.\n  - `compilerOptions.rootDir`: Specifies the root directory of input files.",
+    "source": "web_search",
+    "updated_at": 1781034272.5009851
+  },
+  "search:Advanced Performance Tuning for TypeScript + Next.js + Prisma:typescript performance_ex": {
+    "content": "- **CLI Commands**: Use `tsc --watch` for real-time compilation and `tsc --incremental` for faster incremental builds.\n- **Latest Version**: TypeScript v5.2 as of my last update.\n- **Key Config Options**:\n  - `compilerOptions.target`: Set to \"ES6\" or later for better performance.\n  - `compilerOptions.moduleResolution`: Use \"node\" for Node.js compatibility.\n  - `compilerOptions.removeComments`: True to reduce output file size.\n  - `compilerOptions.sourceMap`: False in production to avoid exposing source code.",
+    "source": "code_example",
+    "updated_at": 1781034278.5002658
+  },
+  "search:Advanced Performance Tuning for TypeScript + Next.js + Prisma:next.js performance": {
+    "content": "- **CLI Commands**:\n  - `next build`: Build your Next.js application.\n  - `next start`: Start the production server.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Next.js for performance improvements and bug fixes.\n\n- **Key Config Options**:\n  - `images: { domains: ['example.com'] }`: Specify allowed image domains.\n  - `reactStrictMode: true`: Enable React Strict Mode for better error detection.\n  - `swcMinify: true`: Use SWC for faster minification.\n  - `compilerOptions: { optimizeImports: true }`: Optimize imports in your code.\n\n- **Performance Tools**:\n  - Lighthouse for performance audits.\n  - WebPageTest for real-user monitoring.\n  - Next.js DevTools for debugging and optimization insights.",
+    "source": "web_search",
+    "updated_at": 1781034288.107365
+  },
+  "search:Advanced Performance Tuning for TypeScript + Next.js + Prisma:next.js performance_ex": {
+    "content": "- Use `next build` to optimize your Next.js application.\n- Implement code splitting by using dynamic imports (`import()`) for lazy loading components.\n- Optimize images with the `next/image` component, which automatically optimizes images for different devices and formats.\n- Enable automatic static optimization (ASO) by setting `optimizeFonts: true` in `next.config.js`.\n- Utilize server-side rendering (SSR) or static site generation (SSG) to improve initial load times.\n- Implement caching strategies using the `Cache-Control` header in your Next.js API routes.\n- Monitor performance with tools like Lighthouse, WebPageTest, and Next.js's built-in performance monitoring features.\n- Regularly update Next.js to take advantage of performance improvements and bug fixes.",
+    "source": "code_example",
+    "updated_at": 1781034303.5360909
+  },
+  "search:Advanced Performance Tuning for TypeScript + Next.js + Prisma:prisma performance tuning": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Creates a new migration with the provided name.\n\n- **Latest Versions**:\n  - Prisma: v4.10.0\n  - Prisma Client: v4.10.0\n\n- **Key Config Options**:\n  - `queryLogging`: Enables or disables query logging.\n  - `maxQueryTime`: Sets a maximum time for queries to execute before being terminated.\n  - `retryAttempts`: Specifies the number of retry attempts for failed queries.\n  - `retryInterval`: Defines the interval between retry attempts.",
+    "source": "web_search",
+    "updated_at": 1781034311.3044505
+  },
+  "search:Advanced Performance Tuning for TypeScript + Next.js + Prisma:prisma performance tuning_ex": {
+    "content": "- **Query Optimization**: Use Prisma Query Insights to identify slow queries and optimize them.\n- **Bulk Queries**: Utilize bulk operations like `createMany`, `updateMany`, and `deleteMany` for better performance.\n- **Connection Pooling**: Enable connection pooling with Prisma Accelerate for edge deployments and serverless environments.\n- **Global Caching**: Leverage global caching provided by Prisma Accelerate to reduce latency per query.\n- **Avoid N+1 Queries**: Use eager loading or batch queries to avoid the N+1 problem.",
+    "source": "code_example",
+    "updated_at": 1781034318.6996117
+  }
+}
