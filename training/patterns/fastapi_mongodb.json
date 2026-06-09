@@ -8,5 +8,10 @@
     "content": "- Install packages using pip:\n  - `pip install beanie motor fastapi`\n  - `pip install pymongo uvicorn`\n\n- Import necessary modules:\n  ```python\n  from motor.motor_asyncio import AsyncIOMotorClient\n  from beanie import init_beanie\n  ```\n\n- Set up the database connection in your FastAPI app:\n  ```python\n  client = AsyncIOMotorClient(\"mongodb://localhost:27017\")\n  await init_beanie(database=client[\"your_database_name\"], document_models=[YourDocumentModel])\n  ```\n\n- Key config options:\n  - `AsyncIOMotorClient`: For asynchronous MongoDB connection.\n  - `init_beanie`: Initializes Beanie with the specified database and document models.\n\n- Latest versions: Ensure you use compatible versions of FastAPI, Motor, and Beanie to avoid issues.",
     "source": "code_example",
     "updated_at": 1780942543.7327094
+  },
+  "search:FastAPI + MongoDB:fastapi mongodb performance op": {
+    "content": "- **FastAPI Version**: Use `pip install fastapi==0.98.0`\n- **PyMongo Version**: Install via `pip install pymongo==4.3.0`\n- **Asynchronous Programming**: Utilize `async` and `await` for non-blocking operations.\n- **Caching**: Implement caching using libraries like `fastapi-cache` or `starlette.cache`.\n- **Database Tuning**: Optimize MongoDB queries with indexes, ensure proper sharding, and use efficient data models.\n- **Production Deployment**: Deploy on platforms like AWS Elastic Beanstalk, Heroku, or Docker containers.\n- **Environment Variables**: Use `.env` files for sensitive information like database URIs.\n- **Monitoring Tools**: Integrate with tools like Prometheus and Grafana for performance monitoring.\n- **Error Handling**: Implement robust error handling using FastAPI's exception handlers.",
+    "source": "web_search",
+    "updated_at": 1781020355.0127535
   }
 }
