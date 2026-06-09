@@ -1,0 +1,47 @@
+{
+  "search:Testing Next.js with Mocks:testing nextjs mocks": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n  - `npx next dev` for development server\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - Next.js: 13.x\n  - React Testing Library: 14.x\n\n- **Key Config Options**:\n  - In `jest.config.js`, use `setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']` for additional matchers.\n  - Use `testEnvironment: 'jsdom'` to simulate a browser environment.",
+    "source": "web_search",
+    "updated_at": 1781014505.5746806
+  },
+  "search:Testing Next.js with Mocks:testing nextjs mocks_ex": {
+    "content": "- Use `next/router` for routing in Next.js.\n- For unit testing, utilize Jest and React Testing Library.\n- Mock router events using `jest.mock('next/router')`.\n- Import the mock router in your test file with `import router from 'next/router'`.\n- Use `router.push('/path')` to simulate navigation.\n- Verify navigation with `expect(router.pathname).toBe('/expected-path')`.\n- For Next.js 13, consider using the new app directory structure for routing tests.",
+    "source": "code_example",
+    "updated_at": 1781014511.1651847
+  },
+  "search:Testing Next.js with Mocks:nextjs testing library": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app --typescript` to create a new Next.js app with TypeScript.\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Jest: 29.0.3\n  - React Testing Library: 14.0.0\n\n- **Key Config Options**:\n  - In `jest.config.js`, set up the following configuration:\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - In `next.config.js`, ensure you have the necessary configurations for testing.\n\n- **Additional Tips**:\n  - Use `npm run dev` to start your Next.js development server.\n  - For E2E testing, consider using Playwright with `npx playwright test`.",
+    "source": "web_search",
+    "updated_at": 1781014520.8960946
+  },
+  "search:Testing Next.js with Mocks:nextjs testing library_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react @testing-library/jest-dom`\n  - `npx jest`\n\n- **Latest Versions**:\n  - As of my last update, the latest versions are:\n    - `@testing-library/react` v14.0.0\n    - `@testing-library/jest-dom` v5.16.2\n\n- **Key Config Options**:\n  - In your `jest.config.js`, you might include:\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - Ensure your `tsconfig.json` includes paths for modules if using TypeScript.",
+    "source": "code_example",
+    "updated_at": 1781014534.816376
+  },
+  "search:Testing Next.js with Mocks:jest for nextjs": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app --typescript`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Jest: v29.0.3\n\n- **Key Config Options**:\n  - In `jest.config.js`, use `{ \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"] }`\n  - Configure test paths in `package.json`: `\"test\": \"jest\"`\n\n- **Additional Tips**:\n  - Use `next/jest` for custom Jest configuration.\n  - Mock API calls with `msw` or `jest-mock`.\n  - Utilize `react-testing-library` for rendering components.",
+    "source": "web_search",
+    "updated_at": 1781014552.0555463
+  },
+  "search:Testing Next.js with Mocks:mocking in nextjs": {
+    "content": "- **Mockoon**: Use Mockoon to create mock APIs.\n- **Jest**: For unit testing, use Jest along with Next.js.\n- **Playwright**: In Next.js 15, use Playwright for fetch mocking.\n- **CLI Commands**:\n  - `npx jest`: Run tests using Jest.\n  - `npx playwright test`: Run tests using Playwright.\n- **Latest Versions**:\n  - Next.js: Latest version as of the last update.\n  - Jest: Latest version as of the last update.\n  - Playwright: Latest version as of the last update.\n- **Key Config Options**:\n  - `jest.config.js`: Configure Jest settings.\n  - `playwright.config.ts`: Configure Playwright settings.",
+    "source": "web_search",
+    "updated_at": 1781014586.80639
+  },
+  "search:Testing Next.js with Mocks:mocking in nextjs_ex": {
+    "content": "- Use `npx create-next-app@latest` to create a new Next.js project.\n- Install `msw` for mocking service worker by running `npm install msw`.\n- Configure `msw` in your Next.js application by creating a file like `mocks/browser.js` and setting up the handlers.\n- Use `setupWorker` from `msw` to start intercepting requests in your browser environment.\n- For server-side rendering, use `msw/node` to mock API calls during testing with Playwright or Jest.\n- Ensure you wrap your application with `MockProvider` if using a library like `react-query` for mocking queries.\n- Check the latest versions of `next`, `msw`, and any other dependencies in their respective GitHub repositories or npm pages.\n- Key config options include setting up request handlers, configuring service worker scope, and handling different types of requests (GET, POST, etc.).",
+    "source": "code_example",
+    "updated_at": 1781014594.9536939
+  },
+  "search:Testing Next.js with Mocks:unit testing nextjs components": {
+    "content": "- Use `next/jest` for Jest configuration tailored to Next.js projects.\n- Install `@testing-library/react` and `@testing-library/jest-dom` for React Testing Library.\n- Configure Jest in your project by creating a `jest.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    setupFilesAfterEnv: ['<rootDir>/setupTests.js'],\n    testEnvironment: 'jsdom',\n    transform: {\n      '^.+\\\\.jsx?$': 'babel-jest',\n    },\n  };\n  ```\n- Use `react-testing-library` for rendering components and interacting with them in tests.\n- Mock API calls using `jest.mock()` or `msw` (Mock Service Worker) for testing components that depend on external data.\n- Write unit tests for components by creating a file named `<ComponentName>.test.js` next to the component file.\n- Use `fireEvent` from React Testing Library to simulate user interactions like clicks, key presses, etc.\n- Utilize `screen` and `render` functions from React Testing Library to query and interact with rendered elements.\n- Run tests using the command: `npm test` or `yarn test`.",
+    "source": "web_search",
+    "updated_at": 1781014612.253364
+  },
+  "search:Testing Next.js with Mocks:unit testing nextjs components_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Jest: 29.0.3\n  - React Testing Library: 14.0.0\n\n- **Key Config Options**:\n  - `jest.config.js`: Configure Jest settings.\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - `next.config.js`: Configure Next.js for testing environments.\n    ```javascript\n    module.exports = {\n      webpack(config, { isServer }) {\n        if (!isServer) {\n          config.resolve.fallback = {\n            ...config.resolve.fallback,\n            fs: false,\n          };\n        }\n        return config;\n      },\n    };\n    ```\n\n- **Example Test**:\n  ```javascript\n  import React from 'react';\n  import { render, screen } from '@testing-library/react';\n  import Home from '../pages/index';\n\n  test('renders learn react link', () => {\n    render(<Home />);\n    const linkElement = screen.getByText(/learn react/i);\n    expect(linkElement).toBeInTheDocument();\n  });\n  ```",
+    "source": "code_example",
+    "updated_at": 1781014628.176383
+  }
+}

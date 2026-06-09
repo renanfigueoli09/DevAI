@@ -28,5 +28,35 @@
     "content": "- **CLI Commands**: Use `kubectl` for Kubernetes environments.\n  - Example: `kubectl apply -f load-balancer.yaml`\n  \n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.3\n  - HAProxy: v2.5.0\n  \n- **Key Config Options**:\n  - Nginx: `nginx.conf` for global settings, `location` blocks for route rules.\n  - HAProxy: `haproxy.cfg` with `frontend`, `backend`, and `server` sections.\n\nFor detailed implementation steps, refer to the official documentation of each tool.",
     "source": "code_example",
     "updated_at": 1781012821.30353
+  },
+  "search:Kubernetes Nginx Ingress Performance Optimization:kubernetes nginx ingress optim": {
+    "content": "- **Latest Version**: As of my last update, the latest version of `nginx/kubernetes-ingress` is v2.4.1.\n  \n- **CLI Commands**:\n  - To install the NGINX Ingress Controller: \n    ```bash\n    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v2.4.1/deploy/static/provider/cloud/deploy.yaml\n    ```\n  - To update an existing installation:\n    ```bash\n    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v2.4.1/deploy/static/provider/cloud/deploy.yaml --record\n    ```\n\n- **Key Config Options**:\n  - `max-worker-connections`: Sets the maximum number of simultaneous connections that can be opened by a worker process.\n    ```yaml\n    nginx.ingress.kubernetes.io/max-worker-connections: \"2048\"\n    ```\n  - `proxy-body-size`: Allows you to set the maximum allowed size of the client request body.\n    ```yaml\n    nginx.ingress.kubernetes.io/proxy-body-size: \"10m\"\n    ```\n  - `use-forwarded-headers`: Enables forwarding of headers like `X-Real-IP` and `X-Forwarded-For`.\n    ```yaml\n    nginx.ingress.kubernetes.io/use-forwarded-headers: \"true\"\n    ```\n\n- **Optimization Tips**:\n  - Enable caching to reduce latency for frequently accessed content.\n  - Use connection pooling to manage connections efficiently.\n  - Adjust worker processes and connections based on your cluster's capacity.\n\nFor the most current information, refer to the official [NGINX Ingress Controller documentation](https://kubernetes.github.io/ingress-nginx/deploy/) or the latest release notes.",
+    "source": "web_search",
+    "updated_at": 1781014639.8079972
+  },
+  "search:Kubernetes Nginx Ingress Performance Optimization:kubernetes nginx ingress optim_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - `nginx-ingress-controller: 1.2.0`\n\n- **Key Config Options**:\n  - `worker_processes`: Adjust based on CPU cores.\n  - `worker_connections`: Increase for higher concurrency.\n  - `keepalive_timeout`: Set to balance between connection reuse and resource usage.\n  - `proxy_read_timeout` and `proxy_send_timeout`: Adjust based on backend service response times.",
+    "source": "code_example",
+    "updated_at": 1781014653.6709177
+  },
+  "search:Kubernetes Nginx Ingress Performance Optimization:nginx ingress controller perfo": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <nginx-ingress-controller-yaml>`\n  - `kubectl get pods --namespace=<ingress-namespace>`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v5.5\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `worker_connections`: Increase for higher concurrency.\n  - `keepalive_timeout`: Adjust based on your application's needs.\n  - `ssl_session_cache`: Use a shared memory cache for SSL sessions.",
+    "source": "web_search",
+    "updated_at": 1781014669.9768283
+  },
+  "search:Kubernetes Nginx Ingress Performance Optimization:nginx ingress controller perfo_ex": {
+    "content": "- **Latest Version**: NGINX Ingress Controller 5.5 introduced significant performance improvements in startup times.\n- **CLI Command for Upgrading**:\n  ```bash\n  kubectl set image deployment/nginx-ingress-controller nginx-ingress-controller=quay.io/kubernetes-ingress-controller/nginx-ingress-controller:5.5\n  ```\n- **Key Config Options**:\n  - `--publish-service`: Specifies the service to publish the Ingress controller.\n  - `--configmap`: Points to a ConfigMap containing custom NGINX configuration.\n  - `--enable-custom-resources`: Enables support for VirtualServer, VirtualServerRoute, TransportServer, and Policy Custom Resources.\n\nFor detailed performance tuning, refer to the [NGINX Ingress Performance Tuning Guide](https://kubernetes.github.io/ingress-nginx/deploy/#performance-tuning).",
+    "source": "code_example",
+    "updated_at": 1781014684.2581239
+  },
+  "search:Kubernetes Nginx Ingress Performance Optimization:kubernetes load balancing tech": {
+    "content": "- Use `kubectl expose` to create a service and load balancer.\n- Flags include `--type=LoadBalancer`, `--port=<port>`, and `--target-port=<target-port>`.\n- Latest version as of my last update is Kubernetes 1.27, but check the official Kubernetes documentation for the most current version.\n- Key config options in a service manifest include `selector` to match pods, `ports` to define port mappings, and `type: LoadBalancer` to enable load balancing.\n- For more advanced configurations, use annotations like `service.beta.kubernetes.io/aws-load-balancer-type=nlb` for AWS NLB.\n- Ensure your cloud provider supports the type of load balancer you need (e.g., AWS ELB, GCP Load Balancing).\n- Regularly update Kubernetes and its components to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781014692.8981082
+  },
+  "search:Kubernetes Nginx Ingress Performance Optimization:kubernetes load balancing tech_ex": {
+    "content": "- Use `kubectl expose` to create a Service for load balancing.\n- Flags like `--type=LoadBalancer` and `--port=<port>` are essential.\n- For internal load balancing, use `Service` with type `ClusterIP`.\n- Key config options include `selector`, `ports`, and `sessionAffinity`.\n- Update Kubernetes to the latest version for optimal performance and security.\n- Use `kubectl get svc` to check Service details and ensure correct configuration.\n- For external load balancing, consider using cloud provider's Load Balancer services.\n- Monitor load balancer metrics with tools like Prometheus and Grafana.\n- Regularly update and patch your Kubernetes cluster to address vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1781014707.050285
   }
 }

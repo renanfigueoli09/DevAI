@@ -18,5 +18,50 @@
     "content": "- Use `kubectl apply -f example-statefulset.yaml` to create a StatefulSet.\n- Ensure your application is designed for state persistence.\n- Set `volumeClaimTemplates` in the StatefulSet spec to manage storage dynamically.\n- Use `service.alpha.kubernetes.io/appstudio-service-type: \"Stateful\"` for better integration with Kubernetes services.\n- Monitor StatefulSet status using `kubectl get statefulset <statefulset-name> -o yaml`.\n- Update StatefulSets by modifying the pod template and rolling out updates.\n- Key config options include `replicas`, `selector`, `template`, and `volumeClaimTemplates`.",
     "source": "code_example",
     "updated_at": 1780941977.4194772
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:statefulsets kubernetes optimi": {
+    "content": "- **CLI Commands**: Use `kubectl get statefulsets` and `kubectl describe statefulset <statefulset-name>` to inspect StatefulSets.\n- **Latest Versions**: Ensure using the latest Kubernetes version for optimal performance and security.\n- **Key Config Options**:\n  - `replicas`: Define the number of replicas.\n  - `volumeClaimTemplates`: Specify persistent storage for each Pod.\n  - `service`: Configure a stable network identity for StatefulSet Pods.\n- **Storage Optimization**: Use `storageClassName` to specify the type of storage class.\n- **Cost Management**: Apply resource limits and requests in `resources` section of Pod template.\n- **Performance Tuning**: Adjust `readinessProbe` and `livenessProbe` for better health checks.\n- **Scalability**: Increase `replicas` to scale out, ensuring stable network identities.",
+    "source": "web_search",
+    "updated_at": 1781014779.7224164
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:statefulsets kubernetes optimi_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to create or update StatefulSets.\n- Ensure your application's Pod template includes a unique identifier, typically using the `statefulset.kubernetes.io/pod-name` label.\n- For optimal performance, consider using `volumeClaimTemplates` for persistent storage in StatefulSets.\n- Use `kubectl rollout status statefulset/<name>` to check the status of a StatefulSet update.\n- Key configuration options include `replicas`, `selector`, and `template`.\n- Ensure your application's data is correctly managed across Pod restarts by using volumes or persistent storage.\n- For scaling, adjust the `replicas` field in the StatefulSet's YAML file and apply changes with `kubectl apply -f <filename>.yaml`.\n- Use `kubectl get statefulsets` to list all StatefulSets in your cluster.\n- Always check for updates to Kubernetes and its controllers to ensure compatibility and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781014788.7206578
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:performance tuning statefulset": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale statefulset <statefulset-name> --replicas=<desired-replicas>`\n  - `kubectl delete pod <pod-name> --grace-period=0 --force`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.template.spec.containers[].resources`: Define resource requests and limits.\n  - `.spec.updateStrategy.type`: Set to `RollingUpdate` for controlled updates.\n  - `.spec.volumeClaimTemplates`: Define persistent storage volumes for each pod.",
+    "source": "web_search",
+    "updated_at": 1781014804.1845393
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:kubernetes storage classes": {
+    "content": "- **CLI Commands**:\n  - `kubectl get storageclass`\n  - `kubectl describe storageclass <storage-class-name>`\n  - `kubectl create storageclass <name> --provisioner=<provisioner> --reclaim-policy=<policy>`\n\n- **Latest Versions**: Ensure you are using the latest version of Kubernetes to access all features and improvements.\n\n- **Key Config Options**:\n  - `provisioner`: Specifies the driver used for provisioning volumes.\n  - `reclaimPolicy`: Defines how persistent volumes are reclaimed when no longer needed (e.g., Retain, Delete).\n  - `parameters`: Additional parameters passed to the provisioner.",
+    "source": "web_search",
+    "updated_at": 1781014840.922743
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:kubernetes storage classes_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get storageclass`\n  - `kubectl describe storageclass <storage-class-name>`\n  - `kubectl create storageclass <storage-class-name> --provisioner=<provisioner>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `provisioner`: Specifies the provisioner to use for dynamic provisioning.\n  - `parameters`: Additional parameters passed to the provisioner.\n  - `reclaimPolicy`: Defines how persistent volumes are reclaimed (e.g., Retain, Delete).\n  - `volumeBindingMode`: Determines when volume binding occurs (e.g., Immediate, WaitForFirstConsumer).",
+    "source": "code_example",
+    "updated_at": 1781014848.7407174
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:statefulset scalability": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n\n- **Latest Versions**: Ensure you are using the latest version of Kubernetes to take advantage of the most recent features and bug fixes.\n\n- **Key Config Options**:\n  - `.spec.replicas`: Defines the number of replicas.\n  - `.spec.template`: Specifies the pod template for the StatefulSet.\n  - `.spec.serviceName`: Links the StatefulSet with a headless service.\n  - `.spec.updateStrategy`: Controls how updates are applied to Pods.",
+    "source": "web_search",
+    "updated_at": 1781014867.6612713
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:statefulset scalability_ex": {
+    "content": "- To scale a StatefulSet, use `kubectl scale statefulset <statefulset-name> --replicas=<new-replica-count>`\n- For HPA with StatefulSet, ensure the targetRef in HPA configuration matches the StatefulSet's Service.\n- Key config options include:\n  - `.spec.replicas`: Defines the number of replicas.\n  - `.spec.template`: Describes the Pods managed by the StatefulSet.\n  - `.spec.serviceName`: Specifies the service that provides network access to the StatefulSet pods.\n- Use `kubectl get statefulsets` to list all StatefulSets in a namespace.\n- To create a Service for a StatefulSet, use `kubectl apply -f <service-definition-file>`.\n- Ensure your application is designed to handle ordered pod management and state consistency during scaling.",
+    "source": "code_example",
+    "updated_at": 1781014873.7053385
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:kubernetes resource management": {
+    "content": "- Use `kubectl` for managing Kubernetes resources.\n- Latest version: Check [Kubernetes official website](https://kubernetes.io/docs/setup/release/version-skew-policy/).\n- Key config options:\n  - `resources`: Define CPU and memory limits and requests.\n  - `nodeSelector`: Schedule pods on specific nodes.\n  - `tolerations`: Allow scheduling pods on nodes with taints.",
+    "source": "web_search",
+    "updated_at": 1781014881.2329767
+  },
+  "search:Kubernetes StatefulSets Performance Optimization:kubernetes resource management_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to create or update resources.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>` for detailed information about a pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27 (as of my last update).\n\n- **Key Config Options**:\n  - `resources.requests`: Specifies the minimum amount of resources that a container needs.\n  - `resources.limits`: Specifies the maximum amount of resources that a container can use.\n  - `spec.containers[].resources` in pod specifications.\n\nFor more detailed information, refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).",
+    "source": "code_example",
+    "updated_at": 1781014904.9332256
   }
 }
