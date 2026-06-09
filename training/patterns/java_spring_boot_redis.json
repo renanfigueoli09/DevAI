@@ -1,0 +1,17 @@
+{
+  "search:java-spring-boot-redis:java spring boot redis integra": {
+    "content": "- **GitHub Repository**: [damonx/spring-boot-redis-demo](https://github.com/damonx/spring-boot-redis-demo)\n- **Latest Spring Boot Version**: As of my last update, the latest stable version is 3.x.\n- **Key Config Options**:\n  - `spring.redis.host`: Redis server host\n  - `spring.redis.port`: Redis server port\n  - `spring.cache.type`: Set to `redis` for using Redis as cache manager\n- **CLI Commands**:\n  - To add Spring Boot Redis dependency: `./mvnw spring-boot:add-dependency -Dartifact=org.springframework.boot:spring-boot-starter-data-redis`\n  - To run the application: `./mvnw spring-boot:run`\n- **Integration Steps**:\n  1. Add `spring-boot-starter-data-redis` to your `pom.xml`.\n  2. Configure Redis properties in `application.properties` or `application.yml`.\n  3. Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations for caching.\n  4. Optionally, configure cache metrics with Micrometer for Prometheus and Grafana dashboards.\n\nFor detailed instructions on using Spring Boot with Redis in a Docker environment, refer to the [Spring Boot + Redis + Docker: Ultimate Guide to Caching in Java](https://www.example.com/spring-boot-redis-docker-guide).",
+    "source": "web_search",
+    "updated_at": 1781031840.32579
+  },
+  "search:java-spring-boot-redis:spring boot redis caching stra": {
+    "content": "- **CLI Commands**:\n  - `docker run --name my-redis -d redis`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Redis: 7.0.14\n\n- **Key Config Options**:\n  - `spring.cache.type=redis`\n  - `spring.redis.host=localhost`\n  - `spring.redis.port=6379`\n  - `spring.cache.redis.time-to-live=3600` (in seconds)",
+    "source": "web_search",
+    "updated_at": 1781031877.2243702
+  },
+  "search:java-spring-boot-redis:spring boot redis caching stra_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name my-redis -d redis`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Redis: 7.0.10\n\n- **Key Config Options**:\n  - `spring.cache.type=redis`\n  - `spring.redis.host=localhost`\n  - `spring.redis.port=6379`",
+    "source": "code_example",
+    "updated_at": 1781031900.937888
+  }
+}
