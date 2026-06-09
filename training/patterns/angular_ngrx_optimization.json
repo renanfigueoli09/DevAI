@@ -1,0 +1,22 @@
+{
+  "search:angular-ngrx-optimization:angular ngrx store optimizatio": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create an NgRx store.\n  - `ng generate effect <name>` to create an NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - @ngrx/store: 15.x\n\n- **Key Config Options**:\n  - `initialState`: Define the initial state of your store.\n  - `reducers`: Specify how the state changes in response to actions.\n  - `effects`: Implement side effects for asynchronous operations.",
+    "source": "web_search",
+    "updated_at": 1781020671.3426237
+  },
+  "search:angular-ngrx-optimization:angular ngrx store optimizatio_ex": {
+    "content": "- Use `ng generate store` to create an NGRX store.\n- Ensure Angular and NGRX are up-to-date using the latest versions for compatibility.\n- Utilize `createSelector` from `@ngrx/store/selectors` to optimize data retrieval in components.\n- For mocking router store selectors, structure test data according to the router store state's schema.\n- Implement `selectRouterState` from `@ngrx/router-store` to access router state in your NGRX store.",
+    "source": "code_example",
+    "updated_at": 1781020688.1379979
+  },
+  "search:angular-ngrx-optimization:angular ngrx performance best ": {
+    "content": "- Use `ng generate store` to create NgRx stores.\n- Update Angular to the latest version using `ng update @angular/core`.\n- Utilize `@ngrx/store-devtools` for development environment debugging.\n- Implement lazy loading for NgRx effects to improve performance.\n- Avoid unnecessary selectors by memoizing them with `createSelector`.\n- Use `selectSnapshot` in components for immediate access to store state.\n- Optimize reducers by using pure functions and avoiding side effects.\n- Monitor performance with Angular's built-in profiling tools.\n- Regularly update NgRx packages to benefit from performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781020704.111051
+  },
+  "search:angular-ngrx-optimization:angular ngrx performance best _ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng add @ngrx/store` to set up NgRx in your Angular project.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular CLI and NgRx by running `npm update`.\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `StoreModule.forRoot({})` for root store configuration.\n  - Use `EffectsModule.forRoot([])` to register global effects.\n  - Configure reducers in a separate file like `reducers/index.ts`.\n  - Set up selectors in `selectors/index.ts` for accessing state.\n\n- **Performance Considerations**:\n  - Use memoization with `createSelector` from `@ngrx/store/selectors` to avoid unnecessary recalculations.\n  - Implement lazy loading for NgRx modules to reduce initial bundle size.\n  - Optimize effects by using `ofType` and `pipe` for better performance.",
+    "source": "code_example",
+    "updated_at": 1781020720.7196732
+  }
+}

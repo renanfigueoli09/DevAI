@@ -1,0 +1,17 @@
+{
+  "search:kubernetes-jobs-scheduling:kubernetes jobs scheduling bes": {
+    "content": "- Use `kubectl apply -f <filename>` to create or update Kubernetes resources.\n- For job scheduling, use the `apiVersion: batch/v1` and specify `spec.template.spec.containers`.\n- Set `restartPolicy: Never` for jobs that should not restart on failure.\n- Utilize `backoffLimit` to control the number of retries before marking a job as failed.\n- Employ `affinity` and `anti-affinity` rules to control pod placement.\n- Apply taints and tolerations to manage node affinity.\n- Use `resources.requests` and `resources.limits` for resource management.\n- Monitor job status with `kubectl get jobs -o wide`.\n- Ensure Kubernetes version is up-to-date using `kubectl version --short`.",
+    "source": "web_search",
+    "updated_at": 1781020736.9698856
+  },
+  "search:kubernetes-jobs-scheduling:kubernetes jobs scheduling bes_ex": {
+    "content": "- Use `kubectl create job` to create a Kubernetes Job.\n- Specify the container image and command in the Job's YAML file.\n- Set `restartPolicy: Never` to ensure the Job runs only once.\n- Use `backoffLimit` to control the number of retries before marking the Job as failed.\n- For topology-aware scheduling, use `topologySpreadConstraints`.\n- Example CLI command:\n  ```sh\n  kubectl create job example-job --image=busybox -- sleep 3600\n  ```\n- Latest versions: Ensure you are using the latest stable version of Kubernetes and client-go library for compatibility.\n- Key config options in Job YAML:\n  - `apiVersion`: Specifies the API version (e.g., `batch/v1`).\n  - `kind`: Specifies the resource type (`Job`).\n  - `metadata`: Contains metadata about the Job.\n  - `spec`: Defines the specifications of the Job, including template and backoffLimit.",
+    "source": "code_example",
+    "updated_at": 1781020743.714122
+  },
+  "search:kubernetes-jobs-scheduling:kubernetes batch processing op": {
+    "content": "- **CLI Commands and Flags**:\n  - `kubectl create job <job-name> --image=<image-name> -- <command>` to create a batch job.\n  - `kubectl get jobs` to list all jobs.\n  - `kubectl describe job <job-name>` for detailed information about a job.\n\n- **Latest Versions**:\n  - Kubernetes 1.35 introduced Opportunistic Batching (Beta).\n\n- **Key Config Options**:\n  - `spec.template.spec.containers`: Define the container specifications within the job template.\n  - `spec.parallelism`: Set the number of parallel pods to run.\n  - `spec.completions`: Specify how many successful completions are required for the job to be considered successful.",
+    "source": "web_search",
+    "updated_at": 1781020755.2412076
+  }
+}

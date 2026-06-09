@@ -8,5 +8,15 @@
     "content": "// service.ts TypeORM: @InjectRepository(Book) private repo:Repository<Book>. findAll(){return this.repo.find()} findOne(id){return this.repo.findOne({where:{id}})} create(dto){return this.repo.save(this.repo.create(dto as any))} update(id,dto){await this.repo.update(id,dto as any);return this.findOne(id)} remove(id){return this.repo.delete(id)}",
     "source": "code_pattern",
     "updated_at": 1781006581.1708858
+  },
+  "search:nestjs-typeorm:nestjs typeorm migrations 2024": {
+    "content": "- **CLI Commands**:\n  - `nest generate migration <name>`\n  - `typeorm migration:run`\n  - `typeorm migration:revert`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeORM: v0.3.x\n\n- **Key Config Options**:\n  - `ormconfig.ts`: Configure database connection and migrations settings.\n  - `migrationsDir`: Specify the directory where migrations are stored.\n  - `entitiesDir`: Define the directory for entity classes.\n\n- **Example `ormconfig.ts`**:\n  ```typescript\n  export default {\n    type: 'postgres',\n    host: 'localhost',\n    port: 5432,\n    username: 'user',\n    password: 'password',\n    database: 'database',\n    entities: [__dirname + '/entities/**/*.{ts,js}'],\n    migrations: [__dirname + '/migrations/**/*.{ts,js}'],\n    synchronize: false,\n    logging: true,\n  };\n  ```\n\n- **Running Migrations**:\n  - `nest build`\n  - `typeorm migration:run --config ormconfig.ts`",
+    "source": "web_search",
+    "updated_at": 1781020653.0000978
+  },
+  "search:nestjs-typeorm:nestjs typeorm migrations 2024_ex": {
+    "content": "- Use `nest new project-name` to create a NestJS application.\n- Install TypeORM and PostgreSQL driver using npm: `npm install typeorm pg`.\n- Configure `app.module.ts` with TypeORM connection options:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { TypeOrmModule } from '@nestjs/typeorm';\n\n  @Module({\n    imports: [\n      TypeOrmModule.forRoot({\n        type: 'postgres',\n        host: 'localhost',\n        port: 5432,\n        username: 'your_username',\n        password: 'your_password',\n        database: 'your_database',\n        entities: [__dirname + '/**/*.entity{.ts,.js}'],\n        synchronize: true, // Use false in production\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Generate a migration file using CLI: `nest generate migration create-table-name`.\n- Edit the generated migration file to define schema changes.\n- Run migrations with CLI: `npm run typeorm migration:run`.\n\nNote: Ensure PostgreSQL server is running and accessible. Adjust connection options accordingly.",
+    "source": "code_example",
+    "updated_at": 1781020663.0273988
   }
 }
