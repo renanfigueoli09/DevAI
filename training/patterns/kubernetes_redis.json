@@ -18,5 +18,30 @@
     "content": "- Use `kubectl top node` to monitor resource usage.\n- Apply Redis performance optimizations using the `redis.conf` file.\n- Set `maxmemory-policy allkeys-lru` for memory management.\n- Enable persistence with RDB snapshots by setting `save 900 1`.\n- Scale Redis horizontally by deploying multiple instances in Kubernetes.\n- Use `kubectl scale deployment redis --replicas=3` to increase replicas.\n- Monitor Redis performance using `redis-cli info stats`.\n- Adjust `maxclients` based on expected load.\n- Implement network policies for isolation and security.",
     "source": "code_example",
     "updated_at": 1781015450.3398733
+  },
+  "search:kubernetes+redis:kubernetes redis deployment be": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Redis using a YAML file.\n- For the latest version of Redis Operator, check [GitHub](https://github.com/OT-CONTAINER-KIT/redis-operator/releases).\n- Key config options in Redis Operator include `replicas`, `storageClass`, and `resources`.\n- To create a namespace for your Redis deployment, use:\n  ```bash\n  kubectl create namespace my-redis\n  ```\n- For deploying a Redis cluster on Minikube, follow the steps outlined in [DEV Community](https://dev.to/ot-container-kit/how-to-deploy-a-redis-cluster-in-kubernetes-2k0i).\n- To deploy a highly available Redis cluster using Helm, refer to [Baeldung](https://www.baeldung.com/linux/kubernetes-highly-available-redis).\n- For managing Redis Enterprise on Kubernetes, use the official [Redis Enterprise for Kubernetes documentation](https://docs.redisenterprise.io/latest/kubernetes/overview).",
+    "source": "web_search",
+    "updated_at": 1781046806.8382223
+  },
+  "search:kubernetes+redis:kubernetes redis deployment be_ex": {
+    "content": "- Use `kubectl apply -f redis-deployment.yaml` to deploy Redis.\n- Ensure Kubernetes and Redis are up-to-date for security.\n- Utilize `ConfigMap` for Redis configuration.\n- Employ `StatefulSet` for persistent storage in Redis instances.\n- Create a `Service` to expose the Redis cluster.\n- Use latest versions of Kubernetes, Redis, and related tools.\n- Implement vulnerability scanning and patching regularly.\n- Monitor Redis performance with metrics and logs.",
+    "source": "code_example",
+    "updated_at": 1781046814.614205
+  },
+  "search:kubernetes+redis:kubernetes redis performance o": {
+    "content": "- Use `kubectl create namespace redis` to create a namespace for Redis.\n- Deploy Redis using ConfigMaps and resource requests with `kubectl apply -f redis-config.yaml`.\n- Expose Redis on port 6379 for in-memory caching performance testing.\n- Utilize network policies for improved ingress and egress traffic management.\n- Configure Redis Sentinel for high availability by running it as a separate container within the same pod.\n- Monitor Redis instances using Sentinel to trigger failover when the primary fails.\n- Use `kubectl get pods -n redis` to check the status of your Redis pods.\n- Update Redis configurations dynamically with ConfigMaps without needing to recreate pods.",
+    "source": "web_search",
+    "updated_at": 1781046825.1899135
+  },
+  "search:kubernetes+redis:kubernetes redis security conf": {
+    "content": "- Use `kubectl apply -f redis-enterprise-cluster.yaml` to create a Redis Enterprise cluster.\n- Ensure Kubernetes Secrets are used for sensitive data like passwords and keys.\n- Implement network policies with `kubectl apply -f network-policy.yaml` to restrict pod communication.\n- Configure Redis using ConfigMaps via `kubectl apply -f configmap.yaml`.\n- Use the latest version of Redis Enterprise for Kubernetes, typically found on the official documentation or GitHub repository.\n- Key config options include `replicas`, `memory`, and `storageClass` in the RedisEnterpriseCluster custom resource.",
+    "source": "web_search",
+    "updated_at": 1781046849.498245
+  },
+  "search:kubernetes+redis:kubernetes redis security conf_ex": {
+    "content": "- Ensure Kubernetes cluster is up and running.\n- Install `kubectl` and configure it to communicate with your cluster.\n- Use the latest version of Redis Operator for automated setup on Kubernetes.\n- Configure Redis using a ConfigMap for custom settings.\n- Key config options include `requirepass`, `maxmemory`, and `bind`.\n- Deploy Redis in a secure manner by limiting access to specific IP ranges.\n- Regularly update Redis and its dependencies to patch security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1781046857.517903
   }
 }

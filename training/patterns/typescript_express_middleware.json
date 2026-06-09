@@ -1,0 +1,12 @@
+{
+  "search:typescript+express-middleware:typescript express middleware ": {
+    "content": "- Install `express-rate-limit` using npm: `npm install express-rate-limit`\n- Use the middleware in your Express app:\n  ```javascript\n  const rateLimit = require('express-rate-limit');\n  \n  const limiter = rateLimit({\n    windowMs: 15 * 60 * 1000, // 15 minutes\n    max: 100 // limit each IP to 100 requests per windowMs\n  });\n  \n  app.use(limiter);\n  ```\n- Key config options:\n  - `windowMs`: Time frame for rate limiting (e.g., 15 * 60 * 1000 for 15 minutes).\n  - `max`: Maximum number of requests allowed within the time frame.\n  - `message`: Custom error message to send when rate limit is exceeded.",
+    "source": "web_search",
+    "updated_at": 1781046790.3826606
+  },
+  "search:typescript+express-middleware:typescript express middleware _ex": {
+    "content": "- **CLI Commands**:\n  - `npm install express-rate-limit`\n\n- **Latest Versions**:\n  - `express-rate-limit@6.7.2` (as of my last update)\n\n- **Key Config Options**:\n  - `windowMs`: Time window in milliseconds for which requests are tracked.\n  - `max`: Maximum number of requests allowed during the time window.\n  - `message`: Custom error message when rate limit is exceeded.\n  - `statusCode`: HTTP status code to return when rate limit is exceeded.",
+    "source": "code_example",
+    "updated_at": 1781046795.7667835
+  }
+}
