@@ -1,0 +1,12 @@
+{
+  "search:go-gorm:go gorm orm crud 2025": {
+    "content": "- Install GORM and SQLite drivers: `go get -u gorm.io/gorm` and `go get -u gorm.io/driver/sqlite`\n- Initialize a new Go module: `go mod init github.com/yourusername/go-crud-api`\n- Set up Fiber for routing: `go get -u github.com/gofiber/fiber/v2`\n- Define models in GORM\n- Use hooks for database operations (Before/After Create/Save/Update/Delete/Find)\n- Automate migrations with GORM's schema migration tools",
+    "source": "web_search",
+    "updated_at": 1781022116.7112205
+  },
+  "search:go-gorm:go gorm orm crud 2025_ex": {
+    "content": "- **CLI Commands**: `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: As of my last update, the latest version is v2.x. Check [GitHub](https://github.com/go-gorm/gorm) for the most current version.\n- **Key Config Options**:\n  - `gorm.DB`: The primary struct for interacting with the database.\n  - `AutoMigrate()`: Automatically migrates the schema to match the model's structure.\n  - `Create()`, `Read()`, `Update()`, `Delete()`: CRUD operations provided by GORM.",
+    "source": "code_example",
+    "updated_at": 1781022122.2224724
+  }
+}

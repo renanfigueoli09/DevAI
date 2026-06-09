@@ -1,0 +1,17 @@
+{
+  "search:ruby-on-rails-activerecord:ruby on rails activerecord cru": {
+    "content": "- Use `rails dbconsole` to interact with the database.\n- For Rails 8.1, release date is October 2025.\n- To override ActiveRecord CRUD operations, create a model using `rails generate model...`, then modify the generated methods in the model file.\n- Key config options for ActiveRecord include `config/database.yml` settings such as `database`, `username`, and `password`.",
+    "source": "web_search",
+    "updated_at": 1781022029.098221
+  },
+  "search:ruby-on-rails-activerecord:ruby on rails activerecord mig": {
+    "content": "- Use `rails db:migrate` to run migrations.\n- Use `rails db:migrate:status` to check migration status.\n- Use `rails db:rollback` to undo the last migration.\n- Use `rails db:schema:dump` to dump the current schema.\n- Latest version as of 2025 is Rails 7.0.\n- Key config options include `config.active_record.schema_format`, which can be set to `:sql` or `:ruby`.\n- Ensure migrations are idempotent for safe rollback and reapplication.\n- Use version control for migration files to manage changes across team members.\n- Regularly run `rails db:migrate` in development to keep the schema up-to-date.",
+    "source": "web_search",
+    "updated_at": 1781022082.3581796
+  },
+  "search:ruby-on-rails-activerecord:ruby on rails activerecord mig_ex": {
+    "content": "- Use `rails generate migration AddSsl accounts ssl_enabled:boolean` to create a new migration.\n- Set the default value for a column using `default: true`.\n- Apply migrations with `rails db:migrate`.\n- For large tables, consider adding columns without defaults first and then updating them in batches.\n- Ensure your database supports the features used in migrations (e.g., PostgreSQL for boolean columns).\n- Use `rails db:schema:dump` to update `db/schema.rb` after making changes.",
+    "source": "code_example",
+    "updated_at": 1781022099.5445828
+  }
+}

@@ -23,5 +23,20 @@
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `git clone https://github.com/spring-projects/spring-data-examples.git` to clone the repository.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Data JPA: 2.7.5\n  - Spring Security: 6.0.4\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for production environments.\n  - `spring.security.user.name`: Default security user name.\n  - `spring.security.user.password`: Default security user password.",
     "source": "code_example",
     "updated_at": 1780943550.6576605
+  },
+  "search:java-spring-data-jpa:java spring data jpa crud 2025": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.5 (as of my last update).\n  - Hibernate: 6.1.5.Final (compatible with Spring Data JPA).\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls the schema generation strategy (`create-drop`, `update`, etc.).\n  - `spring.jpa.show-sql`: Enables SQL logging for debugging purposes.\n\n- **Additional Tips**:\n  - Use `@Data` and `@Entity` annotations from Lombok to reduce boilerplate code.\n  - Implement custom repository methods by extending `JpaRepository` or `CrudRepository`.\n  - Utilize Spring Data JPA's query derivation feature to simplify query creation.",
+    "source": "web_search",
+    "updated_at": 1781021968.380008
+  },
+  "search:java-spring-data-jpa:java spring data jpa performan": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`: For building the project.\n  - `./gradlew build`: For building the project using Gradle.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 2.7.5\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.dialect`: Specifies the SQL dialect.\n  - `spring.jpa.show-sql`: Enables logging of SQL queries.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `update`, `create-drop`).\n  - `spring.datasource.url`: Database connection URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.",
+    "source": "web_search",
+    "updated_at": 1781022005.38177
+  },
+  "search:java-spring-data-jpa:java spring data jpa performan_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`: For building and testing the project.\n  - `jconsole`: To monitor Java application performance.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 2.7.5\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.dialect`: Specifies the SQL dialect.\n  - `spring.jpa.show-sql`: Enables logging of SQL statements.\n  - `spring.jpa.properties.hibernate.hbm2ddl.auto`: Controls schema generation strategy.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.",
+    "source": "code_example",
+    "updated_at": 1781022012.0181143
   }
 }
