@@ -1,0 +1,22 @@
+{
+  "search:azure-functions-serverless:azure functions serverless arc": {
+    "content": "- **CLI Commands**:\n  - `func azure functionapp publish <functionAppName> --force`\n  - `az functionapp create --name <functionAppName> --resource-group <resourceGroupName> --consumption-plan-location <location> --runtime <languageRuntime>`\n\n- **Latest Versions**:\n  - Azure Functions Core Tools: v4.0.5183\n  - Azure CLI: 2.46.0\n\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Specifies the runtime stack for your function app.\n  - `WEBSITE_CONTENTAZUREFILECONNECTIONSTRING`: Connection string to blob storage used for file system.\n  - `AzureWebJobsStorage`: Connection string to Azure Storage, essential for durable functions.",
+    "source": "web_search",
+    "updated_at": 1781019355.2463546
+  },
+  "search:azure-functions-serverless:azure functions serverless arc_ex": {
+    "content": "- **Azure Functions CLI**: `func azure functionapp publish <functionAppName> --resource-group <resourceGroupName>`\n- **Latest Node.js Runtime**: nodejs20.x\n- **Key Config Options**:\n  - `provider: name: aws`\n  - `runtime: nodejs20.x`\n  - `region: us-east-1`\n  - `functions: getUser: handler: src/handlers/users.get`",
+    "source": "code_example",
+    "updated_at": 1781019362.4245915
+  },
+  "search:azure-functions-serverless:azure functions performance op": {
+    "content": "- **CLI Commands**:\n  - `func azure functionapp publish <functionAppName> --build Remote`\n  - `az functionapp update --name <functionAppName> --resource-group <resourceGroupName> --set appSettings[WEBSITE_NODE_DEFAULT_VERSION]=14`\n\n- **Latest Versions**:\n  - Azure Functions Core Tools: v4.0.5238\n  - .NET SDK: 6.0.100\n\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Specifies the language runtime for your functions.\n  - `WEBSITE_NODE_DEFAULT_VERSION`: Sets the Node.js version used by Azure Functions.\n  - `AzureWebJobsStorage`: Connection string to Azure Storage, essential for function state and logging.",
+    "source": "web_search",
+    "updated_at": 1781019381.047379
+  },
+  "search:azure-functions-serverless:azure functions performance op_ex": {
+    "content": "- **CLI Commands**:\n  - `func azure functionapp publish <functionAppName> --consumption-plan-location <location>`\n  - `az functionapp update --name <functionAppName> --resource-group <resourceGroup> --set appsettings[FUNCTIONS_WORKER_RUNTIME]=dotnet`\n\n- **Latest Versions**:\n  - Azure Functions Core Tools: v4.0.5137\n  - .NET SDK: 6.0.402\n\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Set the runtime version (e.g., `dotnet`, `node`)\n  - `WEBSITE_CONTENTAZUREFILESHOSTINGENABLED`: Enable or disable Azure File Hosting\n  - `AzureWebJobsStorage`: Connection string for storage account",
+    "source": "code_example",
+    "updated_at": 1781019388.708469
+  }
+}
