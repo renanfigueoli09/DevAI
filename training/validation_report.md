@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 17:22*
+*2026-06-09 17:37*
 
-## Score: 91% `[██████████████████░░]`  (48.0/53.0)
+## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
-### Knowledge Check (vector store): 34.0/39.0
+### Knowledge Check (vector store): 32.0/37.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -22,8 +22,6 @@
 | kafka-streams-python: producer consumer | 1.0/1 | ✅ |
 | typescript-graphql-authentication: padrões de código | 1.0/1 | ✅ |
 | kubernetes-redis-cache: cache | 1.0/1 | ✅ |
-| golang-mongo-go-driver-advanced: não usa TypeORM | 1.0/1 | ✅ |
-| Optimizing NGRX Store with Angular: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
