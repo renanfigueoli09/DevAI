@@ -1,0 +1,17 @@
+{
+  "search:react+nextjs-performance-optimization:react nextjs performance optim": {
+    "content": "- **CLI Commands**:\n  - `next build --optimize`: Optimizes the build process.\n  - `next start -p <port>`: Starts the server on a specified port.\n\n- **Latest Versions**:\n  - Next.js 15: Latest features and performance improvements.\n  - React 18: Improved rendering performance and new hooks.\n\n- **Key Config Options**:\n  - `next.config.js`: Configure build settings, asset optimization, and more.\n  - `Image` component from Next.js for image optimization.\n  - `Script` component for loading scripts with specific strategies (e.g., `loading=\"lazy\"`).\n\n- **Performance Techniques**:\n  - Lazy Loading: Use `loading=\"lazy\"` in the `Image` component.\n  - Server-Side Rendering (SSR): Utilize `getServerSideProps`.\n  - Static Site Generation (SSG): Use `getStaticPaths` and `getStaticProps`.\n  - Code Splitting: Automatically handled by Next.js with dynamic imports.\n\n- **Tools**:\n  - `next/image`: Optimizes images for faster loading.\n  - `next/script`: Provides control over script loading strategies.\n  - `react-lazy-load-image-component`: Lazy loads images in React applications.",
+    "source": "web_search",
+    "updated_at": 1781021254.700333
+  },
+  "search:react+nextjs-performance-optimization:react nextjs performance optim_ex": {
+    "content": "- Use `next build` for production builds.\n- Implement lazy loading with `React.lazy()` and `Suspense`.\n- Utilize `next/image` for optimized image delivery.\n- Enable static generation with `getStaticProps` and `getStaticPaths`.\n- Leverage server-side rendering (SSR) with `getServerSideProps`.\n- Minimize HTTP requests by combining CSS and JavaScript files.\n- Use `next/font` for custom fonts with automatic optimization.\n- Implement code splitting with dynamic imports.\n- Monitor performance using Next.js DevTools.\n- Keep dependencies up to date with `npm update`.",
+    "source": "code_example",
+    "updated_at": 1781021260.2076938
+  },
+  "search:react+nextjs-performance-optimization:nextjs server-side rendering p": {
+    "content": "- **CLI Commands**:\n  - `next build`: Builds the application for production.\n  - `next start`: Starts the Next.js server in production mode.\n\n- **Latest Versions**:\n  - As of my last update, Next.js is at version 13.x. Check [official docs](https://nextjs.org/docs) for the latest version.\n\n- **Key Config Options**:\n  - `getServerSideProps`: Used to fetch data on each request.\n  - `rewrites`, `redirects`, and `headers` in `next.config.js` for custom routing and server-side configuration.\n  - `emotion` for server-side rendering CSS.",
+    "source": "web_search",
+    "updated_at": 1781021268.5918705
+  }
+}

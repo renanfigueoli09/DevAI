@@ -1,0 +1,17 @@
+{
+  "search:docker+kubernetes-statefulsets-advanced:docker kubernetes statefulsets": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <statefulset-name> --image=<image-name> --replicas=<number>`\n  - `kubectl apply -f <yaml-file>`\n  - `kubectl delete statefulset <statefulset-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Docker: v20.10\n\n- **Key Config Options**:\n  - `spec.serviceName`: Defines the name of a service that must be created to route traffic to this stateful set.\n  - `spec.template.spec.volumes`: Specifies volumes for persistent storage.\n  - `spec.updateStrategy.type`: Determines how updates are applied (RollingUpdate or OnDelete).\n  - `spec.rollingUpdate.partition`: Specifies the partition to roll out new replicas from.",
+    "source": "web_search",
+    "updated_at": 1781021189.834316
+  },
+  "search:docker+kubernetes-statefulsets-advanced:statefulsets best practices in": {
+    "content": "- Use `kubectl create statefulset` to create a StatefulSet.\n- Specify `volumeClaimTemplates` in the StatefulSet YAML for persistent storage.\n- Ensure unique and meaningful names for StatefulSets and Pods.\n- Set `spec.serviceName` to link StatefulSet with a Headless Service.\n- Use `spec.updateStrategy.type=RollingUpdate` for controlled updates.\n- Configure `spec.replicas` to define the number of Pods in the StatefulSet.\n- Monitor StatefulSet status using `kubectl get statefulset`.\n- Update StatefulSet configurations by editing the YAML and applying changes with `kubectl apply -f <filename>`.",
+    "source": "web_search",
+    "updated_at": 1781021226.8397074
+  },
+  "search:docker+kubernetes-statefulsets-advanced:statefulsets best practices in_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <statefulset-name> --image=<image-name>`\n  - `kubectl apply -f <yaml-file>`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<number>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - StatefulSets: Supported in all versions of Kubernetes\n\n- **Key Config Options**:\n  - `spec.serviceName`: Name of the service that provides network access to the statefulset.\n  - `spec.replicas`: Number of replicas for the statefulset.\n  - `spec.template`: Pod template specification.\n  - `spec.volumeClaimTemplates`: PersistentVolumeClaims for each pod in the statefulset.",
+    "source": "code_example",
+    "updated_at": 1781021243.4838653
+  }
+}

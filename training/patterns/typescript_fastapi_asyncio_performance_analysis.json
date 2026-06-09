@@ -1,0 +1,12 @@
+{
+  "search:typescript+fastapi-asyncio-performance-analysis:typescript fastapi asyncio per": {
+    "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`\n  - `uvicorn myapp.main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `async def main()`: Define your application logic.\n  - `@app.get(\"/\")`: Define routes with HTTP methods.\n  - `dependencies=[Depends(dep)]`: Use dependency injection for route handlers.\n  - `openapi_url=\"/openapi.json\"`: Customize the URL for OpenAPI documentation.",
+    "source": "web_search",
+    "updated_at": 1781021049.287005
+  },
+  "search:typescript+fastapi-asyncio-performance-analysis:fastapi asyncio optimization t": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For production, consider using an asynchronous web server like Hypercorn or Daphne.\n- Key config options in FastAPI include `app = FastAPI()`, where you can configure settings such as `debug=True` for development.\n- Use `async def` to define asynchronous endpoints.\n- Implement background tasks with `BackgroundTasks` for non-blocking operations.\n- For database interactions, use libraries like SQLAlchemy or Tortoise ORM which support async operations.\n- Monitor performance using tools like FastAPI's built-in metrics and third-party solutions like Prometheus and Grafana.\n- Keep dependencies up-to-date to benefit from the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1781021100.1533186
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:php-laravel-mysql-security-best-practices:php laravel mysql security bes": {
+    "content": "- **MySQL Security Best Practices**:\n  - Use MySQL 8.0 or later.\n  - Enable and configure `sql_mode` to enforce strict SQL syntax.\n  - Regularly update MySQL and its plugins.\n  - Implement strong authentication methods like password hashing.\n\n- **Laravel Security Best Practices**:\n  - Use Laravel 10 for the latest features and security updates.\n  - Configure `.env` file securely, avoid hardcoding sensitive information.\n  - Utilize Laravel's built-in authentication system with `php artisan make:auth`.\n  - Implement CSRF protection using middleware.\n\n- **General Security Tips**:\n  - Sanitize all user inputs to prevent SQL injection and XSS attacks.\n  - Use prepared statements for database queries.\n  - Regularly audit your code for vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781021131.6513987
+  },
+  "search:php-laravel-mysql-security-best-practices:php laravel mysql security bes_ex": {
+    "content": "- **CLI Commands**: Use `php artisan make:migration` to create migrations, `php artisan migrate` to run migrations.\n- **Latest Versions**: Laravel 10 is the latest stable version as of my last update in October 2023. Check [Laravel's official website](https://laravel.com/docs) for the most current version.\n- **Key Config Options**:\n  - `APP_KEY`: Generate a new application key using `php artisan key:generate`.\n  - `DB_CONNECTION`, `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`: Configure database settings in `.env` file.\n  - `SESSION_DRIVER`: Set session driver to `database` for enhanced security.\n  - `CSRF_TOKEN`: Ensure CSRF protection is enabled by default in Laravel forms and routes.",
+    "source": "code_example",
+    "updated_at": 1781021146.6124191
+  },
+  "search:php-laravel-mysql-security-best-practices:securing laravel applications ": {
+    "content": "- **CLI Commands**:\n  - `php artisan make:migration create_users_table --create=users`\n  - `php artisan migrate:fresh`\n\n- **Latest Versions**:\n  - Laravel Framework: 10.x\n  - MySQL: 8.0\n\n- **Key Config Options**:\n  - `.env` file for database connection settings.\n  - `config/database.php` for configuring database connections.\n  - Middleware for handling authentication and authorization (`auth`, `can`).",
+    "source": "web_search",
+    "updated_at": 1781021163.533411
+  },
+  "search:php-laravel-mysql-security-best-practices:securing laravel applications _ex": {
+    "content": "- **CLI Commands**:\n  - `php artisan make:migration create_users_table --create=users`\n  - `php artisan migrate`\n  - `php artisan tinker`\n\n- **Latest Versions**:\n  - Laravel: 11.x\n  - MySQL: 8.0\n\n- **Key Config Options**:\n  - `.env` file for database connection settings.\n  - `config/database.php` for configuring database connections.\n  - Middleware for CSRF protection (`VerifyCsrfToken`).\n  - Policies for authorization (`php artisan make:policy UserPolicy`).",
+    "source": "code_example",
+    "updated_at": 1781021170.988503
+  }
+}
