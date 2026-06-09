@@ -1,0 +1,22 @@
+{
+  "search:Testing Patterns for TypeScript and Jest Unit Testing:typescript unit testing": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev mocha typescript ts-node @types/mocha`\n  - `npx mocha`\n\n- **Latest Versions**:\n  - Mocha: v10.x\n  - TypeScript: v4.x\n\n- **Key Config Options**:\n  - `tsconfig.json`: Ensure `module` is set to `commonjs` and `target` is set to `ES6`.\n  - `mocha.opts`: Configure options like `--require ts-node/register` for running tests with TypeScript.",
+    "source": "web_search",
+    "updated_at": 1781033475.9165335
+  },
+  "search:Testing Patterns for TypeScript and Jest Unit Testing:typescript unit testing_ex": {
+    "content": "- Use `npm install --save-dev jest ts-jest @types/jest` to install Jest and TypeScript support.\n- Create a `jest.config.ts` file for configuration:\n  ```typescript\n  export default {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Write tests in `.spec.ts` or `.test.ts` files, e.g., `example.spec.ts`.\n- Run tests with `npx jest --watchAll` for continuous testing.\n- Use `describe`, `it`, and `expect` to structure your tests.",
+    "source": "code_example",
+    "updated_at": 1781033500.8717768
+  },
+  "search:Testing Patterns for TypeScript and Jest Unit Testing:jest unit testing patterns": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for browser-like environment.\n  - `transformIgnorePatterns`: Array of regex patterns to ignore during transformation.\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test framework has been installed in the environment.",
+    "source": "web_search",
+    "updated_at": 1781033510.1707978
+  },
+  "search:Testing Patterns for TypeScript and Jest Unit Testing:jest unit testing patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: [Check latest version on npm](https://www.npmjs.com/package/jest)\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"` for Node.js environment\n  - `\"transform\": {\"^.+\\\\.jsx?$\": \"babel-jest\"}` for Babel transformation\n  - `\"setupFilesAfterEnv\": [\"<rootDir>/setupTests.js\"]` for setup files",
+    "source": "code_example",
+    "updated_at": 1781033515.4137802
+  }
+}

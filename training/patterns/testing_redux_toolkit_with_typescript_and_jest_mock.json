@@ -1,0 +1,22 @@
+{
+  "search:Testing Redux Toolkit with TypeScript and Jest-Mock:redux toolkit testing": {
+    "content": "- Use `npm install --save-dev @testing-library/react @testing-library/jest-dom redux-mock-store`\n- For React components, use `render` from `@testing-library/react`.\n- Mock Redux store with `redux-mock-store`.\n- Test reducers using Jest and `expect`.\n- Write tests for actions using Jest.\n- Use `configureStore` from `@reduxjs/toolkit` for creating mock stores.\n- Ensure your test environment is set up to use React Testing Library and Jest.",
+    "source": "web_search",
+    "updated_at": 1781033367.313979
+  },
+  "search:Testing Redux Toolkit with TypeScript and Jest-Mock:redux toolkit testing_ex": {
+    "content": "- Use `npm install --save-dev @reduxjs/toolkit`\n- Install testing libraries: `npm install --save-dev @testing-library/react @testing-library/jest-dom redux-mock-store`\n- Latest versions as of my last update:\n  - `@reduxjs/toolkit`: 1.8.5\n  - `@testing-library/react`: 13.4.0\n  - `@testing-library/jest-dom`: 5.16.5\n  - `redux-mock-store`: 1.5.4\n- Key config options:\n  - Mock store creation with `configureMockStore` from `redux-mock-store`\n  - Use `renderWithProviders` for rendering components wrapped in a provider\n  - Utilize `fireEvent` for simulating user interactions",
+    "source": "code_example",
+    "updated_at": 1781033374.3091047
+  },
+  "search:Testing Redux Toolkit with TypeScript and Jest-Mock:typescript jest mock redux": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom redux-mock-store`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - React Testing Library: 13.x\n  - Redux Mock Store: 1.5.x\n\n- **Key Config Options**:\n  - In `jest.config.js`, add `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`.\n  - Use `redux-mock-store` to create a mock store for testing reducers and thunks.\n  - Mock API calls using `jest.spyOn(MyService.prototype, 'postData')`.",
+    "source": "web_search",
+    "updated_at": 1781033382.0127966
+  },
+  "search:Testing Redux Toolkit with TypeScript and Jest-Mock:typescript jest mock redux_ex": {
+    "content": "- Install Jest and Redux-Mock-Store using npm or yarn.\n- Use `npm install --save-dev jest redux-mock-store` or `yarn add --dev jest redux-mock-store`.\n- Configure Jest in your project by creating a `jest.config.js` file with the following content:\n  ```javascript\n  module.exports = {\n    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n    testEnvironment: 'jsdom',\n  };\n  ```\n- Mock Redux store using `redux-mock-store` in your tests.\n- Use `act()` from `@testing-library/react` to wrap your component rendering for React components that use hooks or context.\n- For testing thunks, dispatch actions and assert on the store's state changes.\n- Ensure all tests are isolated by cleaning up after each test using Jest's `beforeEach` and `afterEach`.\n- Use TypeScript types for better type safety when writing mock functions and assertions.",
+    "source": "code_example",
+    "updated_at": 1781033400.0686831
+  }
+}

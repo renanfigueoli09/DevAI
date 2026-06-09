@@ -1,0 +1,17 @@
+{
+  "search:Advanced Error Handling in React-Query + TypeScript:react-query error handling": {
+    "content": "- **Latest Version**: React Query v5\n- **Key Config Options**:\n  - `useQuery`: For fetching data.\n  - `error`: Access the error object if an error occurred during the query.\n  - `onError`: Callback function to handle errors.\n  - `retry`: Control how many times a failed query should be retried.\n- **CLI Commands**: Not applicable for React Query, as it's a library and not a CLI tool.\n- **Example Code**:\n  ```jsx\n  import { useQuery } from 'react-query';\n\n  function fetchData() {\n    return fetch('https://api.example.com/data')\n      .then(response => response.json())\n      .catch(error => Promise.reject(error));\n  }\n\n  const MyComponent = () => {\n    const { data, error, isLoading } = useQuery('data', fetchData);\n\n    if (isLoading) return 'Loading...';\n    if (error) return `An error has occurred: ${error.message}`;\n\n    return <div>{JSON.stringify(data)}</div>;\n  };\n  ```",
+    "source": "web_search",
+    "updated_at": 1781033301.8251112
+  },
+  "search:Advanced Error Handling in React-Query + TypeScript:typescript error handling in r": {
+    "content": "- Ensure you are using the latest version of React Query and TypeScript.\n- Use `useQuery` or `useMutation` hooks provided by React Query for fetching data.\n- Handle errors in your query function by throwing exceptions when necessary.\n- Utilize TypeScript's type system to define error types explicitly.\n- Implement error handling within your component using conditional rendering based on the state of the query (e.g., `isError`, `error`).\n- For network errors, check for HTTP status codes and handle accordingly.\n- Use try-catch blocks inside your query function to catch and throw exceptions.\n- Configure React Query with options like `retryOnMount` and `refetchOnWindowFocus` as needed.\n- Refer to the official React Query documentation for detailed examples and best practices.",
+    "source": "web_search",
+    "updated_at": 1781033342.7886293
+  },
+  "search:Advanced Error Handling in React-Query + TypeScript:typescript error handling in r_ex": {
+    "content": "- Use `useQuery` hook from `react-query`.\n- Handle errors using the `error` property of the returned object.\n- Example:\n  ```typescript\n  const { data, error } = useQuery('key', fetchData);\n  \n  if (error) {\n    return <div>Error: {error.message}</div>;\n  }\n  ```\n- Ensure your fetch function returns a rejected Promise on error.\n- Use TypeScript types for `useQuery` to handle errors effectively.\n- Example:\n  ```typescript\n  const { data, error } = useQuery<MyDataType>('key', fetchData);\n  \n  if (error) {\n    return <div>Error: {error.message}</div>;\n  }\n  ```\n- Check React Query version and update if necessary for the latest features and bug fixes.\n- Use `onError` callback in `useQuery` to handle errors globally or per query.\n- Example:\n  ```typescript\n  useQuery('key', fetchData, {\n    onError: (error) => {\n      console.error('An error occurred:', error);\n    }\n  });\n  ```\n- Utilize `isFetching`, `isLoading`, and `isSuccess` flags for conditional rendering.",
+    "source": "code_example",
+    "updated_at": 1781033359.4956596
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:Optimizing NGRX Store with Angular:ngrx store optimization": {
+    "content": "- Use `ng add @ngrx/store` to install NgRx Store.\n- Update Angular and NgRx packages to their latest versions for performance improvements.\n- Configure the store with reducers, actions, and selectors in separate files for better organization.\n- Implement lazy loading for NgRx modules to reduce initial bundle size.\n- Utilize `@ngrx/effects` for side effects management to keep components clean.\n- Apply memoization techniques using `createSelector` from `@ngrx/store/selectors` to optimize selector performance.\n- Use `selectSnapshot` in components to avoid unnecessary subscriptions and improve performance.\n- Implement `OnDestroy` lifecycle hook to unsubscribe from selectors when a component is destroyed.\n- Monitor the store's state changes with `StoreDevtoolsModule.instrument()` for debugging and optimization.",
+    "source": "web_search",
+    "updated_at": 1781033524.3981316
+  },
+  "search:Optimizing NGRX Store with Angular:ngrx store optimization_ex": {
+    "content": "- Install NgRx using the Angular CLI: `ng add @ngrx/store@latest`\n- Update your project to use the latest version of NgRx.\n- Configure NgRx Store in your Angular application by creating actions, reducers, and selectors.\n- Use `Store` service for state management within services.\n- Dispatch actions to update the store.\n- Subscribe to observables using `AsyncPipe` in templates.\n- Implement effects for side effects like HTTP requests.\n- Utilize `@ngrx/store-devtools` for debugging and development purposes.",
+    "source": "code_example",
+    "updated_at": 1781033533.0627785
+  },
+  "search:Optimizing NGRX Store with Angular:angular ngrx performance": {
+    "content": "- Use Angular CLI version 14 or later.\n- Implement lazy loading for modules to improve initial load time.\n- Utilize NgRx selectors with memoization for performance gains.\n- Dispatch actions in NgRx to trigger data prefetching.\n- Optimize Change Detection strategies by using `ChangeDetectionStrategy.OnPush`.\n- Configure Ahead-of-Time (AOT) compilation for production builds.\n- Use Webpack Bundle Analyzer to identify and optimize large bundles.",
+    "source": "web_search",
+    "updated_at": 1781033540.895881
+  },
+  "search:Optimizing NGRX Store with Angular:angular ngrx performance_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng add @ngrx/store` to add NgRx to an existing project.\n\n- **Latest Versions**:\n  - Angular: 18.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the app module for root reducers.\n  - `EffectsModule.forRoot(effects)` for root effects.\n  - `MetaReducer` for applying meta-reductions globally.",
+    "source": "code_example",
+    "updated_at": 1781033545.8965554
+  }
+}
