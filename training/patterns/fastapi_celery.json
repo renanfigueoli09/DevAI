@@ -10,8 +10,13 @@
     "updated_at": 1780941765.531611
   },
   "search:fastapi+celery:fastapi celery task scheduling": {
-    "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `celery -A app.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - Broker URL (e.g., `redis://localhost:6379/0`)\n  - Result Backend (e.g., `redis://localhost:6379/0`)\n  - Task Queue Name\n  - Beat Schedule Configuration",
+    "content": "- **CLI Commands**:\n  - `celery -A your_project_name.celery worker --loglevel=info`\n  - `celery -A your_project_name.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - Celery: 5.2.7\n\n- **Key Config Options**:\n  - `broker_url`: URL of the message broker (e.g., Redis, RabbitMQ)\n  - `result_backend`: URL of the result backend (e.g., Redis, SQLAlchemy)\n  - `task_serializer`: Serialization method for tasks (e.g., json)\n  - `accept_content`: List of accepted content types\n  - `timezone`: Timezone for scheduling tasks",
     "source": "web_search",
-    "updated_at": 1780941767.5515635
+    "updated_at": 1781006832.9315677
+  },
+  "search:fastapi+celery:fastapi celery task scheduling_ex": {
+    "content": "- **CLI Commands**:\n  - `mkdir fastapi-celery-scheduler`\n  - `cd fastapi-celery-scheduler`\n\n- **Latest Versions**:\n  - FastAPI: v0.85.2\n  - Celery: v5.3.1\n\n- **Key Config Options**:\n  - `broker_url`: URL for the message broker (e.g., Redis, RabbitMQ)\n  - `result_backend`: URL for the result backend (e.g., Redis, SQLAlchemy)\n  - `timezone`: Timezone for task scheduling\n  - `enable_utc`: Enable UTC timezone",
+    "source": "code_example",
+    "updated_at": 1781006841.4997072
   }
 }

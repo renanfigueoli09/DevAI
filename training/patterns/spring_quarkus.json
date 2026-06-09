@@ -1,22 +1,22 @@
 {
   "search:spring+quarkus:spring boot quarkus microservi": {
-    "content": "- **Spring Boot**:\n  - Latest Version: Spring Boot 3.x\n  - Key Config Options: `application.properties` or `application.yml`\n  - CLI Command: `mvn spring-boot:run`\n\n- **Quarkus**:\n  - Latest Version: Quarkus 2.10\n  - Key Config Options: `application.properties` or `application.yaml`\n  - CLI Command: `./mvnw compile quarkus:dev`\n\n- **Micronaut**:\n  - Latest Version: Micronaut 3.x\n  - Key Config Options: `application.yml`\n  - CLI Command: `./gradlew run`",
+    "content": "- **CLI Commands**:\n  - `mvn quarkus:create` to create a new Quarkus project.\n  - `./mvnw compile quarkus:dev` for development mode in Quarkus.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.9.0.Final\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`.\n  - Quarkus: `application.properties` or `application.yaml`, with additional native image configuration options like `quarkus.native.enable-all-profilers`.\n\nThese points provide concrete guidance for developers to choose and configure the appropriate framework for their microservices projects in 2025.",
     "source": "web_search",
-    "updated_at": 1780939526.0466952
+    "updated_at": 1781007464.458228
   },
   "search:spring+quarkus:spring boot quarkus microservi_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw quarkus:dev` for development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Quarkus: 3.10.x\n\n- **Key Config Options**:\n  - `quarkus.http.host`: Set the HTTP host.\n  - `quarkus.http.port`: Set the HTTP port.\n  - `quarkus.datasource.username`: Database username.\n  - `quarkus.datasource.password`: Database password.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for the database.",
+    "content": "- **CLI Commands**:\n  - `mvn quarkus:create` to create a new Quarkus project.\n  - `./mvnw compile quarkus:dev` to run the application in development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.9.0.Final\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Specifies the port on which the server listens.\n  - `spring.datasource.url`: JDBC URL for database connection.\n  - `quarkus.arc.allow-all-constructors`: Allows all constructors to be used in CDI beans.",
     "source": "code_example",
-    "updated_at": 1780939528.1740816
+    "updated_at": 1781007472.7812617
   },
   "search:spring+quarkus:spring boot quarkus performanc": {
-    "content": "- **CLI Commands**:\n  - `mvn clean package` for building Spring Boot and Quarkus applications.\n  - `quarkus dev` for running Quarkus in development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0 (as of my last update)\n  - Quarkus: 2.14.0.Final (as of my last update)\n\n- **Key Config Options**:\n  - Spring Boot: `server.port` for setting the server port.\n  - Quarkus: `quarkus.http.port` for setting the HTTP port.\n\nFor detailed performance tuning, consider reviewing official documentation and community resources specific to each framework.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building Spring Boot and Quarkus projects.\n  - `quarkus dev` for running Quarkus in development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.9.0.Final\n\n- **Key Config Options**:\n  - Spring Boot: `spring.main.banner-mode=off`, `server.port=8080`.\n  - Quarkus: `quarkus.http.host=0.0.0.0`, `quarkus.http.port=8080`.",
     "source": "web_search",
-    "updated_at": 1780939530.350115
+    "updated_at": 1781007481.976102
   },
   "search:spring+quarkus:spring boot quarkus performanc_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn io.quarkus:quarkus-maven-plugin:2.13.4.Final:create`\n  - `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.5\n  - Quarkus: 2.13.4.Final\n\n- **Key Config Options**:\n  - Spring Boot: `server.port`, `spring.datasource.url`\n  - Quarkus: `quarkus.http.port`, `quarkus.datasource.jdbc.url`",
+    "content": "- Use `quarkus create app com.djamware:quarkus-performance:1.0.0 --extensions=\"resteasy-reactive,resteasy-reactive-jackson\"` to generate a Quarkus project.\n- Remove dead code at build time using Arc's aggressive dead-code elimination.\n- Compare CPU/Memory utilisation with services like Quarkus, Payara Micro, Spring Boot, and Python using the `demo-spring-boot-jpa` repository.\n- For performance comparison between Spring Boot Webflux and Quarkus, use Java v21, Spring Boot Webflux 3.1.4, and Quarkus 3.4.1.\n- Key config options for Quarkus include `quarkus.arc.enabled=true` for dependency injection and `quarkus.http.port=8080` to set the HTTP port.",
     "source": "code_example",
-    "updated_at": 1780939532.5719678
+    "updated_at": 1781007491.2796667
   }
 }

@@ -1,22 +1,22 @@
 {
   "search:fastapi+redis-advanced:fastapi redis advanced operati": {
-    "content": "- **FastAPI Version**: 0.95.0\n- **Redis Version**: 6.2.7\n- **Celery Version**: 5.2.8\n\n**CLI Commands**:\n- `pip install fastapi[all] redis celery`\n- `celery -A your_project_name worker --loglevel=info`\n\n**Key Config Options**:\n- FastAPI: Use `Depends` for Redis injection.\n- Celery: Configure broker URL as `redis://localhost:6379/0`.\n- Redis: Set `maxmemory-policy allkeys-lru` to manage memory usage.\n\n**Additional Tips**:\n- Ensure Redis is running locally or use a cloud service like AWS ElastiCache.\n- For production, consider using Redis Cluster for high availability and scalability.",
+    "content": "- **Install Redis**: `sudo apt-get install redis-server`\n- **FastAPI Version**: Use the latest version available on PyPI.\n- **Redis Client Library**: Install with `pip install redis`.\n- **Key Config Options**:\n  - `maxmemory`: Set memory limit for Redis.\n  - `maxmemory-policy`: Define eviction policy (e.g., `allkeys-lru`).\n- **CLI Commands**:\n  - Start Redis: `redis-server`\n  - Connect to Redis: `redis-cli`\n  - Check Redis Version: `redis-cli --version`\n- **FastAPI + Redis Example**:\n  ```python\n  from fastapi import FastAPI, HTTPException\n  import redis\n\n  app = FastAPI()\n  r = redis.Redis(host='localhost', port=6379, db=0)\n\n  @app.get(\"/items/{item_id}\")\n  async def read_item(item_id: str):\n      item = r.get(item_id)\n      if item is None:\n          raise HTTPException(status_code=404, detail=\"Item not found\")\n      return {\"item\": item.decode()}\n  ```\n- **Rate Limiting Example**:\n  ```python\n  from fastapi import FastAPI, Depends, HTTPException, status\n  from fastapi_limiter import FastAPILimiter\n  from fastapi_limiter.depends import RateLimiter\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      await FastAPILimiter.init(app)\n\n  @app.get(\"/items/{item_id}\", dependencies=[Depends(RateLimiter(times=10, seconds=60))])\n  async def read_item(item_id: str):\n      return {\"item\": item_id}\n  ```",
     "source": "web_search",
-    "updated_at": 1780940010.129713
+    "updated_at": 1781008190.0177765
   },
   "search:fastapi+redis-advanced:fastapi redis advanced operati_ex": {
-    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.7.0\n  - Redis: v4.6.3\n\n- **Key Config Options**:\n  - `redis_url`: Connection string for Redis, e.g., `redis://localhost:6379/0`\n  - `max_connections`: Maximum number of connections to Redis.\n  - `min_connections`: Minimum number of connections to Redis.\n  - `dependencies`: Dependency injection for managing Redis operations.",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all] redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - Redis-py: 4.5.4\n\n- **Key Config Options**:\n  - `RedisManager` for async Redis management with connection pooling.\n  - Dependency injection patterns for easy integration of Redis in FastAPI applications.\n  - Use `redis-py`'s `AsyncClient` for asynchronous operations.",
     "source": "code_example",
-    "updated_at": 1780940012.22219
+    "updated_at": 1781008195.9420145
   },
   "search:fastapi+redis-advanced:redis integration with fastapi": {
-    "content": "- Install `fastapi` and `redis-py` using pip:\n  ```bash\n  pip install fastapi redis-py\n  ```\n- Use the following code snippet to integrate Redis with FastAPI:\n  ```python\n  from fastapi import FastAPI, Depends\n  import redis\n\n  app = FastAPI()\n\n  # Create a Redis client instance\n  redis_client = redis.Redis(host='localhost', port=6379, db=0)\n\n  @app.get(\"/\")\n  async def read_root():\n      return {\"message\": \"Hello World\"}\n\n  @app.get(\"/items/{item_id}\")\n  async def read_item(item_id: str):\n      item = redis_client.get(item_id)\n      if item:\n          return {\"item_id\": item_id, \"item\": item.decode()}\n      else:\n          return {\"item_id\": item_id, \"message\": \"Item not found\"}\n  ```\n- Key configuration options for Redis include `host`, `port`, and `db`.\n- For async support with FastAPI, use `aioredis` instead of `redis-py`.",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install redis`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Redis-py: 4.3.4\n\n- **Key Config Options**:\n  - `redis_url`: Connection string for Redis (e.g., `redis://localhost:6379/0`)\n  - `pool_size`: Maximum number of connections in the pool\n  - `max_connections`: Maximum number of connections allowed\n  - `min_connections`: Minimum number of connections to keep open",
     "source": "web_search",
-    "updated_at": 1780940014.4546745
+    "updated_at": 1781008212.7879655
   },
   "search:fastapi+redis-advanced:redis integration with fastapi_ex": {
-    "content": "- **CLI Commands**:\n  - `pip install fastapi[all] redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.97.0\n  - Redis-py: v4.5.4\n\n- **Key Config Options**:\n  - `RedisManager` for managing Redis connections asynchronously.\n  - Dependency injection for easy Redis integration in FastAPI endpoints.\n  - Connection pooling to optimize performance and resource usage.",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install redis`\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Redis-py: v4.5.3\n\n- **Key Config Options**:\n  - `RedisManager` for connection pooling in FastAPI applications.\n  - Use `asyncio` with `redis-py` for asynchronous operations.\n  - Configure Redis URL in environment variables or directly in code.",
     "source": "code_example",
-    "updated_at": 1780940016.795634
+    "updated_at": 1781008239.9006064
   }
 }

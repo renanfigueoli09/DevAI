@@ -10,9 +10,9 @@
     "updated_at": 1780943149.252332
   },
   "search:nextjs+serverless-authentication:implementing authentication in": {
-    "content": "- **CLI Commands**: Use `aws cognito-idp` for AWS Cognito operations.\n- **Latest Versions**: Ensure using the latest SDKs and libraries compatible with your serverless framework (e.g., Serverless Framework, AWS SAM).\n- **Key Config Options**:\n  - For AWS Cognito: Configure user pools, identity pools, and resource policies.\n  - For IAM in Serverless: Define roles and permissions in `serverless.yml` or through CloudFormation templates.\n  - For OAuth integration: Set up OAuth providers like Google, Facebook, or custom providers.",
+    "content": "- **CLI Commands**: Use `aws cognito-idp create-user-pool` to create a user pool.\n- **Latest Versions**: Ensure using the latest AWS SDKs for serverless applications.\n- **Key Config Options**:\n  - Set `AutoVerifiedAttributes` in user pool settings for email or phone number verification.\n  - Configure `MfaConfiguration` for multi-factor authentication.\n  - Use `OAuth2` settings to enable OAuth integration.",
     "source": "web_search",
-    "updated_at": 1780943151.3579862
+    "updated_at": 1781008991.5232372
   },
   "search:nextjs-serverless-authentication:next.js serverless authenticat": {
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm run dev` for development server\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: v13.5 (as of my last update)\n  - React: v18.2 (compatible with Next.js)\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing build and development settings\n  - Environment Variables: Use `.env.local` for sensitive information like API keys\n  - Middleware: Define serverless functions using middleware in `middleware.js`\n  - Authentication Providers: Integrate with OAuth providers through NextAuth.js or similar libraries",
@@ -33,5 +33,10 @@
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-oauth-app`\n  \n- **Latest Versions**:\n  - Next.js: 13.5\n  - OAuth libraries: `next-auth` v4\n  \n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].js`: Configuration for OAuth providers.\n  - Environment variables for client and server secrets.\n  - Redirect URIs in provider settings (e.g., Google, GitHub).",
     "source": "code_example",
     "updated_at": 1780943160.5309668
+  },
+  "search:nextjs+serverless-authentication:implementing authentication in_ex": {
+    "content": "- **CLI Commands**:\n  - `aws lambda create-function --function-name myFunction --runtime nodejs14.x --role arn:aws:iam::123456789012:role/lambda-role --handler index.handler`\n  - `aws apigateway put-method --rest-api-id abcdefghij --resource-id mnopqrstuv --http-method POST --authorization-type NONE`\n\n- **Latest Versions**:\n  - AWS CLI: v2.10.34\n  - Node.js: 14.x\n\n- **Key Config Options**:\n  - `runtime`: Specifies the runtime environment for your Lambda function.\n  - `role`: IAM role that grants permissions to the Lambda function.\n  - `handler`: The entry point of your Lambda function.\n  - `authorization-type`: Determines how requests are authenticated and authorized.",
+    "source": "code_example",
+    "updated_at": 1781009008.883076
   }
 }

@@ -1,22 +1,22 @@
 {
   "search:performance-optimization-python:python performance optimizatio": {
-    "content": "- Use `python -O` to enable optimization flag.\n- Install Python 3.13 for performance improvements.\n- Enable the new JIT compiler using `-X jit`.\n- Test free-threaded builds with `-m test --threaded`.\n- Compile with Profile Guided Optimization (PGO) and Link Time Optimization (LTO).\n- Use `pyperformance` to measure baselines.\n- Optimize memory management by using generators and context managers.\n- Apply variable packing for efficient data handling.\n- Loop optimization techniques include list comprehensions and generator expressions.",
+    "content": "- Use `Py-Spy` for profiling Python applications.\n- Employ `Numba` for just-in-time compilation of Python code to machine code.\n- Optimize data structures using libraries like `Pandas` and `NumPy`.\n- Utilize vectorized operations instead of loops where possible.\n- Enable garbage collection tuning with `-X gc_debug=generation` flag.\n- Use `Cython` for writing C extensions in Python.\n- Employ `multiprocessing` or `concurrent.futures` for parallel execution.\n- Optimize I/O operations by using buffered file handling.\n- Utilize `asyncio` for asynchronous programming to handle I/O-bound tasks efficiently.",
     "source": "web_search",
-    "updated_at": 1780942914.5963762
+    "updated_at": 1781007377.0264542
   },
   "search:performance-optimization-python:python performance optimizatio_ex": {
-    "content": "- Use `cProfile` and `line_profiler` for profiling.\n- Upgrade to Python 3.11 for performance improvements.\n- Utilize `numpy` and `pandas` for efficient data handling.\n- Implement list comprehensions instead of loops where possible.\n- Use generator expressions for memory efficiency.\n- Optimize string operations with `str.join()` over concatenation.\n- Employ dictionary comprehensions for faster dictionary creation.\n- Use `asyncio` for asynchronous programming to improve I/O-bound tasks.\n- Enable Just-In-Time (JIT) compilation with `numba`.\n- Configure virtual environments using `venv` or `conda`.",
+    "content": "- **CLI Commands**: Use `py-spy` to profile Python applications.\n- **Latest Versions**: Ensure using Python 3.10 or later for performance improvements.\n- **Key Config Options**:\n  - Enable Just-In-Time (JIT) compilation with Numba.\n  - Utilize Pandas' vectorized operations for data manipulation.\n  - Optimize loops and reduce function calls in critical sections.\n  - Use `gc.disable()` and `gc.enable()` to control garbage collection.",
     "source": "code_example",
-    "updated_at": 1780942916.7818944
+    "updated_at": 1781007392.0159216
   },
   "search:performance-optimization-python:python performance profiling t": {
-    "content": "- **py-spy**: `py-spy top -p <pid>` to profile by CPU usage.\n- **Scalene**: `scalene <script.py>` for detailed line-by-line profiling.\n- **eBPF Profiling**: Use `ebpftrace` with Python eBPF scripts for high-performance tracing.\n- **cProfile**: `python -m cProfile -s time script.py` to profile by execution time.\n- **line_profiler**: Install via pip, then use `kernprof -l -v script.py` to profile line-by-line.\n- **memory_profiler**: Install via pip, then use `mprof run script.py` for memory usage analysis.\n- **PyCharm Profiling**: Use built-in tools in PyCharm IDE for profiling Python applications.\n- **VisualVM**: Connect to a running Python process and analyze CPU, memory, and thread usage.\n- **perf**: For Linux, use `perf record -g python script.py` followed by `perf report` for detailed performance analysis.",
+    "content": "- **Py-Spy**: Use `py-spy record --output profile.svg <your_script.py>` to generate a flame graph.\n- **Scalene**: Run with `scalene your_script.py` for detailed CPU and memory usage analysis.\n- **eBPF Profiling**: Install `ebpftrace` and use scripts like `python-tracepoint.bt` to trace Python functions.\n- **cProfile**: Use `python -m cProfile -s time your_script.py` for a basic performance profile.\n- **line_profiler**: Install with `pip install line_profiler`, then run `kernprof -l -v your_script.py`.\n- **memory_profiler**: Install via `pip install memory_profiler`, use `@profile` decorators in your code.\n- **Numba**: Use `from numba import jit` to compile Python functions to machine code for speedup.\n- **Polars**: For data processing, switch from pandas to Polars for faster operations.\n- Latest versions can be found on their respective GitHub pages or PyPI listings.",
     "source": "web_search",
-    "updated_at": 1780942919.0642598
+    "updated_at": 1781007403.8917606
   },
   "search:performance-optimization-python:python performance profiling t_ex": {
-    "content": "- **cProfile**: Use `python -m cProfile script.py` to profile your Python script.\n- **line_profiler**: Install via pip (`pip install line_profiler`) and use `kernprof -l -v script.py`.\n- **timeit**: Run with `python -m timeit -s \"import module\" \"statement\"` for timing small code snippets.\n- Latest versions: Ensure tools are up-to-date using `pip install --upgrade tool_name`.\n- Key config options:\n  - `cProfile`: `-o output_file` to write results to a file.\n  - `line_profiler`: `-f function_name` to profile specific functions.\n  - `timeit`: `-n number_of_runs` for more accurate timing.",
+    "content": "- **CLI Commands**: \n  - `python -m cProfile script.py` to profile Python scripts.\n  - `pip install performance-profiler-optimizer==latest_version` to install the latest version of the profiling toolkit.\n\n- **Latest Versions**:\n  - `performance-profiler-optimizer`: Version 1.2.3 (as of Dec 16, 2025).\n\n- **Key Config Options**:\n  - For `cProfile`, use `-s time` to sort by total time.\n  - For `performance-profiler-optimizer`, configure memory tracking with `--memory` and set up caching options with `--cache-dir`.",
     "source": "code_example",
-    "updated_at": 1780942921.5093842
+    "updated_at": 1781007411.7435806
   }
 }

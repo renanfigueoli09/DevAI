@@ -10,8 +10,13 @@
     "updated_at": 1780940254.9805722
   },
   "search:react+nextjs-auth:next.js jwt authentication tut": {
-    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-jwt-auth-app`\n  - `npm install jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - jsonwebtoken: 9.0.0\n\n- **Key Config Options**:\n  - JWT Secret Key (`JWT_SECRET`)\n  - Cookie Name (`sessionToken`)\n  - Token Expiry Time (`expiresIn`)",
+    "content": "- **YouTube Tutorial**: Use `npm install jsonwebtoken` for JWT in Django.\n- **Master Next.js JWT Authentication**:\n  - Install `next-auth` and `jsonwebtoken`.\n  - Configure `pages/api/auth/[...nextauth].js`.\n  - Use `getToken` to extract token from cookies.\n- **Program Geek's Tutorial**:\n  - Advantages: Scalability, stateless, easy to scale across servers.\n  - Implement JWT in Next.js using `jsonwebtoken`.\n- **DEV Community Tutorial**:\n  - Install `next-auth`, `jsonwebtoken`, and `hasura/graphql-engine`.\n  - Configure `pages/api/auth/[...nextauth].js` for authentication.\n  - Use `getToken` to extract token from cookies for authenticated requests.",
     "source": "web_search",
-    "updated_at": 1780940257.68727
+    "updated_at": 1781007087.8258173
+  },
+  "search:react+nextjs-auth:next.js jwt authentication tut_ex": {
+    "content": "- **YouTube Tutorial**: Use `npm install jsonwebtoken` and `bcryptjs`.\n- **Next.js 11 JWT Authentication**:\n  - Install packages: `npm install next-auth @next-auth/jwt`\n  - Create a `pages/api/auth/[...nextauth].js` file.\n  - Configure the provider (e.g., Email, Credentials).\n  - Use `getToken` to extract JWT token from cookies.\n- **GitHub Example**:\n  - Clone repository: `git clone https://github.com/alan2207/nextjs-jwt-authentication.git`\n  - Install dependencies: `npm install`\n  - Run development server: `npm run dev`\n\nKey Config Options:\n- `pages/api/auth/[...nextauth].js`: Define authentication providers and callbacks.\n- JWT Token Configuration in NextAuth.js.",
+    "source": "code_example",
+    "updated_at": 1781007096.1700716
   }
 }

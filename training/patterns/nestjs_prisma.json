@@ -1,22 +1,22 @@
 {
   "search:nestjs+prisma:nestjs prisma orm crud 2025": {
-    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `prisma init`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `PrismaModule.forRoot()`.\n  - Define models in `schema.prisma`.\n  - Use decorators like `@Injectable()` and `@Service()` for services.\n  - Utilize `@Controller()` and route decorators for controllers.",
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `prisma init`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Prisma: 4.x\n\n- **Key Config Options**:\n  - `ormconfig.json` for database connection settings.\n  - `@nestjsx/crud` for simplifying CRUD operations.",
     "source": "web_search",
-    "updated_at": 1780943242.7390275
+    "updated_at": 1781006992.4848995
   },
   "search:nestjs+prisma:nestjs prisma orm crud 2025_ex": {
-    "content": "- **CLI Commands**:\n  - `npm install @nestjs/cli`\n  - `nest new project-name`\n  - `npm install prisma --save-dev`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - `prisma/schema.prisma`: Define your data model.\n  - `nest-cli.json`: Configure project settings.\n  - `.env`: Set environment variables for database connection.",
+    "content": "- **GitHub Repository**: [doroyyy/Practise-2025](https://github.com/doroyyy/Practise-2025)\n- **YouTube Tutorial**: [Nest.js REST API with Prisma ORM, Neon Postgres](https://bit.ly/DaveGrayWebDevRoadmapLearnhowtobuildaNestjsRESTAPIwithPrismaORMandNeonPostgres)\n- **Dockerize NestJS with Prisma and PostgreSQL**:\n  - `docker-compose.yml` example:\n    ```yaml\n    version: '3'\n    services:\n      db:\n        image: postgres:latest\n        environment:\n          POSTGRES_USER: user\n          POSTGRES_PASSWORD: password\n          POSTGRES_DB: database\n        volumes:\n          - db-data:/var/lib/postgresql/data\n      nestjs:\n        build: .\n        ports:\n          - \"3000:3000\"\n        depends_on:\n          - db\n    volumes:\n      db-data:\n    ```\n  - `Dockerfile` example:\n    ```dockerfile\n    FROM node:14\n\n    WORKDIR /usr/src/app\n\n    COPY package*.json ./\n\n    RUN npm install\n\n    COPY . .\n\n    CMD [\"npm\", \"run\", \"start\"]\n    ```\n\n- **Prisma CLI**: \n  - `prisma init` to initialize a new Prisma project\n  - `prisma migrate dev --name init` to create and apply migrations\n  - `prisma studio` to open the Prisma Studio\n\n- **NestJS CLI**:\n  - `nest generate module <module-name>` to generate a new module\n  - `nest generate controller <controller-name>` to generate a new controller\n  - `nest generate service <service-name>` to generate a new service\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure the PrismaModule with your database URL.\n  - Example: \n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { PrismaModule } from '@prisma/client';\n\n    @Module({\n      imports: [\n        PrismaModule.forRoot({\n          prismaServiceOptions: {\n            datasources: {\n              db: {\n                url: 'postgresql://user:password@localhost:5432/database',\n              },\n            },\n          },\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Prisma: v4.0.0",
     "source": "code_example",
-    "updated_at": 1780943245.0149558
+    "updated_at": 1781007010.6602983
   },
   "search:nestjs+prisma:nestjs prisma migrations 2025": {
-    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates the initial migration based on your Prisma schema.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Prisma: v5.0.0\n\n- **Key Config Options**:\n  - `prisma/schema.prisma`: Defines your data model and database connection.\n  - `nest-cli.json`: Configuration file for NestJS CLI.\n  - `.env`: Environment variables, including the database URL.",
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init`: Initialize and create the first migration.\n  - `npx prisma migrate dev --name add-user-table`: Create a new migration to add a user table.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Prisma: v4.0.0\n\n- **Key Config Options**:\n  - `prismaClientOptions`: Configure options for the Prisma client.\n  - `migrationsDirectory`: Specify the directory where migrations are stored.\n  - `schemaPath`: Define the path to your Prisma schema file.",
     "source": "web_search",
-    "updated_at": 1780943247.254798
+    "updated_at": 1781007019.7995238
   },
   "search:nestjs+prisma:nestjs prisma migrations 2025_ex": {
-    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name initial_migration`: Creates and applies migrations.\n\n- **Latest Versions**:\n  - NestJS: v9.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `nest-cli.json`: Configuration for the NestJS CLI.",
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `prisma init`\n  - `prisma migrate dev --name initial_migration`\n  - `prisma generate`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Prisma: v4.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model.\n  - `prisma.migrate`: Configure migration settings in `package.json`.\n  - Environment variables for database connection.",
     "source": "code_example",
-    "updated_at": 1780943249.7805698
+    "updated_at": 1781007026.905043
   }
 }

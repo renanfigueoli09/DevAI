@@ -2,37 +2,37 @@
   "pattern:nestjs+mongodb:schema": {
     "content": "// book.schema.ts — CORRECT Mongoose NestJS pattern\nimport { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\nimport { HydratedDocument } from 'mongoose';  // HydratedDocument, NOT Document\n\nexport type BookDocument = HydratedDocument<Book>;  // NOT Book & Document\n\n@Schema({ timestamps: true })\nexport class Book {  // MUST have export keyword\n  @Prop({ required: true }) title!: string;   // required → ! (non-null assertion)\n  @Prop({ required: true }) author!: string;  // required → !\n  @Prop() description?: string;               // optional → ?\n  @Prop({ default: true }) isActive?: boolean; // optional with default → ?\n}\nexport const BookSchema = SchemaFactory.createForClass(Book);\n// RULES: 1) export class 2) HydratedDocument not Document 3) required=! optional=?",
     "source": "code_pattern",
-    "updated_at": 1780973945.852314
+    "updated_at": 1781006575.4762259
   },
   "pattern:nestjs+mongodb:service": {
     "content": "// service.ts: @InjectModel(Book.name) private model: Model<BookDocument>. findAll(){return this.model.find().exec()} findOne(id){return this.model.findById(id).exec()} create(dto){return new this.model(dto).save()} update(id,dto){return this.model.findByIdAndUpdate(id,{$set:dto},{new:true}).exec()} remove(id){return this.model.findByIdAndDelete(id).exec()}",
     "source": "code_pattern",
-    "updated_at": 1780973946.9879093
+    "updated_at": 1781006576.594286
   },
   "pattern:nestjs+mongodb:module": {
     "content": "// module.ts: @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController],exports:[BookService]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780973948.206503
+    "updated_at": 1781006577.8445196
   },
   "qa:mongoose-required-bang": {
     "content": "@Prop({required:true}) → field!: string  (! = required, NON-NULL ASSERTION)\n@Prop() → field?: string  (? = optional)\nNEVER: @Prop({required:true}) field?: string  (WRONG)\nNEVER: @Prop({required:true}) field: string   (WRONG, needs !)\nRULE: required=! | optional=? | NO EXCEPTIONS",
     "source": "critical_pattern",
-    "updated_at": 1781006436.940455
+    "updated_at": 1781009771.1999664
   },
   "qa:mongoose-no-findOneBy": {
     "content": "findOneBy does NOT exist in Mongoose. findOneBy is TypeORM-only.\nMongoose CORRECT: findById(id), findByIdAndUpdate(id,{$set:dto},{new:true}), findByIdAndDelete(id)\nWRONG: this.model.findOneBy({_id:id})  ← TypeORM only\nCORRECT: this.model.findById(id).exec()",
     "source": "critical_pattern",
-    "updated_at": 1781006437.983812
+    "updated_at": 1781009771.3101754
   },
   "qa:mongoose-forFeature": {
     "content": "NestJS Mongoose module uses MongooseModule.forFeature NEVER TypeOrmModule.\n@Module({ imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] })\nWRONG: TypeOrmModule.forFeature([Book])  ← TypeORM only",
     "source": "critical_pattern",
-    "updated_at": 1781006439.1062489
+    "updated_at": 1781009771.3831866
   },
   "qa:app-module-mongodb": {
     "content": "app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/app')\nWRONG: TypeOrmModule with DB_HOST/DB_PORT/DB_NAME  ← PostgreSQL config\nMongoDB uses MONGODB_URI, NOT DB_HOST/DB_PORT",
     "source": "critical_pattern",
-    "updated_at": 1781006440.2442951
+    "updated_at": 1781009771.4475794
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/mongoose mongoose`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - Use `@Schema` to define a schema.\n  - Use `@Prop` to define properties within the schema.\n  - Import `HydratedDocument` from 'mongoose' for type safety.\n\n- **Example Usage**:\n  ```typescript\n  import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';\n  import { HydratedDocument } from 'mongoose';\n\n  export const CatSchema = new Schema({\n    name: String,\n    age: Number,\n  });\n\n  export class Cat {\n    @Prop()\n    name: string;\n\n    @Prop()\n    age: number;\n  }\n\n  export type CatDocument = HydratedDocument<Cat>;\n  ```\n\n- **References**:\n  - [NestJS Mongoose](https://docs.nestjs.com/techniques/mongodb)\n  - [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)",

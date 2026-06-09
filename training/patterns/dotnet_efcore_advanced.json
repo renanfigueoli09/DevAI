@@ -1,12 +1,22 @@
 {
   "search:dotnet+efcore-advanced:entity framework core performa": {
-    "content": "- **Latest Version**: Entity Framework Core 7.0\n- **CLI Commands**:\n  - `dotnet ef database update`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `MaxBatchSize(int batchSize)` to control batch size for bulk operations.\n- **Performance Optimization Tips**:\n  - Enable second-level caching using `Microsoft.EntityFrameworkCore.Caching.Memory`.\n  - Use stored procedures and materialized views for complex queries.\n  - Optimize database schema and indexes.\n  - Monitor and tune query performance with Entity Framework Core's logging capabilities.",
+    "content": "- **Latest Version**: Entity Framework Core 7.0\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only operations\n  - `LazyLoadingEnabled = false` to disable lazy loading\n  - `MaxBatchSize` for batching commands\n  - `EnableSensitiveDataLogging = true` for debugging purposes",
     "source": "web_search",
-    "updated_at": 1780941175.9404829
+    "updated_at": 1781007055.5393195
   },
   "search:dotnet+efcore-advanced:entity framework core performa_ex": {
-    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 6.0.1\n\n- **Key Config Options**:\n  - `UseLazyLoadingProxies`: Enable lazy loading.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disable change tracking for read-only queries.\n  - `UseConnectionString(\"YourConnectionString\")`: Specify the database connection string.",
+    "content": "- **Latest Version**: Entity Framework Core 7.0 was released in October 2023.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations to the database.\n\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure options for DbContext.\n  - `OnConfiguring`: Override to configure DbContext options.\n  - `UseSqlServer`, `UseMySQL`, etc.: Specify database provider in `appsettings.json`.\n\n- **Performance Optimization Tips**:\n  - Use `AsNoTracking()` for read-only queries.\n  - Batch inserts and updates using `SaveChangesAsync()`.\n  - Configure lazy loading with `LazyLoadingEnabled` option.\n\n- **NuGet Packages**:\n  - Install EF Core via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`.\n\n- **Documentation**: Refer to the official [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/) for detailed guides and best practices.",
     "source": "code_example",
-    "updated_at": 1780941178.2252378
+    "updated_at": 1781007063.953245
+  },
+  "search:dotnet+efcore-advanced:advanced entity framework core": {
+    "content": "- **Latest Version**: EF Core 8.0\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n- **Key Config Options**:\n  - `DbContext` class\n  - `OnConfiguring` method for connection strings\n  - `DbSet<T>` properties for entity sets\n  - Fluent API for configuring relationships and constraints",
+    "source": "web_search",
+    "updated_at": 1781007038.5740926
+  },
+  "search:dotnet+efcore-advanced:advanced entity framework core_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - ASP.NET Core: 6.0\n\n- **Key Config Options**:\n  - Connection Strings in `appsettings.json`\n  - DbContext Configuration in `Startup.cs` or `Program.cs`\n  - Repository Pattern Implementation\n  - Query Optimization Techniques",
+    "source": "code_example",
+    "updated_at": 1781007046.964219
   }
 }

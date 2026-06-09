@@ -1,22 +1,22 @@
 {
   "search:kubernetes+canary-deployments:kubernetes canary deployments ": {
-    "content": "- **CLI Commands**:\n  - `kubectl apply -f <canary-deployment-file.yaml>`\n  - `kubectl rollout status deployment/<deployment-name>`\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.x\n  - Helm: v3.8.x\n\n- **Key Config Options**:\n  - `spec.strategy.canary`: Defines the canary strategy.\n  - `spec.template.spec.containers.image`: Specifies the image version for the canary deployment.\n  - `spec.minReadySeconds`: Minimum number of seconds the new pods should be ready before marking the deployment as successful.",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f canary-deployment.yaml`\n  - `minikube start --kubernetes-version v1.25.2 --memory 8192 --cpus 2`\n  - `helm install <release-name> <chart-name>`\n  \n- **Latest Versions**:\n  - Kubernetes: v1.25.2\n  - Helm: Latest version as of the last update\n  \n- **Key Config Options**:\n  - Load balancer routing based on parameters\n  - Canary deployment involves a clone of production environment",
     "source": "web_search",
-    "updated_at": 1780941983.651121
+    "updated_at": 1781007888.6634893
   },
   "search:kubernetes+canary-deployments:kubernetes canary deployments _ex": {
-    "content": "- Use `kubectl apply -f <canary-deployment-file>.yaml` to deploy canary version.\n- Ensure the canary deployment has a lower replica count initially, e.g., `replicas: 2`.\n- Gradually increase the canary's replicas using `kubectl scale deployment/<canary-deployment-name> --replicas=4`.\n- Monitor metrics with Prometheus and Grafana for health checks.\n- Use `kubectl rollout status deployment/<canary-deployment-name>` to track the progress of the canary release.\n- If successful, promote the canary to production by scaling down the original deployment and scaling up the canary.",
+    "content": "- Use `kubectl apply -f <filename>` to create or update deployments.\n- For canary deployment, create two separate deployments for stable and canary versions.\n- Utilize `kubectl expose` to create a service for routing traffic.\n- Employ `ingress` resources to manage traffic distribution between stable and canary environments.\n- Use Helm charts to simplify the management of Kubernetes applications.\n- Set `canaryWeight` in Helm values to control the percentage of traffic routed to the canary version.\n- Monitor deployment status with `kubectl rollout status deployment/<deployment-name>`.\n- Rollback to stable version using `helm rollback <release-name> <revision-number>`.",
     "source": "code_example",
-    "updated_at": 1780941985.9425793
+    "updated_at": 1781007898.4783883
   },
   "search:kubernetes+canary-deployments:canary deployment strategies i": {
-    "content": "- **CLI Commands**:\n  - `kubectl rollout status deployment/<deployment-name>`\n  - `kubectl apply -f <canary-deployment-file.yaml>`\n\n- **Latest Versions**:\n  - Argo Rollouts: v1.2.3\n\n- **Key Config Options**:\n  - `spec.strategy.canary.steps`: Defines the steps for canary rollout.\n  - `spec.template.spec.containers.image`: Specifies the container image version.\n  - `spec.progressDeadlineSeconds`: Sets the timeout for a deployment to make progress before it is considered failed.",
+    "content": "- Use `kubectl rollout` to manage canary deployments.\n- Apply a new deployment with a different version and use `kubectl set image` to update the image.\n- Configure traffic routing using Ingress or Service annotations like `nginx.ingress.kubernetes.io/canary: \"true\"`.\n- Monitor the canary deployment with `kubectl rollout status`.\n- Rollback if necessary using `kubectl rollout undo`.\n- Ensure proper logging and monitoring during the canary phase.\n- Use Helm charts for easier management of complex deployments.\n- Consider using Istio or Linkerd for advanced traffic management.",
     "source": "web_search",
-    "updated_at": 1780941988.1078854
+    "updated_at": 1781007906.8787818
   },
   "search:kubernetes+canary-deployments:canary deployment strategies i_ex": {
-    "content": "- Use `kubectl apply -f <canary-deployment-file>.yaml` to deploy the canary version.\n- Set `spec.strategy.canary.weight` to control traffic split, e.g., `50`.\n- Monitor deployment with `kubectl rollout status deployment/<deployment-name> --watch`.\n- Rollback using `kubectl rollout undo deployment/<deployment-name>`.\n- Key config options: `canary`, `weight`, `maxSurge`, `maxUnavailable`.",
+    "content": "- Use `kubectl apply -f <filename>` to deploy or update resources.\n- For canary deployment, create a new version of the application and scale it up gradually.\n- Monitor the new version using `kubectl get pods` and logs with `kubectl logs <pod-name>`.\n- Implement blue/green deployment by creating two versions of your application (blue and green) and switching traffic between them.\n- Use `kubectl set image deployment/<deployment-name> <container-name>=<image>:<tag>` to update the image for a specific container in a deployment.\n- Monitor the new version's performance using metrics tools like Prometheus or Grafana.\n- Rollback to the previous version if issues are detected with `kubectl rollout undo deployment/<deployment-name>`.\n- Ensure proper configuration of service and ingress resources to route traffic correctly between versions.",
     "source": "code_example",
-    "updated_at": 1780941990.202559
+    "updated_at": 1781007916.6676018
   }
 }

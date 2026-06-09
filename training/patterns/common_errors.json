@@ -2,22 +2,22 @@
   "pattern:error:module-not-found": {
     "content": "// TS2307 './book/book.module' not found: CREATE src/book/book.module.ts with @Module({imports:[MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],providers:[BookService],controllers:[BookController]}) export class BookModule {}",
     "source": "code_pattern",
-    "updated_at": 1780973968.601453
+    "updated_at": 1781006598.01731
   },
   "pattern:error:findOneBy-mongoose": {
     "content": "// TS2551 Model.findOneBy does not exist: findOneBy is TypeORM-only. Mongoose uses: findById(id), findOne({field:value}), findByIdAndUpdate, findByIdAndDelete. NEVER use findOneBy with Mongoose.",
     "source": "code_pattern",
-    "updated_at": 1780973969.614381
+    "updated_at": 1781006599.13095
   },
   "pattern:error:partialtype": {
     "content": "// PartialType import: ALWAYS from '@nestjs/mapped-types'. NEVER from '@nestjs/common' (doesn't exist there). NEVER from '@nestjs/swagger' (prefer mapped-types). Fix: import {PartialType} from '@nestjs/mapped-types'",
     "source": "code_pattern",
-    "updated_at": 1780973970.600362
+    "updated_at": 1781006600.1692297
   },
   "qa:ts2307-create-module": {
     "content": "TS2307 Cannot find module './book/book.module': CREATE src/book/book.module.ts\n@Module({\n  imports: [MongooseModule.forFeature([{name:Book.name,schema:BookSchema}])],\n  providers: [BookService], controllers: [BookController], exports: [BookService]\n}) export class BookModule {}",
     "source": "critical_pattern",
-    "updated_at": 1781006452.8025131
+    "updated_at": 1781009772.5364
   },
   "search:common+errors:nestjs ts2307 ts2339 ts2551 ty": {
     "content": "- **CLI Commands**:\n  - `ng serve` to restart the Angular server.\n  - `yarn add @types/node@12 --dev --tilde` to install Node.js type definitions.\n\n- **Latest Versions**:\n  - TypeScript: Latest version as of my last update (not specified in the search results).\n  - Angular CLI: Latest version as of my last update (not specified in the search results).\n\n- **Key Config Options**:\n  - No specific config options mentioned in the search results.",

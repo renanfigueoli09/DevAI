@@ -1,12 +1,22 @@
 {
   "search:django+security-practices:securing django applications 2": {
-    "content": "- **CLI Commands**:\n  - `pip install django==3.2` to install Django 3.2.\n  \n- **Latest Versions**:\n  - Django 4.0 is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a strong, random secret key in your settings.py.\n  - `DEBUG`: Set to `False` in production environments.\n  - `ALLOWED_HOSTS`: Specify allowed hosts in your settings.py.\n  - `DATABASES`: Configure database connections securely.\n  - `SECURE_SSL_REDIRECT`: Redirect all HTTP traffic to HTTPS.",
+    "content": "- **CLI Commands**:\n  - `pip install django==3.2` for installing Django 3.2.\n  - `python manage.py runserver --settings=your_project.settings.development` to run the development server.\n\n- **Latest Versions**:\n  - Django 4.1 is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for cryptographic signing.\n  - `DEBUG`: Set to `False` in production environments.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.\n  - `DATABASES`: Configuration dictionary for database connections.",
     "source": "web_search",
-    "updated_at": 1780939913.3348043
+    "updated_at": 1781008802.1554153
   },
   "search:django+security-practices:securing django applications 2_ex": {
-    "content": "- Use Django's built-in authentication system.\n- Implement CSRF protection using `@csrf_protect` decorator or middleware.\n- Sanitize user input using Django forms and validators.\n- Configure HTTPS by setting `SECURE_SSL_REDIRECT = True`.\n- Set `SESSION_COOKIE_SECURE = True` to ensure cookies are sent over HTTPS.\n- Use Django's password hashing mechanism with `django.contrib.auth.hashers`.\n- Regularly update Django and installed packages to patch security vulnerabilities.\n- Implement content security policies (CSP) using the `ContentSecurityPolicyMiddleware`.\n- Enable X-Frame-Options header for clickjacking protection.\n- Utilize Django's built-in email backend for secure password reset emails.",
+    "content": "- Install Simple-JWT via pip: `pip install djangorestframework-simplejwt`\n- Update settings.py to include 'rest_framework_simplejwt' in INSTALLED_APPS and configure authentication classes.\n- Use the following CLI command for penetration testing: `nmap -sV --script vuln <target>`\n- For 2FA with OTP, install TOTP package via pip: `pip install django-totp`\n- Add 'django_totp' to INSTALLED_APPS in settings.py\n- Configure TOTP in your Django project by following the GeeksforGeeks guide.\n- Ensure Django version is up-to-date (e.g., 4.1 as of my last update).\n- Use Django's built-in User model for authentication or extend it with custom fields if necessary.\n- Implement CSRF protection using middleware: `MIDDLEWARE = ['django.middleware.csrf.CsrfViewMiddleware']`\n- Regularly update dependencies and security patches to mitigate vulnerabilities.",
     "source": "code_example",
-    "updated_at": 1780939915.4474008
+    "updated_at": 1781008825.2493293
+  },
+  "search:django+security-practices:django security best practices": {
+    "content": "- Ensure Django and dependencies are up-to-date using `pip install --upgrade django`\n- Set `DEBUG = False` in production settings for security\n- Use HTTPS by configuring your web server to enforce SSL/TLS\n- Implement CSRF protection with `{% csrf_token %}` in forms\n- Sanitize user input using Django's built-in escaping functions\n- Configure secure cookies with `SESSION_COOKIE_SECURE = True`\n- Regularly update and patch all software components\n- Use Django's authentication system for handling user accounts\n- Employ Django middleware for additional security features",
+    "source": "web_search",
+    "updated_at": 1781008773.4236164
+  },
+  "search:django+security-practices:django security best practices_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --insecure`: Run the development server without HTTPS.\n  - `python manage.py collectstatic`: Collect static files into a single directory.\n\n- **Latest Versions**:\n  - Django 4.1\n\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for cryptographic signing.\n  - `DEBUG`: Set to `False` in production.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.\n  - `CSRF_COOKIE_SECURE`: Set to `True` to use HTTPS only for CSRF cookies.",
+    "source": "code_example",
+    "updated_at": 1781008778.2553093
   }
 }

@@ -10,13 +10,13 @@
     "updated_at": 1780943410.887652
   },
   "search:fastapi+mysql-advanced:mysql integration with fastapi": {
-    "content": "- Use `pip install fastapi[all] mysql-connector-python` to install FastAPI and MySQL connector.\n- Create a `.env` file for environment variables like database credentials.\n- Use SQLModel for ORM, which is compatible with FastAPI.\n- Implement dependency injection for database sessions in FastAPI routes.\n- For health checks, create an endpoint that returns the current status of your application.\n- Ensure to use `asyncio` and `uvicorn` for running FastAPI applications asynchronously.\n- Regularly update dependencies using `pip install --upgrade <package_name>`.\n- Check the latest versions on [PyPI](https://pypi.org/) or [FastAPI GitHub](https://github.com/tiangolo/fastapi).\n- For database connection, use `mysql-connector-python` with appropriate flags for connection pooling.\n- Implement error handling in your database operations to manage exceptions gracefully.",
+    "content": "- Use `pip install fastapi[all] sqlalchemy asyncpg` to install FastAPI, SQLAlchemy, and asyncpg.\n- Create a `.env` file for database credentials:\n  ```\n  DATABASE_URL=postgresql://user:password@localhost/dbname\n  ```\n- Define models using SQLModel or SQLAlchemy ORM.\n- Use the `async_engine = create_async_engine(DATABASE_URL)` function to create an asynchronous engine.\n- Implement dependency injection for database sessions with `AsyncSessionLocal`.\n- Use `Mapped` types from SQLModel for model definitions.\n- Configure FastAPI app with `app = FastAPI()`.\n- Define routes and use SQLAlchemy ORM or SQLModel queries within route handlers.\n- Run the FastAPI application with `uvicorn main:app --reload`.",
     "source": "web_search",
-    "updated_at": 1780943413.1654336
+    "updated_at": 1781008109.0586672
   },
   "search:fastapi+mysql-advanced:mysql integration with fastapi_ex": {
-    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn sqlalchemy databases`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 1.4.32\n  - Databases: 0.6.1\n\n- **Key Config Options**:\n  - `.env` file for environment variables (e.g., `DATABASE_URL=sqlite:///./test.db`)\n  - Database URL format: `postgresql://user:password@host:port/dbname`\n  - SQLAlchemy models and schemas\n  - Dependency injection for database sessions",
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init alembic`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - SQLAlchemy: v2.0.0\n\n- **Key Config Options**:\n  - Database URL in `.env` file.\n  - Models defined in `models.py`.\n  - CRUD operations implemented in `api.py`.",
     "source": "code_example",
-    "updated_at": 1780943415.4422681
+    "updated_at": 1781008118.9032564
   }
 }

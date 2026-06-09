@@ -1,17 +1,22 @@
 {
   "search:dotnet+azure-functions:.net azure functions best prac": {
-    "content": "- Use Azure Functions Core Tools to develop locally.\n- Deploy using `func azure functionapp publish <functionAppName>`.\n- Set environment variables in the Azure portal or via `.env` file.\n- Utilize Azure Monitor for logging and monitoring functions.\n- Implement cold start optimization techniques.\n- Ensure proper error handling and retries.\n- Use Azure Functions Premium plan for high-performance scenarios.\n- Leverage durable functions for complex workflows.\n- Regularly update dependencies to latest versions.",
+    "content": "- Use Azure Functions Core Tools version 4.x or later.\n- Deploy using Azure DevOps pipelines for continuous integration and deployment.\n- Configure function timeouts in `host.json` to avoid long-running processes.\n- Utilize durable functions for stateful workflows, specifying the latest version in your function app settings.\n- Monitor function performance with Application Insights by enabling it during function app creation or update.\n- Implement logging using ILogger interface to capture function execution details.\n- Use Azure Functions Premium plan for higher concurrency and lower latency requirements.\n- Optimize cold start times by pre-warming instances or using premium hosting plans.\n- Secure your functions by using managed identities, connection strings, and role-based access control (RBAC).",
     "source": "web_search",
-    "updated_at": 1780940527.7649412
+    "updated_at": 1781006659.4209747
   },
   "search:dotnet+azure-functions:.net azure functions best prac_ex": {
-    "content": "- Use the latest version of Azure Functions Core Tools (`func`) to create and manage functions.\n- Utilize Visual Studio or Visual Studio Code for development, leveraging extensions like \"Azure Functions\" by Microsoft.\n- Implement dependency injection in your Azure Functions using `Microsoft.Azure.Functions.Extensions` package.\n- Configure logging with `ILogger` to track function execution and errors.\n- Use Azure Storage Queues or Service Bus for input/output bindings to decouple functions from external systems.\n- Employ Azure Key Vault for secure storage of sensitive information like API keys and connection strings.\n- Implement unit tests using xUnit.net and Moq for your Azure Functions logic.\n- Deploy functions using Azure DevOps pipelines with the Azure Functions task.\n- Monitor function performance and logs through Azure Monitor.",
+    "content": "- **CLI Commands**: Use `func azure functionapp publish <functionAppName>` to publish your Azure Function.\n- **Latest Version**: As of my last update, the latest version is .NET 6, but check for updates regularly as Microsoft frequently releases new versions.\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Set this to `.net` for .NET functions.\n  - `AzureWebJobsStorage`: Connection string for Azure Storage.\n  - `WEBSITE_CONTENTAZUREFILECONNECTIONSTRING`: For local development, use Azure Files storage connection string.\n\nThese points provide actionable guidance for developers working with Azure Functions in a .NET environment.",
     "source": "code_example",
-    "updated_at": 1780940531.112245
+    "updated_at": 1781006670.261963
   },
   "search:dotnet+azure-functions:.net azure functions performan": {
-    "content": "- **CLI Commands**:\n  - `func azure functionapp publish <functionAppName> --csharp`\n  - `dotnet publish -c Release`\n\n- **Latest Versions**:\n  - .NET 8\n  - Azure Functions Core Tools v4\n\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Set to `.NET` for .NET functions.\n  - `WEBSITE_NODE_DEFAULT_VERSION`: Specify Node.js version if needed.\n  - `AzureWebJobsStorage`: Connection string for Azure Storage.",
+    "content": "- **CLI Commands**:\n  - `func azure functionapp publish <functionAppName> --build Remote`\n  - `az functionapp update --name <functionAppName> --resource-group <resourceGroupName> --set appsettings[FUNCTIONS_WORKER_RUNTIME]=.NET8`\n\n- **Latest Versions**:\n  - .NET 8\n  - Azure Functions Core Tools v4\n\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Set to `.NET8`\n  - `WEBSITE_CONTENTAZUREFILECONNECTIONSTRING`: For binding to Azure Storage\n  - `AzureWebJobsStorage`: For binding to Azure Storage\n  - `FUNCTIONS_EXTENSION_VERSION`: Set to `~4` for the latest stable version",
     "source": "web_search",
-    "updated_at": 1780940534.6061707
+    "updated_at": 1781006687.7267385
+  },
+  "search:dotnet+azure-functions:.net azure functions performan_ex": {
+    "content": "- **CLI Command**: `func azure functionapp publish <functionAppName> --dotnet-version 10`\n- **Latest Version**: .NET 10\n- **Key Config Options**:\n  - `FUNCTIONS_WORKER_RUNTIME`: Set to `.NET`\n  - `AzureWebJobsStorage`: Connection string for Azure Storage\n  - `WEBSITE_CONTENTAZUREFILESHOSTINGENABLED`: Set to `true` for local development",
+    "source": "code_example",
+    "updated_at": 1781006694.2118967
   }
 }

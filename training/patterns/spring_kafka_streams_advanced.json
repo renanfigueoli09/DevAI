@@ -1,12 +1,22 @@
 {
   "search:spring+kafka-streams-advanced:spring kafka streams advanced ": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Apache Kafka: 3.4.0\n  - Spring for Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.streams.application-id`: Application ID for Kafka Streams.\n  - `spring.kafka.streams.default-key-deserializer`: Default key deserializer class.\n  - `spring.kafka.streams.default-value-deserializer`: Default value deserializer class.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew build` for Gradle projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Apache Kafka Streams: 3.4.0\n\n- **Key Config Options**:\n  - `spring.kafka.streams.application-id`: Unique identifier for the application.\n  - `spring.kafka.streams.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.streams.default-key-deserializer`: Deserializer class for keys.\n  - `spring.kafka.streams.default-value-deserializer`: Deserializer class for values.",
     "source": "web_search",
-    "updated_at": 1780963597.6599207
+    "updated_at": 1781008296.9726105
   },
   "search:spring+kafka-streams-advanced:spring kafka streams state sto": {
-    "content": "- **CLI Commands**: Use `kafka-topics.sh --create` to create Kafka topics.\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kafka Streams: 3.4.x\n- **Key Config Options**:\n  - `spring.kafka.streams.state-dir`: Specifies the local file system directory for state stores.\n  - `spring.kafka.streams.application-id`: Unique identifier for the application.\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers to connect to.",
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --create` to create topics, and `kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe` to describe consumer groups.\n- **Latest Versions**: Ensure you are using the latest versions of Spring Kafka Streams and Apache Kafka for optimal performance and security.\n- **Key Config Options**:\n  - `state.dir`: Specifies the directory where state stores are stored.\n  - `cache.max.bytes.buffering`: Controls the maximum size of the in-memory buffer used to cache records before they are written to disk.\n  - `default.key.serde` and `default.value.serde`: Define the default serializers for keys and values.",
     "source": "web_search",
-    "updated_at": 1780963599.5951674
+    "updated_at": 1781008315.1167283
+  },
+  "search:spring+kafka-streams-advanced:spring kafka streams advanced _ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Kafka Streams: 3.2.0, Apache Kafka: 3.3.0.\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka broker addresses.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy to reset offsets (e.g., `earliest`, `latest`).",
+    "source": "code_example",
+    "updated_at": 1781008303.3295357
+  },
+  "search:spring+kafka-streams-advanced:spring kafka streams state sto_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server localhost:9092 --create --topic app-store --partitions 3 --replication-factor 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic app-store`\n\n- **Latest Versions**:\n  - Spring Kafka Streams: 3.0.0\n  - Apache Kafka Streams: 3.0.0\n\n- **Key Config Options**:\n  - `state.store.name`: Name of the state store.\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.",
+    "source": "code_example",
+    "updated_at": 1781008322.675299
   }
 }

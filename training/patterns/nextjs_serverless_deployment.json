@@ -1,0 +1,17 @@
+{
+  "search:nextjs+serverless-deployment:next.js serverless deployment ": {
+    "content": "- **CLI Commands**:\n  - `next dev`: Starts the Next.js development server.\n  - `next build`: Compiles and optimizes your application for production.\n  - `next start`: Starts a Node.js server that serves your built application.\n\n- **Latest Versions**:\n  - Next.js: 16\n  - Vercel (serverless platform): Latest version\n\n- **Key Config Options**:\n  - `next.config.js`: Configuration file to customize the behavior of your Next.js app.\n    - `output: 'export'` for static site generation.\n    - `target: 'serverless'` for serverless deployment.\n    - `rewrites`, `redirects`, and `headers` for custom routing.\n\n- **Deployment Strategies**:\n  - **Static Hosting**: Use platforms like Vercel, Netlify for static content.\n  - **Serverless Functions**: Deploy with Vercel, AWS Lambda, or Google Cloud Functions.\n  - **Containerization**: Use Docker to containerize your Next.js app and deploy on Kubernetes.\n  - **Traditional Server Deployment**: Run on traditional servers using platforms like Heroku, AWS EC2.\n\n- **Optimization Tips**:\n  - Enable `static generation` for pages that don't require server-side rendering.\n  - Utilize `edge functions` for performance optimization.\n  - Implement `image optimization` to reduce load times.",
+    "source": "web_search",
+    "updated_at": 1781008457.7251358
+  },
+  "search:nextjs+serverless-deployment:next.js serverless functions o": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm run dev` for development server\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: v13.5 (as of October 2023)\n  - Node.js: v16.x or later\n\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations such as asset paths, webpack settings, and more.\n  - `serverlessFunctionsDir`: Specify the directory for serverless functions in your Next.js project.\n\n- **Actionable Tips**:\n  - Use `getServerSideProps` or `getStaticProps` for data fetching at build time or on-demand.\n  - Optimize images using `next/image` for better performance.\n  - Implement caching strategies to reduce load times.\n  - Monitor and optimize serverless function cold start times.",
+    "source": "web_search",
+    "updated_at": 1781008506.2333605
+  },
+  "search:nextjs+serverless-deployment:next.js serverless functions o_ex": {
+    "content": "- **CLI Commands:** Use `vercel` for deployment.\n- **Latest Versions:** Next.js 13, Vercel 26.\n- **Key Config Options:** `next.config.js`, `api-routes`.\n- **Optimization Tips:** Use edge functions, reduce payload size.",
+    "source": "code_example",
+    "updated_at": 1781008528.3827808
+  }
+}
