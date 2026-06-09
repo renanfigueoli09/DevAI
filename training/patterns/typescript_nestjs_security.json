@@ -1,0 +1,22 @@
+{
+  "search:TypeScript + NestJS Security:securing typescript applicatio": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Update dependencies using `npm update`.\n- Implement authentication with `@nestjs/passport` and `passport-local`.\n- Configure CORS in `app.module.ts` with `CORSOptions`.\n- Utilize environment variables for sensitive data with `dotenv`.\n- Apply rate limiting with `nestjs-rate-limit`.\n- Use HTTPS by configuring SSL certificates.\n- Integrate security monitoring with `securenow` package.\n- Implement input validation using class-validator and class-transformer.",
+    "source": "web_search",
+    "updated_at": 1781037102.9775984
+  },
+  "search:TypeScript + NestJS Security:securing typescript applicatio_ex": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module auth`: Generates an authentication module.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeScript: v4.x\n\n- **Key Config Options**:\n  - Use `@nestjs/passport` for authentication strategies.\n  - Implement JWT (JSON Web Tokens) for secure token-based authentication.\n  - Configure CORS in `app.module.ts` to control access from different origins.",
+    "source": "code_example",
+    "updated_at": 1781037116.0759976
+  },
+  "search:TypeScript + NestJS Security:best security practices for ne": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `nest generate module module-name`: Generates a new module.\n  - `nest generate controller controller-name`: Generates a new controller.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - TypeScript: v4.9.5\n\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe())`: Enables validation pipes globally.\n  - `app.useGlobalFilters(new AllExceptionsFilter())`: Enables exception filters globally.\n  - `app.useGlobalInterceptors(new TransformInterceptor())`: Enables interceptors globally.",
+    "source": "web_search",
+    "updated_at": 1781037125.543954
+  },
+  "search:TypeScript + NestJS Security:best security practices for ne_ex": {
+    "content": "- Install NestJS CLI globally: `npm install -g @nestjs/cli`\n- Create a new NestJS project: `nest new <project-name>`\n- Use TypeScript for development.\n- Key configuration files: `app.module.ts`, `main.ts`.\n- Latest version as of 2023: Check the official NestJS website or npm for the most current version.\n- Security practices: Implement middleware, use DTOs (Data Transfer Objects), and validate inputs.",
+    "source": "code_example",
+    "updated_at": 1781037133.0409012
+  }
+}
