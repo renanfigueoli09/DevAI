@@ -1,0 +1,17 @@
+{
+  "search:go-gorm-mysql:go gorm mysql orm tutorial 202": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.36.0 (as of my last update)\n  - MySQL Driver for GORM: v1.4.5\n\n- **Key Config Options**:\n  - Database DSN: `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Auto Migration: `db.AutoMigrate(&User{})`\n  - Logging Mode: `db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})`",
+    "source": "web_search",
+    "updated_at": 1781044499.0781565
+  },
+  "search:go-gorm-mysql:gorm with mysql performance tu": {
+    "content": "- **CLI Commands**: Use `mysql` command-line tool to interact with MySQL server.\n- **Latest Versions**: Ensure using the latest GORM and MySQL driver versions for optimal performance.\n- **Key Config Options**:\n  - `gorm.DB.SetLogger`: Customize logger for better debugging.\n  - `gorm.DB.DB().SetMaxIdleConns`: Set maximum idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns`: Set maximum open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime`: Set connection lifetime.",
+    "source": "web_search",
+    "updated_at": 1781044529.1788247
+  },
+  "search:go-gorm-mysql:gorm with mysql performance tu_ex": {
+    "content": "- **CLI Commands**:\n  - `mysql --version` to check MySQL version.\n  - `mysqldump -u username -p database_name > backup.sql` for backing up a database.\n\n- **Latest Versions**:\n  - MySQL 8.0 is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjusts the size of the buffer pool, which can significantly impact performance.\n  - `query_cache_type` and `query_cache_size`: Control query caching to improve read performance.\n  - `max_connections`: Sets the maximum number of concurrent connections.",
+    "source": "code_example",
+    "updated_at": 1781044534.9101598
+  }
+}
