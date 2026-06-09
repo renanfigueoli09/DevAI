@@ -1,7 +1,24 @@
 {
-  "generated_at": 1781037350.7127755,
+  "generated_at": 1781038164.4693213,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "golang-mongo-go-migrate: não usa TypeORM",
+      "queries": [
+        "golang-mongo-go-migrate schema service"
+      ],
+      "must_find": [
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "golang-mongo-go-migrate"
+    },
     {
       "name": "kafka-streams-python: producer consumer",
       "queries": [
