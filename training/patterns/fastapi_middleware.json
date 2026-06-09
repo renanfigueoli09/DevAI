@@ -1,0 +1,27 @@
+{
+  "search:fastapi-middleware:fastapi middleware patterns 20": {
+    "content": "- **CLI Commands**:\n  - `fastapi create-app myapp` to create a new FastAPI project.\n  - `uvicorn myapp.main:app --reload` to run the app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.104.2\n  - Starlette: v0.26.0\n\n- **Key Config Options**:\n  - Middleware Configuration in `main.py`: Define middleware classes and add them to the application.\n    ```python\n    from fastapi import FastAPI, Request\n    from fastapi.middleware.cors import CORSMiddleware\n\n    app = FastAPI()\n\n    origins = [\n        \"http://localhost\",\n        \"http://localhost:8080\",\n    ]\n\n    app.add_middleware(\n        CORSMiddleware,\n        allow_origins=origins,\n        allow_credentials=True,\n        allow_methods=[\"*\"],\n        allow_headers=[\"*\"],\n    )\n    ```\n  - Logging Middleware Configuration:\n    ```python\n    from fastapi import FastAPI, Request, Response\n\n    app = FastAPI()\n\n    @app.middleware(\"http\")\n    async def log_requests(request: Request, call_next):\n        response = await call_next(request)\n        return response\n    ```\n\n- **Additional Resources**:\n  - [FastAPI Middleware Patterns](https://medium.com/take-ichiru/7-fastapi-middleware-patterns-that-cut-latency-in-half-2023)\n  - [Logging in FastAPI Apps](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)\n  - [Custom Middleware for Request Tracing](https://fastapi.tiangolo.com/tutorial/middleware/)\n  - [FastAPI CORS Middleware](https://fastapi.tiangolo.com/tutorial/cors/)",
+    "source": "web_search",
+    "updated_at": 1781036255.606892
+  },
+  "search:fastapi-middleware:fastapi middleware patterns 20_ex": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run FastAPI applications.\n  - Example: `uvicorn main:app --reload`\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n  \n- **Key Config Options**:\n  - Middleware registration order matters; the last registered is outermost.\n  - Use `Request` and `Response` objects in middleware functions.\n  - Implement custom middleware for tasks like request logging, authentication, or rate limiting.",
+    "source": "code_example",
+    "updated_at": 1781036263.4825475
+  },
+  "search:fastapi-middleware:fastapi middleware performance": {
+    "content": "- **CLI Commands**: Use `uvicorn` for running FastAPI applications.\n  - Example: `uvicorn myapp.main:app --reload`\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0 (as of October 2023)\n  - Uvicorn: v10.6.0 (as of October 2023)\n\n- **Key Config Options for Middleware Performance**:\n  - `allow_origins`: List of allowed origins.\n    - Example: `allow_origins=[\"http://localhost\", \"https://example.com\"]`\n  - `allow_credentials`: Allow credentials in CORS requests.\n    - Example: `allow_credentials=True`\n  - `allow_methods`: List of allowed HTTP methods.\n    - Example: `allow_methods=[\"GET\", \"POST\", \"PUT\", \"DELETE\"]`\n  - `allow_headers`: List of allowed headers.\n    - Example: `allow_headers=[\"Content-Type\", \"Authorization\"]`\n\n- **Performance Optimization Tips**:\n  - Use asynchronous middleware for non-blocking operations.\n  - Minimize the number of layers in your application architecture.\n  - Profile and identify bottlenecks using tools like `uvicorn` with profiling flags.",
+    "source": "web_search",
+    "updated_at": 1781036284.076162
+  },
+  "search:fastapi-middleware:fastapi middleware security be": {
+    "content": "- Use `uvicorn` as the ASGI server.\n- Install FastAPI and Uvicorn via pip: `pip install fastapi uvicorn`.\n- Implement middleware by subclassing `fastapi.middleware.base.BaseHTTPMiddleware`.\n- Key config options for security include:\n  - `SecurityHeadersMiddleware`: Adds necessary HTTP headers.\n  - `CORSMiddleware`: Handles Cross-Origin Resource Sharing.\n  - `TrustedHostMiddleware`: Ensures requests come from trusted hosts.\n  - `GZipMiddleware`: Compresses responses to reduce bandwidth usage.\n- For custom exception handling, use FastAPI's built-in exception handlers or create custom ones using `@app.exception_handler`.\n- Middleware should be added in the order they are needed: `app.add_middleware(MiddlewareClass)`.",
+    "source": "web_search",
+    "updated_at": 1781036330.4365222
+  },
+  "search:fastapi-middleware:fastapi middleware security be_ex": {
+    "content": "- **GitHub Repository**: [rennf93/fastapi-guard](https://github.com/rennf93/fastapi-guard)\n- **Latest Version**: Check the repository for the latest release.\n- **Key Config Options**:\n  - `allowed_hosts`: List of allowed IP addresses or domains.\n  - `log_requests`: Enable request logging.\n  - `detect_penetration_attempts`: Enable detection of potential security threats.\n- **CLI Commands**:\n  - To install FastAPI Guard: `pip install fastapi-guard`\n  - To run a FastAPI application with FastAPI Guard middleware: `uvicorn main:app --middleware \"fastapi_guard.middleware.GuardMiddleware\"`\n- **Documentation**: Refer to the [FastAPI Guard documentation](https://github.com/rennf93/fastapi-guard) for detailed setup and usage instructions.",
+    "source": "code_example",
+    "updated_at": 1781036336.5204313
+  }
+}
