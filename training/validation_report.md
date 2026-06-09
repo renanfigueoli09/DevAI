@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 13:57*
+*2026-06-09 14:15*
 
-## Score: 90% `[██████████████████░░]`  (47.0/52.0)
+## Score: 90% `[██████████████████░░]`  (45.0/50.0)
 
-### Knowledge Check (vector store): 33.0/38.0
+### Knowledge Check (vector store): 31.0/36.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -21,8 +21,6 @@
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
 | typescript-graphql-prisma: padrões de código | 1.0/1 | ✅ |
 | nestjs-typeorm: padrões de código | 1.0/1 | ✅ |
-| go-gorm-redis-cache: cache | 1.0/1 | ✅ |
-| typescript-graphql-server: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |

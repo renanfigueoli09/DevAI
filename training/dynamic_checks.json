@@ -1,5 +1,5 @@
 {
-  "generated_at": 1781023946.486176,
+  "generated_at": 1781025232.2556312,
   "studied_count": 636,
   "checks": [
     {
@@ -31,36 +31,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "nestjs-typeorm"
-    },
-    {
-      "name": "go-gorm-redis-cache: cache",
-      "queries": [
-        "go-gorm-redis-cache cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache",
-        "CacheModule"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "go-gorm-redis-cache"
-    },
-    {
-      "name": "typescript-graphql-server: padrões de código",
-      "queries": [
-        "typescript-graphql-server pattern code example",
-        "typescript-graphql-server"
-      ],
-      "must_find": [
-        "@latest",
-        "@realtime"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-graphql-server"
     }
   ]
 }
