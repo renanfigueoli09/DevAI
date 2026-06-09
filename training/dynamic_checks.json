@@ -1,7 +1,40 @@
 {
-  "generated_at": 1781031211.2120862,
+  "generated_at": 1781032172.5997162,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "nodejs-express-mongodb-advanced: não usa TypeORM",
+      "queries": [
+        "nodejs-express-mongodb-advanced schema service"
+      ],
+      "must_find": [
+        "Mongoose",
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nodejs-express-mongodb-advanced"
+    },
+    {
+      "name": "Node.js  +  MongoDB: padrões de código",
+      "queries": [
+        "Node.js + MongoDB pattern code example",
+        "Node.js  +  MongoDB"
+      ],
+      "must_find": [
+        "@mongodb",
+        "@latest"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Node.js + MongoDB"
+    },
     {
       "name": "golang-redis-performance: cache",
       "queries": [
@@ -30,20 +63,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "typescript-graphql-codegen"
-    },
-    {
-      "name": "RabbitMQ + kafka-streams-advanced: producer consumer",
-      "queries": [
-        "RabbitMQ+kafka-streams-advanced producer consumer example"
-      ],
-      "must_find": [
-        "kafka",
-        "producer"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "RabbitMQ+kafka-streams-advanced"
     }
   ]
 }
