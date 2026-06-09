@@ -1,0 +1,32 @@
+{
+  "search:spring-cloud-gateway-advanced-security:spring cloud gateway advanced ": {
+    "content": "- **CLI Commands**:\n  - `spring cloud gateway add route`\n  - `spring cloud gateway remove route`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.4.2\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Target URI\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate (e.g., Path=/example)\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter (e.g., RewritePath=/example/(?<segment>.*), /$\\{segment})",
+    "source": "web_search",
+    "updated_at": 1781014200.9466443
+  },
+  "search:spring-cloud-gateway-advanced-security:spring cloud gateway advanced _ex": {
+    "content": "- **CLI Commands**: \n  - `mvn clean install` to build the project.\n  - `java -jar target/spring-cloud-gateway-demo.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.1.0.RELEASE\n  - Spring Security: 5.7.2\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the service.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests (e.g., Path=/example/**).\n  - `spring.cloud.gateway.filters[0]`: Filter to modify requests or responses.",
+    "source": "code_example",
+    "updated_at": 1781014209.400886
+  },
+  "search:spring-cloud-gateway-advanced-security:spring cloud gateway performan": {
+    "content": "- Use `wrk` for benchmarking gateway performance.\n- Optimize response body size to improve gateway performance.\n- Configure Spring Cloud Gateway request routing properly.\n- Consider using Zuul 1 due to its strong support for the Spring framework.\n- Evaluate Kong as an alternative microservice gateway.\n- Monitor API Gateway performance during migration from monolith to microservices.",
+    "source": "web_search",
+    "updated_at": 1781014216.5296035
+  },
+  "search:spring-cloud-gateway-advanced-security:spring cloud gateway performan_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your Spring Cloud Gateway project.\n  - `java -jar target/your-application.jar --server.port=8080` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Spring Cloud Gateway: 3.1.2\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the route.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., `Path=/example/**`.\n  - `spring.cloud.gateway.filters[0]`: Filter to modify requests or responses, e.g., `RewritePath=/example/(?<segment>.*), /new/$\\{segment}`.",
+    "source": "code_example",
+    "updated_at": 1781014225.3373415
+  },
+  "search:spring-cloud-gateway-advanced-security:spring cloud gateway integrati": {
+    "content": "- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n  - Spring Cloud Gateway: 3.0.x\n\n- **Key Config Options**:\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: URI for the JWK set.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Define predicates like Path, Method, etc.\n  - `spring.cloud.gateway.routes[0].filters[0]`: Define filters like StripPrefix, RewritePath, etc.\n\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `java -jar target/your-application.jar` to run the application.\n  - `./gradlew build` if using Gradle.",
+    "source": "web_search",
+    "updated_at": 1781014245.4635146
+  },
+  "search:spring-cloud-gateway-advanced-security:spring cloud gateway integrati_ex": {
+    "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6, Spring Cloud Gateway 3.0\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `java -jar target/your-application.jar` to run the application.\n- **Key Config Options**:\n  - For JWT Authentication: \n    ```yaml\n    security:\n      oauth2:\n        resourceserver:\n          jwt:\n            issuer-uri: https://your-auth-server.com/oauth/token\n    ```\n  - For Spring Cloud Gateway Routing:\n    ```yaml\n    spring:\n      cloud:\n        gateway:\n          routes:\n          - id: example_route\n            uri: http://example.com\n            predicates:\n            - Path=/example/**\n    ```\n- **Dependencies**:\n  - Add `spring-boot-starter-security`, `spring-cloud-starter-gateway`, and `jjwt` to your `pom.xml`.\n- **Additional Notes**: Ensure you have the correct OAuth2 provider setup and that JWT is properly configured for security.",
+    "source": "code_example",
+    "updated_at": 1781014260.9679997
+  }
+}

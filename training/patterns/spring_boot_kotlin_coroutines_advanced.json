@@ -1,0 +1,12 @@
+{
+  "search:spring-boot+kotlin-coroutines-advanced:spring boot kotlin coroutines ": {
+    "content": "- **CLI Commands**:\n  - `./gradlew build`\n  - `./mvnw clean install`\n\n- **Latest Versions**:\n  - Spring Boot 2.7.x\n  - Kotlin 1.6.x\n\n- **Key Config Options**:\n  - `spring.main.task-executor.core-pool-size` for configuring the core pool size of the task executor.\n  - `spring.main.task-executor.max-pool-size` for setting the maximum pool size of the task executor.\n  - `spring.main.task-executor.queue-capacity` to define the capacity of the queue used by the task executor.",
+    "source": "web_search",
+    "updated_at": 1781014019.843739
+  },
+  "search:spring-boot+kotlin-coroutines-advanced:spring boot kotlin coroutines _ex": {
+    "content": "- Use `./mvnw clean install` to build your Spring Boot Kotlin project.\n- Ensure you have the latest version of Kotlin and Spring Boot in your `pom.xml`.\n- Configure coroutines in your `application.yml` or `application.properties`:\n  ```yaml\n  spring:\n    task:\n      execution:\n        pool:\n          core-size: 10\n          max-size: 20\n          queue-capacity: 500\n  ```\n- Use `@EnableWebFlux` to enable reactive web support in your Spring Boot application.\n- Implement coroutines using the `suspend` keyword and `runBlocking`, `launch`, or `async`.\n- For testing, use `Testcontainers` for integration tests:\n  ```kotlin\n  @Testcontainers\n  class MyIntegrationTest {\n      @Container\n      private val myDatabase = PostgreSQLContainer(\"postgres:latest\")\n\n      @Autowired\n      lateinit var myService: MyService\n\n      @BeforeEach\n      fun setUp() {\n          // Initialize database and data\n      }\n\n      @AfterEach\n      fun tearDown() {\n          // Clean up resources\n      }\n\n      @Test\n      fun testMyFunction() = runBlocking {\n          val result = myService.myFunction()\n          assertEquals(expected, result)\n      }\n  }\n  ```\n- Ensure you have the latest versions of `spring-boot-starter-webflux` and `kotlinx-coroutines-core` in your dependencies.\n- Use `@WebFluxTest` for testing reactive controllers without starting the full application context.",
+    "source": "code_example",
+    "updated_at": 1781014028.5929012
+  }
+}

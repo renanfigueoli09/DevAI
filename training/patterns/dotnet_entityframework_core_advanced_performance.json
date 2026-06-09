@@ -1,0 +1,32 @@
+{
+  "search:dotnet-entityframework-core-advanced-performance:.net entity framework core adv": {
+    "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef database update`\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `AddDbContextPool`: Sets the maximum number of instances retained by the pool (default: 1024).\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Improves performance for read-only queries.\n  - `AsSplitQuery()`: Enables split query execution to improve performance with large datasets.",
+    "source": "web_search",
+    "updated_at": 1781014131.1212652
+  },
+  "search:dotnet-entityframework-core-advanced-performance:.net entity framework core adv_ex": {
+    "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models`\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure options for the DbContext.\n  - `OnModelCreating(ModelBuilder modelBuilder)`: Customize model building.\n  - `UseLazyLoadingProxies()`: Enable lazy loading.\n  - `MigrationsAssembly(string migrationsAssemblyName)`: Specify the assembly containing migrations.",
+    "source": "code_example",
+    "updated_at": 1781014138.8060288
+  },
+  "search:dotnet-entityframework-core-advanced-performance:.net entity framework core per": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0 (as of my last update in October 2023)\n  - .NET SDK: 6.0 or later\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` to improve performance when reading data that won't be modified.\n  - `AsSplitQuery()` for better performance with large datasets and complex queries.\n  - `UseLazyLoadingProxies(true)` if you need lazy loading but are concerned about performance.\n  - `MaxBatchSize(int batchSize)` in bulk operations to control batch size.",
+    "source": "web_search",
+    "updated_at": 1781014158.4346924
+  },
+  "search:dotnet-entityframework-core-advanced-performance:.net entity framework core per_ex": {
+    "content": "- **Install EF Core**: Use `dotnet add package Microsoft.EntityFrameworkCore`\n- **Add Provider**: Install provider like `Microsoft.EntityFrameworkCore.SqlServer` for SQL Server.\n- **Update to Latest Version**: Check [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) for latest version and update using `dotnet upgrade`.\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure connection strings, logging, and other settings.\n  - `OnModelCreating`: Define model relationships and configurations.\n  - `UseLazyLoadingProxies`: Enable lazy loading for better performance.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`: Add a new migration.\n  - `dotnet ef database update`: Apply migrations to the database.\n  - `dotnet ef dbcontext info`: Display information about the DbContext.\n- **Performance Tips**:\n  - Use `AsNoTracking` for read-only queries to avoid change tracking overhead.\n  - Batch inserts and updates using `AddRange` and `SaveChanges`.\n  - Indexes on frequently queried columns to improve query performance.",
+    "source": "code_example",
+    "updated_at": 1781014165.962958
+  },
+  "search:dotnet-entityframework-core-advanced-performance:.net entity framework core mig": {
+    "content": "- **Latest Version**: EF Core 8.0\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n  - `dotnet ef migrations script`\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or directly in code.\n  - Provider Package: Install via NuGet, e.g., `Microsoft.EntityFrameworkCore.SqlServer`.\n  - Migrations Directory: Specify the directory for migration files using `Scaffold-DbContext` or `dotnet ef migrations add`.",
+    "source": "web_search",
+    "updated_at": 1781014176.357928
+  },
+  "search:dotnet-entityframework-core-advanced-performance:.net entity framework core mig_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` - Creates a new migration.\n  - `dotnet ef database update` - Applies all pending migrations to the database.\n\n- **Latest Versions**:\n  - EF Core: 7.x (as of my last update in October 2023)\n  - .NET SDK: 6.0 or later\n\n- **Key Config Options**:\n  - `DbContext`: Define your data model and configuration.\n  - `OnModelCreating(ModelBuilder modelBuilder)`: Customize the schema generation.\n  - `appsettings.json`: Configure connection strings and other settings.",
+    "source": "code_example",
+    "updated_at": 1781014193.024115
+  }
+}

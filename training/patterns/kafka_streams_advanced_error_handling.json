@@ -1,0 +1,27 @@
+{
+  "search:kafka-streams-advanced-error-handling:kafka streams advanced error h": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh` to manage topics, e.g., `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092`.\n- **Latest Versions**: Kafka Streams is part of Apache Kafka, which as of 2023 has the latest version being 3.3.1.\n- **Key Config Options**:\n  - `default.key.serde`: Specifies the default key serializer and deserializer.\n  - `default.value.serde`: Specifies the default value serializer and deserializer.\n  - `application.id`: Unique identifier for the Kafka Streams application.\n  - `bootstrap.servers`: Comma-separated list of broker addresses used to bootstrap the client.",
+    "source": "web_search",
+    "updated_at": 1781014046.1027367
+  },
+  "search:kafka-streams-advanced-error-handling:kafka streams advanced error h_ex": {
+    "content": "- **GitHub Repository**: [confluentinc/kafka-streams-examples](https://github.com/confluentinc/kafka-streams-examples)\n- **Baeldung Article**: [Handling Exceptions in Kafka Streams](https://www.baeldung.com/java/kafka-streams-error-handling)\n- **DeepWiki Page**: [Usage Examples | bakdata/kafka-error-handling](https://deepwiki.io/usage-examples/bakdata-kafka-error-handling)\n\n**Actionable Facts for Developers:**\n\n- **CLI Commands**:\n  - `kafka-topics.sh --create --topic input-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n  - `kafka-topics.sh --create --topic output-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n\n- **Latest Versions**:\n  - Kafka Streams: [Kafka 3.4](https://kafka.apache.org/downloads)\n  - Confluent Platform: [Confluent 7.5](https://www.confluent.io/download/)\n\n- **Key Config Options**:\n  - `default.key.serde`: Specifies the default key serializer and deserializer.\n  - `default.value.serde`: Specifies the default value serializer and deserializer.\n  - `error.topic.name`: The topic to which error messages are sent.\n  - `auto.offset.reset`: Controls what happens when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g., because that data has been deleted). Possible values: `earliest`, `latest`.",
+    "source": "code_example",
+    "updated_at": 1781014055.155286
+  },
+  "search:kafka-streams-advanced-error-handling:kafka streams performance opti": {
+    "content": "- **CLI Commands and Flags**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic-name> --partitions <num-partitions> --replication-factor <replication-factor>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group-id>`\n\n- **Latest Versions**:\n  - Apache Kafka: 3.3.1\n  - Kafka Streams: 3.3.1\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets on startup (e.g., earliest, latest).\n  - `max.poll.records`: Maximum number of records to fetch in a single poll.\n  - `commit.interval.ms`: Interval at which to commit offsets.",
+    "source": "web_search",
+    "updated_at": 1781014065.4911468
+  },
+  "search:kafka-streams-advanced-error-handling:kafka streams performance opti_ex": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --describe` to inspect topic configurations.\n- **Latest Versions**: Kafka Streams 3.4.0, Confluent Platform 7.5.0.\n- **Key Config Options**:\n  - `max.poll.records`: Maximum number of records returned in a single poll.\n  - `commit.interval.ms`: Interval between commits to the offset store.\n  - `cache.max.bytes.buffering`: Maximum size of the record cache.\n  - `auto.commit.enable`: Whether auto-commit is enabled.",
+    "source": "code_example",
+    "updated_at": 1781014070.7563746
+  },
+  "search:kafka-streams-advanced-error-handling:kafka streams integration with": {
+    "content": "- **CLI Commands**:\n  - `./gradlew build`\n  - `./mvnw clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.4\n  - Kotlin: 1.9\n  - Kafka Streams: 3.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Kafka broker addresses.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Reset offset to earliest or latest.\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name.",
+    "source": "web_search",
+    "updated_at": 1781014087.6916878
+  }
+}
