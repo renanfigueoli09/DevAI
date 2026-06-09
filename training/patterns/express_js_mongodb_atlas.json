@@ -1,0 +1,22 @@
+{
+  "search:Express.js + MongoDB Atlas:express.js mongodb atlas integ": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `mongosh --uri <your_mongodb_atlas_uri>`\n\n- **Latest Versions**:\n  - Express.js: v4.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - MongoDB Atlas URI: Replace `<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority`\n  - Environment Variables: Use `.env` for sensitive data like MongoDB URI.\n  - Whitelisted IPs: Ensure your IP is whitelisted in MongoDB Atlas settings.",
+    "source": "web_search",
+    "updated_at": 1781049431.7897613
+  },
+  "search:Express.js + MongoDB Atlas:express.js mongodb atlas integ_ex": {
+    "content": "- Use `npm install express mongoose` to install Express.js and Mongoose.\n- Ensure MongoDB Atlas is set up and accessible via a connection string.\n- Configure Mongoose with the connection string using `mongoose.connect(connectionString)`.\n- Implement RESTful routes in Express using `.get()`, `.post()`, `.put()`, and `.delete()` methods.\n- Use middleware like `body-parser` to parse JSON bodies: `app.use(bodyParser.json())`.\n- Define schemas for MongoDB documents using Mongoose models.\n- Utilize environment variables for sensitive information like connection strings.\n- Implement error handling with middleware functions in Express.\n- Deploy your application using a service like Heroku or AWS.",
+    "source": "code_example",
+    "updated_at": 1781049438.7492516
+  },
+  "search:Express.js + MongoDB Atlas:express.js mongodb atlas perfo": {
+    "content": "- **CLI Commands**: Use `mongosh` for MongoDB shell access.\n- **Latest Versions**: Ensure MongoDB Atlas and Express.js are up to date using their respective package managers.\n- **Key Config Options**:\n  - Indexes: Create indexes on frequently queried fields using `db.collection.createIndex()`.\n  - Limit Results: Use `.limit()` in queries to restrict the number of documents returned.\n  - Projection: Specify only required fields with `.select('field1 field2')` to reduce data transfer.\n  - Aggregation Pipelines: Utilize aggregation pipelines for complex data processing and analysis.\n  - Denormalization: Simplify queries by denormalizing data models.\n- **Performance Optimization**: Monitor performance using Atlas's built-in tools and adjust resources accordingly.",
+    "source": "web_search",
+    "updated_at": 1781049446.2623343
+  },
+  "search:Express.js + MongoDB Atlas:express.js mongodb atlas perfo_ex": {
+    "content": "- **CLI Commands**:\n  - `mongosh --uri <your_mongodb_atlas_uri>` to connect to MongoDB Atlas.\n  - `mongoimport --uri <your_mongodb_atlas_uri> --file <path_to_json_file> --collection <collection_name>` for importing data.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - Express: 4.18.x\n  - MongoDB Atlas: Latest version as of my last update, check official MongoDB Atlas website for the most current version.\n  - Mongoose (MongoDB object modeling tool): 7.x\n\n- **Key Config Options**:\n  - In `express` app, use `.use(express.json())` to parse JSON bodies.\n  - For MongoDB connection in Express, use `mongoose.connect(<your_mongodb_atlas_uri>, { useNewUrlParser: true, useUnifiedTopology: true })`.\n  - Indexing: Create indexes on fields that are frequently queried for faster data retrieval. Use `db.collection.createIndex({ <field>: 1 })` or `db.collection.createIndex({ <field>: -1 })` for ascending and descending order respectively.\n  - Caching: Implement caching mechanisms like Redis to reduce database load by storing frequently accessed data in memory.\n  - Load Balancing: Use MongoDB Atlas’s native support for load balancing across multiple regions to improve performance and availability.",
+    "source": "code_example",
+    "updated_at": 1781049454.4942932
+  }
+}

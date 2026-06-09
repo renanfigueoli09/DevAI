@@ -1,0 +1,12 @@
+{
+  "search:Ruby on Rails + MySQL:ruby on rails mysql security b": {
+    "content": "- **RubyInstaller**: Download from [rubyinstaller.org](https://rubyinstaller.org/).\n- **Rails Version**: Use `gem install rails -v 7.0.6`.\n- **MySQL Version**: Install MySQL server and client.\n- **Database Configuration**:\n  ```yaml\n  development:\n    adapter: mysql2\n    encoding: utf8mb4\n    database: your_database_name\n    username: your_username\n    password: your_password\n    host: localhost\n    port: 3306\n  ```\n- **Testing**: Use RSpec for unit tests and Capybara for integration tests.\n- **Parallel Testing**: Configure `parallel_tests` gem in `Gemfile`.\n- **CI/CD**: Set up GitHub Actions or GitLab CI with MySQL service.\n- **Security**:\n  - Use parameterized queries to prevent SQL injection.\n  - Regularly update dependencies using `bundle update`.\n  - Enable SSL for database connections.",
+    "source": "web_search",
+    "updated_at": 1781049316.066379
+  },
+  "search:Ruby on Rails + MySQL:ruby on rails mysql security b_ex": {
+    "content": "- **RubyInstaller for Windows**: Download and install Ruby version manager 4.0.0.\n- **Learn Ruby on Rails - Full Course**: Access the course to learn from The Pragmatic Studio.\n- **Ruby on Rails Test Automation Best Practices**:\n  - Use fast unit tests on every commit.\n  - Implement continuous integration (CI) for automated testing.\n  - Utilize a test coverage tool like SimpleCov.",
+    "source": "code_example",
+    "updated_at": 1781049321.2432218
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:Flask + SQLite:flask sqlite security consider": {
+    "content": "- **CLI Commands**:\n  - `flask run`: Runs the Flask application.\n  - `flask shell`: Opens an interactive Python shell with the Flask app context.\n\n- **Latest Versions**:\n  - Flask: 3.1.x\n  - SQLite: Latest version compatible with your Python environment.\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URI`: Specifies the database URI for SQLAlchemy.\n  - `SECRET_KEY`: A secret key used to keep the client-side sessions secure.\n  - `DEBUG`: Enables or disables debug mode, which should be disabled in production.",
+    "source": "web_search",
+    "updated_at": 1781049406.6811042
+  },
+  "search:Flask + SQLite:flask sqlite security consider_ex": {
+    "content": "- **CLI Commands**: Use `pip install flask_sqlalchemy` to install the necessary package.\n- **Latest Version**: Flask-SQLAlchemy 3.0.x is recommended for compatibility and security updates.\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URI`: Set this to your SQLite database URI, e.g., `sqlite:///example.db`.\n  - `SQLALCHEMY_TRACK_MODIFICATIONS`: Set to `False` in production to disable modification tracking.\n  - `SECRET_KEY`: Ensure a strong secret key for session management and CSRF protection.",
+    "source": "code_example",
+    "updated_at": 1781049414.0913107
+  }
+}
