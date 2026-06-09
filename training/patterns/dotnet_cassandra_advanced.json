@@ -2,16 +2,16 @@
   "search:dotnet+cassandra-advanced:.net cassandra advanced queryi": {
     "content": "- **Latest Version**: Apache Cassandra 4.0\n- **CLI Commands**:\n  - `cqlsh`: Command-line interface for interacting with Cassandra.\n  - `nodetool`: Tool for managing a Cassandra cluster.\n- **Key Config Options**:\n  - `num_tokens`: Number of virtual nodes per physical node.\n  - `compaction`: Strategy for merging sstables, e.g., `SizeTieredCompactionStrategy`.\n  - `read_repair_chance`: Probability of read repair being triggered.\n  - `memtable_flush_writers`: Number of threads to use when flushing memtables.",
     "source": "web_search",
-    "updated_at": 1781038463.1249976
+    "updated_at": 1781038554.628618
   },
   "search:dotnet+cassandra-advanced:.net cassandra performance tun": {
     "content": "- **CLI Commands**: Use `nodetool` for monitoring and management tasks.\n  - Example: `nodetool status`\n  - Example: `nodetool compactionstats`\n\n- **Latest Versions**: Ensure you are using the latest stable version of Cassandra, as performance improvements and bug fixes are regularly released.\n\n- **Key Config Options**:\n  - `heap_size`: Adjust JVM heap size based on your system's memory.\n    - Example: `-Xmx4G`\n  - `compaction_throughput_mb_per_sec`: Control compaction speed to avoid impacting read/write operations.\n    - Example: `16`\n  - `memtable_flush_writers`: Increase the number of memtable flush writers for better write performance.\n    - Example: `8`\n\n- **JVM/GC Optimization**: Use a garbage collector that suits your workload, such as G1GC.\n  - Example: `-XX:+UseG1GC`\n\n- **Compaction Strategy**: Choose an appropriate compaction strategy based on your data access patterns.\n  - Example: `SizeTieredCompactionStrategy` for write-heavy workloads.\n\n- **Token Ring Rebalancing**: Regularly rebalance token rings to ensure even distribution of data across nodes.\n  - Example: Use `nodetool removenode` and `nodetool joinring`.\n\n- **Query Pattern Identification**: Analyze query patterns using tools like `cqlsh` or third-party monitoring tools to identify bottlenecks.\n\n- **Benchmarking**: Regularly benchmark your Cassandra cluster to understand performance characteristics under different workloads.\n  - Example: Use `cassandra-stress` for load testing.",
     "source": "web_search",
-    "updated_at": 1781038464.4362378
+    "updated_at": 1781038555.8344874
   },
   "search:dotnet+cassandra-advanced:.net cassandra performance tun_ex": {
     "content": "- **CLI Commands**:\n  - `nodetool` for monitoring and management.\n  - `cqlsh` for interacting with Cassandra.\n\n- **Latest Versions**:\n  - Apache Cassandra 4.0.x\n  - ScyllaDB 5.1.x\n\n- **Key Config Options**:\n  - `num_tokens`: Number of virtual nodes per physical node.\n  - `read_request_timeout_in_ms`: Timeout for read requests.\n  - `write_request_timeout_in_ms`: Timeout for write requests.\n  - `compaction`: Type and strategy for data compaction.",
     "source": "code_example",
-    "updated_at": 1781038465.6611273
+    "updated_at": 1781038556.9546597
   }
 }

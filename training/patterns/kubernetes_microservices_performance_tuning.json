@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-microservices-performance-tuning:kubernetes microservices perfo": {
+    "content": "- Use `kubectl top pod` to monitor resource usage of pods.\n- Update Kubernetes to the latest version for performance improvements and bug fixes.\n- Configure horizontal pod autoscaling with `--min=2 --max=10`.\n- Set resource limits in deployment YAMLs: `resources: {limits: {cpu: \"500m\", memory: \"512Mi\"}, requests: {cpu: \"250m\", memory: \"256Mi\"}}`.\n- Use `kubectl explain` to understand and configure key options.\n- Employ `kube-bench` for security audits and compliance checks.\n- Utilize Prometheus and Grafana for comprehensive monitoring of microservices performance.\n- Apply Istio for service mesh capabilities, enhancing observability and performance.\n- Regularly update microservice code and dependencies for performance enhancements.",
+    "source": "web_search",
+    "updated_at": 1781038516.8516738
+  },
+  "search:kubernetes-microservices-performance-tuning:kubernetes microservices perfo_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl logs <pod-name>` to view pod logs.\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.0\n  - Istio: v1.13.1\n  - Linkerd: v2.11.1\n\n- **Key Config Options**:\n  - Resource limits and requests in `resources` section.\n  - Service type (e.g., NodePort, LoadBalancer).\n  - Ingress configuration for external access.\n  - OIDC authentication settings for secure CI/CD pipelines.",
+    "source": "code_example",
+    "updated_at": 1781038524.298763
+  },
+  "search:kubernetes-microservices-performance-tuning:advanced kubernetes microservi": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy or update resources.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n  - `kubectl describe pod <pod-name>` for detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Helm (Kubernetes package manager): v3.9.4\n\n- **Key Config Options**:\n  - Resource Requests and Limits (`resources.requests` and `resources.limits`) in Pod specifications.\n  - Horizontal Pod Autoscaler (HPA) to automatically scale the number of pods based on CPU utilization or custom metrics.\n  - Service Mesh for inter-service communication, e.g., Istio.",
+    "source": "web_search",
+    "updated_at": 1781038532.4548523
+  },
+  "search:kubernetes-microservices-performance-tuning:advanced kubernetes microservi_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale deployment <deployment-name> --replicas=<number>`\n  - `kubectl apply -f <file.yaml>`\n  - `kubectl get pods`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: v24.0.0\n\n- **Key Config Options**:\n  - Resource Requests and Limits\n  - Horizontal Pod Autoscaler (HPA)\n  - Node Affinity and Taints",
+    "source": "code_example",
+    "updated_at": 1781038538.5678082
+  }
+}
