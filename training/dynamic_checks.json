@@ -1,34 +1,5 @@
 {
-  "generated_at": 1781044130.7252002,
+  "generated_at": 1781044897.5420132,
   "studied_count": 636,
-  "checks": [
-    {
-      "name": "kafka-streams-error-handling: producer consumer",
-      "queries": [
-        "kafka-streams-error-handling producer consumer example"
-      ],
-      "must_find": [
-        "kafka"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kafka-streams-error-handling"
-    },
-    {
-      "name": "typescript-eslint-performance-rules: padrões de código",
-      "queries": [
-        "typescript-eslint-performance-rules pattern code example",
-        "typescript-eslint-performance-rules"
-      ],
-      "must_find": [
-        "@eslint",
-        "@types"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-eslint-performance-rules"
-    }
-  ]
+  "checks": []
 }
