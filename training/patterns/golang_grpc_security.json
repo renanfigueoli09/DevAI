@@ -1,0 +1,12 @@
+{
+  "search:golang-grpc-security:best practices for securing gr": {
+    "content": "- Use TLS encryption for production deployments.\n- Implement mTLS for mutual authentication.\n- Apply rate limiting to prevent abuse.\n- Configure observability tools like Prometheus and Grafana.\n- Use JWT Authentication for secure access control.\n- Regularly update gRPC and its dependencies.\n- Enable logging and monitoring for real-time insights.\n- Employ security plugins for additional protection.\n- Follow the latest OWASP guidelines for best practices.",
+    "source": "web_search",
+    "updated_at": 1781030791.3887188
+  },
+  "search:golang-grpc-security:best practices for securing gr_ex": {
+    "content": "- Use `protoc` version 3.21 or later.\n- Install Go gRPC packages using `go get google.golang.org/grpc`.\n- Implement TLS for secure communication with flags like `-tls=true`, `-cacert=<path>`, and `-cert=<path>`.\n- Configure server credentials with `grpc.Creds(credentials.NewTLS(&tls.Config{...}))`.\n- Use `protoc-gen-go` to generate Go code from `.proto` files.\n- Set up a simple client using `grpc.DialContext(ctx, \"localhost:50051\", grpc.WithTransportCredentials(credentials.NewTLS(nil)))`.\n- Implement authentication with interceptors like `grpc.UnaryInterceptor(grpc_auth.UnaryServerInterceptor(authFunc))`.\n- Ensure proper error handling and logging in your gRPC service.\n- Regularly update dependencies to mitigate vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1781030798.4069278
+  }
+}

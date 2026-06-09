@@ -18,5 +18,25 @@
     "content": "- Use `spring-boot-starter-data-jpa` dependency for JPA integration.\n- Configure database connection properties in `application.properties` or `application.yml`.\n- Implement repository interfaces extending `JpaRepository` or `CrudRepository`.\n- Utilize Spring Data JPA's query derivation to simplify custom queries.\n- Apply pagination and sorting using `Pageable` and `Sort` parameters.\n- Use `@Entity`, `@Table`, `@Column`, and other JPA annotations for entity design.\n- Implement transaction management with `@Transactional` annotation.\n- Optimize performance by configuring Hibernate properties like `hibernate.dialect`, `hibernate.show_sql`.\n- Regularly update dependencies to the latest versions for security and features.",
     "source": "code_example",
     "updated_at": 1780940970.7568154
+  },
+  "search:spring-boot-jpa-advanced:spring boot jpa advanced usage": {
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=web,data-jpa,mysql myproject`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n    ```properties\n    spring.datasource.url=jdbc:mysql://localhost:3306/mydb\n    spring.datasource.username=root\n    spring.datasource.password=password\n    spring.jpa.hibernate.ddl-auto=update\n    spring.jpa.show-sql=true\n    ```",
+    "source": "web_search",
+    "updated_at": 1781030746.0979087
+  },
+  "search:spring-boot-jpa-advanced:spring boot jpa advanced usage_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Data JPA: 2.7.6\n  - Hibernate: 6.1.8.Final\n\n- **Key Config Options**:\n  - `spring.datasource.url`: Database URL.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for automatic schema updates.\n  - `spring.jpa.show-sql`: Set to `true` to log SQL queries.",
+    "source": "code_example",
+    "updated_at": 1781030752.214112
+  },
+  "search:spring-boot-jpa-advanced:spring boot jpa performance op": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build and test the project.\n  - `jpa:show-sql=true` in application.properties to log SQL queries for debugging.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data JPA: 2.7.x\n  - Hibernate: 6.x\n\n- **Key Config Options**:\n  - `spring.jpa.show-sql`: Set to true to enable logging of SQL statements.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect for better performance tuning.\n  - `spring.jpa.hibernate.ddl-auto`: Set to 'update' or 'create-drop' for development environments.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure datasource properties.",
+    "source": "web_search",
+    "updated_at": 1781030761.0778284
+  },
+  "search:spring-boot-jpa-advanced:spring boot jpa performance op_ex": {
+    "content": "- Use `@Query` annotation for custom JPQL or native SQL queries.\n- Enable lazy loading by default in Spring Data JPA repositories.\n- Configure batch updates using `spring.jpa.properties.hibernate.jdbc.batch_size`.\n- Set `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true` for better performance.\n- Use `@EntityGraph` to fetch related entities efficiently.\n- Optimize entity mappings by avoiding N+1 queries.\n- Enable second-level cache with `spring.jpa.cache.use_second_level_cache=true`.\n- Configure Hibernate's `hibernate.jdbc.fetch_size` for batch fetching.\n- Use `@Transactional(readOnly = true)` on read operations to enable query caching.",
+    "source": "code_example",
+    "updated_at": 1781030769.6928673
   }
 }
