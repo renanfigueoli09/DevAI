@@ -13,5 +13,25 @@
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Kafka Streams: 3.4.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output.\n  - `spring.kafka.streams.application-id`: Unique identifier for the application.",
     "source": "web_search",
     "updated_at": 1780938750.33386
+  },
+  "search:spring-boot+kafka:spring boot kafka producer and": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kafka: 3.4.x\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.producer.key-serializer`: Key serializer class.\n  - `spring.kafka.producer.value-serializer`: Value serializer class.",
+    "source": "web_search",
+    "updated_at": 1781013856.3245604
+  },
+  "search:spring-boot+kafka:spring boot kafka producer and_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Kafka and Zookeeper.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - Producer Configuration: `bootstrap.servers`, `key.serializer`, `value.serializer`.\n  - Consumer Configuration: `bootstrap.servers`, `group.id`, `key.deserializer`, `value.deserializer`.",
+    "source": "code_example",
+    "updated_at": 1781013861.624369
+  },
+  "search:spring-boot+kafka:spring boot kafka stream proce": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `docker-compose up` to start Kafka and Zookeeper services.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Cloud Stream: 4.x\n  - Apache Kafka: 3.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers.\n  - `application.id`: Unique identifier for the application.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy to reset offsets on startup (e.g., earliest, latest).",
+    "source": "web_search",
+    "updated_at": 1781013885.7956257
+  },
+  "search:spring-boot+kafka:spring boot kafka stream proce_ex": {
+    "content": "- **Latest Version of Spring Boot**: 3.x\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Kafka broker addresses.\n  - `spring.cloud.stream.bindings.input.destination`: Input topic name.\n  - `spring.cloud.stream.bindings.output.destination`: Output topic name.\n- **CLI Commands**:\n  - To create a new Spring Boot project with Kafka Streams: `mvn archetype:generate -DgroupId=com.example -DartifactId=kafka-streams-demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`\n  - To run the application: `./mvnw spring-boot:run`\n- **Example Code Snippet**:\n  ```java\n  @SpringBootApplication\n  public class KafkaStreamsDemoApplication {\n      public static void main(String[] args) {\n          SpringApplication.run(KafkaStreamsDemoApplication.class, args);\n      }\n  }\n\n  @StreamListener(Sink.INPUT)\n  @SendTo(Sink.OUTPUT)\n  public String process(String message) {\n      return \"Processed: \" + message;\n  }\n  ```\n- **Dependencies**:\n  - Add `spring-cloud-stream` and `spring-kafka-streams` to your `pom.xml`.\n- **Real-life Examples**:\n  - Real-time data processing.\n  - Event sourcing.\n  - Stream analytics.",
+    "source": "code_example",
+    "updated_at": 1781013901.794365
   }
 }
