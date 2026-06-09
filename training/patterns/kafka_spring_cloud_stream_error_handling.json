@@ -1,0 +1,22 @@
+{
+  "search:kafka-spring-cloud-stream-error-handling:kafka spring cloud stream erro": {
+    "content": "- Use `spring-cloud-stream` version 3.2.5.RELEASE.\n- Configure error handling in `application.yml` or `bootstrap.yml`.\n- Set `error-handler-definition` to define custom error handlers.\n- Use `maxAttempts` to specify the number of retries before failing.\n- Implement a Dead Letter Queue (DLQ) for failed messages.\n- Utilize `spring.cloud.stream.bindings.input.errors.destination` to route errors to a DLQ.\n- Enable `spring.cloud.stream.bindings.input.errors.enabled=true`.\n- Configure Kafka-specific properties under `spring.cloud.stream.kafka.binder.configuration`.\n- Use `@StreamListener` and `@SendTo` annotations for error handling in listeners.\n- Monitor error logs and metrics for troubleshooting.",
+    "source": "web_search",
+    "updated_at": 1781016556.6290462
+  },
+  "search:kafka-spring-cloud-stream-error-handling:kafka spring cloud stream erro_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 4.0.0\n  - Kafka Streams: 3.3.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output.\n  - `spring.cloud.stream.error.enabled`: Enables error handling.\n  - `spring.cloud.stream.error.destination`: Specifies the Kafka topic for error messages.",
+    "source": "code_example",
+    "updated_at": 1781016563.8912313
+  },
+  "search:kafka-spring-cloud-stream-error-handling:advanced kafka integration wit": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot applications.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.0\n  - Kafka: 3.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.cloud.stream.kafka.binder.configuration.bootstrap.servers`: Kafka broker addresses.\n  - `spring.cloud.stream.kafka.binder.configuration.group.id`: Consumer group ID.",
+    "source": "web_search",
+    "updated_at": 1781016580.96225
+  },
+  "search:kafka-spring-cloud-stream-error-handling:advanced kafka integration wit_ex": {
+    "content": "- **Latest Version**: Spring Cloud Stream 3.2.0, Kafka 3.0.0\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output.\n  - `spring.cloud.stream.kafka.binder.configuration.bootstrap.servers`: Kafka broker addresses.\n  - `spring.cloud.stream.kafka.binder.configuration.group.id`: Consumer group ID.\n- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar --server.port=8081` to run the application with a specific port.\n- **Integration with Confluent Schema Registry**:\n  - Add dependency: `<dependency><groupId>org.springframework.cloud</groupId><artifactId>spring-cloud-stream-binder-kafka-schema-registry</artifactId></dependency>`\n  - Configure schema registry URL and topic properties in `application.properties`.",
+    "source": "code_example",
+    "updated_at": 1781016597.5709643
+  }
+}
