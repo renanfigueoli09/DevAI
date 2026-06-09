@@ -1,0 +1,22 @@
+{
+  "search:typescript-sequelize-typescript-error-handling:sequelize error handling patte": {
+    "content": "- Ensure TypeScript version >= 4.1.\n- Use Sequelize's official TypeScript definitions.\n- For error handling, consider using a centralized approach.\n- Example of centralized error handling:\n```typescript\ntry {\n    // Sequelize operations here\n} catch (error) {\n    console.error('Sequelize Error:', error);\n    throw new Error('Database operation failed');\n}\n```\n- Use `Umzug` for migrations with TypeScript support.\n- Ensure your migration files are `.ts` and compiled to CommonJS.",
+    "source": "web_search",
+    "updated_at": 1781025481.4438071
+  },
+  "search:typescript-sequelize-typescript-error-handling:sequelize error handling patte_ex": {
+    "content": "- Ensure Sequelize and TypeScript are compatible.\n- Use the latest version of Sequelize and TypeScript.\n- Configure Sequelize to work well with TypeScript by using minimal configuration.\n- Utilize CLI commands like `npm install sequelize` and `npm install typescript`.\n- Key config options include setting up models correctly with TypeScript interfaces.",
+    "source": "code_example",
+    "updated_at": 1781025488.343467
+  },
+  "search:typescript-sequelize-typescript-error-handling:best practices for sequelize t": {
+    "content": "- Use `sequelize.transaction()` to start a transaction.\n- Commit using `.commit()`, rollback using `.rollback()`.\n- Set isolation levels with `{ isolationLevel: Sequelize.ISOLATION_LEVELS.READ_COMMITTED }`.\n- Manage transactions manually or use managed transactions for automatic handling.\n- Latest version of Sequelize as of my last update is 6.30.2, but check the official documentation for the most current version.\n- Key config options include `isolationLevel`, `type` (e.g., `TRANSACTION_TYPE.EXCLUSIVE`), and `deferrable`.\n- Use `.savepoint()` to create savepoints within a transaction.\n- For nested transactions, use `.join()`.\n- Handle errors with try-catch blocks around transaction logic.",
+    "source": "web_search",
+    "updated_at": 1781025496.1349876
+  },
+  "search:typescript-sequelize-typescript-error-handling:best practices for sequelize t_ex": {
+    "content": "- Use `sequelize.transaction()` to start a new transaction.\n- Ensure all operations within the transaction are wrapped in a try-catch block.\n- Commit the transaction with `.commit()` if all operations succeed.\n- Rollback the transaction with `.rollback()` if any operation fails.\n- Key config options include `isolationLevel` and `deferrable`.\n- Latest versions of Sequelize support TypeScript natively.\n- Use CLI commands like `npx sequelize-cli init` for project setup.",
+    "source": "code_example",
+    "updated_at": 1781025502.0451536
+  }
+}

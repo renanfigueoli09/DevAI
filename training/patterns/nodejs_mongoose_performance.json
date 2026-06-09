@@ -1,0 +1,22 @@
+{
+  "search:nodejs+mongoose-performance:node.js mongoose performance o": {
+    "content": "- Use `db.collection.find()` with projection to limit the fields returned.\n- Implement indexing on frequently queried fields using `createIndex()`.\n- Utilize Mongoose's `.lean()` method for raw JSON output, reducing overhead.\n- Optimize queries by avoiding N+1 issues with population and aggregation pipelines.\n- Monitor performance with tools like AppSignal or MongoDB Atlas for real-time insights.\n- Regularly review and optimize schema design to reduce data duplication.\n- Use `db.collection.stats()` to understand collection size and index usage.\n- Implement caching strategies for frequently accessed data.\n- Stay updated with Mongoose and Node.js versions for performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781025385.4911876
+  },
+  "search:nodejs+mongoose-performance:node.js mongoose performance o_ex": {
+    "content": "- Use `mongoose.set('useCreateIndex', true)` to improve query performance.\n- Implement indexing on frequently queried fields using `index()` method in schema definition.\n- Utilize `lean()` method for queries to reduce overhead by returning plain JavaScript objects instead of Mongoose documents.\n- Employ batch processing with `batchSize()` option to limit the number of documents returned per query, reducing memory usage.\n- Optimize aggregation pipelines by minimizing stages and using `$match` early in pipeline for filtering.\n- Regularly update Mongoose and MongoDB drivers to the latest versions to benefit from performance improvements and bug fixes.\n- Monitor application performance using tools like AppSignal or New Relic for insights into bottlenecks.\n- Implement connection pooling with `poolSize` option in Mongoose connection configuration to manage database connections efficiently.",
+    "source": "code_example",
+    "updated_at": 1781025402.246014
+  },
+  "search:nodejs+mongoose-performance:mongoose with mongodb best pra": {
+    "content": "- Use `Mongoose` version 7.x or later.\n- Employ `QueryCursor` for large datasets to avoid memory issues.\n- Implement pagination using `skip()` and `limit()`.\n- Utilize indexes on frequently queried fields for performance improvement.\n- Consider sharding for very large collections across multiple servers.\n- Enable connection pooling with `poolSize: 10` in your Mongoose connection options.\n- Regularly monitor and optimize queries using MongoDB's profiling tools.\n- Use `.lean()` to return plain JavaScript objects instead of Mongoose documents.\n- Implement batch processing for bulk operations to reduce load.",
+    "source": "web_search",
+    "updated_at": 1781025418.2493875
+  },
+  "search:nodejs+mongoose-performance:mongoose with mongodb best pra_ex": {
+    "content": "- Use `mongoose.connect()` to establish a connection to MongoDB.\n- Employ `QueryCursor` for handling large datasets efficiently.\n- Implement indexing on frequently queried fields.\n- Utilize Mongoose's `populate()` method for efficient data retrieval.\n- Regularly update Mongoose and MongoDB drivers to the latest versions.\n- Optimize queries by using `.lean()` to reduce overhead.\n- Use `async/await` for better readability and error handling in asynchronous operations.\n- Consider sharding for very large collections across multiple servers.\n- Monitor performance with tools like MongoDB Atlas or custom metrics.",
+    "source": "code_example",
+    "updated_at": 1781025423.8795931
+  }
+}
