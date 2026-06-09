@@ -1,0 +1,17 @@
+{
+  "search:react-query-advanced-mutations:advanced react query mutations": {
+    "content": "- Use `useMutation` hook from TanStack Query to handle mutations.\n- Pass multiple parameters to `mutationFn` by destructuring the arguments in your mutation function.\n- For example, if you have a mutation that updates user data, you can pass the user ID and new data as parameters.\n- Ensure your mutation function is asynchronous and returns a promise.\n- Key config options for `useMutation` include:\n  - `mutationFn`: The function to execute when the mutation is triggered.\n  - `onSuccess`: Callback function called if the mutation succeeds.\n  - `onError`: Callback function called if the mutation fails.\n  - `onSettled`: Callback function called after the mutation completes, regardless of success or failure.\n- Latest version of TanStack Query can be found on their official GitHub repository.\n- For more detailed information and examples, refer to the [TanStack Query React Docs](https://tanstack.com/query/v4/docs/react/guides/mutations).",
+    "source": "web_search",
+    "updated_at": 1781042217.0300703
+  },
+  "search:react-query-advanced-mutations:advanced react query mutations_ex": {
+    "content": "- **CLI Commands**: Not applicable for React Query.\n- **Latest Version**: Ensure you are using the latest version of `@tanstack/react-query` by running:\n  ```bash\n  npm install @tanstack/react-query@latest\n  ```\n- **Key Config Options**:\n  - `useMutation`: Accepts a function that performs side effects on the server.\n  - `mutationFn`: The function to execute for the mutation.\n  - `onSuccess`, `onError`, `onComplete`: Callback functions for handling success, error, and completion of the mutation.\n  - `initialData`: Initial data for the mutation state.\n  - `refetchOnWindowFocus`: Boolean to control refetching on window focus.",
+    "source": "code_example",
+    "updated_at": 1781042223.6987987
+  },
+  "search:react-query-advanced-mutations:react query for complex data f": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4.x, TanStack Query v5.x\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global settings.\n  - `useQuery`: Hook to fetch data and manage state.\n  - `useMutation`: Hook for handling side effects like form submissions or data updates.\n  - `refetchInterval`: Automatically refetches data at specified intervals.",
+    "source": "web_search",
+    "updated_at": 1781042232.2945073
+  }
+}

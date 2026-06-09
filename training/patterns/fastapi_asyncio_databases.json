@@ -28,5 +28,25 @@
     "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a new migration script based on database changes.\n  - `alembic upgrade head`: Applies all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.39\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `DATABASE_URL`: Connection string for the database.\n  - `SQLALCHEMY_DATABASE_URI`: Alternative to `DATABASE_URL` for SQLAlchemy.\n  - `alembic.ini`: Configuration file for Alembic migrations, including the connection string and migration script location.",
     "source": "code_example",
     "updated_at": 1781017026.0745661
+  },
+  "search:fastapi+asyncio-databases:fastapi asyncio database integ": {
+    "content": "- Use `asyncpg` or `SQLAlchemy` for database operations.\n- Install FastAPI, SQLAlchemy, and asyncpg using pip:\n  ```bash\n  pip install fastapi sqlalchemy asyncpg\n  ```\n- For SQLModel, use:\n  ```bash\n  pip install sqlmodel\n  ```\n- Key config options in `main.py`:\n  ```python\n  from fastapi import FastAPI\n  app = FastAPI()\n\n  # Database connection settings\n  DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"\n  engine = create_async_engine(DATABASE_URL, echo=True)\n  ```\n- Use Pydantic models for data validation and ORM integration.\n- Example of a simple CRUD operation:\n  ```python\n  from sqlalchemy.ext.asyncio import AsyncSession\n  from sqlmodel import SQLModel, Field\n\n  class Item(SQLModel, table=True):\n      id: int = Field(default=None, primary_key=True)\n      name: str\n      description: str | None = None\n\n  async def get_item(db: AsyncSession, item_id: int):\n      return await db.get(Item, item_id)\n\n  @app.get(\"/items/{item_id}\")\n  async def read_item(item_id: int, db: AsyncSession = Depends(get_db)):\n      item = await get_item(db, item_id)\n      if not item:\n          raise HTTPException(status_code=404, detail=\"Item not found\")\n      return item\n  ```\n- Test your FastAPI app with `uvicorn`:\n  ```bash\n  uvicorn main:app --reload\n  ```\n- For production, use an ASGI server like `daphne` or `uvicorn` with `--workers` flag for better performance.",
+    "source": "web_search",
+    "updated_at": 1781042150.5282254
+  },
+  "search:fastapi+asyncio-databases:fastapi asyncio database integ_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install sqlalchemy[asyncpg] alembic pytest`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.7.5\n\n- **Key Config Options**:\n  - `DATABASE_URL`: Define your database URL in the format `postgresql+asyncpg://user:password@host/dbname`.\n  - `alembic.ini`: Configure Alembic with the correct dialect and connection string.\n  - `main.py`: Set up FastAPI app, define routes, and integrate SQLAlchemy session.",
+    "source": "code_example",
+    "updated_at": 1781042157.86562
+  },
+  "search:fastapi+asyncio-databases:asyncio with sqlalchemy in fas": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`\n  - `alembic init alembic`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - SQLAlchemy: 2.0.43\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Async Engine: `engine = create_async_engine(SQLALCHEMY_DATABASE_URL)`\n  - Session Local: `AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`",
+    "source": "web_search",
+    "updated_at": 1781042168.3208203
+  },
+  "search:fastapi+asyncio-databases:asyncio with sqlalchemy in fas_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init <dir>`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: 0.98.1\n  - SQLAlchemy: 2.0.0\n  - PostgreSQL: 14.x\n\n- **Key Config Options**:\n  - `DATABASE_URL`: Connection string for the database.\n  - `SQLALCHEMY_ECHO`: Enable logging of SQL queries (True/False).\n  - `AsyncSession`: Use for asynchronous database sessions in FastAPI with SQLAlchemy.",
+    "source": "code_example",
+    "updated_at": 1781042176.9439106
   }
 }

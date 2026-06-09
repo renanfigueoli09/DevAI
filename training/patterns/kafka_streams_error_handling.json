@@ -1,0 +1,17 @@
+{
+  "search:kafka-streams-error-handling:kafka streams error handling s": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh` to create and manage Kafka topics.\n- **Latest Versions**: Ensure using Kafka Streams version 3.0 or later for the best features and error handling improvements.\n- **Key Config Options**:\n  - `default.key.serde`: Set the default key serializer/deserializer.\n  - `default.value.serde`: Set the default value serializer/deserializer.\n  - `commit.interval.ms`: Configure how often to commit offsets.\n  - `processing.guarantee`: Ensure exactly-once processing with `exactly_once`.\n- **Error Handling Patterns**:\n  - Implement retries using Kafka Streams' built-in retry mechanism.\n  - Use `KafkaStreamsExceptionHandler` for custom error handling logic.\n  - Monitor and log errors using Kafka's monitoring tools.\n  - Configure dead-letter topics to store failed messages.",
+    "source": "web_search",
+    "updated_at": 1781042262.3675473
+  },
+  "search:kafka-streams-error-handling:kafka streams error handling s_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.0.0\n  - Confluent Platform: 7.0.0\n\n- **Key Config Options**:\n  - `default.key.serde`: Serde for keys.\n  - `default.value.serde`: Serde for values.\n  - `commit.interval.ms`: Interval between commits.\n  - `processing.guarantee`: Exactly Once or At Least Once processing guarantees.",
+    "source": "code_example",
+    "updated_at": 1781042268.3656404
+  },
+  "search:kafka-streams-error-handling:error management in kafka stre": {
+    "content": "- **Exception Handling**: Use `spring.kafka.properties.default.deserialization.exception.handler` to set custom exception handlers.\n- **Error Retries**: Configure `max.task.attempts` to specify the maximum number of attempts for processing a record.\n- **Confluent Platform Configuration**: Avoid setting replication factor in Kafka Streams applications; it's intended for internal topics only.\n- **Monitoring and Resetting**: Use Conduktor interface for registering, monitoring, and resetting Kafka Streams applications.",
+    "source": "web_search",
+    "updated_at": 1781042275.5409164
+  }
+}

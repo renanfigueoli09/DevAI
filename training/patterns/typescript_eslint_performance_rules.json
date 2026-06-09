@@ -1,0 +1,22 @@
+{
+  "search:typescript-eslint-performance-rules:typescript eslint performance ": {
+    "content": "- Use `TIMING=1` flag in ESLint command to profile rule performance.\n- Check [typescript-eslint/performance](https://github.com/typescript-eslint/performance) for specific performance issues and optimizations.\n- For custom rules, utilize ESLint's built-in performance tracking by setting the `TIMING` environment variable.\n- Review [Mastering TypeScript ESLint Recommended Rules](https://xjavascript.com/mastering-typescript-eslint-recommended-rules/) for up-to-date recommendations.\n- Ensure you are using the latest version of TypeScript and ESLint for optimal performance.",
+    "source": "web_search",
+    "updated_at": 1781042186.0436249
+  },
+  "search:typescript-eslint-performance-rules:typescript eslint performance _ex": {
+    "content": "- Ensure all files are included in the `tsconfig.json` file.\n- Use the latest version of TypeScript and `typescript-eslint`.\n- Enable lint caching to improve performance.\n- Configure ESLint with the following key options:\n  - `\"parserOptions\": { \"project\": \"./tsconfig.json\" }`\n  - `\"extends\": [\"plugin:@typescript-eslint/recommended\"]`\n  - `\"rules\": {\n      \"@typescript-eslint/no-explicit-any\": \"off\",\n      \"@typescript-eslint/explicit-function-return-type\": \"off\"\n    }`\n- Run ESLint with the following CLI command:\n  ```bash\n  npx eslint --ext .ts,.tsx src/\n  ```\n- Consider using `eslint-plugin-import` for additional performance benefits.\n- Monitor and adjust configurations based on specific project needs.",
+    "source": "code_example",
+    "updated_at": 1781042192.7344115
+  },
+  "search:typescript-eslint-performance-rules:optimizing typescript code wit": {
+    "content": "- Install ESLint and related packages using the command: `$ npm i -D eslint @eslint/js @types/eslint__js typescript [email protected] --force`\n- Ensure compatibility with ESLint v9 and flat config.\n- Configure Prettier for consistent code formatting alongside ESLint.",
+    "source": "web_search",
+    "updated_at": 1781042200.4407923
+  },
+  "search:typescript-eslint-performance-rules:optimizing typescript code wit_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install eslint prettier eslint-config-prettier eslint-plugin-prettier --save-dev`\n\n- **Latest Versions**:\n  - ESLint: v9.x\n  - Prettier: v3.x\n\n- **Key Config Options**:\n  - `.eslintrc.json`:\n    ```json\n    {\n      \"extends\": [\n        \"eslint:recommended\",\n        \"plugin:@typescript-eslint/recommended\",\n        \"prettier\"\n      ],\n      \"plugins\": [\"@typescript-eslint\", \"prettier\"],\n      \"rules\": {\n        \"prettier/prettier\": \"error\"\n      }\n    }\n    ```\n  - `.prettierrc`:\n    ```json\n    {\n      \"semi\": true,\n      \"singleQuote\": true\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1781042207.3383505
+  }
+}
