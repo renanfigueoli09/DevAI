@@ -1,0 +1,27 @@
+{
+  "search:go-gorm-advanced-queries:gorm advanced queries in go 20": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: Check the latest version on [GORM's GitHub page](https://github.com/go-gorm/gorm).\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})`: Automatically migrate schema based on struct definition.\n  - `db.Where(\"name = ?\", \"jinzhu\").First(&user)`: Find first record that matches the condition.\n  - `db.Model(&user).Update(\"age\", 18)`: Update user's age to 18.\n  - `db.Select(\"name, age\").Find(&users)`: Select specific fields from the database.\n  - `db.Joins(\"Profile\").Where(\"profiles.age > ?\", 20).Find(&users)`: Perform a join and filter based on condition.",
+    "source": "web_search",
+    "updated_at": 1781017181.2627697
+  },
+  "search:go-gorm-advanced-queries:gorm advanced queries in go 20_ex": {
+    "content": "- Install GORM using `go get -u gorm.io/gorm`\n- Use `Select` method to smartly select specific fields in queries\n- For MySQL, use the official MySQL driver for GORM",
+    "source": "code_example",
+    "updated_at": 1781017194.1318982
+  },
+  "search:go-gorm-advanced-queries:gorm performance tuning for la": {
+    "content": "- **Disable Transactions**: Use `&gorm.Config{ SkipDefaultTransaction: true }` during initialization to improve write performance.\n- **Use Indexes**: Create secondary indexes on frequently queried columns to enhance query performance.\n- **Eager Loading**: Utilize `Preload` or `Joins` to reduce the number of database queries, improving data retrieval speed.\n- **Batch Operations**: Use batch operations like `CreateInBatches`, `SaveInBatches`, and `DeleteInBatches` for efficient bulk data manipulation.\n- **Optimize Queries**: Write optimized SQL queries by avoiding N+1 query problems through proper use of joins and eager loading.\n- **Connection Pooling**: Configure connection pooling with `&gorm.Config{ PrepareStmt: true }` to manage database connections efficiently.\n- **Use Latest GORM Version**: Always update to the latest version of GORM for performance improvements and bug fixes.\n- **Profile and Benchmark**: Use profiling tools like `pprof` to identify bottlenecks in your application and optimize accordingly.",
+    "source": "web_search",
+    "updated_at": 1781017203.3785748
+  },
+  "search:go-gorm-advanced-queries:gorm performance tuning for la_ex": {
+    "content": "- **CLI Commands**: Use `gorm.Open()` with appropriate drivers and configurations.\n- **Latest Versions**: Ensure using the latest GORM version for performance improvements.\n- **Key Config Options**:\n  - Disable default transactions during initialization: `&gorm.Config{ SkipDefaultTransaction: true }`\n  - Optimize query batching to reduce database load.\n  - Use connection pooling effectively with appropriate settings.",
+    "source": "code_example",
+    "updated_at": 1781017210.997843
+  },
+  "search:go-gorm-advanced-queries:gorm migrations and schema man": {
+    "content": "- **Atlas Operator**: Automates database schema migrations on Kubernetes.\n- **GORM AutoMigrate**: Automatically creates tables, foreign keys, constraints, columns, and indexes.\n- **Gormigrate**: Minimalistic migration helper for Gorm with schema versioning and rollback support.\n- **CLI Commands**:\n  - `atlas apply`: Applies migrations to the database.\n  - `gorm migrate`: Migrates the schema based on model definitions.\n  - `gormigrate migrate`: Runs migrations using gormigrate.\n- **Latest Versions**: Check official repositories for the latest versions of Atlas and Gormigrate.\n- **Key Config Options**:\n  - Atlas Operator: `--database-url`, `--migrations-path`.\n  - GORM AutoMigrate: No specific flags, just call `AutoMigrate` method on your DB instance.\n  - Gormigrate: Configure migration options in the initialization of gormigrate.",
+    "source": "web_search",
+    "updated_at": 1781017231.3813834
+  }
+}

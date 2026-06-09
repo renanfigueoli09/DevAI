@@ -1,0 +1,32 @@
+{
+  "search:fastapi-asyncio-databases:fastapi asyncio with databases": {
+    "content": "- Use `uvicorn` to run FastAPI applications with async support.\n- Install `fastapi`, `asyncpg`, and `sqlalchemy` using pip:\n  ```bash\n  pip install fastapi asyncpg sqlalchemy\n  ```\n- Configure database connection in your FastAPI app using SQLAlchemy's `AsyncEngine`.\n- Use `asyncpg` for asynchronous PostgreSQL operations.\n- Implement background tasks with `BackgroundTasks` in FastAPI.\n- For testing, use `pytest` along with `httpx` and `fastapi.testclient`.\n- Ensure to handle exceptions properly in async functions using `try-except` blocks.\n- Monitor performance using tools like `asyncio`'s `run_in_executor` for CPU-bound tasks.\n- Use environment variables for sensitive data like database credentials.",
+    "source": "web_search",
+    "updated_at": 1781016963.4810333
+  },
+  "search:fastapi-asyncio-databases:fastapi asyncio with databases_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications with async support.\n  ```bash\n  uvicorn main:app --reload\n  ```\n- Install SQLModel for ORM capabilities.\n  ```bash\n  pip install sqlmodel\n  ```\n- For database operations, use SQLAlchemy's async engine.\n  ```python\n  from sqlalchemy.ext.asyncio import create_async_engine\n\n  DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"\n  engine = create_async_engine(DATABASE_URL)\n  ```\n- Use Pydantic for data validation and settings management.\n  ```bash\n  pip install pydantic\n  ```\n- For testing, use `pytest` with FastAPI's test client.\n  ```bash\n  pip install pytest fastapi[all]\n  ```\n- Key config options include setting up async session factories.\n  ```python\n  from sqlmodel import AsyncSession, sessionmaker\n\n  async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)\n  ```\n- Use `asyncio` for concurrent external API calls and background tasks.\n  ```python\n  import asyncio\n\n  async def fetch_data():\n      # Simulate an external API call\n      await asyncio.sleep(1)\n      return {\"data\": \"example\"}\n  ```\n\nThese actionable facts provide a concise guide for setting up and running FastAPI applications with asynchronous database operations using SQLModel.",
+    "source": "code_example",
+    "updated_at": 1781016974.0299332
+  },
+  "search:fastapi-asyncio-databases:fastapi asyncio orm integratio": {
+    "content": "- **GitHub Repositories**:\n  - `mjhea0/awesome-fastapi`: Explore curated FastAPI resources.\n  - `FastAPI SQLAlchemy`: Simple integration between FastAPI and SQLAlchemy.\n  - `Fastapi-SQLA`: SQLAlchemy extension for FastAPI with asyncio support.\n\n- **Stack Overflow Article**: Learn how to use FastApi and SqlAlchemy for asynchronous operations.\n\n- **DEV Community Article**: Understand async in Python, including using `async with` with FastAPI.\n\n- **Python Async/Await Resources**:\n  - `asyncio.gather`: Run coroutines concurrently.\n  - `asyncio.create_task vs gather`: Choose the right method for running tasks.\n  - `FastAPI`: Create real asynchronous endpoints.\n\n- **Key Config Options**:\n  - Use `async with` for managing resources asynchronously.\n  - Employ `asyncio.gather` to run multiple coroutines concurrently.\n  - Utilize FastAPI's built-in support for asyncio and SQLAlchemy.",
+    "source": "web_search",
+    "updated_at": 1781016984.2965076
+  },
+  "search:fastapi-asyncio-databases:fastapi asyncio orm integratio_ex": {
+    "content": "- **GitHub Repository**: [emekadefirst/OrmI](https://github.com/emekadefirst/OrmI)\n- **Blog Post**: [Using an ORM with FastAPI](https://medium.com/@yourusername/using-an-orm-with-fastapi-1234567890)\n- **FastAPI Examples**: [Tortoise ORM v1.1.7 Documentation](https://tortoise-orm.readthedocs.io/en/latest/fastapi.html)\n\n**Actionable Facts for Developers:**\n\n- **Latest Version of FastAPI**: 0.73.0\n- **Key Config Options**:\n  - `database_url`: URL to the database.\n  - `models`: List of models to be used with ORM.\n  - `use_tz`: Whether to use timezone-aware datetimes.\n  - `timezone`: The timezone to use for datetime objects.\n\n- **CLI Commands**:\n  ```bash\n  pip install fastapi[all]\n  pip install tortoise-orm\n  ```\n\n- **Example Code Snippet**:\n  ```python\n  from fastapi import FastAPI\n  from tortoise import Tortoise, fields\n  from tortoise.models import Model\n\n  app = FastAPI()\n\n  class User(Model):\n      id = fields.IntField(pk=True)\n      name = fields.CharField(max_length=255)\n\n      class Meta:\n          table = \"users\"\n\n  async def init():\n      await Tortoise.init(\n          db_url='sqlite://db.sqlite3',\n          modules={'models': ['__main__']}\n      )\n      await Tortoise.generate_schemas()\n\n  app.on_event(\"startup\")\n  async def startup():\n      await init()\n\n  @app.get(\"/users/\")\n  async def get_users():\n      users = await User.all()\n      return {\"users\": [user.name for user in users]}\n  ```\n\n- **Documentation**: [Tortoise ORM FastAPI Integration](https://tortoise-orm.readthedocs.io/en/latest/fastapi.html)",
+    "source": "code_example",
+    "updated_at": 1781017011.2890534
+  },
+  "search:fastapi-asyncio-databases:fastapi asyncio database migra": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - ASGI Server: `uvicorn main:app --reload`",
+    "source": "web_search",
+    "updated_at": 1781017018.7108793
+  },
+  "search:fastapi-asyncio-databases:fastapi asyncio database migra_ex": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a new migration script based on database changes.\n  - `alembic upgrade head`: Applies all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.39\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `DATABASE_URL`: Connection string for the database.\n  - `SQLALCHEMY_DATABASE_URI`: Alternative to `DATABASE_URL` for SQLAlchemy.\n  - `alembic.ini`: Configuration file for Alembic migrations, including the connection string and migration script location.",
+    "source": "code_example",
+    "updated_at": 1781017026.0745661
+  }
+}

@@ -18,5 +18,35 @@
     "content": "- Use `helm install <release-name> <chart-path>` to deploy a Helm chart.\n- Update Helm charts using `helm upgrade <release-name> <chart-path>`.\n- Manage dependencies with `dependencies update` in the chart directory.\n- Configure ingress with `--set ingress.enabled=true,ingress.hosts[0].host=example.com`.\n- Use `kubectl apply -f <manifest-file>` for applying Kubernetes manifests.\n- Scale deployments with `kubectl scale deployment/<deployment-name> --replicas=<number>`.\n- Secure applications by using secrets and config maps.\n- Monitor deployments with `kubectl get pods, kubectl logs <pod-name>`.",
     "source": "code_example",
     "updated_at": 1780940143.003365
+  },
+  "search:docker-compose-kubernetes:docker compose for kubernetes ": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the docker-compose.yml file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by docker-compose.\n\n- **Latest Versions**:\n  - Docker Compose: Version 1.29.2 (as of my last update).\n  - Kubernetes: Latest stable version varies; check [Kubernetes official site](https://kubernetes.io/docs/setup/release/version-skew-policy/) for the most current version.\n\n- **Key Config Options**:\n  - `services`: Defines the services that make up your application.\n  - `version`: Specifies the version of Docker Compose file format.\n  - `networks`: Defines networks to which containers are attached.\n  - `volumes`: Defines volumes used by the containers.",
+    "source": "web_search",
+    "updated_at": 1781017037.328834
+  },
+  "search:docker-compose-kubernetes:docker compose for kubernetes _ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml`: Applies configuration to a resource by filename or stdin.\n  - `docker-compose up`: Creates and starts containers for a service.\n\n- **Latest Versions**:\n  - Docker Compose: Version 1.29.2 (as of my last update).\n  - Kubernetes: Version 1.23.x (latest stable release).\n\n- **Key Config Options**:\n  - `services`: Defines the services in your application.\n  - `replicas`: Specifies the number of replicas for a service.\n  - `ports`: Maps container ports to host ports.\n  - `volumes`: Mounts volumes from the host into containers.",
+    "source": "code_example",
+    "updated_at": 1781017043.169035
+  },
+  "search:docker-compose-kubernetes:kubernetes deployment strategi": {
+    "content": "- Use `kubectl rollout status deployment/<deployment-name>` to check the status of a rolling update.\n- For canary deployments, use `helm upgrade --install <release-name> <chart-path> --set strategy.type=canary`.\n- To automate rollback based on logs or metrics, configure Helm hooks and use monitoring tools like Prometheus.\n- Key config options for rolling updates include:\n  - `maxUnavailable`: Maximum number of Pods that can be unavailable during the update.\n  - `maxSurge`: Maximum number of Pods that can be created over the desired number of Pods.\n- For Istio-based canary deployments, apply a VirtualService with a weighted route to direct traffic to different versions of your service.\n- Ensure Helm releases are versioned and use semantic versioning for better management.\n- Use `kubectl rollout undo deployment/<deployment-name>` to rollback a deployment if needed.",
+    "source": "web_search",
+    "updated_at": 1781017051.8210294
+  },
+  "search:docker-compose-kubernetes:kubernetes deployment strategi_ex": {
+    "content": "- Use `kubectl apply -f deployment.yaml` to deploy applications.\n- For canary deployments, use Istio with the following command:\n  ```bash\n  kubectl apply -f istio-canary.yaml\n  ```\n- To automate rollback based on logs or metrics, configure Helm hooks and use tools like Prometheus for monitoring.\n- Key config options in `deployment.yaml` include `replicas`, `strategy.type`, and `strategy.rollingUpdate`.\n- Latest versions of Kubernetes can be found at the official [Kubernetes website](https://kubernetes.io/).\n- For detailed guidance on deployment strategies, refer to the [Kubernetes Deployment Strategies Guide](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).",
+    "source": "code_example",
+    "updated_at": 1781017057.6428616
+  },
+  "search:docker-compose-kubernetes:ci/cd with docker and kubernet": {
+    "content": "- **GitHub Actions**:\n  - `gh auth login` to authenticate.\n  - Use `actions/checkout@v3` for checking out code.\n  - Use `docker/build-push-action@v2` for building and pushing Docker images.\n\n- **Docker**:\n  - Latest version: [Docker Desktop](https://www.docker.com/products/docker-desktop).\n  - Key config options in `docker-compose.yml`: `services`, `networks`, `volumes`.\n\n- **Kubernetes**:\n  - Latest version: [kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/).\n  - Key config options in `k8s` files: `apiVersion`, `kind`, `metadata`, `spec`.\n\n- **CI/CD Pipeline**:\n  - Use GitHub Actions for automation.\n  - Define workflows in `.github/workflows/main.yml`.\n  - Example workflow snippet:\n    ```yaml\n    name: CI/CD\n\n    on:\n      push:\n        branches: [ main ]\n\n    jobs:\n      build-and-push:\n        runs-on: ubuntu-latest\n\n        steps:\n          - uses: actions/checkout@v3\n          - name: Set up Docker Buildx\n            uses: docker/setup-buildx-action@v2\n          - name: Login to Docker Hub\n            uses: docker/login-action@v1\n            with:\n              username: ${{ secrets.DOCKER_USERNAME }}\n              password: ${{ secrets.DOCKER_PASSWORD }}\n          - name: Build and push Docker image\n            uses: docker/build-push-action@v2\n            with:\n              context: .\n              push: true\n              tags: your-dockerhub-username/your-image-name:latest\n    ```\n\n- **Minikube**:\n  - Install Minikube using [official instructions](https://minikube.sigs.k8s.io/docs/start/).\n  - Key commands: `minikube start`, `minikube stop`, `minikube dashboard`.\n\n- **Docker Hub**:\n  - Create a repository and use it for image management.\n  - Use Docker CLI to push images: `docker push your-dockerhub-username/your-image-name:tag`.",
+    "source": "web_search",
+    "updated_at": 1781017079.9669218
+  },
+  "search:docker-compose-kubernetes:ci/cd with docker and kubernet_ex": {
+    "content": "- **CLI Commands**:\n  - `docker build --tag myapp:v1 .`\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl rollout restart deployment/myapp`\n\n- **Latest Versions**:\n  - Docker: 24.0.6\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - `deployment.yaml`: Define container images, replicas, and resource limits.\n  - `.dockerignore`: Specify files to exclude from the Docker build context.\n  - `Kubernetes Service`: Expose your application to external traffic.",
+    "source": "code_example",
+    "updated_at": 1781017102.7407882
   }
 }
