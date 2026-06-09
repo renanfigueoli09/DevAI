@@ -2,21 +2,21 @@
   "search:java-spring-security-oauth2:spring security oauth2 impleme": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Security: 6.x\n  - OAuth2: 5.7\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for configuration settings.\n  - `@EnableOAuth2Client` to enable OAuth2 client support.\n  - `@EnableAuthorizationServer` for enabling the authorization server.\n  - `ResourceServerTokenServices` bean for token validation.",
     "source": "web_search",
-    "updated_at": 1780946447.4951177
+    "updated_at": 1780963605.3696725
   },
   "search:java-spring-security-oauth2:spring security oauth2 impleme_ex": {
     "content": "- Use `spring-boot-starter-security` and `spring-boot-starter-oauth2-client`\n- Implement `OAuth2User` interface for custom user handling\n- Configure OAuth2 client in `application.yml` or `application.properties`\n- Use JWT for stateless authentication with Spring Security 6\n- Set up a Postgres database for storing user data\n- Customize security configurations using Java configuration classes\n- Make authenticated API calls to Reddit's endpoints using OAuth2 tokens",
     "source": "code_example",
-    "updated_at": 1780946451.3280244
+    "updated_at": 1780963607.3868349
   },
   "search:java-spring-security-oauth2:advanced spring security oauth": {
     "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6.0\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application\n  - `./mvnw clean install` for building the project\n- **Key Config Options**:\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: URI of the JWK Set endpoint\n  - `spring.security.oauth2.client.registration.<registration-id>.client-id`: Client ID for OAuth2 client registration\n  - `spring.security.oauth2.client.registration.<registration-id>.client-secret`: Client secret for OAuth2 client registration\n- **Additional Resources**:\n  - [Spring Boot Security Enhancements](https://www.baeldung.com/spring-boot-security-enhancements)\n  - [ProductDock Guide](https://productdock.io/guides/securing-your-web-apps-spring-security-oauth/)\n  - [Baeldung OAuth2 Course](https://www.baeldung.com/courses/spring-security-oauth2)",
     "source": "web_search",
-    "updated_at": 1780946454.6634629
+    "updated_at": 1780963609.3961537
   },
   "search:java-spring-security-oauth2:advanced spring security oauth_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/spring-security-oauth2-example.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Security: 6.2.0\n  - OAuth2: 5.7.0\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for configuring security settings.\n  - `@EnableWebSecurity` to enable web security configuration.\n  - `HttpSecurity` for defining HTTP security rules.\n  - `OAuth2AuthorizationServerConfigurerAdapter` for OAuth2 authorization server configuration.\n  - JWT (JSON Web Tokens) for secure token management.",
     "source": "code_example",
-    "updated_at": 1780946457.9763675
+    "updated_at": 1780963611.4431527
   }
 }

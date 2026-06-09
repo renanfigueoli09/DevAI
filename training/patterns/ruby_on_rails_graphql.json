@@ -2,26 +2,26 @@
   "search:ruby-on-rails-graphql:ruby on rails graphql api desi": {
     "content": "- Use `gem 'graphql'` in your Gemfile to add GraphQL support.\n- Run `bundle install` to install the gem.\n- Create a new schema with `rails generate graphql:schema`.\n- Define types and queries using Ruby classes.\n- Use `rails generate graphql:object <ObjectName>` for object definitions.\n- Implement mutations with `rails generate graphql:mutation <MutationName>`.\n- Configure CORS in your Rails application if needed.\n- Use `graphql-ruby` version 2.0 or later for the latest features.\n- Define types using `GraphQL::ObjectType.define` and queries/mutations using `GraphQL::Field.define`.",
     "source": "web_search",
-    "updated_at": 1780946566.3255992
+    "updated_at": 1780963681.8639793
   },
   "search:ruby-on-rails-graphql:ruby on rails graphql api desi_ex": {
     "content": "- **CLI Commands**:\n  - `bundle add graphql-ruby`\n  - `rails generate graphql:install`\n\n- **Latest Versions**:\n  - GraphQL-Ruby: v20.0.0\n\n- **Key Config Options**:\n  - Define types and queries in `app/graphql/types/`\n  - Configure routes in `config/routes.rb` with `mount Graphql::Rails::Engine => '/graphql'`\n  - Enable GraphiQL for development with `config.graphql.enabled = true`",
     "source": "code_example",
-    "updated_at": 1780946569.4010928
+    "updated_at": 1780963684.1523201
   },
   "search:ruby-on-rails-graphql:ruby on rails graphql performa": {
     "content": "- Use `gem 'graphql'` to add GraphQL to your Rails application.\n- Install the latest version of `graphql` by running `bundle update graphql`.\n- Configure GraphQL in your Rails app by creating a new file at `app/graphql/schema.rb`.\n- Define types and queries within the schema file.\n- Use `GraphQL::Batch` for batching multiple requests to improve performance.\n- Implement caching strategies using `Rails.cache.fetch` or third-party gems like `graphql-cache`.\n- Optimize database queries with eager loading and preloading associations.\n- Use `GraphQL::Pro` for advanced features and performance enhancements if needed.\n- Monitor and profile your GraphQL API using tools like `rack-mini-profiler`.\n- Regularly update dependencies to benefit from security patches and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780946572.3589592
+    "updated_at": 1780963686.1920593
   },
   "search:ruby-on-rails-graphql:ruby on rails graphql security": {
     "content": "- Use `bundle add graphql-ruby` to install the latest version of GraphQL in your Rails project.\n- Configure GraphQL by adding `config/initializers/graphql.rb` and setting up schema and types.\n- Implement authentication using Devise with `bundle add devise`.\n- Secure mutations by checking user permissions before executing them.\n- Use `GraphQL::Schema.define do` to define your schema, including types and queries.\n- Apply rate limiting to prevent denial of service attacks with gems like `rack-ratelimit`.\n- Sanitize inputs in GraphQL queries using `GraphQL::Types::InputObject` for type safety.\n- Regularly update dependencies by running `bundle update` and checking for security advisories.",
     "source": "web_search",
-    "updated_at": 1780946575.3510728
+    "updated_at": 1780963688.225284
   },
   "search:ruby-on-rails-graphql:ruby on rails graphql security_ex": {
     "content": "- Use `gem 'graphql-ruby'` in your Gemfile for the latest version.\n- For Rails integration, add `gem 'graphql-rails'`.\n- Configure GraphQL schema with `GraphQL::Schema.define do ... end`.\n- Implement authentication using JWT by generating tokens with claims and setting expiration times.\n- Secure resolvers with authorization checks to ensure only authorized users can access data.\n- Use HTTP Basic Auth for securing the GraphQL endpoint in Spring Boot applications.\n- For Rails, consider using Devise or CanCanCan for user authentication and authorization.",
     "source": "code_example",
-    "updated_at": 1780946578.1441839
+    "updated_at": 1780963690.321471
   }
 }
