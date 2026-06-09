@@ -1,0 +1,22 @@
+{
+  "search:fastapi-asyncio-sqlalchemy:fastapi asyncio sqlalchemy tut": {
+    "content": "- **Latest Versions**: FastAPI 0.95.0, SQLAlchemy 2.0.0, Alembic 1.8.3, asyncpg 0.26.0.\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL` for database connection string.\n  - `async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL)` to create an asynchronous engine.\n  - `AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)` for creating a session factory.\n- **CLI Commands**:\n  - `alembic init alembic` to initialize Alembic.\n  - `alembic revision --autogenerate -m \"message\"` to generate migration scripts.\n  - `alembic upgrade head` to apply migrations.",
+    "source": "web_search",
+    "updated_at": 1781039260.7172267
+  },
+  "search:fastapi-asyncio-sqlalchemy:fastapi asyncio sqlalchemy tut_ex": {
+    "content": "- Install dependencies using Poetry:\n  ```\n  poetry add fastapi uvicorn uvloop asyncpg alembic pydantic-settings\n  poetry add sqlalchemy --extra-index-url https://pypi.org/simple\n  ```\n\n- Key config options for FastAPI and SQLAlchemy:\n  - `DATABASE_URL`: Connection string for the database.\n  - `SQLALCHEMY_DATABASE_URI`: SQLAlchemy connection string.\n\n- Latest versions:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.0\n\n- Recommended packages for testing and migrations:\n  - pytest\n  - aiosqlite",
+    "source": "code_example",
+    "updated_at": 1781039267.644441
+  },
+  "search:fastapi-asyncio-sqlalchemy:fastapi asyncio sqlalchemy wit": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install sqlalchemy[asyncio]`\n  - `pip install redis`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - SQLAlchemy: 2.0.0\n  - Redis: 4.5.3\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Async Session: `AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`\n  - Redis Connection: `redis_client = Redis(host='localhost', port=6379, db=0)`",
+    "source": "web_search",
+    "updated_at": 1781039305.0220304
+  },
+  "search:fastapi-asyncio-sqlalchemy:fastapi asyncio sqlalchemy wit_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/tiangolo/fastapi-sqlalchemy.git`\n  - `pip install fastapi sqlalchemy asyncpg redis`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.1\n  - SQLAlchemy: 2.0.7\n  - Redis: 4.5.3\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Redis Connection String: `REDIS_URL = \"redis://localhost:6379/0\"`\n\nThese commands and configurations provide a solid foundation for integrating FastAPI with SQLAlchemy and Redis, ensuring a robust and scalable microservices architecture.",
+    "source": "code_example",
+    "updated_at": 1781039311.3020265
+  }
+}

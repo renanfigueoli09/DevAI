@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-mongodb-replication:kubernetes mongodb replication": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy MongoDB on Kubernetes.\n- Ensure MongoDB version compatibility with Kubernetes.\n- Configure stateful sets for persistent storage and replication.\n- Set up RBAC roles and bindings for secure access.\n- Utilize `mongo` shell commands for initial setup and configuration.\n- Monitor MongoDB performance using Kubernetes metrics.\n- Regularly update MongoDB and Kubernetes to the latest versions.\n- Implement backup strategies using tools like `mongodump` and `kubectl cp`.\n- Scale horizontally by adding more nodes in your Kubernetes cluster.",
+    "source": "web_search",
+    "updated_at": 1781039319.5463593
+  },
+  "search:kubernetes-mongodb-replication:kubernetes mongodb replication_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy MongoDB Replica Set.\n- Ensure Kubernetes version is at least 1.16 for StatefulSets.\n- Configure TLS encryption using `--tlsMode=verifyCA`.\n- Set up a Headless Service with selector matching the StatefulSet.\n- Define Persistent Volumes and Claims for data persistence.\n- Use `kubectl get pods -l app=mongodb` to check Replica Set status.\n- Monitor MongoDB logs with `kubectl logs <pod-name>`.\n- Update configuration using `kubectl edit statefulset mongodb`.\n- Ensure network policies allow communication between StatefulSet pods.",
+    "source": "code_example",
+    "updated_at": 1781039334.7680562
+  },
+  "search:kubernetes-mongodb-replication:kubernetes mongodb performance": {
+    "content": "- Use `kubectl` to manage MongoDB resources in Kubernetes.\n- Apply the latest MongoDB version using Helm charts or official Docker images.\n- Configure `resources` in your Kubernetes deployment YAML for CPU and memory limits.\n- Enable `storageClass` with high IOPS for better performance.\n- Utilize `readPreference` and `writeConcern` settings in MongoDB to optimize data access patterns.\n- Implement `auto-scaling` based on metrics like CPU usage or disk I/O.\n- Regularly monitor and analyze MongoDB performance using tools like `mongostat`, `mongotop`, and `pt-query-digest`.\n- Optimize queries by indexing frequently accessed fields and avoiding full table scans.\n- Use `sharding` to distribute data across multiple servers for scalability.",
+    "source": "web_search",
+    "updated_at": 1781039371.896074
+  },
+  "search:kubernetes-mongodb-replication:kubernetes mongodb performance_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy MongoDB on Kubernetes.\n- Ensure MongoDB version is up-to-date, e.g., `image: mongo:latest`.\n- Configure resource limits and requests in the deployment YAML:\n  ```yaml\n  resources:\n    limits:\n      cpu: \"1\"\n      memory: \"2Gi\"\n    requests:\n      cpu: \"0.5\"\n      memory: \"1Gi\"\n  ```\n- Use `kubectl exec -it <pod-name> -- mongo` to access MongoDB shell.\n- Enable horizontal pod autoscaling with `kubectl autoscale deployment <deployment-name> --cpu-percent=50 --min=1 --max=3`.\n- Configure persistence using PersistentVolume and PersistentVolumeClaim:\n  ```yaml\n  volumeMounts:\n    - name: mongodb-persistent-storage\n      mountPath: /data/db\n  volumes:\n    - name: mongodb-persistent-storage\n      persistentVolumeClaim:\n        claimName: mongodb-pvc\n  ```\n- Monitor MongoDB performance with `kubectl logs <pod-name>` and use tools like Prometheus for monitoring.\n- Apply CIS Benchmark guidelines using images like `kwame-mintah/mongodb-7-cis-benchmark`.",
+    "source": "code_example",
+    "updated_at": 1781039393.4192896
+  }
+}
