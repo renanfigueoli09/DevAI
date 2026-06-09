@@ -1,0 +1,22 @@
+{
+  "search:spring-data-r2dbc-postgres:spring data r2dbc with postgre": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - R2DBC PostgreSQL Driver: 0.8.1.RELEASE\n\n- **Key Config Options**:\n  - `spring.r2dbc.url=r2dbc:postgresql://localhost:5432/mydb`\n  - `spring.r2dbc.username=myuser`\n  - `spring.r2dbc.password=mypassword`\n  - `spring.r2dbc.properties.cache-prepared-statements=true`",
+    "source": "web_search",
+    "updated_at": 1781017336.7156541
+  },
+  "search:spring-data-r2dbc-postgres:spring data r2dbc with postgre_ex": {
+    "content": "- **CLI Commands**:\n  - `./mvnw clean install` to build the project.\n  - `./mvnw spring-boot:run` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data R2DBC: 1.5.x\n  - PostgreSQL Driver: 42.2.x\n\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for PostgreSQL.\n  - `spring.r2dbc.username`: Database username.\n  - `spring.r2dbc.password`: Database password.\n  - `spring.datasource.hikari.maximum-pool-size`: Maximum pool size for HikariCP.",
+    "source": "code_example",
+    "updated_at": 1781017354.010874
+  },
+  "search:spring-data-r2dbc-postgres:r2dbc for reactive database ac": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew run` to start the application.\n\n- **Latest Versions**:\n  - Spring Data R2DBC: 4.0.0\n\n- **Key Config Options**:\n  - Database URL\n  - Username and Password\n  - Driver Class Name (e.g., `io.r2dbc.spi.ConnectionFactoryOptions`)\n  - Reactive Streams implementation (e.g., Project Reactor)",
+    "source": "web_search",
+    "updated_at": 1781017361.8391502
+  },
+  "search:spring-data-r2dbc-postgres:r2dbc for reactive database ac_ex": {
+    "content": "- **Add R2DBC Driver Dependency**: Include `spring-boot-starter-data-r2dbc` in your `pom.xml`.\n- **Configure Database Connection**: Set the database URL, username, and password in `application.properties` or `application.yml`.\n- **Define Data Models**: Create JPA-like entities annotated with `@Entity`.\n- **Create Repository Interfaces**: Extend `ReactiveCrudRepository` for basic CRUD operations.\n- **Enable R2DBC Auto-configuration**: Ensure Spring Boot auto-configures R2DBC by including the necessary dependencies.\n- **Use Reactive Streams**: Utilize `Mono` and `Flux` to handle asynchronous data streams.\n- **Configure Connection Pooling**: Use HikariCP or another connection pool compatible with R2DBC.\n- **Enable Transaction Management**: Configure transaction management using `@Transactional` annotations.\n- **Test Reactive Endpoints**: Write tests using Spring's Test WebFlux for reactive endpoints.",
+    "source": "code_example",
+    "updated_at": 1781017368.4782727
+  }
+}
