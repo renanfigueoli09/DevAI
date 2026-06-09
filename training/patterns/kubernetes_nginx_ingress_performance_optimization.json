@@ -1,0 +1,32 @@
+{
+  "search:Kubernetes+nginx-ingress Performance Optimization:kubernetes performance optimiz": {
+    "content": "- Use `kubectl top nodes` and `kubectl top pods` to monitor resource usage.\n- Apply resource requests and limits in pod specifications, e.g., `resources: {requests: {cpu: \"250m\", memory: \"64Mi\"}, limits: {cpu: \"500m\", memory: \"128Mi\"}}`.\n- Utilize `kube-bench` for security benchmarking.\n- Employ `cAdvisor` or `Prometheus` for detailed resource metrics and performance analysis.\n- Scale your cluster using `kubectl scale deployment <deployment-name> --replicas=<number>`.\n- Apply horizontal pod autoscaling with `kubectl autoscale deployment <deployment-name> --cpu-percent=50 --min=1 --max=10`.\n- Use `kube-proxy` modes like `iptables`, `ipvs`, or `userspace` for networking optimization.\n- Optimize container images by minimizing layers and using multi-stage builds.\n- Configure storage classes and persistent volume claims to improve I/O performance.\n- Regularly update Kubernetes and all components to the latest stable versions.",
+    "source": "web_search",
+    "updated_at": 1781012767.730316
+  },
+  "search:Kubernetes+nginx-ingress Performance Optimization:kubernetes performance optimiz_ex": {
+    "content": "- Use `kubectl top pod` to check resource usage.\n- Install and configure Prometheus and Grafana for monitoring.\n- Apply horizontal pod autoscaling using `--minReplicas` and `--maxReplicas`.\n- Utilize `k6` or `Apache JMeter` for load testing.\n- Set up resource requests and limits in Pod specifications.\n- Enable node affinity to control pod placement.\n- Use `kubectl drain` to safely evict pods during maintenance.",
+    "source": "code_example",
+    "updated_at": 1781012775.2415602
+  },
+  "search:Kubernetes+nginx-ingress Performance Optimization:nginx ingress configuration": {
+    "content": "- **CLI Commands**: \n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingresses`\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.1\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: Rewrites the target URL.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: Adjusts the maximum body size for proxy requests.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: Specifies the backend protocol (HTTP, HTTPS).",
+    "source": "web_search",
+    "updated_at": 1781012782.8366601
+  },
+  "search:Kubernetes+nginx-ingress Performance Optimization:nginx ingress configuration_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Nginx Ingress Controller.\n- Ensure you have the latest version of Nginx Ingress Controller by checking [GitHub releases](https://github.com/kubernetes/ingress-nginx/releases).\n- Key config options include:\n  - `controller.service.annotations`: for custom annotations on the service.\n  - `controller.config`: for advanced NGINX configurations via ConfigMap.\n  - `controller.ingressClassResource.enabled`: to enable IngressClass resource support.\n- Use `kubectl edit ingress <ingress-name>` to modify an existing Ingress resource.\n- For ConfigMap customization, create a ConfigMap with your desired settings and apply it using `kubectl apply -f configmap.yaml`.\n- Annotations can be added directly in the Ingress resource YAML file for specific configurations.",
+    "source": "code_example",
+    "updated_at": 1781012798.034285
+  },
+  "search:Kubernetes+nginx-ingress Performance Optimization:load balancing strategies": {
+    "content": "- **CLI Commands**:\n  - `kubectl get svc` to list services.\n  - `kubectl describe svc <service-name>` for detailed service info.\n  - `kubectl edit svc <service-name>` to modify service configurations.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x is the latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `spec.type`: Defines the type of load balancer (e.g., ClusterIP, NodePort, LoadBalancer).\n  - `spec.selector`: Labels used to identify pods that should be part of this service.\n  - `spec.ports`: Configuration for ports and protocols.\n\n- **Load Balancing Techniques**:\n  - **Least Connections**: Routes requests to the server with the least number of active connections.\n  - **Weighted Round Robin**: Distributes traffic based on weights assigned to servers.\n  - **Affinity**: Keeps related requests on the same server for session persistence.",
+    "source": "web_search",
+    "updated_at": 1781012806.5756965
+  },
+  "search:Kubernetes+nginx-ingress Performance Optimization:load balancing strategies_ex": {
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes environments.\n  - Example: `kubectl apply -f load-balancer.yaml`\n  \n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.3\n  - HAProxy: v2.5.0\n  \n- **Key Config Options**:\n  - Nginx: `nginx.conf` for global settings, `location` blocks for route rules.\n  - HAProxy: `haproxy.cfg` with `frontend`, `backend`, and `server` sections.\n\nFor detailed implementation steps, refer to the official documentation of each tool.",
+    "source": "code_example",
+    "updated_at": 1781012821.30353
+  }
+}
