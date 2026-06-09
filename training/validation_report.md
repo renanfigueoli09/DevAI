@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 20:35*
+*2026-06-09 20:51*
 
-## Score: 90% `[██████████████████░░]`  (46.0/51.0)
+## Score: 88% `[█████████████████░░░]`  (44.0/50.0)
 
-### Knowledge Check (vector store): 32.0/37.0
+### Knowledge Check (vector store): 30.0/36.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,9 +19,8 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| Docker + kafka-security: padrões de código | 0.0/1 | ❌ |
 | kubernetes + redis: cache | 1.0/1 | ✅ |
-| django-redis-cache-performance: cache | 1.0/1 | ✅ |
-| typescript-graphql-nestjs: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
@@ -35,6 +34,7 @@
 
 - **PartialType de @nestjs/mapped-types** — found=['@nestjs/mapped-types', 'PartialType'] missing=[] wrong=['@nestjs/common']
 - **FastAPI: AsyncIOMotorClient (não pymongo)** — found=['AsyncIOMotorClient', 'motor'] missing=[] wrong=['pymongo']
+- **Docker + kafka-security: padrões de código** — found=[] missing=['@auth', '@latest'] wrong=[]
 
 ## Fix
 ```bash

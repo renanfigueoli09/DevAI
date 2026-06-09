@@ -1,7 +1,22 @@
 {
-  "generated_at": 1781047990.5781975,
+  "generated_at": 1781048943.2038658,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "Docker + kafka-security: padrões de código",
+      "queries": [
+        "Docker+kafka-security pattern code example",
+        "Docker + kafka-security"
+      ],
+      "must_find": [
+        "@auth",
+        "@latest"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Docker+kafka-security"
+    },
     {
       "name": "kubernetes + redis: cache",
       "queries": [
@@ -15,35 +30,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "kubernetes+redis"
-    },
-    {
-      "name": "django-redis-cache-performance: cache",
-      "queries": [
-        "django-redis-cache-performance cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "django-redis-cache-performance"
-    },
-    {
-      "name": "typescript-graphql-nestjs: padrões de código",
-      "queries": [
-        "typescript-graphql-nestjs pattern code example",
-        "typescript-graphql-nestjs"
-      ],
-      "must_find": [
-        "@prisma",
-        "@nestjs"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-graphql-nestjs"
     }
   ]
 }
