@@ -1,0 +1,17 @@
+{
+  "search:spring-cloud-gateway:spring cloud gateway performan": {
+    "content": "- **CLI Commands**:\n  - `wrk` for benchmarking gateway performance.\n  \n- **Latest Versions**:\n  - Spring Cloud Gateway: [Check latest version on Maven Central](https://search.maven.org/artifact/org.springframework.cloud/spring-cloud-starter-gateway)\n  - Spring Boot: [Check latest version on Maven Central](https://search.maven.org/artifact/org.springframework.boot/spring-boot)\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes`: Define routes for gateway.\n  - `spring.cloud.gateway.discovery.locator.enabled`: Enable service discovery for routing.\n  - `spring.cloud.gateway.httpclient.pool.max-idle-per-route`: Set max idle connections per route.\n  - `spring.cloud.gateway.httpclient.pool.max-connections`: Set total max connections.\n\n- **Performance Optimization Tips**:\n  - Monitor response body size and optimize accordingly.\n  - Adjust HTTP client pool settings for better resource management.",
+    "source": "web_search",
+    "updated_at": 1781015132.4042914
+  },
+  "search:spring-cloud-gateway:spring cloud gateway performan_ex": {
+    "content": "- **CLI Commands**: \n  - `java -jar spring-cloud-gateway.jar --server.port=8080`\n  - `curl -X GET http://localhost:8080/actuator/metrics`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.1.4.RELEASE\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the route.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/example/**.\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter to modify requests or responses, e.g., RewritePath=/example/(?<segment>.*), /new/$\\{segment}.",
+    "source": "code_example",
+    "updated_at": 1781015139.0785213
+  },
+  "search:spring-cloud-gateway:spring cloud gateway security ": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your Spring Cloud Gateway project.\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Cloud Gateway: 3.0.x\n  - Spring Security: 5.7.x\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes`: Define routes for your gateway.\n  - `spring.security.user.name` and `spring.security.user.password`: Configure basic authentication.\n  - `management.endpoints.web.exposure.include=*`: Expose all management endpoints.\n  - `server.port`: Set the port for your gateway.",
+    "source": "web_search",
+    "updated_at": 1781015147.5401127
+  }
+}
