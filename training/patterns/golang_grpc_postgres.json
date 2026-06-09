@@ -1,0 +1,22 @@
+{
+  "search:golang-grpc-postgres:go grpc postgresql integration": {
+    "content": "- **CLI Commands**:\n  - `protoc --go_out=. path/to/your/protofile.proto`\n  - `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n\n- **Latest Versions**:\n  - Go: v1.20.3\n  - gRPC: v1.54.0\n  - PostgreSQL: 14.6\n\n- **Key Config Options**:\n  - In `protofile.proto`, define your service and message types.\n  - In `main.go`, set up the gRPC server with `grpc.NewServer()`.\n  - Configure PostgreSQL connection string in Go code, e.g., `host=localhost user=postgres password=mysecretpassword dbname=mydb sslmode=disable`.",
+    "source": "web_search",
+    "updated_at": 1781029490.1308982
+  },
+  "search:golang-grpc-postgres:go grpc postgresql integration_ex": {
+    "content": "- Initialize project with `go mod init example.com/go-grpc-postgres`\n- Use Render.com to create a PostgreSQL database and note the External Database URL.\n- Install necessary packages:\n  - `go get google.golang.org/grpc`\n  - `go get github.com/lib/pq`\n- Define gRPC service in `.proto` file.\n- Implement server logic in Go, using `grpc.NewServer()` and register your services.\n- Connect to PostgreSQL database using connection string from Render.com.\n- Use `sql.DB` for database operations like reading and writing.\n- Handle errors appropriately with Go's error handling mechanisms.\n- Test gRPC service using tools like `protoc-gen-go` and `go test`.\n- Deploy application on a server or cloud platform.",
+    "source": "code_example",
+    "updated_at": 1781029510.0710354
+  },
+  "search:golang-grpc-postgres:go grpc postgresql performance": {
+    "content": "- Use `go get google.golang.org/grpc` to install the latest version of gRPC.\n- Employ Redis caching by integrating a Redis client in your Go application for performance optimization.\n- Implement graceful shutdown with `ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second); defer cancel()`.\n- Enable structured logging using an interceptor like `grpc_zap_interceptor.NewServerInterceptor(zap.L())` for better observability.\n- Configure PostgreSQL connection pooling with `pgxpool.ConnectConfig{...}` for efficient database interactions.\n- Utilize gRPC's streaming capabilities to handle large data transfers efficiently.\n- Monitor performance using Prometheus and Grafana by integrating them with your gRPC server.",
+    "source": "web_search",
+    "updated_at": 1781029527.9102252
+  },
+  "search:golang-grpc-postgres:go grpc postgresql performance_ex": {
+    "content": "- Use `go mod init example.com/go-grpc-postgres` to initialize a new Go module.\n- Create folders for server, client, and proto files.\n- Utilize Render.com for free PostgreSQL database creation.\n- Note down the database credentials after creation.\n- For gRPC with PostgreSQL, consider using the `johanbrandhorst/grpc-postgres` example repository.\n- Run `make generate` to update migration scripts.\n- Increment the migration version in `users/helpers.go`.\n- Ensure consistent naming conventions for new files starting with '2_'.\n- Use the latest versions of Go and gRPC libraries for optimal performance.",
+    "source": "code_example",
+    "updated_at": 1781029534.4367986
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:python-django-asyncio-websockets:python django asyncio websocke": {
+    "content": "- Use `websockets` library version 13.0 or later.\n- For error handling, implement custom exception handlers in your WebSocket server code.\n- Remove the deprecated `path` argument from connection handler definitions.\n- Ensure Django is running under ASGI for full asynchronous support.\n- Utilize Django's async views and request stack for better performance.\n- Deploy your WebSocket server using Docker with appropriate configurations.\n- Monitor logs regularly to catch and resolve any runtime errors.",
+    "source": "web_search",
+    "updated_at": 1781029465.3693118
+  },
+  "search:python-django-asyncio-websockets:python django asyncio websocke_ex": {
+    "content": "- Ensure `websockets` is installed using pip: `pip install websockets`\n- Use the latest version of Django and asyncio.\n- For error handling in async websockets, use try-except blocks around your coroutine functions.\n- Key config options for integrating websockets with Django include setting up authentication tokens and sending them to the websockets server.\n- Example CLI command to run a Django project: `python manage.py runserver`\n- Ensure that the asyncio event loop is not running when starting another one, especially in web applications.",
+    "source": "code_example",
+    "updated_at": 1781029481.944851
+  }
+}
