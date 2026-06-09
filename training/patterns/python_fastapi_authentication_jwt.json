@@ -1,0 +1,22 @@
+{
+  "search:python-fastapi-authentication-jwt:python fastapi jwt authenticat": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI application.\n  - `pip install fastapi[all]` to install FastAPI with all dependencies.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0 (as of my last update).\n  - Pydantic: v2.0.0 (for data validation and settings management).\n\n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for signing JWT tokens.\n  - `ALGORITHM`: The algorithm used to encode the JWT, e.g., \"HS256\".\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiration time for access tokens in minutes.",
+    "source": "web_search",
+    "updated_at": 1781040328.744224
+  },
+  "search:python-fastapi-authentication-jwt:python fastapi jwt authenticat_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn python-jose passlib[bcrypt]`\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 0.21.3\n  - Python-Jose: 4.1.0\n  - Passlib: 1.0.6\n  \n- **Key Config Options**:\n  - `SECRET_KEY`: A secret key for JWT encoding and decoding.\n  - `ALGORITHM`: The algorithm used for JWT encoding, e.g., \"HS256\".\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiry time for access tokens in minutes.",
+    "source": "code_example",
+    "updated_at": 1781040343.0600007
+  },
+  "search:python-fastapi-authentication-jwt:fastapi security with jwt and ": {
+    "content": "- Use FastAPI version 0.95.0 or later.\n- Install `fastapi[all]` and `python-multipart`.\n- For JWT, use PyJWT version 2.6.0 or later.\n- Implement OAuth2 with Password (and hashing) using `fastapi.security.OAuth2PasswordBearer`.\n- Use Bcrypt for password hashing with `passlib`.\n- Configure JWT token expiration in the FastAPI app settings.\n- Set up role-based access control (RBAC) using custom dependencies and permissions.\n- Test authentication endpoints using tools like Postman or curl.\n- Deploy your FastAPI application on a secure server, ensuring HTTPS is enabled.",
+    "source": "web_search",
+    "updated_at": 1781040362.7571728
+  },
+  "search:python-fastapi-authentication-jwt:fastapi security with jwt and _ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI along with all its dependencies.\n- For JWT, use `pip install python-jose[cryptography]`.\n- Ensure you have the latest versions of FastAPI and related libraries for security updates.\n- Key config options include:\n  - `SECRET_KEY`: A secret key used for encoding and decoding JWT tokens.\n  - `ALGORITHM`: The algorithm to be used for encoding (e.g., \"HS256\").\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Expiry time for the access token in minutes.\n- Use `bcrypt` for password hashing:\n  ```python\n  from passlib.context import CryptContext\n\n  pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n  ```\n- For OAuth2, define a `OAuth2PasswordBearer` instance with your token URL:\n  ```python\n  from fastapi.security import OAuth2PasswordBearer\n\n  oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n  ```\n- Implement password hashing and verification:\n  ```python\n  def get_password_hash(password):\n      return pwd_context.hash(password)\n\n  def verify_password(plain_password, hashed_password):\n      return pwd_context.verify(plain_password, hashed_password)\n  ```\n- Create a JWT token with `jwt.encode`:\n  ```python\n  from datetime import datetime, timedelta\n  from jose import jwt\n\n  def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):\n      to_encode = data.copy()\n      if expires_delta:\n          expire = datetime.utcnow() + expires_delta\n      else:\n          expire = datetime.utcnow() + timedelta(minutes=15)\n      to_encode.update({\"exp\": expire})\n      encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n      return encoded_jwt\n  ```\n- Protect routes with OAuth2 scheme:\n  ```python\n  @app.get(\"/items/\")\n  async def read_items(token: str = Depends(oauth2_scheme)):\n      # Your logic here\n  ```\n\nThese steps provide a comprehensive guide to securing your FastAPI application using JWT and OAuth2.",
+    "source": "code_example",
+    "updated_at": 1781040384.4174705
+  }
+}

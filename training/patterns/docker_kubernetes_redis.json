@@ -18,5 +18,25 @@
     "content": "- Use `kubectl apply -f redis-deployment.yaml` to deploy Redis on Kubernetes.\n- Ensure the latest version of Redis is used by pulling from the official Docker Hub repository.\n- Key configuration options include setting up persistence, replicas for high availability, and resource limits.\n- Example YAML file (`redis-deployment.yaml`) should specify the correct image tag (e.g., `image: redis:latest`).\n- Use `kubectl get pods` to check if the Redis pod is running.\n- For persistent storage, use a PersistentVolumeClaim in your deployment configuration.\n- To scale Redis, adjust the `replicas` field in your deployment YAML and apply changes with `kubectl apply -f <filename>`.\n- Monitor Redis performance using Kubernetes metrics or third-party tools like Prometheus.",
     "source": "code_example",
     "updated_at": 1780967797.583688
+  },
+  "search:docker-kubernetes-redis:dockerizing redis for kubernet": {
+    "content": "- Use `kubectl create namespace redis` to create a Kubernetes namespace for Redis.\n- Deploy Redis using the command: `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/stable/redis/deployment.yaml`.\n- Expose Redis with a service: `kubectl expose deployment redis --type=ClusterIP --port=6379`.\n- Use `kubectl get pods -n redis` to check if the Redis pod is running.\n- For data persistence, use a PersistentVolumeClaim (PVC) in your deployment YAML file.\n- Ensure you have the latest version of Kubernetes and Docker installed on your system.\n- Key config options include `replicas`, `resources`, and `image` in the deployment YAML.\n- Use `kubectl logs <pod-name> -n redis` to view Redis logs for troubleshooting.",
+    "source": "web_search",
+    "updated_at": 1781040442.9745157
+  },
+  "search:docker-kubernetes-redis:dockerizing redis for kubernet_ex": {
+    "content": "- Use `kubectl create namespace redis` to create a Redis namespace.\n- Apply a storage class using `kubectl apply -f <storage-class-file.yaml>`.\n- Deploy Redis with `helm install my-redis bitnami/redis --namespace redis`.\n- Configure Redis using ConfigMaps with `kubectl apply -f <configmap-file.yaml>`.\n- Access Redis pods with `kubectl get pods --namespace redis`.\n- Scale Redis with `kubectl scale deployment/my-redis --replicas=3 --namespace redis`.",
+    "source": "code_example",
+    "updated_at": 1781040458.305826
+  },
+  "search:docker-kubernetes-redis:kubernetes statefulsets and re": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update a StatefulSet.\n  - `kubectl get statefulsets` to list all StatefulSets.\n  - `kubectl describe statefulset <statefulset-name>` for detailed information.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Redis: v7.0\n\n- **Key Config Options**:\n  - `.spec.replicas`: Number of replicas to maintain.\n  - `.spec.template`: Pod template specification.\n  - `.spec.volumeClaimTemplates`: Persistent volume claims for each pod.\n  - `.spec.serviceName`: Headless service name for stable network identity.\n\nThese commands and options provide a solid foundation for managing StatefulSets in Kubernetes, ensuring applications with persistent storage or unique identities run reliably.",
+    "source": "web_search",
+    "updated_at": 1781040467.5558162
+  },
+  "search:docker-kubernetes-redis:kubernetes statefulsets and re_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get pods --watch`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Redis: 7.0.5\n\n- **Key Config Options**:\n  - `spec.serviceName`: Headless service name for StatefulSet.\n  - `spec.replicas`: Number of replicas for the StatefulSet.\n  - `volumeClaimTemplates`: Persistent volume claims for each pod.",
+    "source": "code_example",
+    "updated_at": 1781040473.1252043
   }
 }
