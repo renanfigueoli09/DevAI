@@ -1,0 +1,32 @@
+{
+  "search:Node.js + TypeORM:node.js typeorm crud operation": {
+    "content": "- **CLI Commands**:\n  - `npm install typeorm reflect-metadata --save`\n  - `npx typeorm init` to initialize TypeORM\n  - `npm run start` to run the Node.js application\n\n- **Latest Versions**:\n  - Node.js: v16.x\n  - TypeScript: v4.5.x\n  - NestJS: v8.x\n  - TypeORM: v0.3.x\n\n- **Key Config Options**:\n  - `ormconfig.json` for database connection settings\n  - Entity classes with decorators for ORM mapping\n  - Controller methods for CRUD operations",
+    "source": "web_search",
+    "updated_at": 1781040057.2464304
+  },
+  "search:Node.js + TypeORM:node.js typeorm crud operation_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install typeorm reflect-metadata --save`\n  - `npm install @nestjs/typeorm typeorm pg --save`\n\n- **Latest Versions**:\n  - Node.js: v16.x or later\n  - TypeScript: v4.x\n  - NestJS: v9.x\n  - TypeORM: v0.3.x\n\n- **Key Config Options**:\n  - `type`: \"postgres\"\n  - `host`: \"localhost\"\n  - `port`: 5432\n  - `username`: \"your_username\"\n  - `password`: \"your_password\"\n  - `database`: \"your_database\"\n  - `synchronize`: true (for development)\n  - `entities`: [\"dist/**/*.entity{.ts,.js}\"]\n  - `migrations`: [\"dist/migrations/**/*{.ts,.js}\"]",
+    "source": "code_example",
+    "updated_at": 1781040076.5702884
+  },
+  "search:Node.js + TypeORM:node.js typeorm migration stra": {
+    "content": "- **CLI Commands**:\n  - `typeorm migration:create [name]` to create a new migration file.\n  - `typeorm migration:generate --name [name]` to generate a migration based on entity changes.\n  - `typeorm migration:run` to apply migrations to the database.\n  - `typeorm migration:revert` to undo the last applied migration.\n\n- **Latest Versions**:\n  - Ensure using the latest stable version of TypeORM for compatibility and features.\n\n- **Key Config Options**:\n  - `migrationsDir`: Specifies the directory where migration files are stored.\n  - `entitiesDir`: Defines the directory containing entity classes.\n  - `synchronize`: Automatically syncs entities with the database schema (use with caution in production).\n\nThese actionable facts should help developers effectively manage and utilize TypeORM migrations in their projects.",
+    "source": "web_search",
+    "updated_at": 1781040094.7237883
+  },
+  "search:Node.js + TypeORM:node.js typeorm migration stra_ex": {
+    "content": "- **CLI Commands**:\n  - `typeorm migration:create --name <migration-name>`\n  - `typeorm migration:generate`\n  - `typeorm migration:run`\n  - `typeorm migration:revert`\n\n- **Latest Versions**:\n  - Ensure using the latest stable version of TypeORM for compatibility and features.\n\n- **Key Config Options**:\n  - Configure `migrationsDir` in your `ormconfig.json` to specify the directory where migrations are stored.\n  - Use `CLI` flag `-o` with `migration:generate` to output JavaScript files instead of TypeScript.",
+    "source": "code_example",
+    "updated_at": 1781040112.9117825
+  },
+  "search:Node.js + TypeORM:node.js typeorm security pract": {
+    "content": "- **CLI Commands**: Use `npm install typeorm` to install TypeORM.\n- **Latest Version**: Check the latest version on [TypeORM GitHub](https://github.com/typeorm/typeorm).\n- **Key Config Options**:\n  - `type`: Database type (e.g., `postgres`, `mysql`, `sqlite`).\n  - `host`: Database host.\n  - `port`: Database port.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Database name.\n- **Security Practices**:\n  - Use parameterized queries to prevent SQL injection.\n  - Enable connection pooling for efficient database connections.\n  - Regularly update TypeORM and dependencies to patch security vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781040122.2433608
+  },
+  "search:Node.js + TypeORM:node.js typeorm security pract_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install typeorm reflect-metadata --save`\n  - `npx typeorm init`\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - TypeORM: v0.3.x\n\n- **Key Config Options**:\n  - `entities`: Array of entity classes or directories.\n  - `migrations`: Directory where migration files are located.\n  - `synchronize`: Boolean to automatically synchronize schema with entities.\n  - `logging`: Boolean to enable query logging for debugging.\n\nThese actionable facts provide a clear guide for developers to set up and configure TypeORM in their Node.js applications, ensuring both scalability and security.",
+    "source": "code_example",
+    "updated_at": 1781040127.7799728
+  }
+}

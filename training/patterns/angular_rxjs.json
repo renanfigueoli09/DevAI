@@ -1,0 +1,22 @@
+{
+  "search:Angular + RxJS:angular rxjs observables best ": {
+    "content": "- Use `ng generate service <service-name>` to create Angular services.\n- Ensure you are using the latest version of RxJS and Angular for optimal performance.\n- Configure HttpClient in your module with `HttpClientModule`.\n- Implement error handling using `.catchError()` or `try/catch` blocks within observables.\n- Utilize operators like `map`, `filter`, and `switchMap` to transform and combine data streams effectively.\n- For passing data between RxJS pipable operators, use `shareReplay` for shared state across multiple subscribers.\n- Employ `ngOnDestroy` lifecycle hook to unsubscribe from observables to prevent memory leaks.\n- Consider using Angular's built-in forms with `FormControl`, `FormGroup`, and `FormArray` for reactive forms.\n- For real-world examples, refer to the official Angular documentation or Stack Overflow threads.",
+    "source": "web_search",
+    "updated_at": 1781040145.292553
+  },
+  "search:Angular + RxJS:angular rxjs error handling pa": {
+    "content": "- **CLI Commands**: `ng generate service <service-name>`\n- **Latest Versions**: RxJS 7.x, Angular 14.x\n- **Key Config Options**:\n  - `catchError`: Handles errors thrown by observables.\n  - `retry`: Retries the observable a specified number of times before failing.",
+    "source": "web_search",
+    "updated_at": 1781040182.4857473
+  },
+  "search:Angular + RxJS:angular rxjs error handling pa_ex": {
+    "content": "- **CLI Commands**: `ng generate component my-component`\n- **Latest Versions**: RxJS 7.x, Angular 14.x\n- **Key Config Options**:\n  - `errorHandler`: Custom error handler for the application.\n  - `useFactory` in providers for dynamic error handling logic.",
+    "source": "code_example",
+    "updated_at": 1781040205.333482
+  },
+  "search:Angular + RxJS:angular rxjs performance optim": {
+    "content": "- Use `ng generate` to create components, services, etc., ensuring best practices.\n- Update Angular and RxJS to their latest stable versions for performance improvements.\n- Implement the `OnPush` change detection strategy in components where data doesn't frequently change.\n- Utilize `trackBy` functions with lists to optimize rendering performance.\n- Employ lazy loading for modules and components to reduce initial load time.\n- Use the `async` pipe to automatically subscribe and unsubscribe from observables, avoiding memory leaks.\n- Apply RxJS operators like `distinctUntilChanged`, `debounceTime`, and `switchMap` to optimize data streams.\n- Monitor and profile performance using Angular DevTools for identifying bottlenecks.\n- Regularly clean up subscriptions in services or components to prevent memory leaks.",
+    "source": "web_search",
+    "updated_at": 1781040214.7444193
+  }
+}

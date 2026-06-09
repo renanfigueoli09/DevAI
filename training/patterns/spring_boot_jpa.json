@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Hibernate: 6.2.4.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.generate_statistics=true`",
     "source": "code_example",
     "updated_at": 1780938430.807886
+  },
+  "search:Spring Boot + JPA:spring boot jpa best practices": {
+    "content": "- Use `@EntityScan` and `@EnableJpaRepositories` to specify package locations.\n- Implement `equals/hashCode` in entities for proper comparison and caching.\n- Use `@IdClass` or composite keys for complex primary keys.\n- Configure `spring.jpa.properties.hibernate.dialect` for database compatibility.\n- Enable lazy loading with `@Lazy` on associations.\n- Use `@Query` for custom SQL queries to optimize performance.\n- Implement pagination in repositories using `Pageable`.\n- Use `@Transactional` for managing transactions efficiently.\n- Monitor and tune JPA settings like `hibernate.jdbc.batch_size`.",
+    "source": "web_search",
+    "updated_at": 1781039977.904906
+  },
+  "search:Spring Boot + JPA:spring boot jpa best practices_ex": {
+    "content": "- Use `spring-boot-starter-data-jpa` in your `pom.xml` or `build.gradle`.\n- Ensure JPA entities are designed carefully:\n  - Avoid using `@Data` from Lombok.\n  - Implement `equals/hashCode` safely.\n  - Use consistent ID types and reduce JPA magic.\n- Configure Spring Boot properties in `application.properties` or `application.yml`, e.g., database URL, username, password.\n- Utilize Spring Data JPA repositories for data access:\n  ```java\n  public interface BookRepository extends JpaRepository<Book, Long> {\n      // Custom query methods can be defined here\n  }\n  ```\n- Enable caching to optimize performance:\n  ```properties\n  spring.jpa.properties.hibernate.cache.use_second_level_cache=true\n  spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory\n  ```\n- Use Spring Boot DevTools for faster development and live reload.\n- Implement transaction management using `@Transactional` annotation on service methods.\n- Consider using Flyway or Liquibase for database migrations.",
+    "source": "code_example",
+    "updated_at": 1781039984.9796574
+  },
+  "search:Spring Boot + JPA:spring boot jpa security patte": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Security: 6.1.4\n  - JPA (Hibernate): 5.6.7\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for configuration.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`.\n  - `spring.jpa.hibernate.ddl-auto` for database schema management.\n  - `spring.security.user.name` and `spring.security.user.password` for default security setup.",
+    "source": "web_search",
+    "updated_at": 1781040030.811903
+  },
+  "search:Spring Boot + JPA:spring boot jpa security patte_ex": {
+    "content": "- Use `spring init` to create a new Spring Boot project.\n- Add dependencies: `Spring Web`, `Spring Security`, and `Thymeleaf`.\n- Configure security using Java configuration.\n- Utilize JPA for database operations.\n- Implement annotations like `@Entity`, `@Repository`, `@Service`, and `@Controller`.\n- Use `spring-boot-starter-security` for authentication and authorization.\n- Define user roles and permissions in the security configuration.\n- Configure data source properties in `application.properties` or `application.yml`.",
+    "source": "code_example",
+    "updated_at": 1781040047.2878065
   }
 }
