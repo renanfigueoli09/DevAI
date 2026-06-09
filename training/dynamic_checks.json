@@ -1,7 +1,37 @@
 {
-  "generated_at": 1781032860.6670563,
+  "generated_at": 1781033633.0555866,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "Optimizing NGRX Store with Angular: padrões de código",
+      "queries": [
+        "Optimizing NGRX Store with Angular pattern code example",
+        "Optimizing NGRX Store with Angular"
+      ],
+      "must_find": [
+        "@ngrx",
+        "@latest"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Optimizing NGRX Store with Angular"
+    },
+    {
+      "name": "Testing Patterns for TypeScript and Jest Unit Testing: padrões de código",
+      "queries": [
+        "Testing Patterns for TypeScript and Jest Unit Testing pattern code example",
+        "Testing Patterns for TypeScript and Jest Unit Testing"
+      ],
+      "must_find": [
+        "@testing",
+        "@types"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Testing Patterns for TypeScript and Jest Unit Testing"
+    },
     {
       "name": "python-django-celery-redis: cache",
       "queries": [
@@ -33,35 +63,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "nodejs-express-mongodb-advanced"
-    },
-    {
-      "name": "golang-redis-performance: cache",
-      "queries": [
-        "golang-redis-performance cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "golang-redis-performance"
-    },
-    {
-      "name": "typescript-graphql-codegen: padrões de código",
-      "queries": [
-        "typescript-graphql-codegen pattern code example",
-        "typescript-graphql-codegen"
-      ],
-      "must_find": [
-        "@latest",
-        "@realtime"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-graphql-codegen"
     }
   ]
 }
