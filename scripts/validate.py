@@ -130,6 +130,173 @@ KNOWLEDGE_CHECKS = [
     },
 ]
 
+# ─── Geração dinâmica de checks com base no training store ───────────────────
+
+_DYNAMIC_CHECKS_CACHE = None
+_DYNAMIC_CHECKS_FILE  = DEVAI_DIR / "training" / "dynamic_checks.json"
+
+
+def _generate_checks_for_topic(topic: str, content_sample: str, llm=None, model: str = "") -> list[dict]:
+    """
+    Gera checks de validação DETERMINISTICAMENTE a partir do conteúdo do training.
+    Extrai keywords específicos do código encontrado — não depende do LLM.
+    """
+    import re as _re
+
+    checks = []
+    text = content_sample.lower()
+    topic_label = topic.replace("_", " ").replace("+", " + ")
+
+    # Extract code-specific keywords from training content
+    pat_dec = r'@[A-Za-z][A-Za-z]+'
+    pat_cls = r'class ([A-Z][A-Za-z]+)'
+    pat_mth = r'[.](?:findById|findOne|findAll|create|update|delete|save|insert|emit)[(]'
+    decorators = list(dict.fromkeys(_re.findall(pat_dec, content_sample)))[:4]
+    classes    = list(dict.fromkeys(_re.findall(pat_cls, content_sample)))[:3]
+    methods    = list(dict.fromkeys(_re.findall(pat_mth, content_sample)))[:3]
+    imports    = []
+
+    # Build must_find from most specific keywords found
+    must_find = []
+    if decorators: must_find.extend(decorators[:2])
+    if imports:    must_find.extend([i.split("/")[-1] for i in imports[:2]])
+    if methods:    must_find.extend(list(dict.fromkeys(methods))[:2])
+
+    # Only create check if we found meaningful keywords
+    if len(must_find) >= 2:
+        checks.append({
+            "name":      f"{topic_label}: padrões de código",
+            "queries":   [f"{topic} pattern code example", topic_label],
+            "must_find": must_find[:4],
+            "must_not":  [],
+            "weight":    1,
+            "dynamic":   True,
+            "source_topic": topic,
+        })
+
+    # Second check: look for common wrong patterns for this topic type
+    if "mongo" in topic or "mongoose" in topic:
+        checks.append({
+            "name": f"{topic_label}: não usa TypeORM",
+            "queries": [f"{topic} schema service"],
+            "must_find": [kw for kw in ["Mongoose", "mongo", "@Schema", "findById"] if kw.lower() in text][:3],
+            "must_not": ["TypeOrmModule", "@Entity", "Repository<"],
+            "weight": 1,
+            "dynamic": True,
+            "source_topic": topic,
+        })
+    elif "kafka" in topic:
+        checks.append({
+            "name": f"{topic_label}: producer consumer",
+            "queries": [f"{topic} producer consumer example"],
+            "must_find": [kw for kw in ["kafka", "producer", "consumer", "@EventPattern", "emit"] if kw.lower() in text][:3],
+            "must_not": [],
+            "weight": 1,
+            "dynamic": True,
+            "source_topic": topic,
+        })
+    elif "redis" in topic:
+        checks.append({
+            "name": f"{topic_label}: cache",
+            "queries": [f"{topic} cache redis example"],
+            "must_find": [kw for kw in ["redis", "cache", "CacheModule", "CACHE_MANAGER", "ioredis"] if kw.lower() in text][:3],
+            "must_not": [],
+            "weight": 1,
+            "dynamic": True,
+            "source_topic": topic,
+        })
+
+    return [c for c in checks if len(c.get("must_find", [])) >= 1]
+
+
+def load_dynamic_checks(llm=None, model: str = "") -> list[dict]:
+    """
+    Carrega checks dinâmicos gerados a partir dos tópicos treinados.
+    Regenera quando há novos tópicos estudados.
+    """
+    global _DYNAMIC_CHECKS_CACHE
+
+    # Load from cache if recent AND not empty
+    if _DYNAMIC_CHECKS_FILE.exists():
+        try:
+            cached = json.loads(_DYNAMIC_CHECKS_FILE.read_text())
+            age_h  = (time.time() - cached.get("generated_at", 0)) / 3600
+            cached_count = len(cached.get("checks", []))
+            # Check if new topics were added since cache
+            try:
+                from scripts.study import load_journal
+                journal = load_journal()
+                studied_count = sum(1 for e in journal.values() if e.times_studied >= 2)
+                cache_studied = cached.get("studied_count", 0)
+                # Regenerate if: new topics added OR cache is old OR cache is empty
+                if age_h < 12 and cached_count > 0 and studied_count == cache_studied:
+                    _DYNAMIC_CHECKS_CACHE = cached["checks"]
+                    return _DYNAMIC_CHECKS_CACHE
+            except Exception:
+                if age_h < 24 and cached_count > 0:
+                    _DYNAMIC_CHECKS_CACHE = cached["checks"]
+                    return _DYNAMIC_CHECKS_CACHE
+        except Exception:
+            pass
+
+    # llm is optional now — generation is deterministic
+
+    # Generate checks for well-studied topics not yet in KNOWLEDGE_CHECKS
+    existing_topics = {c["name"].lower() for c in KNOWLEDGE_CHECKS}
+    new_checks = []
+
+    try:
+        from tools.vector_store import search_relevant
+        from scripts.study import load_journal, SEARCH_CURRICULUM
+
+        journal = load_journal()
+        # Topics studied well (times_studied >= 2) and not already validated
+        candidate_topics = [
+            t for t, e in sorted(journal.items(),
+                                  key=lambda x: x[1].times_studied, reverse=True)
+            if e.times_studied >= 2
+            and not any(t.replace("_","").replace("+","") in ex for ex in existing_topics)
+        ][:10]  # max 10 new topics to validate
+
+        for topic in candidate_topics:
+            # Get training content for this topic
+            content_sample = search_relevant(
+                f"{topic} pattern example code",
+                limit=2, exclude_topics=["docker","devops"]
+            )
+            if not content_sample or len(content_sample) < 100:
+                continue
+
+            checks = _generate_checks_for_topic(topic, content_sample)
+            for c in checks:
+                c["dynamic"] = True
+                c["source_topic"] = topic
+            new_checks.extend(checks)
+
+    except Exception as e:
+        pass
+
+    # Cache (always save, even if empty, with studied_count for invalidation)
+    try:
+        from scripts.study import load_journal
+        journal = load_journal()
+        studied_count = sum(1 for e in journal.values() if e.times_studied >= 2)
+    except Exception:
+        studied_count = 0
+
+    _DYNAMIC_CHECKS_FILE.write_text(
+        json.dumps({
+            "generated_at": time.time(),
+            "studied_count": studied_count,
+            "checks": new_checks,
+        }, indent=2, ensure_ascii=False)
+    )
+    if new_checks:
+        console.print(f"  [green]✓[/green] {len(new_checks)} checks dinâmicos gerados e salvos")
+
+    _DYNAMIC_CHECKS_CACHE = new_checks
+    return new_checks
+
 
 def _strip_negations(text: str) -> str:
     """Remove linhas que negam termos (NEVER, NOT, don't use, não use)."""
@@ -390,13 +557,23 @@ def force_train(topic: str, llm, model: str) -> int:
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
-def run_knowledge_phase() -> tuple[float, float, list]:
-    """Fase 1: testa o vector store diretamente."""
+def run_knowledge_phase(llm=None, model: str = "") -> tuple[float, float, list]:
+    """Fase 1: testa o vector store diretamente + checks dinâmicos do training."""
     results = []
     total_score = 0.0
     max_score   = 0.0
 
-    for check in KNOWLEDGE_CHECKS:
+    # Static + dynamic checks
+    all_checks = list(KNOWLEDGE_CHECKS)
+    try:
+        dynamic = load_dynamic_checks(llm, model)
+        if dynamic:
+            console.print(f"  [dim]+ {len(dynamic)} checks dinâmicos do training[/dim]")
+            all_checks.extend(dynamic)
+    except Exception:
+        pass
+
+    for check in all_checks:
         passed, score, detail = check_knowledge(check)
         results.append({"name": check["name"], "passed": passed,
                         "score": score, "max": check["weight"], "detail": detail})

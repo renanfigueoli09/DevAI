@@ -526,6 +526,8 @@ def auto_commit(message: str = None) -> bool:
     git_dir = DEVAI_DIR / ".git"
     if not git_dir.exists():
         return False
+
+    # Lock guard
     lock = git_dir / "index.lock"
     waited = 0
     while lock.exists() and waited < 15:
@@ -533,62 +535,84 @@ def auto_commit(message: str = None) -> bool:
     if lock.exists():
         try: lock.unlink()
         except Exception: pass
+
     try:
         msg = message or f"🧠 training: {_t.strftime('%Y-%m-%d %H:%M')}"
-        subprocess.run(["git","add","training/","README.md"], cwd=str(DEVAI_DIR), capture_output=True)
-        if subprocess.run(["git","diff","--cached","--quiet"], cwd=str(DEVAI_DIR)).returncode == 0:
+        cwd = str(DEVAI_DIR)
+
+        # Ensure git user is configured (needed in some environments)
+        subprocess.run(["git","config","user.email","devai@local"], cwd=cwd,
+                       capture_output=True)
+        subprocess.run(["git","config","user.name","DevAI"], cwd=cwd,
+                       capture_output=True)
+
+        # Stage files
+        r_add = subprocess.run(["git","add","training/","README.md"],
+                               cwd=cwd, capture_output=True, text=True)
+
+        # Check if there's anything staged
+        r_diff = subprocess.run(["git","diff","--cached","--quiet"],
+                                cwd=cwd, capture_output=True)
+        if r_diff.returncode == 0:
+            return False  # nothing to commit
+
+        # Commit
+        r_commit = subprocess.run(["git","commit","-m", msg],
+                                  cwd=cwd, capture_output=True, text=True)
+        if r_commit.returncode != 0:
+            # Log the error so it's visible
+            import sys
+            print(f"  [git commit error] {r_commit.stderr.strip()}", file=sys.stderr)
             return False
-        subprocess.run(["git","commit","-m",msg], cwd=str(DEVAI_DIR), capture_output=True)
-        subprocess.run(["git","push"], cwd=str(DEVAI_DIR), capture_output=True)
+
+        # Push (non-blocking — failure is OK)
+        subprocess.run(["git","push"], cwd=cwd, capture_output=True, timeout=30)
         return True
-    except Exception:
+
+    except Exception as _e:
+        import sys
+        print(f"  [auto_commit error] {_e}", file=sys.stderr)
         return False
+
+
+_LAST_SYNC_FILE = DEVAI_DIR / "training" / ".last_sync"
+_SYNC_INTERVAL  = 3600  # só re-sincroniza após 1h
 
 
 def sync_patterns_to_vectors() -> int:
     """
-    Sincroniza todos os JSON de patterns com o LanceDB.
-    Lê cada patterns/*.json e garante que cada item tem embedding no LanceDB.
-    Roda no início de cada ciclo de treinamento para manter tudo atualizado.
-    Retorna número de itens sincronizados.
+    Sincroniza patterns JSON → LanceDB de forma rápida.
+    - Pula se já foi feito há menos de 1h
+    - Usa backfill_embeddings() (que já é incremental) em vez de iterar tudo
+    - Retorna número de itens sincronizados
     """
+    import time as _time
+
+    # Checa se sync recente já foi feito
+    if _LAST_SYNC_FILE.exists():
+        try:
+            last = float(_LAST_SYNC_FILE.read_text())
+            if _time.time() - last < _SYNC_INTERVAL:
+                return 0  # feito recentemente — pula
+        except Exception:
+            pass
+
     if not PATTERNS_DIR.exists():
         return 0
 
+    # Merge duplicates first (fast file operation)
+    _merge_duplicate_patterns()
+
+    # backfill_embeddings já processa só itens sem embedding — muito mais rápido
     try:
-        from tools.embeddings import embed, model_available
-        if not model_available():
-            return backfill_embeddings()
+        synced = backfill_embeddings()
     except Exception:
-        return 0
+        synced = 0
 
-    synced = 0
-    idx = _load_index()
-
-    for json_file in PATTERNS_DIR.glob("*.json"):
-        try:
-            data = json.loads(json_file.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-
-        for key, entry in data.items():
-            content = entry.get("content", "")
-            topic   = json_file.stem  # already normalized
-            # Check if already in LanceDB with embedding
-            already_embedded = key in idx and _lance_available()
-            if already_embedded:
-                try:
-                    tbl = _get_table()
-                    rows = tbl.search(None).where(f"id = '{key}'", prefilter=True).limit(1).to_list()
-                    if rows:
-                        continue  # already has embedding
-                except Exception:
-                    pass
-
-            # Generate embedding and save
-            emb = embed(f"{key}\n{content[:600]}")
-            if emb:
-                save(key, content, topic=topic, source=entry.get("source","pattern"), embedding=emb)
-                synced += 1
+    # Marca timestamp do sync
+    try:
+        _LAST_SYNC_FILE.write_text(str(_time.time()))
+    except Exception:
+        pass
 
     return synced
