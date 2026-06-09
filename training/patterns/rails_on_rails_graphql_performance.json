@@ -1,0 +1,22 @@
+{
+  "search:rails-on-rails-graphql-performance:rails on rails graphql perform": {
+    "content": "- **CLI Commands**:\n  - `rails generate graphql:install`\n  - `bundle install`\n\n- **Latest Versions**:\n  - GraphQL gem version: [Check latest on RubyGems](https://rubygems.org/gems/graphql)\n  - Rails version: [Check latest on RubyGems](https://rubygems.org/gems/rails)\n\n- **Key Config Options**:\n  - `config/initializers/graphql.rb`: Configure GraphQL settings.\n  - `config/routes.rb`: Define GraphQL routes.\n  - `app/graphql/types/schema.rb`: Define the schema for your API.",
+    "source": "web_search",
+    "updated_at": 1781032441.0191152
+  },
+  "search:rails-on-rails-graphql-performance:rails on rails graphql perform_ex": {
+    "content": "- Use `rails new myapp --api` to create a new Rails API project.\n- Install GraphQL by adding `gem 'graphql'` and `gem 'graphiql-rails'` to your Gemfile, then run `bundle install`.\n- Configure GraphQL in `config/initializers/graphql.rb` with schema definition.\n- Use `GraphiQL::Rails::Engine` for an interactive GraphQL interface at `/graphiql`.\n- Implement caching strategies using Rails cache stores (e.g., Redis) and GraphQL's caching directives.\n- Optimize queries by using eager loading (`includes`) and avoiding N+1 queries.\n- Monitor performance with tools like New Relic or Skylight.\n- Use `graphql-batch` for efficient batching of database queries.\n- Regularly update gems to the latest versions (e.g., `bundle update graphql graphiql-rails`).",
+    "source": "code_example",
+    "updated_at": 1781032449.3305964
+  },
+  "search:rails-on-rails-graphql-performance:optimizing rails on rails grap": {
+    "content": "- Use `rails generate graphql:install` to set up GraphQL in your Rails application.\n- Update gems like `graphql-rails`, `graphiql-rails`, and `bullet` to their latest versions for optimal performance.\n- Configure `Bullet` by adding it to `config/environments/development.rb`:\n  ```ruby\n  config.after_initialize do\n    Bullet.enable = true\n    Bullet.alert = true\n    Bullet.bullet_logger = true\n    Bullet.console = true\n    Bullet.add_footer = true\n  end\n  ```\n- Implement eager loading in your GraphQL queries to reduce N+1 issues. Use `includes` method.\n- Create a `schema.rb` file for defining your GraphQL schema and types.\n- Utilize `graphiql-rails` for an interactive GraphQL explorer during development.\n- Apply strategic indexing on database tables, especially those frequently queried.\n- Optimize queries by avoiding unnecessary joins and using `where` clauses effectively.\n- Use `Devise` for authentication in Rails applications to secure your API.\n- Regularly run tests with `N+1 Control` to ensure query performance meets expectations.",
+    "source": "web_search",
+    "updated_at": 1781032459.9749281
+  },
+  "search:rails-on-rails-graphql-performance:optimizing rails on rails grap_ex": {
+    "content": "- Use `rails g graphql:install` to set up GraphQL in your Rails application.\n- Update the `config/initializers/graphql.rb` file for configuration options like default max complexity and depth.\n- Implement batching with `graphql-batch` gem to reduce N+1 queries.\n- Use `graphiql-rails` for an interactive query interface during development.\n- Optimize database queries by using eager loading (`includes`) or preloading (`preload`) associations.\n- Apply caching strategies like fragment caching or HTTP caching headers.\n- Monitor performance with tools like New Relic or Skylight to identify bottlenecks.\n- Regularly update gems and Rails version for security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781032475.4373882
+  }
+}

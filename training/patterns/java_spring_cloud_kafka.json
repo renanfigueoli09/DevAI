@@ -1,0 +1,12 @@
+{
+  "search:java-spring-cloud-kafka:java spring cloud kafka stream": {
+    "content": "- **Latest Version**: Spring Cloud Stream Binder Kafka version 3.2.0.RELEASE as of April 1, 2026.\n  \n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.cloud.stream.kafka.binder.configuration.auto.offset.reset`: Sets the offset reset policy (e.g., `earliest`, `latest`).\n  \n- **CLI Commands**:\n  - To add Spring Cloud Stream Binder Kafka to your Maven project, use:\n    ```bash\n    mvn dependency:add -DgroupId=org.springframework.cloud -DartifactId=spring-cloud-starter-stream-kafka -Dversion=3.2.0.RELEASE\n    ```\n  - To refresh the environment and reset partition count, use:\n    ```bash\n    ./mvnw spring-boot:run -Dspring-boot.run.arguments=\"--spring.cloud.stream.kafka.binder.configuration.auto.offset.reset=earliest\"\n    ```\n\n- **GitHub Release Notes**:\n  - Check [Releases](https://github.com/spring-cloud/spring-cloud-stream/releases) for detailed information on version 3.2.0.RELEASE and other versions.\n  \n- **Documentation Links**:\n  - [Spring Cloud Stream Kafka Binder Reference Guide](https://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#spring-cloud-stream-binder-kafka)\n  - [Spring Cloud Stream Kafka Integration](https://www.baeldung.com/spring-cloud-stream-kafka-integration)",
+    "source": "web_search",
+    "updated_at": 1781032605.894089
+  },
+  "search:java-spring-cloud-kafka:java spring cloud kafka stream_ex": {
+    "content": "- **Latest Version**: Spring Cloud Kafka Streams 3.0.0\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.streams.binder.applicationId`\n  - `spring.cloud.stream.bindings.input.destination`\n  - `spring.cloud.stream.bindings.output.destination`\n- **CLI Commands**:\n  ```bash\n  mvn clean install\n  ```\n  ```bash\n  ./mvnw spring-boot:run\n  ```\n- **Example Application**:\n  - Repository: [stockgeeks/spring-boot-kafka-confluent-cloud](https://github.com/stockgeeks/spring-boot-kafka-confluent-cloud)\n  - Contains Avro schema and generated Java code for Kafka integration.",
+    "source": "code_example",
+    "updated_at": 1781032611.8074977
+  }
+}

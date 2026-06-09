@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-mongoose-advanced:node.js express mongoose advan": {
+    "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n  - `npx create-express-app myapp` (for creating a new Express app)\n- **Key Config Options**:\n  - `mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })`\n  - `const schema = new mongoose.Schema({ name: String, age: Number });`\n  - `model.find(query).exec()`\n  - `model.findOneAndUpdate(filter, update, options)`\n- **Advanced Queries**:\n  - `.sort({ field: 'asc' })` for sorting\n  - `.limit(10)` to limit results\n  - `.skip(5)` to skip initial documents",
+    "source": "web_search",
+    "updated_at": 1781032493.8847666
+  },
+  "search:nodejs-express-mongoose-advanced:node.js express mongoose advan_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `npm start`\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - MongoDB connection string in `.env` or directly in code.\n  - Schema definition for data models.\n  - Middleware for request handling and validation.",
+    "source": "code_example",
+    "updated_at": 1781032508.7615337
+  },
+  "search:nodejs-express-mongoose-advanced:optimizing node.js express mon": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `nodemon app.js` for development\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.18.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - Express: `app.set('trust proxy', true)` for handling proxied requests.\n  - Mongoose: `mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })` for connecting to MongoDB with best practices.",
+    "source": "web_search",
+    "updated_at": 1781032518.167346
+  },
+  "search:nodejs-express-mongoose-advanced:optimizing node.js express mon_ex": {
+    "content": "- Use `npm init` to create a new Node.js project.\n- Install dependencies using `npm install express mongoose body-parser cors`.\n- Update Express and Mongoose to their latest versions with `npm update express mongoose`.\n- Configure Mongoose connection in your app:\n  ```javascript\n  const mongoose = require('mongoose');\n  mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true });\n  ```\n- Implement middleware for parsing JSON bodies:\n  ```javascript\n  const bodyParser = require('body-parser');\n  app.use(bodyParser.json());\n  ```\n- Use CORS to allow cross-origin requests:\n  ```javascript\n  const cors = require('cors');\n  app.use(cors());\n  ```\n- Create a simple CRUD API using Express and Mongoose.\n- Optimize performance with caching strategies, such as Redis or Memcached.\n- Monitor application performance using tools like New Relic or Datadog.",
+    "source": "code_example",
+    "updated_at": 1781032525.2114706
+  }
+}
