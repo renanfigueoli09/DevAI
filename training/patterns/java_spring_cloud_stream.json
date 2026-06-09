@@ -1,0 +1,22 @@
+{
+  "search:java-spring-cloud-stream:java spring cloud stream kafka": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 4.0.0\n  - Spring Kafka: 3.0.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output bindings.\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.",
+    "source": "web_search",
+    "updated_at": 1781043193.4006076
+  },
+  "search:java-spring-cloud-stream:java spring cloud stream kafka_ex": {
+    "content": "- **Latest Version**: Spring Cloud Stream 3.2.x, Apache Kafka 3.4.x\n- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output.\n  - `spring.kafka.bootstrap-servers`: Kafka broker addresses.",
+    "source": "code_example",
+    "updated_at": 1781043199.1103196
+  },
+  "search:java-spring-cloud-stream:spring cloud stream error hand": {
+    "content": "- Use `@ServiceActivator` to handle errors in Spring Cloud Stream.\n- Configure error handlers through the `@ServiceActivator` annotation.\n- For external error handling, refer to the Spring Cloud Stream documentation for specific configurations.\n- Test error flows using `spring-cloud-stream-test`.\n- Handle exceptions in Kafka Streams by catching runtime exceptions and shutting down the KStream if not handled.",
+    "source": "web_search",
+    "updated_at": 1781043209.6504407
+  },
+  "search:java-spring-cloud-stream:spring cloud stream error hand_ex": {
+    "content": "- Update Spring Cloud Stream dependency to version 3.5.2 in your `pom.xml`.\n- Use `@Bean` annotation for error handlers.\n- Configure external destination for error propagation, e.g., a Kafka topic.\n- Implement custom error handling logic using Spring Cloud Stream's features.\n- Ensure proper configuration of Dead Letter Queues (DLQs) for fault-tolerant stream processing.",
+    "source": "code_example",
+    "updated_at": 1781043216.4192307
+  }
+}

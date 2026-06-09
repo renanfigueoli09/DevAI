@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npm install prisma --save-dev`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n\n- **Key Config Options**:\n  - In `prisma/schema.prisma`:\n    - Define data models using Prisma schema language.\n    - Configure database connection URL in the `datasource` block.\n  - In `next.config.js`:\n    - Add environment variables for sensitive information like database URLs.",
     "source": "code_example",
     "updated_at": 1780940492.4831626
+  },
+  "search:typescript+nextjs-prisma:typescript next.js prisma inte": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates a new migration based on the current state of your models.\n\n- **Latest Versions**:\n  - Prisma: v4.10.0\n  - Next.js: v13.5\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and relations.\n  - `next.config.js`: Configures Next.js, including API routes and static generation settings.\n  - `.env.local`: Stores environment variables for Prisma connection strings.\n\n- **Integration Steps**:\n  1. Initialize Prisma: `npx prisma init`\n  2. Define your data model in `schema.prisma`.\n  3. Generate Prisma Client: `prisma generate`\n  4. Use Prisma Client in Next.js API routes or custom hooks.\n  5. Configure database connection URL in `.env.local`.\n\n- **Performance Optimization**:\n  - Use Prisma's query engine for efficient data retrieval.\n  - Implement caching strategies to optimize revalidation of fetched data.\n\n- **Additional Resources**:\n  - [Prisma Documentation](https://www.prisma.io/docs)\n  - [Next.js Framework Guides](https://nextjs.org/docs/api-reference/overview)",
+    "source": "web_search",
+    "updated_at": 1781043123.6357973
+  },
+  "search:typescript+nextjs-prisma:typescript next.js prisma inte_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `prisma init`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.10\n\n- **Key Config Options**:\n  - `next.config.js`: Enable TypeScript support.\n  - `.env.local`: Define environment variables for database connection.\n  - `prisma/schema.prisma`: Define data models and relations.\n\n- **Setup Steps**:\n  1. Create a new Next.js app: `npx create-next-app@latest my-prisma-app`\n  2. Initialize Prisma: `cd my-prisma-app && prisma init`\n  3. Define your database schema in `prisma/schema.prisma`.\n  4. Generate Prisma Client: `npx prisma generate`\n  5. Use Prisma Client in your Next.js API routes or components.\n\n- **Best Practices**:\n  - Use TypeScript for type safety.\n  - Keep your Prisma schema DRY (Don't Repeat Yourself).\n  - Utilize Prisma Migrate for database migrations.",
+    "source": "code_example",
+    "updated_at": 1781043131.146069
+  },
+  "search:typescript+nextjs-prisma:next.js prisma orm best practi": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n  - `prisma generate`: Generates Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: v5.0.0\n  - Next.js: v13.4\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and relations.\n  - `prismaClientOptions`: Customizes the behavior of Prisma Client.\n  - `next.config.js`: Configures Next.js project settings, including API routes and environment variables.",
+    "source": "web_search",
+    "updated_at": 1781043139.8284369
+  },
+  "search:typescript+nextjs-prisma:next.js prisma orm best practi_ex": {
+    "content": "- **CLI Commands**: \n  - `npx prisma init` to initialize Prisma in your project.\n  - `prisma generate` to generate the Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Ensure you are using the latest versions of Next.js and Prisma by running `npm update next prisma`.\n\n- **Key Config Options**:\n  - In `next.config.js`, add `experimental: { appDir: true }` to enable the App Router.\n  - Configure your database connection in `.env.local` with `DATABASE_URL=postgresql://user:password@localhost:5432/mydb`.\n  - Define your data models in `prisma/schema.prisma`.\n\n- **Best Practices**:\n  - Use Prisma Migrate for schema migrations to avoid conflicts.\n  - Utilize Prisma Client for database operations to benefit from type safety and auto-completion.",
+    "source": "code_example",
+    "updated_at": 1781043151.6135545
   }
 }

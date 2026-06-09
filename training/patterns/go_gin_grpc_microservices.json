@@ -1,0 +1,22 @@
+{
+  "search:go-gin-grpc-microservices:go gin grpc microservices arch": {
+    "content": "- **CLI Commands**:\n  - `go get google.golang.org/grpc`\n  - `protoc --go_out=. --go-grpc_out=. path/to/your/protofile.proto`\n\n- **Latest Versions**:\n  - Go: v1.20.3\n  - gRPC: v1.54.0\n\n- **Key Config Options**:\n  - `grpc.WithInsecure()`: For development without TLS.\n  - `grpc.WithTransportCredentials(credentials.NewTLS(nil))`: For production with TLS.\n  - `server := grpc.NewServer()`: To create a new gRPC server instance.",
+    "source": "web_search",
+    "updated_at": 1781043160.8087533
+  },
+  "search:go-gin-grpc-microservices:go gin grpc microservices arch_ex": {
+    "content": "- **CLI Commands**:\n  - `go get google.golang.org/grpc`\n  - `protoc --go_out=. *.proto`\n\n- **Latest Versions**:\n  - Go: v1.20.3\n  - gRPC: v1.54.0\n\n- **Key Config Options**:\n  - `grpcClient.name`: Service name.\n  - `grpcClient.host`: Service host.\n  - `grpcClient.port`: Service port.\n  - `registryDiscoveryType`: Registry discovery type (empty for direct connection).\n  - `enableLoadBalance`: Enable load balancing.",
+    "source": "code_example",
+    "updated_at": 1781043166.29464
+  },
+  "search:go-gin-grpc-microservices:grpc microservices performance": {
+    "content": "- **CLI Commands**:\n  - `protoc --go_out=. --go-grpc_out=. path/to/your/protofile.proto`\n  - `nest start` for starting a NestJS application\n\n- **Latest Versions**:\n  - Node.js: v16.x or later\n  - gRPC: v2.0.x\n  - Protocol Buffers (protobuf): v3.17.x\n  - NestJS: v8.x\n\n- **Key Config Options**:\n  - `grpc.max_send_message_length`: Set to `-1` for unlimited message size.\n  - `grpc.max_receive_message_length`: Set to `-1` for unlimited message size.\n  - Use HTTP/2 for transport in gRPC to leverage its multiplexing and header compression features.",
+    "source": "web_search",
+    "updated_at": 1781043177.5502212
+  },
+  "search:go-gin-grpc-microservices:grpc microservices performance_ex": {
+    "content": "- Use `npm install -g @grpc/proto-loader` to install the gRPC proto loader.\n- Update Node.js to version 14 or higher for optimal performance with gRPC.\n- Configure gRPC server options in your service code, e.g., `server.setMaxListeners(0)` to avoid listener count warnings.\n- Implement JWT authentication and authorization using Spring Security as shown in [1].\n- Use TypeScript with gRPC by installing `@grpc/grpc-js` and `@grpc/proto-loader`.\n- For high-performance microservices, consider using Node.js v14 or higher along with gRPC and TypeScript.\n- Design aggregator client APIs as simple NestJS applications to manage microservice interactions effectively.",
+    "source": "code_example",
+    "updated_at": 1781043185.5564933
+  }
+}
