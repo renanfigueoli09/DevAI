@@ -1,7 +1,35 @@
 {
-  "generated_at": 1781040558.2737274,
+  "generated_at": 1781041213.7276108,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "nextjs-graphql-integration: padrões de código",
+      "queries": [
+        "nextjs-graphql-integration pattern code example",
+        "nextjs-graphql-integration"
+      ],
+      "must_find": [
+        "@sentry",
+        "@latest"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nextjs-graphql-integration"
+    },
+    {
+      "name": "python-django-celery-redis-error-handling: cache",
+      "queries": [
+        "python-django-celery-redis-error-handling cache redis example"
+      ],
+      "must_find": [
+        "redis"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "python-django-celery-redis-error-handling"
+    },
     {
       "name": "kubernetes-mongodb-replication: não usa TypeORM",
       "queries": [
@@ -35,23 +63,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "typescript-prisma-mongodb"
-    },
-    {
-      "name": "golang-mongo-go-migrate: não usa TypeORM",
-      "queries": [
-        "golang-mongo-go-migrate schema service"
-      ],
-      "must_find": [
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "golang-mongo-go-migrate"
     }
   ]
 }
