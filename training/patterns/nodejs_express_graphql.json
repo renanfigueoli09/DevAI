@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-graphql:node.js express graphql perfor": {
+    "content": "- Use `apollo-server-express` for efficient GraphQL server setup.\n- Implement batching and caching strategies to reduce latency.\n- Optimize resolver functions for faster data retrieval.\n- Utilize DataLoader for batch loading of related entities.\n- Enable query complexity validation to prevent resource exhaustion.\n- Configure Apollo Server's `cacheControl` option for fine-grained control over caching.\n- Monitor performance using tools like Apollo Engine or Apollo Tracing.\n- Regularly update dependencies to the latest versions for security and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781045959.2282526
+  },
+  "search:nodejs-express-graphql:node.js express graphql perfor_ex": {
+    "content": "- Use `npm install apollo-server-express prisma` to install necessary packages.\n- Initialize Apollo Server with `const server = new ApolloServer({ typeDefs, resolvers });`.\n- Apply middleware to Express app with `server.applyMiddleware({ app })`.\n- For large datasets, use pagination and filtering techniques.\n- Optimize schema design by using interfaces and unions.\n- Enable caching on the server side for repeated queries.\n- Use DataLoader for batching similar data requests.\n- Monitor performance with Apollo Engine or custom logging.\n- Regularly update packages to their latest versions.",
+    "source": "code_example",
+    "updated_at": 1781045964.4559462
+  },
+  "search:nodejs-express-graphql:graphql subscriptions in node.": {
+    "content": "- **CLI Commands**:\n  - `npm init` to create a new Node.js project.\n  - `npm install express apollo-server-express graphql` to install necessary packages.\n\n- **Latest Versions**:\n  - Apollo Server: v3.x\n  - Express: v4.18.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - Define schema using `graphql-tools`.\n  - Use `ApolloServer` for setting up the server.\n  - Configure subscriptions with `subscriptions-transport-ws`.\n\n- **Example Code Snippet**:\n  ```javascript\n  const express = require('express');\n  const { ApolloServer, gql } = require('apollo-server-express');\n\n  // Define your schema\n  const typeDefs = gql`\n    type Query {\n      hello: String\n    }\n  `;\n\n  // Implement resolvers\n  const resolvers = {\n    Query: {\n      hello: () => 'Hello world!',\n    },\n  };\n\n  // Create Apollo Server instance\n  const server = new ApolloServer({ typeDefs, resolvers });\n\n  // Apply middleware to Express app\n  const app = express();\n  server.applyMiddleware({ app });\n\n  // Start the server\n  app.listen({ port: 4000 }, () =>\n    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)\n  );\n  ```",
+    "source": "web_search",
+    "updated_at": 1781045974.4318833
+  },
+  "search:nodejs-express-graphql:graphql subscriptions in node._ex": {
+    "content": "- **CLI Commands**:\n  - `npm install express graphql express-graphql subscriptions-transport-ws`\n  \n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.18.x\n  - GraphQL: 16.x\n  - subscriptions-transport-ws: 0.9.x\n\n- **Key Config Options**:\n  - `server.listen({ port: 4000 })` for starting the server on port 4000.\n  - `new ApolloServer({ typeDefs, resolvers }).listen()` to set up GraphQL server with type definitions and resolvers.\n  - `wsServer.installSubscriptionHandlers(httpServer)` to integrate WebSocket subscriptions.",
+    "source": "code_example",
+    "updated_at": 1781045981.977224
+  }
+}
