@@ -251,12 +251,20 @@ def load_dynamic_checks(llm=None, model: str = "") -> list[dict]:
 
         journal = load_journal()
         # Topics studied well (times_studied >= 2) and not already validated
+        # Include all studied topics (times_studied >= 1) not already in static checks
+        # Sort: most recently studied first → validates the freshest knowledge
         candidate_topics = [
             t for t, e in sorted(journal.items(),
-                                  key=lambda x: x[1].times_studied, reverse=True)
-            if e.times_studied >= 2
-            and not any(t.replace("_","").replace("+","") in ex for ex in existing_topics)
-        ][:10]  # max 10 new topics to validate
+                                  key=lambda x: x[1].last_studied, reverse=True)
+            if e.times_studied >= 1
+            and e.items_saved > 0
+            and not any(
+                # Skip if already covered by a static check name
+                kw in t.replace("_","").replace("+","")
+                for kw in ["mongoose","partialtype","livros","usuário","docker","spring","fastapi"]
+                if any(kw in c["name"].lower() for c in KNOWLEDGE_CHECKS)
+            )
+        ][:20]  # up to 20 new topics
 
         for topic in candidate_topics:
             # Get training content for this topic
