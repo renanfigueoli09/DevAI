@@ -1,0 +1,12 @@
+{
+  "search:golang-grpc-performance:grpc in golang for microservic": {
+    "content": "- **CLI Commands**:\n  - `protoc --go_out=. path/to/your/protofile.proto`\n  - `go get google.golang.org/grpc/cmd/protoc-gen-go`\n\n- **Latest Versions**:\n  - gRPC Go: v1.54.0 (as of my last update)\n  - Protocol Buffers: v3.21.6\n\n- **Key Config Options**:\n  - `grpc.WithInsecure()`: For development without TLS.\n  - `grpc.WithTransportCredentials(credentials.NewTLS(nil))`: For production with TLS.\n  - `server := grpc.NewServer()`: Creates a new gRPC server instance.\n  - `conn, err := grpc.Dial(\"localhost:50051\", grpc.WithInsecure())`: Connects to a gRPC server.",
+    "source": "web_search",
+    "updated_at": 1781047819.6402435
+  },
+  "search:golang-grpc-performance:grpc in golang for microservic_ex": {
+    "content": "- **CLI Commands**:\n  - `protoc --go_out=. path/to/your/protofile.proto`\n  - `docker build -t your-image-name .`\n  - `docker run -p 50051:50051 your-image-name`\n\n- **Latest Versions**:\n  - Go: v1.20\n  - gRPC: v1.48.0\n\n- **Key Config Options**:\n  - `server := grpc.NewServer()`\n  - `lis, err := net.Listen(\"tcp\", \":50051\")`\n  - `grpc.WithInsecure()`",
+    "source": "code_example",
+    "updated_at": 1781047825.3790438
+  }
+}

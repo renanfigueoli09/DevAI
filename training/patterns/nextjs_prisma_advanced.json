@@ -18,5 +18,15 @@
     "content": "- **CLI Commands**:\n  - `pnpm db:generate`: Generates Prisma Client based on the schema.\n  - `pnpm db:push`: Applies migrations to the database.\n\n- **Latest Versions**:\n  - Prisma: Latest version as of my last update (2023).\n  - Next.js: Latest LTS version as of my last update (2023).\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database schema.\n  - `prismaClientOptions`: Configuration options for the Prisma Client.",
     "source": "code_example",
     "updated_at": 1781045877.6369982
+  },
+  "search:nextjs-prisma-advanced:prisma with next.js performanc": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest prisma-nextjs`\n  - `npm install @prisma/client prisma --save-dev`\n\n- **Latest Versions**:\n  - Next.js: 14.x\n  - Prisma: 5.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data models.\n  - `next.config.js`: Configure Prisma with environment variables for database URL.",
+    "source": "web_search",
+    "updated_at": 1781047781.5694532
+  },
+  "search:nextjs-prisma-advanced:prisma with next.js performanc_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies migrations based on your Prisma schema.\n\n- **Latest Versions**:\n  - Prisma: v5.x\n  - Next.js: v13.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and database connection.\n  - `next.config.js`: Configures Next.js settings, including API routes and static generation.",
+    "source": "code_example",
+    "updated_at": 1781047788.3127494
   }
 }

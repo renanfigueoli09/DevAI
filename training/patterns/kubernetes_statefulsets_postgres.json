@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-statefulsets-postgres:kubernetes statefulsets for po": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy a StatefulSet.\n- Ensure your PostgreSQL deployment YAML specifies `volumeClaimTemplates` for persistent storage.\n- Set `spec.serviceName` in the StatefulSet to create a stable network identity.\n- Configure `replicas` under `spec` to define the number of PostgreSQL instances.\n- Use `kubectl rollout status statefulset/<statefulset-name>` to monitor deployment progress.\n- For backups, consider using Kubernetes CronJobs with `initContainers` for pre-backup operations.\n- Update StatefulSet configurations by editing the YAML and applying changes with `kubectl apply`.\n- Monitor StatefulSet health with `kubectl get pods -l app=<app-label> --watch`.\n- Use `kubectl scale statefulset/<statefulset-name> --replicas=<new-replica-count>` to adjust instance count.\n- For rolling updates, ensure your StatefulSet is configured for ordered, graceful updates.",
+    "source": "web_search",
+    "updated_at": 1781047834.9948134
+  },
+  "search:kubernetes-statefulsets-postgres:kubernetes statefulsets for po_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy StatefulSet.\n- Ensure the StatefulSet YAML specifies `volumeClaimTemplates` for persistent storage.\n- Set `replicas` in the StatefulSet spec to define the number of PostgreSQL instances.\n- Configure environment variables like `POSTGRES_PASSWORD`, `POSTGRES_USER`, and `POSTGRES_DB`.\n- Use `kubectl get pods -l app=<app-label>` to check the status of your PostgreSQL pods.\n- For replication, ensure each pod has a unique hostname using `$(POD_NAME)` in the StatefulSet spec.\n- Update the StatefulSet by modifying the YAML file and applying it again with `kubectl apply`.\n- Use `kubectl exec -it <pod-name> -- psql` to access the PostgreSQL database within a pod.\n- Monitor logs with `kubectl logs <pod-name>` for troubleshooting.\n- Ensure network policies are configured correctly if deploying in a multi-tenant environment.",
+    "source": "code_example",
+    "updated_at": 1781047844.5750573
+  },
+  "search:kubernetes-statefulsets-postgres:postgresql performance tuning ": {
+    "content": "- **Update PostgreSQL and Kubernetes**: Use `kubectl apply -f <manifest-file>` to update deployments.\n- **Latest Versions**: Check [PostgreSQL](https://www.postgresql.org/docs/current/release-notes.html) and [Kubernetes](https://kubernetes.io/releases/) for the latest stable releases.\n- **Key Config Options**:\n  - `resources`: Set CPU and memory limits in deployment YAMLs.\n  - `storageClass`: Use a high-performance storage class for PostgreSQL data volumes.\n  - `affinity`/`anti-affinity`: Configure to run PostgreSQL on specific nodes or avoid colocation with other workloads.\n- **CLI Commands**:\n  - `kubectl get pods`: List all running pods.\n  - `kubectl describe pod <pod-name>`: Get detailed information about a pod.\n  - `kubectl logs <pod-name>`: View logs for a pod.\n  - `kubectl exec -it <pod-name> -- psql -U postgres`: Access PostgreSQL shell within a pod.",
+    "source": "web_search",
+    "updated_at": 1781047853.4616804
+  },
+  "search:kubernetes-statefulsets-postgres:postgresql performance tuning _ex": {
+    "content": "- Use `kubectl apply -f postgresql-deployment.yaml` to deploy PostgreSQL on Kubernetes.\n- Ensure you use the latest version of PostgreSQL, as of my last update, it's 15.x.\n- Key config options include setting `resources.requests` and `resources.limits` for CPU and memory.\n- Utilize StatefulSets for persistent storage with PersistentVolumeClaims.\n- Employ a ReadWriteOnce (RWO) storage class for your PostgreSQL pods.\n- Monitor performance using tools like Prometheus and Grafana.\n- Regularly update Kubernetes and PostgreSQL to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781047859.5049665
+  }
+}

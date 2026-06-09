@@ -1,0 +1,22 @@
+{
+  "search:fastapi-asyncio-performance-analysis:fastapi with asyncio performan": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development.\n  - `uvicorn main:app --host 0.0.0.0 --port 8000` for production.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.2\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `asyncio.run(app)` for running the application.\n  - `app.include_router(router)` to include routers.\n  - `app.state` for storing state across requests.\n  - `app.middleware(\"http\")` for adding middleware.",
+    "source": "web_search",
+    "updated_at": 1781047871.0510168
+  },
+  "search:fastapi-asyncio-performance-analysis:fastapi with asyncio performan_ex": {
+    "content": "- **FastAPI Version**: Use `fastapi==0.95.0`\n- **Async SQLAlchemy Version**: Use `SQLAlchemy[asyncio]==2.0.0`\n- **Alembic Version**: Use `alembic==1.8.3`\n- **pytest Version**: Use `pytest==7.1.2`\n- **asyncpg Version**: Use `asyncpg==0.25.0`\n\n**CLI Commands**:\n- Create a new FastAPI project: `fastapi create myproject`\n- Run FastAPI app: `uvicorn myproject.main:app --reload`\n- Run tests: `pytest`\n\n**Key Config Options**:\n- **FastAPI**: Use `async def` for asynchronous endpoints.\n- **SQLAlchemy**: Configure async engine with `create_async_engine`.\n- **Alembic**: Set up async migrations using `alembic init --name alembic`.\n- **pytest**: Use `pytest-asyncio` plugin for testing asynchronous code.",
+    "source": "code_example",
+    "updated_at": 1781047882.9054036
+  },
+  "search:fastapi-asyncio-performance-analysis:optimizing fastapi application": {
+    "content": "- Use `uvicorn` with the `--reload` flag during development.\n- Upgrade to FastAPI and Starlette to their latest versions for performance improvements.\n- Implement async programming using `async/await`.\n- Utilize caching mechanisms like Redis or Memcached.\n- Optimize database queries and use connection pooling.\n- Configure logging levels appropriately in production.\n- Use environment variables for sensitive data and configuration settings.\n- Monitor API performance with tools like Prometheus and Grafana.\n- Regularly update dependencies to benefit from security patches and performance enhancements.",
+    "source": "web_search",
+    "updated_at": 1781047902.4092724
+  },
+  "search:fastapi-asyncio-performance-analysis:optimizing fastapi application_ex": {
+    "content": "- Use `uvicorn` with the `--reload` flag during development to enable auto-reload.\n- Update FastAPI to the latest version using pip: `pip install fastapi --upgrade`.\n- Implement caching mechanisms like Redis or Memcached for data retrieval optimization.\n- Configure database connections efficiently, adjusting pool sizes and timeouts.\n- Use asynchronous programming with `async/await` for non-blocking I/O operations.\n- Deploy on a server that supports async processing, such as Uvicorn or Hypercorn.\n- Enable HTTP/2 in your web server configuration for better performance.\n- Utilize middleware for logging, authentication, and other cross-cutting concerns.\n- Optimize database queries using indexes and query optimization techniques.\n- Consider deploying behind a CDN to reduce latency for global users.",
+    "source": "code_example",
+    "updated_at": 1781047909.9612858
+  }
+}
