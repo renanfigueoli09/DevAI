@@ -1,0 +1,22 @@
+{
+  "search:Error Handling in Next.js + Supabase Realtime:error handling nextjs": {
+    "content": "- Use `next error` to handle errors in Next.js.\n- Implement global error handling using `_app.js`.\n- Utilize the `getInitialProps` method for server-side rendering error handling.\n- For client-side errors, use React's Error Boundary component.\n- Update Next.js to the latest version for bug fixes and improvements.\n- Configure `next.config.js` with appropriate settings for production environments.\n- Use `next/error` for custom 404 and 500 pages.\n- Implement structured error logging using tools like Sentry or LogRocket.\n- Avoid using `try-catch` blocks in server-side rendering to prevent memory leaks.",
+    "source": "web_search",
+    "updated_at": 1781011914.2385936
+  },
+  "search:Error Handling in Next.js + Supabase Realtime:error handling nextjs_ex": {
+    "content": "- Use `next error` to create custom error pages.\n- Implement global error handling using `_app.js`.\n- Utilize `getServerSideProps` for server-side error handling.\n- Employ `try-catch` blocks in API routes.\n- Configure `next.config.js` for advanced settings.\n- Update Next.js to the latest version for bug fixes and improvements.",
+    "source": "code_example",
+    "updated_at": 1781011928.0189586
+  },
+  "search:Error Handling in Next.js + Supabase Realtime:supabase realtime error handli": {
+    "content": "- **CLI Commands**: Ensure you are using the latest Supabase CLI version by running `npm install -g @supabase/cli`. For creating partitions, use `supabase db schema migrate apply`.\n- **Latest Versions**: Check for the latest versions of Supabase Realtime and related packages on [GitHub](https://github.com/supabase/realtime).\n- **Key Config Options**:\n  - In your Supabase project settings, ensure you have enabled WebSocket connections.\n  - Configure the `supabase-js` client with the correct URL and API key.\n  - Set up error handling in your application to manage `PoolingReplicationError`, `UnableToTrackPresence`, and `UnableToUpdateCounter`.\n- **Error Handling**: Implement robust error handling for WebSocket events. Use try-catch blocks around event listeners and handle errors gracefully, possibly retrying connections or notifying the user.\n- **Real-time Data Updates**: Ensure your application is designed to handle real-time data updates efficiently, using techniques like batching and debouncing to reduce load on the client side.",
+    "source": "web_search",
+    "updated_at": 1781011937.2860868
+  },
+  "search:Error Handling in Next.js + Supabase Realtime:supabase realtime error handli_ex": {
+    "content": "- **CLI Commands**:\n  - `supabase db schema apply`\n  - `supabase functions deploy`\n\n- **Latest Versions**:\n  - Supabase CLI: v2.3.4\n  - Supabase JS Client: v1.15.0\n\n- **Key Config Options**:\n  - `JWT_SECRET`: Ensure this is securely set in your environment variables.\n  - `DATABASE_URL`: The connection string for your Supabase database.\n  - `REALTIME_SUBSCRIPTION_KEY`: Used for managing subscriptions securely.",
+    "source": "code_example",
+    "updated_at": 1781011952.2502694
+  }
+}

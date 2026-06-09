@@ -1,0 +1,7 @@
+{
+  "search:RabbitMQ and Kafka Performance Tuning:kafka performance comparison": {
+    "content": "- **Redpanda**: \n  - CLI command: `redpanda start`\n  - Latest version: Check [official website](https://vectorized.io)\n  - Key config options: `--memory`, `--cpus`\n\n- **Kafka**:\n  - CLI command: `kafka-server-start.sh <config-file>`\n  - Latest version: Check [Apache Kafka releases](https://kafka.apache.org/downloads)\n  - Key config options: `num.partitions`, `replication.factor`\n\n- **GitHub Repository for Comparison**:\n  - URL: [tsk902000/kafka-performance-comparison](https://github.com/tsk902000/kafka-performance-comparison)\n\n- **Benchmarking with Aiven**:\n  - Service: Kafka on UpCloud\n  - Metrics: Write Throughput\n\n- **Kafka vs RabbitMQ Comparison**:\n  - Performance metrics: Throughput and Latency",
+    "source": "web_search",
+    "updated_at": 1781012166.7490394
+  }
+}

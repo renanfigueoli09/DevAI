@@ -1,0 +1,22 @@
+{
+  "search:Kafka Spring Cloud Stream Performance Tuning:kafka performance tuning": {
+    "content": "- **Increase TCP socket buffer sizes**: Adjust `net.core.rmem_max` and `net.ipv4.tcp_rmem`.\n- **Adjust JVM heap size**: Use `-Xmx` and `-Xms` flags in Kafka server startup.\n- **Optimize linger.ms and batch.size**: Minimize for ultra-low latency, but ensure sufficient CPU resources.\n- **Enable compression**: Set `compression.type=snappy` or `lz4` to reduce message sizes.\n- **Adjust fetch.min.bytes**: Increase to improve consumer efficiency.\n- **Enable idempotence**: Use `enable.idempotence=true` for exactly-once semantics.\n- **Configure partition count**: Balance between partitions and consumers.\n- **Use SASL/SSL**: For secure communication, enable SSL/TLS encryption.\n- **Monitor and adjust**: Continuously monitor Kafka metrics and adjust configurations as needed.",
+    "source": "web_search",
+    "updated_at": 1781012086.310405
+  },
+  "search:Kafka Spring Cloud Stream Performance Tuning:kafka performance tuning_ex": {
+    "content": "- **CLI Commands:**\n  - `kafka-topics.sh --create --topic <topic_name> --bootstrap-server <broker_address> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-configs.sh --alter --add-config \"cleanup.policy=compact\" --entity-type topics --entity-name <topic_name>`\n\n- **Latest Versions:**\n  - Apache Kafka 3.0.x\n\n- **Key Config Options:**\n  - `num.partitions`: Number of partitions for a topic.\n  - `replication.factor`: Replication factor for a topic.\n  - `cleanup.policy`: Determines how log segments are cleaned up (e.g., delete, compact).\n  - `message.max.bytes`: Maximum size of message that can be sent to or received from Kafka.\n  - `batch.size`: Number of messages to batch together before sending to the broker.\n  - `linger.ms`: Time to wait for additional messages before sending a batch.",
+    "source": "code_example",
+    "updated_at": 1781012101.1973236
+  },
+  "search:Kafka Spring Cloud Stream Performance Tuning:spring cloud stream kafka opti": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `docker-compose up` to run services.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0.RELEASE\n  - Apache Kafka: 3.1.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.binder.configuration.key.deserializer`: Set the key deserializer.\n  - `spring.cloud.stream.kafka.binder.configuration.value.deserializer`: Set the value deserializer.\n  - `spring.cloud.stream.bindings.input.destination`: Define the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Define the Kafka topic for output bindings.",
+    "source": "web_search",
+    "updated_at": 1781012108.9770715
+  },
+  "search:Kafka Spring Cloud Stream Performance Tuning:spring cloud stream kafka opti_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot applications.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 3.2.0\n  - Apache Kafka: 3.3.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic for output bindings.\n  - `spring.cloud.stream.kafka.binder.configuration.bootstrap.servers`: Kafka broker addresses.\n  - `spring.cloud.stream.kafka.binder.configuration.group.id`: Consumer group ID.",
+    "source": "code_example",
+    "updated_at": 1781012127.4239476
+  }
+}

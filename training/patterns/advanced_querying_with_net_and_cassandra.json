@@ -1,0 +1,12 @@
+{
+  "search:Advanced Querying with .NET and Cassandra:.net cassandra advanced queryi": {
+    "content": "- Use `cqlsh` for Cassandra Query Language shell.\n- Install latest version of Apache Cassandra using package managers like apt, yum, or brew.\n- Configure `cassandra.yaml` for key settings such as cluster name, listen address, and seed nodes.\n- Utilize UDTs with `CREATE TYPE` statement in CQL.\n- Perform batch operations with `BEGIN BATCH ... APPLY BATCH`.\n- Create materialized views with `CREATE MATERIALIZED VIEW` to optimize queries.\n- Example of creating a table with UDTs:\n  ```cql\n  CREATE TYPE address (\n      street text,\n      city text,\n      state text,\n      zip_code int\n  );\n\n  CREATE TABLE users (\n      id uuid PRIMARY KEY,\n      name text,\n      contact_info frozen<address>\n  );\n  ```\n- Use `DESCRIBE KEYSPACE` and `DESCRIBE TABLE` to inspect schema.\n- Monitor Cassandra with tools like nodetool, Prometheus, and Grafana.",
+    "source": "web_search",
+    "updated_at": 1781012054.96234
+  },
+  "search:Advanced Querying with .NET and Cassandra:.net cassandra advanced queryi_ex": {
+    "content": "- **CLI Commands**:\n  - `cqlsh`: Cassandra Query Language Shell.\n  - `nodetool`: Tool for managing a Cassandra cluster.\n\n- **Latest Versions**:\n  - Apache Cassandra 4.0.x\n\n- **Key Config Options**:\n  - `num_tokens`: Number of virtual nodes per physical node.\n  - `endpoint_snitch`: Strategy to determine the location of nodes in the cluster.\n  - `hinted_handoff_enabled`: Enables or disables hinted handoff for repairs.",
+    "source": "code_example",
+    "updated_at": 1781012068.1667445
+  }
+}
