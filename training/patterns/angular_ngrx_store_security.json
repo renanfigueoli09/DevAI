@@ -1,0 +1,32 @@
+{
+  "search:angular-ngrx-store-security:angular ngrx store security be": {
+    "content": "- Use `ng add @ngrx/store` to install NgRx Store.\n- Ensure latest version by running `npm update @ngrx/store`.\n- Configure store in `app.module.ts` with `StoreModule.forRoot(reducers)`.\n- Define actions using TypeScript interfaces or classes for type safety.\n- Implement reducers as pure functions that return new state based on actions.\n- Use `@Select` decorator to select parts of the state in components.\n- Apply middleware like `@ngrx/effects` for side effects and asynchronous operations.\n- Configure NgRx DevTools for debugging by installing extension and enabling it in environment.\n- Utilize `StoreDevtoolsModule.instrument()` in development environments.",
+    "source": "web_search",
+    "updated_at": 1781042938.156539
+  },
+  "search:angular-ngrx-store-security:angular ngrx store security be_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the root module for global state management.\n  - `EffectsModule.forRoot(effects)` to register effects globally.\n  - `createSelector` for creating selectors to access parts of the store.",
+    "source": "code_example",
+    "updated_at": 1781042955.6647854
+  },
+  "search:angular-ngrx-store-security:ngrx store authentication and ": {
+    "content": "- **CLI Commands**:\n  - `ng generate store auth` to create an NgRx store for authentication.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest versions of Angular, NgRx, and Firebase for compatibility and security.\n\n- **Key Config Options**:\n  - In your `app.module.ts`, import `StoreModule.forRoot({ auth: fromAuth.reducer })`.\n  - Use `createFeatureSelector` to select parts of the state in your components.\n  - Configure guards with `canActivate` using selectors to check authentication status.",
+    "source": "web_search",
+    "updated_at": 1781042965.9801707
+  },
+  "search:angular-ngrx-store-security:ngrx store authentication and _ex": {
+    "content": "- Use `ng generate store auth` to create an AuthStore.\n- Ensure Angular CLI is up-to-date using `npm install -g @angular/cli`.\n- Import NgRx libraries in your project with `npm install @ngrx/store @ngrx/effects`.\n- Define actions for authentication (login, logout) in the AuthStore.\n- Create a reducer function to handle these actions and update the state accordingly.\n- Use selectors to access parts of the authentication state.\n- Implement effects for side effects like API calls during login/logout.\n- Configure NgRx DevTools for easier debugging with `ng add @ngrx/devtools`.\n- Ensure proper error handling in your reducers and effects.",
+    "source": "code_example",
+    "updated_at": 1781042972.4209077
+  },
+  "search:angular-ngrx-store-security:secure state management in ang": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store.\n\n- **Latest Versions**:\n  - Angular CLI: v18.x\n  - NgRx: v15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot`: Registers the root store configuration.\n  - `EffectsModule.forRoot`: Registers the root effects configuration.\n  - `SignalStore` for reactive state management.",
+    "source": "web_search",
+    "updated_at": 1781042979.526129
+  },
+  "search:angular-ngrx-store-security:secure state management in ang_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <path>/<name>` to create a new NgRx store.\n  - `ng generate effect <path>/<name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: v16.2.0\n  - NgRx: v15.3.0\n\n- **Key Config Options**:\n  - Store: Define initial state and reducers.\n  - Actions: Describe what happened in the application.\n  - Reducers: Handle actions and update the state.\n  - Selectors: Extract data from the store for components.\n  - Effects: Handle side effects like API calls.",
+    "source": "code_example",
+    "updated_at": 1781042988.7212892
+  }
+}

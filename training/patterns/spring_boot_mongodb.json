@@ -7,7 +7,7 @@
   "qa:spring-document-not-entity": {
     "content": "Spring Boot MongoDB: use @Document NOT @Entity\n@Document(collection='books') class Book { @Id String id; @NotBlank String title; }\nRepository: extends MongoRepository<Book, String>\nWRONG: @Entity, JpaRepository  ← those are JPA/PostgreSQL",
     "source": "critical_pattern",
-    "updated_at": 1781042834.6809566
+    "updated_at": 1781043057.277289
   },
   "search:spring-boot-mongodb:spring boot mongodb crud opera": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `mvn clean install`: Builds and packages the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0 (as of my last update)\n  - MongoDB Driver: 4.5.1\n\n- **Key Config Options**:\n  - `spring.datasource.url`: URL for the database.\n  - `spring.datasource.username`: Username for the database.\n  - `spring.datasource.password`: Password for the database.\n  - `spring.data.mongodb.database`: Name of the MongoDB database.\n  - `spring.data.mongodb.host`: Hostname or IP address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",

@@ -1,0 +1,22 @@
+{
+  "search:spring-cloud-gateway-kafka-consumption:spring cloud gateway kafka con": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.2.x\n  - Spring Boot: 2.7.x\n  - Apache Kafka: 3.0.x\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI to forward requests.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate type, e.g., Path=/example/**.\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter type, e.g., RewritePath=/example/(?<segment>.*), /$\\{segment}.\n  - `spring.kafka.bootstrap-servers`: Kafka broker addresses.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: Offset reset policy (earliest/latest).\n  - `spring.kafka.consumer.key-deserializer`: Key deserializer class.\n  - `spring.kafka.consumer.value-deserializer`: Value deserializer class.",
+    "source": "web_search",
+    "updated_at": 1781042999.9995923
+  },
+  "search:spring-cloud-gateway-kafka-consumption:spring cloud gateway kafka con_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.1.4.RELEASE\n  - Spring Cloud Stream: 3.2.0.RELEASE\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Destination URI\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output",
+    "source": "code_example",
+    "updated_at": 1781043017.8283134
+  },
+  "search:spring-cloud-gateway-kafka-consumption:high-performance kafka consume": {
+    "content": "- **CLI Commands**:\n  - `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group>`\n  - `kafka-topics.sh --bootstrap-server <broker> --list`\n  \n- **Latest Versions**:\n  - Kafka: 3.3.1\n  - Confluent Kafka Go Library: v2.0.0\n\n- **Key Config Options**:\n  - `auto.offset.reset`: Set to `earliest` or `latest` based on consumer needs.\n  - `max.poll.records`: Adjust batch size for better throughput.\n  - `enable.auto.commit`: Enable or disable automatic offset commits.\n  - `session.timeout.ms`: Control the timeout for consumer group rebalancing.",
+    "source": "web_search",
+    "updated_at": 1781043038.716313
+  },
+  "search:spring-cloud-gateway-kafka-consumption:high-performance kafka consume_ex": {
+    "content": "- Use `confluent-kafka-go` library for Go applications.\n- For parallel processing, consider using `kafka-consumer` from GitHub.\n- Set `message.max.bytes` and `fetch.min.bytes` in Kafka consumer configuration to optimize data ingestion.\n- Implement per-message ACKs for better reliability.\n- Use virtual threads with Spring Cloud Stream for high-performance event-driven apps.\n- Ensure Kafka cluster is properly scaled based on workload.\n- Monitor Kafka metrics using tools like Prometheus and Grafana.\n- Regularly update `confluent-kafka-go` to the latest version (e.g., `v1.8.0` as of my last update).\n- Configure consumer group ID for proper message distribution across consumers.\n- Use `max.poll.records` to control batch size in Kafka consumer.",
+    "source": "code_example",
+    "updated_at": 1781043048.251962
+  }
+}
