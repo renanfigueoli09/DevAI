@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-09 16:11*
+*2026-06-09 16:23*
 
 ## Score: 90% `[██████████████████░░]`  (47.0/52.0)
 
@@ -19,8 +19,8 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| python-django-celery-redis: cache | 1.0/1 | ✅ |
 | nodejs-express-mongodb-advanced: não usa TypeORM | 1.0/1 | ✅ |
-| Node.js  +  MongoDB: padrões de código | 1.0/1 | ✅ |
 | golang-redis-performance: cache | 1.0/1 | ✅ |
 | typescript-graphql-codegen: padrões de código | 1.0/1 | ✅ |
 
