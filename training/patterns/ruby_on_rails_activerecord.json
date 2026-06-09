@@ -13,5 +13,35 @@
     "content": "- Use `rails generate migration AddSsl accounts ssl_enabled:boolean` to create a new migration.\n- Set the default value for a column using `default: true`.\n- Apply migrations with `rails db:migrate`.\n- For large tables, consider adding columns without defaults first and then updating them in batches.\n- Ensure your database supports the features used in migrations (e.g., PostgreSQL for boolean columns).\n- Use `rails db:schema:dump` to update `db/schema.rb` after making changes.",
     "source": "code_example",
     "updated_at": 1781022099.5445828
+  },
+  "search:Ruby on Rails + ActiveRecord:ruby on rails activerecord adv": {
+    "content": "- **CLI Commands**: `rails db:migrate` to run migrations, `rails console` for interactive database queries.\n- **Latest Versions**: Ensure using the latest Rails version for optimal performance and security updates.\n- **Key Config Options**:\n  - `config.active_record.schema_format`: Set to `:sql` or `:ruby`.\n  - `config.active_record.default_timezone`: Set to `:utc` or `:local`.\n  - `config.active_record.logging`: Enable or disable query logging for debugging.",
+    "source": "web_search",
+    "updated_at": 1781031704.4749625
+  },
+  "search:Ruby on Rails + ActiveRecord:ruby on rails activerecord adv_ex": {
+    "content": "- Use `rails db:migrate` to apply migrations.\n- Employ `ActiveRecord::Base.connection.exec_query(\"SELECT * FROM table_name\")` for raw SQL queries.\n- Utilize `.joins(:association)` for complex joins.\n- Apply `.where(\"column = ?\", value)` for parameterized queries.\n- Leverage `.order(created_at: :desc)` to sort records.\n- Use `.limit(10)` to restrict the number of results.\n- Implement `.includes(:association)` for eager loading.\n- Employ `.group(:column_name)` for grouping data.\n- Apply `.having(\"count(*) > ?\", 5)` for conditional aggregation.",
+    "source": "code_example",
+    "updated_at": 1781031720.3861995
+  },
+  "search:Ruby on Rails + ActiveRecord:ruby on rails activerecord dat": {
+    "content": "- **CLI Commands**:\n  - `rails generate migration AddStatusToBlog`\n  - `rake db:migrate`\n\n- **Latest Versions**:\n  - Ruby on Rails 7.0.x\n  - ActiveRecord 6.1.x\n\n- **Key Config Options**:\n  - `default: 0` in migration for enum column\n  - Use `COPY` command for bulk data insertion with `ActiveRecord-Copy`\n  - Avoid database locks during child record callbacks by optimizing queries",
+    "source": "web_search",
+    "updated_at": 1781031729.5247338
+  },
+  "search:Ruby on Rails + ActiveRecord:ruby on rails activerecord dat_ex": {
+    "content": "- Use `rails db:migrate` to apply migrations.\n- Use `rails db:migrate:status` to check migration status.\n- Use `rails db:rollback` to undo the last migration.\n- Latest version as of my knowledge cutoff in 2023 is Rails 7.0.x.\n- Key config options include `config.active_record.schema_format`, which can be set to `:sql` or `:ruby`.\n- Ensure migrations are idempotent for safe rollback and reapplication.\n- Use `rails db:schema:dump` to create a schema.rb file from the database.\n- Utilize `rails db:schema:load` to load schema.rb into the database.",
+    "source": "code_example",
+    "updated_at": 1781031735.6484802
+  },
+  "search:Ruby on Rails + ActiveRecord:ruby on rails activerecord per": {
+    "content": "- Use `bundle exec rails db:migrate` for database migrations.\n- Update Rails to the latest version using `gem install rails`.\n- Configure eager loading in your models with `includes(:association)`.\n- Add indexes to frequently queried columns using `rails g migration AddIndexToTableName(column_name)` and then run `rails db:migrate`.\n- Use `find_by_sql` for complex queries when ActiveRecord methods are insufficient.\n- Monitor performance with tools like AppSignal or New Relic.\n- Optimize queries by avoiding N+1 issues with `preload`, `eager_load`, or `joins`.\n- Check record existence using `exists?` instead of `present?` to avoid loading records unnecessarily.\n- Batch process large datasets using `find_in_batches` or `in_batches`.",
+    "source": "web_search",
+    "updated_at": 1781031756.5622847
+  },
+  "search:Ruby on Rails + ActiveRecord:ruby on rails activerecord per_ex": {
+    "content": "- Use `includes` to avoid N+1 queries.\n- Utilize `preload` for associations that are often accessed together.\n- Employ `eager_load` when you need all associated records upfront.\n- Optimize database indexes on frequently queried columns.\n- Consider using `counter_cache` for counters in models.\n- Implement caching strategies like fragment caching or page caching.\n- Use `where.not` instead of `!=` to improve query performance.\n- Avoid eager loading unnecessary associations.\n- Regularly run `rails db:explain` to analyze and optimize queries.",
+    "source": "code_example",
+    "updated_at": 1781031763.1319346
   }
 }

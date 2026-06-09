@@ -1,0 +1,32 @@
+{
+  "search:Python + SQLAlchemy:python sqlalchemy advanced que": {
+    "content": "- **CLI Commands**:\n  - `pip install sqlalchemy`\n  - `alembic init alembic`\n\n- **Latest Versions**:\n  - SQLAlchemy: 2.0.4\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - Database URL format: `dialect+driver://username:password@host:port/database`\n  - Engine creation: `engine = create_engine('sqlite:///example.db')`\n  - Session creation: `Session = sessionmaker(bind=engine)`\n  - ORM mapping: Define classes with `declarative_base()`\n  - Querying: Use `session.query(Model).filter_by(attribute=value)`",
+    "source": "web_search",
+    "updated_at": 1781031467.9815516
+  },
+  "search:Python + SQLAlchemy:python sqlalchemy advanced que_ex": {
+    "content": "- **CLI Commands**: Use `pip install sqlalchemy` to install the latest version.\n- **Latest Version**: Check [SQLAlchemy's official documentation](https://www.sqlalchemy.org/) for the most current version.\n- **Key Config Options**:\n  - Engine: Configure with `create_engine('dialect+driver://username:password@host/dbname')`.\n  - Session: Use `Session = sessionmaker(bind=engine)` to create a session class.\n  - Declarative Models: Define models using classes inheriting from `declarative_base()`.\n  - Query Builder: Utilize methods like `.filter()`, `.order_by()`, and `.limit()` for advanced querying.",
+    "source": "code_example",
+    "updated_at": 1781031491.2339942
+  },
+  "search:Python + SQLAlchemy:python sqlalchemy database mig": {
+    "content": "- **CLI Commands**:\n  - `alembic init <env>`: Initializes a new Alembic environment.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a migration script from database changes.\n  - `alembic upgrade head`: Applies all migrations to the database.\n  - `alembic downgrade <revision>`: Reverts the database to a previous state.\n\n- **Latest Versions**:\n  - Alembic: Version 1.8.2\n  - Flask-Migrate: Version 3.0.0\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URI`: Specifies the connection string for your database.\n  - `MIGRATE_REPO`: Path to the directory where migration scripts are stored.\n  - `FLASK_APP`: The name of the main application file (e.g., `app.py`).",
+    "source": "web_search",
+    "updated_at": 1781031499.7295454
+  },
+  "search:Python + SQLAlchemy:python sqlalchemy database mig_ex": {
+    "content": "- **CLI Commands**:\n  - `flask db init`: Initializes the migration repository.\n  - `flask db migrate -m \"message\"`: Generates a new migration script based on detected changes.\n  - `flask db upgrade`: Applies all migrations to the database.\n  - `flask db downgrade`: Reverts the last applied migration.\n\n- **Latest Versions**:\n  - Flask-Migrate: v3.0.1\n  - Alembic: v2.0.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URI`: Specifies the database URI.\n  - `MIGRATE_REPO`: Path to the migration repository directory.\n  - `FLASK_APP`: Name of the Flask application module.",
+    "source": "code_example",
+    "updated_at": 1781031518.0423343
+  },
+  "search:Python + SQLAlchemy:python sqlalchemy performance ": {
+    "content": "- Use `sqlalchemy` version 2.0 or later for improved performance.\n- Employ query profiling tools like `SQLAlchemy Profiler` to identify bottlenecks.\n- Optimize queries by avoiding N+1 issues with eager loading using `.options(joinedload())`.\n- Implement proper indexing on frequently queried columns.\n- Use connection pooling (`pool_size`, `max_overflow`) in your database URL for efficient connection management.\n- Consider using the `asyncio` extension for asynchronous operations if your application is I/O bound.\n- Regularly benchmark and optimize ORM usage to ensure efficiency.",
+    "source": "web_search",
+    "updated_at": 1781031525.3334796
+  },
+  "search:Python + SQLAlchemy:python sqlalchemy performance _ex": {
+    "content": "- Use the latest version of SQLAlchemy, as it includes numerous optimizations and bug fixes.\n- Employ `selectinload` or `joinedload` for eager loading to reduce N+1 query issues.\n- Optimize queries by using explicit joins instead of implicit ones.\n- Ensure proper indexing on frequently queried columns.\n- Utilize `bulk_insert_mappings` for bulk inserts to improve performance.\n- Enable connection pooling with SQLAlchemy's built-in pool options like `QueuePool`.\n- Use the `EXPLAIN` statement to analyze and optimize SQL queries.\n- Consider using `asyncio` with SQLAlchemy for asynchronous database operations.\n- Regularly benchmark your application to identify and address performance bottlenecks.",
+    "source": "code_example",
+    "updated_at": 1781031533.092655
+  }
+}

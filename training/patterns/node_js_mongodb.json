@@ -1,0 +1,32 @@
+{
+  "search:Node.js + MongoDB:node.js mongodb performance op": {
+    "content": "- **CLI Commands**:\n  - `mongostat` to monitor MongoDB performance.\n  - `mongoexport --db <database> --collection <collection>` for data export.\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - MongoDB: 7.0\n\n- **Key Config Options**:\n  - Increase `maxPoolSize` in MongoDB connection string.\n  - Use `readPreference` to optimize read operations.\n  - Implement caching strategies for frequently accessed data.\n  - Optimize queries with proper indexing and aggregation pipelines.",
+    "source": "web_search",
+    "updated_at": 1781031391.1988547
+  },
+  "search:Node.js + MongoDB:node.js mongodb performance op_ex": {
+    "content": "- Use `mongosh` instead of the deprecated `mongo shell`.\n- Ensure MongoDB version is up to date, e.g., v6.x.\n- Implement indexing on frequently queried fields for faster data retrieval.\n- Utilize connection pooling with libraries like `mongoose` or `mongodb-native-driver`.\n- Optimize queries by avoiding unnecessary joins and using projection to fetch only required fields.\n- Enable WiredTiger storage engine for better performance in high-concurrency scenarios.\n- Adjust MongoDB configuration parameters such as `wiredTigerCacheSizeGB`, `net.ipv4.tcp_window_scaling`, etc., based on your server's specifications.\n- Regularly monitor and analyze query performance using tools like MongoDB Atlas or `mongostat`.\n- Consider sharding for large datasets to distribute load across multiple servers.",
+    "source": "code_example",
+    "updated_at": 1781031398.6003711
+  },
+  "search:Node.js + MongoDB:node.js mongodb security best ": {
+    "content": "- Use MongoDB Atlas for managed, secure MongoDB deployments.\n- Implement SSL/TLS encryption for all connections to MongoDB.\n- Regularly update MongoDB and drivers to the latest versions.\n- Enable authentication and authorization in MongoDB.\n- Limit user privileges to the minimum required.\n- Use environment variables to store sensitive information like connection strings.\n- Configure MongoDB to use strong passwords and secure mechanisms.\n- Monitor MongoDB performance and security logs regularly.\n- Implement rate limiting on API endpoints accessing MongoDB.\n- Regularly audit MongoDB configurations for vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781031415.0502918
+  },
+  "search:Node.js + MongoDB:node.js mongodb security best _ex": {
+    "content": "- Use `npm install --save mongoose` to install the latest version of Mongoose.\n- Implement authentication using JSON Web Tokens (JWT) for secure user sessions.\n- Enable MongoDB's built-in authentication by setting `security.authorization = enabled` in your `mongod.conf`.\n- Utilize environment variables for sensitive information like database URLs and secret keys with `dotenv`.\n- Regularly update Node.js, Express.js, and Mongoose to the latest versions using `npm update`.\n- Implement input validation on all user inputs to prevent injection attacks.\n- Use HTTPS instead of HTTP for secure data transmission by configuring SSL/TLS certificates.\n- Enable MongoDB's audit logging feature to monitor database access and operations with `security.authorization = enabled` in your `mongod.conf`.\n- Employ rate limiting middleware like `express-rate-limit` to protect against brute-force attacks.",
+    "source": "code_example",
+    "updated_at": 1781031424.0001855
+  },
+  "search:Node.js + MongoDB:node.js mongodb query optimiza": {
+    "content": "- Use `db.collection.find()` with projection to limit the fields returned.\n- Implement indexes on frequently queried fields using `db.collection.createIndex()`.\n- Utilize pagination with `skip()` and `limit()` for large datasets.\n- Enable query caching with MongoDB's built-in caching mechanisms or third-party libraries like `node-cache`.\n- Optimize queries by avoiding `$regex` in performance-critical paths if possible.\n- Regularly analyze and optimize slow queries using MongoDB's profiling tools.\n- Consider sharding for very large collections to distribute data across multiple servers.\n- Use the latest version of Node.js and MongoDB for better performance and security.\n- Review and refactor complex queries into simpler, more efficient ones.",
+    "source": "web_search",
+    "updated_at": 1781031440.9613917
+  },
+  "search:Node.js + MongoDB:node.js mongodb query optimiza_ex": {
+    "content": "- Use `db.collection.find()` with projection to limit the fields returned.\n- Implement indexes on frequently queried fields using `db.collection.createIndex()`.\n- Utilize aggregation pipelines for complex data processing and analysis.\n- Apply query limits with `.limit(n)` to reduce the number of documents processed.\n- Regularly analyze and optimize queries using MongoDB's profiling tools.\n- Update Node.js and MongoDB drivers to their latest versions for performance improvements.\n- Enable connection pooling in your application to manage database connections efficiently.\n- Use `db.collection.distinct()` for counting unique values without loading all data.\n- Consider sharding for large datasets across multiple servers for better scalability.",
+    "source": "code_example",
+    "updated_at": 1781031457.7018688
+  }
+}

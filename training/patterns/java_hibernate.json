@@ -1,0 +1,32 @@
+{
+  "search:Java + Hibernate:java hibernate advanced mappin": {
+    "content": "- **Latest Version**: Hibernate 6.x is the latest stable version as of my last update.\n  \n- **CLI Commands**:\n  - `mvn clean install`: To build and install Hibernate in a Maven project.\n  - `hibernate.cfg.xml`: Configuration file for Hibernate settings.\n\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect to use.\n  - `hibernate.connection.driver_class`: JDBC driver class.\n  - `hibernate.connection.url`: Database URL.\n  - `hibernate.connection.username`: Database username.\n  - `hibernate.connection.password`: Database password.\n\n- **Advanced Mapping Techniques**:\n  - **One-to-Many**: Use annotations like `@OneToMany` and `@ManyToOne`.\n  - **Many-to-Many**: Use `@ManyToMany` with a join table.\n  - **Inheritance**: Implement using `@Inheritance` strategy (Single Table, Joined Table, or Table Per Class).\n  - **Custom Types**: Create custom types for complex data handling.\n\n- **Tools and Libraries**:\n  - **Hibernate Tools**: For generating Hibernate mapping files from existing databases.\n  - **Schema Exporter**: To export database schema based on Hibernate mappings.",
+    "source": "web_search",
+    "updated_at": 1781031543.49534
+  },
+  "search:Java + Hibernate:java hibernate advanced mappin_ex": {
+    "content": "- **GitHub Repository**: [lie2098/advanced-hibernate-mappings](https://github.com/lie2098/advanced-hibernate-mappings)\n  - Provides hands-on examples and configurations for advanced Hibernate features.\n  \n- **JPA Advanced Mappings**:\n  - Covers One-to-One, One-to-Many, Many-to-One, and Many-to-Many mappings.\n  - Latest version as of July 2025.\n\n- **Hibernate Mastery**:\n  - Focuses on advanced techniques for Java database management.\n  - Key config options include `hibernate.dialect`, `hibernate.show_sql`, and `hibernate.format_sql`.\n\n- **CLI Commands**:\n  - `mvn clean install` to build the project using Maven.\n  - `gradle build` to build the project using Gradle.\n\n- **Key Config Options in Hibernate**:\n  - `hibernate.dialect`: Specifies the SQL dialect for the database.\n  - `hibernate.show_sql`: Enables logging of SQL statements.\n  - `hibernate.format_sql`: Formats the logged SQL statements for better readability.",
+    "source": "code_example",
+    "updated_at": 1781031550.648009
+  },
+  "search:Java + Hibernate:java hibernate transaction man": {
+    "content": "- **CLI Commands**: \n  - `mvn clean install` to build and test the project.\n  - `mvn hibernate3:hbm2ddl` for database schema generation.\n\n- **Latest Versions**:\n  - Hibernate ORM: 6.1.x\n  - Spring Framework: 5.3.x\n\n- **Key Config Options**:\n  - `hibernate.dialect`: Specifies the SQL dialect.\n  - `hibernate.hbm2ddl.auto`: Controls schema generation (e.g., create, update, validate).\n  - `hibernate.show_sql`: Enables logging of SQL statements for debugging.",
+    "source": "web_search",
+    "updated_at": 1781031569.6940155
+  },
+  "search:Java + Hibernate:java hibernate transaction man_ex": {
+    "content": "- Use `@Transactional` annotation to manage transactions in Hibernate.\n- Ensure all operations within a transaction are completed successfully before committing changes.\n- Rollback the transaction if any exception occurs to maintain data integrity.\n- Utilize JDBC API for persistence, supporting both JDBC and JTA mechanisms.\n- For latest versions, refer to official Hibernate documentation or Maven Central repository.\n- Key config options include `hibernate.transaction.factory_class` and `hibernate.current_session_context_class`.\n- Example CLI command: `mvn clean install -DskipTests=true`\n- Consider using Spring Framework for more advanced transaction management features.",
+    "source": "code_example",
+    "updated_at": 1781031585.2811048
+  },
+  "search:Java + Hibernate:java hibernate performance opt": {
+    "content": "- Use the latest version of Hibernate, currently Hibernate ORM 6.x.\n- Optimize entity mappings by using `@BatchSize` and `@Fetch(FetchMode.JOIN)` to reduce database queries.\n- Implement second-level caching with Ehcache or Caffeine for frequently accessed data.\n- Configure connection pooling with HikariCP or Apache Commons DBCP2 for efficient database connections.\n- Use lazy loading where possible, but be cautious of N+1 query problems.\n- Enable SQL logging (`hibernate.show_sql=true`) to identify inefficient queries.\n- Optimize Hibernate's `fetchSize` and `maxResults` settings for pagination.\n- Regularly analyze and optimize your database schema and indexes.\n- Consider using a profiler like JProfiler or YourKit to identify bottlenecks.",
+    "source": "web_search",
+    "updated_at": 1781031593.4473565
+  },
+  "search:Java + Hibernate:java hibernate performance opt_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.2, Spring Boot 3.1, Angular 17.\n- **Key Config Options**:\n  - Enable second-level caching: `<property name=\"hibernate.cache.use_second_level_cache\" value=\"true\"/>`\n  - Configure cache provider: `<property name=\"hibernate.cache.region.factory_class\" value=\"org.hibernate.cache.ehcache.EhCacheRegionFactory\"/>`\n  - Use batch processing for inserts/updates: `<property name=\"hibernate.jdbc.batch_size\" value=\"50\"/>`\n  - Optimize SQL queries using HQL or JPQL.\n- **Optimization Techniques**:\n  - Avoid N+1 query problem by using `fetch join`.\n  - Use lazy loading judiciously to reduce database hits.\n  - Implement pagination for large datasets.\n  - Regularly analyze and optimize your database schema.",
+    "source": "code_example",
+    "updated_at": 1781031611.1600084
+  }
+}
