@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 16:53*
+*2026-06-09 17:07*
 
-## Score: 90% `[██████████████████░░]`  (47.0/52.0)
+## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
-### Knowledge Check (vector store): 33.0/38.0
+### Knowledge Check (vector store): 32.0/37.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -22,7 +22,6 @@
 | golang-mongo-go-driver-advanced: não usa TypeORM | 1.0/1 | ✅ |
 | Optimizing NGRX Store with Angular: padrões de código | 1.0/1 | ✅ |
 | Testing Patterns for TypeScript and Jest Unit Testing: padrões de código | 1.0/1 | ✅ |
-| python-django-celery-redis: cache | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
