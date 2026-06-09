@@ -1,0 +1,32 @@
+{
+  "search:nextjs-graphql-integration:next.js graphql integration tu": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-graphql-app`\n  - `npm install apollo-server-express graphql`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Apollo Server: v3.6.0\n\n- **Key Config Options**:\n  - In `next.config.js`, configure API routes to handle GraphQL requests.\n  - Use Apollo Server with Express for setting up the GraphQL server within a Next.js app.\n  - Configure data fetching in components using Apollo Client or custom hooks.",
+    "source": "web_search",
+    "updated_at": 1781041071.9594514
+  },
+  "search:nextjs-graphql-integration:next.js graphql integration tu_ex": {
+    "content": "- Ensure you're using the latest version of Next.js (13.4+).\n- Create a new Route Handler file at `app/` for GraphQL integration.\n- Utilize Apollo Server for setting up the GraphQL server in your Next.js project.\n- For testing, use Nest.js Starter REST GitHub repository as a reference.\n- Familiarize yourself with JavaScript and React for effective implementation.",
+    "source": "code_example",
+    "updated_at": 1781041077.159784
+  },
+  "search:nextjs-graphql-integration:building a graphql api with ne": {
+    "content": "- Install dependencies: `npm install @neo4j/graphql graphql-yoga`\n- Use Next.js API routes to build GraphQL server.\n- For TypeScript, ensure type definitions are correctly set up.\n- Utilize Prisma for data loading from Postgres.\n- Employ Apollo Server v4 with Next.js 13 and GraphQL Yoga.\n- Explore Route Handlers in Next.js 13 App Router for GraphQL Yoga integration.\n- Key config options include `serverPort`, `corsOrigin`, and `context` in GraphQL Yoga setup.",
+    "source": "web_search",
+    "updated_at": 1781041085.664396
+  },
+  "search:nextjs-graphql-integration:building a graphql api with ne_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-graphql-app`\n  - `npm install type-graphql graphql cors`\n\n- **Latest Versions**:\n  - Next.js: 20.3\n  - TypeGraphQL: 1.5.0\n  - GraphQL: 16.4.0\n  - Cors: 2.8.5\n\n- **Key Config Options**:\n  - `serverRuntimeConfig`: For sensitive environment variables.\n  - `publicRuntimeConfig`: For public environment variables accessible in the browser.\n  - `corsOptions`: Configure CORS for your GraphQL server.",
+    "source": "code_example",
+    "updated_at": 1781041095.7501822
+  },
+  "search:nextjs-graphql-integration:optimizing graphql queries in ": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-graphql-app`\n  - `npm install @apollo/client graphql`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Apollo Client: 3.7\n\n- **Key Config Options**:\n  - In `next.config.js`, add Apollo Client configuration.\n  - Use `ApolloProvider` in `_app.js` to wrap your application with the client instance.\n  - Configure GraphQL endpoints and options in Apollo Client setup.",
+    "source": "web_search",
+    "updated_at": 1781041104.3063285
+  },
+  "search:nextjs-graphql-integration:optimizing graphql queries in _ex": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install GraphQL dependencies with `npm install graphql apollo-client apollo-cache-inmemory apollo-link-http`.\n- Configure Apollo Client in your `_app.js`:\n  ```javascript\n  import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';\n  \n  const client = new ApolloClient({\n    link: new HttpLink({ uri: 'http://localhost:4000/graphql' }),\n    cache: new InMemoryCache(),\n  });\n  \n  export default function MyApp({ Component, pageProps }) {\n    return (\n      <ApolloProvider client={client}>\n        <Component {...pageProps} />\n      </ApolloProvider>\n    );\n  }\n  ```\n- Use `useQuery` or `useMutation` hooks from `@apollo/client` in your components to fetch and manage data.\n- For SSR, use `getServerSideProps`:\n  ```javascript\n  export async function getServerSideProps(context) {\n    const { data } = await client.query({ query: YOUR_QUERY });\n    return { props: { data } };\n  }\n  ```\n- Optimize queries by using fragments and aliases to reduce the amount of data fetched.\n- Implement caching strategies with `InMemoryCache` options like `typePolicies`.\n- Use Apollo Server for setting up your GraphQL API, ensuring it's compatible with Next.js SSR.",
+    "source": "code_example",
+    "updated_at": 1781041120.6795125
+  }
+}

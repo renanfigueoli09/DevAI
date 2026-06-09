@@ -1,0 +1,32 @@
+{
+  "search:fastapi+jinja2-templates:fastapi jinja2 templates tutor": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app with auto-reload.\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Jinja2: 3.1.2\n\n- **Key Config Options**:\n  - `templates = Jinja2Templates(directory=\"path/to/templates\")` to specify the directory containing your HTML templates.\n  - Use `TemplateResponse` to render and return a template with dynamic data.",
+    "source": "web_search",
+    "updated_at": 1781041024.5802073
+  },
+  "search:fastapi+jinja2-templates:fastapi jinja2 templates tutor_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run FastAPI app in development mode.\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Jinja2: 3.1.2\n\n- **Key Config Options**:\n  - Templates directory: Set using `Templates(directory=\"path/to/templates\")`.\n  - Static files directory: Configure in `FastAPI` with `staticfiles_dir=\"path/to/static\"`.",
+    "source": "code_example",
+    "updated_at": 1781041031.112224
+  },
+  "search:fastapi+jinja2-templates:fastapi jinja2 for dynamic htm": {
+    "content": "- Use `uvicorn` as the ASGI server.\n- Install FastAPI and Jinja2 using pip: `pip install fastapi jinja2`.\n- Create a FastAPI app instance.\n- Define routes that return HTML templates rendered with Jinja2.\n- Pass dynamic data to templates via route functions.\n- Configure Jinja2 environment in your FastAPI app.\n- Use `fastapi.responses.TemplateResponse` for rendering templates.\n- Ensure your project structure includes a `templates` folder for HTML files.",
+    "source": "web_search",
+    "updated_at": 1781041040.336346
+  },
+  "search:fastapi+jinja2-templates:fastapi jinja2 for dynamic htm_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.102.0\n  - Jinja2: v3.1.2\n\n- **Key Config Options**:\n  - `templates.TemplateResponse`: Use this to render Jinja2 templates.\n  - `app.mount(\"/static\", StaticFiles(directory=\"static\"), name=\"static\")`: Mount static files directory.\n  - `@app.get(\"/\", response_class=TemplatesResponse)`: Define routes with Jinja2 template responses.",
+    "source": "code_example",
+    "updated_at": 1781041045.9492218
+  },
+  "search:fastapi+jinja2-templates:fastapi and jinja2 integration": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install FastAPI and Jinja2 using pip: `pip install fastapi jinja2`.\n- Ensure you have the latest versions of FastAPI, Jinja2, and Uvicorn for compatibility.\n- Key configuration options include setting up templates in your FastAPI app with `templates = Jinja2Templates(directory=\"path/to/templates\")`.\n- Use `uvicorn main:app --reload` to run your FastAPI application with auto-reload during development.\n- For serving static files, use the `static` directory and reference them in your HTML templates using `<link>` or `<script>`.\n- Implement inheritance in Jinja2 templates by creating a base template (`base.html`) and extending it in other templates.\n- Pass data from FastAPI to Jinja2 templates through the context dictionary: `return templates.TemplateResponse(\"template.html\", {\"request\": request, \"data\": your_data})`.",
+    "source": "web_search",
+    "updated_at": 1781041054.5931258
+  },
+  "search:fastapi+jinja2-templates:fastapi and jinja2 integration_ex": {
+    "content": "- Use `uvicorn` as the ASGI server.\n- Install FastAPI and Jinja2 using pip: `pip install fastapi jinja2`.\n- Create a FastAPI app instance.\n- Configure Jinja2 environment with `Jinja2Templates(directory=\"templates\")`.\n- Define routes that return templates rendered with context data.\n- Use `@app.get(\"/\")` to define the root route.\n- Pass dynamic data to templates using the `context` parameter in `TemplateResponse`.\n- Ensure templates are stored in a directory named \"templates\".\n- Utilize Jinja2's templating features for dynamic content rendering.",
+    "source": "code_example",
+    "updated_at": 1781041060.1378193
+  }
+}
