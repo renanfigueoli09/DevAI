@@ -1,0 +1,12 @@
+{
+  "search:nodejs-express-middleware:node.js express middleware bes": {
+    "content": "- **CLI Commands**:\n  - `npm install express-generator` to create a new Express app.\n  - `npm install --save <middleware-name>` to add middleware.\n\n- **Latest Versions**:\n  - Node.js: v20.x (as of October 2025)\n  - Express: v6.14.0 (as of October 2025)\n\n- **Key Config Options**:\n  - `app.use(express.json())` for parsing JSON bodies.\n  - `app.use(express.urlencoded({ extended: true }))` for URL-encoded bodies.\n  - `app.set('view engine', 'ejs')` to set the view engine.\n  - `app.use('/api', apiRouter)` to mount a router on a specific path.",
+    "source": "web_search",
+    "updated_at": 1781032723.8309216
+  },
+  "search:nodejs-express-middleware:node.js express middleware bes_ex": {
+    "content": "- **CLI Commands**: Use `npm init` to create a new Node.js project.\n- **Latest Versions**: Ensure you are using the latest version of Express by running `npm install express@latest`.\n- **Key Config Options**:\n  - `app.use(express.json())`: Middleware for parsing JSON bodies.\n  - `app.use(express.urlencoded({ extended: true }))`: Middleware for parsing URL-encoded bodies.\n  - `app.use(cors())`: Middleware to enable Cross-Origin Resource Sharing.\n  - `app.use(morgan('dev'))`: Middleware for HTTP request logging.\n- **Testing**: Use frameworks like Mocha and Chai for testing middleware. Example:\n  ```bash\n  npm install --save-dev mocha chai\n  ```\n- **Debugging**: Utilize Node.js debugging tools such as `node inspect app.js` or use a debugger in your IDE.\n- **Best Practices**:\n  - Keep middleware functions small and focused on one task.\n  - Use environment variables for configuration settings.\n  - Implement error handling properly using try-catch blocks within middleware.",
+    "source": "code_example",
+    "updated_at": 1781032730.7194405
+  }
+}
