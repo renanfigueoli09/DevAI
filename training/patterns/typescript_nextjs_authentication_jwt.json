@@ -1,0 +1,22 @@
+{
+  "search:typescript-nextjs-authentication-jwt:next.js authentication with jw": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install jsonwebtoken @types/jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Node.js: v16.x or later\n\n- **Key Config Options**:\n  - `next.config.js`: Configure server settings.\n  - `.env.local`: Define environment variables for JWT secret and other sensitive data.\n  - `pages/api/auth/[...].ts`: Implement API routes for authentication.",
+    "source": "web_search",
+    "updated_at": 1781045540.412846
+  },
+  "search:typescript-nextjs-authentication-jwt:next.js authentication with jw_ex": {
+    "content": "- Use `npx create-next-app@latest my-auth-app --typescript` to start a new Next.js app with TypeScript.\n- Install dependencies with `npm install jsonwebtoken bcryptjs`.\n- Configure JWT secret in `.env.local`: `JWT_SECRET=your-secret-key`.\n- Implement token generation and verification in your API routes.\n- Use middleware for protected routes:\n  ```typescript\n  import { verify } from 'jsonwebtoken';\n\n  export default function authMiddleware(req, res, next) {\n    const token = req.headers.authorization?.split(' ')[1];\n    if (!token) return res.status(401).json({ message: 'Unauthorized' });\n    try {\n      const decoded = verify(token, process.env.JWT_SECRET);\n      req.user = decoded;\n      next();\n    } catch (error) {\n      res.status(403).json({ message: 'Forbidden' });\n    }\n  }\n  ```\n- Protect routes using the middleware:\n  ```typescript\n  import authMiddleware from '../middleware/auth';\n\n  export default function protectedRoute(req, res) {\n    if (!req.user) return res.status(401).json({ message: 'Unauthorized' });\n    res.json({ message: `Welcome, ${req.user.username}!` });\n  }\n\n  export const config = { api: { bodyParser: false } };\n\n  export default authMiddleware(protectedRoute);\n  ```\n- Ensure environment variables are securely managed and not exposed in your codebase.",
+    "source": "code_example",
+    "updated_at": 1781045548.5995808
+  },
+  "search:typescript-nextjs-authentication-jwt:typescript next.js jwt securit": {
+    "content": "- Use `next-auth` for JWT authentication in Next.js.\n- Install via npm: `npm install next-auth`.\n- Configure `next-auth` in your project by creating a file like `[...nextauth].ts` in the `/pages/api/auth/` directory.\n- Set up providers (e.g., Google, Email) and configure them with necessary credentials.\n- Use middleware to protect routes:\n  ```typescript\n  import { NextResponse } from 'next/server';\n  import { getToken } from 'next-auth/jwt';\n\n  export async function middleware(req: Request) {\n    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });\n    if (!token) return new NextResponse('Unauthorized', { status: 401 });\n\n    return NextResponse.next();\n  }\n  ```\n- Configure `next.config.js` for environment variables:\n  ```javascript\n  module.exports = {\n    env: {\n      NEXTAUTH_URL: process.env.NEXTAUTH_URL,\n      NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,\n    },\n  };\n  ```\n- Ensure to set up `.env.local` with your environment-specific values.\n- Regularly update dependencies and check for security patches.",
+    "source": "web_search",
+    "updated_at": 1781045560.617529
+  },
+  "search:typescript-nextjs-authentication-jwt:typescript next.js jwt securit_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app --typescript`\n  - `npm install @next-auth/jwt`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - @next-auth/jwt: v4.0\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth].ts`: Configuration for NextAuth.js.\n  - `JWT_SECRET`: Secret key for signing JWT tokens.\n  - `session.maxAge`: Maximum age of the session in seconds.\n  - `session.strategy`: Strategy for managing sessions (e.g., \"jwt\", \"database\").",
+    "source": "code_example",
+    "updated_at": 1781045572.1814587
+  }
+}

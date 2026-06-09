@@ -1,0 +1,22 @@
+{
+  "search:python-fastapi-asyncio-performance:fastapi asyncio performance op": {
+    "content": "- Use `uvicorn` with the `--reload` flag for development.\n- Upgrade FastAPI to the latest version using pip: `pip install fastapi --upgrade`.\n- Configure ASGI server settings in your main application file, e.g., `app = FastAPI()`.\n- Utilize `asyncio.sleep()` for CPU-bound tasks offloading.\n- Employ worker processes with `uvicorn` using the `--workers` flag, e.g., `uvicorn app:app --workers 4`.\n- Monitor performance with tools like `asyncio.run()` and `timeit` for benchmarking.\n- Avoid using synchronous functions in async contexts to maintain performance.",
+    "source": "web_search",
+    "updated_at": 1781045505.6709807
+  },
+  "search:python-fastapi-asyncio-performance:fastapi asyncio performance op_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications with async capabilities.\n  - Command: `uvicorn main:app --host 0.0.0.0 --port 8000`\n\n- Ensure your database session is asynchronous and compatible with FastAPI.\n  - Example: `async_db = AsyncSession(bind=engine)`\n\n- Define routes as `async` to leverage FastAPI's async capabilities.\n  - Example: `@app.get(\"/items/\", response_model=list[Item])`\n    ```python\n    async def read_items():\n        items = await get_items()\n        return items\n    ```\n\n- Use `asyncio.create_task()` for concurrent task execution in FastAPI routes.\n  - Example:\n    ```python\n    @app.get(\"/start\")\n    async def start_tasks():\n        task1 = asyncio.create_task(task1_function())\n        task2 = asyncio.create_task(task2_function())\n        await task1\n        await task2\n        return {\"message\": \"Tasks completed\"}\n    ```\n\n- Optimize database queries to reduce latency.\n  - Use SQLAlchemy's ORM for efficient querying.\n\n- Monitor and profile your FastAPI application using tools like `asyncio` profiling or third-party libraries.\n\n- Ensure proper error handling in async routes to maintain robustness.",
+    "source": "code_example",
+    "updated_at": 1781045513.3401709
+  },
+  "search:python-fastapi-asyncio-performance:python fastapi asyncio benchma": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development.\n  - `uvicorn main:app --host 0.0.0.0 --port 8000` for production.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - Uvicorn: v10.7.0\n\n- **Key Config Options**:\n  - `--reload`: Enables auto-reload during development.\n  - `--host`: Specifies the host to bind the server to.\n  - `--port`: Specifies the port to listen on.\n  - `--workers`: Number of worker processes for handling requests.\n\nThese commands and options provide a solid foundation for setting up and running FastAPI applications efficiently.",
+    "source": "web_search",
+    "updated_at": 1781045522.1498168
+  },
+  "search:python-fastapi-asyncio-performance:python fastapi asyncio benchma_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications, e.g., `uvicorn main:app --host 0.0.0.0 --port 8000`.\n- Ensure you have the latest versions of FastAPI and Uvicorn by running `pip install fastapi uvicorn --upgrade`.\n- Key configuration options include setting environment variables like `LOG_LEVEL` for logging control.\n- For benchmarking, consider using tools like `ab` (Apache Bench) or `wrk` to simulate multiple concurrent users.\n- Use `asyncio.get_running_loop()` to manage asynchronous operations within FastAPI endpoints.\n- Be aware that async does not always improve performance; benchmark specific patterns to understand their impact.",
+    "source": "code_example",
+    "updated_at": 1781045530.895888
+  }
+}

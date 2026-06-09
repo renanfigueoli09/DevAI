@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-mysql-performance-tuning:gorm mysql performance tuning ": {
+    "content": "- **CLI Commands**:\n  - `mysqladmin -u root -p status` to check MySQL server status.\n  - `EXPLAIN SELECT * FROM table_name WHERE condition;` to analyze query performance.\n\n- **Latest Versions**:\n  - GORM: Latest version as of my last update is v2.0.x.\n  - MySQL: Latest stable version as of my last update is 8.4.\n\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on your system's memory to improve read performance.\n  - `query_cache_type` and `query_cache_size`: Enable query cache for read-heavy workloads.\n  - `max_connections`: Increase if you have many concurrent connections.",
+    "source": "web_search",
+    "updated_at": 1781045580.1864905
+  },
+  "search:go-gorm-mysql-performance-tuning:gorm mysql performance tuning _ex": {
+    "content": "- **Latest Version**: MySQL 8.4, GORM latest as of April 2026.\n  \n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on your system's memory.\n  - `query_cache_type` and `query_cache_size`: Disable if not needed for better performance.\n\n- **CLI Commands**:\n  - `mysqladmin -u root -p status`: Check MySQL server status.\n  - `mysqldump --single-transaction --quick --lock-tables=false`: Efficiently backup databases.\n\n- **Performance Tips**:\n  - Use indexes on frequently queried columns.\n  - Optimize queries by avoiding N+1 selects.\n  - Regularly analyze and optimize tables with `ANALYZE TABLE` and `OPTIMIZE TABLE`.\n\n- **GORM Optimization**:\n  - Enable eager loading to reduce database hits: `Preload(\"RelatedModel\")`.\n  - Use batch operations for bulk inserts/updates/deletes.\n\n- **MySQL Scalability**:\n  - Scale out by adding more replicas.\n  - Use sharding for large datasets across multiple servers.",
+    "source": "code_example",
+    "updated_at": 1781045590.6993327
+  },
+  "search:go-gorm-mysql-performance-tuning:go gorm mysql optimization str": {
+    "content": "- **CLI Commands**: \n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.36.0\n  - MySQL Driver: v1.5.0\n\n- **Key Config Options**:\n  - `gorm.Open(mysql.Open(dsn), &gorm.Config{})`\n  - `dsn`: Data Source Name, e.g., `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - `prepareStmtCacheSize`: Set to 0 to disable prepared statement cache.\n    ```go\n    dsn += \"&prepareStmtCacheSize=0\"\n    ```\n  - `gorm.Config{Logger: logger.Default.LogMode(logger.Info)}`\n    - Configure logging level.\n\n- **Additional Tips**:\n  - Use connection pooling for better performance.\n    ```go\n    db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{\n        NowFunc: func() time.Time {\n            return time.Now().Local()\n        },\n        Logger: logger.Default.LogMode(logger.Info),\n    })\n    ```\n  - Optimize queries by using eager loading and avoiding N+1 issues.\n    ```go\n    db.Preload(\"RelatedModel\").Find(&users)\n    ```\n\nThese actionable facts should help developers optimize their use of GORM with MySQL in Go.",
+    "source": "web_search",
+    "updated_at": 1781045604.333119
+  },
+  "search:go-gorm-mysql-performance-tuning:go gorm mysql optimization str_ex": {
+    "content": "- Use `go get -u gorm.io/gorm` to update GORM.\n- For MySQL, use `go get -u gorm.io/driver/mysql`.\n- Initialize GORM with MySQL using `gorm.Open(mysql.Open(\"user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local\"), &gorm.Config{})`.\n- Key config options include:\n  - `charset`: Set the character set for MySQL.\n  - `parseTime`: Automatically parse time values.\n  - `loc`: Set the location of time values.\n- Use `db.AutoMigrate(&YourModel{})` to automatically migrate your models.\n- For efficient queries, use GORM's query builder methods like `Where`, `Select`, and `Joins`.\n- Implement batch operations using `CreateInBatches` or `SaveInBatches` for better performance with large datasets.\n- Use connection pooling by setting `MaxIdleConns`, `MaxOpenConns`, and `ConnMaxLifetime` in the MySQL driver configuration.",
+    "source": "code_example",
+    "updated_at": 1781045612.322225
+  }
+}
