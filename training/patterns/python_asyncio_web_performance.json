@@ -1,0 +1,22 @@
+{
+  "search:python-asyncio-web-performance:python asyncio web performance": {
+    "content": "- Use `python -m asyncio` to run asyncio programs.\n- Update Python to the latest version (3.14.5 as of my last update).\n- Configure event loop policies with `asyncio.set_event_loop_policy()`.\n- Utilize `asyncio.run()` for running top-level entry point coroutines.\n- Implement `async def` functions for asynchronous operations.\n- Use `await` to pause execution until a coroutine completes.\n- Monitor performance using tools like `asyncio.Task.all_tasks()` and `asyncio.get_running_loop()`.\n- Consider third-party libraries such as `aiohttp` for web servers and `aiomysql` for database connections.\n- Optimize by reducing I/O blocking with non-blocking I/O operations.",
+    "source": "web_search",
+    "updated_at": 1781018898.4611373
+  },
+  "search:python-asyncio-web-performance:python asyncio web performance_ex": {
+    "content": "- Use `python -m pip install --upgrade asyncio` to ensure you have the latest version of asyncio.\n- For running an asyncio script, use `python your_script.py`.\n- Key configuration options include setting loop policies with `asyncio.set_event_loop_policy()`.\n- Utilize `asyncio.run()` for running top-level entry point coroutines.\n- Implement asynchronous web requests using libraries like `aiohttp` or `httpx`.\n- Configure concurrency limits with `asyncio.Semaphore`.\n- Monitor performance using tools like `asyncio.Queue` and `asyncio.Task.all_tasks()`.\n- For high-performance, consider using `uvloop` as an alternative event loop policy.\n- Implement error handling with `try-except` blocks around asynchronous operations.",
+    "source": "code_example",
+    "updated_at": 1781018916.7628179
+  },
+  "search:python-asyncio-web-performance:asynchronous web frameworks in": {
+    "content": "- **Sanic**: Asynchronous Web Framework for Python 3.5+\n  - Install: `pip install sanic`\n  - Run: `sanic app --host=0.0.0.0 --port=8000`\n\n- **FastAPI**:\n  - Install: `pip install fastapi uvicorn`\n  - Run: `uvicorn main:app --reload`\n\n- **Django**:\n  - Install: `pip install django`\n  - Start Project: `django-admin startproject myproject`\n  - Run Server: `python manage.py runserver`\n\n- **Flask**:\n  - Install: `pip install flask`\n  - Run: `flask run --host=0.0.0.0 --port=5000`\n\n- **FastAPI**:\n  - Key Config Options: `app = FastAPI(docs_url=\"/api/docs\", redoc_url=\"/api/redoc\")`\n\n- **Django**:\n  - Key Config Options: `DATABASES`, `SECRET_KEY`, `DEBUG`\n\n- **Flask**:\n  - Key Config Options: `FLASK_APP`, `FLASK_ENV`",
+    "source": "web_search",
+    "updated_at": 1781018936.0423863
+  },
+  "search:python-asyncio-web-performance:asynchronous web frameworks in_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install asyncio`\n  - `python3 -m asyncio example.py`\n\n- **Latest Versions**:\n  - Python 3.10 or later\n\n- **Key Config Options**:\n  - Event Loop: `asyncio.get_event_loop()`\n  - Coroutines: Define functions with `async def`\n  - Tasks: Schedule coroutines with `asyncio.create_task()`\n  - Futures: Represent the result of an asynchronous computation",
+    "source": "code_example",
+    "updated_at": 1781018941.3471806
+  }
+}
