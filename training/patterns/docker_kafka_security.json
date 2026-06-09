@@ -8,5 +8,50 @@
     "content": "- Use the latest Bitnami or Apache Kafka Docker images.\n- Configure TLS/SSL using `docker run` command with flags like `-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://your_host:9092,SSL://your_host:9093 -e KAFKA_SSL_KEYSTORE_LOCATION=/etc/kafka/secrets/kafka.server.keystore.jks -e KAFKA_SSL_KEYSTORE_PASSWORD=your_password`.\n- Set up SSL certificates by mounting them into the container with `-v /path/to/certs:/etc/kafka/secrets`.\n- Enable SASL/PLAIN authentication for additional security.\n- Configure `server.properties` to include settings like `listeners=SSL://0.0.0.0:9093`, `ssl.keystore.location=/etc/kafka/secrets/kafka.server.keystore.jks`, and `ssl.key.password=your_password`.\n- Use Docker Compose for multi-container setups, defining networks and volumes.\n- Regularly update the Kafka image to the latest version for security patches.",
     "source": "code_example",
     "updated_at": 1780942024.7856598
+  },
+  "search:Docker+kafka-security:docker kafka security best pra": {
+    "content": "- Use `docker run` to deploy Kafka with the latest version.\n- Set up TLS/SSL encryption using `-e KAFKA_SSL_ENABLED=true`.\n- Configure Zookeeper for high availability with `-e ZOOKEEPER_CONNECT=zookeeper:2181`.\n- Enable SASL authentication with `-e KAFKA_SASL_ENABLED=true` and specify mechanism.\n- Use `docker exec` to manage Kafka cluster operations like getting the cluster ID.\n- Ensure resource limits are set using Docker's `--memory` and `--cpus` flags.\n- Regularly update Docker images and Kafka binaries for security patches.",
+    "source": "web_search",
+    "updated_at": 1781048163.76288
+  },
+  "search:Docker+kafka-security:docker kafka security best pra_ex": {
+    "content": "- Use `docker-compose` to set up a Kafka cluster.\n- Ensure TLS/SSL is enabled by mounting certificates and keys in the `docker-compose.yml`.\n- Configure ACLs using `kafka-acls.sh` script for secure access control.\n- Set environment variables in `kafka.env` for default configurations.\n- Utilize Bitnami's Docker image for Kafka with built-in rack configuration support.\n- Monitor Kafka cluster health using tools like Confluent Control Center or Prometheus.\n- Regularly update Docker images and dependencies to the latest versions.",
+    "source": "code_example",
+    "updated_at": 1781048173.3763428
+  },
+  "search:Docker+kafka-security:kafka security in docker envir": {
+    "content": "- Use `docker run` to start Kafka container with SASL/PLAIN authentication.\n- Set environment variables like `KAFKA_ADVERTISED_LISTENERS`, `KAFKA_LISTENERS`, `KAFKA_SASL_ENABLED_MECHANISMS`, and `KAFKA_PLAINTEXT_LISTENER_NAME`.\n- Use `docker-compose` for managing multiple Kafka brokers in a Docker environment.\n- Ensure all containers are on the same network to communicate.\n- Generate self-signed certificates using OpenSSL commands.\n- Mount volumes for persistent storage of Kafka data and certificates.\n- Expose necessary ports (default is 9092) for communication.\n- Use `docker cp` to copy generated keystore files from container to host.",
+    "source": "web_search",
+    "updated_at": 1781048181.8558235
+  },
+  "search:Docker+kafka-security:kafka security in docker envir_ex": {
+    "content": "- Use `docker-compose` to start Kafka in Docker.\n- Set environment variables for security configurations.\n- Utilize `KAFKA_ADVERTISED_LISTENERS`, `KAFKA_SECURITY_PROTOCOL`, and `KAFKA_SSL_KEYSTORE_LOCATION`.\n- Ensure latest versions of Kafka and Docker images.\n- Configure SSL/TLS for secure communication.\n- Use `docker run` with flags like `-e KAFKA_BROKER_ID=0 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181`.\n- Mount volumes for persistent storage.\n- Expose necessary ports (default 9092 for Kafka).\n- Utilize Docker Compose files from Apache Kafka repository.",
+    "source": "code_example",
+    "updated_at": 1781048199.9181929
+  },
+  "search:Docker+kafka-security:docker-compose kafka security ": {
+    "content": "- Use `docker-compose` version 3.8 or later.\n- Deploy Kafka in KRaft mode using Docker Compose for production environments.\n- Configure SASL authentication and SSL/TLS encryption for enhanced security.\n- Set up a 3-broker cluster for production workloads.\n- Use the latest Apache Kafka version (e.g., 3.0.0).\n- Define environment variables such as `KAFKA_BROKER_ID`, `KAFKA_ZOOKEEPER_CONNECT`, and `KAFKA_ADVERTISED_LISTENERS`.\n- Configure network settings to ensure seamless communication between brokers.\n- Use the `docker-compose.yml` file provided by Confluent for a quick setup.\n- Run Kafka with SSL/TLS using the `kafka-docker-compose` repository from GitHub.",
+    "source": "web_search",
+    "updated_at": 1781048210.8225608
+  },
+  "search:Docker+kafka-security:docker-compose kafka security _ex": {
+    "content": "- Use `docker-compose` version 3.8 or later.\n- Define users in the `docker-compose.yml` file using the format:\n  ```yaml\n  environment:\n    KAFKA_OPTS: \"-Djava.security.auth.login.config=/etc/kafka/secrets/jaas.conf\"\n  ```\n- Create a `jaas.conf` file with entries like:\n  ```conf\n  KafkaServer {\n      org.apache.kafka.common.security.plain.PlainLoginModule required\n      username=\"admin\"\n      password=\"admin-secret\"\n      user_admin=\"admin-secret\"\n      user_alice=\"alice-secret\";\n  };\n  ```\n- Mount the `jaas.conf` file into your Docker container:\n  ```yaml\n  volumes:\n    - ./jaas.conf:/etc/kafka/secrets/jaas.conf\n  ```\n- Configure Kafka to use SASL/PLAIN by setting environment variables in your `docker-compose.yml`:\n  ```yaml\n  environment:\n    KAFKA_SASL_ENABLED_MECHANISMS: PLAIN\n    KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,SSL://0.0.0.0:9093\n    KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,SSL://localhost:9093\n    KAFKA_SSL_ENABLED_PROTOCOLS: TLSv1.2\n  ```\n- Ensure Zookeeper is also configured to work with SASL/PLAIN if needed.\n\nThese steps provide a basic setup for securing Kafka using SASL/PLAIN authentication with Docker Compose.",
+    "source": "code_example",
+    "updated_at": 1781048224.33952
+  },
+  "search:Docker+kafka-security:securing kafka with docker": {
+    "content": "- Use `docker-compose` to set up Kafka with TLS/SSL.\n- Create a `kafka.env` file for default settings.\n- Attach six volumes for certificates, clients, and producers.\n- Configure SASL/PLAIN authentication using JAAS configuration.\n- Utilize Docker's network configuration to secure Kafka.\n- Override broker configurations in the `docker-compose.yml`.\n- Ensure Kafka does not expose unnecessary open ports.",
+    "source": "web_search",
+    "updated_at": 1781048233.8325279
+  },
+  "search:Docker+kafka-security:securing kafka with docker_ex": {
+    "content": "- Use `docker-compose up -d` to start Kafka and Zookeeper.\n- Configure SASL/PLAIN authentication by setting environment variables in `docker-compose.yml`.\n- Set `KAFKA_SASL_ENABLED_MECHANISMS=PLAIN` and `KAFKA_AUTHORIZER_CLASS_NAME=kafka.security.authorizer.AclAuthorizer`.\n- Enable ACLs for fine-grained access control.\n- Use `kafka-topics.sh --create` with appropriate ACLs to secure topics.\n- Configure clients with SASL/PLAIN credentials in the properties file or code.",
+    "source": "code_example",
+    "updated_at": 1781048241.6189275
+  },
+  "search:Docker+kafka-security:docker kafka authentication an": {
+    "content": "- **CLI Commands**:\n  - `docker run --name kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -d wurstmeister/kafka`\n  - `docker exec -it kafka bash`\n\n- **Latest Versions**:\n  - Kafka: 3.4.1\n  - Zookeeper: 3.7.0\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for the broker.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string to Zookeeper.\n  - `SASL_ENABLED_MECHANISMS`: Enable SASL mechanisms like SCRAM-SHA-512.\n  - `SCRAM-SHA-512`: Authentication mechanism using SHA-512 hashing.",
+    "source": "web_search",
+    "updated_at": 1781048250.1063955
   }
 }
