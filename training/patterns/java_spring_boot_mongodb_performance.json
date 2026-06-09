@@ -1,0 +1,17 @@
+{
+  "search:java-spring-boot-mongodb-performance:spring boot mongodb performanc": {
+    "content": "- **CLI Commands**: Use `mongo` shell to run queries and analyze performance.\n- **Latest Versions**: Ensure Spring Boot and MongoDB are up-to-date for the best performance.\n- **Key Config Options**:\n  - Enable query logging: `spring.data.mongodb.logging.level.com.yourpackage.repository=DEBUG`\n  - Configure connection pool size: `spring.data.mongodb.uri=mongodb://localhost:27017/yourdb?maxPoolSize=50&minPoolSize=10`\n  - Use indexes for queries to speed up data retrieval.\n- **Optimization Tips**:\n  - Avoid N+1 query problems by using projections or fetching related entities in a single query.\n  - Regularly review and optimize MongoDB queries for efficiency.\n  - Monitor and analyze performance metrics using tools like MongoDB Atlas or Spring Boot Actuator.",
+    "source": "web_search",
+    "updated_at": 1781035740.8413942
+  },
+  "search:java-spring-boot-mongodb-performance:mongodb indexing strategies fo": {
+    "content": "- **CLI Commands**: Use `db.collection.createIndex()` to create an index.\n- **Latest Versions**: Ensure MongoDB and Spring Data MongoDB are up-to-date for the best performance and features.\n- **Key Config Options**:\n  - `@Indexed`: Marks a field as indexed in entity classes.\n  - `single-field indexes`: Optimize queries on single fields.\n  - `compound indexes`: Combine multiple fields to optimize multi-field queries.\n  - `text indexes`: Enable text search capabilities.\n  - `time-to-live (TTL) indexes`: Automatically remove documents after a certain period.",
+    "source": "web_search",
+    "updated_at": 1781035796.6256988
+  },
+  "search:java-spring-boot-mongodb-performance:mongodb indexing strategies fo_ex": {
+    "content": "- **Enable Auto-Index Creation**: Set `spring.data.mongodb.auto-index-creation=true` in your `application.properties`.\n- **Create Indexes Programmatically**:\n  ```java\n  import org.springframework.beans.factory.annotation.Autowired;\n  import org.springframework.boot.CommandLineRunner;\n  import org.springframework.data.mongodb.core.MongoTemplate;\n  import org.springframework.stereotype.Component;\n\n  @Component\n  public class MongoIndexCreator implements CommandLineRunner {\n      @Autowired\n      private MongoTemplate mongoTemplate;\n\n      @Override\n      public void run(String... args) throws Exception {\n          mongoTemplate.indexOps(\"yourCollectionName\").ensureIndex(new Index().on(\"fieldName\", Sort.Direction.ASC));\n      }\n  }\n  ```\n- **Latest MongoDB Version**: Ensure you are using the latest stable version for optimal performance and security.\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string to your MongoDB instance.\n  - `spring.data.mongodb.database`: Name of the database to connect to.\n\nThese actionable facts should help a developer set up and manage indexes in their Spring Boot application using MongoDB.",
+    "source": "code_example",
+    "updated_at": 1781035814.499139
+  }
+}

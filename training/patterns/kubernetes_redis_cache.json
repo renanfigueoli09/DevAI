@@ -18,5 +18,25 @@
     "content": "- Deploy Redis on Kubernetes using `kubectl apply -f redis.yaml`\n- Use HPA to scale based on CPU utilization: `kubectl autoscale deployment redis --cpu-percent=50 --min=1 --max=10`\n- Configure Redis with persistence: `volumeClaimTemplates` in the deployment YAML\n- Set resource limits and requests for pods: `resources` section in pod spec\n- Use StatefulSet for ordered, unique network identifiers\n- Monitor performance with Prometheus and Grafana\n- Update to latest Redis version using Helm charts",
     "source": "code_example",
     "updated_at": 1780969058.6952388
+  },
+  "search:kubernetes-redis-cache:kubernetes redis cache setup a": {
+    "content": "- Deploy Redis on Kubernetes using `kubectl apply -f redis-deployment.yaml`\n- Use ConfigMap to manage Redis configuration files, e.g., `kubectl create configmap redis-config --from-file=redis.conf`\n- Apply the ConfigMap in your deployment with `envFrom` or `volumeMounts`\n- For a Redis cluster, use the `redis-operator` from OT-CONTAINER-KIT: `kubectl apply -f https://raw.githubusercontent.com/OT-CONTAINER-KIT/redis-operator/master/deploy/crds/cache_v1_rediscluster.yaml`\n- Deploy the operator with `kubectl apply -f https://raw.githubusercontent.com/OT-CONTAINER-KIT/redis-operator/master/deploy/operator.yaml`\n- Configure Redis cluster settings in the CRD, e.g., number of replicas\n- Monitor and scale your Redis deployment using Kubernetes autoscaling features\n- Use `kubectl get pods` to check the status of your Redis pods\n- For optimization, consider enabling persistence with `volumeClaimTemplates` in your StatefulSet\n- Adjust memory limits and requests in your pod specification for optimal performance",
+    "source": "web_search",
+    "updated_at": 1781035667.1108816
+  },
+  "search:kubernetes-redis-cache:kubernetes redis cache setup a_ex": {
+    "content": "- Ensure Kubernetes cluster is running.\n- Install `kubectl` and configure it to communicate with your cluster.\n- Use `kubectl apply -f <filename>.yaml` to deploy Redis using a ConfigMap or other YAML file.\n- For the latest version of Redis, check the official Redis website for the most current release.\n- Key config options include `replicas`, `resources`, and `storageClass`.\n- Example command to create a Redis deployment:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/staging/deployment/redis.yaml\n  ```\n- For managing Redis in production, consider using StatefulSets for persistent storage.\n- Use `kubectl get pods` and `kubectl describe pod <pod-name>` to monitor and troubleshoot your Redis deployment.",
+    "source": "code_example",
+    "updated_at": 1781035684.3645997
+  },
+  "search:kubernetes-redis-cache:redis as a service on kubernet": {
+    "content": "- Deploy Redis on Kubernetes using `kubectl apply -f redis-deployment.yaml`\n- Use ConfigMap to manage Redis configuration, e.g., `kubectl create configmap redis-config --from-file=redis.conf`\n- Apply the ConfigMap in your deployment file with:\n  ```yaml\n  volumeMounts:\n  - name: redis-config-volume\n    mountPath: /etc/redis\n  volumes:\n  - name: redis-config-volume\n    configMap:\n      name: redis-config\n  ```\n- Use `kubectl apply -f redis-service.yaml` to create a service for Redis.\n- For monitoring, integrate Prometheus and Grafana using Helm charts with:\n  ```bash\n  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts\n  helm install my-prometheus prometheus-community/prometheus\n  ```\n- Set CPU and memory limits in your deployment file:\n  ```yaml\n  resources:\n    requests:\n      cpu: \"250m\"\n      memory: \"64Mi\"\n    limits:\n      cpu: \"500m\"\n      memory: \"128Mi\"\n  ```\n- Use `kubectl get pods -l app=redis` to check the status of your Redis pods.\n- For a Redis cluster, use StatefulSets and Headless Services for stable network identities.",
+    "source": "web_search",
+    "updated_at": 1781035711.7232757
+  },
+  "search:kubernetes-redis-cache:redis as a service on kubernet_ex": {
+    "content": "- Use `kubectl expose pod redis --name=redis-service --port=6379` to create a service for Redis.\n- Deploy Redis using the command: `kubectl run redis --image=redis:alpine`.\n- Create a deployment for your web app with 3 replicas:\n  ```bash\n  kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3\n  ```\n- Expose the web app deployment as a service:\n  ```bash\n  kubectl expose deployment webapp --name=webapp-service --type=LoadBalancer --port=80\n  ```\n- Use `kubectl apply -f <filename>.yaml` to deploy applications using YAML files.\n- For Redis, consider using the latest stable version available on Docker Hub.\n- Key configuration options for Redis in Kubernetes include resource limits and requests, persistence volumes, and node affinity.",
+    "source": "code_example",
+    "updated_at": 1781035731.3368485
   }
 }
