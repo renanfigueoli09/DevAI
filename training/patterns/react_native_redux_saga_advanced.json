@@ -1,0 +1,37 @@
+{
+  "search:react-native+redux-saga-advanced:react native redux saga advanc": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-native-app my-app`\n  - `npm install redux-saga --save`\n\n- **Latest Versions**:\n  - React Native: 0.72.6\n  - Redux-Saga: 1.4.3\n\n- **Key Config Options**:\n  - In `store.js`, configure the store with `applyMiddleware(sagaMiddleware)` to integrate Redux Saga.\n  - Define sagas using `function* mySaga() { ... }` and run them with `sagaMiddleware.run(mySaga)`.\n  - Use `takeEvery`, `takeLatest`, or `call` effects in sagas for handling side effects.",
+    "source": "web_search",
+    "updated_at": 1781024483.6317968
+  },
+  "search:react-native+redux-saga-advanced:react native redux saga testin": {
+    "content": "- Use `redux-saga-test` or `redux-saga-testing` for step-by-step testing of generator yields.\n- For advanced testing, consider using `redux-saga-test-engine`.\n- Explore comprehensive guides on Redux-Saga testing by searching for \"Comprehensive Guide to Testing Strategies in Redux-Saga\".\n- Alex Mitchell's guide offers detailed techniques and code examples for testing React and Redux applications with Redux-Saga.\n- Ensure your test suites are disciplined and prevent bugs through effective testing strategies.",
+    "source": "web_search",
+    "updated_at": 1781024529.1367202
+  },
+  "search:react-native+redux-saga-advanced:react native redux saga testin_ex": {
+    "content": "- **CLI Commands**: Use `npm test` or `yarn test` to run tests.\n- **Latest Versions**: Ensure you are using the latest versions of React Native, Redux, and Redux-Saga for compatibility and bug fixes.\n- **Key Config Options**:\n  - In your `package.json`, ensure you have `\"test\": \"jest\"` under `scripts`.\n  - Configure Jest in your project root with a `jest.config.js` file if needed.\n  - Use `redux-saga-test-plan` for testing sagas effectively.",
+    "source": "code_example",
+    "updated_at": 1781024535.2665675
+  },
+  "search:react-native+redux-saga-advanced:react native redux saga error ": {
+    "content": "- Use `try/catch` blocks within Redux Saga Generators to handle errors.\n- Ensure you have the latest version of Redux and Redux Saga installed for compatibility.\n- Configure your store with `sagaMiddleware.run(rootSaga)` to start running sagas.\n- Implement error handling strategies like logging, retrying operations, or notifying the user.\n- Utilize middleware like `redux-saga/effects` for managing side effects efficiently.\n- Regularly update your dependencies and follow best practices for maintaining clean code.",
+    "source": "web_search",
+    "updated_at": 1781024545.3573656
+  },
+  "search:react-native+redux-saga-advanced:react native redux saga error _ex": {
+    "content": "- **CLI Commands**:\n  - `npm install redux-saga --save`\n  - `npm install @reduxjs/toolkit --save`\n\n- **Latest Versions**:\n  - Redux-Saga: v1.6.3\n  - Redux Toolkit: v2.0.5\n\n- **Key Config Options**:\n  - Use `createSagaMiddleware` from `redux-saga`\n  - Configure middleware in your store with `applyMiddleware(sagaMiddleware)`\n  - Implement error handling within sagas using `try...catch` blocks\n  - Utilize Redux Toolkit's `configureStore` for simplified store setup",
+    "source": "code_example",
+    "updated_at": 1781024551.087426
+  },
+  "search:react-native+redux-saga-advanced:react native redux saga integr": {
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyProject`\n  - `npm install @react-navigation/native`\n  - `npm install @react-navigation/stack`\n  - `npm install redux redux-saga`\n\n- **Latest Versions**:\n  - React Native: 0.69\n  - Redux: 4.1.2\n  - Redux-Saga: 1.1.3\n\n- **Key Config Options**:\n  - In `App.js`, configure the stack navigator.\n  - In `store.js`, set up the Redux store with reducers and middleware including `sagaMiddleware`.\n  - In `rootSaga.js`, define your root saga to manage side effects.\n\nThese steps provide a solid foundation for integrating React Native, Redux, and Redux-Saga effectively.",
+    "source": "web_search",
+    "updated_at": 1781024559.6780195
+  },
+  "search:react-native+redux-saga-advanced:react native redux saga integr_ex": {
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyApp`\n  - `npm install @react-navigation/native`\n  - `npm install @react-navigation/stack`\n  - `npm install redux redux-saga react-redux`\n\n- **Latest Versions**:\n  - React Native: 0.72\n  - Redux: 4.1.5\n  - Redux-Saga: 1.1.3\n\n- **Key Config Options**:\n  - Navigation Stack Configuration: Define screens and navigation paths.\n  - Redux Store Setup: Configure reducers, middleware (including redux-saga).\n  - Saga Effects: Use `takeEvery`, `put`, `call` to manage side effects.\n  - Connect Components: Use `connect` from react-redux to bind state and dispatch.",
+    "source": "code_example",
+    "updated_at": 1781024576.0770931
+  }
+}

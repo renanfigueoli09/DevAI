@@ -18,5 +18,15 @@
     "content": "- Use `kubectl apply -f kafka-client.yml` to deploy Kafka client.\n- Execute `kubectl exec -it kafka-client -- /bin/bash` to access the Kafka client pod.\n- For microservices performance, consider using Kubernetes version 23.x and Docker version 20.x.\n- Key config options include resource limits (`resources.limits.cpu`, `resources.limits.memory`) and requests (`resources.requests.cpu`, `resources.requests.memory`).",
     "source": "code_example",
     "updated_at": 1781018057.51799
+  },
+  "search:docker+kubernetes-microservices-advanced:docker kubernetes microservice": {
+    "content": "- **GitHub Actions**: Use `actions/checkout@v3` and `actions/setup-kubernetes@v2`.\n- **Docker**: Ensure Docker is installed locally with latest version.\n- **Kubernetes**: Deploy using `kubectl apply -f <filename>.yaml`. Use `kustomize build . | kubectl apply -f -` for dynamic configurations.\n- **CI/CD Pipeline**:\n  - Trigger on push to main branch: \n    ```yaml\n    on:\n      push:\n        branches: [ main ]\n    ```\n  - Use steps like `docker/build-push-action@v2` and `kubernetes/kubectl@v2`.\n- **OIDC Authentication**: Configure OIDC in GitHub Actions for secure access.\n- **Istio/Linkerd**: Integrate with Kubernetes using Helm charts:\n  ```bash\n  helm repo add istio https://istio-release.storage.googleapis.com/charts\n  helm install my-release istio/istio --set profile=demo\n  ```\n- **Automated Testing**: Use `actions/setup-node@v3` for Node.js projects and run tests with `npm test`.\n- **Immutable Delivery**: Ensure each deployment is a new version using unique labels or tags.\n- **Performance Management**: Monitor with tools like Prometheus, Grafana, and Kubernetes Dashboard.",
+    "source": "web_search",
+    "updated_at": 1781024656.5668986
+  },
+  "search:docker+kubernetes-microservices-advanced:docker kubernetes microservice_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources in Kubernetes.\n  - `docker build -t <image_name>:<tag> .` to build a Docker image.\n  - `docker push <image_name>:<tag>` to push the Docker image to a registry.\n\n- **Latest Versions**:\n  - GitHub Actions: Latest version as of my last update.\n  - Kubernetes: v1.24.x\n  - Docker: v20.10.x\n\n- **Key Config Options**:\n  - GitHub Actions Workflow YAML for CI/CD.\n  - Kubernetes Deployment and Service YAML files.\n  - Dockerfile configurations for building microservices images.",
+    "source": "code_example",
+    "updated_at": 1781024663.397074
   }
 }
