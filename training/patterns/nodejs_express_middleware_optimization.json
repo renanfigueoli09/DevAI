@@ -1,0 +1,12 @@
+{
+  "search:nodejs-express-middleware-optimization:node.js express middleware opt": {
+    "content": "- Use `npm install express` to install the latest version of Express.\n- Implement caching strategies like `express-cache-middleware` for API responses.\n- Optimize middleware by reducing unnecessary operations and using efficient algorithms.\n- Configure garbage collection with Node.js flags like `--max-old-space-size=4096`.\n- Utilize third-party middleware such as `helmet` for security enhancements.\n- Implement rate limiting with `express-rate-limit` to prevent abuse.\n- Use `compression` middleware to reduce response size and improve load times.\n- Monitor performance using tools like `pm2` or `nodemon` for real-time insights.\n- Regularly update dependencies to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781033188.1484122
+  },
+  "search:nodejs-express-middleware-optimization:node.js express middleware opt_ex": {
+    "content": "- Use `npm install express` to install the latest version of Express.js.\n- Implement caching middleware using `express-cache-middleware`.\n- Utilize `helmet` for security headers optimization.\n- Employ `compression` middleware for reducing response size.\n- Monitor performance with `morgan` logging middleware.\n- Apply rate limiting with `express-rate-limit`.\n- Use `cors` for handling Cross-Origin Resource Sharing.\n- Implement session management with `express-session`.\n- Optimize database queries using `sequelize` or `mongoose`.\n- Regularly update dependencies using `npm outdated` and `npm update`.",
+    "source": "code_example",
+    "updated_at": 1781033194.1671693
+  }
+}
