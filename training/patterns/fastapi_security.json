@@ -8,5 +8,25 @@
     "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2 authentication, use `OAuth2PasswordBearer` for password flow and `OAuth2PasswordRequestForm` for form data handling.\n- To generate JWT tokens, consider using libraries like `python-jose[cryptography]`.\n- Key config options include setting the token URL (`tokenUrl`) in your FastAPI app's security scheme.\n- For video tutorials, visit https://go.prettyprinted.co/ to learn about implementing authentication with OAuth2 and JSON web tokens (JWT) in FastAPI apps using Tortoise ORM.",
     "source": "code_example",
     "updated_at": 1781011295.576214
+  },
+  "search:fastapi-security:fastapi security with oauth2 2": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI along with all dependencies.\n- For OAuth2, use `pip install python-multipart`.\n- The latest version of FastAPI as of my last update is 0.98.0.\n- Key config options for securing FastAPI with OAuth2 include:\n  - Setting up an OAuth2 password flow using `OAuth2PasswordBearer` and `OAuth2PasswordRequestForm`.\n  - Generating JWT tokens with `jwt.encode()` from the `pyjwt` library.\n  - Protecting routes with dependencies that validate JWT tokens.\n- Example CLI command to run a FastAPI application: `uvicorn main:app --reload`.\n- For handling passwords securely, use `passlib` for hashing and verifying passwords.",
+    "source": "web_search",
+    "updated_at": 1781017759.1075988
+  },
+  "search:fastapi-security:fastapi security with oauth2 2_ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth2, use `pip install python-multipart`.\n- Create a login endpoint using `OAuth2PasswordRequestForm` for username and password authentication.\n- Implement JWT tokens by installing `python-jose[cryptography]` and using it to encode/decode tokens.\n- Configure the security scheme in your FastAPI app with `SecurityScheme` from `fastapi.security`.\n- Use environment variables for sensitive information like secret keys.\n- For JWKS caching, consider using libraries like `jwkest`.\n- Implement scope checks by defining scopes in your OAuth2 configuration and checking them in your routes.\n- Use middleware to handle token validation and authentication globally across your application.",
+    "source": "code_example",
+    "updated_at": 1781017765.4799757
+  },
+  "search:fastapi-security:fastapi security with jwt bear": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI with all dependencies.\n- For JWT authentication, use the `python-jose[cryptography]` package for encoding and decoding tokens.\n- Ensure your database is secure by using HTTPS connections and strong password policies.\n- Implement password hashing using `passlib` with a robust algorithm like bcrypt.\n- Configure OAuth2 with JWT in FastAPI using the `fastapi.security.OAuth2PasswordBearer` class.\n- Set up environment variables for sensitive information such as secret keys and database URLs.\n- Use middleware to handle authentication and authorization across your application.\n- Regularly update dependencies to the latest versions using `pip install --upgrade package_name`.\n- Test your security implementation thoroughly with tools like Postman or curl.",
+    "source": "web_search",
+    "updated_at": 1781017774.6869016
+  },
+  "search:fastapi-security:fastapi security with jwt bear_ex": {
+    "content": "- Use `pip install fastapi uvicorn python-multipart passlib[bcrypt]` to install necessary packages.\n- Create a new FastAPI project using `fastapi create`.\n- Implement OAuth2 with JWT tokens in your FastAPI application by following the tutorial on [FastAPI's official documentation](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/).\n- Key config options include setting up the secret key, algorithm, and token expiration time.\n- Use `python -m uvicorn main:app --reload` to run your FastAPI application in development mode.",
+    "source": "code_example",
+    "updated_at": 1781017780.1213186
   }
 }

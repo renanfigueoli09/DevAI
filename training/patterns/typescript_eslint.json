@@ -1,0 +1,22 @@
+{
+  "search:typescript-eslint:typescript eslint best practic": {
+    "content": "- Install ESLint globally using `npm install -g eslint`\n- Initialize ESLint in your project with `npx eslint --init` and follow the prompts to set up a configuration.\n- For TypeScript projects, use the `@typescript-eslint/parser` parser and `@typescript-eslint/eslint-plugin`.\n- Add `\"parser\": \"@typescript-eslint/parser\"` and `\"plugins\": [\"@typescript-eslint\"]` to your `.eslintrc.json`.\n- Install recommended plugins for best practices: `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-jsx-a11y`, and `eslint-plugin-prettier`.\n- Configure rules in `.eslintrc.json` under `\"rules\"`. For example, `\"@typescript-eslint/explicit-function-return-type\": \"error\"` to enforce explicit return types.\n- Use the `--fix` flag with ESLint commands to automatically fix linting errors: `npx eslint . --ext .js,.ts --fix`.\n- Update ESLint and plugins regularly using `npm update eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`.",
+    "source": "web_search",
+    "updated_at": 1781017712.7837353
+  },
+  "search:typescript-eslint:typescript eslint best practic_ex": {
+    "content": "- Install ESLint globally using `npm install -g eslint`\n- Initialize ESLint in your project with `eslint --init` and follow the prompts to set up a configuration file.\n- For TypeScript projects, use `npx eslint --init` and select \"TypeScript\" when prompted for language support.\n- Install necessary plugins like `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`.\n- Update your `.eslintrc.json` or `.eslintrc.js` to include the parser and plugin configurations:\n  ```json\n  {\n    \"parser\": \"@typescript-eslint/parser\",\n    \"plugins\": [\"@typescript-eslint\"]\n  }\n  ```\n- Install Prettier for code formatting and integrate it with ESLint by installing `eslint-config-prettier` and `eslint-plugin-prettier`.\n- Configure your `.eslintrc.json` to use Prettier:\n  ```json\n  {\n    \"extends\": [\"plugin:@typescript-eslint/recommended\", \"prettier\"],\n    \"plugins\": [\"@typescript-eslint\", \"prettier\"],\n    \"rules\": {\n      \"prettier/prettier\": \"error\"\n    }\n  }\n  ```\n- Run ESLint on your project with `npx eslint .` to check for linting errors.\n- Consider using the `--fix` flag to automatically fix some linting issues: `npx eslint . --fix`.\n- Keep your ESLint and plugin versions up-to-date by running `npm update @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-prettier`.",
+    "source": "code_example",
+    "updated_at": 1781017722.0730968
+  },
+  "search:typescript-eslint:typescript eslint for large pr": {
+    "content": "- **CLI Commands**:\n  - `npx eslint --init` to set up ESLint in your project.\n  - `npm install typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev` for TypeScript support.\n\n- **Latest Versions**:\n  - Ensure you use the latest versions of `eslint`, `@typescript-eslint/parser`, and `@typescript-eslint/eslint-plugin`.\n\n- **Key Config Options**:\n  - `\"parser\": \"@typescript-eslint/parser\"` in your `.eslintrc.json`.\n  - `\"plugins\": [\"@typescript-eslint\"]` to include TypeScript-specific linting rules.\n  - `\"extends\": \"eslint:recommended\", \"@typescript-eslint/recommended\"` for a balanced set of rules.\n  - `\"rules\": { ... }` to override or add specific rules as needed.",
+    "source": "web_search",
+    "updated_at": 1781017732.910521
+  },
+  "search:typescript-eslint:typescript eslint for large pr_ex": {
+    "content": "- **CLI Commands**: Use `eslint --config-file .eslintrc.js` to specify the ESLint configuration file.\n- **Latest Versions**: ESLint v9.34.0, TypeScript v5.0.0.\n- **Key Config Options**:\n  - `parserOptions.project`: Set to true or provide a path to a tsconfig.json file.\n  - `extends`: Use \"eslint:recommended\" for basic rules and \"plugin:@typescript-eslint/recommended\" for TypeScript-specific rules.\n  - `rules`: Customize rules as needed, e.g., `\"@typescript-eslint/explicit-function-return-type\": \"error\"`.\n\nThese actionable facts should help developers set up ESLint for large TypeScript projects effectively.",
+    "source": "code_example",
+    "updated_at": 1781017741.8810117
+  }
+}

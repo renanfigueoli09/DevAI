@@ -1,0 +1,22 @@
+{
+  "search:nextjs-graphql:next.js graphql integration 20": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-graphql-app`\n  - `npm install @apollo/client graphql`\n\n- **Latest Versions**:\n  - Next.js: 14.x\n  - Apollo Client: 3.x\n\n- **Key Config Options**:\n  - `next.config.js`: Configure API routes, headers, and other settings.\n  - `.env.local`: Define environment variables for GraphQL endpoint URLs and tokens.",
+    "source": "web_search",
+    "updated_at": 1781017796.9331343
+  },
+  "search:nextjs-graphql:next.js graphql integration 20_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-graphql-app`\n  - `npm install graphql apollo-client apollo-link-http apollo-cache-inmemory`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Apollo Client: 3.6\n\n- **Key Config Options**:\n  - `apolloClient`: Configure the Apollo client in `_app.js` for global state management.\n  - `graphqlUrl`: Set the GraphQL API endpoint in your Apollo configuration.\n  - `cache`: Use `ApolloCacheInMemory` for efficient data caching.",
+    "source": "code_example",
+    "updated_at": 1781017802.4884188
+  },
+  "search:nextjs-graphql:next.js graphql performance op": {
+    "content": "- **CLI Commands**:\n  - `next dev`: Starts the development server.\n  - `next build`: Compiles and optimizes your application for production.\n  - `next start`: Starts a Node.js server that serves your Next.js app.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - GraphQL: v16.0\n\n- **Key Config Options**:\n  - `next.config.js`: Configure various aspects of your Next.js project, including optimization settings.\n  - `serverRuntimeConfig` and `publicRuntimeConfig`: For environment-specific configurations.\n\n- **Performance Optimization Tips**:\n  - Use `getStaticProps` for static generation.\n  - Implement `getServerSideProps` for server-side rendering.\n  - Utilize `Image` component from Next.js for optimized image loading.\n  - Enable `staticGenerationAsyncStorage` for advanced caching strategies.",
+    "source": "web_search",
+    "updated_at": 1781017813.6142972
+  },
+  "search:nextjs-graphql:next.js graphql performance op_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-graphql-app`\n  - `npm install @apollo/client graphql`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Apollo Client: 3.7\n\n- **Key Config Options**:\n  - In `next.config.js`, enable API routes for GraphQL.\n  - Configure Apollo Client with the GraphQL endpoint URL.\n  - Use `useQuery` and `useMutation` hooks from `@apollo/client`.",
+    "source": "code_example",
+    "updated_at": 1781017829.1832883
+  }
+}

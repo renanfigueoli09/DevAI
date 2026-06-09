@@ -1,0 +1,12 @@
+{
+  "search:docker-compose:docker compose for multi-servi": {
+    "content": "- Install Docker and Docker Compose on Ubuntu using the following commands:\n  ```bash\n  sudo apt-get update\n  sudo apt-get install docker.io docker-compose-plugin\n  ```\n- Ensure Docker Compose is up to date by running:\n  ```bash\n  sudo apt-get install --only-upgrade docker-compose-plugin\n  ```\n- Key config options in `docker-compose.yml` include:\n  - `version`: Specifies the version of the Compose file format.\n  - `services`: Defines individual services (containers).\n  - `build`: Path to a Dockerfile or build context.\n  - `ports`: Maps container ports to host ports.\n  - `volumes`: Mounts volumes for data persistence.\n  - `depends_on`: Specifies dependencies between services.\n- Example of a simple `docker-compose.yml`:\n  ```yaml\n  version: '3.8'\n  services:\n    web:\n      build: .\n      ports:\n        - \"5000:5000\"\n      volumes:\n        - .:/code\n      depends_on:\n        - db\n    db:\n      image: postgres:latest\n  ```\n- Use `docker-compose up` to start all services defined in the `docker-compose.yml`.\n- To stop and remove containers, use `docker-compose down`.",
+    "source": "web_search",
+    "updated_at": 1781017866.4849238
+  },
+  "search:docker-compose:docker compose for multi-servi_ex": {
+    "content": "- Use `docker compose up` to start all services defined in your Compose file.\n- Ensure Docker Compose is installed and updated to the latest version for compatibility.\n- Key configuration options include `services`, `networks`, and `volumes`.\n- Example of a simple `docker-compose.yml`:\n  ```yaml\n  version: '3.8'\n  services:\n    web:\n      image: nginx:latest\n      ports:\n        - \"80:80\"\n    db:\n      image: mysql:5.7\n      environment:\n        MYSQL_ROOT_PASSWORD: example\n  ```\n- Use `docker compose down` to stop and remove containers, networks, volumes, and images created by `docker-compose up`.\n- For running multiple Node.js apps together, use `docker-compose up -d` for detached mode.\n- Ensure Docker is running on your machine before executing these commands.",
+    "source": "code_example",
+    "updated_at": 1781017883.2072124
+  }
+}
