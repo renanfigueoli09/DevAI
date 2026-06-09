@@ -1,7 +1,24 @@
 {
-  "generated_at": 1781038164.4693213,
+  "generated_at": 1781038794.8053617,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "typescript-prisma-mongodb: não usa TypeORM",
+      "queries": [
+        "typescript-prisma-mongodb schema service"
+      ],
+      "must_find": [
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-prisma-mongodb"
+    },
     {
       "name": "golang-mongo-go-migrate: não usa TypeORM",
       "queries": [
@@ -32,35 +49,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "kafka-streams-python"
-    },
-    {
-      "name": "typescript-graphql-authentication: padrões de código",
-      "queries": [
-        "typescript-graphql-authentication pattern code example",
-        "typescript-graphql-authentication"
-      ],
-      "must_find": [
-        "@latest",
-        "@realtime"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-graphql-authentication"
-    },
-    {
-      "name": "kubernetes-redis-cache: cache",
-      "queries": [
-        "kubernetes-redis-cache cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kubernetes-redis-cache"
     }
   ]
 }
