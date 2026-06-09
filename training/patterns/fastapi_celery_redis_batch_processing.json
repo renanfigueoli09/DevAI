@@ -1,0 +1,22 @@
+{
+  "search:fastapi+celery-redis-batch-processing:fastapi celery redis batch pro": {
+    "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `docker-compose up -d`\n  - `docker-compose down`\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - Celery: 5.3.0\n  - Redis: 7.0.0\n\n- **Key Config Options**:\n  - `app.celery.conf.broker_url = \"redis://localhost:6379/0\"`\n  - `app.celery.conf.result_backend = \"redis://localhost:6379/0\"`\n  - `app.celery.conf.task_serializer = 'json'`\n  - `app.celery.conf.accept_content = ['json']`",
+    "source": "web_search",
+    "updated_at": 1781035942.86567
+  },
+  "search:fastapi+celery-redis-batch-processing:fastapi celery redis batch pro_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up --build`: Build and start services.\n  - `celery -A app.celery worker --loglevel=info`: Start Celery worker.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Celery: 5.2.7\n  - Redis: 6.2.6\n\n- **Key Config Options**:\n  - `app.celery.conf.broker_url = 'redis://localhost:6379/0'`: Set Redis as the message broker.\n  - `app.celery.conf.result_backend = 'redis://localhost:6379/1'`: Use Redis for task results.\n  - `app.celery.conf.worker_concurrency = 4`: Adjust worker concurrency.",
+    "source": "code_example",
+    "updated_at": 1781035961.8122988
+  },
+  "search:fastapi+celery-redis-batch-processing:optimizing fastapi celery redi": {
+    "content": "- **CLI Commands**:\n  - `celery -A app.celery worker --loglevel=info`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - Celery: 5.3.1\n  - Redis: 7.0.4\n\n- **Key Config Options**:\n  - `app.celery.conf.update(broker_url='redis://localhost:6379/0', result_backend='redis://localhost:6379/0')`\n  - `celery_app.autodiscover_tasks(['tasks'])`",
+    "source": "web_search",
+    "updated_at": 1781035970.513466
+  },
+  "search:fastapi+celery-redis-batch-processing:optimizing fastapi celery redi_ex": {
+    "content": "- Use `docker run --rm --name some-redis redis` to start Redis locally.\n- Install Celery with Redis support using `poetry add 'celery[redis]'`.\n- Configure Celery in your FastAPI app with the broker URL, e.g., `broker_url = \"redis://localhost:6379/0\"`.\n- Use Flower for monitoring and managing Celery tasks by running `celery -A your_project_name flower --broker=redis://localhost:6379/0`.\n- Set up a worker process to handle background tasks with `celery -A your_project_name worker --loglevel=info`.\n- Restrict Celery to one task at a time using the `max_concurrency` option in the worker configuration.\n- Cancel long-running tasks by sending a message to the task ID, e.g., `task_id.revoke(terminate=True)`.",
+    "source": "code_example",
+    "updated_at": 1781035979.3120904
+  }
+}

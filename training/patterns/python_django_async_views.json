@@ -1,0 +1,22 @@
+{
+  "search:python-django-async-views:asynchronous views in django 2": {
+    "content": "- **Latest Versions**: Django 4.1 introduced asynchronous API for cache backends.\n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to the ASGI callable of your project.\n  - `MIDDLEWARE`: Include async middlewares if needed.\n- **CLI Commands with Exact Flags**:\n  - To create an async view: `python manage.py startapp myapp`\n  - To run an ASGI server: `daphne myproject.asgi:application`\n- **Additional Resources**:\n  - [Django Asynchronous Views Documentation](https://docs.djangoproject.com/en/stable/topics/async/)\n  - [Django Async Programming Tutorial](https://medium.com/djangostars/asynchronous-programming-in-django-from-basics-to-advanced-5b8e2a1c0f3d)",
+    "source": "web_search",
+    "updated_at": 1781036003.6090295
+  },
+  "search:python-django-async-views:asynchronous views in django 2_ex": {
+    "content": "- Use `django-asyncio` package for async views.\n- Install via pip: `pip install django-asyncio`.\n- Update settings to use ASGI application:\n  ```python\n  # settings.py\n  ASGI_APPLICATION = 'your_project.asgi.application'\n  ```\n- Create an async view using `@async_view` decorator:\n  ```python\n  from django.views.decorators.http import require_http_methods\n  from django_asyncio.decorators import async_view\n\n  @require_http_methods([\"GET\"])\n  @async_view()\n  async def my_async_view(request):\n      # Your async logic here\n      return HttpResponse(\"Hello, world!\")\n  ```\n- Run Django project with ASGI server:\n  ```bash\n  python manage.py runserver --asgi\n  ```\n- Ensure your project is compatible with Python 3.7+ for `async/await` support.\n- For more details, refer to the official Django documentation on asynchronous views and ASGI.",
+    "source": "code_example",
+    "updated_at": 1781036020.784709
+  },
+  "search:python-django-async-views:optimizing django performance ": {
+    "content": "- Use `django-asyncio` package for asynchronous views.\n- Update Django to the latest version (4.2 as of my last update).\n- Configure ASGI server like Daphne or Uvicorn for async support.\n- Set `ASGI_APPLICATION = 'myproject.asgi.application'` in settings.py.\n- Use `@async_to_sync` decorator for synchronous code within async views.\n- Monitor performance using Django Debug Toolbar and profiling tools.\n- Consider using Celery with Redis for background tasks.",
+    "source": "web_search",
+    "updated_at": 1781036036.089923
+  },
+  "search:python-django-async-views:optimizing django performance _ex": {
+    "content": "- **Latest Version**: Django 6.0 introduced full async support.\n- **CLI Commands**:\n  - `python manage.py runserver` for WSGI development server.\n  - `uvicorn myproject.asgi:application --reload` for ASGI development with Uvicorn.\n- **Key Config Options**:\n  - Use asynchronous views by defining them with `async def`.\n  - Configure middleware to handle async requests if needed.\n  - Ensure your database and other dependencies support async operations.",
+    "source": "code_example",
+    "updated_at": 1781036042.0374777
+  }
+}

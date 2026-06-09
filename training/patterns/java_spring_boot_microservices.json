@@ -1,0 +1,22 @@
+{
+  "search:java-spring-boot-microservices:spring boot microservices arch": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `docker-compose up` to start services defined in a `docker-compose.yml`.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x (as of my last update).\n  - Spring Cloud: 2021.0.x (Greenwich).\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for configuration.\n  - `spring.application.name` to set the application name.\n  - `server.port` to specify the port number.\n  - `spring.cloud.client.discovery.enabled=true` to enable service discovery.",
+    "source": "web_search",
+    "updated_at": 1781036049.6089823
+  },
+  "search:java-spring-boot-microservices:spring boot microservices arch_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot applications.\n  - `docker-compose up` for multi-service setup.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Cloud: 2021.0.x\n\n- **Key Config Options**:\n  - `application.yml`: For service configuration and properties.\n  - `@EnableDiscoveryClient`: Enables Eureka client for service discovery.\n  - `@FeignClient`: Used to create declarative REST clients.",
+    "source": "code_example",
+    "updated_at": 1781036066.3012054
+  },
+  "search:java-spring-boot-microservices:building scalable java spring ": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to run services locally.\n\n- **Latest Versions**:\n  - Java 21\n  - Spring Boot 3.1.4\n  - Spring Cloud 2022.0.4\n\n- **Key Config Options**:\n  - `server.port`: Define the port for the application.\n  - `spring.cloud.loadbalancer.ribbon.enabled=false`: Disable Ribbon in favor of Spring Cloud LoadBalancer.\n  - `eureka.client.register-with-eureka=false`: Configure Eureka client to not register itself.",
+    "source": "web_search",
+    "updated_at": 1781036077.090354
+  },
+  "search:java-spring-boot-microservices:building scalable java spring _ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to run multiple services.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Cloud: 2021.0.x\n\n- **Key Config Options**:\n  - `server.port`: Define the port for your service.\n  - `spring.application.name`: Name of the application.\n  - `eureka.client.serviceUrl.defaultZone`: URL to Eureka server for service discovery.\n  - `spring.cloud.loadbalancer.ribbon.enabled`: Enable or disable Ribbon load balancer.",
+    "source": "code_example",
+    "updated_at": 1781036082.533311
+  }
+}
