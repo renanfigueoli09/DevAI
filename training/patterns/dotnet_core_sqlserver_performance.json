@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-sqlserver-performance:dotnet core sql server perform": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations and `dotnet ef database update` to apply them.\n- **Latest Versions**: Ensure using the latest .NET Core SDK and SQL Server drivers for optimal performance.\n- **Key Config Options**:\n  - Indexing: Create indexes on frequently queried columns using `CREATE INDEX`.\n  - Query Tuning: Use `OPTION (RECOMPILE)` to force query recompilation.\n  - Connection Pooling: Enable connection pooling in your connection strings with `Pooling=true;Min Pool Size=10;Max Pool Size=200`.\n  - Deadlock Avoidance: Monitor and resolve deadlocks using SQL Server Profiler or Extended Events.",
+    "source": "web_search",
+    "updated_at": 1781027181.6296108
+  },
+  "search:dotnet-core-sqlserver-performance:dotnet core sql server perform_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n\n- **Latest Versions**:\n  - .NET Core: 7.0\n  - Entity Framework Core: 6.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: `\"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\"`\n  - Indexes for performance optimization.\n  - Query caching using `FromCache()` method.\n  - Asynchronous programming with `async` and `await`.",
+    "source": "code_example",
+    "updated_at": 1781027187.626806
+  },
+  "search:dotnet-core-sqlserver-performance:entity framework core with sql": {
+    "content": "- **Latest Version**: As of my last update, the latest version is EF Core 7.0.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create a new migration.\n  - `dotnet ef database update` to apply migrations to the database.\n\n- **Key Config Options**:\n  - `DbContextOptionsBuilder.UseSqlServer(connectionString)` to configure the connection string for SQL Server.\n  - `OnModelCreating(ModelBuilder modelBuilder)` method in your DbContext class to define model configurations and relationships.",
+    "source": "web_search",
+    "updated_at": 1781027206.2224903
+  },
+  "search:dotnet-core-sqlserver-performance:entity framework core with sql_ex": {
+    "content": "- Install EF Core provider via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- Update to latest EF Core version: `dotnet update package Microsoft.EntityFrameworkCore.SqlServer`\n- Configure DbContext in `Startup.cs`:\n  ```csharp\n  services.AddDbContext<ApplicationDbContext>(options =>\n      options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\")));\n  ```\n- Use migrations for database schema changes:\n  - Add migration: `dotnet ef migrations add InitialCreate`\n  - Update database: `dotnet ef database update`\n- Key configuration options in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Server=(localdb)\\\\mssqllocaldb;Database=MyAppDb;Trusted_Connection=True;\"\n  }\n  ```\n- Enable lazy loading: \n  ```csharp\n  services.AddDbContext<ApplicationDbContext>(options =>\n      options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"), b => b.EnableLazyLoadingProxies()));\n  ```\n- Use `AsNoTracking()` for read-only queries to improve performance.\n- Configure connection pooling in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Server=(localdb)\\\\mssqllocaldb;Database=MyAppDb;Trusted_Connection=True;Pooling=true;\"\n  }\n  ```\n- Use `FromSqlRaw()` for raw SQL queries when necessary.",
+    "source": "code_example",
+    "updated_at": 1781027223.3225603
+  }
+}

@@ -18,5 +18,25 @@
     "content": "- Use `jest.mock('module-path')` to mock an imported module.\n- For TypeScript, use `jest.mock('module-path', () => ({ default: jest.fn() }))`.\n- Utilize `mockImplementation(fn)` for custom mock behavior.\n- Ensure Jest is installed via npm or yarn (`npm install --save-dev jest`).\n- Use `ts-jest` for TypeScript support (`npm install --save-dev ts-jest @types/jest`).\n- Configure Jest in `jest.config.js` with `{ preset: 'ts-jest' }`.\n- For mocking classes, use `mockImplementation(() => new MockClass())`.\n- Update Jest to the latest version using `npm update jest`.\n- Key config options include `testEnvironment`, `transform`, and `moduleFileExtensions`.",
     "source": "code_example",
     "updated_at": 1780969383.297561
+  },
+  "search:typescript-jest-mocking:typescript jest mocking best p": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest ts-jest @types/jest`\n  - `npx jest --init` to set up Jest configuration\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 5.0.x\n\n- **Key Config Options**:\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"collectCoverageFrom\": [\"src/**/*.{ts,tsx}\"]`",
+    "source": "web_search",
+    "updated_at": 1781027231.4222414
+  },
+  "search:typescript-jest-mocking:typescript jest mocking best p_ex": {
+    "content": "- Use `jest.mock('module-path')` to mock an imported module.\n- Employ `mockImplementation(fn)` to define custom behavior for mocks.\n- Apply `mockReturnValue(value)` to specify a return value for mocks.\n- Utilize `mockResolvedValue(value)` for async mocks resolving with a value.\n- Set up `ts-jest` by installing it via npm: `npm install --save-dev ts-jest @types/jest`.\n- Configure Jest in your `jest.config.ts` file:\n  ```typescript\n  export default {\n    preset: 'ts-jest',\n    testEnvironment: 'node',\n  };\n  ```\n- Ensure TypeScript is up to date with the latest version.\n- Use `--watch` flag for Jest to automatically re-run tests on file changes.",
+    "source": "code_example",
+    "updated_at": 1781027247.475359
+  },
+  "search:typescript-jest-mocking:advanced typescript jest mocki": {
+    "content": "- **CLI Commands**: `npm install --save-dev jest ts-jest @types/jest`\n- **Latest Versions**: Jest 29, TypeScript 4.6\n- **Key Config Options**:\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"testRegex\": \".*\\\\.(test|spec)\\\\.[tj]sx?$\"`\n  - `\"moduleFileExtensions\": [\"ts\", \"tsx\", \"js\"]`",
+    "source": "web_search",
+    "updated_at": 1781027264.8881004
+  },
+  "search:typescript-jest-mocking:advanced typescript jest mocki_ex": {
+    "content": "- Use `jest.mock('module-name')` to mock third-party libraries.\n- For mocking TypeScript classes, consider using `jest.mock('./path/to/module', () => ({ default: jest.fn() }));`.\n- Utilize `@golevelup/ts-jest` for creating mock objects with all sub-properties mocked as `jest.fn()`.\n- Ensure your Jest configuration is up-to-date and includes necessary flags like `--tsconfig path/to/tsconfig.json`.\n- For TypeScript, use the latest version of Jest and ts-jest to take advantage of TypeScript features.\n- Key config options in `jest.config.js` include `moduleFileExtensions`, `transform`, and `testRegex`.",
+    "source": "code_example",
+    "updated_at": 1781027285.4994557
   }
 }

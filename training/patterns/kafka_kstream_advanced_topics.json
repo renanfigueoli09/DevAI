@@ -1,0 +1,22 @@
+{
+  "search:kafka+kstream-advanced-topics:kafka kstream advanced topics ": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `auto.offset.reset`: Set to `earliest` or `latest` depending on the consumer's starting point.\n  - `key.deserializer`: Specify the deserializer for keys, e.g., `org.apache.kafka.common.serialization.StringDeserializer`.\n  - `value.deserializer`: Specify the deserializer for values, e.g., `org.apache.kafka.common.serialization.StringDeserializer`.",
+    "source": "web_search",
+    "updated_at": 1781027308.6117113
+  },
+  "search:kafka+kstream-advanced-topics:kafka kstream advanced topics _ex": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic-name>` to create a topic.\n- **Latest Versions**: Kafka Streams API version 2.3.0 is referenced.\n- **Key Config Options**:\n  - `auto.offset.reset`: Set to `earliest` or `latest` depending on whether you want to start from the beginning of the topic or the latest messages.\n  - `key.deserializer`: Specify a deserializer for keys, e.g., `org.apache.kafka.common.serialization.StringDeserializer`.\n  - `value.deserializer`: Specify a deserializer for values, e.g., `org.apache.kafka.common.serialization.StringDeserializer`.",
+    "source": "code_example",
+    "updated_at": 1781027316.5153084
+  },
+  "search:kafka+kstream-advanced-topics:kafka streams state stores and": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh` to create and manage Kafka topics.\n- **Latest Versions**: Ensure using the latest Kafka Streams library version for optimal performance and features.\n- **Key Config Options**:\n  - `state.store.dir`: Directory where state stores are stored.\n  - `cache.max.bytes.buffering`: Maximum size of in-memory cache for records.\n  - `retention.ms`: Retention period for log data.\n  - `cleanup.policy`: Policy to clean up old log segments (e.g., delete, compact).\n- **State Store Types**: \n  - **Memory State Stores**: In-memory storage for fast access.\n  - **Persistent State Stores**: Disk-based storage with persistence guarantees.\n- **Windowing Techniques**:\n  - **Tumbling Windows**: Fixed-size windows that do not overlap.\n  - **Sliding Windows**: Overlapping windows of fixed size.\n  - **Session Windows**: Unbounded windows based on a gap between events.\n  - **Global Windows**: Single global window for the entire stream.",
+    "source": "web_search",
+    "updated_at": 1781027335.504724
+  },
+  "search:kafka+kstream-advanced-topics:kafka streams state stores and_ex": {
+    "content": "- **CLI Commands**: `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic-name>`\n- **Latest Versions**: Kafka Streams 3.4.0, Confluent Platform 7.5.0\n- **Key Config Options**:\n  - `window.size.ms`: Size of the window in milliseconds.\n  - `advance.by.ms`: Amount by which to advance the window start time for each new record.\n  - `grace.period.ms`: Duration during which late events are accepted after the end of a window.",
+    "source": "code_example",
+    "updated_at": 1781027341.2457316
+  }
+}
