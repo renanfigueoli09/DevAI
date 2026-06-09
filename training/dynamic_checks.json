@@ -1,0 +1,150 @@
+{
+  "generated_at": 1781010070.6239383,
+  "studied_count": 636,
+  "checks": [
+    {
+      "name": "nestjs + mongodb: padrões de código",
+      "queries": [
+        "nestjs+mongodb pattern code example",
+        "nestjs + mongodb"
+      ],
+      "must_find": [
+        "@nestjs",
+        "@Schema",
+        ".findById(",
+        ".save("
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+mongodb"
+    },
+    {
+      "name": "nestjs + mongodb: não usa TypeORM",
+      "queries": [
+        "nestjs+mongodb schema service"
+      ],
+      "must_find": [
+        "Mongoose",
+        "mongo",
+        "@Schema"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+mongodb"
+    },
+    {
+      "name": "nestjs + postgres: padrões de código",
+      "queries": [
+        "nestjs+postgres pattern code example",
+        "nestjs + postgres"
+      ],
+      "must_find": [
+        "@injectreposito",
+        "@InjectRepository",
+        ".findOne(",
+        ".save("
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+postgres"
+    },
+    {
+      "name": "nestjs + mysql: padrões de código",
+      "queries": [
+        "nestjs+mysql pattern code example",
+        "nestjs + mysql"
+      ],
+      "must_find": [
+        "@nestjs",
+        "@Entity"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+mysql"
+    },
+    {
+      "name": "nestjs + redis: cache",
+      "queries": [
+        "nestjs+redis cache redis example"
+      ],
+      "must_find": [
+        "redis",
+        "cache",
+        "CacheModule"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+redis"
+    },
+    {
+      "name": "nestjs + elasticsearch: padrões de código",
+      "queries": [
+        "nestjs+elasticsearch pattern code example",
+        "nestjs + elasticsearch"
+      ],
+      "must_find": [
+        "@nestjs",
+        "@elastic"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+elasticsearch"
+    },
+    {
+      "name": "nestjs + kafka: padrões de código",
+      "queries": [
+        "nestjs+kafka pattern code example",
+        "nestjs + kafka"
+      ],
+      "must_find": [
+        "@EventPattern",
+        "@Payload",
+        ".emit("
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+kafka"
+    },
+    {
+      "name": "nestjs + kafka: producer consumer",
+      "queries": [
+        "nestjs+kafka producer consumer example"
+      ],
+      "must_find": [
+        "kafka",
+        "producer",
+        "consumer"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+kafka"
+    },
+    {
+      "name": "nestjs + rabbitmq: padrões de código",
+      "queries": [
+        "nestjs+rabbitmq pattern code example",
+        "nestjs + rabbitmq"
+      ],
+      "must_find": [
+        "@rabbitli",
+        "@RabbitListener"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "nestjs+rabbitmq"
+    }
+  ]
+}
