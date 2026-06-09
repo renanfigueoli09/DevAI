@@ -1,0 +1,22 @@
+{
+  "search:Next.js Serverless Deployment Testing:nextjs serverless testing": {
+    "content": "- **CLI Commands**:\n  - `npx next dev`: Starts the Next.js development server.\n  - `npm run build`: Builds the Next.js application for production.\n  - `npm start`: Starts the production server.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Cypress: v12.8.0\n  - Playwright: v1.24.0\n  - Vitest: v0.29.0\n  - Jest: v27.5.1\n\n- **Key Config Options**:\n  - `next.config.js`: Configuration file for Next.js.\n    ```javascript\n    module.exports = {\n      serverless: true,\n      reactStrictMode: true,\n      images: {\n        domains: ['example.com'],\n      },\n    };\n    ```\n  - `serverless-nextjs/serverless-next.js`: For deploying Next.js apps on AWS Lambda.\n    ```json\n    {\n      \"provider\": \"aws\",\n      \"runtime\": \"nodejs14.x\",\n      \"functions\": {\n        \"api\": {\n          \"handler\": \"dist/api/index.handler\"\n        }\n      }\n    }\n    ```\n\n- **Testing Tools**:\n  - Cypress: For end-to-end testing.\n  - Playwright: For browser automation and testing.\n  - Vitest: For unit testing with a focus on speed.\n  - Jest: For comprehensive JavaScript testing.",
+    "source": "web_search",
+    "updated_at": 1781048426.959871
+  },
+  "search:Next.js Serverless Deployment Testing:nextjs serverless testing_ex": {
+    "content": "- **GitHub Repositories**:\n  - [TomiTakussaari/serverless-nextjs](https://github.com/TomiTakussaari/serverless-nextjs)\n  - [thchia/nextjs-serverless-test](https://github.com/thchia/nextjs-serverless-test)\n\n- **CLI Commands**:\n  ```bash\n  # Install Serverless Framework\n  npm install -g serverless\n\n  # Deploy with Serverless\n  sls deploy --stage dev\n  ```\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Serverless Framework: v2.60.0\n\n- **Key Config Options**:\n  - `serverless.yml`: Define service, provider, functions, and plugins.\n  - Environment variables: Set in `serverless.yml` under `provider.environment`.\n  - Deployment stages: Specify with `--stage` flag during deployment.\n\nThese actionable facts provide a quick reference for developers looking to set up and test Next.js applications using the Serverless Framework.",
+    "source": "code_example",
+    "updated_at": 1781048437.5548403
+  },
+  "search:Next.js Serverless Deployment Testing:nextjs deployment strategies": {
+    "content": "- **CLI Commands**: Use `next build` to prepare the app for production, followed by `next export` or `next start` for deployment.\n- **Latest Versions**: Ensure using the latest Next.js version for optimal performance and security.\n- **Key Config Options**:\n  - `output: 'export'` in `next.config.js` for static site generation.\n  - `target: 'serverless'` for deploying to platforms like Vercel or Netlify.\n  - Environment variables through `.env.local` for sensitive data.\n- **Deployment Strategies**:\n  - **Static Site Hosting**: Use `next export` and deploy to platforms like GitHub Pages, Netlify, or Vercel.\n  - **Serverless Deployment**: Deploy using platforms like Vercel, Netlify, AWS Lambda, or Google Cloud Functions.\n  - **Containerized Deployment**: Use Docker with Next.js for consistent environments across different deployment targets.",
+    "source": "web_search",
+    "updated_at": 1781048460.1155267
+  },
+  "search:Next.js Serverless Deployment Testing:nextjs deployment strategies_ex": {
+    "content": "- Use `next build` to prepare the application for production.\n- Deploy using platforms like Vercel, Netlify, or AWS Amplify.\n- For Vercel, use `vercel --prod` to deploy to production.\n- For Netlify, use `netlify deploy` with appropriate flags.\n- Key config options in `next.config.js`: `output`, `assetPrefix`, `rewrites`.\n- Ensure your deployment strategy supports automatic preview environments for testing.",
+    "source": "code_example",
+    "updated_at": 1781048467.627639
+  }
+}

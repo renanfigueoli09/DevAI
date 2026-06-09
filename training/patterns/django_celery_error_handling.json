@@ -1,0 +1,32 @@
+{
+  "search:Django + Celery Error Handling:django celery error handling": {
+    "content": "- **CLI Commands**:\n  - `celery -A your_project worker --loglevel=info`\n  - `celery -A your_project beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.x\n  - Celery: 5.x\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to Redis or RabbitMQ URL.\n  - `CELERY_RESULT_BACKEND`: Set to Redis or RabbitMQ URL for task results.\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types (e.g., `['json']`).\n  - `CELERY_TASK_SERIALIZER`: Serializer used to serialize tasks (e.g., `'json'`).",
+    "source": "web_search",
+    "updated_at": 1781048345.0148017
+  },
+  "search:Django + Celery Error Handling:django celery error handling_ex": {
+    "content": "- Ensure Celery and Django-Celery-Beat are up to date.\n- Use `pip install celery django-celery-beat`.\n- Configure Celery in your Django project:\n  ```python\n  # settings.py\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n- Create a Celery app and configure it:\n  ```python\n  # celery.py\n  from __future__ import absolute_import, unicode_literals\n  import os\n  from celery import Celery\n\n  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')\n  app = Celery('your_project')\n  app.config_from_object('django.conf:settings', namespace='CELERY')\n  app.autodiscover_tasks()\n  ```\n- Handle errors in tasks:\n  ```python\n  from celery import shared_task\n\n  @shared_task(bind=True)\n  def my_task(self):\n      try:\n          # Task logic here\n          pass\n      except Exception as e:\n          self.update_state(state='FAILURE', meta={'error': str(e)})\n          raise\n  ```\n- Configure Celery Beat for periodic tasks:\n  ```python\n  from celery.schedules import crontab\n\n  CELERY_BEAT_SCHEDULE = {\n      'add-every-30-seconds': {\n          'task': 'your_app.tasks.add',\n          'schedule': 30.0,\n          'args': (16, 16)\n      },\n  }\n  ```\n- Ensure Redis is running if using it as a broker.\n- Check Celery worker logs for errors:\n  ```sh\n  celery -A your_project worker --loglevel=info\n  ```\n- Use Django's logging to capture and send error emails.",
+    "source": "code_example",
+    "updated_at": 1781048361.6285658
+  },
+  "search:Django + Celery Error Handling:celery task retries": {
+    "content": "- **CLI Commands**:\n  - `celery -A your_project_name worker --loglevel=info`\n  - `celery -A your_project_name flower`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n\n- **Key Config Options**:\n  - `task_retries`: Number of retries before giving up.\n  - `task_retry_interval`: Time interval between retries.\n  - `task_backoff`: Exponential backoff for retry intervals.\n  - `task_max_retries`: Maximum number of retries before task is marked as failed.",
+    "source": "web_search",
+    "updated_at": 1781048369.8880868
+  },
+  "search:Django + Celery Error Handling:celery task retries_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n\n- **Key Config Options**:\n  - `broker_url`: Specifies the URL of the message broker (e.g., Redis, RabbitMQ).\n  - `result_backend`: Specifies where task results are stored (e.g., Redis, Database).\n  - `task_retries`: Number of retries for a failed task.\n  - `retry_backoff`: Exponential backoff factor between retries.",
+    "source": "code_example",
+    "updated_at": 1781048376.210437
+  },
+  "search:Django + Celery Error Handling:django celery logging": {
+    "content": "- Install Celery and Redis using pip: `pip install celery redis`\n- Ensure Django's logging is configured in `settings.py`.\n- Use the `@shared_task` decorator for tasks.\n- Configure Celery logging setup in your project.\n- Set up hierarchical loggers for better organization.\n- Ensure Celery uses Django’s logging configuration by importing it.\n- Example of a simple Celery task:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def add(x, y):\n      return x + y\n  ```\n- Use the `celery -A your_project_name worker --loglevel=info` command to start the Celery worker.\n- Check Celery documentation for the latest version and best practices.",
+    "source": "web_search",
+    "updated_at": 1781048385.9694045
+  },
+  "search:Django + Celery Error Handling:django celery logging_ex": {
+    "content": "- **Latest Version**: Celery 5.6.3, Django 4.2\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set the message broker URL.\n  - `CELERY_RESULT_BACKEND`: Configure the result backend.\n  - `LOGGING`: Define logging configuration in settings.py.\n- **CLI Commands**:\n  - `celery -A your_project_name worker --loglevel=info`\n  - `celery -A your_project_name beat --loglevel=info`\n- **Logging with Structlog**:\n  ```python\n  import structlog\n  from celery.utils.log import get_task_logger\n\n  logger = get_task_logger(__name__)\n\n  @app.task(bind=True)\n  def my_task(self):\n      logger.info(\"Task started\", task_id=self.request.id)\n      # Task logic here\n      logger.info(\"Task completed\", task_id=self.request.id)\n  ```\n- **Logging Configuration**:\n  ```python\n  LOGGING = {\n      'version': 1,\n      'disable_existing_loggers': False,\n      'formatters': {\n          'verbose': {\n              'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',\n              'style': '{',\n          },\n      },\n      'handlers': {\n          'file': {\n              'level': 'DEBUG',\n              'class': 'logging.FileHandler',\n              'filename': '/path/to/django-celery.log',\n              'formatter': 'verbose',\n          },\n      },\n      'loggers': {\n          'django': {\n              'handlers': ['file'],\n              'level': 'INFO',\n              'propagate': True,\n          },\n          'celery': {\n              'handlers': ['file'],\n              'level': 'INFO',\n              'propagate': False,\n          },\n      },\n  }\n  ```",
+    "source": "code_example",
+    "updated_at": 1781048404.698609
+  }
+}

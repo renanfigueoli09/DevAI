@@ -1,0 +1,32 @@
+{
+  "search:Next.js + Serverless Functions Performance Optimization:nextjs serverless performance": {
+    "content": "- **CLI Commands**:\n  - `next dev` for development mode.\n  - `next build` to build the project.\n  - `next start` to start the production server.\n\n- **Latest Versions**:\n  - Next.js: v13.x (as of my last update).\n  - Serverless Framework: v2.x (latest version).\n\n- **Key Config Options**:\n  - `serverless`: Set to `true` in `next.config.js` to enable serverless mode.\n  - `target`: Set to `'serverless'` for Next.js 8 and later versions.\n  - `prefetch`: Configure prefetching behavior in the router.\n\n- **Performance Enhancements**:\n  - Smaller bundles with Serverless Mode.\n  - Prefetch performance improvements via the Next.js router.",
+    "source": "web_search",
+    "updated_at": 1781048477.6462586
+  },
+  "search:Next.js + Serverless Functions Performance Optimization:nextjs serverless performance_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-app`\n  - `npm run dev` for development server\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: 15.0\n  - AWS CDK: 2.x\n  - AWS SAM: 3.x\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing build and deployment settings.\n  - `serverless.yml` (for SAM): Configuration for serverless functions and resources.\n  - Environment variables in `.env.local` or through AWS Secrets Manager.",
+    "source": "code_example",
+    "updated_at": 1781048483.7096426
+  },
+  "search:Next.js + Serverless Functions Performance Optimization:cold start optimization": {
+    "content": "- Use `aws lambda update-function-code` to deploy new code without changing the function configuration.\n- Set environment variables using `--environment` flag in `aws lambda update-function-configuration`.\n- Enable active tracing with `--tracing-config Mode=Active` for better performance insights.\n- Utilize layers to share dependencies across functions, reducing cold start times.\n- Configure memory and timeout settings appropriately based on function requirements.\n- Monitor cold start latency using CloudWatch Metrics and Alarms.\n- Use AWS X-Ray for detailed analysis of function execution and identify bottlenecks.\n- Implement scheduled events with EventBridge to keep functions warm.\n- Consider using `aws lambda publish-version` to create a new version of the function, which can be invoked without cold starts.",
+    "source": "web_search",
+    "updated_at": 1781048501.5361161
+  },
+  "search:Next.js + Serverless Functions Performance Optimization:cold start optimization_ex": {
+    "content": "- Use `aws lambda update-function-code` to deploy new code without changing the function configuration.\n- Enable SnapStart using `--snapstart-enabled true` in `aws lambda create-function` or `aws lambda update-function-configuration`.\n- Set provisioned concurrency with `aws lambda put-provisioned-concurrency-config --function-name <function_name> --provisioned-concurrency 100`.\n- Minimize dependencies by removing unused libraries and modules.\n- Use environment variables for configuration instead of hardcoding values in the code.\n- Optimize code by reducing complexity and using efficient algorithms.\n- Enable X-Ray tracing with `--tracing-config Mode=Active` to identify bottlenecks during cold starts.\n- Monitor cold start latency using CloudWatch metrics and logs.",
+    "source": "code_example",
+    "updated_at": 1781048509.0268817
+  },
+  "search:Next.js + Serverless Functions Performance Optimization:serverless function scaling": {
+    "content": "- Use `az functionapp scale` to adjust the number of instances.\n- Set `FUNCTIONS_WORKER_RUNTIME` in your app settings for language-specific optimizations.\n- Configure autoscale rules via Azure Portal or ARM templates.\n- Monitor scaling with metrics like `Requests`, `Duration`, and `Errors`.\n- Update Azure Functions Core Tools to latest version using `npm install -g azure-functions-core-tools@latest --unsafe-perm true`.\n- Use Consumption plan for cost-effective scaling based on usage.\n- For Premium plan, specify `--consumption-plan-location` when creating the function app.\n- Set `WEBSITE_CONTENTAZUREFILESHOSTINGENABLED=true` to enable file system access for larger functions.",
+    "source": "web_search",
+    "updated_at": 1781048528.1972976
+  },
+  "search:Next.js + Serverless Functions Performance Optimization:serverless function scaling_ex": {
+    "content": "- **Vercel Serverless Functions**:\n  - Deploy using `vercel deploy`\n  - Scale automatically based on traffic\n\n- **Netlify Serverless Functions**:\n  - Use `netlify dev` for local development\n  - Deploy with `netlify deploy`\n\n- **Scaleway Serverless Products**:\n  - Example projects available in `scaleway/serverless-examples`\n  - Ensure secure code practices during development",
+    "source": "code_example",
+    "updated_at": 1781048539.382324
+  }
+}

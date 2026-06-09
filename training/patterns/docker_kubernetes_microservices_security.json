@@ -1,0 +1,27 @@
+{
+  "search:Docker + Kubernetes Microservices Security:docker security best practices": {
+    "content": "- Use `docker run --user <uid>:<gid>` to specify non-root user.\n- Employ multi-stage builds in Dockerfiles for minimizing image size and vulnerabilities.\n- Utilize `docker-compose` with security settings like `security_opt: [\"no-new-privileges:true\"]`.\n- Regularly update Docker and all images using `docker pull --update-only <image>`.\n- Implement secrets management with Docker's secret API or environment variables.\n- Restrict resource usage with `--memory`, `--cpu-shares`, and `--cpus` flags in `docker run`.\n- Enable network isolation by using Docker’s bridge network mode.\n- Utilize `docker scan` to check images for vulnerabilities before deployment.\n- Implement image scanning as part of your CI/CD pipeline.",
+    "source": "web_search",
+    "updated_at": 1781048598.4055433
+  },
+  "search:Docker + Kubernetes Microservices Security:docker security best practices_ex": {
+    "content": "- Use `docker run --user $(id -u):$(id -g)` to run containers as non-root users.\n- Employ `docker-compose` for multi-container applications, ensuring services are isolated and managed efficiently.\n- Implement OPA (Open Policy Agent) policies for container security, blocking root user execution with `container.run.as.nonroot: true`.\n- Utilize Docker's latest version for enhanced security features and performance improvements.\n- Configure Docker to use a non-root user by setting the `USER` directive in your Dockerfile.\n- Apply security patches regularly using `docker pull --update` or `docker-compose up -d --force-recreate`.\n- Implement network isolation with Docker's built-in networking capabilities, limiting container communication.\n- Use `docker run --security-opt=no-new-privileges=true` to restrict the privileges of processes within the container.\n- Regularly audit and review security policies using tools like OPA for continuous compliance.",
+    "source": "code_example",
+    "updated_at": 1781048604.4877973
+  },
+  "search:Docker + Kubernetes Microservices Security:kubernetes security policies": {
+    "content": "- **CLI Commands**:\n  - `kubectl create namespace <namespace-name>`\n  - `kubectl apply -f <filename.yaml>`\n  - `kubectl get pods --all-namespaces`\n  - `kubectl describe pod <pod-name> -n <namespace-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.25 deprecated Pod Security Policies.\n  - Recommended to use Pod Security Standards and the Pod Security Admission Controller.\n\n- **Key Config Options**:\n  - Network Policies: Define network access rules between pods.\n  - Role-Based Access Control (RBAC): Manage user permissions.\n  - Pod Security Standards: Enforce security policies on pod creation.\n  - Image Scanning: Regularly scan container images for vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781048622.719455
+  },
+  "search:Docker + Kubernetes Microservices Security:kubernetes security policies_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <policy-file.yaml>`\n  - `helm install --set securityPolicy=<policy-name> <chart-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n  - OPA (Open Policy Agent) v0.39.x\n\n- **Key Config Options**:\n  - `securityContext`: Defines the security options for a container.\n  - `podSecurityPolicy`: Specifies the Pod Security Policy to apply.\n  - `opaGatekeeper`: Integrates OPA with Kubernetes using Gatekeeper.",
+    "source": "code_example",
+    "updated_at": 1781048628.7362132
+  },
+  "search:Docker + Kubernetes Microservices Security:microservices network security": {
+    "content": "- Use `kubectl` for managing Kubernetes resources.\n- Implement network segmentation using tools like Calico or Flannel.\n- Configure service mesh like Istio for secure communication between microservices.\n- Apply least privilege principle by setting appropriate RBAC roles and policies.\n- Enable encryption at rest and in transit using TLS/SSL certificates.\n- Utilize security scanning tools like Sonatype Nexus Lifecycle or OWASP Dependency Check.\n- Implement zero trust architecture with continuous validation of identities and access.\n- Regularly update dependencies to the latest versions to patch vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781048638.7892957
+  }
+}
