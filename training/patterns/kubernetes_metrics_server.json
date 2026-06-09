@@ -1,0 +1,17 @@
+{
+  "search:kubernetes-metrics-server:kubernetes metrics server perf": {
+    "content": "- **Metrics Server Installation**:\n  - Use `kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml` to install the latest version.\n\n- **Key Config Options**:\n  - `--kubelet-insecure-tls`: Allows metrics server to connect to kubelets without TLS.\n  - `--cert-dir`: Specifies the directory where certificates are stored.\n  - `--kubelet-preferred-address-types`: Defines the preferred address types for kubelet connections.\n\n- **Optimizing Metrics Server**:\n  - Increase `--request-header-client-ca-file` size if experiencing high request sizes.\n  - Adjust `--secure-port` to use a non-standard port for secure communication.\n\n- **CLI Commands**:\n  - `kubectl get pods --all-namespaces | grep metrics-server`: Lists all metrics server pods across namespaces.\n  - `kubectl logs <metrics-server-pod-name> -n kube-system`: Fetches logs from the metrics server pod.\n\n- **Latest Version Check**:\n  - Visit [Metrics Server GitHub Releases](https://github.com/kubernetes-sigs/metrics-server/releases) for the latest version details.",
+    "source": "web_search",
+    "updated_at": 1781037830.9783585
+  },
+  "search:kubernetes-metrics-server:kubernetes metrics server perf_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl top nodes`: Displays resource usage of nodes.\n  - `kubectl top pods --all-namespaces`: Shows resource usage for all pods across namespaces.\n\n- **Latest Versions**:\n  - Kubernetes Metrics Server: v0.6.3 (as of Jan 2023)\n\n- **Key Config Options**:\n  - `--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname`: Specifies the preferred address types for kubelets.\n  - `--metric-resolution=1m`: Sets the resolution at which metrics are collected and exposed.",
+    "source": "code_example",
+    "updated_at": 1781037837.00557
+  },
+  "search:kubernetes-metrics-server:metrics server for kubernetes ": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml`\n  - `kubectl get pods --all-namespaces | grep metrics-server`\n\n- **Latest Versions**:\n  - Metrics Server: v0.8.0\n\n- **Key Config Options**:\n  - `--kubelet-insecure-tls=true` (required for versions > 0.7.1)\n  - `--cert-dir=/tmp` (optional, specify certificate directory)",
+    "source": "web_search",
+    "updated_at": 1781037854.8129652
+  }
+}

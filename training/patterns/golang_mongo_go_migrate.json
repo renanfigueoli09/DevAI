@@ -1,0 +1,12 @@
+{
+  "search:golang-mongo-go-migrate:golang mongodb go-migrate tuto": {
+    "content": "- **CLI Commands**:\n  - `migrate create -ext sql -dir db/migrations -seq init_schema`\n  - `migrate -path db/migrations -database \"mongodb://user:password@localhost:27017/dbname\" up`\n  - `migrate -path db/migrations -database \"mongodb://user:password@localhost:27017/dbname\" down`\n\n- **Latest Versions**:\n  - golang-migrate/migrate: v4.16.0\n\n- **Key Config Options**:\n  - `-ext`: File extension for migration scripts (e.g., `sql`, `go`).\n  - `-dir`: Directory containing migration files.\n  - `-seq`: Sequential numbering of migrations.\n  - `-database`: Connection string to the MongoDB database.\n  - `up`: Apply migrations.\n  - `down`: Rollback migrations.",
+    "source": "web_search",
+    "updated_at": 1781037785.9350536
+  },
+  "search:golang-mongo-go-migrate:golang mongodb go-migrate tuto_ex": {
+    "content": "- **CLI Commands**:\n  - `migrate create -ext sql -dir db/migrations -seq init`\n  - `migrate -path db/migrations -database \"mongodb://user:password@localhost:27017/dbname\" up`\n\n- **Latest Versions**:\n  - golang-migrate/migrate: v4.15.0\n  - erodriguezg/go-mongodb-migrate: v1.3.0\n\n- **Key Config Options**:\n  - `migrate create` flags: `-ext`, `-dir`, `-seq`\n  - `migrate` flags: `-path`, `-database`\n  - MongoDB connection string format: `mongodb://user:password@host:port/dbname`",
+    "source": "code_example",
+    "updated_at": 1781037791.5970602
+  }
+}
