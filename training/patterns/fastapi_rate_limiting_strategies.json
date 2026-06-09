@@ -1,0 +1,17 @@
+{
+  "search:fastapi-rate-limiting-strategies:rate limiting strategies for f": {
+    "content": "- **FastAPI Rate Limiting Introduction**: Use `fastapi-limiter` package.\n- **CLI Command**: Install via pip: `pip install fastapi-limiter`\n- **Latest Version**: Check on [PyPI](https://pypi.org/project/fastapi-limiter/)\n- **Key Config Options**:\n  - `max_calls`: Maximum number of requests allowed in a time window.\n  - `time_window`: Duration of the time window (e.g., \"1 minute\").\n  - `backend`: Storage backend for rate limiting (e.g., Redis, In-Memory).\n- **Implementation Example**:\n  ```python\n  from fastapi import FastAPI\n  from fastapi_limiter import FastAPILimiter\n  from fastapi_limiter.depends import RateLimiter\n\n  app = FastAPI()\n\n  @app.on_event(\"startup\")\n  async def startup():\n      await FastAPILimiter.init(app, redis_url=\"redis://localhost:6379\")\n\n  @app.get(\"/items/\")\n  async def read_items(rate_limit: RateLimiter = Depends()):\n      return {\"message\": \"Items\"}\n  ```",
+    "source": "web_search",
+    "updated_at": 1781046936.6815243
+  },
+  "search:fastapi-rate-limiting-strategies:implementing rate limiting in ": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi redis`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Redis: 4.3.4\n\n- **Key Config Options**:\n  - Token bucket algorithm for rate limiting.\n  - Use middleware to integrate with FastAPI.\n  - Configure Redis connection details in your application settings.\n  - Set the maximum number of requests allowed within a specified time frame (e.g., 100 requests per minute).\n  - Implement Lua scripting for efficient rate limiting operations.",
+    "source": "web_search",
+    "updated_at": 1781046960.9992194
+  },
+  "search:fastapi-rate-limiting-strategies:implementing rate limiting in _ex": {
+    "content": "- Use `pip install fastapi redis`\n- Install Redis server locally or use cloud services like Upstash.\n- Create FastAPI app instance.\n- Import necessary modules:\n  ```python\n  from fastapi import FastAPI, HTTPException, Depends\n  from fastapi_limiter import FastAPILimiter\n  from fastapi_limiter.depends import RateLimiter\n  ```\n- Configure Redis connection in your main file:\n  ```python\n  app = FastAPI()\n  redis_client = Redis.from_url(\"redis://localhost:6379\")\n  await FastAPILimiter.init(redis_client)\n  ```\n- Define rate limiting middleware or use `RateLimiter` dependency:\n  ```python\n  @app.get(\"/items/\")\n  async def read_items(rate_limiter: RateLimiter = Depends()):\n      return {\"message\": \"Items\"}\n  ```\n- Adjust rate limit settings in the `FastAPILimiter.init()` method.\n- Test your API with tools like Postman or curl to ensure rate limiting works as expected.",
+    "source": "code_example",
+    "updated_at": 1781046971.1487167
+  }
+}
