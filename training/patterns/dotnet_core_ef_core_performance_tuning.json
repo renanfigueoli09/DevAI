@@ -1,0 +1,12 @@
+{
+  "search:dotnet-core-ef-core-performance-tuning:.net core ef core performance ": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef database update`\n  - `dotnet ef migrations add <MigrationName>`\n\n- **Latest Versions**:\n  - EF Core 10.0\n\n- **Key Config Options**:\n  - `DbContextOptionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`\n  - `DbContextOptionsBuilder.AddInterceptors(new PerformanceInterceptor())`\n  - `DbFunction` for custom SQL functions",
+    "source": "web_search",
+    "updated_at": 1781040861.112974
+  },
+  "search:dotnet-core-ef-core-performance-tuning:entity framework core optimiza": {
+    "content": "- **Latest Version**: Entity Framework Core 7.0 is the latest version as of my last update.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration with the specified name.\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n  - `dotnet ef migrations remove`: Removes the most recent migration from the project.\n\n- **Key Configuration Options**:\n  - `DbContextOptionsBuilder`: Used to configure options for the DbContext.\n  - `OnConfiguring` method: Override this method in your DbContext to specify additional configuration options.\n  - `UseSqlServer`, `UseNpgsql`, etc.: Methods used to specify the database provider and connection string.\n\n- **Performance Optimization Tips**:\n  - Use `.AsNoTracking()` for read-only queries to avoid tracking entities in memory.\n  - Batch inserts using `AddRange` instead of multiple `Add`.\n  - Avoid loading unnecessary data with eager or lazy loading strategies.\n  - Use raw SQL queries when Entity Framework Core's LINQ capabilities are insufficient.\n\n- **Entity Framework Core Tools**:\n  - EF Core Power Tools: A Visual Studio extension for scaffolding models from existing databases and generating DbContext classes.\n  - EF Core Profiler: A tool to monitor and analyze the performance of your Entity Framework Core applications.",
+    "source": "web_search",
+    "updated_at": 1781040889.6402826
+  }
+}

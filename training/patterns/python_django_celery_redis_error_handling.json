@@ -1,0 +1,22 @@
+{
+  "search:python-django-celery-redis-error-handling:django celery redis error hand": {
+    "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n  - `CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'`\n  - `CELERY_ACCEPT_CONTENT = ['json']`\n  - `CELERY_TASK_SERIALIZER = 'json'`\n  - `CELERY_RESULT_SERIALIZER = 'json'`\n  - `CELERY_TIMEZONE = 'UTC'`\n  - `CELERY_ENABLE_UTC = True`",
+    "source": "web_search",
+    "updated_at": 1781040925.1122375
+  },
+  "search:python-django-celery-redis-error-handling:django celery redis error hand_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`\n  - `python manage.py migrate`\n  - `celery -A your_project_name worker --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n  - `CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'`\n  - `CELERY_ACCEPT_CONTENT = ['json']`\n  - `CELERY_TASK_SERIALIZER = 'json'`",
+    "source": "code_example",
+    "updated_at": 1781040932.5438757
+  },
+  "search:python-django-celery-redis-error-handling:celery task retries and error ": {
+    "content": "- **CLI Commands**:\n  - `celery worker --loglevel=info`\n  - `celery -A my_project.celery worker --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.2.7\n  - RabbitMQ: 3.8.16\n\n- **Key Config Options**:\n  - `task_retries`: Number of retries before giving up.\n  - `retry_backoff`: Exponential backoff factor for retries.\n  - `task_retry_kwargs`: Keyword arguments to pass when retrying a task.\n  - `task_track_started`: Track the start time of tasks.",
+    "source": "web_search",
+    "updated_at": 1781040941.1541107
+  },
+  "search:python-django-celery-redis-error-handling:celery task retries and error _ex": {
+    "content": "- **CLI Commands**:\n  - `celery worker --app=your_project_name.celery_app --loglevel=info`\n  - `celery beat --app=your_project_name.celery_app`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n\n- **Key Config Options**:\n  - `task_retries`: Number of retries before giving up.\n  - `task_retry_interval`: Interval between retries.\n  - `task_acks_late`: Whether to acknowledge tasks after the task has been executed successfully.\n  - `task_serializer`: Serialization method for task arguments and return values.",
+    "source": "code_example",
+    "updated_at": 1781040951.626448
+  }
+}
