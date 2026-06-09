@@ -1,7 +1,24 @@
 {
-  "generated_at": 1781038794.8053617,
+  "generated_at": 1781039476.3932784,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "kubernetes-mongodb-replication: não usa TypeORM",
+      "queries": [
+        "kubernetes-mongodb-replication schema service"
+      ],
+      "must_find": [
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kubernetes-mongodb-replication"
+    },
     {
       "name": "typescript-prisma-mongodb: não usa TypeORM",
       "queries": [
@@ -35,20 +52,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "golang-mongo-go-migrate"
-    },
-    {
-      "name": "kafka-streams-python: producer consumer",
-      "queries": [
-        "kafka-streams-python producer consumer example"
-      ],
-      "must_find": [
-        "kafka",
-        "producer"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kafka-streams-python"
     }
   ]
 }

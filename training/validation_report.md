@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-09 18:01*
+*2026-06-09 18:13*
 
 ## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
@@ -19,9 +19,9 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| kubernetes-mongodb-replication: não usa TypeORM | 1.0/1 | ✅ |
 | typescript-prisma-mongodb: não usa TypeORM | 1.0/1 | ✅ |
 | golang-mongo-go-migrate: não usa TypeORM | 1.0/1 | ✅ |
-| kafka-streams-python: producer consumer | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
