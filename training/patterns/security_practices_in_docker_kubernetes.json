@@ -1,0 +1,32 @@
+{
+  "search:Security Practices in Docker + Kubernetes:docker security best practices": {
+    "content": "- Use non-root users in Docker containers by specifying `USER` in the Dockerfile.\n- Implement least privilege by limiting container capabilities using `--cap-drop`.\n- Secure images by minimizing layers and avoiding unnecessary packages.\n- Manage secrets securely using environment variables or Docker secrets.\n- Restrict resource usage with `--memory`, `--cpu-shares`, and other flags.\n- Harden network configurations by using Docker's network isolation features.\n- Regularly update Docker and its components to the latest versions.\n- Use a security scanning tool like Snyk for Docker images.\n- Implement multi-stage builds in Dockerfiles to reduce image size and complexity.",
+    "source": "web_search",
+    "updated_at": 1781047554.810109
+  },
+  "search:Security Practices in Docker + Kubernetes:docker security best practices_ex": {
+    "content": "- Use `docker run --user <uid>:<gid>` to run containers as non-root users.\n- Implement OPA policies for container security, e.g., blocking root containers with `docker run --security-opt=no-new-privileges`.\n- Utilize Docker Compose for managing multi-container applications, ensuring consistent environments across development and production.\n- Employ `docker-compose.yml` version 3.8 or later for the latest features and improvements.\n- Set file permissions within Docker images using `RUN chmod -R <permissions> /path/to/directory`.\n- Regularly update Docker and its components to patch security vulnerabilities.\n- Use `docker scan` to assess image vulnerabilities before deployment.\n- Implement network isolation with `docker run --network none` or custom bridge networks for enhanced security.\n- Utilize secrets management tools like Docker Secrets or HashiCorp Vault for secure handling of sensitive data within containers.",
+    "source": "code_example",
+    "updated_at": 1781047564.058261
+  },
+  "search:Security Practices in Docker + Kubernetes:kubernetes security models": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces`: List all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>`: Get detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27: Latest stable version as of my last update.\n\n- **Key Config Options**:\n  - `securityContext`: Define security settings for containers and pods.\n  - `nodeSelector`: Schedule pods on nodes with matching labels.\n  - `tolerations`: Allow scheduling pods on nodes with taints.",
+    "source": "web_search",
+    "updated_at": 1781047573.2374284
+  },
+  "search:Security Practices in Docker + Kubernetes:kubernetes security models_ex": {
+    "content": "- Use `kubectl create secret generic my-secret --from-literal=username=admin --from-literal=password=secret` to create a Kubernetes secret.\n- Update your deployment with `kubectl apply -f my-deployment.yaml` to ensure the latest configuration is applied.\n- Key config options for security include:\n  - `securityContext`: Defines privilege and access control settings.\n  - `runAsUser`: Specifies the user ID under which processes run in the container.\n  - `fsGroup`: Sets the group ID of the filesystem.\n- Ensure your Kubernetes cluster uses RBAC (Role-Based Access Control) by creating roles with `kubectl create role my-role --verb=get,list,watch --resource=pods`.\n- Apply network policies to control traffic between pods using `kubectl apply -f my-network-policy.yaml`.\n- Regularly update Kubernetes and all components to the latest version for security patches.\n- Use `kubectl describe pod <pod-name>` to inspect pod details and identify any potential security issues.",
+    "source": "code_example",
+    "updated_at": 1781047580.5527158
+  },
+  "search:Security Practices in Docker + Kubernetes:container escape prevention": {
+    "content": "- Use `docker run --security-opt=no-new-privileges` to prevent privilege escalation.\n- Implement `--cap-drop ALL` to drop all capabilities except those explicitly granted.\n- Utilize `--read-only` for read-only filesystems, enhancing security against data tampering.\n- Employ `--user` or `--uidmap` and `--gidmap` to run containers as non-root users.\n- Regularly update Docker to the latest version (e.g., `docker pull docker:latest`).\n- Configure SELinux or AppArmor for additional security layers (`--security-opt seccomp=unconfined`).\n- Monitor container runtime with tools like Falco for detecting anomalous behavior.\n- Implement network policies using Kubernetes Network Policies to restrict container communication.\n- Use `docker-compose.yml` to define and run multi-container Docker applications securely.",
+    "source": "web_search",
+    "updated_at": 1781047592.6843295
+  },
+  "search:Security Practices in Docker + Kubernetes:container escape prevention_ex": {
+    "content": "- **GitHub Repository**: [Container-escape](https://github.com/arnav108276/Container-escape)\n- **eBPF for Real-time Monitoring**: Use `ebpf` for runtime security monitoring.\n- **Docker Escape Prevention**:\n  - Run containers with minimal privileges using `--user <uid>:<gid>`.\n  - Enable AppArmor or SELinux policies.\n  - Update Docker to the latest version: `docker update --latest <container_id>`.\n- **Key Config Options**:\n  - Use `--cap-drop` to drop unnecessary capabilities.\n  - Configure `seccomp` profiles for restricted system calls.\n  - Implement network isolation using `--network host` or custom networks.",
+    "source": "code_example",
+    "updated_at": 1781047612.4018583
+  }
+}

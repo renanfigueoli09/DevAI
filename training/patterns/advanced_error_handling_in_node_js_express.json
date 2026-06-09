@@ -1,0 +1,17 @@
+{
+  "search:Advanced Error Handling in Node.js + Express:express middleware for errors": {
+    "content": "- Use `app.use((err, req, res, next) => { ... })` to define custom error handling middleware.\n- Ensure your custom error handler is placed after all other routes and middleware.\n- Utilize `res.status(statusCode).json({ message: err.message })` for sending error responses.\n- Implement logging within the error handler for better debugging and monitoring.\n- Use `next(err)` to pass errors to the next middleware function if not handled locally.",
+    "source": "web_search",
+    "updated_at": 1781047516.8890848
+  },
+  "search:Advanced Error Handling in Node.js + Express:express middleware for errors_ex": {
+    "content": "- Install the `express` package using npm: `npm install express`\n- Import the `express` module at the top of your file.\n- Use error handling middleware to catch and handle errors globally in your application.\n- Implement a custom error handler middleware function that logs errors, sends appropriate status codes, and handles async errors properly.\n- Use try/catch blocks or helper functions within asynchronous tasks to manage errors effectively.",
+    "source": "code_example",
+    "updated_at": 1781047523.1592762
+  },
+  "search:Advanced Error Handling in Node.js + Express:uncaught exceptions in node.js": {
+    "content": "- **CLI Command:** `node --unhandled-rejections=strict your-script.js`\n- **Latest Version:** Node.js v18.x and later versions.\n- **Key Config Options:**\n  - `process.on('uncaughtException', callback)`: Handles uncaught exceptions.\n  - `process.on('unhandledRejection', callback)`: Handles unhandled promise rejections.",
+    "source": "web_search",
+    "updated_at": 1781047531.3417728
+  }
+}

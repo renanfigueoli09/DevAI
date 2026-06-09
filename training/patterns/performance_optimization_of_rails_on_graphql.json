@@ -1,0 +1,32 @@
+{
+  "search:Performance Optimization of Rails on GraphQL:rails graphql performance": {
+    "content": "- Use `rails new --api` to create a new Rails API project.\n- Implement batching in GraphQL by using the `graphql-batch` gem.\n- Configure caching with `rack-cache` or `redis-rails`.\n- Utilize eager loading in your models to reduce N+1 queries.\n- Optimize database queries with indexes and query optimization techniques.\n- Use `GraphQL::Pro` for advanced features like caching, batching, and more.\n- Implement authorization using gems like `graphql-guardian` or custom middleware.\n- Test performance with tools like `ab`, `wrk`, or `rails-perftest`.\n- Monitor performance metrics using services like New Relic or Datadog.",
+    "source": "web_search",
+    "updated_at": 1781047622.549245
+  },
+  "search:Performance Optimization of Rails on GraphQL:rails graphql performance_ex": {
+    "content": "- Install `graphql-ruby` gem using `bundle add graphql`\n- Use `rails generate graphql:install` to set up GraphQL in your Rails app\n- Configure `config/initializers/graphql.rb` for settings like default max complexity and depth\n- Implement GraphQL types and queries in `app/graphql/types`\n- Use `GraphQL::Batch` for batching multiple queries to reduce database hits\n- Optimize resolver methods by using eager loading with ActiveRecord\n- Monitor performance using tools like `rack-mini-profiler` or custom logging\n- Consider caching results of frequently accessed data using Redis or similar\n- Regularly profile and optimize your GraphQL schema and resolvers",
+    "source": "code_example",
+    "updated_at": 1781047629.6981125
+  },
+  "search:Performance Optimization of Rails on GraphQL:query optimization": {
+    "content": "- Use `EXPLAIN` to analyze query execution plans.\n- Update statistics regularly using `ANALYZE TABLE`.\n- Consider indexing columns frequently queried in WHERE, JOIN, and ORDER BY clauses.\n- Optimize queries by breaking them into smaller parts if possible.\n- Use EXPLAIN ANALYZE for detailed performance insights.\n- Ensure database schema is normalized to reduce redundancy.\n- Monitor query execution times with tools like `pg_stat_statements` (PostgreSQL).\n- Regularly review and optimize slow queries identified in logs.",
+    "source": "web_search",
+    "updated_at": 1781047638.4935129
+  },
+  "search:Performance Optimization of Rails on GraphQL:query optimization_ex": {
+    "content": "- Use `EXPLAIN` to understand query execution plans.\n- Upgrade to the latest version of your SQL database management system.\n- Enable and configure query caching for frequently executed queries.\n- Utilize indexes on columns that are frequently used in WHERE clauses, JOIN conditions, or ORDER BY.\n- Avoid using SELECT *; specify only the required columns.\n- Use subqueries judiciously; consider alternatives like joins if possible.\n- Regularly analyze and optimize database schema to reduce data redundancy.\n- Employ query optimization tools provided by your database management system.\n- Monitor query performance metrics regularly and adjust queries based on observed bottlenecks.",
+    "source": "code_example",
+    "updated_at": 1781047655.836242
+  },
+  "search:Performance Optimization of Rails on GraphQL:schema design for performance": {
+    "content": "- Use `CREATE TABLE` and `ALTER TABLE` statements to define and modify table schemas.\n- Implement normalization up to third normal form for data integrity.\n- Utilize indexing on columns frequently queried to improve performance.\n- Partition large tables based on access patterns to enhance scalability.\n- Regularly analyze and optimize query execution plans using tools like EXPLAIN.\n- Consider denormalization in scenarios with high read/write ratios.\n- Use database-specific features like sharding or replication for horizontal scaling.\n- Monitor schema performance metrics regularly and adjust as needed.",
+    "source": "web_search",
+    "updated_at": 1781047673.3931506
+  },
+  "search:Performance Optimization of Rails on GraphQL:schema design for performance_ex": {
+    "content": "- **CLI Commands**: Use `psql` for PostgreSQL and `mysql` for MySQL to interact with databases.\n- **Latest Versions**: Ensure you are using the latest version of your database management system for optimal performance.\n- **Key Config Options**:\n  - For PostgreSQL: Adjust `work_mem`, `maintenance_work_mem`, and `shared_buffers`.\n  - For MySQL: Modify `innodb_buffer_pool_size`, `query_cache_size`, and `max_connections`.",
+    "source": "code_example",
+    "updated_at": 1781047684.4564152
+  }
+}

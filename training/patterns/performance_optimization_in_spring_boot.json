@@ -1,0 +1,32 @@
+{
+  "search:Performance Optimization in Spring Boot:spring boot performance tuning": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot and its dependencies.\n- **Key Config Options**:\n  - `spring.datasource.hikari.maximum-pool-size=20`: Adjust based on your application's load.\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`: Increase for batch processing.\n  - `spring.thymeleaf.cache=false`: Disable caching in development to avoid stale content issues.\n  - `server.tomcat.max-threads=100`: Adjust based on server capacity and expected load.",
+    "source": "web_search",
+    "updated_at": 1781047457.6570385
+  },
+  "search:Performance Optimization in Spring Boot:spring boot performance tuning_ex": {
+    "content": "- Use `mvn clean install` to build your project.\n- Update Spring Boot version to the latest stable release using `<parent>` in `pom.xml`.\n- Configure Tomcat settings in `application.properties` or `application.yml`, e.g., `server.tomcat.max-threads=200`.\n- Enable caching with `@EnableCaching` and configure cache manager.\n- Use `@Async` for asynchronous method execution to improve responsiveness.\n- Optimize database queries using Spring Data JPA and Hibernate.\n- Implement connection pooling with HikariCP in `application.properties`, e.g., `spring.datasource.hikari.maximum-pool-size=10`.\n- Monitor application performance using tools like Actuator endpoints.\n- Profile your application with VisualVM or JProfiler for detailed insights.",
+    "source": "code_example",
+    "updated_at": 1781047465.1668005
+  },
+  "search:Performance Optimization in Spring Boot:memory optimization": {
+    "content": "- **CLI Commands**:\n  - `taskkill /PID <process_id> /F` to forcefully terminate a process.\n  - `wmic process where \"name='process_name.exe'\" call terminate` for terminating processes by name.\n\n- **Latest Versions**:\n  - Windows 11: Latest version as of my last update is Windows 11, version 23H2.\n  - Wise Memory Optimizer: As of my last check, the latest version is 4.0.5.\n\n- **Key Config Options**:\n  - In Windows Task Manager, adjust \"Performance\" settings to monitor and manage memory usage.\n  - Use `powercfg` command for power management settings that can affect memory performance.\n  - Configure system settings under \"Advanced system settings\" > \"Performance\" tab for better resource allocation.",
+    "source": "web_search",
+    "updated_at": 1781047475.118915
+  },
+  "search:Performance Optimization in Spring Boot:memory optimization_ex": {
+    "content": "- **CLI Commands**:\n  - `go build -gcflags=\"-m\"` to print memory allocations.\n  - `perf record` and `perf report` for performance profiling.\n\n- **Latest Versions**:\n  - Go: v1.20.1\n  - Node.js: v18.14.0\n\n- **Key Config Options**:\n  - Use `struct-layout` for optimizing memory usage in Go.\n  - Configure VSCode with extensions like \"Go\" and \"Memory Profiler\".\n  - Enable caching mechanisms in your development environment.",
+    "source": "code_example",
+    "updated_at": 1781047482.0900526
+  },
+  "search:Performance Optimization in Spring Boot:application startup time reduc": {
+    "content": "- **Spring Boot**: Upgrade to Spring Boot 3.5.\n- **Lazy Initialization**: Enable lazy initialization in your `application.properties` or `application.yml`.\n  ```properties\n  spring.main.lazy-initialization=true\n  ```\n- **Build Optimizations**:\n  - Use the latest version of Maven or Gradle for faster builds.\n  - Optimize dependencies and exclude unnecessary ones.\n- **QML Compilation Caching**: Enable QML compilation caching in Qt Quick applications.\n  ```cpp\n  QQmlApplicationEngine engine;\n  engine.setOfflineStoragePath(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));\n  ```\n- **Windows Boot Time Measurement**:\n  - Use `Startup Timer` to measure and optimize Windows boot time.\n  - Identify and address the largest startup time consumers.",
+    "source": "web_search",
+    "updated_at": 1781047490.2911596
+  },
+  "search:Performance Optimization in Spring Boot:application startup time reduc_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `./mvnw spring-boot:run` for running the application.\n\n- **Latest Versions**:\n  - Spring Boot 3.5\n  - Maven 3.x\n\n- **Key Config Options**:\n  - `spring.main.lazy-initialization=true`\n  - `spring.devtools.restart.enabled=false`",
+    "source": "code_example",
+    "updated_at": 1781047496.9050667
+  }
+}
