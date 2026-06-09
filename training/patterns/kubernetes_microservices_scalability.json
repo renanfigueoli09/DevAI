@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-microservices-scalability:kubernetes microservices scala": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale deployment <deployment-name> --replicas=<number>` to scale deployments.\n  - `kubectl apply -f <file.yaml>` for applying configurations.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0 (as of early 2025).\n  - KodeKloud Labs: Latest version as of Nov 2025.\n\n- **Key Config Options**:\n  - `resources.requests` and `resources.limits` for defining CPU and memory limits.\n  - `autoscaling/v2beta2 HorizontalPodAutoscaler` for dynamic scaling based on metrics.",
+    "source": "web_search",
+    "updated_at": 1781012410.0628417
+  },
+  "search:kubernetes-microservices-scalability:kubernetes microservices scala_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy microservices.\n- Employ Helm charts for easier management and versioning of Kubernetes applications.\n- Implement StatefulSets for stateful services with persistent storage.\n- Utilize Traefik Ingress Controller for efficient routing and load balancing.\n- Configure horizontal pod autoscaling with `kubectl autoscale deployment <deployment-name> --cpu-percent=<threshold> --min=<min-pods> --max=<max-pods>`.\n- Leverage Kubernetes Service objects to expose microservices within the cluster.\n- Monitor resource usage with `kubectl top node` and `kubectl top pod`.\n- Apply network policies for security using `kubectl apply -f <network-policy>.yaml`.\n- Use `kubectl rollout restart deployment/<deployment-name>` to update deployments gracefully.",
+    "source": "code_example",
+    "updated_at": 1781012416.2707334
+  },
+  "search:kubernetes-microservices-scalability:kubernetes horizontal scaling ": {
+    "content": "- Use `kubectl autoscale deployment <deployment-name> --cpu-percent=<threshold> --min=<min-replicas> --max=<max-replicas>` for Horizontal Pod Autoscaling.\n- Ensure Kubernetes version is up to date, preferably the latest stable release as of your search date.\n- Key config options include:\n  - `spec.minReplicas`: Minimum number of replicas.\n  - `spec.maxReplicas`: Maximum number of replicas.\n  - `spec.targetCPUUtilizationPercentage`: Target CPU utilization percentage.\n- For advanced scaling, consider using custom metrics with Horizontal Pod Autoscaler by setting up a Metrics Server and configuring the HPA to use these metrics.",
+    "source": "web_search",
+    "updated_at": 1781012432.7919986
+  },
+  "search:kubernetes-microservices-scalability:kubernetes horizontal scaling _ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl autoscale deployment <deployment-name> --cpu-percent=<threshold> --min=<min-pods> --max=<max-pods>`\n  - `kubectl get hpa`\n\n- **Latest Versions**:\n  - Kubernetes: v1.26\n  - Horizontal Pod Autoscaler (HPA): v2.5\n\n- **Key Config Options**:\n  - `spec.minReplicas`: Minimum number of pods.\n  - `spec.maxReplicas`: Maximum number of pods.\n  - `spec.metrics`: Metrics to monitor for scaling, e.g., CPU utilization or custom metrics.",
+    "source": "code_example",
+    "updated_at": 1781012438.0678725
+  }
+}

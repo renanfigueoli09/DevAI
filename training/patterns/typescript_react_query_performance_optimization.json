@@ -1,0 +1,22 @@
+{
+  "search:typescript-react-query-performance-optimization:typescript react query perform": {
+    "content": "- **CLI Commands**: Use `npm install react-query@latest` or `yarn add react-query@latest` to install the latest version.\n- **Key Config Options**:\n  - `refetchInterval`: Automatically refetches data at a specified interval (in milliseconds).\n  - `staleTime`: Determines how long data is considered fresh before refetching.\n  - `cacheTime`: Specifies how long data remains in cache after being fetched.\n- **Performance Techniques**:\n  - Use `select` for memoizing query results with structural sharing.\n  - Implement pagination and lazy loading to manage large datasets efficiently.\n  - Manage memory by garbage collecting server state.\n- **TypeScript Support**: Ensure all types are correctly typed using TypeScript generics.",
+    "source": "web_search",
+    "updated_at": 1781012380.6672304
+  },
+  "search:typescript-react-query-performance-optimization:typescript react query perform_ex": {
+    "content": "- **CLI Commands**: Use `npm install @tanstack/react-query` to install the latest version.\n- **Key Config Options**:\n  - `queryClient`: Configure the query client for global cache management.\n  - `useQuery`: Use this hook to fetch data, with options like `refetchInterval`, `staleTime`, and `cacheTime`.\n  - `useMutation`: For handling side effects, with options like `onSuccess` and `onError`.",
+    "source": "code_example",
+    "updated_at": 1781012387.0914953
+  },
+  "search:typescript-react-query-performance-optimization:typescript react query caching": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.x\n  - TypeScript: v5.x\n- **Key Config Options**:\n  - `queryCache`: Manages caching behavior.\n  - `refetchInterval`: Automatically refetches data at specified intervals.\n  - `staleTime`: Determines when data is considered stale and needs refetching.",
+    "source": "web_search",
+    "updated_at": 1781012397.0212946
+  },
+  "search:typescript-react-query-performance-optimization:typescript react query caching_ex": {
+    "content": "- **CLI Commands**: Use `npm install react-query` or `yarn add react-query`.\n- **Latest Version**: As of my last update, the latest version is 4.x.\n- **Key Config Options**:\n  - `queryCache`: Manages caching strategies for queries.\n  - `mutationCache`: Handles caching and invalidation for mutations.\n  - `defaultOptions`: Sets default options for all queries and mutations.\n  - `staleTime`: Determines how long data is considered fresh before refetching.",
+    "source": "code_example",
+    "updated_at": 1781012402.7191257
+  }
+}

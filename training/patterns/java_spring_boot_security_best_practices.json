@@ -1,0 +1,22 @@
+{
+  "search:java-spring-boot-security-best-practices:java spring boot security best": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot 3.2.0\n  - Java 17\n\n- **Key Config Options**:\n  - `spring.security.user.name`\n  - `spring.security.user.password`\n  - `spring.datasource.url`\n  - `spring.datasource.username`\n  - `spring.datasource.password`\n\n- **Additional Best Practices**:\n  - Use `@RequiredArgsConstructor` for constructor injection.\n  - Employ parameter binding in Hibernate native queries to prevent SQL injection.",
+    "source": "web_search",
+    "updated_at": 1781012325.1522324
+  },
+  "search:java-spring-boot-security-best-practices:java spring boot security best_ex": {
+    "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `mvn clean install` for building the project.\n- **Key Config Options**:\n  - `spring.security.user.name`: Username for default user.\n  - `spring.security.user.password`: Password for default user.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `create-drop`, `update`).",
+    "source": "code_example",
+    "updated_at": 1781012330.3033438
+  },
+  "search:java-spring-boot-security-best-practices:java spring boot authenticatio": {
+    "content": "- Use `spring-boot-starter-security` and `spring-boot-starter-data-jpa`\n- Implement JWT authentication by adding dependencies for `jjwt-api`, `jjwt-impl`, and `jjwt-jackson`\n- Configure Spring Security in a Java configuration class\n- Define roles and permissions using `@PreAuthorize` or `@PostAuthorize`\n- Use `CommandLineRunner` to initialize database with users and roles\n- Implement token refresh mechanism for JWT\n- Enable CSRF protection by setting `http.csrf().disable()` if not needed\n- Configure H2 console for development (`spring.h2.console.enabled=true`)\n- Use `application.properties` or `application.yml` for configuration",
+    "source": "web_search",
+    "updated_at": 1781012346.765721
+  },
+  "search:java-spring-boot-security-best-practices:java spring boot authenticatio_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application-name.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - Authentication: Use `spring.security.user.name` and `spring.security.user.password` for in-memory authentication.\n  - Authorization: Configure roles and permissions using `@PreAuthorize`, `@PostAuthorize`, or `@Secured`.\n  - JWT: Implement JWT with dependencies like `io.jsonwebtoken:jjwt-api` and `io.jsonwebtoken:jjwt-impl`.",
+    "source": "code_example",
+    "updated_at": 1781012362.0466938
+  }
+}
