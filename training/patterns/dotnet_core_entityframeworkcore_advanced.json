@@ -1,0 +1,27 @@
+{
+  "search:dotnet-core-entityframeworkcore-advanced:entity framework core advanced": {
+    "content": "- **Latest Version**: EF Core 8.0\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n  - `dotnet ef dbcontext scaffold \"Connection String\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n- **Key Config Options**:\n  - `DbContext` configuration in `appsettings.json`\n  - `OnConfiguring` method for connection string\n  - `ModelBuilder` for entity configurations",
+    "source": "web_search",
+    "updated_at": 1781016342.29384
+  },
+  "search:dotnet-core-entityframeworkcore-advanced:entity framework core advanced_ex": {
+    "content": "- **Install EF Core Provider**: Use `dotnet add package Microsoft.EntityFrameworkCore.SqlServer` for SQL Server.\n- **Latest Version**: Check [GitHub](https://github.com/dotnet/efcore/releases) for the latest version.\n- **Eager Loading**: Use `.Include()` to load related entities, e.g., `context.Entities.Include(e => e.RelatedEntities).ToList()`.\n- **Raw SQL Queries**: Use `FromSqlRaw` method for executing raw SQL queries, e.g., `var results = context.Entities.FromSqlRaw(\"SELECT * FROM Entities WHERE Id = {0}\", id).ToList()`.\n- **Parameterized Queries**: Ensure security by using parameterized queries with `FromSqlRaw`, as shown above.\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Configure options like connection strings, logging, and more.\n  - `OnModelCreating`: Define model configurations in the derived context class.",
+    "source": "code_example",
+    "updated_at": 1781016349.00802
+  },
+  "search:dotnet-core-entityframeworkcore-advanced:entity framework core migratio": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration.\n  - `dotnet ef database update`: Applies the latest migrations to the database.\n\n- **Latest Versions**:\n  - Entity Framework Core 7.0 (as of 2025)\n\n- **Key Config Options**:\n  - `DbContext` class for defining the model.\n  - `OnModelCreating` method for configuring relationships and constraints.\n  - `appsettings.json` for connection string configuration.",
+    "source": "web_search",
+    "updated_at": 1781016358.4541702
+  },
+  "search:dotnet-core-entityframeworkcore-advanced:entity framework core performa": {
+    "content": "- **Latest Version**: Entity Framework Core 7.0 is the latest stable version as of my last update.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`: Adds a new migration with the name \"InitialCreate\".\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Prevents Entity Framework from tracking changes for entities retrieved by queries.\n  - `UseLazyLoadingProxies()`: Enables lazy loading of related data.\n  - `MaxBatchSize(int batchSize)`: Sets the maximum number of commands to include in a single batch.\n\n- **Performance Tuning Tips**:\n  - Optimize queries using LINQ and avoid N+1 query problems.\n  - Use `AsNoTracking()` for read-only operations.\n  - Configure indexes on frequently queried columns.\n  - Monitor and analyze query performance with Entity Framework Core's logging capabilities.",
+    "source": "web_search",
+    "updated_at": 1781016396.3920023
+  },
+  "search:dotnet-core-entityframeworkcore-advanced:entity framework core performa_ex": {
+    "content": "- **Latest Version**: EF Core 7.0 as of my last update.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`: Adds a new migration with the name \"InitialCreate\".\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n\n- **Key Config Options**:\n  - `DbContextOptionsBuilder`: Used for configuring DbContext options.\n  - `OnModelCreating(ModelBuilder modelBuilder)`: Override this method to configure entity relationships and other model-specific configurations.\n  - `UseSqlServer`, `UseMySQL`, etc.: Specify the database provider in your `DbContext` configuration.",
+    "source": "code_example",
+    "updated_at": 1781016401.916317
+  }
+}

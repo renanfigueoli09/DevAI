@@ -1,0 +1,17 @@
+{
+  "search:ruby-on-rails-advanced-performance:rails performance optimization": {
+    "content": "- **CLI Commands**:\n  - `rails server --port=3000`\n  - `rails db:migrate RAILS_ENV=production`\n\n- **Latest Versions**:\n  - Ruby on Rails 7.0.6\n  - Sidekiq 6.5.2\n  - Jemalloc 5.2.1\n\n- **Key Config Options**:\n  - `config.cache_classes = true`\n  - `config.eager_load = true`\n  - `config.active_record.dump_schema_after_migration = false`",
+    "source": "web_search",
+    "updated_at": 1781016409.8177972
+  },
+  "search:ruby-on-rails-advanced-performance:rails query optimization 2025": {
+    "content": "- Use `rails db:schema:dump` to generate the current schema.\n- Employ `bullet` gem to identify N+1 queries and eager loading issues.\n- Utilize `pg_stat_statements` extension for PostgreSQL to track query performance.\n- Implement `index` on frequently queried columns using `rails g migration AddIndexToTable column_name`.\n- Use `EXPLAIN` in the Rails console to analyze query plans.\n- Consider using `ActiveRecord::Relation#includes` for eager loading.\n- Update gems regularly with `bundle update gem_name`.\n- Review and refactor queries in `config/environments/production.rb` by setting `config.active_record.verbose_query_logs = true`.\n- Use `rails db:structure:load` to reload the database schema from the dump file.",
+    "source": "web_search",
+    "updated_at": 1781016447.0276551
+  },
+  "search:ruby-on-rails-advanced-performance:rails query optimization 2025_ex": {
+    "content": "- Use `rails db:explain` to analyze query performance.\n- Employ `Arel` for writing complex queries in a readable manner.\n- Utilize `ActiveRecord::Relation#includes` for eager loading to reduce N+1 queries.\n- Apply `index`es on frequently queried columns to speed up data retrieval.\n- Optimize joins by using `LEFT JOIN` instead of `INNER JOIN` when possible.\n- Use `LIMIT` and `OFFSET` judiciously to paginate results efficiently.\n- Consider using `pg_stat_statements` extension for PostgreSQL to monitor query performance.\n- Regularly update Rails and gems to benefit from performance improvements.\n- Implement caching strategies like fragment caching or page caching to reduce database load.",
+    "source": "code_example",
+    "updated_at": 1781016463.2592037
+  }
+}

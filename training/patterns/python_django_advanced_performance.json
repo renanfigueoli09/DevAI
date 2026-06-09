@@ -1,0 +1,22 @@
+{
+  "search:python-django-advanced-performance:django queryset optimization 2": {
+    "content": "- Use `select_related` and `prefetch_related` to reduce N+1 queries.\n- Implement caching mechanisms like Django's built-in cache framework or third-party packages for long-running queries.\n- Utilize `annotate` and `aggregate` for complex data calculations without hitting the database multiple times.\n- Apply pagination (`Paginator`) to limit the number of records fetched in a single query.\n- Ensure proper indexing on your database tables, especially foreign keys and fields used frequently in filters or joins.\n- Regularly review and optimize your QuerySets using Django's debug toolbar to identify bottlenecks.",
+    "source": "web_search",
+    "updated_at": 1781016298.4840834
+  },
+  "search:python-django-advanced-performance:django queryset optimization 2_ex": {
+    "content": "- Use `explain()` to analyze and optimize database queries.\n- Employ `select_related` and `prefetch_related` for efficient data retrieval.\n- Apply `filter`, `exclude`, and `order_by` judiciously to reduce query complexity.\n- Utilize Django's caching mechanisms to store frequently accessed data.\n- Implement custom admin interfaces with optimized filtering capabilities.\n- Ensure proper indexing on database tables for faster query execution.\n- Regularly update Django and its dependencies to benefit from performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781016304.0777392
+  },
+  "search:python-django-advanced-performance:django middleware performance ": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --settings=your_project.settings`\n  - `django-admin startproject your_project`\n\n- **Latest Versions**:\n  - Django 4.2\n  - Python 3.10\n\n- **Key Config Options**:\n  - `MIDDLEWARE`: List of middleware classes to be used.\n  - `CACHES`: Configuration for caching backends.\n  - `DEBUG`: Enable or disable debug mode.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.",
+    "source": "web_search",
+    "updated_at": 1781016311.2248304
+  },
+  "search:python-django-advanced-performance:django middleware performance _ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --settings=your_project.settings`\n  - `pip install django[dev]`\n\n- **Latest Versions**:\n  - Django 4.2\n\n- **Key Config Options**:\n  - `MIDDLEWARE`: List of middleware classes to use.\n  - `DEBUG`: Enable or disable debug mode.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.\n  - `DATABASES`: Configuration for database connections.",
+    "source": "code_example",
+    "updated_at": 1781016325.4352288
+  }
+}
