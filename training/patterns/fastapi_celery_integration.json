@@ -1,0 +1,22 @@
+{
+  "search:fastapi+celery-integration:fastapi celery integration tut": {
+    "content": "- **CLI Commands**:\n  - `celery -A your_project_name.celery worker --loglevel=info`\n  - `celery -A your_project_name.celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.2\n  - Celery: v5.2.7\n\n- **Key Config Options**:\n  - `broker_url`: URL of the message broker (e.g., `redis://localhost:6379/0`)\n  - `result_backend`: URL of the result backend (e.g., `redis://localhost:6379/1`)\n  - `task_serializer`: Serialization method for tasks (e.g., `json`)\n  - `accept_content`: List of accepted content types (e.g., `['json']`)",
+    "source": "web_search",
+    "updated_at": 1781021859.1552384
+  },
+  "search:fastapi+celery-integration:fastapi celery integration tut_ex": {
+    "content": "- **GitHub Repository**: [testdrivenio/fastapi-celery](https://github.com/testdrivenio/fastapi-celery)\n- **Latest Versions**:\n  - FastAPI: `0.75.2`\n  - Celery: `5.2.3`\n  - Redis: `6.2.6`\n- **Key Config Options**:\n  - FastAPI: `app = FastAPI()`\n  - Celery: `app.conf.update(broker_url='redis://localhost:6379/0', result_backend='redis://localhost:6379/0')`\n  - Docker Compose: Define services for FastAPI, Celery, and Redis.\n- **CLI Commands**:\n  - Run FastAPI app: `uvicorn main:app --reload`\n  - Start Celery worker: `celery -A tasks.celery worker --loglevel=info`\n  - Test Celery task: Use unit tests or integration tests as described in the repository.",
+    "source": "code_example",
+    "updated_at": 1781021866.851789
+  },
+  "search:fastapi+celery-integration:fastapi celery performance opt": {
+    "content": "- **CLI Commands**:\n  - `celery -A your_project_name worker --loglevel=info`\n  - `celery -A your_project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - FastAPI: v0.89.1\n  - Celery: v5.2.7\n\n- **Key Config Options**:\n  - `broker_url`: URL of the message broker (e.g., Redis, RabbitMQ).\n  - `result_backend`: URL of the result backend to store task results.\n  - `worker_concurrency`: Number of worker processes to run concurrently.\n  - `task_serializer`: Serialization method for tasks (e.g., json, msgpack).\n  - `accept_content`: List of serialization methods the workers can accept.",
+    "source": "web_search",
+    "updated_at": 1781021876.855697
+  },
+  "search:fastapi+celery-integration:fastapi celery performance opt_ex": {
+    "content": "- **GitHub Repository**: [GregaVrbancic/fastapi-celery](https://github.com/GregaVrbancic/fastapi-celery)\n- **CLI Commands**:\n  - Start FastAPI app: `poetry run hypercorn app/main:app --reload`\n  - Start Celery worker: `celery -A tasks.celery worker --loglevel=info`\n  - Monitor Celery tasks: `celery -A tasks.celery flower`\n- **Latest Versions**:\n  - FastAPI: v0.103.2\n  - Celery: v5.2.7\n  - RabbitMQ: v3.8.x\n  - Redis: v6.2.x\n- **Key Config Options**:\n  - `broker_url`: URL for the message broker (e.g., `amqp://guest@localhost//`)\n  - `result_backend`: URL for the result backend (e.g., `redis://localhost:6379/0`)\n  - `task_serializer`: Serialization method for tasks (e.g., `json`)\n  - `accept_content`: List of accepted serialization methods (e.g., `['json']`)",
+    "source": "code_example",
+    "updated_at": 1781021893.310595
+  }
+}

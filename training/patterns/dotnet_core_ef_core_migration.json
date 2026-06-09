@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-ef-core-migration:dotnet core ef core migration ": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - .NET SDK: 6.0 and later\n\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server\n  - `UseMySql`: For MySQL\n  - `UseNpgsql`: For PostgreSQL\n  - `MigrationsHistoryTable`: Customize the name of the migrations history table",
+    "source": "web_search",
+    "updated_at": 1781021828.329278
+  },
+  "search:dotnet-core-ef-core-migration:dotnet core ef core migration _ex": {
+    "content": "- **CLI Commands**: `dotnet ef migrations add <MigrationName>` to create a new migration.\n- **Applying Migrations**: `dotnet ef database update` to apply all pending migrations.\n- **Rollback Migration**: `dotnet ef database update <MigrationName>` to roll back to a specific migration.\n- **Latest Version**: Ensure you are using the latest version of EF Core and .NET SDK for compatibility and bug fixes.\n- **Key Config Options**:\n  - `UseSqlServer`: For SQL Server databases.\n  - `UseMySql`: For MySQL databases.\n  - `UseNpgsql`: For PostgreSQL databases.",
+    "source": "code_example",
+    "updated_at": 1781021837.3894389
+  },
+  "search:dotnet-core-ef-core-migration:advanced dotnet core ef core m": {
+    "content": "- **CLI Commands**: \n  - `dotnet ef migrations add [name]`\n  - `dotnet ef database update`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of .NET Core and EF Core for compatibility.\n\n- **Key Config Options**:\n  - Connection strings in `appsettings.json` or environment variables.\n  - Migrations directory configuration in `Startup.cs`.",
+    "source": "web_search",
+    "updated_at": 1781021844.4140046
+  },
+  "search:dotnet-core-ef-core-migration:advanced dotnet core ef core m_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `Add-Migration InitialCreate` (for Visual Studio Package Manager Console)\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of EF Core and .NET CLI for compatibility and features.\n\n- **Key Config Options**:\n  - `ModelSnapshot`: Automatically generated file to track model changes.\n  - `Migrations` folder: Contains migration scripts and snapshots.",
+    "source": "code_example",
+    "updated_at": 1781021849.7324228
+  }
+}
