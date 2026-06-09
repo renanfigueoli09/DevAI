@@ -1,0 +1,12 @@
+{
+  "search:fastapi+postgres-async:fastapi async postgresql trans": {
+    "content": "- **FastAPI**: Version 0.95.0\n- **SQLAlchemy**: Version 2.0.0\n- **asyncpg**: Version 0.26.0\n- **uvicorn**: Version 0.18.3\n\n**CLI Commands:**\n- `pip install fastapi sqlalchemy asyncpg uvicorn`\n- `uvicorn main:app --reload`\n\n**Key Config Options:**\n- FastAPI app creation: `app = FastAPI()`\n- Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n- Async session setup:\n  ```python\n  from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession\n  engine = create_async_engine(SQLALCHEMY_DATABASE_URL)\n  async with AsyncSession(engine) as session:\n      # Perform database operations\n  ```\n- Dependency injection for sessions:\n  ```python\n  @app.get(\"/\")\n  async def read_root(db: AsyncSession = Depends(get_db)):\n      # Use db for database operations\n  ```\n\n**Additional Tools:**\n- **pytest**: For testing asynchronous code.\n- **Alembic**: For database migrations.",
+    "source": "web_search",
+    "updated_at": 1781026413.7861474
+  },
+  "search:fastapi+postgres-async:fastapi async postgresql trans_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install sqlalchemy[asyncio]`\n  - `pip install databases`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - SQLAlchemy: 2.0.0\n  - Databases: 1.0.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - Connection Pooling: Use `AsyncEngine` with `create_async_engine`\n  - Transaction Management: Use `async with session.begin()` for transactions\n  - ORM Configuration: Define models using SQLAlchemy ORM 2.0",
+    "source": "code_example",
+    "updated_at": 1781026428.592621
+  }
+}

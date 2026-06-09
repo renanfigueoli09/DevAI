@@ -1,0 +1,22 @@
+{
+  "search:angular-ngrx-store-performance:angular ngrx store performance": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>`: Generates a new NgRx store.\n  - `ng add @ngrx/signal`: Adds Angular Signals to your project.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - NgRx: v15.4.0\n  - Angular Signals: v3.1.0\n\n- **Key Config Options**:\n  - `storeConfig` in `app.module.ts`: Configures the NgRx store.\n  - `SignalStore` for reactive state management.\n  - `select` method for accessing state slices.\n\nThese actionable facts should help developers optimize their Angular applications using NgRx and Signals effectively.",
+    "source": "web_search",
+    "updated_at": 1781026499.8866959
+  },
+  "search:angular-ngrx-store-performance:angular ngrx store performance_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store with actions, reducers, and effects.\n\n- **Latest Versions**:\n  - Angular CLI: 16.2\n  - NgRx: 15.3\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)`: Registers the root reducer.\n  - `EffectsModule.forRoot(effects)`: Registers the root effects.\n  - `Action creators`: Define actions using classes for type safety and better readability.\n  - `Reducers`: Pure functions that handle state transitions based on actions.\n  - `Selectors`: Functions to select slices of the state for components.",
+    "source": "code_example",
+    "updated_at": 1781026508.1572695
+  },
+  "search:angular-ngrx-store-performance:ngrx store best practices for ": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng add @ngrx/store` to set up NgRx in your Angular project.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version of NgRx is 15.0.0. Check [Angular's official website](https://angular.io/) for the most current version.\n\n- **Key Config Options**:\n  - `initialState`: Define the initial state of your store.\n  - `reducers`: Map actions to functions that update the state.\n  - `effects`: Handle side effects like HTTP requests.\n  - `selectors`: Create selectors to access parts of the state in a more readable way.\n\n- **Best Practices**:\n  - Use NgRx for global state management.\n  - Organize reducers into feature modules.\n  - Utilize selectors for efficient state retrieval.\n  - Implement effects for handling asynchronous operations.",
+    "source": "web_search",
+    "updated_at": 1781026526.3539155
+  },
+  "search:angular-ngrx-store-performance:ngrx store best practices for _ex": {
+    "content": "- Use `ng add @ngrx/store` to install NgRx in your Angular project.\n- Update `app.module.ts` to import `StoreModule.forRoot({})`.\n- Define actions using TypeScript interfaces or classes.\n- Create reducers with pure functions that return new state objects.\n- Utilize `@ngrx/effects` for side effects like API calls.\n- Configure `StoreDevtoolsModule.instrument()` in development environments.\n- Use `select` operators from `@ngrx/store/selectors` to access state slices.\n- Apply middleware with `StoreModule.forRoot({}, { metaReducers })`.\n- Ensure immutability by returning new objects in reducers.",
+    "source": "code_example",
+    "updated_at": 1781026541.8071027
+  }
+}

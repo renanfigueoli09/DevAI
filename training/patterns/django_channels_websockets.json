@@ -1,0 +1,17 @@
+{
+  "search:django-channels-websockets:django channels websockets tut": {
+    "content": "- **Latest Version**: Channels 4.3.2, Daphne 4.0.0, Uvicorn 10.0.0\n- **Key Config Options**:\n  - `CHANNEL_LAYERS`: Configure the channel layer to use Redis.\n  - `ASGI_APPLICATION`: Set the ASGI application entry point.\n  - `INSTALLED_APPS`: Include `'channels'` and `'channels_redis'`.\n- **CLI Commands**:\n  - `pip install channels==4.3.2 daphne==4.0.0 uvicorn==10.0.0`\n  - `python manage.py migrate`\n  - `daphne myproject.asgi:application`\n  - `uvicorn myproject.asgi:application`",
+    "source": "web_search",
+    "updated_at": 1781026436.3880517
+  },
+  "search:django-channels-websockets:django channels real-time appl": {
+    "content": "- **CLI Commands**:\n  - `pip install channels`\n  - `python manage.py runserver`\n\n- **Latest Versions**:\n  - Django Channels: 4.x\n\n- **Key Config Options**:\n  - `CHANNEL_LAYERS`: Configure the channel layer to use Redis or another backend.\n  - `ASGI_APPLICATION`: Set the ASGI application entry point in your settings.\n\n- **Additional Tools**:\n  - Use Redis for message passing and scaling.",
+    "source": "web_search",
+    "updated_at": 1781026480.691449
+  },
+  "search:django-channels-websockets:django channels real-time appl_ex": {
+    "content": "- **Install Django Channels**:\n  ```bash\n  pip install channels\n  ```\n\n- **Update `settings.py`**:\n  - Add `'channels'` to `INSTALLED_APPS`.\n  - Configure ASGI application: \n    ```python\n    ASGI_APPLICATION = 'myproject.asgi.application'\n    ```\n  - Set up Channels layer:\n    ```python\n    CHANNEL_LAYERS = {\n        \"default\": {\n            \"BACKEND\": \"channels.layers.InMemoryChannelLayer\",\n        },\n    }\n    ```\n\n- **Create a Consumer**:\n  - Create a file `consumers.py` in your app.\n  - Define a consumer class:\n    ```python\n    from channels.generic.websocket import AsyncWebsocketConsumer\n\n    class MyConsumer(AsyncWebsocketConsumer):\n        async def connect(self):\n            await self.accept()\n\n        async def disconnect(self, close_code):\n            pass\n\n        async def receive(self, text_data=None, bytes_data=None):\n            await self.send(text_data=\"Message received\")\n    ```\n\n- **Configure Routing**:\n  - Create a file `routing.py` in your app.\n  - Define routing for consumers:\n    ```python\n    from django.urls import re_path\n\n    from .consumers import MyConsumer\n\n    websocket_urlpatterns = [\n        re_path(r'ws/myconsumer/$', MyConsumer.as_asgi()),\n    ]\n    ```\n\n- **Run ASGI Server**:\n  ```bash\n  python manage.py runserver\n  ```\n\n- **Test WebSocket Connection**:\n  - Use a WebSocket client like `websocat` or open browser console to test.\n\n- **Latest Version**:\n  - Check [Django Channels GitHub](https://github.com/django/channels) for the latest version and updates.",
+    "source": "code_example",
+    "updated_at": 1781026491.1638713
+  }
+}
