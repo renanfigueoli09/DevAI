@@ -1,0 +1,22 @@
+{
+  "search:python-django-mysql:python django mysql orm 2025": {
+    "content": "- **Tortoise ORM**: Use `pip install tortoise-orm==1.1.7` to install the latest version.\n- **Django MySQL Distinct Query**: Ensure Django and MySQL are compatible versions, then use Django's ORM methods like `.distinct()` for distinct queries.\n- **Python Django Web Framework**: Install using `pip install django`, then start a project with `django-admin startproject myproject`.\n- **Django Models**: Define models in `models.py` using Django's ORM. Example:\n  ```python\n  from django.db import models\n\n  class Book(models.Model):\n      title = models.CharField(max_length=100)\n      author = models.CharField(max_length=100)\n  ```\n- **Key Config Options**:\n  - For Tortoise ORM: Configure in `settings.py` with database URLs.\n  - For Django: Set up `DATABASES` dictionary in `settings.py`.\n- **CLI Commands**:\n  - To start a Django project: `django-admin startproject myproject`\n  - To run migrations: `python manage.py migrate`\n  - To create an admin user: `python manage.py createsuperuser`\n  - To run the development server: `python manage.py runserver`",
+    "source": "web_search",
+    "updated_at": 1781046056.756973
+  },
+  "search:python-django-mysql:python django mysql orm 2025_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/jerry81333/Django-MySQL-Example.git`\n  - `python manage.py runserver`\n\n- **Latest Versions**:\n  - Python: 3.9 or later\n  - Django: 4.0 or later\n  - MySQL Connector/Python: Latest version\n\n- **Key Config Options**:\n  - In `settings.py`, configure the database settings:\n    ```python\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'your_database_name',\n            'USER': 'your_username',\n            'PASSWORD': 'your_password',\n            'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n            'PORT': '3306',\n        }\n    }\n    ```\n  - Ensure `mysqlclient` or `pymysql` is installed for MySQL connectivity:\n    ```bash\n    pip install mysqlclient\n    ```\n\n- **Additional Notes**:\n  - Use Django's ORM to interact with the database.\n  - For joining tables, use Django's QuerySet API.",
+    "source": "code_example",
+    "updated_at": 1781046065.2450101
+  },
+  "search:python-django-mysql:python django mysql database m": {
+    "content": "- **CLI Commands**:\n  - `python manage.py makemigrations`\n  - `python manage.py migrate`\n  - `python manage.py runserver`\n\n- **Latest Versions**:\n  - Django 4.2\n  - MySQL Connector/Python 8.0\n\n- **Key Config Options**:\n  - `DATABASES` in `settings.py`: Define database connection details.\n  - `INSTALLED_APPS`: List of apps to include in the project.\n  - `STATIC_URL` and `MEDIA_URL`: URLs for static files and media files respectively.",
+    "source": "web_search",
+    "updated_at": 1781046074.6971965
+  },
+  "search:python-django-mysql:python django mysql database m_ex": {
+    "content": "- Use `python manage.py makemigrations` to create new migrations.\n- Apply migrations using `python manage.py migrate`.\n- For zero-downtime strategies, consider Django's `--fake` and reverse migration support.\n- Ensure data migrations have a proper `reverse_sql` or `reverse_code` implementation.\n- Latest versions: Django 4.2\n- Key config options: `MIGRATION_MODULES`, `MIGRATE_ALL_TOGETHER`.",
+    "source": "code_example",
+    "updated_at": 1781046087.9142056
+  }
+}

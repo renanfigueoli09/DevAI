@@ -1,0 +1,22 @@
+{
+  "search:typescript-graphql-nestjs:typescript graphql nestjs inte": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/graphql graphql-tools graphql`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - `GraphQLModule.forRoot({ typePaths: ['./**/*.graphql'], resolvers })`\n  - `@Resolver()`, `@Query()`, `@Mutation()`, `@Field()`\n  - `PrismaClient` for database operations",
+    "source": "web_search",
+    "updated_at": 1781046105.990604
+  },
+  "search:typescript-graphql-nestjs:typescript graphql nestjs inte_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/graphql graphql-tools graphql apollo-server-express`.\n- Configure GraphQL in `app.module.ts`:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { GraphQLModule } from '@nestjs/graphql';\n\n  @Module({\n    imports: [\n      GraphQLModule.forRoot({\n        typePaths: ['./**/*.graphql'],\n        context: ({ req }) => ({ headers: req.headers }),\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Define a GraphQL schema using `.graphql` files.\n- Use `@nestjs/graphql` decorators like `@Field`, `@InputType`, `@ObjectType`, and `@Resolver`.\n- For ApolloDriver, install `@nestjs/apollo` and configure it in `GraphQLModule.forRoot`.\n- For MercuriusDriver, install `@nestjs/mercurius` and configure it similarly.\n- Use `npm run start:dev` to run the development server.\n- Ensure TypeScript version is up-to-date (e.g., 4.9.x).\n- Key config options include `typePaths`, `context`, and `driver`.",
+    "source": "code_example",
+    "updated_at": 1781046113.8888903
+  },
+  "search:typescript-graphql-nestjs:typescript graphql nestjs secu": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install Prisma and its type definitions using `npm install prisma @prisma/client`.\n- For code-first approach, use `@nestjs/graphql` package.\n- Apply validation decorators like `@IsString()`, `@MinLength(5)` from `class-validator`.\n- Implement authentication with JWT by installing `@nestjs/jwt` and configuring it in `auth.module.ts`.\n- Use environment variables for sensitive information like secret keys.\n- For production, ensure to use HTTPS and configure CORS properly.\n- Regularly update NestJS and its dependencies using `npm update`.",
+    "source": "web_search",
+    "updated_at": 1781046121.8857665
+  },
+  "search:typescript-graphql-nestjs:typescript graphql nestjs secu_ex": {
+    "content": "- **CLI Commands**:\n  - `npm i --save @nestjs/graphql graphql-tools graphql apollo-server-express`\n  - `nest generate module [module-name]`\n  - `nest generate controller [controller-name]`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeScript: v6.x\n\n- **Key Config Options**:\n  - `GraphQLModule.forRoot({ typePaths: ['./**/*.graphql'], context: ({ req }) => ({ user: req.user }), });`\n  - `@UseGuards(AuthGuard('jwt'))` for authentication\n  - `@Roles(Role.ADMIN)` for authorization",
+    "source": "code_example",
+    "updated_at": 1781046128.5433655
+  }
+}
