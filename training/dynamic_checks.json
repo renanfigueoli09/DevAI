@@ -1,7 +1,24 @@
 {
-  "generated_at": 1781033633.0555866,
+  "generated_at": 1781034650.417853,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "golang-mongo-go-driver-advanced: não usa TypeORM",
+      "queries": [
+        "golang-mongo-go-driver-advanced schema service"
+      ],
+      "must_find": [
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "golang-mongo-go-driver-advanced"
+    },
     {
       "name": "Optimizing NGRX Store with Angular: padrões de código",
       "queries": [
@@ -45,24 +62,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "python-django-celery-redis"
-    },
-    {
-      "name": "nodejs-express-mongodb-advanced: não usa TypeORM",
-      "queries": [
-        "nodejs-express-mongodb-advanced schema service"
-      ],
-      "must_find": [
-        "Mongoose",
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nodejs-express-mongodb-advanced"
     }
   ]
 }

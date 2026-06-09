@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-09 16:35*
+*2026-06-09 16:53*
 
 ## Score: 90% `[██████████████████░░]`  (47.0/52.0)
 
@@ -19,10 +19,10 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| golang-mongo-go-driver-advanced: não usa TypeORM | 1.0/1 | ✅ |
 | Optimizing NGRX Store with Angular: padrões de código | 1.0/1 | ✅ |
 | Testing Patterns for TypeScript and Jest Unit Testing: padrões de código | 1.0/1 | ✅ |
 | python-django-celery-redis: cache | 1.0/1 | ✅ |
-| nodejs-express-mongodb-advanced: não usa TypeORM | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
