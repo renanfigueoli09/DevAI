@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-kotlin-jpa-performance:spring boot kotlin jpa perform": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Kotlin: 1.9.20\n  - JPA: 2.4\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.dialect`: Set the database dialect.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.\n  - `spring.jpa.hibernate.ddl-auto`: Control schema generation (e.g., `create-drop`, `update`).\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure datasource properties.",
+    "source": "web_search",
+    "updated_at": 1781049132.6586626
+  },
+  "search:spring-boot-kotlin-jpa-performance:spring boot kotlin jpa perform_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Kotlin: 1.8.20\n  - JPA: 2.2\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, JPA properties.\n  - `@EntityScan` and `@EnableJpaRepositories`: Specify package for entities and repositories.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update`, `create-drop`, etc., for schema management.",
+    "source": "code_example",
+    "updated_at": 1781049136.3387063
+  },
+  "search:spring-boot-kotlin-jpa-performance:kotlin jpa repositories optimi": {
+    "content": "- Use `spring-boot-starter-data-jpa` and `kotlin-reflect` in your `pom.xml` or `build.gradle`.\n- Ensure you have the latest Spring Boot version, currently 2023.\n- Configure your data source properties in `application.properties` or `application.yml`.\n- Utilize Kotlin's data classes for entity definitions.\n- Implement repositories by extending `CrudRepository` or `JpaRepository`.\n- Use `@Query` annotations to define custom queries in repository interfaces.\n- Enable Kotlin support in IntelliJ IDEA via the \"Kotlin\" plugin.\n- Run your application with `./mvnw spring-boot:run` or `./gradlew bootRun`.",
+    "source": "web_search",
+    "updated_at": 1781049147.6935756
+  },
+  "search:spring-boot-kotlin-jpa-performance:kotlin jpa repositories optimi_ex": {
+    "content": "- **CLI Commands**:\n  - `./gradlew build`\n  - `./gradlew run`\n\n- **Latest Versions**:\n  - Spring Boot: 2023\n  - Kotlin: 1.8.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n    ```yaml\n    spring:\n      jpa:\n        hibernate:\n          ddl-auto: update\n        show-sql: true\n        properties:\n          hibernate:\n            dialect: org.hibernate.dialect.PostgreSQLDialect\n    ```\n  - Repository interfaces should extend `JpaRepository` or `CrudRepository`.\n  - Use `@Query` for complex queries.\n  - Enable caching with `@EnableCaching` and configure cache manager.",
+    "source": "code_example",
+    "updated_at": 1781049155.1860902
+  }
+}

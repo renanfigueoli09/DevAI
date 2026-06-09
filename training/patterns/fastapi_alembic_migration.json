@@ -1,0 +1,22 @@
+{
+  "search:fastapi-alembic-migration:fastapi alembic migration best": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in your project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a migration script based on detected changes.\n  - `alembic upgrade head`: Applies all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for your database connection.\n  - `alembic.ini`: Configuration file for Alembic, specify the database URL and migration script location.\n  - `env.py`: Environment configuration file where you define the target metadata and bind.",
+    "source": "web_search",
+    "updated_at": 1781049100.9330046
+  },
+  "search:fastapi-alembic-migration:fastapi alembic migration best_ex": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.5\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - Database URL in settings file (e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`)\n  - Alembic configuration (`alembic.ini`) with correct paths and dialects\n  - Dependency injection for database sessions",
+    "source": "code_example",
+    "updated_at": 1781049110.8425927
+  },
+  "search:fastapi-alembic-migration:alembic migrations with fastap": {
+    "content": "- **CLI Commands**:\n  - `alembic init migrations`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a migration script based on model changes.\n  - `alembic upgrade head`: Applies all pending migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - `sqlalchemy.url`: Database connection string.\n  - `revision_id`: Unique identifier for the migration script.\n  - `target_metadata`: SQLAlchemy metadata object representing the database schema.",
+    "source": "web_search",
+    "updated_at": 1781049120.202425
+  },
+  "search:fastapi-alembic-migration:alembic migrations with fastap_ex": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a new migration script based on changes detected in the models.\n  - `alembic upgrade head`: Applies all pending migrations to the database.\n  - `alembic downgrade <revision>`: Reverts the database schema to a previous state.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: Specifies the database URL.\n  - `alembic.ini`: Configuration file for Alembic, including paths to migration scripts and environment settings.\n  - `env.py`: Script used by Alembic to manage migrations, where you define your target metadata.",
+    "source": "code_example",
+    "updated_at": 1781049126.6803014
+  }
+}
