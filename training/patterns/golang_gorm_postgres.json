@@ -1,0 +1,22 @@
+{
+  "search:golang-gorm-postgres:golang gorm postgresql orm 202": {
+    "content": "- **Latest GORM Version**: v2.34.0\n- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/postgres`\n- **Key Config Options**:\n  - `dsn`: Data Source Name for PostgreSQL connection.\n  - `autoMigrate`: Automatically migrate schema to match models.\n  - `logger`: Custom logger for ORM operations.",
+    "source": "web_search",
+    "updated_at": 1781044678.659354
+  },
+  "search:golang-gorm-postgres:golang gorm postgresql orm 202_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres` to start a PostgreSQL container.\n\n- **Latest Versions**:\n  - GORM: v2.30.0\n  - pgx: v4.18.0\n\n- **Key Config Options**:\n  - `dsn`: Data source name for connecting to the database.\n  - `autoMigrate`: Automatically migrate schema based on struct definitions.\n  - `logger`: Custom logger for ORM operations.",
+    "source": "code_example",
+    "updated_at": 1781044690.886966
+  },
+  "search:golang-gorm-postgres:golang gorm postgresql query o": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: As of my last update, the latest version of GORM is v2.35.0.\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})`: Automatically migrates schema based on model definition.\n  - `gorm.DB.Create(&user)`: Inserts a new record into the database.\n  - `gorm.DB.First(&user, 1)`: Finds the first record with primary key = 1.\n  - `gorm.DB.Where(\"name = ?\", \"jinzhu\").First(&user)`: Finds the first record where name is jinzhu.\n  - `gorm.DB.Find(&users, []int{1,2,3})`: Finds records with primary keys in [1,2,3].\n  - `gorm.DB.Model(&User{}).Where(\"name = ?\", \"jinzhu\").Update(\"age\", 18)`: Updates age to 18 where name is jinzhu.\n  - `gorm.DB.Model(&User{}).Where(\"name = ?\", \"jinzhu\").Delete()`: Deletes the record where name is jinzhu.",
+    "source": "web_search",
+    "updated_at": 1781044700.1908462
+  },
+  "search:golang-gorm-postgres:golang gorm postgresql query o_ex": {
+    "content": "- **CLI Commands**:\n  - `pgx` driver installation: `go get github.com/jackc/pgx/v4`\n  - `pgx` custom client setup: `pgx.Connect(context.Background(), \"your_connection_string\")`\n\n- **Latest Versions**:\n  - `pgx`: v4.20.1\n  - `GORM`: v2.35.0\n\n- **Key Config Options**:\n  - `pgx`: Connection string, SSL mode, and timeout settings.\n  - `GORM`: Auto-migration, eager loading, and raw SQL queries.",
+    "source": "code_example",
+    "updated_at": 1781044705.8887625
+  }
+}
