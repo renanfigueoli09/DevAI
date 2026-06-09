@@ -1,8 +1,8 @@
 {
   "search:security-best-practices-django:django security best practices": {
-    "content": "- **Latest Django Version**: 6.0.2, 5.2.11, and 4.2.28\n- **CLI Commands**:\n  - `pip install django==6.0.2`\n  - `pip install django==5.2.11`\n  - `pip install django==4.2.28`\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a unique, random secret key.\n  - `DEBUG`: Set to `False` in production.\n  - `ALLOWED_HOSTS`: Specify allowed hostnames.\n  - `CSRF_COOKIE_SECURE`: Set to `True` for HTTPS.\n  - `SESSION_COOKIE_SECURE`: Set to `True` for HTTPS.\n  - `SECURE_SSL_REDIRECT`: Redirect all HTTP requests to HTTPS.",
+    "content": "- Update Django to the latest version: `pip install --upgrade django`\n- Use Django REST Framework for APIs and ensure it's up-to-date.\n- Implement proper authentication mechanisms like JWT or OAuth2.\n- Enable HTTPS by configuring your web server.\n- Regularly update dependencies with `pip list --outdated`.\n- Use Django’s built-in security features, such as CSRF protection.\n- Configure security settings in `settings.py`, e.g., `SECURE_SSL_REDIRECT = True`.\n- Implement user permissions and roles for fine-grained control.\n- Regularly audit your codebase for vulnerabilities.\n- Monitor your application with tools like Django Debug Toolbar.",
     "source": "web_search",
-    "updated_at": 1780941769.7726123
+    "updated_at": 1780976115.8757787
   },
   "search:security-best-practices-django:django security best practices_ex": {
     "content": "- **CLI Commands**:\n  - `pip install djangorestframework`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django REST Framework: v3.14.0\n  - Django: v4.2\n\n- **Key Config Options**:\n  - `CORS_ORIGIN_ALLOW_ALL = False` (production)\n  - `CORS_ORIGIN_WHITELIST = ['https://example.com']`\n  - `AUTHENTICATION_CLASSES = [rest_framework.authentication.BasicAuthentication]`\n  - `SESSION_COOKIE_SECURE = True`\n  - `CSRF_COOKIE_SECURE = True`\n\n- **Environment Variables**:\n  - `DJANGO_SECRET_KEY`\n  - `DATABASE_URL`\n  - `CORS_ORIGIN_WHITELIST`",
@@ -10,13 +10,13 @@
     "updated_at": 1780941771.9437988
   },
   "search:security-best-practices-django:securing django web applicatio": {
-    "content": "- **CLI Commands**:\n  - `pip install django==3.2`\n  - `python manage.py runserver`\n\n- **Latest Versions**:\n  - Django 3.2\n\n- **Key Config Options**:\n  - `SECRET_KEY`: Set a unique secret key for your project.\n  - `DEBUG`: Set to `False` in production environments.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.\n  - `CSRF_COOKIE_SECURE`: Ensure CSRF cookies are only sent over HTTPS.",
+    "content": "- Update Django and third-party packages regularly using `pip install --upgrade <package_name>`\n- Use Django's built-in authentication system for user management\n- Configure session security settings in `settings.py` such as `SESSION_COOKIE_SECURE = True`\n- Implement CSRF protection by including `{% csrf_token %}` in forms\n- Use HTTPS to encrypt data transmitted between the client and server\n- Regularly check for Django security advisories and apply patches\n- Utilize Django's built-in password hashing mechanism with default settings\n- Configure email backend for password reset functionality\n- Implement custom authentication backends if needed for specific use cases",
     "source": "web_search",
-    "updated_at": 1780941774.1809552
+    "updated_at": 1780976161.7793236
   },
   "search:security-best-practices-django:securing django web applicatio_ex": {
-    "content": "- Use Django's built-in authentication system.\n- Enable CSRF protection by including `{% csrf_token %}` in forms.\n- Sanitize user input using `escape` or `mark_safe`.\n- Update Django to the latest version regularly.\n- Configure security settings in `settings.py`, e.g., `SECURE_SSL_REDIRECT = True`.\n- Use HTTPS for all communications.\n- Implement password hashing with Django's default authentication system.\n- Regularly update dependencies and packages.\n- Use Django's built-in middleware for security features like XSS protection.",
+    "content": "- Use Django's built-in authentication system.\n- Enable CSRF protection by including `{% csrf_token %}` in forms.\n- Set `SESSION_COOKIE_SECURE` to `True` for HTTPS-only cookies.\n- Configure `SECURE_HSTS_SECONDS` and `SECURE_HSTS_INCLUDE_SUBDOMAINS`.\n- Use HTTPS by setting up SSL/TLS with a certificate.\n- Regularly update Django and installed packages using `pip install --upgrade django`.\n- Implement custom authentication backends if needed.\n- Use Django's password hashing mechanisms for user passwords.\n- Configure `ALLOWED_HOSTS` to restrict valid hostnames.\n- Enable content security policies (CSP) for additional security.",
     "source": "code_example",
-    "updated_at": 1780941776.5030878
+    "updated_at": 1780976167.2542572
   }
 }

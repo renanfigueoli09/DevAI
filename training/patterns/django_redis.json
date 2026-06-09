@@ -1,17 +1,17 @@
 {
   "search:django+redis:django redis caching 2025": {
-    "content": "- **CLI Commands**:\n  - `pip install django-redis`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis-py: 4.5.4\n  - Django-Redis: 5.1.0\n\n- **Key Config Options**:\n  - `CACHES = {\n        \"default\": {\n            \"BACKEND\": \"django_redis.cache.RedisCache\",\n            \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n            \"OPTIONS\": {\n                \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            }\n        }\n    }`\n  - `CACHES['default']['LOCATION']`: Redis server URL\n  - `CACHES['default']['OPTIONS']['CLIENT_CLASS']`: Client class for connecting to Redis",
+    "content": "- Install Redis server locally or remotely.\n- Install `redis-py` Python bindings using pip: `pip install redis`.\n- Use `django-redis` for full-featured Redis cache and session backend in Django.\n- Configure `CACHES` setting in Django settings.py:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Use `@cache_page` decorator for caching views:\n  ```python\n  from django.views.decorators.cache import cache_page\n\n  @cache_page(60 * 15)  # Cache this view for 15 minutes\n  def my_view(request):\n      ...\n  ```\n- For session caching, set `SESSION_ENGINE` to `'django.contrib.sessions.backends.cache'`.\n- Monitor Redis performance using tools like `redis-cli` and Django's cache statistics.",
     "source": "web_search",
-    "updated_at": 1780938853.1694393
+    "updated_at": 1780976445.722952
   },
   "search:django+redis:django redis session managemen": {
-    "content": "- **CLI Commands**:\n  - `pip install django-redis-sessions-fork`\n  - `python setup.py install`\n\n- **Latest Versions**:\n  - Not specified in the provided text.\n\n- **Key Config Options**:\n  - Set session engine to `redis_sessions_fork.session`",
+    "content": "- **CLI Commands**:\n  - `django-admin startproject config`\n  - `python manage.py startapp accounts`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.x\n\n- **Key Config Options**:\n  - `SESSION_ENGINE = 'django.contrib.sessions.backends.cache'`\n  - `CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }`",
     "source": "web_search",
-    "updated_at": 1780938855.3719547
+    "updated_at": 1780976490.8179743
   },
   "search:django+redis:django redis session managemen_ex": {
-    "content": "- **CLI Commands**:\n  - `pip install django-redis`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.0\n  - django-redis: 5.3\n\n- **Key Config Options**:\n  - `SESSION_ENGINE = 'django.contrib.sessions.backends.cache'`\n  - `SESSION_CACHE_ALIAS = 'default'`\n  - `CACHES = {\n      'default': {\n          'BACKEND': 'django_redis.cache.RedisCache',\n          'LOCATION': 'redis://127.0.0.1:6379/1',\n          'OPTIONS': {\n              'CLIENT_CLASS': 'django_redis.client.DefaultClient',\n          }\n      }\n  }`\n  - `SESSION_COOKIE_AGE = 1800` (30 minutes)\n  - `SESSION_EXPIRE_AT_BROWSER_CLOSE = True`",
+    "content": "- **GitHub Repository**: jazzband/django-redis\n- **Latest Version**: Not specified in the snippet, check GitHub for the latest version.\n- **Key Config Options**:\n  - `SESSION_ENGINE`: Set to `'django.contrib.sessions.backends.cache'`.\n  - `CACHES['default']`: Configure with `'BACKEND': 'django_redis.cache.RedisCache'` and specify Redis connection details.\n- **CLI Commands**: Not applicable for configuration, but you can use `pip install django-redis` to install the package.\n\nFor detailed setup instructions, refer to the [GitHub repository](https://github.com/jazzband/django-redis) or the official Django documentation.",
     "source": "code_example",
-    "updated_at": 1780938857.5240679
+    "updated_at": 1780976496.3836217
   }
 }

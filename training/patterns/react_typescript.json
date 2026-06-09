@@ -1,0 +1,12 @@
+{
+  "search:react+typescript:typescript generics in react 2": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of TypeScript and React by running `npm install typescript@latest react@latest react-dom@latest`.\n- **Key Config Options**:\n  - In `tsconfig.json`, set `\"jsx\": \"react-jsx\"` for JSX support.\n  - Use `\"strict\": true` to enforce strict type-checking rules.\n  - Configure `\"esModuleInterop\": true` for better compatibility with JavaScript modules.",
+    "source": "web_search",
+    "updated_at": 1780975523.387633
+  },
+  "search:react+typescript:typescript generics in react 2_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React v18, TypeScript v5\n- **Key Config Options**:\n  - `tsconfig.json`: Configure `compilerOptions` for type checking and JSX.\n  - `tsx` file extension: Use `.tsx` for files containing JSX and TS.\n  - `interface` or `type`: Define reusable types for components.",
+    "source": "code_example",
+    "updated_at": 1780975528.1159675
+  }
+}

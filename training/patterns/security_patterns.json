@@ -1,8 +1,8 @@
 {
   "search:security-patterns:api security owasp top 10 back": {
-    "content": "- **CLI Commands**: Use `owasp-top10-cli` to fetch the latest OWASP Top 10 data.\n- **Latest Version**: Check for updates using `owasp-top10-cli --update`.\n- **Key Config Options**:\n  - Enable API security scanning with `--api-security`.\n  - Set verbosity level with `--verbose <level>`.\n  - Specify target URL with `--url <target_url>`.",
+    "content": "- **CLI Commands**: Use `owasp-top10-cli --version` to check the latest version.\n- **Latest Version**: As of October 2025, the latest version is 1.3.2.\n- **Key Config Options**:\n  - `api-rate-limit`: Set rate limits for API calls.\n  - `security-audit`: Enable security audits on all endpoints.\n  - `log-level`: Adjust log verbosity (e.g., `--log-level=DEBUG`).\n- **CLI Flags**: \n  - `--update-db`: Update the vulnerability database.\n  - `--scan-api <url>`: Scan a specific API URL for vulnerabilities.\n  - `--report-format json|xml`: Specify output report format.",
     "source": "web_search",
-    "updated_at": 1780941704.991685
+    "updated_at": 1780973984.9044516
   },
   "search:security-patterns:api security owasp top 10 back_ex": {
     "content": "- Familiarize yourself with the latest OWASP Top 10 for 2025 web application security threats.\n- Implement input validation and sanitization to prevent injection attacks.\n- Use secure authentication mechanisms, such as OAuth or JWT, for API access control.\n- Regularly update dependencies and libraries to patch known vulnerabilities.\n- Employ rate limiting to mitigate brute force attacks.\n- Enable HTTPS to encrypt data in transit.\n- Conduct regular security audits and penetration testing.\n- Implement logging and monitoring to detect and respond to anomalies.\n- Use a content security policy (CSP) to prevent cross-site scripting (XSS).\n- Educate developers on secure coding practices and best practices.",
@@ -10,39 +10,39 @@
     "updated_at": 1780941707.1084323
   },
   "search:security-patterns:sql injection xss csrf prevent": {
-    "content": "- **CLI Commands**: Use `nest generate controller <name>` to create controllers.\n- **Latest Versions**: NestJS v10.x, Node.js v16.x.\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe({ transform: true }));` for input validation.\n  - `app.enableCors();` for enabling CORS.\n  - Use `@UseGuards(AuthGuard('jwt'))` for authentication guards.",
+    "content": "- **XSS Prevention**:\n  - Use Angular's built-in sanitization functions.\n  - Implement Content Security Policy (CSP) headers.\n\n- **CSRF Prevention**:\n  - Use Spring Security's CSRF protection mechanisms.\n  - Ensure all forms and AJAX requests include a CSRF token.\n\n- **NestJS Security Practices**:\n  - Install `helmet` for HTTP security headers.\n  - Use `@nestjs/common/security` decorators for securing routes.\n\n- **CLI Commands**:\n  - NestJS: `nest new project-name`\n  - Angular CLI: `ng generate component component-name`\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Angular: v16.2.0\n  - Spring Boot: 3.1.0\n\n- **Key Config Options**:\n  - NestJS: `app.use(helmet())`\n  - Angular: `X-XSS-Protection`, `Content-Security-Policy`\n  - Spring Security: CSRF token configuration",
     "source": "web_search",
-    "updated_at": 1780941709.2584
+    "updated_at": 1780974022.4255133
   },
   "search:security-patterns:sql injection xss csrf prevent_ex": {
-    "content": "- **Prevent SQL Injection**: Use parameterized queries or prepared statements.\n- **Prevent XSS**: Sanitize user inputs, use Content Security Policy (CSP), and output encoding.\n- **Prevent CSRF**: Use CSRF tokens, validate Referer header, and set HttpOnly flag for cookies.\n- **NestJS**: Update to the latest version using `npm install @nestjs/core@latest`.\n- **Spring Boot**: Update to the latest version using `mvn versions:set -DnewVersion=2025.1.0.RELEASE`.\n- **CLI Commands**:\n  - For NestJS: `nest new project-name`\n  - For Spring Boot: `spring init --dependencies=web project-name`\n- **Key Config Options**:\n  - NestJS: `app.useGlobalPipes(new ValidationPipe({ transform: true }));`\n  - Spring Boot: `httpSecurity.csrf().disable();` (for development purposes only)",
+    "content": "- **NestJS Security Best Practices**: Implement authentication, authorization, and security measures.\n- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - TypeScript: v4.9.5\n- **Key Config Options**:\n  - Use JWT for authentication.\n  - Implement CSRF protection using middleware like `csurf`.\n  - Sanitize user inputs to prevent XSS attacks.\n  - Configure CORS with appropriate origins and methods.\n  - Enable HTTPS for secure data transmission.\n- **Security Measures**:\n  - Role-based access control (RBAC).\n  - Custom guards for managing user permissions.\n  - Protect against CSRF, XSS, and DDoS attacks.",
     "source": "code_example",
-    "updated_at": 1780941711.264807
+    "updated_at": 1780974026.650856
   },
   "search:security-patterns:jwt security best practices ex": {
-    "content": "- **CLI Commands**:\n  - `jwt-cli sign --alg HS256 --exp <expiry_time> --iss <issuer> --sub <subject> <payload>`\n  - `jwt-cli verify --key <secret_key> <token>`\n\n- **Latest Versions**:\n  - JWT CLI: v1.0.3\n  - Node.js JWT Library: v9.0.0\n\n- **Key Config Options**:\n  - `exp`: Expiration time in seconds.\n  - `iss`: Issuer of the token.\n  - `sub`: Subject of the token (usually user ID).\n  - `alg`: Algorithm used for signing (e.g., HS256, RS256).",
+    "content": "- **Algorithm Choice**: Use RS256 over HS256 for better security.\n- **Token Expiry**: Set a short expiry time, e.g., 15 minutes.\n- **Rotation**:\n  - Implement refresh tokens.\n  - Rotate access tokens upon user logout or token expiration.\n- **Key Management**:\n  - Use secure key storage solutions like AWS KMS.\n  - Regularly rotate secret keys.\n- **Token Storage**: Store JWTs in HttpOnly cookies for security.\n- **Security Headers**: Ensure `Content-Security-Policy` and `X-Frame-Options` are set appropriately.\n- **Monitoring**: Implement monitoring for unusual token usage patterns.\n- **Testing**: Conduct regular security audits and penetration testing.",
     "source": "web_search",
-    "updated_at": 1780941713.4899802
+    "updated_at": 1780974032.6869566
   },
   "search:security-patterns:jwt security best practices ex_ex": {
-    "content": "- **CLI Commands**:\n  - `openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048`\n  - `openssl rsa -pubout -in private.key -out public.key`\n\n- **Latest Versions**:\n  - JWT Library: v9.0.0\n  - Node.js: v16.15.0\n\n- **Key Config Options**:\n  - Algorithm: RS256 for enhanced security\n  - Expiry Time: Set to 30 minutes (1800 seconds)\n  - Refresh Token Rotation: Enabled with a new token issued on each refresh\n  - Secret Key Management: Use environment variables for secret keys",
+    "content": "- Use `openssl genpkey -algorithm RSA -out private_key.pem` to generate an RSA private key.\n- Use `openssl rsa -pubout -in private_key.pem -out public_key.pem` to derive the corresponding public key.\n- Implement token expiry using the `exp` claim with a value in seconds since Unix epoch, e.g., `exp=1672531200`.\n- Rotate JWTs by issuing new tokens and invalidating old ones upon rotation.\n- Use RS256 algorithm for enhanced security over HS256.\n- Implement refresh tokens to extend session validity without exposing long-lived access tokens.\n- Regularly update libraries and dependencies to mitigate vulnerabilities.\n- Monitor JWT usage patterns for anomalies that could indicate potential security breaches.",
     "source": "code_example",
-    "updated_at": 1780941715.436842
+    "updated_at": 1780974036.7056236
   },
   "search:security-patterns:input validation sanitization ": {
-    "content": "- Use OWASP Cheat Sheet Series for comprehensive guidance.\n- Implement input validation using libraries like `express-validator` in Node.js.\n- Sanitize data using packages such as `sanitize-html`.\n- Regularly update dependencies to the latest versions.\n- Enable strict mode in JavaScript to catch common coding errors.\n- Configure security headers in your web server (e.g., Apache, Nginx).\n- Use parameterized queries for SQL statements to prevent SQL injection.\n- Implement rate limiting to protect against brute force attacks.\n- Conduct code reviews and use static analysis tools like ESLint.\n- Subscribe to OWASP newsletters for the latest best practices.",
+    "content": "- **CLI Commands**:\n  - `npm install --save express-validator`\n  - `yarn add express-sanitizer`\n\n- **Latest Versions**:\n  - `express-validator@6.5.3`\n  - `express-sanitizer@2.1.0`\n\n- **Key Config Options**:\n  - Use `express-validator` middleware for validation rules.\n  - Employ `express-sanitizer` to sanitize user inputs before validation.\n  - Configure validation chains with methods like `.isEmail()`, `.isLength()`, etc.\n  - Sanitize inputs using `.escape()` or `.trim()` methods.",
     "source": "web_search",
-    "updated_at": 1780941717.515484
+    "updated_at": 1780974044.226107
   },
   "search:security-patterns:input validation sanitization _ex": {
-    "content": "- Use `npm install express-validator` for input validation in Express.js.\n- Implement server-side validation using `express-validator`.\n- Use `bcrypt` for password hashing to prevent leaks.\n- Employ parameterized queries with libraries like `pg-promise` or `sequelize`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Enable CORS with `cors()` middleware in Express.js.\n- Implement CSRF protection using `csurf` middleware.\n- Use HTTPS for secure data transmission.\n- Sanitize user input using DOMPurify to prevent XSS attacks.",
+    "content": "- **CLI Commands**: Use `npm install --save-dev express-validator` to add Express Validator middleware.\n- **Latest Version**: As of my last update, the latest version is 6.x, but check for updates regularly.\n- **Key Config Options**:\n  - `trim()`: Removes whitespace from both ends of a string.\n  - `escape()`: Escapes HTML characters in a string.\n  - `toInt()`: Converts a value to an integer.\n  - `isEmail()`: Validates if the input is a valid email address.",
     "source": "code_example",
-    "updated_at": 1780941720.0289128
+    "updated_at": 1780974047.9440548
   },
   "search:security-patterns:https tls certificate backend ": {
-    "content": "- **CLI Commands**:\n  - `certbot renew --dry-run` to test certificate renewal.\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes` to generate a self-signed certificate.\n\n- **Latest Versions**:\n  - Certbot: Ensure you are using the latest version for compatibility and security updates.\n  - OpenSSL: Update to the latest stable release for enhanced security features.\n\n- **Key Config Options**:\n  - `certbot renew --webroot -w /path/to/webroot` for webroot authentication.\n  - `openssl s_client -connect example.com:443 -showcerts` to check TLS certificate details.\n  - `nginx.conf` or `apache2.conf`: Configure SSL/TLS settings in your server configuration files.",
+    "content": "- **CLI Commands and Flags**:\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`\n  - `caddy run --config /path/to/Caddyfile`\n\n- **Latest Versions**:\n  - OpenSSL: 3.0.2\n  - Caddy: v2.6.1\n\n- **Key Config Options**:\n  - Certificate Authority (CA) for internal use.\n  - Auto-renewal of certificates.\n  - Local trust store installation for locally-trusted certificates.",
     "source": "web_search",
-    "updated_at": 1780941722.1729465
+    "updated_at": 1780974066.1773503
   },
   "search:Security Patterns:.net mvc security patterns": {
     "content": "- Use `dotnet new mvc -n SecureApp` to create a new secure MVC project.\n- Update your project file (.csproj) to target the latest LTS version of .NET Core or .NET 6+.\n- Implement authentication using Identity by running `dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore`.\n- Configure cookie options in `Startup.cs`:\n  ```csharp\n  services.ConfigureApplicationCookie(options =>\n  {\n      options.SlidingExpiration = false;\n      options.ExpireTimeSpan = TimeSpan.FromMinutes(30);\n      options.Cookie.HttpOnly = true;\n  });\n  ```\n- Use HTTPS by setting `<UseHttpsRedirection>true</UseHttpsRedirection>` in `Startup.cs`.\n- Implement authorization using `[Authorize]` and `[Roles]` attributes on controllers or actions.\n- Regularly update packages to the latest versions using `dotnet upgrade tool`.\n- Enable dependency injection for services that require configuration, e.g., `services.AddScoped<IMyService, MyService>()`.\n- Use middleware for common tasks like logging and error handling:\n  ```csharp\n  app.UseRouting();\n  app.UseAuthentication();\n  app.UseAuthorization();\n  app.UseEndpoints(endpoints =>\n  {\n      endpoints.MapControllerRoute(\n          name: \"default\",\n          pattern: \"{controller=Home}/{action=Index}/{id?}\");\n  });\n  ```\n- Implement input validation using data annotations or custom validators.\n- Use the OWASP cheat sheet for secure coding guidelines and best practices.",
@@ -83,5 +83,20 @@
     "content": "- Use `ng serve --prod` for production builds.\n- Update Angular to the latest version using `npm update @angular/core @angular/cli`.\n- Implement HTTP interceptors for request and response handling.\n- Configure CORS in your backend server to restrict access.\n- Use Angular's built-in forms validation to prevent injection attacks.\n- Enable HTTPS by setting up SSL/TLS on your server.\n- Utilize Angular's `HttpClient` with `HttpParams` for safe URL parameter passing.\n- Implement Angular's `DomSanitizer` for sanitizing HTML content.\n- Regularly update dependencies using `npm audit fix`.\n- Use Angular's `RouterLinkActive` directive to prevent clickjacking.",
     "source": "web_search",
     "updated_at": 1780941739.3595011
+  },
+  "search:security-patterns:secrets management environment": {
+    "content": "- **CLI Commands**:\n  - `devsecrets init` to initialize DevSecrets.\n  - `vault kv put secret/my-secret key=value` for HashiCorp Vault.\n  - `kubectl create secret generic my-secret --from-literal=key=value` for Kubernetes Sealed Secrets.\n\n- **Latest Versions**:\n  - DevSecrets: v1.2.3\n  - HashiCorp Vault: v1.7.0\n  - Kubernetes Sealed Secrets: v1.14.0\n\n- **Key Config Options**:\n  - DevSecrets: `--secure-mode` for enhanced security.\n  - Vault: `VAULT_ADDR` and `VAULT_TOKEN`.\n  - Kubernetes Sealed Secrets: `--controller-image` for specifying the controller image version.",
+    "source": "web_search",
+    "updated_at": 1780974054.2825632
+  },
+  "search:security-patterns:secrets management environment_ex": {
+    "content": "- Use `export` command to set environment variables in your terminal.\n- For GitHub, use the Secrets feature under Settings > Security & Privacy > Secrets and Variables > Actions.\n- In Databricks, use the Secrets API or UI for managing secrets securely.\n- Key config options include setting up secret scopes and keys within those scopes.\n- Ensure that sensitive information is not hard-coded in your source code.\n- Regularly rotate and update secrets to enhance security.",
+    "source": "code_example",
+    "updated_at": 1780974057.2794814
+  },
+  "search:security-patterns:https tls certificate backend _ex": {
+    "content": "- **CLI Commands**:\n  - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`\n  - `nginx -s reload`\n\n- **Latest Versions**:\n  - Node.js: v18.12.1\n  - OpenSSL: 3.0.7\n\n- **Key Config Options**:\n  - `server.key`: Path to the private key file.\n  - `server.cert`: Path to the certificate file.\n  - `listen(443, { ssl: true })`: Enable HTTPS on port 443 with SSL enabled.",
+    "source": "code_example",
+    "updated_at": 1780974073.046742
   }
 }

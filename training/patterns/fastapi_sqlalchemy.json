@@ -1,22 +1,22 @@
 {
   "search:fastapi+sqlalchemy:fastapi sqlalchemy orm crud 20": {
-    "content": "- **CLI Commands**: `uvicorn main:app --reload`\n- **Latest Versions**:\n  - FastAPI: 0.84.1\n  - SQLAlchemy: 2.0.5\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"sqlite:///./sql_app.db\"`\n  - Model Base Class: `Base = declarative_base()`\n  - Dependency Injection: `@ Depends(get_db)`",
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `sqlalchemy init`: Initialize a new SQLAlchemy database.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v1.4.32\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"sqlite:///./test.db\"`\n  - Model Base Class: `Base = declarative_base()`\n  - Dependency Injection: Use `Depends` for database session management.\n  - CRUD Operations: Implement create, read, update, delete methods using SQLAlchemy ORM.",
     "source": "web_search",
-    "updated_at": 1780938617.8971581
+    "updated_at": 1780975391.3603108
   },
   "search:fastapi+sqlalchemy:fastapi sqlalchemy orm crud 20_ex": {
-    "content": "- Use `fastapi-sqlalchemy` to generate CRUD methods from an SQLAlchemy schema.\n- FastAPI supports any SQL database, not just relational databases.\n- For a basic CRUD app with SQLAlchemy in FastAPI:\n  - Install FastAPI and SQLAlchemy: `pip install fastapi sqlalchemy`\n  - Define your models using SQLAlchemy ORM.\n  - Create a database session.\n  - Implement CRUD operations manually or use libraries like `SQLModel`.\n- Key config options include database URL, model definitions, and session management.\n- For the latest versions:\n  - Check the [FastAPI GitHub repository](https://github.com/tiangolo/fastapi).\n  - Check the [SQLAlchemy documentation](https://www.sqlalchemy.org/).",
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  \n- **Latest Versions**:\n  - FastAPI: 0.84.0\n  - SQLAlchemy: 2.0.0\n  \n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection: Use `Depends` for managing database sessions.\n  - Model Relationships: Define relationships using SQLAlchemy ORM's `relationship()` function.\n  - CRUD Operations: Implement create, read, update, and delete methods in your API endpoints.",
     "source": "code_example",
-    "updated_at": 1780938620.3398798
+    "updated_at": 1780975397.4306078
   },
   "search:fastapi+sqlalchemy:sqlalchemy with fastapi 2025": {
-    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `alembic init <dir>`: Initialize Alembic for database migrations.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.2\n  - SQLAlchemy: v1.4.46\n\n- **Key Config Options**:\n  - Database URL: Define in `.env` or directly in code.\n  - Async Session: Use `AsyncSession` for asynchronous operations.\n  - Model Definitions: Create Pydantic models and map them to SQLAlchemy ORM classes.\n  - Dependency Injection: Utilize FastAPI's dependency injection system for managing database sessions.",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy databases`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL (e.g., `sqlite:///./test.db`)\n  - Dependency Injection for database sessions\n  - Asynchronous operations using `async` and `await`\n  - CRUD operations defined in FastAPI routes",
     "source": "web_search",
-    "updated_at": 1780938622.7465787
+    "updated_at": 1780975405.819936
   },
   "search:fastapi+sqlalchemy:sqlalchemy with fastapi 2025_ex": {
-    "content": "- **GitHub Repo**: [fastapi-sqlalchemy2-alembic-postgresql](https://github.com/Tenacity-Dev/fastapi-sqlalchemy2-alembic-postgresql)\n- **FastAPI Version**: Latest as of the tutorial\n- **SQLAlchemy Version**: Latest as of the tutorial\n- **Alembic Version**: Latest as of the tutorial\n- **Database**: PostgreSQL\n- **ORM**: SQLAlchemy\n- **Web Server**: Starlette\n- **Data Validation**: Pydantic\n- **CLI Commands**:\n  - `git clone https://github.com/Tenacity-Dev/fastapi-sqlalchemy2-alembic-postgresql.git`\n  - `cd fastapi-sqlalchemy2-alembic-postgresql`\n  - `pip install -r requirements.txt`\n  - `uvicorn main:app --reload`\n- **Key Config Options**:\n  - Database URL in `.env` file\n  - Models defined in `models.py`\n  - CRUD operations in `main.py`\n  - Alembic migrations for database schema changes",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy databases[postgresql]`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.2\n  - SQLAlchemy: 1.4.39\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection Container: Define dependencies in a container for better organization.\n  - Alembic Configuration: For database migrations, configure Alembic with the appropriate settings.",
     "source": "code_example",
-    "updated_at": 1780938625.2295609
+    "updated_at": 1780975413.0183084
   }
 }

@@ -1,18 +1,18 @@
 {
   "search:microservices-design:microservices decomposition st": {
-    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, `docker-compose` for local development.\n- **Latest Versions**: Ensure using the latest stable versions of Docker, Kubernetes, and microservices frameworks like Spring Boot or NestJS.\n- **Key Config Options**:\n  - For Kubernetes: Define resource limits (`resources`) in deployment YAML files.\n  - For Istio: Configure service mesh policies with `istioctl` for traffic management.\n  - For observability: Use OpenTelemetry to trace and monitor microservices.",
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 20.10.17\n  - Helm: v3.9.4\n- **Key Config Options**:\n  - Microservices Decomposition: Use `domain-driven design` for intelligent domain decomposition.\n  - AI-Driven Scaling: Implement `LLM (Large Language Models)` for software decomposition.\n  - Inter-Service Communication: Opt for `gRPC` or `RESTful APIs` for efficient communication.",
     "source": "web_search",
-    "updated_at": 1780939825.3869061
+    "updated_at": 1780975024.9124882
   },
   "search:microservices-design:service communication patterns": {
-    "content": "- **Async vs Sync Communication**: Use sync for dialogue, nuance, and relationship-building; use async for everything else.\n- **Year in Review**: Focus on mastering async communication for smarter teams, clearer workflows, and more human-centered collaboration.\n- **Go-Python Interoperability**: For edge computing and AI at the edge:\n  - WebSockets for bidirectional streaming in AR/VR applications\n  - MQTT for lightweight IoT messaging\n  - Ensure cybersecurity through mTLS\n- **Microservices Communication Patterns**:\n  - Synchronous REST APIs for reliability and simplicity\n  - Asynchronous event processing for scalability and responsiveness\n  - gRPC for high-throughput communication within the system",
+    "content": "- **Microservices Communication Patterns**:\n  - Use a message broker for asynchronous communication.\n  - Example: Order Service publishes to Message Broker, which consumes by Payment Service.\n\n- **Backend Communication Patterns**:\n  - Asynchronous tasks use the request-response model.\n  - Update user upon completion of async task.\n\n- **Go-Python Interoperability**:\n  - Edge computing and AI drive pattern evolution.\n  - WebSockets for AR/VR applications.\n  - MQTT for lightweight IoT messaging.\n  - mTLS ensures cybersecurity.\n\n- **Communication Patterns**:\n  - Essential patterns include load balancing, pub/sub, request-reply, circuit breaker, and retry strategies.",
     "source": "web_search",
-    "updated_at": 1780939828.1080377
+    "updated_at": 1780975060.2734864
   },
   "search:microservices-design:service communication patterns_ex": {
-    "content": "- **Microservices Communication Patterns**:\n  - REST: Ideal for stateless, client-server communication.\n  - gRPC: Best for high-performance services requiring strong typing and efficient serialization.\n  - Events: Suitable for decoupled systems where asynchronous communication is required.\n  - Service Mesh: Provides a way to manage and secure microservice communications.\n\n- **Go-Python Interoperability**:\n  - Use `cgo` for calling C functions from Go.\n  - Utilize Python's `ctypes` or `PyBind11` for calling Python functions from Go.\n\n- **Asyncio in Python**:\n  - Install: `pip install asyncio`\n  - Key Config Options:\n    - Event Loop: `asyncio.get_event_loop()`\n    - Tasks: `asyncio.create_task(coroutine)`\n    - Futures: `asyncio.Future`\n\n- **Latest Versions**:\n  - Go: v1.20\n  - Python: 3.11\n  - gRPC: Latest version available on [gRPC GitHub](https://github.com/grpc/grpc)\n  - Asyncio: Included in Python's standard library, no separate installation required.\n\n- **CLI Commands**:\n  - `go run main.go` to run a Go program.\n  - `python3 script.py` to run a Python script.",
+    "content": "- **CLI Commands**: Use `aws s3 cp` to copy files between S3 buckets.\n- **Latest Versions**: Ensure using the latest SDKs for AWS services, e.g., `aws-sdk-go-v2`.\n- **Key Config Options**:\n  - For synchronous communication: Set `Timeout` in your HTTP client configuration.\n  - For asynchronous communication: Configure message queue parameters like `VisibilityTimeout`, `MessageRetentionPeriod`.",
     "source": "code_example",
-    "updated_at": 1780939831.0764306
+    "updated_at": 1780975067.974681
   },
   "search:microservices-design:api gateway pattern implementa": {
     "content": "- Use `kubectl apply -f api-gateway.yaml` to deploy an API gateway.\n- Ensure your Kubernetes version is up-to-date, ideally v1.23 or later.\n- Configure the API gateway with security settings using annotations like `nginx.ingress.kubernetes.io/auth-type: basic`.\n- Set up rate limiting with annotations such as `nginx.ingress.kubernetes.io/limit-rpm: \"60\"`.\n- For routing, use annotations like `nginx.ingress.kubernetes.io/backend-protocol: HTTPS`.\n- Ensure your API gateway is configured to handle both synchronous and asynchronous requests.\n- Use Kong Gateway for advanced features like rate limiting, authentication, and more.\n- Implement the Saga Pattern using Spring Boot Microservices with Kafka for event-driven architecture.\n- For best practices, refer to GeeksforGeeks articles on API Gateway implementation.",
@@ -35,13 +35,28 @@
     "updated_at": 1780939840.8861756
   },
   "search:microservices-design:idempotency distributed system": {
-    "content": "- **CLI Commands**: Use `curl` or `httpie` for making HTTP requests.\n  - Example: `curl -X POST https://api.example.com/resource -H \"Content-Type: application/json\" -d '{\"key\":\"value\"}'`\n  \n- **Latest Versions**:\n  - Node.js: v18.14.0\n  - Python: 3.10.9\n  - Java: 17.0.6\n  \n- **Key Config Options**:\n  - Database connection pool size: `maxPoolSize=20`\n  - Retry attempts for idempotent operations: `retryAttempts=5`\n  - Timeout for network requests: `timeout=30s`",
+    "content": "- **CLI Commands**: Use `curl` for testing idempotency endpoints.\n- **Latest Versions**: Ensure using the latest version of your distributed system framework.\n- **Key Config Options**:\n  - Enable idempotency middleware in your application.\n  - Configure retry logic with exponential backoff.\n  - Implement a deduplication store to track requests.",
     "source": "web_search",
-    "updated_at": 1780939843.5689034
+    "updated_at": 1780975177.5402741
   },
   "search:microservices-design:idempotency distributed system_ex": {
-    "content": "- Use `curl` or `Postman` to send requests with an `Idempotency-Key` header.\n- Ensure your server stores outcomes against this key for idempotency checks.\n- Implement a deduplication store like Redis or DynamoDB to track processed keys.\n- Consider using the Saga Pattern for distributed transactions, especially in e-commerce platforms.\n- For production-grade implementation, use frameworks that support idempotency out-of-the-box (e.g., Spring Cloud).\n- Be aware of failure scenarios and implement appropriate fallback strategies.\n- Test your system thoroughly with various edge cases to ensure idempotency is maintained.",
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, e.g., `kubectl apply -f deployment.yaml`.\n- **Latest Versions**:\n  - Kubernetes: v1.25.3\n  - Docker: 20.10.7\n  - Terraform: 1.4.6\n- **Key Config Options**:\n  - In Kubernetes, use `replicas` in the deployment YAML to specify the number of instances.\n  - For Docker, set environment variables using `-e VAR=value`.\n  - In Terraform, define resource counts with `count = n`.",
     "source": "code_example",
-    "updated_at": 1780939846.0722501
+    "updated_at": 1780975184.2193165
+  },
+  "search:microservices-design:microservices decomposition st_ex": {
+    "content": "- **AI-driven resource allocation & autoscaling**: Use tools like Kubernetes with AI-enhanced features.\n- **ML-assisted monolith-to-microservice decomposition**: Employ services like AWS Lambda and Amazon SageMaker for automated analysis.\n- **CLI commands**:\n  - `kubectl scale deployment <deployment-name> --replicas=<number>` (Kubernetes)\n  - `aws lambda create-function --function-name <name> --runtime <runtime> --role <role> --handler <handler> --zip-file fileb://<path-to-zip>`\n- **Latest versions**:\n  - Kubernetes: v1.26\n  - AWS Lambda: Latest runtime versions (e.g., Python 3.9, Node.js 18)\n  - Amazon SageMaker: Latest model and algorithm versions.\n- **Key config options**:\n  - Kubernetes: `resources`, `autoscaling`\n  - AWS Lambda: `memorySize`, `timeout`, `environmentVariables`\n  - Amazon SageMaker: `instanceType`, `instanceCount`, `role`",
+    "source": "code_example",
+    "updated_at": 1780975041.4156027
+  },
+  "search:microservices-design:data consistency distributed s": {
+    "content": "- **CLI Commands**: Use `etcdctl` for managing etcd clusters, e.g., `etcdctl put key value`.\n- **Latest Versions**: Ensure using the latest version of frameworks like Apache Kafka (v3.4.0) and Cassandra (4.1.0).\n- **Key Config Options**:\n  - For Kafka: Configure `replication.factor` and `min.insync.replicas`.\n  - For Cassandra: Set `consistency_level` to `QUORUM` or higher.\n- **Advanced Techniques**: Implement distributed consensus algorithms like Raft or Paxos for strong consistency guarantees.\n- **Real-world Examples**: Review Google's Spanner architecture for handling global data consistency across multiple regions.",
+    "source": "web_search",
+    "updated_at": 1780975086.2400494
+  },
+  "search:microservices-design:data consistency distributed s_ex": {
+    "content": "- **CLI Commands**: Use `kubectl get pods` to check pod status.\n- **Latest Versions**: Ensure Kubernetes is at version 1.25 for the latest features and security patches.\n- **Key Config Options**:\n  - Set `replicas: 3` in your deployment YAML for high availability.\n  - Configure `readinessProbe` and `livenessProbe` to monitor pod health.\n  - Use `service.beta.kubernetes.io/aws-load-balancer-type=nlb` for network load balancing.",
+    "source": "code_example",
+    "updated_at": 1780975104.0013669
   }
 }

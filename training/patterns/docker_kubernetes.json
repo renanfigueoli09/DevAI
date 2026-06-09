@@ -1,22 +1,22 @@
 {
   "search:docker+kubernetes:docker kubernetes deployment s": {
-    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy applications.\n- For Canary deployment, use Istio and Helm with the command:\n  ```bash\n  helm upgrade --install my-release stable/my-chart --set strategy.type=RollingUpdate,strategy.rollingUpdate.maxUnavailable=10%\n  ```\n- To automate rollback based on logs or metrics, configure Helm hooks in your `values.yaml`.\n- Ensure Kubernetes is enabled in Docker Desktop by running:\n  ```bash\n  docker desktop start\n  ```\n- For production-grade configuration, use ConfigMaps and Secrets for environment variables.\n- Deploy using the latest version of Docker and Kubernetes to take advantage of new features and security patches.",
+    "content": "- **CLI Commands**:\n  - `docker build --tag myimage:v1 .`\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl scale deployment/myapp --replicas=3`\n\n- **Latest Versions**:\n  - Docker: v25.0.0\n  - Kubernetes: v26.0.0\n\n- **Key Config Options**:\n  - Resource Requests and Limits (`resources.requests`, `resources.limits`)\n  - Autoscaling (`autoscaling/v2beta2 HorizontalPodAutoscaler`)\n  - Security Contexts (`securityContext`)\n  - Persistent Volumes (`PersistentVolume`, `PersistentVolumeClaim`)",
     "source": "web_search",
-    "updated_at": 1780940168.2015722
+    "updated_at": 1780975819.7532465
   },
   "search:docker+kubernetes:docker kubernetes deployment s_ex": {
-    "content": "- **CLI Commands**:\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl rollout status deployment/my-deployment`\n  - `kubectl scale deployment/my-deployment --replicas=3`\n\n- **Latest Versions**:\n  - Kubernetes: v1.26\n  - Docker: 20.10\n\n- **Key Config Options**:\n  - `spec.strategy.type`: RollingUpdate, Recreate\n  - `spec.template.spec.containers[].imagePullPolicy`: Always, IfNotPresent, Never\n  - `spec.replicas`: Number of desired Pods",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl rollout status deployment/my-deployment`\n\n- **Latest Versions**:\n  - Docker: v24.0.6\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - Deployment Strategy: RollingUpdate, Blue-Green, Canary, Argo Rollouts\n  - Resource Limits and Requests\n  - Security Contexts",
     "source": "code_example",
-    "updated_at": 1780940170.055764
+    "updated_at": 1780975833.9809659
   },
   "search:docker+kubernetes:kubernetes network policies 20": {
-    "content": "- **CLI Commands**: Use `kubectl get networkpolicies` to list all network policies in your cluster.\n- **Latest Versions**: Cilium, a popular Kubernetes Network Policy solution, is currently at version 1.12.\n- **Key Config Options**:\n  - `podSelector`: Selects pods that the policy should apply to.\n  - `ingress`: Defines rules for incoming traffic.\n  - `egress`: Defines rules for outgoing traffic.\n  - `policyTypes`: Specifies whether the policy is for ingress, egress, or both.",
+    "content": "- **CLI Commands**: Use `kubectl create networkpolicy` to define policies.\n- **Latest Version**: As of my last update, the latest version is Kubernetes 1.27, but always check for updates.\n- **Key Config Options**:\n  - `podSelector`: Selects Pods based on labels.\n  - `namespaceSelector`: Selects namespaces.\n  - `ingress`: Defines rules for incoming traffic.\n  - `egress`: Defines rules for outgoing traffic.\n  - `policyTypes`: Specifies whether the policy applies to ingress, egress, or both.",
     "source": "web_search",
-    "updated_at": 1780940172.0106885
+    "updated_at": 1780975841.81851
   },
   "search:docker+kubernetes:kubernetes network policies 20_ex": {
-    "content": "- Use `kubectl apply -f <network-policy-file.yaml>` to create or update network policies.\n- Ensure your Kubernetes cluster uses a networking solution that supports NetworkPolicy, such as Calico, Flannel, or Weave Net.\n- Key config options in the YAML file include:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: NetworkPolicy`\n  - `metadata`: Define the policy name and namespace.\n  - `spec`: Specify pod selectors and ingress/egress rules.\n- For automation, consider using Otterize Intents for managing Kubernetes network policies efficiently.\n- Always refer to the latest Kubernetes documentation for the most accurate and up-to-date information on Network Policies.",
+    "content": "- **CLI Commands**:\n  - `kubectl get networkpolicies`\n  - `kubectl apply -f <networkpolicy-file.yaml>`\n  - `kubectl delete networkpolicy <networkpolicy-name>`\n\n- **Latest Versions**:\n  - Kubernetes Network Policies are part of the core Kubernetes API and do not have specific versions. Ensure your Kubernetes cluster is up to date for the latest features.\n\n- **Key Config Options**:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: NetworkPolicy`\n  - `metadata.name`: Name of the network policy.\n  - `spec.podSelector`: Selects pods that this policy applies to.\n  - `spec.policyTypes`: Specifies the types of traffic this policy controls (e.g., Ingress, Egress).\n  - `spec.ingress`: Rules for incoming traffic.\n  - `spec.egress`: Rules for outgoing traffic.\n\n- **Example YAML**:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: NetworkPolicy\n  metadata:\n    name: allow-nginx-ingress\n  spec:\n    podSelector:\n      matchLabels:\n        app: nginx\n    policyTypes:\n    - Ingress\n    ingress:\n    - from:\n      - namespaceSelector: {}\n      ports:\n      - protocol: TCP\n        port: 80\n  ```",
     "source": "code_example",
-    "updated_at": 1780940174.1506822
+    "updated_at": 1780975857.9305654
   }
 }

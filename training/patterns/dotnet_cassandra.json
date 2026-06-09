@@ -8,5 +8,15 @@
     "content": "- **CLI Commands**:\n  - `dotnet add package EFCore.Cassandra`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EFCore.Cassandra: [Check GitHub for latest version](https://github.com/robinrodricks/EFCore.Cassandra)\n  - CassandraCSharpDriver: [Check NuGet for latest version](https://www.nuget.org/packages/CassandraCSharpDriver)\n\n- **Key Config Options**:\n  - ConnectionString: `Server=your_cassandra_server;Port=9042;Keyspace=your_keyspace`\n  - MigrationsAssembly: Specify the assembly where migrations are stored.\n  - ModelBuilder: Use to configure entity types and relationships.",
     "source": "code_example",
     "updated_at": 1780938682.8611138
+  },
+  "search:dotnet+cassandra:.net core cassandra data acces": {
+    "content": "- **CLI Commands**:\n  - `docker exec -it accessing_data_cassandra bash -c \"cqlsh -u cassandra -p cassandra\"`\n  - `dotnet add package Sail2025.DataAccess --version 2026.1.4`\n\n- **Latest Versions**:\n  - .NET Core Cassandra Client Driver: Not specified in the search results.\n  - Sail2025.DataAccess: Version 2026.1.4\n\n- **Key Config Options**:\n  - For Amazon Keyspaces, use the client driver compatible with Apache Cassandra.\n  - For Docker Compose, ensure the container name is `accessing_data_cassandra`.\n  - For Spring Data Cassandra, configure data source properties in your application's configuration file (e.g., `application.properties` or `application.yml`).",
+    "source": "web_search",
+    "updated_at": 1780975431.3191323
+  },
+  "search:dotnet+cassandra:.net core cassandra data acces_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name cassandra -d cassandra`\n  - `dotnet add package Microsoft.EntityFrameworkCore.Cassandra`\n\n- **Latest Versions**:\n  - .NET Core: 7.0\n  - Cassandra: 4.x\n\n- **Key Config Options**:\n  - Connection String: `Server=localhost;Port=9042;Database=mydatabase`\n  - Entity Framework Core: Use `CassandraDbContext` for database operations.\n  - Spring Data Cassandra: Configure in `application.properties` with `spring.data.cassandra.keyspace-name`.",
+    "source": "code_example",
+    "updated_at": 1780975439.4704876
   }
 }

@@ -1,22 +1,22 @@
 {
   "search:spring+jpa:spring jpa best practices 2023": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.5\n  - Hibernate: 6.1.5.Final\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for development.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect.",
+    "content": "- Use `@EntityScan` to specify the package where your entity classes are located.\n- Employ `@EnableJpaRepositories` to define custom repository interfaces if needed.\n- Utilize Spring Data JPA's query derivation for simple queries, reducing the need for manual SQL.\n- Configure `spring.jpa.properties.hibernate.dialect` in `application.properties` or `application.yml` to specify the database dialect.\n- Enable lazy loading by default using `@Entity` with `fetch = FetchType.LAZY`.\n- Use `@Transactional` on repository methods to manage transactions declaratively.\n- Implement custom converters and user types for complex data handling.\n- Optimize queries by using JPQL (Java Persistence Query Language) or native SQL when necessary.\n- Regularly update Spring Boot, Spring Data JPA, and Hibernate to the latest versions for security and performance improvements.",
     "source": "web_search",
-    "updated_at": 1780940514.8605614
+    "updated_at": 1780975536.5685873
   },
   "search:spring+jpa:spring jpa best practices 2023_ex": {
-    "content": "- Use the latest version of Spring Boot and Spring Data JPA.\n- Implement pagination in repository methods to handle large datasets efficiently.\n- Utilize `@Query` annotations for complex queries instead of JPQL or native SQL.\n- Apply DTOs (Data Transfer Objects) for read operations to reduce data transfer size.\n- Configure `spring.jpa.properties.hibernate.dialect` based on your database type.\n- Use `@Transactional` annotation wisely, avoiding unnecessary transactions.\n- Implement custom repository interfaces for specific use cases.\n- Optimize entity relationships by using eager or lazy loading appropriately.\n- Regularly update and maintain dependencies to avoid security vulnerabilities.",
+    "content": "- Use Spring Data JPA for repository interfaces.\n- Implement pagination for complex queries using `Pageable`.\n- Utilize Spring AOP with AspectJ for cross-cutting concerns.\n- Optimize entity mappings by understanding the state model and API details.\n- Ensure thread safety in concurrent environments.\n- Regularly update dependencies to their latest versions.\n- Use clean code practices, including regex for validation.\n- Implement database migrations using Flyway or Liquibase.\n- Monitor performance with tools like Spring Boot Actuator.",
     "source": "code_example",
-    "updated_at": 1780940517.6847062
+    "updated_at": 1780975553.3727646
   },
   "search:spring+jpa:spring jpa performance optimiz": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `gradle build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Data JPA: 2.7.4\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.show_sql=false`",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `jpa:show-sql=true` in `application.properties` for debugging SQL queries.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for development.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache`: Enable second-level cache.",
     "source": "web_search",
-    "updated_at": 1780940520.6298254
+    "updated_at": 1780975573.2826035
   },
   "search:spring+jpa:spring jpa performance optimiz_ex": {
-    "content": "- Use `@Cacheable`, `@CachePut`, and `@CacheEvict` annotations to manage caching.\n- Enable caching in Spring Boot by adding `@EnableCaching` to your configuration class.\n- Configure cache manager, e.g., `ConcurrentMapCacheManager`.\n- Optimize queries using JPQL or native SQL for better performance.\n- Use `@Query` annotation with `nativeQuery = true` for complex queries.\n- Avoid fetching unnecessary data by using `@EntityGraph` or `fetch = FetchType.LAZY`.\n- Configure batch processing in Spring Data JPA to reduce database round-trips.\n- Monitor and tune application performance using tools like Spring Boot Actuator.",
+    "content": "- Use `@Query` to write custom JPQL or native SQL queries.\n- Enable second-level cache with `@EnableCaching` and configure it in `application.properties`.\n- Optimize entity relationships by using `@Lazy` for LAZY loading.\n- Upgrade to the latest Spring Data JPA version, e.g., 2.7.x.\n- Use `@BatchSize` on entities to control batch fetching size.\n- Configure `spring.jpa.show-sql=true` in `application.properties` for debugging.\n- Implement pagination and sorting using `Pageable` and `Sort`.\n- Avoid N+1 query problem by using `JOIN FETCH` or `@Fetch(FetchMode.JOIN)`.\n- Monitor performance with tools like Spring Boot Actuator.",
     "source": "code_example",
-    "updated_at": 1780940524.0288334
+    "updated_at": 1780975587.080072
   }
 }

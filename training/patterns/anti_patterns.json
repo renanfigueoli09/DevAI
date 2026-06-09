@@ -1,22 +1,62 @@
 {
   "search:anti-patterns:god object anti-pattern refact": {
-    "content": "- **CLI Commands**: Use `git reflog` to track changes and recover from mistakes.\n- **Latest Versions**: Ensure using the latest version of your IDE, such as IntelliJ IDEA 2023.2 or Visual Studio Code 1.74.\n- **Key Config Options**: For managing dependencies in Java, use Maven with the latest version (e.g., 3.8.5) and configure `pom.xml` for better organization.\n- **Refactoring Strategy**: Apply the Observer Pattern to distribute responsibilities among classes, reducing the God Object's burden.",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for Java projects.\n  - `flutter pub get` and `flutter test` for Flutter projects.\n\n- **Latest Versions**:\n  - Java 21\n  - Flutter 4.0\n\n- **Key Config Options**:\n  - Maven: `pom.xml`\n  - Flutter: `pubspec.yaml`, `analysis_options.yaml`",
     "source": "web_search",
-    "updated_at": 1780940197.6572928
+    "updated_at": 1780975263.4165509
   },
   "search:anti-patterns:god object anti-pattern refact_ex": {
-    "content": "- **CLI Commands**: Use `git reflog` to track changes in the repository.\n- **Latest Versions**: Ensure you are using the latest version of your IDE and any plugins for better support.\n- **Key Config Options**: Review and optimize configuration files such as `.editorconfig`, `.eslintrc`, and `.prettierrc`.\n- **Refactoring Steps**:\n  - Identify the god object by analyzing class responsibilities.\n  - Extract methods into smaller, focused classes.\n  - Use dependency injection to reduce coupling.\n  - Write unit tests for each new class to ensure functionality.\n  - Refactor step-by-step to avoid breaking changes.",
+    "content": "- **CLI Commands**: Use `dotnet` for C# projects.\n- **Latest Versions**: Ensure using the latest .NET SDK and Visual Studio.\n- **Key Config Options**:\n  - `public class GodObjectRefactor`\n    - `private List<SubClass> subClasses;`\n    - `public void AddSubClass(SubClass subclass) { subClasses.Add(subclass); }`\n    - `public SubClass GetSubClass(int index) { return subClasses[index]; }`\n- **Example Code**:\n  ```csharp\n  public class GodObjectRefactor {\n      private List<SubClass> subClasses;\n\n      public void AddSubClass(SubClass subclass) {\n          subClasses.Add(subclass);\n      }\n\n      public SubClass GetSubClass(int index) {\n          return subClasses[index];\n      }\n  }\n\n  public class SubClass {\n      // Class implementation\n  }\n  ```\n- **Refactoring Steps**:\n  - Identify the God object.\n  - Break it down into smaller, focused classes.\n  - Ensure each class has a single responsibility.\n  - Test each new class individually before integrating.",
     "source": "code_example",
-    "updated_at": 1780940199.710901
+    "updated_at": 1780975272.4022272
   },
   "search:anti-patterns:premature optimization anti-pa": {
-    "content": "- **CLI Commands**: Use `perf` or `gprof` for profiling.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries.\n- **Key Config Options**: Optimize based on actual system constraints, not assumptions.\n- **Avoid Assumptions**: Profile before optimizing to avoid common pitfalls like \"loops are slow\" or \"string operations are expensive.\"\n- **Cargo Cult Optimization**: Avoid optimizations without evidence.",
+    "content": "- Avoid micro-optimizations; focus on algorithmic efficiency.\n- Use modern compilers and profiling tools to identify bottlenecks.\n- Refactor code for readability before optimization.\n- Implement lazy initialization where applicable.\n- Use efficient data structures and algorithms.\n- Optimize only after identifying critical performance issues.\n- Profile regularly during development to guide optimizations.\n- Consider using caching strategies for frequently accessed data.\n- Avoid premature optimization in team discussions.",
     "source": "web_search",
-    "updated_at": 1780940201.7485468
+    "updated_at": 1780975282.2517803
   },
   "search:anti-patterns:premature optimization anti-pa_ex": {
-    "content": "- Avoid micro-optimizations; focus on macro optimizations.\n- Use profiling tools like `cProfile` in Python to identify bottlenecks.\n- Ensure code readability and maintainability before optimization.\n- Consider using built-in functions and libraries for performance benefits.\n- Regularly update dependencies and use the latest versions of libraries.\n- Optimize data structures and algorithms based on real-world usage patterns.\n- Avoid premature optimization by following the 80/20 rule (Pareto Principle).\n- Use caching mechanisms to reduce redundant computations.\n- Monitor application performance using tools like Prometheus or Grafana.",
+    "content": "- Avoid micro-optimizations; focus on algorithmic efficiency.\n- Use modern compilers and profiling tools to identify bottlenecks.\n- Implement lazy loading for resources that are not immediately needed.\n- Optimize data structures based on access patterns.\n- Use asynchronous programming where applicable.\n- Minimize database queries by batching or using caching.\n- Profile code regularly to measure performance improvements.\n- Refactor code for readability and maintainability before optimizing.",
     "source": "code_example",
-    "updated_at": 1780940203.728912
+    "updated_at": 1780975290.2060905
+  },
+  "search:anti-patterns:common nestjs mistakes anti-pa": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Create a new NestJS project.\n  - `nest generate module module-name`: Generate a new module.\n  - `nest generate controller controller-name`: Generate a new controller.\n  - `nest generate service service-name`: Generate a new service.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Fastify: v3.28.0\n  - Hono: v5.0.0\n\n- **Key Config Options**:\n  - `imports`: Array of modules to import.\n  - `controllers`: Array of controllers to include in the module.\n  - `providers`: Array of providers (services, repositories) to include in the module.\n  - `exports`: Array of providers that this module exports for other modules to use.",
+    "source": "web_search",
+    "updated_at": 1780975192.3256013
+  },
+  "search:anti-patterns:common nestjs mistakes anti-pa_ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate service <service-name>`\n  - `nest generate controller <controller-name>`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n\n- **Key Config Options**:\n  - `app.useGlobalPipes(new ValidationPipe())`\n  - `app.useGlobalFilters(new AllExceptionsFilter())`",
+    "source": "code_example",
+    "updated_at": 1780975197.49316
+  },
+  "search:anti-patterns:common spring boot mistakes be": {
+    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot, which as of my last update is 3.2.0.\n- **Key Config Options**:\n  - `application.properties`: Configure properties like server port, database URL, and logging level.\n  - `spring-boot-starter-web`: Adds dependencies for building web applications.\n  - `spring-boot-devtools`: Provides development-time features such as automatic restarts and live reload.\n  - `spring-boot-actuator`: Actuator endpoints to monitor and manage your application.",
+    "source": "web_search",
+    "updated_at": 1780975207.262129
+  },
+  "search:anti-patterns:common spring boot mistakes be_ex": {
+    "content": "- Ensure correct dependency management in `pom.xml` or `build.gradle`.\n- Use the latest stable version of Spring Boot.\n- Configure application properties correctly, e.g., `application.properties` or `application.yml`.\n- Avoid using deprecated annotations and methods.\n- Implement proper exception handling to avoid silent failures.\n- Secure sensitive data using environment variables or secrets management tools.\n- Optimize database queries for better performance.\n- Use asynchronous programming for non-blocking operations.\n- Enable logging with appropriate levels for debugging and monitoring.\n- Regularly update dependencies to fix security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1780975214.760383
+  },
+  "search:anti-patterns:fat controller anti-pattern so": {
+    "content": "- **Refactor Fat Controllers**: Move business logic from controllers to service classes.\n- **Use Service Classes**: For complex workflows, encapsulate logic in service classes.\n- **Implement Dependency Injection**: Use DI frameworks like InversifyJS or NestJS for better testability and maintainability.\n- **Adopt Layered Architecture**: Implement a clean architecture with separate layers (Controller, Service, Repository).\n- **Leverage Design Patterns**: Apply patterns like MVC, MVP, or Hexagonal Architecture to organize code effectively.\n- **Update Node.js**: Ensure using the latest LTS version for performance improvements and security patches.\n- **Configure Testing Frameworks**: Use Jest or Mocha with Chai for unit testing services and controllers.\n- **Implement Code Reviews**: Regularly review code changes to enforce best practices and catch issues early.\n- **Document API Endpoints**: Maintain clear documentation of all API endpoints and their functionalities.",
+    "source": "web_search",
+    "updated_at": 1780975231.5451581
+  },
+  "search:anti-patterns:fat controller anti-pattern so_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc --name MyProject`\n  - `dotnet add package MediatR`\n  - `dotnet add package FluentValidation`\n  - `dotnet add package CQRS`\n\n- **Latest Versions**:\n  - .NET 10 (as of May 2026)\n  - MediatR: Latest stable version\n  - FluentValidation: Latest stable version\n  - CQRS: Not a package, but a design pattern\n\n- **Key Config Options**:\n  - `services.AddMediatR(typeof(MyProject).Assembly);`\n  - `services.AddControllersWithViews();`\n  - `services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<MyValidator>());`",
+    "source": "code_example",
+    "updated_at": 1780975249.1425283
+  },
+  "search:anti-patterns:over-engineering simple soluti": {
+    "content": "- **CLI Commands**: Use `git diff` to compare changes.\n- **Latest Versions**: Ensure Node.js is up-to-date using `nvm install node --latest-npm`.\n- **Key Config Options**: Review `.env` files for environment-specific settings.\n- **KISS Principle**: Implement solutions with simplicity in mind, avoiding unnecessary complexity.",
+    "source": "web_search",
+    "updated_at": 1780975315.764011
+  },
+  "search:anti-patterns:over-engineering simple soluti_ex": {
+    "content": "- **CLI Commands**: Use `git commit -m \"Simplify solution\"` to document changes.\n- **Latest Versions**: Ensure using Node.js v18.x for the latest features and security patches.\n- **Key Config Options**:\n  - In `package.json`, set `\"type\": \"module\"` for ES6 module support.\n  - Use `.env` files for environment variables, e.g., `DB_HOST=localhost`.\n  - Configure ESLint with a simple rule set: `\"rules\": {\"no-console\": \"off\"}`.",
+    "source": "code_example",
+    "updated_at": 1780975321.1657283
   }
 }

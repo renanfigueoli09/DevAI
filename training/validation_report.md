@@ -1,12 +1,12 @@
 # DevAI Validation Report
-*2026-06-08 21:34*
+*2026-06-09 09:01*
 
-## Score: 82% `[████████████████░░░░]`  (39.4/48.0)
+## Score: 90% `[█████████████████░░░]`  (43.0/48.0)
 
-### Knowledge Check (vector store): 26.0/34.0
+### Knowledge Check (vector store): 29.0/34.0
 | Check | Score | OK |
 |---|---|---|
-| Mongoose: required=! optional=? | 0.0/3 | ❌ |
+| Mongoose: required=! optional=? | 3.0/3 | ✅ |
 | findOneBy não existe no Mongoose | 3.0/3 | ✅ |
 | MongooseModule.forFeature (não TypeOrmModule) | 3.0/3 | ✅ |
 | app.module MongoDB = MongooseModule.forRoot | 3.0/3 | ✅ |
@@ -20,20 +20,18 @@
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
 
-### Generation Check (LLM): 13.4/14.0
+### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
 |---|---|---|
-| schema.ts Mongoose strict mode | 3.4/4 | ❌ |
+| schema.ts Mongoose strict mode | 4.0/4 | ✅ |
 | service.ts Mongoose CRUD | 4.0/4 | ✅ |
 | dto.ts PartialType correto | 3.0/3 | ✅ |
 | docker-compose MongoDB only | 3.0/3 | ✅ |
 
 ## ❌ Falhou
 
-- **Mongoose: required=! optional=?** — found=['!', 'required', '@Prop'] missing=[] wrong=['findOneBy']
 - **PartialType de @nestjs/mapped-types** — found=['@nestjs/mapped-types', 'PartialType'] missing=[] wrong=['@nestjs/common']
 - **FastAPI: AsyncIOMotorClient (não pymongo)** — found=['AsyncIOMotorClient', 'motor'] missing=[] wrong=['pymongo']
-- **schema.ts Mongoose strict mode** — found=['@Schema', '@Prop', 'title!:'] missing=['HydratedDocument'] wrong=[]
 
 ## Fix
 ```bash

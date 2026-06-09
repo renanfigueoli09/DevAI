@@ -1,17 +1,22 @@
 {
   "search:microservices+security:microservices security best pr": {
-    "content": "- **CLI Commands**:\n  - `kubectl apply -f <file.yaml>` to deploy resources in Kubernetes.\n  - `docker-compose up` for local development of microservices.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Kubernetes: 1.27.x\n\n- **Key Config Options**:\n  - Authentication: OAuth 2.0, JWT (JSON Web Tokens).\n  - Authorization: Role-Based Access Control (RBAC).\n  - API Security: Use HTTPS for secure communication.\n  - Encryption: Encrypt sensitive data at rest and in transit using TLS/SSL.",
+    "content": "- Use `kubectl` for managing Kubernetes resources.\n- Implement least privilege access controls using RBAC.\n- Enable encryption at rest and in transit.\n- Utilize service meshes like Istio for observability and security.\n- Apply zero trust principles with network segmentation.\n- Regularly update dependencies to the latest versions.\n- Employ static code analysis tools like SonarQube.\n- Configure logging and monitoring with Prometheus and Grafana.\n- Conduct regular security audits and penetration testing.",
     "source": "web_search",
-    "updated_at": 1780965894.9988613
+    "updated_at": 1780976285.7638009
   },
   "search:microservices+security:microservices security best pr_ex": {
-    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts microservices using Docker Compose.\n  - `kubectl apply -f deployment.yaml`: Deploys microservices on Kubernetes.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Kubernetes: 1.27.0\n  - OAuth2: 2.0.0\n\n- **Key Config Options**:\n  - `spring.security.oauth2.client.registration`: Configuration for OAuth2 client registration.\n  - `kubernetes.io/service-account.name`: Service account name for Kubernetes authentication.\n  - `oauth2.resourceserver.jwt.jwk-set-uri`: URI for JWT keys in OAuth2 resourceserver.",
+    "content": "- Use AWS CLI version 2.7.3 or later.\n- Implement IAM roles and policies for microservices access.\n- Enable AWS WAF to protect against common web exploits.\n- Utilize Amazon VPC for isolated network environments.\n- Configure AWS CloudTrail for auditing API calls.\n- Employ AWS X-Ray for tracing and debugging microservice interactions.\n- Set up AWS Secrets Manager for secure storage of sensitive data.\n- Use AWS Config to continuously monitor configuration changes.\n- Implement AWS Shield Advanced for DDoS protection.",
     "source": "code_example",
-    "updated_at": 1780965897.440052
+    "updated_at": 1780976290.9600782
   },
   "search:microservices+security:microservices authentication p": {
-    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**: Ensure using the latest version of your microservices framework and libraries.\n- **Key Config Options**:\n  - JWT (JSON Web Tokens) for secure token-based authentication.\n  - OAuth 2.0 for authorization flows.\n  - API Gateway for managing authentication and routing requests.\n  - Token Exchange patterns for secure identity sharing across services.",
+    "content": "- **CLI Commands**: Use `kubectl` for managing Kubernetes resources.\n- **Latest Versions**: Ensure using the latest version of your microservices framework and libraries.\n- **Key Config Options**:\n  - Authentication: Implement JWT for secure token-based authentication.\n  - Authorization: Utilize OAuth2 or OpenID Connect for role-based access control.\n  - API Gateway: Configure an API Gateway to handle requests, manage routing, and enforce security policies.",
     "source": "web_search",
-    "updated_at": 1780965899.9192815
+    "updated_at": 1780976309.8041189
+  },
+  "search:microservices+security:microservices authentication p_ex": {
+    "content": "- **CLI Commands**:\n  - `nest generate module auth`\n  - `nest generate service auth`\n  - `nest generate controller auth`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Passport: v6.x\n  - JWT: v8.x\n\n- **Key Config Options**:\n  - `JWTStrategy`: Configure secretOrPrivateKey and jwtFromRequest.\n  - `PassportModule.register({ defaultStrategy: 'jwt' })`\n  - `BCryptService` for password hashing.",
+    "source": "code_example",
+    "updated_at": 1780976323.9075038
   }
 }

@@ -1,12 +1,22 @@
 {
   "search:spring+hibernate:spring hibernate jpa 2025": {
-    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `mvn clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Hibernate: 6.x\n  - JPA: 2.2\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`",
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `spring-boot:run` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.2.0.Final\n  - JPA: 3.1\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, Hibernate properties.\n    ```properties\n    spring.datasource.url=jdbc:mysql://localhost:3306/mydb\n    spring.datasource.username=root\n    spring.datasource.password=password\n    spring.jpa.hibernate.ddl-auto=update\n    ```\n  - Entity annotations for JPA/Hibernate:\n    ```java\n    @Entity\n    public class User {\n        @Id\n        @GeneratedValue(strategy = GenerationType.IDENTITY)\n        private Long id;\n        \n        @Column(nullable = false)\n        private String name;\n        \n        // Getters and setters\n    }\n    ```\n  - Spring Data JPA repository interface:\n    ```java\n    public interface UserRepository extends JpaRepository<User, Long> {\n        List<User> findByName(String name);\n    }\n    ```",
     "source": "web_search",
-    "updated_at": 1780942473.688373
+    "updated_at": 1780976397.2686357
   },
   "search:spring+hibernate:spring hibernate jpa 2025_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 2025 (as of my last update)\n  - Hibernate: 6.x\n  - JPA: 3.0\n\n- **Key Config Options**:\n  - `spring.jpa.defer-datasource-initialization=true`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.show-sql=true`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`\n\nThese configurations help in setting up and managing a Spring Boot application with Hibernate and JPA, ensuring that the database schema is correctly managed and SQL queries are visible for debugging.",
+    "content": "- **Hibernate vs JPA**: Hibernate is recommended over JPA in 2025 due to its optimizations, lazy loading, and caching.\n- **Spring Boot with H2 Database**: Use `spring.jpa.defer-datasource-initialization=true` to delay datasource initialization until after schema generation by Hibernate.\n- **Spring Data JPA**: Simplifies JPA-based repositories with minimal boilerplate code.",
     "source": "code_example",
-    "updated_at": 1780942475.8193483
+    "updated_at": 1780976403.0410054
+  },
+  "search:spring+hibernate:spring hibernate performance t": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build and test your project.\n- **Latest Versions**: Hibernate ORM 6.2, Spring Framework 5.3.\n- **Key Config Options**:\n  - `hibernate.jdbc.batch_size`: Set to 50 for batch processing.\n  - `hibernate.cache.use_second_level_cache`: Enable second-level cache.\n  - `hibernate.cache.region.factory_class`: Use `org.hibernate.cache.ehcache.EhCacheRegionFactory`.\n  - `hibernate.query.plan_cache_max_size`: Increase query plan cache size to 2048.\n  - `hibernate.order_inserts=true` and `hibernate.order_updates=true` for better batch performance.",
+    "source": "web_search",
+    "updated_at": 1780976424.0884082
+  },
+  "search:spring+hibernate:spring hibernate performance t_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to ensure your project is up-to-date.\n- **Latest Versions**: Hibernate 6.6 and Spring Boot 2.7 are recommended for optimal performance.\n- **Key Config Options**:\n  - `hibernate.jdbc.batch_size`: Set to a value like 50 for batch updates.\n  - `hibernate.order_inserts=true` and `hibernate.order_updates=true` to reduce the number of statements.\n  - `hibernate.cache.use_second_level_cache=true` with an appropriate cache provider (e.g., Ehcache).\n  - `spring.jpa.properties.hibernate.dialect`: Use the correct dialect for your database.\n- **Performance Tuning Tips**:\n  - Avoid N+1 query problems by using joins or fetch profiles.\n  - Optimize SQL queries to reduce complexity and execution time.\n  - Regularly monitor and analyze performance metrics with tools like JProfiler or VisualVM.",
+    "source": "code_example",
+    "updated_at": 1780976435.1815624
   }
 }

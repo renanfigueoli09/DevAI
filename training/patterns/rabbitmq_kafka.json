@@ -1,12 +1,17 @@
 {
   "search:rabbitmq+kafka:rabbitmq kafka message convers": {
-    "content": "- **CLI Commands**:\n  - RabbitMQ: `rabbitmqctl start_app`, `rabbitmqctl stop_app`\n  - Kafka: `kafka-server-start.sh`, `kafka-console-producer.sh`, `kafka-console-consumer.sh`\n\n- **Latest Versions**:\n  - RabbitMQ: v3.12.0\n  - Kafka: v3.3.0\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` (e.g., `listeners.tcp.default = 5672`, `vm_memory_high_watermark.relative = 0.4`)\n  - Kafka: `server.properties` (e.g., `broker.id=0`, `listeners=PLAINTEXT://:9092`, `log.retention.hours=168`)",
+    "content": "- **Latest Versions**:\n  - RabbitMQ: 4.2\n  - Kafka: 4.0 KRaft GA\n\n- **Key Config Options for RabbitMQ**:\n  - `delivery_mode`: Set message delivery mode to ensure persistence.\n  - `exchange_type`: Define the type of exchange (direct, fanout, topic, headers).\n\n- **Key Config Options for Kafka**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `key.serializer` and `value.serializer`: Specify serializers for keys and values.\n\n- **CLI Commands**:\n  - RabbitMQ: \n    ```bash\n    rabbitmqctl add_user admin password\n    rabbitmqctl set_permissions -p / admin \".*\" \".*\" \".*\"\n    ```\n  - Kafka:\n    ```bash\n    kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1\n    ```\n\n- **Spring Boot Integration**:\n  - Add dependencies in `pom.xml` for both RabbitMQ and Kafka.\n  - Configure properties in `application.properties` or `application.yml`.\n\n- **Conversion Tutorial**:\n  - Use Spring Cloud Stream to simplify the conversion process.\n  - Migrate message listeners from RabbitMQ to Kafka consumers.\n  - Update producer configurations to use Kafka producers.",
     "source": "web_search",
-    "updated_at": 1780946632.181172
+    "updated_at": 1780976553.7151997
   },
   "search:rabbitmq+kafka:rabbitmq kafka message convers_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start RabbitMQ and Kafka containers.\n\n- **Latest Versions**:\n  - Spring Boot 3.4\n  - Apache Kafka 3.0.0\n  - RabbitMQ 3.8.15\n\n- **Key Config Options**:\n  - RabbitMQ: `spring.rabbitmq.host`, `spring.rabbitmq.port`\n  - Kafka: `spring.kafka.bootstrap-servers`, `spring.kafka.consumer.group-id`",
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare queue name=my_queue durable=true`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - RabbitMQ: 3.8.27\n  - Kafka: 3.3.1\n\n- **Key Config Options**:\n  - RabbitMQ: `spring.rabbitmq.host`, `spring.rabbitmq.port`, `spring.rabbitmq.username`, `spring.rabbitmq.password`\n  - Kafka: `spring.kafka.bootstrap-servers`, `spring.kafka.producer.key-serializer`, `spring.kafka.producer.value-serializer`",
     "source": "code_example",
-    "updated_at": 1780946634.82941
+    "updated_at": 1780976562.1901584
+  },
+  "search:rabbitmq+kafka:rabbitmq kafka integration 202": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare queue name=my_queue`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.11.x\n  - Apache Kafka: 3.4.x\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` (e.g., `listeners.tcp.default = 5672`)\n  - Kafka: `server.properties` (e.g., `broker.id=0`, `listeners=PLAINTEXT://localhost:9092`)",
+    "source": "web_search",
+    "updated_at": 1780976514.8123662
   }
 }

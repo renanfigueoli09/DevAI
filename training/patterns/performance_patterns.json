@@ -1,8 +1,8 @@
 {
   "search:performance-patterns:nestjs performance optimizatio": {
-    "content": "- **CLI Commands**:\n  - `nest generate module <module-name>`\n  - `nest generate controller <controller-name>`\n  - `nest generate service <service-name>`\n\n- **Latest Versions**:\n  - NestJS: v10.x (as of my last update)\n  - Fastify: v7.x\n  - Express: v4.x\n\n- **Key Config Options for Caching**:\n  - Use `@nestjs/common` decorators like `@CacheInterceptor`\n  - Configure cache manager in `app.module.ts`:\n    ```typescript\n    import { CacheModule, Module } from '@nestjs/common';\n    @Module({\n      imports: [\n        CacheModule.register({\n          ttl: 60,\n          max: 100,\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - Use `@CacheKey` decorator to specify cache keys:\n    ```typescript\n    import { Controller, Get, CacheKey } from '@nestjs/common';\n    @Controller('data')\n    export class DataController {\n      @Get()\n      @CacheKey('data-key')\n      getData() {\n        return 'Data';\n      }\n    }\n    ```\n\n- **Performance Optimization Tips**:\n  - Use `async/await` for asynchronous operations.\n  - Implement caching to reduce database queries.\n  - Optimize routes and controllers for faster response times.\n  - Monitor and analyze performance using tools like NestJS APM or third-party services.",
+    "content": "- **Install Cache Manager**: Use `npm install @nestjs/cache-manager cache-manager`\n- **Enable Caching**: Import and use `CacheModule.register()` in your module.\n- **CLI Commands**:\n  - `nest generate module caching`: Generates a new caching module.\n  - `nest generate service caching`: Generates a new caching service.\n- **Latest Versions**: Ensure you are using the latest versions of `@nestjs/cache-manager` and `cache-manager`.\n- **Key Config Options**:\n  - `ttl`: Time to live for cached items.\n  - `maxSize`: Maximum number of items in cache.\n  - `store`: Specify the caching store (e.g., `memory`, `redis`).\n- **Performance Monitoring**: Use `nestjs-performance-monitor` middleware for tracking and logging endpoint performance.\n- **APM Integration**: Consider integrating with APM solutions like New Relic or Datadog for advanced monitoring.",
     "source": "web_search",
-    "updated_at": 1780940680.7642655
+    "updated_at": 1780974293.8431616
   },
   "search:performance-patterns:nestjs performance optimizatio_ex": {
     "content": "- **CLI Commands**: Use `nest generate module <module-name>` to create new modules.\n- **Latest Version**: NestJS v12.5.0 as of October 2025.\n- **Key Config Options**:\n  - `cacheManager`: Configure caching strategies in `app.module.ts`.\n  - `ttl`: Set time-to-live for cache entries.\n  - `max`: Define the maximum number of items in the cache.\n\nFor detailed implementation, refer to the official NestJS documentation and community resources.",
@@ -20,29 +20,29 @@
     "updated_at": 1780940687.8871086
   },
   "search:performance-patterns:async concurrency patterns nod": {
-    "content": "- **CLI Commands**: Use `node --version` to check Node.js version.\n- **Latest Versions**: Ensure using Node.js v20.x or later for optimal performance and concurrency features.\n- **Key Config Options**:\n  - `worker_threads`: For creating worker threads in Node.js applications.\n  - `cluster`: To create a cluster of worker processes that share the same server port, improving scalability.\n  - `async_hooks`: For tracking asynchronous operations in Node.js applications.",
+    "content": "- Use `async/await` for cleaner asynchronous code.\n- Explore structured concurrency proposals like `AsyncResource`.\n- Experiment with worker patterns using `worker_threads`.\n- Utilize `async iterators` for efficient data processing.\n- Implement error handling with `try/catch` blocks in async functions.\n- Manage concurrency control with libraries like `p-limit`.\n- Update Node.js to the latest version (v18+).\n- Configure environment variables using `.env` files.\n- Use `pm2` or `nodemon` for process management and restarts.",
     "source": "web_search",
-    "updated_at": 1780940690.1732059
+    "updated_at": 1780974371.9979734
   },
   "search:performance-patterns:async concurrency patterns nod_ex": {
-    "content": "- Use `node --version` to check the latest version of Node.js.\n- For concurrency, consider using libraries like `async`, `p-limit`, and `p-queue`.\n- Implement error handling with `try/catch` blocks around async functions.\n- Utilize `Promise.all()` for parallel execution of multiple promises.\n- Use `async/await` to simplify asynchronous code structure.\n- Configure the event loop with `process.nextTick()` or `setImmediate()`.\n- Monitor performance using tools like `node --inspect-brk <script.js>`.\n- Implement backpressure handling in streams with `.backpressure`.\n- Use `worker_threads` for true parallelism across multiple CPU cores.",
+    "content": "- Use `node --version` to check Node.js version.\n- Install latest Node.js using nvm with `nvm install node`.\n- Implement async/await for non-blocking I/O operations.\n- Utilize Promises for handling asynchronous tasks.\n- Consider using libraries like `async` for managing complex workflows.\n- Explore concurrency patterns such as worker threads or child processes for parallel execution.\n- Configure environment variables in `.env` files for better management.\n- Use `pm2` for process management and scaling Node.js applications.\n- Implement rate limiting to prevent overloading the system.",
     "source": "code_example",
-    "updated_at": 1780940692.5051632
+    "updated_at": 1780974380.2311816
   },
   "search:performance-patterns:pagination cursor-based offset": {
-    "content": "- **CLI Commands**: Use `npm install @cursor-agents/core` to install Cursor Agents.\n- **Latest Versions**: As of my last update, the latest version of Cursor Agents is 2.3.4.\n- **Key Config Options**:\n  - `maxResults`: Maximum number of results per page.\n  - `cursorField`: Field used for pagination.\n  - `sortOrder`: Order of results (ascending or descending).\n\nFor more detailed information and benchmarks, refer to the official Cursor Agents documentation.",
+    "content": "- Use `LIMIT` and `OFFSET` for traditional pagination.\n- For cursor-based pagination, use `cursor` and `first/last`.\n- Implement cursor-based pagination in Spring Boot with `@PageableDefault` and `@Query`.\n- Test performance with large datasets using tools like JMeter or Locust.\n- Consider using GraphQL's cursor-based pagination for efficient data retrieval.\n- Key config options include `pageSize`, `cursor`, and `first/last`.",
     "source": "web_search",
-    "updated_at": 1780940694.9553988
+    "updated_at": 1780974393.1644683
   },
   "search:performance-patterns:pagination cursor-based offset_ex": {
-    "content": "- **CLI Commands**: Use `curl` or Postman to test API endpoints.\n- **Latest Versions**: Check the latest Node.js version using `node -v`.\n- **Key Config Options**:\n  - For cursor-based pagination, use a unique identifier like an ID or timestamp from the last item of the previous page.\n  - Set the limit for the number of items per page to control data flow.",
+    "content": "- **Offset-Based Pagination**:\n  - Use `LIMIT` and `OFFSET` in SQL queries.\n  - Example query: `SELECT * FROM table_name LIMIT 10 OFFSET 20;`\n  - Pros: Simple to implement, easy to understand.\n  - Cons: Performance degrades with large offsets.\n\n- **Cursor-Based Pagination**:\n  - Use a unique identifier (cursor) from the last item of the previous page.\n  - Example query: `SELECT * FROM table_name WHERE id > 'last_cursor_value' LIMIT 10;`\n  - Pros: Better performance, supports infinite scrolling.\n  - Cons: More complex to implement.\n\n- **Implementing Cursor-Based Pagination in EF Core**:\n  - Use `Skip` and `Take` methods with a cursor value.\n  - Example code:\n    ```csharp\n    var query = context.Table.Skip(cursorValue).Take(pageSize);\n    ```\n  - Key config options: Ensure the primary key is unique and indexed.\n\n- **Implementing Cursor-Based Pagination in Spring Boot**:\n  - Use `Pageable` interface with a cursor.\n  - Example code:\n    ```java\n    Pageable pageable = PageRequest.of(0, pageSize, Sort.by(\"id\").ascending());\n    Page<Entity> page = repository.findAll(pageable);\n    ```\n  - Key config options: Configure the database to support efficient querying.\n\n- **Latest Versions**:\n  - GraphQL: v16.3\n  - EF Core: v7.0\n  - Spring Boot: v2.7",
     "source": "code_example",
-    "updated_at": 1780940697.575365
+    "updated_at": 1780974411.169032
   },
   "search:performance-patterns:lazy loading eager loading str": {
-    "content": "- **CLI Commands**:\n  - `ng generate module <module-name> --lazy`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular CLI: 16.x\n  - Angular Core: 16.x\n\n- **Key Config Options**:\n  - `app-routing.module.ts`: Define routes with `{ loadChildren: () => import('./module/module.module').then(m => m.ModuleModule) }`\n  - `angular.json`: Configure build options for production.",
+    "content": "- **CLI Commands**:\n  - `dotnet ef dbcontext scaffold \"YourConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n  - `dotnet ef migrations add InitialCreate`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure connection strings.\n  - Use `[LazyLoadingEnabled]` attribute on DbContext to enable lazy loading.\n  - Configure eager loading using `.Include()` method in queries.",
     "source": "web_search",
-    "updated_at": 1780940699.7821987
+    "updated_at": 1780974430.2653487
   },
   "search:performance-patterns:lazy loading eager loading str_ex": {
     "content": "- **Eager Loading**: Fetches related data upfront.\n- **Lazy Loading**: Loads data only when accessed.\n- **Explicit Loading**: Manually and on-demand loading of data.\n- Latest versions:\n  - .NET Core: 7.0\n  - Entity Framework Core: 6.0\n- Key config options:\n  - `Include()`: For eager loading.\n  - `LazyLoadingEnabled`: For enabling lazy loading in EF Core.\n  - `Load()`: For explicit loading.\n\nCLI commands with exact flags:\n- Enable lazy loading in EF Core:\n  ```bash\n  dotnet ef DbContext add <DbContextName> --lazy-loading-enabled\n  ```\n- Explicitly load related data:\n  ```bash\n  db.Entry(entity).Collection(e => e.RelatedEntities).Load();\n  ```\n\nThese actionable facts provide a clear guide for developers to implement and manage data loading strategies effectively in their projects.",
@@ -50,8 +50,8 @@
     "updated_at": 1780940701.7794204
   },
   "search:performance-patterns:connection pooling database pe": {
-    "content": "- Django 5.1 released August 7, 2024, with native connection pooling.\n- Deploy the fix in under 10 minutes.\n- Connection pooling reduces database connection overhead by 60-80%.\n- Response times improve by 10-30% with connection pooling.\n- Node.js applications can benefit from connection pooling to reuse connections.\n- Key config options for connection pooling include maxPoolSize, minPoolSize, and idleTimeoutMillis.",
+    "content": "- **CLI Commands**: Use `dbpool-cli` to manage connection pools.\n- **Latest Version**: AI2sql v2.3.4\n- **Key Config Options**:\n  - `max_connections`: Set the maximum number of connections in the pool.\n  - `idle_timeout`: Define how long a connection can be idle before being closed.\n  - `query_cache_size`: Adjust the size of the query cache for optimized performance.",
     "source": "web_search",
-    "updated_at": 1780940704.0602489
+    "updated_at": 1780974474.8207777
   }
 }

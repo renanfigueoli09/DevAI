@@ -1,12 +1,22 @@
 {
   "search:spring+kotlin:spring boot kotlin rest api 20": {
-    "content": "- **CLI Commands**:\n  - `./gradlew build`: Builds the project.\n  - `./gradlew run`: Runs the application.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kotlin: 1.6.x\n\n- **Key Config Options**:\n  - Database Configuration in `application.properties` or `application.yml`.\n  - Swagger Configuration for API documentation.\n  - Actuator for monitoring and management.",
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=web,data-jpa,actuator,kotlin --language=kotlin my-spring-boot-project`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kotlin: 1.6.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection, server port, etc.\n  - Use `@EnableAutoConfiguration` to enable auto-configuration of the application context.\n  - Configure data source using `spring.datasource.url`, `spring.datasource.username`, and `spring.datasource.password`.\n  - Enable Swagger documentation with `springfox.documentation.swagger2.annotations.EnableSwagger2`.",
     "source": "web_search",
-    "updated_at": 1780943251.956718
+    "updated_at": 1780975330.6786985
   },
   "search:spring+kotlin:spring boot kotlin rest api 20_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Kotlin: 1.8.20\n\n- **Key Config Options**:\n  - `application.properties`: Configure database connection, server port, etc.\n    ```properties\n    spring.datasource.url=jdbc:h2:mem:testdb\n    spring.datasource.driverClassName=org.h2.Driver\n    spring.datasource.username=sa\n    spring.datasource.password=\n    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect\n    ```\n  - `build.gradle.kts` or `pom.xml`: Define dependencies for Spring Boot, Kotlin, and other libraries.\n    ```kotlin\n    dependencies {\n        implementation(\"org.springframework.boot:spring-boot-starter-webflux\")\n        implementation(\"org.jetbrains.kotlin:kotlin-stdlib-jdk8\")\n        runtimeOnly(\"com.h2database:h2\")\n    }\n    ```\n\nThese actionable facts provide a clear guide for setting up and running a Spring Boot Kotlin REST API project.",
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Kotlin: 1.9.20\n  - Spring Boot: 3.1.4\n\n- **Key Config Options**:\n  - `application.properties`: Configure server port, database URL, etc.\n  - `@RestController`: Annotate classes to define REST controllers.\n  - `@RequestMapping`: Map web requests onto specific handler classes and/or methods.\n  - `@Autowired`: Automatically wire beans in your application.",
     "source": "code_example",
-    "updated_at": 1780943254.7130466
+    "updated_at": 1780975335.758725
+  },
+  "search:spring+kotlin:kotlin coroutines in spring bo": {
+    "content": "- **CLI Commands**:\n  - `./gradlew bootRun --args='--spring.main.web-application-type=reactive'`\n  - `./mvnw spring-boot:run -Dspring-boot.run.arguments=\"--spring.main.web-application-type=reactive\"`\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Kotlin: 1.8.x\n\n- **Key Config Options**:\n  - `spring.main.web-application-type`: Set to `reactive` for non-blocking applications.\n  - `spring.datasource.hikari.maximum-pool-size`: Adjust based on your application's needs.\n  - `spring.r2dbc.url`: Use R2DBC URL for reactive database access.",
+    "source": "web_search",
+    "updated_at": 1780975362.7519968
+  },
+  "search:spring+kotlin:kotlin coroutines in spring bo_ex": {
+    "content": "- **CLI Commands**:\n  - `./gradlew bootRun` to run the Spring Boot application.\n  - `./gradlew build` to build the project.\n\n- **Latest Versions**:\n  - Kotlin: 1.9.x\n  - Spring Boot: 2025 (as of the latest available information)\n\n- **Key Config Options**:\n  - `spring.main.task-executor.core-pool-size`: Set the core pool size for task execution.\n  - `spring.main.task-executor.max-pool-size`: Set the maximum pool size for task execution.\n  - `spring.main.task-executor.queue-capacity`: Set the queue capacity for task execution.",
+    "source": "code_example",
+    "updated_at": 1780975380.7945092
   }
 }

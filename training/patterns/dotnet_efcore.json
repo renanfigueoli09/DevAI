@@ -10,13 +10,13 @@
     "updated_at": 1780940340.2347584
   },
   "search:dotnet+efcore:ef core migrations and concurr": {
-    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`: Adds a new migration.\n  - `dotnet ef database update`: Applies the latest migration to the database.\n\n- **Latest Versions**:\n  - EF Core 7.0 (as of my last update)\n\n- **Key Config Options**:\n  - `ConcurrencyToken` attribute on entity properties for optimistic concurrency control.\n  - `IsRowVersion` property in model builder for version tracking.",
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - .NET SDK: 6.0 or later\n\n- **Key Config Options**:\n  - `IsRowVersion`: Enables row versioning for optimistic concurrency.\n  - `ConcurrencyToken`: Specifies the property to use as a concurrency token.\n  - `Timestamp` (for SQL Server): Used to implement row versioning.\n\n- **Best Practices**:\n  - Always include a concurrency token in your entity model.\n  - Use `IsRowVersion` or `ConcurrencyToken` attribute on the property.\n  - Handle concurrency exceptions (`DbUpdateConcurrencyException`) gracefully in your application logic.",
     "source": "web_search",
-    "updated_at": 1780940342.8270593
+    "updated_at": 1780975635.4957585
   },
   "search:dotnet+efcore:ef core migrations and concurr_ex": {
-    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - .NET SDK: 6.0\n\n- **Key Config Options**:\n  - `[Timestamp]` attribute on entity properties for optimistic concurrency control.\n  - `ConcurrencyCheck` property in Fluent API to specify columns for concurrency checks.\n  - `IsRowVersion` property in Fluent API to mark a column as the row version column.",
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - .NET SDK: 6.x or later\n\n- **Key Config Options**:\n  - `[Timestamp]` attribute on a property to enable concurrency token.\n  - `IsConcurrencyToken = true` in entity configuration.\n  - `ConcurrentBag<T>` for handling concurrent updates.",
     "source": "code_example",
-    "updated_at": 1780940345.3547916
+    "updated_at": 1780975640.6466014
   }
 }

@@ -1,12 +1,22 @@
 {
   "search:react+testing-library:react testing patterns 2025": {
-    "content": "- **React Testing Library**: Use `@testing-library/react` and `@testing-library/jest-dom`.\n- **Jest**: Install via npm or yarn with `npm install --save-dev jest` or `yarn add --dev jest`.\n- **CLI Commands**:\n  - Run tests: `npm test` or `yarn test`\n  - Watch mode: `npm test --watchAll` or `yarn test --watchAll`\n- **Key Config Options**:\n  - In `package.json`, set `\"test\": \"jest\"` under `scripts`.\n  - Configure Jest in `jest.config.js`.\n\nThese tools and configurations will help you effectively test React components and logic in 2025.",
+    "content": "- **React Testing Library**: For component tests.\n- **Jest**: For logic tests.\n- **Wrapper Utilities**: Needed for shared hooks and asynchronous flows, especially when mocking Redux Toolkit slices or simulating queries.\n- **Advanced Testing Patterns**: Explore new patterns to ensure application reliability in 2025.\n- **CLI Commands**:\n  - `npx create-react-app my-app`: To create a new React app.\n  - `npm test`: To run tests using Jest.\n- **Latest Versions**:\n  - React: v18.2\n  - Jest: v29.3\n- **Key Config Options**:\n  - In `jest.config.js`, configure `testEnvironment` to `\"jsdom\"` for DOM testing.\n  - Use `setupFilesAfterEnv` to include setup files like `@testing-library/jest-dom/extend-expect`.",
     "source": "web_search",
-    "updated_at": 1780966227.7499332
+    "updated_at": 1781006471.4921875
   },
   "search:react+testing-library:react testing patterns 2025_ex": {
-    "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - React: v18.2.0\n  - React Testing Library: v13.4.0\n\n- **Key Config Options**:\n  - Jest configuration in `package.json` for test environment setup.\n  - Babel configuration for transpiling TypeScript to JavaScript.\n  - ESLint rules for code quality and consistency.",
+    "content": "- Use `npm install --save-dev @testing-library/react @testing-library/jest-dom`\n- Run tests with `npm test` or `yarn test`\n- Configure Jest in `package.json`:\n  ```json\n  \"jest\": {\n    \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]\n  }\n  ```\n- Key patterns: Render, Interact, Assert\n- Use `render()` from `@testing-library/react`\n- Simulate events with `fireEvent` from `@testing-library/react`\n- Assertions with Jest and `@testing-library/jest-dom`\n- Update dependencies to latest versions regularly",
     "source": "code_example",
-    "updated_at": 1780966230.4030762
+    "updated_at": 1781006472.5850081
+  },
+  "search:react+testing-library:react testing library best pra": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of React, ReactDOM, and React Testing Library by running `npm update react react-dom @testing-library/react`.\n- **Key Config Options**:\n  - In `jest.config.js`, set `\"testEnvironment\": \"jsdom\"` to use a DOM environment for testing.\n  - Use `\"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]` to extend Jest's expect with matchers from React Testing Library.\n- **CLI Commands**: Run tests using `npm test` or `yarn test`.\n- **Latest Versions**: Ensure Jest is updated to the latest version by running `npm install jest@latest`.\n- **Key Config Options**:\n  - In `package.json`, under `\"scripts\"`, add `\"test\": \"jest\"` if not already present.\n  - Configure `\"moduleNameMapper\"` in `jest.config.js` for module resolution issues, e.g., `\"^@/(.*)$\": \"<rootDir>/src/$1\"`.\n- **CLI Commands**: Use `npm install --save-dev @testing-library/react @testing-library/jest-dom` to add necessary packages.\n- **Latest Versions**: Ensure React Testing Library is updated by running `npm update @testing-library/react`.\n- **Key Config Options**:\n  - In `.eslintrc.js`, extend your rules with `\"plugin:@testing-library/react/recommended\"` for better linting of testing code.",
+    "source": "web_search",
+    "updated_at": 1780976339.5810251
+  },
+  "search:react+testing-library:react testing library best pra_ex": {
+    "content": "- **CLI Commands**: `npm init jest@latest` or `yarn create jest`\n- **Latest Versions**: Jest 29, React Testing Library 13\n- **Key Config Options**:\n  - `testEnvironment: 'jsdom'`\n  - `setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']`\n  - `transformIgnorePatterns: ['/node_modules/(?!(react|react-dom)/)']`",
+    "source": "code_example",
+    "updated_at": 1780976354.9861891
   }
 }

@@ -1,17 +1,22 @@
 {
   "search:unit-testing-javascript:javascript unit testing with j": {
-    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `testMatch`: Array of glob patterns to match files for tests.\n  - `transformIgnorePatterns`: An array of regexp pattern strings that are used to skip the transformation of files.\n  - `setupFilesAfterEnv`: An array of paths to modules that run some code to configure or set up the testing environment before each test file in the suite is executed.",
+    "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.5\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for DOM testing.\n  - `transformIgnorePatterns`: [\"node_modules/(?!(react|react-dom)/)\"] to include React and ReactDOM in transformation.\n  - `setupFilesAfterEnv`: [\"./setupTests.js\"] for global setup.",
     "source": "web_search",
-    "updated_at": 1780946769.3460977
+    "updated_at": 1780976175.8061998
   },
   "search:unit-testing-javascript:best practices for javascript ": {
-    "content": "- Use Jasmine or Mocha for JavaScript unit testing.\n- Install Jasmine via npm using `npm install jasmine`.\n- Run tests with `jasmine` command in the CLI.\n- Configure Jasmine with a `spec/support/jasmine.json` file.\n- Write tests in `.spec.js` files, naming them after the feature they test.\n- Use describe blocks to group related tests.\n- Employ it blocks for individual test cases.\n- Aim for 100% code coverage by writing comprehensive tests.\n- Utilize beforeEach and afterEach hooks for setup and teardown.\n- Mock dependencies using Jasmine's `spyOn` or `jasmine.createSpy`.\n- Regularly update your testing framework to the latest version.",
+    "content": "- Use Jasmine for JavaScript unit testing.\n- Install Jasmine via npm (`npm install jasmine-core --save-dev`).\n- Run tests using the command `npx jasmine`.\n- Ensure realistic input data in tests.\n- Focus on testing behavior rather than implementation details.\n- Utilize mocking and stubbing to isolate dependencies.\n- Write tests for edge cases and error handling.\n- Use coverage tools like Istanbul (`npm install nyc --save-dev`) to measure test effectiveness.",
     "source": "web_search",
-    "updated_at": 1780946771.6678011
+    "updated_at": 1780976208.08461
   },
   "search:unit-testing-javascript:best practices for javascript _ex": {
-    "content": "- Use Jest for testing.\n- Install Jest via npm: `npm install --save-dev jest`.\n- Configure Jest in your project by creating a `jest.config.js` file.\n- Naming convention: `<filename>.test.js`.\n- Example CLI command to run tests: `npx jest`.\n- Ensure realistic input data in tests.\n- Focus on testing behavior, not implementation details.\n- Use mocks and stubs for dependencies.\n- Aim for fast, simple, and deterministic tests.",
+    "content": "- **CLI Commands**: \n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: [Check latest version on npm](https://www.npmjs.com/package/jest)\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"` for Node.js environments\n  - `\"transform\": {\"^.+\\\\.jsx?$\": \"babel-jest\"}` for JSX files\n  - `\"setupFilesAfterEnv\": [\"./setupTests.js\"]` for global setup",
     "source": "code_example",
-    "updated_at": 1780946774.4345953
+    "updated_at": 1780976214.213798
+  },
+  "search:unit-testing-javascript:javascript unit testing with j_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for DOM testing.\n  - `transformIgnorePatterns`: [\"node_modules/(?!(your-package-name))\"] to include specific packages in transformation.\n  - `setupFilesAfterEnv`: [\"./jest.setup.js\"] for global setup after environment is set up.",
+    "source": "code_example",
+    "updated_at": 1780976190.6661046
   }
 }
