@@ -1,7 +1,35 @@
 {
-  "generated_at": 1781041988.9469876,
+  "generated_at": 1781042776.836948,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "kafka-streams-error-handling: producer consumer",
+      "queries": [
+        "kafka-streams-error-handling producer consumer example"
+      ],
+      "must_find": [
+        "kafka"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kafka-streams-error-handling"
+    },
+    {
+      "name": "typescript-eslint-performance-rules: padrões de código",
+      "queries": [
+        "typescript-eslint-performance-rules pattern code example",
+        "typescript-eslint-performance-rules"
+      ],
+      "must_find": [
+        "@eslint",
+        "@types"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-eslint-performance-rules"
+    },
     {
       "name": "nextjs-graphql-integration: padrões de código",
       "queries": [
@@ -29,40 +57,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "python-django-celery-redis-error-handling"
-    },
-    {
-      "name": "kubernetes-mongodb-replication: não usa TypeORM",
-      "queries": [
-        "kubernetes-mongodb-replication schema service"
-      ],
-      "must_find": [
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kubernetes-mongodb-replication"
-    },
-    {
-      "name": "typescript-prisma-mongodb: não usa TypeORM",
-      "queries": [
-        "typescript-prisma-mongodb schema service"
-      ],
-      "must_find": [
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-prisma-mongodb"
     }
   ]
 }
