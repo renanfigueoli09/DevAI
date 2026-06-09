@@ -1,0 +1,22 @@
+{
+  "search:dotnet-ef-core-sqlserver-performance:entity framework core performa": {
+    "content": "- **Latest Version**: Entity Framework Core 9\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - `AsNoTracking()` for read-only queries to reduce memory usage.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` globally if applicable.\n  - Indexes and constraints on SQL Server tables for faster query performance.\n  - Connection pooling with `Pooling=true` in connection strings.",
+    "source": "web_search",
+    "updated_at": 1781032333.5371313
+  },
+  "search:dotnet-ef-core-sqlserver-performance:entity framework core performa_ex": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- **Latest Versions**: EF Core 7.0 and SQL Server 2024 are the latest versions as of my last update.\n- **Key Config Options**:\n  - `AddDbContextPool`: Set `poolSize` for better performance with concurrent requests.\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)`: Disable tracking for read-only queries to reduce memory usage.\n  - `UseLazyLoadingProxies`: Enable lazy loading for improved data access efficiency.",
+    "source": "code_example",
+    "updated_at": 1781032340.8520718
+  },
+  "search:dotnet-ef-core-sqlserver-performance:optimizing entity framework co": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef query --raw`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - SQL Server: Latest version as of the last update\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only queries to avoid tracking changes.\n  - `AsNoTracking()` method to disable change tracking for query results.\n  - Indexes and constraints in your database schema to improve query performance.",
+    "source": "web_search",
+    "updated_at": 1781032350.309301
+  },
+  "search:dotnet-ef-core-sqlserver-performance:optimizing entity framework co_ex": {
+    "content": "- Use `dotnet ef` CLI tool for Entity Framework Core operations.\n- Update to the latest EF Core version using `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version <latest-version>`.\n- Configure lazy loading with `.UseLazyLoadingProxies()` in your DbContext configuration.\n- Optimize queries by using explicit loading instead of eager loading where possible.\n- Use `AsNoTracking()` for read-only operations to improve performance.\n- Apply pagination with `.Skip(pageSize * pageNumber).Take(pageSize)` for large datasets.\n- Index columns frequently queried to speed up data retrieval.\n- Avoid using `Select(*)`; specify only the required columns.\n- Regularly review and optimize generated SQL queries using EF Core's logging capabilities.",
+    "source": "code_example",
+    "updated_at": 1781032366.1701763
+  }
+}
