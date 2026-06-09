@@ -1,0 +1,42 @@
+{
+  "search:Advanced Security Practices:advanced security practices wi": {
+    "content": "- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n  - OAuth2: 5.7.x\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for security settings.\n  - JWT (JSON Web Token) for stateless authentication.\n  - OAuth2 Resource Server for securing resources.\n\n- **CLI Commands**:\n  - `mvn clean install`: To build the project.\n  - `java -jar target/your-application.jar`: To run the application.\n  - `./mvnw spring-boot:run`: For running Spring Boot applications with Maven.\n\n- **Additional Resources**:\n  - [Spring Security Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)\n  - [OAuth2 Specification](https://tools.ietf.org/html/rfc6749)",
+    "source": "web_search",
+    "updated_at": 1781045286.7445967
+  },
+  "search:Advanced Security Practices:advanced security practices wi_ex": {
+    "content": "- **Latest Versions**:\n  - Spring Boot: 3.0\n  - Spring Security: 6.0\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties`\n  - JWT for authentication and authorization\n  - OAuth2 for secure communication between services\n  - API Gateway security\n  - mTLS for mutual TLS encryption\n  - Rate limiting to control traffic\n  - Production-grade monitoring tools\n\n- **CLI Commands**:\n  - `mvn clean install` to build the project\n  - `java -jar target/your-application.jar` to run the application\n  - `keytool -genkeypair -alias your_alias -keyalg RSA -keystore keystore.jks` for generating a keystore file",
+    "source": "code_example",
+    "updated_at": 1781045292.5895848
+  },
+  "search:Advanced Security Practices:react+nextjs-auth security": {
+    "content": "- **Latest Version of Auth.js**: v5\n- **CLI Command for Setup**:\n  ```bash\n  npx create-next-app@latest --authjs\n  ```\n- **Key Config Options in `next.config.js`**:\n  - `authOptions`: Configuration object for authentication settings.\n  - `providers`: List of authentication providers (e.g., Google, GitHub).\n  - `session`: Session management options (e.g., strategy, maxAge).\n\nFor more detailed information and advanced configurations, refer to the official [Auth.js documentation](https://next-auth.js.org/docs).",
+    "source": "web_search",
+    "updated_at": 1781045309.9811313
+  },
+  "search:Advanced Security Practices:react+nextjs-auth security_ex": {
+    "content": "- Use `npx create-next-app@latest` to start a new Next.js project.\n- Install `next-auth@5` for authentication.\n- Create a file named `[...nextauth].js` in the `pages/api/auth` directory.\n- Configure global settings in the `[...nextauth].js` file, e.g., providers, secret, session type.\n- Use OAuth providers like Google, Facebook by adding their credentials to the configuration.\n- Implement JWT or database sessions based on your security requirements.\n- Apply middleware for route protection using `getServerSideProps`.\n- Enable Role-Based Access Control (RBAC) for fine-grained permissions.\n- Utilize magic links for passwordless authentication.",
+    "source": "code_example",
+    "updated_at": 1781045320.2234066
+  },
+  "search:Advanced Security Practices:python-django-celery-redis-err": {
+    "content": "- Install Celery, Django-Celery-Beat, and Redis using pip.\n  ```bash\n  pip install celery django-celery-beat redis\n  ```\n- Set `CELERY_BROKER_URL` to `redis://localhost:6379/0` in your Django settings.\n- Ensure Redis is running on the specified URL.\n- Use Celery's built-in task decorators for defining background tasks.\n- Configure Celery worker with:\n  ```bash\n  celery -A myproject worker --loglevel=info\n  ```\n- Implement exponential backoff retries using Celery's `retry` decorator and `max_retries` parameter.\n- Monitor Celery tasks using Django-Celery-Beat for scheduling and monitoring.\n- Ensure transactional safety by handling database transactions within Celery tasks.\n- Use Redis as the message broker for Celery to handle asynchronous task queues efficiently.",
+    "source": "web_search",
+    "updated_at": 1781045337.1847782
+  },
+  "search:Advanced Security Practices:python-django-celery-redis-err_ex": {
+    "content": "- Install Celery, Redis, django-celery-beat, and django-celery-results using pip.\n- Configure Celery in `settings.py` with the broker URL set to Redis.\n- Ensure Django recognizes Celery by adding `from .celery import app as celery_app` in `__init__.py`.\n- Use `Celery Beat` for scheduled tasks, configure them either in code or through Django admin.\n- Handle exceptions like `OperationalError: [Errno 111] Connection refused` by checking Redis service availability and network settings.",
+    "source": "code_example",
+    "updated_at": 1781045345.8206446
+  },
+  "search:Advanced Security Practices:spring-cloud-gateway-performan": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your Spring Cloud Gateway project.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot and Spring Cloud Gateway, e.g., Spring Boot 3.0.x and Spring Cloud Gateway 3.1.x.\n- **Key Config Options**:\n  - For basic authentication: Add `spring-boot-starter-security` dependency and configure security in your application properties or YAML file.\n  - Example configuration:\n    ```yaml\n    spring:\n      security:\n        user:\n          name: admin\n          password: password\n    ```\n  - To improve performance, consider using Spring Cloud Gateway's caching mechanisms and optimizing route configurations.",
+    "source": "web_search",
+    "updated_at": 1781045353.637368
+  },
+  "search:Advanced Security Practices:spring-cloud-gateway-performan_ex": {
+    "content": "- Use `spring-boot-starter-security` and `spring-cloud-starter-gateway` dependencies.\n- Configure security in Spring Cloud Gateway using `SecurityWebFilterChain`.\n- Define routes with path predicates for routing requests.\n- Implement authentication and authorization filters.\n- Use `@EnableWebFluxSecurity` to enable web flux security.\n- Configure CORS settings if necessary.\n- Update dependencies to the latest versions regularly.",
+    "source": "code_example",
+    "updated_at": 1781045360.0830092
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "search:Advanced Testing Techniques:fastapi+celery-redis-batch tes": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up --build`: Starts the Docker containers.\n  - `celery -A app.celery worker --loglevel=info`: Runs Celery worker.\n  - `celery -A app.celery beat --loglevel=info`: Runs Celery beat for scheduling.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - Celery: 5.2.7\n  - Redis: 6.2.6\n\n- **Key Config Options**:\n  - `app.celery.conf.broker_url = 'redis://localhost:6379/0'`: Sets the broker URL for Celery.\n  - `app.celery.conf.result_backend = 'redis://localhost:6379/0'`: Sets the result backend for Celery.\n  - `app.celery.conf.timezone = 'UTC'`: Sets the timezone for Celery tasks.",
+    "source": "web_search",
+    "updated_at": 1781045172.4955838
+  },
+  "search:Advanced Testing Techniques:fastapi+celery-redis-batch tes_ex": {
+    "content": "- **Install Redis**: `sudo apt-get install redis-server`\n- **FastAPI Version**: `fastapi==0.95.0`\n- **Celery Version**: `celery==5.2.7`\n- **Redis Version**: `redis==4.3.4`\n- **Docker Compose File**:\n  ```yaml\n  version: '3'\n  services:\n    fastapi:\n      build: .\n      ports:\n        - \"8000:8000\"\n    celery:\n      build: .\n      command: celery worker --app main.celery_app --loglevel=info\n    redis:\n      image: \"redis:latest\"\n  ```\n- **Celery Configuration** (`main.py`):\n  ```python\n  from fastapi import FastAPI\n  from celery import Celery\n\n  app = FastAPI()\n  celery_app = Celery(\"tasks\", broker=\"redis://redis:6379/0\")\n\n  @celery_app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Run Docker Compose**: `docker-compose up`\n- **Test Task**:\n  ```python\n  from main import celery_app\n\n  result = celery_app.send_task('main.add', args=(4, 6))\n  print(result.get(timeout=10))\n  ```\n\nThese steps provide a concrete guide for setting up and testing an asynchronous task system using FastAPI, Celery, and Redis.",
+    "source": "code_example",
+    "updated_at": 1781045192.950187
+  },
+  "search:Advanced Testing Techniques:azure-cosmosdb-spring-data tes": {
+    "content": "- **CLI Commands**: Use `az cosmosdb create` to create a new Cosmos DB account.\n- **Latest Versions**: Ensure using the latest Spring Data Azure Cosmos DB SDK version for compatibility and features.\n- **Key Config Options**:\n  - `@PartitionKey`: Annotate the partition key field in your domain class.\n  - `spring.data.cosmosdb.uri`: Set your Cosmos DB URI.\n  - `spring.data.cosmosdb.key`: Set your Cosmos DB key.\n  - `spring.data.cosmosdb.database`: Specify the database name.",
+    "source": "web_search",
+    "updated_at": 1781045210.937649
+  },
+  "search:Advanced Testing Techniques:azure-cosmosdb-spring-data tes_ex": {
+    "content": "- **GitHub Repository**: [nikkijuk/cosmosdb-springboot-kotlin-sample](https://github.com/nikkijuk/cosmosdb-springboot-kotlin-sample)\n- **Latest Versions**:\n  - Spring Boot: 2.4.3\n  - Azure CosmosDB Spring Data SQL API: 3.5.1\n  - OpenAPI 3.0.3\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for Cosmos DB connection details.\n  - Repository interfaces extending `CosmosRepository`.\n  - Entity classes annotated with `@Document`.\n\nFor testing, consider using:\n- **Mockito**: For mocking dependencies.\n- **JUnit**: For writing test cases.\n\nExample CLI command to create a new Spring Boot project with Azure CosmosDB support:\n```bash\nspring init --dependencies=azure-cosmosdb-spring-data myproject\n```\n\nEnsure your `application.properties` includes:\n```properties\nspring.data.cosmos.uri=<your_cosmos_db_uri>\nspring.data.cosmos.key=<your_cosmos_db_key>\nspring.data.cosmos.database=<your_database_name>\n```",
+    "source": "code_example",
+    "updated_at": 1781045220.2636878
+  },
+  "search:Advanced Testing Techniques:angular+material-design-patter": {
+    "content": "- Use Angular CLI to generate component harnesses (`ng generate component-harness <component-name>`)\n- For testing Angular Material applications, utilize `ComponentHarness` and `TestBed.configureTestingModule`\n- To test a function that opens an `MatDialog`, mock the dialog service using Jasmine's `spyOn` or `jasmine.createSpyObj`\n- Ensure your `angular.json` includes necessary configurations for testing\n- Use `ng test --watch` to continuously run tests during development",
+    "source": "web_search",
+    "updated_at": 1781045236.959837
+  },
+  "search:Advanced Testing Techniques:angular+material-design-patter_ex": {
+    "content": "- **CLI Commands**:\n  - `ng new my-app --style=scss`\n  - `ng add @angular/material`\n\n- **Latest Versions**:\n  - Angular CLI: 15.x\n  - Angular Material: 13.x\n\n- **Key Config Options**:\n  - `angular.json`: Configure project settings, including paths and styles.\n  - `src/styles.scss`: Import global styles.\n  - `app.module.ts`: Import Angular Material modules.",
+    "source": "code_example",
+    "updated_at": 1781045242.0523922
+  },
+  "search:Advanced Testing Techniques:python-django-async-views test": {
+    "content": "- **CLI Commands**: Use `pytest` for testing async views in Django.\n- **Latest Versions**: Ensure using the latest stable version of Django and Channels.\n- **Key Config Options**:\n  - Set `ASGI_APPLICATION = 'your_project.asgi.application'` in your settings.\n  - Configure test runner to use `django.test.runner.DiscoverRunner`.\n- **Testing Async Views**:\n  - Use `asyncio.run()` for running async tests.\n  - Utilize Django's testing framework with `pytest-django` plugin.\n- **Example Code Snippet**:\n  ```python\n  import asyncio\n  from django.test import TestCase\n\n  class AsyncViewTest(TestCase):\n      async def test_async_view(self):\n          response = await self.client.get('/async-endpoint/')\n          self.assertEqual(response.status_code, 200)\n  ```\n- **Testing Channels Consumers**: Use `Communicators` provided by Channels for testing consumers.",
+    "source": "web_search",
+    "updated_at": 1781045253.4998097
+  },
+  "search:Advanced Testing Techniques:python-django-async-views test_ex": {
+    "content": "- Django 3.1 introduced async views.\n- Use `async def` to define async views.\n- Async test methods must be marked as `async def`.\n- Inherit from Django's `TestCase` for async tests.\n- Ensure Python is installed and up-to-date.\n- Run tests using the command: `python manage.py test`\n- Key config options include enabling ASGI if needed.",
+    "source": "code_example",
+    "updated_at": 1781045260.5966952
+  },
+  "search:Advanced Testing Techniques:fastapi-asyncio-sqlalchemy tes": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install latest versions of `fastapi`, `sqlalchemy`, and `asyncpg`.\n- Configure SQLAlchemy with async engine for asynchronous operations.\n- Use `TestClient` from `fastapi.testclient` for synchronous tests.\n- For asynchronous tests, use `pytest` with `asyncio` plugin.\n- Ensure event loop is managed correctly in tests to avoid RuntimeError.\n- Implement session management and dependency injection for database interactions.\n- Utilize migrations tools like Alembic for managing database schema changes.",
+    "source": "web_search",
+    "updated_at": 1781045268.3470273
+  },
+  "search:Advanced Testing Techniques:fastapi-asyncio-sqlalchemy tes_ex": {
+    "content": "- Clone the repository using `git clone https://github.com/neeraj9194/fastapi-async-sqlalchemy-testing.git`\n- Use Python 3.8 or later.\n- Install dependencies with `pip install fastapi sqlalchemy pytest-asyncio alembic anyio`.\n- For running tests, use `pytest --asyncio-mode=auto`.\n- Key config options include setting up SQLAlchemy's async engine and session factory.\n- Ensure your database URL is correctly configured in the environment variables or settings file.\n- Use `anyio` for managing asynchronous test functions.\n- Check the latest versions of FastAPI, SQLAlchemy, pytest-asyncio, and Alembic on their respective GitHub pages.",
+    "source": "code_example",
+    "updated_at": 1781045276.7429965
+  }
+}

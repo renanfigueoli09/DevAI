@@ -1,0 +1,32 @@
+{
+  "search:Advanced Design Patterns:react-native-performance-optim": {
+    "content": "- **CLI Commands**:\n  - `npx react-native upgrade` to update dependencies.\n  - `react-native start --reset-cache` for a clean build.\n\n- **Latest Versions**:\n  - React Native CLI: v7.x\n  - Hermes Engine: v1.0\n  - FlashList: v1.0\n\n- **Key Config Options**:\n  - `metro.config.js`: Configure Metro bundler settings.\n  - `react-native.config.js`: Define project-specific configurations.\n  - `android/app/build.gradle` and `ios/Podfile`: Adjust native build configurations for performance.",
+    "source": "web_search",
+    "updated_at": 1781045383.7567525
+  },
+  "search:Advanced Design Patterns:react-native-performance-optim_ex": {
+    "content": "- **CLI Commands**: Use `react-native performance` to analyze and optimize your app.\n- **Latest Versions**: Ensure you are using the latest stable version of React Native, as updates often include performance improvements.\n- **Key Config Options**:\n  - `metro.config.js`: Configure Metro bundler for better performance.\n  - `react-native.config.js`: Set up custom configurations for your project.\n  - `useMemo` and `useCallback`: Optimize rendering by memoizing expensive computations.",
+    "source": "code_example",
+    "updated_at": 1781045389.192959
+  },
+  "search:Advanced Design Patterns:spring-cloud-gateway-performan": {
+    "content": "- **CLI Commands**: \n  - `curl -X POST http://localhost:8080/gateway/endpoint`\n  - `java -jar spring-cloud-gateway.jar --server.port=8080`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.1.4\n  - Spring Boot: 2.7.5\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Destination URI.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Routing predicate, e.g., Path=/example/**.",
+    "source": "web_search",
+    "updated_at": 1781045397.7578313
+  },
+  "search:Advanced Design Patterns:spring-cloud-gateway-performan_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.0.x\n  - Spring Boot: 2.7.x\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the service.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/example/**\n  - `spring.cloud.gateway.filters[0].name`: Filter name, e.g., AddRequestHeader\n  - `spring.cloud.gateway.filters[0].args.name`: Argument for the filter, e.g., X-Request-Foo: Bar",
+    "source": "code_example",
+    "updated_at": 1781045407.7218869
+  },
+  "search:Advanced Design Patterns:microservices+resilience-patte": {
+    "content": "- **Spring WebFlux**: Use `@EnableWebFlux` to enable reactive web applications.\n- **Retry Mechanism**: Implement retry logic using Spring Retry or Resilience4j with `@Retryable`, `@CircuitBreaker`.\n- **Circuit Breaker**: Utilize Resilience4j's `CircuitBreakerRegistry` and `CircuitBreakerConfig`.\n- **Exponential Backoff**: Configure exponential backoff in Retry mechanisms using `BackoffPolicy.exponentialBackoff()`.\n- **AWS SDK for Java**: Use the latest version to interact with AWS services.\n- **Docker Compose**: Define multi-container applications using Docker Compose files.\n- **Kubernetes**: Deploy microservices on Kubernetes clusters using YAML configurations.\n- **Helm Charts**: Package and manage Kubernetes applications using Helm charts.\n- **Prometheus**: Monitor microservices performance with Prometheus metrics.\n- **Grafana**: Visualize metrics collected by Prometheus for better monitoring.",
+    "source": "web_search",
+    "updated_at": 1781045420.7103603
+  },
+  "search:Advanced Design Patterns:microservices+resilience-patte_ex": {
+    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**:\n  - Kubernetes: v1.27.3\n  - Istio: 1.14.5\n  - Hystrix: N/A (Java-based, no direct CLI)\n- **Key Config Options**:\n  - Circuit Breaker: `circuitBreaker.enabled`, `circuitBreaker.requestVolumeThreshold`\n  - Retry Mechanism: `retryPolicy.attempts`, `retryPolicy.backoffPeriod`\n  - Resilience Patterns: Implement `@HystrixCommand` for fallbacks, use `@Retryable` for retries.",
+    "source": "code_example",
+    "updated_at": 1781045426.3052204
+  }
+}
