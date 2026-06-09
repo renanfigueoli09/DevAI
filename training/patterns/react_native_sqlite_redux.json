@@ -1,0 +1,22 @@
+{
+  "search:React Native + SQLite + Redux:react native sqlite redux stat": {
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyProject`\n  - `npm install --save redux react-redux @react-navigation/native @react-navigation/stack`\n\n- **Latest Versions**:\n  - React Native: 0.68.2\n  - Redux: 4.1.5\n  - React Navigation: 6.x\n\n- **Key Config Options**:\n  - SQLite Database Path: `SQLite.openDatabase({ name: 'mydatabase.db', location: 'default' })`\n  - Redux Store Configuration: \n    ```javascript\n    const store = createStore(rootReducer);\n    ```\n  - React Navigation Stack Navigator:\n    ```javascript\n    <Stack.Navigator>\n      <Stack.Screen name=\"Home\" component={HomeScreen} />\n      <Stack.Screen name=\"Details\" component={DetailsScreen} />\n    </Stack.Navigator>\n    ```",
+    "source": "web_search",
+    "updated_at": 1781043984.5931723
+  },
+  "search:React Native + SQLite + Redux:react native sqlite redux stat_ex": {
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyApp`\n  - `npm install redux react-redux @reduxjs/toolkit`\n\n- **Latest Versions**:\n  - React Native: 0.72.6\n  - Redux Toolkit: 1.8.5\n\n- **Key Config Options**:\n  - `store.js`: Configure the Redux store with reducers and middleware.\n  - `actions.js`: Define action types and creators.\n  - `reducers.js`: Combine reducers using `combineReducers`.\n  - `Provider`: Wrap your app in `<Provider>` to pass the Redux store.",
+    "source": "code_example",
+    "updated_at": 1781043991.4298513
+  },
+  "search:React Native + SQLite + Redux:react native sqlite redux perf": {
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyApp`\n  - `npm install @react-navigation/native`\n  - `npm install @react-navigation/stack`\n  - `npm install redux react-redux`\n  - `npm install redux-persist`\n\n- **Latest Versions**:\n  - React Native: v0.71\n  - Redux: v4.2\n  - Redux Persist: v6.0\n\n- **Key Config Options**:\n  - SQLite Database Path: `/path/to/database.db`\n  - Redux Store Configuration: `const store = createStore(rootReducer, applyMiddleware(thunk))`\n  - Redux Persist Configuration: \n    ```javascript\n    const persistConfig = {\n      key: 'root',\n      storage: AsyncStorage,\n    };\n    const persistedReducer = persistReducer(persistConfig, rootReducer);\n    const store = createStore(persistedReducer, applyMiddleware(thunk));\n    const persistor = persistStore(store);\n    ```\n  - SQLiteProvider Singleton Pattern:\n    ```javascript\n    class SQLiteProvider {\n      static instance;\n      constructor() {\n        if (!SQLiteProvider.instance) {\n          this.db = new SQLite.Database('database.db');\n          SQLiteProvider.instance = this;\n        }\n        return SQLiteProvider.instance;\n      }\n      // CRUD methods here\n    }\n    ```\n\n- **Offline Data Synchronization**:\n  - Use `redux-persist` for state persistence.\n  - Implement background sync using libraries like `react-native-background-fetch`.\n\n- **Background Sync**:\n  - Install: `npm install react-native-background-fetch`\n  - Configure in App.js:\n    ```javascript\n    import BackgroundFetch from 'react-native-background-fetch';\n\n    const onBackgroundFetch = async () => {\n      // Perform data synchronization here\n      BackgroundFetch.finish(BackgroundFetch.Result.OK);\n    };\n\n    BackgroundFetch.configure(\n      { minimumInterval: 15 },\n      onBackgroundFetch,\n      (error) => console.log('[js] configure error', error),\n    );\n    ```\n\n- **Performance Tuning Tips**:\n  - Index SQLite tables for faster query performance.\n  - Use `react-native-sqlite-storage` for optimized database operations.\n  - Implement lazy loading for large datasets.",
+    "source": "web_search",
+    "updated_at": 1781044007.5794377
+  },
+  "search:React Native + SQLite + Redux:react native sqlite redux perf_ex": {
+    "content": "- **CLI Commands**:\n  - `npx react-native init MyProject`\n  - `npm install --save @react-navigation/native`\n  - `npm install --save @reduxjs/toolkit`\n\n- **Latest Versions**:\n  - React Native: v0.72.3\n  - Redux Toolkit: v1.8.5\n\n- **Key Config Options**:\n  - SQLite: Use SQLCipher for enhanced security.\n  - Redux: Configure middleware like `redux-thunk` or `redux-saga` for asynchronous actions.\n  - Performance Tuning: Implement lazy loading, memoization, and use of selectors in Redux.",
+    "source": "code_example",
+    "updated_at": 1781044014.0681088
+  }
+}

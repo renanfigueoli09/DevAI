@@ -1,0 +1,12 @@
+{
+  "search:Spring Boot + JPA + MongoDB:spring boot jpa mongodb perfor": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data 2025.1.0-M3 (released May 16, 2025).\n  - MongoDB Java Driver latest version as of October 2025.\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for development.\n  - `spring.aot.enabled`: Enable ahead-of-time compilation for performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781043851.9582822
+  },
+  "search:Spring Boot + JPA + MongoDB:spring boot jpa mongodb perfor_ex": {
+    "content": "- **GitHub Repository**: [sogilis/spring-boot-jpa-mongodb-example](https://github.com/sogilis/spring-boot-jpa-mongodb-example)\n- **YouTube Tutorial**: \"Spring Boot Tutorial for Beginners [2025]\" on YouTube\n- **Baeldung Article**: \"Introduction to Spring Data MongoDB\"\n- **Latest Spring Boot Version**: 3.0 (as of my last update in October 2023, but check the official website for the most current version)\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: MongoDB connection URI\n  - `spring.jpa.properties.hibernate.dialect`: Hibernate dialect for MongoDB\n  - `spring.jpa.show-sql`: Enable SQL logging\n  - `spring.jpa.properties.hibernate.format_sql`: Format SQL output\n- **CLI Commands**:\n  - `mvn clean install` to build the project\n  - `mvn spring-boot:run` to run the application\n- **Performance Optimization Tips**:\n  - Use `@Query` annotations for complex queries\n  - Implement pagination and sorting in repository methods\n  - Optimize database indexes\n  - Consider using asynchronous operations with Spring's `@Async`\n  - Monitor and tune MongoDB performance metrics",
+    "source": "code_example",
+    "updated_at": 1781043859.6017795
+  }
+}

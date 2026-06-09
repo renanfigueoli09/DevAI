@@ -1,0 +1,12 @@
+{
+  "search:Node.js + Express + MongoDB + Mongoose:node.js express mongodb mongoo": {
+    "content": "- Use `npm init` to create a new Node.js project.\n- Install dependencies using `npm install express mongoose body-parser cors`.\n- Ensure MongoDB is running and accessible.\n- Configure Mongoose with the latest version by setting up a connection string in your `.env` file.\n- Use `express.json()` middleware for parsing JSON bodies.\n- Implement CORS to allow cross-origin requests.\n- Optimize queries by using indexes on MongoDB collections.\n- Utilize pagination in API responses to improve performance and reduce load times.\n- Regularly update Node.js, Express, Mongoose, and other dependencies to benefit from security patches and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781043966.7901804
+  },
+  "search:Node.js + Express + MongoDB + Mongoose:node.js express mongodb mongoo_ex": {
+    "content": "- Use `npm install express mongoose` to install latest versions.\n- For filtering, use `app.get('/api/items', async (req, res) => { const items = await Item.find(req.query); res.json(items); });`\n- Optimize MongoDB queries with indexes: `Item.createIndex({ name: 1 });`\n- Use Mongoose middleware for pre and post hooks.\n- Implement caching using Redis or Memcached to reduce database load.\n- Monitor performance with tools like New Relic or PM2.\n- Enable compression middleware in Express: `app.use(compression());`\n- Adjust MongoDB connection pool size: `mongoose.connect(uri, { poolSize: 10 });`\n- Use environment variables for sensitive data and configuration settings.",
+    "source": "code_example",
+    "updated_at": 1781043972.257629
+  }
+}
