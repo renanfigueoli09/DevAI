@@ -1,0 +1,17 @@
+{
+  "search:rails+sidekiq:ruby on rails sidekiq backgrou": {
+    "content": "- Install Redis using `brew install redis` or download from [Redis official site](https://redis.io/download).\n- Install Sidekiq using `gem 'sidekiq'`.\n- Configure Rails to use Sidekiq by adding `config.active_job.queue_adapter = :sidekiq` in `config/application.rb`.\n- Start Redis server with `redis-server`.\n- Start Sidekiq with `bundle exec sidekiq -C config/sidekiq.yml`.\n- Use `Sidekiq::Worker.perform_async(arg1, arg2)` to enqueue jobs.\n- Configure multiple queues in `sidekiq.yml` under the `queues` key.\n- Install `sidekiq-cron` for scheduling jobs with cron syntax using `gem 'sidekiq-cron'`.\n- Access Sidekiq web dashboard by visiting `http://localhost:3000/sidekiq` after starting Sidekiq.",
+    "source": "web_search",
+    "updated_at": 1781042362.6926332
+  },
+  "search:rails+sidekiq:sidekiq with redis for ruby on": {
+    "content": "- **Latest Versions**:\n  - Sidekiq: 8.0+\n  - Redis: 7.2+\n\n- **Key Config Options**:\n  - `config/initializers/sidekiq.rb`: Configure Sidekiq settings.\n  - `sidekiq.yml`: Define Sidekiq queue configurations.\n\n- **CLI Commands with Exact Flags**:\n  - `bundle install --with sidekiq`: Install Sidekiq and its dependencies.\n  - `rails generate sidekiq:worker MyWorker`: Generate a new Sidekiq worker.\n  - `redis-server /path/to/redis.conf`: Start Redis server with specific configuration.\n  - `sidekiq -C config/sidekiq.yml`: Run Sidekiq with custom configuration file.\n\n- **Additional Tips**:\n  - Ensure Redis is running and accessible from your Rails application.\n  - Use environment-specific configurations in `sidekiq.yml`.\n  - Monitor Sidekiq performance using tools like Sidekiq Web UI.",
+    "source": "web_search",
+    "updated_at": 1781042383.4577818
+  },
+  "search:rails+sidekiq:sidekiq with redis for ruby on_ex": {
+    "content": "- Install Redis: `sudo apt-get install redis-server`\n- Update Ruby to MRI 3.2+: `rbenv install 3.2.0` and set it as global: `rbenv global 3.2.0`\n- Add Sidekiq gem to Gemfile: `gem 'sidekiq', '~> 8.0'`\n- Run bundle install: `bundle install`\n- Configure Sidekiq in Rails: Create `config/sidekiq.yml` and add configuration.\n- Start Sidekiq server: `bundle exec sidekiq -C config/sidekiq.yml`\n- Enqueue jobs using `perform_async`: `AddEndangeredWorker.perform_async(csv_file)`\n- Monitor job queue: Use Sidekiq web UI or CLI commands like `sidekiqctl info`",
+    "source": "code_example",
+    "updated_at": 1781042390.837782
+  }
+}
