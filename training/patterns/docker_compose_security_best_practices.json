@@ -1,0 +1,22 @@
+{
+  "search:docker-compose-security-best-practices:docker compose security best p": {
+    "content": "- Use `docker-compose up --build` to build images from Dockerfile during deployment.\n- Implement network isolation using `network_mode: \"bridge\"` in Docker Compose.\n- Secure secrets by using environment variables and the `.env` file for sensitive data.\n- Regularly update Docker and all dependencies with `docker pull <image_name>:latest`.\n- Apply security patches to base images using `FROM <base_image>:<tag>`.\n- Use `docker-compose exec -it <service_name> /bin/bash` for secure access to containers.\n- Enable HTTPS by configuring a reverse proxy like Nginx or Traefik in Docker Compose.\n- Implement firewall rules with `iptables` or `ufw` to restrict traffic.\n- Utilize security scanning tools like Clair or Trivy for vulnerability detection.",
+    "source": "web_search",
+    "updated_at": 1781037609.4823666
+  },
+  "search:docker-compose-security-best-practices:docker compose security best p_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up --build`: Builds, (re)creates, starts, and attaches to containers for a service.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by docker-compose.\n\n- **Latest Versions**:\n  - Docker Compose: Ensure you are using the latest version for security patches. Check [Docker's official website](https://docs.docker.com/compose/install/) for the latest installation instructions.\n\n- **Key Config Options**:\n  - `services`: Define services in your application.\n    ```yaml\n    services:\n      web:\n        image: nginx\n    ```\n  - `networks`: Configure networks to isolate and connect containers.\n    ```yaml\n    networks:\n      my_network:\n        driver: bridge\n    ```\n  - `volumes`: Manage data persistence outside of containers.\n    ```yaml\n    volumes:\n      my_volume:\n        driver: local\n    ```\n  - `secrets`: Securely manage sensitive information like API keys.\n    ```yaml\n    secrets:\n      api_key:\n        file: ./api.key\n    ```\n  - `security_opt`: Apply security options to containers.\n    ```yaml\n    services:\n      web:\n        image: nginx\n        security_opt:\n          - no-new-privileges:true\n    ```\n\nThese actionable facts provide a solid foundation for implementing Docker Compose security best practices in your development environment.",
+    "source": "code_example",
+    "updated_at": 1781037627.1196725
+  },
+  "search:docker-compose-security-best-practices:securing docker compose enviro": {
+    "content": "- Use Docker Compose's built-in logging to monitor applications.\n- Securely handle environment variables using `.env` files, Docker Secrets, or CI/CD pipelines.\n- Implement network security by defining custom networks in `docker-compose.yml`.\n- Harden containers by setting appropriate user IDs and permissions.\n- Regularly scan for vulnerabilities using tools like Trivy or Snyk.\n- Utilize HashiCorp Vault to manage secrets securely within Docker Compose environments.",
+    "source": "web_search",
+    "updated_at": 1781037644.3231997
+  },
+  "search:docker-compose-security-best-practices:securing docker compose enviro_ex": {
+    "content": "- Run containers as non-root users by setting `user` in Docker Compose.\n- Use environment variables to configure services securely.\n- Ensure images are from reputable sources for security.\n- Configure network settings carefully to avoid exposure.\n- Utilize secrets management tools like Docker Secrets or HashiCorp Vault.\n- Regularly update Docker and all container images.\n- Implement security policies using Docker Content Trust (DCT).\n- Monitor container logs and events for anomalies.\n- Use Docker Compose's `depends_on` to manage service startup order.",
+    "source": "code_example",
+    "updated_at": 1781037658.3775833
+  }
+}

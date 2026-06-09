@@ -1,0 +1,12 @@
+{
+  "search:flask-alembic-migrations:flask alembic migrations best ": {
+    "content": "- **Latest Version**: Flask-Alembic 3.2.0\n- **CLI Commands**:\n  - `flask db init`: Initialize a new migration repository.\n  - `flask db migrate -m \"message\"`: Generate a new migration script.\n  - `flask db upgrade`: Apply migrations to the database.\n  - `flask db downgrade`: Revert the last applied migration.\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URI`: Database URI for SQLAlchemy.\n  - `MIGRATE_REPO`: Path to the migration repository.\n  - `FLASK_APP`: Flask application entry point.",
+    "source": "web_search",
+    "updated_at": 1781037513.2925315
+  },
+  "search:flask-alembic-migrations:flask alembic migrations best _ex": {
+    "content": "- Use `flask db init` to initialize migrations.\n- Run `flask db migrate -m \"message\"` to create migration scripts.\n- Execute `flask db upgrade` to apply migrations.\n- Revert changes with `flask db downgrade`.\n- Key config in `alembic.ini`: `sqlalchemy.url`, `script_location`.\n- Use `flask db stamp head` to mark the database as at the latest revision without running migrations.\n- For seed data, consider using Alembic hooks or separate scripts outside migrations for better maintainability.",
+    "source": "code_example",
+    "updated_at": 1781037530.9786851
+  }
+}

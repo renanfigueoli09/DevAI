@@ -1,0 +1,12 @@
+{
+  "search:fastapi-asgi-performance-tuning:fastapi asgi performance tunin": {
+    "content": "- **FastAPI Version**: Use `pip install fastapi==0.95.0`\n- **Uvicorn Version**: Use `pip install uvicorn==0.21.2`\n- **CLI Command**: Run FastAPI with Uvicorn using `uvicorn main:app --reload`\n- **Key Config Options**:\n  - `--host`: Specify the host to listen on (e.g., `--host 0.0.0.0`)\n  - `--port`: Specify the port to listen on (e.g., `--port 8000`)\n  - `--reload`: Enable auto-reload during development\n- **Concurrency**: Use `--workers` to specify the number of worker processes (e.g., `--workers 4`)\n- **Performance Tuning**:\n  - Adjust `--limit-max-requests` and `--limit-max-connections`\n  - Monitor with tools like `uvicorn --metrics`\n\nThese steps will help you set up FastAPI with Uvicorn for optimal performance.",
+    "source": "web_search",
+    "updated_at": 1781037669.4740105
+  },
+  "search:fastapi-asgi-performance-tuning:fastapi asgi performance tunin_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --reload`\n  - `hypercorn app.main:app`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  - Hypercorn: 0.14.0\n\n- **Key Config Options**:\n  - `workers`: Number of worker processes (e.g., `uvicorn app.main:app --workers 4`)\n  - `host`: Server host address (e.g., `--host 0.0.0.0`)\n  - `port`: Server port number (e.g., `--port 8000`)\n  - `log-level`: Logging level (e.g., `--log-level info`)",
+    "source": "code_example",
+    "updated_at": 1781037675.3138382
+  }
+}

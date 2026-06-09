@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-performance-tuning:typescript prisma performance ": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - `datasource url`: Specifies the database connection URL.\n  - `generator client`: Defines the Prisma Client generator settings.\n  - `schema directives`: Allows for custom directives in your schema.",
+    "source": "web_search",
+    "updated_at": 1781037571.6265645
+  },
+  "search:typescript-prisma-performance-tuning:typescript prisma performance _ex": {
+    "content": "- Use Prisma Client's `include` and `select` options to optimize data retrieval.\n- Upgrade to the latest version of Prisma for performance improvements.\n- Configure Prisma Client with `queryRaw` or `executeRaw` for direct SQL queries when necessary.\n- Implement batching using Prisma's `batch` method to reduce the number of database calls.\n- Monitor and analyze query performance using tools like AppSignal or OpenTelemetry.\n- Optimize schema design by normalizing data and avoiding redundant fields.\n- Use Prisma Middleware for custom logic that can improve performance in certain scenarios.\n- Enable caching mechanisms to store frequently accessed data, reducing database load.",
+    "source": "code_example",
+    "updated_at": 1781037578.519279
+  },
+  "search:typescript-prisma-performance-tuning:prisma typescript query tuning": {
+    "content": "- **CLI Commands**:\n  - `prisma generate --sql` to run raw SQL queries safely.\n  - `prisma migrate dev` for database migrations.\n  - `prisma db pull` to update Prisma schema from the database.\n\n- **Latest Versions**:\n  - Prisma Client: v5.0\n  - Prisma Migrate: v2.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model and relations.\n  - `prisma.yml`: Configure Prisma project settings, including database connection details.",
+    "source": "web_search",
+    "updated_at": 1781037586.0754626
+  },
+  "search:typescript-prisma-performance-tuning:prisma typescript query tuning_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name <migration-name>`: Creates and applies a migration based on the schema changes.\n\n- **Latest Versions**:\n  - Prisma: [Check latest version on npm](https://www.npmjs.com/package/prisma)\n  - Drizzle: [Check latest version on npm](https://www.npmjs.com/package/drizzle)\n\n- **Key Config Options**:\n  - `schema`: Defines the data model and relations.\n  - `datasource`: Specifies the database connection details.\n  - `generator`: Configures the Prisma Client generation options.",
+    "source": "code_example",
+    "updated_at": 1781037591.8920786
+  }
+}
