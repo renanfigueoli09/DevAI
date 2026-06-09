@@ -1,0 +1,22 @@
+{
+  "search:react-query-performance-tuning:react query advanced performan": {
+    "content": "- **CLI Commands**: Not applicable for React Query.\n- **Latest Version**: Check the official [TanStack Query GitHub repository](https://github.com/TanStack/query) for the latest version.\n- **Key Config Options**:\n  - `queryCache`: Manages caching of queries.\n  - `mutationCache`: Manages caching of mutations.\n  - `defaultOptions`: Sets default options for all queries and mutations.\n  - `retry`: Controls how many times a query should retry on failure.\n  - `staleTime`: Determines when data is considered stale.\n  - `refetchInterval`: Automatically refetches the query at specified intervals.",
+    "source": "web_search",
+    "updated_at": 1781034511.4926977
+  },
+  "search:react-query-performance-tuning:react query advanced performan_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**: React Query v4.x, React v18.x\n- **Key Config Options**:\n  - `notifyOnChangeProps`: ['data']\n  - `staleTime`: 5000 (ms)\n  - `refetchInterval`: null or interval in ms",
+    "source": "code_example",
+    "updated_at": 1781034526.8817794
+  },
+  "search:react-query-performance-tuning:best practices for react query": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to set up a new React project with TypeScript.\n- **Latest Version**: As of my last update, the latest version of React Query is 3.x (check [npm](https://www.npmjs.com/package/react-query) for the most current version).\n- **Key Config Options**:\n  - `queryCache`: Manages caching behavior. Example: `new QueryCache({ defaultConfig: { staleTime: Infinity } })`.\n  - `refetchInterval`: Automatically refetches data at a specified interval. Example: `{ refetchInterval: 1000 * 60 * 5 }` for every 5 minutes.\n  - `queryKeyHashFn`: Custom function to hash query keys. Example: `(key) => JSON.stringify(key)`.\n- **Performance Tips**:\n  - Use `useQuery` with unique `queryKeys` to avoid unnecessary refetches.\n  - Implement `staleTime` and `cacheTime` to control when data is considered stale or removed from cache.\n  - Use `prefetchQuery` for fetching data in advance, especially during navigation.",
+    "source": "web_search",
+    "updated_at": 1781034547.301518
+  },
+  "search:react-query-performance-tuning:best practices for react query_ex": {
+    "content": "- Use `react-query@3.x` for the latest features.\n- Implement error boundaries using `ErrorBoundary` from React.\n- Create custom hooks for API calls in separate files.\n- Utilize TanStack Config for advanced optimizations.\n- Set `refetchOnWindowFocus: false` to prevent unnecessary refetches.\n- Use `staleTime` and `cacheTime` for better cache management.\n- Implement `keepPreviousData` for smooth transitions during data updates.\n- Use `useQueryClient` for manual cache updates.\n- Monitor performance with React DevTools.",
+    "source": "code_example",
+    "updated_at": 1781034564.0346282
+  }
+}
