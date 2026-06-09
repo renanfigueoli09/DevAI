@@ -1,0 +1,17 @@
+{
+  "search:Go + Gin Framework:gin framework performance opti": {
+    "content": "- Use the latest version of Gin by running `go get -u github.com/gin-gonic/gin`.\n- Optimize routing by using `httprouter` instead of default router.\n- Enable compression middleware with `gin.Gzip(gin.DefaultCompression)`.\n- Configure timeouts in your server setup:\n  ```go\n  r := gin.New()\n  r.Use(gin.Recovery())\n  r.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {\n      return fmt.Sprintf(\"%s - [%s] \\\"%s %s %s\\\" %d %s \\\"%s\\\" \\\"%s\\\"\\n\",\n          param.ClientIP,\n          param.TimeStamp.Format(time.RFC1123),\n          param.Method,\n          param.Path,\n          param.Request.Proto,\n          param.StatusCode,\n          param.Latency,\n          param.UserAgent,\n          param.ErrorMessage,\n      )\n  }))\n  ```\n- Use connection pooling for database operations.\n- Implement caching strategies to reduce database hits.\n- Monitor and profile your application using tools like `pprof`.\n- Avoid blocking operations in middleware or handlers.\n- Use asynchronous processing for I/O-bound tasks.",
+    "source": "web_search",
+    "updated_at": 1781034934.9986923
+  },
+  "search:Go + Gin Framework:gin framework middleware patte": {
+    "content": "- Use `go get -u github.com/gin-gonic/gin` to update Gin to the latest version.\n- For testing middleware, use `gin.SetMode(gin.TestMode)` and `gin.CreateTestContext(w io.Writer) *gin.Context`.\n- Key config options include setting up routes with `r.GET(\"/path\", handlerFunc)`, using middleware with `r.Use(middlewareFunc)`, and handling errors with `c.JSON(http.StatusInternalServerError, gin.H{\"error\": err.Error()})`.",
+    "source": "web_search",
+    "updated_at": 1781034971.240418
+  },
+  "search:Go + Gin Framework:gin framework middleware patte_ex": {
+    "content": "- **CLI Commands**: `go get -u github.com/gin-gonic/gin`\n- **Latest Version**: Gin v1.8.2 (as of my last update)\n- **Key Config Options**:\n  - `gin.SetMode(gin.ReleaseMode)` for production\n  - `c.Next()` to pass control to the next middleware or handler\n  - Middleware registration via `router.Use()`\n  - Route grouping with `router.Group()`\n  - MVC architecture through separate packages for controllers, models, and views",
+    "source": "code_example",
+    "updated_at": 1781034992.9296212
+  }
+}

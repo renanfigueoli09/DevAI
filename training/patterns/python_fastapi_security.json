@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**: `uvicorn main:app --reload`\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Pydantic: 1.10.7\n  - SQLAlchemy: 2.0.4\n  - Auth0 Python SDK: 3.16.0\n- **Key Config Options**:\n  - JWT Secret Key\n  - Database URL (e.g., `SQLALCHEMY_DATABASE_URL = \"sqlite:///./test.db\"`)\n  - OAuth2 Password Flow Client ID and Secret",
     "source": "code_example",
     "updated_at": 1780947311.0335264
+  },
+  "search:Python + FastAPI Security:fastapi security best practice": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- Implement OAuth 3.0 using libraries like `fastapi-oauthlib`.\n- Configure JWT with `python-jose[cryptography]` for secure token generation and validation.\n- Set up environment variables for sensitive information like secret keys.\n- Use `uvicorn[standard]` as the ASGI server for production environments.\n- Implement rate limiting with `fastapi-limiter` to prevent abuse.\n- Enable CORS using `fastapi.middleware.cors.CORSMiddleware`.\n- Regularly update FastAPI and its dependencies to patch security vulnerabilities.\n- Conduct code reviews and use static analysis tools like `pylint` or `flake8`.",
+    "source": "web_search",
+    "updated_at": 1781034877.0656545
+  },
+  "search:Python + FastAPI Security:fastapi security best practice_ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For OAuth 3.0, consider using `fastapi-oauthlib`.\n- Implement JWT authentication with `python-jose[cryptography]`.\n- Configure CORS with `fastapi.middleware.cors.CORSMiddleware`.\n- Hash passwords using `passlib`.\n- Use environment variables for sensitive information like secrets and keys.\n- Regularly update FastAPI and its dependencies to the latest versions.\n- Implement rate limiting with middleware like `fastapi-limiter`.\n- Test your security measures thoroughly in a staging environment before production.",
+    "source": "code_example",
+    "updated_at": 1781034901.7354162
+  },
+  "search:Python + FastAPI Security:fastapi oauth2 authentication ": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.98.1\n  - Uvicorn: 10.6.0\n  - OAuth2PasswordBearer: Part of FastAPI, no separate version needed.\n  - JWT (PyJWT): 2.7.0\n\n- **Key Config Options**:\n  - `OAuth2PasswordBearer(tokenUrl=\"token\")`: Define the token URL for password authentication.\n  - `OAuth2PasswordRequestForm(username: str = Form(...), password: str = Form(...))`: Capture username and password from form data.\n  - `JWT.encode(payload, secret_key, algorithm)`: Encode payload into a JWT using a secret key and specified algorithm.",
+    "source": "web_search",
+    "updated_at": 1781034910.3493803
+  },
+  "search:Python + FastAPI Security:fastapi oauth2 authentication _ex": {
+    "content": "- **FastAPI Version**: 0.95.2\n- **CLI Command**: `uvicorn main:app --reload`\n- **Key Config Options**:\n  - `oauth2_scheme`: Use `OAuth2PasswordBearer` for password flow.\n  - `JWT_SECRET_KEY`: Generate a secret key using `openssl rand -hex 32`.\n  - `ALGORITHM`: Set to `\"HS256\"` for HMAC SHA256 algorithm.\n  - `ACCESS_TOKEN_EXPIRE_MINUTES`: Define token expiration time in minutes.",
+    "source": "code_example",
+    "updated_at": 1781034925.9097822
   }
 }

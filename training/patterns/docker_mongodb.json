@@ -1,0 +1,17 @@
+{
+  "search:Docker + MongoDB:docker mongodb containerizatio": {
+    "content": "- **CLI Commands**:\n  - `docker pull mongo:latest`: Pulls the latest MongoDB image.\n  - `docker run --name my-mongo-container -d mongo:latest`: Runs a MongoDB container in detached mode.\n  - `docker exec -it my-mongo-container mongo`: Connects to the running MongoDB instance.\n\n- **Latest Versions**:\n  - MongoDB Docker Image: `mongo:latest`\n\n- **Key Config Options**:\n  - `-p 27017:27017`: Maps port 27017 of the container to port 27017 on the host.\n  - `-v /my/local/data:/data/db`: Mounts a local directory for data persistence.\n  - `--restart unless-stopped`: Ensures the container restarts unless manually stopped.",
+    "source": "web_search",
+    "updated_at": 1781034813.4955397
+  },
+  "search:Docker + MongoDB:docker mongodb best practices ": {
+    "content": "- Use `docker pull mongo:latest` to get the latest MongoDB image.\n- Run MongoDB with `docker run --name my-mongo -d mongo`.\n- For a read-heavy, failover HA setup, use `docker-compose.yml` with configurations for replica sets and sharding.\n- Key config options include `replication.replSetName`, `sharding.clusterRole`, and `security.authorization`.\n- Use `docker exec -it my-mongo mongo` to access the MongoDB shell.\n- For backup, run `mongodump --uri \"mongodb://username:password@localhost:27017\"` and store the dump files.\n- Restore with `mongorestore --uri \"mongodb://username:password@localhost:27017\" /path/to/backup`.\n- Ensure Docker Compose is up-to-date by running `docker-compose pull` before deploying.",
+    "source": "web_search",
+    "updated_at": 1781034852.8810155
+  },
+  "search:Docker + MongoDB:docker mongodb best practices _ex": {
+    "content": "- Use the latest official MongoDB Docker image from Docker Hub.\n- Set environment variables like `MONGO_INITDB_ROOT_USERNAME` and `MONGO_INITDB_ROOT_PASSWORD` for secure initialization.\n- Enable query profiling with `--setParameter enableProfiler=1`.\n- Utilize Docker Compose for multi-container setups, defining services, networks, and volumes.\n- Implement read replicas for scaling by adding more instances in a replica set configuration.\n- Use persistent storage with Docker volumes to ensure data durability across container restarts.\n- Configure MongoDB for high availability (HA) using replica sets or sharding.\n- Monitor MongoDB performance using tools like `mongostat` and `mongotop`.\n- Regularly update the MongoDB image and underlying OS to patch security vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1781034869.1765487
+  }
+}
