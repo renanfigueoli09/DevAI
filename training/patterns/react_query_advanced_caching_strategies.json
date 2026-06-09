@@ -1,0 +1,32 @@
+{
+  "search:react-query-advanced-caching-strategies:advanced react query caching t": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query v5\n  - TanStack Query React Docs\n- **Key Config Options**:\n  - `queryCache.find`: Synchronous method to get an existing query instance.\n  - `cacheTime`: Time in milliseconds that data will be cached before it is considered stale.\n  - `staleTime`: Time in milliseconds after which a query is considered stale and needs refetching.",
+    "source": "web_search",
+    "updated_at": 1781028996.7896583
+  },
+  "search:react-query-advanced-caching-strategies:advanced react query caching t_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Version**: React Query v4.x, TanStack Query v5.x\n- **Key Config Options**:\n  - `cacheTime`: Duration in milliseconds to keep data in cache.\n  - `staleTime`: Duration in milliseconds after which data is considered stale.\n  - `refetchInterval`: Interval in milliseconds at which data is refetched automatically.\n  - `keepPreviousData`: Boolean to retain previous data during refetches.",
+    "source": "code_example",
+    "updated_at": 1781029013.5048542
+  },
+  "search:react-query-advanced-caching-strategies:optimizing react query cache f": {
+    "content": "- Use `react-query` version 3.x or later.\n- Configure cache settings using `cacheTime`, `staleTime`, and `refetchInterval`.\n- Example configuration:\n  ```javascript\n  const queryClient = new QueryClient({\n    defaultOptions: {\n      queries: {\n        cacheTime: 1000 * 60 * 5, // 5 minutes\n        staleTime: 1000 * 60, // 1 minute\n        refetchInterval: 1000 * 30, // 30 seconds\n      },\n    },\n  });\n  ```\n- Utilize `useQuery` with `enabled` flag to conditionally fetch data.\n- Implement `onSuccess`, `onError`, and `onSettled` callbacks for side effects.\n- Use `refetchOnWindowFocus` to control refetching behavior on window focus.\n- Monitor performance using React's Profiler API to identify bottlenecks.",
+    "source": "web_search",
+    "updated_at": 1781029022.4131093
+  },
+  "search:react-query-advanced-caching-strategies:optimizing react query cache f_ex": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to set up a new React project with TypeScript.\n- **Latest Version**: As of my last update, the latest version of React Query is 4.x. Check [npm](https://www.npmjs.com/package/react-query) for the most current version.\n- **Key Config Options**:\n  - `QueryClientProvider`: Wraps your application to provide access to React Query's functionalities.\n  - `useQuery`: Hook used to fetch data and manage state.\n  - `refetchInterval`: Automatically refetches the query at specified intervals.\n  - `staleTime`: Determines how long a query result is considered fresh before it should be refetched.",
+    "source": "code_example",
+    "updated_at": 1781029029.1525586
+  },
+  "search:react-query-advanced-caching-strategies:react query cache management s": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.23.0\n  - TanStack Query: v5.23.0\n- **Key Config Options**:\n  - `queryCache`: Manages the cache for queries.\n    ```javascript\n    const queryCache = new QueryCache();\n    ```\n  - `mutationCache`: Manages the cache for mutations.\n    ```javascript\n    const mutationCache = new MutationCache();\n    ```\n  - `defaultOptions`: Sets default options for all queries and mutations.\n    ```javascript\n    const queryClient = new QueryClient({\n      defaultOptions: {\n        queries: {\n          refetchOnWindowFocus: false,\n        },\n      },\n    });\n    ```\n- **Useful Hooks**:\n  - `useQuery`: Fetches data and handles caching.\n    ```javascript\n    const { data, isLoading, isError } = useQuery('key', fetchData);\n    ```\n  - `useMutation`: Manages side effects like form submissions.\n    ```javascript\n    const mutation = useMutation(submitData, {\n      onSuccess: () => {\n        // Handle success\n      },\n    });\n    ```\n- **Caching Strategies**:\n  - `staleTime`: Time in milliseconds after which a query is considered stale and refetched.\n    ```javascript\n    useQuery('key', fetchData, { staleTime: 5000 });\n    ```\n  - `cacheTime`: Total time in milliseconds that a query will be kept in the cache.\n    ```javascript\n    useQuery('key', fetchData, { cacheTime: 10000 });\n    ```\n- **Offline State Management**: React Query automatically handles offline state by caching data and refetching when online.",
+    "source": "web_search",
+    "updated_at": 1781029050.536548
+  },
+  "search:react-query-advanced-caching-strategies:react query cache management s_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.23.0\n  - TanStack Query: v5.0.0\n- **Key Config Options**:\n  - `queryCache`: Manages the cache for queries.\n  - `mutationCache`: Manages the cache for mutations.\n  - `defaultOptions`: Sets default options for all queries and mutations.\n  - `staleTime`: Determines how long data is considered fresh before refetching.",
+    "source": "code_example",
+    "updated_at": 1781029057.6285655
+  }
+}

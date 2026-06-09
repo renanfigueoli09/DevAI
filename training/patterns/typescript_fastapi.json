@@ -1,0 +1,32 @@
+{
+  "search:typescript+fastapi:typescript fastapi crud operat": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Creates a new FastAPI project.\n  - `uvicorn main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.104.2\n  - Uvicorn: v0.23.2\n\n- **Key Config Options**:\n  - `database_url`: Specifies the database connection URL.\n  - `debug_mode`: Enables or disables debug mode for development.\n  - `secret_key`: Used for JWT token generation and validation.",
+    "source": "web_search",
+    "updated_at": 1781028918.7864935
+  },
+  "search:typescript+fastapi:typescript fastapi crud operat_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn run app:app --reload`: Run the FastAPI application with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: v0.104.2\n  - Uvicorn: v0.23.2\n\n- **Key Config Options**:\n  - `app = FastAPI()`: Initialize a new FastAPI app.\n  - `@app.get(\"/\")`: Define a GET endpoint.\n  - `@app.post(\"/\")`: Define a POST endpoint.\n  - `@app.put(\"/\")`: Define a PUT endpoint.\n  - `@app.delete(\"/\")`: Define a DELETE endpoint.",
+    "source": "code_example",
+    "updated_at": 1781028925.0836022
+  },
+  "search:typescript+fastapi:fastapi with typescript valida": {
+    "content": "- **CLI Commands**:\n  - `npm install @fastapi/veloce-ts`\n  - `npx create-next-app@latest --typescript`\n\n- **Latest Versions**:\n  - FastAPI: v2.4.6\n  - Veloce-TS: v1.3.0\n  - Next.js: v13.5.3\n\n- **Key Config Options**:\n  - `veloce.config.ts`: Configuration file for Veloce-TS.\n  - `next.config.js`: Configuration file for Next.js with TypeScript support.\n  - `tsconfig.json`: TypeScript configuration file for project settings.",
+    "source": "web_search",
+    "updated_at": 1781028950.9827034
+  },
+  "search:typescript+fastapi:fastapi with typescript valida_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install @velocejs/veloce`\n  - `npx create-next-app@latest --typescript`\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Pydantic: v1.10.7\n  - Next.js: v13.5\n\n- **Key Config Options**:\n  - VeloceJS: `decorators`, `automatic validation`, `OpenAPI docs`, `dependency injection`\n  - Next.js: `clean architecture`, `best practices`, `TypeScript`, `Zod`",
+    "source": "code_example",
+    "updated_at": 1781028965.5185401
+  },
+  "search:typescript+fastapi:typescript and fastapi integra": {
+    "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`: Creates a new FastAPI project.\n  - `npm install react vite @vitejs/plugin-react`: Installs necessary dependencies for React and Vite.\n  - `pyinstaller --onefile main.py`: Compiles the FastAPI app into a standalone executable.\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - React: v18.2.0\n  - Vite: v4.3.2\n\n- **Key Config Options**:\n  - `fastapi.Config`: Configuration settings for the FastAPI app.\n  - `vite.config.js`: Configuration file for Vite, including paths and plugins.\n  - `pyinstaller --onefile`: Compiles the Python script into a single executable file.",
+    "source": "web_search",
+    "updated_at": 1781028973.6459992
+  },
+  "search:typescript+fastapi:typescript and fastapi integra_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install -g create-react-app`\n  - `npx create-react-app my-app --template typescript`\n  - `pip install fastapi uvicorn`\n\n- **Latest Versions**:\n  - React: v18.x\n  - TypeScript: v4.9.x\n  - FastAPI: v0.75.x\n  - Uvicorn: v0.20.x\n\n- **Key Config Options**:\n  - In `fastapi` app, use `app = FastAPI()`\n  - For React, configure `vite.config.ts` for TypeScript support\n  - Use environment variables in `.env` files for configuration",
+    "source": "code_example",
+    "updated_at": 1781028981.9825335
+  }
+}
