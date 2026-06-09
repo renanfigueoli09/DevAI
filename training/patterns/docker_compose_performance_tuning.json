@@ -1,0 +1,17 @@
+{
+  "search:docker-compose-performance-tuning:docker compose performance opt": {
+    "content": "- Install latest Docker Compose version using `sudo curl -L \"https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose`\n- Use `docker-compose up` to start services defined in `docker-compose.yml`\n- Key config options include `services`, `networks`, and `volumes`\n- For production, consider using `docker-compose build --pull --no-cache` for clean builds\n- Utilize Docker Compose's `depends_on` to manage service startup order\n- Enable logging with `logging` option in `docker-compose.yml`\n- Use `docker-compose exec <service> <command>` to run commands inside a running container\n- For performance, consider using `build.args` for build-time variables\n- Monitor resource usage with `docker stats` while services are running",
+    "source": "web_search",
+    "updated_at": 1781030119.758237
+  },
+  "search:docker-compose-performance-tuning:high availability with docker ": {
+    "content": "- **Patroni**: For PostgreSQL HA, use Patroni with distributed configuration stores like ZooKeeper, etcd, Consul, or Kubernetes.\n- **Docker Swarm**: Use Docker Swarm for clustering and scheduling Docker nodes into a single virtual system.\n- **Docker Compose vs Kubernetes**:\n  - **Docker Compose**: Minimal built-in support for high availability (HA) and fault tolerance.\n  - **Kubernetes**: Offers robust HA and self-healing features.\n- **macOS**: `docker-compose` is part of Docker Desktop for Mac, no explicit installation required.\n- **CLI Commands**:\n  - `patroni start <cluster_name>`\n  - `docker swarm init`\n  - `docker stack deploy -c docker-compose.yml my_stack`\n- **Latest Versions**:\n  - Check [Patroni GitHub](https://github.com/patroni/patroni) for the latest version.\n  - Docker Swarm and Kubernetes versions can be found on their respective official websites.\n- **Key Config Options**:\n  - For Patroni: `scope`, `name`, `restapi`, `postgresql`.\n  - For Docker Compose: `services`, `networks`, `volumes`, `deploy`.\n  - For Kubernetes: `replicas`, `strategy`, `resources`, `nodeSelector`.",
+    "source": "web_search",
+    "updated_at": 1781030166.3135808
+  },
+  "search:docker-compose-performance-tuning:high availability with docker _ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up --scale service_name=num_replicas`: Scales the specified service to run multiple instances.\n  - `docker-compose down --volumes`: Removes all containers, networks, and volumes created by docker-compose.\n\n- **Latest Versions**:\n  - Docker Compose: Latest version as of my last update is 1.29.2, but it's recommended to check the official [Docker Compose GitHub repository](https://github.com/docker/compose/releases) for the most current version.\n\n- **Key Config Options**:\n  - `replicas`: Specifies the number of instances to run.\n  - `restart`: Defines the restart policy (e.g., always, unless-stopped).\n  - `depends_on`: Ensures that a service is started before another.\n  - `networks`: Connects services to custom networks for communication.",
+    "source": "code_example",
+    "updated_at": 1781030172.8663354
+  }
+}
