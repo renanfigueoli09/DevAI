@@ -1,0 +1,22 @@
+{
+  "search:nextjs-prisma-performance:next.js prisma performance opt": {
+    "content": "- **CLI Commands**: \n  - `npx prisma generate`\n  - `prisma migrate dev --name init`\n\n- **Latest Versions**:\n  - Prisma: 4.x\n  - Next.js: 13.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Define data models and relations.\n  - `next.config.js`: Configure Next.js settings, including API routes and asset optimization.",
+    "source": "web_search",
+    "updated_at": 1781041809.9077156
+  },
+  "search:nextjs-prisma-performance:next.js prisma performance opt_ex": {
+    "content": "- Use `npx prisma init` to initialize a new Prisma project.\n- Install the latest version of Prisma using `npm install prisma@latest`.\n- Configure PrismaClient as a singleton for optimal performance:\n  ```javascript\n  import { PrismaClient } from '@prisma/client';\n\n  const prisma = new PrismaClient();\n\n  export default prisma;\n  ```\n- Utilize caching strategies in Next.js with Prisma Accelerate.\n- Monitor and optimize connection pools by adjusting the `max` and `idleTimeoutMillis` options:\n  ```javascript\n  const prisma = new PrismaClient({\n    datasources: {\n      db: {\n        url: process.env.DATABASE_URL,\n        options: {\n          max: 10, // Maximum number of connections in pool\n          idleTimeoutMillis: 30000, // Timeout for idle connections\n        },\n      },\n    },\n  });\n  ```\n- Regularly update Prisma and its dependencies to benefit from performance improvements and bug fixes.",
+    "source": "code_example",
+    "updated_at": 1781041816.6655543
+  },
+  "search:nextjs-prisma-performance:prisma with next.js best pract": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.10\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model.\n  - `next.config.js`: Customizes Next.js behavior, including API routes and static file serving.\n  - `.env.local`: Stores environment variables for sensitive information like database URLs.\n\n- **Best Practices**:\n  - Use a monorepo structure for better organization and dependency management.\n  - Implement dynamic data fetching using Prisma Client in serverless functions or getServerSideProps.\n  - Regularly run `npx prisma migrate dev` to keep your schema up-to-date with the database.",
+    "source": "web_search",
+    "updated_at": 1781041834.8027554
+  },
+  "search:nextjs-prisma-performance:prisma with next.js best pract_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest prisma-nextjs`\n  - `npm install @prisma/client`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - Prisma Client: v5.x\n  - Next.js: v13.5\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data models.\n  - `next.config.js`: Configure server components and middleware.\n  - `.env.local`: Set environment variables for database connection strings.",
+    "source": "code_example",
+    "updated_at": 1781041841.2753124
+  }
+}
