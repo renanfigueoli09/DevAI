@@ -12,11 +12,11 @@
   "search:spring+postgres:spring boot flyway hikaricp @t": {
     "content": "- **Flyway**: Use `mvn flyway:migrate` to run migrations.\n- **HikariCP**: No specific command, configured via application properties.\n- **@Transactional**: Ensure transactions are managed by Spring's transaction management system.\n- **Spring Boot Version**: 3.x (latest as of my last update).\n- **Flyway Version**: 7.x or later for best practices and features.\n- **HikariCP Configuration**:\n  - `spring.datasource.hikari.maximum-pool-size=10`\n  - `spring.datasource.hikari.minimum-idle=5`\n- **Database Migration File Naming**: Use version numbers (e.g., V1__Initial_schema.sql).\n- **Test Data Cleanup**: Use `@DataJpaTest` for in-memory database tests with automatic cleanup.\n- **Flyway Configuration**:\n  - `spring.flyway.locations=classpath:db/migration`\n  - `spring.flyway.baseline-on-migrate=true`",
     "source": "web_search",
-    "updated_at": 1781040611.5119004
+    "updated_at": 1781040766.072064
   },
   "search:spring+postgres:spring boot flyway hikaricp @t_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - Flyway: 9.10.1\n  - HikariCP: 5.0.1\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/yourdb`\n  - `spring.datasource.username=youruser`\n  - `spring.datasource.password=yourpass`\n  - `spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver`\n  - `spring.flyway.locations=classpath:/db/migration`\n  - `spring.hikari.maximum-pool-size=10`\n  - `spring.hikari.minimum-idle=5`",
     "source": "code_example",
-    "updated_at": 1781040615.7687266
+    "updated_at": 1781040769.6089683
   }
 }

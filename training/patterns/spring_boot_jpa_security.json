@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+jpa-security:spring boot jpa security best ": {
+    "content": "- **CLI Command:** `spring init --dependencies=web,security,jpa myproject`\n- **Latest Versions:** Spring Boot 3.0, Spring Security 6.0, JPA 2.2\n- **Key Config Options:**\n  - `application.properties`: \n    ```properties\n    spring.datasource.url=jdbc:postgresql://localhost:5432/mydb\n    spring.datasource.username=myuser\n    spring.datasource.password=mypassword\n    spring.jpa.hibernate.ddl-auto=update\n    spring.security.user.name=admin\n    spring.security.user.password=password\n    ```\n  - `SecurityConfig.java`:\n    ```java\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n        @Override\n        protected void configure(HttpSecurity http) throws Exception {\n            http.authorizeRequests()\n                .antMatchers(\"/api/public/**\").permitAll()\n                .anyRequest().authenticated();\n            http.csrf().disable();\n        }\n    }\n    ```",
+    "source": "web_search",
+    "updated_at": 1781040717.0517716
+  },
+  "search:spring-boot+jpa-security:spring boot jpa security best _ex": {
+    "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6, Postgres\n- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n- **Key Config Options**:\n  - JWT Authentication: Enable JWT in `application.properties` with `spring.security.jwt.enabled=true`.\n  - CORS Configuration: Set CORS properties in `application.properties` like `spring.mvc.cors.allowed-origins=*`.\n  - Role-Based Authorization: Define roles and permissions in Spring Security configuration.\n  - DTO Usage: Use Data Transfer Objects (DTOs) for API responses instead of entities.\n  - Lazy Fetching: Configure Hibernate to use `FetchType.LAZY` for improved performance.",
+    "source": "code_example",
+    "updated_at": 1781040724.781051
+  },
+  "search:spring-boot+jpa-security:spring boot jpa security oauth": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `docker-compose up`\n\n- **Latest Versions**:\n  - Spring Boot: 3.5.6\n  - Spring Security: 6.2.0\n  - PostgreSQL: 14.x\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for database and security configurations.\n  - JWT secret key in `application.yml`.\n  - OAuth2 client ID and secret in `application.yml`.",
+    "source": "web_search",
+    "updated_at": 1781040733.8701632
+  },
+  "search:spring-boot+jpa-security:spring boot jpa security oauth_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn archetype:generate -DgroupId=com.example -DartifactId=spring-boot-oauth2 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`\n  \n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Spring Security: 6.1.4\n  - OAuth2: 2.0\n  \n- **Key Config Options**:\n  - `application.yml`:\n    ```yaml\n    spring:\n      security:\n        oauth2:\n          client:\n            registration:\n              google:\n                client-id: YOUR_GOOGLE_CLIENT_ID\n                client-secret: YOUR_GOOGLE_CLIENT_SECRET\n                redirect-uri: \"{baseUrl}/login/oauth2/code/{registrationId}\"\n                scope: profile, email\n            provider:\n              google:\n                authorizationUri: https://accounts.google.com/o/oauth2/auth\n                tokenUri: https://oauth2.googleapis.com/token\n                userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo\n    ```\n  - `pom.xml` dependencies:\n    ```xml\n    <dependencies>\n      <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-security</artifactId>\n      </dependency>\n      <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>\n      </dependency>\n    </dependencies>\n    ```",
+    "source": "code_example",
+    "updated_at": 1781040744.7351882
+  }
+}
