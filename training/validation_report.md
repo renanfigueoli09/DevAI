@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 20:19*
+*2026-06-09 20:35*
 
-## Score: 91% `[██████████████████░░]`  (48.0/53.0)
+## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
-### Knowledge Check (vector store): 34.0/39.0
+### Knowledge Check (vector store): 32.0/37.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -22,8 +22,6 @@
 | kubernetes + redis: cache | 1.0/1 | ✅ |
 | django-redis-cache-performance: cache | 1.0/1 | ✅ |
 | typescript-graphql-nestjs: padrões de código | 1.0/1 | ✅ |
-| typescript-nextjs-authentication-jwt: padrões de código | 1.0/1 | ✅ |
-| typescript + prisma: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
