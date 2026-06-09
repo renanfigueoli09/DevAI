@@ -1,0 +1,22 @@
+{
+  "search:fastapi+pydantic-performance:fastapi pydantic performance o": {
+    "content": "- Use `wrk` or `ab` for performance testing.\n- Upgrade FastAPI and Pydantic to their latest versions.\n- Apply data validation strategies in Pydantic models.\n- Implement batch database queries instead of individual ones.\n- Utilize ASGI servers like Uvicorn for better performance.\n- Enable Pydantic's `lazy_evaluation` option.\n- Use `asyncio` for asynchronous operations.\n- Optimize serialization by reducing unnecessary validations.\n- Monitor and profile the application using tools like `cProfile`.\n- Regularly update dependencies to benefit from performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781018690.5576453
+  },
+  "search:fastapi+pydantic-performance:fastapi pydantic performance o_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app in development mode.\n  \n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Pydantic: 1.10.7\n  \n- **Key Config Options**:\n  - `dependencies`: For dependency injection.\n  - `responses`: To define custom responses for endpoints.\n  - `tags`: For grouping related API endpoints in the documentation.",
+    "source": "code_example",
+    "updated_at": 1781018699.9013913
+  },
+  "search:fastapi+pydantic-performance:fastapi pydantic validation st": {
+    "content": "- **GitHub Repository**: [pydantic/pydantic](https://github.com/pydantic/pydantic)\n- **FastAPI Pydantic Compatibility**: Seamless integration for data validation and parsing.\n- **Latest Version**: Check the repository or use `pip install pydantic --upgrade` to get the latest version.\n- **Key Config Options**:\n  - `BaseModel`: Define your data models using Python type hints.\n  - `Field`: Use to specify additional metadata like default values, descriptions, etc.\n  - `validator`: Decorator for custom validation logic.\n- **CLI Commands**:\n  - `pip install pydantic` to install Pydantic.\n  - `pip install fastapi[all]` to install FastAPI with all dependencies including Pydantic.\n- **Documentation**: [Pydantic Documentation](https://pydantic-docs.helpmanual.io/)\n- **FastAPI Documentation**: [FastAPI Documentation](https://fastapi.tiangolo.com/)",
+    "source": "web_search",
+    "updated_at": 1781018709.9372485
+  },
+  "search:fastapi+pydantic-performance:fastapi pydantic validation st_ex": {
+    "content": "- **CLI Commands**: `fastapi create`\n- **Latest Versions**: FastAPI v0.85.2, Pydantic v1.9.4\n- **Key Config Options**:\n  - `app = FastAPI()`\n  - `pydantic_settings = Settings()`\n  - `@app.get(\"/items/{item_id}\")`",
+    "source": "code_example",
+    "updated_at": 1781018724.5464354
+  }
+}
