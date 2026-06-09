@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 14:45*
+*2026-06-09 15:10*
 
-## Score: 90% `[██████████████████░░]`  (45.0/50.0)
+## Score: 90% `[██████████████████░░]`  (47.0/52.0)
 
-### Knowledge Check (vector store): 31.0/36.0
+### Knowledge Check (vector store): 33.0/38.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,8 +19,10 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| RabbitMQ + kafka-streams-advanced: producer consumer | 1.0/1 | ✅ |
+| python-django-redis: cache | 1.0/1 | ✅ |
+| kafka + kstream-advanced-topics: producer consumer | 1.0/1 | ✅ |
 | typescript-nextjs-prisma-authentication: padrões de código | 1.0/1 | ✅ |
-| Advanced Error Handling in Django  +  PostgreSQL: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
