@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-redis:kubernetes redis deployment an": {
+    "content": "- Deploy Redis Enterprise Software for Kubernetes using `kubectl get deployment redis-enterprise-operator`.\n- Check operator status with `kubectl get deployment redis-enterprise-operator`.\n- For autoscaling, use KEDA's Redis List Scaler.\n- Define a job template for the ScaledJob.\n- Ensure your Deployment is ready before targeting it with ScaledObject.\n- Deploy Redis to Kubernetes using YAML files.\n- Install telnet on Raspberry Pi 4 for connectivity checks.\n- Connect to Redis instance using `telnet redis.cube.local 6379`.\n- Example: Deploy PHP Guestbook app with a single-instance Redis.",
+    "source": "web_search",
+    "updated_at": 1781015417.846574
+  },
+  "search:kubernetes-redis:kubernetes redis deployment an_ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Redis on Kubernetes.\n- Ensure the ConfigMap is correctly applied using `kubectl apply -f configmap.yaml`.\n- For storage, create a StorageClass with `kubectl apply -f storageclass.yaml`.\n- Deploy the PHP Guestbook application with Redis by applying the respective YAML files: `kubectl apply -f guestbook.yaml`, `kubectl apply -f redis-deployment.yaml`, and `kubectl apply -f redis-service.yaml`.\n- Scale Redis deployment using `kubectl scale deployment <deployment-name> --replicas=<number-of-replicas>`.",
+    "source": "code_example",
+    "updated_at": 1781015423.3713677
+  },
+  "search:kubernetes-redis:redis performance optimization": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale deployment <deployment-name> --replicas=<number>`\n  - `kubectl apply -f <filename>.yaml`\n  \n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - Redis: 7.0.x\n  \n- **Key Config Options**:\n  - Resource Requests and Limits in Pod Spec\n  - Use of StatefulSets for Redis\n  - PersistentVolumeClaims for data persistence\n  - Configuring Redis to use AOF or RDB for persistence",
+    "source": "web_search",
+    "updated_at": 1781015434.0820782
+  },
+  "search:kubernetes-redis:redis performance optimization_ex": {
+    "content": "- Use `kubectl top node` to monitor resource usage.\n- Apply Redis performance optimizations using the `redis.conf` file.\n- Set `maxmemory-policy allkeys-lru` for memory management.\n- Enable persistence with RDB snapshots by setting `save 900 1`.\n- Scale Redis horizontally by deploying multiple instances in Kubernetes.\n- Use `kubectl scale deployment redis --replicas=3` to increase replicas.\n- Monitor Redis performance using `redis-cli info stats`.\n- Adjust `maxclients` based on expected load.\n- Implement network policies for isolation and security.",
+    "source": "code_example",
+    "updated_at": 1781015450.3398733
+  }
+}

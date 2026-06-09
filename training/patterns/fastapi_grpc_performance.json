@@ -1,0 +1,22 @@
+{
+  "search:fastapi-grpc-performance:fastapi grpc integration 2025": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi grpcio`\n  - `fastapi-grpc-bridge --version`\n\n- **Latest Versions**:\n  - FastAPI: v0.97.0\n  - gRPC: v1.54.2\n  - fastapi-grpc-bridge: v0.3.1\n\n- **Key Config Options**:\n  - `host`: Define the host for your FastAPI server.\n  - `port`: Specify the port number for your FastAPI server.\n  - `protocol_buffer_path`: Path to the Protocol Buffer definitions generated from Pydantic models.\n  - `service_name`: Name of the gRPC service.",
+    "source": "web_search",
+    "updated_at": 1781015466.6094844
+  },
+  "search:fastapi-grpc-performance:fastapi grpc integration 2025_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi grpcio`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - gRPC: 1.48.2\n\n- **Key Config Options**:\n  - `host`: Set the host address for the server.\n  - `port`: Specify the port number for the server.\n  - `debug`: Enable debug mode for development.\n\nFor more detailed integration, refer to the provided links for code examples and ASCII diagrams.",
+    "source": "code_example",
+    "updated_at": 1781015483.184821
+  },
+  "search:fastapi-grpc-performance:grpc performance tuning with f": {
+    "content": "- Use `fastgrpc` library for seamless gRPC integration in FastAPI.\n- Install latest version of `fastgrpc`: `pip install fastgrpc==latest_version`.\n- Configure channel tuning with flags like `--channel_options max_send_message_length=52428800,max_receive_message_length=52428800`.\n- Set deadlines for requests using `deadline` parameter in gRPC calls.\n- Implement streaming for efficient data transfer between services.\n- Optimize payload design by minimizing unnecessary data and using efficient serialization formats.\n- Enable observability with Prometheus or similar tools to monitor gRPC performance.\n- Use async all the way approach for handling requests asynchronously.\n- Ensure FastAPI app is compatible with Python 3.7+ for best performance.\n- Regularly update dependencies and libraries to benefit from latest optimizations and security patches.",
+    "source": "web_search",
+    "updated_at": 1781015491.306346
+  },
+  "search:fastapi-grpc-performance:grpc performance tuning with f_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi run app --reload`\n  - `uvicorn app.main:app --host 0.0.0.0 --port 8000`\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `async def read_items()`: Define asynchronous endpoints.\n  - `@app.get(\"/items/{item_id}\")`: Use path parameters.\n  - `response_model=Item`: Specify response model for validation and serialization.\n  - `dependencies=[Depends(get_db)]`: Add dependencies to endpoints.",
+    "source": "code_example",
+    "updated_at": 1781015497.8088593
+  }
+}
