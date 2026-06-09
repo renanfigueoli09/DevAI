@@ -1,7 +1,50 @@
 {
-  "generated_at": 1781035495.099373,
+  "generated_at": 1781036419.6585112,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "kafka-streams-python: producer consumer",
+      "queries": [
+        "kafka-streams-python producer consumer example"
+      ],
+      "must_find": [
+        "kafka",
+        "producer"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kafka-streams-python"
+    },
+    {
+      "name": "typescript-graphql-authentication: padrões de código",
+      "queries": [
+        "typescript-graphql-authentication pattern code example",
+        "typescript-graphql-authentication"
+      ],
+      "must_find": [
+        "@latest",
+        "@realtime"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-graphql-authentication"
+    },
+    {
+      "name": "kubernetes-redis-cache: cache",
+      "queries": [
+        "kubernetes-redis-cache cache redis example"
+      ],
+      "must_find": [
+        "redis",
+        "cache"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kubernetes-redis-cache"
+    },
     {
       "name": "golang-mongo-go-driver-advanced: não usa TypeORM",
       "queries": [
@@ -33,21 +76,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "Optimizing NGRX Store with Angular"
-    },
-    {
-      "name": "Testing Patterns for TypeScript and Jest Unit Testing: padrões de código",
-      "queries": [
-        "Testing Patterns for TypeScript and Jest Unit Testing pattern code example",
-        "Testing Patterns for TypeScript and Jest Unit Testing"
-      ],
-      "must_find": [
-        "@testing",
-        "@types"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "Testing Patterns for TypeScript and Jest Unit Testing"
     }
   ]
 }
