@@ -1,0 +1,32 @@
+{
+  "search:go+mongo-go-migrate:go mongodb crud operations 202": {
+    "content": "- **CLI Commands**:\n  - `mongo` to start the MongoDB shell.\n  - `mongosh` for the modern JavaScript-based shell.\n\n- **Latest Versions**:\n  - MongoDB Server: v6.0\n  - Go Driver: v1.2.3\n\n- **Key Config Options**:\n  - Connection String: `mongodb://username:password@host:port/database`\n  - Authentication Database: `admin`\n  - Replica Set: `rs0`\n\n- **Go Example Code Snippet**:\n  ```go\n  package main\n\n  import (\n      \"context\"\n      \"fmt\"\n      \"log\"\n\n      \"go.mongodb.org/mongo-driver/bson\"\n      \"go.mongodb.org/mongo-driver/mongo\"\n      \"go.mongodb.org/mongo-driver/mongo/options\"\n  )\n\n  func main() {\n      clientOptions := options.Client().ApplyURI(\"mongodb://localhost:27017\")\n      client, err := mongo.Connect(context.TODO(), clientOptions)\n      if err != nil {\n          log.Fatal(err)\n      }\n\n      collection := client.Database(\"testdb\").Collection(\"users\")\n\n      // Insert a document\n      insertResult, err := collection.InsertOne(context.TODO(), bson.D{{\"name\", \"John Doe\"}, {\"age\", 30}})\n      if err != nil {\n          log.Fatal(err)\n      }\n      fmt.Println(\"Inserted document with ID:\", insertResult.InsertedID)\n\n      // Close the connection\n      err = client.Disconnect(context.TODO())\n      if err != nil {\n          log.Fatal(err)\n      }\n  }\n  ```",
+    "source": "web_search",
+    "updated_at": 1781029860.004865
+  },
+  "search:go+mongo-go-migrate:go mongodb crud operations 202_ex": {
+    "content": "- **CLI Commands**:\n  - `go mod init <module_name>`\n  - `go get go.mongodb.org/mongo-driver/mongo`\n  - `go get go.mongodb.org/mongo-driver/mongo/options`\n\n- **Latest Versions**:\n  - Go: v1.20.4 (as of my last update)\n  - MongoDB Driver for Go: v1.13.0\n\n- **Key Config Options**:\n  - Connection URI: `mongodb://<username>:<password>@<host>:<port>/<database>`\n  - Database Name: `<database_name>`\n  - Collection Name: `<collection_name>`",
+    "source": "code_example",
+    "updated_at": 1781029866.180125
+  },
+  "search:go+mongo-go-migrate:go mongodb migrations with go-": {
+    "content": "- **CLI Commands**:\n  - `migrate create --ext sql --dir db/migrations --seq init`: Creates a new migration file.\n  - `migrate up`: Applies all migrations that have not yet been applied.\n  - `migrate down`: Reverses the last applied migration.\n\n- **Latest Versions**:\n  - Go-Migrate: v4.10.2\n  - MongoDB Driver: v1.6.3\n\n- **Key Config Options**:\n  - `--source file://db/migrations`: Specifies the directory containing migration files.\n  - `--database mongodb://user:password@localhost:27017/mydb`: Specifies the database connection string.\n  - `--driver mongodb`: Specifies the driver to use for MongoDB migrations.",
+    "source": "web_search",
+    "updated_at": 1781029893.7658434
+  },
+  "search:go+mongo-go-migrate:go mongodb migrations with go-_ex": {
+    "content": "- Use `go run cmd/migrations/main.go down` to execute migrations downwards.\n- To handle MongoDB migrations in Go, use the `migrate` library with the MongoDB driver.\n- Write migrations as Go scripts for better control and readability.\n- Ensure all keys in migration commands are quoted.\n- Check the `migrations` collection to see if the last migration was successful before executing pending ones.\n- For JSON format migrations, ensure each command is executed in a separate request.",
+    "source": "code_example",
+    "updated_at": 1781029899.1413872
+  },
+  "search:go+mongo-go-migrate:go mongodb performance optimiz": {
+    "content": "- Use `mongostat` to monitor MongoDB performance.\n- Optimize queries by creating indexes on frequently queried fields.\n- Utilize projections to limit the amount of data returned in queries.\n- Set query limits with `.Limit(n)` for efficient pagination.\n- Regularly update MongoDB and Go drivers to latest versions.\n- Configure `wiredTigerCacheSizeGB` based on system memory.\n- Use `db.collection.stats()` to analyze collection performance.\n- Implement sharding for large datasets across multiple servers.\n- Monitor and adjust `maxConcurrentWriteOperations` as needed.",
+    "source": "web_search",
+    "updated_at": 1781029910.0251777
+  },
+  "search:go+mongo-go-migrate:go mongodb performance optimiz_ex": {
+    "content": "- **CLI Commands**: Use `mongostat` and `mongotop` to monitor performance.\n- **Latest Versions**: MongoDB 6.x is recommended for its improved performance features.\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjust based on system memory.\n  - `storage.wiredTiger.engineConfig.cache_size_percent`: Set cache size percentage.\n  - `net.maxIncomingConnections`: Increase if necessary.\n  - `operationProfiling.mode`: Enable profiling for performance analysis.",
+    "source": "code_example",
+    "updated_at": 1781029915.169383
+  }
+}

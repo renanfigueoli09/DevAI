@@ -1,0 +1,32 @@
+{
+  "search:typescript+express-mongoose:typescript express mongoose cr": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose typescript @types/express @types/mongoose --save`\n  - `npx tsc --init` to initialize a TypeScript configuration file\n\n- **Latest Versions**:\n  - Express: v4.18.2\n  - Mongoose: v6.9.0\n  - TypeScript: v5.0.4\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure paths, compiler options, and include/exclude files.\n  - `.env` or environment variables for database connection strings and other sensitive information.\n  - Express middleware for handling requests (e.g., body-parser, cors).\n  - Mongoose schemas and models to define data structures.",
+    "source": "web_search",
+    "updated_at": 1781029793.8150787
+  },
+  "search:typescript+express-mongoose:typescript express mongoose cr_ex": {
+    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express mongoose typescript @types/express @types/mongoose ts-node-dev --save-dev` for dependencies.\n\n- **Latest Versions**:\n  - Express: v4.18.2\n  - Mongoose: v7.3.0\n  - TypeScript: v5.1.6\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript compiler options.\n    ```json\n    {\n      \"compilerOptions\": {\n        \"target\": \"ES6\",\n        \"module\": \"commonjs\",\n        \"strict\": true,\n        \"esModuleInterop\": true,\n        \"skipLibCheck\": true,\n        \"forceConsistentCasingInFileNames\": true\n      },\n      \"include\": [\"src\"]\n    }\n    ```\n  - `server.ts`: Entry point for the Express application.\n    ```typescript\n    import express from 'express';\n    import mongoose from 'mongoose';\n\n    const app = express();\n    const port = process.env.PORT || 3000;\n\n    // Connect to MongoDB using Mongoose\n    mongoose.connect('mongodb://localhost:27017/mydatabase', {\n      useNewUrlParser: true,\n      useUnifiedTopology: true,\n    });\n\n    // Define a simple schema and model\n    const userSchema = new mongoose.Schema({\n      name: String,\n      email: String,\n    });\n    const User = mongoose.model('User', userSchema);\n\n    // CRUD operations\n    app.get('/users', async (req, res) => {\n      const users = await User.find();\n      res.json(users);\n    });\n\n    app.post('/users', async (req, res) => {\n      const newUser = new User(req.body);\n      await newUser.save();\n      res.status(201).json(newUser);\n    });\n\n    // Start the server\n    app.listen(port, () => {\n      console.log(`Server is running on port ${port}`);\n    });\n    ```",
+    "source": "code_example",
+    "updated_at": 1781029815.4474857
+  },
+  "search:typescript+express-mongoose:typescript express mongoose va": {
+    "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - `mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })`",
+    "source": "web_search",
+    "updated_at": 1781029821.7052681
+  },
+  "search:typescript+express-mongoose:typescript express mongoose va_ex": {
+    "content": "- **GitHub Repository**: [G-Mursalin/express-typescript-mongoose-starter](https://github.com/G-Mursalin/express-typescript-mongoose-starter)\n- **Latest Mongoose Version**: v9.6.3\n- **Key Config Options**:\n  - `pre('save')`: Registers validation as a pre-save hook.\n  - `updateOne()`, `updateMany()`, `findOneAndUpdate()`: Support validation for updates.\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n  - `npm install @types/mongoose@latest`",
+    "source": "code_example",
+    "updated_at": 1781029829.059643
+  },
+  "search:typescript+express-mongoose:typescript express mongoose se": {
+    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install typescript @types/node express mongoose jsonwebtoken dotenv --save`\n  - `npx tsc --init` to create a TypeScript configuration file.\n\n- **Latest Versions**:\n  - TypeScript: v5.1.6\n  - Express: v4.18.2\n  - Mongoose: v7.3.0\n  - jsonwebtoken: v9.1.4\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure compiler options like target, module, and strict mode.\n  - `.env`: Store environment variables for JWT secret, MongoDB URI, etc.\n  - `app.ts`: Set up Express server with middleware (e.g., body-parser, CORS).\n  - `models/User.ts`: Define Mongoose schema for User model.\n  - `routes/auth.ts`: Implement routes for user authentication using JWT.",
+    "source": "web_search",
+    "updated_at": 1781029841.155466
+  },
+  "search:typescript+express-mongoose:typescript express mongoose se_ex": {
+    "content": "- **CLI Commands**:\n  - `npm init express-ts` to create a new TypeScript Express project.\n  - `npm install mongoose @types/mongoose --save` for MongoDB integration.\n  - `npm install zod --save` for data validation.\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - npm: 9.x\n  - TypeScript: 5.x\n  - Express: 4.18.x\n  - Mongoose: 6.x\n  - ZOD: 3.x\n\n- **Key Config Options**:\n  - `tsconfig.json` for TypeScript configuration.\n  - `.env` for environment variables.\n  - `app.ts` or `server.ts` as the entry point.\n  - `mongoose.connect()` with connection URI and options.",
+    "source": "code_example",
+    "updated_at": 1781029847.2413912
+  }
+}
