@@ -1,0 +1,22 @@
+{
+  "search:fastapi-asyncio-middleware:fastapi asyncio middleware usa": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run FastAPI applications.\n  - Example: `uvicorn main:app --reload`\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Starlette: v0.21.3\n  \n- **Key Config Options**:\n  - Middleware: Define custom middleware in your FastAPI app.\n    ```python\n    from fastapi import FastAPI, Request\n\n    app = FastAPI()\n\n    @app.middleware(\"http\")\n    async def add_process_time_header(request: Request, call_next):\n        start_time = time.time()\n        response = await call_next(request)\n        process_time = time.time() - start_time\n        response.headers[\"X-Process-Time\"] = str(process_time)\n        return response\n    ```\n  - Rate Limiting Middleware:\n    ```python\n    from fastapi import FastAPI, HTTPException, Request\n    from fastapi.middleware.cors import CORSMiddleware\n\n    app = FastAPI()\n\n    @app.middleware(\"http\")\n    async def rate_limit_middleware(request: Request, call_next):\n        # Implement rate limiting logic here\n        pass\n    ```\n  - CORS Middleware:\n    ```python\n    app.add_middleware(\n        CORSMiddleware,\n        allow_origins=[\"*\"],\n        allow_credentials=True,\n        allow_methods=[\"*\"],\n        allow_headers=[\"*\"],\n    )\n    ```\n\n- **Performance Optimization**:\n  - Use `asyncio` for asynchronous operations.\n  - Implement middleware to handle common tasks like logging, rate limiting, and CORS.\n\nThese actionable facts should help developers effectively use FastAPI's middleware and asyncio features for building high-performance APIs.",
+    "source": "web_search",
+    "updated_at": 1781015571.505169
+  },
+  "search:fastapi-asyncio-middleware:fastapi asyncio middleware usa_ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For Redis rate limiting, use `redis.asyncio as redis`.\n- Import middleware with `from fastapi import FastAPI` and apply it with `app.add_middleware(RateLimitMiddleware)`.\n- Test rate-limiting using a tool like Ratelimit Tester for concurrent connections and requests.\n- Example of async code in FastAPI:\n  ```python\n  from fastapi import FastAPI\n  import time\n  import datetime\n  import asyncio\n\n  app = FastAPI()\n\n  @app.get(\"/\")\n  async def read_root():\n      start_time = time.time()\n      await asyncio.sleep(1)\n      process_time = time.time() - start_time\n      return {\"Hello\": \"World\", \"Process Time\": f\"{process_time} seconds\"}\n  ```",
+    "source": "code_example",
+    "updated_at": 1781015579.2387354
+  },
+  "search:fastapi-asyncio-middleware:performance optimization with ": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install the latest version of FastAPI and Uvicorn using pip:\n  ```bash\n  pip install fastapi uvicorn\n  ```\n- Implement middleware for performance optimization, such as the one mentioned in [1].\n- Monitor and analyze performance bottlenecks with tools like `uvicorn`'s built-in profiling capabilities or third-party solutions.\n- Consider caching strategies to reduce database load, as suggested in [4].\n- Optimize async operations within your FastAPI endpoints to improve response times.\n- Regularly update FastAPI and Uvicorn to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781015587.8008199
+  },
+  "search:fastapi-asyncio-middleware:performance optimization with _ex": {
+    "content": "- Use FastAPI's built-in profiling middleware to identify bottlenecks.\n- Implement custom middleware for logging and request/response processing.\n- Update FastAPI to the latest version for performance improvements.\n- Configure ASGI server settings, e.g., Uvicorn with `--limit-max-requests` and `--timeout-keep-alive`.\n- Use caching mechanisms like Redis or Memcached to reduce database queries.\n- Optimize database queries by indexing and using efficient query patterns.\n- Enable Gzip compression in your ASGI server for faster data transfer.\n- Monitor application performance using tools like Prometheus and Grafana.\n- Regularly update dependencies and security patches.",
+    "source": "code_example",
+    "updated_at": 1781015601.2346232
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:docker-compose-best-practices:docker compose best practices": {
+    "content": "- Use `docker-compose up` to start services defined in the current directory's docker-compose.yml file.\n- Specify Docker Compose version in your project using `version: '3.8'` for compatibility with latest features.\n- Utilize environment variables securely by avoiding sensitive data directly in files; use Docker Secrets instead.\n- Understand and manage environment variable precedence to avoid conflicts between services.\n- Organize monorepo microservices into separate folders, each with its own Dockerfile for independent builds.\n- Use `docker-compose down` to stop and remove containers, networks, volumes, and images created by docker-compose up.\n- For production environments, consider using a centralized root docker-compose.yml file for managing multiple services.\n- Implement aliasing in Docker Compose files to handle slight variations between development and production configurations.\n- Regularly update Docker Compose and related tools to benefit from the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1781015618.4758873
+  },
+  "search:docker-compose-best-practices:docker compose best practices_ex": {
+    "content": "- Use `docker-compose up` to start services defined in the current directory's `docker-compose.yml`.\n- Utilize `docker-compose down` to stop and remove containers, networks, volumes, and images created by `docker-compose up`.\n- For scaling services, use `docker-compose up --scale <service_name>=<number_of_instances>`.\n- To manage environment variables, define them in a `.env` file or directly in the `docker-compose.yml`.\n- Leverage Docker Compose profiles for managing different environments (e.g., development, production) with separate configurations.\n- Use secrets management features like Docker Secrets to securely store sensitive data such as passwords and API keys.\n- Ensure your `docker-compose.yml` is versioned and stored in a source control system like Git.\n- Regularly update Docker Compose and its dependencies to benefit from the latest features and security patches.\n- For complex applications, consider using Docker Compose profiles to manage different configurations for development, testing, and production environments.",
+    "source": "code_example",
+    "updated_at": 1781015625.320051
+  },
+  "search:docker-compose-best-practices:advanced docker compose config": {
+    "content": "- **Latest Version**: Docker Compose v2.x is recommended.\n  \n- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the compose file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by docker-compose.\n  - `docker-compose build`: Builds or rebuilds services defined in the compose file.\n  - `docker-compose ps`: Lists containers for services defined in the compose file.\n\n- **Key Config Options**:\n  - `services`: Defines the services to run.\n  - `networks`: Defines networks to connect services.\n  - `volumes`: Defines volumes to persist data.\n  - `build`: Specifies build context and Dockerfile.\n  - `ports`: Maps ports between host and containers.\n  - `environment`: Sets environment variables.\n\n- **Advanced Features**:\n  - **Service Dependencies**: Define dependencies between services using `depends_on`.\n  - **Health Checks**: Use `healthcheck` to monitor service health.\n  - **Secrets Management**: Manage sensitive data using Docker secrets.\n  - **Build Args**: Pass build-time arguments to the builder.\n\n- **Best Practices**:\n  - Use `.env` files for environment variables.\n  - Separate development and production configurations.\n  - Regularly update Docker Compose and dependencies.",
+    "source": "web_search",
+    "updated_at": 1781015643.8959675
+  },
+  "search:docker-compose-best-practices:advanced docker compose config_ex": {
+    "content": "- **CLI Commands**: `docker-compose up`, `docker-compose down`, `docker-compose config`\n- **Latest Version**: Check [Docker Compose GitHub](https://github.com/docker/compose/releases) for the latest version.\n- **Key Config Options**:\n  - `services`: Define services (containers).\n  - `networks`: Configure networks.\n  - `volumes`: Manage data volumes.\n  - `build`: Build images from Dockerfiles.\n  - `environment`: Set environment variables.",
+    "source": "code_example",
+    "updated_at": 1781015649.2433202
+  }
+}
