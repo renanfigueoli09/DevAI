@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-entityframeworkcore-sqlite:entity framework core with sql": {
+    "content": "- Install SQLite provider via NuGet: `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n- Ensure latest Entity Framework Core version: `dotnet tool update --global dotnet-ef`\n- Configure DbContext in `Startup.cs`:\n  ```csharp\n  services.AddDbContext<ApplicationDbContext>(options =>\n      options.UseSqlite(Configuration.GetConnectionString(\"DefaultConnection\")));\n  ```\n- Add connection string to `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Data Source=yourdatabase.db\"\n  }\n```\n- Scaffold DbContext and entities using EF Core CLI: `dotnet ef dbcontext scaffold \"Data Source=yourdatabase.db\" Microsoft.EntityFrameworkCore.Sqlite -o Models`\n- Run migrations to create/update database schema: `dotnet ef migrations add InitialCreate` followed by `dotnet ef database update`\n\nKey config options:\n- Connection string (`Data Source`)\n- Migrations settings\n- Logging level",
+    "source": "web_search",
+    "updated_at": 1781045031.3193126
+  },
+  "search:dotnet-core-entityframeworkcore-sqlite:entity framework core with sql_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new console -n EFCoreSQLiteExample`\n  - `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n  - `dotnet add package Microsoft.EntityFrameworkCore.Design`\n\n- **Latest Versions**:\n  - .NET Core: 6.x\n  - Entity Framework Core: 6.x\n\n- **Key Config Options**:\n  - Connection String: `options.UseSqlite(\"Data Source=yourdatabase.db\")`\n  - DbContext Configuration: \n    ```csharp\n    public class YourDbContext : DbContext\n    {\n        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n        {\n            optionsBuilder.UseSqlite(\"Data Source=yourdatabase.db\");\n        }\n    }\n  ```\n  - Migration Commands:\n    - `dotnet ef migrations add InitialCreate`\n    - `dotnet ef database update`",
+    "source": "code_example",
+    "updated_at": 1781045043.191538
+  },
+  "search:dotnet-core-entityframeworkcore-sqlite:sqlite performance tuning for ": {
+    "content": "- **CLI Commands**: Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- **Latest Versions**: Ensure using the latest Entity Framework Core and SQLite packages.\n- **Key Config Options**:\n  - `AddDbContextPool` with a suitable `poolSize`.\n  - Configure `MaxBatchSize` for bulk operations.\n  - Use `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` when not tracking entities.\n  - Enable `ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;` globally.",
+    "source": "web_search",
+    "updated_at": 1781045060.0153382
+  },
+  "search:dotnet-core-entityframeworkcore-sqlite:sqlite performance tuning for _ex": {
+    "content": "- **Install SQLite Provider**: `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`\n- **Update DbContext**: Ensure your `DbContext` uses the SQLite provider.\n- **Configure Connection String**: Set the connection string in `appsettings.json`.\n- **Migrations**: Use `Add-Migration InitialCreate` and `Update-Database` to create and apply migrations.\n- **Key Config Options**:\n  - `MaxBatchSize`: Controls the maximum number of commands sent to SQLite in a single batch.\n  - `Cache Size`: Adjusts the cache size for better performance.\n  - `Foreign Keys Enabled`: Ensures foreign key constraints are enforced.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Latest Versions**: Ensure using the latest versions of Entity Framework Core and SQLite provider to benefit from bug fixes and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781045067.8347623
+  }
+}

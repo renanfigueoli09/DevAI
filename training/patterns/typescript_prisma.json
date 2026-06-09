@@ -1,0 +1,32 @@
+{
+  "search:typescript+prisma:typescript prisma orm tutorial": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n  - `prisma generate`: Generates Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: 7.x\n  - Node.js: LTS (e.g., v18)\n  - TypeScript: 5.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and database connection.\n  - `prisma.yml`: Configuration file for Prisma Migrate.\n  - Environment variables (`DATABASE_URL`) to specify the database connection string.",
+    "source": "web_search",
+    "updated_at": 1781044967.8501928
+  },
+  "search:typescript+prisma:typescript prisma orm tutorial_ex": {
+    "content": "- Install Prisma ORM using `yarn add --dev prisma@alpha`\n- Initialize Prisma project with `npx prisma init`\n- Configure TypeScript in your project by creating a `tsconfig.json` file\n- Add necessary dependencies: `yarn add graphql-resolver-codegen@beta ts-node typescript`\n- Install Prisma libraries and GraphQL packages: `yarn add prisma-lib graphql graphql-yoga`\n- Use `npx prisma generate` to generate Prisma Client based on your schema\n- Run Prisma Studio with `npx prisma studio`\n- Utilize TypeScript for type-safe queries and mutations in your API",
+    "source": "code_example",
+    "updated_at": 1781044975.1361377
+  },
+  "search:typescript+prisma:prisma migrations for typescri": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `npx prisma migrate dev --name init`: Creates a new migration based on the schema changes.\n  - `npx prisma generate`: Generates Prisma Client based on the current schema.\n\n- **Latest Versions**:\n  - Prisma: v5.0.0\n  - Prisma Client: v5.0.0\n  - Prisma Migrate: v1.0.0\n\n- **Key Config Options**:\n  - `schema`: Defines your data model.\n  - `datasource`: Specifies the database connection details.\n  - `generator client`: Configuration for generating Prisma Client.",
+    "source": "web_search",
+    "updated_at": 1781044985.2028065
+  },
+  "search:typescript+prisma:prisma migrations for typescri_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init`: Initializes a new migration.\n  - `npx prisma generate`: Generates the Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - Node.js: LTS (LTS versions recommended)\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prismaClientOptions`: Customizes the behavior of the Prisma Client.",
+    "source": "code_example",
+    "updated_at": 1781045002.7012677
+  },
+  "search:typescript+prisma:prisma client in typescript ap": {
+    "content": "- Install Prisma Client: `npm install @prisma/client`\n- Initialize Prisma project: `npx prisma init`\n- Generate Prisma Client: `npx prisma generate`\n- Create a Prisma schema file (`schema.prisma`): \n  ```prisma\n  datasource db {\n    provider = \"mongodb\"\n    url      = env(\"DATABASE_URL\")\n  }\n\n  generator client {\n    provider = \"prisma-client-js\"\n  }\n  ```\n- Set environment variable for database URL: `DATABASE_URL=mongodb://user:password@localhost:27017/mydb`\n- Run migrations: `npx prisma migrate dev --name init`",
+    "source": "web_search",
+    "updated_at": 1781045011.3913264
+  },
+  "search:typescript+prisma:prisma client in typescript ap_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.10.0\n  - Prisma Migrate: v2.8.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model.\n  - `prismaClientOptions`: Customizes the behavior of the Prisma Client, e.g., enabling or disabling logging.\n  - `datasource url`: Specifies the database connection string.",
+    "source": "code_example",
+    "updated_at": 1781045020.0306358
+  }
+}
