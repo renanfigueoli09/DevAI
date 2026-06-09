@@ -28,5 +28,15 @@
     "content": "- **CLI Commands**: `npx create-next-app@latest --typescript`\n- **Latest Versions**: Next.js v13.5, TypeScript v4.9\n- **Key Config Options**:\n  - `tsconfig.json`: Configure compiler options like `\"strict\": true`, `\"esModuleInterop\": true`.\n  - `next.config.js`: Enable TypeScript by setting `compilerOptions` in the `typescript` plugin.\n  - VSCode: Install \"TypeScript and JavaScript Language Features\" extension.",
     "source": "code_example",
     "updated_at": 1780943316.631386
+  },
+  "search:typescript-nextjs-performance:nextjs performance optimizatio": {
+    "content": "- **CLI Commands**:\n  - `next build`: Build your Next.js app.\n  - `next start`: Start the production server.\n\n- **Latest Versions**:\n  - Next.js: v13.x\n  - TypeScript: v4.x\n\n- **Key Config Options**:\n  - `next.config.js`: Configure your project settings.\n    ```javascript\n    module.exports = {\n      reactStrictMode: true,\n      images: {\n        domains: ['example.com'],\n      },\n    };\n    ```\n  - `dynamic import()`: Lazy load components.\n    ```javascript\n    const MyComponent = dynamic(() => import('../components/MyComponent'));\n    ```\n\n- **Performance Techniques**:\n  - Code Splitting: Use `next/dynamic` for lazy loading.\n  - Image Optimization: Utilize Next.js's built-in image optimization.\n  - SSR/SSG: Choose based on use case for predictable latency.",
+    "source": "web_search",
+    "updated_at": 1781019202.242775
+  },
+  "search:typescript-nextjs-performance:nextjs performance optimizatio_ex": {
+    "content": "- Use `next build` to optimize your Next.js application.\n- Implement server-side rendering (SSR) using `getServerSideProps`.\n- Utilize dynamic imports with `import()` for lazy loading components and libraries.\n- Configure `next.config.js` for advanced performance settings:\n  - `reactStrictMode: true`\n  - `swcMinify: true`\n  - `images: { domains: ['example.com'] }`\n- Use `ISR` (Incremental Static Regeneration) with `getStaticProps` and `revalidate`.\n- Monitor performance using tools like Lighthouse or Next.js DevTools.\n- Ensure TypeScript is up to date for better type checking and optimization.\n- Implement code splitting with `React.lazy` and `Suspense`.\n- Use `next/image` for optimized image loading.",
+    "source": "code_example",
+    "updated_at": 1781019208.5531483
   }
 }

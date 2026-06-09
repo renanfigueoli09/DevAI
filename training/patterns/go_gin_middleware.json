@@ -1,0 +1,12 @@
+{
+  "search:go-gin-middleware:gin middleware performance tun": {
+    "content": "- **CLI Commands**: Use `go get -u github.com/gin-gonic/gin` to update Gin.\n- **Latest Version**: As of my last update, the latest version is v1.8.2. Check [GitHub](https://github.com/gin-gonic/gin/releases) for the most current version.\n- **Key Config Options**:\n  - `gin.SetMode(gin.ReleaseMode)` for production mode.\n  - `r.Use(middlewareName())` to apply middleware.\n  - `c.Next()` to pass control to the next middleware or handler.",
+    "source": "web_search",
+    "updated_at": 1781019282.3774862
+  },
+  "search:go-gin-middleware:gin middleware performance tun_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`: To update Gin to the latest version.\n  \n- **Latest Versions**:\n  - Gin v1.8.2 (as of my last update in October 2023).\n\n- **Key Config Options**:\n  - Middleware registration: Use `router.Use(middlewareName)`.\n  - Route handler definition: Define handlers using `router.GET`, `router.POST`, etc.\n  - Middleware execution model: Understand the onion model for middleware, where each middleware runs in two phases (pre-handler and post-handler).",
+    "source": "code_example",
+    "updated_at": 1781019288.0823417
+  }
+}
