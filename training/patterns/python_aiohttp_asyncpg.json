@@ -1,0 +1,22 @@
+{
+  "search:python+aiohttp+asyncpg:python aiohttp asyncpg crud 20": {
+    "content": "- **GitHub Repository**: [chaitanya34/realworld-aiohttp](https://github.com/chaitanya34/realworld-aiohttp)\n  - Contains real-world examples of a backend application built with AIOHTTP, including CRUD operations.\n  \n- **AIOHTTP Documentation**:\n  - Latest version: aiohttp 3.14.0\n  - Key config options include `ClientSession` for making HTTP requests and `WebApplication` for creating web applications.\n\n- **asyncpg Documentation**:\n  - Latest version: asyncpg (version not specified in the search results)\n  - Key config options include connection parameters like `host`, `port`, `user`, `password`, and `database`.\n\n- **CLI Commands**:\n  - To create a new AIOHTTP project, use:\n    ```bash\n    aiohttp-admin startproject my_project\n    ```\n  - To run an AIOHTTP application, use:\n    ```bash\n    python app.py\n    ```\n\n- **Example CRUD Operations with asyncpg**:\n  - Connect to the database:\n    ```python\n    import asyncpg\n\n    async def connect():\n        return await asyncpg.connect(user='user', password='password',\n                                     database='database', host='127.0.0.1')\n    ```\n  - Create a table:\n    ```python\n    async def create_table(conn):\n        await conn.execute('''\n            CREATE TABLE IF NOT EXISTS users (\n                id SERIAL PRIMARY KEY,\n                name TEXT NOT NULL,\n                email TEXT UNIQUE NOT NULL\n            )\n        ''')\n    ```\n  - Insert data:\n    ```python\n    async def insert_user(conn, name, email):\n        await conn.execute('INSERT INTO users (name, email) VALUES ($1, $2)', name, email)\n    ```\n  - Fetch data:\n    ```python\n    async def fetch_users(conn):\n        return await conn.fetch('SELECT * FROM users')\n    ```\n\n- **Advanced Techniques**:\n  - Use `aiohttp` for asynchronous HTTP requests.\n  - Use `asyncpg` for efficient PostgreSQL database operations.",
+    "source": "web_search",
+    "updated_at": 1781013394.556674
+  },
+  "search:python+aiohttp+asyncpg:python aiohttp asyncpg crud 20_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install aiohttp asyncpg`\n  - `python app.py` to run the application\n\n- **Latest Versions**:\n  - aiohttp: 3.8.4\n  - asyncpg: 0.25.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql://user:password@host:port/database`\n  - Event Loop: Use `asyncio.run(main())` for running the application\n  - Middleware and Handlers: Define them in your aiohttp application to handle requests and responses",
+    "source": "code_example",
+    "updated_at": 1781013399.7991645
+  },
+  "search:python+aiohttp+asyncpg:python aiohttp asyncpg perform": {
+    "content": "- **CLI Commands**:\n  - `pip install aiohttp==3.14.0`\n  - `pip install asyncpg==0.25.0`\n\n- **Latest Versions**:\n  - aiohttp: 3.14.0\n  - asyncpg: 0.25.0\n\n- **Key Config Options**:\n  - aiohttp: Use `ClientSession` for managing HTTP requests.\n  - asyncpg: Configure connection pool with `create_pool` method, specifying parameters like host, port, user, password, and database.",
+    "source": "web_search",
+    "updated_at": 1781013415.4943342
+  },
+  "search:python+aiohttp+asyncpg:python aiohttp asyncpg perform_ex": {
+    "content": "- Use `asyncio` and `aiohttp` for asynchronous HTTP requests.\n- Install the latest version of Python, aiohttp, and asyncpg using pip:\n  ```bash\n  pip install python==3.11 aiohttp==3.8.4 asyncpg==0.26.0\n  ```\n- Configure your application to use connection pooling with `asyncpg` for efficient database access.\n- Implement caching mechanisms like Redis or Memcached to reduce database load.\n- Use NumPy vectorization for performance-critical numerical computations.\n- Optimize your code by profiling and identifying bottlenecks using tools like `cProfile`.\n- Asynchronously handle I/O operations to improve throughput.\n- Consider using multiprocessing for CPU-bound tasks.\n- Regularly update libraries and dependencies to benefit from performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781013422.9550002
+  }
+}

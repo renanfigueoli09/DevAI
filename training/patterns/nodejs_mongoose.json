@@ -1,0 +1,17 @@
+{
+  "search:nodejs+mongoose:node.js mongoose orm crud 2025": {
+    "content": "- **Install Mongoose**: `npm install mongoose`\n- **Connect to MongoDB**: Use `mongoose.connect('mongodb://localhost/mydatabase')`\n- **Define Schema**: Create a schema using `new mongoose.Schema({ ... })`\n- **Create Model**: Generate a model from the schema with `const MyModel = mongoose.model('MyModel', mySchema)`\n- **CRUD Operations**:\n  - **Create**: `await new MyModel(data).save()`\n  - **Read**: `await MyModel.find(query)`\n  - **Update**: `await MyModel.findByIdAndUpdate(id, data)`\n  - **Delete**: `await MyModel.findByIdAndRemove(id)`\n- **Middleware**: Use `.pre()` and `.post()` for pre-save and post-save operations\n- **Validation**: Define validation rules in the schema using `type: String`, `required: true`, etc.\n- **Versioning**: Ensure you are using the latest version of Mongoose to benefit from bug fixes and new features.",
+    "source": "web_search",
+    "updated_at": 1781013325.124871
+  },
+  "search:nodejs+mongoose:node.js mongoose migrations 20": {
+    "content": "- **Latest Mongoose Version**: v9.6.3\n- **CLI Commands**:\n  - `npm install ts-migrate-mongoose`\n  - `npx migrate-mongoose up` to run migrations\n  - `npx migrate-mongoose down` to rollback migrations\n- **Key Config Options**:\n  - `migrationsDir`: Directory where migration files are stored.\n  - `dbUri`: MongoDB connection URI.\n  - `useESM`: Flag to enable ES6+ syntax support.",
+    "source": "web_search",
+    "updated_at": 1781013359.032415
+  },
+  "search:nodejs+mongoose:node.js mongoose migrations 20_ex": {
+    "content": "- **GitHub Repository**: [balmasi/migrate-mongoose](https://github.com/balmasi/migrate-mongoose)\n- **CLI Commands**:\n  - `migrate create some-migration-name`\n  - `migrate up` (Applies all pending migrations)\n  - `migrate down` (Reverts the last applied migration)\n- **Latest Version**: Not specified in the provided text, but you can check on GitHub.\n- **Key Config Options**:\n  - `migrationDir`: Directory where migration files are stored.\n  - `dbUri`: MongoDB connection URI.\n  - `modelsDir`: Directory containing your Mongoose models.",
+    "source": "code_example",
+    "updated_at": 1781013381.0390518
+  }
+}
