@@ -1,7 +1,22 @@
 {
-  "generated_at": 1781025232.2556312,
+  "generated_at": 1781026202.4835,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "Advanced Error Handling in Django  +  PostgreSQL: padrões de código",
+      "queries": [
+        "Advanced Error Handling in Django + PostgreSQL pattern code example",
+        "Advanced Error Handling in Django  +  PostgreSQL"
+      ],
+      "must_find": [
+        "@ControllerAdvice",
+        "@ExceptionHandler"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Advanced Error Handling in Django + PostgreSQL"
+    },
     {
       "name": "typescript-graphql-prisma: padrões de código",
       "queries": [
@@ -16,21 +31,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "typescript-graphql-prisma"
-    },
-    {
-      "name": "nestjs-typeorm: padrões de código",
-      "queries": [
-        "nestjs-typeorm pattern code example",
-        "nestjs-typeorm"
-      ],
-      "must_find": [
-        "@injectreposito",
-        "@InjectRepository"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "nestjs-typeorm"
     }
   ]
 }

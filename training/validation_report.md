@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-09 14:15*
+*2026-06-09 14:32*
 
 ## Score: 90% `[██████████████████░░]`  (45.0/50.0)
 
@@ -19,8 +19,8 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| Advanced Error Handling in Django  +  PostgreSQL: padrões de código | 1.0/1 | ✅ |
 | typescript-graphql-prisma: padrões de código | 1.0/1 | ✅ |
-| nestjs-typeorm: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
