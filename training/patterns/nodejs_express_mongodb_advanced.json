@@ -1,0 +1,32 @@
+{
+  "search:nodejs-express-mongodb-advanced:node.js express mongodb advanc": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `mongod --dbpath /data/db`\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Express: 4.18.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017/mydatabase`\n  - Mongoose Schema: Define data models for MongoDB collections.\n  - Express Middleware: Use middleware like `express.json()` for parsing JSON bodies.",
+    "source": "web_search",
+    "updated_at": 1781032034.6238
+  },
+  "search:nodejs-express-mongodb-advanced:node.js express mongodb advanc_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install express mongoose`\n  - `mongod` to start MongoDB server\n\n- **Latest Versions**:\n  - Node.js: v16.x\n  - Express: 4.18.x\n  - Mongoose: 7.x\n\n- **Key Config Options**:\n  - MongoDB URI in `.env`: `MONGO_URI=mongodb://localhost:27017/mydatabase`\n  - Schema definition using Mongoose:\n    ```javascript\n    const mongoose = require('mongoose');\n    const userSchema = new mongoose.Schema({\n      name: String,\n      age: Number,\n      email: { type: String, required: true }\n    });\n    const User = mongoose.model('User', userSchema);\n    ```\n  - Advanced querying in Express:\n    ```javascript\n    app.get('/users', async (req, res) => {\n      try {\n        const users = await User.find({ age: { $gt: 20 } }).sort({ name: 'asc' });\n        res.json(users);\n      } catch (error) {\n        res.status(500).json({ message: error.message });\n      }\n    });\n    ```",
+    "source": "code_example",
+    "updated_at": 1781032042.4839325
+  },
+  "search:nodejs-express-mongodb-advanced:node.js express mongodb aggreg": {
+    "content": "- Use `npm install mongodb` to install the latest MongoDB Node.js driver.\n- For aggregation, use `db.collection.aggregate([...])`.\n- Key stages include `$match`, `$group`, `$sort`, and `$project`.\n- Ensure indexes on fields used in `$lookup` and `$match` for performance.\n- Consider using `$facet` for complex multi-stage pipelines.\n- Monitor pipeline performance with `explain()` method.\n- Use `db.collection.createIndex({ field: 1 })` to create an index.\n- For large datasets, consider sharding collections.",
+    "source": "web_search",
+    "updated_at": 1781032052.1742208
+  },
+  "search:nodejs-express-mongodb-advanced:node.js express mongodb aggreg_ex": {
+    "content": "- Use `npm install mongodb` to install the MongoDB driver.\n- Ensure MongoDB server is running and accessible.\n- Example of connecting to MongoDB using Node.js:\n  ```javascript\n  const { MongoClient } = require('mongodb');\n  \n  async function main() {\n    const uri = \"your_mongodb_connection_string\";\n    const client = new MongoClient(uri);\n    \n    try {\n      await client.connect();\n      console.log(\"Connected successfully to server\");\n      \n      // Perform operations here\n      \n    } finally {\n      await client.close();\n    }\n  }\n  \n  main().catch(console.error);\n  ```\n- Key aggregation pipeline stages include `$match`, `$group`, `$sort`, and `$project`.\n- Example of a simple aggregation pipeline:\n  ```javascript\n  const collection = client.db('your_database').collection('your_collection');\n  \n  const pipeline = [\n    { $match: { status: \"active\" } },\n    { $group: { _id: \"$category\", count: { $sum: 1 } } }\n  ];\n  \n  collection.aggregate(pipeline).toArray().then(console.log);\n  ```\n- Latest versions of MongoDB and Node.js should be used for compatibility.\n- Key configuration options include connection URI, database name, and collection name.",
+    "source": "code_example",
+    "updated_at": 1781032068.9921408
+  },
+  "search:nodejs-express-mongodb-advanced:node.js express mongodb securi": {
+    "content": "- Use `npm init -y` to create a new Node.js project.\n- Install dependencies using `npm install express dotenv mongoose body-parser cors`.\n- Set environment variables in `.env` file for sensitive data like MongoDB URI.\n- Use Mongoose schemas to define the structure of your data.\n- Implement middleware with `app.use(cors())` and `app.use(bodyParser.json())`.\n- Secure routes by validating input with libraries like `express-validator`.\n- Use HTTPS instead of HTTP for secure connections.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Implement rate limiting to prevent abuse with `express-rate-limit`.\n- Backup your MongoDB database regularly.",
+    "source": "web_search",
+    "updated_at": 1781032076.31072
+  },
+  "search:nodejs-express-mongodb-advanced:node.js express mongodb securi_ex": {
+    "content": "- Use `npm install express mongoose helmet cors` to install necessary packages.\n- Update Node.js to the latest LTS version using `nvm install --lts`.\n- Configure MongoDB with SSL for secure connections by setting `ssl: true` in connection URI.\n- Implement rate limiting with `express-rate-limit` middleware.\n- Use environment variables for sensitive information like database credentials and secret keys.\n- Sanitize inputs using `express-sanitizer` to prevent XSS attacks.\n- Enable HTTPS by generating a self-signed certificate or using Let's Encrypt.\n- Configure CORS using `cors` middleware to control access from different origins.\n- Implement JWT authentication with `jsonwebtoken` package for secure user sessions.",
+    "source": "code_example",
+    "updated_at": 1781032090.1871781
+  }
+}
