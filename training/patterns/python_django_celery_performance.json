@@ -1,0 +1,17 @@
+{
+  "search:python-django-celery-performance:django celery performance opti": {
+    "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.6.3\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set the message broker URL (e.g., `redis://localhost:6379/0`).\n  - `CELERY_RESULT_BACKEND`: Configure the result backend (e.g., `rpc://`, `redis://`).\n  - `CELERY_ACCEPT_CONTENT`: Specify accepted content types (e.g., `['json']`).\n  - `CELERY_TASK_SERIALIZER`: Set the task serializer (e.g., `'json'`).\n  - `CELERY_RESULT_SERIALIZER`: Define the result serializer (e.g., `'json'`).\n  - `CELERY_TIMEZONE`: Set the timezone for scheduling tasks.\n  - `CELERY_ENABLE_UTC`: Enable UTC time for scheduling tasks.",
+    "source": "web_search",
+    "updated_at": 1781022378.3584247
+  },
+  "search:python-django-celery-performance:django celery performance opti_ex": {
+    "content": "- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Celery: 5.3\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to Redis URL (e.g., `redis://localhost:6379/0`)\n  - `CELERY_RESULT_BACKEND`: Set to Redis URL (e.g., `redis://localhost:6379/1`)\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types (e.g., `['json']`)\n  - `CELERY_TASK_SERIALIZER`: Serializer for task messages (e.g., `'json'`)\n  - `CELERY_RESULT_SERIALIZER`: Serializer for result messages (e.g., `'json'`)",
+    "source": "code_example",
+    "updated_at": 1781022385.507762
+  },
+  "search:python-django-celery-performance:celery task scheduling with dj": {
+    "content": "- **Latest Version**: Celery 5.6.3, Django 4.2\n- **CLI Commands**:\n  - `celery -A project_name worker --loglevel=info`\n  - `celery -A project_name beat --loglevel=info`\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: URL of the message broker (e.g., `redis://localhost:6379/0`).\n  - `CELERY_RESULT_BACKEND`: URL of the result backend (e.g., `redis://localhost:6379/1`).\n  - `CELERY_TIMEZONE`: Time zone for scheduling tasks.\n- **Task Scheduling**:\n  - Use Celery Beat to schedule periodic tasks.\n  - Define tasks in Django views or separate task modules.\n- **Monitoring and Management**:\n  - Use Flower for monitoring Celery workers and tasks.\n  - Configure retries and error handling in tasks.",
+    "source": "web_search",
+    "updated_at": 1781022412.326625
+  }
+}

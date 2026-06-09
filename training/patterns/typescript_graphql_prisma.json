@@ -1,0 +1,17 @@
+{
+  "search:typescript-graphql-prisma:typescript graphql prisma tuto": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app --typescript`\n  - `npm install prisma @prisma/client`\n  - `npx prisma init`\n\n- **Latest Versions**:\n  - TypeScript: v5.0.0\n  - Prisma Client JS: v4.12.0\n  - TypeGraphQL: v1.3.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model and relations.\n  - `tsconfig.json`: Ensure TypeScript is correctly configured for your project.\n  - `.env`: Set environment variables, e.g., `DATABASE_URL`.",
+    "source": "web_search",
+    "updated_at": 1781022301.7433572
+  },
+  "search:typescript-graphql-prisma:prisma orm for graphql in type": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.x\n  - Prisma Migrate: v1.30\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model.\n  - `prismaClientOptions`: Customizes the Prisma client behavior.\n\nFor more detailed information, refer to the [Prisma documentation](https://www.prisma.io/docs).",
+    "source": "web_search",
+    "updated_at": 1781022345.3554866
+  },
+  "search:typescript-graphql-prisma:prisma orm for graphql in type_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.x\n  - GraphQL Yoga: v2.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prisma.yml`: Configuration file for Prisma Migrate.\n  - `tsconfig.json`: TypeScript configuration for type-safe development.",
+    "source": "code_example",
+    "updated_at": 1781022352.3015163
+  }
+}

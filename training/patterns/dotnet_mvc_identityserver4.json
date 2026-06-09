@@ -1,0 +1,22 @@
+{
+  "search:dotnet-mvc-identityserver4:.net mvc identityserver4 authe": {
+    "content": "- Install IdentityServer4 via NuGet: `dotnet add package IdentityServer4`\n- Use the latest version of IdentityServer4, currently at v5.x.\n- Configure IdentityServer4 in your Startup.cs:\n  ```csharp\n  services.AddIdentityServer()\n      .AddInMemoryClients(Config.Clients)\n      .AddInMemoryIdentityResources(Config.IdentityResources)\n      .AddInMemoryApiScopes(Config.ApiScopes);\n  ```\n- Add authentication middleware:\n  ```csharp\n  app.UseAuthentication();\n  app.UseAuthorization();\n  ```\n- Configure OpenID Connect in your Startup.cs:\n  ```csharp\n  services.AddAuthentication(options =>\n  {\n      options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;\n      options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;\n      options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;\n  })\n  .AddCookie()\n  .AddOpenIdConnect(\"oidc\", \"IdentityServer4\", options =>\n  {\n      options.Authority = \"https://demo.identityserver.io\";\n      options.RequireHttpsMetadata = false;\n      options.ClientId = \"mvc\";\n      options.ResponseType = \"code id_token\";\n      options.SaveTokens = true;\n      options.Scope.Add(\"openid\");\n      options.Scope.Add(\"profile\");\n      options.Scope.Add(\"api1\");\n  });\n  ```\n- Key config options include `Clients`, `IdentityResources`, and `ApiScopes` which should be defined in a separate configuration file or class.\n- Ensure your IdentityServer4 instance is running and accessible at the specified authority URL.",
+    "source": "web_search",
+    "updated_at": 1781022524.7768757
+  },
+  "search:dotnet-mvc-identityserver4:.net mvc identityserver4 authe_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc -n IdentityServer4Auth`\n  - `dotnet add package IdentityServer4`\n  - `dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer`\n\n- **Latest Versions**:\n  - .NET Core: 6.0\n  - IdentityServer4: 4.x\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure JWT settings and IdentityServer4.\n  - `Startup.cs`/`Program.cs`: Set up authentication services and configure middleware.\n  - `IdentityServerConfig.cs`: Define clients, resources, and API scopes.",
+    "source": "code_example",
+    "updated_at": 1781022548.725437
+  },
+  "search:dotnet-mvc-identityserver4:identityserver4 for asp.net co": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc -au Individual` to create an MVC project with individual user accounts.\n  - `dotnet add package IdentityServer4`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - ASP.NET Core: 6.0\n  - IdentityServer4: 4.1.2\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection string and IdentityServer settings.\n  - In `Startup.cs` or `Program.cs`, set up services for IdentityServer and MVC.\n  - Configure the authentication scheme in `ConfigureServices`.\n  - Use `[Authorize]` attribute on controllers or actions to protect routes.",
+    "source": "web_search",
+    "updated_at": 1781022568.8433146
+  },
+  "search:dotnet-mvc-identityserver4:identityserver4 for asp.net co_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc -n IdentityServerMVC`\n  - `dotnet add package IdentityServer4`\n\n- **Latest Versions**:\n  - ASP.NET Core: 6.0\n  - IdentityServer4: 5.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure IdentityServer and client settings.\n  - `Startup.cs` or `Program.cs`: Set up services and middleware for IdentityServer.\n  - `IdentityServerConfig.cs`: Define clients, resources, and API scopes.",
+    "source": "code_example",
+    "updated_at": 1781022575.761348
+  }
+}

@@ -23,5 +23,25 @@
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `docker-compose up` to start Kafka and Zookeeper containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - Apache Kafka: 3.0.1\n\n- **Key Config Options**:\n  - `spring.kafka.consumer.error-handler`: Custom error handler for Kafka consumers.\n  - `spring.kafka.producer.error-handler`: Custom error handler for Kafka producers.\n  - `spring.kafka.listener.backoff-ms`: Time to wait before retrying a failed message.",
     "source": "code_example",
     "updated_at": 1780941867.4345636
+  },
+  "search:spring-boot-kafka-spring-cloud-stream:spring boot kafka spring cloud": {
+    "content": "- **CLI Commands**:\n  - `docker run -p 19092:19092 wurstmeister/kafka`\n  \n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Cloud Stream: 4.0.x\n  - Apache Kafka: 3.0.x\n  \n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output.\n  - `spring.kafka.bootstrap-servers`: Kafka server address.\n  - `spring.cloud.stream.default-binder`: Default binder to use (e.g., kafka).",
+    "source": "web_search",
+    "updated_at": 1781022239.800299
+  },
+  "search:spring-boot-kafka-spring-cloud-stream:spring boot kafka spring cloud_ex": {
+    "content": "- **Latest Versions**\n  - Spring Cloud Stream: 4.0.0\n  - Apache Kafka: 3.3.0\n\n- **Key Config Options**\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input binding.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output binding.\n\n- **CLI Commands with Exact Flags**\n  - To create a new Spring Boot project: \n    ```bash\n    curl https://start.spring.io/starter.zip -d dependencies=webflux,kafka-streams -o myproject.zip\n    ```\n  - To run the application:\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n\n- **Additional Tips**\n  - Use Confluent Schema Registry for Avro serialization.\n  - Configure Kafka properties in `application.yml` or `application.properties`.",
+    "source": "code_example",
+    "updated_at": 1781022247.7421775
+  },
+  "search:spring-boot-kafka-spring-cloud-stream:kafka streams with spring clou": {
+    "content": "- **Latest Versions**:\n  - Spring Cloud Stream: 2025.0.0\n  - Kafka Streams Binder: Compatible with Spring Cloud Stream 2025\n\n- **Key Config Options**:\n  - `spring.cloud.stream.kafka.streams.binder.application-id`: Unique identifier for the application.\n  - `spring.cloud.stream.bindings.input.destination`: Topic name for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Topic name for output bindings.\n\n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Kafka Streams:\n    ```bash\n    spring init --dependencies=webflux,kafka-streams my-kafka-streams-app\n    ```\n  - To run the application:\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n\n- **Additional Resources**:\n  - GitHub repository for example project: [taoudi-abdelbasset/kafka-streams-spring](https://github.com/taoudi-abdelbasset/kafka-streams-spring)\n  - YouTube video on Kafka Streams, Spring Boot, and Confluent Cloud: [Link](https://www.youtube.com/watch?v=VIDEO_LINKS)",
+    "source": "web_search",
+    "updated_at": 1781022258.7104256
+  },
+  "search:spring-boot-kafka-spring-cloud-stream:kafka streams with spring clou_ex": {
+    "content": "- Use `mvn clean install` to build your Spring Cloud Stream application.\n- Ensure you have the latest version of Spring Boot and Spring Cloud Stream, as of my last update in October 2023.\n- Key config options include:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input binding.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output binding.\n  - `spring.cloud.stream.kafka.binder.configuration.bootstrap.servers`: Kafka broker addresses.\n  - `spring.cloud.stream.kafka.binder.configuration.group.id`: Consumer group ID.\n- For AOT compilation, use GraalVM and the Spring Boot Native plugin.\n- To run your application on GraalVM, execute: `./mvnw package -Pnative` followed by `./target/your-application-name`.\n- Ensure Kafka and Confluent Schema Registry are up and running for full functionality with Avro schemas.",
+    "source": "code_example",
+    "updated_at": 1781022275.3116033
   }
 }
