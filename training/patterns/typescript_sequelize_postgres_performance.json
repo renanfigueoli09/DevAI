@@ -1,0 +1,17 @@
+{
+  "search:typescript-sequelize-postgres-performance:typescript sequelize with post": {
+    "content": "- **CLI Commands**:\n  - `npx sequelize-cli init`\n  - `npx sequelize-cli model:create --name User --attributes firstName:string,lastName:string`\n  - `npx sequelize-cli db:migrate`\n\n- **Latest Versions**:\n  - Sequelize: v6.x\n  - @sequelize/postgres: v6.x\n\n- **Key Config Options**:\n  - `host`: PostgreSQL server host (e.g., 'localhost')\n  - `port`: PostgreSQL server port (default: 5432)\n  - `username`: Database username\n  - `password`: Database password\n  - `database`: Database name\n  - `dialect`: Set to 'postgres'",
+    "source": "web_search",
+    "updated_at": 1781043669.0883627
+  },
+  "search:typescript-sequelize-postgres-performance:optimizing typescript sequeliz": {
+    "content": "- **CLI Commands**: Use `npx sequelize-cli init` to initialize Sequelize.\n- **Latest Versions**: Ensure using latest Sequelize and pg packages for compatibility.\n- **Key Config Options**:\n  - `dialect`: Set to 'postgres'.\n  - `host`: PostgreSQL server address.\n  - `port`: PostgreSQL server port.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Database name.",
+    "source": "web_search",
+    "updated_at": 1781043691.4044442
+  },
+  "search:typescript-sequelize-postgres-performance:optimizing typescript sequeliz_ex": {
+    "content": "- Use `npm install sequelize pg pg-hstore` to install Sequelize along with PostgreSQL drivers.\n- Ensure your project is initialized with TypeScript by running `npx create-react-app my-app --template typescript`.\n- Configure Sequelize in a file like `db.ts`:\n  ```typescript\n  import { Sequelize } from 'sequelize';\n\n  const sequelize = new Sequelize('database', 'username', 'password', {\n    host: 'localhost',\n    dialect: 'postgres'\n  });\n\n  export default sequelize;\n  ```\n- Use TypeScript's type definitions for models to enforce data types.\n- Example model definition:\n  ```typescript\n  import { Model, DataTypes } from 'sequelize';\n  import sequelize from './db';\n\n  class User extends Model {}\n  User.init({\n    firstName: {\n      type: DataTypes.STRING,\n      allowNull: false\n    },\n    lastName: {\n      type: DataTypes.STRING\n    }\n  }, { sequelize, modelName: 'user' });\n\n  export default User;\n  ```\n- Use async/await for database operations:\n  ```typescript\n  const users = await User.findAll();\n  console.log(users);\n  ```\n- For migrations, use Sequelize CLI:\n  - Install CLI globally with `npm install -g sequelize-cli`.\n  - Initialize the CLI in your project: `npx sequelize-cli init`.\n  - Create a migration file: `npx sequelize-cli model:create --name User --attributes firstName:string,lastName:string`.\n  - Run migrations: `npx sequelize-cli db:migrate`.\n\nLatest versions:\n- Sequelize: v6.30.2\n- PostgreSQL Node.js Driver (pg): v8.7.1\n\nKey config options:\n- `host`: Database host.\n- `dialect`: Specifies the database dialect, e.g., 'postgres'.\n- `modelsPath`: Path to your model definitions.",
+    "source": "code_example",
+    "updated_at": 1781043703.2849605
+  }
+}

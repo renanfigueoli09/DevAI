@@ -1,0 +1,17 @@
+{
+  "search:python-django-mysql-security:django security best practices": {
+    "content": "- **Keep Django Updated**: Use `pip install --upgrade django` to ensure you have the latest version.\n- **CSRF Protection**: Enable CSRF protection by adding `'django.middleware.csrf.CsrfViewMiddleware'` in your `MIDDLEWARE` setting.\n- **SQL Injection Prevention**: Use parameterized queries or ORM methods instead of raw SQL.\n- **XSS Prevention**: Sanitize user inputs and outputs using Django's built-in escaping mechanisms.\n- **Use HTTPS**: Configure your web server to enforce HTTPS for secure data transmission.\n- **Session Security**: Set `SESSION_COOKIE_SECURE = True` and `SESSION_COOKIE_HTTPONLY = True` in your settings.\n- **Database Configuration**: Use a strong password for MySQL user and limit database privileges.\n- **Logging**: Configure logging in Django to capture errors and security issues effectively.\n- **Middleware Order**: Ensure the order of middleware is correct, with `'django.middleware.security.SecurityMiddleware'` at the top.\n- **Regular Audits**: Perform regular security audits and vulnerability scans on your application.",
+    "source": "web_search",
+    "updated_at": 1781043717.9511113
+  },
+  "search:python-django-mysql-security:securing django applications w": {
+    "content": "- Obtain an SSL/TLS certificate from Let’s Encrypt using `certbot`.\n- Install Django and MySQL on your server.\n- Configure Django settings for security, including:\n  - `SECRET_KEY`: Generate a strong secret key.\n  - `DEBUG`: Set to `False` in production.\n  - `ALLOWED_HOSTS`: Specify allowed hosts.\n  - Database configuration: Use environment variables for sensitive data.\n- Implement user authentication using Django’s built-in auth system or third-party packages like Auth0.\n- Regularly update Django and its dependencies to the latest versions.\n- Use HTTPS by configuring your web server (e.g., Nginx, Apache) to redirect HTTP traffic to HTTPS.\n- Perform regular security audits and penetration testing on your application.",
+    "source": "web_search",
+    "updated_at": 1781043742.8514118
+  },
+  "search:python-django-mysql-security:securing django applications w_ex": {
+    "content": "- **HTTPS/SSL Configuration**: Use `python manage.py runsslserver` for local development.\n- **HashiCorp Vault Integration**: Install `hvac` using `pip install hvac`. Configure vault URL and token in Django settings.\n- **OAuth 2.0 & JWT**: Implement OAuth 2.0 with a provider like Google or Auth0. Use `djangorestframework-simplejwt` for JWT handling.\n\n**Key Config Options**:\n- `SECURE_SSL_REDIRECT`: Set to `True` to enforce HTTPS.\n- `SESSION_COOKIE_SECURE`: Set to `True` to use secure cookies.\n- `CSRF_COOKIE_SECURE`: Set to `True` to use secure CSRF cookies.\n- `CORS_ORIGIN_ALLOW_ALL`: Set to `False` and specify allowed origins for CORS.\n\n**Latest Versions**:\n- Django 4.1\n- Python 3.9\n- hvac 0.12.0\n- djangorestframework-simplejwt 5.2.2",
+    "source": "code_example",
+    "updated_at": 1781043752.6253953
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:rails+pgbouncer:rails pgbouncer setup and conf": {
+    "content": "- Install PgBouncer using `git clone https://github.com/pgbouncer/pgbouncer.git` and follow the compilation instructions.\n- Configure PgBouncer as a Windows service with `service_name = \"pgbouncer\"` in the configuration file.\n- To uninstall the PgBouncer service, use `pgbouncer -d`.\n- Update your Rails `database.yml` to point to PgBouncer's port (6432) and disable prepared statements.\n- Set `syslog = 1` in the PgBouncer configuration to enable logging to the Windows event log.\n- Ensure you have the latest version of PgBouncer for compatibility with your application.\n- Key config options include `listen_addr`, `listen_port`, `auth_type`, and `pool_mode`.\n- For Rails, use `pgbouncer -u postgres` to run PgBouncer as a user with PostgreSQL privileges.",
+    "source": "web_search",
+    "updated_at": 1781043600.4087014
+  },
+  "search:rails+pgbouncer:rails pgbouncer setup and conf_ex": {
+    "content": "- **Install Dependencies**: Ensure GNU Make, Libevent2.0+, pkg-config, OpenSSL1.0.1+ are installed.\n- **Clone pgBouncer Repository**: `git clone https://github.com/pgbouncer/pgbouncer.git`\n- **Compile pgBouncer**: Navigate to the directory and run `make` followed by `sudo make install`.\n- **Configure pgBouncer**:\n  - Edit `pgbouncer.ini`: Set `[databases]`, `[pgbouncer]`, and `[logging]` sections.\n  - Example: \n    ```ini\n    [databases]\n    mydb = host=localhost port=5432 dbname=mydb user=myuser\n    \n    [pgbouncer]\n    listen_addr = *\n    listen_port = 6432\n    auth_type = md5\n    \n    [logging]\n    log_connections = 1\n    ```\n- **Update Rails `database.yml`**:\n  ```yaml\n  default: &default\n    adapter: postgresql\n    encoding: unicode\n    pool: <%= ENV.fetch(\"RAILS_MAX_THREADS\") { 5 } %>\n    username: myuser\n    password: mypassword\n    host: localhost\n    port: 6432\n    database: mydb\n    prepared_statements: false\n  ```\n- **Start pgBouncer**: `pgbouncer pgbouncer.ini`\n- **Restart Rails Application**: Ensure the application is restarted to use the new connection pool.\n- **Monitor and Tune**: Use pgBouncer's stats endpoint or logs for monitoring and tuning.",
+    "source": "code_example",
+    "updated_at": 1781043609.995544
+  },
+  "search:rails+pgbouncer:rails performance optimization": {
+    "content": "- **CLI Commands**: \n  - `pgbouncer --version`\n  - `pgbouncer -d /path/to/pgbouncer.ini`\n\n- **Latest Versions**:\n  - PgBouncer: 2.3.0\n\n- **Key Config Options**:\n  - `listen_addr`: IP address to listen on\n  - `listen_port`: Port number to listen on\n  - `auth_type`: Authentication method (e.g., md5)\n  - `max_client_conn`: Maximum number of client connections\n  - `default_pool_size`: Default size of the connection pool per backend\n  - `log_connections`: Log connection attempts",
+    "source": "web_search",
+    "updated_at": 1781043620.006723
+  },
+  "search:rails+pgbouncer:rails performance optimization_ex": {
+    "content": "- **CLI Commands**:\n  - `pgbouncer --version`\n  - `pgbouncer -d /etc/pgbouncer/pgbouncer.ini`\n\n- **Latest Versions**:\n  - pgBouncer: 2.3.0\n\n- **Key Config Options**:\n  - `listen_addr`: Set to `127.0.0.1` for local connections.\n  - `listen_port`: Default is `6432`.\n  - `auth_type`: Use `md5` for password authentication.\n  - `pool_mode`: Choose between `session`, `transaction`, and `statement`.\n  - `max_client_conn`: Maximum number of client connections.\n  - `default_pool_size`: Number of server connections per database.",
+    "source": "code_example",
+    "updated_at": 1781043626.1345282
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:nextjs+prisma-realtime:nextjs prisma real-time data f": {
+    "content": "- **Next.js**: Version 14+\n- **Prisma**: Latest version\n- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npx prisma init`\n- **Key Config Options**:\n  - `prismaClient` in Next.js API routes\n  - `revalidate` option for data fetching\n  - `socket.io` integration for real-time updates",
+    "source": "web_search",
+    "updated_at": 1781043632.9597144
+  },
+  "search:nextjs+prisma-realtime:nextjs prisma real-time data f_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-prisma-app`\n  - `npm install prisma --save-dev`\n\n- **Latest Versions**:\n  - Next.js: 14\n  - Prisma: 5.x\n\n- **Key Config Options**:\n  - In `prisma/schema.prisma`, define your data models.\n  - Use `prisma generate` to update the Prisma Client after changes.\n  - Configure `next.config.js` for environment variables and other settings.",
+    "source": "code_example",
+    "updated_at": 1781043638.7722228
+  },
+  "search:nextjs+prisma-realtime:prisma real-time subscriptions": {
+    "content": "- **Install Prisma**: `npm install @prisma/client`\n- **Initialize Prisma**: `npx prisma init`\n- **Generate Client**: `npx prisma generate`\n- **Prisma Pulse**: For real-time data, use Prisma Pulse.\n- **Next.js 16**: Ensure compatibility with Next.js 16 for SaaS apps.\n- **Database Schema**: Define schemas in `prisma/schema.prisma`.\n- **Real-time Subscriptions**: Use Prisma Pulse for real-time database events.\n- **Billing & Subscriptions**: Implement billing using Stripe or Polar.\n- **Key Config Options**:\n  - `schema`: Define your data model.\n  - `datasource`: Configure the database connection.\n  - `generator`: Specify the client generator.\n\nThese steps and configurations will help you build a high-performance, type-safe Next.js application with Prisma, including real-time subscriptions and billing features.",
+    "source": "web_search",
+    "updated_at": 1781043657.0657923
+  },
+  "search:nextjs+prisma-realtime:prisma real-time subscriptions_ex": {
+    "content": "- **CLI Command**: `npx create-t3-app@latest`\n- **Latest Version**: Not specified, but use the latest version available.\n- **Key Config Options**:\n  - Choose Prisma as your ORM.\n  - Select NextJS as the framework.\n  - Optionally include other tools like Tailwind CSS or ESLint.",
+    "source": "code_example",
+    "updated_at": 1781043661.553472
+  }
+}
