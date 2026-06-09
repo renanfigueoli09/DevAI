@@ -1,7 +1,35 @@
 {
-  "generated_at": 1781046267.407305,
+  "generated_at": 1781047056.0851262,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "kubernetes + redis: cache",
+      "queries": [
+        "kubernetes+redis cache redis example"
+      ],
+      "must_find": [
+        "redis",
+        "cache"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kubernetes+redis"
+    },
+    {
+      "name": "django-redis-cache-performance: cache",
+      "queries": [
+        "django-redis-cache-performance cache redis example"
+      ],
+      "must_find": [
+        "redis",
+        "cache"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "django-redis-cache-performance"
+    },
     {
       "name": "typescript-graphql-nestjs: padrões de código",
       "queries": [
