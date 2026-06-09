@@ -1,0 +1,22 @@
+{
+  "search:java-spring-security:java spring security best prac": {
+    "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `mvn spring-boot:run` to run the application.\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for configuration settings.\n  - JWT (JSON Web Token) for stateless authentication.\n  - Role-based authorization using Spring Security's `@PreAuthorize`, `@PostAuthorize`, and `@Secured`.\n  - Custom user details service for integrating with databases.",
+    "source": "web_search",
+    "updated_at": 1781027476.1550949
+  },
+  "search:java-spring-security:java spring security best prac_ex": {
+    "content": "- **Latest Versions**: \n  - Spring Boot 3.0\n  - Spring Security 6.0\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n  - JWT for authentication and authorization\n  - Role-based access control (RBAC)\n\n- **CLI Commands with Exact Flags**:\n  - `mvn clean install` to build the project\n  - `java -jar target/your-application.jar` to run the application\n\n- **Additional Resources**:\n  - [Baeldung Spring Tutorial](https://www.baeldung.com/spring-tutorial)\n  - [Spring Boot Testing Guide](https://medium.com/@pratikshukla1987/spring-boot-testing-best-practices-2025-mockito-and-spring-test-4e3b6c9d8a0f)",
+    "source": "code_example",
+    "updated_at": 1781027482.1387713
+  },
+  "search:java-spring-security:java spring security advanced ": {
+    "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n- **Key Config Options**:\n  - JWT Authentication: Enable JWT in `application.properties` with `spring.security.jwt.enabled=true`.\n  - HTTP Basic Authentication: Configure in `SecurityConfig.java` with `http.http-basic().and()`.\n  - Form-based Authentication: Use `http.formLogin()` for form-based login configuration.\n- **Additional Resources**:\n  - [Spring Boot 3 + Spring Security 6 - JWT Authentication](https://www.youtube.com/watch?v=example)\n  - [Advanced Spring Security - How to create multiple Spring Security Configurations](https://example.com/article)",
+    "source": "web_search",
+    "updated_at": 1781027501.593525
+  },
+  "search:java-spring-security:java spring security advanced _ex": {
+    "content": "- **Latest Versions**: Spring Boot 3, Spring Security 6\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `java -jar target/your-application-name.jar` to run the application.\n- **Key Config Options**:\n  - `application.properties`: Configure JWT secret key, token expiration time.\n  - Security Configuration Class: Define authentication and authorization rules.\n  - Entity Classes: Implement UserDetailsService for custom user details.",
+    "source": "code_example",
+    "updated_at": 1781027507.9349737
+  }
+}

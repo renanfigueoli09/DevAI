@@ -1,0 +1,22 @@
+{
+  "search:typescript-sequelize-mysql:typescript sequelize mysql orm": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of Sequelize and MySQL to benefit from performance improvements and bug fixes.\n  \n- **CLI Commands**:\n  - `npm install sequelize --save`\n  - `npm install mysql2 --save`\n\n- **Key Config Options**:\n  - `pool`: Configure connection pool settings for better resource management.\n    ```typescript\n    const sequelize = new Sequelize('database', 'username', 'password', {\n      host: 'localhost',\n      dialect: 'mysql',\n      pool: {\n        max: 5,\n        min: 0,\n        acquire: 30000,\n        idle: 10000\n      }\n    });\n    ```\n  - `logging`: Disable logging for production environments to reduce performance overhead.\n    ```typescript\n    const sequelize = new Sequelize('database', 'username', 'password', {\n      host: 'localhost',\n      dialect: 'mysql',\n      logging: false\n    });\n    ```\n\n- **Performance Tips**:\n  - Use eager loading instead of multiple queries for related data.\n  - Optimize queries by using indexes on database tables.\n  - Avoid N+1 query problems by preloading associations.",
+    "source": "web_search",
+    "updated_at": 1781027533.9692206
+  },
+  "search:typescript-sequelize-mysql:typescript sequelize mysql orm_ex": {
+    "content": "- Ensure TypeScript version >= 4.1.\n- Use Sequelize's built-in TypeScript definitions.\n- For MySQL, use `mysql2` package for better performance.\n- Implement lazy loading and caching strategies in Sequelize to optimize performance.\n- Update Sequelize and its dependencies regularly (e.g., `npm update sequelize mysql2`).\n- Configure Sequelize models with appropriate options like `timestamps: false` if not needed.\n- Use transactions for bulk operations to improve efficiency.\n- Monitor query execution times using Sequelize's logging feature.\n- Consider using connection pooling provided by MySQL or Sequelize itself.",
+    "source": "code_example",
+    "updated_at": 1781027542.5831835
+  },
+  "search:typescript-sequelize-mysql:typescript sequelize mysql mig": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of Sequelize and Sequelize-cli.\n  \n- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes a new Sequelize project.\n  - `npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string`: Generates a new model.\n  - `npx sequelize-cli migration:generate --name create-users-table`: Generates a new migration file.\n  - `npx sequelize-cli db:migrate`: Applies migrations to the database.\n  - `npx sequelize-cli db:migrate:undo`: Reverts the last applied migration.\n\n- **Key Config Options**:\n  - `config/config.json`: Contains database connection settings and other configurations.\n  - `models/yourModel.ts`: Defines your Sequelize models using TypeScript.\n  - `migrations/yourMigrationFile.js`: Contains the SQL statements for migrations.\n\n- **TypeScript Integration**: Ensure you have TypeScript installed (`npm install typescript --save-dev`) and configure it in your project with a `tsconfig.json` file.",
+    "source": "web_search",
+    "updated_at": 1781027553.2763638
+  },
+  "search:typescript-sequelize-mysql:typescript sequelize mysql mig_ex": {
+    "content": "- Use `npx sequelize-cli init` to initialize Sequelize project.\n- Install dependencies: `npm install --save sequelize sequelize-typescript mysql2`.\n- Configure `config/config.json` with database details and dialect set to `mysql`.\n- Create migrations using `npx sequelize-cli migration:generate --name create-users-table`.\n- Define models in TypeScript, e.g., `src/models/User.ts`.\n- Run migrations with `npx sequelize-cli db:migrate`.\n- Rollback migrations with `npx sequelize-cli db:migrate:undo`.\n- Ensure TypeScript is configured in `tsconfig.json` for project compilation.",
+    "source": "code_example",
+    "updated_at": 1781027577.8452985
+  }
+}

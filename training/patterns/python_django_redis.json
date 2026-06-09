@@ -1,0 +1,22 @@
+{
+  "search:python-django-redis:python django redis caching st": {
+    "content": "- **CLI Commands**:\n  - `pip install django-redis`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django 4.2\n  - Redis 7.0\n\n- **Key Config Options**:\n  - `CACHES = {\n        \"default\": {\n            \"BACKEND\": \"django_redis.cache.RedisCache\",\n            \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n            \"OPTIONS\": {\n                \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            }\n        }\n    }`\n  - `CACHES['default']['TIMEOUT'] = 300` (5 minutes)\n  - `CACHES['default']['KEY_PREFIX'] = 'myapp'`\n\n- **Additional Tips**:\n  - Use `@cache_page(60 * 15)` for view-level caching.\n  - Utilize `django-redis` for more advanced features like list operations and transactions.",
+    "source": "web_search",
+    "updated_at": 1781027430.1364527
+  },
+  "search:python-django-redis:python django redis caching st_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install django-redis`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django: 4.2\n  - Redis: 7.0\n\n- **Key Config Options**:\n  - `CACHES = {\n      'default': {\n          'BACKEND': 'django_redis.cache.RedisCache',\n          'LOCATION': 'redis://127.0.0.1:6379/1',\n          'OPTIONS': {\n              'CLIENT_CLASS': 'django_redis.client.DefaultClient',\n          }\n      }\n  }`\n  - `CACHES['default']['LOCATION']`: Adjust based on your Redis server configuration.\n  - `CACHES['default']['OPTIONS']['CLIENT_CLASS']`: Choose the appropriate client class for your needs.",
+    "source": "code_example",
+    "updated_at": 1781027436.950501
+  },
+  "search:python-django-redis:python django redis performanc": {
+    "content": "- Install `django-redis` using pip: `pip install django-redis`\n- Ensure `hiredis` is installed for performance boost: `pip install hiredis`\n- Configure Redis in Django settings:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Use `django-redis` for caching views:\n  ```python\n  from django.views.decorators.cache import cache_page\n\n  @cache_page(60 * 15)  # Cache this view for 15 minutes\n  def my_view(request):\n      ...\n  ```\n- Monitor Redis performance using tools like `redis-cli --stat`\n- Consider using Redis clustering for high availability and scalability.\n- Regularly clear expired keys to optimize memory usage: `redis-cli FLUSHDB`",
+    "source": "web_search",
+    "updated_at": 1781027447.149669
+  },
+  "search:python-django-redis:python django redis performanc_ex": {
+    "content": "- Install Redis and Celery using pip: `pip install django celery[redis] redis`\n- Ensure Redis is running.\n- Configure Django settings.py:\n  - CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  - CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n- Use caching in views for homepage performance boost.\n- Example cache key: `homepage_cache_key`\n- Cache timeout (in seconds): `cache.set(homepage_cache_key, data, timeout=300)`\n- Monitor Redis performance using tools like RedisInsight or redis-cli.",
+    "source": "code_example",
+    "updated_at": 1781027456.8020961
+  }
+}

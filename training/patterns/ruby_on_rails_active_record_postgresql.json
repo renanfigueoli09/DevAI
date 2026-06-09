@@ -1,0 +1,12 @@
+{
+  "search:ruby-on-rails-active-record-postgresql:ruby on rails activerecord pos": {
+    "content": "- **CLI Commands**:\n  - `rails db:migrate`\n  - `rails db:create`\n  - `rails db:schema:dump`\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - PostgreSQL: 14.x\n\n- **Key Config Options**:\n  - `config/database.yml`: Configure database settings like `pool`, `encoding`, and `timeout`.\n  - `config/initializers/assets.rb`: Optimize asset precompilation.\n  - `config/environments/production.rb`: Enable caching, disable debug mode.",
+    "source": "web_search",
+    "updated_at": 1781027625.725951
+  },
+  "search:ruby-on-rails-active-record-postgresql:ruby on rails activerecord pos_ex": {
+    "content": "- Use `rails db:migrate` to apply database migrations.\n- Employ `find_each` for large datasets in loops.\n- Utilize `pluck` instead of `select` when only specific columns are needed.\n- Implement `counter_cache` for efficient association counts.\n- Apply indexing on frequently queried columns using `add_index`.\n- Use `preload` or `eager_load` over `includes` to avoid N+1 queries.\n- Optimize raw SQL with prepared statements and parameterized queries.\n- Monitor database performance with tools like `pg_stat_activity` and `pgbadger`.\n- Regularly update Rails, ActiveRecord, and PostgreSQL to the latest versions for security and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781027632.0507991
+  }
+}
