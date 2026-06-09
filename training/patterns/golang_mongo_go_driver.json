@@ -1,0 +1,22 @@
+{
+  "search:golang-mongo-go-driver:golang mongodb go driver perfo": {
+    "content": "- Use `go get go.mongodb.org/mongo-driver/mongo` to install the latest MongoDB Go driver.\n- For pagination, use the `options.FindOptions` struct with `Limit`, `Skip`, and `Sort`.\n- Ensure you are using a compatible version of Go (1.16+ recommended).\n- Key config options include connection string (`uri`), database name, and collection name.\n- Use `ctx, cancel := context.WithTimeout(context.Background(), timeout)` for managing query timeouts.\n- For CSFLE, ensure you have the correct build tags enabled during compilation.\n- Check MongoDB server logs for any performance bottlenecks or errors.",
+    "source": "web_search",
+    "updated_at": 1781011645.5398476
+  },
+  "search:golang-mongo-go-driver:golang mongodb go driver perfo_ex": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of the MongoDB Go Driver by checking [GitHub](https://github.com/mongodb/mongo-go-driver/releases).\n  \n- **CLI Commands**:\n  - To install the driver: `go get go.mongodb.org/mongo-driver/mongo`\n  - To run a local MongoDB instance for development: `docker run --name some-mongo -d mongo`\n\n- **Key Config Options**:\n  - Connection URI: `mongodb://localhost:27017` (default)\n  - Database Name: Specify the database name when creating a client.\n  - Collection Name: Specify the collection name when performing CRUD operations.\n\n- **Performance Tuning Tips**:\n  - Use connection pooling by setting `MaxPoolSize`.\n  - Batch operations for bulk inserts and updates.\n  - Indexes to speed up query performance.",
+    "source": "code_example",
+    "updated_at": 1781011652.9165661
+  },
+  "search:golang-mongo-go-driver:golang mongodb go driver error": {
+    "content": "- Use `go get go.mongodb.org/mongo-driver/v2` to install the latest MongoDB Go driver.\n- For error handling, check for specific errors like `mongo.ErrNoDocuments` or `mongo.WriteError`.\n- To handle duplicate key errors specifically, use `err.(mongo.WriteException).WriteErrors[0].Code == 11000`.\n- Use `ctx, cancel := context.WithTimeout(context.Background(), timeout)` to set a timeout for operations.\n- Configure the client with options like `clientOptions := options.Client().ApplyURI(uri)`.\n- For logging, use `log.Println` or integrate with a logging library like `logrus`.\n- To connect to MongoDB, use `client, err := mongo.Connect(ctx, clientOptions)` and check for errors.\n- Use `collection := client.Database(\"dbname\").Collection(\"collname\")` to access collections.\n- Always call `cancel()` after operations to release resources.",
+    "source": "web_search",
+    "updated_at": 1781011683.7006042
+  },
+  "search:golang-mongo-go-driver:golang mongodb go driver error_ex": {
+    "content": "- Install MongoDB Go Driver using `go get go.mongodb.org/mongo-driver/mongo`\n- Ensure Go version is at least 1.20 for running the driver test suite\n- Use Go modules to manage dependencies\n- Key config options include connection URI, database name, and collection name\n- Error handling patterns are crucial for production readiness\n- Refer to official documentation for detailed examples and best practices",
+    "source": "code_example",
+    "updated_at": 1781011688.32612
+  }
+}

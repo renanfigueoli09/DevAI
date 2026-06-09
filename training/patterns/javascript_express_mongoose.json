@@ -1,0 +1,12 @@
+{
+  "search:javascript-express-mongoose:javascript express mongoose pe": {
+    "content": "- Use Mongoose virtuals to populate documents instead of nested queries.\n- Ensure MongoDB indexes are properly set up for efficient querying.\n- Implement caching mechanisms like Redis or Memcached to reduce database load.\n- Optimize query performance by using lean() and select() methods in Mongoose.\n- Regularly monitor and profile your application to identify bottlenecks.\n- Use connection pooling with MongoDB to manage multiple connections efficiently.\n- Consider using a more efficient schema design to minimize data redundancy.\n- Implement batch processing for bulk operations to reduce latency.\n- Upgrade to the latest versions of Node.js, Express, and Mongoose for performance improvements.\n- Utilize environment variables for configuration management to enhance security.",
+    "source": "web_search",
+    "updated_at": 1781011791.9074104
+  },
+  "search:javascript-express-mongoose:javascript express mongoose pe_ex": {
+    "content": "- Use `npm install express mongoose` to install latest versions.\n- For lean queries, use `.lean()` method in Mongoose.\n- Implement indexing on MongoDB collections for faster query performance.\n- Utilize caching mechanisms like Redis or Memcached to reduce database load.\n- Batch operations with `$in` operator can improve performance when dealing with multiple documents.\n- Configure `mongoose.set('useCreateIndex', true)` for better index creation.\n- Use `.select()` method in Mongoose queries to specify which fields to include, reducing data transfer size.\n- Implement connection pooling by setting `poolSize: 10` in MongoDB URI.\n- Regularly monitor and analyze query performance using tools like MongoDB Atlas or Mongoose's built-in profiling methods.",
+    "source": "code_example",
+    "updated_at": 1781011801.4851992
+  }
+}

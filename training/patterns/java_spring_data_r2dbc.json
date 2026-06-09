@@ -1,0 +1,22 @@
+{
+  "search:java-spring-data-r2dbc:java spring data r2dbc crud op": {
+    "content": "- Use `spring-boot-starter-data-r2dbc` dependency in your project.\n- Ensure you have the latest version of Spring Boot and R2DBC compatible with your Java version.\n- Configure `application.properties` or `application.yml` for database connection details, e.g., `spring.r2dbc.url`, `spring.r2dbc.username`, `spring.r2dbc.password`.\n- Use `@Entity` annotation to define entities, similar to JPA.\n- Utilize `@Id` and `@GeneratedValue` annotations for primary keys.\n- Implement CRUD operations using Spring Data R2DBC repositories.\n- Example repository interface: `public interface UserRepository extends ReactiveCrudRepository<User, Long> {}`\n- Run your application with `mvn spring-boot:run` or `./gradlew bootRun`.\n- For auto-increment IDs, use `bigserial` in PostgreSQL or equivalent for other databases.",
+    "source": "web_search",
+    "updated_at": 1781011701.252028
+  },
+  "search:java-spring-data-r2dbc:java spring data r2dbc crud op_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `./mvnw clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - R2DBC: 1.0.x\n  - H2 Database: 1.4.x\n\n- **Key Config Options**:\n  - `spring.r2dbc.url=r2dbc:h2:mem:///testdb`\n  - `spring.r2dbc.username=sa`\n  - `spring.r2dbc.password=password`\n  - `spring.data.r2dbc.repositories.enabled=true`",
+    "source": "code_example",
+    "updated_at": 1781011711.5824358
+  },
+  "search:java-spring-data-r2dbc:java spring data r2dbc perform": {
+    "content": "- Use Spring Initializr to create a new project with necessary dependencies.\n- Ensure you are using the latest version of Spring Boot, R2DBC, and PostgreSQL drivers.\n- Configure `application.properties` or `application.yml` for R2DBC connection settings:\n  ```properties\n  spring.r2dbc.url=r2dbc:postgresql://localhost:5432/mydatabase\n  spring.r2dbc.username=myuser\n  spring.r2dbc.password=mypassword\n  ```\n- Enable reactive repositories by adding `@EnableR2dbcRepositories` to your configuration.\n- Use Kotlin coroutines for non-blocking database operations in your service layer.\n- Configure connection pool size and other R2DBC properties as needed:\n  ```properties\n  spring.r2dbc.pool.max-size=100\n  ```\n- Monitor application performance using tools like Micrometer or Spring Boot Actuator.\n- Optimize queries to reduce latency and improve throughput.\n- Consider using a distributed tracing system like Zipkin for better visibility into application performance.",
+    "source": "web_search",
+    "updated_at": 1781011723.5022063
+  },
+  "search:java-spring-data-r2dbc:java spring data r2dbc perform_ex": {
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=r2dbc,webflux myproject`\n  \n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - R2DBC: 0.8.x\n  \n- **Key Config Options**:\n  - `spring.r2dbc.url`: Database URL.\n  - `spring.r2dbc.username`: Database username.\n  - `spring.r2dbc.password`: Database password.\n  - `spring.r2dbc.pool.max-size`: Maximum pool size.",
+    "source": "code_example",
+    "updated_at": 1781011728.909256
+  }
+}
