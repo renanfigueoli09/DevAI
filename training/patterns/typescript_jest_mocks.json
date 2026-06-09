@@ -1,0 +1,22 @@
+{
+  "search:typescript+jest-mocks:typescript jest mocking techni": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest --version`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"setupFilesAfterEnv\": [\"<rootDir>/setupTests.ts\"]`",
+    "source": "web_search",
+    "updated_at": 1781048739.3312538
+  },
+  "search:typescript+jest-mocks:typescript jest mocking techni_ex": {
+    "content": "- Use `npm install --save-dev jest @types/jest` to install Jest and TypeScript types.\n- For mocking, use `jest.mock('module')` or `jest.fn()` for creating mock functions.\n- Key config options in `jest.config.ts`: \n  - `testEnvironment: 'jsdom'`\n  - `setupFilesAfterEnv: ['<rootDir>/setupTests.ts']`\n  - `transform: { '^.+\\\\.tsx?$': 'ts-jest' }`\n- Use `mockImplementation` or `mockReturnValue` for customizing mock behavior.\n- For spying on methods, use `jest.spyOn(object, method)`.\n- Ensure mocks are restored after tests with `afterEach(() => jest.restoreAllMocks())`.\n- Update Jest to the latest version using `npm update jest`.\n- Use TypeScript's type annotations for better type safety in mock implementations.",
+    "source": "code_example",
+    "updated_at": 1781048746.960739
+  },
+  "search:typescript+jest-mocks:advanced typescript jest mocks": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 5.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"jsdom\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"setupFilesAfterEnv\": [\"<rootDir>/setupTests.ts\"]`",
+    "source": "web_search",
+    "updated_at": 1781048762.316617
+  },
+  "search:typescript+jest-mocks:advanced typescript jest mocks_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest ts-jest @types/jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 5.x\n\n- **Key Config Options**:\n  - `\"testEnvironment\": \"node\"`\n  - `\"transform\": {\"^.+\\\\.tsx?$\": \"ts-jest\"}`\n  - `\"collectCoverageFrom\": [\"src/**/*.{ts,tsx}\"]`",
+    "source": "code_example",
+    "updated_at": 1781048770.492232
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+redis-statefulsets:kubernetes redis statefulsets ": {
+    "content": "- Use `kubectl apply -f statefulset.yaml` to deploy Redis StatefulSet.\n- Ensure your `statefulset.yaml` includes a headless service for stable network identifiers.\n- Specify persistent volumes in the `volumeClaimTemplates` section of your StatefulSet configuration.\n- Utilize ConfigMaps for managing Redis configurations dynamically.\n- For scaling, use `kubectl scale statefulset <statefulset-name> --replicas=<number>`.\n\nLatest versions:\n- Kubernetes: 1.27.x\n- Redis: 7.0.x\n\nKey config options:\n- `volumeClaimTemplates`: Defines the storage requirements for each pod in the StatefulSet.\n- `headlessService`: Ensures stable DNS names for pods, crucial for Redis clustering.\n- `replicas`: Specifies the number of replicas (pods) to run in the StatefulSet.",
+    "source": "web_search",
+    "updated_at": 1781048780.6123319
+  },
+  "search:kubernetes+redis-statefulsets:kubernetes redis statefulsets _ex": {
+    "content": "- Use `kubectl apply -f redis-statefulset.yaml` to create the StatefulSet.\n- Ensure Kubernetes version is at least 1.9 for StatefulSets support.\n- Set `replicas: 3` in the YAML to define a Redis cluster with three instances.\n- Configure each Redis instance with a unique storage volume using PersistentVolumes and PersistentVolumeClaims.\n- Use `serviceName: \"redis\"` to create a stable DNS entry for each pod in the StatefulSet.\n- Employ ConfigMaps for configuring Redis settings dynamically without changing the deployment.\n- Implement Role-Based Access Control (RBAC) for securing access to the StatefulSet and its resources.\n- Utilize Sidecar containers for additional functionality like monitoring or logging alongside Redis pods.",
+    "source": "code_example",
+    "updated_at": 1781048786.369213
+  },
+  "search:kubernetes+redis-statefulsets:redis statefulsets in kubernet": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get pods --selector app=myapp`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `replicas`: Number of replicas.\n  - `volumeClaimTemplates`: Persistent volume claims for storage.\n  - `service`: Service configuration for statefulset pods.",
+    "source": "web_search",
+    "updated_at": 1781048795.5628083
+  },
+  "search:kubernetes+redis-statefulsets:redis statefulsets in kubernet_ex": {
+    "content": "- Deploy Redis using StatefulSets in Kubernetes with the command: `kubectl apply -f redis-statefulset.yaml`\n- Use the latest version of Redis, as of my last update, which is 7.2.\n- Key config options for performance tuning include:\n  - `maxmemory`: Set to limit memory usage.\n  - `maxmemory-policy`: Define eviction policy when maxmemory is reached.\n  - `appendonly yes`: Enable AOF persistence for data durability.\n  - `cluster-enabled yes`: For Redis Cluster mode if needed.\n- Ensure StatefulSets are used for stable network identities and ordered pod management with the command: `kubectl get statefulsets`\n- Monitor performance using Kubernetes metrics or third-party tools like Prometheus and Grafana.\n- Scale horizontally by increasing the number of replicas in the StatefulSet configuration file.\n- Regularly update Redis and Kubernetes to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781048806.6169286
+  }
+}
