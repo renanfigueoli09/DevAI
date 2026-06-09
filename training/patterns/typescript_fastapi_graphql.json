@@ -1,0 +1,12 @@
+{
+  "search:typescript+fastapi-graphql:typescript fastapi graphql err": {
+    "content": "- **CLI Commands**:\n  - `npm install @nestjs/cli`\n  - `npx create-next-app@latest my-app --typescript`\n  - `pip install fastapi[all] strawberry-graphql`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - FastAPI: v0.78.0\n  - Strawberry GraphQL: v0.14.0\n\n- **Key Config Options**:\n  - Next.js: `next.config.js` for custom configurations.\n  - FastAPI: `main.py` with `FastAPI()` instance and routes defined.\n  - Strawberry GraphQL: Define schemas using Python type annotations.",
+    "source": "web_search",
+    "updated_at": 1781041646.8509738
+  },
+  "search:typescript+fastapi-graphql:typescript fastapi graphql err_ex": {
+    "content": "- Use `FastAPI` version 0.95.0 or later.\n- Install `strawberry-graphql-fastapi` for GraphQL integration.\n- Implement error handling using Python's built-in exception handling mechanisms.\n- Configure FastAPI to return appropriate HTTP status codes based on errors.\n- Use `GraphQLApp` from `strawberry.asgi` to create a GraphQL app.\n- Integrate the GraphQL app with FastAPI using `app.include_router`.\n- Define custom exceptions and error handlers for specific scenarios.\n- Utilize ASGI-compatible GraphQL libraries like `graphene` or `strawberry`.\n- Ensure proper documentation of error handling patterns in your API.",
+    "source": "code_example",
+    "updated_at": 1781041654.4986527
+  }
+}

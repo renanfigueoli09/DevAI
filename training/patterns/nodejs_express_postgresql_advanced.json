@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-postgresql-advanced:node.js express postgresql adv": {
+    "content": "- **CLI Commands**:\n  - `npm install express sequelize pg pg-hstore`\n  - `npx sequelize-cli init`\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - Express: 4.19.x\n  - Sequelize: 6.x\n\n- **Key Config Options**:\n  - Database URL: `postgres://username:password@localhost:5432/database_name`\n  - Sequelize Models: Define models using Sequelize's ORM.\n  - Middleware: Use middleware for validation, authentication, and error handling.\n  - Testing: Utilize Jest or Mocha for testing API endpoints.",
+    "source": "web_search",
+    "updated_at": 1781041662.6675515
+  },
+  "search:nodejs-express-postgresql-advanced:node.js express postgresql adv_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install express sequelize pg`\n  - `npx sequelize-cli init`\n  - `npx sequelize-cli model:generate --name User --attributes username:string,email:string,password:string`\n\n- **Latest Versions**:\n  - Node.js: v18.14.0\n  - Express: 4.18.2\n  - Sequelize: 6.30.2\n  - PostgreSQL: 15.3\n\n- **Key Config Options**:\n  - `config/config.json`: Database connection settings.\n  - `models/user.js`: Define User model with attributes like username, email, and password.\n  - `routes/users.js`: Define routes for CRUD operations on the User model.\n  - `.env`: Environment variables for sensitive information like database credentials.",
+    "source": "code_example",
+    "updated_at": 1781041682.2533247
+  },
+  "search:nodejs-express-postgresql-advanced:node.js express postgresql per": {
+    "content": "- **CLI Commands**: Use `npm install express pg` to install Express and PostgreSQL drivers.\n- **Latest Versions**: Ensure using `express@4.x`, `pg@8.x`.\n- **Key Config Options**:\n  - For Express: Set `app.set('trust proxy', true)` for handling proxied requests.\n  - For PostgreSQL (`pg`): Use connection pool settings like `{ max: 20, idleTimeoutMillis: 30000 }`.",
+    "source": "web_search",
+    "updated_at": 1781041689.803715
+  },
+  "search:nodejs-express-postgresql-advanced:node.js express postgresql per_ex": {
+    "content": "- Use `pg` package for PostgreSQL in Node.js.\n- Install latest version of Node.js and npm.\n- Configure PostgreSQL connection pool using `pg-pool`.\n- Optimize queries with indexes, e.g., `CREATE INDEX idx_name ON table(column);`.\n- Monitor performance with tools like pgAdmin or custom dashboards.\n- Use `.env` for environment variables to keep sensitive data secure.\n- Implement caching strategies to reduce database load.\n- Regularly update Node.js and PostgreSQL packages to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781041694.7445977
+  }
+}
