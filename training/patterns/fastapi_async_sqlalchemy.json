@@ -1,0 +1,22 @@
+{
+  "search:fastapi-async-sqlalchemy:fastapi async sqlalchemy tutor": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi asyncpg sqlalchemy alembic`\n  - `alembic init migrations`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 2.0.0b1\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - Async Session Factory: Use `AsyncSession` from `sqlalchemy.ext.asyncio`\n  - Alembic Configuration: Set up in `alembic.ini` and define environment variables for database URLs.",
+    "source": "web_search",
+    "updated_at": 1781085296.3332276
+  },
+  "search:fastapi-async-sqlalchemy:fastapi async sqlalchemy tutor_ex": {
+    "content": "- **Latest Version**: FastAPI 0.98.0, SQLAlchemy 2.0.0\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL` for database connection string\n  - `engine = create_async_engine(SQLALCHEMY_DATABASE_URL)`\n  - `async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`\n- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `pip install fastapi[all] sqlalchemy asyncpg databases`\n- **Example Code Snippet**:\n  ```python\n  from fastapi import FastAPI\n  from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession\n  from sqlalchemy.orm import sessionmaker\n\n  app = FastAPI()\n\n  SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"\n  engine = create_async_engine(SQLALCHEMY_DATABASE_URL)\n  async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)\n\n  @app.get(\"/\")\n  async def read_root():\n      async with async_session() as session:\n          # Perform database operations\n          pass\n  ```",
+    "source": "code_example",
+    "updated_at": 1781085314.7972672
+  },
+  "search:fastapi-async-sqlalchemy:fastapi async sqlalchemy perfo": {
+    "content": "- Use FastAPI version 0.95.0 or later.\n- Employ SQLAlchemy 2.0 for asynchronous database operations.\n- Configure the async engine with `create_async_engine(\"postgresql+asyncpg://user:password@host/dbname\")`.\n- Implement connection pooling using `poolclass=AsyncQueuePool` in the engine configuration.\n- Use `select()` from SQLAlchemy's `sqlalchemy.future` module for efficient query construction.\n- Apply caching mechanisms like Redis or Memcached to reduce database load.\n- Avoid N+1 queries by using eager loading with `.options(joinedload(User.addresses))`.\n- Monitor and profile your application using tools like `asyncio.run(asyncpg.dump_stats())` and `cProfile`.\n- Regularly update dependencies to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781085332.473151
+  },
+  "search:fastapi-async-sqlalchemy:fastapi async sqlalchemy perfo_ex": {
+    "content": "- Use `pip install fastapi[all] sqlalchemy databases asyncpg alembic` to install necessary packages.\n- FastAPI version: 0.95.0\n- SQLAlchemy version: 2.0.0\n- Databases package version: 1.0.0\n- Alembic version: 1.8.3\n- Key config options:\n  - `DATABASE_URL` for connection string.\n  - `engine = create_async_engine(DATABASE_URL)`\n  - `SessionLocal = AsyncSession(bind=engine)`\n  - Use `async with SessionLocal() as session:` for database operations.\n- Run migrations using `alembic init alembic`, then configure in `alembic.ini` and use `alembic revision --autogenerate -m \"message\"` to create new migration scripts.",
+    "source": "code_example",
+    "updated_at": 1781085342.4721088
+  }
+}
