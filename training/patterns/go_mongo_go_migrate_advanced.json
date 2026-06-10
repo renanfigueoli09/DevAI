@@ -1,0 +1,27 @@
+{
+  "search:go+mongo-go-migrate-advanced:go mongodb advanced querying w": {
+    "content": "- **CLI Commands**:\n  - `migrate create -ext sql -dir db/migrations -seq init`: Creates a new migration file.\n  - `migrate up`: Applies all migrations that have not yet been applied.\n  - `migrate down`: Reverses the last applied migration.\n\n- **Latest Versions**:\n  - Go: v1.20\n  - MongoDB Community Server: v6.0\n  - golang-migrate/migrate: v4.13\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Migrate Database: `migrate`\n  - Migration Collection: `migrations`",
+    "source": "web_search",
+    "updated_at": 1781066361.5333297
+  },
+  "search:go+mongo-go-migrate-advanced:go mongodb error handling patt": {
+    "content": "- **CLI Commands**:\n  - `migrate create -ext sql -dir db/migrations -seq init`: Creates a new migration file.\n  - `migrate up`: Applies all migrations that have not yet been applied.\n  - `migrate down`: Reverses the last applied migration.\n\n- **Latest Versions**:\n  - golang-migrate/migrate: v4.10.2\n  - MongoDB Go Driver: v1.8.3\n\n- **Key Config Options**:\n  - `MONGO_URI`: Connection string for MongoDB.\n  - `MIGRATE_STORAGE_PATH`: Path to the storage directory for migration files.\n  - `MIGRATE_STORAGE_DRIVER`: Storage driver type (e.g., \"filesystem\", \"mongodb\").",
+    "source": "web_search",
+    "updated_at": 1781066417.4617324
+  },
+  "search:go+mongo-go-migrate-advanced:go mongodb error handling patt_ex": {
+    "content": "- Use `migrate` CLI for managing MongoDB migrations.\n- Install latest version of `golang-migrate/migrate/v4`.\n- Run migrations using command: `migrate -path ./db/migrations -database \"mongodb://user:password@localhost:27017/dbname\" up`.\n- Key config options include `-path` for migration files, `-database` for MongoDB connection string.\n- Migrations support JSON format with array of commands.\n- Each command in the JSON is executed separately.\n- Ensure all keys in JSON are quoted.",
+    "source": "code_example",
+    "updated_at": 1781066433.1401973
+  },
+  "search:go+mongo-go-migrate-advanced:go mongodb security best pract": {
+    "content": "- **MongoDB Security Best Practices**:\n  - Use authentication (`--authentication`)\n  - Implement role-based access control (`--role`)\n  - Enable encryption (`--encryption`)\n  - Audit activities (`--audit`)\n  - Isolate networks (`--network-isolation`)\n\n- **golang-migrate/migrate**:\n  - Latest version: `v4.10.2`\n  - CLI commands:\n    ```sh\n    migrate create -ext sql -dir db/migrations -seq init_table\n    migrate up\n    migrate down\n    ```\n  - Key config options:\n    - `-database`: Database connection string\n    - `-source`: Migration source (e.g., `file://db/migrations`)\n    - `-target`: Target migration version\n\n- **Go MongoDB Security Best Practices**:\n  - Use environment variables for sensitive data (`MONGO_URI`, `MONGO_PASSWORD`)\n  - Regularly update MongoDB and drivers to patch security vulnerabilities\n  - Implement least privilege access control for database users",
+    "source": "web_search",
+    "updated_at": 1781066441.5968518
+  },
+  "search:go+mongo-go-migrate-advanced:go mongodb security best pract_ex": {
+    "content": "- **CLI Commands**:\n  - `go get go.mongodb.org/mongo-driver/mongo`\n  - `go get go.mongodb.org/mongo-driver/mongo/options`\n\n- **Latest Versions**:\n  - MongoDB Go Driver: v2.3.4\n\n- **Key Config Options**:\n  - `authSource`: Specifies the database where authentication credentials are stored.\n  - `tls`: Enables TLS/SSL for secure connections.\n  - `retryWrites`: Allows retrying write operations on network errors.",
+    "source": "code_example",
+    "updated_at": 1781066446.6799192
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "search:typescript-prisma-advanced:typescript prisma advanced que": {
+    "content": "- **CLI Commands**:\n  - `npx prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.x\n  - Prisma Migrate: v1.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and relations.\n  - `.env`: Contains environment variables like database URL.\n  - `prisma/schema.ts`: TypeScript version of the schema file for type safety.\n\n- **TypeScript Integration**:\n  - Use Prisma Client with TypeScript to ensure full type safety in queries.\n  - Import types from `@prisma/client` for better type inference and autocompletion.",
+    "source": "web_search",
+    "updated_at": 1781066296.2828522
+  },
+  "search:typescript-prisma-advanced:typescript prisma advanced que_ex": {
+    "content": "- **CLI Commands**: `npx prisma migrate dev --name init` initializes a new Prisma project.\n- **Latest Versions**: Ensure using the latest Prisma version by running `npm install prisma@latest`.\n- **Key Config Options**:\n  - `schema`: Defines your data model.\n  - `generator client`: Specifies how to generate the Prisma Client.\n  - `datasource db`: Configures the database connection.",
+    "source": "code_example",
+    "updated_at": 1781066311.7652047
+  },
+  "search:typescript-prisma-advanced:typescript prisma error handli": {
+    "content": "- Use `prisma generate` to update Prisma Client based on the latest schema.\n- Implement error handling using try-catch blocks around database operations.\n- Utilize Prisma Better Errors for more descriptive error messages.\n- Install `@prisma/prisma-error-formatter` via npm for formatting common Prisma errors.\n- Configure Prisma Client in your TypeScript project by setting up a `prisma.ts` file with the appropriate connection string and schema path.",
+    "source": "web_search",
+    "updated_at": 1781066320.9789464
+  },
+  "search:typescript-prisma-advanced:typescript prisma error handli_ex": {
+    "content": "- **CLI Commands**: Use `npx prisma migrate dev` to create new migrations.\n- **Latest Version**: Prisma 4.x as of my last update.\n- **Key Config Options**:\n  - `schema`: Define your data model in a `.prisma` file.\n  - `provider`: Specify the database provider (e.g., `postgresql`, `mysql`).\n  - `generator`: Configure the Prisma Client generator for TypeScript.",
+    "source": "code_example",
+    "updated_at": 1781066326.0953298
+  },
+  "search:typescript-prisma-advanced:typescript prisma security enh": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma generate`: Generates the Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma Client: v5.x\n  - Prisma Migrate: v2.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prismaClientOptions`: Customizes the behavior of the Prisma Client.",
+    "source": "web_search",
+    "updated_at": 1781066334.4892213
+  },
+  "search:typescript-prisma-advanced:typescript prisma security enh_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates a new migration based on the schema changes.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - TypeScript: v5.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prismaClientOptions`: Customizes the behavior of the Prisma Client, such as enabling or disabling query batching.",
+    "source": "code_example",
+    "updated_at": 1781066340.2121942
+  }
+}

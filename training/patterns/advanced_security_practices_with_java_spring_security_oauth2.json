@@ -2,12 +2,12 @@
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:oauth2 security best practices": {
     "content": "- Use `npm install express-session` for session management.\n- Implement CSRF protection using `express-csurf`.\n- Configure OAuth2 clients in your application's environment variables.\n- Ensure HTTPS is used by setting `app.use(require('https-only'))`.\n- Use `helmet` to secure HTTP headers.\n- Set up rate limiting with `express-rate-limit`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Implement JWT for stateless authentication.\n- Use environment-specific configurations in `.env` files.\n- Conduct security audits with tools like `snyk`.",
     "source": "web_search",
-    "updated_at": 1781066259.7519355
+    "updated_at": 1781066557.6944845
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring": {
     "content": "- **CLI Commands**:\n  - `mvnw spring-boot:run`: Runs the Spring Boot application.\n  \n- **Latest Versions**:\n  - Spring Boot 3.0\n  - Spring Security 6\n  \n- **Key Config Options**:\n  - JWT Secret Key for signing tokens\n  - Token Expiration Time\n  - Role-Based Access Control (RBAC) configuration",
     "source": "web_search",
-    "updated_at": 1781066260.8665676
+    "updated_at": 1781066558.9480376
   },
   "search:Advanced Security Practices with Java-Spring-Security-OAuth2:jwt token management in spring_ex": {
     "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application-name.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Security: 6.0.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for JWT configuration.\n  - `jwt.secret`: Secret key used to sign and verify tokens.\n  - `jwt.expiration`: Token expiration time in milliseconds.\n  - `security.oauth2.resourceserver.jwt.jwk-set-uri`: URI for the JWKS (JSON Web Key Set) endpoint if using a public key.",
