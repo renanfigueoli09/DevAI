@@ -1,0 +1,32 @@
+{
+  "search:Node.js + MongoDB Advanced Indexing:node.js mongodb indexing best ": {
+    "content": "- **CLI Commands**:\n  - `mongo --eval \"db.collection.createIndex({field: 1})\"` to create a single field index.\n  - `mongo --eval \"db.collection.createIndex([ { field1: 1 }, { field2: -1 } ])\"` for compound indexes.\n\n- **Latest Versions**:\n  - MongoDB Node.js Driver: v7.0.0\n  - MongoDB Server: v6.0.0\n\n- **Key Config Options**:\n  - `background`: Set to true to create index in the background.\n  - `unique`: Enforce uniqueness on indexed field(s).\n  - `expireAfterSeconds`: Define TTL for documents.\n\n- **Example Code Snippets**:\n  ```javascript\n  const MongoClient = require('mongodb').MongoClient;\n  \n  async function run() {\n    const uri = \"your_mongodb_connection_string\";\n    const client = new MongoClient(uri);\n    \n    try {\n      await client.connect();\n      const database = client.db('testdb');\n      const collection = database.collection('users');\n      \n      // Create a single field index\n      await collection.createIndex({ email: 1 }, { unique: true });\n      \n      // Create a compound index\n      await collection.createIndex([ { age: 1 }, { name: -1 } ], { background: true });\n    } finally {\n      await client.close();\n    }\n  }\n\n  run().catch(console.dir);\n  ```",
+    "source": "web_search",
+    "updated_at": 1781073463.9603348
+  },
+  "search:Node.js + MongoDB Advanced Indexing:node.js mongodb indexing best _ex": {
+    "content": "- Use `db.collection.createIndex()` to create an index.\n- Specify the field and type of index, e.g., `{ \"fieldName\": 1 }` for ascending order.\n- For compound indexes, include all fields used in queries: `{ \"field1\": 1, \"field2\": -1 }`.\n- TTL (Time To Live) indexes can be created with `{ \"createdAt\": 1 }, { expireAfterSeconds: 3600 }`.\n- Covered queries use only indexed fields for faster retrieval.\n- Monitor index usage with `db.collection.stats()`.\n- Update MongoDB to the latest version for performance improvements and new features.\n- Use `db.collection.find().explain(\"executionStats\")` to analyze query performance.\n- Regularly review and optimize indexes based on query patterns.",
+    "source": "code_example",
+    "updated_at": 1781073469.6664069
+  },
+  "search:Node.js + MongoDB Advanced Indexing:mongodb sharding strategies 20": {
+    "content": "- **CLI Commands**:\n  - `mongosh --shard <host>:<port>`\n  - `mongo --eval \"db.adminCommand({enableSharding: '<database>'})\"\n  - `mongo --eval \"sh.shardCollection('<database>.<collection>', {<key>: 1})\"`\n\n- **Latest Versions**:\n  - MongoDB 6.0\n\n- **Key Config Options**:\n  - `configDB`: Specifies the configuration database for sharded clusters.\n  - `chunkSize`: Defines the size of chunks in bytes or documents.\n  - `shardKey`: Determines how data is distributed across shards.",
+    "source": "web_search",
+    "updated_at": 1781073478.744445
+  },
+  "search:Node.js + MongoDB Advanced Indexing:mongodb sharding strategies 20_ex": {
+    "content": "- **CLI Commands**:\n  - `mongosh --shard <host>:<port>`\n  - `mongo --shard <host>:<port>`\n\n- **Latest Versions**:\n  - MongoDB 6.0\n\n- **Key Config Options**:\n  - `configDB`: Specifies the configuration database for sharding.\n  - `shardsvr`: Indicates that a node is a shard server.\n  - `mongos`: The query router for the sharded cluster.\n\n- **Sharding Strategies**:\n  - Range Sharding: Distributes data based on a range of values.\n  - Hashed Sharding: Uses a hash function to distribute data evenly across shards.\n  - Manual Sharding: Manually assigns documents to shards.",
+    "source": "code_example",
+    "updated_at": 1781073488.1552112
+  },
+  "search:Node.js + MongoDB Advanced Indexing:node.js mongodb query optimiza": {
+    "content": "- **CLI Commands**: Use `db.collection.find(query, { projection })` for efficient data retrieval.\n- **Latest Versions**: Ensure MongoDB and Node.js are up to date for the best performance.\n- **Key Config Options**:\n  - `useUnifiedTopology: true`\n  - `poolSize: 50`\n  - `bufferMaxEntries: 0`\n  - `retryWrites: false`",
+    "source": "web_search",
+    "updated_at": 1781073505.4935553
+  },
+  "search:Node.js + MongoDB Advanced Indexing:node.js mongodb query optimiza_ex": {
+    "content": "- **CLI Commands**: Use `db.collection.createIndex()` to create an index.\n- **Latest Versions**: MongoDB v8.0, Node.js v20.x.\n- **Key Config Options**:\n  - `index`: Specify the field(s) for indexing.\n  - `unique`: Ensure uniqueness of indexed values.\n  - `sparse`: Create sparse indexes for documents with missing fields.\n  - `expireAfterSeconds`: Set TTL (Time To Live) for documents.",
+    "source": "code_example",
+    "updated_at": 1781073509.9125128
+  }
+}

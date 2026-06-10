@@ -1,0 +1,32 @@
+{
+  "search:Spring Boot + Hibernate Performance Tuning:spring boot hibernate performa": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Boot 3.2, Hibernate 6.2.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.show_sql=false`",
+    "source": "web_search",
+    "updated_at": 1781073351.7502592
+  },
+  "search:Spring Boot + Hibernate Performance Tuning:spring boot hibernate performa_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to run Docker containers.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Hibernate: 6.2.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.dialect`: Set the database dialect.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache`: Enable second-level caching.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Configure database connection details.",
+    "source": "code_example",
+    "updated_at": 1781073360.807196
+  },
+  "search:Spring Boot + Hibernate Performance Tuning:hibernate query caching strate": {
+    "content": "- **CLI Commands**: Use `hibernate.cache.use_query_cache=true` to enable query caching.\n- **Latest Versions**: Ensure using Hibernate 6.x for the best performance and features.\n- **Key Config Options**:\n  - `hibernate.cache.region.factory_class`: Specify the cache region factory class, e.g., `org.hibernate.cache.ehcache.EhCacheRegionFactory`.\n  - `hibernate.cache.use_second_level_cache`: Enable second-level caching if needed.\n  - `hibernate.cache.use_query_cache`: Explicitly enable query caching for individual queries.",
+    "source": "web_search",
+    "updated_at": 1781073369.3270552
+  },
+  "search:Spring Boot + Hibernate Performance Tuning:hibernate query caching strate_ex": {
+    "content": "- **CLI Commands**: Use `hibernate.cache.use_second_level_cache=true` and `hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory`.\n- **Latest Versions**: Ensure Hibernate, Ehcache, and Spring Boot are up-to-date for optimal performance.\n- **Key Config Options**:\n  - `hibernate.cache.use_second_level_cache`: Enables second-level caching.\n  - `hibernate.cache.region.factory_class`: Specifies the cache region factory class (e.g., EhCacheRegionFactory).\n  - `hibernate.cache.use_query_cache`: Enables query caching for HQL queries.",
+    "source": "code_example",
+    "updated_at": 1781073378.5320656
+  },
+  "search:Spring Boot + Hibernate Performance Tuning:spring boot hibernate batch pr": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build the project.\n- **Latest Versions**: Spring Boot 3.2, Hibernate 6.2.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
+    "source": "web_search",
+    "updated_at": 1781073390.6268961
+  },
+  "search:Spring Boot + Hibernate Performance Tuning:spring boot hibernate batch pr_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.2.1.Final\n\n- **Key Config Options**:\n  - `@EnableBatchProcessing`: Enables Spring Batch auto-configuration.\n  - `batchSize`: Specifies the number of items processed in a single batch.\n  - `jobRepository`: Manages job and step execution metadata.\n  - `stepBuilderFactory`: Used to create steps for batch processing.",
+    "source": "code_example",
+    "updated_at": 1781073396.6523862
+  }
+}

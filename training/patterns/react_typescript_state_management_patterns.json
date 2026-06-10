@@ -1,0 +1,32 @@
+{
+  "search:React + TypeScript State Management Patterns:react typescript state managem": {
+    "content": "- **CLI Commands:** `npx create-react-app my-app --template typescript`\n- **Latest Versions:** React 2024, Zustand 5.0, Jotai 3.0\n- **Key Config Options:**\n  - Redux Toolkit for state management\n  - Context API with TypeScript\n  - Zustand and Jotai for simpler state management",
+    "source": "web_search",
+    "updated_at": 1781073405.1874833
+  },
+  "search:React + TypeScript State Management Patterns:react typescript state managem_ex": {
+    "content": "- **GitHub - react-declarative/react-declarative**: A React form builder that interacts with a JSON endpoint to generate nested grids and automatically manage state in a declarative style.\n  \n- **Comparing TypeScript state management solutions - LogRocket Blog**: Example usage of MobX for state management in React. Use the following code snippet inside a React component:\n  ```jsx\n  import { observable, action } from 'mobx';\n  import { observer } from 'mobx-react';\n\n  @observer\n  class Timer extends React.Component {\n    @observable time = 0;\n\n    @action incrementTime() {\n      this.time++;\n    }\n\n    render() {\n      return (\n        <div>\n          <p>Time: {this.time}</p>\n          <button onClick={this.incrementTime}>Increment</button>\n        </div>\n      );\n    }\n  }\n  ```\n\n- **Typescript-React State Management With Easy Peasy**: Use Easy Peasy for state management. Install it using:\n  ```bash\n  npm install easy-peasy\n  ```\n  \n  Key config options include defining models and actions in a simple, declarative way. Example model:\n  ```javascript\n  import { createStore } from 'easy-peasy';\n\n  const store = createStore({\n    count: {\n      value: 0,\n      increment: action(state => state.value++)\n    }\n  });\n\n  export default store;\n  ```\n\n- **Latest versions**: Ensure you are using the latest versions of React, TypeScript, MobX, and Easy Peasy to take advantage of the latest features and improvements.",
+    "source": "code_example",
+    "updated_at": 1781073417.694407
+  },
+  "search:React + TypeScript State Management Patterns:redux toolkit with typescript ": {
+    "content": "- **Install Redux Toolkit**: `npm install @reduxjs/toolkit`\n- **Create Slice**: Use `createSlice` to define reducers and actions.\n- **PayloadAction Type**: Import from `@reduxjs/toolkit` for type-safe action payloads.\n- **Configure Store**: Use `configureStore` from `@reduxjs/toolkit`.\n- **TypeScript Configuration**: Ensure your `tsconfig.json` includes necessary compiler options like `\"esModuleInterop\": true`.",
+    "source": "web_search",
+    "updated_at": 1781073428.6971247
+  },
+  "search:React + TypeScript State Management Patterns:redux toolkit with typescript _ex": {
+    "content": "- **CLI Commands**:\n  - `npm install @reduxjs/toolkit typescript --save`\n  - `npx create-react-app my-app --template redux-typescript`\n\n- **Latest Versions**:\n  - Redux Toolkit: v2.0.1\n  - TypeScript: v5.3.3\n\n- **Key Config Options**:\n  - Use `configureStore` from `@reduxjs/toolkit`.\n  - Define typed slices using `createSlice`.\n  - Utilize `createAsyncThunk` for asynchronous actions.\n  - Selectors should be type-safe with `ReturnType`.",
+    "source": "code_example",
+    "updated_at": 1781073433.5485823
+  },
+  "search:React + TypeScript State Management Patterns:context api and typescript 202": {
+    "content": "- **GitHub - upstash/context7**: Use Context7 to fetch up-to-date code examples and documentation directly into your LLM's context.\n  \n- **How to Master TypeScript in 2025**: Stay current with TypeScript by following the latest features and best practices.\n\n- **Stop Guessing Types in React**: Learn TypeScript patterns for better prop, hook, and context typing. Avoid defaulting context values to undefined.\n\n- **createContext – React**: Use `createContext` to create a context provider and consumer. Ensure context values change trigger re-renders of components reading the context.\n\n- **Latest TypeScript Version**: Check the latest version on the [TypeScript website](https://www.typescriptlang.org/) for new features and improvements.\n\n- **Key Config Options**:\n  - `renderToPipeableStream`: For server-side rendering.\n  - `renderToReadableStream`: For streaming SSR.\n\n- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`: Create a new React app with TypeScript support.\n  - `npm install typescript @types/node @types/react @types/react-dom`: Install TypeScript and related type definitions.",
+    "source": "web_search",
+    "updated_at": 1781073442.6315706
+  },
+  "search:React + TypeScript State Management Patterns:context api and typescript 202_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @types/react-context-api`\n\n- **Latest Versions**:\n  - React Context API: Part of React core, no separate version needed.\n  - TypeScript: Latest LTS version (as of my last update).\n\n- **Key Config Options**:\n  - Define context type using interfaces or types.\n  - Use `React.createContext` to create the context.\n  - Provide value using `<Context.Provider>`.\n  - Consume value using `useContext` hook.",
+    "source": "code_example",
+    "updated_at": 1781073451.362087
+  }
+}

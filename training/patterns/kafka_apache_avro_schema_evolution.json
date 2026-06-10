@@ -1,0 +1,32 @@
+{
+  "search:Kafka + Apache Avro Schema Evolution:kafka avro schema evolution 20": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1`\n  - `kafka-avro-console-producer.sh --broker-list localhost:9092 --topic my-topic --property schema.registry.url=http://localhost:8081`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Schema Registry: 7.5.0\n\n- **Key Config Options**:\n  - `schema.registry.url`: URL of the Schema Registry.\n  - `value.schema`: Avro schema for the value.\n  - `key.schema`: Avro schema for the key (if applicable).",
+    "source": "web_search",
+    "updated_at": 1781073521.4901848
+  },
+  "search:Kafka + Apache Avro Schema Evolution:kafka avro schema evolution 20_ex": {
+    "content": "- **GitHub Project**: [schema-evolution](https://github.com/confluentinc/schema-registry-demo)\n- **YouTube Tutorial**: [Kafka Avro Schema Validation](https://www.youtube.com/watch?v=6Z8wXvqJfjg)\n- **Medium Article**: [Kafka Avro Model Generation with Gradle](https://medium.com/@palmuruganr/kafka-avro-model-generation-with-gradle-b5b2c0e1a9d7)\n\n**CLI Commands**:\n- `confluent local services start`\n- `confluent local services kafka status`\n\n**Latest Versions**:\n- Kafka: 3.4.0\n- Schema Registry: 6.2.0\n\n**Key Config Options**:\n- `schema.registry.url`: URL of the schema registry.\n- `key.deserializer`: Set to `io.confluent.kafka.serializers.KafkaAvroDeserializer`.\n- `value.deserializer`: Set to `io.confluent.kafka.serializers.KafkaAvroDeserializer`.",
+    "source": "code_example",
+    "updated_at": 1781073529.7946453
+  },
+  "search:Kafka + Apache Avro Schema Evolution:apache kafka connect with avro": {
+    "content": "- **CLI Commands**:\n  - `kafka-avro-console-producer.sh --broker-list localhost:9092 --topic my-topic --property schema.registry.url=http://localhost:8081`\n  - `kafka-avro-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning --property schema.registry.url=http://localhost:8081`\n\n- **Latest Versions**:\n  - Apache Kafka Connect: 3.9.0\n  - Apache Avro: 1.11.1\n\n- **Key Config Options**:\n  - `key.converter`: `io.confluent.connect.avro.AvroConverter`\n  - `value.converter`: `io.confluent.connect.avro.AvroConverter`\n  - `schema.registry.url`: URL of the Schema Registry\n  - `basic.auth.credentials.source`: For secure connections, use `USER_INFO` or `ENVIRONMENT`\n\nThese details provide actionable guidance for developers working with Apache Kafka Connect and Avro.",
+    "source": "web_search",
+    "updated_at": 1781073541.7396393
+  },
+  "search:Kafka + Apache Avro Schema Evolution:apache kafka connect with avro_ex": {
+    "content": "- **CLI Commands**:\n  - `confluent local services start`: Starts the Confluent Platform.\n  - `confluent local services stop`: Stops the Confluent Platform.\n\n- **Latest Versions**:\n  - Apache Kafka: 3.2.0\n  - Apache Avro: 1.11.1\n  - Confluent Schema Registry: 7.0.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.converter`: Converter class for the key format (e.g., `io.confluent.connect.avro.AvroConverter`).\n  - `value.converter`: Converter class for the value format (e.g., `io.confluent.connect.avro.AvroConverter`).\n  - `schema.registry.url`: URL of the Schema Registry.",
+    "source": "code_example",
+    "updated_at": 1781073553.841516
+  },
+  "search:Kafka + Apache Avro Schema Evolution:kafka streams and avro integra": {
+    "content": "- **Latest Apache Avro Version**: 2.8.3\n- **Kafka Streams Avro SerDes**: `io.confluent:kafka-streams-avro-serde`\n- **JSON Serialization Library**: `com.fasterxml.jackson.module:jackson-module-kotlin`\n- **CLI Command for Schema Registry**:\n  ```bash\n  confluent local services schema-registry start\n  ```\n- **Key Config Options in Kafka Streams**:\n  - `key.deserializer`: Set to Avro deserializer.\n  - `value.deserializer`: Set to Avro deserializer.\n  - `schema.registry.url`: URL of the Schema Registry.\n\nThese actionable facts provide a concrete guide for developers integrating Apache Avro with Kafka Streams.",
+    "source": "web_search",
+    "updated_at": 1781073563.4468703
+  },
+  "search:Kafka + Apache Avro Schema Evolution:kafka streams and avro integra_ex": {
+    "content": "- **Latest Kafka Streams Version**: 3.4.0\n- **Latest Avro Version**: 1.11.2\n- **Key Config Options**:\n  - `key.deserializer`: `org.apache.kafka.common.serialization.Serdes.StringDeserializer`\n  - `value.deserializer`: `io.confluent.kafka.serializers.KafkaAvroDeserializer`\n  - `schema.registry.url`: URL of the Confluent Schema Registry\n\n- **CLI Commands**:\n  ```bash\n  kafka-topics.sh --create --topic CustomerTopic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3\n  kafka-topics.sh --create --topic BalanceTopic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3\n  kafka-topics.sh --create --topic CustomerBalanceOutput --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3\n  ```\n\n- **Example Code Snippet**:\n  ```java\n  Properties props = new Properties();\n  props.put(StreamsConfig.APPLICATION_ID_CONFIG, \"customer-balance-stream\");\n  props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, \"localhost:9092\");\n  props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());\n  props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, KafkaAvroDeserializer.class);\n  props.put(\"schema.registry.url\", \"http://localhost:8081\");\n\n  StreamsBuilder builder = new StreamsBuilder();\n  KStream<String, GenericRecord> customerStream = builder.stream(\"CustomerTopic\");\n  KStream<String, GenericRecord> balanceStream = builder.stream(\"BalanceTopic\");\n\n  // Process streams and produce output\n  customerStream.join(balanceStream,\n    (customer, balance) -> {\n      // Process logic here\n      return new GenericData.Record(outputSchema);\n    },\n    JoinWindows.of(Duration.ofMinutes(1)),\n    StreamJoined.with(Serdes.String(), KafkaAvroSerde.class, KafkaAvroSerde.class)\n  ).to(\"CustomerBalanceOutput\", Produced.with(Serdes.String(), KafkaAvroSerializer.class));\n\n  KafkaStreams streams = new KafkaStreams(builder.build(), props);\n  streams.start();\n  ```",
+    "source": "code_example",
+    "updated_at": 1781073577.294422
+  }
+}
