@@ -1,0 +1,22 @@
+{
+  "search:angular-graphql-performance:angular graphql performance op": {
+    "content": "- **CLI Commands**:\n  - `ng generate service <name>` to create a new GraphQL service.\n  - `ng serve --prod` for production builds.\n\n- **Latest Versions**:\n  - Angular CLI: v15.2.3\n  - Apollo Client: v3.7.0\n\n- **Key Config Options**:\n  - In `angular.json`, configure the build options for production environments.\n  - Use Apollo's `InMemoryCache` for caching GraphQL data locally.\n  - Implement `@apollo/client/link/error` to handle errors gracefully.\n\n- **Optimization Techniques**:\n  - Use `@graphql-codegen/cli` for code generation from GraphQL schemas.\n  - Apply `@angular/cdk/layout` for efficient UI rendering.\n  - Utilize Apollo's `useQuery` and `useMutation` hooks for reactive data fetching.",
+    "source": "web_search",
+    "updated_at": 1781077171.67936
+  },
+  "search:angular-graphql-performance:angular graphql performance op_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate component <component-name>`\n  - `ng serve --prod`\n  - `ng build --prod`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Core: 16.2.3\n\n- **Key Config Options**:\n  - `angular.json`: Configure project settings, including optimization flags.\n  - `tsconfig.json`: Set TypeScript compiler options for better performance and code quality.\n  - `environment.ts`/`environment.prod.ts`: Define environment-specific variables for different deployment stages.",
+    "source": "code_example",
+    "updated_at": 1781077187.056086
+  },
+  "search:angular-graphql-performance:graphql in angular: best pract": {
+    "content": "- **CLI Commands**:\n  - `ng generate service <name>` to create a new service.\n  - `ng serve` to start the development server.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.4\n  - Apollo Client: v3.7.0\n\n- **Key Config Options**:\n  - In `angular.json`, configure paths and assets for your project.\n  - Use `environment.ts` and `environment.prod.ts` for environment-specific configurations.\n  - Configure Apollo Client in `app.module.ts` with GraphQL endpoint URL.",
+    "source": "web_search",
+    "updated_at": 1781077200.6424956
+  },
+  "search:angular-graphql-performance:graphql in angular: best pract_ex": {
+    "content": "- Use Angular CLI to create new projects (`ng new my-app`).\n- Install Apollo Client for Angular using `npm install @apollo/client graphql-tag`.\n- Configure Apollo Client in your app module with `ApolloModule.forRoot()`.\n- Utilize `HttpLink` for connecting to GraphQL server.\n- Implement caching strategies with `InMemoryCache`.\n- Use directives like `*ngIf` and `*ngFor` for data binding.\n- Employ Angular's reactive forms for handling form inputs.\n- Leverage Angular services for managing application state and logic.\n- Apply best practices for error handling in GraphQL queries.",
+    "source": "code_example",
+    "updated_at": 1781077205.8875659
+  }
+}
