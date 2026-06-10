@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-advanced-performance:go gorm advanced performance o": {
+    "content": "- **Advanced GORM Techniques**: Master efficient data handling using Preload, Joins, and Hooks.\n- **Performance Optimization**: Apply intelligent indexing, batch processing, and caching strategies.\n- **CLI Commands**: Use `gorm.io/gorm` for the latest version of GORM.\n- **Key Config Options**:\n  - `AutoMigrate`: Automatically migrate schema to match models.\n  - `Logger`: Configure logging level and output format.\n  - `DryRun`: Enable dry run mode to simulate queries without executing them.",
+    "source": "web_search",
+    "updated_at": 1781057736.7740772
+  },
+  "search:go-gorm-advanced-performance:go gorm advanced performance o_ex": {
+    "content": "- **CLI Commands**:\n  - `go mod init example.com/neon-gorm`\n  - `gorm-cli migrate`\n\n- **Latest Versions**:\n  - GORM: v2.34.0\n  - Neon Postgres: Latest stable version\n\n- **Key Config Options**:\n  - `gorm.DB` configuration for database connection.\n  - Migrations using `AutoMigrate`, `CreateTable`, and `DropTable`.\n  - Hooks for lifecycle events like `BeforeSave`, `AfterFind`.",
+    "source": "code_example",
+    "updated_at": 1781057744.4789689
+  },
+  "search:go-gorm-advanced-performance:go gorm batch operations 2025": {
+    "content": "- **Latest Version**: GORM 2.0\n- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/sqlite` (or other database drivers)\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})`\n  - `db.Create(&users)`\n  - `db.Save(&user)`\n  - `db.Delete(&user)`\n  - `db.Where(\"name = ?\", \"jinzhu\").Updates(User{Name: \"Jinzhu\", Age: 18})`",
+    "source": "web_search",
+    "updated_at": 1781057753.2497537
+  },
+  "search:go-gorm-advanced-performance:go gorm batch operations 2025_ex": {
+    "content": "- To run the benchmark test for `gorm-batch-insert`, use: `$ GOMAXPROCS=2 go test -bench=Batches -timeout 30m -count 6 -benchtime=20x ./internal/benchmark | tee results/gorm-bench.txt`.\n- Ensure Go version is up to date, as of my last update in October 2023.\n- Key config options for GORM batch inserts include `BatchInsertSize` and `CreateInBatches`.",
+    "source": "code_example",
+    "updated_at": 1781057769.6722724
+  }
+}
