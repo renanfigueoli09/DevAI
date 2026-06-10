@@ -1,0 +1,22 @@
+{
+  "search:TypeScript + React Testing Library:typescript react testing libra": {
+    "content": "- Install React Testing Library and Jest using npm or yarn.\n- Use `npm install --save-dev @testing-library/react @testing-library/jest-dom`.\n- Ensure `@types/react-dom` is installed for TypeScript type checking.\n- Configure Vite by adding `test: { globals: true, setupFilesAfterEnv: ['<rootDir>/setupTests.ts'] }` to `vite.config.js`.\n- Use `render()` from React Testing Library to render components in tests.\n- Employ `screen.getByText()`, `screen.getByRole()`, etc., for querying the DOM.\n- Utilize Jest matchers like `expect(element).toBeInTheDocument()` for assertions.\n- Update dependencies regularly by checking GitHub releases or npm updates.",
+    "source": "web_search",
+    "updated_at": 1781066150.6274269
+  },
+  "search:TypeScript + React Testing Library:typescript react testing libra_ex": {
+    "content": "- **CLI Commands**:\n  - `npm create vite@latest my-react-app --template react-ts`\n  - `npx vitest setup`\n\n- **Latest Versions**:\n  - React Testing Library: v14.0.0\n  - Vitest: v0.25.0\n\n- **Key Config Options**:\n  - In `vite.config.ts`, add `test: { globals: true, environment: 'jsdom' }`\n  - Use TypeScript interfaces for component props and state.\n  - Configure Jest in `vitest.config.ts` with `transform: { '^.+\\\\.tsx?$': 'ts-jest' }`.",
+    "source": "code_example",
+    "updated_at": 1781066158.1860921
+  },
+  "search:TypeScript + React Testing Library:advanced typescript react test": {
+    "content": "- **CLI Commands**: Use `npx create-react-app my-app --template typescript` to start a new React project with TypeScript.\n- **Latest Versions**: Ensure you are using the latest versions of TypeScript and React by running `npm install typescript@latest react@latest react-dom@latest`.\n- **Key Config Options**:\n  - In `tsconfig.json`, set `\"strict\": true` for strict type-checking.\n  - Use `\"esModuleInterop\": true` to enable interoperability with CommonJS modules.\n  - Configure `\"skipLibCheck\": true` in production builds to speed up compilation.",
+    "source": "web_search",
+    "updated_at": 1781066166.7473907
+  },
+  "search:TypeScript + React Testing Library:advanced typescript react test_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev @testing-library/react`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - React: v18.x\n  - TypeScript: v5.x\n\n- **Key Config Options**:\n  - `\"compilerOptions\": { \"jsx\": \"react-jsx\" }` in `tsconfig.json`\n  - `\"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]` in `jest.config.js`",
+    "source": "code_example",
+    "updated_at": 1781066173.977712
+  }
+}

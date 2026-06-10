@@ -1,0 +1,22 @@
+{
+  "search:Go + Gin + PostgreSQL:go gin postgresql crud operati": {
+    "content": "- **CLI Commands**:\n  - `go get -u github.com/gin-gonic/gin`\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/postgres`\n\n- **Latest Versions**:\n  - Gin: v1.8.2\n  - GORM: v2.0.13\n  - PostgreSQL Driver for GORM: v1.2.6\n\n- **Key Config Options**:\n  - Database Connection String: `host=localhost user=youruser dbname=yourdb password=yourpassword port=5432 sslmode=disable`\n  - Gin Mode: Set to `gin.ReleaseMode` for production\n  - GORM Logging: Enable or disable logging based on environment variables",
+    "source": "web_search",
+    "updated_at": 1781066195.3320053
+  },
+  "search:Go + Gin + PostgreSQL:go gin postgresql crud operati_ex": {
+    "content": "- Use `go run main.go` to start the application.\n- Install PostgreSQL driver using `go get -u github.com/lib/pq`.\n- Set up database connection in `config.go` with username, password, host, and dbname.\n- Define routes for CRUD operations in your main file (e.g., `router.POST(\"/items\", createItem)`).\n- Use SQLC to generate type-safe queries from `.sql` files.\n- Test endpoints using Postman or cURL.\n- Ensure error handling is robust throughout the application.",
+    "source": "code_example",
+    "updated_at": 1781066202.4497304
+  },
+  "search:Go + Gin + PostgreSQL:gin postgresql performance tun": {
+    "content": "- **CLI Commands**: Use `pg_stat_user_indexes` to monitor GIN index performance.\n- **Latest Versions**: PostgreSQL 17 and later versions support advanced GIN features.\n- **Key Config Options**:\n  - `work_mem`: Increase for better sorting and hash operations during query execution.\n  - `maintenance_work_mem`: Boosts the efficiency of VACUUM, CREATE INDEX, and ALTER TABLE ADD FOREIGN KEY.\n  - `effective_cache_size`: Adjust based on your system's memory to optimize I/O performance.",
+    "source": "web_search",
+    "updated_at": 1781066211.7136335
+  },
+  "search:Go + Gin + PostgreSQL:gin postgresql performance tun_ex": {
+    "content": "- **CLI Commands**:\n  - `pgbench -i` to initialize the benchmark database.\n  - `pgbench -c <clients> -T <seconds>` for concurrent client load testing.\n\n- **Latest Versions**:\n  - PostgreSQL 17 is expected to be released in Q4 2025, introducing significant performance enhancements and new features.\n\n- **Key Config Options**:\n  - `work_mem`: Adjusts the amount of memory used for internal sort operations.\n  - `maintenance_work_mem`: Sets the maximum memory used by maintenance activities like VACUUM, CREATE INDEX, and ALTER TABLE ADD FOREIGN KEY.\n  - `autovacuum_max_workers`: Specifies the number of autovacuum worker processes.",
+    "source": "code_example",
+    "updated_at": 1781066219.5487318
+  }
+}
