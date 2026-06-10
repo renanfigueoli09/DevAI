@@ -1,0 +1,22 @@
+{
+  "search:java-spring-boot-actuator-metrics:spring boot actuator metrics m": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `curl http://localhost:8080/actuator/metrics` to fetch metrics.\n\n- **Latest Versions**:\n  - Spring Boot Actuator: 3.1.4\n  - Micrometer: 1.10.5\n\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*` to expose all endpoints.\n  - `management.metrics.export.prometheus.enabled=true` to enable Prometheus metrics export.\n  - `management.endpoint.health.show-details=always` to show health details always.",
+    "source": "web_search",
+    "updated_at": 1781071663.0126743
+  },
+  "search:java-spring-boot-actuator-metrics:spring boot actuator metrics m_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `curl http://localhost:8080/actuator/metrics` to fetch metrics.\n\n- **Latest Versions**:\n  - Spring Boot Actuator: 3.1.4\n  - Prometheus: 2.37.0\n\n- **Key Config Options**:\n  - `management.endpoints.web.exposure.include=*`: Expose all endpoints.\n  - `management.metrics.export.prometheus.enabled=true`: Enable Prometheus metrics export.\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`: Configure datasource URL.",
+    "source": "code_example",
+    "updated_at": 1781071673.569062
+  },
+  "search:java-spring-boot-actuator-metrics:java spring boot performance m": {
+    "content": "- **Prometheus Integration**:\n  - Use `@EnablePrometheusEndpoint` to enable Prometheus metrics.\n  - Add `prometheus-client` dependency in your `pom.xml`.\n\n- **Spring Boot Actuator**:\n  - Enable actuator endpoints with `management.endpoints.web.exposure.include=*`.\n  - Configure endpoint security using `management.endpoints.web.exposure.exclude=health`.\n\n- **Micronaut vs Quarkus vs Spring Boot**:\n  - Micronaut: Use `./gradlew run` for running the application.\n  - Quarkus: Use `./mvnw compile quarkus:dev` for development mode.\n  - Spring Boot: Use `./mvnw spring-boot:run` for running.\n\n- **Performance Metrics**:\n  - Time-to-first-response: Monitor using Prometheus and Grafana dashboards.\n  - Request-per-second: Use metrics from Actuator or Micrometer.\n  - Memory efficiency: Analyze heap dump with tools like VisualVM or JProfiler.\n\n- **Spring Boot 3.0**:\n  - Latest version as of my last update is 3.0.x.\n  - Key config options include `spring.main.lazy-initialization=true` for lazy bean initialization.\n\n- **Micronaut 4.0**:\n  - Latest version as of my last update is 4.0.x.\n  - Key config options include `micronaut.server.port=8080`.\n\n- **Quarkus 3.0**:\n  - Latest version as of my last update is 3.0.x.\n  - Key config options include `quarkus.http.host=0.0.0.0`.",
+    "source": "web_search",
+    "updated_at": 1781071686.6230323
+  },
+  "search:java-spring-boot-actuator-metrics:java spring boot performance m_ex": {
+    "content": "- **Prometheus Monitoring**:\n  - Install Prometheus using Docker: `docker run --name prometheus -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus`\n  - Configure Prometheus to scrape metrics from your Spring Boot app.\n\n- **Spring Boot Performance Testing**:\n  - Use JMeter for load testing.\n  - Example command: `jmeter -n -t testplan.jmx -l results.jtl`\n\n- **ycrash Performance Analysis**:\n  - Install yCrash using Docker: `docker run --name ycrash -p 8080:8080 ycrash/ycrash`\n  - Configure your Spring Boot app to send metrics to yCrash.\n\n- **Key Config Options**:\n  - Enable Actuator endpoints for monitoring: `management.endpoints.web.exposure.include=*`\n  - Adjust JVM options for better performance: `-Xmx1024m -Xms512m`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Prometheus: 2.37.x\n  - JMeter: 5.4.1\n  - yCrash: Latest stable version available on Docker Hub",
+    "source": "code_example",
+    "updated_at": 1781071694.1720748
+  }
+}

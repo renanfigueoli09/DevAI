@@ -1,0 +1,12 @@
+{
+  "search:spring-cloud-stream-kafka-transaction:kafka transactional messaging ": {
+    "content": "- **CLI Commands**: \n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot 3.0\n  - Kafka 3.3\n\n- **Key Config Options**:\n  - `spring.kafka.producer.transaction-id-prefix`: Prefix for transaction IDs.\n  - `spring.kafka.consumer.enable-auto-commit`: Enable auto commit of offsets.\n  - `spring.kafka.consumer.auto-offset-reset`: Set to `earliest` or `latest`.",
+    "source": "web_search",
+    "updated_at": 1781071645.6753204
+  },
+  "search:spring-cloud-stream-kafka-transaction:kafka transactional messaging _ex": {
+    "content": "- Use `@Transactional` annotation on your listener methods.\n- Set `spring.kafka.producer.transaction-id-prefix` in your application properties.\n- Ensure you have the latest version of Spring Boot and Spring Kafka libraries.\n- Configure `KafkaTransactionManager` bean if needed.\n- Use producer-only transactions for Kafka.\n- Loop through a list of producer objects and rollback all records on exception.",
+    "source": "code_example",
+    "updated_at": 1781071652.5072513
+  }
+}

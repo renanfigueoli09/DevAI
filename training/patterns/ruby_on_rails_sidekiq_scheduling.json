@@ -1,0 +1,17 @@
+{
+  "search:ruby-on-rails-sidekiq-scheduling:sidekiq scheduling in ruby on ": {
+    "content": "- **Latest Version**: Sidekiq version 6.5.7 as of my last update.\n- **CLI Commands**:\n  - `bundle exec sidekiq` to start the Sidekiq server.\n  - `sidekiqctl stop <pid>` to stop a running Sidekiq process.\n  - `sidekiqctl restart <pid>` to restart a Sidekiq process.\n- **Key Config Options**:\n  - `config/initializers/sidekiq.rb`: Configure Sidekiq settings such as concurrency, queue names, and more.\n  - Redis URL: Set the Redis URL in your environment file (e.g., `.env`) or directly in the initializer to specify where Sidekiq should store its jobs.\n- **Scheduled Jobs**:\n  - Use `Sidekiq::Cron::Job.create` to schedule recurring tasks. For example:\n    ```ruby\n    Sidekiq::Cron::Job.create(name: 'daily_job', cron: '0 0 * * *', class: 'DailyWorker')\n    ```\n- **Monitoring**:\n  - Use `sidekiq-web` for a web-based interface to monitor Sidekiq jobs and workers.\n  - Install via `gem 'sidekiq-web'` and run with `bundle exec sidekiq-web`.\n- **Best Practices**:\n  - Keep job classes simple and focused on one task.\n  - Use Sidekiq's built-in retry mechanism for transient failures.\n  - Monitor job performance and adjust concurrency levels as needed.",
+    "source": "web_search",
+    "updated_at": 1781071590.8367648
+  },
+  "search:ruby-on-rails-sidekiq-scheduling:advanced sidekiq job managemen": {
+    "content": "- **CLI Commands**:\n  - `sidekiqctl stop`: Stop Sidekiq gracefully.\n  - `sidekiqctl restart`: Restart Sidekiq.\n\n- **Latest Versions**:\n  - Sidekiq: v6.5.2 (as of my last update in October 2023).\n\n- **Key Config Options**:\n  - `concurrency`: Set the number of concurrent jobs Sidekiq can handle.\n  - `queues`: Define which queues to process and their priorities.\n  - `retry_limit`: Specify the maximum number of retries for a job before it is discarded.",
+    "source": "web_search",
+    "updated_at": 1781071613.6930208
+  },
+  "search:ruby-on-rails-sidekiq-scheduling:advanced sidekiq job managemen_ex": {
+    "content": "- Install Sidekiq gem using `gem install sidekiq`\n- Configure Sidekiq in `config/sidekiq.yml` for advanced options like concurrency pool size and named queues\n- Set up Redis instance in Sidekiq initializer to point to your Redis server\n- Use `sidekiq` command to start the Sidekiq server\n- For scheduled jobs, use Sidekiq Pro or Sidekiq Enterprise features such as expiring unprocessed jobs and job metric reporting",
+    "source": "code_example",
+    "updated_at": 1781071621.6301765
+  }
+}
