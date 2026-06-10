@@ -1,0 +1,17 @@
+{
+  "search:python-django-orm Advanced Topics:django orm advanced usage": {
+    "content": "- Use `python manage.py shell` to interact with Django ORM directly.\n- Utilize `Django.db.models.functions` for database functions like `Count`, `Sum`, etc.\n- Employ `select_related()` and `prefetch_related()` for efficient querying of related objects.\n- Implement `Q` objects for complex queries combining multiple conditions.\n- Use `annotate()` to add calculated fields to querysets.\n- Leverage `raw()` method for executing raw SQL queries when necessary.\n- Configure database settings in `settings.py`, e.g., `DATABASES['default']`.\n- Ensure Django ORM is up-to-date with the latest version for performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781076873.377159
+  },
+  "search:python-django-orm Advanced Topics:django orm advanced usage_ex": {
+    "content": "- Use `django-admin` for managing Django projects.\n- Install the latest version of Django using pip: `pip install django`.\n- Key ORM configuration in settings.py includes `DATABASES` dictionary with database details.\n- Utilize `Count`, `Q` from `django.db.models` for complex queries.\n- Example query to count people by city:\n  ```python\n  from django.db.models import Count, Q\n  from .models import Person, Address\n\n  city_counts = Address.objects.values('city').annotate(count=Count('person'))\n  ```\n- Explore third-party packages like `django-orm` for advanced ORM features.\n- Consider using PostgreSQL-specific features if your project requires them.",
+    "source": "code_example",
+    "updated_at": 1781076879.2245665
+  },
+  "search:python-django-orm Advanced Topics:django model relationships": {
+    "content": "- **CLI Commands**:\n  - `python manage.py makemigrations`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - Django 4.2\n\n- **Key Config Options**:\n  - `settings.py`: `INSTALLED_APPS`, `DATABASES`, `MEDIA_URL`, `STATIC_URL`",
+    "source": "web_search",
+    "updated_at": 1781076886.0021608
+  }
+}

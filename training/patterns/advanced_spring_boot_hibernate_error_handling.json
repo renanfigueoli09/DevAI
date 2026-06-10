@@ -1,0 +1,22 @@
+{
+  "search:Advanced Spring Boot + Hibernate Error Handling:spring boot error handling": {
+    "content": "- Use `@ExceptionHandler` to handle exceptions at the controller level.\n- Utilize `@ControllerAdvice` for global exception handling across multiple controllers.\n- Implement custom error responses using `ResponseEntity`.\n- Configure error handling in `application.properties` or `application.yml`.\n- Latest version of Spring Boot: 3.1.4\n- Key config options:\n  - `server.error.include-message=always`\n  - `server.error.include-binding-errors=always`\n  - `spring.mvc.throw-exception-if-no-handler-found=true`\n  - `spring.web.resources.add-mappings=false`",
+    "source": "web_search",
+    "updated_at": 1781076846.4749644
+  },
+  "search:Advanced Spring Boot + Hibernate Error Handling:spring boot error handling_ex": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` for centralized error handling in Spring Boot.\n- Implement custom exception handlers to return specific HTTP status codes and messages.\n- Configure `server.error.include-stacktrace=never` in `application.properties` to prevent stack traces from being exposed in production environments.\n- Utilize `@ResponseStatus` on exceptions to specify the HTTP status code returned by the exception handler.\n- For RESTful APIs, ensure that error responses are in JSON format using `@RestControllerAdvice`.\n- Consider using `ErrorController` for custom error pages when accessed via browsers.",
+    "source": "code_example",
+    "updated_at": 1781076849.969525
+  },
+  "search:Advanced Spring Boot + Hibernate Error Handling:hibernate exception management": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` to handle exceptions globally in Spring.\n- Implement custom exception classes that extend `RuntimeException` for application-specific errors.\n- Configure Hibernate properties in `application.properties` or `application.yml`.\n- Utilize `try-catch` blocks around database operations to catch `HibernateException`.\n- Use `@Transactional` annotation to manage transactions and rollback on exceptions.\n- Log exceptions using SLF4J or Logback for better visibility and debugging.",
+    "source": "web_search",
+    "updated_at": 1781076856.8311749
+  },
+  "search:Advanced Spring Boot + Hibernate Error Handling:hibernate exception management_ex": {
+    "content": "- Use `@Transactional` to manage transactions and handle exceptions.\n- Implement custom exception handlers using `@ControllerAdvice` or `@ExceptionHandler`.\n- Configure Hibernate properties in `application.properties` or `application.yml`.\n- Use `DataAccessException` for consistent exception handling across different databases.\n- Update dependencies to the latest versions of Spring Data JPA and Hibernate.\n- Enable detailed logging for debugging with `logging.level.org.hibernate.SQL=DEBUG`.\n- Implement retry logic using `@Retryable` for transient exceptions.\n- Use `@RollbackOn` to specify exceptions that should cause a rollback.",
+    "source": "code_example",
+    "updated_at": 1781076861.906676
+  }
+}
