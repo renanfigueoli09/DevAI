@@ -1,0 +1,22 @@
+{
+  "search:spring-boot+kotlin-springdoc-openapi-security:spring boot kotlin springdoc o": {
+    "content": "- **Latest Version**: springdoc-openapi v1.8.0\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Defines the path for API documentation.\n  - `springdoc.swagger-ui.path`: Defines the path for Swagger UI.\n- **CLI Commands**:\n  - To add dependencies: \n    ```bash\n    ./mvnw dependency:add -DgroupId=org.springdoc -DartifactId=springdoc-openapi-security -Dversion=1.8.0\n    ```\n  - To update to latest version:\n    ```bash\n    ./mvnw versions:set -DnewVersion=1.8.0\n    ```\n- **Extended Support**: Available for organizations beyond 2023, contact for details.\n- **Documentation**: [springdoc-openapi GitHub](https://github.com/springdoc/springdoc-openapi)",
+    "source": "web_search",
+    "updated_at": 1781086776.8270206
+  },
+  "search:spring-boot+kotlin-springdoc-openapi-security:spring boot kotlin springdoc o_ex": {
+    "content": "- **Latest Version**: springdoc-openapi v1.8.0\n- **Key Config Options**:\n  - `springdoc.api-docs.path`: Define the path for the API documentation.\n  - `springdoc.swagger-ui.path`: Define the path for Swagger UI.\n- **CLI Commands**:\n  - To generate API documentation: `mvn clean install`\n  - To run the application with default settings: `./mvnw spring-boot:run`\n- **Extended Support**: Available beyond 2023 for organizations needing extended support.",
+    "source": "code_example",
+    "updated_at": 1781086784.9239335
+  },
+  "search:spring-boot+kotlin-springdoc-openapi-security:spring boot kotlin oauth2 secu": {
+    "content": "- **Add Dependencies**: Include `spring-security-oauth2-resource-server` in your `build.gradle.kts` or `pom.xml`.\n- **Configure Resource Server**: Use `@EnableResourceServer` and configure the `JwtDecoder` bean.\n- **Key Config Options**:\n  - `spring.security.oauth2.resourceserver.jwt.issuer-uri`: Set the issuer URI of the JWT token.\n  - `spring.security.oauth2.resourceserver.jwt.jwk-set-uri`: Specify the JWK set URI for decoding JWTs.\n- **Latest Version**: Ensure you are using the latest stable version of Spring Security and Kotlin.\n- **CLI Commands**:\n  - `./gradlew build` to compile and build your project.\n  - `./gradlew run` to start your application.\n- **Asynchronous Programming**: Utilize Kotlin coroutines for handling asynchronous operations efficiently.\n- **GitHub Repository**: Explore the official GitHub repository for Spring Security OAuth2 for more detailed examples and documentation.",
+    "source": "web_search",
+    "updated_at": 1781086795.5754137
+  },
+  "search:spring-boot+kotlin-springdoc-openapi-security:spring boot kotlin oauth2 secu_ex": {
+    "content": "- **CLI Commands**:\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Kotlin: 1.8.20\n  - OAuth2: Spring Security OAuth2 (as of Spring Security 6)\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for configuration.\n  - `spring.security.oauth2.client.registration.*` for client registration details.\n  - `spring.security.oauth2.resource.server.jwt.jwk-set-uri` for JWT validation.\n\n- **Dependencies**:\n  - Add `implementation 'org.springframework.boot:spring-boot-starter-security'`\n  - Add `implementation 'org.springframework.security:spring-security-oauth2-client'`\n  - Add `implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'`\n\n- **Example Code Snippet**:\n  ```kotlin\n  @SpringBootApplication\n  class OAuth2Application {\n      companion object {\n          @JvmStatic\n          fun main(args: Array<String>) {\n              runApplication<OAuth2Application>(*args)\n          }\n      }\n  }\n\n  @EnableWebSecurity\n  class SecurityConfig : WebSecurityConfigurerAdapter() {\n      override fun configure(http: HttpSecurity) {\n          http.authorizeRequests()\n              .antMatchers(\"/\", \"/home\").permitAll()\n              .anyRequest().authenticated()\n              .and()\n              .oauth2Login()\n      }\n  }\n  ```\n\n- **Additional Resources**:\n  - [Spring Security OAuth2 Documentation](https://docs.spring.io/spring-security-oauth2/docs/current/reference/htmlsingle/)\n  - [Kotlin Spring Boot Starter](https://spring.io/projects/spring-boot#learn)",
+    "source": "code_example",
+    "updated_at": 1781086807.256215
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:kubernetes+postgres-db-scalability:kubernetes postgresql database": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy PostgreSQL on Kubernetes.\n- Ensure you use the latest version of CloudNativePG for high availability.\n- Key config options include `replicas`, `storageClass`, and `resources`.\n- For scaling, adjust `replicas` in your deployment YAML.\n- Utilize Zalando Postgres operator for easy management and scalability.\n- Monitor with Kubernetes metrics and logs to ensure performance.",
+    "source": "web_search",
+    "updated_at": 1781086861.6255794
+  },
+  "search:kubernetes+postgres-db-scalability:kubernetes postgresql database_ex": {
+    "content": "- Use `kubectl apply -f postgresql-deployment.yaml` to deploy PostgreSQL on Kubernetes.\n- Set environment variables like `POSTGRES_DB`, `POSTGRES_USER`, and `POSTGRES_PASSWORD` in the deployment YAML.\n- Utilize StatefulSets for persistent storage with PersistentVolumeClaims (PVCs).\n- Scale out by increasing the number of replicas in the StatefulSet.\n- Employ Horizontal Pod Autoscaler (HPA) based on CPU or memory usage.\n- Regularly back up and restore databases using `pg_dump` and `psql`.\n- Monitor performance with tools like Prometheus and Grafana.\n- Ensure network policies for secure communication between pods.",
+    "source": "code_example",
+    "updated_at": 1781086870.81625
+  }
+}
