@@ -1,0 +1,22 @@
+{
+  "search:typescript-nextjs-performance-optimization:typescript next.js performance": {
+    "content": "- **Next.js Version**: 15.5\n- **CLI Commands**:\n  - `next build` for production builds.\n  - `next start` to run the server in production mode.\n- **Key Config Options**:\n  - `images` in `next.config.js` for image optimization settings.\n  - `reactStrictMode: true` in `next.config.js` for better React app performance.\n  - `swcMinify: true` in `next.config.js` to use SWC for faster builds.",
+    "source": "web_search",
+    "updated_at": 1781075046.2443979
+  },
+  "search:typescript-nextjs-performance-optimization:typescript next.js performance_ex": {
+    "content": "- **Next.js Version**: 15.5\n- **TypeScript Integration**:\n  - Add TypeScript to an existing Next.js project using `npx create-next-app@latest --typescript`.\n  - Enable typed routes with the `stable` flag in `next.config.js`: `{ experimental: { typedRoutes: true } }`.\n- **Performance Optimization Techniques**:\n  - Use server-side rendering (SSR) and static site generation (SSG).\n  - Implement lazy loading for components.\n  - Minimize HTTP requests by combining files.\n  - Optimize images using `next/image` component.\n  - Use CSS-in-JS libraries like styled-components or emotion for efficient styling.",
+    "source": "code_example",
+    "updated_at": 1781075053.347809
+  },
+  "search:typescript-nextjs-performance-optimization:high-performance typescript ne": {
+    "content": "- **CLI Commands**:\n  - `next dev`: Starts the development server.\n  - `next build`: Builds your application for production.\n  - `next start`: Starts a Node.js server.\n\n- **Latest Versions**:\n  - Next.js: 15.5\n\n- **Key Config Options**:\n  - `tsconfig.json`: Recommended configuration for TypeScript support.\n  - `typedRoutes`: Flag to enable stable typed routes, preventing broken links.",
+    "source": "web_search",
+    "updated_at": 1781075063.7616737
+  },
+  "search:typescript-nextjs-performance-optimization:high-performance typescript ne_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`\n  - `npm run dev` for development server\n  - `npm run build` to build the app\n  - `npm start` to start the production server\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - TypeScript: 4.9.5\n  - Tailwind CSS: 3.2.7\n\n- **Key Config Options**:\n  - `next.config.js`: For customizing build settings, environment variables, and more.\n  - `tsconfig.json`: For configuring TypeScript options like target, module, and compiler options.\n  - `app/router.tsx`: For defining the app router with server components.",
+    "source": "code_example",
+    "updated_at": 1781075070.7865655
+  }
+}
