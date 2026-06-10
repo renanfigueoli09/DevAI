@@ -1,0 +1,32 @@
+{
+  "search:GORM and MySQL Performance Tuning:gorm query optimization": {
+    "content": "- Use `db.Where(\"name = ?\", \"value\").Find(&result)` to optimize queries using parameters.\n- Create indexes on columns frequently used in WHERE clauses for faster query performance.\n- Utilize GORM's `Select`, `Omit`, and `Preload` methods to control the data fetched from the database, reducing unnecessary data transfer.\n- Employ optimizer hints through the `gorm.io/hints` package to guide the database's query execution plan.\n- Regularly update GORM to the latest version for performance improvements and bug fixes.",
+    "source": "web_search",
+    "updated_at": 1781065342.1606722
+  },
+  "search:GORM and MySQL Performance Tuning:gorm query optimization_ex": {
+    "content": "- Use `db.Where` to dynamically construct queries based on request query parameters.\n- Employ GORM's named arguments feature for clearer and more organized complex queries.\n- Leverage transactions with `db.Transaction` for related operations.\n- Optimize queries by using indexes, avoiding N+1 queries, and selecting only necessary fields.\n- Utilize GORM's scopes to encapsulate reusable query logic.\n- Ensure efficient database layer by mastering associations, migrations, and query optimization.",
+    "source": "code_example",
+    "updated_at": 1781065346.673859
+  },
+  "search:GORM and MySQL Performance Tuning:mysql indexing strategies": {
+    "content": "- Use `CREATE INDEX` to add an index.\n- Utilize `ALTER TABLE ... ADD INDEX`.\n- Employ `EXPLAIN` to analyze query performance and identify missing indexes.\n- Consider using `BTREE` for most queries, and `HASH` for exact match queries.\n- Optimize by removing redundant indexes.\n- Adjust `innodb_buffer_pool_size` based on your workload.\n- Use `pt-index-usage` from Percona Toolkit for index usage analysis.\n- Regularly review and optimize indexes with `ANALYZE TABLE`.\n- Ensure proper normalization to reduce redundancy.",
+    "source": "web_search",
+    "updated_at": 1781065366.8745925
+  },
+  "search:GORM and MySQL Performance Tuning:mysql indexing strategies_ex": {
+    "content": "- Use `CREATE INDEX` to add an index, e.g., `CREATE INDEX idx_name ON table_name(column_name);`\n- For composite indexes, specify multiple columns, e.g., `CREATE INDEX idx_composite ON table_name(col1, col2);`\n- Utilize `ALTER TABLE ... ADD INDEX` for existing tables.\n- Consider using `EXPLAIN` to analyze query performance and identify potential indexing opportunities.\n- Evaluate the latest MySQL version for improved indexing features and optimizations.\n- Key configuration options include `innodb_buffer_pool_size`, `query_cache_type`, and `query_cache_size`.\n- Avoid creating indexes on columns with high update rates or low selectivity.\n- Use `FULLTEXT` indexes for text search capabilities, e.g., `CREATE FULLTEXT INDEX idx_fulltext ON table_name(column_name);`\n- Be aware of anti-patterns such as over-indexing, which can degrade performance.",
+    "source": "code_example",
+    "updated_at": 1781065382.5159504
+  },
+  "search:GORM and MySQL Performance Tuning:connection pool management in ": {
+    "content": "- Use `gorm.Open()` to establish and manage database connections.\n- Supported drivers include MySQL, PostgreSQL, SQLite, etc.\n- Configure connection pooling through the underlying `database/sql` package.\n- For SQL Server, use GORM with `sqlserver` driver for connection management.\n- Initialize *gorm.DB with an existing database connection if needed.\n- Avoid creating a new connection pool every time by using a single *gorm.DB instance.\n- Use global variables or singleton pattern to maintain a single *gorm.DB instance throughout the application.",
+    "source": "web_search",
+    "updated_at": 1781065422.1771278
+  },
+  "search:GORM and MySQL Performance Tuning:connection pool management in _ex": {
+    "content": "- Use `gorm.Open()` to establish a connection with the Postgres driver.\n- Configure GORM's logger using `Logger` option for debugging SQL queries during development.\n- Access the underlying `*sql.DB` object via `RawDB()` method to use lower-level database functions.\n- Manage connection pooling settings through GORM by configuring options like:\n  - `MaxIdleConns`: Maximum number of idle connections in the pool.\n  - `MaxOpenConns`: Maximum number of open connections to the database.\n  - `ConnMaxLifetime`: Maximum lifetime of a connection before being closed.\n- Use `db.DB()` method to get access to the underlying `*sql.DB` object for further configuration.\n- Ensure efficient management of database connections by closing them when they are no longer needed, unless managed by application lifecycle.",
+    "source": "code_example",
+    "updated_at": 1781065431.9909205
+  }
+}

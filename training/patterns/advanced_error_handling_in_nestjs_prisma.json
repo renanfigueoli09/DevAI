@@ -1,0 +1,37 @@
+{
+  "search:Advanced Error Handling in NestJS + Prisma:nestjs error handling best pra": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Update dependencies using `npm update`.\n- Implement global exception filters by creating a file like `exception.filter.ts` and applying it globally in `main.ts` with `app.useGlobalFilters(new ExceptionFilter());`.\n- For custom error handling, extend the `HttpException` class or use built-in exceptions like `NotFoundException`, `BadRequestException`, etc.\n- Configure logging using `PinoHttpModule` for better error tracking and debugging.\n- Implement validation pipes globally to handle data validation automatically with `app.useGlobalPipes(new ValidationPipe());`.\n- Use environment variables for configuration management, set up in `.env` file and load them using `ConfigService`.\n- For production environments, use NestJS's built-in support for HTTPS and CORS with `NestFactory.create(AppModule, { httpsOptions: ..., cors: true });`.",
+    "source": "web_search",
+    "updated_at": 1781065107.912624
+  },
+  "search:Advanced Error Handling in NestJS + Prisma:nestjs error handling best pra_ex": {
+    "content": "- **CLI Commands**: Use `nest new project-name` to create a new NestJS project.\n- **Latest Version**: As of my last update, the latest stable version is 10.x. Check [NestJS official docs](https://docs.nestjs.com/) for the most current version.\n- **Key Config Options**:\n  - `exceptionFilters`: Use to define custom exception filters globally or in specific controllers/services.\n  - `useGlobalFilters`: Apply global exception filters using `app.useGlobalFilters(new HttpExceptionFilter());`\n  - `errorHttpStatusCode`: Set a default HTTP status code for exceptions, e.g., `@Catch(HttpException)(error: HttpException)`.\n- **Error Handling Patterns**:\n  - Implement custom exception classes extending `HttpException` to handle specific error scenarios.\n  - Use `ValidationPipe` for data validation and return appropriate error responses.\n  - Create global filters like `AllExceptionsFilter` to handle all unhandled exceptions gracefully.",
+    "source": "code_example",
+    "updated_at": 1781065114.833441
+  },
+  "search:Advanced Error Handling in NestJS + Prisma:prisma error management strate": {
+    "content": "- Use `prisma migrate dev` to create and apply migrations.\n- Utilize `prisma db push` to update the database schema based on your Prisma schema file.\n- Implement error handling using try-catch blocks around Prisma operations.\n- Install `prisma-better-errors` for more descriptive error messages with `npm install prisma-better-errors`.\n- Configure Prisma client options in `prisma/schema.prisma` under the `datasource` block.\n- Update to the latest Prisma version using `npm update prisma`.\n- Use `prisma studio` to interactively explore your database schema and data.\n- Implement custom error handling logic for specific Prisma errors.",
+    "source": "web_search",
+    "updated_at": 1781065133.2893453
+  },
+  "search:Advanced Error Handling in NestJS + Prisma:custom exception filters in ne": {
+    "content": "- Use `nest generate filter <filter-name>` to create a custom exception filter.\n- To apply a global filter, use the `app.useGlobalFilters(new ExceptionFilter())` method in your main application file.\n- For HTTP exceptions, import and use `HttpException` from `@nestjs/common`.\n- To handle validation errors, use `ValidationPipe` with `exceptionFactory` to customize error responses.\n- Configure custom filters in `app.module.ts` using `providers: [ExceptionFilter]`.\n- Ensure the filter implements the `ExceptionFilter` interface.\n- Use `@Catch()` decorator on your custom filter class to specify which exceptions it handles.\n- For structured error responses, override the `catch(exception, host)` method in your filter.",
+    "source": "web_search",
+    "updated_at": 1781065172.8220959
+  },
+  "search:Advanced Error Handling in NestJS + Prisma:custom exception filters in ne_ex": {
+    "content": "- Use `nest generate filter <filter-name>` to create custom exception filters.\n- Ensure the filter implements the `ExceptionFilter` interface.\n- Apply filters globally with `app.useGlobalFilters(new CustomExceptionFilter())`.\n- Configure filters in a module using `imports: [CommonModule]`.\n- Latest version of NestJS as of my last update is 10.x, but check for the latest on their official website.\n- Key config options include specifying the type of exceptions to handle and customizing the response format.",
+    "source": "code_example",
+    "updated_at": 1781065186.6836123
+  },
+  "search:Advanced Error Handling in NestJS + Prisma:error logging and monitoring w": {
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init` to initialize Prisma migrations.\n  - `prisma generate` to generate the Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: [Check latest version](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference)\n  - AppSignal for Node.js: [Check latest version](https://docs.appsignal.com/nodejs/installation.html)\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your data model and Prisma Client.\n  - `.env`: Configure environment variables like database URL, API keys, etc.\n  - `prisma.yml` (for Prisma Studio): Customize the behavior of Prisma Studio.",
+    "source": "web_search",
+    "updated_at": 1781065196.882402
+  },
+  "search:Advanced Error Handling in NestJS + Prisma:error logging and monitoring w_ex": {
+    "content": "- **GitHub Repository**: MWANGIKENNEDY/express-product-api-with-prisma\n  - Centralized error handling using Prisma.\n  - Add logging and metrics collection.\n\n- **Prisma + NestJS Error Handling**\n  - Use Prisma for database operations.\n  - Map Prisma errors to custom exceptions.\n  - Example schema:\n    ```prisma\n    model User {\n      id    Int     @id @default(autoincrement())\n      email String  @unique\n      name  String?\n    }\n    ```\n  - Identify Prisma error codes for specific issues.\n\n- **Trigger.dev**\n  - Three-database strategy: PostgreSQL, ClickHouse, and Object Storage.\n  - PostgreSQL: Primary transactional database with read replica support.\n  - ClickHouse: Time-series analytics and log storage.",
+    "source": "code_example",
+    "updated_at": 1781065213.592646
+  }
+}

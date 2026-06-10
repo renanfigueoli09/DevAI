@@ -1,0 +1,17 @@
+{
+  "search:Advanced Performance Optimization with Java + Kotlin + Spring Boot:spring boot performance tuning": {
+    "content": "- Use `jconsole` or `VisualVM` for monitoring and profiling.\n- Enable Spring Boot Actuator endpoints like `/actuator/metrics`, `/actuator/httptrace`.\n- Configure database connection pooling with HikariCP using properties like `spring.datasource.hikari.maximum-pool-size`.\n- Adjust garbage collection settings in JVM, e.g., `-XX:+UseG1GC`.\n- Use `@Async` for I/O-bound tasks to avoid blocking the main thread.\n- Optimize Spring Boot configuration by removing unnecessary dependencies and auto-configurations.\n- Enable lazy initialization of beans with `spring.main.lazy-initialization=true`.\n- Monitor and tune Tomcat settings like `server.tomcat.max-threads`.\n- Use caching mechanisms like Redis or Ehcache for frequently accessed data.\n- Profile your application using tools like JMH for microbenchmarking.",
+    "source": "web_search",
+    "updated_at": 1781065221.8034384
+  },
+  "search:Advanced Performance Optimization with Java + Kotlin + Spring Boot:spring boot performance tuning_ex": {
+    "content": "- **CLI Commands**:\n  - `jps` to list Java processes.\n  - `jstat -gcutil <pid> 1000` for GC statistics every second.\n  - `jmap -heap <pid>` to print heap memory usage.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - JVM: OpenJDK 21\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.cache.type=caffeine`\n  - `server.tomcat.max-threads=200`",
+    "source": "code_example",
+    "updated_at": 1781065229.6427577
+  },
+  "search:Advanced Performance Optimization with Java + Kotlin + Spring Boot:kotlin coroutines for asynchro": {
+    "content": "- **CLI Commands**: Use `kotlin -version` to check the latest Kotlin version.\n- **Latest Versions**: As of my last update, Kotlin 2.3 is the latest stable version.\n- **Key Config Options**:\n  - `launch`: Launches a coroutine and returns a Job.\n  - `async`: Launches a coroutine and returns a Deferred that can be awaited for its result.\n  - `withContext`: Changes the context of execution to another dispatcher (e.g., IO, Default).\n  - `delay`: Suspends the coroutine for a specified time period without blocking the thread.",
+    "source": "web_search",
+    "updated_at": 1781065244.8965998
+  }
+}

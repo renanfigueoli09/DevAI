@@ -1,0 +1,37 @@
+{
+  "search:Advanced Sequelize Usage with PostgreSQL:sequelize associations and per": {
+    "content": "- **Latest Versions**: Ensure you are using the latest stable version of Sequelize (currently v6.x) and its associated database drivers.\n- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes a new Sequelize project.\n  - `npx sequelize-cli model:generate --name User --attributes username:string,email:string`: Generates a new model with specified attributes.\n- **Key Config Options**:\n  - `define`: Configuration options for models, such as timestamps (`timestamps: true`).\n  - `options`: Connection options, including dialect-specific settings like `pool`.\n  - `logging`: Function to log SQL queries, useful for debugging and performance analysis.\n- **Performance Tips**:\n  - Use eager loading (`.include`) to fetch associated data in a single query when possible.\n  - Optimize database indexes on frequently queried columns.\n  - Consider using raw queries or stored procedures for complex operations that exceed Sequelize's capabilities.",
+    "source": "web_search",
+    "updated_at": 1781065450.3961468
+  },
+  "search:Advanced Sequelize Usage with PostgreSQL:query optimization techniques ": {
+    "content": "- Use Sequelize's `.include` method to eager load associations.\n- Employ `where` clauses to filter data efficiently.\n- Utilize indexes on frequently queried columns for faster retrieval.\n- Optimize joins by reducing the number of tables involved.\n- Cache results using Redis or similar caching mechanisms.\n- Regularly update Sequelize and database drivers to benefit from performance improvements.\n- Monitor query execution times with tools like `sequelize-benchmark`.\n- Use `.raw` queries when necessary, but be cautious with SQL injection risks.\n- Implement batch processing for large data operations.",
+    "source": "web_search",
+    "updated_at": 1781065489.2737029
+  },
+  "search:Advanced Sequelize Usage with PostgreSQL:query optimization techniques _ex": {
+    "content": "- Use `sequelize-cli` version 6.4.0 or later.\n- Employ `.include` for eager loading to reduce the number of queries.\n- Utilize `where` and `order` options in your query definitions for efficient filtering and sorting.\n- Apply `limit` and `offset` for pagination, ensuring accurate counts with `count` method.\n- Optimize complex joins by breaking them into smaller subqueries if necessary.\n- Use `raw: true` to bypass model validation when executing raw SQL queries.\n- Monitor query performance using Sequelize's built-in logging or external tools like `pg_stat_statements`.\n- Regularly update Sequelize and its dependencies to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781065505.3390198
+  },
+  "search:Advanced Sequelize Usage with PostgreSQL:postgresql indexing best pract": {
+    "content": "- Use `CREATE INDEX` and `DROP INDEX` commands.\n- Consider B-Tree, Hash, GIN, GiST, SP-GiST, and BRIN indexes based on data types and query patterns.\n- For large tables, use partial indexes to reduce size and improve performance.\n- Regularly analyze and vacuum your database with `ANALYZE` and `VACUUM`.\n- Monitor index usage with `EXPLAIN ANALYZE` to identify underutilized or inefficient indexes.\n- Use `pg_stat_user_indexes` to track index statistics.\n- Be cautious about over-indexing, as it can degrade write performance.\n- Consider using `CREATE INDEX CONCURRENTLY` for large tables during off-peak hours.",
+    "source": "web_search",
+    "updated_at": 1781065514.6087837
+  },
+  "search:Advanced Sequelize Usage with PostgreSQL:postgresql indexing best pract_ex": {
+    "content": "- Use `CREATE INDEX index_name ON table_name (column_name)` to create an index.\n- For e-commerce product catalog, consider indexing columns like `category_id`, `price`, and `stock`.\n- BRIN indexes are suitable for sorted, immutable data; B-Tree is better for random access.\n- Consider using GIN or GiST indexes for full-text search or complex queries.\n- Regularly monitor and analyze query performance with tools like `EXPLAIN ANALYZE`.\n- Keep PostgreSQL updated to the latest version for performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781065522.6815088
+  },
+  "search:Advanced Sequelize Usage with PostgreSQL:transaction management in sequ": {
+    "content": "- Install Sequelize using npm: `npm install sequelize`\n- Use transactions in Sequelize by importing the `Sequelize` module and creating a new instance of it.\n- To start a transaction, use the `beginTransaction()` method on the Sequelize instance.\n- Commit a transaction with `commit()`, or rollback with `rollback()`.\n- Key config options include:\n  - `dialect`: Specifies the database dialect (e.g., 'mysql', 'postgres').\n  - `host`: The hostname of your database server.\n  - `port`: The port number on which the database server is listening.\n  - `username`: Your database username.\n  - `password`: Your database password.\n  - `database`: The name of the database to connect to.",
+    "source": "web_search",
+    "updated_at": 1781065539.1884165
+  },
+  "search:Advanced Sequelize Usage with PostgreSQL:transaction management in sequ_ex": {
+    "content": "- Install Sequelize: `npm install sequelize`\n- Use MySQL dialect: `const sequelize = new Sequelize('database', 'username', 'password', { dialect: 'mysql' })`\n- Start transaction: `await sequelize.transaction(async t => { ... })`\n- Commit transaction: `t.commit()`\n- Rollback transaction: `t.rollback()`",
+    "source": "code_example",
+    "updated_at": 1781065543.5516915
+  }
+}
