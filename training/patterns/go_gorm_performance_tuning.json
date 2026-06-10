@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `go get -u gorm.io/driver/postgres` for PostgreSQL driver.\n  - `go get -u github.com/jinzhu/copier` for copying structs.\n\n- **Latest Versions**:\n  - GORM: v2.0.13\n  - Gin: v1.8.2\n  - Fiber: v2.4.5\n\n- **Key Config Options**:\n  - `gorm.DB`: Configuration object for database operations.\n  - `Gin.Engine`: Main router of the application.\n  - `Fiber.Ctx`: Context object for handling HTTP requests and responses.",
     "source": "code_example",
     "updated_at": 1781062205.5836048
+  },
+  "search:go-gorm-performance-tuning:go gorm performance tuning str": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: As of my last update, the latest version is v2.37.0.\n- **Key Config Options**:\n  - `gorm.DB.DB().SetMaxIdleConns(10)` for setting maximum idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns(100)` for setting maximum open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime(time.Hour * 24)` for setting connection lifetime.",
+    "source": "web_search",
+    "updated_at": 1781069377.4837372
+  },
+  "search:go-gorm-performance-tuning:go gorm performance tuning str_ex": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: As of my last update, the latest version is v2.36.0.\n- **Key Config Options**:\n  - `gorm.DB.SetLogger`: Set a custom logger for better performance monitoring.\n  - `gorm.DB.Logger.LogMode`: Adjust logging mode (e.g., `gorm.LogInfo`, `gorm.LogWarn`, `gorm.LogError`).\n  - `gorm.DB.DB().SetMaxIdleConns`: Set the maximum number of idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns`: Set the maximum number of open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime`: Set the maximum lifetime of a connection.",
+    "source": "code_example",
+    "updated_at": 1781069388.0231948
+  },
+  "search:go-gorm-performance-tuning:optimizing go applications wit": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of GORM to benefit from the latest features and performance improvements.\n- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `go get -u gorm.io/driver/mysql` for MySQL driver, or other drivers as needed.\n- **Key Config Options**:\n  - `gorm.DB.SetLogger`: Customize the logger to control log output.\n  - `gorm.DB.Logger.LogMode`: Set log mode (e.g., `gorm.Logger.Info`, `gorm.Logger.Warn`, `gorm.Logger.Error`).\n  - `gorm.DB.DB().SetMaxIdleConns`: Set maximum idle connections in the database pool.\n  - `gorm.DB.DB().SetMaxOpenConns`: Set maximum open connections in the database pool.\n  - `gorm.DB.DB().SetConnMaxLifetime`: Set the maximum lifetime of a connection.\n- **Performance Tips**:\n  - Disable eager loading when not needed using `.Preload(\"AssociationName\", false)`.\n  - Use batch inserts with `CreateInBatches` for large datasets.\n  - Index database columns that are frequently queried to improve query performance.",
+    "source": "web_search",
+    "updated_at": 1781069406.1011686
+  },
+  "search:go-gorm-performance-tuning:optimizing go applications wit_ex": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: As of my last update, the latest version is v2.x.x. Check [GORM's official GitHub page](https://github.com/go-gorm/gorm) for the most current version.\n- **Key Config Options**:\n  - `gorm.DB`: The primary type representing a database connection.\n  - `.AutoMigrate()`: Automatically migrates schema to match models.\n  - `.Raw()`: Executes raw SQL queries.\n  - `.Preload()`: Preloads associations, reducing N+1 query issues.\n  - `.Where()`, `.Find()`, `.First()`: Query methods for fetching data.",
+    "source": "code_example",
+    "updated_at": 1781069413.917394
   }
 }

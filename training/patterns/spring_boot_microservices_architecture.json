@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-microservices-architecture:spring boot microservices arch": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `docker-compose up` to start services using Docker Compose.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Cloud: 2021.0.5\n\n- **Key Config Options**:\n  - `server.port`: Specifies the port on which the application will run.\n  - `spring.application.name`: Defines the name of the application for service discovery.\n  - `eureka.client.serviceUrl.defaultZone`: URL for Eureka server to register services.\n  - `resilience4j.circuitbreaker.instances.<name>.registerHealthIndicator`: Configures a circuit breaker with health indicator.",
+    "source": "web_search",
+    "updated_at": 1781069343.4060638
+  },
+  "search:spring-boot-microservices-architecture:spring boot microservices arch_ex": {
+    "content": "- **Latest Version of Spring Boot**: 3.2.5\n- **Latest Version of Spring Cloud**: 2023.0.1\n- **CLI Command to Create a New Spring Boot Project**:\n  ```bash\n  spring init --dependencies=web,actuator my-microservice\n  ```\n- **Key Configuration Options for Service Discovery**:\n  - `spring.cloud.discovery.enabled=true`\n  - `spring.cloud.service-registry.auto-registration.enabled=true`\n- **Key Configuration Options for API Gateway**:\n  - `spring.cloud.gateway.routes[0].id=example_route`\n  - `spring.cloud.gateway.routes[0].uri=lb://my-service`\n- **Key Configuration Options for Circuit Breaker**:\n  - `spring.cloud.circuitbreaker.resilience4j.instances.myService.maxRequestsInPeriod=20`\n  - `spring.cloud.circuitbreaker.resilience4j.instances.myService.slidingWindowSize=100`\n- **Key Configuration Options for Data Management**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`",
+    "source": "code_example",
+    "updated_at": 1781069353.0665429
+  },
+  "search:spring-boot-microservices-architecture:building scalable microservice": {
+    "content": "- **Latest Version of Spring Boot**: 2.7.x\n- **Key Config Options**:\n  - `spring.application.name`: Specifies the name of the application.\n  - `server.port`: Sets the port number on which the server will listen.\n  - `eureka.client.serviceUrl.defaultZone`: URL for Eureka service discovery.\n- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs a Spring Boot application from Maven.\n  - `docker-compose up`: Starts services defined in docker-compose.yml.\n  - `kubectl apply -f deployment.yaml`: Deploys applications to Kubernetes using YAML configuration files.",
+    "source": "web_search",
+    "updated_at": 1781069361.900969
+  },
+  "search:spring-boot-microservices-architecture:building scalable microservice_ex": {
+    "content": "- Use `mvn spring-boot:run` to run Spring Boot applications.\n- Update dependencies in `pom.xml` for the latest versions.\n- Configure service discovery with Netflix Eureka using `<dependency>com.netflix.eureka:eureka-client</dependency>`.\n- Set up load balancing with Ribbon by adding `<dependency>org.springframework.cloud:spring-cloud-starter-netflix-ribbon</dependency>`.\n- Use Spring Cloud Gateway for API gateway: `<dependency>org.springframework.cloud:spring-cloud-starter-gateway</dependency>`.\n- Configure circuit breaker with Hystrix using `<dependency>org.springframework.cloud:spring-cloud-starter-netflix-hystrix</dependency>`.\n- Enable distributed tracing with Sleuth and Zipkin by adding `<dependency>org.springframework.cloud:spring-cloud-sleuth-zipkin</dependency>`.\n- Use Spring Boot Actuator for production-ready features: `<dependency>org.springframework.boot:spring-boot-starter-actuator</dependency>`.",
+    "source": "code_example",
+    "updated_at": 1781069367.9769626
+  }
+}
