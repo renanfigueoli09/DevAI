@@ -1,0 +1,22 @@
+{
+  "search:spring-data-jpa-batch-import-advanced:spring data jpa batch import b": {
+    "content": "- Use `@EnableBatchProcessing` in your Spring Boot application to enable batch processing.\n- Configure the batch job and step in XML or Java configuration.\n- Utilize `JpaItemWriter` for writing data to a database in batches.\n- Set `commit-interval` in the `<step>` tag of your XML configuration or use `@StepScope` with `@Bean` method in Java config.\n- Use `@EnableTransactionManagement` and configure transaction management in your Spring Boot application.\n- Ensure that your entity class is annotated with `@Entity` and has a primary key.\n- Use `@Repository` annotation for repository interfaces to enable Spring Data JPA functionality.\n- For batch updates, use `JpaItemWriter` and set the `usePersistedState` property to `true`.\n- Check the latest version of Spring Boot and Spring Data JPA in their official documentation.",
+    "source": "web_search",
+    "updated_at": 1781085913.7367342
+  },
+  "search:spring-data-jpa-batch-import-advanced:spring data jpa batch import b_ex": {
+    "content": "- Use `@EnableBatchProcessing` to enable batch processing.\n- Configure `JpaItemWriter` and `JdbcBatchItemWriter` for writing data in batches.\n- Set `batchSize` property in writer configuration to define the number of items per batch.\n- Utilize `@Transactional(propagation = Propagation.REQUIRES_NEW)` on batch operations to ensure isolation.\n- Employ `@Repository` or `@Service` annotations for batch processing methods.\n- Check Spring Data JPA version compatibility with your project dependencies.\n- Monitor and tune batch performance using metrics like execution time and resource usage.",
+    "source": "code_example",
+    "updated_at": 1781085919.3432176
+  },
+  "search:spring-data-jpa-batch-import-advanced:advanced spring data jpa batch": {
+    "content": "- Use `spring-boot-starter-batch` for batch processing.\n- Configure `ItemReader`, `ItemProcessor`, and `ItemWriter`.\n- Enable batch processing in Spring Boot with `@EnableBatchProcessing`.\n- Set batch size using `@StepScope` and `@Bean` configuration.\n- Utilize `JpaPagingItemReader` for reading data from JPA repositories.\n- Implement custom `ItemProcessor` and `ItemWriter` logic as needed.\n- Use `JobRepository` and `JobLauncher` to manage batch jobs.\n- Monitor job progress with `JobExplorer`.\n- Consider using `@Transactional` on step methods for transaction management.",
+    "source": "web_search",
+    "updated_at": 1781085926.9144914
+  },
+  "search:spring-data-jpa-batch-import-advanced:advanced spring data jpa batch_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Spring Data JPA 2.7.4, Hibernate 5.6.9.Final.\n- **Key Config Options**:\n  - Enable batch processing in `application.properties`: `spring.jpa.properties.hibernate.jdbc.batch_size=100`\n  - Use `@EnableBatchProcessing` annotation in your configuration class.\n  - Configure transaction management for batch operations: `@Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)`.",
+    "source": "code_example",
+    "updated_at": 1781085934.7706964
+  }
+}
