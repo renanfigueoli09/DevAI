@@ -8,5 +8,30 @@
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl describe pod <pod-name>` for detailed info on a pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Docker: v20.10\n\n- **Key Config Options**:\n  - `securityContext`: Defines security settings for containers and pods.\n  - `livenessProbe` and `readinessProbe`: Ensures the application is healthy before traffic is routed to it.\n  - `resourceRequests` and `resourceLimits`: Allocates resources efficiently.",
     "source": "code_example",
     "updated_at": 1781030368.4271295
+  },
+  "search:Kubernetes Microservices Security:kubernetes security best pract": {
+    "content": "- Use `kubectl` to manage your Kubernetes cluster.\n- Update Kubernetes using the latest version available.\n- Implement RBAC (Role-Based Access Control) for fine-grained access control.\n- Apply Pod Security Standards to ensure secure pod configurations.\n- Configure Network Policies to restrict network traffic between pods and services.\n- Secure secrets management by using `kubeseal` or other encryption tools.\n- Regularly audit your cluster using the CIS Kubernetes Benchmark.\n- Monitor your cluster with tools like Prometheus, Grafana, and Elasticsearch.\n- Use `kubectl apply -f <filename>` to deploy resources securely.\n- Ensure all nodes are up-to-date with security patches.",
+    "source": "web_search",
+    "updated_at": 1781052770.2190812
+  },
+  "search:Kubernetes Microservices Security:kubernetes security best pract_ex": {
+    "content": "- Use `kubectl` version 26.0 or later.\n- Implement RBAC (Role-Based Access Control) using `kubectl create rolebinding`.\n- Enable network policies with `kubectl apply -f network-policy.yaml`.\n- Secure secrets using `kubectl create secret generic my-secret --from-literal=my-key=my-value`.\n- Use the CIS Kubernetes Benchmark for compliance: `kubeadm alpha certs renew all`.\n- Implement encryption at rest and in transit.\n- Regularly update Kubernetes components to latest versions.\n- Monitor cluster events with `kubectl get events --watch`.\n- Enable audit logging with `--audit-log-path=/var/log/kubernetes/audit.log`.\n- Use `kubectl auth can-i` to check permissions.",
+    "source": "code_example",
+    "updated_at": 1781052776.3814626
+  },
+  "search:Kubernetes Microservices Security:microservices security with ku": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>` for detailed information about a specific pod.\n  - `kubectl apply -f <file-path>` to create or update resources based on a YAML file.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Helm: v3.9\n\n- **Key Config Options**:\n  - `securityContext` in Pod and Container specifications for setting user, group, and permissions.\n  - `networkPolicies` to control traffic between pods within a namespace.\n  - `PodSecurityPolicy` (deprecated) or `Pod Security Admission` for defining security policies at the pod level.",
+    "source": "web_search",
+    "updated_at": 1781052784.5297267
+  },
+  "search:Kubernetes Microservices Security:network policies in kubernetes": {
+    "content": "- **CLI Commands**:\n  - `kubectl create networkpolicy <name> --namespace=<namespace>`\n  - `kubectl get networkpolicies --namespace=<namespace>`\n  - `kubectl describe networkpolicy <name> --namespace=<namespace>`\n  - `kubectl delete networkpolicy <name> --namespace=<namespace>`\n\n- **Latest Versions**:\n  - Network Policies are supported in Kubernetes v1.7 and later.\n\n- **Key Config Options**:\n  - `podSelector`: Selects the pods to which the policy applies.\n  - `ingress`: Defines rules for incoming traffic.\n  - `egress`: Defines rules for outgoing traffic.\n  - `policyTypes`: Specifies whether the policy affects ingress, egress, or both.",
+    "source": "web_search",
+    "updated_at": 1781052818.126497
+  },
+  "search:Kubernetes Microservices Security:network policies in kubernetes_ex": {
+    "content": "- **CLI Command**: `kubectl apply -f <network-policy-file.yaml>`\n- **Latest Version**: Kubernetes v1.27.x\n- **Key Config Options**:\n  - `apiVersion`: Specifies the API version of the network policy.\n  - `kind`: Always set to `NetworkPolicy`.\n  - `metadata.name`: Name of the network policy.\n  - `spec podSelector`: Selects pods to which this policy applies.\n  - `spec ingress/egress`: Defines rules for incoming and outgoing traffic.\n  - `spec policyTypes`: Specifies whether the policy is for Ingress, Egress, or both.",
+    "source": "code_example",
+    "updated_at": 1781052828.041943
   }
 }

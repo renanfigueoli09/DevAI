@@ -18,5 +18,30 @@
     "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for DOM testing.\n  - `transformIgnorePatterns`: [\"node_modules/(?!(your-package-name))\"] to include specific packages in transformation.\n  - `setupFilesAfterEnv`: [\"./jest.setup.js\"] for global setup after environment is set up.",
     "source": "code_example",
     "updated_at": 1780976190.6661046
+  },
+  "search:Unit Testing JavaScript:javascript unit testing": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Versions**:\n  - Jest: [Check latest version on npm](https://www.npmjs.com/package/jest)\n\n- **Key Config Options**:\n  - `testEnvironment`: Set to `\"node\"` or `\"jsdom\"`\n  - `transformIgnorePatterns`: Array of regex patterns that match files to ignore when transforming\n  - `setupFilesAfterEnv`: Array of paths to modules which run before each test file",
+    "source": "web_search",
+    "updated_at": 1781052561.429582
+  },
+  "search:Unit Testing JavaScript:javascript unit testing_ex": {
+    "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.x\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for DOM testing\n  - `transformIgnorePatterns`: [\"node_modules/(?!(axios|lodash))\"]\n  - `setupFilesAfterEnv`: [\"./setupTests.js\"]",
+    "source": "code_example",
+    "updated_at": 1781052570.5277815
+  },
+  "search:Unit Testing JavaScript:mocha and chai": {
+    "content": "- Install Mocha and Chai globally: `npm install -g mocha chai`\n- Initialize a new Mocha project: `mocha init`\n- Run tests with Mocha: `mocha test.js`\n- Key config options in `mocha.opts`: \n  - `--reporter spec` (default reporter)\n  - `--timeout 2000` (set timeout for tests)\n  - `--require @babel/register` (for Babel support)\n- Latest versions can be found on [npm](https://www.npmjs.com/)\n- Chai styles: \n  - Should style: `expect(value).to.be.true`\n  - Expect style: `assert.strictEqual(actual, expected)`\n  - Assert style: `value.should.be.true`",
+    "source": "web_search",
+    "updated_at": 1781052580.8696594
+  },
+  "search:Unit Testing JavaScript:jest for javascript": {
+    "content": "- Install Jest using npm: `npm install --save-dev jest`\n- Run tests: `npx jest`\n- Watch mode for continuous testing: `npx jest --watch`\n- Configure Jest with a `jest.config.js` file\n- Key config options:\n  - `testEnvironment`: \"jsdom\" or \"node\"\n  - `transformIgnorePatterns`: Array of regex patterns to ignore during transformation\n  - `setupFilesAfterEnv`: Array of paths to modules that run after the test framework has been installed in the environment\n- Latest version: Check on [npm](https://www.npmjs.com/package/jest) for the most current version.",
+    "source": "web_search",
+    "updated_at": 1781052608.6317744
+  },
+  "search:Unit Testing JavaScript:jest for javascript_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx jest`\n\n- **Latest Version**: Check [Jest GitHub](https://github.com/facebook/jest) for the latest version.\n\n- **Key Config Options**:\n  - `testMatch`: Array of glob patterns to match files for testing.\n  - `setupFilesAfterEnv`: Array of paths to modules that run some code to configure or set up the testing environment before each test file in the suite is executed.\n  - `transformIgnorePatterns`: An array of regexp pattern strings that are matched against all source file paths, while applying transforms.",
+    "source": "code_example",
+    "updated_at": 1781052614.9035566
   }
 }
