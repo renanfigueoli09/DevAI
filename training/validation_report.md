@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-10 04:22*
+*2026-06-10 04:33*
 
-## Score: 90% `[██████████████████░░]`  (47.0/52.0)
+## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
-### Knowledge Check (vector store): 33.0/38.0
+### Knowledge Check (vector store): 32.0/37.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -22,7 +22,6 @@
 | python-django-redis-sessions: cache | 1.0/1 | ✅ |
 | kubernetes-statefulsets-mongodb: não usa TypeORM | 1.0/1 | ✅ |
 | typescript + graphql-codegen: padrões de código | 1.0/1 | ✅ |
-| Spring Boot  +  Hibernate Performance Tuning: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
