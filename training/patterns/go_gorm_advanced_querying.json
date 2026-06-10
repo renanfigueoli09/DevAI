@@ -1,0 +1,12 @@
+{
+  "search:go-gorm-advanced-querying:go gorm advanced querying tech": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: Check the [GORM GitHub page](https://github.com/go-gorm/gorm) for the latest version.\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})`: Automatically migrates schema based on struct definition.\n  - `db.Where(\"name = ?\", \"jinzhu\").First(&user)`: Finds the first record that matches the condition.\n  - `db.Joins(\"Author\").Find(&books)`: Joins with associated records and finds all books.\n  - `db.Model(&User{}).Association(\"Roles\").Append(&Role{Name: \"admin\"})`: Appends a new role to user's roles.",
+    "source": "web_search",
+    "updated_at": 1781075589.146043
+  },
+  "search:go-gorm-advanced-querying:go gorm advanced querying tech_ex": {
+    "content": "- **Latest GORM Version**: Check latest version on [GitHub](https://github.com/go-gorm/gorm).\n- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/sqlite` (for SQLite)\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})` for automatic schema migration.\n  - `db.Find(&users, \"name = ?\", \"jinzhu\")` for querying specific records.\n  - `db.Where(\"age > ?\", 20).Find(&users)` for conditional queries.\n- **Advanced Query Techniques**:\n  - Use `Pluck` to retrieve a single column: `db.Model(&User{}).Pluck(\"name\", &names)`.\n  - Use `Joins` for complex joins: `db.Joins(\"Profile\").Where(\"profiles.age > ?\", 18).Find(&users)`.\n  - Use `Raw SQL` for custom queries: `db.Raw(\"SELECT * FROM users WHERE name = ?\", \"jinzhu\")`.",
+    "source": "code_example",
+    "updated_at": 1781075599.3670437
+  }
+}

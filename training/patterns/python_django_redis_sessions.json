@@ -1,0 +1,12 @@
+{
+  "search:python-django-redis-sessions:django redis sessions best pra": {
+    "content": "- **Install Django Redis**: `pip install django-redis`\n- **Update settings.py**:\n  ```python\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  SESSION_ENGINE = \"django.contrib.sessions.backends.cache\"\n  SESSION_CACHE_ALIAS = \"default\"\n  ```\n- **Redis Version**: Ensure Redis server is up-to-date.\n- **CLI Commands**:\n  - `redis-cli ping`: Check if Redis is running.\n  - `redis-cli info`: Get detailed information about the Redis server.\n- **Key Config Options**:\n  - `LOCATION`: URL of the Redis server.\n  - `CLIENT_CLASS`: Specifies the client class to use for connecting to Redis.\n  - `SESSION_ENGINE` and `SESSION_CACHE_ALIAS`: Configure session management using Redis.",
+    "source": "web_search",
+    "updated_at": 1781075541.1542416
+  },
+  "search:python-django-redis-sessions:django redis sessions best pra_ex": {
+    "content": "- Install `django-redis` using pip: `pip install django-redis`\n- Update Django settings to use Redis as the session backend:\n  ```python\n  SESSION_ENGINE = \"django.contrib.sessions.backends.cache\"\n  SESSION_CACHE_ALIAS = \"default\"\n  CACHES = {\n      \"default\": {\n          \"BACKEND\": \"django_redis.cache.RedisCache\",\n          \"LOCATION\": \"redis://127.0.0.1:6379/1\",\n          \"OPTIONS\": {\n              \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n          }\n      }\n  }\n  ```\n- Ensure Redis server is running on `127.0.0.1:6379` or adjust the `LOCATION` setting accordingly.\n- Use the latest version of `django-redis` for compatibility and features.\n- Consider using a more secure connection string if deploying to production environments, e.g., `redis://username:password@hostname:port/db`.",
+    "source": "code_example",
+    "updated_at": 1781075550.0534518
+  }
+}

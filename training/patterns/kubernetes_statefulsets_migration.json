@@ -1,0 +1,12 @@
+{
+  "search:kubernetes-statefulsets-migration:statefulsets migration with ku": {
+    "content": "- **CLI Commands**:\n  - `kubectl migrate statefulset <source-statefulset> --to=<destination-cluster>`\n  - `kubectl apply -f <statefulset-yaml-file>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27 introduces the Start Ordinal feature for StatefulSet migration.\n\n- **Key Config Options**:\n  - `spec.template.metadata.annotations[\"volume.beta.kubernetes.io/storage-class-name\"]`\n  - `spec.updateStrategy.type` (e.g., RollingUpdate, OnDelete)\n  - `spec.rollingUpdate.partition`",
+    "source": "web_search",
+    "updated_at": 1781075573.677001
+  },
+  "search:kubernetes-statefulsets-migration:statefulsets migration with ku_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update resources.\n  - `kubectl get pods --selector app=<app-name>` to list Pods by label.\n  - `kubectl describe pod <pod-name>` for detailed Pod information.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.x\n  - StatefulSets: Available in all versions of Kubernetes supporting them.\n\n- **Key Config Options**:\n  - `spec.template.metadata.labels`: Labels to attach to Pods.\n  - `spec.volumeClaimTemplates`: Templates for PersistentVolumeClaims.\n  - `spec.serviceName`: Name of the Service to link with StatefulSet.",
+    "source": "code_example",
+    "updated_at": 1781075580.2608223
+  }
+}

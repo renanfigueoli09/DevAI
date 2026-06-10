@@ -1,0 +1,22 @@
+{
+  "search:fastapi-asyncio-mongodb:fastapi asyncio mongodb integr": {
+    "content": "- Use `pip install fastapi[all] pymongo[motor]` to install FastAPI and Motor.\n- Ensure MongoDB is running and accessible.\n- Configure FastAPI app with `uvicorn main:app --reload`.\n- Key config options in `main.py`:\n  - `client = AsyncIOMotorClient(\"mongodb://localhost:27017\")`\n  - `db = client[\"your_database_name\"]`\n  - `collection = db[\"your_collection_name\"]`\n- Latest versions as of my last update: FastAPI 0.95.0, PyMongo 4.3.0.\n- Use Motor for asynchronous operations with MongoDB.\n- Example route in FastAPI:\n  ```python\n  @app.get(\"/items/\")\n  async def read_items():\n      items = await collection.find().to_list(None)\n      return {\"items\": items}\n  ```\n- Run the app using `uvicorn main:app --reload` for development.",
+    "source": "web_search",
+    "updated_at": 1781075488.1604602
+  },
+  "search:fastapi-asyncio-mongodb:fastapi asyncio mongodb integr_ex": {
+    "content": "- Clone example code from GitHub repository: `git clone https://github.com/mongodb-pymongo-fastapi/example.git`\n- Install FastAPI and PyMongo using pip:\n  ```bash\n  pip install fastapi uvicorn pymongo\n  ```\n- Use Motor for asynchronous MongoDB operations with FastAPI.\n- Latest versions:\n  - FastAPI: 0.95.1\n  - PyMongo: 4.3.2\n  - Motor: 2.6.0\n- Key config options in `main.py`:\n  ```python\n  from fastapi import FastAPI\n  from motor.motor_asyncio import AsyncIOMotorClient\n\n  app = FastAPI()\n\n  # MongoDB connection setup\n  client = AsyncIOMotorClient(\"mongodb://localhost:27017\")\n  db = client[\"your_database_name\"]\n  collection = db[\"your_collection_name\"]\n\n  @app.get(\"/\")\n  async def read_root():\n      return {\"message\": \"Hello World\"}\n  ```\n- Run the FastAPI application:\n  ```bash\n  uvicorn main:app --reload\n  ```",
+    "source": "code_example",
+    "updated_at": 1781075499.6543112
+  },
+  "search:fastapi-asyncio-mongodb:fastapi asyncio mongodb perfor": {
+    "content": "- **Latest PyMongo Version**: 4.9\n- **CLI Command**: `pip install pymongo==4.9`\n- **Key Config Options**:\n  - `MotorClient`: For asynchronous MongoDB connections.\n  - `async for` loop for iterating through documents.\n- **Performance Tuning Tips**:\n  - Use `await` for non-blocking operations.\n  - Indexes on frequently queried fields.\n  - Limit document size to reduce memory usage.\n  - Use connection pooling (`maxPoolSize`) in `MotorClient`.\n- **Example Code Snippet**:\n  ```python\n  from motor.motor_asyncio import AsyncIOMotorClient\n\n  client = AsyncIOMotorClient(\"mongodb://localhost:27017\", maxPoolSize=50)\n  db = client[\"mydatabase\"]\n  collection = db[\"mycollection\"]\n\n  async def get_document(doc_id):\n      document = await collection.find_one({\"_id\": doc_id})\n      return document\n  ```\n- **Documentation**: [MongoDB PyMongo Async](https://pymongo.readthedocs.io/en/stable/async.html)",
+    "source": "web_search",
+    "updated_at": 1781075510.0731802
+  },
+  "search:fastapi-asyncio-mongodb:fastapi asyncio mongodb perfor_ex": {
+    "content": "- Use `pip install fastapi uvicorn motor` to install FastAPI, Uvicorn, and Motor (async MongoDB driver).\n- For performance tuning, consider using the latest versions of FastAPI (`v0.95.0`) and Motor (`2.3.1`).\n- Key config options for MongoDB include setting `maxPoolSize` and `minPoolSize` in your connection string.\n- Use `uvicorn main:app --reload` to run your FastAPI app with auto-reload during development.\n- For testing, use `pytest` with the `asyncio` plugin to handle asynchronous tests effectively.",
+    "source": "code_example",
+    "updated_at": 1781075515.378012
+  }
+}
