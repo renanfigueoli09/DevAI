@@ -1,0 +1,42 @@
+{
+  "search:Advanced Features and Best Practices:fastapi-asyncio-mongodb advanc": {
+    "content": "- **GitHub Repository**: [michaldev/fastapi-async-mongodb](https://github.com/michaldev/fastapi-async-mongodb)\n  - Use `git clone https://github.com/michaldev/fastapi-async-mongodb.git` to clone the repository.\n  \n- **Dependency Manager**: Poetry\n  - Install Poetry with `curl -sSL https://install.python-poetry.org | python3 -`\n  - Create a virtual environment and install dependencies using `poetry install`.\n  \n- **Docker Setup**:\n  - Run MongoDB container: `docker run --name some-mongo -d mongo`\n  - Run FastAPI app with Docker Compose: `docker-compose up`\n\n- **Async MongoDB**: Use Motor for asynchronous operations.\n  - Install Motor with `pip install motor`\n  - Example usage:\n    ```python\n    import asyncio\n    from motor.motor_asyncio import AsyncIOMotorClient\n\n    async def main():\n        client = AsyncIOMotorClient(\"mongodb://localhost:27017\")\n        db = client.test_database\n        collection = db.test_collection\n        await collection.insert_one({\"name\": \"John Doe\"})\n        document = await collection.find_one({\"name\": \"John Doe\"})\n        print(document)\n\n    asyncio.run(main())\n    ```\n\n- **FastAPI Installation**:\n  - Install FastAPI with `pip install fastapi`\n  - Run the app: `uvicorn main:app --reload`\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - FastAPI App Instance: `app = FastAPI()`\n  - Motor Client: `client = AsyncIOMotorClient(\"mongodb://localhost:27017\")`",
+    "source": "web_search",
+    "updated_at": 1781081887.3345299
+  },
+  "search:Advanced Features and Best Practices:dotnet-efcore-migrations best ": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create a new migration.\n- Apply migrations using `dotnet ef database update`.\n- Review and commit migrations separately from application code.\n- Configure DbContext in `appsettings.json` for connection strings.\n- Ensure migrations are version-controlled with the project.\n- Avoid committing migration history table (`_EFMigrationsHistory`) directly.\n- Use `dotnet ef migrations remove` to undo the last migration.\n- Regularly update EF Core and tools using `dotnet tool update --global dotnet-ef`.\n- Utilize `dotnet ef migrations script` for generating SQL scripts.",
+    "source": "web_search",
+    "updated_at": 1781081914.0729227
+  },
+  "search:Advanced Features and Best Practices:dotnet-efcore-migrations best _ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 8.0\n  - .NET SDK: 7.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure connection strings.\n  - `Startup.cs`/`Program.cs`: Enable migrations and configure services.\n  - `Migrations/<MigrationName>.cs`: Define migration operations.",
+    "source": "code_example",
+    "updated_at": 1781081920.3715646
+  },
+  "search:Advanced Features and Best Practices:code-quality guidelines": {
+    "content": "- **Code Quality Metrics**: Use SonarQube or ESLint to measure code quality.\n- **CLI Commands**:\n  - `npm install --save-dev eslint`\n  - `npx eslint --init` for initial configuration\n  - `eslint yourfile.js` to lint a specific file\n- **Latest Versions**:\n  - Ensure Node.js and npm are up-to-date using `node -v` and `npm -v`.\n  - Update ESLint with `npm update eslint`.\n- **Key Config Options**:\n  - In `.eslintrc.json`, configure rules like `\"indent\": [\"error\", 2]` for indentation.\n  - Enable plugins with `\"plugins\": [\"react\"]` if using React.\n- **Code Review Checklist**: Refer to the DEV Community article for a detailed list of items to check during code reviews.",
+    "source": "web_search",
+    "updated_at": 1781081932.0873027
+  },
+  "search:Advanced Features and Best Practices:code-quality guidelines_ex": {
+    "content": "- **AWS SDK Code Examples Repo**: Use `git clone https://github.com/aws-samples/aws-sdk-code-examples.git` to clone the repository.\n- **PEP 8 for Python**: Install `flake8` using `pip install flake8`. Run with `flake8 your_script.py`.\n- **Autoformatting with Black**: Install `black` using `pip install black`. Format code with `black your_script.py`.\n- **Code Quality Guidelines - ShumerPrompt**: Access guidelines at [ShumerPrompt](https://shumerprompt.com/code-quality-guidelines).",
+    "source": "code_example",
+    "updated_at": 1781081937.8980803
+  },
+  "search:Advanced Features and Best Practices:fastapi-asyncio-caching strate": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- For Redis caching, use `pip install aioredis`.\n- Implement caching in FastAPI using middleware:\n  ```python\n  from fastapi import FastAPI, Request\n  from fastapi.middleware.cors import CORSMiddleware\n\n  app = FastAPI()\n\n  @app.middleware(\"http\")\n  async def cache_middleware(request: Request, call_next):\n      # Cache logic here\n      response = await call_next(request)\n      return response\n  ```\n- Key config options for Redis:\n  - `host`: Redis server host.\n  - `port`: Redis server port.\n  - `db`: Database index to use.\n- Use `uvicorn` for running FastAPI applications with async support:\n  ```bash\n  uvicorn main:app --reload --host 0.0.0.0 --port 8000\n  ```\n- Latest versions as of my last update are:\n  - FastAPI: 0.103.0\n  - aioredis: 2.4.2",
+    "source": "web_search",
+    "updated_at": 1781081957.080437
+  },
+  "search:Advanced Features and Best Practices:python+aiohttp+asyncpg advance": {
+    "content": "- **Latest aiohttp Version**: 3.14.0\n- **Latest asyncpg Version**: 0.26.0\n\n**Key Config Options for aiohttp ClientSession**:\n- `base_url`: Base URL for all requests.\n- `headers`: Default headers for the session.\n\n**CLI Commands**:\n- To install aiohttp: `pip install aiohttp==3.14.0`\n- To install asyncpg: `pip install asyncpg==0.26.0`\n\n**Actionable Facts**:\n- Use `ClientSession` to manage HTTP requests.\n- Configure default headers and base URL for the session.\n- Utilize `asyncpg` for asynchronous PostgreSQL database operations.\n- Ensure compatibility with Python 3.7+ for best performance.",
+    "source": "web_search",
+    "updated_at": 1781081989.18142
+  },
+  "search:Advanced Features and Best Practices:python+aiohttp+asyncpg advance_ex": {
+    "content": "- **Install asyncpg**: `pip install asyncpg`\n- **Connect to PostgreSQL**: \n  ```python\n  import asyncpg\n\n  conn = await asyncpg.connect(user='user', password='password', database='database', host='host')\n  ```\n- **Run a Query**:\n  ```python\n  result = await conn.fetch('SELECT * FROM table_name WHERE condition')\n  ```\n- **Use Transactions**:\n  ```python\n  async with conn.transaction():\n      # Your transaction code here\n  ```\n- **Latest Version**: Check on [PyPI](https://pypi.org/project/asyncpg/)\n- **Key Config Options**:\n  - `user`: Database username.\n  - `password`: Database password.\n  - `database`: Database name.\n  - `host`: Database host address.\n  - `port`: Database port (default is 5432).\n  \nFor advanced usage, refer to the [asyncpg documentation](https://magicstack.github.io/asyncpg/current/) and explore examples in the [kernoio-benchmark/stkrizh-realworld-aiohttp GitHub repository](https://github.com/kernoio-benchmark/stkrizh-realworld-aiohttp).",
+    "source": "code_example",
+    "updated_at": 1781082002.3011284
+  }
+}
