@@ -1,0 +1,12 @@
+{
+  "search:java-spring-data-jpa-batch-import:spring data jpa batch import p": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.2.0.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.rewrite_batched_inserts=true`",
+    "source": "web_search",
+    "updated_at": 1781077807.1523716
+  },
+  "search:java-spring-data-jpa-batch-import:spring data jpa batch import p_ex": {
+    "content": "- Use `@EnableBatchProcessing` in your Spring Boot application to enable batch processing.\n- Configure batch size in `application.properties`: `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Utilize `JpaRepository.saveAll()` for bulk inserts, but consider customizing it for better performance.\n- Enable JPA batching by setting `hibernate.order_inserts=true` and `hibernate.order_updates=true`.\n- Use `@Modifying` and `@Query` annotations with native SQL for more complex batch operations.\n- Monitor and tune database connection pool settings like `spring.datasource.hikari.maximum-pool-size=10`.\n- Consider using Spring Data JPA's `PagingAndSortingRepository` for efficient data fetching in batches.\n- Regularly update your dependencies to the latest versions, especially Hibernate, as newer versions often include performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781077818.2362998
+  }
+}

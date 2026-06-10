@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+postgres-statefulset:kubernetes statefulset with po": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy StatefulSet.\n- Ensure at least one worker node with 1 vCPU and 2 GiB RAM for PostgreSQL pod.\n- Optionally use Helm 3 for deployment.\n- Key config options include `replicas`, `volumeClaimTemplates`, and `service`.\n- Use `kubectl get pods -l app=<app-label>` to list StatefulSet pods.\n- For high availability, consider using pgpool and repmgr with StatefulSets.\n- Perform basic operations inside PostgreSQL cluster using a client pod.",
+    "source": "web_search",
+    "updated_at": 1781077779.6653676
+  },
+  "search:kubernetes+postgres-statefulset:kubernetes statefulset with po_ex": {
+    "content": "- Use `kubectl apply -f statefulset-replica.yml` to deploy PostgreSQL StatefulSet.\n- Monitor Replica status with `kubectl get pods`.\n- Check logs for issues using `kubectl logs -f postgres-replica-0`.\n- Implement an SOP to scale StatefulSet to zero before deletion.\n- Consider rolling updates with a custom pod management policy for better stability.",
+    "source": "code_example",
+    "updated_at": 1781077787.304707
+  },
+  "search:kubernetes+postgres-statefulset:performance tuning kubernetes ": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy StatefulSets.\n- Ensure PostgreSQL version compatibility with Kubernetes.\n- Configure `volumeClaimTemplates` for persistent storage.\n- Set `spec.serviceName` for stable network identities.\n- Use `readinessProbe` and `livenessProbe` for health checks.\n- Apply `orderedReady` update strategy for ordered deployment.\n- Monitor StatefulSet events using `kubectl describe statefulset <name>`.\n- Update PostgreSQL configuration via ConfigMaps or Secrets.",
+    "source": "web_search",
+    "updated_at": 1781077794.4789965
+  },
+  "search:kubernetes+postgres-statefulset:performance tuning kubernetes _ex": {
+    "content": "- Use `kubectl create statefulset` to deploy PostgreSQL StatefulSets.\n- Specify the latest Kubernetes version, e.g., `v1.24`.\n- Set `replicas` in the StatefulSet YAML for desired number of instances.\n- Configure `volumeClaimTemplates` for persistent storage.\n- Use `service.beta.kubernetes.io/aws-load-balancer-type: nlb` for AWS NLB.\n- Enable PostgreSQL replication by configuring `postgresql.conf` and `pg_hba.conf`.\n- Monitor performance with `kubectl top statefulset` and `kubectl logs`.\n- Update StatefulSets using `kubectl apply -f <filename>.yaml`.",
+    "source": "code_example",
+    "updated_at": 1781077800.1281254
+  }
+}

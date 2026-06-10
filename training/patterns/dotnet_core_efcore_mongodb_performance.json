@@ -1,0 +1,17 @@
+{
+  "search:dotnet-core-efcore-mongodb-performance:.net ef core mongodb performan": {
+    "content": "- **Install EF Core MongoDB Provider**: Use `dotnet add package Microsoft.EntityFrameworkCore.MongoDB`\n- **Latest Version**: EF Core 8.0 introduced MongoDB support.\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate --provider Microsoft.EntityFrameworkCore.MongoDB`\n  - `dotnet ef database update --provider Microsoft.EntityFrameworkCore.MongoDB`\n- **Key Config Options**:\n  - Connection String: `options.UseMongoDb(\"mongodb://username:password@host:port/database\")`\n  - Indexing: Define indexes in your model using `[Index]` attribute or Fluent API.\n  - Query Optimization: Use projection to reduce data transferred, avoid N+1 queries with eager loading.",
+    "source": "web_search",
+    "updated_at": 1781077839.8487544
+  },
+  "search:dotnet-core-efcore-mongodb-performance:advanced queries and indexing ": {
+    "content": "- **Latest Versions**: MongoDB EF Core Provider supports Entity Framework Core 8 or later on .NET 8.0 or later, and Entity Framework Core 10 on .NET 10.0 or later.\n- **CLI Commands**:\n  - `dotnet add package MongoDB.EntityFrameworkCore`\n  - `dotnet ef migrations add InitialCreate --provider MongoDB.EntityFrameworkCore`\n  - `dotnet ef database update --provider MongoDB.EntityFrameworkCore`\n- **Key Config Options**:\n  - Define indexes using the Fluent API in your DbContext configuration.\n  - Configure change tracking strategies to optimize performance and data consistency.\n  - Use LINQ queries for efficient querying of MongoDB collections.",
+    "source": "web_search",
+    "updated_at": 1781077864.0367982
+  },
+  "search:dotnet-core-efcore-mongodb-performance:advanced queries and indexing _ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package Microsoft.EntityFrameworkCore.MongoDB`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - MongoDB EF Core Provider: Version 8.0 or later for .NET 8.0 or later, and Version 10.0 or later for .NET 10.0 or later\n  - Entity Framework Core: Version 8 or 9\n\n- **Key Config Options**:\n  - Indexes: Single field, compound, unique, alternate keys\n  - Change tracking\n  - Complex queries\n  - Transactions",
+    "source": "code_example",
+    "updated_at": 1781077882.8314462
+  }
+}
