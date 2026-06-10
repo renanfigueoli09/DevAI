@@ -8,5 +8,55 @@
     "content": "- **Docker Kafka Zookeeper Configuration**\n  - **Latest Versions**: Kafka 3.5, Zookeeper 3.8\n  - **CLI Commands**:\n    ```bash\n    docker run --name zookeeper -d wurstmeister/zookeeper:latest\n    docker run --name kafka -d --link zookeeper:zookeeper wurstmeister/kafka:latest -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181\n    ```\n  - **Key Config Options**:\n    - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n    - `KAFKA_ZOOKEEPER_CONNECT`: Zookeeper connection string for Kafka.\n\n- **Advanced Configuration**\n  - **Replication Factor**: Set replication factor in Kafka topics to ensure data redundancy and fault tolerance.\n  - **Partition Count**: Increase partition count for higher throughput and parallelism.\n  - **Consumer Group Management**: Configure consumer groups for load balancing and message processing.\n  - **SSL/TLS Encryption**: Enable SSL/TLS encryption for secure communication between Kafka brokers and clients.\n\n- **Monitoring and Logging**\n  - **Prometheus**: Integrate Prometheus for monitoring Kafka metrics.\n  - **Grafana**: Use Grafana to visualize Kafka metrics with Prometheus data.\n  - **Log Aggregation**: Configure log aggregation using tools like Fluentd or Filebeat for centralized logging.",
     "source": "code_example",
     "updated_at": 1780941375.5508678
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:docker+kafka+zookeeper+advance": {
+    "content": "- Use `docker-compose` to manage multi-container setups.\n- Ensure Kafka and ZooKeeper are in the same network.\n- Set environment variables for configuration, e.g., `KAFKA_ADVERTISED_LISTENERS`.\n- Use `docker pull apache/kafka:latest` to get the latest version of Kafka.\n- Configure `zookeeper.connect` in Kafka's `server.properties`.\n- Scale Kafka by adjusting `num.partitions` and `replication.factor`.\n- Monitor Kafka metrics with Prometheus and Grafana.\n- Use Kafka Manager for efficient cluster management.",
+    "source": "web_search",
+    "updated_at": 1781059024.0267782
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:docker+kafka+zookeeper+advance_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name zookeeper -d wurstmeister/zookeeper`\n  - `docker run --name kafka -d wurstmeister/kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181`\n\n- **Latest Versions**:\n  - Zookeeper: 3.7.0\n  - Kafka: 3.4.0\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string to the Zookeeper instance.\n  - `ZOO_MY_ID`: Unique identifier for each Zookeeper server in a cluster.",
+    "source": "code_example",
+    "updated_at": 1781059040.5074682
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:kafka+zookeeper+distributed": {
+    "content": "- **Latest Versions**: Apache Kafka 3.4.0, ZooKeeper 3.8.2\n- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `zookeeper-shell.sh localhost:2181 ls /brokers/ids`\n- **Key Config Options**:\n  - Kafka: `broker.id`, `listeners`, `log.dirs`\n  - ZooKeeper: `dataDir`, `clientPort`, `maxClientCnxns`",
+    "source": "web_search",
+    "updated_at": 1781059058.0223513
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:kafka+zookeeper+distributed_ex": {
+    "content": "- Use `docker-compose` to set up Kafka and Zookeeper.\n- Ensure both services are running on the same network.\n- Configure Kafka to connect to Zookeeper using environment variables like `KAFKA_ZOOKEEPER_CONNECT`.\n- Expose ports 9092 for client connections and 29092 for inter-broker communication.\n- Use the latest versions of Confluent Kafka and Zookeeper images from Docker Hub.\n- Set up a distributed Kafka cluster by running multiple instances of Kafka, each with unique configurations.\n- Configure JMX exporter for monitoring Kafka and Zookeeper using their respective configuration files.",
+    "source": "code_example",
+    "updated_at": 1781059076.5303013
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:docker+kafka+zookeeper+tutoria": {
+    "content": "- Use `docker-compose` to set up Kafka and Zookeeper.\n- Example `docker-compose.yml` for Kafka and Zookeeper:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: confluentinc/cp-zookeeper:latest\n      container_name: zookeeper\n      environment:\n        ZOOKEEPER_CLIENT_PORT: 2181\n        ZOOKEEPER_TICK_TIME: 2000\n      ports:\n        - \"2181:2181\"\n    kafka:\n      image: confluentinc/cp-kafka:latest\n      container_name: kafka\n      environment:\n        KAFKA_BROKER_ID: 1\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1\n      ports:\n        - \"9092:9092\"\n      depends_on:\n        - zookeeper\n  ```\n- Ensure Docker and Docker Compose are installed.\n- Run `docker-compose up` to start the services.\n- Use `docker exec -it kafka bash` to access the Kafka container.\n- Key config options include `KAFKA_BROKER_ID`, `KAFKA_ZOOKEEPER_CONNECT`, and `KAFKA_ADVERTISED_LISTENERS`.\n- Latest versions of images can be found on Docker Hub.",
+    "source": "web_search",
+    "updated_at": 1781059098.6923387
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:docker+kafka+zookeeper+tutoria_ex": {
+    "content": "- Use `docker-compose` to manage Kafka and Zookeeper containers.\n- Ensure Docker and Docker Compose are installed on your system.\n- Pull the latest images for Kafka and Zookeeper using:\n  ```bash\n  docker pull confluentinc/cp-zookeeper:latest\n  docker pull confluentinc/cp-kafka:latest\n  ```\n- Create a `docker-compose.yml` file with the following content:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: confluentinc/cp-zookeeper:latest\n      container_name: zookeeper\n      environment:\n        ZOOKEEPER_CLIENT_PORT: 2181\n        ZOOKEEPER_TICK_TIME: 2000\n      ports:\n        - \"2181:2181\"\n    kafka:\n      image: confluentinc/cp-kafka:latest\n      container_name: kafka\n      environment:\n        KAFKA_BROKER_ID: 1\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092\n      ports:\n        - \"9092:9092\"\n      depends_on:\n        - zookeeper\n  ```\n- Start the services with `docker-compose up`.\n- Access Kafka and Zookeeper using their respective ports (2181 for Zookeeper, 9092 for Kafka).",
+    "source": "code_example",
+    "updated_at": 1781059109.4229696
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:kafka+zookeeper+security": {
+    "content": "- **CLI Commands**:\n  - `zkSecurityMigrator --zookeeper <ZooKeeper_host> --port <ZooKeeper_port>`\n  - `kafka-configs.sh --bootstrap-server <Kafka_broker> --entity-type brokers --entity-name <broker_id> --alter --add-config 'ssl.client.auth=required'`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - ZooKeeper: 3.8.2\n\n- **Key Config Options**:\n  - `zookeeper.set.acl`: Set to true for secure ACLs.\n  - `ssl.client.auth`: Required for SSL client authentication.\n  - `security.inter.broker.protocol`: Set to SSL for broker-to-broker communication.\n  - `listeners`: Specify the listener protocol (e.g., PLAINTEXT, SSL).\n  - `advertised.listeners`: Advertise listeners with appropriate protocols.",
+    "source": "web_search",
+    "updated_at": 1781059120.1782858
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:kafka+zookeeper+security_ex": {
+    "content": "- Use `zookeeper-security-migration.sh` tool to set ACLs on all existing znodes.\n- Ensure Kafka and Zookeeper are running in a secure environment.\n- Implement SASL/PLAIN authentication for Kafka brokers.\n- Configure Kafka with the latest version for security enhancements.\n- Key config options include `security.protocol`, `sasl.mechanism`, and `zookeeper.connect`.\n- Use `bin/zookeeper-security-migration.sh` for ACL migration.\n- Latest versions of Kafka and Zookeeper should be used to ensure security patches.",
+    "source": "code_example",
+    "updated_at": 1781059127.233338
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:docker+kafka+zookeeper+perform": {
+    "content": "- **Latest Versions**: Ensure using the latest stable versions of Docker, Kafka, and ZooKeeper.\n- **CLI Commands**:\n  - `docker run --name zookeeper -d wurstmeister/zookeeper`\n  - `docker run --name kafka -d wurstmeister/kafka -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181`\n- **Key Config Options**:\n  - `KAFKA_BROKER_ID`: Unique identifier for each broker.\n  - `KAFKA_ZOOKEEPER_CONNECT`: ZooKeeper connection string.\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka brokers.\n  - `KAFKA_NUM_PARTITIONS`: Number of partitions per topic.\n  - `KAFKA_REPLICATION_FACTOR`: Replication factor for topics.",
+    "source": "web_search",
+    "updated_at": 1781059136.3479507
+  },
+  "search:Docker/Kafka/Zookeeper Advanced:docker+kafka+zookeeper+perform_ex": {
+    "content": "- **Docker Compose File Example**:\n  ```yaml\n  version: '3'\n  services:\n    zookeeper:\n      image: wurstmeister/zookeeper\n    kafka:\n      image: wurstmeister/kafka\n      ports:\n        - \"9092:9092\"\n      environment:\n        KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092\n        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181\n  ```\n\n- **CLI Commands**:\n  - Start Kafka and Zookeeper:\n    ```bash\n    docker-compose up -d\n    ```\n  - Create a topic:\n    ```bash\n    docker exec -ti kafka /opt/kafka/bin/kafka-topics.sh --create --topic demo --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1\n    ```\n  - Produce messages:\n    ```bash\n    docker exec -ti kafka /opt/kafka/bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic demo\n    ```\n  - Consume messages:\n    ```bash\n    docker exec -ti kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic demo --from-beginning\n    ```\n\n- **Latest Versions**:\n  - Zookeeper: `wurstmeister/zookeeper`\n  - Kafka: `wurstmeister/kafka`\n\n- **Key Config Options**:\n  - `KAFKA_ADVERTISED_LISTENERS`: Advertised listeners for Kafka.\n  - `KAFKA_ZOOKEEPER_CONNECT`: Connection string to Zookeeper.\n  - `replication-factor` and `partitions`: Configuration for topic replication and partitioning.",
+    "source": "code_example",
+    "updated_at": 1781059149.4859674
   }
 }

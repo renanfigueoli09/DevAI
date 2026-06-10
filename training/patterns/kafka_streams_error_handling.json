@@ -13,5 +13,50 @@
     "content": "- **Exception Handling**: Use `spring.kafka.properties.default.deserialization.exception.handler` to set custom exception handlers.\n- **Error Retries**: Configure `max.task.attempts` to specify the maximum number of attempts for processing a record.\n- **Confluent Platform Configuration**: Avoid setting replication factor in Kafka Streams applications; it's intended for internal topics only.\n- **Monitoring and Resetting**: Use Conduktor interface for registering, monitoring, and resetting Kafka Streams applications.",
     "source": "web_search",
     "updated_at": 1781042275.5409164
+  },
+  "search:Kafka Streams Error Handling:kafka-streams-error-handling": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --describe` to check topic details.\n- **Latest Versions**: Kafka Streams 3.4.0, Confluent Platform 7.5.0.\n- **Key Config Options**:\n  - `default.key.serde`: Serde for keys.\n  - `default.value.serde`: Serde for values.\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `auto.offset.reset`: Strategy to reset offsets on startup (e.g., `earliest`, `latest`).",
+    "source": "web_search",
+    "updated_at": 1781059158.1519358
+  },
+  "search:Kafka Streams Error Handling:kafka-streams-error-handling_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic-name>`\n  - `kafka-console-consumer.sh --bootstrap-server <broker> --topic <topic-name>`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `errors.tolerance`: Set to `all`, `none`, or `logging`.\n  - `errors.log.include.messages`: Boolean, whether to log the message.\n  - `default.key.serde` and `default.value.serde`: Define default serializers for keys and values.\n\n- **Error Handling Interfaces**:\n  - `ConsumerRecordRecoverer`\n  - `ProcessorContext`\n  - `Punctuator`\n\n- **Example Code Snippet**:\n  ```java\n  StreamsBuilder builder = new StreamsBuilder();\n  KStream<String, String> stream = builder.stream(\"input-topic\");\n  \n  stream.process(() -> new Processor<String, String, Void>() {\n      @Override\n      public void init(ProcessorContext<Void> context) {}\n      \n      @Override\n      public void process(String key, String value) {\n          try {\n              // Processing logic here\n          } catch (Exception e) {\n              context.forward(key, value);\n              context.commit();\n          }\n      }\n      \n      @Override\n      public void close() {}\n  });\n  \n  KafkaStreams streams = new KafkaStreams(builder.build(), props);\n  streams.start();\n  ```",
+    "source": "code_example",
+    "updated_at": 1781059167.7842526
+  },
+  "search:Kafka Streams Error Handling:error+handling+kafka+streams": {
+    "content": "- **CLI Commands**: Not applicable in this context.\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Kafka: 3.4.0\n- **Key Config Options**:\n  - `default.key.serde`: Serde for keys.\n  - `default.value.serde`: Serde for values.\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `error.handler`: Custom error handler class.",
+    "source": "web_search",
+    "updated_at": 1781059178.0949652
+  },
+  "search:Kafka Streams Error Handling:error+handling+kafka+streams_ex": {
+    "content": "- Use `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic-name>` to create Kafka topics.\n- Set `errorHandlingMode` in your Kafka Streams application properties to define how errors are handled (`all`, `none`, `non-fatal`, or `fatal`).\n- Configure `default.key.serde` and `default.value.serde` for key and value serialization.\n- Use `exceptions.handler` to specify a custom exception handler class.\n- Set `max.poll.interval.ms` to control the maximum time between invocations of poll().\n- Monitor Kafka Streams metrics using JMX or Prometheus for error tracking.\n- Implement retry logic in your application code for transient errors.\n- Use `rebalance.listener` to handle rebalance events and perform cleanup tasks.",
+    "source": "code_example",
+    "updated_at": 1781059200.1192958
+  },
+  "search:Kafka Streams Error Handling:kafka+streams+reliability": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group_id>`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - Kafka: 3.4.0\n\n- **Key Config Options**:\n  - `state.dir`: Directory where state stores are stored.\n  - `cache.max.bytes.buffering`: Maximum size of the in-memory buffer for caching records before they are written to disk.\n  - `commit.interval.ms`: Interval at which offsets are committed to Kafka.\n  - `default.key.serde` and `default.value.serde`: Serdes for keys and values, respectively.",
+    "source": "web_search",
+    "updated_at": 1781059213.0755994
+  },
+  "search:Kafka Streams Error Handling:kafka+streams+reliability_ex": {
+    "content": "- Use `docker run` to start Kafka and ZooKeeper containers.\n- Set `bootstrap.servers=localhost:9092` in your Kafka Streams application properties.\n- Update `confluentinc/kafka-streams-examples` to the latest version for bug fixes and improvements.\n- Configure `auto.offset.reset=earliest` to ensure processing from the beginning of topics.\n- Use `acks=all` for producer configuration to guarantee message delivery.\n- Enable idempotence on producers with `enable.idempotence=true`.\n- Monitor Kafka Streams application metrics using Confluent Control Center or Prometheus.",
+    "source": "code_example",
+    "updated_at": 1781059222.3302665
+  },
+  "search:Kafka Streams Error Handling:kafka+streams+tutorials": {
+    "content": "- **CLI Commands**: \n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**: \n  - Kafka Streams: 3.4.0\n  - Apache Kafka: 3.4.0\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to bootstrap from.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Strategy for resetting offsets when no initial offset is found.",
+    "source": "web_search",
+    "updated_at": 1781059233.4435828
+  },
+  "search:Kafka Streams Error Handling:kafka+streams+tutorials_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.1\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the application.\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `auto.offset.reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on the server.",
+    "source": "code_example",
+    "updated_at": 1781059241.918577
+  },
+  "search:Kafka Streams Error Handling:streaming+architecture+error+m": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <file.yaml>` to deploy resources.\n  - `kubectl get pods` to list all pods.\n\n- **Latest Versions**:\n  - Grafana v9.3.5\n  - Kubernetes v1.23.4\n\n- **Key Config Options**:\n  - Grafana: `data_source.json` for configuring data sources.\n  - Kubernetes: `replicas` in deployment YAML to set pod count.",
+    "source": "web_search",
+    "updated_at": 1781059260.2309613
   }
 }

@@ -18,5 +18,45 @@
     "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-configs.sh --bootstrap-server <broker> --entity-type topics --entity-name <topic_name> --alter --add-config cleanup.policy=compact`\n\n- **Latest Versions**:\n  - Apache Kafka: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `message.max.bytes`: Maximum size of a message.\n  - `replication.factor`: Number of replicas for each partition.\n  - `num.partitions`: Number of partitions per topic.\n  - `cleanup.policy`: Determines how log segments are cleaned up (delete, compact).\n  - `transaction.state.log.replication.factor`: Replication factor for the transaction state log.",
     "source": "code_example",
     "updated_at": 1780946590.00195
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:rabbitmq+kafka+performance+tun": {
+    "content": "- **Latest Versions**: RabbitMQ 4.1, Kafka 3.2\n- **CLI Commands**:\n  - RabbitMQ: `rabbitmqctl start_app`, `rabbitmqctl stop_app`\n  - Kafka: `kafka-server-start.sh config/server.properties`, `kafka-server-stop.sh`\n- **Key Config Options**:\n  - RabbitMQ: `vm_memory_high_watermark.relative`, `queue_index_cache_size`\n  - Kafka: `num.network.threads`, `log.segment.bytes`",
+    "source": "web_search",
+    "updated_at": 1781058887.561725
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:rabbitmq+kafka+performance+tun_ex": {
+    "content": "- **Kafka Performance Tuning**:\n  - Use `kafka-server-start.sh` with `--config server.properties`.\n  - Adjust `num.network.threads`, `num.io.threads`, and `socket.send.buffer.bytes` in `server.properties`.\n\n- **RabbitMQ Performance Tuning**:\n  - Use `rabbitmq-server` command.\n  - Configure `vm_memory_high_watermark.relative` in `rabbitmq.conf`.\n\n- **Latest Versions**:\n  - Kafka: Version 3.4.0\n  - RabbitMQ: Version 3.9.12\n\n- **Key Config Options**:\n  - Kafka: `log.retention.hours`, `message.max.bytes`.\n  - RabbitMQ: `vm_memory_high_watermark.absolute`, `disk_free_limit`.",
+    "source": "code_example",
+    "updated_at": 1781058893.9732864
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:high+performance+rabbitmq+kafk": {
+    "content": "- **RabbitMQ**:\n  - Latest Version: `3.12.x`\n  - Key Config Options: `rabbitmq.conf`, `vm_memory_high_watermark.relative`\n  - CLI Command: `rabbitmqctl start_app`\n\n- **Kafka**:\n  - Latest Version: `3.4.x`\n  - Key Config Options: `server.properties` (e.g., `log.dirs`, `num.partitions`)\n  - CLI Command: `kafka-server-start.sh config/server.properties`\n\nBoth RabbitMQ and Kafka are excellent for high-performance message transmission, but they have different strengths:\n- **RabbitMQ** is better suited for scenarios requiring complex routing, transactions, and a wide range of plugins.\n- **Kafka** excels in handling large volumes of data with low latency and is ideal for real-time streaming applications.",
+    "source": "web_search",
+    "updated_at": 1781058940.1841366
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:high+performance+rabbitmq+kafk_ex": {
+    "content": "- **RabbitMQ**:\n  - Latest Version: RabbitMQ 3.12.x\n  - Key Config Options: `rabbitmqctl`, `vm_memory_high_watermark.relative`\n  - CLI Command: `rabbitmqctl start_app`\n\n- **Kafka**:\n  - Latest Version: Kafka 3.0.x\n  - Key Config Options: `server.properties` (e.g., `num.partitions`, `replication.factor`)\n  - CLI Command: `kafka-server-start.sh config/server.properties`\n\nFor detailed performance benchmarks and comparisons, refer to the provided links for comprehensive analysis and actionable insights.",
+    "source": "code_example",
+    "updated_at": 1781058949.719804
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:optimizing+rabbitmq+kafka": {
+    "content": "- **RabbitMQ**:\n  - Latest Version: Use `rabbitmq-server --version` to check.\n  - Key Config Options: `rabbitmqctl set_policy`, `rabbitmqctl set_user_tags`.\n  - CLI Commands: `rabbitmqctl start_app`, `rabbitmqctl stop_app`.\n\n- **Kafka**:\n  - Latest Version: Check on the official Apache Kafka website.\n  - Key Config Options: `server.properties` settings like `num.partitions`, `replication.factor`.\n  - CLI Commands: `kafka-server-start.sh config/server.properties`, `kafka-topics.sh --create`.",
+    "source": "web_search",
+    "updated_at": 1781058957.7327259
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:optimizing+rabbitmq+kafka_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare queue name=my_queue durable=true`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - RabbitMQ: v3.11.x\n  - Kafka: v3.4.x\n\n- **Key Config Options**:\n  - RabbitMQ:\n    - `durable`: Ensures the queue survives broker restarts.\n    - `auto_delete`: Automatically deletes the queue when it's no longer in use.\n  - Kafka:\n    - `replication_factor`: Number of copies of each partition for fault tolerance.\n    - `num_partitions`: Number of partitions to create during topic creation.",
+    "source": "code_example",
+    "updated_at": 1781058983.4223888
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:rabbitmq+kafka+throughput": {
+    "content": "- **Latest Versions**: \n  - RabbitMQ: v3.12.15\n  - Kafka: v3.4.0\n\n- **CLI Commands**:\n  - RabbitMQ: `rabbitmqctl start_app`, `rabbitmqctl stop_app`\n  - Kafka: `kafka-server-start.sh config/server.properties`, `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092`\n\n- **Key Config Options**:\n  - RabbitMQ: `vm_memory_high_watermark.relative` (default 0.4)\n  - Kafka: `num.partitions` (default 1), `replication.factor` (default 1)\n\n- **Performance Tuning**:\n  - RabbitMQ: Increase `vm_memory_high_watermark` for higher throughput.\n  - Kafka: Adjust `num.partitions` and `replication.factor` based on cluster size.\n\n- **Throughput Considerations**:\n  - RabbitMQ: Best suited for lower to medium throughput with guaranteed message delivery.\n  - Kafka: Ideal for high-throughput scenarios, especially with distributed systems.",
+    "source": "web_search",
+    "updated_at": 1781059000.4012613
+  },
+  "search:RabbitMQ/Kafka Performance Tuning:rabbitmq+kafka+throughput_ex": {
+    "content": "- **RabbitMQ Stream**:\n  - **CLI Command**: `rabbitmqctl stream`\n  - **Latest Version**: RabbitMQ 3.9+\n  - **Key Config Options**: `stream.buffer_size`, `stream.max_inflight`\n\n- **Kafka**:\n  - **CLI Command**: `kafka-topics.sh --create`\n  - **Latest Version**: Kafka 3.0+\n  - **Key Config Options**: `replication.factor`, `partitions`, `message.max.bytes`\n\n- **Spring Boot Messaging**:\n  - **RabbitMQ**: Use `@EnableRabbit` and `@RabbitListener`.\n  - **Kafka**: Use `@EnableKafka` and `@KafkaListener`.\n\n- **Kafka RabbitMQ Connector**:\n  - **Latest Version**: Kafka Connect 3.0+\n  - **Key Config Options**: `topics`, `topic.prefix`, `key.converter`, `value.converter`.",
+    "source": "code_example",
+    "updated_at": 1781059017.0027366
   }
 }
