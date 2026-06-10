@@ -1,0 +1,17 @@
+{
+  "search:fastapi+asyncpg-performance:fastapi asyncpg performance tu": {
+    "content": "- Use `uvicorn` to run FastAPI applications with the `--reload` flag for development.\n- Install `asyncpg` version 0.26.0 or later for database operations.\n- Implement caching using Redis by setting up a connection pool and configuring cache expiration times.\n- Utilize `Locust` for load testing, specifying the number of users and hatch rate to identify bottlenecks.\n- Optimize FastAPI routes by ensuring they are asynchronous and use efficient data handling techniques.\n- Configure database connections with pooling options in `asyncpg` to manage resources effectively.\n- Monitor application performance using tools like `PyCharm` or `VisualVM`.\n- Regularly update FastAPI and its dependencies to benefit from the latest performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781075188.3511088
+  },
+  "search:fastapi+asyncpg-performance:fastapi asyncpg performance tu_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `pytest`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - `DATABASE_URL`: Define your PostgreSQL connection string.\n  - `pool_size`: Set the number of connections in the pool.\n  - `max_overflow`: Maximum number of connections beyond `pool_size`.\n  - `echo`: Enable logging for SQL queries (True/False).",
+    "source": "code_example",
+    "updated_at": 1781075193.8352635
+  },
+  "search:fastapi+asyncpg-performance:asyncpg best practices for fas": {
+    "content": "- Use `fastapi` version 0.95.0 or later.\n- Use `asyncpg` version 0.26.0 or later for PostgreSQL database interactions.\n- Implement modular design to enhance maintainability and scalability.\n- Configure logging with Python's built-in `logging` module for better visibility into application behavior.\n- Write unit tests using libraries like `pytest` to ensure code reliability.\n- Use environment variables for sensitive information such as database credentials.\n- Optimize FastAPI performance by enabling request caching and reducing response times.\n- Monitor application metrics using tools like Prometheus or Grafana for real-time insights.\n- Regularly update dependencies to benefit from security patches and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781075201.5882463
+  }
+}
