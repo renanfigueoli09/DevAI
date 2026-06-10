@@ -1,0 +1,22 @@
+{
+  "search:java-spring-boot-kafka-spring-cloud-stream:java spring boot kafka spring ": {
+    "content": "- **Latest Version of Spring Cloud Stream**: As of my last update, the latest stable version is 4.x. Check [Spring's official release notes](https://spring.io/projects/spring-cloud-stream#release-notes) for the most current version.\n  \n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Kafka: \n    ```bash\n    spring init --dependencies=webflux,kafka,stream my-spring-cloud-stream-project\n    ```\n  - To add dependencies in `pom.xml` for Spring Cloud Stream Kafka:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.cloud</groupId>\n        <artifactId>spring-cloud-starter-stream-kafka</artifactId>\n    </dependency>\n    ```\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic to consume messages from.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the Kafka topic to produce messages to.\n  - `spring.cloud.stream.kafka.binder.configuration.bootstrap.servers`: The list of Kafka brokers.\n  - `spring.cloud.stream.kafka.binder.configuration.group.id`: The consumer group ID.\n\n- **Additional Resources**:\n  - [Baeldung Guide](https://www.baeldung.com/spring-cloud-stream-kafka)\n  - [Spring Cloud Stream Documentation](https://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/)\n  \nThese points should help developers set up and configure Spring Cloud Stream with Kafka effectively.",
+    "source": "web_search",
+    "updated_at": 1781074199.7043066
+  },
+  "search:java-spring-boot-kafka-spring-cloud-stream:java spring boot kafka spring _ex": {
+    "content": "- **Latest Versions**: Spring Boot 3.2.0, Spring Cloud Stream 4.0.0, Apache Kafka 3.0.0\n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `docker-compose up` to start services using Docker Compose.\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic for input bindings.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic for output bindings.\n  - `spring.kafka.bootstrap-servers`: Kafka broker addresses.",
+    "source": "code_example",
+    "updated_at": 1781074205.0187974
+  },
+  "search:java-spring-boot-kafka-spring-cloud-stream:spring boot kafka spring cloud": {
+    "content": "- **Latest Version**: Spring Boot 3.2, Spring Cloud Stream 4.0, Apache Kafka 3.5\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Kafka topic name for input.\n  - `spring.cloud.stream.bindings.output.destination`: Kafka topic name for output.\n  - `spring.cloud.stream.error.default.destination`: Kafka topic for error messages.\n\n- **CLI Commands**:\n  - To create a new Spring Boot project with Spring Cloud Stream and Apache Kafka: \n    ```bash\n    spring init --dependencies=webflux,kafka-streams my-kafka-app\n    ```\n  - To run the application:\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n\n- **Error Handling**:\n  - Use `@StreamListener` with error handling annotations like `@SendTo(\"errorTopic\")`.\n  - Configure deserialization error handlers in Kafka Streams.\n\n- **Advanced Topics**:\n  - Implement dead-letter queues using Spring Cloud Stream's DLQ support.\n  - Utilize custom exception handlers for more granular control over error management.",
+    "source": "web_search",
+    "updated_at": 1781074215.2882373
+  },
+  "search:java-spring-boot-kafka-spring-cloud-stream:spring boot kafka spring cloud_ex": {
+    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Spring Cloud Stream: 4.0.0\n  - Kafka: 3.3.1\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Name of the Kafka topic to consume from.\n  - `spring.cloud.stream.bindings.output.destination`: Name of the Kafka topic to produce to.\n  - `spring.cloud.stream.error.enabled`: Enable error handling for streams.\n  - `spring.cloud.stream.error.destination`: Name of the Kafka topic for error messages.",
+    "source": "code_example",
+    "updated_at": 1781074233.3128808
+  }
+}
