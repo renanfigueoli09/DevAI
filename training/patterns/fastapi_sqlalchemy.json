@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy databases[postgresql]`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.2\n  - SQLAlchemy: 1.4.39\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection Container: Define dependencies in a container for better organization.\n  - Alembic Configuration: For database migrations, configure Alembic with the appropriate settings.",
     "source": "code_example",
     "updated_at": 1780975413.0183084
+  },
+  "search:FastAPI + SQLAlchemy:fastapi sqlalchemy crud 2025": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Create a new FastAPI project.\n  - `uvicorn app.main:app --reload`: Run the FastAPI server with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: Define in `settings.py` or environment variables.\n  - Models: Define using Pydantic models and SQLAlchemy ORM.\n  - CRUD Operations: Implement create, read, update, delete methods for each model.",
+    "source": "web_search",
+    "updated_at": 1781068661.3479197
+  },
+  "search:FastAPI + SQLAlchemy:fastapi sqlalchemy crud 2025_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` to run the FastAPI app.\n  - `pip install fastapi sqlalchemy databases[postgresql]` to install necessary packages.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Models should inherit from `Base` (from SQLAlchemy).\n  - Pydantic schemas for data validation and serialization.\n  - Use `Depends` for dependency injection in routes.",
+    "source": "code_example",
+    "updated_at": 1781068666.921917
+  },
+  "search:FastAPI + SQLAlchemy:fastapi sqlalchemy performance": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy`\n  - `pip install fastapi-sqlalchemy-monitor`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - SQLAlchemy: v2.0.14\n\n- **Key Config Options**:\n  - Database URL in SQLAlchemy (`SQLALCHEMY_DATABASE_URL`)\n  - Connection pool settings (`pool_size`, `max_overflow`)\n  - Monitoring middleware configuration",
+    "source": "web_search",
+    "updated_at": 1781068678.2641275
+  },
+  "search:FastAPI + SQLAlchemy:fastapi sqlalchemy performance_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Engine Creation: `engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_size=10, max_overflow=20)`\n  - Session Local: `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`\n  - Dependency Injection: `db: Session = Depends(get_db)`\n\n- **Performance Optimization Tips**:\n  - Indexing: Create indexes on frequently queried columns.\n  - Caching: Use Redis or Memcached for caching query results.\n  - Pagination: Implement pagination to reduce the number of records fetched at once.\n  - Query Profiling: Use SQLAlchemy's `explain()` method to analyze and optimize queries.",
+    "source": "code_example",
+    "updated_at": 1781068685.7910366
   }
 }

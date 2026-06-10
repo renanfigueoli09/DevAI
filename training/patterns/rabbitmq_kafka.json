@@ -13,5 +13,20 @@
     "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare queue name=my_queue`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.11.x\n  - Apache Kafka: 3.4.x\n\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` (e.g., `listeners.tcp.default = 5672`)\n  - Kafka: `server.properties` (e.g., `broker.id=0`, `listeners=PLAINTEXT://localhost:9092`)",
     "source": "web_search",
     "updated_at": 1780976514.8123662
+  },
+  "search:RabbitMQ + Kafka:rabbitmq kafka integration 202": {
+    "content": "- **CLI Commands**:\n  - `mvn install` to build the project.\n  - `docker run --rm -it <image_name> /bin/bash` to enter a Docker container.\n\n- **Latest Versions**:\n  - Spring Boot: 4.x (as of my last update).\n  - Kafka: 3.3.1 (latest stable version as of my last update).\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of Kafka brokers.\n  - `key.deserializer` and `value.deserializer`: Deserializers for keys and values.\n  - `group.id`: Consumer group ID.\n  - `auto.offset.reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on server.",
+    "source": "web_search",
+    "updated_at": 1781068693.4826868
+  },
+  "search:RabbitMQ + Kafka:rabbitmq kafka performance tun": {
+    "content": "- **CLI Commands**: \n  - `kafka-topics.sh --zookeeper <zk_host> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-configs.sh --bootstrap-server <broker_host> --entity-type topics --entity-name <topic_name> --alter --add-config cleanup.policy=compact`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Zookeeper: 3.8.2\n\n- **Key Config Options**:\n  - `message.max.bytes`: Maximum size of a message.\n  - `replication.factor`: Number of replicas for each partition.\n  - `num.partitions`: Number of partitions per topic.\n  - `cleanup.policy`: Determines how log segments are cleaned up (delete, compact).\n  - `retention.ms`: Retention time in milliseconds for messages.",
+    "source": "web_search",
+    "updated_at": 1781068716.5253956
+  },
+  "search:RabbitMQ + Kafka:rabbitmq kafka performance tun_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare queue name=my_queue durable=true`\n  - `kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.11.4\n  - Kafka: 3.3.1\n\n- **Key Config Options**:\n  - RabbitMQ: `queue.durable`, `exchange.type`\n  - Kafka: `replication.factor`, `num.partitions`",
+    "source": "code_example",
+    "updated_at": 1781068722.4855838
   }
 }
