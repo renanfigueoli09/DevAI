@@ -18,5 +18,25 @@
     "content": "- **Latest Version**: ASP.NET Core 9.0\n- **CLI Commands**:\n  - `dotnet new mvc` to create a new MVC project.\n  - `dotnet add package Microsoft.AspNetCore.Diagnostics` for global exception handling.\n- **Key Config Options**:\n  - `app.UseExceptionHandler(\"/Home/Error\")` in `Startup.cs` for centralized error handling.\n  - `app.UseSerilogRequestLogging()` for structured logging with Serilog.\n  - `ConfigureServices` method to register services like `services.AddControllersWithViews()`.\n- **Middleware**: Implement custom middleware for specific error scenarios.\n- **Exception Filters**: Use `[ExceptionHandler]` attribute or create custom filters in `Startup.cs`.",
     "source": "code_example",
     "updated_at": 1781060186.9971309
+  },
+  "search:advanced-error-handling-in-angular-core:advanced error handling in ang": {
+    "content": "- Use `ng generate service error-handler` to create a custom error handler.\n- Implement the `ErrorHandler` interface in your custom service.\n- Override the `handleError` method for custom error handling logic.\n- Configure the global error handler in `app.module.ts`:\n  ```typescript\n  providers: [{ provide: ErrorHandler, useClass: CustomErrorHandler }]\n  ```\n- Use `try-catch` blocks within components and services for local error handling.\n- Implement logging using a service like `ngx-logger` or `console.error`.\n- Utilize Angular's built-in `HttpClientModule` with interceptors for centralized HTTP error handling.\n- Consider using RxJS operators like `catchError` to handle errors in observables.\n- Regularly update Angular and its dependencies to benefit from improved error handling features.",
+    "source": "web_search",
+    "updated_at": 1781064207.6659408
+  },
+  "search:advanced-error-handling-in-angular-core:advanced error handling in ang_ex": {
+    "content": "- Use `ng generate service global-error-handler` to create a new service.\n- Implement the `ErrorHandler` interface in your `GlobalErrorHandler` service.\n- Configure Angular's error handling by providing the `GlobalErrorHandler` service in the `app.module.ts`.\n- Example of error handling in a component:\n  ```typescript\n  import { ErrorHandler, Injectable } from '@angular/core';\n\n  @Injectable()\n  export class GlobalErrorHandler implements ErrorHandler {\n    handleError(error: Error) {\n      // Custom error handling logic here\n      console.error('Global Error Handler:', error);\n    }\n  }\n\n  @NgModule({\n    providers: [\n      { provide: ErrorHandler, useClass: GlobalErrorHandler }\n    ]\n  })\n  export class AppModule { }\n  ```\n- Ensure your `GlobalErrorHandler` handles errors appropriately for a better user experience and debugging.",
+    "source": "code_example",
+    "updated_at": 1781064214.2310112
+  },
+  "search:advanced-error-handling-in-angular-core:angular core error logging and": {
+    "content": "- **CLI Commands**:\n  - `ng generate service error` to create an ErrorService.\n  - `ng serve --prod` for production mode.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - Angular Core: v16.2.0\n\n- **Key Config Options**:\n  - In `app.module.ts`, configure `HttpInterceptor` and `ErrorHandler`.\n  - Use RxJS operators like `catchError` for error handling in services.\n  - Implement a centralized `ErrorService` for logging, notifications, and categorization.",
+    "source": "web_search",
+    "updated_at": 1781064222.419488
+  },
+  "search:advanced-error-handling-in-angular-core:angular core error logging and_ex": {
+    "content": "- **CLI Commands**:\n  - `ng build --prod` to build the production version of your Angular app.\n  - `ng serve --live-reload` to start a development server with live reload.\n\n- **Latest Versions**:\n  - Angular Core: Version 16.x (as of my last update).\n  - Sentry SDK for Angular: Version 7.0.0 (latest at the time).\n\n- **Key Config Options**:\n  - In `angular.json`, ensure you have the correct configurations for production builds.\n  - For Sentry, configure it in your main application file (`main.ts`) with your DSN.\n\n- **Error Handling Techniques**:\n  - Use Angular's built-in error handling mechanisms like `try-catch` blocks and custom error classes.\n  - Implement global error handlers using `ErrorHandler`.\n\n- **Monitoring Strategies**:\n  - Integrate Sentry for real-time error tracking and monitoring.\n  - Configure logging levels in your application to capture necessary information.\n\n- **Optimization Tips**:\n  - Use Angular Signals for state management to optimize rendering updates.\n  - Regularly update dependencies to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781064240.5437727
   }
 }
