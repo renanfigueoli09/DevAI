@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-sqlite-performance-tuning:.net core sqlite performance t": {
+    "content": "- Use `dotnet ef migrations add InitialCreate` to create initial migration.\n- Apply migrations using `dotnet ef database update`.\n- Optimize queries by indexing columns frequently queried in WHERE clauses.\n- Regularly run `VACUUM` command to defragment the database and reclaim space.\n- Adjust connection string settings like `Cache Size` for better performance.\n- Monitor and analyze query execution plans with `EXPLAIN QUERY PLAN`.\n- Use `PRAGMA synchronous = NORMAL;` for a balance between durability and performance.\n- Consider using `Microsoft.Data.Sqlite` version 6.0 or later for the latest features and improvements.\n- Enable logging to identify bottlenecks: `services.AddDbContext<YourContext>(options => options.UseSqlite(connectionString).LogTo(Console.WriteLine));`\n- Regularly update .NET Core and SQLite libraries to benefit from performance enhancements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781080427.1729035
+  },
+  "search:dotnet-core-sqlite-performance-tuning:.net core sqlite performance t_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - .NET Core 6.0\n  - SQLite 3.40.1\n\n- **Key Config Options**:\n  - ConnectionString: `Data Source=example.db;Version=3;`\n  - Pooling: `Pooling=true;Max Pool Size=100;`\n  - Cache Size: `Cache Size=2000;`",
+    "source": "code_example",
+    "updated_at": 1781080432.2275488
+  },
+  "search:dotnet-core-sqlite-performance-tuning:optimizing .net core applicati": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EntityFrameworkCore.Sqlite: 7.0.0\n  - .NET Core: 6.0\n\n- **Key Config Options**:\n  - `poolSize`: Maximum number of DbContext instances in the pool (default: 1024)\n  - `connectionString`: Specifies the connection string for the SQLite database",
+    "source": "web_search",
+    "updated_at": 1781080441.8133538
+  },
+  "search:dotnet-core-sqlite-performance-tuning:optimizing .net core applicati_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EntityFrameworkCore.Sqlite.Concurrency: v2.3.4\n  - Entity Framework Core: v7.0.0\n\n- **Key Config Options**:\n  - ConnectionString: `Data Source=yourdatabase.db`\n  - Enable-Migrations: `Enable-Migrations -Context YourDbContextName`\n  - Update-Database: `Update-Database`",
+    "source": "code_example",
+    "updated_at": 1781080447.531466
+  }
+}

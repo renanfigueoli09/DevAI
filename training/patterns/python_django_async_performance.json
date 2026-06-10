@@ -1,0 +1,17 @@
+{
+  "search:python-django-async-performance:django async performance optim": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run Django asynchronously.\n  - Example: `uvicorn myproject.asgi:application --host 0.0.0.0 --port 8000`\n\n- **Latest Versions**:\n  - Django 4.1 (as of Q2 2023)\n  - Uvicorn 10.5\n\n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to `'myproject.asgi:application'`\n  - `DATABASES['default']['ENGINE']`: Use `'django.db.backends.asyncpg'` for PostgreSQL\n  - `CACHES`: Configure caching backends like Redis or Memcached with async support\n\n- **Performance Tips**:\n  - Optimize database queries to be non-blocking.\n  - Use asynchronous libraries for external services (e.g., `aiohttp`, `aioredis`).\n  - Implement caching strategies to reduce database load.\n\n- **Deployment**:\n  - Consider using platforms like Fly.io or Heroku that support ASGI applications.",
+    "source": "web_search",
+    "updated_at": 1781080381.143735
+  },
+  "search:python-django-async-performance:python django async views and ": {
+    "content": "- **Latest Versions**: Django 3.1+\n- **Key Config Options**:\n  - `ASGI_APPLICATION`: Set to your ASGI application entry point.\n  - `USE_TZ`: Ensure time zone support is enabled for proper handling of async tasks.\n- **CLI Commands**:\n  - `python manage.py runserver` (for WSGI)\n  - `daphne myproject.asgi:application` (for ASGI)\n- **Performance Tuning Tips**:\n  - Use asynchronous views to handle I/O-bound tasks more efficiently.\n  - Consider using an ASGI server like Daphne for better performance with async views.\n  - Optimize database queries and use connection pooling.",
+    "source": "web_search",
+    "updated_at": 1781080404.6335454
+  },
+  "search:python-django-async-performance:python django async views and _ex": {
+    "content": "- Use `python manage.py runserver` to start the Django development server.\n- Install Django using pip: `pip install django`.\n- For async views, use `async def my_view(request):` in your views.py.\n- Configure ASGI with `uvicorn` for better performance: `uvicorn myproject.asgi:application --reload`.\n- Key config options include `ASGI_APPLICATION` and `WSGI_APPLICATION` in settings.py.\n- Use middleware like `django.middleware.common.CommonMiddleware` for request/response processing.\n- For async tasks, use Celery with Redis or RabbitMQ as the broker.\n- Monitor performance using Django Debug Toolbar and logging tools.",
+    "source": "code_example",
+    "updated_at": 1781080412.7060492
+  }
+}

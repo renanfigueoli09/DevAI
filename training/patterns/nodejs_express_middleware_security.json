@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-middleware-security:node.js express middleware sec": {
+    "content": "- Use TLS by configuring SSL certificates.\n- Implement input validation using libraries like `express-validator`.\n- Secure cookies with `httpOnly` and `secure` flags.\n- Prevent Cross-Site Scripting (XSS) with `helmet` middleware.\n- Limit request rate to prevent abuse with `rate-limit` middleware.\n- Use HTTPS for all communications in production.\n- Implement CSRF protection using `csurf` middleware.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Audit code for vulnerabilities using tools like `snyk`.\n- Enable strict mode by setting `\"strict\": true` in `package.json`.",
+    "source": "web_search",
+    "updated_at": 1781080340.5230453
+  },
+  "search:nodejs-express-middleware-security:node.js express middleware sec_ex": {
+    "content": "- Use `npm install express helmet` to add security middleware.\n- Implement CSRF protection using `helmet.csrf()`.\n- Set up CORS with `helmet.cors({ origin: 'https://example.com' })`.\n- Enable HTTP Strict Transport Security (HSTS) with `helmet.hsts({ maxAge: 31536000, includeSubDomains: true })`.\n- Use HTTPS by generating a self-signed certificate or using Let's Encrypt.\n- Implement rate limiting with `express-rate-limit` to prevent brute-force attacks.\n- Sanitize user inputs using libraries like `validator.js`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Use environment variables for sensitive information like API keys.",
+    "source": "code_example",
+    "updated_at": 1781080348.6836205
+  },
+  "search:nodejs-express-middleware-security:securing node.js express appli": {
+    "content": "- **Helmet**: Install via npm (`npm install helmet`) and use in your app (`app.use(require('helmet'))`). Latest version is available on [npm](https://www.npmjs.com/package/helmet).\n- **HTTPS**: Use `https` module or tools like `express-enforces-ssl`.\n- **Authentication**: Implement using libraries like `passport.js` for OAuth, JWTs with `jsonwebtoken`, or session management.\n- **Input Validation**: Utilize libraries such as `express-validator` for validating request data.\n- **Sanitization**: Employ `sanitize-html` to clean user inputs.\n- **Rate Limiting**: Use `express-rate-limit` middleware to limit requests from a single IP.\n- **Security Headers**: Configure Helmet with specific directives like `helmet.contentSecurityPolicy()`, `helmet.referrerPolicy()`, etc., for enhanced security.\n- **Environment Variables**: Store sensitive information in `.env` files and load them using `dotenv`.\n- **Logging**: Implement logging with libraries like `winston` or `morgan` to monitor application behavior and security events.",
+    "source": "web_search",
+    "updated_at": 1781080364.3721294
+  },
+  "search:nodejs-express-middleware-security:securing node.js express appli_ex": {
+    "content": "- Use `npm install @clerk/clerk-sdk-node` to install Clerk middleware.\n- Implement `ClerkExpressWithAuth()` in your Express routes for user authentication.\n- For JWT security, use a library like `jsonwebtoken` with the latest version (e.g., `^9.0.0`).\n- Configure JWT verification using an endpoint from an Authorization Server.\n- Implement HTTPS by setting up SSL certificates or using services like Let's Encrypt.\n- Use middleware like `helmet` for HTTP headers security (e.g., `npm install helmet`).\n- Set `Clerk` environment variables (`CLERK_FRONTEND_API`, `CLERK_SECRET_KEY`) in your `.env` file.\n- Implement rate limiting with `express-rate-limit` to prevent abuse (e.g., `npm install express-rate-limit`).\n- Regularly update dependencies using `npm outdated` and `npm update`.",
+    "source": "code_example",
+    "updated_at": 1781080370.7139459
+  }
+}
