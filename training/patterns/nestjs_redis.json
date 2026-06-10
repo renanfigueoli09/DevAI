@@ -10,14 +10,14 @@
     "updated_at": 1780941833.7209756
   },
   "search:nestjs+redis:nestjs @nestjs/bull bullmodule": {
-    "content": "- **CLI Commands**:\n  - `npm install @nestjs/bullmq`\n  - `npm install bullmq`\n\n- **Latest Versions**:\n  - @nestjs/bullmq: v5.0.0\n  - bullmq: v2.14.0\n\n- **Key Config Options**:\n  - Queue registration using `BullModule.registerQueue()`\n  - Worker setup with `WorkerHost` pattern\n  - Integration of Bull Board for monitoring",
+    "content": "- **CLI Commands**:\n  - `npm install @nestjs/bullmq`\n  - `npm install bullmq`\n\n- **Latest Versions**:\n  - `@nestjs/bullmq`: v3.0.0\n  - `bullmq`: v1.25.0\n\n- **Key Config Options**:\n  - `BullModule.registerQueue()`\n  - `WorkerHost` for job processing\n  - Bull Board integration for monitoring",
     "source": "web_search",
-    "updated_at": 1780941835.815728
+    "updated_at": 1781053096.3633099
   },
   "search:nestjs+redis:nestjs @nestjs/bull bullmodule_ex": {
-    "content": "- **Install Dependencies**: `npm install @nestjs/bull bull`\n- **Register Bull Module**: \n  ```typescript\n  import { BullModule } from '@nestjs/bull';\n  \n  @Module({\n    imports: [BullModule.forRoot({ redis: { host: 'localhost', port: 6379 } })],\n  })\n  export class AppModule {}\n  ```\n- **Create a Queue**:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { BullModule } from '@nestjs/bull';\n\n  @Module({\n    imports: [BullModule.registerQueue({ name: 'myqueue' })],\n  })\n  export class MyQueueModule {}\n  ```\n- **Define a Processor (Worker)**:\n  ```typescript\n  import { Processor, Process } from '@nestjs/bull';\n  import { Job } from 'bull';\n\n  @Processor('myqueue')\n  export class MyQueueProcessor {\n    @Process()\n    async handle(job: Job) {\n      console.log(`Processing job ${job.id}`);\n    }\n  }\n  ```\n- **Add Jobs to Queue**:\n  ```typescript\n  import { Injectable } from '@nestjs/common';\n  import { InjectQueue } from '@nestjs/bull';\n  import { Queue } from 'bull';\n\n  @Injectable()\n  export class MyQueueService {\n    constructor(@InjectQueue('myqueue') private readonly myQueue: Queue) {}\n\n    async addJob(data: any) {\n      await this.myQueue.add('jobName', data);\n    }\n  }\n  ```\n- **Latest Versions**: NestJS v10, Bull v3\n- **Key Config Options**:\n  - `redis`: Configuration for Redis connection.\n  - `name`: Name of the queue.\n  - `process`: Method to handle jobs in the queue.",
+    "content": "- **CLI Commands**:\n  - `npm install @nestjs/bull bull`\n  - `npm install --save-dev @types/bull`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Bull: v4.x\n  - @nestjs/bull: v5.2.3\n\n- **Key Config Options**:\n  - Redis connection string (e.g., `redis://localhost:6379`)\n  - Queue name (e.g., `myQueue`)\n  - Processor function to handle tasks",
     "source": "code_example",
-    "updated_at": 1780941837.6225786
+    "updated_at": 1781053102.136619
   },
   "search:nestjs+redis:nestjs ioredis sentinel cluste": {
     "content": "- **CLI Commands**:\n  - `npm install @liaoliaots/nestjs-redis ioredis`\n  \n- **Latest Versions**:\n  - `@liaoliaots/nestjs-redis`: v4.0.0\n  - `ioredis`: v5.2.0\n\n- **Key Config Options**:\n  - `type: 'sentinel'` in connection options\n  - Sentinel nodes configuration array\n  - Redis version >= 2.8.12 for sentinel support",

@@ -1,8 +1,8 @@
 {
   "search:nestjs+mysql:nestjs typeorm mysql mysql2 en": {
-    "content": "- Install dependencies: `npm install --save @nestjs/typeorm typeorm mysql2`\n- Entity example:\n  ```typescript\n  import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';\n\n  @Entity()\n  export class User {\n    @PrimaryGeneratedColumn()\n    id: number;\n\n    @Column()\n    name: string;\n  }\n  ```\n- Migrations:\n  - Install `typeorm-cli`: `npm install --save-dev typeorm-cli`\n  - Generate migration file: `npx typeorm migration:generate -n CreateUsersTable`\n  - Run migrations: `npx typeorm migration:run`",
+    "content": "- **CLI Commands**:\n  - `nest generate entity [entity-name]` to create an entity.\n  - `nest g resource [resource-name]` to scaffold a new resource with CRUD operations.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeORM: v0.3.x\n  - mysql2: v3.x\n\n- **Key Config Options**:\n  - `type`: Set to 'mysql' or 'mariadb'.\n  - `host`: Database host.\n  - `port`: Database port (default is 3306).\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Database name.",
     "source": "web_search",
-    "updated_at": 1780939131.0723126
+    "updated_at": 1781053049.805714
   },
   "search:nestjs+mysql:nestjs typeorm mysql mysql2 en_ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save @nestjs/typeorm typeorm mysql2`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - TypeORM: v0.3.x\n  - MySQL2: v2.x\n\n- **Key Config Options**:\n  - `app.module.ts`: Import `TypeOrmModule.forRoot()` with connection options.\n  - `entity`: Define entity classes using decorators like `@Entity`, `@PrimaryGeneratedColumn`, etc.\n  - `.env`: Store database credentials securely as environment variables.",
