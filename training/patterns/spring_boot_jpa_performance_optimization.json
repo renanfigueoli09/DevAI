@@ -13,5 +13,25 @@
     "content": "- Use `spring-boot-starter-data-jpa` for database access.\n- Configure data source properties in `application.properties` or `application.yml`.\n- Implement pagination and sorting in repositories to reduce query load.\n- Use batch processing for large data operations.\n- Optimize SQL queries using indexes and proper joins.\n- Enable lazy loading to minimize initial data fetches.\n- Regularly monitor database performance with tools like JConsole or VisualVM.\n- Consider using connection pooling (e.g., HikariCP) for better resource management.\n- Upgrade Spring Boot and dependencies regularly for security patches and performance improvements.",
     "source": "web_search",
     "updated_at": 1780942298.5166197
+  },
+  "search:Spring Boot + JPA Performance Optimization:jpa-performance-tuning": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building and testing projects.\n  - `jconsole` or `VisualVM` for monitoring application performance.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Hibernate: 6.2.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory`",
+    "source": "web_search",
+    "updated_at": 1781082734.9637783
+  },
+  "search:Spring Boot + JPA Performance Optimization:jpa-performance-tuning_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Ensure you are using the latest version of Spring Boot and Spring Data JPA, which can be checked on [Maven Central](https://search.maven.org/).\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`: Set batch size for efficient bulk operations.\n  - `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true`: Enable ordered inserts and updates to reduce locking contention.\n  - `spring.jpa.show-sql=true`: Enable SQL logging to identify inefficient queries.\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`: Use second-level cache for read-heavy applications.",
+    "source": "code_example",
+    "updated_at": 1781082753.5327246
+  },
+  "search:Spring Boot + JPA Performance Optimization:hibernate-caching-strategies": {
+    "content": "- **CLI Commands**: \n  - `mvn clean install` to build and run tests.\n  - `hibernate-cli.sh` for Hibernate command-line interface.\n\n- **Latest Versions**:\n  - Hibernate ORM: 6.x\n  - Ehcache: 3.x\n\n- **Key Config Options**:\n  - `hibernate.cache.use_second_level_cache`: Enable second-level cache globally.\n  - `hibernate.cache.region.factory_class`: Specify the region factory class (e.g., `org.hibernate.cache.ehcache.EhCacheRegionFactory`).\n  - `hibernate.cache.default_cache_concurrency_strategy`: Set default concurrency strategy (e.g., `read-write`).\n\n- **Concurrency Strategies**:\n  - `read-only`\n  - `read-write`\n  - `nonstrict-read-write`\n  - `transactional`\n\n- **Cache Eviction Policies**:\n  - `LRU` (Least Recently Used)\n  - `FIFO` (First In First Out)\n  - `SOFT` (Soft Reference Cache)\n\n- **Performance Tuning**:\n  - Adjust cache size.\n  - Use appropriate eviction policies.\n  - Monitor cache hit/miss ratios.",
+    "source": "web_search",
+    "updated_at": 1781082777.4312637
+  },
+  "search:Spring Boot + JPA Performance Optimization:hibernate-caching-strategies_ex": {
+    "content": "- **Latest Version**: Hibernate 6.4\n- **Key Config Options**:\n  - `hibernate.cache.use_second_level_cache`\n  - `hibernate.cache.region.factory_class`\n  - `hibernate.cache.use_query_cache`\n- **CLI Commands**:\n  - To enable second-level cache: `mvn clean install -DskipTests=true`\n  - To run the application with caching enabled: `java -jar target/your-application.jar --spring.jpa.properties.hibernate.cache.use_second_level_cache=true`",
+    "source": "code_example",
+    "updated_at": 1781082787.272181
   }
 }

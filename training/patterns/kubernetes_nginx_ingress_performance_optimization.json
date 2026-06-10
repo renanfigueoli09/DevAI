@@ -58,5 +58,35 @@
     "content": "- Use `kubectl expose` to create a Service for load balancing.\n- Flags like `--type=LoadBalancer` and `--port=<port>` are essential.\n- For internal load balancing, use `Service` with type `ClusterIP`.\n- Key config options include `selector`, `ports`, and `sessionAffinity`.\n- Update Kubernetes to the latest version for optimal performance and security.\n- Use `kubectl get svc` to check Service details and ensure correct configuration.\n- For external load balancing, consider using cloud provider's Load Balancer services.\n- Monitor load balancer metrics with tools like Prometheus and Grafana.\n- Regularly update and patch your Kubernetes cluster to address vulnerabilities.",
     "source": "code_example",
     "updated_at": 1781014707.050285
+  },
+  "search:Kubernetes + Nginx-Ingress Performance Optimization:nginx-ingress-performance-tuni": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml`\n  - `kubectl edit deployment nginx-ingress-controller -n ingress-nginx`\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is v1.2.1.\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `worker_connections`: Increase based on expected traffic.\n  - `keepalive_timeout`: Adjust for connection persistence.\n  - `proxy_read_timeout` and `proxy_send_timeout`: Increase for slower backend services.",
+    "source": "web_search",
+    "updated_at": 1781082676.1694586
+  },
+  "search:Kubernetes + Nginx-Ingress Performance Optimization:nginx-ingress-performance-tuni_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f nginx-ingress-controller.yaml`\n  - `kubectl edit configmap nginx-ingress-controller-config`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.1\n\n- **Key Config Options**:\n  - `worker_processes`: Set to the number of CPU cores.\n  - `worker_connections`: Increase for higher concurrency.\n  - `proxy_buffers`: Adjust buffer sizes for proxy requests.\n  - `client_body_buffer_size`: Buffer size for client request bodies.\n  - `sendfile`: Enable to use kernel's sendfile implementation.\n  - `tcp_nopush`: Combine multiple HTTP headers into one packet.\n  - `keepalive_timeout`: Set timeout for keep-alive connections.",
+    "source": "code_example",
+    "updated_at": 1781082682.4968162
+  },
+  "search:Kubernetes + Nginx-Ingress Performance Optimization:kubernetes-load-balancing-stra": {
+    "content": "- **CLI Commands**:\n  - `kubectl expose deployment <deployment-name> --type=LoadBalancer`\n  - `kubectl get services`\n\n- **Latest Versions**:\n  - Kubernetes v1.27\n\n- **Key Config Options**:\n  - `spec.type: LoadBalancer`\n  - `spec.selector`: Defines the labels for the pods to balance traffic\n  - `spec.clusterIP`: Internal IP address of the service",
+    "source": "web_search",
+    "updated_at": 1781082701.3923333
+  },
+  "search:Kubernetes + Nginx-Ingress Performance Optimization:kubernetes-load-balancing-stra_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl expose deployment <deployment-name> --type=LoadBalancer`\n  - `kubectl get services`\n\n- **Latest Versions**:\n  - Kubernetes v1.27\n\n- **Key Config Options**:\n  - `spec.selector`: Defines the labels of the pods to balance traffic.\n  - `spec.ports`: Specifies the port mappings for incoming and outgoing traffic.\n  - `spec.type=LoadBalancer`: Enables load balancing on cloud platforms that support it.",
+    "source": "code_example",
+    "updated_at": 1781082708.2051098
+  },
+  "search:Kubernetes + Nginx-Ingress Performance Optimization:ingress-controller-optimizatio": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress-controller.yaml`\n  - `kubectl get ingresses --all-namespaces`\n\n- **Latest Versions**:\n  - NGINX Ingress Controller: v1.2.1\n  - Kong Ingress Controller: v3.0.0\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/auth-type`: For authentication types like basic auth or JWT.\n  - `kong.annotations.kubernetes.io/upstream-hash-by`: For customizing upstream hashing.",
+    "source": "web_search",
+    "updated_at": 1781082715.4020886
+  },
+  "search:Kubernetes + Nginx-Ingress Performance Optimization:ingress-controller-optimizatio_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress-controller.yaml`\n  - `kubectl get ingress`\n  - `kubectl describe ingress <ingress-name>`\n\n- **Latest Versions**:\n  - Kong Ingress Controller: v2.6.0\n  - Nginx Ingress Controller: v1.2.1\n\n- **Key Config Options**:\n  - `kong.annotations.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: To increase the allowed body size for POST requests.\n  - `nginx.ingress.kubernetes.io/backend-protocol`: To specify the backend protocol (HTTP or HTTPS).",
+    "source": "code_example",
+    "updated_at": 1781082723.804388
   }
 }
