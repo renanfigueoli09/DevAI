@@ -1,0 +1,12 @@
+{
+  "search:ruby-on-rails-activerecord-mysql:ruby on rails activerecord mys": {
+    "content": "- Use `bin/rails db:migrate VERBOSE=false` to suppress migration output.\n- For MySQL and MariaDB, migrations can use the output of `SHOW CREATE TABLE`.\n- When migrating Redmine, ensure date fields are set as MySQL timestamp type.\n- The `activerecord-mysql2rgeo-adapter` provides spatial data access for ActiveRecord with MySQL 8.0 and 8.4.\n- For managing data in Rails, use ActiveRecord's ORM capabilities to interact with databases like MySQL, PostgreSQL, SQLite, etc.",
+    "source": "web_search",
+    "updated_at": 1781063253.8896828
+  },
+  "search:ruby-on-rails-activerecord-mysql:ruby on rails activerecord mys_ex": {
+    "content": "- **CLI Commands**:\n  - `rails db:migrate`: Runs all pending migrations.\n  - `rails db:migrate RAILS_ENV=test`: Runs migrations in the test environment.\n  - `rails db:rollback`: Rolls back the last migration.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.6\n  - ActiveRecord: 7.0.6\n  - MySQL Connector/J: 8.0.25\n\n- **Key Config Options**:\n  - `config/database.yml`: Configure database connection details.\n    ```yaml\n    default: &default\n      adapter: mysql2\n      encoding: utf8mb4\n      pool: <%= ENV.fetch(\"RAILS_MAX_THREADS\") { 5 } %>\n      username: your_username\n      password: your_password\n      socket: /tmp/mysql.sock\n    ```\n  - `config/initializers/mime_types.rb`: Configure MIME types.\n    ```ruby\n    Mime::Type.register \"application/json\", :json\n    ```\n\n- **Additional Resources**:\n  - [Ruby on Rails Guides](https://guides.rubyonrails.org/active_record_migrations.html)\n  - [YouTube Tutorial](https://www.youtube.com/watch?v=example_video_id)",
+    "source": "code_example",
+    "updated_at": 1781063272.933429
+  }
+}

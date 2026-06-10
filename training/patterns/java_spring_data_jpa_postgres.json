@@ -1,0 +1,12 @@
+{
+  "search:java-spring-data-jpa-postgres:java spring data jpa postgresq": {
+    "content": "- **CLI Commands**:\n  - `mvn flyway:migrate`: Runs Flyway migrations.\n  - `mvn clean install`: Builds the project and runs tests.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Spring Data JPA: 3.2.x\n  - PostgreSQL JDBC Driver: 42.5.x\n  - Flyway: 9.18.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.datasource.username=myuser`\n  - `spring.datasource.password=mypassword`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `flyway.locations=classpath:db/migration`",
+    "source": "web_search",
+    "updated_at": 1781063207.8241374
+  },
+  "search:java-spring-data-jpa-postgres:java spring data jpa postgresq_ex": {
+    "content": "- **Latest Versions**:\n  - Spring Boot: 2.7.0\n  - Spring Data JPA: 2.6.0\n  - PostgreSQL Driver: 42.3.1\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection settings.\n  - Flyway for database migrations.\n\n- **CLI Commands with Exact Flags**:\n  - Create a new Spring Boot project using Spring Initializr (https://start.spring.io/).\n    ```bash\n    curl https://start.spring.io/starter.zip -d dependencies=web,lombok,flyway,postgresql,spring-data-jpa -o spring-boot-project.zip\n    ```\n  - Initialize Flyway migrations.\n    ```bash\n    flyway init --url=jdbc:postgresql://localhost:5432/mydb --user=myuser --password=mypassword\n    ```\n  - Run the Spring Boot application.\n    ```bash\n    ./mvnw spring-boot:run\n    ```\n\n- **Example Code Snippet**:\n  ```java\n  @Entity\n  public class City {\n      @Id\n      @GeneratedValue(strategy = GenerationType.IDENTITY)\n      private Long id;\n\n      private String name;\n      private Integer population;\n\n      // Getters and setters\n  }\n\n  @Repository\n  public interface CityRepository extends JpaRepository<City, Long> {\n      List<City> findByCountryAndIsCapital(String country, boolean isCapital);\n  }\n  ```",
+    "source": "code_example",
+    "updated_at": 1781063224.5525484
+  }
+}
