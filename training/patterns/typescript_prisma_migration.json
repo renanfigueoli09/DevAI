@@ -1,0 +1,32 @@
+{
+  "search:typescript-prisma-migration:typescript prisma migrations b": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Create and apply a new migration.\n  - `prisma db pull`: Fetch the database schema from the database and update Prisma Client.\n  - `prisma generate`: Generate Prisma Client based on your Prisma schema.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Prisma CLI (`npm install prisma@latest`).\n  - Check for updates to Prisma Client in your project dependencies.\n\n- **Key Config Options**:\n  - `schema`: Define your database schema in a `.prisma` file.\n  - `datasource`: Configure the connection to your database.\n  - `generator`: Specify the generator settings, including provider and output directory.",
+    "source": "web_search",
+    "updated_at": 1781076349.1694515
+  },
+  "search:typescript-prisma-migration:typescript prisma migrations b_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Creates a new migration file.\n  - `prisma migrate deploy`: Applies migrations to the database.\n  - `prisma studio`: Opens Prisma Studio for data exploration.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Prisma CLI and Prisma Client by running `npm install prisma@latest`.\n\n- **Key Config Options**:\n  - `schema.prisma`: Define your database schema.\n  - `prismaClientOptions`: Configure options for Prisma Client, such as enabling or disabling query logging.",
+    "source": "code_example",
+    "updated_at": 1781076358.4076188
+  },
+  "search:typescript-prisma-migration:prisma migration patterns for ": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name <migration-name>`: Creates and applies a new migration.\n  - `prisma migrate deploy`: Applies migrations to the database.\n  - `prisma db pull`: Updates Prisma schema based on the current state of the database.\n\n- **Latest Versions**:\n  - Prisma ORM: Version 7.x\n  - Prisma Client: Version 4.x\n\n- **Key Config Options**:\n  - `schema`: Defines your data model in a declarative file.\n  - `generator client`: Configuration for generating the Prisma Client.\n  - `datasource db`: Configuration for connecting to your database.",
+    "source": "web_search",
+    "updated_at": 1781076366.8937829
+  },
+  "search:typescript-prisma-migration:prisma migration patterns for _ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma migrate dev --name init`: Initializes a new migration.\n  - `npx prisma migrate dev --name <migration-name>`: Creates and applies a new migration with a custom name.\n  - `npx prisma db pull`: Updates Prisma schema based on the database state.\n\n- **Latest Versions**:\n  - Prisma Client JS: v4.10.0\n  - Prisma Migrate: v2.13.0\n\n- **Key Config Options**:\n  - `generator client { provider = \"prisma-client-js\" }`: Specifies the Prisma Client generator.\n  - `datasource db { provider = \"postgresql\" url = env(\"DATABASE_URL\") }`: Defines the database connection in the schema file.",
+    "source": "code_example",
+    "updated_at": 1781076373.014946
+  },
+  "search:typescript-prisma-migration:advanced prisma migration tech": {
+    "content": "- **CLI Commands**: `prisma migrate dev`, `prisma migrate deploy`\n- **Latest Version**: Prisma Migrate is part of the Prisma CLI, which as of my last update, is at version 5.x.\n- **Key Config Options**:\n  - `schema`: Path to your Prisma schema file.\n  - `provider`: Database provider (e.g., `postgresql`, `mysql`).\n  - `url`: Connection URL for the database.",
+    "source": "web_search",
+    "updated_at": 1781076392.2753167
+  },
+  "search:typescript-prisma-migration:advanced prisma migration tech_ex": {
+    "content": "- **GitHub Repository**: [yowainwright/prisma-migrations](https://github.com/yowainwright/prisma-migrations)\n  - Adds rollback and programmatic migrations for Prisma.\n  - Compatible with Prisma 5, 6, and 7.\n\n- **Prisma Migrate Commands**:\n  - `prisma migrate dev`: For development.\n  - `prisma migrate deploy`: For production.\n  - `prisma migrate status`: Checks migration status.\n  - `prisma migrate resolve`: Resolves migration issues.\n  - `prisma migrate diff`: Generates a migration based on schema changes.\n  - `prisma migrate reset`: Resets the database to an empty state.\n\n- **Prisma Deep-Dive Handbook**:\n  - Covers modeling, migrations, querying, performance, deployment, testing, and gotchas.\n  - Ideal for expert developers new to Prisma.",
+    "source": "code_example",
+    "updated_at": 1781076400.5383048
+  }
+}
