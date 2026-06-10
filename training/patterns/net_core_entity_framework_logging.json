@@ -1,0 +1,12 @@
+{
+  "search:.NET Core + Entity Framework Logging:.net core entity framework log": {
+    "content": "- Install Serilog and Entity Framework Core packages via NuGet.\n- Use `AddLogging` in your `Startup.cs` or `Program.cs`.\n- Configure Serilog with `SerilogLoggerFactory.Create` for logging setup.\n- Suppress SQL queries by configuring EF Core to ignore them during logging.\n- Use `Log.Logger` to manually log messages throughout your application.\n- Ensure you have the latest versions of Serilog and Entity Framework Core for compatibility.",
+    "source": "web_search",
+    "updated_at": 1781087581.1807861
+  },
+  "search:.NET Core + Entity Framework Logging:.net core entity framework log_ex": {
+    "content": "- Install Serilog and EF Core logging packages via NuGet.\n- Use `dotnet add package Serilog.AspNetCore` and `dotnet add package Microsoft.EntityFrameworkCore`.\n- Configure Serilog in your `Program.cs` or `Startup.cs`:\n  ```csharp\n  var logger = new LoggerConfiguration()\n      .ReadFrom.Configuration(configuration)\n      .CreateLogger();\n  \n  Log.Logger = logger;\n  ```\n- Enable EF Core logging by configuring it in the `DbContext` constructor:\n  ```csharp\n  public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)\n  {\n      ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;\n      ChangeTracker.AutoDetectChangesEnabled = false;\n  }\n  ```\n- Use Serilog to log EF Core queries in your `Startup.cs`:\n  ```csharp\n  services.AddDbContext<MyDbContext>(options =>\n      options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\"))\n             .LogTo(Console.WriteLine, LogLevel.Information));\n  ```\n- Ensure you have the necessary NuGet packages installed for Serilog and EF Core.\n- Use `dotnet add package Serilog.Sinks.Console` for console logging.\n- Configure Serilog in your `appsettings.json`:\n  ```json\n  \"Serilog\": {\n    \"Using\": [ \"Serilog.Sinks.Console\" ],\n    \"MinimumLevel\": { \"Default\": \"Information\", \"Override\": { \"Microsoft\": \"Warning\", \"System\": \"Warning\" } },\n    \"WriteTo\": [ \"Console\" ]\n  }\n  ```\n- Use `Log.Logger` to log messages throughout your application.",
+    "source": "code_example",
+    "updated_at": 1781087592.6793115
+  }
+}
