@@ -1,12 +1,12 @@
 {
   "search:spring+elasticsearch:spring data elasticsearch @doc": {
-    "content": "- Use `docker-compose up` to create an Elasticsearch cluster.\n- Create a sample index using the Elasticsearch REST API or Kibana Dev Tools.\n- Post sample documents into Elasticsearch using the `_doc/_create` endpoint.\n- Implement search as you type feature in Angular by binding input events and making HTTP requests to Elasticsearch.\n- Use `@Document(indexName = \"your_index_name\")` in your entity class for Spring Data Elasticsearch.\n- Configure Elasticsearch connection properties in `application.properties` or `application.yml`.\n- Ensure Elasticsearch version compatibility with Spring Data Elasticsearch.\n- Utilize Spring Boot Actuator endpoints for monitoring and management of Elasticsearch connections.",
+    "content": "- Use Spring Initializr to create a new project with Spring Boot, Elasticsearch, and other necessary dependencies.\n- For dynamic index names in @Document, consider using SpEL expressions or custom annotations.\n- Implement search functionality by integrating Elasticsearch with your application.\n- Use the `docker-compose.yml` file provided by Elastic for setting up an Elasticsearch cluster.\n- Configure Elasticsearch properties in `application.properties` or `application.yml`.\n- Utilize Spring Data Elasticsearch's `@Query` annotation for complex queries.\n- For a \"search as you type\" feature, implement real-time search using Angular and Elasticsearch.",
     "source": "web_search",
-    "updated_at": 1780940319.5006156
+    "updated_at": 1781053844.2153232
   },
   "search:spring+elasticsearch:spring data elasticsearch @doc_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `curl -X GET \"localhost:9200/_cat/indices?v\"` to list Elasticsearch indices.\n\n- **Latest Versions**:\n  - Spring Data Elasticsearch: 4.3.0\n  - Elasticsearch: 7.10.2\n\n- **Key Config Options**:\n  - `spring.data.elasticsearch.cluster-name`: Name of the Elasticsearch cluster.\n  - `spring.data.elasticsearch.cluster-nodes`: List of nodes in the cluster.\n  - `spring.data.elasticsearch.repositories.enabled`: Enable Spring Data Elasticsearch repositories.",
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=elasticsearch-repository,reactor`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot 4\n  - Spring Data Elasticsearch\n\n- **Key Config Options**:\n  - `application.yml` or `application.properties` for Elasticsearch configuration\n  - ReactiveElasticsearchClient for reactive querying",
     "source": "code_example",
-    "updated_at": 1780940322.384463
+    "updated_at": 1781053849.2176266
   }
 }
