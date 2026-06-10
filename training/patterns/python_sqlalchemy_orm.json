@@ -1,0 +1,22 @@
+{
+  "search:Python + SQLAlchemy ORM:python sqlalchemy orm advanced": {
+    "content": "- **Latest Version**: SQLAlchemy 2.0.0\n- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URI`: Database connection string.\n  - `SQLALCHEMY_TRACK_MODIFICATIONS`: Set to `False` for better performance.\n  - `declarative_base()`: Base class for all models.\n  - `relationship()`: Define relationships between tables.",
+    "source": "web_search",
+    "updated_at": 1781051528.7150176
+  },
+  "search:Python + SQLAlchemy ORM:python sqlalchemy orm advanced_ex": {
+    "content": "- Use `pip install sqlalchemy==2.0` to install the latest version.\n- Navigate to `/examples` directory in your SQLAlchemy distribution for runnable code examples.\n- For advanced queries, utilize the query builder provided by SQLAlchemy ORM.\n- Manage sessions using `Session()` from `sqlalchemy.orm`.\n- Define models using declarative base classes for database tables.\n- Filter results using methods like `.filter()`, `.order_by()`, and `.limit()`.\n- Optimize performance with indexing and efficient query construction.",
+    "source": "code_example",
+    "updated_at": 1781051534.4008124
+  },
+  "search:Python + SQLAlchemy ORM:best practices for using sqlal": {
+    "content": "- Use the latest version of SQLAlchemy by running `pip install sqlalchemy --upgrade`.\n- Organize your models in a separate Python package, e.g., `project_models`, and distribute it as a dependency.\n- For FastAPI projects, follow patterns and practices specific to using SQLAlchemy 2.0 with FastAPI for optimal performance and maintainability.\n- Implement cursor rules to manage database connections efficiently, such as using context managers (`with` statement) to ensure connections are properly closed after use.\n- Utilize session management best practices by creating a session factory and reusing sessions within your application to improve performance and resource utilization.\n- Employ declarative base classes for defining models in SQLAlchemy to maintain consistency and reduce boilerplate code.\n- Regularly update your SQLAlchemy documentation and explore community resources for the most current best practices and coding standards.",
+    "source": "web_search",
+    "updated_at": 1781051542.9568148
+  },
+  "search:Python + SQLAlchemy ORM:best practices for using sqlal_ex": {
+    "content": "- Use `pip install sqlalchemy` to install the latest version.\n- For database connections, use `create_engine('dialect+driver://username:password@host/dbname')`.\n- Define tables using classes inheriting from `declarative_base()`.\n- Use `sessionmaker()` for creating session objects.\n- Apply filters and joins using SQLAlchemy's ORM capabilities.\n- Configure logging with `logging.basicConfig` to debug issues.\n- Utilize relationship mappings for handling foreign keys.\n- Employ `autoflush=False` in sessions for better control over transaction management.",
+    "source": "code_example",
+    "updated_at": 1781051551.426717
+  }
+}

@@ -18,5 +18,25 @@
     "content": "- Use Spring Data JPA's `@Query` annotation to write custom SQL queries.\n- Implement pagination and sorting in repository methods using `Pageable`.\n- Enable caching with `@EnableCaching` and configure cache manager like `ConcurrentMapCacheManager`.\n- Optimize entity relationships by using eager fetching where necessary.\n- Use DTOs (Data Transfer Objects) for reducing data fetched from the database.\n- Configure JPA properties like `spring.jpa.properties.hibernate.jdbc.batch_size` for batch processing.\n- Enable async processing with `@Async` and configure task executor in Spring Boot.\n- Monitor application performance using tools like Spring Boot Actuator and Micrometer.",
     "source": "code_example",
     "updated_at": 1780942650.513693
+  },
+  "search:Spring Boot + JPA Performance Tuning:spring boot jpa performance op": {
+    "content": "- Use `@Query` annotation for custom JPQL or native SQL queries to avoid N+1 issues.\n- Implement batch processing using `@Modifying`, `@Transactional`, and `@BatchSize`.\n- Optimize entity relationships by using `@Fetch(FetchMode.JOIN)` in repository methods.\n- Enable second-level cache with `@EnableCaching` and configure it in `application.properties`.\n- Use pagination (`Pageable`) for large datasets to reduce memory usage.\n- Monitor query performance with Spring Boot Actuator's `httptrace` endpoint.\n- Upgrade to the latest version of Spring Data JPA (e.g., 2.7.x) and Hibernate (e.g., 5.6.x).\n- Configure connection pool settings in `application.properties`, e.g., `spring.datasource.hikari.maximum-pool-size`.\n- Use `@EntityGraph` for fetching related entities efficiently.\n- Avoid using lazy loading for frequently accessed associations to prevent N+1 queries.",
+    "source": "web_search",
+    "updated_at": 1781051461.1498995
+  },
+  "search:Spring Boot + JPA Performance Tuning:spring boot jpa performance op_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n  - Hibernate: 6.1.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50` for batch updates.\n  - `spring.jpa.properties.hibernate.order_inserts=true` and `spring.jpa.properties.hibernate.order_updates=true` to optimize insert/update order.\n  - `spring.jpa.show-sql=true` to log SQL queries for debugging.",
+    "source": "code_example",
+    "updated_at": 1781051465.72628
+  },
+  "search:Spring Boot + JPA Performance Tuning:spring data jpa best practices": {
+    "content": "- Use `Pageable` interface for pagination.\n- Implement `@Repository` interfaces extending `JpaRepository`.\n- Utilize Spring Data JPA's query derivation or named queries.\n- Enable caching with `@EnableCaching` and `@Cacheable`.\n- Optimize queries to avoid N+1 issues.\n- Configure data source properties in `application.properties`.\n- Use `@Query` for complex JPQL/HQL queries.\n- Implement custom repository methods.\n- Ensure proper transaction management with `@Transactional`.\n- Monitor performance using Spring Boot Actuator.",
+    "source": "web_search",
+    "updated_at": 1781051474.3371458
+  },
+  "search:Spring Boot + JPA Performance Tuning:spring data jpa best practices_ex": {
+    "content": "- Use Spring Data JPA repositories for database access.\n- Employ pagination and sorting in queries to handle large datasets efficiently.\n- Optimize entity design by keeping them lightweight and avoiding business logic inside entities.\n- Prefer JPQL or native SQL for complex queries over Criteria API.\n- Configure `spring.jpa.properties.hibernate.jdbc.batch_size` for batch processing.\n- Use `@Query` annotations with named parameters for better readability and maintainability.\n- Enable second-level caching to reduce database hits.\n- Regularly update Spring Data JPA and Hibernate to the latest versions for performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781051481.800787
   }
 }

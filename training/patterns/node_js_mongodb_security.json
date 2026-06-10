@@ -1,0 +1,22 @@
+{
+  "search:Node.js + MongoDB Security:node.js mongodb security best ": {
+    "content": "- Use `npm install express-mongo-sanitize` to prevent operator injection.\n- Implement authentication using JSON Web Tokens (JWT) for secure user sessions.\n- Update MongoDB driver to the latest version via `npm update mongodb`.\n- Enable SSL/TLS encryption by configuring MongoDB with `ssl: true`.\n- Sanitize input data using libraries like `express-validator` before processing.\n- Regularly update Node.js and all dependencies using `npm update`.\n- Implement rate limiting for API endpoints using middleware like `express-rate-limit`.\n- Use environment variables to store sensitive information such as database credentials.\n- Conduct regular security audits and vulnerability scans of your application.",
+    "source": "web_search",
+    "updated_at": 1781051492.6985483
+  },
+  "search:Node.js + MongoDB Security:node.js mongodb security best _ex": {
+    "content": "- Use `npm install --save-dev helmet` to add security headers.\n- Implement input validation using libraries like `express-validator`.\n- Update MongoDB driver to the latest version with `npm update mongodb`.\n- Enable HTTPS by generating a self-signed certificate or using Let's Encrypt.\n- Configure CORS properly using `cors` middleware.\n- Use environment variables for sensitive information (`dotenv`).\n- Regularly update Node.js and all dependencies.\n- Implement rate limiting with `express-rate-limit`.\n- Use secure authentication mechanisms like JWT.",
+    "source": "code_example",
+    "updated_at": 1781051501.061714
+  },
+  "search:Node.js + MongoDB Security:securing node.js applications ": {
+    "content": "- **Install Node.js**: Use `nvm install node --latest-npm` to get the latest version.\n- **Install MongoDB**: Download from [MongoDB official site](https://www.mongodb.com/try/download/community) or use `brew install mongodb-community` on macOS.\n- **CLI Commands**:\n  - Start MongoDB: `mongod`\n  - Connect to MongoDB: `mongo`\n  - Create a new database: `use mydatabase`\n  - Insert data: `db.mycollection.insertOne({name: \"John\", age: 30})`\n- **Key Config Options**:\n  - In Node.js, use environment variables for sensitive information like MongoDB URI.\n  - For SSL in MongoDB, configure the connection string with `ssl=true`.\n  - Use middleware like `express-jwt` for JWT authentication.\n  - Implement rate limiting to prevent abuse.",
+    "source": "web_search",
+    "updated_at": 1781051511.6711764
+  },
+  "search:Node.js + MongoDB Security:securing node.js applications _ex": {
+    "content": "- Use `npm install express mongoose helmet cors` to install necessary packages.\n- Ensure MongoDB is running and accessible.\n- Implement authentication middleware like JWT for securing routes.\n- Configure CORS with `cors({ origin: 'yourdomain.com' })`.\n- Use environment variables for sensitive data like database URLs.\n- Enable HTTPS by configuring SSL certificates.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Utilize MongoDB's built-in security features, such as enabling authentication on the server.\n- Implement rate limiting to prevent abuse with packages like `express-rate-limit`.",
+    "source": "code_example",
+    "updated_at": 1781051517.3963728
+  }
+}

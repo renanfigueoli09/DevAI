@@ -1,0 +1,22 @@
+{
+  "search:Kubernetes + Prometheus Monitoring:kubernetes monitoring with pro": {
+    "content": "- **Install Helm**: `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`\n- **Add Prometheus Helm Repository**: `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`\n- **Update Helm Repositories**: `helm repo update`\n- **Deploy Prometheus with Helm**: `helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace`\n- **Access Prometheus UI**: `kubectl port-forward svc/prometheus-kube-prometheus-prometheus 9090:80`\n- **Configure Prometheus Targets**: Edit the `prometheus.yml` file to include your Kubernetes service endpoints.\n- **Deploy Grafana for Dashboards**: `helm install grafana grafana/grafana --namespace monitoring`\n- **Access Grafana UI**: `kubectl port-forward svc/grafana 3000:80`\n- **Add Prometheus Data Source in Grafana**: Navigate to Configuration > Data Sources, add a new data source of type Prometheus and set the URL to `http://prometheus-kube-prometheus-prometheus.monitoring.svc.cluster.local`.\n- **Import Dashboards**: Use the Import feature in Grafana to load pre-built dashboards for Kubernetes monitoring.",
+    "source": "web_search",
+    "updated_at": 1781051607.0865543
+  },
+  "search:Kubernetes + Prometheus Monitoring:kubernetes monitoring with pro_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl scale deployment prometheus --replicas=3`\n  - `helm install prometheus prometheus-community/prometheus`\n\n- **Latest Versions**:\n  - Kubernetes: v1.24.x\n  - Prometheus: 2.37.x\n  - Grafana: 9.0.x\n\n- **Key Config Options**:\n  - `replicas`: Number of Prometheus replicas.\n  - `resources`: CPU and memory limits for Prometheus pods.\n  - `serviceMonitorSelector`: Selects services to monitor using ServiceMonitors.\n  - `podMonitorSelector`: Selects pods to monitor using PodMonitors.",
+    "source": "code_example",
+    "updated_at": 1781051612.928936
+  },
+  "search:Kubernetes + Prometheus Monitoring:best practices for setting up ": {
+    "content": "- Use Helm to install Prometheus Operator: `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`\n- Install the latest version of Prometheus Operator: `helm install prometheus-operator prometheus-community/prometheus-operator --namespace monitoring --create-namespace`\n- Configure Prometheus with a custom values.yaml file.\n- Key config options include:\n  - `serviceMonitorSelector` for selecting services to monitor\n  - `podMonitorSelector` for selecting pods to monitor\n  - `scrapeInterval` for setting the scrape interval\n- Use the Prometheus Operator to manage Prometheus instances declaratively.\n- Ensure RBAC is properly configured for Prometheus and its components.\n- Regularly update Helm charts and Prometheus to benefit from security patches and new features.",
+    "source": "web_search",
+    "updated_at": 1781051624.9765403
+  },
+  "search:Kubernetes + Prometheus Monitoring:best practices for setting up _ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to deploy Prometheus and Grafana.\n- Ensure Kubernetes version compatibility with Prometheus.\n- Set up PersistentVolumeClaims for Prometheus data persistence.\n- Configure Prometheus server with `scrape_configs` in the `prometheus.yml`.\n- Use `--storage.tsdb.retention=30d` to set retention period for metrics.\n- Install client libraries using Helm or directly via package managers.\n- Enable authentication and authorization for secure access.\n- Monitor resource usage with `kubectl top nodes/pods`.\n- Regularly update Prometheus and Grafana to the latest versions.",
+    "source": "code_example",
+    "updated_at": 1781051631.7793553
+  }
+}
