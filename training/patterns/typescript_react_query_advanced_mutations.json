@@ -1,0 +1,22 @@
+{
+  "search:typescript-react-query-advanced-mutations:react query advanced mutations": {
+    "content": "- **CLI Commands**: Not applicable for React Query.\n- **Latest Versions**:\n  - React Query: v4.23.0 (as of my last update)\n- **Key Config Options**:\n  - `useMutation`: \n    - `mutationFn`: The function that performs the mutation.\n    - `onSuccess`: Callback to run on successful mutation.\n    - `onError`: Callback to run if an error occurs during the mutation.\n    - `onSettled`: Callback to run after the mutation settles (either successfully or with an error).\n  - `MutationCache`:\n    - `maxSize`: Maximum number of entries in the cache.\n    - `ttl`: Time-to-live for each entry in milliseconds.\n    - `onError`: Callback to handle errors globally across all mutations.",
+    "source": "web_search",
+    "updated_at": 1781080049.3235962
+  },
+  "search:typescript-react-query-advanced-mutations:react query advanced mutations_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @tanstack/react-query`\n\n- **Latest Versions**:\n  - React Query: v4.x\n\n- **Key Config Options**:\n  - `queryClient`: Customizes the query client instance.\n  - `useMutation`: Manages asynchronous data fetching and state management for mutations.\n  - `useQuery`: Manages asynchronous data fetching and state management for queries.",
+    "source": "code_example",
+    "updated_at": 1781080058.31635
+  },
+  "search:typescript-react-query-advanced-mutations:advanced typescript react quer": {
+    "content": "- Use `useQuery` hook to handle errors.\n- Implement error handling in the query function by throwing or returning a rejected Promise.\n- Utilize the `error` property from `useQuery` for error display.\n- Set up an `onError` callback on queries or globally in QueryCache/MutationCache.\n- Employ Error Boundary components for robust error handling.\n- Ensure TypeScript types are correctly defined for query functions and data structures.\n- Update to the latest version of `@tanstack/react-query` using npm or yarn.\n- Configure `retry` option in `useQuery` to control retry behavior on errors.\n- Use `isFetching` and `isError` flags from `useQuery` to manage UI state during error handling.",
+    "source": "web_search",
+    "updated_at": 1781080082.523529
+  },
+  "search:typescript-react-query-advanced-mutations:advanced typescript react quer_ex": {
+    "content": "- **CLI Commands**: `npx create-react-app my-app --template typescript`\n- **Latest Versions**:\n  - React Query: v4.x\n  - TypeScript: v5.x\n- **Key Config Options**:\n  - `useQuery` options: `refetchInterval`, `staleTime`, `retry`\n  - Error handling in `useQuery`: `onError`, `onSuccess`, `onSettled`\n  - Custom error types for better type safety",
+    "source": "code_example",
+    "updated_at": 1781080089.9045563
+  }
+}

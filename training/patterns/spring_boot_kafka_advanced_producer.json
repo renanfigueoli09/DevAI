@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-kafka-advanced-producer:spring boot kafka advanced pro": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `compression.type`: Set to `gzip` for high compression.\n  - `batch.size`: Increase for higher throughput.\n  - `linger.ms`: Adjust for batch size control.\n  - `delivery.timeout.ms`: Define the maximum time to wait for delivery.\n  - `acks`: Configure acknowledgment level (e.g., `all`).",
+    "source": "web_search",
+    "updated_at": 1781080010.569348
+  },
+  "search:spring-boot-kafka-advanced-producer:spring boot kafka advanced pro_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Apache Kafka: 3.4.0\n\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers (e.g., `localhost:9092`).\n  - `key.serializer`: Serializer class for key data.\n  - `value.serializer`: Serializer class for value data.\n  - `acks`: Number of acknowledgments required before a producer considers a request complete.\n  - `retries`: Maximum number of retries if delivery fails.",
+    "source": "code_example",
+    "updated_at": 1781080017.3027253
+  },
+  "search:spring-boot-kafka-advanced-producer:spring boot kafka transaction ": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start services.\n\n- **Latest Versions**:\n  - Spring Boot 3.2.4\n  - Kafka 3.5.1\n\n- **Key Config Options**:\n  - `spring.kafka.producer.transaction-id-prefix`: Prefix for transaction IDs.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.datasource.url`, `spring.datasource.username`, `spring.datasource.password`: Database connection details.\n\nThese points provide actionable facts for a developer working with Spring Boot and Kafka transactions.",
+    "source": "web_search",
+    "updated_at": 1781080029.9744706
+  },
+  "search:spring-boot-kafka-advanced-producer:spring boot kafka transaction _ex": {
+    "content": "- Set `spring.kafka.producer.transaction-id-prefix` in your application properties.\n- Use `KafkaTransactionManager` bean for transaction management.\n- Ensure Kafka producer is configured to use transactions (`transactional.id`).\n- For chaining Kafka and database transactions, use Spring's transaction synchronization.\n- Check the latest version of Spring Boot and Spring Kafka on their official websites.\n- Configure `KafkaTemplate` with `ProducerFactory` that supports transactions.",
+    "source": "code_example",
+    "updated_at": 1781080039.9346461
+  }
+}

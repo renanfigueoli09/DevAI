@@ -1,0 +1,17 @@
+{
+  "search:docker-swarm-advanced-networking:docker swarm advanced networki": {
+    "content": "- **Overlay Networking**: Use `docker network create --driver overlay <network_name>`\n- **Ingress Routing**: Enable ingress routing by default in Docker Swarm.\n- **Advanced Services**: Deploy services with `docker service create --name <service_name> --replicas <num_replicas> <image_name>`\n- **Secrets Management**: Manage secrets using `docker secret create <secret_name> <file_path>`\n- **Configuration Handling**: Use Configs for managing configuration files across services.\n- **CLI Flags**:\n  - `--network`: Specify the network for a service.\n  - `--publish`: Map ports for services.\n  - `--replicas`: Set the number of replicas for a service.\n- **Latest Versions**: Ensure Docker and Docker Swarm are up-to-date to benefit from latest features and security patches.\n- **Key Config Options**:\n  - `docker-compose.yml` for defining multi-container applications.\n  - Swarm mode configuration in `docker swarm init` and `docker swarm join`.\n  - Network settings in `docker network create`.",
+    "source": "web_search",
+    "updated_at": 1781080101.5526226
+  },
+  "search:docker-swarm-advanced-networking:docker swarm performance tunin": {
+    "content": "- **CLI Commands**:\n  - `docker swarm init` to initialize the swarm.\n  - `docker service create --replicas <num> <image>` to create a new service with specified replicas.\n  - `docker service scale <service_name>=<new_replicas>` to scale an existing service.\n\n- **Latest Versions**:\n  - Docker Engine: Latest version as of my last update is 24.0.1, released on December 6, 2023.\n  - Docker Swarm: Integrated with Docker Engine and follows the same versioning.\n\n- **Key Config Options**:\n  - `--replicas`: Specifies the number of replicas for a service.\n  - `--network`: Defines the network to attach the service to.\n  - `--publish`: Maps ports from the service to the host.\n  - `--constraint`: Applies placement constraints to services.\n\n- **Performance Tuning Tips**:\n  - Use `docker swarm init --advertise-addr <ip>` for better network communication.\n  - Configure `max-concurrent-downloads` and `max-concurrent-uploads` in Docker daemon settings.\n  - Monitor and adjust `--dns` options for improved DNS resolution within the swarm.",
+    "source": "web_search",
+    "updated_at": 1781080138.7342508
+  },
+  "search:docker-swarm-advanced-networking:docker swarm performance tunin_ex": {
+    "content": "- **CLI Commands**:\n  - `docker swarm init`: Initialize a new swarm.\n  - `docker service create --replicas <num> <image>`: Create and scale a service.\n  - `docker service update --replicas <new_num> <service_name>`: Scale an existing service.\n\n- **Latest Versions**:\n  - Docker Engine: [Check latest version](https://docs.docker.com/engine/release-notes/)\n  - Docker Swarm: Integrated with Docker Engine, no separate versioning.\n\n- **Key Config Options**:\n  - `--replicas`: Number of replicas for a service.\n  - `--network`: Specify the network for the service.\n  - `--publish`: Map ports to the host.\n  - `--constraint`: Schedule services based on node attributes.",
+    "source": "code_example",
+    "updated_at": 1781080146.2901409
+  }
+}

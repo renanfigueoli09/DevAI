@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-efcore-sqlserver-advanced:ef core advanced sql server fe": {
+    "content": "- **Latest Version**: EF Core 7.0 is the latest stable version as of my last update.\n  \n- **CLI Commands**:\n  - To install EF Core tools globally: `dotnet tool install --global dotnet-ef`\n  - To add EF Core to a project: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n  - To scaffold a model from an existing database: `dotnet ef dbcontext scaffold \"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n\n- **Key Config Options**:\n  - Connection String: Define the connection string in `appsettings.json` or directly in code.\n  - DbContext Configuration: Configure your `DbContext` class to include DbSets for entities and options like migrations.\n  - Migrations: Use commands like `dotnet ef migrations add InitialCreate` and `dotnet ef database update` to manage database schema changes.\n\n- **Additional Features**:\n  - LINQ Queries: Write queries using LINQ that are translated into SQL by EF Core.\n  - Change Tracking: Automatically track changes made to entities in the context.\n  - Lazy Loading: Load related data on-demand when accessed, reducing initial query load.",
+    "source": "web_search",
+    "updated_at": 1781080219.543837
+  },
+  "search:dotnet-core-efcore-sqlserver-advanced:ef core advanced sql server fe_ex": {
+    "content": "- **Install EF Core Provider**: `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`\n- **Latest Version**: Check on [NuGet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/)\n- **Key Config Options**:\n  - Connection String: `options.UseSqlServer(\"YourConnectionString\")`\n  - Migrations: `Add-Migration InitialCreate`, `Update-Database`\n  - DbContext Configuration: Override `OnConfiguring` or use dependency injection\n- **CLI Commands**:\n  - Create Migration: `dotnet ef migrations add InitialCreate`\n  - Update Database: `dotnet ef database update`\n  - Scaffold Model: `dotnet ef dbcontext scaffold \"YourConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n- **Additional Features**: \n  - Lazy Loading\n  - Change Tracking\n  - Raw SQL Queries\n  - Stored Procedures",
+    "source": "code_example",
+    "updated_at": 1781080226.1666188
+  },
+  "search:dotnet-core-efcore-sqlserver-advanced:advanced entity framework core": {
+    "content": "- **Latest Version**: EF Core 7.0\n- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n- **Key Config Options**:\n  - `DbContext` class configuration in `OnConfiguring` method.\n  - `appsettings.json` for connection strings and other settings.",
+    "source": "web_search",
+    "updated_at": 1781080250.746089
+  },
+  "search:dotnet-core-efcore-sqlserver-advanced:advanced entity framework core_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n  - `dotnet ef migrations script`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - Entity Framework Core Power Tools: Latest version available on GitHub\n\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or directly in the DbContext.\n  - Migration History Table: Customize with `MigrationsHistoryTable` option in `OnConfiguring`.\n  - Migrations Directory: Specify with `Scaffold-DbContext` command using `-OutputDir` flag.",
+    "source": "code_example",
+    "updated_at": 1781080258.501379
+  }
+}
