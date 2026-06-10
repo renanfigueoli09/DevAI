@@ -1,0 +1,17 @@
+{
+  "search:Kotlin + Spring Security:kotlin spring security best pr": {
+    "content": "- **CLI Commands**: Use `./gradlew build` to compile and test your project.\n- **Latest Versions**: Spring Security 5.7, Kotlin 1.8.20.\n- **Key Config Options**:\n  - `http.authorizeRequests()`: Configure URL access rules.\n  - `http.csrf().disable()`: Disable CSRF protection for specific endpoints.\n  - `http.formLogin()`: Enable form-based authentication.\n  - `http.httpBasic()`: Enable HTTP Basic authentication.",
+    "source": "web_search",
+    "updated_at": 1781065779.0653553
+  },
+  "search:Kotlin + Spring Security:kotlin spring security best pr_ex": {
+    "content": "- **CLI Commands**:\n  - `./gradlew bootRun` to run the Spring Boot application.\n  - `./gradlew test` to run tests.\n\n- **Latest Versions**:\n  - Kotlin: 1.9.20\n  - Spring Security: 6.3.0\n\n- **Key Config Options**:\n  - `http.authorizeRequests()`: Configure URL access rules.\n  - `http.csrf().disable()`: Disable CSRF protection (not recommended for production).\n  - `http.headers().frameOptions().sameOrigin()`: Prevent clickjacking attacks.\n  - `@EnableWebSecurity`: Enable Spring Security configuration.",
+    "source": "code_example",
+    "updated_at": 1781065784.1770806
+  },
+  "search:Kotlin + Spring Security:kotlin spring security advance": {
+    "content": "- **Latest Versions**: Kotlin 2.4.0, Spring Boot 3.0, Spring Security 6.\n- **CLI Commands**:\n  - `./gradlew build` to build the project.\n  - `./gradlew run` to start the application.\n  - `./gradlew test` to run tests.\n- **Key Config Options for Spring Security with JWT**:\n  - `application.yml` or `application.properties` for security settings.\n  - Enable JWT authentication: `spring.security.jwt.enabled=true`.\n  - Specify token secret: `spring.security.jwt.secret=yourSecretKey`.\n  - Define roles and permissions in the configuration class.\n- **AWS Cognito Integration**:\n  - Configure AWS Cognito as an OAuth2 provider.\n  - Set up a custom user pool and client application.\n  - Update Spring Security to use AWS Cognito for authentication.\n- **Prometheus Monitoring**:\n  - Add Prometheus dependencies: `implementation 'io.micrometer:micrometer-core'`.\n  - Configure Prometheus endpoint in `application.yml` or `application.properties`.\n  - Define custom metrics using Micrometer.\n- **Kotlin Documentation**:\n  - Visit Kotlin's official documentation for the latest features and best practices.",
+    "source": "web_search",
+    "updated_at": 1781065806.9968438
+  }
+}

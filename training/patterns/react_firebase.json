@@ -1,0 +1,22 @@
+{
+  "search:React + Firebase:react firebase authentication ": {
+    "content": "- **CLI Commands**:\n  - `firebase init` to initialize Firebase in your project.\n  - `npm install --save firebase react-firebaseui` for Firebase and UI library.\n\n- **Latest Versions**:\n  - Firebase SDK: v9.x (as of my last update).\n  - React-FirebaseUI: v5.x (check latest on npm).\n\n- **Key Config Options**:\n  - Firebase project settings in `firebaseConfig.js`.\n  - Authentication methods like Email/Password, Google, Facebook.\n  - Security rules for database and storage.\n\n- **Integration Steps**:\n  - Initialize Firebase with your project's configuration.\n  - Use `StyledFirebaseAuth` from `react-firebaseui` for UI components.\n  - Implement authentication logic using Firebase SDK methods.",
+    "source": "web_search",
+    "updated_at": 1781065747.4671702
+  },
+  "search:React + Firebase:react firebase authentication _ex": {
+    "content": "- **CLI Commands**:\n  - `firebase init`: Initialize Firebase in your project.\n  - `npm install firebase @react-firebase/auth`: Install Firebase and React Firebase Auth packages.\n\n- **Latest Versions**:\n  - Firebase SDK: v9.x\n  - React: v18.x\n\n- **Key Config Options**:\n  - `apiKey`: Your Firebase project's API key.\n  - `authDomain`: The domain of your Firebase project.\n  - `projectId`: Your Firebase project ID.\n  - `storageBucket`: Storage bucket for your Firebase project.\n  - `messagingSenderId`: Sender ID for Firebase Cloud Messaging.\n  - `appId`: App ID for your Firebase project.",
+    "source": "code_example",
+    "updated_at": 1781065754.1013052
+  },
+  "search:React + Firebase:react firebase performance opt": {
+    "content": "- **CLI Commands**:\n  - `npm install react@latest react-dom@latest`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - React: v18.2.0\n  - Firebase SDK: v9.6.0\n\n- **Key Config Options**:\n  - Use `React.memo` for functional components to prevent unnecessary re-renders.\n  - Implement code splitting with dynamic imports (`import()`).\n  - Utilize Firebase's Realtime Database or Firestore for efficient data retrieval and updates.\n  - Configure Firebase Hosting for optimized deployment.\n\n- **Performance Tools**:\n  - Use React DevTools for performance analysis.\n  - Leverage Firebase Performance Monitoring to track app performance in production.",
+    "source": "web_search",
+    "updated_at": 1781065763.318116
+  },
+  "search:React + Firebase:react firebase performance opt_ex": {
+    "content": "- **CLI Commands**:\n  - `firebase init`: Initializes Firebase project.\n  - `npm install firebase --save`: Installs Firebase SDK.\n\n- **Latest Versions**:\n  - Firebase SDK v9.x\n\n- **Key Config Options**:\n  - `useEffect` for preventing unnecessary re-renders.\n  - Firebase services like Firestore, Authentication, and Storage.\n  - Integration with React Router, React Query, and other ecosystem tools.",
+    "source": "code_example",
+    "updated_at": 1781065768.8282824
+  }
+}
