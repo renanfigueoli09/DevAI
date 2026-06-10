@@ -1,0 +1,12 @@
+{
+  "search:ruby-on-rails-redis:ruby on rails redis integratio": {
+    "content": "- Install Redis using `brew install redis` on macOS or `sudo apt-get install redis-server` on Ubuntu.\n- Ensure Redis is running by executing `redis-cli ping`. It should return \"PONG\".\n- Add the `gem 'redis-rails'` to your Gemfile for Rails 5.2+.\n- Run `bundle install` to install the gem.\n- Configure Redis in `config/initializers/redis.rb`:\n  ```ruby\n  # config/initializers/redis.rb\n  $redis = Redis.new(host: 'localhost', port: 6379, db: 0)\n  ```\n- Use Redis for caching by setting up a cache store in `config/environments/production.rb`:\n  ```ruby\n  # config/environments/production.rb\n  config.cache_store = :redis_store, { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/0') }\n  ```\n- For session management, configure it in `config/initializers/session_store.rb`:\n  ```ruby\n  # config/initializers/session_store.rb\n  Rails.application.config.session_store :redis_store, servers: [{ url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/0') }]\n  ```\n- Use Redis for background jobs with Sidekiq or Resque by configuring them to use Redis as their backend.\n- Monitor Redis performance using tools like `redis-cli --stat` and `redis-rails-stat`.\n- Regularly update the gem to the latest version using `bundle update redis-rails`.",
+    "source": "web_search",
+    "updated_at": 1781059750.4488692
+  },
+  "search:ruby-on-rails-redis:ruby on rails redis integratio_ex": {
+    "content": "- Install Redis using `brew install redis` on macOS.\n- Add `gem 'redis'` and `gem 'sidekiq'` to your Gemfile for Rails integration.\n- Run `bundle install` to install the gems.\n- Configure Redis in `config/initializers/redis.rb` with:\n  ```ruby\n  $redis = Redis.new(host: 'localhost', port: 6379)\n  ```\n- Use Sidekiq for background jobs by adding it to your `Procfile`:\n  ```\n  web: bundle exec rails server -p 3000\n  worker: bundle exec sidekiq\n  ```\n- Set up Redis as a cache store in `config/environments/development.rb`:\n  ```ruby\n  config.cache_store = :redis_cache_store, { url: 'redis://localhost:6379/1' }\n  ```\n- Monitor Redis performance with `redis-cli --stat`.\n- Use Redis for caching views and fragments by adding to your controller:\n  ```ruby\n  caches_action :index, expires_in: 10.minutes\n  ```\n- Regularly update gems using `bundle update` to benefit from latest features and security patches.",
+    "source": "code_example",
+    "updated_at": 1781059768.3544073
+  }
+}
