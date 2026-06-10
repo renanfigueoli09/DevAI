@@ -1,0 +1,17 @@
+{
+  "search:dotnet-core-efcore-sqlite-migrations:dotnet core entity framework c": {
+    "content": "- **Latest Version**: EF Core 7.0, SQLite 3.42.0\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - Connection String: `Server=.;Database=mydatabase.db;`\n  - Migrations Enabled: `services.AddDbContext<MyDbContext>(options => options.UseSqlite(Configuration.GetConnectionString(\"DefaultConnection\")));`",
+    "source": "web_search",
+    "updated_at": 1781081453.5010629
+  },
+  "search:dotnet-core-efcore-sqlite-migrations:dotnet core entity framework c_ex": {
+    "content": "- Install EF Core tools: `dotnet tool install --global dotnet-ef`\n- Create migration: `dotnet ef migrations add InitialCreate`\n- Apply migration: `dotnet ef database update`\n- Key config options in `appsettings.json`:\n  - ConnectionString: `\"ConnectionStrings\": { \"DefaultConnection\": \"Data Source=example.db\" }`\n  - Entity Framework Core version: Ensure compatibility with .NET Core version\n- Use SQLite provider: Install `Microsoft.EntityFrameworkCore.Sqlite`\n- Update model and apply migrations:\n  ```bash\n  dotnet ef migrations add UpdateModel\n  dotnet ef database update\n  ```\n- Remove migration: `dotnet ef migrations remove`",
+    "source": "code_example",
+    "updated_at": 1781081460.708806
+  },
+  "search:dotnet-core-efcore-sqlite-migrations:advanced ef core migrations fo": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate --context SqliteDataContext --output-dir Migrations/SqliteMigrations`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update in October 2023)\n  - SQLite: Latest stable version compatible with EF Core\n\n- **Key Config Options**:\n  - `DbContext` class configuration for SQLite\n  - `OnConfiguring` method to specify the connection string\n  - Migration history table (`__EFMigrationsHistory`) management",
+    "source": "web_search",
+    "updated_at": 1781081473.85376
+  }
+}

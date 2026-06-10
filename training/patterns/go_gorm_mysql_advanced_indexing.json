@@ -1,0 +1,12 @@
+{
+  "search:go-gorm-mysql-advanced-indexing:go gorm mysql advanced indexin": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/driver/mysql`\n  - `go get -u gorm.io/gorm`\n\n- **Latest Versions**:\n  - GORM: v2.36.0 (as of my last update)\n  - MySQL Driver for GORM: v1.4.5 (as of my last update)\n\n- **Key Config Options**:\n  - `gorm.DB` instance configuration\n  - Index creation using `db.AutoMigrate()` or manual SQL commands\n  - Optimizer hints and index hints in queries",
+    "source": "web_search",
+    "updated_at": 1781081424.1683588
+  },
+  "search:go-gorm-mysql-advanced-indexing:go gorm mysql advanced indexin_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.34.0 (as of my last update)\n  - MySQL Driver for Go: v1.6.0\n\n- **Key Config Options**:\n  - `gorm.DB` instance configuration\n  - Auto-migration (`db.AutoMigrate(&YourModel{})`)\n  - Index creation (`db.Model(&YourModel{}).AddIndex(\"idx_name\", \"column_name\")`)",
+    "source": "code_example",
+    "updated_at": 1781081431.7109983
+  }
+}
