@@ -1,0 +1,27 @@
+{
+  "search:golang-mysql-orm:golang mysql orm best practice": {
+    "content": "- Use `go get -u gorm.io/gorm` to install the latest version of GORM.\n- For MySQL, use `go get -u gorm.io/driver/mysql`.\n- Initialize a new GORM connection with:\n  ```go\n  dsn := \"user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local\"\n  db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})\n  ```\n- Key config options include:\n  - `dsn`: Data Source Name for connecting to the database.\n  - `charset`: Character set used in the connection.\n  - `parseTime`: Automatically parse time values from database into Go's time.Time type.\n  - `loc`: Time zone location, e.g., \"Local\".\n- Use `db.AutoMigrate(&User{})` to automatically migrate schema based on your model definitions.\n- For production, ensure proper error handling and connection pooling:\n  ```go\n  sqlDB, err := db.DB()\n  if err != nil {\n      log.Fatal(err)\n  }\n  sqlDB.SetMaxIdleConns(10)\n  sqlDB.SetMaxOpenConns(100)\n  sqlDB.SetConnMaxLifetime(time.Hour)\n  ```\n- Regularly update GORM and database drivers to benefit from the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1781072639.4136097
+  },
+  "search:golang-mysql-orm:using gorm with mysql in go": {
+    "content": "- **Latest GORM Version**: v2.34.0\n- **MySQL Driver**: `github.com/go-sql-driver/mysql`\n- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM\n  - `go get -u gorm.io/driver/mysql` to install MySQL driver\n- **Key Config Options**:\n  - `DSN`: Data Source Name, e.g., `user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - `AutoMigrate`: Automatically migrate schema to match models\n  - `CreateTableOptions`: Additional options for creating tables, e.g., `ENGINE=InnoDB`\n\nThese points provide actionable guidance for setting up and using GORM with MySQL in a Go application.",
+    "source": "web_search",
+    "updated_at": 1781072671.4930513
+  },
+  "search:golang-mysql-orm:using gorm with mysql in go_ex": {
+    "content": "- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.x\n  - MySQL Driver for GORM: v1.x\n\n- **Key Config Options**:\n  - Database URL format: `username:password@tcp(host:port)/dbname?charset=utf8mb4&parseTime=True&loc=Local`\n  - Auto Migration: `db.AutoMigrate(&User{})`\n  - Logging Mode: `db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})`",
+    "source": "code_example",
+    "updated_at": 1781072680.6711771
+  },
+  "search:golang-mysql-orm:optimizing golang mysql querie": {
+    "content": "- Use `go get -u gorm.io/gorm` to update GORM to the latest version.\n- For MySQL, use `go get -u gorm.io/driver/mysql` to install the MySQL driver for GORM.\n- Initialize a new GORM instance with `gorm.Open(mysql.Open(dsn), &gorm.Config{})`.\n- Use `db.AutoMigrate(&User{})` to automatically migrate your schema.\n- Implement hooks like `BeforeCreate`, `AfterUpdate`, etc., by defining methods in your model struct.\n- Utilize associations for complex queries, e.g., `db.Model(&user).Association(\"Books\").Find(&books)`.\n- Enable logging with `db.Logger = logger.Default.LogMode(logger.Info)` for better debugging.\n- Use `Preload` to preload associated records, e.g., `db.Preload(\"Books\").First(&user)`.\n- Implement transactions using `tx := db.Begin()`, followed by `tx.Commit()` or `tx.Rollback()` based on conditions.",
+    "source": "web_search",
+    "updated_at": 1781072689.155201
+  },
+  "search:golang-mysql-orm:optimizing golang mysql querie_ex": {
+    "content": "- Use `gorm.io/gorm` version 2.x for optimized Golang MySQL interactions.\n- Implement batch inserts using `CreateInBatches`.\n- Utilize `Select`, `Omit`, and `Joins` to reduce the number of columns fetched from the database.\n- Employ `Where`, `Or`, and `Not` methods for efficient query filtering.\n- Use `First`, `Last`, and `Find` with conditions for specific data retrieval.\n- Implement caching strategies using Redis or Memcached to reduce database load.\n- Regularly analyze and optimize SQL queries using tools like `EXPLAIN`.\n- Monitor query performance with metrics from Prometheus or Grafana.\n- Refactor code to use prepared statements for repeated queries.",
+    "source": "code_example",
+    "updated_at": 1781072694.5120418
+  }
+}

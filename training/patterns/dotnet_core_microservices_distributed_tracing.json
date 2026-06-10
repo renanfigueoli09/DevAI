@@ -1,0 +1,32 @@
+{
+  "search:dotnet-core-microservices-distributed-tracing:distributed tracing with .net ": {
+    "content": "- **CLI Commands**:\n  - `dotnet tool install --global dotnet-trace`\n  - `dotnet trace collect --process-id <PID>`\n\n- **Latest Versions**:\n  - .NET Core 7.0\n  - OpenTelemetry 1.8.0\n\n- **Key Config Options**:\n  - `appsettings.json`:\n    ```json\n    {\n      \"Logging\": {\n        \"LogLevel\": {\n          \"Default\": \"Information\",\n          \"Microsoft.AspNetCore\": \"Warning\"\n        }\n      },\n      \"OpenTelemetry\": {\n        \"Enabled\": true,\n        \"Exporter\": \"otlphttp\",\n        \"Endpoint\": \"http://localhost:4317\"\n      }\n    }\n    ```\n  - `Program.cs`:\n    ```csharp\n    using OpenTelemetry.Trace;\n\n    var builder = WebApplication.CreateBuilder(args);\n\n    // Add services to the container.\n    builder.Services.AddControllers();\n\n    // Configure the HTTP request pipeline.\n    if (builder.Environment.IsDevelopment())\n    {\n        builder.Services.AddEndpointsApiExplorer();\n        builder.Services.AddSwaggerGen();\n    }\n\n    var app = builder.Build();\n\n    // Configure the HTTP request pipeline.\n    if (app.Environment.IsDevelopment())\n    {\n        app.UseSwagger();\n        app.UseSwaggerUI();\n    }\n\n    app.UseHttpsRedirection();\n    app.UseAuthorization();\n    app.MapControllers();\n\n    // Initialize OpenTelemetry Tracing\n    Sdk.CreateTracerProviderBuilder()\n        .AddAspNetCoreInstrumentation()\n        .AddOtlpExporter(options =>\n        {\n            options.Endpoint = new Uri(\"http://localhost:4317\");\n        })\n        .BuildAndRegisterAsGlobalTracerProvider();\n\n    app.Run();\n    ```",
+    "source": "web_search",
+    "updated_at": 1781072709.2168489
+  },
+  "search:dotnet-core-microservices-distributed-tracing:distributed tracing with .net _ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet tool install --global dotnet-trace`\n  - `dotnet trace collect --process-id <pid>`\n\n- **Latest Versions**:\n  - .NET Core: 6.0\n  - OpenTelemetry: 1.7.0\n\n- **Key Config Options**:\n  - `OTEL_SERVICE_NAME`: Name of the service.\n  - `OTEL_EXPORTER_OTLP_ENDPOINT`: Endpoint for exporting traces.\n  - `OTEL_TRACES_SAMPLER`: Sampling strategy (e.g., always_on, traceidratio).",
+    "source": "code_example",
+    "updated_at": 1781072714.3427548
+  },
+  "search:dotnet-core-microservices-distributed-tracing:implementing distributed traci": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package OpenTelemetry`\n  - `dotnet add package OpenTelemetry.Exporter.Console`\n\n- **Latest Versions**:\n  - OpenTelemetry: v1.5.0\n\n- **Key Config Options**:\n  - `AddOpenTelemetryTracing`: Enables tracing in your application.\n  - `WithConsoleExporter`: Exports traces to the console for debugging purposes.\n  - `WithSourceInformation`: Includes source code information in trace data.\n\n- **Example Configuration**:\n  ```csharp\n  services.AddOpenTelemetryTracing(builder =>\n  {\n      builder.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(\"MyApp\"))\n             .AddAspNetCoreInstrumentation()\n             .AddConsoleExporter();\n  });\n  ```\n\n- **Additional Resources**:\n  - [OpenTelemetry Documentation](https://opentelemetry.io/docs/)\n  - [.NET Core Tracing Guide](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/tracing)",
+    "source": "web_search",
+    "updated_at": 1781072724.6891754
+  },
+  "search:dotnet-core-microservices-distributed-tracing:implementing distributed traci_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet tool install --global dotnet-trace`\n  - `dotnet trace collect --process-id <PID>`\n\n- **Latest Versions**:\n  - .NET Core 6.0\n  - OpenTelemetry 1.5.0\n\n- **Key Config Options**:\n  - `OTEL_TRACES_EXPORTER`: Set to `otlp` for exporting traces using OpenTelemetry Protocol.\n  - `OTEL_SERVICE_NAME`: Define the name of your service for trace visibility.\n  - `OTEL_RESOURCE_ATTRIBUTES`: Specify attributes like environment, version, etc.",
+    "source": "code_example",
+    "updated_at": 1781072730.0402775
+  },
+  "search:dotnet-core-microservices-distributed-tracing:best practices for distributed": {
+    "content": "- Use Jaeger, Zipkin, or OpenTelemetry UI for distributed tracing.\n- Implement distributed tracing in microservices using tools like Jaeger or Zipkin.\n- Ensure consistent trace IDs across services to maintain the flow of requests.\n- Configure sampling rates to balance between performance and observability.\n- Utilize baggage propagation for passing context between services.\n- Set up centralized logging and monitoring with distributed tracing data.\n- Regularly update tracing libraries to their latest versions (e.g., Jaeger 1.42, Zipkin 2.23).\n- Monitor trace latency and error rates to identify bottlenecks.\n- Implement alerting on critical paths identified by distributed tracing.",
+    "source": "web_search",
+    "updated_at": 1781072740.1195328
+  },
+  "search:dotnet-core-microservices-distributed-tracing:best practices for distributed_ex": {
+    "content": "- **CLI Commands**: Use `jaeger query` to query Jaeger UI.\n- **Latest Versions**: Jaeger v1.43, Zipkin v2.26, OpenTelemetry v1.18.\n- **Key Config Options**:\n  - Jaeger: `--reporter.grpc.host-port=localhost:14250`\n  - Zipkin: `zipkin-server --storage.type=elasticsearch`\n  - OpenTelemetry: `export OTEL_TRACES_EXPORTER=otlp`",
+    "source": "code_example",
+    "updated_at": 1781072746.127957
+  }
+}
