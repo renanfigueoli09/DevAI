@@ -1,0 +1,22 @@
+{
+  "search:Spring Boot + Hibernate Envers:spring boot hibernate envers a": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mvn clean install` to build and package the project.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - Hibernate Envers: 6.1.x\n\n- **Key Config Options**:\n  - Enable auditing in your entity class using `@Audited`.\n  - Configure Envers properties in `application.properties` or `application.yml`, e.g., `spring.jpa.properties.hibernate.envers.audit_table_suffix=_AUD`.",
+    "source": "web_search",
+    "updated_at": 1781072267.9220169
+  },
+  "search:Spring Boot + Hibernate Envers:spring boot hibernate envers a_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./mvnw spring-boot:run`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Hibernate Envers: 6.4.0.Final\n\n- **Key Config Options**:\n  - `@EnableJpaAuditing` in main application class\n  - `@EntityListeners(AuditingEntityListener.class)` on entity classes\n  - `application.properties`:\n    ```properties\n    spring.jpa.hibernate.ddl-auto=update\n    spring.jpa.show-sql=true\n    ```\n  - `pom.xml` dependencies:\n    ```xml\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-data-jpa</artifactId>\n    </dependency>\n    <dependency>\n        <groupId>org.hibernate.envers</groupId>\n        <artifactId>hibernate-envers</artifactId>\n    </dependency>\n    ```",
+    "source": "code_example",
+    "updated_at": 1781072275.725504
+  },
+  "search:Spring Boot + Hibernate Envers:spring boot hibernate envers p": {
+    "content": "- **Latest Versions**: Hibernate Envers 6.4.1.Final, Spring Boot 3.2.1\n- **Key Config Options**:\n  - `@EnableJpaAuditing`\n  - `@EntityListeners(AuditingEntityListener.class)`\n  - `@EnableEnversRepositories`\n- **CLI Commands**:\n  - `mvn clean install` to build the project\n  - `./mvnw spring-boot:run` to run the application\n- **Performance Optimization Tips**:\n  - Use batch processing for auditing operations\n  - Configure Envers to audit only necessary fields\n  - Monitor and tune database indexing",
+    "source": "web_search",
+    "updated_at": 1781072284.3393774
+  },
+  "search:Spring Boot + Hibernate Envers:spring boot hibernate envers p_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate Envers: 6.2.0.Final\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.envers.audit_table_suffix`: Customize the suffix for audit tables.\n  - `spring.jpa.properties.hibernate.envers.revision_type_field_name`: Specify the field name for revision type in audit entities.\n  - `spring.jpa.properties.hibernate.envers.revision_listener`: Define a custom revision listener class.",
+    "source": "code_example",
+    "updated_at": 1781072292.5156367
+  }
+}

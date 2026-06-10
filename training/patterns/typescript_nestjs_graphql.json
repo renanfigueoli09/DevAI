@@ -1,0 +1,22 @@
+{
+  "search:TypeScript + NestJS GraphQL:typescript nestjs graphql perf": {
+    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install @nestjs/graphql graphql-tools`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - `GraphQLModule.forRoot`: Configure the GraphQL module.\n    ```typescript\n    import { Module } from '@nestjs/common';\n    import { GraphQLModule } from '@nestjs/graphql';\n\n    @Module({\n      imports: [\n        GraphQLModule.forRoot({\n          autoSchemaFile: 'src/schema.gql',\n          sortSchema: true,\n        }),\n      ],\n    })\n    export class AppModule {}\n    ```\n  - `DataLoader`: Use DataLoader for batching and caching.\n    ```typescript\n    import { Injectable } from '@nestjs/common';\n    import DataLoader from 'dataloader';\n\n    @Injectable()\n    export class UsersService {\n      private readonly users = [\n        { id: 1, name: 'John' },\n        { id: 2, name: 'Jane' },\n      ];\n\n      createLoader() {\n        return new DataLoader<number, User>(async (userIds) => {\n          const userMap = this.users.reduce((acc, user) => {\n            acc[user.id] = user;\n            return acc;\n          }, {} as { [id: number]: User });\n          return userIds.map(id => userMap[id]);\n        });\n      }\n    }\n    ```\n\n- **Performance Tuning Tips**:\n  - Use `Mercurius` for high-performance GraphQL.\n  - Implement caching strategies with `apollo-server-cache-inmemory`.\n  - Optimize resolvers to reduce complexity and improve response times.",
+    "source": "web_search",
+    "updated_at": 1781072362.231666
+  },
+  "search:TypeScript + NestJS GraphQL:typescript nestjs graphql perf_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/graphql graphql-tools graphql`.\n- Update `app.module.ts` to import GraphQL module:\n  ```typescript\n  import { Module } from '@nestjs/common';\n  import { GraphQLModule } from '@nestjs/graphql';\n\n  @Module({\n    imports: [\n      GraphQLModule.forRoot({\n        autoSchemaFile: 'src/schema.gql',\n        sortSchema: true,\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n- Define your schema using `.graphql` files or TypeScript classes.\n- Use `@Field`, `@InputType`, and `@ObjectType` decorators for type definitions.\n- Implement resolvers with `@Resolver`, `@Query`, `@Mutation`, and `@Args`.\n- Configure performance tuning options in `GraphQLModule.forRoot()`:\n  ```typescript\n  GraphQLModule.forRoot({\n    autoSchemaFile: 'src/schema.gql',\n    sortSchema: true,\n    context: ({ req }) => ({ user: req.user }),\n    installSubscriptionHandlers: true,\n  }),\n  ```\n- Use `@nestjs/graphql` version 13.0.0 for the latest features and improvements.\n- Monitor performance with tools like Apollo Tracing or custom logging in resolvers.",
+    "source": "code_example",
+    "updated_at": 1781072370.2964485
+  },
+  "search:TypeScript + NestJS GraphQL:typescript nestjs graphql secu": {
+    "content": "- **CLI Commands**: Use `nest generate module <module-name>` to create new modules.\n- **Latest Versions**: Ensure NestJS and GraphQL are up-to-date using npm or yarn.\n- **Key Config Options**:\n  - `GraphQLModule.forRoot`: Configure the GraphQL server options.\n  - `TypeOrmModule.forRoot`: For database integration with TypeORM.\n  - `AuthModule.register`: For authentication setup.",
+    "source": "web_search",
+    "updated_at": 1781072376.917684
+  },
+  "search:TypeScript + NestJS GraphQL:typescript nestjs graphql secu_ex": {
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install GraphQL dependencies with `npm install @nestjs/graphql graphql-tools graphql`.\n- Utilize DTOs for type safety and validation.\n- Implement schema stitching for version-safe practices.\n- Configure security using guards, interceptors, and pipes.\n- Deploy on AWS Lambda with serverless framework.\n- Use environment variables for configuration management.\n- Regularly update dependencies to the latest versions.",
+    "source": "code_example",
+    "updated_at": 1781072384.8140829
+  }
+}
