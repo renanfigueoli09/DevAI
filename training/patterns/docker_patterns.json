@@ -1,7 +1,12 @@
 {
   "search:docker+patterns:docker-compose healthcheck dep": {
-    "content": "- **Docker Compose Health Checks**: Use `healthcheck` in your service definition to specify how Docker should check if the container is healthy.\n- **depends_on**: In version 3, use `restart: on-failure` instead of `depends_on` for controlling restart behavior based on failure.\n- **Multi-stage Security**: Implement multi-stage builds in your Dockerfile to reduce image size and improve security by only including necessary files.\n- **CLI Commands**:\n  - `docker-compose up --build`: Build images before starting containers.\n  - `docker-compose down`: Stop and remove containers, networks, volumes, and images created by docker-compose.\n- **Key Config Options**:\n  - `healthcheck`: Define a command to check the health of your container.\n  - `restart: on-failure`: Automatically restart the container if it fails.\n  - `depends_on`: Specify dependencies between services (use `restart: on-failure` instead in version 3).\n- **Latest Versions**: Ensure you are using the latest stable versions of Docker and Docker Compose to benefit from the latest features and security patches.",
+    "content": "- Ensure Docker Compose version is at least 1.29.0 to support health checks and depends_on correctly.\n- Use `docker-compose up` with the `-d` flag for detached mode.\n- Configure health checks in your docker-compose.yml file using the `healthcheck` key under each service.\n- Example of a health check:\n  ```yaml\n  healthcheck:\n    test: [\"CMD\", \"curl\", \"-f\", \"http://localhost:80\"]\n    interval: 30s\n    timeout: 10s\n    retries: 3\n    start_period: 40s\n  ```\n- Use `depends_on` to specify the order of service startup:\n  ```yaml\n  services:\n    db:\n      image: postgres\n    web:\n      image: myapp\n      depends_on:\n        - db\n  ```\n- Ensure health checks are not just based on container running but also readiness.\n- Update Docker Compose file regularly for compatibility and new features.",
     "source": "web_search",
-    "updated_at": 1780966300.9998097
+    "updated_at": 1781056111.9005165
+  },
+  "search:docker+patterns:docker-compose healthcheck dep_ex": {
+    "content": "- Use `docker compose ps` to monitor live health status of all services.\n- Ensure Docker Compose version is at least 3 for proper functionality.\n- Configure `depends_on` with the condition `service_healthy` to hold dependent services until checks pass.\n- Example CLI command: `docker-compose up --build`\n- Key config options include:\n  - `healthcheck`: Defines a test to check that the container is healthy.\n  - `depends_on`: Specifies dependencies between services, but does not wait for them to be ready.\n  - `condition`: Can be set to `service_healthy` to ensure dependent services are ready before starting.",
+    "source": "code_example",
+    "updated_at": 1781056119.5459151
   }
 }

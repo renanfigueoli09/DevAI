@@ -1,7 +1,12 @@
 {
   "search:rabbitmq+advanced:rabbitmq exchanges routing dlx": {
-    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=my-dlx type=direct`\n  - `rabbitmqadmin set policy name=DLX pattern=\".*\" definition='{\"dead_letter_exchange\":\"my-dlx\"}' apply-to=queues`\n\n- **Latest Versions**:\n  - RabbitMQ: v3.12.0\n  - Erlang/OTP: R25\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the DLX for a queue.\n  - `x-dead-letter-routing-key`: Optionally specifies the routing key for messages sent to the DLX.\n  - `x-max-priority`: Sets the maximum priority level for messages in a priority queue.",
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare policy name=DLX apply-to=queues definition='{\"dead_letter_exchange\":\"my-dlx\"}'`\n  - `rabbitmqadmin declare exchange name=my-dlx type=direct`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - rabbitmqadmin: 3.12.x\n\n- **Key Config Options**:\n  - `dead_letter_exchange`: Specifies the DLX for a queue.\n  - `x-dead-letter-routing-key`: Specifies the routing key for messages sent to the DLX.\n  - `x-max-priority`: Sets the maximum priority level for messages in a priority queue.",
     "source": "web_search",
-    "updated_at": 1780942052.3328955
+    "updated_at": 1781056083.1192431
+  },
+  "search:rabbitmq+advanced:rabbitmq exchanges routing dlx_ex": {
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=dlx type=direct`\n  - `rabbitmqadmin declare queue name=priority_queue arguments='{\"x-max-priority\":20}\"`\n  - `rabbitmqadmin bind source=dlx destination=priority_queue routing_key=error`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.14.0\n  - Erlang/OTP: 25.0\n\n- **Key Config Options**:\n  - `x-max-priority`: Maximum priority level for messages in the queue.\n  - `arguments`: Additional configuration options passed to queues and exchanges.\n\nThese commands and configurations will help you set up a RabbitMQ system with priority support and dead letter exchanges, ensuring efficient message routing and handling.",
+    "source": "code_example",
+    "updated_at": 1781056099.8840523
   }
 }
