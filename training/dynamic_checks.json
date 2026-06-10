@@ -1,20 +1,5 @@
 {
-  "generated_at": 1781050996.9506965,
+  "generated_at": 1781052371.0467627,
   "studied_count": 636,
-  "checks": [
-    {
-      "name": "python-django + celery-redis: cache",
-      "queries": [
-        "python-django+celery-redis cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "python-django+celery-redis"
-    }
-  ]
+  "checks": []
 }
