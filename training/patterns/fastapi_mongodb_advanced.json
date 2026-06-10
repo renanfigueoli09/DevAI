@@ -18,5 +18,35 @@
     "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn motor`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.85.2\n  - Uvicorn: 10.6.0\n  - Motor: 3.0.0\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Database Name: `mydatabase`\n  - Collection Name: `mycollection`\n  - FastAPI App Instance: `app = FastAPI()`\n  - Motor Client Initialization: `client = AsyncIOMotorClient(\"mongodb://localhost:27017\")`",
     "source": "code_example",
     "updated_at": 1780969023.6857018
+  },
+  "search:FastAPI + MongoDB Advanced:python django advanced perform": {
+    "content": "- Use `django-admin runserver --insecure` for development to avoid SSL overhead.\n- Upgrade Django to the latest version using `pip install django --upgrade`.\n- Utilize caching mechanisms like Memcached or Redis by setting `CACHES` in settings.py.\n- Optimize database queries with `SELECT_related()` and `prefetch_related()`.\n- Use Django's built-in profiling tools like `django-debug-toolbar` for analysis.\n- Implement lazy loading for static files using `collectstatic --noinput`.\n- Enable Gzip compression by adding middleware and configuring Nginx or Apache.\n- Utilize Celery for asynchronous task processing with Redis as the broker.\n- Employ Django’s template caching to reduce rendering time.\n- Regularly run database migrations with `python manage.py migrate`.",
+    "source": "web_search",
+    "updated_at": 1781050878.5630937
+  },
+  "search:FastAPI + MongoDB Advanced:python django advanced perform_ex": {
+    "content": "- Use Django's built-in profiling tools like `django-debug-toolbar` to identify bottlenecks.\n- Optimize database queries by using `select_related`, `prefetch_related`, and avoiding N+1 queries.\n- Implement caching strategies such as Memcached or Redis for frequently accessed data.\n- Utilize Django's template caching feature to reduce the load on your server.\n- Minimize the use of raw SQL queries in favor of Django ORM methods.\n- Use asynchronous views with `asyncio` and `aiohttp` for handling I/O-bound tasks more efficiently.\n- Optimize image processing by using libraries like Pillow or Wand, and consider lazy loading images.\n- Configure Django's `settings.py` to optimize performance:\n  - Set `DEBUG = False` in production.\n  - Use a production-ready WSGI server like Gunicorn or uWSGI.\n  - Adjust database settings for optimal performance (e.g., connection pooling).\n- Regularly update Django and its dependencies to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781050888.1618476
+  },
+  "search:FastAPI + MongoDB Advanced:next.js nextauth performance o": {
+    "content": "- **CLI Commands**: Use `next build` to optimize your Next.js application.\n- **Latest Versions**: Ensure you are using the latest version of NextAuth.js, currently at v5.\n- **Key Config Options**:\n  - `session`: Configure session management options like type (JWT or database).\n  - `providers`: Set up authentication providers such as Google, GitHub, etc.\n  - `callbacks`: Customize callbacks for handling events like signIn and signOut.",
+    "source": "web_search",
+    "updated_at": 1781050893.4821756
+  },
+  "search:FastAPI + MongoDB Advanced:next.js nextauth performance o_ex": {
+    "content": "- Use `next build` to optimize the initial load time of your Next.js app.\n- Implement lazy loading by using dynamic imports for components and pages.\n- Configure `next.config.js` with optimization settings like:\n  ```javascript\n  module.exports = {\n    images: {\n      domains: ['example.com'],\n    },\n    webpack(config, { isServer }) {\n      return config;\n    },\n  };\n  ```\n- Use the latest version of NextAuth.js for enterprise-grade authentication.\n- Implement middleware in `middleware.js` to handle authentication and authorization efficiently.\n- Monitor performance using tools like DebugBear or Next.js DevTools.\n- Optimize images by compressing them and using appropriate formats.\n- Enable server-side rendering (SSR) for pages that require dynamic content.",
+    "source": "code_example",
+    "updated_at": 1781050897.5963418
+  },
+  "search:FastAPI + MongoDB Advanced:fastapi asyncio websockets sec": {
+    "content": "- Use `uvicorn` for running FastAPI applications with WebSocket support.\n- Install FastAPI and Uvicorn via pip: `pip install fastapi uvicorn`.\n- For securing WebSocket connections, use JWT (JSON Web Tokens) for authentication.\n- Access headers during the handshake phase using `websocket.headers.get(\"authorization\")`.\n- Implement authentication as dependencies in FastAPI to manage user sessions securely.\n- Use `asyncio` tasks to handle multiple WebSocket connections concurrently.\n- Ensure that your application is running with SSL/TLS for secure communication over the internet.",
+    "source": "web_search",
+    "updated_at": 1781050903.0115004
+  },
+  "search:FastAPI + MongoDB Advanced:fastapi asyncio websockets sec_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi` (latest version can be installed via pip): `pip install fastapi`\n  - `uvicorn` (ASGI server for FastAPI applications, latest version can be installed via pip): `pip install uvicorn`\n\n- **Key Config Options**:\n  - Authentication: Use `Depends` with custom authentication functions.\n  - Rate Limiting: Implement using middleware or third-party packages like `fastapi-limiter`.\n  - Input Validation: Utilize Pydantic models for data validation.\n\nFor more detailed information, refer to the FastAPI documentation and the provided GitHub repository.",
+    "source": "code_example",
+    "updated_at": 1781050906.6185129
   }
 }

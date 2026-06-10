@@ -18,5 +18,35 @@
     "content": "- **Latest Version**: cert-manager v1.12.0\n- **CLI Commands**:\n  - `kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.yaml`\n  - `cert-manager version` to check the installed version.\n- **Key Config Options**:\n  - `issuer`: Defines how certificates are issued, e.g., Let's Encrypt.\n  - `clusterIssuer`: Similar to `issuer`, but for cluster-wide use.\n  - `certificate`: Specifies details about the certificate, including DNS names and secret name.",
     "source": "code_example",
     "updated_at": 1780938803.032249
+  },
+  "search:Kubernetes + Cert-Manager:ruby on rails devise security ": {
+    "content": "- Install Devise using `gem install devise`\n- Add Devise to your Gemfile with `gem 'devise'` and run `bundle install`\n- Generate Devise models with `rails generate devise MODEL_NAME`\n- Run migrations with `rails db:migrate`\n- Configure Devise in `config/initializers/devise.rb`\n- Use `devise_for :users` in `config/routes.rb`\n- Key config options include `:authentication_keys`, `:password_length`, and `:timeout_in`\n- Test Devise by running `bundle exec rspec spec/models/user_spec.rb`\n- Ensure latest Devise version with `gem update devise`",
+    "source": "web_search",
+    "updated_at": 1781050826.4000704
+  },
+  "search:Kubernetes + Cert-Manager:ruby on rails devise security _ex": {
+    "content": "- Use `devise` gem for authentication.\n- Update Devise to latest version using `bundle update devise`.\n- Configure `config/initializers/devise.rb`:\n  - Set `config.secret_key` securely.\n  - Enable `config.pepper` for additional security.\n  - Configure `config.mailer_sender` with a valid email address.\n- Implement strong password policies in Devise by setting `config.password_length`.\n- Use HTTPS to protect data in transit. Update `config/environments/production.rb`:\n  ```ruby\n  config.force_ssl = true\n  ```\n- Sanitize user inputs using `strip`, `downcase`, and `upcase` methods.\n- Regularly update Rails and gem dependencies using `bundle update`.\n- Use CSRF protection by ensuring `protect_from_forgery with: :exception` in ApplicationController.\n- Implement rate limiting to prevent brute force attacks.",
+    "source": "code_example",
+    "updated_at": 1781050833.3669274
+  },
+  "search:Kubernetes + Cert-Manager:angular firebase auth implemen": {
+    "content": "- Install Firebase CLI globally using `npm install -g firebase-tools`\n- Initialize Firebase in your Angular project by running `firebase init` and follow the prompts\n- Add Firebase Authentication to your project during initialization or later with `firebase auth:import`\n- Import necessary modules in `app.module.ts`: `import { AngularFireAuth } from '@angular/fire/auth';`\n- Configure Firebase in `src/environments/environment.ts`:\n  ```typescript\n  export const environment = {\n    production: false,\n    firebaseConfig: {\n      apiKey: \"YOUR_API_KEY\",\n      authDomain: \"YOUR_AUTH_DOMAIN\",\n      projectId: \"YOUR_PROJECT_ID\",\n      storageBucket: \"YOUR_STORAGE_BUCKET\",\n      messagingSenderId: \"YOUR_MESSAGING_SENDER_ID\",\n      appId: \"YOUR_APP_ID\"\n    }\n  };\n  ```\n- Use `AngularFireAuth` for authentication methods like `signInWithEmailAndPassword`, `createUserWithEmailAndPassword`, etc.\n- For testing, use Firebase Emulator Suite with `firebase emulators:start`\n- Ensure you have the latest versions of Angular and Firebase SDKs by running `npm update @angular/core @angular/cli firebase`",
+    "source": "web_search",
+    "updated_at": 1781050844.7307465
+  },
+  "search:Kubernetes + Cert-Manager:angular firebase auth implemen_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/fire`\n  - `firebase init`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - AngularFire: 7.3.0\n\n- **Key Config Options**:\n  - Firebase project setup in Firebase Console\n  - `environment.ts` and `environment.prod.ts` for API keys\n  - Authentication providers (email/password, Google, Facebook, etc.)\n  - Security rules for database access",
+    "source": "code_example",
+    "updated_at": 1781050849.7585218
+  },
+  "search:Kubernetes + Cert-Manager:nodejs express redis cache adv": {
+    "content": "- **CLI Commands**:\n  - `npm install -g express-redis-cache` (to install globally)\n\n- **Latest Versions**:\n  - Not specified in the provided links, but you can check on [npm](https://www.npmjs.com/package/express-redis-cache) for the latest version.\n\n- **Key Config Options**:\n  - `host`: Redis server host.\n  - `port`: Redis server port.\n  - `ttl`: Time to live for cache entries in seconds.",
+    "source": "web_search",
+    "updated_at": 1781050858.5742855
+  },
+  "search:Kubernetes + Cert-Manager:nodejs express redis cache adv_ex": {
+    "content": "- Install Redis using `sudo apt-get install redis-server` on Ubuntu.\n- Use `npm install express redis` to add Express and Redis packages.\n- Configure Redis client in your app:\n  ```javascript\n  const redis = require('redis');\n  const client = redis.createClient();\n  ```\n- Set cache with TTL (time-to-live):\n  ```javascript\n  client.setex('key', 60, 'value'); // Cache for 1 minute\n  ```\n- Retrieve cached data:\n  ```javascript\n  client.get('key', (err, reply) => {\n    if (err) throw err;\n    console.log(reply);\n  });\n  ```\n- Invalidate cache:\n  ```javascript\n  client.del('key');\n  ```\n- Use Redis middleware for caching routes:\n  ```javascript\n  const express = require('express');\n  const redis = require('redis');\n  const app = express();\n  const client = redis.createClient();\n\n  app.use((req, res, next) => {\n    const key = req.originalUrl;\n    client.get(key, (err, reply) => {\n      if (err) throw err;\n      if (reply) {\n        res.send(reply);\n      } else {\n        res.on('finish', () => {\n          client.setex(key, 60, res.body); // Cache response for 1 minute\n        });\n        next();\n      }\n    });\n  });\n\n  app.get('/data', (req, res) => {\n    res.send('Data from server');\n  });\n\n  app.listen(3000);\n  ```\n- Key config options:\n  - `host`: Redis server host.\n  - `port`: Redis server port.\n  - `password`: If Redis is password protected.",
+    "source": "code_example",
+    "updated_at": 1781050868.6570392
   }
 }

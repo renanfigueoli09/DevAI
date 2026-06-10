@@ -18,5 +18,35 @@
     "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `docker logs <container-id>` to view logs of a specific container.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27 (as of my last update)\n  - Docker: 20.10.x\n\n- **Key Config Options**:\n  - For Kubernetes, configure logging using `logging.config` in the `kubelet` configuration.\n  - For Docker, use `--log-driver` and `--log-opt` to specify log drivers and options.\n\nThese actionable facts should help developers effectively manage logs in both Docker and Kubernetes environments.",
     "source": "code_example",
     "updated_at": 1780967313.174486
+  },
+  "search:Docker + Kubernetes Logging Patterns:kubernetes statefulsets advanc": {
+    "content": "- **CLI Commands**:\n  - `kubectl rollout history statefulset <statefulset-name>`\n  - `kubectl rollout undo statefulset <statefulset-name> --to-revision=<revision-number>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x\n\n- **Key Config Options**:\n  - `.spec.template`: Defines the pod template for the StatefulSet.\n  - `.spec.serviceName`: Specifies the name of a service to link with this statefulset.\n  - `.spec.replicas`: Number of replicas in the set.\n  - `.spec.updateStrategy.type`: RollingUpdate or OnDelete.\n  - `.spec.updateStrategy.rollingUpdate.partition`: Partition for rolling update strategy.",
+    "source": "web_search",
+    "updated_at": 1781050770.7029014
+  },
+  "search:Docker + Kubernetes Logging Patterns:kubernetes statefulsets advanc_ex": {
+    "content": "- Use `kubectl get statefulsets` to list StatefulSets.\n- Apply a StatefulSet configuration file using `kubectl apply -f example-statefulset.yaml`.\n- Edit the CoreDNS config map for DNS caching settings with `kubectl edit configmap coredns -n kube-system`.\n- Key config options include `replicas`, `selector`, and `template`.\n- Use `kubectl describe statefulset <statefulset-name>` to get detailed information.\n- To scale a StatefulSet, adjust the `replicas` field in the YAML file and apply it again.",
+    "source": "code_example",
+    "updated_at": 1781050775.8938613
+  },
+  "search:Docker + Kubernetes Logging Patterns:next.js nextauth performance o": {
+    "content": "- **CLI Commands**:\n  - `next dev`: Start the development server.\n  - `next build`: Build your application for production.\n  - `next start`: Start a Node.js server using the built files.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - `pages/api/auth/[...nextauth]`: Configuration file for authentication.\n  - `session.maxAge`: Duration of the session in seconds.\n  - `providers`: List of authentication providers (e.g., Google, GitHub).\n  - `callbacks`: Custom callbacks for handling events like signIn, signOut.",
+    "source": "web_search",
+    "updated_at": 1781050784.826917
+  },
+  "search:Docker + Kubernetes Logging Patterns:next.js nextauth performance o_ex": {
+    "content": "- Use `next-auth@latest` for the latest authentication capabilities.\n- Implement Next.js Middleware for authentication to reduce server load.\n- Utilize `next/image` for optimized image loading with automatic format optimization.\n- Apply lazy loading by wrapping components in `<React.lazy>` and using `Suspense`.\n- Optimize API routes by caching responses using middleware or external services like Vercel Cache.\n- Minimize initial bundle size by splitting code into smaller chunks using dynamic imports.\n- Enable static generation (`getStaticProps`) for pages that don't require server-side rendering.\n- Use `next/image` with `unoptimized={true}` if you need to bypass automatic optimization for specific images.\n- Monitor performance using tools like Lighthouse and DebugBear for insights and actionable recommendations.",
+    "source": "code_example",
+    "updated_at": 1781050793.674964
+  },
+  "search:Docker + Kubernetes Logging Patterns:fastapi asyncio websockets sec": {
+    "content": "- Use `fastapi` and `python-websockets` libraries.\n- For securing WebSocket connections, use JWT tokens.\n- Set headers during the handshake phase for token access.\n- Implement authentication and authorization as dependencies in FastAPI.\n- Use `asyncio.create_task()` to run tasks concurrently.\n- Ensure proper error handling and logging.",
+    "source": "web_search",
+    "updated_at": 1781050801.2357023
+  },
+  "search:Docker + Kubernetes Logging Patterns:fastapi asyncio websockets sec_ex": {
+    "content": "- **CLI Commands**: Use `uvicorn` to run FastAPI applications, e.g., `uvicorn main:app --reload`.\n- **Latest Versions**: Ensure you are using the latest versions of FastAPI and its dependencies.\n- **Key Config Options**:\n  - For WebSocket security, use `fastapi.security.WebSocketBearer` for authentication.\n  - Implement rate limiting with libraries like `fastapi-limiter`.\n  - Validate input data using Pydantic models in your WebSocket endpoints.",
+    "source": "code_example",
+    "updated_at": 1781050807.5679457
   }
 }
