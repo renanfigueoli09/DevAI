@@ -1,12 +1,12 @@
 {
   "search:spring+grpc:spring boot grpc grpc-spring-b": {
-    "content": "- Add dependency: `implementation 'net.devh:grpc-spring-boot-starter'`\n- Use annotation: `@GrpcService`\n- Configure server port in `application.properties`: `grpc.server.port=50051`\n- Enable gRPC client auto-configuration: `spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration`\n- Latest version as of 2023: Check [Maven Central](https://search.maven.org/artifact/net.devh/grpc-spring-boot-starter)\n- Key config options:\n  - `grpc.server.port`: Port for gRPC server\n  - `grpc.client.<client-name>.address`: Address of the gRPC client\n  - `grpc.client.<client-name>.usePlaintext`: Use plaintext connection (default is secure)",
+    "content": "- **Latest Version**: grpc-spring-boot-starter v5.2.0, released on Apr 3, 2025.\n- **Key Config Options**:\n  - `@GrpcService`: Annotate your gRPC service class to enable autoconfiguration.\n  - `grpc.server.port`: Specify the port for the gRPC server.\n- **CLI Commands**:\n  - To add grpc-spring-boot-starter to your project, use Maven:\n    ```bash\n    mvn dependency:add -DgroupId=net.devh -DartifactId=grpc-spring-boot-starter -Dversion=5.2.0\n    ```\n  - Or Gradle:\n    ```groovy\n    implementation 'net.devh:grpc-spring-boot-starter:5.2.0'\n    ```\n- **Testing**:\n  - Use `@GrpcClient` to inject gRPC clients in your tests.\n  - Write unit tests for your gRPC services using JUnit and Mockito.\n\nThese actionable facts should help developers integrate, configure, and test gRPC services with Spring Boot effectively.",
     "source": "web_search",
-    "updated_at": 1780938278.2055128
+    "updated_at": 1781054006.9544709
   },
   "search:spring+grpc:spring boot grpc grpc-spring-b_ex": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew build` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - gRPC: 1.54.0\n  - grpc-spring-boot-starter: 2.9.0\n\n- **Key Config Options**:\n  - `server.port`: Define the port for the gRPC server.\n  - `grpc.server.insecure-port`: Specify the insecure port for the server.\n  - `grpc.client.default-channel-name`: Set the default channel name for clients.\n  - `grpc.client.default-max-inbound-message-size`: Configure the maximum inbound message size.",
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` or `gradle bootRun` to run the sample project.\n  \n- **Latest Versions**:\n  - Ensure using the latest versions of `gRPC-spring-boot-starter`, Spring Boot, and gRPC itself for compatibility and performance improvements.\n\n- **Key Config Options**:\n  - Add `@GrpcService` annotation to your service class.\n  - Configure server settings in `application.properties` or `application.yml`.\n  - Define service methods using `.proto` files and generate Java classes with `protoc`.",
     "source": "code_example",
-    "updated_at": 1780938280.4442525
+    "updated_at": 1781054012.2946346
   }
 }

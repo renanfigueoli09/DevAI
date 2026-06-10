@@ -1,12 +1,12 @@
 {
   "search:fastapi+postgres:fastapi sqlalchemy 2.0 async m": {
-    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy alembic`\n  - `alembic init migrations`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - In `alembic.ini`, set the database URL.\n  - Define models using `Mapped` and `mapped_column`.\n  - Use `Base` from `sqlalchemy.orm` as the base class for declarative models.\n  - Configure Alembic operations in migration scripts.",
+    "content": "- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - Use `async_sessionmaker` for async database sessions.\n  - Configure `alembic.ini` with the correct connection string.\n  - Define models using `MappedColumn` from SQLAlchemy.\n\n- **CLI Commands**:\n  - Create a new FastAPI project: `fastapi create myproject`\n  - Initialize Alembic migrations: `alembic init alembic`\n  - Generate migration scripts: `alembic revision --autogenerate -m \"message\"`\n  - Apply migrations: `alembic upgrade head`",
     "source": "web_search",
-    "updated_at": 1780941605.4829023
+    "updated_at": 1781054107.983226
   },
   "search:fastapi+postgres:fastapi sqlalchemy 2.0 async m_ex": {
-    "content": "- **CLI Commands**:\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"Initial migration\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.100+\n  - SQLAlchemy: 2.0\n  - Pydantic: 2.0\n  - Alembic: 2.0\n\n- **Key Config Options**:\n  - Use `async_sessionmaker` for asynchronous sessions.\n  - Define models using `mapped_column` from SQLAlchemy ORM.\n  - Configure database URL in settings with `SQLALCHEMY_DATABASE_URL`.",
+    "content": "- Use `pip install fastapi sqlalchemy alembic` to install the latest versions.\n- For FastAPI, use version `0.100+`.\n- For SQLAlchemy, use version `2.0+`.\n- For Alembic, use version `1.11`.\n- Create a model using `async_mapped_column` from SQLAlchemy 2.0.\n- Use `alembic init alembic` to initialize Alembic.\n- Configure the database URL in your FastAPI app settings.\n- Run migrations with `alembic revision --autogenerate -m \"message\"` and `alembic upgrade head`.\n- Ensure you have an asynchronous engine for SQLAlchemy 2.0.\n- Use Pydantic models for data validation and serialization.\n- Test your application using FastAPI's built-in test client or pytest.",
     "source": "code_example",
-    "updated_at": 1780941607.4366727
+    "updated_at": 1781054123.3059068
   }
 }
