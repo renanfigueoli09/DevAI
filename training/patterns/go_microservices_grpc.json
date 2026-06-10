@@ -1,0 +1,22 @@
+{
+  "search:go-microservices-grpc:go microservices with grpc 202": {
+    "content": "- Use `protoc` compiler to generate Go code from `.proto` files.\n- Install latest version of `protoc-gen-go`: `go install google.golang.org/protobuf/cmd/protoc-gen-go@latest`\n- Set up a gRPC server in Go by defining service methods in a `.proto` file.\n- Use `go run google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest --go-grpc_out=. yourfile.proto` to generate gRPC code.\n- Implement observability and safety early using tools like Prometheus, Grafana, and Envoy.\n- Configure Kubernetes for Go microservices with gRPC by deploying services as StatefulSets or Deployments.\n- Use `kubectl apply -f your-deployment.yaml` to deploy your gRPC service on Kubernetes.\n- Ensure network policies are in place to secure communication between microservices.",
+    "source": "web_search",
+    "updated_at": 1781086183.0433092
+  },
+  "search:go-microservices-grpc:go microservices with grpc 202_ex": {
+    "content": "- **CLI Commands**:\n  - `go get google.golang.org/grpc`\n  - `protoc --go_out=. path/to/your/protofile.proto`\n\n- **Latest Versions**:\n  - gRPC: v1.54.0\n  - Protocol Buffers (protobuf): v3.21.8\n\n- **Key Config Options**:\n  - Use JWT for authentication.\n  - Implement circuit breakers using libraries like `github.com/sony/gobreaker`.\n  - Enable Prometheus observability with `github.com/prometheus/client_golang/prometheus`.\n\nThese actionable facts provide a solid foundation for developers looking to implement gRPC microservices in Go.",
+    "source": "code_example",
+    "updated_at": 1781086190.3291786
+  },
+  "search:go-microservices-grpc:grpc performance optimization ": {
+    "content": "- Use `protoc` compiler to generate Go code from `.proto` files.\n- Ensure latest gRPC and Protocol Buffers libraries are used for optimal performance.\n- Implement server-side streaming for long-lived connections.\n- Utilize HTTP/2 features like multiplexing and header compression.\n- Configure `grpc.MaxRecvMsgSize` and `grpc.MaxSendMsgSize` to handle large messages.\n- Use connection pooling with `grpc.WithBlock()` for efficient reuse.\n- Monitor gRPC metrics using Prometheus and Grafana.\n- Implement load balancing strategies like round-robin or least connections.\n- Optimize network settings, such as adjusting TCP buffer sizes.",
+    "source": "web_search",
+    "updated_at": 1781086210.1991704
+  },
+  "search:go-microservices-grpc:grpc performance optimization _ex": {
+    "content": "- Use `go get google.golang.org/grpc` to install the latest version of gRPC.\n- Implement server and client code efficiently, avoiding unnecessary computations and optimizing data structures.\n- Utilize Go's concurrency model with goroutines for handling large numbers of concurrent requests.\n- Configure horizontal scaling using Kubernetes' Horizontal Pod Autoscaler (HPA) based on CPU or memory usage.\n- Apply vertical scaling by adjusting resource limits in Kubernetes to manage resources effectively.\n- Use `go build -ldflags=\"-s -w\"` to optimize binary size and improve performance.\n- Implement connection pooling for gRPC clients to reuse connections efficiently.\n- Monitor performance using tools like Prometheus and Grafana for real-time insights.\n- Regularly update dependencies and libraries to benefit from security patches and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781086219.357869
+  }
+}

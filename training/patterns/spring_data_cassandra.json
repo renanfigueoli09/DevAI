@@ -1,0 +1,22 @@
+{
+  "search:spring-data-cassandra:spring data cassandra best pra": {
+    "content": "- **Latest Version**: Spring Data Cassandra 3.5.2 as of my last update.\n  \n- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application with Cassandra support.\n  - `cqlsh` for interacting with Cassandra directly.\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace to use.\n  - `spring.data.cassandra.contact-points`: List of contact points (hostnames or IP addresses) for the Cassandra cluster.\n  - `spring.data.cassandra.port`: Port number on which Cassandra is running.\n\n- **Best Practices**:\n  - Use Spring Data Cassandra's repository patterns for data access.\n  - Implement proper exception handling and retry mechanisms.\n  - Optimize queries using indexing and pagination where necessary.\n  - Regularly monitor and tune performance with tools like Prometheus and Grafana.",
+    "source": "web_search",
+    "updated_at": 1781086144.0395098
+  },
+  "search:spring-data-cassandra:spring data cassandra best pra_ex": {
+    "content": "- Use `mvn clean install` to build your project.\n- Ensure you have Cassandra community installed and running.\n- Add Spring Data Cassandra dependency in your `pom.xml`.\n- Configure `application.properties` with database connection details.\n- Utilize `@Query` annotation for complex queries.\n- Implement repositories extending `CassandraRepository`.\n- Use `CqlSession` bean for custom session management.\n- Optimize IN clauses using batch operations where applicable.\n- Monitor and tune token distribution for scalability.",
+    "source": "code_example",
+    "updated_at": 1781086149.874267
+  },
+  "search:spring-data-cassandra:cassandra data modeling for sp": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `cqlsh` for interacting with Cassandra.\n\n- **Latest Versions**:\n  - Spring Data Cassandra: 3.x\n  - Apache Cassandra: 4.x\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace to use.\n  - `spring.data.cassandra.contact-points`: List of contact points for Cassandra nodes.\n  - `spring.data.cassandra.port`: Port number for Cassandra connections.",
+    "source": "web_search",
+    "updated_at": 1781086163.2075615
+  },
+  "search:spring-data-cassandra:cassandra data modeling for sp_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `./gradlew run` to start the application.\n\n- **Latest Versions**:\n  - Spring Data Cassandra: 3.5.0.RELEASE\n  - Apache Cassandra: 4.1.2\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specifies the keyspace.\n  - `spring.data.cassandra.contact-points`: List of contact points for the cluster.\n  - `spring.data.cassandra.port`: Port number for the Cassandra cluster.\n  - `spring.data.cassandra.username` and `spring.data.cassandra.password`: Credentials for authentication.",
+    "source": "code_example",
+    "updated_at": 1781086168.7149029
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "search:fastapi-redis-pytest:fastapi redis testing with pyt": {
+    "content": "- **CLI Commands**:\n  - `pytest` to run tests.\n  - `pip install fastapi redis pytest` to install dependencies.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Redis-py: 4.2.1\n  - Pytest: 7.3.0\n\n- **Key Config Options**:\n  - `settings.py`: Configure Redis connection details.\n  - `conftest.py`: Define fixtures for testing, such as test clients and databases.\n  - `.env` or environment variables: Set up environment-specific configurations.\n\n- **Example Code Snippet**:\n  ```python\n  import pytest\n  from fastapi.testclient import TestClient\n  from main import app\n\n  @pytest.fixture(scope=\"module\")\n  def client():\n      with TestClient(app) as c:\n          yield c\n\n  def test_read_main(client):\n      response = client.get(\"/\")\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"Hello World\"}\n  ```",
+    "source": "web_search",
+    "updated_at": 1781086085.554946
+  },
+  "search:fastapi-redis-pytest:fastapi redis testing with pyt_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi redis pytest`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - Redis-py: 4.5.4\n  - PyTest: 7.2.1\n\n- **Key Config Options**:\n  - Redis URL: `redis://localhost:6379/0`\n  - Test Database: `pytest --database-url=sqlite:///test.db`",
+    "source": "code_example",
+    "updated_at": 1781086101.518524
+  },
+  "search:fastapi-redis-pytest:advanced fastapi redis integra": {
+    "content": "- Use `pip install fastapi[all] redis` to install FastAPI and Redis.\n- For the latest versions, check [FastAPI](https://fastapi.tiangolo.com/) and [redis-py](https://github.com/redis/redis-py) documentation.\n- Key config options for Redis in FastAPI include `host`, `port`, `db`, and `password`.\n- Use `from fastapi import Depends` to manage dependencies with Redis.\n- For caching, use `@cache` decorator from `fastapi_cache.decorator`.\n- To integrate Redis for session management, use `RedisBackend` from `fastapi_cache.backends.redis`.\n- For rate limiting, consider using `FastAPI-Limiter` in combination with Redis.\n- Use `redis-py`'s `asyncio` support for asynchronous operations.\n- For distributed session management, configure `session_cookie` and `cookie_params` in FastAPI settings.",
+    "source": "web_search",
+    "updated_at": 1781086120.0163584
+  }
+}
