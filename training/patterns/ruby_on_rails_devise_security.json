@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-devise-security:ruby on rails devise security ": {
+    "content": "- Use Devise version 4.8.3 or later for best security practices.\n- Ensure Ruby version is at least 2.7.5 to support all Rails versions.\n- Configure `config/initializers/devise.rb` with strong password settings:\n  ```ruby\n  config.password_length = 10..20\n  config.expire_password_after = 90.days\n  ```\n- Implement multi-factor authentication using Devise extensions like `devise-two-factor`.\n- Use HTTPS for all API requests to protect data in transit.\n- Regularly update Devise and Rails to patch security vulnerabilities.\n- Employ CSRF protection by including `protect_from_forgery` in your ApplicationController.\n- Sanitize user inputs to prevent XSS attacks with `sanitize` method or gems like `rails-html-sanitizer`.\n- Use strong parameters in controllers to restrict mass assignment:\n  ```ruby\n  params.require(:user).permit(:name, :email)\n  ```\n- Implement rate limiting for API endpoints using gems like `rack-throttle`.",
+    "source": "web_search",
+    "updated_at": 1781050522.4103248
+  },
+  "search:ruby-on-rails-devise-security:ruby on rails devise security _ex": {
+    "content": "- Use `rails secret` to generate and manage secret tokens.\n- Configure environment variables in `.env` or through services like AWS Secrets Manager.\n- Update Devise to the latest version using `bundle update devise`.\n- Implement strong password policies with `config/initializers/devise.rb`: \n  ```ruby\n  config.password_length = 10..24\n  ```\n- Use HTTPS by setting `config.force_ssl = true` in `config/environments/production.rb`.\n- Regularly run `rails security:check` to identify potential vulnerabilities.\n- Implement CSRF protection with `protect_from_forgery with: :exception`.\n- Sanitize user inputs using strong parameters:\n  ```ruby\n  params.require(:user).permit(:name, :email)\n  ```\n- Use `devise_parameter_sanitizer.permit` for additional customizations.",
+    "source": "code_example",
+    "updated_at": 1781050528.4709332
+  },
+  "search:ruby-on-rails-devise-security:advanced authentication in rub": {
+    "content": "- **CLI Commands**:\n  - `rails generate devise:install`\n  - `rails generate devise User`\n\n- **Latest Versions**:\n  - Devise: v5.4.3\n  - Devise-JWT: v2.2.1\n\n- **Key Config Options**:\n  - `config/initializers/devise.rb`: Configure mailer settings, encryption keys, and more.\n  - `config/routes.rb`: Add routes for Devise controllers.\n  - `app/models/user.rb`: Customize user model with Devise modules (e.g., `:database_authenticatable`, `:registerable`).",
+    "source": "web_search",
+    "updated_at": 1781050541.0318005
+  },
+  "search:ruby-on-rails-devise-security:advanced authentication in rub_ex": {
+    "content": "- **CLI Commands**:\n  - `rails generate devise:install`\n  - `rails generate devise User`\n\n- **Latest Versions**:\n  - Devise: 4.8.3\n\n- **Key Config Options**:\n  - `config/initializers/devise.rb`: Configure mailer settings, default URL options, and more.\n  - `app/models/user.rb`: Define user model with Devise modules like `:database_authenticatable`, `:registerable`, etc.\n  - `config/routes.rb`: Add routes for Devise controllers.",
+    "source": "code_example",
+    "updated_at": 1781050547.2991722
+  }
+}
