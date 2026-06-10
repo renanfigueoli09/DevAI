@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-10 02:27*
+*2026-06-10 02:41*
 
-## Score: 89% `[█████████████████░░░]`  (47.0/53.0)
+## Score: 91% `[██████████████████░░]`  (48.0/53.0)
 
-### Knowledge Check (vector store): 33.0/39.0
+### Knowledge Check (vector store): 34.0/39.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,11 +19,11 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream: padrões de código | 1.0/1 | ✅ |
 | typescript-graphql-mutations: padrões de código | 1.0/1 | ✅ |
 | kafka-streams-performance-tuning: producer consumer | 1.0/1 | ✅ |
 | golang-redis-cluster: cache | 1.0/1 | ✅ |
 | typescript-eslint-performance: padrões de código | 1.0/1 | ✅ |
-| go + mongo-go-migrate-advanced: não usa TypeORM | 0.0/1 | ❌ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
@@ -37,7 +37,6 @@
 
 - **PartialType de @nestjs/mapped-types** — found=['@nestjs/mapped-types', 'PartialType'] missing=[] wrong=['@nestjs/common']
 - **FastAPI: AsyncIOMotorClient (não pymongo)** — found=['AsyncIOMotorClient', 'motor'] missing=[] wrong=['pymongo']
-- **go + mongo-go-migrate-advanced: não usa TypeORM** — found=[] missing=['mongo'] wrong=[]
 
 ## Fix
 ```bash

@@ -1,7 +1,22 @@
 {
-  "generated_at": 1781069118.2749774,
+  "generated_at": 1781069945.601351,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream: padrões de código",
+      "queries": [
+        "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream pattern code example",
+        "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream"
+      ],
+      "must_find": [
+        "@KafkaListener",
+        "@EnableKafka"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream"
+    },
     {
       "name": "typescript-graphql-mutations: padrões de código",
       "queries": [
@@ -59,23 +74,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "typescript-eslint-performance"
-    },
-    {
-      "name": "go + mongo-go-migrate-advanced: não usa TypeORM",
-      "queries": [
-        "go+mongo-go-migrate-advanced schema service"
-      ],
-      "must_find": [
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "go+mongo-go-migrate-advanced"
     }
   ]
 }
