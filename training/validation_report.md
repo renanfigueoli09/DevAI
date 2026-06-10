@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-10 03:34*
+*2026-06-10 03:48*
 
-## Score: 90% `[█████████████████░░░]`  (44.0/49.0)
+## Score: 90% `[██████████████████░░]`  (45.0/50.0)
 
-### Knowledge Check (vector store): 30.0/35.0
+### Knowledge Check (vector store): 31.0/36.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,6 +19,7 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| Spring Boot  +  Hibernate Performance Tuning: padrões de código | 1.0/1 | ✅ |
 | TypeScript  +  NestJS GraphQL: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
