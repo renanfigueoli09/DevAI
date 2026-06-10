@@ -1,0 +1,22 @@
+{
+  "search:typescript-sequelize-performance:typescript sequelize orm perfo": {
+    "content": "- **Install Sequelize**: `npm install sequelize`\n- **TypeScript Definitions**: Ensure you have `@types/sequelize` installed.\n- **Latest Version**: Check [Sequelize GitHub](https://github.com/sequelize/sequelize) for the latest version.\n- **Key Config Options**:\n  - `dialect`: Database type (e.g., 'postgres', 'mysql').\n  - `storage`: Path to SQLite database file.\n  - `logging`: Function to log SQL queries.\n- **CLI Commands**:\n  - `npx sequelize-cli init`: Initialize Sequelize project structure.\n  - `npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string`: Generate a new model.\n- **Performance Optimization Tips**:\n  - Use eager loading for related models to reduce database queries.\n  - Optimize transactions by batching multiple operations within a single transaction.\n  - Enable connection pooling for better performance with concurrent connections.",
+    "source": "web_search",
+    "updated_at": 1781058156.3159542
+  },
+  "search:typescript-sequelize-performance:typescript sequelize orm perfo_ex": {
+    "content": "- **Latest Version**: Ensure you are using the latest version of Sequelize and its dependencies to benefit from performance improvements and bug fixes.\n- **CLI Commands**:\n  - `npx sequelize-cli init`: Initializes a new Sequelize project.\n  - `npx sequelize-cli model:generate --name User --attributes username:string,email:string`: Generates a new model with specified attributes.\n  - `npx sequelize-cli db:migrate`: Applies migrations to the database.\n- **Key Config Options**:\n  - `define.timestamps`: Set to `false` if you don't need timestamps (`createdAt`, `updatedAt`) in your models for performance gains.\n  - `logging`: Set to a function that logs only errors or disable logging entirely for production environments.\n  - `pool.max`: Adjust the maximum number of connections in the pool based on your database's capacity and application load.\n- **Optimization Tips**:\n  - Use eager loading (`include`) instead of multiple queries when fetching related data.\n  - Avoid using raw SQL queries if possible, as Sequelize can handle query optimization internally.\n  - Index frequently queried columns to speed up data retrieval.",
+    "source": "code_example",
+    "updated_at": 1781058165.1425312
+  },
+  "search:typescript-sequelize-performance:sequelize query optimization s": {
+    "content": "- Use `logging: console.log` to print every SQL statement and benchmark execution time.\n- Implement raw queries when metadata access is not required for performance gains.\n- Monitor query performance using Sequelize's built-in logging capabilities.\n- Update Sequelize to the latest version for bug fixes and performance improvements.\n- Consider using indexes on database tables to speed up query execution.\n- Optimize queries by avoiding N+1 issues through eager loading or joins.",
+    "source": "web_search",
+    "updated_at": 1781058173.2765882
+  },
+  "search:typescript-sequelize-performance:sequelize query optimization s_ex": {
+    "content": "- Use Sequelize's `include` option to eager load related models, reducing the number of queries.\n- Employ raw SQL queries for complex operations that are difficult to optimize with ORM methods.\n- Set the `nest: true` option when querying tables with dot-separated attribute names to flatten results.\n- Utilize Sequelize's `where` clause to filter data efficiently before fetching it from the database.\n- Implement pagination using `limit` and `offset` to manage large datasets effectively.\n- Regularly update Sequelize to the latest version for performance improvements and security patches.\n- Use indexes on frequently queried columns to speed up data retrieval.\n- Optimize queries by avoiding unnecessary joins and selecting only required fields.",
+    "source": "code_example",
+    "updated_at": 1781058179.71941
+  }
+}

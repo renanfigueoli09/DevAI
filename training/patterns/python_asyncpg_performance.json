@@ -1,0 +1,22 @@
+{
+  "search:python-asyncpg-performance:python asyncpg postgresql perf": {
+    "content": "- Use `asyncpg` version 0.27.0 or later.\n- For bulk inserts, consider using `Bulk INSERT` or `Prepared Statements`.\n- Integrate `asyncpg` with PostgreSQL for enhanced performance.\n- Utilize `UNNEST` for certain operations but note its limitations in terms of speed compared to other methods.\n- Monitor and profile your application's performance regularly.",
+    "source": "web_search",
+    "updated_at": 1781058040.5338933
+  },
+  "search:python-asyncpg-performance:python asyncpg postgresql perf_ex": {
+    "content": "- **GitHub Repository**: [MagicStack/asyncpg](https://github.com/MagicStack/asyncpg)\n- **Performance Benchmark**: asyncpg is, on average, 5x faster than psycopg3.\n- **Latest Version**: Check the repository for the most recent version.\n- **Key Config Options**:\n  - `max_connections`: Maximum number of connections in the pool.\n  - `min_size`: Minimum number of connections to keep open in the pool.\n  - `ssl`: Enable SSL connection.\n- **CLI Commands**:\n  - `asyncpg.connect(user='user', password='password', database='db', host='host', port=5432)`: Connect to PostgreSQL using asyncpg.\n  - `pool = await asyncpg.create_pool(user='user', password='password', database='db', host='host', port=5432, max_size=10)`: Create a connection pool with a maximum size of 10 connections.",
+    "source": "code_example",
+    "updated_at": 1781058067.7992203
+  },
+  "search:python-asyncpg-performance:asyncpg connection pooling bes": {
+    "content": "- **CLI Commands**:\n  - `asyncpg.pool.create_pool(min_size=1, max_size=10, dsn='postgresql://user:password@host/dbname')`\n\n- **Latest Versions**:\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - `min_size`: Minimum number of connections in the pool.\n  - `max_size`: Maximum number of connections in the pool.\n  - `dsn`: Database connection string.",
+    "source": "web_search",
+    "updated_at": 1781058075.1924317
+  },
+  "search:python-asyncpg-performance:asyncpg connection pooling bes_ex": {
+    "content": "- Use `asyncpg` version 0.26.0 or later.\n- Configure connection pool size using `min_size` and `max_size`.\n- Example CLI command for creating a connection pool:\n  ```bash\n  asyncpg.connect_pool(user='user', password='password', database='database', host='host', port=5432, min_size=10, max_size=20)\n  ```\n- Handle connection errors and timeouts using try-except blocks.\n- Avoid long-lived transactions to prevent blocking the pool.\n- Use context managers (`async with`) for automatic transaction management.",
+    "source": "code_example",
+    "updated_at": 1781058081.289021
+  }
+}

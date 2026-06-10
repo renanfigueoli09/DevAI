@@ -1,0 +1,22 @@
+{
+  "search:spring-cloud-sleuth-distributed-tracing:spring cloud sleuth distribute": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker run -d --name zipkin -p 9411:9411 openzipkin/zipkin`\n\n- **Latest Versions**:\n  - Spring Cloud Sleuth: 3.0.2.RELEASE\n  - Zipkin: 2.25.6\n\n- **Key Config Options**:\n  - `spring.sleuth.sampler.probability=1.0` (to enable tracing)\n  - `spring.zipkin.baseUrl=http://localhost:9411`\n  - `spring.application.name=my-service`",
+    "source": "web_search",
+    "updated_at": 1781058093.097824
+  },
+  "search:spring-cloud-sleuth-distributed-tracing:spring cloud sleuth distribute_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar`\n\n- **Latest Versions**:\n  - Spring Cloud Sleuth: 3.2.0.RELEASE\n  - Zipkin: 2.17.4\n\n- **Key Config Options**:\n  - `spring.sleuth.sampler.probability=1.0` (to enable tracing for all requests)\n  - `spring.zipkin.baseUrl=http://localhost:9411` (to specify the Zipkin server URL)",
+    "source": "code_example",
+    "updated_at": 1781058098.4718425
+  },
+  "search:spring-cloud-sleuth-distributed-tracing:distributed tracing with sprin": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your Spring Boot application.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Cloud Sleuth: 3.1.0.RELEASE\n  - Zipkin: 2.24.2\n\n- **Key Config Options**:\n  - `spring.sleuth.sampler.probability`: Set the sampling rate for distributed traces (e.g., `0.5` for 50%).\n  - `zipkin.baseUrl`: Specify the URL of the Zipkin server (e.g., `http://localhost:9411`).\n\n- **Dependencies**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.cloud</groupId>\n      <artifactId>spring-cloud-starter-sleuth</artifactId>\n  </dependency>\n  <dependency>\n      <groupId>io.zipkin.brave</groupId>\n      <artifactId>brave-instrumentation-spring-webflux</artifactId>\n  </dependency>\n  ```\n\n- **Auto Configuration**:\n  - Spring Cloud Sleuth automatically configures tracing for your application.\n  - Enable auto-configuration by including the `spring-cloud-starter-sleuth` dependency.\n\n- **Configuration File**:\n  ```yaml\n  spring:\n    sleuth:\n      sampler:\n        probability: 0.5\n    zipkin:\n      baseUrl: http://localhost:9411\n  ```\n\n- **Running Zipkin Server**:\n  - Use Docker to run Zipkin: `docker run -d --name zipkin -p 9411:9411 openzipkin/zipkin`.\n\n- **Viewing Traces**:\n  - Access the Zipkin UI at `http://localhost:9411` to view and analyze distributed traces.\n\n- **Logging Levels**:\n  - Adjust logging levels for Sleuth by setting `logging.level.org.springframework.cloud.sleuth=DEBUG`.",
+    "source": "web_search",
+    "updated_at": 1781058121.9632118
+  },
+  "search:spring-cloud-sleuth-distributed-tracing:distributed tracing with sprin_ex": {
+    "content": "- **CLI Commands**:\n  - `curl -X POST http://localhost:9411/api/v2/spans` to send a manual span for testing.\n  \n- **Latest Versions**:\n  - Spring Cloud Sleuth: 3.1.0.RELEASE\n  - Zipkin Server: 2.25.6\n  \n- **Key Config Options**:\n  - `spring.zipkin.baseUrl=http://localhost:9411` to set the Zipkin server URL.\n  - `spring.sleuth.sampler.probability=1.0` to enable tracing for all requests.\n  - `logging.level.org.springframework.cloud.sleuth=DEBUG` to increase logging level for debugging purposes.",
+    "source": "code_example",
+    "updated_at": 1781058136.5414567
+  }
+}
