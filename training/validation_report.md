@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-10 07:02*
+*2026-06-10 07:14*
 
-## Score: 90% `[██████████████████░░]`  (46.0/51.0)
+## Score: 90% `[██████████████████░░]`  (45.0/50.0)
 
-### Knowledge Check (vector store): 32.0/37.0
+### Knowledge Check (vector store): 31.0/36.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -21,7 +21,6 @@
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
 | typescript-jest-unit-testing: padrões de código | 1.0/1 | ✅ |
 | GraphQL with Apollo Server: padrões de código | 1.0/1 | ✅ |
-| Spring Boot  +  MySQL  +  Spring Data JPA: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
