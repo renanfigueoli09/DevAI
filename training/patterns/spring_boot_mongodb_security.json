@@ -1,0 +1,12 @@
+{
+  "search:Spring Boot + MongoDB Security:securing spring boot applicati": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `spring init --dependencies=mongodb myproject` to create a new project with MongoDB dependency.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - MongoDB Java Driver: 4.5.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.security.user.name` and `spring.security.user.password`: For setting up basic authentication.\n  - `server.ssl.enabled=true`: To enable SSL on the server.",
+    "source": "web_search",
+    "updated_at": 1781064643.2325516
+  },
+  "search:Spring Boot + MongoDB Security:securing spring boot applicati_ex": {
+    "content": "- **Latest Versions**:\n  - Spring Boot: 3.0.10\n  - MongoDB Java Driver: 4.5.2\n\n- **CLI Commands with Exact Flags**:\n  - `mvn spring-boot:run` to run a Spring Boot application.\n  - `mongoimport --uri <your_mongodb_uri> --collection <collection_name> --file <json_file_path>` to import data into MongoDB.\n\n- **Key Config Options**:\n  - In `application.properties`, set MongoDB connection string with `spring.data.mongodb.uri`.\n  - Enable security in Spring Boot by adding `spring-boot-starter-security` dependency and configuring authentication mechanisms.\n  - Configure CORS settings using `spring.mvc.cors.allowed-origins` and other related properties.",
+    "source": "code_example",
+    "updated_at": 1781064659.6448135
+  }
+}

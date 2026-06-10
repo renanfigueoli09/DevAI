@@ -1,0 +1,22 @@
+{
+  "search:Java + Hibernate Performance Optimization:hibernate performance optimiza": {
+    "content": "- **CLI Commands**: Use `mvn hibernate3:hbm2ddl` to generate schema from HBM files.\n- **Latest Versions**: Hibernate 6.2.5.Final as of my last update.\n- **Key Config Options**:\n  - `hibernate.cache.use_second_level_cache`: Enable second-level cache.\n  - `hibernate.cache.region.factory_class`: Specify the cache provider (e.g., `org.hibernate.cache.ehcache.EhCacheRegionFactory`).\n  - `hibernate.jdbc.batch_size`: Set batch size for inserts/updates/deletes.\n  - `hibernate.order_inserts`: Order insert statements to reduce locking contention.\n  - `hibernate.order_updates`: Order update statements to reduce locking contention.",
+    "source": "web_search",
+    "updated_at": 1781064784.36455
+  },
+  "search:Java + Hibernate Performance Optimization:hibernate performance optimiza_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.2, Spring Boot 3.0, Angular 14.\n- **Key Config Options**:\n  - `hibernate.jdbc.batch_size`: Set to a value like 50 for batch updates.\n  - `hibernate.order_inserts`: Enable to reorder inserts for better performance.\n  - `hibernate.order_updates`: Enable to reorder updates for better performance.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the correct dialect for your database.",
+    "source": "code_example",
+    "updated_at": 1781064789.702604
+  },
+  "search:Java + Hibernate Performance Optimization:advanced hibernate caching str": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.2.3.Final, Ehcache 3.9.7.\n- **Key Config Options**:\n  - Cache Provider: Configure in `hibernate.cfg.xml` or `persistence.xml`.\n  - Second-Level Cache: Enable with `<property name=\"hibernate.cache.use_second_level_cache\" value=\"true\"/>`.\n  - Query Cache: Enable with `<property name=\"hibernate.cache.use_query_cache\" value=\"true\"/>`.\n  - Cache Region: Define regions in `hibernate.cfg.xml` for better management.\n  - Cache Eviction: Use `evict()` or `evictAll()` methods to manage cache entries.",
+    "source": "web_search",
+    "updated_at": 1781064798.308684
+  },
+  "search:Java + Hibernate Performance Optimization:advanced hibernate caching str_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate 6.2.x, Ehcache 3.9.x, Infinispan 14.x.\n- **Key Config Options**:\n  - `hibernate.cache.use_second_level_cache=true`\n  - `hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory` (for Ehcache)\n  - `hibernate.cache.infinispan.cachemanager=org.infinispan.manager.DefaultCacheManager` (for Infinispan)",
+    "source": "code_example",
+    "updated_at": 1781064814.5852332
+  }
+}
