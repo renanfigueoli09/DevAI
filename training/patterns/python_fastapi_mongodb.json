@@ -1,0 +1,22 @@
+{
+  "search:python-fastapi-mongodb:python fastapi mongodb crud 20": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn pymongo`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - PyMongo: v4.3.1\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Database Name: `mydatabase`\n  - Collection Name: `mycollection`",
+    "source": "web_search",
+    "updated_at": 1781050190.8553123
+  },
+  "search:python-fastapi-mongodb:python fastapi mongodb crud 20_ex": {
+    "content": "- **Create Directory and Activate Virtual Environment**:\n  ```bash\n  mkdir fastAPI\n  cd fastAPI\n  python -m venv fastAPI\n  source fastAPI/bin/activate\n  ```\n\n- **Install Dependencies**:\n  ```bash\n  pip install fastapi uvicorn pydantic pymongo\n  ```\n\n- **Run FastAPI Application**:\n  ```bash\n  uvicorn main:app --reload\n  ```\n\n- **Key Config Options for PyMongo**:\n  - `client = pymongo.MongoClient(\"mongodb://localhost:27017/\")`\n  - `db = client[\"your_database_name\"]`\n  - `collection = db[\"your_collection_name\"]`\n\n- **Latest Versions as of Jul 23, 2025**:\n  - FastAPI: 0.98.0\n  - Uvicorn: 10.6.0\n  - Pydantic: 1.10.7\n  - PyMongo: 4.3.0",
+    "source": "code_example",
+    "updated_at": 1781050198.5942252
+  },
+  "search:python-fastapi-mongodb:python fastapi mongodb securit": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn pymongo`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - PyMongo: 4.3.1\n\n- **Key Config Options**:\n  - MongoDB Connection String\n  - JWT Secret Key\n  - Database and Collection Names",
+    "source": "web_search",
+    "updated_at": 1781050205.9040666
+  },
+  "search:python-fastapi-mongodb:python fastapi mongodb securit_ex": {
+    "content": "- **CLI Commands**:\n  - `mkdir fastAPI`\n  - `cd fastAPI`\n  - `python -m venv fastAPI`\n  - `source fastAPI/bin/activate` (Linux/Mac)\n  - `fastAPI\\Scripts\\activate` (Windows)\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - Uvicorn: 10.6.0\n  - Pydantic: 1.10.8\n  - PyMongo: 4.3.0\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Database Name: `mydatabase`\n  - Collection Name: `mycollection`\n  - FastAPI Security: Use `Depends` with `SecurityScheme` for authentication and authorization.\n  - PyMongo Connection Pooling: Configure using `maxPoolSize` in MongoDB URI.",
+    "source": "code_example",
+    "updated_at": 1781050222.2594035
+  }
+}
