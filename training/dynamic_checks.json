@@ -1,7 +1,20 @@
 {
-  "generated_at": 1781058717.3128963,
+  "generated_at": 1781059995.4166021,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "ruby-on-rails-redis: cache",
+      "queries": [
+        "ruby-on-rails-redis cache redis example"
+      ],
+      "must_find": [
+        "redis"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "ruby-on-rails-redis"
+    },
     {
       "name": "NextJS  +  Prisma Authentication: padrões de código",
       "queries": [
