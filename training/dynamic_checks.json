@@ -1,5 +1,5 @@
 {
-  "generated_at": 1781077301.2935045,
+  "generated_at": 1781077975.0466273,
   "studied_count": 636,
   "checks": [
     {
@@ -16,38 +16,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "Advanced Spring Boot + Hibernate Error Handling"
-    },
-    {
-      "name": "python-django-redis-sessions: cache",
-      "queries": [
-        "python-django-redis-sessions cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "python-django-redis-sessions"
-    },
-    {
-      "name": "kubernetes-statefulsets-mongodb: não usa TypeORM",
-      "queries": [
-        "kubernetes-statefulsets-mongodb schema service"
-      ],
-      "must_find": [
-        "Mongoose",
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kubernetes-statefulsets-mongodb"
     }
   ]
 }
