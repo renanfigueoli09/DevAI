@@ -1,0 +1,22 @@
+{
+  "search:kubernetes+argocd-gitops:kubernetes argocd gitops ci/cd": {
+    "content": "- **Install Argo CD**: `kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`\n- **CLI Installation**: Download from [Argo CD GitHub releases](https://github.com/argoproj/argo-cd/releases), e.g., `curl -LO https://github.com/argoproj/argo-cd/releases/download/v2.7.5/argocd-linux-amd64`\n- **Login to Argo CD**: `argocd login <CLUSTER_IP>:8080 --insecure`\n- **Create Application**: `argocd app create my-app --repo https://github.com/myorg/myproject.git --path path/to/app --dest-server https://kubernetes.default.svc --dest-namespace default`\n- **Key Config Options**:\n  - `spec.source.repoURL`: Git repository URL.\n  - `spec.source.targetRevision`: Commit SHA or branch name.\n  - `spec.destination.server`: Kubernetes API server URL.\n  - `spec.destination.namespace`: Target namespace in the cluster.\n- **GitHub Actions Integration**: Use `argoproj/argo-cd-action` to trigger Argo CD sync on push events.\n- **Latest Version Check**: Run `kubectl get pods -n argocd | grep argocd-server` and check for version in logs or use `kubectl describe pod <pod-name>`.\n- **Audit Trail**: Access via Argo CD UI under \"Application\" > \"Details\" to view deployment history.",
+    "source": "web_search",
+    "updated_at": 1781083136.1864905
+  },
+  "search:kubernetes+argocd-gitops:kubernetes argocd gitops ci/cd_ex": {
+    "content": "- **CLI Commands**:\n  - `argocd app create <app-name> --repo <git-repo-url> --path <path-to-app>`: Create a new Argo CD application.\n  - `argocd app sync <app-name>`: Synchronize the application with the latest commit in the repository.\n\n- **Latest Versions**:\n  - Argo CD: v2.7.0\n  - Kubernetes: v1.24.0\n\n- **Key Config Options**:\n  - `spec.source.repoURL`: URL of the Git repository.\n  - `spec.syncPolicy.hookType`: Type of hook to trigger sync (e.g., `PostSync`).\n  - `spec.destination.server`: URL of the Kubernetes cluster destination.",
+    "source": "code_example",
+    "updated_at": 1781083143.093645
+  },
+  "search:kubernetes+argocd-gitops:argocd kubernetes deployment s": {
+    "content": "- **CLI Commands**:\n  - `argocd app create <app-name> --repo <git-repo-url> --path <manifest-path>`\n  - `argocd app sync <app-name>`\n  - `argocd app set <app-name> --sync-policy automated`\n  - `argocd app set <app-name> --auto-prune true`\n\n- **Latest Versions**:\n  - Argo CD: [Check latest version on GitHub](https://github.com/argoproj/argo-cd/releases)\n\n- **Key Config Options**:\n  - `sync-policy`: Controls when to sync the application with the repository.\n    - `automated`: Syncs automatically based on Git events.\n    - `manual`: Requires manual triggers for syncing.\n  - `auto-prune`: Automatically prunes resources that are no longer in the manifest.",
+    "source": "web_search",
+    "updated_at": 1781083156.340579
+  },
+  "search:kubernetes+argocd-gitops:argocd kubernetes deployment s_ex": {
+    "content": "- **CLI Commands**:\n  - `argocd app create <app-name> --repo <git-repo-url> --path <path-to-app>`\n  - `argocd app sync <app-name>`\n  - `argocd app get <app-name>`\n  - `argocd app set <app-name> --sync-policy automated`\n\n- **Latest Versions**:\n  - ArgoCD: v2.7.0 (as of my last update)\n\n- **Key Config Options**:\n  - `syncPolicy`: Defines how the application should be synced with the repository.\n    - Example: `{ automated: {} }`\n  - `destination`: Specifies where to deploy the application.\n    - Example: `{ server: 'https://kubernetes.default.svc', namespace: 'default' }`\n  - `project`: Assigns the application to a project for organizational purposes.",
+    "source": "code_example",
+    "updated_at": 1781083162.3188906
+  }
+}
