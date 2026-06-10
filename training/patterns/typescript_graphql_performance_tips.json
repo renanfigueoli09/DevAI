@@ -1,0 +1,22 @@
+{
+  "search:typescript-graphql-performance-tips:graphql performance optimizati": {
+    "content": "- **Apollo Server**: Use Apollo Server 4 for building high-performance GraphQL APIs.\n- **TypeScript**: Leverage TypeScript for type-safe schemas and better code quality.\n- **DataLoader**: Implement DataLoader to prevent N+1 query problems efficiently.\n- **Query Batching**: Enable query batching in your client to reduce the number of requests.\n- **Caching**: Utilize caching strategies like Apollo Client's cache or Redis for faster data retrieval.\n- **Pagination**: Optimize pagination with cursor-based pagination for efficient large dataset handling.\n- **Directives**: Use GraphQL directives to add custom functionality and optimizations directly in the schema.\n- **Depth Limiting**: Implement depth limiting to prevent malicious queries that could overload your server.\n- **Persisted Queries**: Enable persisted queries to reduce network overhead and improve performance.\n- **Hasura Integration**: For TypeScript integration, use Hasura's TypeScript client generator for strong typing.",
+    "source": "web_search",
+    "updated_at": 1781068374.8884935
+  },
+  "search:typescript-graphql-performance-tips:graphql performance optimizati_ex": {
+    "content": "- **CLI Commands**: Use `apollo server start` to launch Apollo Server.\n- **Latest Versions**: Apollo Server 4, TypeScript 5.\n- **Key Config Options**:\n  - `typeDefs`: Define GraphQL schema using type definitions.\n  - `resolvers`: Implement resolvers for each field in the schema.\n  - `dataLoader`: Use DataLoader for batching and caching to optimize data fetching.",
+    "source": "code_example",
+    "updated_at": 1781068381.7947178
+  },
+  "search:typescript-graphql-performance-tips:building efficient graphql que": {
+    "content": "- Use `npm install dataloader` to install DataLoader.\n- Implement DataLoader in your resolvers to batch and cache database requests.\n- For Apollo Client, use `apollo-client-preset` for quick setup.\n- Explore Node.js GraphQL Query Resolvers Tutorial for detailed implementation steps.\n- Learn custom GraphQL queries through the provided comprehensive guide.",
+    "source": "web_search",
+    "updated_at": 1781068389.0449235
+  },
+  "search:typescript-graphql-performance-tips:building efficient graphql que_ex": {
+    "content": "- **CLI Commands**:\n  - `npx graphql-codegen init` to initialize GraphQL Code Generator.\n  - `npm install @graphql-codegen/cli @graphql-codegen/typescript-resolvers` for TypeScript resolvers.\n\n- **Latest Versions**:\n  - GraphQL Code Generator: v3.0.0\n  - Apollo Server: v4.0.0\n\n- **Key Config Options**:\n  - `schema`: Path to your GraphQL schema file.\n  - `generates`: Configuration for output files and plugins.\n  - `plugins`: Specify which plugins to use, e.g., `typescript-resolvers`.\n\n- **Best Practices**:\n  - Use `defer` and `stream` directives for optimizing large data queries.\n  - Implement caching strategies in resolvers to reduce database load.",
+    "source": "code_example",
+    "updated_at": 1781068394.9970775
+  }
+}
