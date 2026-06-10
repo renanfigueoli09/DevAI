@@ -1,0 +1,22 @@
+{
+  "search:spring-boot-kafka-advanced-consumer-group-management:managing kafka consumer groups": {
+    "content": "- **CLI Commands**:\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic spring`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic spring --from-beginning`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n  - `spring.kafka.consumer.key-deserializer`: Deserializer class for key that implements `Deserializer`.\n  - `spring.kafka.consumer.value-deserializer`: Deserializer class for value that implements `Deserializer`.",
+    "source": "web_search",
+    "updated_at": 1781079328.987651
+  },
+  "search:spring-boot-kafka-advanced-consumer-group-management:managing kafka consumer groups_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-consumer.sh --topic my-topic --from-beginning --bootstrap-server localhost:9092`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Apache Kafka: 3.0.x\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., because that data has been deleted).\n  - `spring.kafka.consumer.key-deserializer`: Deserializer class for key that implements `Deserializer`.\n  - `spring.kafka.consumer.value-deserializer`: Deserializer class for value that implements `Deserializer`.",
+    "source": "code_example",
+    "updated_at": 1781079337.8560395
+  },
+  "search:spring-boot-kafka-advanced-consumer-group-management:best practices for optimizing ": {
+    "content": "- **CLI Commands**:\n  - `kafka-consumer-groups.sh --bootstrap-server <broker_address> --describe --group <group_id>`\n  - `burrow --config <path_to_config_file>`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Burrow: 1.2.3\n\n- **Key Config Options**:\n  - `auto.offset.reset`: Set to `earliest` or `latest` based on consumer needs.\n  - `enable.auto.commit`: Enable or disable automatic commit of offsets.\n  - `max.poll.records`: Maximum number of records returned in a single poll call.\n  - `session.timeout.ms`: The timeout used to detect failures when using Kafka's group management facility.",
+    "source": "web_search",
+    "updated_at": 1781079357.9406073
+  },
+  "search:spring-boot-kafka-advanced-consumer-group-management:best practices for optimizing _ex": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --describe` to check topic details.\n- **Latest Versions**: Ensure Kafka, Zookeeper, and other dependencies are up-to-date for optimal performance.\n- **Key Config Options**:\n  - `num.partitions`: Set the number of partitions based on expected throughput and consumer count.\n  - `replication.factor`: Configure replication factor for fault tolerance.\n  - `max.poll.records`: Adjust to control how many records a consumer fetches in one poll.\n  - `fetch.min.bytes`: Minimum bytes to fetch before returning from poll.\n  - `auto.offset.reset`: Set to 'earliest' or 'latest' based on data consumption needs.",
+    "source": "code_example",
+    "updated_at": 1781079365.4287772
+  }
+}

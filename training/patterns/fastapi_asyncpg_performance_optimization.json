@@ -1,0 +1,12 @@
+{
+  "search:fastapi-asyncpg-performance-optimization:optimizing fastapi performance": {
+    "content": "- Use `asyncpg` version 0.26.0 or later.\n- Implement caching using Redis or Memcached for API responses.\n- Configure FastAPI with `uvicorn` using the command:\n  ```bash\n  uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4 --limit-max-requests-per-connection 100\n  ```\n- Set up database connection pooling in `asyncpg` with:\n  ```python\n  pool = await asyncpg.create_pool(user='user', password='password', database='database', host='host')\n  ```\n- Use `fastapi-cache` for caching API responses, install via pip:\n  ```bash\n  pip install fastapi-cache[redis]\n  ```\n- Monitor performance with tools like Prometheus and Grafana.\n- Optimize queries using indexes and query optimization techniques.",
+    "source": "web_search",
+    "updated_at": 1781079419.1216576
+  },
+  "search:fastapi-asyncpg-performance-optimization:optimizing fastapi performance_ex": {
+    "content": "- Use `asyncpg` version 0.26.0 or later.\n- Install `asyncpg` using pip: `pip install asyncpg`.\n- Configure FastAPI to use `asyncpg` for database operations.\n- Set up connection pool in `postgres.py`: \n  ```python\n  import asyncpg\n\n  async def create_pool():\n      return await asyncpg.create_pool(\n          user='your_user',\n          password='your_password',\n          host='127.0.0.1',\n          port=5432,\n          database='your_db'\n      )\n  ```\n- Monitor performance using tools like `asyncpg`'s built-in metrics or external monitoring solutions.\n- Adjust connection pool size based on application load and database capacity.\n- Use async queries to leverage non-blocking I/O: \n  ```python\n  async def fetch_data(pool):\n      async with pool.acquire() as conn:\n          result = await conn.fetch('SELECT * FROM your_table')\n          return result\n  ```\n- Regularly update `asyncpg` and FastAPI to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781079426.2520232
+  }
+}

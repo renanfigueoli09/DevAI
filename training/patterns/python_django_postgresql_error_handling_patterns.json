@@ -1,0 +1,12 @@
+{
+  "search:python-django-postgresql-error-handling-patterns:django error handling patterns": {
+    "content": "- Use `psql` command to interact with PostgreSQL.\n- Ensure Django and psycopg2 are up-to-date using pip:\n  ```bash\n  pip install --upgrade django psycopg2-binary\n  ```\n- Configure Django settings for PostgreSQL:\n  ```python\n  DATABASES = {\n      'default': {\n          'ENGINE': 'django.db.backends.postgresql',\n          'NAME': 'your_db_name',\n          'USER': 'your_db_user',\n          'PASSWORD': 'your_db_password',\n          'HOST': 'localhost',  # Or an IP Address that your DB is hosted on\n          'PORT': '5432',\n      }\n  }\n  ```\n- Use `EXPLAIN` to analyze SQL queries:\n  ```sql\n  EXPLAIN ANALYZE SELECT * FROM your_table;\n  ```\n- Implement try-except blocks in Django views for error handling.\n- Utilize Django's logging framework to capture and log errors.\n- For tenant-specific issues, ensure proper schema management with django-tenants.",
+    "source": "web_search",
+    "updated_at": 1781079375.2148716
+  },
+  "search:python-django-postgresql-error-handling-patterns:django error handling patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver`: Starts the Django development server.\n  - `python manage.py migrate`: Applies migrations to your database.\n\n- **Latest Versions**:\n  - Django 4.2\n  - PostgreSQL 15\n\n- **Key Config Options**:\n  - `DATABASES` in `settings.py`: Configure database settings, including engine, name, user, password, and host.\n  - `DEBUG`: Set to `True` during development for detailed error pages.\n  - `ALLOWED_HOSTS`: List of strings representing the host/domain names that this Django site can serve.",
+    "source": "code_example",
+    "updated_at": 1781079393.7291632
+  }
+}

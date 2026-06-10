@@ -1,0 +1,22 @@
+{
+  "search:dotnet-core-ef-core-sqlserver-performance-tuning:optimizing entity framework co": {
+    "content": "- **CLI Commands**: Use `dotnet ef database update` to apply migrations.\n- **Latest Versions**: EF Core 7 and SQL Server 2024 are the latest versions as of my last update.\n- **Key Config Options**:\n  - `QueryTrackingBehavior`: Set to `NoTracking` for read-only queries to reduce memory usage.\n  - `UseLazyLoadingProxies`: Enable lazy loading for improved performance in some scenarios.\n  - `MaxBatchSize`: Configure the maximum batch size for bulk operations.",
+    "source": "web_search",
+    "updated_at": 1781079294.6419308
+  },
+  "search:dotnet-core-ef-core-sqlserver-performance-tuning:optimizing entity framework co_ex": {
+    "content": "- **Latest Version**: Entity Framework Core 7.0, SQL Server 2024\n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - Use `Index` in Fluent API to configure indexes.\n  - Enable `QueryTrackingBehavior.NoTracking` for read-only operations.\n  - Configure connection strings with appropriate settings (e.g., `Pooling=true;Max Pool Size=100`).",
+    "source": "code_example",
+    "updated_at": 1781079299.333193
+  },
+  "search:dotnet-core-ef-core-sqlserver-performance-tuning:advanced ef core queries for h": {
+    "content": "- Use `AddDbContextPool` with the `poolSize` parameter to manage context instances efficiently.\n- Implement query splitting using `SplitQuery` method for large datasets.\n- Utilize compiled queries with `EF.CompileQuery` for performance improvements.\n- Employ bulk operations like `BulkInsert`, `BulkUpdate`, and `BulkDelete` from libraries such as Entity Framework Plus.\n- Configure connection strings in `appsettings.json` to optimize database connections.\n- Use `AsNoTracking` when querying read-only data to reduce memory usage.\n- Enable query caching with `QueryCache` for repeated queries.\n- Monitor performance using tools like SQL Server Profiler and EF Core's logging capabilities.",
+    "source": "web_search",
+    "updated_at": 1781079308.0125527
+  },
+  "search:dotnet-core-ef-core-sqlserver-performance-tuning:advanced ef core queries for h_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef query --raw-sql`\n\n- **Latest Versions**:\n  - EF Core: 7.0 (as of my last update)\n  - SQL Server: Latest stable version\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only operations\n  - `AsNoTracking()` to avoid tracking entities in memory\n  - `FromSqlRaw` or `FromSqlInterpolated` for raw SQL queries",
+    "source": "code_example",
+    "updated_at": 1781079317.8880348
+  }
+}

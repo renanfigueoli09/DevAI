@@ -1,0 +1,22 @@
+{
+  "search:angular-ngrx-state-management-for-large-applications:state management in angular ap": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <store-name>` to create a new NgRx store.\n  - `ng generate effect <effect-name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the app module for root reducers.\n  - `EffectsModule.forRoot([effects])` in the app module for root effects.\n  - `createSelector` and `createFeatureSelector` for selecting state slices.",
+    "source": "web_search",
+    "updated_at": 1781079448.6994405
+  },
+  "search:angular-ngrx-state-management-for-large-applications:state management in angular ap_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular: 18.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the root module for global state management.\n  - `EffectsModule.forRoot(effects)` to register effects globally.\n  - Using `Signal` for reactive state management in NgRx.",
+    "source": "code_example",
+    "updated_at": 1781079453.8074086
+  },
+  "search:angular-ngrx-state-management-for-large-applications:best practices for managing ap": {
+    "content": "- Use `ng add @ngrx/store` to install NgRx.\n- Update Angular and NgRx to their latest versions using `npm update`.\n- Configure NgRx in your project by creating an `app.module.ts` file with the following imports:\n  ```typescript\n  import { StoreModule } from '@ngrx/store';\n  import { EffectsModule } from '@ngrx/effects';\n  ```\n- Define reducers in a separate file, e.g., `reducers/index.ts`, and import them into `app.module.ts`.\n- Use `StoreDevtoolsModule.instrument()` for development to monitor state changes.\n- Implement effects for side effects using `EffectsModule.forRoot([YourEffect])` in `app.module.ts`.\n- Utilize `SignalStore` from `@ngrx/signals` for a more modern approach to state management.\n- Configure the store with initial state and reducers:\n  ```typescript\n  StoreModule.forRoot({\n    yourFeature: yourReducer,\n  }),\n  ```\n- Use selectors to access parts of the state in components:\n  ```typescript\n  import { selectYourFeature } from './selectors/your-feature.selectors';\n  ```\n- Dispatch actions using `store.dispatch(new YourAction())` in services or components.\n- Ensure immutability by returning new objects in reducers.",
+    "source": "web_search",
+    "updated_at": 1781079465.6349847
+  },
+  "search:angular-ngrx-state-management-for-large-applications:best practices for managing ap_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <path>/<name>` to create NgRx store.\n  - `ng generate effect <path>/<name>` to create NgRx effects.\n\n- **Latest Versions**:\n  - Angular: 19.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - Modular structure for NgRx stores.\n  - Use of selectors and reducers for state management.\n  - Effects for handling side effects.",
+    "source": "code_example",
+    "updated_at": 1781079473.712333
+  }
+}
