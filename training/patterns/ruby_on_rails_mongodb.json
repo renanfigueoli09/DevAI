@@ -1,0 +1,22 @@
+{
+  "search:Ruby on Rails + MongoDB:ruby on rails mongodb performa": {
+    "content": "- **CLI Commands**:\n  - `rails new myapp --database=mongodb`\n  - `mongod` to start MongoDB server\n  - `mongo` to interact with MongoDB shell\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.x\n  - MongoDB: 6.x\n  - Mongoid: 8.x\n\n- **Key Config Options**:\n  - In `config/database.yml`, set `adapter: mongoid`\n  - Configure indexes in your models using `index` method\n  - Use `bulk_write` for efficient bulk operations",
+    "source": "web_search",
+    "updated_at": 1781086644.8683605
+  },
+  "search:Ruby on Rails + MongoDB:ruby on rails mongodb performa_ex": {
+    "content": "- Install MongoDB Ruby driver using `gem install mongodb`\n- Use `mongoid` or `mongo_mapper` gems for ORM\n- Configure database connection in `config/database.yml`\n- Enable C extensions for performance tuning (`gem install bson_ext`)\n- Optimize queries with indexes and eager loading\n- Monitor performance with tools like `MongoDB Compass`, `New Relic`\n- Adjust server resources (CPU, RAM) based on load\n- Regularly update MongoDB and Ruby versions",
+    "source": "code_example",
+    "updated_at": 1781086652.9152248
+  },
+  "search:Ruby on Rails + MongoDB:ruby on rails mongodb orm stra": {
+    "content": "- Use `gem install mongoid` to install the latest version of Mongoid.\n- Configure your MongoDB connection in `config/mongoid.yml`.\n- Define models using classes that inherit from `Mongoid::Document`.\n- Utilize `mongoid-rails` for seamless integration with Rails applications.\n- Employ `Mongoid::Criteria` for querying and manipulating data.\n- Use `mongoid-paperclip` for handling file attachments in MongoDB.\n- Implement validation rules directly within your model classes using Mongoid's built-in validators.\n- Leverage `mongoid-history` to track changes made to documents.\n- For advanced queries, use the `Mongoid::Criteria` DSL or raw MongoDB query operators.",
+    "source": "web_search",
+    "updated_at": 1781086663.6412182
+  },
+  "search:Ruby on Rails + MongoDB:ruby on rails mongodb orm stra_ex": {
+    "content": "- Use `rails new myapp --skip-active-record` to create a Rails app without ActiveRecord.\n- Install the `mongoid` gem for MongoDB integration.\n- Configure database cleaner in `config/environments/test.rb`:\n  ```ruby\n  config.before(:suite) do\n    DatabaseCleaner.strategy = :truncation\n    DatabaseCleaner.orm = \"mongoid\"\n  end\n  ```\n- Ensure MongoDB is running and accessible from your Rails app.\n- Use `rails db:migrate` to apply migrations in a MongoDB environment.\n- For development, consider using `config/mongoid.yml` for database configuration.\n- Utilize MongoMapper or Mongoid as ORM strategies depending on preference.",
+    "source": "code_example",
+    "updated_at": 1781086671.5682368
+  }
+}
