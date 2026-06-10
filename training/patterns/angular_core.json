@@ -1,12 +1,12 @@
 {
   "search:angular+core:angular 19 standalone signals ": {
-    "content": "- **CLI Commands**:\n  - `ng new my-app --standalone`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular 19\n  - HttpClient\n  - Signals\n\n- **Key Config Options**:\n  - Standalone Components: Use `--standalone` flag in CLI commands.\n  - Signal-driven State Management: Utilize Angular's Signals for state management.\n  - Zoneless Change Detection: Optimize change detection with zoneless mode.",
+    "content": "- **Angular 19 Features**: Standalone components, linkedSignal API, resource management, incremental hydration, event replay, and HMR.\n- **HttpClient Guards**: Use `canActivate`, `canDeactivate`, `canLoad` guards for route protection.\n- **Standalone Components**: Create standalone components using `ng generate component --standalone`.\n- **linkedSignal API**: Utilize the linkedSignal API for reactive state management.\n- **HttpClient in Signals**: Integrate HttpClient with signals for data retrieval.\n- **Dependencies**: Ensure Angular and rxjs are up to date (latest versions).\n- **Error Handling**: Check if HttpClientModule is imported in all standalone components requiring it.\n- **DataService Injection**: Verify that DataService is properly injected and declared with `@Injectable({ providedIn: 'root' })`.\n- **Event Replay**: Use event replay for better performance in reactive applications.\n- **HMR (Hot Module Replacement)**: Enable HMR for faster development using Angular CLI flags.",
     "source": "web_search",
-    "updated_at": 1780940669.580556
+    "updated_at": 1781055810.5882542
   },
   "search:angular+core:angular 19 standalone signals _ex": {
-    "content": "- **CLI Commands**:\n  - `ng new my-app --standalone`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular 19\n  - HttpClient\n\n- **Key Config Options**:\n  - Standalone components\n  - Signal-driven state management\n  - Zoneless change detection",
+    "content": "- **CLI Commands**:\n  - `ng new my-app --standalone`\n  - `ng generate component my-component`\n\n- **Latest Versions**:\n  - Angular 19\n  - HttpClient guards\n\n- **Key Config Options**:\n  - Standalone components\n  - Signal-driven state management\n  - Zoneless change detection",
     "source": "code_example",
-    "updated_at": 1780940671.6939218
+    "updated_at": 1781055820.1644654
   }
 }
