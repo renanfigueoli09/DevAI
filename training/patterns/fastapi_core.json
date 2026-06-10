@@ -30,13 +30,13 @@
     "updated_at": 1780963590.8925703
   },
   "search:fastapi+core:fastapi pydantic v2 depends ba": {
-    "content": "- **Latest FastAPI Version**: 0.124.0 (Release Date: 2025-12-06)\n- **Pydantic v2 Support**: Available in FastAPI 0.100+\n- **Key Config Options**:\n  - `WebSocket` for handling WebSocket connections\n  - `Depends` for dependency injection\n  - Background tasks with `BackgroundTasks`\n- **CLI Commands**:\n  - To install FastAPI: `pip install fastapi`\n  - To run a FastAPI application: `uvicorn main:app --reload`\n\nThese actionable facts provide essential information for developers working on projects that involve FastAPI, Pydantic v2, WebSocket testing, and background tasks.",
+    "content": "- **FastAPI Version**: 0.115\n- **Pydantic Version**: Not explicitly mentioned, but compatible with FastAPI 0.115\n- **CLI Commands**:\n  - `uvicorn main:app --reload` for development\n  - `fastapi testclient` for testing\n- **Key Config Options**:\n  - `BackgroundTasks`: For asynchronous background tasks in websockets.\n  - `TestClient`: For testing FastAPI applications, including websockets.\n- **Latest Versions**: Ensure using the latest versions of FastAPI and Pydantic to benefit from performance improvements and security patches.",
     "source": "web_search",
-    "updated_at": 1780963593.6575506
+    "updated_at": 1781054260.7789538
   },
   "search:fastapi+core:fastapi pydantic v2 depends ba_ex": {
-    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development server.\n  - `pytest` to run tests.\n\n- **Latest Versions**:\n  - FastAPI: v0.98.0\n  - Pydantic: v1.10.7\n\n- **Key Config Options**:\n  - `background_tasks`: For asynchronous background tasks.\n  - `WebSocket`: For handling WebSocket connections.\n  - `Depends`: For dependency injection.",
+    "content": "- **GitHub Repository**: benavlabs/FastAPI-boilerplate\n  - Latest Version: Not specified in the snippet.\n  - Key Config Options: FastAPI, Pydantic V2, SQLAlchemy 2.0, PostgreSQL, Redis.\n\n- **Background Tasks with WebSockets**:\n  - Guide Title: Incorporating WebSockets with FastAPI Like a Pro\n  - Release Date: June 28, 2025\n  - Price: $10 on Gumroad\n\n- **Using `Depends` in FastAPI**:\n  - CLI Command: Not applicable.\n  - Latest Version: Not specified in the snippet.\n  - Key Config Options: Depends, Pydantic validation.",
     "source": "code_example",
-    "updated_at": 1780963595.6939392
+    "updated_at": 1781054275.776497
   }
 }

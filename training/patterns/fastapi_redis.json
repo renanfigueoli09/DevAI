@@ -20,13 +20,13 @@
     "updated_at": 1780949027.1199605
   },
   "search:fastapi+redis:fastapi redis-py aioredis cach": {
-    "content": "- **CLI Commands**:\n  - `pip install fastapi[all] aioredis`\n  - `pip install fastapi-advanced-rate-limiter`\n\n- **Latest Versions**:\n  - FastAPI: 0.98.0\n  - aioredis: 2.4.1\n  - fastapi-advanced-rate-limiter: 0.3.0\n\n- **Key Config Options**:\n  - Redis URL: `redis://localhost:6379/0`\n  - Rate Limit Algorithm: `fixed_window`\n  - Window Size: `60` seconds\n  - Max Requests: `20`\n\nFor detailed integration and usage, refer to the provided links.",
+    "content": "- **FastAPI Version**: 0.95.0\n- **Redis-py Version**: 4.6.0\n- **Aioredis Version**: 2.3.0\n- **Fastapi-Limiter Version**: 0.1.0\n\n**CLI Commands**:\n- Install FastAPI: `pip install fastapi`\n- Install Redis-py: `pip install redis`\n- Install Aioredis: `pip install aioredis`\n- Install Fastapi-Limiter: `pip install fastapi-limiter`\n\n**Key Config Options**:\n- **Redis Connection**: Use `redis.StrictRedis` or `aioredis.Redis` for connection.\n- **Rate Limiting**: Configure rate limits using `fastapi_limiter.RateLimit` and apply it to routes with decorators like `@app.get(\"/\", dependencies=[Depends(RateLimit(limit=5, time_window=1))])`.\n\n**Additional Notes**:\n- Ensure Redis server is running and accessible.\n- For production use, consider using a more robust caching strategy and rate limiting mechanism.",
     "source": "web_search",
-    "updated_at": 1780943142.2050178
+    "updated_at": 1781054192.477882
   },
   "search:fastapi+redis:fastapi redis-py aioredis cach_ex": {
-    "content": "- **Install fastapi-cache**: `pip install fastapi-cache`\n- **Install aioredis**: `pip install aioredis`\n- **Key Config Options**:\n  - `CACHE_URL`: Redis connection URL, e.g., `redis://localhost:6379/0`\n  - `BACKEND_CLASS`: Cache backend class, e.g., `fastapi_cache.backends.redis_backend.RedisBackend`\n- **CLI Commands**: None needed for basic setup\n- **Latest Versions**:\n  - fastapi-cache: v1.2.0\n  - aioredis: v2.3.0",
+    "content": "- **CLI Commands**:\n  - `pip install fastapi redis aioredis`\n  \n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Redis-py: v4.2.0\n  - Aioredis: v2.3.1\n  \n- **Key Config Options**:\n  - `redis.StrictRedis(host='localhost', port=6379, db=0)`\n  - `aioredis.create_redis_pool('redis://localhost')`\n  - Rate limit configuration in FastAPI using dependencies and middleware",
     "source": "code_example",
-    "updated_at": 1780943144.474127
+    "updated_at": 1781054197.6946151
   }
 }
