@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-10 02:17*
+*2026-06-10 02:27*
 
-## Score: 88% `[█████████████████░░░]`  (46.0/52.0)
+## Score: 89% `[█████████████████░░░]`  (47.0/53.0)
 
-### Knowledge Check (vector store): 32.0/38.0
+### Knowledge Check (vector store): 33.0/39.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,6 +19,7 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| typescript-graphql-mutations: padrões de código | 1.0/1 | ✅ |
 | kafka-streams-performance-tuning: producer consumer | 1.0/1 | ✅ |
 | golang-redis-cluster: cache | 1.0/1 | ✅ |
 | typescript-eslint-performance: padrões de código | 1.0/1 | ✅ |

@@ -1,7 +1,22 @@
 {
-  "generated_at": 1781068486.0714562,
+  "generated_at": 1781069118.2749774,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "typescript-graphql-mutations: padrões de código",
+      "queries": [
+        "typescript-graphql-mutations pattern code example",
+        "typescript-graphql-mutations"
+      ],
+      "must_find": [
+        "@apollo",
+        "@latest"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-graphql-mutations"
+    },
     {
       "name": "kafka-streams-performance-tuning: producer consumer",
       "queries": [
