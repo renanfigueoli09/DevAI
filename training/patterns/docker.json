@@ -12,12 +12,12 @@
   "qa:docker-mongodb-only": {
     "content": "When user says 'MongoDB only' or 'only MongoDB': docker-compose has ONLY app + mongo:7.0\nNO redis:, NO kafka:, NO nginx: unless explicitly requested\n'only' means ONLY what is mentioned",
     "source": "critical_pattern",
-    "updated_at": 1781063940.1437054
+    "updated_at": 1781064081.2303545
   },
   "qa:mongodb-healthcheck": {
     "content": "MongoDB healthcheck: mongosh --eval db.adminCommand('ping')\ntest: [CMD, mongosh, --eval, db.adminCommand('ping')]\ninterval: 15s | timeout: 10s | retries: 5\nNEVER pg_isready (PostgreSQL) or redis-cli for MongoDB",
     "source": "critical_pattern",
-    "updated_at": 1781063943.6140294
+    "updated_at": 1781064082.6420858
   },
   "docker": {
     "content": "- Use `docker-compose up` to start services.\n- Use `docker-compose down` to stop and remove containers.\n- Configure health checks in `docker-compose.yml` using the `healthcheck` key.\n- Set dependencies between services with `depends_on`.\n- Monitor service readiness with `docker-compose ps`.\n- Update Docker Compose file version to 3.8 or later for latest features.\n- Use `start_period` and `interval` for health check timing adjustments.\n- Consider using `restart: always` for critical services.\n- Integrate Symfony, Nginx, and Postgres in a single `docker-compose.yml`.",
