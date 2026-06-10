@@ -1,0 +1,12 @@
+{
+  "search:Performance Optimization in go-gorm-mysql-indexing:gorm performance tuning": {
+    "content": "- **CLI Commands**: Use `gorm.io/gorm` latest version.\n- **Key Config Options**:\n  - `Preload`: Optimize queries by preloading associations.\n  - `Joins`: Use joins for complex queries to improve performance.\n  - `Raw SQL Queries`: For complex scenarios, use raw SQL for better control and performance.\n  - `Batch Insert/Update`: Use batch operations to reduce database load.\n- **Latest Version**: Ensure using the latest version of GORM for bug fixes and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781060461.3870394
+  },
+  "search:Performance Optimization in go-gorm-mysql-indexing:gorm performance tuning_ex": {
+    "content": "- **GORM Performance Tuning Tips**:\n  - Disable default debug mode to reduce logging overhead.\n  - Use `Preload` instead of `Eager Loading` for better performance in specific cases.\n  - Optimize database connection settings, such as increasing the number of connections.\n\n- **CLI Commands with Exact Flags**:\n  - `gorm-cli migrate --auto-migrate=true`: Automatically migrates schema based on models.\n  - `gorm-cli db:seed`: Seeds the database with initial data.\n\n- **Latest Versions**:\n  - GORM v2.30.0 (as of my last update)\n  - Go 1.19.4 (latest stable version)\n\n- **Key Config Options**:\n  - `gorm.Config{Logger: logger.New(...)}`: Customizes the logging behavior.\n  - `db.DB().SetMaxIdleConns(10)`: Sets the maximum number of idle connections in the pool.\n  - `db.DB().SetMaxOpenConns(100)`: Sets the maximum number of open connections to the database.",
+    "source": "code_example",
+    "updated_at": 1781060478.7630553
+  }
+}

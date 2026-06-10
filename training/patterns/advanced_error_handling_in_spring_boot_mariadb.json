@@ -1,0 +1,17 @@
+{
+  "search:Advanced Error Handling in Spring Boot + MariaDB:spring boot error handling": {
+    "content": "- Use `@ExceptionHandler` to handle exceptions at the controller level.\n- Utilize `@ControllerAdvice` for global exception handling across all controllers.\n- Implement custom error responses using `ResponseEntity`.\n- Configure error logging with Spring Boot's built-in logging framework.\n- Enable error details in development mode by setting `server.error.include-message=always`.\n- Use `@ResponseStatus` to specify HTTP status codes for exceptions.\n- Integrate with third-party libraries like Spring Security for enhanced security.\n- Monitor errors using tools like Prometheus and Grafana.\n- Update Spring Boot to the latest version for bug fixes and new features.",
+    "source": "web_search",
+    "updated_at": 1781060340.977478
+  },
+  "search:Advanced Error Handling in Spring Boot + MariaDB:spring boot error handling_ex": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` annotations to handle exceptions globally.\n- Implement `ErrorController` for custom error handling in browsers.\n- Set `server.error.include-stacktrace=never` in `application.properties` to hide stack traces.\n- Utilize Spring Boot's auto-configured error page (`Whitelabel Error Page`) for HTML requests.\n- For RESTful services, return JSON responses with error details.\n- Use `@ResponseStatus` and `@ResponseBody` annotations on exception classes.\n- Implement custom exception handlers for specific exceptions.\n- Configure error handling in `application.yml` or `application.properties`.\n- Ensure consistent error response format across the application.",
+    "source": "code_example",
+    "updated_at": 1781060357.778574
+  },
+  "search:Advanced Error Handling in Spring Boot + MariaDB:mariadb exception management": {
+    "content": "- Use `DECLARE HANDLER` to manage exceptions in MariaDB procedures.\n- Implement `CONTINUE` or `EXIT` handlers within a procedure block.\n- For Python, use `try-except` blocks with `mariadb.connect()` to catch and handle exceptions.\n- Check MariaDB documentation for the latest versions and handler syntax.\n- Ensure correct user credentials and permissions in connection strings.\n- Use `SHOW ERRORS` or `SHOW WARNINGS` after procedures to diagnose issues.",
+    "source": "web_search",
+    "updated_at": 1781060365.428301
+  }
+}

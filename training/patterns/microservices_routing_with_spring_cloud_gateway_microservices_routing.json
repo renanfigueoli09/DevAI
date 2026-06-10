@@ -1,0 +1,22 @@
+{
+  "search:Microservices Routing with spring-cloud-gateway-microservices-routing:spring cloud gateway routing": {
+    "content": "- **CLI Commands**:\n  - `spring cloud gateway route add <route-name> --uri=<target-uri>`\n  - `spring cloud gateway filter add <filter-name>`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.2.0.RELEASE\n\n- **Key Config Options**:\n  - `server.port`: Port number for the gateway.\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for a route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI to forward requests.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match incoming requests (e.g., Path=/api/**).\n  - `spring.cloud.gateway.filters[0].name`: Name of the filter to apply (e.g., AddRequestHeader).",
+    "source": "web_search",
+    "updated_at": 1781060529.095018
+  },
+  "search:Microservices Routing with spring-cloud-gateway-microservices-routing:spring cloud gateway routing_ex": {
+    "content": "- **CLI Commands**: \n  - `cf create-route <space> <domain> --path <path>`\n  - `cf map-route <app> <space> <domain> --path <path>`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.0.x\n  - Spring Boot: 2.7.x\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Target URI\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Routing Predicate (e.g., Path=/example)\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter (e.g., RewritePath=/example/(?<segment>.*), /$\\{segment})",
+    "source": "code_example",
+    "updated_at": 1781060535.1245587
+  },
+  "search:Microservices Routing with spring-cloud-gateway-microservices-routing:microservices architecture pat": {
+    "content": "- **CLI Commands**: Use `docker-compose up` to start services.\n- **Latest Versions**: Check [Docker](https://docs.docker.com/engine/release-notes/) and [Kubernetes](https://kubernetes.io/releases/) for the latest versions.\n- **Key Config Options**:\n  - Docker: `docker run --network host`\n  - Kubernetes: `kubectl apply -f deployment.yaml`",
+    "source": "web_search",
+    "updated_at": 1781060542.1291456
+  },
+  "search:Microservices Routing with spring-cloud-gateway-microservices-routing:microservices architecture pat_ex": {
+    "content": "- **CLI Commands**: Use `docker-compose up` to start services.\n- **Latest Versions**: Ensure using the latest stable version of Docker and Kubernetes.\n- **Key Config Options**:\n  - `service_name`: Define service names in your `docker-compose.yml`.\n  - `replicas`: Specify number of replicas for each microservice.\n  - `network_mode`: Use `overlay` network for better communication between services.",
+    "source": "code_example",
+    "updated_at": 1781060548.5121758
+  }
+}

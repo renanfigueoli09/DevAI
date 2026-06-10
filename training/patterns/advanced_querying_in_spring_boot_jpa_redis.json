@@ -1,0 +1,22 @@
+{
+  "search:Advanced Querying in spring-boot+jpa-redis:jpa advanced querying": {
+    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run Spring Boot applications.\n- **Latest Versions**: Ensure using the latest Spring Data JPA and Hibernate versions for optimal performance and features.\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for development environments.\n  - `spring.jpa.show-sql`: Enable to log SQL queries in console for debugging.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect for Hibernate.",
+    "source": "web_search",
+    "updated_at": 1781060563.5843825
+  },
+  "search:Advanced Querying in spring-boot+jpa-redis:jpa advanced querying_ex": {
+    "content": "- **GitHub Repository**: [indrabasak/jpa-postgres-advanced](https://github.com/indrabasak/jpa-postgres-advanced) for advanced JPA examples with PostgreSQL.\n  \n- **Spring Boot Example**: Use `@Query` and `@Procedure` annotations for custom queries and stored procedures in Spring Data JPA.\n\n- **Mastering JPA Guide**: Follow the guide on [Towards Dev](https://www.towardsdev.com/mastering-jpa-in-spring-boot-a-comprehensive-guide-9b2e7c8f3a51) for comprehensive learning on JPA in Spring Boot, including advanced querying and best practices.\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop` for development.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect (e.g., `org.hibernate.dialect.PostgreSQLDialect`).\n\n- **CLI Commands**:\n  - To run a Spring Boot application: `mvn spring-boot:run`\n  - To build a JAR file: `mvn clean package`\n\n- **Latest Versions**:\n  - Ensure you are using the latest versions of Spring Boot, Hibernate, and PostgreSQL JDBC driver to take advantage of new features and bug fixes.",
+    "source": "code_example",
+    "updated_at": 1781060572.883691
+  },
+  "search:Advanced Querying in spring-boot+jpa-redis:redis caching strategies": {
+    "content": "- **CLI Commands**: Use `redis-cli` to interact with Redis.\n  - Example: `redis-cli set mykey \"Hello, Redis!\"`\n  \n- **Latest Versions**: Ensure you are using the latest stable version of Redis for optimal performance and security.\n  - Check updates at [Redis official website](https://redis.io/download).\n\n- **Key Config Options**:\n  - `maxmemory`: Set a limit on memory usage to prevent out-of-memory errors.\n    - Example: `maxmemory 256mb`\n  - `maxmemory-policy`: Define eviction policy when maxmemory is reached.\n    - Example: `maxmemory-policy allkeys-lru` (Least Recently Used)\n  \n- **Advanced Patterns**:\n  - Use Redis Streams for real-time data feeds and event sourcing.\n  - Implement Redis Pub/Sub for messaging and broadcasting.\n  \n- **Performance Tips**:\n  - Use pipelining to batch multiple commands into a single network round trip.\n    - Example: `redis-cli --pipe < mycommands.txt`\n  - Monitor memory usage with `INFO memory` command to adjust configurations accordingly.",
+    "source": "web_search",
+    "updated_at": 1781060585.3470693
+  },
+  "search:Advanced Querying in spring-boot+jpa-redis:redis caching strategies_ex": {
+    "content": "- Use `redis-cli` for interacting with Redis.\n- For write-through caching, use the `SET` command to update data in both cache and database simultaneously.\n- Ensure Redis is up-to-date by checking the latest version on the official Redis website.\n- Key config options include `maxmemory`, `maxmemory-policy`, and `timeout`.\n- Use `redis-cli --scan` for scanning keys in a Redis database.\n- For distributed caching, consider using Redis Cluster or Redis Sentinel.\n- Implement `EXPIRE` to set an expiration time on cache entries.\n- Monitor Redis performance with commands like `INFO` and `MONITOR`.",
+    "source": "code_example",
+    "updated_at": 1781060598.9223483
+  }
+}

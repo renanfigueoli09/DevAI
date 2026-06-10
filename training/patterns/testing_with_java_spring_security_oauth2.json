@@ -1,0 +1,22 @@
+{
+  "search:Testing with java-spring-security-oauth2:oauth2 testing strategies": {
+    "content": "- **CLI Commands**: Use `curl` or Postman to simulate OAuth2 requests.\n- **Latest Versions**: Ensure using OAuth2 v2.0 for the most secure practices.\n- **Key Config Options**:\n  - `client_id`: Your application's unique identifier.\n  - `client_secret`: Secret key for your application.\n  - `redirect_uri`: URL where the authorization server sends the user back after granting access.\n  - `scope`: Permissions requested by the client.\n  - `grant_type`: Type of grant, e.g., `authorization_code`, `refresh_token`.",
+    "source": "web_search",
+    "updated_at": 1781060403.4435093
+  },
+  "search:Testing with java-spring-security-oauth2:oauth2 testing strategies_ex": {
+    "content": "- Use `rest-assured` for testing OAuth2 flows.\n- Example command: `curl -X POST \"https://oauth.example.com/token\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"grant_type=authorization_code&code=CODE&redirect_uri=REDIRECT_URI&client_id=CLIENT_ID&client_secret=CLIENT_SECRET\"`\n- Latest versions of tools:\n  - `rest-assured`: 4.5.1\n  - Postman: 9.20.7\n- Key config options for OAuth2 testing:\n  - `grant_type`: Specifies the type of grant being used (e.g., authorization_code, client_credentials).\n  - `code`: The authorization code received from the authorization server.\n  - `redirect_uri`: Must match the redirect URI registered with the application.\n  - `client_id`: Unique identifier for the client application.\n  - `client_secret`: Secret key known only to the application and the authorization server.",
+    "source": "code_example",
+    "updated_at": 1781060412.5703044
+  },
+  "search:Testing with java-spring-security-oauth2:spring security unit tests": {
+    "content": "- Use `@WithMockUser` for mock authentication in unit tests.\n- Employ `@MockBean` to simulate security-specific dependencies like `SecurityContextHolder`.\n- For CSRF protection, include a dummy value in the '_csrf' parameter in your requests.\n- Ensure you are using the latest version of Spring Security and JUnit for compatibility.",
+    "source": "web_search",
+    "updated_at": 1781060429.2031636
+  },
+  "search:Testing with java-spring-security-oauth2:spring security unit tests_ex": {
+    "content": "- Use `@WebMvcTest` or `@SpringBootTest` for testing Spring Security configurations.\n- For unit tests, focus on testing individual components like filters and authentication managers.\n- Utilize `MockMvc` for simulating HTTP requests in controller tests.\n- Employ `SecurityMockMvcRequestPostProcessors` to set up security context.\n- Ensure you have the latest version of Spring Security (5.7.x as of my last update).\n- Key config options include `http.authorizeRequests()`, `http.csrf().disable()`, and `http.formLogin()`.\n\nFor more detailed guidance, refer to the provided links for practical examples and best practices.",
+    "source": "code_example",
+    "updated_at": 1781060454.5238695
+  }
+}
