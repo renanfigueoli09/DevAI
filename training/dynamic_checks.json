@@ -1,7 +1,37 @@
 {
-  "generated_at": 1781084857.48116,
+  "generated_at": 1781085542.9664407,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "typescript-jest-unit-testing: padrões de código",
+      "queries": [
+        "typescript-jest-unit-testing pattern code example",
+        "typescript-jest-unit-testing"
+      ],
+      "must_find": [
+        "@testing",
+        "@types"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-jest-unit-testing"
+    },
+    {
+      "name": "GraphQL with Apollo Server: padrões de código",
+      "queries": [
+        "GraphQL with Apollo Server pattern code example",
+        "GraphQL with Apollo Server"
+      ],
+      "must_find": [
+        "@nestjs",
+        "@apollo"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "GraphQL with Apollo Server"
+    },
     {
       "name": "Spring Boot  +  MySQL  +  Spring Data JPA: padrões de código",
       "queries": [
