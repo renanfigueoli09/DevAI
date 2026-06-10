@@ -1,0 +1,22 @@
+{
+  "search:nextjs+vercel-deployment:deploying next.js applications": {
+    "content": "- **CLI Commands**: `vercel login`, `vercel`, `vercel --prod`\n- **Latest Version**: As of my last update, the latest version is Vercel CLI v28.0.0.\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations like asset paths, environment variables, and more.\n  - `vercel.json`: For project-specific settings such as build output directory, routes, and redirects.\n  - Environment Variables: Set in the Vercel dashboard or through `.env` files for different environments (development, preview, production).",
+    "source": "web_search",
+    "updated_at": 1781076249.0565014
+  },
+  "search:nextjs+vercel-deployment:deploying next.js applications_ex": {
+    "content": "- **CLI Commands**:\n  - To create a new Next.js project: `npx create-next-app@latest my-project`\n  - To deploy to Vercel: `vercel`\n\n- **Latest Versions**:\n  - Next.js: 16.x\n  - Vercel CLI: latest\n\n- **Key Config Options**:\n  - `next.config.js`: For custom configurations like asset paths, environment variables.\n  - `vercel.json`: For Vercel-specific settings such as routes and headers.",
+    "source": "code_example",
+    "updated_at": 1781076254.0695088
+  },
+  "search:nextjs+vercel-deployment:advanced vercel deployment str": {
+    "content": "- Use `vercel` CLI for deployment.\n- Ensure Next.js version is up-to-date, typically the latest LTS release.\n- Configure `vercel.json` for advanced settings like environment variables and build configurations.\n- Utilize Vercel's Speed Insights for performance monitoring.\n- For private submodules in TurboRepo projects, set submodule permissions to public or adjust authentication methods accordingly.\n- Ensure proper Git configuration for submodule dependencies before deployment.",
+    "source": "web_search",
+    "updated_at": 1781076263.4216232
+  },
+  "search:nextjs+vercel-deployment:advanced vercel deployment str_ex": {
+    "content": "- **CLI Commands**:\n  - `vercel login`: Log in to Vercel.\n  - `vercel deploy`: Deploy your Next.js application.\n  - `vercel env add <env-name> --type secret`: Add a secret environment variable.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Next.js and Vercel CLI for optimal performance and security.\n\n- **Key Config Options**:\n  - `next.config.js`: Configure your application settings such as asset prefixes, output file names, and more.\n  - Environment Variables: Use `.env.local` or Vercel UI to manage environment variables securely.\n  - Edge Functions: Leverage Vercel's Edge Functions for serverless functions at the edge.\n\n- **Optimization Tips**:\n  - Enable `serverlessFunctionsInlinedSizeLimit` in `next.config.js` to optimize function size.\n  - Use `vercel.json` for advanced deployment configurations, such as custom routes and headers.",
+    "source": "code_example",
+    "updated_at": 1781076269.796108
+  }
+}
