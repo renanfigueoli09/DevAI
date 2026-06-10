@@ -1,0 +1,32 @@
+{
+  "search:Testing React Query + TypeScript:react query testing typescript": {
+    "content": "- **Latest Version of `react-query-testing`:** 1.1.0\n- **Key Config Options:** Use `parametrized testing` with different methods (idiomatic, reactive, chimeric).\n- **CLI Commands:**\n  - Install `react-query-testing`:\n    ```bash\n    npm install react-query-testing@latest\n    ```\n  - Run tests using Jest and React Testing Library:\n    ```bash\n    npx jest --watchAll\n    ```\n- **Global Configuration:** Define a utility file to re-export everything from React Testing Library for global use.\n- **Example Usage in Test File:**\n  ```typescript\n  import { render, screen } from 'react-query-testing';\n  import { useQuery } from 'react-query';\n\n  const fetchData = async () => {\n    const response = await fetch('https://api.example.com/data');\n    return response.json();\n  };\n\n  const DataComponent = () => {\n    const { data, isLoading, error } = useQuery('data', fetchData);\n\n    if (isLoading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error.message}</div>;\n\n    return (\n      <div>\n        <h1>Data</h1>\n        <pre>{JSON.stringify(data, null, 2)}</pre>\n      </div>\n    );\n  };\n\n  test('fetches data and displays it', async () => {\n    render(<DataComponent />);\n    expect(screen.getByText(/loading/i)).toBeInTheDocument();\n    await screen.findByText(/data/i);\n  });\n  ```",
+    "source": "web_search",
+    "updated_at": 1781069654.4630058
+  },
+  "search:Testing React Query + TypeScript:react query testing typescript_ex": {
+    "content": "- **GitHub Repository**: [devffex/react-query-implementations](https://github.com/devffex/react-query-implementations)\n- **Testing Library for React Query**:\n  - Install `@testing-library/react` and `@testing-library/jest-dom`.\n  - Use `renderHook` from `@testing-library/react-hooks` to test custom hooks.\n- **Latest Versions**:\n  - React Query: [v4.0.0](https://react-query.tanstack.com/docs/v4)\n  - Axios: [v1.5.1](https://axios-http.com/docs/intro)\n  - TypeScript: [v5.0.2](https://www.typescriptlang.org/)\n- **Key Config Options**:\n  - `useQuery`: `queryKey`, `queryFn`, `options` (e.g., `refetchInterval`, `staleTime`, `cacheTime`).\n  - `useMutation`: `mutationFn`, `options` (e.g., `onSuccess`, `onError`, `onSettled`).\n  - `useQueryClient`: For manual data fetching and updating.\n- **CLI Commands**:\n  - `npm install @testing-library/react @testing-library/jest-dom @testing-library/react-hooks`\n  - `npx create-react-app my-app --template typescript`\n\nThese actionable facts should help developers effectively test React Query implementations with TypeScript.",
+    "source": "code_example",
+    "updated_at": 1781069674.5440161
+  },
+  "search:Testing React Query + TypeScript:typescript testing strategies": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `npx ts-jest config:init`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - TypeScript: 4.8\n\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\" for DOM testing.\n  - `transform`: `{ \".+\\\\.ts$\": \"ts-jest\" }` to transpile TypeScript files with Jest.\n  - `setupFilesAfterEnv`: [\"./jest.setup.ts\"] for setup files after environment initialization.",
+    "source": "web_search",
+    "updated_at": 1781069692.05217
+  },
+  "search:Testing React Query + TypeScript:typescript testing strategies_ex": {
+    "content": "- **CLI Commands**:\n  - `jest`: Run tests.\n  - `jest --coverage`: Generate test coverage report.\n\n- **Latest Versions**:\n  - Jest: Version 29.x\n\n- **Key Config Options**:\n  - `testEnvironment`: Set the testing environment (e.g., \"jsdom\").\n  - `transformIgnorePatterns`: Ignore patterns for transpiling.\n  - `setupFilesAfterEnv`: Files to run after setting up the test environment.",
+    "source": "code_example",
+    "updated_at": 1781069696.8608549
+  },
+  "search:Testing React Query + TypeScript:unit testing react query": {
+    "content": "- **Turn off retries in tests**: Use `queryClient.setQueryDefaults` to set `retry: false`.\n- **Latest version of React Query**: As of my last update, the latest stable version is v4.x.\n- **Key config options**:\n  - `retry`: Controls the number of retries on failed queries. Set to `false` in tests.\n  - `refetchOnWindowFocus`: Prevents refetching data when the window regains focus.\n  - `staleTime`: Defines how long a query result is considered fresh.\n\nExample CLI command:\n```bash\nnpm install @tanstack/react-query@latest\n```\n\nExample code snippet to turn off retries in tests:\n```javascript\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\nimport React from 'react';\n\nconst queryClient = new QueryClient({\n  defaultOptions: {\n    queries: {\n      retry: false,\n    },\n  },\n});\n\nfunction App() {\n  return (\n    <QueryClientProvider client={queryClient}>\n      {/* Your application components */}\n    </QueryClientProvider>\n  );\n}\n\nexport default App;\n```",
+    "source": "web_search",
+    "updated_at": 1781069708.9871051
+  },
+  "search:Testing React Query + TypeScript:unit testing react query_ex": {
+    "content": "- Install `@testing-library/react-hooks` and `react-query`\n- Use `renderHook` from `@testing-library/react-hooks` to test custom hooks\n- Import `useQuery` from `react-query` in your tests\n- Mock the query function using Jest's `jest.fn()`\n- Assert on the result of the hook using `result.current`\n- Use `waitFor` for asynchronous operations\n- Ensure proper cleanup with `unmount` or `cleanupAfterEach`",
+    "source": "code_example",
+    "updated_at": 1781069716.655499
+  }
+}

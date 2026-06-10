@@ -1,0 +1,22 @@
+{
+  "search:Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream:error handling kafka": {
+    "content": "- Use `ErrorHandlingDeserializer` to handle bad records.\n- Implement `DeadLetterPublishingRecoverer` to send messages to a Dead Letter Topic (DLT).\n- Configure Kafka consumer with `enable.auto.commit=false` and `auto.offset.reset=earliest`.\n- Set `max.poll.records` to control the number of records processed in one poll.\n- Use `retries` and `retry.backoff.ms` for retrying failed messages.\n- Implement custom error handling logic using `CommonErrorHandler`.\n- Monitor Kafka consumer metrics using JMX or Prometheus.\n- Update Kafka client libraries to the latest version for bug fixes and improvements.",
+    "source": "web_search",
+    "updated_at": 1781069598.5927744
+  },
+  "search:Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream:error handling kafka_ex": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh --bootstrap-server <broker> --describe` to describe topics.\n- **Latest Versions**: Apache Kafka 3.9.0 introduced the `processing.exception.handler` configuration property for managing processing exceptions.\n- **Key Config Options**:\n  - `processing.exception.handler`: Specifies a custom exception handler class.\n  - `auto.offset.reset`: Controls what happens when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g., because data has been deleted).\n  - `enable.auto.commit`: If set to true, the consumer's offset will be periodically committed in the background.",
+    "source": "code_example",
+    "updated_at": 1781069608.2953598
+  },
+  "search:Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream:kafka error handling patterns": {
+    "content": "- **CLI Commands**:\n  - `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group>`\n  - `kafka-topics.sh --bootstrap-server <broker> --list`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0 (as of my last update)\n  - Spring for Apache Kafka: 2.8.0\n\n- **Key Config Options**:\n  - `auto.offset.reset`: Controls the starting offset if no initial offset is found or if the current offset does not exist anymore on the server.\n  - `enable.auto.commit`: If set to true, the consumer's offset will be periodically committed in the background.\n  - `max.poll.records`: The maximum number of records returned in a single call to poll().",
+    "source": "web_search",
+    "updated_at": 1781069630.7955625
+  },
+  "search:Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream:kafka error handling patterns_ex": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-console-producer.sh --broker-list <broker> --topic <topic_name>`\n  - `kafka-console-consumer.sh --bootstrap-server <broker> --topic <topic_name> --from-beginning`\n\n- **Latest Versions**:\n  - Apache Kafka: 3.0.0\n  - Spring Boot: 2.5.4\n\n- **Key Config Options**:\n  - `retry.backoff.ms`: Time to wait before retrying a failed message.\n  - `max.poll.records`: Maximum number of records returned in a single poll call.\n  - `enable.auto.commit`: Whether the consumer's offset should be automatically committed.",
+    "source": "code_example",
+    "updated_at": 1781069642.653336
+  }
+}

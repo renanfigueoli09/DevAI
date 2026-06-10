@@ -1,0 +1,22 @@
+{
+  "search:CI/CD with GitHub Actions for Spring-Boot-Kafka-Spring-Cloud-Stream:github actions ci cd": {
+    "content": "- **CLI Commands**:\n  - `gh actions run <workflow_id>`\n  - `gh actions list`\n  \n- **Latest Versions**:\n  - GitHub Actions: Version 2.x\n  - AWS CodeDeploy: Latest stable version\n  \n- **Key Config Options**:\n  - Workflow file location: `.github/workflows/`\n  - Event triggers (e.g., `on: [push, pull_request]`)\n  - Jobs and steps configuration\n  - Environment variables\n  - Secrets management",
+    "source": "web_search",
+    "updated_at": 1781069723.8177454
+  },
+  "search:CI/CD with GitHub Actions for Spring-Boot-Kafka-Spring-Cloud-Stream:spring boot ci cd": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker run -p 8080:8080 <image-name>` to run a Docker container.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Maven: 3.9.5\n  - Docker: 20.10.7\n\n- **Key Config Options**:\n  - `application.properties` for environment-specific settings.\n  - `pom.xml` for project dependencies and build configurations.\n  - `.github/workflows/ci-cd.yml` for GitHub Actions CI/CD pipeline configuration.",
+    "source": "web_search",
+    "updated_at": 1781069756.086626
+  },
+  "search:CI/CD with GitHub Actions for Spring-Boot-Kafka-Spring-Cloud-Stream:spring boot ci cd_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build and test the project.\n  - `git push origin main` to trigger CI/CD pipeline.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE\n  - Maven: 4.0.0\n  - GitHub Actions: Latest version\n\n- **Key Config Options**:\n  - In `pom.xml`, configure `<plugin>` for Maven Surefire Plugin.\n  - In `.github/workflows/ci.yml`, define jobs for build, test, and deploy stages.\n  - Set environment variables in GitHub Secrets for sensitive information.",
+    "source": "code_example",
+    "updated_at": 1781069764.0783753
+  },
+  "search:CI/CD with GitHub Actions for Spring-Boot-Kafka-Spring-Cloud-Stream:kafka ci cd": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh` to manage topics.\n- **Latest Version**: Kafka 3.4.0 as of my last update.\n- **Key Config Options**:\n  - `bootstrap.servers`: List of brokers to connect to.\n  - `key.deserializer`: Deserializer for keys.\n  - `value.deserializer`: Deserializer for values.\n  - `auto.offset.reset`: Controls the starting position if no initial offset is found.",
+    "source": "web_search",
+    "updated_at": 1781069776.8389478
+  }
+}

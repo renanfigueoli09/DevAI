@@ -1,0 +1,22 @@
+{
+  "search:Performance Optimization in NextJS + Prisma:prisma optimization strategies": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Creates a new migration and applies it to the database.\n\n- **Latest Versions**:\n  - Prisma: [Check latest version on npm](https://www.npmjs.com/package/prisma)\n  - Prisma Optimize: [Check latest version on Prisma Platform](https://pris.ly/docs/prisma-optimize)\n\n- **Key Config Options**:\n  - `datasource`: Defines the database connection.\n    ```json\n    datasource db {\n      provider = \"postgresql\"\n      url      = env(\"DATABASE_URL\")\n    }\n    ```\n  - `generator client`: Configuration for Prisma Client generation.\n    ```json\n    generator client {\n      provider = \"prisma-client-js\"\n    }\n    ```\n\n- **Performance Optimization Tips**:\n  - Use `select` and `include` to fetch only necessary data.\n  - Utilize `where`, `orderBy`, and `take` for efficient querying.\n  - Implement connection pooling in your application.\n\n- **Advanced Techniques**:\n  - Enable Prisma Optimize for AI-powered query performance analysis.\n    ```bash\n    prisma optimize enable\n    ```\n\n- **Caching Strategies**:\n  - Use Redis or Memcached to cache frequently accessed data.\n  - Configure Prisma Client to use caching mechanisms where applicable.\n\n- **Connection Pooling**:\n  - Set up connection pooling in your application server (e.g., Node.js with `pg` package).\n    ```javascript\n    const { Pool } = require('pg');\n    const pool = new Pool({\n      user: 'your_user',\n      host: 'localhost',\n      database: 'your_database',\n      password: 'your_password',\n      port: 5432,\n    });\n    ```\n\n- **Security Best Practices**:\n  - Use environment variables for sensitive data like `DATABASE_URL`.\n  - Regularly update Prisma and its dependencies to patch security vulnerabilities.\n\n- **Deployment Considerations**:\n  - Deploy Prisma Client in a way that minimizes cold start times.\n  - Monitor performance metrics and adjust configurations as needed.",
+    "source": "web_search",
+    "updated_at": 1781069816.5763216
+  },
+  "search:Performance Optimization in NextJS + Prisma:prisma optimization strategies_ex": {
+    "content": "- **CLI Commands**: Use `prisma optimize` to analyze and optimize queries.\n- **Latest Version**: Check the [GitHub repository](https://github.com/prisma/prisma-examples/tree/latest/optimize/starter) for the most recent version.\n- **Key Config Options**:\n  - `connectionLimit`: Set the maximum number of connections in the pool.\n  - `queryCacheSize`: Define the size of the query cache.\n  - `logLevel`: Adjust logging verbosity (e.g., `info`, `warn`, `error`).",
+    "source": "code_example",
+    "updated_at": 1781069824.6154156
+  },
+  "search:Performance Optimization in NextJS + Prisma:database performance tuning": {
+    "content": "- Use `EXPLAIN` to analyze query performance.\n- Update statistics with `ANALYZE TABLE`.\n- Implement indexing on frequently queried columns.\n- Adjust buffer cache size using `DB_BLOCK_SIZE` and `SGA_TARGET`.\n- Enable parallel execution with `PARALLEL_DEGREE_POLICY`.\n- Monitor resource usage with `V$RESOURCE_LIMIT` and `V$SYSMETRIC`.\n- Use `SQL Tuning Advisor` for automated tuning recommendations.\n- Update Oracle to the latest version for performance improvements.\n- Configure `PGA_AGGREGATE_TARGET` for better memory management.\n- Regularly review and optimize SQL queries.",
+    "source": "web_search",
+    "updated_at": 1781069835.0578802
+  },
+  "search:Performance Optimization in NextJS + Prisma:database performance tuning_ex": {
+    "content": "- Use `EXPLAIN` to analyze query performance.\n- Implement single-column indexes on frequently queried columns.\n- Update PostgreSQL to the latest version for performance improvements.\n- Configure MySQL's buffer pool size based on available memory.\n- Utilize MTR (`mysql-test-run.pl`) for comprehensive testing and debugging.\n- Adjust `work_mem` in PostgreSQL for better sorting and hashing operations.\n- Enable query caching in MySQL for repetitive queries.\n- Monitor and adjust `innodb_buffer_pool_size` in MySQL.\n- Use `pg_stat_statements` extension to track and analyze PostgreSQL query performance.",
+    "source": "code_example",
+    "updated_at": 1781069844.3357625
+  }
+}
