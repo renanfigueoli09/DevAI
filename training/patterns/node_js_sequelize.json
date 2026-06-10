@@ -1,0 +1,27 @@
+{
+  "search:Node.js + Sequelize:node.js sequelize orm crud 202": {
+    "content": "- **CLI Commands**: Use `npx sequelize-cli init` to initialize Sequelize in your project.\n- **Latest Versions**: Ensure you are using the latest version of Sequelize and its dependencies by running `npm update sequelize pg sqlite3`.\n- **Key Config Options**:\n  - `database`: Name of the database.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `host`: Hostname or IP address of the database server.\n  - `dialect`: Type of SQL dialect (e.g., 'postgres', 'mysql', 'sqlite').\n- **Many to Many Relationships**: Use `belongsToMany` method in Sequelize models to define many-to-many relationships.\n- **CRUD Operations**:\n  - Create: Use `.create()` method on a model instance.\n  - Read: Use `.findAll()`, `.findOne()`, or `.findByPk()` methods.\n  - Update: Use `.update()` method on a model instance.\n  - Delete: Use `.destroy()` method on a model instance.",
+    "source": "web_search",
+    "updated_at": 1781078722.1901088
+  },
+  "search:Node.js + Sequelize:node.js sequelize orm crud 202_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install sequelize --save`\n  - `npm install pg pg-hstore --save`\n\n- **Latest Versions**:\n  - Sequelize: 6.x\n  - PostgreSQL Driver: pg@8.x\n\n- **Key Config Options**:\n  - `host`: Database host (e.g., 'localhost')\n  - `port`: Database port (e.g., 5432)\n  - `username`: Database username\n  - `password`: Database password\n  - `database`: Database name",
+    "source": "code_example",
+    "updated_at": 1781078730.4111753
+  },
+  "search:Node.js + Sequelize:node.js sequelize migrations 2": {
+    "content": "- **CLI Commands**:\n  - `npx sequelize-cli init`\n  - `npx sequelize-cli db:migrate`\n  - `npx sequelize-cli migration:generate --name migration-skeleton`\n\n- **Latest Versions**:\n  - Node.js: 16.17.0\n  - Sequelize CLI: 6.4.1\n  - ORM: 6.21.6\n\n- **Key Config Options**:\n  - `config.json`: Contains database connection settings.\n  - `models/index.js`: Automatically generated to include all models.\n  - Migration files in the `migrations` directory, which define changes to the database schema.",
+    "source": "web_search",
+    "updated_at": 1781078741.5705462
+  },
+  "search:Node.js + Sequelize:node.js sequelize migrations 2_ex": {
+    "content": "- **CLI Commands**: \n  - `npx sequelize-cli init` to initialize Sequelize.\n  - `npx sequelize-cli model:create --name User --attributes firstName:string,lastName:string` to create a new model.\n  - `npx sequelize-cli migration:generate --name add-email-to-users` to generate a migration file.\n  - `npx sequelize-cli db:migrate` to apply migrations.\n  - `npx sequelize-cli db:migrate:undo` to undo the last migration.\n\n- **Latest Versions**:\n  - Sequelize CLI: v7.0.0\n  - Umzug: v3.0.0\n\n- **Key Config Options**:\n  - `config/config.json`: Contains database connection settings.\n  - `models/index.js`: Defines model associations and exports models.\n  - `migrations/xxxx_xx_xx_create_users.js`: Migration file template for creating tables.\n  - `seeders/xxxx_xx_xx_create_users.js`: Seeder file template for populating the database.",
+    "source": "code_example",
+    "updated_at": 1781078747.7221544
+  },
+  "search:Node.js + Sequelize:node.js sequelize performance ": {
+    "content": "- **CLI Commands:** Use `npm install sequelize@latest` to update Sequelize.\n- **Latest Version:** As of my last update, the latest version is v6.x.x. Check [Sequelize's official GitHub page](https://github.com/sequelize/sequelize) for the most current version.\n- **Key Config Options:**\n  - `pool`: Configure connection pool settings to manage database connections efficiently.\n    ```javascript\n    {\n      pool: {\n        max: 5,\n        min: 0,\n        acquire: 30000,\n        idle: 10000\n      }\n    }\n    ```\n  - `logging`: Set to `false` in production environments to disable query logging.\n    ```javascript\n    {\n      logging: false\n    }\n    ```\n  - `dialectOptions`: Use specific options for different database dialects, e.g., `ssl` for PostgreSQL.\n    ```javascript\n    {\n      dialectOptions: {\n        ssl: true\n      }\n    }\n    ```\n- **Performance Optimization Tips:**\n  - Use raw queries when possible to bypass ORM overhead.\n  - Index your database tables to speed up query execution.\n  - Batch updates and deletes instead of individual operations.\n  - Monitor and analyze query performance using Sequelize's built-in logging or external tools like `pg_stat_statements` for PostgreSQL.",
+    "source": "web_search",
+    "updated_at": 1781078761.6741128
+  }
+}
