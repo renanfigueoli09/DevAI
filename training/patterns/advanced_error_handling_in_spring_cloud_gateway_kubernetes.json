@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Spring Cloud Gateway Kubernetes:spring cloud gateway error han": {
+    "content": "- **CLI Commands**: \n  - `./gradlew build` to build the project.\n  - `./mvnw clean install` for Maven projects.\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.4.x\n  - Spring Security: 5.7.x\n  - OAuth2 Resource Server: 0.2.x\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the route.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/example/**.\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter to modify request or response, e.g., StripPrefix=1.\n\n- **Error Handling**:\n  - Implement custom error handlers by extending `GlobalErrorAttributes`.\n  - Use `ErrorWebExceptionHandler` for more granular control over error responses.\n  - Configure global error handling in `application.yml` or `application.properties`.\n\n- **Authentication and Authorization**:\n  - Use `spring.cloud.gateway.security.authentication-provider` to configure authentication providers.\n  - Implement OAuth2 Resource Server by adding dependencies and configuring properties.\n\n- **Troubleshooting**:\n  - Check logs for detailed error messages.\n  - Ensure all services are up and running.\n  - Verify network configurations between components.",
+    "source": "web_search",
+    "updated_at": 1781060883.1325874
+  },
+  "search:Advanced Error Handling in Spring Cloud Gateway Kubernetes:spring cloud gateway error han_ex": {
+    "content": "- Use `@ControllerAdvice` and `@ExceptionHandler` to handle exceptions globally in Spring Cloud Gateway.\n- For the latest version, check [Spring Cloud Gateway's official repository](https://github.com/spring-cloud/spring-cloud-gateway).\n- Key config options include:\n  - `spring.cloud.gateway.routes[0].id`\n  - `spring.cloud.gateway.routes[0].uri`\n  - `spring.cloud.gateway.routes[0].predicates[0]`\n  - `spring.cloud.gateway.routes[0].filters[0]`",
+    "source": "code_example",
+    "updated_at": 1781060888.0032651
+  },
+  "search:Advanced Error Handling in Spring Cloud Gateway Kubernetes:kubernetes error management": {
+    "content": "- Use `kubectl describe` to get detailed information about pods, nodes, and events.\n- Apply fixes using `kubectl apply -f <filename>`.\n- Check API server logs with `kubectl logs <api-server-pod-name>`.\n- Update Kubernetes components to the latest version for bug fixes.\n- Configure resource limits in pod specifications with `resources: {limits: {cpu: \"1\", memory: \"512Mi\"}}`.\n- Use `kubectl get events` to monitor cluster-wide events and errors.\n- Apply network policies using `kubectl apply -f <network-policy-file>`.\n- Check DNS issues with `nslookup <service-name>` or `dig <service-name>`.\n- Utilize Kubernetes Dashboard for visual monitoring and troubleshooting.",
+    "source": "web_search",
+    "updated_at": 1781060898.0007324
+  },
+  "search:Advanced Error Handling in Spring Cloud Gateway Kubernetes:kubernetes error management_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl get events --sort-by=.metadata.creationTimestamp` to view recent Kubernetes events.\n  - `kubectl describe pod <pod-name>` for detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Ensure using the latest version of your Kubernetes client (`kubectl`) and server components to avoid compatibility issues.\n\n- **Key Config Options**:\n  - `imagePullSecrets` in Pod or Deployment configuration to provide credentials for pulling images from private registries.\n  - `resources.requests` and `resources.limits` to manage container resource usage effectively.",
+    "source": "code_example",
+    "updated_at": 1781060915.2556849
+  }
+}

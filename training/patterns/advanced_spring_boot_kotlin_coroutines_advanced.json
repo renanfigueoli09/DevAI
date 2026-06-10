@@ -1,0 +1,27 @@
+{
+  "search:Advanced Spring Boot + Kotlin Coroutines Advanced:spring boot coroutines": {
+    "content": "- Use `./gradlew build` to build your project.\n- Ensure you have the latest version of Kotlin and Spring Boot in your `build.gradle.kts`.\n- Add `implementation(\"org.springframework.boot:spring-boot-starter-webflux\")` for reactive support.\n- Configure OpenTelemetry with `implementation(\"io.opentelemetry.instrumentation:opentelemetry-instrumentation-kotlin-coroutines\")`.\n- Use `@Transactional` and Kotlin coroutines together by ensuring proper coroutine scope management.\n- Benchmark your application using tools like JMeter or Gatling to measure throughput improvements.\n- Key config options include setting up `application.properties` for Spring Boot properties and configuring OpenTelemetry in your main class.",
+    "source": "web_search",
+    "updated_at": 1781061042.2899165
+  },
+  "search:Advanced Spring Boot + Kotlin Coroutines Advanced:kotlin coroutines in spring": {
+    "content": "- **CLI Commands**: Use `./gradlew build` to build your project.\n- **Latest Versions**: Ensure using Kotlin 1.8.x and Spring Boot 2.7.x for compatibility with coroutines.\n- **Key Config Options**:\n  - Enable coroutines in Spring by adding `@EnableCoroutineSupport` annotation.\n  - Configure `TaskExecutor` bean if needed, e.g., `ThreadPoolTaskExecutor`.\n  - Use `@Async` and `@EnableAsync` to enable asynchronous method execution.",
+    "source": "web_search",
+    "updated_at": 1781061090.529777
+  },
+  "search:Advanced Spring Boot + Kotlin Coroutines Advanced:kotlin coroutines in spring_ex": {
+    "content": "- **Add Dependencies**: Include `kotlinx-coroutines-core` and `kotlinx-coroutines-reactor` in your `build.gradle.kts`.\n  \n- **Enable Coroutines**: No specific flag needed; dependencies enable coroutine support.\n\n- **Latest Versions**:\n  - Kotlin: 1.8.x\n  - kotlinx-coroutines-core: 1.6.x\n  - kotlinx-coroutines-reactor: 1.6.x\n\n- **Key Config Options**:\n  - `spring.task.execution.pool.core-size`: Define the core pool size for task execution.\n  - `spring.task.execution.pool.max-size`: Set the maximum pool size for task execution.\n\n- **CLI Commands**: None specific to enabling coroutines in Spring Boot.\n\n- **Example Code Snippet**:\n  ```kotlin\n  import kotlinx.coroutines.*\n  import org.springframework.web.bind.annotation.GetMapping\n  import org.springframework.web.bind.annotation.RestController\n\n  @RestController\n  class CoroutineController {\n\n      @GetMapping(\"/async\")\n      suspend fun asyncEndpoint(): String {\n          return withContext(Dispatchers.IO) {\n              // Simulate I/O operation\n              delay(1000)\n              \"Hello, World!\"\n          }\n      }\n  }\n  ```\n\n- **Comparison**: Coroutines offer a more readable and less error-prone way to handle asynchronous code compared to callbacks.",
+    "source": "code_example",
+    "updated_at": 1781061100.6130662
+  },
+  "search:Advanced Spring Boot + Kotlin Coroutines Advanced:asynchronous programming in sp": {
+    "content": "- Use `@Async` annotation to mark methods that should run asynchronously.\n- Configure the task executor in Spring Boot using `application.properties` or Java configuration.\n- Set the core pool size and max pool size for the task executor.\n- Enable asynchronous support in your application by adding `@EnableAsync` to a configuration class.\n- Use `CompletableFuture` for more complex asynchronous operations.\n- Monitor thread usage with tools like JConsole or VisualVM.\n- Consider using Spring Boot's auto-configured `TaskExecutor`.\n- Update Spring Boot and dependencies regularly for the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1781061108.866418
+  },
+  "search:Advanced Spring Boot + Kotlin Coroutines Advanced:asynchronous programming in sp_ex": {
+    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: Ensure you are using the latest version of Spring Boot and Java for optimal performance and security.\n- **Key Config Options**:\n  - `@Async`: Annotate methods that need to be executed asynchronously.\n  - `CompletableFuture`: Use this class to handle asynchronous results.\n  - `application.properties`/`application.yml`: Configure thread pool settings under `spring.task.execution.pool`.",
+    "source": "code_example",
+    "updated_at": 1781061113.8274567
+  }
+}
