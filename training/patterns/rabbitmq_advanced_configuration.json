@@ -2,11 +2,11 @@
   "search:RabbitMQ Advanced Configuration:rabbitmq best practices": {
     "content": "- **CLI Commands**: Use `rabbitmqctl` to manage RabbitMQ instances.\n  - Example: `rabbitmqctl list_queues`\n  \n- **Latest Versions**: Check the official RabbitMQ website for the latest version.\n  - Example: Version 3.12.0 as of my last update.\n\n- **Key Config Options**:\n  - `vm_memory_high_watermark`: Set to control memory usage.\n    - Example: `{vm_memory_high_watermark, 0.4}`\n  - `log_levels`: Configure logging levels for different modules.\n    - Example: `{log_levels, [{rabbit, info}]}`\n\n- **Queue Design**: Use durable queues for persistent messages.\n  - Example: `queue.declare(queue='my_queue', durable=True)`\n\n- **Message Handling**: Implement message acknowledgment to ensure delivery.\n  - Example: `channel.basic_ack(delivery_tag=method.delivery_tag)`\n\n- **Connection Management**: Reuse connections and channels efficiently.\n  - Example: Use connection pooling libraries like `pika-pool`.\n\n- **Monitoring**: Utilize RabbitMQ management plugin for monitoring.\n  - Example: Enable the management plugin with `rabbitmq-plugins enable rabbitmq_management`.\n\n- **Production-Readiness**: Ensure proper security, logging, and failover configurations.\n  - Example: Configure SSL/TLS for secure connections.\n\n- **High-Throughput**: Use RabbitMQ Streams for high-throughput scenarios.\n  - Example: Create a stream with `rabbitmqctl stream create my_stream`.",
     "source": "web_search",
-    "updated_at": 1781075246.235784
+    "updated_at": 1781075390.6498291
   },
   "search:RabbitMQ Advanced Configuration:rabbitmq best practices_ex": {
     "content": "- **CLI Commands**:\n  - `rabbitmqctl start_app`\n  - `rabbitmqctl stop_app`\n  - `rabbitmqctl status`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.1 (as of my last update)\n\n- **Key Config Options**:\n  - `queue` size\n  - `exchange` type (`direct`, `fanout`, `topic`, `headers`)\n  - `binding_key`\n  - `durable`: Ensures queue survives broker restarts\n  - `auto_delete`: Automatically deletes empty queues",
     "source": "code_example",
-    "updated_at": 1781075247.4962897
+    "updated_at": 1781075391.8425982
   }
 }

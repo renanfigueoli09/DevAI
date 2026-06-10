@@ -1,7 +1,25 @@
 {
-  "generated_at": 1781074616.800606,
+  "generated_at": 1781075308.791084,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "kubernetes-statefulsets-mongodb: não usa TypeORM",
+      "queries": [
+        "kubernetes-statefulsets-mongodb schema service"
+      ],
+      "must_find": [
+        "Mongoose",
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kubernetes-statefulsets-mongodb"
+    },
     {
       "name": "typescript + graphql-codegen: padrões de código",
       "queries": [
