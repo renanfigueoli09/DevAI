@@ -1,0 +1,22 @@
+{
+  "search:Advanced SQL Queries:sql window functions for compl": {
+    "content": "- **CLI Commands**: Use `gcloud bigquery query` to run queries in BigQuery.\n- **Latest Versions**: Ensure you use the latest version of SQL and database management tools for optimal performance.\n- **Key Config Options**:\n  - In BigQuery, configure project settings using `gcloud config set project PROJECT_ID`.\n  - Set dataset location with `--dataset-location=LOCATION` flag in CLI commands.\n  - Use `WITH RECURSIVE` for complex queries that require recursion.",
+    "source": "web_search",
+    "updated_at": 1781085188.102537
+  },
+  "search:Advanced SQL Queries:sql window functions for compl_ex": {
+    "content": "- **CLI Commands**: Use `gcloud bigquery query` for executing queries in BigQuery.\n- **Latest Versions**: Ensure using the latest version of SQL and BigQuery to access new features and optimizations.\n- **Key Config Options**:\n  - `PARTITION BY`: For grouping rows before applying window functions.\n  - `ORDER BY`: To order rows within each partition.\n  - `ROWS BETWEEN`: Defines the frame for window functions, e.g., `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`.\n- **Examples**:\n  ```sql\n  SELECT \n    column1,\n    SUM(column2) OVER (PARTITION BY column1 ORDER BY column3 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total\n  FROM \n    your_table;\n  ```\n  This query calculates the running total of `column2` for each partition of `column1`, ordered by `column3`.",
+    "source": "code_example",
+    "updated_at": 1781085198.339861
+  },
+  "search:Advanced SQL Queries:optimizing large-scale sql joi": {
+    "content": "- Use EXPLAIN to analyze query performance.\n- Optimize JOIN order by starting with the smallest table.\n- Create indexes on join columns and filter conditions.\n- Utilize database-specific features like partitioning for large tables.\n- Consider using subqueries or temporary tables for complex joins.\n- Enable parallel execution plans in SQL Server.\n- Adjust memory settings based on system capacity.\n- Regularly update statistics to improve query optimization.",
+    "source": "web_search",
+    "updated_at": 1781085206.224488
+  },
+  "search:Advanced SQL Queries:optimizing large-scale sql joi_ex": {
+    "content": "- Use `EXPLAIN` to analyze query performance.\n- Optimize queries by removing unnecessary functions like `DATE()`.\n- Consider indexing columns used in JOIN conditions and WHERE clauses.\n- Ensure tables are properly normalized to reduce data redundancy.\n- Use `INNER JOIN` instead of other types if possible for better performance.\n- Update database drivers and software to the latest versions.\n- Monitor query execution plans with tools like `EXPLAIN ANALYZE`.\n- Regularly review and optimize slow queries based on performance metrics.",
+    "source": "code_example",
+    "updated_at": 1781085217.9033017
+  }
+}

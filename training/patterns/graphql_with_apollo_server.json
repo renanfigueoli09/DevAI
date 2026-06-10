@@ -1,0 +1,22 @@
+{
+  "search:GraphQL with Apollo Server:apollo server performance opti": {
+    "content": "- **Apollo Server Performance Optimization**:\n  - Use Apollo Server 4 for handling GraphQL endpoints.\n  - Upgrade Prisma to the latest version for improved performance.\n\n- **Database Optimization**:\n  - Utilize edge computing and smarter caching strategies.\n  - Implement AI-powered optimization techniques.\n\n- **Web Performance Optimization**:\n  - Select a trustworthy hosting provider.\n  - Enable server components for faster response times.\n  - Configure smarter caching mechanisms.\n\n- **CLI Commands**:\n  - `npm install apollo-server@latest`\n  - `npm update prisma`\n\n- **Key Config Options**:\n  - `apolloServer` configuration in Apollo Server 4\n  - Prisma schema optimization and indexing",
+    "source": "web_search",
+    "updated_at": 1781085146.657221
+  },
+  "search:GraphQL with Apollo Server:apollo server performance opti_ex": {
+    "content": "- **CLI Commands**: Use `apollo server start` to launch Apollo Server.\n- **Latest Versions**: Ensure using the latest version of Apollo Server and related packages for optimal performance.\n- **Key Config Options**:\n  - `cacheControl`: Enable cache control headers for better client-side caching.\n  - `introspection`: Set to `true` if you need GraphQL introspection enabled.\n  - `playground`: Enable or disable the GraphQL playground based on your needs.",
+    "source": "code_example",
+    "updated_at": 1781085154.9662323
+  },
+  "search:GraphQL with Apollo Server:graphql subscriptions and real": {
+    "content": "- **CLI Commands**: `graphql-cli subscribe --url <endpoint> --query <subscription-query>`\n- **Latest Versions**: GraphQL Subscriptions, graphql-ws, Apollo Server\n- **Key Config Options**:\n  - `subscriptions`: Enable subscriptions in your server configuration.\n  - `transport`: Use `graphql-ws` for WebSocket transport.\n  - `path`: Define the path for subscription endpoint.",
+    "source": "web_search",
+    "updated_at": 1781085171.471176
+  },
+  "search:GraphQL with Apollo Server:graphql subscriptions and real_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install graphql-subscriptions`\n  - `npx create-react-app my-app`\n\n- **Latest Versions**:\n  - GraphQL Subscriptions: v2.3.4\n  - Apollo Client: v3.5.1\n\n- **Key Config Options**:\n  - `subscriptionServer`: Configure the subscription server.\n  - `transportWs`: Use graphql-transport-ws for WebSocket transport.\n  - `onConnect`: Define connection logic on the server side.\n\n- **Example Code Snippet**:\n  ```javascript\n  const { ApolloClient, InMemoryCache, HttpLink } = require('apollo-client');\n  const { createHttpLink } = require('@apollo/client/link/http');\n  const { WebSocketLink } = require('@apollo/client/link/ws');\n\n  const httpLink = createHttpLink({\n    uri: 'http://localhost:4000/graphql',\n  });\n\n  const wsLink = new WebSocketLink({\n    uri: 'ws://localhost:4000/graphql',\n    options: {\n      reconnect: true,\n    },\n  });\n\n  const client = new ApolloClient({\n    link: httpLink.concat(wsLink),\n    cache: new InMemoryCache(),\n  });\n  ```",
+    "source": "code_example",
+    "updated_at": 1781085181.4488015
+  }
+}

@@ -7,7 +7,7 @@
   "qa:spring-document-not-entity": {
     "content": "Spring Boot MongoDB: use @Document NOT @Entity\n@Document(collection='books') class Book { @Id String id; @NotBlank String title; }\nRepository: extends MongoRepository<Book, String>\nWRONG: @Entity, JpaRepository  ← those are JPA/PostgreSQL",
     "source": "critical_pattern",
-    "updated_at": 1781084962.8228893
+    "updated_at": 1781085226.2783983
   },
   "search:spring-boot-mongodb:spring boot mongodb crud opera": {
     "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs the Spring Boot application.\n  - `mvn clean install`: Builds and packages the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0 (as of my last update)\n  - MongoDB Driver: 4.5.1\n\n- **Key Config Options**:\n  - `spring.datasource.url`: URL for the database.\n  - `spring.datasource.username`: Username for the database.\n  - `spring.datasource.password`: Password for the database.\n  - `spring.data.mongodb.database`: Name of the MongoDB database.\n  - `spring.data.mongodb.host`: Hostname or IP address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",
@@ -28,5 +28,25 @@
     "content": "- **MongoDB Spring Boot Aggregation Pipelines**: Use `@Aggregation` annotation in your repository to define aggregation pipelines.\n- **Latest Version**: MongoDB Java Driver - v4.5.2, Spring Data MongoDB - v3.5.0.\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB instance.\n  - `spring.data.mongodb.database`: Database name.\n  - `spring.data.mongodb.username` and `spring.data.mongodb.password`: Authentication credentials.\n\nThese points provide actionable information for developers working with MongoDB and Spring Boot aggregation pipelines.",
     "source": "code_example",
     "updated_at": 1780938513.9786825
+  },
+  "search:Spring Boot + MongoDB:spring boot mongodb integratio": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mongoimport --db yourDatabase --collection yourCollection --file data.json` to import data into MongoDB.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - MongoDB Java Driver: 4.5.2\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.data.mongodb.database`: Name of the database.\n  - `spring.data.mongodb.host`: Host address of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",
+    "source": "web_search",
+    "updated_at": 1781085072.331539
+  },
+  "search:Spring Boot + MongoDB:spring boot mongodb integratio_ex": {
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=mongodb-reactive myproject`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - MongoDB Java Driver: 4.7.0\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n    ```properties\n    spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.mongodb.net/test?retryWrites=true&w=majority\n    ```\n  - Entity classes with `@Document`, `@Id`, and `@Field`\n\n- **Additional Tips**:\n  - Use Lombok for reducing boilerplate code.\n  - Implement transactions using `@Transactional` annotation.",
+    "source": "code_example",
+    "updated_at": 1781085090.6787941
+  },
+  "search:Spring Boot + MongoDB:spring boot mongodb data model": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `mongoimport --db yourDatabase --collection yourCollection --file data.json` to import data into MongoDB.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Data MongoDB: 4.2.0\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string for MongoDB.\n  - `spring.data.mongodb.database`: Name of the database.\n  - `spring.data.mongodb.host`: Hostname of the MongoDB server.\n  - `spring.data.mongodb.port`: Port number of the MongoDB server.",
+    "source": "web_search",
+    "updated_at": 1781085098.7809703
+  },
+  "search:Spring Boot + MongoDB:spring boot mongodb data model_ex": {
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=mongodb-repository my-spring-boot-app`\n  - `mvn clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - MongoDB Java Driver: 4.6.0\n\n- **Key Config Options**:\n  - `application.properties`:\n    ```properties\n    spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/mydatabase?retryWrites=true&w=majority\n    ```\n  - `@Document(collection = \"mycollection\")`\n  - `@DBRef`\n\n- **Additional Tips**:\n  - Use Lombok for reducing boilerplate code.\n  - Implement transaction management with `@Transactional`.\n  - Utilize `ResponseEntity` for RESTful API responses.",
+    "source": "code_example",
+    "updated_at": 1781085106.09847
   }
 }
