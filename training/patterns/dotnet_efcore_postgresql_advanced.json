@@ -1,0 +1,32 @@
+{
+  "search:dotnet-efcore-postgresql-advanced:advanced ef core features with": {
+    "content": "- Use `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL` to install the latest version of the PostgreSQL provider.\n- Configure EF Core in your project file using `<PackageReference Include=\"Npgsql.EntityFrameworkCore.PostgreSQL\" Version=\"latest-version\" />`.\n- Set up the DbContext with the PostgreSQL connection string:\n  ```csharp\n  optionsBuilder.UseNpgsql(\"Host=your_host;Database=your_database;Username=your_username;Password=your_password\");\n  ```\n- Enable JSONB support by using `HasJsonbColumn` in your model builder.\n- Utilize NodaTime for date/time type mapping with the Npgsql provider.\n- Map .NET enum types to PostgreSQL enums using `HasColumnType(\"enum_type_name\")`.\n- Configure PostgreSQL-specific features like arrays and ranges directly in your model definitions.",
+    "source": "web_search",
+    "updated_at": 1781068258.8249247
+  },
+  "search:dotnet-efcore-postgresql-advanced:advanced ef core features with_ex": {
+    "content": "- Install EF Core provider via NuGet: `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- Ensure PostgreSQL server is running and accessible.\n- Use latest version of Npgsql.EntityFrameworkCore.PostgreSQL for compatibility.\n- Configure DbContext in your project:\n  ```csharp\n  public class MyDbContext : DbContext\n  {\n      public DbSet<MyEntity> MyEntities { get; set; }\n\n      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)\n      {\n          optionsBuilder.UseNpgsql(\"Host=myhost;Database=mydatabase;Username=myuser;Password=mypassword\");\n      }\n  }\n  ```\n- Key config options in `OnConfiguring` include connection string details.\n- Use LINQ to query data:\n  ```csharp\n  var entities = context.MyEntities.Where(e => e.SomeProperty == \"value\").ToList();\n  ```\n- For advanced features, refer to official Npgsql and EF Core documentation.",
+    "source": "code_example",
+    "updated_at": 1781068265.1698086
+  },
+  "search:dotnet-efcore-postgresql-advanced:ef core performance optimizati": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- Apply migrations with `dotnet ef database update`.\n- Enable query splitting by setting `optionsBuilder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)`.\n- Utilize compiled queries for performance: `var compiledQuery = EF.CompileQuery((DbContext context, int id) => context.Entities.FirstOrDefault(e => e.Id == id));`\n- Employ bulk operations with libraries like Entity Framework Plus.\n- Configure connection strings in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Host=your_host;Database=your_db;Username=your_user;Password=your_password;\"\n  }\n  ```\n- Use `optionsBuilder.UseNpgsql(\"YourConnectionString\")` for PostgreSQL.\n- Enable logging to diagnose performance issues: `services.AddDbContext<YourContext>(options => options.UseLoggerFactory(MyLoggerFactory).UseNpgsql(connectionString));`\n- Optimize indexes in PostgreSQL by analyzing query patterns and using `CREATE INDEX`.\n- Regularly update EF Core and Npgsql to the latest versions for bug fixes and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781068273.9073908
+  },
+  "search:dotnet-efcore-postgresql-advanced:ef core performance optimizati_ex": {
+    "content": "- Use `dotnet ef dbcontext scaffold` command to reverse-engineer a code model from an existing PostgreSQL database.\n- Ensure Npgsql.EntityFrameworkCore.PostgreSQL NuGet package is up-to-date for best compatibility and performance.\n- Optimize LINQ queries by avoiding the N+1 problem with eager loading, projections, and other techniques.\n- Implement schema design best practices in PostgreSQL for better performance.\n- Regularly monitor and tune PostgreSQL performance using tools like pgAdmin or psql commands.",
+    "source": "code_example",
+    "updated_at": 1781068278.9591892
+  },
+  "search:dotnet-efcore-postgresql-advanced:using ef core migrations in po": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 7.0.0\n\n- **Key Config Options**:\n  - Connection String: Ensure it includes the correct PostgreSQL server details.\n  - Snake Case Naming: Use `SnakeCaseNamingConvention` in your DbContext configuration to apply snake_case naming convention for tables and columns.",
+    "source": "web_search",
+    "updated_at": 1781068288.111288
+  },
+  "search:dotnet-efcore-postgresql-advanced:using ef core migrations in po_ex": {
+    "content": "- **Install EF Core Tools**: `dotnet tool install --global dotnet-ef`\n- **Add EF Core PostgreSQL Package**: `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`\n- **Create Initial Migration**: `dotnet ef migrations add InitialCreate`\n- **Update Database**: `dotnet ef database update`\n- **Latest Version**: Ensure you use the latest versions of `Npgsql.EntityFrameworkCore.PostgreSQL` and `Microsoft.EntityFrameworkCore.Tools`.\n- **Key Config Options**:\n  - Connection String: Configure in `appsettings.json` or directly in code.\n  - Snake Case Conventions: Use `SnakeCaseNamingConvention` for entity names.\n  - Migrations Directory: Specify migrations directory using `-d` flag.",
+    "source": "code_example",
+    "updated_at": 1781068294.8060124
+  }
+}
