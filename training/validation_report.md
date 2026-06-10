@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-10 04:33*
+*2026-06-10 04:43*
 
 ## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
@@ -19,9 +19,9 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| Advanced Spring Boot  +  Hibernate Error Handling: padrões de código | 1.0/1 | ✅ |
 | python-django-redis-sessions: cache | 1.0/1 | ✅ |
 | kubernetes-statefulsets-mongodb: não usa TypeORM | 1.0/1 | ✅ |
-| typescript + graphql-codegen: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
