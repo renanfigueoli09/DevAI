@@ -1,0 +1,22 @@
+{
+  "search:Spring Boot + Hibernate + MySQL:spring boot hibernate mysql pe": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `java -jar target/your-application.jar --spring.jpa.hibernate.ddl-auto=update`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.1.5.Final\n  - MySQL Connector/J: 8.0.33\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/yourdb`\n  - `spring.datasource.username=youruser`\n  - `spring.datasource.password=yourpassword`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`\n  - `spring.jpa.show-sql=true`\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`",
+    "source": "web_search",
+    "updated_at": 1781080920.2069716
+  },
+  "search:Spring Boot + Hibernate + MySQL:spring boot hibernate mysql pe_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Hibernate: 6.2.0.Final\n  - MySQL Connector/J: 8.0.31\n- **Key Config Options**:\n  - `spring.datasource.url`: JDBC URL for your MySQL database.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` or `create-drop`.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the dialect (e.g., `org.hibernate.dialect.MySQL8Dialect`).\n  - `spring.jpa.show-sql`: Set to `true` for SQL logging.\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`: Batch size for JDBC operations.",
+    "source": "code_example",
+    "updated_at": 1781080929.8540678
+  },
+  "search:Spring Boot + Hibernate + MySQL:advanced spring data jpa techn": {
+    "content": "- Use `spring-boot-starter-data-jpa` dependency in your `pom.xml`.\n- Configure MySQL connection details in `application.properties`:\n  ```properties\n  spring.datasource.url=jdbc:mysql://localhost:3306/yourdb\n  spring.datasource.username=yourusername\n  spring.datasource.password=yourpassword\n  spring.jpa.hibernate.ddl-auto=update\n  ```\n- Use `@Entity`, `@Table`, `@Id`, `@Column` annotations for entity mapping.\n- Implement repository interfaces extending `JpaRepository` or `CrudRepository`.\n- Utilize derived query methods to simplify database operations:\n  ```java\n  List<User> findByLastName(String lastName);\n  ```\n- For complex queries, use JPQL (Java Persistence Query Language) or native SQL.\n- Configure Hibernate properties in `application.properties` for advanced settings.",
+    "source": "web_search",
+    "updated_at": 1781080937.873898
+  },
+  "search:Spring Boot + Hibernate + MySQL:advanced spring data jpa techn_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start MySQL container.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data JPA: 3.2.0\n  - MySQL Connector/J: 8.1.0\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:mysql://localhost:3306/mydb`\n  - `spring.datasource.username=root`\n  - `spring.datasource.password=password`\n  - `spring.jpa.hibernate.ddl-auto=update`",
+    "source": "code_example",
+    "updated_at": 1781080955.4369848
+  }
+}

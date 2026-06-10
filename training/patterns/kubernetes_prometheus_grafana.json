@@ -1,0 +1,22 @@
+{
+  "search:Kubernetes + Prometheus + Grafana:kubernetes monitoring with pro": {
+    "content": "- **Install Prometheus**:\n  ```bash\n  kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml\n  ```\n  \n- **Deploy Prometheus Operator**:\n  ```bash\n  kubectl create namespace monitoring\n  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts\n  helm install prometheus prometheus-community/prometheus --namespace monitoring\n  ```\n\n- **Install Grafana**:\n  ```bash\n  helm repo add grafana https://grafana.github.io/helm-charts\n  helm install grafana grafana/grafana --namespace monitoring\n  ```\n\n- **Access Prometheus and Grafana**:\n  - Prometheus: `kubectl port-forward svc/prometheus-server 9090:80`\n  - Grafana: `kubectl port-forward svc/grafana 3000:80`\n\n- **Configure Prometheus to scrape Kubernetes metrics**:\n  ```yaml\n  apiVersion: monitoring.coreos.com/v1\n  kind: ServiceMonitor\n  metadata:\n    name: kubernetes-service-monitor\n    namespace: monitoring\n  spec:\n    selector:\n      matchLabels:\n        app: kube-state-metrics\n    endpoints:\n    - port: metrics\n  ```\n\n- **Create a Grafana dashboard**:\n  - Import dashboards from the [Grafana Labs](https://grafana.com/grafana/dashboards) or create custom ones using JSON.\n\n- **Key Config Options**:\n  - Prometheus `scrape_interval`: Define how often Prometheus should scrape metrics.\n  - Grafana `datasource`: Configure Prometheus as a data source for visualization.\n  - Kubernetes RBAC: Ensure proper role-based access control for monitoring resources.",
+    "source": "web_search",
+    "updated_at": 1781081006.4113839
+  },
+  "search:Kubernetes + Prometheus + Grafana:kubernetes monitoring with pro_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f prometheus-deployment.yaml`\n  - `kubectl apply -f grafana-deployment.yaml`\n  - `kubectl get pods --all-namespaces`\n\n- **Latest Versions**:\n  - Prometheus: v2.40.0\n  - Grafana: v9.3.1\n\n- **Key Config Options**:\n  - ServiceMonitor for Kubernetes service discovery.\n  - PromQL queries for custom metrics analysis.\n  - Alertmanager for alerting and notifications.\n  - Persistent storage for Prometheus data retention.",
+    "source": "code_example",
+    "updated_at": 1781081014.9031672
+  },
+  "search:Kubernetes + Prometheus + Grafana:advanced kubernetes logging an": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs.\n- For advanced monitoring, consider Prometheus and Grafana.\n- Loki is a good alternative for log aggregation in Kubernetes.\n- Fluentd can be used for container-aware logging.\n- Elastic Stack (Elasticsearch, Logstash, Kibana) provides comprehensive log management.\n- Use `kubectl get pods --all-namespaces` to list all pods across namespaces.\n- For alerting, Prometheus Alertmanager is essential.\n- Configure Loki with `loki-config.yaml`.\n- Fluentd configuration can be managed via `fluentd-configmap.yaml`.\n- Ensure Kubernetes RBAC permissions are correctly set for monitoring tools.",
+    "source": "web_search",
+    "updated_at": 1781081025.471083
+  },
+  "search:Kubernetes + Prometheus + Grafana:advanced kubernetes logging an_ex": {
+    "content": "- **Prometheus**: Use `kubectl apply -f prometheus.yaml` to deploy.\n- **Grafana**: Deploy with Helm using `helm install grafana grafana/grafana`.\n- **Loki**: Deploy Loki with Helm: `helm install loki grafana/loki-stack`.\n- **Alertmanager**: Configure Alertmanager in a separate YAML file and apply it with `kubectl apply -f alertmanager.yaml`.\n- **Prometheus Alerting Rules**: Define rules in a YAML file, e.g., `prometheus-rules.yaml`, then load them using `--rule-file=prometheus-rules.yaml`.\n- **Loki Configuration**: Customize Loki by editing the Helm values file and applying it with `helm upgrade --install loki grafana/loki-stack -f custom-values.yaml`.\n- **Grafana Data Sources**: Add Prometheus as a data source in Grafana using its web UI.\n- **Alertmanager Notification**: Configure Alertmanager to send alerts via email, Slack, or other services by editing the configuration file and reloading it with `kubectl apply -f alertmanager-config.yaml`.",
+    "source": "code_example",
+    "updated_at": 1781081032.7208312
+  }
+}

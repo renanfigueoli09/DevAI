@@ -1,0 +1,12 @@
+{
+  "search:React + TypeScript + Jest Testing:react typescript jest testing ": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @types/jest ts-jest`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - Jest: 29.x\n  - React Testing Library: 13.x\n\n- **Key Config Options**:\n  - In `jest.config.ts`, set up the following:\n    ```typescript\n    export default {\n      preset: 'ts-jest',\n      testEnvironment: 'jsdom',\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n    };\n    ```\n  - Use `.env.test` for environment-specific variables.\n\n- **Testing Patterns**:\n  - Unit tests for components, functions, and hooks.\n  - Integration tests to ensure components work together.\n  - Snapshot testing for UI consistency.",
+    "source": "web_search",
+    "updated_at": 1781080972.093496
+  },
+  "search:React + TypeScript + Jest Testing:react typescript jest testing _ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event`\n  - `npx create-react-app my-app --template typescript`\n\n- **Latest Versions**:\n  - Jest: 29.0.3\n  - React Testing Library: 14.0.0\n\n- **Key Config Options**:\n  - In `jest.config.js`, add `\"testEnvironment\": \"jsdom\"`\n  - In `tsconfig.json`, ensure `\"jsx\": \"react\"` and `\"moduleResolution\": \"node\"`\n\n- **Mocking Functions with Jest**:\n  - Use `jest.fn()` to create mock functions\n  - Use `.mockImplementation(() => {})` for custom implementations",
+    "source": "code_example",
+    "updated_at": 1781080978.3030589
+  }
+}

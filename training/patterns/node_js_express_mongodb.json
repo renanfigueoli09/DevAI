@@ -1,0 +1,17 @@
+{
+  "search:Node.js + Express + MongoDB:node.js express mongodb best p": {
+    "content": "- Use `npm init -y` to initialize a new Node.js project.\n- Install dependencies using `npm install express mongoose body-parser cors`.\n- Ensure MongoDB is running and accessible.\n- Create an Express app with `const app = express();`.\n- Configure Mongoose connection with `mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true });`.\n- Use middleware for parsing JSON bodies with `app.use(bodyParser.json());`.\n- Implement CORS with `app.use(cors());`.\n- Define routes using `app.get('/api/users', async (req, res) => { ... })`.\n- Handle errors with `app.use((err, req, res, next) => { ... });`.\n- Deploy to a server or cloud platform like Heroku.",
+    "source": "web_search",
+    "updated_at": 1781080876.27646
+  },
+  "search:Node.js + Express + MongoDB:optimizing node.js application": {
+    "content": "- Use Mongoose for ORM to simplify MongoDB interactions.\n- Declare MongoDB connection outside handler methods in AWS Lambda.\n- Optimize connections by setting a connection pool limit based on your app's needs.\n- Tune readPreference according to your application's consistency requirements.\n- Consider using dedicated secondaries for heavy reads.\n- Apply best practices and tools for building scalable web applications with Node.js and MongoDB.",
+    "source": "web_search",
+    "updated_at": 1781080895.9580336
+  },
+  "search:Node.js + Express + MongoDB:optimizing node.js application_ex": {
+    "content": "- Use `npm install mongodb` to install the latest MongoDB Node.js driver.\n- Configure connection pool limits in your MongoDB client settings, e.g., `{poolSize: 5}`.\n- Set `readPreference` based on your application's consistency needs, e.g., `{readPreference: 'secondary'}` for heavy reads.\n- Declare the MongoDB database connection object outside the handler method to improve performance and scalability.\n- Use `MongoClient.connect()` with a URI string that includes authentication details if required.\n- Implement indexing on frequently queried fields to speed up data retrieval.\n- Regularly monitor and analyze query performance using MongoDB's profiling tools.\n- Optimize queries by avoiding unnecessary joins and filtering out non-critical data.\n- Consider using connection pooling libraries like `node-mongodb-native` for better management of database connections.",
+    "source": "code_example",
+    "updated_at": 1781080900.0619183
+  }
+}
