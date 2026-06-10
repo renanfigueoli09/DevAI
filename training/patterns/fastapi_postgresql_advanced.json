@@ -1,0 +1,22 @@
+{
+  "search:fastapi+postgresql-advanced:fastapi postgresql advanced qu": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`: Creates a new FastAPI project.\n  - `psql -U username -d database_name`: Connects to PostgreSQL database.\n\n- **Latest Versions**:\n  - FastAPI: v0.100.0\n  - SQLAlchemy (ORM): v2.0.0\n  - Alembic (migrations): v1.7.4\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Connection Pooling: Use `pool_size` and `max_overflow` in SQLAlchemy settings.\n  - JWT Authentication: Configure secret key, algorithm, and token expiration time.\n  - Pagination: Implement `Page` from FastAPI's pagination utilities.",
+    "source": "web_search",
+    "updated_at": 1781082279.8054743
+  },
+  "search:fastapi+postgresql-advanced:fastapi postgresql advanced qu_ex": {
+    "content": "- Use `pip install fastapi[all]` to install FastAPI and its dependencies.\n- Install PostgreSQL using the official documentation or package manager.\n- Create a new FastAPI project with `fastapi create-app myproject`.\n- Configure your database connection in `main.py`:\n  ```python\n  from sqlalchemy.ext.asyncio import create_async_engine\n  SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"\n  engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)\n  ```\n- Use SQLModel for ORM operations, install with `pip install sqlmodel`.\n- Optimize queries by using eager loading and avoiding N+1 issues.\n- Configure connection pooling in your database URL:\n  ```python\n  SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname?pool_size=20&max_overflow=0\"\n  ```\n- Use `async with engine.connect()` to manage database connections.\n- For production, consider using a WSGI server like Uvicorn:\n  ```bash\n  uvicorn myproject.main:app --host 0.0.0.0 --port 8000 --reload\n  ```\n- Deploy your FastAPI app on Vercel using the provided boilerplate or create a custom one.\n- Monitor and optimize performance with tools like `asyncpg`'s built-in logging and PostgreSQL's query planner.",
+    "source": "code_example",
+    "updated_at": 1781082289.3260064
+  },
+  "search:fastapi+postgresql-advanced:fastapi postgresql performance": {
+    "content": "- **CLI Commands**:\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n  - `psql -U username -d database_name`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.1\n  - SQLAlchemy: v2.0.0b1\n  - Alembic: v1.8.3\n  - PostgreSQL: v14\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@host/dbname\"`\n  - `DATABASE_POOL_SIZE`: Set to a value based on your application's needs.\n  - `DATABASE_MAX_OVERFLOW`: Define the number of connections that can be created above `pool_size` if necessary.\n  - `ASYNCGEN_TIMEOUT`: Adjust this for handling long-running queries in async environments.",
+    "source": "web_search",
+    "updated_at": 1781082302.2199533
+  },
+  "search:fastapi+postgresql-advanced:fastapi postgresql performance_ex": {
+    "content": "- **FastAPI Version**: Use `fastapi==0.95.0`\n- **SQLModel Version**: Use `sqlmodel==0.0.6`\n- **Tortoise ORM Version**: Use `tortoise-orm==0.18.2`\n- **PostgreSQL Client**: Use `asyncpg==0.27.0`\n- **CLI Commands**:\n  - Install dependencies: `pip install fastapi sqlmodel tortoise-orm asyncpg`\n  - Run FastAPI app: `uvicorn main:app --reload`\n- **Key Config Options**:\n  - Connection Pooling: Configure in Tortoise ORM settings\n    ```python\n    {\n        \"connections\": {\"default\": \"postgres://user:password@localhost/dbname\"},\n        \"apps\": {\n            \"models\": {\n                \"models\": [\"__main__\"],\n                \"default_connection\": \"default\",\n            }\n        },\n        \"use_tz\": True,\n        \"timezone\": \"UTC\"\n    }\n    ```\n  - Async Queries: Use `async`/`await` syntax with Tortoise ORM\n    ```python\n    async def get_user(user_id: int):\n        return await User.get(id=user_id)\n    ```\n- **Performance Tips**:\n  - Avoid N+1 queries by using eager loading or subqueries.\n  - Optimize database indexes for frequently queried columns.\n  - Use connection pooling to manage database connections efficiently.",
+    "source": "code_example",
+    "updated_at": 1781082311.2173684
+  }
+}

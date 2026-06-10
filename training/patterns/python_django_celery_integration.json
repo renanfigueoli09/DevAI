@@ -1,0 +1,22 @@
+{
+  "search:python-django-celery-integration:django celery integration patt": {
+    "content": "- **Latest Version**: Celery 5.6.3, Django 4.2\n- **CLI Commands**:\n  - `pip install celery`\n  - `celery -A your_project_name worker --loglevel=info`\n  - `celery -A your_project_name beat --loglevel=info`\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set to the URL of your message broker (e.g., `redis://localhost:6379/0`).\n  - `CELERY_RESULT_BACKEND`: Set to the backend where task results will be stored (e.g., `redis://localhost:6379/0`).\n  - `CELERY_ACCEPT_CONTENT`: List of accepted content types for messages.\n  - `CELERY_TASK_SERIALIZER`: Serializer used to serialize tasks.\n- **Integration Example**:\n  ```python\n  from celery import Celery\n\n  app = Celery('your_project_name', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')\n\n  @app.task\n  def add(x, y):\n      return x + y\n  ```\n- **Regular Maintenance**:\n  - Use `celery.backend_cleanup` to clean up expired task results.\n  - Schedule tasks using Celery Beat in Django settings.",
+    "source": "web_search",
+    "updated_at": 1781082360.0597625
+  },
+  "search:python-django-celery-integration:django celery integration patt_ex": {
+    "content": "- Install Celery and dependencies using pip: `pip install celery`\n- Ensure Django project structure is suitable for larger projects.\n- Configure Celery in Django settings:\n  ```python\n  CELERY_BROKER_URL = 'redis://localhost:6379/0'\n  CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'\n  ```\n- Create a Celery app instance in your project's main module.\n- Define tasks using the `@app.task` decorator.\n- Run Celery worker with: `celery -A myproject.celery worker --loglevel=info`\n- Use Django management commands to manage Celery tasks, e.g., `python manage.py shell_plus`\n- Monitor task status and results through the Django admin or custom views.",
+    "source": "code_example",
+    "updated_at": 1781082365.931201
+  },
+  "search:python-django-celery-integration:celery task scheduling best pr": {
+    "content": "- **CLI Commands**:\n  - `celery -A proj worker --loglevel=info`\n  - `celery -A proj beat --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n  - Django: 4.1\n\n- **Key Config Options**:\n  - CELERY_BROKER_URL: URL of the message broker (e.g., `redis://localhost:6379/0`)\n  - CELERY_RESULT_BACKEND: URL of the result backend (e.g., `redis://localhost:6379/0`)\n  - CELERY_BEAT_SCHEDULE: Dictionary defining periodic tasks",
+    "source": "web_search",
+    "updated_at": 1781082373.971114
+  },
+  "search:python-django-celery-integration:celery task scheduling best pr_ex": {
+    "content": "- **CLI Commands**: \n  - `celery worker --loglevel=info`\n  - `celery beat --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n  - Redis: 7.x\n  - RabbitMQ: 3.8.x\n\n- **Key Config Options**:\n  - `broker_url`: Specifies the URL of the message broker (e.g., `redis://localhost:6379/0`).\n  - `result_backend`: Specifies where task results are stored (e.g., `redis://localhost:6379/1`).\n  - `task_serializer`: Serialization method for tasks (e.g., `json`).\n  - `accept_content`: List of accepted content types.\n  - `timezone`: Timezone for scheduling tasks.\n  - `enable_utc`: Whether to use UTC for task execution times.",
+    "source": "code_example",
+    "updated_at": 1781082380.9132288
+  }
+}

@@ -2,31 +2,31 @@
   "search:fastapi+pydantic-validation:fastapi pydantic validation be": {
     "content": "- Use Pydantic models to validate request data in FastAPI.\n- Install FastAPI and Pydantic using pip: `pip install fastapi pydantic`.\n- Utilize the latest versions of FastAPI and Pydantic for optimal performance and features.\n- Define data validation schemas with Pydantic models, ensuring type hints are used for better code readability and validation.\n- Leverage FastAPI's automatic documentation generation to create interactive API docs using Swagger UI or ReDoc.\n- For complex request bodies, use Pydantic's nested models and lists to define compound data structures.\n- Employ the `Query`, `Path`, and `Body` parameters in FastAPI for defining extra data for query, path, and body parameters respectively.\n- Configure logging with Pydantic by setting up a custom logger or using the built-in logging module.\n- For advanced validation, use Pydantic's validators to add custom logic for validating specific fields.",
     "source": "web_search",
-    "updated_at": 1781082174.05942
+    "updated_at": 1781082414.5458124
   },
   "search:fastapi+pydantic-validation:fastapi pydantic validation be_ex": {
     "content": "- Use `fastapi` and `pydantic` latest versions.\n- Install FastAPI using pip: `pip install fastapi`.\n- Create Pydantic models for data validation.\n- Use `Field` from `pydantic` to add constraints like minimum/maximum, regex.\n- Implement dependency injection with FastAPI for better code organization.\n- Utilize `HTTPException` for handling errors gracefully.\n- Enable automatic documentation generation using Swagger UI or ReDoc.\n- Employ environment variables for configuration management.\n- Regularly update dependencies and security patches.",
     "source": "code_example",
-    "updated_at": 1781082175.3274946
+    "updated_at": 1781082415.7903967
   },
   "search:fastapi+pydantic-validation:fastapi pydantic validation pe": {
     "content": "- Use FastAPI version 0.100.0 or later.\n- Utilize Pydantic v2 for improved performance, as it serializes models up to 50x faster than v1 using Rust-based validation.\n- Implement zero-copy validation strategies in Pydantic for maximum efficiency.\n- Configure response_model in FastAPI routes to filter output fields and prevent accidental exposure of sensitive data like password hashes.\n- Consider using Starlette's caching mechanisms to reduce latency and improve performance.\n- Deploy FastAPI applications on platforms that support asynchronous programming, such as Uvicorn or Hypercorn.",
     "source": "web_search",
-    "updated_at": 1781082176.5153801
+    "updated_at": 1781082417.09138
   },
   "search:fastapi+pydantic-validation:fastapi pydantic validation pe_ex": {
     "content": "- **CLI Commands**:\n  - `fastapi create-app myapp`: Creates a new FastAPI application.\n  - `uvicorn myapp.main:app --reload`: Runs the FastAPI app with auto-reload.\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - Pydantic: 1.10.9\n\n- **Key Config Options**:\n  - `app = FastAPI()`: Initializes a new FastAPI application.\n  - `pydantic_settings`: Customizes Pydantic settings for validation.\n  - `dependencies`: Manages dependencies in FastAPI routes.",
     "source": "code_example",
-    "updated_at": 1781082177.7172334
+    "updated_at": 1781082418.3866138
   },
   "search:FastAPI + Pydantic Validation:fastapi pydantic validation ad": {
     "content": "- **GitHub Repository**: [pydantic/pydantic](https://github.com/pydantic/pydantic)\n- **Latest Pydantic Version**: Use `pip install pydantic==2.4.2`\n- **Key Config Options**:\n  - `allow_population_by_field_name`: Allows setting fields by their name.\n  - `extra`: Controls how extra data is handled (`ignore`, `forbid`, or `allow`).\n  - `use_enum_values`: Determines if enum values are used in validation.\n- **CLI Commands**:\n  - `pydantic validate-models <module_path>`: Validates all models in a specified module.\n  - `pydantic generate-schema <model_name> <module_path>`: Generates JSON schema for a specific model.\n- **Advanced Features**:\n  - Cross-Field Validation: Use custom validators to ensure rules depend on multiple fields.\n  - Nested Models: Define complex data structures using nested Pydantic models.",
     "source": "web_search",
-    "updated_at": 1781082178.9230304
+    "updated_at": 1781082419.5720913
   },
   "search:FastAPI + Pydantic Validation:fastapi pydantic validation ad_ex": {
     "content": "- **CLI Commands**: Use `uvicorn` to run the FastAPI application, e.g., `uvicorn main:app --reload`.\n- **Latest Versions**: Ensure using the latest versions of FastAPI and Pydantic for optimal performance and security.\n- **Key Config Options**:\n  - `--reload`: Enables auto-reload during development.\n  - `--host` and `--port`: Specify the host and port for the server, e.g., `--host 0.0.0.0 --port 8000`.\n  - `--debug`: Runs the application in debug mode for detailed error messages.",
     "source": "code_example",
-    "updated_at": 1781082180.196964
+    "updated_at": 1781082420.9621315
   }
 }
