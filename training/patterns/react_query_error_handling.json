@@ -1,0 +1,22 @@
+{
+  "search:react-query-error-handling:react query error handling bes": {
+    "content": "- Use `axios` for making HTTP requests to handle errors effectively.\n- Implement error boundaries using React's built-in `ErrorBoundary` component or a custom one.\n- Configure TanStack Query with the latest version for robust error handling.\n- Utilize `useQuery` hook from React Query to manage asynchronous data and catch errors.\n- Set up global error handlers to capture and handle errors across your application.\n- Use `onError` callback in `useQuery` to execute custom logic when an error occurs.\n- Implement retry mechanisms using the `retry` option in `useQuery`.\n- Monitor error logs for insights into common issues and improve data fetching strategies.",
+    "source": "web_search",
+    "updated_at": 1781067746.516927
+  },
+  "search:react-query-error-handling:react query error handling bes_ex": {
+    "content": "- **CLI Commands**: Use `npx create-react-app` to set up a new React project.\n- **Latest Versions**: Ensure you are using the latest version of React Query by running `npm install react-query@latest`.\n- **Key Config Options**:\n  - `retry`: Set the number of retries for failed queries. Example: `{ retry: 3 }`\n  - `refetchOnWindowFocus`: Control whether to refetch data when the window regains focus. Example: `{ refetchOnWindowFocus: false }`\n  - `staleTime`: Define how long a query result is considered fresh before refetching. Example: `{ staleTime: 5000 }`",
+    "source": "code_example",
+    "updated_at": 1781067762.387698
+  },
+  "search:react-query-error-handling:handling errors in react query": {
+    "content": "- Use `useQuery` hook from React Query v5.\n- Implement global error handling using cache-level callbacks like `onError`.\n- Check the `isError` flag in your component to handle errors.\n- Utilize Error Boundaries for robust error management across components.\n- Ensure you are using the latest version of React Query for optimal performance and features.",
+    "source": "web_search",
+    "updated_at": 1781067773.2187612
+  },
+  "search:react-query-error-handling:handling errors in react query_ex": {
+    "content": "- Use `react-query` version 3.x for error handling.\n- Implement Error Boundaries using React's built-in feature.\n- Utilize the `error` option in `useQuery` to handle errors gracefully.\n- Avoid using Error Boundaries in event handlers, asynchronous code, server-side rendering, or within the Error Boundary itself.\n- Consider implementing a global error handling popup for better user experience.",
+    "source": "code_example",
+    "updated_at": 1781067779.0807557
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:kafka-streams-performance-tuning:maximizing kafka streams throu": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker_address> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker_address> --describe --group <consumer_group_id>`\n\n- **Latest Versions**:\n  - Kafka: 3.4.0\n  - Confluent Platform: 7.5.0\n\n- **Key Config Options**:\n  - `producer.batch.size`: Adjusts the size of batches sent by producers.\n  - `fetch.min.bytes`: Controls the minimum amount of data the consumer will fetch in a single request.\n  - `replication.factor`: Specifies how many copies of each partition are maintained across different brokers.\n  - `num.partitions`: Defines the number of partitions per topic, which affects parallelism and throughput.",
+    "source": "web_search",
+    "updated_at": 1781067820.3180327
+  },
+  "search:kafka-streams-performance-tuning:maximizing kafka streams throu_ex": {
+    "content": "- Use `kafka-topics.sh` to create topics with appropriate configurations.\n- Set `num.partitions` and `replication.factor` for topic creation.\n- Monitor Kafka Streams performance using JMX, Kafka Manager, or custom dashboards.\n- Adjust `request.timeout.ms`, `delivery.timeout.ms`, and `acks` in producer properties.\n- Use Confluent Platform 8.0.x or later for Java 11 support.\n- Optimize consumer group settings with `max.poll.records`, `enable.auto.commit`, and `auto.commit.interval.ms`.\n- Regularly update Kafka Streams to the latest version for performance improvements.\n- Monitor key metrics like latency, throughput, and error rates using Confluent Control Center or custom scripts.",
+    "source": "code_example",
+    "updated_at": 1781067826.3181143
+  }
+}
