@@ -1,7 +1,22 @@
 {
-  "generated_at": 1781087018.2964716,
+  "generated_at": 1781087684.7468462,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "typescript-graphql-mutation-security: padrões de código",
+      "queries": [
+        "typescript-graphql-mutation-security pattern code example",
+        "typescript-graphql-mutation-security"
+      ],
+      "must_find": [
+        "@graphql",
+        "@nestjs"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-graphql-mutation-security"
+    },
     {
       "name": "typescript-jest-unit-testing: padrões de código",
       "queries": [

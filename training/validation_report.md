@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-10 07:26*
+*2026-06-10 07:37*
 
-## Score: 90% `[██████████████████░░]`  (45.0/50.0)
+## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
-### Knowledge Check (vector store): 31.0/36.0
+### Knowledge Check (vector store): 32.0/37.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,6 +19,7 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| typescript-graphql-mutation-security: padrões de código | 1.0/1 | ✅ |
 | typescript-jest-unit-testing: padrões de código | 1.0/1 | ✅ |
 | GraphQL with Apollo Server: padrões de código | 1.0/1 | ✅ |
 
