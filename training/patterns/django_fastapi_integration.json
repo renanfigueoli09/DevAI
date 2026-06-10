@@ -1,0 +1,32 @@
+{
+  "search:Django + FastAPI Integration:django and fastapi together 20": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi[all]`\n  - `pip install django`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.2\n  - Django: v4.1\n\n- **Key Config Options**:\n  - For FastAPI, configure ASGI application in `main.py`:\n    ```python\n    from fastapi import FastAPI\n    from django.core.wsgi import get_wsgi_application\n\n    app = FastAPI()\n\n    # Mount the Django application\n    django_app = get_wsgi_application()\n    app.mount(\"/django\", django_app)\n    ```\n  - For Django, ensure `ASGI_APPLICATION` is set in `settings.py`:\n    ```python\n    ASGI_APPLICATION = 'myproject.asgi.application'\n    ```\n\n- **Mounting Django in FastAPI**:\n  - Use `app.mount(\"/path\", django_app)` to integrate Django within FastAPI.\n\n- **Running the Application**:\n  - For FastAPI: `uvicorn main:app --reload`\n  - For Django: `python manage.py runserver`",
+    "source": "web_search",
+    "updated_at": 1781070531.7828324
+  },
+  "search:Django + FastAPI Integration:django and fastapi together 20_ex": {
+    "content": "- **Latest Versions**: Django 4.2, FastAPI 0.98.0\n- **CLI Commands**:\n  - `django-admin startproject myproject`\n  - `uvicorn myproject.asgi:application --reload`\n- **Key Config Options**:\n  - In Django settings.py, add FastAPI app to `INSTALLED_APPS`.\n  - Configure CORS in Django for API access.\n  - Use ASGI server like Uvicorn to run the combined application.",
+    "source": "code_example",
+    "updated_at": 1781070536.9253047
+  },
+  "search:Django + FastAPI Integration:combining django rest framewor": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `main.py`: Define your FastAPI app.\n    ```python\n    from fastapi import FastAPI\n    app = FastAPI()\n    ```\n  - `uvicorn.run(app, host=\"0.0.0.0\", port=8000)`: Run the server with specific host and port.\n\n- **Dependencies**:\n  - Pydantic for data validation.\n  - SQLAlchemy or Django ORM for database interactions.\n\n- **Development Tools**:\n  - `pip install python-multipart` for file uploads.\n  - `pip install starlette` for ASGI web framework.",
+    "source": "web_search",
+    "updated_at": 1781070550.9485996
+  },
+  "search:Django + FastAPI Integration:combining django rest framewor_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi django djangorestframework`\n  - `django-admin startproject myproject`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - FastAPI: v0.98.1\n  - Django: v4.2\n  - Django REST Framework: v3.14.2\n\n- **Key Config Options**:\n  - In `settings.py`, add `'rest_framework'` and `'fastapi'` to `INSTALLED_APPS`.\n  - Configure FastAPI in a separate file (e.g., `fastapi_app.py`) and integrate it with Django.\n  - Use `ASGI` server like `uvicorn` for running the combined application.",
+    "source": "code_example",
+    "updated_at": 1781070557.2822757
+  },
+  "search:Django + FastAPI Integration:best practices for integrating": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi uvicorn djangorestframework`\n  - `uvicorn myproject.asgi:application --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Django: 4.2\n\n- **Key Config Options**:\n  - In Django settings, add `'rest_framework'` to `INSTALLED_APPS`.\n  - Configure `ASGI_APPLICATION` in `settings.py` to point to your ASGI application.\n  - Use FastAPI's dependency injection for authentication and other services within Django views.",
+    "source": "web_search",
+    "updated_at": 1781070576.7620234
+  },
+  "search:Django + FastAPI Integration:best practices for integrating_ex": {
+    "content": "- Use `pip install fastapi uvicorn djangorestframework` to install necessary packages.\n- Create a FastAPI app by running `uvicorn myapp.main:app --reload`.\n- Integrate Django and FastAPI using the `django-rest-framework-fastapi` package.\n- Configure Django settings in `settings.py` for integration.\n- Use Django's ORM for database operations and FastAPI for API endpoints.\n- Implement serializers and views in Django to interact with FastAPI.\n- Run both Django and FastAPI servers simultaneously using `uvicorn myapp.main:app --reload`.\n- Ensure proper CORS configuration in FastAPI settings for cross-origin requests.\n- Utilize Django's admin interface for managing data, while FastAPI handles API logic.",
+    "source": "code_example",
+    "updated_at": 1781070583.176576
+  }
+}

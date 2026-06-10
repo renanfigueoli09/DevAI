@@ -1,0 +1,32 @@
+{
+  "search:Node.js + MongoDB Performance Optimization:optimizing node.js application": {
+    "content": "- Use Mongoose for MongoDB interactions in Node.js.\n- Declare the MongoDB database connection object outside the handler method for AWS Lambda.\n- Optimize connection pool limits based on your application's needs.\n- Tune readPreference to match your consistency requirements.\n- Consider using a dedicated secondary for heavy reads.\n- Apply best practices and tools for building scalable web applications with Node.js and MongoDB.",
+    "source": "web_search",
+    "updated_at": 1781070591.837636
+  },
+  "search:Node.js + MongoDB Performance Optimization:optimizing node.js application_ex": {
+    "content": "- Use `MongoClient.connect()` to establish connections.\n- Implement connection pooling by setting `poolSize` in the MongoClient options.\n- Optimize queries using indexes and avoid N+1 query problems.\n- Set `readPreference` based on your application's consistency needs.\n- Monitor performance with tools like MongoDB Atlas or Node.js profiling.\n- Use `async/await` for cleaner asynchronous code.\n- Regularly update MongoDB and Node.js to the latest versions.\n- Implement caching strategies to reduce database load.\n- Profile queries using MongoDB's built-in profilers.\n- Consider sharding for high-write workloads.",
+    "source": "code_example",
+    "updated_at": 1781070598.6489794
+  },
+  "search:Node.js + MongoDB Performance Optimization:high-performance node.js and m": {
+    "content": "- Use `npm install -g create-react-app` to set up a new React app.\n- Install Node.js version 16.x or later using nvm with `nvm install 16`.\n- For MongoDB, use the latest stable version available from the official MongoDB website.\n- Implement connection pooling in Node.js by configuring `mongoose.connect()` with options like `{ poolSize: 5 }`.\n- Use environment variables for sensitive data and configuration settings. Install `dotenv` with `npm install dotenv` and load it at the start of your app.\n- For high-performance queries, ensure indexes are properly set on MongoDB collections.\n- Utilize caching mechanisms like Redis to reduce database load.\n- Implement rate limiting in Node.js using middleware like `express-rate-limit`.\n- Monitor application performance using tools like New Relic or Datadog.\n- Regularly update dependencies and security patches for both Node.js and MongoDB.",
+    "source": "web_search",
+    "updated_at": 1781070609.8378232
+  },
+  "search:Node.js + MongoDB Performance Optimization:high-performance node.js and m_ex": {
+    "content": "- Use `npm install --save express mongoose` to install Express and Mongoose.\n- Ensure MongoDB is running locally or use `mongodb+srv://<username>:<password>@cluster0.mongodb.net/test?retryWrites=true&w=majority` for remote connections.\n- Set environment variables using `.env` file with `dotenv.config()`.\n- Use `mongoose.connect()` to establish a connection to the database.\n- Implement indexing on frequently queried fields in MongoDB collections.\n- Utilize async/await for cleaner asynchronous code: `const result = await Model.find(query);`.\n- Optimize queries by limiting results and using projection: `Model.find(query).limit(10).select('name age').exec()`.\n- Use connection pooling with Mongoose to manage database connections efficiently.\n- Monitor application performance using tools like MongoDB Atlas or New Relic.\n- Regularly update Node.js and MongoDB to the latest stable versions for security and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781070615.791727
+  },
+  "search:Node.js + MongoDB Performance Optimization:mongodb indexing and query opt": {
+    "content": "- Use `db.collection.createIndex()` to create an index.\n- Apply projections using the `.find(query, { field1: 1, field2: 1 })` syntax to return only necessary fields.\n- Limit query results with `.limit(n)` to reduce data processed.\n- Utilize MongoDB's explain() method to analyze query performance and identify bottlenecks.\n- Regularly review and optimize indexes based on query patterns.\n- Consider using compound indexes for queries involving multiple fields.\n- Enable query caching if applicable, especially for frequently accessed data.\n- Monitor database performance metrics regularly using tools like `mongostat` and `mongotop`.\n- Keep MongoDB up to date with the latest version for performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781070631.3344908
+  },
+  "search:Node.js + MongoDB Performance Optimization:mongodb indexing and query opt_ex": {
+    "content": "- Use `db.collection.createIndex()` to create indexes.\n- For range queries followed by sorts, ensure the sort fields are at the end of the index.\n- Leverage MongoDB v7's Query Planner Improvements for better performance.\n- Monitor and analyze query performance using tools like `explain()`.\n- Adjust `wiredTigerCacheSizeGB` in the configuration file to optimize memory usage.\n- Use compound indexes when multiple fields are frequently queried together.\n- Regularly review and update indexes based on query patterns.",
+    "source": "code_example",
+    "updated_at": 1781070640.7196767
+  }
+}

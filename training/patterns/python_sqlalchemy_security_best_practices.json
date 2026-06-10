@@ -1,0 +1,22 @@
+{
+  "search:Python + SQLAlchemy Security Best Practices:sqlalchemy security best pract": {
+    "content": "- Use parameterized queries in SQLAlchemy to prevent SQL injection.\n- Employ `text()` function from SQLAlchemy for dynamic SQL, ensuring parameters are passed safely.\n- Update SQLAlchemy to the latest version to benefit from security patches and improvements.\n- Implement proper input validation before passing user data to SQLAlchemy queries.\n- Utilize ORM methods instead of raw SQL where possible to reduce the risk of SQL injection.\n- Configure connection pooling in SQLAlchemy to manage database connections efficiently.\n- Regularly review and update your application's dependencies for security vulnerabilities.\n- Enable logging for SQLAlchemy to monitor and debug query execution, aiding in identifying potential issues.",
+    "source": "web_search",
+    "updated_at": 1781070651.999276
+  },
+  "search:Python + SQLAlchemy Security Best Practices:sqlalchemy security best pract_ex": {
+    "content": "- Use SQLAlchemy's ORM instead of raw SQL to prevent SQL injection.\n- Ensure all database connections are properly managed using context managers or session factories.\n- Utilize parameterized queries with `text()` and `bindparams()` for dynamic SQL statements.\n- Regularly update SQLAlchemy and its dependencies to the latest versions.\n- Implement proper exception handling to manage errors gracefully without exposing sensitive information.\n- Use connection pooling to optimize database performance and reduce latency.\n- Configure logging to capture detailed error messages for debugging purposes.\n- Conduct regular security audits and code reviews to identify and mitigate vulnerabilities.",
+    "source": "code_example",
+    "updated_at": 1781070665.9610524
+  },
+  "search:Python + SQLAlchemy Security Best Practices:preventing sql injection attac": {
+    "content": "- Use parameterized queries in SQLAlchemy to prevent SQL injection.\n- Validate and sanitize all user inputs before using them in queries.\n- Avoid dynamic SQL construction where possible, instead use ORM methods.\n- Ensure your database connection is secure and up-to-date with the latest version of SQLAlchemy.\n- Regularly update SQLAlchemy and its dependencies to patch security vulnerabilities.",
+    "source": "web_search",
+    "updated_at": 1781070687.523417
+  },
+  "search:Python + SQLAlchemy Security Best Practices:preventing sql injection attac_ex": {
+    "content": "- Use parameterized queries instead of string concatenation to prevent SQL injection.\n- Example: `session.query(MyClass).filter(MyClass.column == getArgs['val'])`\n- Avoid using raw SQL strings in query filters.\n- Ensure all user inputs are properly sanitized and validated.\n- Update SQLAlchemy to the latest version for security patches.\n- Use ORM methods like `.filter()` instead of raw SQL for safer queries.\n- Configure database connections securely, including setting appropriate timeouts.\n- Regularly review and update your application's security practices.",
+    "source": "code_example",
+    "updated_at": 1781070694.3971422
+  }
+}
