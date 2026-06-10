@@ -1,0 +1,12 @@
+{
+  "search:.NET Core + Entity Framework:.net core entity framework cru": {
+    "content": "- **Latest Versions**: ASP.NET Core 10, Entity Framework Core 10\n- **CLI Commands**:\n  - `dotnet new mvc -n MyProject`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - `appsettings.json`: ConnectionStrings, Logging\n  - `Startup.cs`: ConfigureServices for DbContext\n  - `Program.cs`: ConfigureServices and Configure for middleware",
+    "source": "web_search",
+    "updated_at": 1781078284.2375307
+  },
+  "search:.NET Core + Entity Framework:.net core entity framework cru_ex": {
+    "content": "- **Latest Version**: ASP.NET Core 10, Entity Framework Core 10\n- **CLI Commands**:\n  - `dotnet new webapi`\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n- **Key Config Options**:\n  - `appsettings.json`: ConnectionStrings, Logging, etc.\n  - `Startup.cs` or `Program.cs`: ConfigureServices, Configure\n- **Example Code Snippet**:\n  ```csharp\n  // Startup.cs\n  public void ConfigureServices(IServiceCollection services)\n  {\n      services.AddDbContext<ApplicationDbContext>(options =>\n          options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\")));\n      services.AddControllers();\n  }\n\n  // ApplicationDbContext.cs\n  public class ApplicationDbContext : DbContext\n  {\n      public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }\n      public DbSet<TodoItem> TodoItems { get; set; }\n  }\n\n  // TodoController.cs\n  [ApiController]\n  [Route(\"api/[controller]\")]\n  public class TodoController : ControllerBase\n  {\n      private readonly ApplicationDbContext _context;\n\n      public TodoController(ApplicationDbContext context)\n      {\n          _context = context;\n      }\n\n      // GET: api/TodoItems\n      [HttpGet]\n      public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()\n      {\n          return await _context.TodoItems.ToListAsync();\n      }\n  }\n  ```",
+    "source": "code_example",
+    "updated_at": 1781078293.2035856
+  }
+}
