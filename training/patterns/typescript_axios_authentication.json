@@ -1,0 +1,12 @@
+{
+  "search:typescript-axios-authentication:restful api security with type": {
+    "content": "- Use `npm install axios` to install Axios.\n- For TypeScript support, use `npm install @types/axios`.\n- To generate type-safe API clients, consider using `openapi-typescript`.\n- Install it with `npm install openapi-typescript`.\n- Run generation with: `npx openapi-typescript path/to/openapi.json > api.ts`.\n- Key Axios config options include:\n  - `baseURL`: Base URL of the API.\n  - `headers`: Custom headers for requests.\n  - `timeout`: Request timeout in milliseconds.\n- For error handling, use `.catch(error => { ... })` on Axios promises.\n- Implement authentication by adding tokens to request headers.\n- Use Jest for testing with Axios. Install it via `npm install --save-dev jest`.\n- Configure Jest in your project root with a `jest.config.js` file.\n- Run tests using `npx jest`.",
+    "source": "web_search",
+    "updated_at": 1781064408.6695604
+  },
+  "search:typescript-axios-authentication:restful api security with type_ex": {
+    "content": "- **CLI Commands**: `npm install typescript @types/node axios`\n- **Latest Versions**: TypeScript 5.x, Axios 1.x\n- **Key Config Options**:\n  - `tsconfig.json`: `\"compilerOptions\": { \"target\": \"ES6\", \"module\": \"commonjs\", \"strict\": true }`\n  - `.env`: Define environment variables for API endpoints and keys",
+    "source": "code_example",
+    "updated_at": 1781064431.3955984
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "search:java-spring-boot-jpa-postgres:advanced spring data jpa and p": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data JPA: 2.7.x\n  - PostgreSQL JDBC Driver: 42.3.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydatabase`\n  - `spring.datasource.username=postgres`\n  - `spring.datasource.password=mysecretpassword`\n  - `spring.jpa.hibernate.ddl-auto=update`",
+    "source": "web_search",
+    "updated_at": 1781064351.029411
+  },
+  "search:java-spring-boot-jpa-postgres:advanced spring data jpa and p_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - PostgreSQL: 15.4\n  - Spring Data JPA: 2.7.0\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydatabase`\n  - `spring.datasource.username=postgres`\n  - `spring.datasource.password=mysecretpassword`\n  - `spring.jpa.hibernate.ddl-auto=update`",
+    "source": "code_example",
+    "updated_at": 1781064369.959657
+  }
+}
