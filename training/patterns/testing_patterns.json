@@ -1,62 +1,62 @@
 {
   "search:testing-patterns:unit testing nestjs jest mock ": {
-    "content": "- Install Jest and NestJS testing utilities using `npm install --save-dev jest @nestjs/testing ts-jest @types/jest`.\n- Configure Jest in your project by creating a `jest.config.js` file.\n- Use the `Test.createTestingModule()` method to create a test module that includes the service you want to test, along with any dependencies.\n- Mock services using the `useClass`, `useValue`, or `useFactory` options when defining providers in the test module.\n- Utilize Jest's mocking capabilities to mock methods and properties of your service.\n- Employ hooks like `beforeEach`, `afterEach`, `beforeAll`, and `afterAll` for setup and teardown logic.\n- Run tests using the NestJS CLI with the command `nest test`.\n- Ensure you have a testing strategy that includes both unit and integration tests.",
+    "content": "- **CLI Commands**:\n  - `nest generate service <service-name>` to create a new service.\n  - `nest test` to run unit tests.\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - In `test/jest-e2e.json`, configure the `moduleFileExtensions` and `transform` options.\n  - Use `jest-mock` for mocking services in unit tests.",
     "source": "web_search",
-    "updated_at": 1780974092.7088194
+    "updated_at": 1781061374.5758326
   },
   "search:testing-patterns:unit testing nestjs jest mock _ex": {
-    "content": "- **CLI Commands**:\n  - `nest generate service <service-name>` to create a new service.\n  - `npm run test` to run unit tests.\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - Use `jest-mock` for mocking in Jest.\n  - Configure `test/jest-e2e.json` for end-to-end testing setup.",
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev @nestjs/testing jest ts-jest`\n  - `npx nest generate service my-service`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Jest: 29.x\n\n- **Key Config Options**:\n  - `jest.config.ts`: Configure Jest settings for NestJS.\n  - `test/jest-e2e.json`: Configuration file for end-to-end tests.\n  - `src/app.module.ts`: Import `TestModule` for testing.\n\n- **Example Code Snippet**:\n  ```typescript\n  import { Test, TestingModule } from '@nestjs/testing';\n  import { MyService } from './my.service';\n\n  describe('MyService', () => {\n    let service: MyService;\n\n    beforeEach(async () => {\n      const module: TestingModule = await Test.createTestingModule({\n        providers: [MyService],\n      }).compile();\n\n      service = module.get<MyService>(MyService);\n    });\n\n    it('should be defined', () => {\n      expect(service).toBeDefined();\n    });\n  });\n  ```",
     "source": "code_example",
-    "updated_at": 1780974105.9237137
+    "updated_at": 1781061391.8802667
   },
   "search:testing-patterns:integration testing nestjs sup": {
-    "content": "- **CLI Commands**:\n  - `nest new project-name`: Create a new NestJS project.\n  - `npm run test:e2e`: Run end-to-end tests.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - `test.e2e.json` for E2E testing configuration.\n  - Use `Test.createTestingModule()` to create a test module.",
+    "content": "- **CLI Commands**:\n  - `nest new project-name`: Creates a new NestJS project.\n  - `npm run test:e2e`: Runs end-to-end tests.\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - Supertest: v6.x\n\n- **Key Config Options**:\n  - `test.e2e.json` for E2E testing configuration.\n  - Use `Test.createTestingModule()` for setting up test modules.",
     "source": "web_search",
-    "updated_at": 1780974132.1690295
+    "updated_at": 1781061409.228985
   },
   "search:testing-patterns:integration testing nestjs sup_ex": {
-    "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `npm install --save-dev @nestjs/testing supertest`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - Supertest: 7.x\n\n- **Key Config Options**:\n  - Use `Test.createTestingModule` for setting up the test module.\n  - Configure `TestModuleBuilder` to include controllers, services, and other dependencies.\n  - Utilize `supertest` to make HTTP requests and assert responses.",
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies: `npm install --save-dev @nestjs/testing supertest`.\n- Update `test/jest-e2e.json` for E2E testing configuration.\n- Write E2E tests in `test/**/*.spec.ts`.\n- Run E2E tests with: `npm run test:e2e`.\n- Use `Test.createTestingModule()` for mocking modules.\n- Configure Jest and Supertest for comprehensive testing coverage.",
     "source": "code_example",
-    "updated_at": 1780974138.3985565
+    "updated_at": 1781061434.1794026
   },
   "search:testing-patterns:unit testing spring boot junit": {
-    "content": "- **CLI Commands**:\n  - `mvn test` to run tests.\n  - `mvn clean install` for a full build and test.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - JUnit 5: 5.9.x\n  - Mockito: 4.x\n\n- **Key Config Options**:\n  - `@SpringBootTest`: For loading the entire application context.\n  - `@MockBean`: To create a mock of a bean in the Spring context.\n  - `@InjectMocks`: To inject mocks into a test class.",
+    "content": "- Use `mvn clean install` to run tests.\n- Ensure JUnit 5 and Mockito are in your `pom.xml`.\n- Annotate test classes with `@SpringBootTest` for full application context.\n- Use `@MockBean` to mock Spring beans.\n- Employ `@TestInstance(TestInstance.Lifecycle.PER_CLASS)` for efficient setup.\n- Configure `spring.main.banner-mode=off` in `application.properties` for cleaner output.\n- Utilize `@AutoConfigureMockMvc` for testing web layers.\n- Apply `@DataJpaTest` for database tests without full context.",
     "source": "web_search",
-    "updated_at": 1780974148.1868687
+    "updated_at": 1781061453.0941083
   },
   "search:testing-patterns:unit testing spring boot junit_ex": {
-    "content": "- **CLI Commands**: \n  - `mvn clean test` to run tests.\n  - `mvn spring-boot:run` to start the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - JUnit: 5.9.1\n  - Mockito: 4.0.0\n\n- **Key Config Options**:\n  - `spring.test.annotation.exclude-filter`: To exclude certain test classes.\n  - `spring.main.banner-mode`: To control the banner display during application startup.\n  - `test.resources`: Directory for test resources like properties files.",
+    "content": "- **CLI Commands**:\n  - `mvn clean test` to run tests.\n  - `mvn dependency:tree` to check dependencies.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.x\n  - JUnit 5: 5.10.x\n  - Mockito: 4.1.x\n\n- **Key Config Options**:\n  - `@MockBean`: To mock beans in the application context.\n  - `@WebMvcTest`: For testing controllers without loading the full context.\n  - `@AutoConfigureMockMvc`: To configure MockMvc for testing web layers.",
     "source": "code_example",
-    "updated_at": 1780974163.4647381
+    "updated_at": 1781061470.3567839
   },
   "search:testing-patterns:fastapi pytest async testing f": {
-    "content": "- Use `pytest-asyncio` for running async tests in FastAPI.\n- Set up test environment variables in `conftest.py`.\n- Utilize `AsyncClient` from `fastapi.testclient` with `pytest-anyio` for testing async endpoints.\n- Mock external services like AWS S3 using Moto.\n- Create test clients and mock databases within pytest fixtures.\n- Ensure all dependencies are installed via pip, e.g., `pip install fastapi pytest pytest-asyncio pytest-anyio moto`.\n- Latest versions: FastAPI 0.95.x, pytest 7.x, pytest-asyncio 0.18.x, pytest-anyio 0.3.x, Moto 2.x.\n- Key config options include setting up environment variables and organizing test suite structure in `conftest.py`.",
+    "content": "- Use `pytest` version 7.x or later.\n- Install `pytest-asyncio` using `pip install pytest-asyncio`.\n- Configure your `pytest.ini` with `[pytest]` section and add `addopts = --asyncio-mode=auto`.\n- Create an async fixture for the FastAPI client:\n  ```python\n  import pytest\n  from fastapi.testclient import TestClient\n\n  @pytest.fixture(scope=\"module\")\n  async def client():\n      app = create_app()  # Your FastAPI application creation function\n      with TestClient(app) as c:\n          yield c\n  ```\n- Use the `@pytest.mark.asyncio` decorator for your test functions.\n- Example of an async test using the fixture:\n  ```python\n  @pytest.mark.asyncio\n  async def test_read_main(client):\n      response = await client.get(\"/\")\n      assert response.status_code == 200\n      assert response.json() == {\"message\": \"Hello World\"}\n  ```\n- Ensure your FastAPI application is properly set up to handle asynchronous requests.\n- Use `pytest-asyncio` for running async tests and fixtures correctly.",
     "source": "web_search",
-    "updated_at": 1780974182.5915895
+    "updated_at": 1781061483.5976276
   },
   "search:testing-patterns:fastapi pytest async testing f_ex": {
-    "content": "- Install FastAPI and Pytest using pip: `pip install fastapi pytest`\n- Use the `pytest_asyncio` fixture for asynchronous testing.\n- Define an async client in your tests:\n  ```python\n  @pytest_asyncio.fixture(scope=\"function\")\n  async def async_client(async_db_session: AsyncSession) -> AsyncClient:\n      \"\"\"Setup the test client for the FastAPI app.\"\"\"\n      return AsyncClient(app=your_fastapi_app, base_url=\"http://test\")\n  ```\n- Run tests with pytest: `pytest`\n- Use `asyncio` for asynchronous operations in your tests.\n- Ensure your FastAPI app is configured to use an async database session.",
+    "content": "- Use `pytest.mark.asyncio` to mark async tests.\n- Install latest pytest and FastAPI using pip.\n- Configure `pytest.ini` for FastAPI testing setup.\n- Use `@pytest_asyncio.fixture` for creating async fixtures.\n- Ensure database sessions are properly managed in fixtures.\n- Run tests with `pytest -v` for verbose output.\n- Utilize `AsyncClient` from FastAPI test client for API testing.\n- Commit changes within async session to persist data.\n- Test files should be named `test_*.py` or `*_test.py`.\n- Use `scope=\"function\"` in fixtures for independent tests.",
     "source": "code_example",
-    "updated_at": 1780974192.931982
+    "updated_at": 1781061497.2107692
   },
   "search:testing-patterns:test driven development tdd ex": {
-    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest`\n  - `pytest --version`\n\n- **Latest Versions**:\n  - Jest: 29.3.1\n  - Pytest: 7.4.0\n\n- **Key Config Options**:\n  - Jest: `\"testEnvironment\": \"jsdom\"`\n  - Pytest: `addopts = [\"--cov=my_package\"]`",
+    "content": "- **CLI Commands**: Use `pytest` for running tests.\n- **Latest Version**: Ensure using the latest version of Python and pytest.\n- **Key Config Options**:\n  - `-v`: Verbose mode to see detailed test output.\n  - `--cov=module_name`: Measure code coverage for a specific module.\n  - `--maxfail=1`: Stop running tests after the first failure.",
     "source": "web_search",
-    "updated_at": 1780974209.0573156
+    "updated_at": 1781061515.9876935
   },
   "search:testing-patterns:test driven development tdd ex_ex": {
-    "content": "- **CLI Commands**: `pytest` for running tests, `unittest` for Python's built-in testing framework.\n- **Latest Versions**: Ensure using the latest version of Python and testing frameworks like `pytest` or `unittest`.\n- **Key Config Options**:\n  - For `pytest`, configure in `pytest.ini` or `.ini` files.\n  - For `unittest`, use configuration through `unittest.TestLoader` or command-line options.",
+    "content": "- **CLI Commands**: `npm install --save-dev jest`\n- **Latest Version**: Jest 29.x\n- **Key Config Options**:\n  - `testEnvironment`: \"jsdom\"\n  - `setupFilesAfterEnv`: [\"./setupTests.js\"]\n  - `transformIgnorePatterns`: [\"/node_modules/(?!(react|react-dom)/)\"]",
     "source": "code_example",
-    "updated_at": 1780940633.5058982
+    "updated_at": 1781061530.5172977
   },
   "search:testing-patterns:testing mongodb in-memory mong": {
-    "content": "- **CLI Commands**:\n  - `npm i @shelf/jest-mongodb`\n  \n- **Latest Versions**:\n  - `@shelf/jest-mongodb` version 6.0.2\n  \n- **Key Config Options**:\n  - Use `Global Setup/Teardown` for Jest to manage MongoDB instances.\n  - Configure `Async Test Environment` for asynchronous operations with MongoDB.",
+    "content": "- Use `npm install mongodb-memory-server` to install the latest version.\n- Initialize an instance of MongoDB-Memory-Server using `new MongoMemoryServer()`.\n- Start the server with `.start()` and stop it with `.stop()`.\n- Connect to the in-memory database using Mongoose by setting `mongoose.connect(server.getUri())`.\n- Use Jest for testing, ensuring you clean up after tests with `afterAll(async () => await server.stop())`.\n- For video tutorials, check out [How to Unit Test MongoDb with a in memory MongoDb](https://www.youtube.com/watch?v=example).\n- Ensure compatibility with MongoDB 6.x and Mongoose 6.x by using compatible versions of MongoDB-Memory-Server.",
     "source": "web_search",
-    "updated_at": 1780974255.4391077
+    "updated_at": 1781061543.0482016
   },
   "search:testing-patterns:testing mongodb in-memory mong_ex": {
-    "content": "- **GitHub Repository**: shelfio/jest-mongodb\n  - Latest Version: Check GitHub page for the latest release.\n  - Installation:\n    ```bash\n    npm install --save-dev jest-mongodb\n    ```\n  - Usage Example:\n    ```javascript\n    const { MongoMemoryServer } = require('mongodb-memory-server');\n    const mongoose = require('mongoose');\n\n    let mongoServer;\n\n    beforeAll(async () => {\n      mongoServer = await MongoMemoryServer.create();\n      const uri = mongoServer.getUri();\n\n      await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });\n    });\n\n    afterAll(async () => {\n      await mongoose.connection.close();\n      await mongoServer.stop();\n    });\n    ```\n\n- **Using with Jest**:\n  - Global Setup/Teardown Example:\n    ```javascript\n    // jest.config.js\n    module.exports = {\n      globalSetup: './setupTests.js',\n      globalTeardown: './teardownTests.js',\n    };\n    ```\n  - Async Test Environment Example:\n    ```javascript\n    // setupTests.js\n    const { MongoMemoryServer } = require('mongodb-memory-server');\n    const mongoose = require('mongoose');\n\n    let mongoServer;\n\n    module.exports = async () => {\n      mongoServer = await MongoMemoryServer.create();\n      const uri = mongoServer.getUri();\n\n      await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });\n    };\n    ```\n\n- **In-Memory MongoDB for Testing**:\n  - Key Config Options:\n    ```javascript\n    const server = new MongoMemoryServer({\n      binary: {\n        version: '4.4.6', // Specify the desired MongoDB version\n      },\n      instance: {\n        dbName: 'testdb', // Specify the database name\n      },\n    });\n    ```\n  - Usage Example:\n    ```javascript\n    const { MongoClient } = require('mongodb');\n\n    async function run() {\n      const uri = await server.getUri();\n      const client = new MongoClient(uri);\n\n      try {\n        await client.connect();\n        const database = client.db('testdb');\n        const collection = database.collection('users');\n\n        // Perform operations on the collection\n      } finally {\n        await client.close();\n        await server.stop();\n      }\n    }\n\n    run().catch(console.dir);\n    ```",
+    "content": "- Install MongoDB Memory Server: `npm install mongodb-memory-server --save-dev`\n- Install Jest: `npm install jest --save-dev`\n- Configure Jest to use MongoDB Memory Server:\n  ```json\n  {\n    \"testEnvironment\": \"node\",\n    \"setupFilesAfterEnv\": [\"./path/to/setupMongo.js\"]\n  }\n  ```\n- Create a setup file (e.g., `setupMongo.js`):\n  ```javascript\n  const { MongoMemoryServer } = require('mongodb-memory-server');\n  let mongoServer;\n\n  module.exports = async () => {\n    mongoServer = await MongoMemoryServer.create();\n    global.__MONGOD__ = mongoServer;\n  };\n\n  beforeEach(async () => {\n    const db = global.__MONGOD__.db;\n    await db.dropDatabase();\n  });\n\n  afterAll(async () => {\n    if (mongoServer) {\n      await mongoServer.stop();\n    }\n  });\n  ```\n- Run tests with Jest: `npx jest`\n- Enable debug mode:\n  - Environment variable: `MONGOMS_DEBUG=1`\n  - Package.json config: `\"config\": { \"mongoms_debug\": true }`\n\nKey versions:\n- MongoDB Memory Server: Latest version as of my last update\n- Jest: Latest version as of my last update",
     "source": "code_example",
-    "updated_at": 1780974285.4147701
+    "updated_at": 1781061560.772949
   }
 }

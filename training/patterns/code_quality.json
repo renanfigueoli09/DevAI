@@ -1,53 +1,53 @@
 {
   "search:code-quality:code review checklist backend ": {
-    "content": "- **CLI Commands**: Use `mvn clean install` to build and test your project.\n- **Latest Versions**: Spring Boot 3, Java 21.\n- **Key Config Options**:\n  - `application.properties`: Configure database URL, username, password.\n  - `@EnableAsync`: Enable asynchronous method execution.\n  - `@RepositoryRestResource`: Customize repository REST resource behavior.",
+    "content": "- **Code Review Checklist**: Ensure code meets requirements, compiles without warnings.\n- **Latest Spring Boot Version**: Spring Boot 3.0\n- **Key Config Options**:\n  - `application.properties` for server settings\n  - `pom.xml` or `build.gradle` for dependencies and plugins",
     "source": "web_search",
-    "updated_at": 1780974733.632034
+    "updated_at": 1781061947.2745042
   },
   "search:code-quality:code review checklist backend _ex": {
-    "content": "- Use `git diff` to compare changes between commits.\n- Run `npm audit fix --force` to update dependencies and fix known vulnerabilities.\n- Utilize ESLint with the latest version for code linting.\n- Employ SonarQube for static code analysis.\n- Configure CI/CD pipelines using GitHub Actions or Jenkins.\n- Implement unit tests with Jest or Mocha.\n- Use Postman for API testing.\n- Enable code coverage reports with Istanbul.\n- Review PRs using tools like CodeClimate or Codacy.\n- Ensure all code follows the PEP 8 style guide.",
+    "content": "- **CLI Commands**: Use `git diff` to compare changes between commits.\n- **Latest Versions**: Ensure using Node.js v18.x and npm v9.x for the latest features and security patches.\n- **Key Config Options**:\n  - Set environment variables in `.env` file for sensitive data like API keys.\n  - Configure logging levels in `log4js.json` to control output verbosity.\n  - Adjust database connection settings in `db.config.js` for optimal performance.",
     "source": "code_example",
-    "updated_at": 1780974739.0500128
+    "updated_at": 1781061953.2529945
   },
   "search:code-quality:anti-patterns to avoid backend": {
-    "content": "- **CLI Commands**: Use `git pull --rebase` to avoid merge commits.\n- **Latest Versions**: Ensure Node.js is up to date using `nvm install node --latest-npm`.\n- **Key Config Options**: For Express, use `app.set('trust proxy', true)` for handling proxied requests.\n- **CLI Commands**: Run `npm audit fix` to address known vulnerabilities.\n- **Latest Versions**: Use `docker-compose pull` to update Docker images.\n- **Key Config Options**: In Kubernetes, set `resources.limits.cpu` and `resources.requests.memory`.\n- **CLI Commands**: Execute `terraform fmt` to format Terraform files.\n- **Latest Versions**: Update Python using `pyenv install --list` followed by `pyenv global <version>`.\n- **Key Config Options**: For Django, use `DEBUG = False` in production settings.\n- **CLI Commands**: Use `yarn upgrade` to update dependencies.",
+    "content": "- **CLI Commands:** Use `git pull` to update your local repository.\n- **Latest Versions:** Ensure Node.js is updated to version 16.x or later using `nvm install 16`.\n- **Key Config Options:** For database connections, use environment variables like `DB_HOST`, `DB_USER`, and `DB_PASS`.",
     "source": "web_search",
-    "updated_at": 1780974787.2667844
+    "updated_at": 1781062024.838386
   },
   "search:code-quality:anti-patterns to avoid backend_ex": {
-    "content": "- **CLI Commands**: Use `git pull --rebase` to keep your branch up-to-date without creating merge commits.\n- **Latest Versions**: Ensure you are using the latest version of Node.js with `nvm install node --latest-npm`.\n- **Key Config Options**: For a Django project, set `DEBUG = False` in `settings.py` for production environments.",
+    "content": "- **CLI Commands**: Use `mvn clean install` to ensure your build is up-to-date.\n- **Latest Versions**: Keep Java and Maven updated to the latest stable releases for security and performance improvements.\n- **Key Config Options**:\n  - For Maven, configure `settings.xml` with appropriate repository URLs and credentials.\n  - For Java, set JVM options like `-Xmx2048m` for increased heap size.",
     "source": "code_example",
-    "updated_at": 1780974811.7803736
+    "updated_at": 1781062038.6469193
   },
   "search:code-quality:refactoring patterns legacy co": {
-    "content": "- **Devnexus 2025**: Attend the event to learn about testing legacy code and refactoring patterns.\n- **GitHub Copilot X's sprintf Refactoring Patterns**:\n  - Use GitHub Copilot X for converting legacy formatting approaches into cleaner syntax.\n  - Real-world examples available in C, PHP.\n- **Legacy Code Refactoring Guide**:\n  - Understand what legacy code refactoring means.\n  - Learn how to refactor code using patterns.\n- **Using AI to Refactor Legacy Codebases Intelligently**:\n  - Analyze code patterns.\n  - Recommend refactoring strategies.\n  - Auto-generate tests before/after refactoring.",
+    "content": "- **Devnexus 2025**: Focus on testing legacy code and refactoring patterns.\n  \n- **GitHub Copilot X's sprintf Refactoring Patterns**:\n  - Convert legacy formatting to cleaner syntax.\n  - Real-world examples from C, PHP.\n\n- **Refactoring Legacy PowerShell Scripts**:\n  - Modularize scripts into functions.\n  - Add automated tests.\n  - Ensure consistent naming and error handling.\n\n- **Legacy Code Refactoring Guide**:\n  - Understand what refactoring means.\n  - Learn how to refactor code using patterns.",
     "source": "web_search",
-    "updated_at": 1780974820.2518048
+    "updated_at": 1781062052.5185325
   },
   "search:code-quality:refactoring patterns legacy co_ex": {
-    "content": "- **Devnexus 2025**: Attend the event to learn about testing legacy code and refactoring patterns.\n- **AI Code Refactoring Guide 2025**:\n  - Cursor: Version 95/100, supports multi-file refactoring.\n  - GitHub Copilot: Version 92/100, excels in pattern-based improvements.\n  - Claude Code: Version 90/100, great for complex logic restructuring.\n- **GitHub Copilot X's sprintf Refactoring Patterns**:\n  - Use GitHub Copilot X to convert legacy formatting into cleaner syntax.\n  - Real-world examples available in C and PHP.",
+    "content": "- **Devnexus 2025**: Focus on testing legacy code and applying refactoring patterns.\n- **GitHub Copilot X**: Utilize `sprintf` refactoring patterns for improved code quality.\n- **Medium Article**: Discusses common challenges, types of refactoring, and AI's role in legacy codebases.\n- **CLI Commands**:\n  - `git checkout <branch-name>`: Switch to a specific branch.\n  - `npm install --save-dev eslint`: Install ESLint for code linting.\n  - `yarn add --dev prettier`: Add Prettier for code formatting.\n- **Latest Versions**:\n  - Ensure using the latest version of Node.js (e.g., v16.x).\n  - Update npm to the latest version (`npm install -g npm`).\n- **Key Config Options**:\n  - ESLint configuration file (`eslintrc.json`) for custom rules.\n  - Prettier configuration file (`prettierrc.json`) for formatting preferences.",
     "source": "code_example",
-    "updated_at": 1780974829.2382355
+    "updated_at": 1781062070.4136374
   },
   "search:code-quality:technical debt identification ": {
-    "content": "- **CLI Commands**: Use `git blame` to identify code changes and potential technical debt.\n- **Latest Version**: Ensure using the latest version of your IDE or editor for better support in identifying technical debt.\n- **Key Config Options**: Configure your issue tracker with plugins that support transformer-based models for accurate TD identification.",
+    "content": "- **CLI Commands**: Use `git diff` to identify changes and potential technical debt.\n- **Latest Version**: Ensure using the latest version of your development tools and libraries to avoid known issues.\n- **Key Config Options**: Review configuration files for best practices, such as enabling code formatting on save in IDEs like VSCode or IntelliJ IDEA.",
     "source": "web_search",
-    "updated_at": 1780974836.792605
+    "updated_at": 1781062076.8844845
   },
   "search:code-quality:typescript strict mode best pr": {
-    "content": "- **Enable Strict Mode**: Update `tsconfig.json` to include `\"strict\": true`.\n- **Type Inference**: Leverage TypeScript's type inference to reduce explicit type declarations.\n- **Use Latest TypeScript Version**: Ensure you are using the latest stable version of TypeScript for all features and improvements.\n- **Key Config Options**:\n  - `\"module\": \"ESNext\"`: For modern JavaScript modules.\n  - `\"target\": \"ESNext\"`: To target the latest ECMAScript standards.\n  - `\"esModuleInterop\": true`: Enables interoperability between ES modules and CommonJS.\n  - `\"skipLibCheck\": true`: Skips type checking of declaration files to speed up compilation.\n- **CLI Commands**:\n  - `tsc --init`: Initialize a new TypeScript project with default settings.\n  - `tsc --watch`: Watch for file changes and recompile automatically.\n  - `tsc --noEmitOnError`: Prevents emitting any output if there are errors in the code.",
+    "content": "- Enable TypeScript Strict Mode by setting `strict: true` in your `tsconfig.json`.\n- Use the latest version of TypeScript, currently at v5.3.\n- Key config options include:\n  - `strictNullChecks`: Prevents null and undefined from being assigned to variables unless explicitly allowed.\n  - `strictFunctionTypes`: Ensures that function types are compared structurally rather than by name.\n  - `strictBindCallApply`: Enforces stricter rules for the use of `bind`, `call`, and `apply`.\n  - `noImplicitAny`: Forbids implicit any type, requiring explicit type annotations.\n  - `noImplicitThis`: Ensures that `this` is always defined within functions.\n- Migrate incrementally to strict mode by enabling each flag one at a time and fixing errors as they arise.",
     "source": "web_search",
-    "updated_at": 1780974714.9539824
+    "updated_at": 1781061926.4941525
   },
   "search:code-quality:typescript strict mode best pr_ex": {
-    "content": "- Enable strict mode in your `tsconfig.json` by setting `\"strict\": true`.\n- Use the latest TypeScript version, as of my last update, it's 5.3.\n- Implement `\"noImplicitAny\": true` to avoid implicit any types.\n- Utilize `\"strictNullChecks\": true` for null safety.\n- Enable `\"strictFunctionTypes\": true` for function type checking.\n- Apply `\"strictPropertyInitialization\": true` to ensure class properties are initialized.\n- Use `\"noUnusedLocals\" and \"noUnusedParameters\"` to catch unused code.\n- Configure `\"moduleResolution\": \"node\"` for module resolution.\n- Set `\"esModuleInterop\": true` for better compatibility with ES modules.",
+    "content": "- **CLI Commands**: Use `tsc --strict` to enable strict mode.\n- **Latest Versions**: Ensure TypeScript version is up-to-date using `npm install typescript@latest`.\n- **Key Config Options**:\n  - `noImplicitAny`: Prevents usage of `any` type.\n  - `strictNullChecks`: Enables strict null checks.\n  - `strictFunctionTypes`: Enforces stricter rules for function types.\n  - `strictPropertyInitialization`: Ensures class properties are initialized.\n  - `noImplicitThis`: Prohibits using the `this` keyword in functions without explicit binding.",
     "source": "code_example",
-    "updated_at": 1780974722.9093559
+    "updated_at": 1781061932.6602712
   },
   "search:code-quality:naming conventions functions c": {
-    "content": "- **Java Interfaces/Implementation Naming Convention**: Use `I` prefix for interfaces and no prefix for implementations.\n- **General Naming Conventions**: Follow Microsoft's guidelines on word choice, abbreviations, and avoiding language-specific names.\n- **Programming Naming Conventions**:\n  - Python: Use snake_case for functions and variables.\n  - JavaScript: Use camelCase for functions and variables; PascalCase for constructors.\n- **Code Conventions for Java**:\n  - Use `camelCase` for variable and method names.\n  - Use `PascalCase` for class names.\n  - Use `SCREAMING_SNAKE_CASE` for constants.",
+    "content": "- **CLI Commands**:\n  - `dotnet new classlib` to create a new class library.\n  - `dotnet build` to build the project.\n\n- **Latest Versions**:\n  - .NET SDK 7.0 as of my last update in October 2023.\n\n- **Key Config Options**:\n  - Use PascalCasing for class, struct, and interface names.\n  - Avoid using verbs for class names; use nouns or noun phrases instead.",
     "source": "web_search",
-    "updated_at": 1780974747.4787042
+    "updated_at": 1781061977.3819177
   },
   "search:code-quality:naming conventions functions c_ex": {
     "content": "- **Naming Conventions**:\n  - Variables, functions, classes, methods, interfaces.\n  - Popular case types: Camel, Snake, Kebab.\n\n- **Python Code Quality**:\n  - Use PEP 8 for style guidelines.\n  - Focus on readability and clarity in naming.\n\n- **Java Interface Naming**:\n  - Interfaces should start with \"I\" (e.g., `IFileHandler`).\n  - Avoid suffixes like \"Impl\" or \"Interface\".\n\n- **Latest Versions**:\n  - Ensure using the latest versions of development tools and libraries for best practices.",
@@ -55,8 +55,8 @@
     "updated_at": 1780974764.0185273
   },
   "search:code-quality:technical debt identification _ex": {
-    "content": "- **CLI Commands**: Use `tdr-generator` to generate Technical Debt Records.\n- **Latest Version**: Ensure you use the latest version of `tdr-generator`, which can be checked on GitHub releases page.\n- **Key Config Options**:\n  - `-project-name`: Specify the name of your project.\n  - `-output-format`: Choose the output format (e.g., JSON, CSV).\n  - `-include-submodules`: Include submodules in the analysis.",
+    "content": "- **CLI Commands**: Use `git diff` to compare code changes.\n- **Latest Version**: Ensure using the latest version of your IDE or editor for better features and performance.\n- **Key Config Options**: Review and update configuration files like `.editorconfig`, `.eslintrc`, and `.prettierrc` for consistent coding standards.",
     "source": "code_example",
-    "updated_at": 1780974841.3959632
+    "updated_at": 1781062081.9416795
   }
 }
