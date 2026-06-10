@@ -1,9 +1,9 @@
 # DevAI Validation Report
-*2026-06-09 23:55*
+*2026-06-10 00:15*
 
-## Score: 90% `[██████████████████░░]`  (45.0/50.0)
+## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
-### Knowledge Check (vector store): 31.0/36.0
+### Knowledge Check (vector store): 32.0/37.0
 | Check | Score | OK |
 |---|---|---|
 | Mongoose: required=! optional=? | 3.0/3 | ✅ |
@@ -19,8 +19,9 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| Advanced Error Handling in Spring Cloud Gateway Kubernetes: padrões de código | 1.0/1 | ✅ |
+| Advanced Error Handling in Spring Boot  +  MariaDB: padrões de código | 1.0/1 | ✅ |
 | ruby-on-rails-redis: cache | 1.0/1 | ✅ |
-| NextJS  +  Prisma Authentication: padrões de código | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
