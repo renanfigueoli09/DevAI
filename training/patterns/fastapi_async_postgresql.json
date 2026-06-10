@@ -1,0 +1,32 @@
+{
+  "search:fastapi-async-postgresql:fastapi async postgresql crud ": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up` to start services.\n  - `uvicorn main:app --reload` for local development.\n\n- **Latest Versions**:\n  - FastAPI: 0.85.2\n  - SQLAlchemy: 1.4.39\n  - PostgreSQL: 14.x\n\n- **Key Config Options**:\n  - Database URL in `settings.py`: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Async connection pool size: `pool_size=20, max_overflow=0`\n  - Pydantic models for data validation.\n  - FastAPI dependencies for dependency injection.",
+    "source": "web_search",
+    "updated_at": 1781081638.3209536
+  },
+  "search:fastapi-async-postgresql:fastapi async postgresql crud _ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up` to start the application.\n  - `uvicorn main:app --reload` for local development.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 1.4.32\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Asynchronous Engine: `engine = create_async_engine(SQLALCHEMY_DATABASE_URL, future=True)`\n  - Session Local: `AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`",
+    "source": "code_example",
+    "updated_at": 1781081646.7055836
+  },
+  "search:fastapi-async-postgresql:fastapi async postgresql trans": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `alembic init alembic`\n  - `alembic revision --autogenerate -m \"message\"`\n  - `alembic upgrade head`\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - ASGI Server: `uvicorn`\n  - ORM: `SQLAlchemy 2.0` with `asyncpg` driver\n  - Testing Framework: `pytest`",
+    "source": "web_search",
+    "updated_at": 1781081652.8364198
+  },
+  "search:fastapi-async-postgresql:fastapi async postgresql trans_ex": {
+    "content": "- **CLI Commands**:\n  - `fastapi create`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 2.0.0\n  - PostgreSQL: 14.x\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - Connection Pooling: Use `AsyncEngine` with `create_async_engine`\n  - Transaction Management: Use `async with async_session.begin()`",
+    "source": "code_example",
+    "updated_at": 1781081656.070271
+  },
+  "search:fastapi-async-postgresql:fastapi async postgresql pooli": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI.\n- Install latest FastAPI and SQLModel using pip: `pip install fastapi sqlmodel`.\n- For PostgreSQL, use asyncpg for asynchronous connections.\n- Configure connection pooling with `asyncpg.pool.create_pool`.\n- Key config options include `max_size` and `min_size` in the pool creation.\n- Use Pydantic models for data validation and ORM mapping.\n- Optimize queries to avoid N+1 issues using eager loading or subqueries.\n- For production, consider deploying on platforms like AWS Lambda with API Gateway.",
+    "source": "web_search",
+    "updated_at": 1781081663.041439
+  },
+  "search:fastapi-async-postgresql:fastapi async postgresql pooli_ex": {
+    "content": "- Use `uvicorn` to run FastAPI applications.\n- Install dependencies using pip: `pip install fastapi[all] sqlalchemy asyncpg`.\n- Configure PostgreSQL connection pooling with SQLAlchemy:\n  ```python\n  from sqlalchemy import create_engine\n  engine = create_engine(\"postgresql+asyncpg://user:password@localhost/dbname\", pool_size=10, max_overflow=20)\n  ```\n- Use `FastAPI` to define routes and models.\n- For asynchronous operations, use `asyncio`.\n- Example of an async route:\n  ```python\n  from fastapi import FastAPI\n  app = FastAPI()\n\n  @app.get(\"/\")\n  async def read_root():\n      return {\"Hello\": \"World\"}\n  ```\n- Utilize Pydantic for data validation and settings management.\n- For database operations, use SQLAlchemy ORM or raw SQL queries with `asyncpg`.\n- Configure environment variables for sensitive information like database credentials.\n- Use Docker to containerize your application for easy deployment.",
+    "source": "code_example",
+    "updated_at": 1781081673.918216
+  }
+}

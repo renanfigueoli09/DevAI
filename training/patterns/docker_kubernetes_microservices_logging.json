@@ -1,0 +1,12 @@
+{
+  "search:docker-kubernetes-microservices-logging:docker kubernetes microservice": {
+    "content": "- **CLI Commands**:\n  - `docker build -t <image_name>:<tag> .`\n  - `docker push <registry>/<image_name>:<tag>`\n  - `kubectl apply -f <deployment_file>.yaml`\n  - `kubectl get pods`\n  - `kubectl logs <pod_name>`\n\n- **Latest Versions**:\n  - Docker: v20.10\n  - Kubernetes: v1.24\n\n- **Key Config Options**:\n  - Deployment YAML: `replicas`, `image`, `resources`\n  - Service YAML: `selector`, `ports`\n  - PersistentVolumeClaim: `storageClassName`, `accessModes`, `resources`",
+    "source": "web_search",
+    "updated_at": 1781081763.647669
+  },
+  "search:docker-kubernetes-microservices-logging:docker kubernetes microservice_ex": {
+    "content": "- **CLI Commands**:\n  - `docker build -t my-microservice .`\n  - `kubectl apply -f deployment.yaml`\n\n- **Latest Versions**:\n  - Docker: 24.0\n  - Kubernetes: v1.27.0\n\n- **Key Config Options**:\n  - Dockerfile: `FROM openjdk:17-jdk-slim`, `COPY target/my-microservice.jar app.jar`\n  - deployment.yaml: `apiVersion: apps/v1`, `kind: Deployment`, `spec: replicas: 3`",
+    "source": "code_example",
+    "updated_at": 1781081755.6982656
+  }
+}

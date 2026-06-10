@@ -1,0 +1,22 @@
+{
+  "search:kotlin-spring-data-jpa-performance:kotlin spring data jpa perform": {
+    "content": "- Use `@QueryHints` to optimize performance, e.g., `@QueryHints(value = @QueryHint(name = \"javax.persistence.fetchgraph\", value = \"myFetchGraph\"))`\n- Enable second-level cache in Hibernate: `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`\n- Set fetch size for queries: `@QueryHints(value = @QueryHint(name = \"org.hibernate.fetch_size\", value = \"50\"))`\n- Configure timeout for queries: `@QueryHints(value = @QueryHint(name = \"javax.persistence.query.timeout\", value = \"30\"))`\n- Use read-only transactions when possible: `@Transactional(readOnly = true)`\n- Enable query cache in Hibernate: `spring.jpa.properties.hibernate.cache.use_query_cache=true`\n- Monitor and tune using Spring Boot Actuator endpoints\n- Update to the latest version of Spring Data JPA for performance improvements\n- Use `@EntityGraph` for efficient entity loading\n- Configure connection pool settings, e.g., `spring.datasource.hikari.maximum-pool-size=20`",
+    "source": "web_search",
+    "updated_at": 1781081683.7837105
+  },
+  "search:kotlin-spring-data-jpa-performance:kotlin spring data jpa perform_ex": {
+    "content": "- **Batch Size Configuration**: Use `@QueryHints` to set batch size, e.g., `@QueryHints(value = @QueryHint(name = \"org.hibernate.jdbc.batch_size\", value = \"50\"))`.\n- **Read-Only Queries**: Set queries as read-only using `@QueryHints(value = @QueryHint(name = \"javax.persistence.query.timeout\", value = \"30\"))` to reduce memory pressure.\n- **Fetch Size**: Adjust fetch size with `@QueryHints(value = @QueryHint(name = \"org.hibernate.fetch_size\", value = \"50\"))`.\n- **Timeout**: Set query timeout using `@QueryHints(value = @QueryHint(name = \"javax.persistence.query.timeout\", value = \"30\"))` to prevent slowdowns.\n- **Caching**: Enable caching with `@EnableCaching` and configure cache manager, e.g., `@Bean public CacheManager cacheManager() { return new ConcurrentMapCacheManager(\"users\"); }`.\n- **Latest Version**: Ensure using the latest version of Spring Data JPA for performance improvements and bug fixes.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`\n  - `spring.jpa.properties.hibernate.fetch_size`\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache`\n  - `spring.jpa.properties.hibernate.cache.region.factory_class`",
+    "source": "code_example",
+    "updated_at": 1781081692.0502567
+  },
+  "search:kotlin-spring-data-jpa-performance:kotlin spring data jpa caching": {
+    "content": "- **CLI Commands**:\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Data JPA: 3.0.x\n  - Kotlin: 1.8.x\n  - Spring Boot: 3.0.x\n\n- **Key Config Options**:\n  - Cache Manager Configuration: `application.yml`\n    ```yaml\n    spring:\n      cache:\n        type: caffeine\n        caffeine:\n          spec: maximumSize=500,expireAfterWrite=60s\n    ```\n  - Repository Caching: Enable caching in repository interfaces.\n    ```kotlin\n    @Repository\n    interface UserRepository : JpaRepository<User, Long> {\n        @Cacheable(\"users\")\n        fun findByUsername(username: String): User?\n    }\n    ```\n  - Query Caching: Use `@Query` annotation with `cacheable` attribute.\n    ```kotlin\n    @Repository\n    interface UserRepository : JpaRepository<User, Long> {\n        @Query(\"SELECT u FROM User u WHERE u.username = ?1\")\n        @Cacheable(\"users\")\n        fun findByUsername(username: String): User?\n    }\n  ```",
+    "source": "web_search",
+    "updated_at": 1781081704.7721841
+  },
+  "search:kotlin-spring-data-jpa-performance:kotlin spring data jpa batch p": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.x\n  - Spring Batch: 4.3.x\n\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`",
+    "source": "web_search",
+    "updated_at": 1781081727.448205
+  }
+}
