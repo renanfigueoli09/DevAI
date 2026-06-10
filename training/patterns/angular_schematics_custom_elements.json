@@ -1,0 +1,12 @@
+{
+  "search:angular-schematics-custom-elements:creating reusable angular comp": {
+    "content": "- **CLI Commands**:\n  - `ng generate component <component-name>`\n  - `ng build --prod`\n  - `ng serve`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Core: 16.2.0\n\n- **Key Config Options**:\n  - `angular.json`: Configure project settings, including paths and scripts.\n  - `tsconfig.json`: Define TypeScript compiler options for your project.\n  - `schematics.json`: Customize schematics behavior if needed.",
+    "source": "web_search",
+    "updated_at": 1781079691.2383366
+  },
+  "search:angular-schematics-custom-elements:creating reusable angular comp_ex": {
+    "content": "- **CLI Commands**: Use `ng generate component <component-name>` to create a new component.\n- **Latest Versions**: Ensure Angular CLI is up-to-date with `npm install -g @angular/cli`.\n- **Key Config Options**:\n  - `selector`: Unique identifier for the component in HTML templates.\n  - `templateUrl` or `template`: Specifies the location of the component's template.\n  - `styleUrls` or `styles`: Defines the styles for the component.",
+    "source": "code_example",
+    "updated_at": 1781079697.8635025
+  }
+}

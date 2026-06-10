@@ -1,0 +1,12 @@
+{
+  "search:spring-boot-jpa-advanced-querying:optimizing spring boot jpa que": {
+    "content": "- Use Spring Data JPA repositories for database interactions.\n- Employ query optimization techniques like JPQL, native queries, and projections.\n- Implement batch operations to reduce the number of transactions.\n- Optimize fetch strategies using `@Fetch` annotations or `@EntityGraph`.\n- Utilize caching mechanisms like Ehcache or Caffeine with Spring Boot.\n- Enable lazy loading for collections to avoid N+1 query issues.\n- Configure database connection pool settings in `application.properties`.\n- Monitor and analyze query performance using tools like Hibernate SQL logging.\n- Regularly update Spring Boot, JPA, and related libraries to the latest versions.",
+    "source": "web_search",
+    "updated_at": 1781079729.296841
+  },
+  "search:spring-boot-jpa-advanced-querying:optimizing spring boot jpa que_ex": {
+    "content": "- Use `@Query` annotation for custom JPQL or SQL queries.\n- Implement pagination using `Pageable` and `Slice`.\n- Optimize fetch strategies with `@Fetch(FetchMode.JOIN)`.\n- Use projections to reduce data transfer (e.g., DTOs).\n- Batch operations with `@Modifying` and `@Query`.\n- Enable query logging for debugging (`spring.jpa.show-sql=true`).\n- Consider using Spring Data JPA's repository methods for simplicity.\n- Regularly review and optimize N+1 queries.",
+    "source": "code_example",
+    "updated_at": 1781079734.6674237
+  }
+}
