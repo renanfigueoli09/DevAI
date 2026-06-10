@@ -1,0 +1,22 @@
+{
+  "search:typescript-axios-performance:typescript axios performance o": {
+    "content": "- **CLI Commands**: Use `npm install axios` or `yarn add axios` to install Axios.\n- **Latest Version**: Check the latest version on [npm](https://www.npmjs.com/package/axios) or [GitHub](https://github.com/axios/axios).\n- **Key Config Options**:\n  - `baseURL`: Base URL for all requests.\n  - `timeout`: Timeout in milliseconds for request.\n  - `headers`: Custom headers to be sent with the request.\n  - `params`: Query parameters to be appended to the URL.\n  - `data`: Data to be sent as the body of the request.\n- **Caching Strategies**: Implement caching using libraries like `axios-cache-adapter`.\n- **Connection Pooling**: Use connection pooling by setting up a custom adapter with Axios.\n- **Advanced Error Handling**: Use `.catch()` or `try/catch` blocks for error handling.\n- **Data Transformation**: Utilize Axios interceptors to transform data before it is sent or received.",
+    "source": "web_search",
+    "updated_at": 1781049917.2809763
+  },
+  "search:typescript-axios-performance:typescript axios performance o_ex": {
+    "content": "- **CLI Commands**: Use `npm install axios` to install Axios.\n- **Latest Version**: Axios v1.6.2 as of my last update.\n- **Key Config Options**:\n  - `baseURL`: Base URL for all requests.\n  - `timeout`: Timeout in milliseconds before request is aborted.\n  - `headers`: Custom headers to be sent with the request.\n  - `params`: Query parameters to be appended to the URL.",
+    "source": "code_example",
+    "updated_at": 1781049922.7684555
+  },
+  "search:typescript-axios-performance:high performance http requests": {
+    "content": "- Install Axios using npm: `npm install axios`\n- Use TypeScript to define request types and response data interfaces.\n- For concurrent requests, use `axios.all()` and `axios.spread()`.\n- Configure Axios with options like `baseURL`, `timeout`, and `headers`.\n- Handle errors using `.catch()` or try-catch blocks.\n- Utilize Axios interceptors for global request/response handling.\n- Update Axios to the latest version: `npm update axios`\n- For React projects, consider using Axios in combination with hooks like `useEffect` and custom hooks.",
+    "source": "web_search",
+    "updated_at": 1781049933.333074
+  },
+  "search:typescript-axios-performance:high performance http requests_ex": {
+    "content": "- **Install Axios**: `npm install axios`\n- **Latest Version**: Check on [Axios GitHub](https://github.com/axios/axios)\n- **Key Config Options**:\n  - `baseURL`: Base URL for all requests.\n  - `headers`: Custom headers to be sent with each request.\n  - `timeout`: Request timeout in milliseconds.\n  - `withCredentials`: Whether or not cross-site Access-Control requests should be made using credentials like cookies, authorization headers, or TLS client certificates.\n- **CLI Commands**:\n  - `npm install axios`\n  - `npx create-react-app my-app --template typescript` (for React projects)\n- **Example Usage**:\n  ```typescript\n  import axios from 'axios';\n\n  const fetchData = async () => {\n    try {\n      const response = await axios.get('https://api.example.com/data', {\n        headers: {\n          Authorization: `Bearer ${token}`\n        }\n      });\n      console.log(response.data);\n    } catch (error) {\n      console.error(error);\n    }\n  };\n\n  fetchData();\n  ```",
+    "source": "code_example",
+    "updated_at": 1781049943.5117602
+  }
+}

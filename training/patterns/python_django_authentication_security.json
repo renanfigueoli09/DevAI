@@ -1,0 +1,12 @@
+{
+  "search:python-django-authentication-security:django authentication security": {
+    "content": "- Use Django's built-in authentication system.\n- Sanitize user input using `django.utils.html.escape`.\n- Update Django to the latest version regularly.\n- Configure `SECURE_SSL_REDIRECT` and `SESSION_COOKIE_SECURE` for HTTPS.\n- Implement password hashing with `django.contrib.auth.hashers`.\n- Use `django.middleware.security.SecurityMiddleware` in settings.\n- Enable CSRF protection with `@csrf_exempt` only when necessary.\n- Regularly update dependencies using `pip list --outdated`.\n- Configure `AUTHENTICATION_BACKENDS` to use Django's default backends.",
+    "source": "web_search",
+    "updated_at": 1781049951.6189797
+  },
+  "search:python-django-authentication-security:django authentication security_ex": {
+    "content": "- Use `python manage.py createsuperuser` to create a superuser.\n- Update Django to the latest version using `pip install --upgrade django`.\n- Configure authentication backends in `settings.py`, e.g., `'django.contrib.auth.backends.ModelBackend'`.\n- Implement password hashing by setting `PASSWORD_HASHERS` in `settings.py`.\n- Use middleware for session management, e.g., `'django.contrib.sessions.middleware.SessionMiddleware'`.\n- Enable CSRF protection with `'django.middleware.csrf.CsrfViewMiddleware'`.\n- Configure login and logout URLs in `settings.py`, e.g., `LOGIN_URL = '/login/'` and `LOGOUT_URL = '/logout/'`.\n- Use Django's built-in views for authentication, e.g., `LoginView` and `LogoutView`.\n- Implement custom user models by extending `AbstractUser` or `AbstractBaseUser`.\n- Configure email backend in `settings.py` for password reset emails.\n- Use Django REST framework for API authentication with token-based systems.",
+    "source": "code_example",
+    "updated_at": 1781049959.4052458
+  }
+}
