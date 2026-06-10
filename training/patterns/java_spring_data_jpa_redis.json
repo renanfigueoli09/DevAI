@@ -1,0 +1,17 @@
+{
+  "search:java-spring-data-jpa-redis:java spring data jpa redis int": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build your project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Data Redis: 2.7.0\n  - Lettuce: 6.1.5.RELEASE\n  - Jedis: 4.0.1\n\n- **Key Config Options**:\n  - `spring.redis.host`: Set the Redis host.\n  - `spring.redis.port`: Set the Redis port.\n  - `spring.redis.password`: Set the Redis password if required.\n  - `spring.redis.lettuce.pool.max-active`: Maximum number of active connections in the pool.\n  - `spring.redis.lettuce.pool.max-idle`: Maximum number of idle connections in the pool.\n  - `spring.redis.lettuce.pool.min-idle`: Minimum number of idle connections in the pool.",
+    "source": "web_search",
+    "updated_at": 1781070124.8165946
+  },
+  "search:java-spring-data-jpa-redis:java spring data jpa redis int_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `docker-compose up` to start Redis and other services.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data JPA: 2.7.x\n  - Hibernate: 6.1.x\n  - Redis: 7.0.x\n\n- **Key Config Options**:\n  - `spring.redis.host`: Set the Redis host.\n  - `spring.redis.port`: Set the Redis port.\n  - `spring.jpa.properties.hibernate.cache.use_second_level_cache=true`: Enable second-level cache.\n  - `spring.jpa.properties.hibernate.cache.region.factory_class=org.springframework.boot.orm.jpa.hibernate.SpringCacheRegionFactory`: Use Spring Cache Region Factory.",
+    "source": "code_example",
+    "updated_at": 1781070130.9211843
+  },
+  "search:java-spring-data-jpa-redis:java spring data jpa redis cac": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `docker run --name my-redis -d redis`\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Data JPA: 2.7.x\n  - Hibernate: 6.1.x\n  - Redis: 7.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml`\n    ```properties\n    spring.redis.host=localhost\n    spring.redis.port=6379\n    spring.cache.type=redis\n    ```\n  - Entity Caching:\n    ```java\n    @Cacheable(\"users\")\n    public User getUserById(Long id) {\n        // logic to fetch user from database\n    }\n    ```\n  - Cache Eviction:\n    ```java\n    @CacheEvict(value = \"users\", key = \"#id\")\n    public void deleteUser(Long id) {\n        // logic to delete user from database\n    }\n    ```",
+    "source": "web_search",
+    "updated_at": 1781070141.5672486
+  }
+}

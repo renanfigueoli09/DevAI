@@ -1,0 +1,22 @@
+{
+  "search:golang+mongo-performance-tuning:golang mongodb performance tun": {
+    "content": "- Use Go 1.20 or higher for the latest features and performance improvements.\n- Install MongoDB Go driver using Go modules: `go get go.mongodb.org/mongo-driver`\n- Optimize queries by indexing fields that are frequently queried.\n- Enable connection pooling to manage database connections efficiently.\n- Use bulk operations for write operations to reduce network latency.\n- Monitor and analyze query performance with MongoDB's profiling tools.\n- Adjust MongoDB configuration options like `wiredTigerCacheSizeGB` based on your system's memory.\n- Regularly update MongoDB to the latest stable version for bug fixes and performance enhancements.",
+    "source": "web_search",
+    "updated_at": 1781070165.0100284
+  },
+  "search:golang+mongo-performance-tuning:golang mongodb performance tun_ex": {
+    "content": "- Use `go get go.mongodb.org/mongo-driver/mongo` to install the latest MongoDB Go driver.\n- Establish a connection using `client, err := mongo.Connect(context.Background(), options.Client().ApplyURI(\"mongodb://localhost:27017\"))`.\n- Key config options include setting read and write preferences with `options.ReadPreference()` and `options.WriteConcern()`.\n- Use `ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)` for operations with a timeout.\n- For CRUD operations, use methods like `collection.InsertOne`, `collection.FindOne`, `collection.UpdateOne`, and `collection.DeleteOne`.\n- Ensure to handle errors with `if err != nil { log.Fatal(err) }` after each operation.\n- Close the connection with `defer client.Disconnect(context.Background())`.",
+    "source": "code_example",
+    "updated_at": 1781070174.256136
+  },
+  "search:golang+mongo-performance-tuning:golang mongodb indexing best p": {
+    "content": "- Use `db.collection.createIndex()` to create indexes.\n- For `$in` queries, prefer indexing non-string values like ObjectIDs or ints for better performance.\n- Benchmark looped `FindOne` against `$in` for specific use cases.\n- Avoid creating too many indexes as it can negatively impact write operations.\n- Regularly review and optimize your index usage with `db.collection.stats()`.\n- Use compound indexes when querying on multiple fields to improve performance.\n- Ensure that indexed fields are frequently queried in your application.",
+    "source": "web_search",
+    "updated_at": 1781070183.6620703
+  },
+  "search:golang+mongo-performance-tuning:golang mongodb indexing best p_ex": {
+    "content": "- Use `db.collection.createIndex()` to create indexes.\n- Specify index types like `{ \"field\": 1 }` for ascending or `{ \"field\": -1 }` for descending.\n- Utilize compound indexes by specifying multiple fields in the index creation command.\n- Monitor index performance with `db.collection.stats()`.\n- Regularly review and optimize indexes using MongoDB's profiling tools.\n- Consider TTL (Time To Live) indexes for collections that need automatic cleanup based on time.\n- Use sparse indexes to save space when indexing sparse data sets.\n- Evaluate the impact of text indexes for full-text search capabilities.\n- Ensure proper index maintenance with `db.collection.reIndex()`.\n- Stay updated with MongoDB's latest version and release notes for new features and improvements.",
+    "source": "code_example",
+    "updated_at": 1781070191.773996
+  }
+}
