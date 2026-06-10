@@ -17,22 +17,22 @@
   "qa:mongoose-required-bang": {
     "content": "@Prop({required:true}) → field!: string  (! = required, NON-NULL ASSERTION)\n@Prop() → field?: string  (? = optional)\nNEVER: @Prop({required:true}) field?: string  (WRONG)\nNEVER: @Prop({required:true}) field: string   (WRONG, needs !)\nRULE: required=! | optional=? | NO EXCEPTIONS",
     "source": "critical_pattern",
-    "updated_at": 1781067099.9308383
+    "updated_at": 1781067951.810334
   },
   "qa:mongoose-no-findOneBy": {
     "content": "findOneBy does NOT exist in Mongoose. findOneBy is TypeORM-only.\nMongoose CORRECT: findById(id), findByIdAndUpdate(id,{$set:dto},{new:true}), findByIdAndDelete(id)\nWRONG: this.model.findOneBy({_id:id})  ← TypeORM only\nCORRECT: this.model.findById(id).exec()",
     "source": "critical_pattern",
-    "updated_at": 1781067101.171344
+    "updated_at": 1781067952.9558456
   },
   "qa:mongoose-forFeature": {
     "content": "NestJS Mongoose module uses MongooseModule.forFeature NEVER TypeOrmModule.\n@Module({ imports: [MongooseModule.forFeature([{name: Book.name, schema: BookSchema}])] })\nWRONG: TypeOrmModule.forFeature([Book])  ← TypeORM only",
     "source": "critical_pattern",
-    "updated_at": 1781067102.4552205
+    "updated_at": 1781067954.2181456
   },
   "qa:app-module-mongodb": {
     "content": "app.module.ts MongoDB: MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/app')\nWRONG: TypeOrmModule with DB_HOST/DB_PORT/DB_NAME  ← PostgreSQL config\nMongoDB uses MONGODB_URI, NOT DB_HOST/DB_PORT",
     "source": "critical_pattern",
-    "updated_at": 1781067103.6305795
+    "updated_at": 1781067955.4454265
   },
   "search:nestjs+mongodb:nestjs mongoose mongoosemodule": {
     "content": "- Use `nest generate module <module-name>` to create a new module.\n- Use `nest generate service <service-name>` to create a new service.\n- Use `nest generate controller <controller-name>` to create a new controller.\n- Latest versions: NestJS 10.x, Mongoose 7.x\n- Key config options:\n  - `@Schema` decorator for defining schema properties.\n  - `@Prop` decorator for specifying property options in the schema.\n  - `HydratedDocument` type for accessing document methods and properties.",

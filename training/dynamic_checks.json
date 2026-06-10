@@ -1,7 +1,50 @@
 {
-  "generated_at": 1781067067.5039182,
+  "generated_at": 1781067914.595325,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "kafka-streams-performance-tuning: producer consumer",
+      "queries": [
+        "kafka-streams-performance-tuning producer consumer example"
+      ],
+      "must_find": [
+        "kafka",
+        "producer",
+        "consumer"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "kafka-streams-performance-tuning"
+    },
+    {
+      "name": "golang-redis-cluster: cache",
+      "queries": [
+        "golang-redis-cluster cache redis example"
+      ],
+      "must_find": [
+        "redis"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "golang-redis-cluster"
+    },
+    {
+      "name": "typescript-eslint-performance: padrões de código",
+      "queries": [
+        "typescript-eslint-performance pattern code example",
+        "typescript-eslint-performance"
+      ],
+      "must_find": [
+        "@eslint",
+        "@types"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "typescript-eslint-performance"
+    },
     {
       "name": "go + mongo-go-migrate-advanced: não usa TypeORM",
       "queries": [
