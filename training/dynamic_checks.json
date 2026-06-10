@@ -1,7 +1,21 @@
 {
-  "generated_at": 1781048943.2038658,
+  "generated_at": 1781049755.1776574,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "python-django + celery-redis: cache",
+      "queries": [
+        "python-django+celery-redis cache redis example"
+      ],
+      "must_find": [
+        "redis",
+        "cache"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "python-django+celery-redis"
+    },
     {
       "name": "Docker + kafka-security: padrões de código",
       "queries": [
@@ -16,20 +30,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "Docker+kafka-security"
-    },
-    {
-      "name": "kubernetes + redis: cache",
-      "queries": [
-        "kubernetes+redis cache redis example"
-      ],
-      "must_find": [
-        "redis",
-        "cache"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kubernetes+redis"
     }
   ]
 }

@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-09 20:51*
+*2026-06-09 21:04*
 
 ## Score: 88% `[█████████████████░░░]`  (44.0/50.0)
 
@@ -19,8 +19,8 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| python-django + celery-redis: cache | 1.0/1 | ✅ |
 | Docker + kafka-security: padrões de código | 0.0/1 | ❌ |
-| kubernetes + redis: cache | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
