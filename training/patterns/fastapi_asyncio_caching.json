@@ -1,0 +1,17 @@
+{
+  "search:fastapi-asyncio-caching:fastapi asyncio caching strate": {
+    "content": "- Use `uvicorn` as the ASGI server for FastAPI applications.\n- Install FastAPI and Uvicorn using pip: `pip install fastapi uvicorn`.\n- For caching, consider Redis or Memcached.\n- Use `fastapi-caching` library to integrate caching with FastAPI.\n- Configure Redis in your application:\n  ```python\n  from fastapi_caching.backends.redis import RedisBackend\n\n  cache_config = {\n      \"CACHE_TYPE\": \"redis\",\n      \"CACHE_REDIS_URL\": \"redis://localhost:6379/0\"\n  }\n  ```\n- Use `@cache` decorator to cache responses:\n  ```python\n  from fastapi_caching.decorator import cache\n\n  @app.get(\"/items/{item_id}\")\n  @cache(expire=60)\n  async def read_item(item_id):\n      # Your logic here\n      pass\n  ```\n- Ensure your FastAPI app is configured to use the cache:\n  ```python\n  from fastapi_caching import FastAPICaching\n\n  FastAPICaching(app, config=cache_config)\n  ```\n- For production deployment, consider using Docker and Kubernetes for scaling.\n- Monitor performance with tools like Prometheus and Grafana.",
+    "source": "web_search",
+    "updated_at": 1781058408.807034
+  },
+  "search:fastapi-asyncio-caching:fastapi asyncio caching strate_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn app.main:app --reload`\n  - `pip install fastapi[all]`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n  - Redis: v4.2.0\n\n- **Key Config Options**:\n  - `app.state.cache = redis.Redis(host='localhost', port=6379, db=0)`\n  - `@cache.cached(ttl=300)`",
+    "source": "code_example",
+    "updated_at": 1781058431.6946971
+  },
+  "search:fastapi-asyncio-caching:caching in fastapi with asynci": {
+    "content": "- Use `async_lru` for caching in FastAPI.\n- Install Redis and use `redis-py` library.\n- Configure FastAPI to use Redis with `fastapi-cache`.\n- Set up connection pooling using `aioredis`.\n- Implement cache decorators like `@cache` for endpoints.\n- Adjust TTL (Time To Live) strategies for different data types.\n- Monitor cache hit/miss ratios and adjust accordingly.\n- Use CLI commands like `redis-cli ping` to check Redis connectivity.",
+    "source": "web_search",
+    "updated_at": 1781058442.5403166
+  }
+}

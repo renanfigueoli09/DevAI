@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-mysql-indexing:gorm mysql indexing best pract": {
+    "content": "- **CLI Commands**:\n  - `gorm migrate` to create database indexes.\n  - `mysqlcheck --analyze` for index optimization.\n\n- **Latest Versions**:\n  - GORM v2.30.0\n  - MySQL 8.0.26\n\n- **Key Config Options**:\n  - `index: true` in GORM model tags to create an index.\n  - `uniqueIndex: true` for unique indexes.\n  - `type: BTREE`, `HASH`, etc., to specify the index type.\n  - `where: \"column > value\"` to define conditional indexing.",
+    "source": "web_search",
+    "updated_at": 1781058358.5028439
+  },
+  "search:go-gorm-mysql-indexing:gorm mysql indexing best pract_ex": {
+    "content": "- **CLI Commands**: `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: Ensure using the latest version of GORM and MySQL driver for compatibility and performance improvements.\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})`: Automatically migrates schema based on model definitions.\n  - `gorm.DB.Create(&user)`: Inserts a new record into the database.\n  - `gorm.DB.First(&user, 1)`: Finds the first record with primary key = 1.\n  - `gorm.DB.Where(\"name = ?\", \"jinzhu\").First(&user)`: Finds the first record where name is jinzhu.",
+    "source": "code_example",
+    "updated_at": 1781058363.9164844
+  },
+  "search:go-gorm-mysql-indexing:optimizing gorm queries with i": {
+    "content": "- Use `First`, `Take`, and `Last` methods to retrieve single objects efficiently.\n- Optimize SQL queries using GORM's query builder.\n- Master GORM with PostgreSQL for efficient development.\n- Contribute to GORM development on GitHub.\n- Utilize Group Conditions for complex, readable SQL queries.",
+    "source": "web_search",
+    "updated_at": 1781058370.3657713
+  },
+  "search:go-gorm-mysql-indexing:optimizing gorm queries with i_ex": {
+    "content": "- **CLI Commands**: Use `gorm.io/gorm` package for ORM operations.\n- **Latest Version**: Ensure using the latest GORM version for optimal performance and features.\n- **Key Config Options**:\n  - Indexes: Define indexes in your model struct tags to optimize query performance.\n  - Optimizer Hints: Use optimizer hints through GORM's API to influence execution plans.\n  - Schema System: Leverage GORM's schema system for automatic SQL translation.",
+    "source": "code_example",
+    "updated_at": 1781058387.71584
+  }
+}
