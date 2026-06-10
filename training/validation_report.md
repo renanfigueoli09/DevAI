@@ -1,5 +1,5 @@
 # DevAI Validation Report
-*2026-06-10 00:15*
+*2026-06-10 00:51*
 
 ## Score: 90% `[██████████████████░░]`  (46.0/51.0)
 
@@ -19,9 +19,9 @@
 | TS2307 module not found → criar arquivo | 2.0/2 | ✅ |
 | Spring MongoDB: @Document não @Entity | 2.0/2 | ✅ |
 | FastAPI: AsyncIOMotorClient (não pymongo) | 0.0/2 | ❌ |
+| NestJS  +  Elasticsearch Error Handling: padrões de código | 1.0/1 | ✅ |
 | Advanced Error Handling in Spring Cloud Gateway Kubernetes: padrões de código | 1.0/1 | ✅ |
 | Advanced Error Handling in Spring Boot  +  MariaDB: padrões de código | 1.0/1 | ✅ |
-| ruby-on-rails-redis: cache | 1.0/1 | ✅ |
 
 ### Generation Check (LLM): 14.0/14.0
 | Check | Score | OK |
