@@ -1,38 +1,21 @@
 {
-  "generated_at": 1781071786.8589504,
+  "generated_at": 1781072473.3560152,
   "studied_count": 636,
   "checks": [
     {
-      "name": "golang + mongo-performance-tuning: não usa TypeORM",
+      "name": "TypeScript  +  NestJS GraphQL: padrões de código",
       "queries": [
-        "golang+mongo-performance-tuning schema service"
+        "TypeScript + NestJS GraphQL pattern code example",
+        "TypeScript  +  NestJS GraphQL"
       ],
       "must_find": [
-        "mongo"
-      ],
-      "must_not": [
-        "TypeOrmModule",
-        "@Entity",
-        "Repository<"
-      ],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "golang+mongo-performance-tuning"
-    },
-    {
-      "name": "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream: padrões de código",
-      "queries": [
-        "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream pattern code example",
-        "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream"
-      ],
-      "must_find": [
-        "@KafkaListener",
-        "@EnableKafka"
+        "@prisma",
+        "@nestjs"
       ],
       "must_not": [],
       "weight": 1,
       "dynamic": true,
-      "source_topic": "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream"
+      "source_topic": "TypeScript + NestJS GraphQL"
     }
   ]
 }
