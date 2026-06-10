@@ -1,0 +1,32 @@
+{
+  "search:docker-compose-microservices:docker compose for microservic": {
+    "content": "- Use `docker-compose up` to start services defined in `docker-compose.yml`.\n- Utilize `docker-compose down` to stop and remove containers.\n- Employ `docker-compose override` for environment-specific configurations.\n- Key config options include `services`, `networks`, and `volumes`.\n- Ensure Docker Compose is at least version 1.29 for advanced features.\n- Use `docker-compose ps` to list running services.\n- For complex setups, consider using `docker-compose.override.yml`.\n- Always refer to the official [Docker Compose documentation](https://docs.docker.com/compose/) for detailed syntax and best practices.",
+    "source": "web_search",
+    "updated_at": 1781083945.244424
+  },
+  "search:docker-compose-microservices:docker compose for microservic_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the docker-compose.yml file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by docker-compose up.\n\n- **Latest Versions**:\n  - Docker Compose: 1.29.2\n\n- **Key Config Options**:\n  - `services`: Defines services to run in the application.\n  - `build`: Specifies the path to a Dockerfile or an image to use as the base for building the service.\n  - `ports`: Maps ports between the host and containers.\n  - `volumes`: Mounts volumes to persist data across container restarts.\n  - `networks`: Defines networks that services can communicate on.",
+    "source": "code_example",
+    "updated_at": 1781083952.3106005
+  },
+  "search:docker-compose-microservices:building and scaling microserv": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the docker-compose.yml file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by docker-compose up.\n\n- **Latest Versions**:\n  - Docker Compose: v2.17.3 (as of my last update)\n\n- **Key Config Options**:\n  - `services`: Defines the services to run.\n  - `networks`: Specifies networks for service communication.\n  - `volumes`: Mounts volumes for data persistence.\n  - `scale`: Scales a service with multiple replicas.\n\n- **Additional Tips**:\n  - Use `docker-compose up --build` to rebuild images before starting containers.\n  - Configure environment variables using `.env` file or directly in the docker-compose.yml.",
+    "source": "web_search",
+    "updated_at": 1781083971.6037242
+  },
+  "search:docker-compose-microservices:building and scaling microserv_ex": {
+    "content": "- Use `docker-compose up` to start services defined in `docker-compose.yml`.\n- Specify the latest version of Docker and Docker Compose.\n- Define service connections and configurations in `docker-compose.yml`.\n- Utilize `docker-compose scale <service_name>=<number>` for scaling services.\n- Key config options include `image`, `ports`, `volumes`, and `environment`.",
+    "source": "code_example",
+    "updated_at": 1781083980.0507069
+  },
+  "search:docker-compose-microservices:best practices for using docke": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up`: Starts services defined in the docker-compose.yml file.\n  - `docker-compose down`: Stops and removes containers, networks, volumes, and images created by `docker-compose up`.\n  - `docker-compose build`: Builds or rebuilds services defined in the docker-compose.yml file.\n\n- **Latest Versions**:\n  - Docker Compose: Latest version as of my last update is 1.29.2.\n  - Docker Engine: Latest version varies, check [Docker's official website](https://docs.docker.com/engine/release-notes/) for the most current version.\n\n- **Key Config Options**:\n  - `services`: Defines the services to be run in your application.\n  - `build`: Specifies paths to build context and Dockerfile.\n  - `volumes`: Mounts directories or files from the host machine into containers.\n  - `ports`: Maps ports between the container and the host.\n  - `networks`: Connects services to networks for communication.",
+    "source": "web_search",
+    "updated_at": 1781084001.0256193
+  },
+  "search:docker-compose-microservices:best practices for using docke_ex": {
+    "content": "- **CLI Commands**: Use `docker-compose up` to start services, `docker-compose down` to stop them.\n- **Latest Version**: Always check for the latest version using `docker-compose --version`.\n- **Key Config Options**:\n  - `services`: Define your microservices.\n  - `networks`: Configure networking between services.\n  - `volumes`: Mount volumes for persistent storage.\n  - `build`: Specify build context and Dockerfile.\n  - `ports`: Map container ports to host ports.",
+    "source": "code_example",
+    "updated_at": 1781084006.1871088
+  }
+}
