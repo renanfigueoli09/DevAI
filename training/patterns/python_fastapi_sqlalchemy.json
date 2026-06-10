@@ -38,5 +38,25 @@
     "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a new migration script based on detected changes.\n  - `alembic upgrade head`: Applies all migrations to the database.\n  - `alembic downgrade -1`: Reverts the last applied migration.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: Specifies the database URL.\n  - `alembic.ini` configuration file for migration settings.\n  - `env.py` script in the `alembic` directory for environment-specific configurations.",
     "source": "code_example",
     "updated_at": 1781058632.3991857
+  },
+  "search:Python FastAPI + SQLAlchemy:fastapi sqlalchemy orm 2023": {
+    "content": "- **CLI Commands**:\n  - `pip install fastapi sqlalchemy alembic asyncpg`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 2.0.14\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql+asyncpg://user:password@localhost/dbname\"`\n  - Alembic Configuration: Define in `alembic.ini` and use `alembic init alembic`\n  - FastAPI Settings: Configure in `main.py` with `settings = Settings()`\n  - SQLAlchemy ORM Models: Define models using SQLAlchemy's declarative base.\n  - Dependency Injection: Use FastAPI's dependency injection system for database sessions.",
+    "source": "web_search",
+    "updated_at": 1781071999.487391
+  },
+  "search:Python FastAPI + SQLAlchemy:fastapi sqlalchemy orm 2023_ex": {
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/KenMwaura1/Fast-Api-example.git`\n  - `uvicorn main:app --reload`\n\n- **Latest Versions**:\n  - FastAPI: 0.97.0\n  - SQLAlchemy: 2.0.0\n\n- **Key Config Options**:\n  - Database URL: `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`\n  - Dependency Injection: Use `Depends` for database sessions.\n  - CRUD Operations: Implement create, read, update, and delete methods using SQLAlchemy ORM.",
+    "source": "code_example",
+    "updated_at": 1781072005.5389214
+  },
+  "search:Python FastAPI + SQLAlchemy:fastapi sqlalchemy performance": {
+    "content": "- Use SQLAlchemy's `create_engine` with `pool_pre_ping=True` to ensure connections are healthy.\n- Implement indexing on frequently queried columns for faster data retrieval.\n- Utilize caching mechanisms like Redis or Memcached to cache query results.\n- Employ async engines (`asyncpg`) for PostgreSQL, enhancing performance in asynchronous applications.\n- Optimize queries by avoiding N+1 issues through eager loading with `joinedload` or `subqueryload`.\n- Monitor and profile your application using tools like SQLAlchemy's built-in profiling or third-party solutions like New Relic.\n- Regularly update FastAPI and SQLAlchemy to the latest versions for performance improvements and security patches.\n- Configure connection pool sizes (`pool_size`, `max_overflow`) based on your application's load and database capacity.",
+    "source": "web_search",
+    "updated_at": 1781072014.3893838
+  },
+  "search:Python FastAPI + SQLAlchemy:fastapi sqlalchemy performance_ex": {
+    "content": "- Use `pip install fastapi sqlalchemy databases` to install FastAPI, SQLAlchemy, and Databases.\n- For the latest versions, check [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), and [Databases](https://pypi.org/project/databases/) on PyPI.\n- Key config options include:\n  - `DATABASE_URL` for database connection string.\n  - `engine = create_engine(DATABASE_URL)` to create a SQLAlchemy engine.\n  - `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)` to create a session class.\n  - Use `@app.on_event(\"startup\")` and `@app.on_event(\"shutdown\")` for database connection management.\n- For performance optimization:\n  - Indexing: Create indexes on columns that are frequently queried.\n  - Caching: Use Redis or Memcached for caching query results.\n  - Pagination: Implement pagination to reduce the number of records fetched at once.\n  - Query profiling: Use SQLAlchemy's `explain()` method to analyze query performance.",
+    "source": "code_example",
+    "updated_at": 1781072022.7650037
   }
 }
