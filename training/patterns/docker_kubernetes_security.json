@@ -38,5 +38,35 @@
     "content": "- **CLI Commands**:\n  - `kubectl apply -f <policy-file.yaml>` to enforce policies.\n  - `kubectl get pods --all-namespaces` to monitor pod security.\n\n- **Latest Versions**:\n  - OPA Gatekeeper: v3.10.0\n  - PodSecurityAdmission: Kubernetes v1.25+\n  - Falco: v0.34.0\n\n- **Key Config Options**:\n  - `runAsUser`: Specifies the user ID to run the container as.\n  - `fsGroup`: Defines a group ID that will own all files created by the process in the container.\n  - `privileged`: Determines if the container should have full access to host resources.\n  - `readOnlyRootFilesystem`: Ensures the root filesystem is read-only, preventing write operations.",
     "source": "code_example",
     "updated_at": 1781066136.5928347
+  },
+  "search:Docker+kubernetes-security:docker security best practices": {
+    "content": "- Use `docker run --user` to specify non-root user.\n- Update Docker to latest version regularly using `docker update`.\n- Utilize multi-stage builds for reducing image size and vulnerabilities.\n- Employ `docker-compose` with security configurations.\n- Secure secrets management using environment variables or Docker Secrets.\n- Limit resource usage with `--memory`, `--cpu-shares`, etc.\n- Harden network settings with `docker run --network none`.\n- Regularly scan images for vulnerabilities using tools like `snyk`.\n- Implement least privilege principle by minimizing privileges within containers.",
+    "source": "web_search",
+    "updated_at": 1781080707.6200025
+  },
+  "search:Docker+kubernetes-security:docker security best practices_ex": {
+    "content": "- Use `docker run --user <uid>:<gid>` to run containers as non-root users.\n- Employ `docker-compose` for managing multi-container applications.\n- Implement OPA policies with `opa apply policy.opa` for container security rules.\n- Utilize Docker's built-in security features like `--security-opt=no-new-privileges`.\n- Keep Docker and its components up to date using `docker update --latest <image>`.\n- Configure Docker daemon with `--userns-remap=default` for enhanced user namespace isolation.",
+    "source": "code_example",
+    "updated_at": 1781080710.8921645
+  },
+  "search:Docker+kubernetes-security:kubernetes security": {
+    "content": "- Use `kubectl` for managing Kubernetes resources.\n- Apply security context using `securityContext` in Pod or container definitions.\n- Implement network policies with `NetworkPolicy`.\n- Enable RBAC (Role-Based Access Control) using `kubectl create rolebinding`.\n- Utilize `PodSecurityPolicies` to enforce stricter security settings.\n- Regularly update Kubernetes and all components to the latest versions.\n- Use `kube-bench` for auditing Kubernetes clusters against CIS benchmarks.\n- Employ `Falco` for real-time monitoring of container runtime events.\n- Implement image scanning with tools like Trivy or Clair before deploying images.",
+    "source": "web_search",
+    "updated_at": 1781080724.9482388
+  },
+  "search:Docker+kubernetes-security:kubernetes security_ex": {
+    "content": "- Use `kubectl` to manage Kubernetes resources.\n- Ensure your cluster is up-to-date with the latest version of Kubernetes.\n- Configure Pod Security Admission (PSA) using `psp.yaml`:\n  ```yaml\n  apiVersion: policy/v1beta1\n  kind: PodSecurityPolicy\n  metadata:\n    name: example-psp\n  spec:\n    privileged: false\n    allowPrivilegeEscalation: false\n    defaultAddCapabilities: []\n    requiredDropCapabilities: [\"ALL\"]\n    volumes:\n      - \"emptyDir\"\n      - \"configMap\"\n      - \"secret\"\n      - \"persistentVolumeClaim\"\n    hostNetwork: false\n    hostPorts:\n      - min: 1024\n        max: 65535\n    runAsUser:\n      rule: \"MustRunAsNonRoot\"\n    seLinux:\n      rule: \"RunAsAny\"\n    supplementalGroups:\n      rule: \"MustRunAs\"\n      ranges:\n        - min: 1\n          max: 65535\n    fsGroup:\n      rule: \"MustRunAs\"\n      ranges:\n        - min: 1\n          max: 65535\n  ```\n- Apply the PSA with `kubectl apply -f psp.yaml`.\n- Use `psp-admission-controller` for enforcing Pod Security Admission.\n- Monitor and audit Kubernetes security using tools like Sysdig or Falco.",
+    "source": "code_example",
+    "updated_at": 1781080732.9934523
+  },
+  "search:Docker+kubernetes-security:container orchestration securi": {
+    "content": "- **CLI Commands**: Use `kubectl auth can-i` to check permissions.\n- **Latest Versions**: Ensure Kubernetes is up-to-date, typically using the latest minor version for security patches.\n- **Key Config Options**:\n  - `--context`: Specify the cluster context.\n  - `--namespace`: Set the namespace scope.\n  - `--dry-run=client`: Simulate command without applying changes.\n  - `--record`: Record the command in the resource annotations.",
+    "source": "web_search",
+    "updated_at": 1781080742.6719398
+  },
+  "search:Docker+kubernetes-security:container orchestration securi_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl describe pod <pod-name>` for detailed information about a pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 20.10.17\n\n- **Key Config Options**:\n  - `securityContext` in Pod and Container specifications.\n  - `imagePullPolicy` to control when images are pulled.\n  - `resources` for CPU and memory limits and requests.",
+    "source": "code_example",
+    "updated_at": 1781080753.8524413
   }
 }
