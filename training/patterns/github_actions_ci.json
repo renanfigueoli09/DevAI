@@ -1,12 +1,12 @@
 {
   "search:github-actions+ci:github actions nestjs spring d": {
-    "content": "- Use `docker build` command to build Docker images.\n- Update GitHub Actions workflow file to use the latest version of actions/checkout@v3 and actions/setup-node@v3.\n- Configure caching for dependencies using `actions/cache@v3`.\n- Implement matrix strategy in GitHub Actions to run jobs on multiple configurations.\n- Use `docker-compose` for multi-service applications if needed.\n- Ensure Dockerfile is correctly configured for your Spring Boot application.\n- Set up environment variables securely using GitHub Secrets.\n- Utilize SonarQube Scan Action for code quality and security analysis.\n- Review Stack Overflow questions tagged with 'building-github-actions' for additional insights.",
+    "content": "- Use `gh actions` to manage GitHub Actions workflows.\n- For NestJS and Spring Docker cache matrix, consider using `matrix` strategy in your workflow file.\n- Update NestJS to the latest version for better performance and security.\n- Configure Redis caching in both NestJS and Spring Boot applications.\n- Use `docker-compose` for managing multi-container Docker applications.\n- Ensure proper environment variables are set for each service in Docker Compose.\n- Utilize GitHub Secrets for sensitive information like API keys and passwords.\n- Implement a CI/CD pipeline using GitHub Actions to automate testing, building, and deploying your application.\n- Monitor the pipeline logs for any errors or issues during the build and deployment process.",
     "source": "web_search",
-    "updated_at": 1780966409.345185
+    "updated_at": 1781056255.3029642
   },
   "search:github-actions+ci:github actions nestjs spring d_ex": {
-    "content": "- **CLI Commands**:\n  - `docker build --cache-from <image_name> --tag <new_image_name>`\n  - `docker push <image_name>`\n  - `gh workflow run <workflow_file>`\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Docker: v24.0.0\n  - GitHub Actions: Latest\n\n- **Key Config Options**:\n  - `matrix.node-version`: Define Node.js versions for testing.\n  - `env.DOCKER_IMAGE`: Specify the Docker image name.\n  - `steps.cache`: Configure cache steps in GitHub Actions.\n  - `jobs.build.strategy.matrix`: Use matrix strategy for different configurations.",
+    "content": "- Use `docker build` to create Docker images.\n- Specify base image in `Dockerfile`, e.g., `FROM node:16`.\n- Utilize GitHub Actions for CI/CD.\n- Configure a workflow file `.github/workflows/main.yml`.\n- Set up matrix strategy for different environments or configurations.\n- Cache dependencies using actions/cache@v3.\n- Deploy to Docker Hub with `docker push`.\n- Ensure proper permissions and authentication in GitHub Secrets.",
     "source": "code_example",
-    "updated_at": 1780966415.6647584
+    "updated_at": 1781056260.3236258
   }
 }
