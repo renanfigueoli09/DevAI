@@ -1,0 +1,22 @@
+{
+  "search:typescript-prisma-mutation-best-practices:prisma mutation patterns in ty": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.x\n  - Prisma Migrate: v1.20\n\n- **Key Config Options**:\n  - `schema`: Path to the Prisma schema file.\n  - `datasource url`: Database connection URL.\n  - `generator client`: Configuration for generating Prisma Client.",
+    "source": "web_search",
+    "updated_at": 1781078141.5282867
+  },
+  "search:typescript-prisma-mutation-best-practices:prisma mutation patterns in ty_ex": {
+    "content": "- Install Prisma CLI globally using `npm install -g prisma`\n- Initialize a new Prisma project with `prisma init`\n- Update your schema file (`schema.prisma`) to define your data models and relations\n- Use the Prisma Client in TypeScript by running `npx prisma generate` after updating the schema\n- For handling mutations, use the generated Prisma Client methods like `create`, `update`, `delete`, etc.\n- Example mutation for creating a new user:\n  ```typescript\n  const newUser = await prisma.user.create({\n    data: {\n      email: 'user@example.com',\n      name: 'John Doe'\n    }\n  });\n  ```\n- Ensure your database URL is correctly set in the `.env` file under `DATABASE_URL`\n- For TypeScript support, ensure you have the latest version of Prisma (currently v4.x) and compatible versions of other dependencies\n- Key config options include setting up data models with fields, relations, and constraints",
+    "source": "code_example",
+    "updated_at": 1781078150.359551
+  },
+  "search:typescript-prisma-mutation-best-practices:advanced prisma mutations with": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates the initial migration.\n  - `prisma generate`: Generates Prisma Client based on your schema.\n\n- **Latest Versions**:\n  - Prisma: v5.0.0\n  - Prisma Client: v5.0.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and database connection.\n  - `prisma.yml`: Configuration file for Prisma Migrate.\n  - `middleware`: Allows intercepting queries before they reach the database.\n\nThese actionable facts provide a concise overview of essential commands, versions, and configuration options for developers working with Prisma ORM in TypeScript.",
+    "source": "web_search",
+    "updated_at": 1781078170.3159873
+  },
+  "search:typescript-prisma-mutation-best-practices:advanced prisma mutations with_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies migrations based on your schema.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - Node.js: v16.x or later\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines the data model and database connection.\n  - `prismaClientOptions`: Customizes the behavior of the Prisma Client, such as enabling debug mode.",
+    "source": "code_example",
+    "updated_at": 1781078175.9046073
+  }
+}

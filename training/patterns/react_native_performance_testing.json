@@ -1,0 +1,12 @@
+{
+  "search:react-native-performance-testing:optimizing react native apps f": {
+    "content": "- Use `react-native run-android --variant=release` and `react-native run-ios --configuration Release` for optimized builds.\n- Update React Native to the latest version using `npm install react-native@latest`.\n- Implement lazy loading with `React.lazy()` and `Suspense` for better performance.\n- Optimize images by resizing, compressing, and using formats like WebP.\n- Use FlatList or SectionList instead of ListView for large lists.\n- Avoid unnecessary re-renders by using React.memo and PureComponent.\n- Enable Hermes engine for Android with `hermesEnabled: true` in `android/app/build.gradle`.\n- Minimize bundle size by removing unused dependencies and code splitting.\n- Profile performance using Chrome DevTools or React Native Debugger.",
+    "source": "web_search",
+    "updated_at": 1781078196.6315198
+  },
+  "search:react-native-performance-testing:optimizing react native apps f_ex": {
+    "content": "- **CLI Commands**:\n  - `react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/main.jsbundle --assets-dest ios`\n  - `react-native link` to link native modules\n\n- **Latest Versions**:\n  - React Native CLI: v7.0.0\n  - React Native: v0.68.2\n\n- **Key Config Options**:\n  - `metro.config.js`: Customize Metro Bundler settings.\n  - `android/app/build.gradle`: Adjust Java version and other build configurations.\n  - `ios/Podfile`: Manage CocoaPods dependencies for iOS.\n\n- **Performance Tips**:\n  - Use `React.memo` to prevent unnecessary re-renders.\n  - Implement lazy loading for components and assets.\n  - Optimize images using tools like ImageOptim or TinyPNG.",
+    "source": "code_example",
+    "updated_at": 1781078207.2805808
+  }
+}
