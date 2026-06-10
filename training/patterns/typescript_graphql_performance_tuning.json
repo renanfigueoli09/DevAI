@@ -1,0 +1,12 @@
+{
+  "search:typescript-graphql-performance-tuning:optimizing typescript graphql ": {
+    "content": "- Use `npm install typegraphql graphql` to install TypeGraphQL and GraphQL.\n- Update your project's TypeScript configuration file (`tsconfig.json`) to include `\"module\": \"commonjs\"` and `\"target\": \"es6\"`.\n- Create a resolver class by extending `Resolver` from TypeGraphQL.\n- Define queries and mutations as methods within the resolver class using decorators like `@Query` and `@Mutation`.\n- Use dependency injection in resolvers by defining constructor parameters with types.\n- Configure your GraphQL server to use TypeGraphQL resolvers, typically through an instance of `buildSchema`.\n- Implement validation for inputs using decorators like `@Field(() => Int)` or custom validators.\n- Utilize persisted queries for improved performance and security by enabling automatic persisted queries on the server.",
+    "source": "web_search",
+    "updated_at": 1781075705.4169557
+  },
+  "search:typescript-graphql-performance-tuning:optimizing typescript graphql _ex": {
+    "content": "- **CLI Commands**:\n  - `graphql-code-generator init`: Initialize a new GraphQL Code Generator project.\n  - `graphql-code-generator generate`: Generate code based on the provided schema and operations.\n\n- **Latest Versions**:\n  - TypeScript: v4.9.5\n  - GraphQL: v16.3.0\n  - graphql-code-generator: v2.0.0\n\n- **Key Config Options**:\n  - `schema`: Path to your GraphQL schema file.\n  - `documents`: Paths to your GraphQL operations files (queries, mutations, subscriptions).\n  - `generates`: Output directory and configuration for generated code.\n  - `plugins`: Specify plugins for generating different types of code (e.g., TypeScript resolvers).",
+    "source": "code_example",
+    "updated_at": 1781075711.0280359
+  }
+}

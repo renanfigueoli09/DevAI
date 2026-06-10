@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-advanced-migrations:go gorm advanced migrations te": {
+    "content": "- **CLI Commands**:\n  - `migrate create -ext sql -dir db/migrations -seq init_schema`\n  - `migrate up`\n  - `migrate down`\n\n- **Latest Versions**:\n  - GORM: v2.16.0\n  - golang-migrate/migrate: v4.15.0\n\n- **Key Config Options**:\n  - GORM Migrator: `AutoMigrate`, `FullSaveAssociations`\n  - migrate CLI: `-database`, `-path`, `-source`",
+    "source": "web_search",
+    "updated_at": 1781075718.819388
+  },
+  "search:go-gorm-advanced-migrations:go gorm advanced migrations te_ex": {
+    "content": "- Use `go mod init <module_name>` to initialize a new Go module.\n- For advanced GORM features, explore hooks, transactions, and raw SQL.\n- To contribute to the Go-Part-2-Advanced repository on GitHub, create an account and fork the repository.\n- Structured migrations for production can be achieved using GORM's migration capabilities.\n- Performance optimization with Neon involves leveraging Neon's database infrastructure.",
+    "source": "code_example",
+    "updated_at": 1781075725.8913481
+  },
+  "search:go-gorm-advanced-migrations:best practices for managing go": {
+    "content": "- Use `gorm.io/gorm` version 2.x for the latest features and improvements.\n- Employ Atlas for database migrations, especially when GORM's AutoMigrate is insufficient.\n- For automated migrations, consider using tools like `sql-migrate`.\n- Key config options in GORM include `AutoMigrate`, `Migrator`, and `DryRun` mode.\n- Run migrations with the command: `gorm migrate -config path/to/migration/config.yml`\n- Ensure your migration scripts are versioned and stored in a controlled environment.\n- Utilize `sqlc` for type-safe SQL queries, enhancing both performance and security.\n- For production environments, enable `DryRun` mode to test migrations without applying them.",
+    "source": "web_search",
+    "updated_at": 1781075734.7720015
+  },
+  "search:go-gorm-advanced-migrations:best practices for managing go_ex": {
+    "content": "- Use `golang-migrate/migrate` for database migrations.\n- Install via `go get -u github.com/golang-migrate/migrate/v4/cmd/migrate`.\n- Run migrations with:\n  ```bash\n  migrate -path ./migrations -database \"postgres://user:password@localhost/dbname\" up\n  ```\n- Key config options include `-path` for migration files and `-database` for the database connection string.\n- For auto-migration, use `db.AutoMigrate(&YourModel{})`.\n- Consider using version control to manage migrations.\n- Ensure migrations are idempotent (can be run multiple times without side effects).\n- Use descriptive names for migration files (e.g., `001_create_users_table.up.sql`).\n- Regularly review and update migrations as your application evolves.",
+    "source": "code_example",
+    "updated_at": 1781075742.0090919
+  }
+}
