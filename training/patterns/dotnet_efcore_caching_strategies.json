@@ -1,0 +1,22 @@
+{
+  "search:dotnet-efcore-caching-strategies:entity framework core caching ": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef dbcontext pool --min-size <value> --max-size <value>` to configure DbContext pooling.\n  - `dotnet add package Microsoft.EntityFrameworkCore.Caching` to install caching support.\n\n- **Latest Versions**:\n  - Entity Framework Core 8.0\n  - Second-Level Caching library (e.g., `Microsoft.EntityFrameworkCore.Caching.Memory`)\n\n- **Key Config Options**:\n  - `AddDbContextPool`: Configure DbContext pooling with specified min and max sizes.\n  - `MemoryCacheEntryOptions`: Set cache entry options for second-level caching, including sliding expiration and absolute expiration.",
+    "source": "web_search",
+    "updated_at": 1781076557.9740922
+  },
+  "search:dotnet-efcore-caching-strategies:entity framework core caching _ex": {
+    "content": "- **Latest Version**: EF Core 7.0 is the latest stable version as of my last update in October 2023.\n  \n- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`: Adds a new migration with the name \"InitialCreate\".\n  - `dotnet ef database update`: Applies all pending migrations to the database.\n\n- **Key Config Options**:\n  - `DbContextOptionsBuilder.UseSqlServer(\"YourConnectionString\")`: Configures the DbContext to use SQL Server.\n  - `optionsBuilder.EnableSensitiveDataLogging()`: Enables logging of sensitive data for debugging purposes.\n  - `services.AddDbContext<MyDbContext>(options => options.UseInMemoryDatabase(\"TestDb\"))`: Registers a DbContext with an in-memory database.\n\n- **Caching Strategies**:\n  - **Query Caching**: Use `AsCached()` or `FromCache()` to cache query results. Note: EF Core does not support caching out of the box, so third-party libraries like `EntityFrameworkCore.Caching` are often used.\n  - **Change Tracking Cache**: EF Core automatically caches entities that have been loaded into memory.\n\n- **Performance Tips**:\n  - Use `AsNoTracking()` to avoid change tracking for read-only queries.\n  - Batch inserts and updates using `SaveChangesAsync()`.\n  - Optimize queries with proper indexing and query structure.",
+    "source": "code_example",
+    "updated_at": 1781076565.7363453
+  },
+  "search:dotnet-efcore-caching-strategies:optimizing entity framework co": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core 7.0\n\n- **Key Config Options**:\n  - `QueryTrackingBehavior.NoTracking` for read-only scenarios.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `MaxBatchSize` to control batch size in bulk operations.",
+    "source": "web_search",
+    "updated_at": 1781076578.339029
+  },
+  "search:dotnet-efcore-caching-strategies:optimizing entity framework co_ex": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create migrations.\n- Apply migrations using `dotnet ef database update`.\n- Enable second-level caching with `Microsoft.EntityFrameworkCore.Caching.Memory` package.\n- Configure cache options in `appsettings.json`, e.g., `\"Caching\": { \"DefaultCachePolicy\": { \"SlidingExpiration\": \"00:15:00\" } }`.\n- Use `CompiledQuery.Compile` for compiled queries to optimize performance.\n- Monitor and profile EF Core queries using tools like Entity Framework Profiler.\n- Update EF Core to the latest version (e.g., `6.0.0`) for performance improvements and bug fixes.",
+    "source": "code_example",
+    "updated_at": 1781076584.906269
+  }
+}
