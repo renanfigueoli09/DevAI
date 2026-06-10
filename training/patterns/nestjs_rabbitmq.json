@@ -1,8 +1,8 @@
 {
   "search:nestjs+rabbitmq:nestjs rabbitmq transport.rmq ": {
-    "content": "- **CLI Commands**:\n  - `nest generate microservice rabbitmq <name>` to create a new RabbitMQ microservice.\n  \n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/microservices: v10.x\n  \n- **Key Config Options**:\n  - `host`: The hostname of the RabbitMQ server.\n  - `port`: The port number on which the RabbitMQ server is running.\n  - `username`: The username for authentication.\n  - `password`: The password for authentication.\n  - `queue`: The name of the queue to use.",
+    "content": "- **CLI Commands**:\n  - `nest new billing-service`\n  - `npm install @nestjs/microservices amqplib`\n\n- **Latest Versions**:\n  - NestJS: v9.x\n  - RabbitMQ Transporter: v7.x\n\n- **Key Config Options**:\n  - `host`: RabbitMQ server host.\n  - `port`: RabbitMQ server port.\n  - `username`: RabbitMQ username.\n  - `password`: RabbitMQ password.\n  - `queue`: Queue name for message exchange.",
     "source": "web_search",
-    "updated_at": 1780939330.1214027
+    "updated_at": 1781053335.7297485
   },
   "search:nestjs+rabbitmq:nestjs rabbitmq transport.rmq _ex": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`\n  - `nest generate microservice service-name --transport rabbitmq`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - RabbitMQ Transport: nestjs/microservices-rabbitmq@latest\n\n- **Key Config Options**:\n  - `url`: Connection URL for RabbitMQ server.\n  - `exchange`: Name of the exchange to use.\n  - `queue`: Name of the queue to use.\n  - `routingKey`: Routing key for message routing.",
@@ -10,13 +10,13 @@
     "updated_at": 1780939332.5555708
   },
   "search:nestjs+rabbitmq:nestjs rabbitmq dead letter ex": {
-    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=dlx type=direct`\n  - `rabbitmqadmin declare queue name=my_queue arguments='{\"x-dead-letter-exchange\":\"dlx\", \"x-dead-letter-routing-key\":\"my_routing_key\"}'`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - NestJS: 9.x\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the DLX name.\n  - `x-dead-letter-routing-key`: Specifies the routing key for messages in the DLX.\n  - `x-message-ttl`: Sets the time-to-live for messages in the queue.",
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare policy name=DLX pattern=\".*\" definition='{\"dead-letter-exchange\":\"my-dlx\"}' apply-to=queues`\n  - `rabbitmqadmin declare exchange name=dlx type=direct`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - NestJS: 10.x\n\n- **Key Config Options**:\n  - Dead Letter Exchange (DLX): `my-dlx`\n  - Dead Letter Routing Key: Not explicitly set, uses the original routing key\n  - Queue Configuration: `x-dead-letter-exchange` and `x-dead-letter-routing-key`",
     "source": "web_search",
-    "updated_at": 1780939335.2069438
+    "updated_at": 1781053353.1464255
   },
   "search:nestjs+rabbitmq:nestjs rabbitmq dead letter ex_ex": {
-    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=some.exchange.name type=direct`\n  - `rabbitmqadmin declare queue name=notification_queue arguments='{\"x-dead-letter-exchange\":\"some.exchange.name\"}'`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - NestJS: 9.x\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the DLX for a queue.\n  - `x-dead-letter-routing-key`: Optional, specifies the routing key for messages sent to the DLX.\n  - `x-max-length`: Limits the number of messages in a queue before messages are dropped.",
+    "content": "- **CLI Commands**:\n  - `rabbitmqadmin declare exchange name=dlx type=x-dead-letter`\n  - `rabbitmqadmin declare queue name=my_queue arguments='{\"x-dead-letter-exchange\":\"dlx\", \"x-dead-letter-routing-key\":\"my_routing_key\"}'`\n\n- **Latest Versions**:\n  - RabbitMQ: 3.12.x\n  - NestJS: 9.x\n\n- **Key Config Options**:\n  - `x-dead-letter-exchange`: Specifies the name of the dead letter exchange.\n  - `x-dead-letter-routing-key`: Specifies the routing key for messages sent to the dead letter exchange.",
     "source": "code_example",
-    "updated_at": 1780939337.7847838
+    "updated_at": 1781053358.9145472
   }
 }

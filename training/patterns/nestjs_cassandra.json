@@ -1,12 +1,12 @@
 {
   "search:nestjs+cassandra:nestjs cassandra-driver keyspa": {
-    "content": "- **Latest Version**: cassandra-driver@4.9.0\n- **CLI Command**: `npm i cassandra-driver`\n- **Key Config Options**:\n  - `contactPoints`: Array of hostnames/IP addresses for the Cassandra cluster.\n  - `localDataCenter`: Specifies the local data center to use for routing requests.\n  - `keyspace`: The keyspace to connect to.",
+    "content": "- **Latest Version of cassandra-driver**: 4.9.0\n- **CLI Command to Install cassandra-driver**: `npm i cassandra-driver`\n- **Key Config Options for Cassandra Connection**:\n  - `contactPoints`: Array of hostnames or IP addresses.\n  - `localDataCenter`: Specifies the local data center for load balancing.\n  - `keyspace`: The keyspace to connect to.\n  - `authProvider`: Authentication provider, e.g., `new cassandra.auth.PlainTextAuthProvider(username, password)`.\n- **CQL Query Example**:\n  ```cql\n  CREATE KEYSPACE IF NOT EXISTS my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};\n  ```\n- **Using Cassandra Client Driver**: Ensure the driver is installed and configured correctly in your NestJS project.\n- **Connection String Format**:\n  ```javascript\n  const client = new cassandra.Client({\n    contactPoints: ['127.0.0.1'],\n    keyspace: 'my_keyspace',\n    authProvider: new cassandra.auth.PlainTextAuthProvider('username', 'password')\n  });\n  ```\n- **Keyspace Naming Rules**:\n  - Up to 48 alpha-numeric characters.\n  - Must start with a letter or number.\n  - Names are case-insensitive.",
     "source": "web_search",
-    "updated_at": 1780939320.9468176
+    "updated_at": 1781053243.1642172
   },
   "search:nestjs+cassandra:nestjs cassandra-driver keyspa_ex": {
-    "content": "- **Latest Version of cassandra-driver**: 4.9.0\n- **CLI Command to Install cassandra-driver**: `npm i cassandra-driver`\n- **Key Config Options**:\n  - `contactPoints`: Array of hostnames or IP addresses for the Cassandra cluster.\n  - `localDataCenter`: Specifies the local data center if using a multi-datacenter setup.\n  - `keyspace`: The keyspace to use upon connection.",
+    "content": "- **Latest Version of cassandra-driver**: 4.9.0\n- **CLI Command to Install cassandra-driver**: `npm i cassandra-driver`\n- **Key Config Options**:\n  - `contactPoints`: Array of contact points (e.g., `['127.0.0.1']`)\n  - `localDataCenter`: Local data center name (e.g., `'datacenter1'`)\n  - `keyspace`: Keyspace to connect to (e.g., `'myKeyspace'`)\n\nFor more detailed information, refer to the GitHub repository and npm page for cassandra-driver.",
     "source": "code_example",
-    "updated_at": 1780939323.0670512
+    "updated_at": 1781053257.1739757
   }
 }
