@@ -1,0 +1,22 @@
+{
+  "search:typescript-eslint-performance:typescript eslint performance ": {
+    "content": "- Ensure you are using the latest version of `typescript-eslint` and its dependencies.\n- Use the `--cache` flag in ESLint to cache results for faster subsequent runs.\n- Configure `parserOptions.project` in your ESLint config to specify a tsconfig.json file, which can improve performance by avoiding unnecessary type checking.\n- Enable `noEmit` in your tsconfig.json to prevent TypeScript from generating JavaScript files during linting.\n- Use the `--max-warnings` flag to limit the number of warnings ESLint reports, which can speed up processing.\n- Consider using a `.eslintignore` file to exclude directories or files that do not need to be linted.\n- If possible, run ESLint on smaller subsets of your codebase by specifying file patterns in the CLI command.\n- Enable `parserOptions.jsx` if you are working with JSX, as this can improve performance for React projects.\n- Use the `--format` flag with a simple formatter like `stylish` to reduce output overhead.",
+    "source": "web_search",
+    "updated_at": 1781067310.9288611
+  },
+  "search:typescript-eslint-performance:typescript eslint performance _ex": {
+    "content": "- Install `hyperfine` using `brew install hyperfine` or `winget install hyperfine`.\n- Use `eslint --debug` to enable all of ESLint's debug logs on the CLI.\n- Set `parserOptions.debugLevel` directly in your ESLint config for more granular control over debugging.\n- Enable caching by configuring `cache: true` in your `.eslintrc.json`.\n- Utilize environment variables like `DEBUG=typescript-eslint:* eslin` to enable detailed debug logs for TypeScript ESLint.",
+    "source": "code_example",
+    "updated_at": 1781067319.1877196
+  },
+  "search:typescript-eslint-performance:typescript eslint best practic": {
+    "content": "- Install ESLint and TypeScript plugins using npm: `npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin`\n- Configure ESLint manually or use an opinionated package like Airbnb's `eslint-config-airbnb`.\n- Key config options include:\n  - `\"parser\": \"@typescript-eslint/parser\"`\n  - `\"plugins\": [\"@typescript-eslint\"]`\n  - `\"extends\": [\"plugin:@typescript-eslint/recommended\", \"airbnb-typescript/base\"]` (if using Airbnb's config)\n- Use the CLI to initialize a new ESLint configuration: `npx eslint --init`\n- For TypeScript projects, ensure your `tsconfig.json` is correctly set up.\n- Consider enabling specific rules like `\"no-eval\"` and `\"no-console\"` for better code quality.",
+    "source": "web_search",
+    "updated_at": 1781067327.614519
+  },
+  "search:typescript-eslint-performance:typescript eslint best practic_ex": {
+    "content": "- **Install ESLint**: `npm install eslint --save-dev`\n- **Initialize Config**: `npx eslint --init`\n- **TypeScript Support**: Install `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`.\n- **CLI Command**: `eslint . --ext .ts,.tsx`\n- **Latest Version**: Check on [ESLint's GitHub](https://github.com/eslint/eslint) for the latest version.\n- **Key Config Options**:\n  - `\"parser\": \"@typescript-eslint/parser\"`\n  - `\"plugins\": [\"@typescript-eslint\"]`\n  - `\"extends\": [\"eslint:recommended\", \"plugin:@typescript-eslint/recommended\"]`\n  - `\"rules\"`: Customize rules as needed, e.g., `\"no-unused-vars\": \"error\"`.\n- **Config File**: Create `.eslintrc.js` or `.eslintrc.json` in your project root.\n- **VSCode Integration**: Install ESLint extension and enable it in settings.\n- **GitHub Actions**: Automate linting with a GitHub Action workflow.",
+    "source": "code_example",
+    "updated_at": 1781067335.5398939
+  }
+}

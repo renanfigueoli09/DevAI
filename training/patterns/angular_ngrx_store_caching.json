@@ -1,0 +1,22 @@
+{
+  "search:angular-ngrx-store-caching:angular ngrx store caching tec": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create an NgRx store.\n  - `ng add @ngrx/store` to add NgRx to your project.\n\n- **Latest Versions**:\n  - Angular: 16.x\n  - NgRx: 15.x\n\n- **Key Config Options**:\n  - `@ngrx/store`: Use `StoreModule.forRoot()` for root store configuration.\n  - `@ngrx/effects`: Use `EffectsModule.forRoot()` for root effects configuration.\n  - `@ngrx/signal-store`: For reactive state management with signals.\n\n- **Caching Techniques**:\n  - Check if data exists in the store before making API calls.\n  - Use NgRx Global Store as a cache to display requested (cached) data.\n  - Implement HTTP interceptors for caching responses.",
+    "source": "web_search",
+    "updated_at": 1781067345.2063677
+  },
+  "search:angular-ngrx-store-caching:angular ngrx store caching tec_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NGRX store.\n  - `ng add @ngrx/store` to set up NGRX in an Angular project.\n\n- **Latest Versions**:\n  - Ensure you are using the latest versions of Angular, NgRx, and RxJS for compatibility and performance improvements.\n\n- **Key Config Options**:\n  - In `app.module.ts`, import `StoreModule.forRoot({})` to configure the root store.\n  - Use `EffectsModule.forRoot([])` to register global effects.\n  - Configure reducers in a separate file and pass them to `StoreModule.forRoot()`.\n\n- **Caching Techniques**:\n  - Implement caching strategies using NgRx Signal Store for intelligent HTTP caching.\n  - Utilize HTTP interceptors to cache responses based on custom logic.\n  - Use standalone components with NgRx to manage state locally within the component.",
+    "source": "code_example",
+    "updated_at": 1781067354.1483479
+  },
+  "search:angular-ngrx-store-caching:ngrx store performance optimiz": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx Store to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store with the specified name.\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular and NgRx for optimal performance. As of my last update, Angular 18 is the latest stable version, and NgRx 15 offers significant improvements.\n\n- **Key Config Options**:\n  - `runtimeChecks`: Configure runtime checks in your NgRx store to catch common mistakes during development.\n    ```typescript\n    StoreModule.forRoot(reducers, { runtimeChecks: {\n      strictActionImmutability: true,\n      strictStateImmutability: true,\n    }})\n    ```\n  - `initialState`: Define the initial state of your store for predictable state management.\n    ```typescript\n    const initialState = {\n      // Initial state properties\n    };\n    ```\n\n- **Performance Optimization Tips**:\n  - Use memoization to avoid unnecessary re-renders and computations.\n  - Implement lazy loading for NgRx reducers and effects to reduce initial load time.\n  - Utilize selectors efficiently to fetch only the necessary data from the store.",
+    "source": "web_search",
+    "updated_at": 1781067363.7540302
+  },
+  "search:angular-ngrx-store-caching:ngrx store performance optimiz_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @ngrx/store`: Adds NgRx store to your Angular project.\n  - `ng generate store <name>`: Generates a new NgRx store with actions, reducers, and effects.\n\n- **Latest Versions**:\n  - As of my last update in October 2023, the latest stable version of NgRx is 15.x. Always check [Angular's official website](https://angular.io/) or [npm](https://www.npmjs.com/package/@ngrx/store) for the most current version.\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)`: Registers all reducers in your application.\n  - `EffectsModule.forRoot(effects)`: Registers all effects in your application.\n  - `ActionReducerManagerOptions`: Configuration options for managing actions, such as enabling runtime checks or logging.",
+    "source": "code_example",
+    "updated_at": 1781067369.5834317
+  }
+}

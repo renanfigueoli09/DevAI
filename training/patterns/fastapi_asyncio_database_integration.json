@@ -1,0 +1,17 @@
+{
+  "search:fastapi-asyncio-database-integration:fastapi asyncio with postgresq": {
+    "content": "- **FastAPI**: Version 0.85.2\n- **SQLAlchemy**: Version 2.0.0b3\n- **Alembic**: Version 1.7.6\n- **asyncpg**: Version 0.24.0\n- **pytest**: Version 7.1.2\n\n**CLI Commands**:\n- `fastapi create`: Create a new FastAPI project.\n- `alembic init alembic/`: Initialize Alembic for migrations.\n- `alembic revision --autogenerate -m \"message\"`: Generate a migration script based on changes to the model.\n- `alembic upgrade head`: Apply all pending migrations.\n\n**Key Config Options**:\n- FastAPI: `async def main() -> None`\n- SQLAlchemy: `AsyncSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, class_=AsyncSession)`\n- Alembic: `target_metadata = Base.metadata`\n\nThese details provide a concise overview for integrating FastAPI with PostgreSQL using asynchronous programming.",
+    "source": "web_search",
+    "updated_at": 1781067230.7324414
+  },
+  "search:fastapi-asyncio-database-integration:fastapi asyncio with postgresq_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `pytest`\n\n- **Latest Versions**:\n  - FastAPI: 0.103.0\n  - SQLAlchemy: 2.0.0b1\n  - asyncpg: 0.26.0\n\n- **Key Config Options**:\n  - Database URL: `postgresql+asyncpg://user:password@host/dbname`\n  - Dependency Injection for database sessions.\n  - Use of Alembic for migrations with asyncpg backend.",
+    "source": "code_example",
+    "updated_at": 1781067244.9136953
+  },
+  "search:fastapi-asyncio-database-integration:fastapi asyncio with mongodb i": {
+    "content": "- Use `pip install fastapi uvicorn motor` to install FastAPI, Uvicorn, and Motor.\n- Ensure MongoDB version is at least 4.9 for native async support.\n- Configure your FastAPI app with `uvicorn main:app --reload`.\n- Key config options in Motor include setting the database URL and specifying connection parameters.\n- Use `await client[database_name][collection_name].find().to_list()` to fetch data asynchronously.\n- For complex models, use Pydantic models with type annotations for validation and serialization.\n- Implement error handling using FastAPI's exception handlers for robust API responses.",
+    "source": "web_search",
+    "updated_at": 1781067264.6850593
+  }
+}
