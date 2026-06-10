@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `kubectl autoscale deployment <deployment-name> --cpu-percent=<threshold> --min=<min-pods> --max=<max-pods>`\n  - `kubectl apply -f <resource-file.yaml>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27\n  - Helm v3.9\n\n- **Key Config Options**:\n  - `resources.requests.cpu`\n  - `resources.requests.memory`\n  - `resources.limits.cpu`\n  - `resources.limits.memory`\n  - `autoscaling.v1.HorizontalPodAutoscaler`",
     "source": "code_example",
     "updated_at": 1781018277.221502
+  },
+  "search:docker-kubernetes-performance-tuning:docker kubernetes performance ": {
+    "content": "- **CLI Commands and Flags**:\n  - `kubectl top node`: Display resource usage of nodes.\n  - `kubectl top pod <pod-name>`: Display resource usage of a specific pod.\n  - `kubectl scale deployment <deployment-name> --replicas=<number>`: Scale a deployment.\n\n- **Latest Versions**:\n  - Kubernetes v1.27\n  - Docker Engine v20.10\n\n- **Key Config Options**:\n  - `resources.requests`: Specify minimum resource requirements.\n  - `resources.limits`: Set maximum resource limits.\n  - `nodeSelector`: Assign pods to specific nodes based on labels.\n  - `affinity`: Define pod scheduling constraints.\n  - `tolerations`: Allow pods to be scheduled on nodes with taints.",
+    "source": "web_search",
+    "updated_at": 1781078425.1704822
+  },
+  "search:docker-kubernetes-performance-tuning:docker kubernetes performance _ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl top node`: To check resource usage of nodes.\n  - `kubectl describe pod <pod-name>`: For detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes v1.27.x (as of my last update)\n  - Docker Desktop v4.13.x\n\n- **Key Config Options**:\n  - `kubelet` configuration for resource limits and requests.\n  - `Metrics Server` for accurate resource metrics collection.\n  - `Pod QoS Classes` to ensure critical applications receive adequate resources.\n\n- **Troubleshooting**:\n  - Restart Docker Desktop if Kubernetes fails to start on initial launch.",
+    "source": "code_example",
+    "updated_at": 1781078433.1754527
+  },
+  "search:docker-kubernetes-performance-tuning:optimizing docker containers f": {
+    "content": "- Use `docker run --rm` to optimize container performance.\n- Employ `--cpus` and `--memory` for resource allocation.\n- Utilize `docker-compose` for multi-container setups.\n- Apply Kubernetes' Horizontal Pod Autoscaler with `kubectl autoscale deployment <deployment-name> --cpu-percent=50 --min=1 --max=10`.\n- Leverage `kubeadm init` to initialize a new Kubernetes cluster.\n- Use `kubectl apply -f <filename>.yaml` for deploying applications.\n- Implement `nodeSelector` in pod specifications for specific node placement.\n- Employ `imagePullPolicy: IfNotPresent` to avoid unnecessary image pulls.\n- Utilize `initContainers` for pre-startup tasks.\n- Apply `securityContext` for enhanced security.",
+    "source": "web_search",
+    "updated_at": 1781078443.9543502
+  },
+  "search:docker-kubernetes-performance-tuning:optimizing docker containers f_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --rm -it <image_name> /bin/bash`\n  - `kubectl apply -f <file_name>.yaml`\n\n- **Latest Versions**:\n  - Docker Engine: v24.0.1\n  - Kubernetes: v1.27.3\n\n- **Key Config Options**:\n  - Resource Limits: `resources.limits.cpu`, `resources.limits.memory`\n  - Volume Mounts: `volumeMounts`\n  - Environment Variables: `env`",
+    "source": "code_example",
+    "updated_at": 1781078452.7928438
   }
 }

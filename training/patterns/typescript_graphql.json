@@ -18,5 +18,20 @@
     "content": "- Use `TypeGraphQL` to integrate TypeScript with GraphQL.\n- Install `gql.tada` for magical GraphQL query engine in TypeScript.\n- Explore latest TypeScript performance tuning techniques from official docs.\n- Implement static typing throughout your application using TypeScript.\n- Optimize code execution and reduce memory usage by following best practices.",
     "source": "code_example",
     "updated_at": 1780939890.1020353
+  },
+  "search:typescript-graphql:typescript graphql with apollo": {
+    "content": "- **CLI Commands**:\n  - `npm install apollo-server graphql`\n  - `npx create-react-app my-graphql-app --template typescript`\n\n- **Latest Versions**:\n  - Apollo Server: v3.x\n  - GraphQL: v16.x\n\n- **Key Config Options**:\n  - `typeDefs`: Defines the schema of your GraphQL API.\n  - `resolvers`: Maps queries and mutations to JavaScript functions.\n  - `context`: Provides shared data across resolvers.",
+    "source": "web_search",
+    "updated_at": 1781078382.8447957
+  },
+  "search:typescript-graphql:typescript graphql schema desi": {
+    "content": "- Use `graphql-cli` for schema generation.\n- Install latest version of `graphql-tools`.\n- Configure `tsconfig.json` for TypeScript support.\n- Utilize `apollo-server-express` for server setup.\n- Implement pagination with `graphql-relay`.\n- Define unions and interfaces in GraphQL schema.\n- Use `typescript-resolvers` for type-safe resolvers.\n- Automate schema generation with `prisma` or `type-graphql`.",
+    "source": "web_search",
+    "updated_at": 1781078405.839146
+  },
+  "search:typescript-graphql:typescript graphql schema desi_ex": {
+    "content": "- Use `npx graphql-codegen` to generate TypeScript types from your GraphQL schema.\n- Ensure you have the latest version of Node.js and npm installed.\n- Configure `graphql-codegen` with a `codegen.yml` file specifying your GraphQL endpoint and output directory.\n- Utilize TypeScript interfaces for defining your GraphQL types, ensuring type safety.\n- Employ `npm install @types/graphql-tools` to use TypeScript definitions for `graphql-tools`.\n- For schema validation, integrate `npm install graphql-tools graphql` in your project.\n- Use `npm install apollo-server-express express` if you're setting up a server with Express.\n- Configure Apollo Server with the latest version by using `const server = new ApolloServer({ typeDefs, resolvers });`.\n- Ensure your schema is modular and follows best practices for readability and maintainability.",
+    "source": "code_example",
+    "updated_at": 1781078414.796017
   }
 }
