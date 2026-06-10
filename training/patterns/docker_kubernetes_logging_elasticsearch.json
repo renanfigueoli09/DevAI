@@ -1,0 +1,12 @@
+{
+  "search:docker-kubernetes-logging-elasticsearch:docker and kubernetes logging ": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy resources.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n\n- **Latest Versions**:\n  - Elasticsearch: v8.x\n  - Kibana: v8.x\n  - Fluentd: v1.14.x\n\n- **Key Config Options**:\n  - Elasticsearch: `discovery.type: single-node`\n  - Kibana: `elasticsearch.hosts: [\"http://<elasticsearch-host>:9200\"]`\n  - Fluentd: `elasticsearch.host => \"<elasticsearch-host>\"`",
+    "source": "web_search",
+    "updated_at": 1781084541.7546782
+  },
+  "search:docker-kubernetes-logging-elasticsearch:docker and kubernetes logging _ex": {
+    "content": "- **Fluentd Docker Image**: `fluent/fluentd-kubernetes-daemonset:v2.5.2-debian-elasticsearch7-1`\n- **Elasticsearch Deployment**:\n  - Command: `kubectl apply -f https://download.elastic.co/downloads/kubernetes/elasticsearch.yaml`\n  - Key Config: `es.cluster.name`, `es.node.name`, `discovery.seed_hosts`, `cluster.initial_master_nodes`\n- **Kibana Deployment**:\n  - Command: `kubectl apply -f https://download.elastic.co/downloads/kubernetes/kibana.yaml`\n  - Key Config: `elasticsearch.url`\n- **Fluentd Configuration**:\n  - File Path: `/fluentd/etc/fluent.conf`\n  - Key Sections: `<source>`, `<match>`, `<filter>`\n- **Elasticsearch Service**:\n  - Command: `kubectl expose deployment elasticsearch --type=NodePort --port=9200`\n  - Key Config: `node.port`",
+    "source": "code_example",
+    "updated_at": 1781084560.9534442
+  }
+}
