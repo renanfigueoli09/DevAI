@@ -1,21 +1,23 @@
 {
-  "generated_at": 1781065923.029383,
+  "generated_at": 1781067067.5039182,
   "studied_count": 636,
   "checks": [
     {
-      "name": "typescript-svelte-query: padrões de código",
+      "name": "go + mongo-go-migrate-advanced: não usa TypeORM",
       "queries": [
-        "typescript-svelte-query pattern code example",
-        "typescript-svelte-query"
+        "go+mongo-go-migrate-advanced schema service"
       ],
       "must_find": [
-        "@tanstack",
-        "@wundergraph"
+        "mongo"
       ],
-      "must_not": [],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
       "weight": 1,
       "dynamic": true,
-      "source_topic": "typescript-svelte-query"
+      "source_topic": "go+mongo-go-migrate-advanced"
     }
   ]
 }
