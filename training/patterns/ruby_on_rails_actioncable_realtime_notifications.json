@@ -1,0 +1,17 @@
+{
+  "search:ruby-on-rails-actioncable-realtime-notifications:ruby on rails actioncable real": {
+    "content": "- **CLI Commands**:\n  - `rails generate channel <channel_name>`\n  - `rails server`\n\n- **Latest Versions**:\n  - Ruby on Rails 7.x\n\n- **Key Config Options**:\n  - `config/cable.yml` for configuring ActionCable adapters (e.g., Redis, PostgreSQL)\n  - `app/channels/application_cable/connection.rb` for handling WebSocket connections\n  - `app/javascript/channels/<channel_name>.js` for client-side JavaScript logic",
+    "source": "web_search",
+    "updated_at": 1781078988.9039514
+  },
+  "search:ruby-on-rails-actioncable-realtime-notifications:ruby on rails actioncable real_ex": {
+    "content": "- **CLI Commands**:\n  - `rails new myapp --api`: Creates a new Rails API application.\n  - `rails generate channel Notifications`: Generates a new Action Cable channel.\n\n- **Latest Versions**:\n  - Ruby on Rails: Version 8.1 (as of October 2025).\n  - ActionCable: Integrated with the latest Rails version, no separate installation required.\n\n- **Key Config Options**:\n  - `config/cable.yml`: Configuration file for Action Cable.\n    ```yaml\n    development:\n      adapter: redis\n      url: redis://localhost:6379/1\n    ```\n  - `app/channels/application_cable/connection.rb`: Establishes the connection to the ActionCable server.\n    ```ruby\n    module ApplicationCable\n      class Connection < ActionCable::Connection::Base\n        identified_by :current_user\n\n        def connect\n          self.current_user = find_verified_user\n        end\n\n        private\n          def find_verified_user\n            # Implement user verification logic here\n          end\n      end\n    end\n    ```\n  - `app/channels/notifications_channel.rb`: Defines the channel for real-time notifications.\n    ```ruby\n    class NotificationsChannel < ApplicationCable::Channel\n      def subscribed\n        stream_from \"notifications\"\n      end\n\n      def unsubscribed\n        # Any cleanup needed when channel is unsubscribed\n      end\n\n      def receive(data)\n        ActionCable.server.broadcast(\"notifications\", data)\n      end\n    end\n    ```",
+    "source": "code_example",
+    "updated_at": 1781079000.8822222
+  },
+  "search:ruby-on-rails-actioncable-realtime-notifications:actioncable rails real-time co": {
+    "content": "- **CLI Commands**:\n  - `rails generate channel <channel_name>`\n  - `rails server`\n\n- **Latest Versions**:\n  - Ruby on Rails 7.x\n\n- **Key Config Options**:\n  - `config/cable.yml` for configuring ActionCable adapters.\n  - `config/routes.rb` to mount the ActionCable server.",
+    "source": "web_search",
+    "updated_at": 1781079007.5707366
+  }
+}

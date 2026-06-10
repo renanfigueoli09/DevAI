@@ -1,0 +1,22 @@
+{
+  "search:typescript-sequelize-performance-tips:typescript sequelize performan": {
+    "content": "- Use Sequelize v7 or later for the latest features and performance improvements.\n- Employ TypeScript's type safety to catch errors early in development.\n- Optimize queries by using eager loading (`include`) instead of multiple separate queries.\n- Configure Sequelize with `logging: false` in production environments to reduce overhead.\n- Utilize connection pooling to manage database connections efficiently.\n- Implement caching strategies for frequently accessed data.\n- Use TypeScript's async/await syntax for cleaner and more readable asynchronous code.\n- Regularly update dependencies to benefit from performance enhancements and security patches.\n- Monitor application performance using tools like Sequelize's built-in profiling or external monitoring services.",
+    "source": "web_search",
+    "updated_at": 1781078946.959523
+  },
+  "search:typescript-sequelize-performance-tips:typescript sequelize performan_ex": {
+    "content": "- Use Sequelize CLI to generate models, migrations, and seeders.\n- Ensure latest Sequelize version by running `npm install sequelize@latest`.\n- Configure database connection in `config.json` with dialect-specific settings.\n- Implement eager loading using `.include()` for better performance.\n- Utilize transactions for bulk operations with `sequelize.transaction()`.\n- Optimize queries by using raw SQL or parameterized queries to avoid injection risks.\n- Enable caching for frequently accessed data using Redis or similar tools.\n- Monitor and analyze query performance with Sequelize's built-in logging options.\n- Regularly update dependencies and Sequelize itself to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781078955.5182133
+  },
+  "search:typescript-sequelize-performance-tips:sequelize typescript best prac": {
+    "content": "- Use `npx sequelize-cli init` to initialize Sequelize in your project.\n- Install latest versions of `sequelize`, `sequelize-typescript`, and database driver (e.g., `mysql2` for MySQL).\n- Configure `config/config.json` with your database connection details.\n- Define models using TypeScript interfaces or classes extending `Model`.\n- Use `@Table`, `@Column`, and other decorators to define model properties.\n- For associations, use decorators like `@HasMany`, `@BelongsTo`, etc., specifying the target model.\n- To exclude through models in many-to-many relationships, configure `through: false` in association options.\n- Utilize TypeScript's type inference for better code completion and error checking.",
+    "source": "web_search",
+    "updated_at": 1781078965.4511607
+  },
+  "search:typescript-sequelize-performance-tips:sequelize typescript best prac_ex": {
+    "content": "- Use `npx sequelize-cli init` to initialize Sequelize in your TypeScript project.\n- Install latest versions of Sequelize and its type definitions using npm or yarn:\n  ```bash\n  npm install sequelize @types/sequelize --save\n  ```\n- Configure Sequelize by editing the `config/config.json` file with your database credentials.\n- Define models using TypeScript interfaces or classes, ensuring they are fully typed.\n- Use associations (e.g., `belongsTo`, `hasMany`) to define relationships between models.\n- Utilize type-safe queries and transactions provided by Sequelize's TypeScript support.\n- Implement a clean project structure with separate directories for models, migrations, and seeders.\n- Regularly update Sequelize and its dependencies to benefit from the latest features and security patches.",
+    "source": "code_example",
+    "updated_at": 1781078979.4043536
+  }
+}
