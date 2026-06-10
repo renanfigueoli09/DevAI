@@ -1,0 +1,22 @@
+{
+  "search:nodejs-express-rate-limiting:node.js express rate limiting ": {
+    "content": "- Use `npm install express-rate-limit` or `yarn add express-rate-limit`\n- For Redis integration, use `npm install redis` or `yarn add redis`\n- Apply rate limiting middleware to all requests with `app.use(require('express-rate-limit')({ /* options */ }))`\n- Key config options: `windowMs`, `max`, `message`, `handler`\n- Example:\n  ```javascript\n  const limiter = require('express-rate-limit');\n  app.use(limiter({\n    windowMs: 15 * 60 * 1000, // 15 minutes\n    max: 100, // limit each IP to 100 requests per windowMs\n    message: \"Too many requests from this IP, please try again after 15 minutes\"\n  }));\n  ```\n- For more advanced scenarios, consider `rate-limiter-flexible` for flexibility and performance.\n- Ensure your rate limiter does not violate Single Responsibility Principle by separating business logic.",
+    "source": "web_search",
+    "updated_at": 1781068954.0915468
+  },
+  "search:nodejs-express-rate-limiting:node.js express rate limiting _ex": {
+    "content": "- **CLI Commands**: \n  - `npm install express-rate-limit`\n  - `npm install rate-limiter-flexible`\n\n- **Latest Versions**:\n  - Node.js v18 or higher\n  - Express v5.1.0\n\n- **Key Config Options**:\n  - `windowMs`: Time window in milliseconds (e.g., `60 * 1000` for 1 minute)\n  - `max`: Maximum number of requests allowed within the time window (e.g., `100`)\n  - `message`: Custom error message\n  - `statusCode`: HTTP status code for rate limit exceeded response",
+    "source": "code_example",
+    "updated_at": 1781068961.9213066
+  },
+  "search:nodejs-express-rate-limiting:node.js express security best ": {
+    "content": "- Use `npm install express` to install the latest version.\n- Implement HTTPS by using `https.createServer({ key, cert }, app)`.\n- Validate all input with libraries like `express-validator`.\n- Set secure cookies with `res.cookie('name', value, { httpOnly: true, secure: true })`.\n- Use Helmet for setting security-related HTTP headers (`npm install helmet`).\n- Implement CSRF protection using middleware like `csurf`.\n- Regularly update dependencies using `npm outdated` and `npm update`.\n- Enable CORS with `app.use(cors())` and configure options as needed.\n- Log all requests and errors for monitoring and debugging.",
+    "source": "web_search",
+    "updated_at": 1781068971.5428843
+  },
+  "search:nodejs-express-rate-limiting:node.js express security best _ex": {
+    "content": "- **CLI Commands**: Use `npm install express-generator` to create a new Express project.\n- **Latest Versions**: Ensure you are using the latest version of Node.js and npm by running `nvm install node --latest-npm`.\n- **Key Config Options**:\n  - `app.use(express.json())`: Middleware for parsing JSON bodies.\n  - `app.use(express.urlencoded({ extended: true }))`: Middleware for parsing URL-encoded bodies.\n  - `app.use(helmet())`: Middleware to secure your app by setting various HTTP headers.\n  - `app.use(cors())`: Middleware to enable Cross-Origin Resource Sharing (CORS).\n  - `app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: true }))`: Middleware for session management.\n- **Security Best Practices**:\n  - Use HTTPS instead of HTTP.\n  - Implement rate limiting with packages like `express-rate-limit`.\n  - Sanitize user inputs to prevent SQL injection and XSS attacks.\n  - Regularly update dependencies using `npm outdated` and `npm update`.\n  - Use environment variables for sensitive information like database credentials.",
+    "source": "code_example",
+    "updated_at": 1781068981.0301502
+  }
+}

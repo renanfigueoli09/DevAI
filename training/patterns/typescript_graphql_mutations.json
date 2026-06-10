@@ -1,0 +1,22 @@
+{
+  "search:typescript-graphql-mutations:typescript graphql mutations b": {
+    "content": "- Use Apollo Client's `useMutation` hook for TypeScript projects.\n- Ensure GraphQL schema is type-safe to leverage TypeScript benefits.\n- Utilize TypeScript interfaces or types for defining mutation inputs and outputs.\n- Employ the latest version of Apollo Client, typically installed via npm with `npm install @apollo/client`.\n- Configure Apollo Client with a `HttpLink` pointing to your GraphQL server endpoint.\n- Use the `MutationOptions` interface from Apollo Client to specify options like variables and error handling.\n- Implement error handling in mutations using Apollo's built-in mechanisms for catching and responding to errors.\n- Regularly update dependencies, including Apollo Client, to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781068909.885642
+  },
+  "search:typescript-graphql-mutations:typescript graphql mutations b_ex": {
+    "content": "- Use `npm install graphql-tools` to install GraphQL tools.\n- Utilize `apollo-server-express` for setting up an Apollo server with Express.\n- Implement mutations using TypeScript interfaces and classes for type safety.\n- Employ variables in mutations for dynamic data handling.\n- Name mutations clearly and descriptively for better readability and debugging.\n- Apply security best practices, such as authentication and authorization checks.\n- Optimize performance by batching similar requests and caching results.\n- Maintain code organization through modular schemas and resolvers.",
+    "source": "code_example",
+    "updated_at": 1781068915.4047046
+  },
+  "search:typescript-graphql-mutations:typescript graphql error handl": {
+    "content": "- **CLI Commands**: Use `npm install @apollo/client graphql` to install Apollo Client and GraphQL.\n- **Latest Versions**: As of my last update, the latest version of Apollo Client is 3.x, and GraphQL itself is at version 16.x.\n- **Key Config Options**:\n  - For Apollo Client: Configure with `ApolloClient`, `InMemoryCache`, and `HttpLink`.\n  - For GraphQL Server: Use `express-graphql` or `apollo-server-express`.\n\nFor detailed error handling in TypeScript with Apollo Client, refer to the [official documentation](https://www.apollographql.com/docs/react/data/error-handling/).",
+    "source": "web_search",
+    "updated_at": 1781068934.344844
+  },
+  "search:typescript-graphql-mutations:typescript graphql error handl_ex": {
+    "content": "- Use `graphql-code-generator` to generate TypeScript types from your GraphQL schema.\n- Install `@apollo/client` and `graphql-tag`.\n- Define custom error classes for different error cases in TypeScript.\n- Configure `graphql-code-generator` with a `codegen.yml` file, specifying the schema path and output directory.\n- Utilize Apollo Client's `useMutation` or `useQuery` hooks to handle errors gracefully.\n- Implement error handling logic within your React components using Apollo Client's lifecycle methods.\n- Ensure type safety by using TypeScript interfaces for input and output types in GraphQL operations.",
+    "source": "code_example",
+    "updated_at": 1781068941.9983582
+  }
+}
