@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initialize Alembic in your project.\n  - `alembic revision --autogenerate -m \"message\"`: Generate a new migration script based on changes detected in the models.\n  - `alembic upgrade head`: Apply all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.102.0\n  - SQLAlchemy: 1.4.39\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: URL for the database connection.\n  - `alembic.ini`: Configuration file for Alembic, including paths to migration scripts and environment variables.\n  - `models.py`: Contains SQLAlchemy models defining the database schema.",
     "source": "code_example",
     "updated_at": 1780965973.7240255
+  },
+  "search:Python + FastAPI + SQLAlchemy:python fastapi sqlalchemy crud": {
+    "content": "- **CLI Commands**: Use `pip install fastapi sqlalchemy databases` to install FastAPI, SQLAlchemy, and Databases.\n- **Latest Versions**: As of my last update in October 2023, the latest versions are FastAPI 0.95.1, SQLAlchemy 1.4.46, and Databases 1.0.0.\n- **Key Config Options**:\n  - For FastAPI: Define routes using `@app.get`, `@app.post`, etc., specifying path parameters and query parameters.\n  - For SQLAlchemy ORM: Define models by subclassing `Base` from `sqlalchemy.ext.declarative`.\n  - For Databases: Configure the database URL in your application settings, e.g., `SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\"`.",
+    "source": "web_search",
+    "updated_at": 1781058600.0940921
+  },
+  "search:Python + FastAPI + SQLAlchemy:python fastapi sqlalchemy crud_ex": {
+    "content": "- `mkdir fastapi_sqlalchemy`\n- `cd fastapi_sqlalchemy`\n- `code .` # Open project in VS Code\n- Create and activate virtual environment:\n  ```bash\n  python -m venv venv\n  source venv/bin/activate  # On Windows use `venv\\Scripts\\activate`\n  ```\n- Install dependencies:\n  ```bash\n  pip install fastapi sqlalchemy databases uvicorn\n  ```\n- Key config options for FastAPI and SQLAlchemy include:\n  - Database URL in `settings.py` (e.g., `SQLALCHEMY_DATABASE_URL = \"sqlite:///./test.db\"`)\n  - Models defined in SQLAlchemy ORM\n  - CRUD operations implemented using FastAPI endpoints",
+    "source": "code_example",
+    "updated_at": 1781058614.1754477
+  },
+  "search:Python + FastAPI + SQLAlchemy:python fastapi sqlalchemy migr": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initialize Alembic in your project.\n  - `alembic revision --autogenerate -m \"message\"`: Create a new migration script based on detected changes.\n  - `alembic upgrade head`: Apply all migrations to the database.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - SQLAlchemy: 2.0.0\n  - Alembic: 1.8.3\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: Define your database URL in the format `postgresql+asyncpg://user:password@host/dbname`.\n  - `alembic.ini`: Configure Alembic with paths to your models and migration scripts.\n  - `metadata.create_all(bind=engine)`: Create all tables based on your SQLAlchemy models.",
+    "source": "web_search",
+    "updated_at": 1781058622.722361
+  },
+  "search:Python + FastAPI + SQLAlchemy:python fastapi sqlalchemy migr_ex": {
+    "content": "- **CLI Commands**:\n  - `alembic init alembic`: Initializes Alembic in the project.\n  - `alembic revision --autogenerate -m \"message\"`: Generates a new migration script based on detected changes.\n  - `alembic upgrade head`: Applies all migrations to the database.\n  - `alembic downgrade -1`: Reverts the last applied migration.\n\n- **Latest Versions**:\n  - FastAPI: 0.95.2\n  - SQLAlchemy: 1.4.36\n  - Alembic: 1.8.1\n\n- **Key Config Options**:\n  - `SQLALCHEMY_DATABASE_URL`: Specifies the database URL.\n  - `alembic.ini` configuration file for migration settings.\n  - `env.py` script in the `alembic` directory for environment-specific configurations.",
+    "source": "code_example",
+    "updated_at": 1781058632.3991857
   }
 }

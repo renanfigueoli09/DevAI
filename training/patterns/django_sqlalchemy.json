@@ -1,0 +1,22 @@
+{
+  "search:Django + SQLAlchemy:django sqlalchemy orm crud 202": {
+    "content": "- **CLI Commands**:\n  - `pip install sqlalchemy`\n  - `python manage.py makemigrations`\n  - `python manage.py migrate`\n\n- **Latest Versions**:\n  - SQLAlchemy: 2.0.4\n  - Django: 4.1\n\n- **Key Config Options**:\n  - Database URI in settings.py (e.g., `SQLALCHEMY_DATABASE_URI = 'sqlite:///example.db'`)\n  - ORM Models for defining database tables\n  - Session management for transactions",
+    "source": "web_search",
+    "updated_at": 1781058548.6966152
+  },
+  "search:Django + SQLAlchemy:django sqlalchemy orm crud 202_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install sqlalchemy`\n  - `pip install psycopg2` (for PostgreSQL)\n  \n- **Latest Versions**:\n  - SQLAlchemy: 1.4.x\n  - Django ORM: 3.2.x\n  \n- **Key Config Options**:\n  - Database URL: `postgresql://user:password@localhost/dbname`\n  - Model definitions in Python classes\n  - CRUD operations using session methods (e.g., `session.add()`, `session.commit()`, `session.query()`)",
+    "source": "code_example",
+    "updated_at": 1781058564.7390215
+  },
+  "search:Django + SQLAlchemy:django sqlalchemy performance ": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver --settings=your_project.settings`\n  - `sqlalchemy.orm.configure_engine(engine, pool_size=20, max_overflow=50)`\n\n- **Latest Versions**:\n  - Django: 4.1\n  - SQLAlchemy: 2.0\n\n- **Key Config Options**:\n  - `DATABASES['default']['OPTIONS'] = {'pool_size': 20, 'max_overflow': 50}`\n  - `SQLALCHEMY_POOL_SIZE=20`\n  - `SQLALCHEMY_MAX_OVERFLOW=50`",
+    "source": "web_search",
+    "updated_at": 1781058572.99077
+  },
+  "search:Django + SQLAlchemy:django sqlalchemy performance _ex": {
+    "content": "- Use `sqlalchemy==2.0` for optimized ORM bulk inserts.\n- Employ `RETURNING` in raw SQL queries for improved performance.\n- Configure Django settings with `DATABASES['default']['OPTIONS'] = {'isolation_level': 'AUTOCOMMIT'}` for better performance.\n- Utilize `session.bulk_insert_mappings()` for efficient data insertion.\n- Apply `query.execution_options(stream_results=True)` to reduce memory usage during large queries.",
+    "source": "code_example",
+    "updated_at": 1781058590.0780792
+  }
+}
