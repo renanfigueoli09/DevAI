@@ -1,0 +1,22 @@
+{
+  "search:java-spring-data-cassandra:java spring data cassandra cru": {
+    "content": "- **Latest Version**: Spring Data Cassandra 3.5.0, Spring Boot 2.7.4\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`\n  - `spring.data.cassandra.contact-points`\n  - `spring.data.cassandra.port`\n- **CLI Commands**:\n  ```bash\n  mvn clean install\n  ```\n- **Example Code Snippet**:\n  ```java\n  @Repository\n  public interface UserRepository extends CassandraRepository<User, String> {\n      User findByUsername(String username);\n  }\n  ```\n- **Dependencies in `pom.xml`**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.boot</groupId>\n      <artifactId>spring-boot-starter-data-cassandra</artifactId>\n  </dependency>\n  ```\n- **Run Application**:\n  ```bash\n  ./mvnw spring-boot:run\n  ```\n- **Database Schema**:\n  Define entities with annotations like `@Table`, `@PrimaryKey`.\n- **CRUD Operations**:\n  Use repository methods or custom query methods for CRUD operations.\n- **Testing**:\n  Write unit tests using JUnit and Mockito.",
+    "source": "web_search",
+    "updated_at": 1781084432.9187398
+  },
+  "search:java-spring-data-cassandra:java spring data cassandra cru_ex": {
+    "content": "- **CLI Commands**:\n  - `cqlsh`: Cassandra Query Language Shell.\n  - `mvn clean install`: Build and run the application using Maven.\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Spring Data Cassandra: 4.0.x\n\n- **Key Config Options**:\n  - `application.properties` or `application.yml` for database connection details.\n  - `@EnableCassandraRepositories`: Enables Spring Data Cassandra repositories.\n  - `@Entity`: Annotates a class as a JPA entity and maps it to a table in the database.",
+    "source": "code_example",
+    "updated_at": 1781084440.959616
+  },
+  "search:java-spring-data-cassandra:java spring data cassandra per": {
+    "content": "- **Latest Version**: Ensure using the latest version of Spring Data Cassandra and Apache Cassandra to benefit from performance improvements and bug fixes.\n  \n- **CLI Commands**:\n  - `mvn clean install` for building your project with Maven.\n  - `cqlsh` for interacting with Cassandra directly.\n\n- **Key Config Options**:\n  - `spring.data.cassandra.keyspace-name`: Specify the keyspace in your application properties or YAML file.\n  - `spring.data.cassandra.contact-points`: List of contact points to connect to the Cassandra cluster.\n  - `spring.data.cassandra.port`: Port number for connecting to the Cassandra cluster.\n\n- **Optimization Tips**:\n  - Use batch operations for multiple inserts or updates.\n  - Implement proper indexing and partitioning strategies.\n  - Monitor and tune query performance using tools like DataStax Studio.",
+    "source": "web_search",
+    "updated_at": 1781084450.644311
+  },
+  "search:java-spring-data-cassandra:java spring data cassandra per_ex": {
+    "content": "- Use `@CreatedDate` manually in Cassandra by generating the primary key.\n- Implement repository interfaces for CRUD operations without manual class implementation.\n- For Apache Cassandra performance, consider JVM choice and configuration.\n- Monitor throughput and responsiveness to optimize cost-effectively.\n- Ensure latest versions of Spring Data Cassandra and related libraries for optimal functionality.",
+    "source": "code_example",
+    "updated_at": 1781084461.7394068
+  }
+}
