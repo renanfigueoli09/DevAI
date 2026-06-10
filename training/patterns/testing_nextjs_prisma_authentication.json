@@ -1,0 +1,22 @@
+{
+  "search:Testing NextJS + Prisma Authentication:nextjs testing": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-next-app` to create a new Next.js app.\n  - `npm run test` or `yarn test` to run tests.\n\n- **Latest Versions**:\n  - Cypress: v12.0.3\n  - Playwright: v1.24.0\n  - Vitest: v0.26.0\n  - Jest: v27.5.1\n\n- **Key Config Options**:\n  - `jest.config.js`: Configure Jest settings.\n  - `next.config.js`: Customize Next.js build and development behavior.\n  - `.env.local`: Define environment variables for testing.",
+    "source": "web_search",
+    "updated_at": 1781060212.3459713
+  },
+  "search:Testing NextJS + Prisma Authentication:nextjs testing_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom`\n  - `npx playwright install`\n\n- **Latest Versions**:\n  - Jest: v29.3.1\n  - React Testing Library: v14.0.0\n  - Playwright: v1.27.0\n\n- **Key Config Options**:\n  - Jest configuration in `jest.config.js`\n    ```javascript\n    module.exports = {\n      setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],\n      testEnvironment: 'jsdom',\n    };\n    ```\n  - Playwright configuration in `playwright.config.ts`\n    ```typescript\n    import { defineConfig } from '@playwright/test';\n\n    export default defineConfig({\n      projects: [\n        {\n          name: 'chromium',\n          use: {\n            browserName: 'chromium',\n          },\n        },\n      ],\n    });\n    ```",
+    "source": "code_example",
+    "updated_at": 1781060219.248375
+  },
+  "search:Testing NextJS + Prisma Authentication:prisma authentication tests": {
+    "content": "- **CLI Commands**:\n  - `prisma db pull`: Pulls the Prisma schema from your database.\n  - `prisma migrate dev --name init`: Creates a new migration and applies it to the database.\n\n- **Latest Versions**:\n  - Prisma: 4.10.0\n  - Playwright: 1.27.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model.\n  - `prisma.yml`: Configuration file for Prisma Cloud SSO settings.\n  - Environment variables (`DATABASE_URL`, `PRISMA_SECRET`) for database connection and security.",
+    "source": "web_search",
+    "updated_at": 1781060244.266595
+  },
+  "search:Testing NextJS + Prisma Authentication:prisma authentication tests_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - `datasource url`: Specifies the database connection URL.\n  - `generator client`: Defines the Prisma Client generator configuration.",
+    "source": "code_example",
+    "updated_at": 1781060263.5689814
+  }
+}

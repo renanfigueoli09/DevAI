@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Angular+Core:angular error handling": {
+    "content": "- Use `ng serve --prod` to build and serve the application in production mode.\n- Update Angular CLI to the latest version using `npm install -g @angular/cli`.\n- Configure custom error handling by providing a custom `ErrorHandler` in your `ApplicationConfig`.\n- Implement HTTP error handling in services using `HttpClient` and interceptors for centralized error management.\n- Use `ng build --prod --base-href=/your-base-path/` to specify the base path for production builds.\n- Utilize Angular's built-in logging mechanisms like `console.log`, `console.error`, and `console.warn`.\n- Implement global error handling in your main module by overriding the default `ErrorHandler`.\n- Use `ng test --watch` to run tests in watch mode, which helps in identifying errors during development.\n- Configure environment-specific settings using Angular's environment files (`environment.ts`, `environment.prod.ts`).",
+    "source": "web_search",
+    "updated_at": 1781060161.2353349
+  },
+  "search:Advanced Error Handling in Angular+Core:angular error handling_ex": {
+    "content": "- Use `ng generate library error-handler` to create an Angular library for error handling.\n- Implement the `ErrorHandler` interface in your custom error handler class.\n- Configure your custom error handler in `bootstrapApplication` using `ApplicationConfig`.\n- Utilize `ErrorInterceptor` and `ErrorService` from the `@my-org/error-handler` library across all applications or micro frontends.\n- Ensure your error handling components are shared, tested, and reusable for consistency and maintainability.",
+    "source": "code_example",
+    "updated_at": 1781060166.3934247
+  },
+  "search:Advanced Error Handling in Angular+Core:core error handling strategies": {
+    "content": "- Use `try-catch` blocks for error handling in Express.js.\n- Implement middleware to handle errors globally.\n- Utilize `errors.Is()` and `errors.As()` for type-specific error checking in Go.\n- Configure n8n's \"Continue on Fail\" option to skip failed nodes.\n- Set up custom error output nodes in n8n for advanced routing.",
+    "source": "web_search",
+    "updated_at": 1781060181.079434
+  },
+  "search:Advanced Error Handling in Angular+Core:core error handling strategies_ex": {
+    "content": "- **Latest Version**: ASP.NET Core 9.0\n- **CLI Commands**:\n  - `dotnet new mvc` to create a new MVC project.\n  - `dotnet add package Microsoft.AspNetCore.Diagnostics` for global exception handling.\n- **Key Config Options**:\n  - `app.UseExceptionHandler(\"/Home/Error\")` in `Startup.cs` for centralized error handling.\n  - `app.UseSerilogRequestLogging()` for structured logging with Serilog.\n  - `ConfigureServices` method to register services like `services.AddControllersWithViews()`.\n- **Middleware**: Implement custom middleware for specific error scenarios.\n- **Exception Filters**: Use `[ExceptionHandler]` attribute or create custom filters in `Startup.cs`.",
+    "source": "code_example",
+    "updated_at": 1781060186.9971309
+  }
+}
