@@ -1,5 +1,21 @@
 {
-  "generated_at": 1781082211.1742196,
+  "generated_at": 1781082876.860687,
   "studied_count": 636,
-  "checks": []
+  "checks": [
+    {
+      "name": "Spring Boot  +  MySQL  +  Spring Data JPA: padrões de código",
+      "queries": [
+        "Spring Boot + MySQL + Spring Data JPA pattern code example",
+        "Spring Boot  +  MySQL  +  Spring Data JPA"
+      ],
+      "must_find": [
+        "@Async",
+        "@Service"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "Spring Boot + MySQL + Spring Data JPA"
+    }
+  ]
 }
