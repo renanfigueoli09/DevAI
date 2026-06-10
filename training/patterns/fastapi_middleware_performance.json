@@ -1,0 +1,17 @@
+{
+  "search:fastapi-middleware-performance:fastapi middleware performance": {
+    "content": "• FastAPI performance tuning.Fastapi Middleware performance tuning. Fastapi JSON response classes comparison. Gunicorn workers and threads. Nginx in front of FastAPI. Connection keepalive.\n• This isn’t a FastAPI problem. It’s an architecture problem. After analyzing performance traces from dozens of production FastAPI services, a clear pattern emerges: 93% of latency comes from how we com\n• It may seem a bit like the way that FastAPI uses dependency injection can feel a bit like a middleware. Well, FastAPI also allows for adding middlewares expl...",
+    "source": "web_search",
+    "updated_at": 1781072966.7416258
+  },
+  "search:fastapi-middleware-performance:advanced fastapi middleware us": {
+    "content": "• FastAPI Learn Advanced User Guide Advanced Middleware In the main tutorial you read how to add Custom Middleware to your application. And then you also read how to handle CORS with the CORSMiddleware.\n• For the next examples, you could also use from starlette.middleware.something import SomethingMiddleware. FastAPI provides several middlewares in fastapi.middleware just as a convenience for you, the \n• Mar 28, 2026 · A middleware is a piece of code that runs before the request reaches your endpoint and again after response is sent back. It: Inspect or modify the incoming request. Add extra processin",
+    "source": "web_search",
+    "updated_at": 1781073011.6959898
+  },
+  "search:fastapi-middleware-performance:advanced fastapi middleware us_ex": {
+    "content": "- Use `app.add_middleware()` to add middleware in FastAPI.\n- For CORS, use `from fastapi.middleware.cors import CORSMiddleware` and configure it with necessary options like origins, methods, headers.\n- FastAPI provides several middlewares under `fastapi.middleware`, such as `HTTPAuthMiddleware`, `HTTPSRedirectMiddleware`, etc., for convenience.\n- Ensure custom exception handlers work properly by handling exceptions in middleware or directly in your application logic.",
+    "source": "code_example",
+    "updated_at": 1781073017.1658268
+  }
+}

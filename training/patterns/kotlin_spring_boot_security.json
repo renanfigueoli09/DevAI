@@ -1,0 +1,17 @@
+{
+  "search:kotlin-spring-boot-security:kotlin spring boot security be": {
+    "content": "- Use `./gradlew bootRun` to run your Spring Boot application.\n- Ensure Kotlin version is up-to-date, typically using the latest stable release.\n- Implement authentication with Spring Security by extending `WebSecurityConfigurerAdapter`.\n- Configure authorization rules in `configure(HttpSecurity http)` method.\n- Utilize Kotlin coroutines for asynchronous programming with `@EnableAsync` and `@Async` annotations.\n- Apply null-safety features to prevent runtime exceptions due to null values.\n- Regularly update dependencies using `./gradlew dependencyUpdates`.\n- Implement CSRF protection by enabling it in Spring Security configuration.\n- Use HTTPS for secure communication between client and server.\n- Conduct security testing with tools like OWASP ZAP or Burp Suite.",
+    "source": "web_search",
+    "updated_at": 1781072889.2177358
+  },
+  "search:kotlin-spring-boot-security:spring boot security with kotl": {
+    "content": "- **CLI Commands**:\n  - `./mvnw clean install` for building the project.\n  - `./gradlew bootRun` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - Spring Security: 6.x\n\n- **Key Config Options**:\n  - `application.properties`: Configure JWT secret, token expiration time, etc.\n  - `SecurityConfig.kt`: Define security configurations such as authentication and authorization rules.\n  - `AuthenticationFilter.kt`: Implement custom filter for handling JWT authentication.",
+    "source": "web_search",
+    "updated_at": 1781072915.8258104
+  },
+  "search:kotlin-spring-boot-security:spring boot security with kotl_ex": {
+    "content": "- **CLI Commands**:\n  - `spring init --dependencies=webflux,security,kotlin my-spring-boot-project`\n  - `./mvnw clean install`\n\n- **Latest Versions**:\n  - Spring Boot: 3.5.5\n  - Kotlin: 2.0\n\n- **Key Config Options**:\n  - Security Configuration Class with `@EnableWebSecurity`\n  - Using Kotlin DSL for security configuration (`http { ... }`)\n  - JWT Authentication with `JwtAuthenticationConverter`",
+    "source": "code_example",
+    "updated_at": 1781072929.3422391
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:rails-graphql-performance:ruby on rails graphql performa": {
+    "content": "- **Install GraphQL Gem**: `gem install graphql`\n- **Add to Gemfile**: `gem 'graphql'`\n- **Bundle Install**: `bundle install`\n- **Latest Version**: Check on [GitHub](https://github.com/rmosolgo/graphql-ruby/releases)\n- **Key Config Options**:\n  - Define types and queries in your schema.\n  - Use fragments for efficient data fetching.\n  - Implement caching strategies (e.g., Redis).\n  - Optimize resolver performance.\n- **Optimize Queries**: \n  - Avoid N+1 queries by using eager loading.\n  - Utilize GraphQL's batching capabilities.\n  - Profile and analyze query performance with tools like `GraphQL::Tracing`.\n- **Security**:\n  - Implement authentication and authorization checks.\n  - Use input validation to prevent malicious data.\n- **Performance Tuning**:\n  - Monitor API response times using monitoring tools.\n  - Scale horizontally by adding more servers if needed.\n  - Optimize database queries for faster data retrieval.",
+    "source": "web_search",
+    "updated_at": 1781072848.4897413
+  },
+  "search:rails-graphql-performance:ruby on rails graphql performa_ex": {
+    "content": "- Use `gem 'graphql-ruby'` in your Gemfile.\n- Run `bundle install` to install the gem.\n- Define GraphQL schema using `GraphQL::Schema.define`.\n- Implement resolvers for queries and mutations.\n- Utilize `GraphQL::Batch` for efficient data fetching.\n- Configure caching with `rack-cache` or `redis-rails`.\n- Optimize database queries with eager loading and indexing.\n- Use `graphql-batch-loader` for batch loading of associated records.\n- Monitor performance using tools like New Relic or Skylight.\n- Regularly update dependencies to the latest versions.",
+    "source": "code_example",
+    "updated_at": 1781072853.7871892
+  },
+  "search:rails-graphql-performance:rails graphql optimization tec": {
+    "content": "- Use `rails generate graphql:install` to set up GraphQL in Rails.\n- Implement caching strategies like `GraphQL::CacheControlExtension` for data freshness.\n- Utilize `graphql-ruby` version 2.0 or later for performance improvements.\n- Apply pagination with `graphiql-rails` to manage large datasets efficiently.\n- Enable query batching using `graphql-batch` for reducing the number of requests.\n- Configure `GraphQL::Tracing::AdvancedTracer` for detailed query analysis and optimization.\n- Implement lazy loading in GraphQL types to reduce initial load times.\n- Use `graphql-guardian` for securing your GraphQL API effectively.\n- Regularly update dependencies with `bundle update graphql-ruby graphiql-rails graphql-batch`.\n- Monitor performance using tools like New Relic or Datadog for real-time insights.",
+    "source": "web_search",
+    "updated_at": 1781072864.0598488
+  },
+  "search:rails-graphql-performance:rails graphql optimization tec_ex": {
+    "content": "- **CLI Commands**:\n  - `rails generate graphql:install`\n  - `rails generate graphql:object <name>`\n  - `rails generate graphql:mutation <name>`\n\n- **Latest Versions**:\n  - Rails 7.0.6\n  - GraphQL-Ruby 2.14.3\n\n- **Key Config Options**:\n  - `config/initializers/graphql.rb`: Configure GraphQL settings.\n  - `config/routes.rb`: Define GraphQL routes with `mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql'`.\n  - `app/graphql/types/schema.rb`: Define the schema for your GraphQL API.",
+    "source": "code_example",
+    "updated_at": 1781072873.6180494
+  }
+}
