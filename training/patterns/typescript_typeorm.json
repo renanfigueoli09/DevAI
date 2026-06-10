@@ -1,0 +1,32 @@
+{
+  "search:TypeScript + TypeORM:typescript typeorm orm best pr": {
+    "content": "- **CLI Commands**: Use `npm install typeorm reflect-metadata --save` to install TypeORM and its dependencies.\n- **Latest Version**: Check the latest version on [GitHub](https://github.com/typeorm/typeorm/releases).\n- **Key Config Options**:\n  - `type`: Database type (e.g., `mysql`, `postgres`, `sqlite`).\n  - `host`: Database host.\n  - `port`: Database port.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Database name.\n  - `synchronize`: Automatically synchronize schema with entities (use with caution in production).\n  - `logging`: Enable or disable query logging.",
+    "source": "web_search",
+    "updated_at": 1781074864.0990055
+  },
+  "search:TypeScript + TypeORM:typescript typeorm orm best pr_ex": {
+    "content": "- Use `npm install typeorm reflect-metadata --save` to install TypeORM and its dependencies.\n- Ensure TypeScript is configured in your project by adding `\"emitDecoratorMetadata\": true` and `\"experimentalDecorators\": true` to your `tsconfig.json`.\n- For the latest version, check [TypeORM GitHub page](https://github.com/typeorm/typeorm) for the most current release.\n- Key config options include:\n  - `type`: Database type (e.g., \"mysql\", \"postgres\").\n  - `host`: Hostname of the database server.\n  - `port`: Port number of the database server.\n  - `username`: Username to connect to the database.\n  - `password`: Password for the user.\n  - `database`: Name of the database.\n- Use decorators like `@Entity`, `@PrimaryGeneratedColumn`, and `@Column` to define your entity classes.\n- For best practices, refer to [TypeORM Best Practices](https://typeorm.io/docs/best-practices.html) on their official documentation.",
+    "source": "code_example",
+    "updated_at": 1781074874.0586655
+  },
+  "search:TypeScript + TypeORM:typescript typeorm performance": {
+    "content": "- **CLI Commands**:\n  - `typeorm migration:create --name CreateUsersTable`\n  - `typeorm migration:run`\n\n- **Latest Versions**:\n  - TypeORM: v0.3.7\n\n- **Key Config Options**:\n  - `entities`: Array of entity classes or glob patterns.\n  - `migrations`: Directory where migrations are stored.\n  - `synchronize`: Automatically synchronize schema with entities (not recommended for production).\n  - `logging`: Enable logging to monitor queries and events.",
+    "source": "web_search",
+    "updated_at": 1781074893.2789483
+  },
+  "search:TypeScript + TypeORM:typescript typeorm performance_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install typeorm reflect-metadata --save`\n  - `npx typeorm init`\n\n- **Latest Versions**:\n  - TypeORM: 0.3.x\n  - Node.js: 18.x\n\n- **Key Config Options**:\n  - `entities`: Array of entity classes or glob patterns.\n  - `migrations`: Array of migration classes or glob patterns.\n  - `synchronize`: Boolean to auto-sync schema with entities (not recommended for production).\n  - `logging`: Boolean or function to enable logging.",
+    "source": "code_example",
+    "updated_at": 1781074899.444648
+  },
+  "search:TypeScript + TypeORM:typescript typeorm migration s": {
+    "content": "- **CLI Commands**:\n  - `npm run typeorm:migration:generate -- -n CreateUsersTable`\n  - `npm run typeorm:migrate`\n\n- **Latest Versions**:\n  - Ensure using the latest stable version of TypeORM and Node.js.\n\n- **Key Config Options**:\n  - `type`: Specifies the database type (e.g., postgres, mysql).\n  - `host`: Database host.\n  - `port`: Database port.\n  - `username`: Database username.\n  - `password`: Database password.\n  - `database`: Database name.\n  - `synchronize`: Automatically synchronize schema with entities (not recommended for production).\n  - `migrationsTableName`: Name of the table where migrations are stored.",
+    "source": "web_search",
+    "updated_at": 1781074910.2753437
+  },
+  "search:TypeScript + TypeORM:typescript typeorm migration s_ex": {
+    "content": "- **CLI Commands**: \n  - `npm install typeorm --save`\n  - `npx typeorm migration:create -n CreateUsersTable`\n\n- **Latest Versions**:\n  - TypeScript: v4.9.5\n  - TypeORM: v0.3.12\n\n- **Key Config Options**:\n  - `tsconfig.json`: \n    ```json\n    {\n      \"compilerOptions\": {\n        \"baseUrl\": \"./\",\n        \"paths\": {\n          \"@/*\": [\"src/*\"]\n        }\n      }\n    }\n    ```\n  - `ormconfig.json`:\n    ```json\n    {\n      \"type\": \"mysql\",\n      \"host\": \"localhost\",\n      \"port\": 3306,\n      \"username\": \"test\",\n      \"password\": \"test\",\n      \"database\": \"test\",\n      \"synchronize\": true,\n      \"logging\": false,\n      \"entities\": [\"src/entity/**/*.ts\"],\n      \"migrations\": [\"src/migration/**/*.ts\"],\n      \"subscribers\": [\"src/subscriber/**/*.ts\"]\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1781074923.6701767
+  }
+}

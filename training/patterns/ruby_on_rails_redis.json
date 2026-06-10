@@ -8,5 +8,25 @@
     "content": "- Install Redis using `brew install redis` on macOS.\n- Add `gem 'redis'` and `gem 'sidekiq'` to your Gemfile for Rails integration.\n- Run `bundle install` to install the gems.\n- Configure Redis in `config/initializers/redis.rb` with:\n  ```ruby\n  $redis = Redis.new(host: 'localhost', port: 6379)\n  ```\n- Use Sidekiq for background jobs by adding it to your `Procfile`:\n  ```\n  web: bundle exec rails server -p 3000\n  worker: bundle exec sidekiq\n  ```\n- Set up Redis as a cache store in `config/environments/development.rb`:\n  ```ruby\n  config.cache_store = :redis_cache_store, { url: 'redis://localhost:6379/1' }\n  ```\n- Monitor Redis performance with `redis-cli --stat`.\n- Use Redis for caching views and fragments by adding to your controller:\n  ```ruby\n  caches_action :index, expires_in: 10.minutes\n  ```\n- Regularly update gems using `bundle update` to benefit from latest features and security patches.",
     "source": "code_example",
     "updated_at": 1781059768.3544073
+  },
+  "search:Ruby on Rails + Redis:ruby on rails redis caching st": {
+    "content": "- **Latest Version of Rails**: 7.0.6\n- **Redis Cache Store**: Available in Rails 5.2+\n- **CLI Commands**:\n  - `rails cache:clear`: Clears all cached data.\n  - `rails dev:cache`: Enables caching during development.\n- **Key Config Options**:\n  - `config.cache_store = :redis_cache_store`\n  - `config.redis_cache_options = { url: 'redis://localhost:6379/0' }`\n- **Caching Strategies**:\n  - **Low-Level Caching**: Use `Rails.cache.write` and `Rails.cache.read`.\n  - **Fragment Caching**: Cache partials using `<%= cache do %>` blocks.\n  - **Russian Doll Caching**: Nest fragments to invalidate higher-level caches.\n  - **Cache Expiration**: Set expiration times with `expires_in: time`\n- **Dependencies**:\n  - Add `gem 'redis-rails'` to your Gemfile for Redis caching support.",
+    "source": "web_search",
+    "updated_at": 1781074797.0520952
+  },
+  "search:Ruby on Rails + Redis:ruby on rails redis caching st_ex": {
+    "content": "- **CLI Commands**:\n  - `rails c`: Open the Rails console.\n  - `rails s`: Start the Rails server.\n  - `redis-cli ping`: Check if Redis is running.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.6 (as of my last update)\n  - Redis: 7.0.5\n\n- **Key Config Options**:\n  - In `config/environments/production.rb`, set `config.cache_store = :redis_cache_store, { url: 'redis://localhost:6379/1' }`\n  - Use `expire_in` for caching fragments with a specific time-to-live.\n  - Implement multi-level caching using `around_action` in controllers.\n\n- **Actionable Tips**:\n  - Use Redis for fragment caching to cache partial views.\n  - Optimize queries by using eager loading and avoiding N+1 queries.\n  - Configure Rails to automatically expire cache entries based on model changes.",
+    "source": "code_example",
+    "updated_at": 1781074806.1555126
+  },
+  "search:Ruby on Rails + Redis:ruby on rails redis performanc": {
+    "content": "- **CLI Commands**:\n  - `rails server`: Start the Rails development server.\n  - `rails db:migrate`: Run database migrations.\n  - `rails c`: Open the Rails console.\n\n- **Latest Versions**:\n  - Ruby on Rails: 8.0\n  - Redis: 7.2\n\n- **Key Config Options**:\n  - In `config/database.yml`, configure PostgreSQL settings.\n  - In `config/redis.yml`, set up Redis configurations.\n  - Use `Sidekiq.configure_server` and `Sidekiq.configure_client` in `config/sidekiq.rb`.",
+    "source": "web_search",
+    "updated_at": 1781074817.3684843
+  },
+  "search:Ruby on Rails + Redis:ruby on rails redis integratio": {
+    "content": "- **Latest Redis Store Gem**: `redis-store` version 2.4.0.\n- **CLI Commands**:\n  - To install the latest Redis store gem: `gem install redis-store`.\n  - To update to the latest version of a gem in your Rails app: `bundle update redis-store`.\n- **Key Config Options**:\n  - In `config/initializers/session_store.rb`, set session storage with Redis:\n    ```ruby\n    Rails.application.config.session_store :redis_store, servers: [{ host: 'localhost', port: 6379 }]\n    ```\n  - For caching in `config/environments/production.rb`:\n    ```ruby\n    config.cache_store = :redis_cache_store, { url: 'redis://localhost:6379/0/cache' }\n    ```\n- **Feature Flags with Flipper**:\n  - Install Flipper gem: `gem install flipper`.\n  - Configure in `config/initializers/flipper.rb`:\n    ```ruby\n    require 'flipper'\n    require 'flipper/adapters/redis'\n\n    adapter = Flipper::Adapters::Redis.new(Redis.new)\n    Flipper.configure do |config|\n      config.default do\n        Flipper.new(adapter)\n      end\n    end\n    ```\n  - Use in your application:\n    ```ruby\n    flipper[:new_feature].enable\n    flipper[:new_feature].enabled? # => true\n    ```\n\nThese actionable facts provide a clear path for integrating Redis into a Ruby on Rails application, including setting up caching and feature flags.",
+    "source": "web_search",
+    "updated_at": 1781074840.2558758
   }
 }
