@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in RabbitMQ:rabbitmq error handling": {
+    "content": "- Use `rabbitmqadmin` CLI tool for managing RabbitMQ.\n- Set up dead-letter-exchange and dead-letter-routing-key in queue declaration:\n  ```bash\n  rabbitmqadmin declare queue name=my_queue arguments='{\"x-dead-letter-exchange\":\"my_dl_exchange\", \"x-dead-letter-routing-key\":\"my_dl_key\"}'\n  ```\n- Configure the latest RabbitMQ version (e.g., 3.12.x) for better performance and features.\n- Key config options include `x-max-length`, `x-message-ttl`, and `x-dead-letter-exchange`.\n- Monitor RabbitMQ using management plugin:\n  ```bash\n  rabbitmq-plugins enable rabbitmq_management\n  ```\n- Implement retry logic in application code to handle transient errors.\n- Use `basic.reject` or `basic.nack` with requeue flag set to false for permanent failures.\n- Regularly check and clean up messages in dead-letter queues.",
+    "source": "web_search",
+    "updated_at": 1781051162.3421278
+  },
+  "search:Advanced Error Handling in RabbitMQ:rabbitmq error handling_ex": {
+    "content": "- Use `rabbitmqctl` to manage RabbitMQ server.\n- Ensure RabbitMQ version is up-to-date, e.g., `3.8.x`.\n- Implement custom retry logic using exponential backoff strategy.\n- Configure error queues in RabbitMQ for failed messages.\n- Utilize Spring AMQP's `@RabbitListener` annotations with `ErrorHandler` to handle exceptions.\n- Set `spring.rabbitmq.listener.simple.retry.enabled=true` in application properties.\n- Use `SimpleMessageListenerContainerFactory` to configure retry settings.\n- Implement a custom `ErrorHandler` bean to catch and log errors.\n- Monitor RabbitMQ management UI for error metrics.",
+    "source": "code_example",
+    "updated_at": 1781051180.52152
+  },
+  "search:Advanced Error Handling in RabbitMQ:rabbitmq exception management": {
+    "content": "- **CLI Commands**: Use `rabbitmqctl` to manage RabbitMQ nodes and queues.\n- **Latest Versions**: Check [RabbitMQ official website](https://www.rabbitmq.com/download.html) for the latest version.\n- **Key Config Options**:\n  - `vm_memory_high_watermark`: Set memory usage threshold.\n  - `log_levels`: Configure logging levels in `rabbitmq.conf`.\n  - `listeners.tcp.default`: Define TCP listeners in `rabbitmq.conf`.",
+    "source": "web_search",
+    "updated_at": 1781051188.252435
+  },
+  "search:Advanced Error Handling in RabbitMQ:rabbitmq exception management_ex": {
+    "content": "- Use `rabbitmqadmin` command-line tool for managing RabbitMQ.\n- Ensure using the latest version of Spring AMQP, e.g., `2.9.3`.\n- Implement exception handling in consumers to log and manage exceptions effectively.\n- Configure retry logic manually as RabbitMQ does not provide built-in functionality.\n- Key config options include `x-dead-letter-exchange`, `x-dead-letter-routing-key`, and `x-max-length`.",
+    "source": "code_example",
+    "updated_at": 1781051193.509308
+  }
+}

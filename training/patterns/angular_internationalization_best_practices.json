@@ -1,0 +1,22 @@
+{
+  "search:Angular Internationalization Best Practices:angular i18n": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/localize`\n  - `ng xi18n --format=xlf --out-file=src/locale/messages.xlf`\n\n- **Latest Versions**:\n  - Angular: 16.2.0\n  - @angular/localize: 16.2.0\n\n- **Key Config Options**:\n  - `angular.json`: Add `\"i18n\"` configuration under the project.\n  - `src/locale/messages.xlf`: Translation file for i18n.\n  - `src/app/app.component.ts`: Use `@Component({ template: `<h1 i18n>Hello World!</h1>` })`.",
+    "source": "web_search",
+    "updated_at": 1781051235.6649954
+  },
+  "search:Angular Internationalization Best Practices:angular i18n_ex": {
+    "content": "- **CLI Commands**:\n  - `ng add @angular/localize`\n  - `ng xi18n --out-file messages.xlf`\n\n- **Latest Versions**:\n  - Angular CLI: 16.2.4\n  - Angular Core: 16.2.4\n\n- **Key Config Options**:\n  - `src/environments/environment.ts`: Set `production` to `true` for production builds.\n  - `angular.json`: Configure the `i18n` section with locales and translation files.\n  - `src/locale/messages.xx.xlf`: Translation files for different languages.",
+    "source": "code_example",
+    "updated_at": 1781051251.5871992
+  },
+  "search:Angular Internationalization Best Practices:angular internationalization s": {
+    "content": "- **CLI Commands**:\n  - `ng xi18n`: Extracts i18n messages from your source code.\n  - `ng build --localize`: Builds the app for a specific locale.\n\n- **Latest Versions**:\n  - Angular CLI: v16.x\n  - Angular Core: v16.x\n\n- **Key Config Options**:\n  - `angular.json`: Configure locales under `projects > your-project-name > i18n`.\n  - `src/locale/messages.en.xlf`: Default translation file.\n  - `src/locale/messages.fr.xlf`: French translation file.",
+    "source": "web_search",
+    "updated_at": 1781051259.5652406
+  },
+  "search:Angular Internationalization Best Practices:angular internationalization s_ex": {
+    "content": "- Use `ng xi18n` to extract i18n messages from your Angular project.\n- Update the `angular.json` file with the following configuration:\n  ```json\n  \"i18n\": {\n    \"locales\": {\n      \"fr\": \"./src/locale/messages.fr.xlf\",\n      \"es\": \"./src/locale/messages.es.xlf\"\n    },\n    \"defaultLocale\": \"en\"\n  }\n  ```\n- Use `ng serve --configuration=fr` to serve your application in French.\n- Update the `angular.json` file with the following configuration for multiple locales:\n  ```json\n  \"configurations\": {\n    \"fr\": {\n      \"fileReplacements\": [\n        {\n          \"replace\": \"src/environments/environment.ts\",\n          \"with\": \"src/environments/environment.fr.ts\"\n        }\n      ],\n      \"i18nLocale\": \"fr\",\n      \"i18nFile\": \"src/locale/messages.fr.xlf\"\n    },\n    \"es\": {\n      \"fileReplacements\": [\n        {\n          \"replace\": \"src/environments/environment.ts\",\n          \"with\": \"src/environments/environment.es.ts\"\n        }\n      ],\n      \"i18nLocale\": \"es\",\n      \"i18nFile\": \"src/locale/messages.es.xlf\"\n    }\n  }\n  ```\n- Use `ng build --configuration=fr` to build your application in French.\n- Update the `angular.json` file with the following configuration for production:\n  ```json\n  \"production\": {\n    \"fileReplacements\": [\n      {\n        \"replace\": \"src/environments/environment.ts\",\n        \"with\": \"src/environments/environment.prod.ts\"\n      }\n    ],\n    \"i18nLocale\": \"fr\",\n    \"i18nFile\": \"src/locale/messages.fr.xlf\"\n  }\n  ```\n- Use `ng build --prod --configuration=fr` to build your production application in French.\n- Update the `angular.json` file with the following configuration for testing:\n  ```json\n  \"test\": {\n    \"fileReplacements\": [\n      {\n        \"replace\": \"src/environments/environment.ts\",\n        \"with\": \"src/environments/environment.test.ts\"\n      }\n    ],\n    \"i18nLocale\": \"fr\",\n    \"i18nFile\": \"src/locale/messages.fr.xlf\"\n  }\n  ```\n- Use `ng test --configuration=fr` to run your tests in French.",
+    "source": "code_example",
+    "updated_at": 1781051273.4266055
+  }
+}

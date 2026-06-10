@@ -1,0 +1,22 @@
+{
+  "search:FastAPI Authentication with JWT Optimization:fastapi jwt authentication": {
+    "content": "- Install FastAPI and Uvicorn: `pip install fastapi uvicorn`\n- Create a new FastAPI project: `uvicorn main:app --reload`\n- Use Pydantic for data validation.\n- Hash passwords with bcrypt: `pip install passlib[bcrypt]`\n- Generate JWT tokens using PyJWT: `pip install python-jose[cryptography]`\n- Configure OAuth2 with password and Bearer token.\n- Store user data in a SQLite database or any other supported database.\n- Implement role-based access control (RBAC) for protected routes.\n- Use environment variables for sensitive information like secret keys.\n- Test your API using tools like Postman or curl.",
+    "source": "web_search",
+    "updated_at": 1781051282.3828297
+  },
+  "search:FastAPI Authentication with JWT Optimization:fastapi jwt authentication_ex": {
+    "content": "- Install FastAPI and Uvicorn: `pip install fastapi uvicorn`\n- Use PyJWT for JWT handling: `pip install pyjwt`\n- Hash passwords with bcrypt: `pip install bcrypt`\n- Key config options:\n  - Secret key for JWT encoding/decoding (`SECRET_KEY`)\n  - Algorithm used for encoding (`ALGORITHM`, e.g., \"HS256\")\n  - Token expiration time (`ACCESS_TOKEN_EXPIRE_MINUTES`)\n- Example of creating a token:\n  ```python\n  import jwt\n  from datetime import datetime, timedelta\n\n  SECRET_KEY = \"your-secret-key\"\n  ALGORITHM = \"HS256\"\n  ACCESS_TOKEN_EXPIRE_MINUTES = 30\n\n  def create_access_token(data: dict, expires_delta: timedelta | None = None):\n      to_encode = data.copy()\n      if expires_delta:\n          expire = datetime.utcnow() + expires_delta\n      else:\n          expire = datetime.utcnow() + timedelta(minutes=15)\n      to_encode.update({\"exp\": expire})\n      encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n      return encoded_jwt\n  ```\n- Example of verifying a token:\n  ```python\n  from fastapi import Depends, HTTPException, status\n  from fastapi.security import OAuth2PasswordBearer\n\n  oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n\n  async def get_current_user(token: str = Depends(oauth2_scheme)):\n      credentials_exception = HTTPException(\n          status_code=status.HTTP_401_UNAUTHORIZED,\n          detail=\"Could not validate credentials\",\n          headers={\"WWW-Authenticate\": \"Bearer\"},\n      )\n      try:\n          payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n          username: str = payload.get(\"sub\")\n          if username is None:\n              raise credentials_exception\n      except JWTError:\n          raise credentials_exception\n      return {\"username\": username}\n  ```",
+    "source": "code_example",
+    "updated_at": 1781051297.7833016
+  },
+  "search:FastAPI Authentication with JWT Optimization:fastapi security optimization": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload` for development.\n  - `gunicorn -w 4 main:app` for production with Gunicorn.\n\n- **Latest Versions**:\n  - FastAPI: v0.103.0 (as of my last update).\n  - Uvicorn: v0.20.0.\n  - Gunicorn: v20.1.0.\n\n- **Key Config Options**:\n  - `uvicorn` options: `--host`, `--port`, `--reload`.\n  - `gunicorn` options: `-w` (number of workers), `-k` (worker class).\n  - Security middleware: Use `fastapi.middleware.security.SecurityMiddleware`.\n  - JWT auth: Implement with libraries like `python-jose`.\n  - Rate limiting: Use `fastapi-limiter`.\n\n- **HTTPS**:\n  - Enable HTTPS by configuring your ASGI server to use SSL certificates.\n\n- **Replication**:\n  - Scale horizontally using multiple instances of your application.\n\n- **Memory Management**:\n  - Monitor and optimize memory usage with tools like `psutil` or `memory_profiler`.",
+    "source": "web_search",
+    "updated_at": 1781051308.403774
+  },
+  "search:FastAPI Authentication with JWT Optimization:fastapi security optimization_ex": {
+    "content": "- **CLI Commands**:\n  - `uvicorn main:app --reload`\n  - `pip install fastapi uvicorn`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.0\n  - Uvicorn: v10.6.0\n\n- **Key Config Options**:\n  - `security_scheme`: Define security requirements for your API.\n  - `dependencies`: Add dependencies to routes for authentication and authorization.\n  - `responses`: Customize the responses of your endpoints.",
+    "source": "code_example",
+    "updated_at": 1781051314.5969083
+  }
+}

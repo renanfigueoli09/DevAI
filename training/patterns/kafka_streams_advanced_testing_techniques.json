@@ -1,0 +1,22 @@
+{
+  "search:Kafka Streams Advanced Testing Techniques:kafka streams testing": {
+    "content": "- Use `mvn clean install` to build and run tests.\n- Add `confluentinc/kafka-streams-test-utils` as a test dependency in your `pom.xml`.\n- Configure Kafka Streams with `application.id`, `bootstrap.servers`, and `default.key.serde`.\n- Run integration tests using `mvn verify -DskipTests=false`.\n- Ensure to use the latest version of Confluent Platform for compatibility.\n- Key config options include `auto.offset.reset` and `enable.auto.commit`.",
+    "source": "web_search",
+    "updated_at": 1781051204.0475037
+  },
+  "search:Kafka Streams Advanced Testing Techniques:kafka streams testing_ex": {
+    "content": "- Add `org.apache.kafka:kafka-streams-test-utils` to your test dependencies.\n- Use `TopologyTestDriver` for unit testing Kafka Streams applications.\n- Ensure you have the latest version of Kafka and Kafka Streams libraries.\n- Key config options include `bootstrap.servers`, `application.id`, and `default.key.serde`.\n- Run tests using your preferred build tool (e.g., Maven, Gradle).\n- Example CLI command: `mvn test -DskipTests=false` to execute tests.",
+    "source": "code_example",
+    "updated_at": 1781051209.3767939
+  },
+  "search:Kafka Streams Advanced Testing Techniques:kafka streams unit tests": {
+    "content": "- **Mocked Stream**: Use `MockedStream` library for Scala to simplify Kafka Streams unit testing.\n- **Kafka Streams Testing**: Implement both \"Unit\" and \"Integration\" testing methodologies.\n- **Spring Boot Configuration**: For SpringBoot projects, use `spring-boot-starter-parent 2.4.4` and `kafka-streams 2.7.0`.\n- **GitHub Repository**: Explore `david-romero/kafka-streams-tests` for practical unit test examples.\n- **CLI Commands**:\n  - `mvn clean install`: For building the project with tests.\n  - `mvn test`: To run all tests, including Kafka Streams unit tests.",
+    "source": "web_search",
+    "updated_at": 1781051217.7630742
+  },
+  "search:Kafka Streams Advanced Testing Techniques:kafka streams unit tests_ex": {
+    "content": "- Use `mvn dependency:add` to add the Kafka Streams test utilities as a dependency.\n- Ensure you have the latest version of Kafka Streams and its test utilities by checking [Maven Central](https://search.maven.org/) or [Confluent Hub](https://www.confluent.io/hub/).\n- Key config options include `application.id`, `bootstrap.servers`, and `default.key.serde` for setting up your Kafka Streams application.\n- Use `TopologyTestDriver` from the `kafka-streams-test-utils` package to simulate execution environments in unit tests.\n- Example CLI command: `mvn dependency:add -DgroupId=org.apache.kafka -DartifactId=kafka-streams-test-utils -Dversion=<latest-version>`\n- For integration testing, consider using a test Kafka cluster or Docker containers for Kafka and Zookeeper.",
+    "source": "code_example",
+    "updated_at": 1781051225.0694036
+  }
+}
