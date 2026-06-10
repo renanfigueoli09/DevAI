@@ -1,62 +1,62 @@
 {
   "search:database-design:when to use mongodb vs postgre": {
-    "content": "- **CLI Commands**:\n  - `mongod --dbpath /path/to/data` to start MongoDB.\n  - `psql -U username -d database_name` to connect to PostgreSQL.\n\n- **Latest Versions**:\n  - MongoDB: 6.0 (as of my last update).\n  - PostgreSQL: 14 (as of my last update).\n\n- **Key Config Options**:\n  - MongoDB: `bindIp`, `port`, `storageEngine`.\n  - PostgreSQL: `listen_addresses`, `port`, `shared_buffers`.",
+    "content": "- **PostgreSQL**:\n  - Latest version: PostgreSQL 15\n  - Key config options: `postgresql.conf`, `pg_hba.conf`\n  - CLI commands: \n    ```bash\n    psql --version\n    pg_dump -U username dbname > backup.sql\n    pg_restore -U username -d dbname backup.sql\n    ```\n\n- **MongoDB**:\n  - Latest version: MongoDB 6.0\n  - Key config options: `mongod.conf`\n  - CLI commands:\n    ```bash\n    mongod --version\n    mongoexport --db dbname --collection collectionname --out data.json\n    mongoimport --db dbname --collection collectionname --file data.json\n    ```",
     "source": "web_search",
-    "updated_at": 1780966797.4446588
+    "updated_at": 1781056969.9895365
   },
   "search:database-design:when to use mongodb vs postgre_ex": {
-    "content": "- **CLI Commands**: \n  - MongoDB: `mongod --dbpath /data/db` to start the server.\n  - PostgreSQL: `pg_ctl -D /usr/local/pgsql/data start` to start the server.\n\n- **Latest Versions**:\n  - MongoDB: As of my last update, the latest stable version is 6.0.\n  - PostgreSQL: The latest stable version as of my last update is 14.\n\n- **Key Config Options**:\n  - MongoDB: `bindIp`, `port`, `storageEngine`.\n  - PostgreSQL: `listen_addresses`, `port`, `shared_buffers`.",
+    "content": "- **CLI Commands**:\n  - PostgreSQL: `psql` for interactive terminal, `pg_dump` for backups.\n  - MongoDB: `mongo` shell, `mongodump` for backups.\n\n- **Latest Versions**:\n  - PostgreSQL: As of my last update in October 2023, the latest stable version is 15.4.\n  - MongoDB: The latest stable version as of my last update is 6.0.\n\n- **Key Config Options**:\n  - PostgreSQL: `max_connections`, `shared_buffers`, `work_mem`.\n  - MongoDB: `storage.wiredTiger.engineConfig.cacheSizeGB`, `net.port`, `security.authorization`.",
     "source": "code_example",
-    "updated_at": 1780966804.625884
+    "updated_at": 1781056993.8176603
   },
   "search:database-design:database normalization denorma": {
-    "content": "- **CLI Commands**: Use `pg_dump` for database backups and `psql` for interactive queries.\n- **Latest Versions**: PostgreSQL 15, MySQL 8.0, MongoDB 6.0.\n- **Key Config Options**:\n  - For PostgreSQL: `work_mem`, `maintenance_work_mem`.\n  - For MySQL: `innodb_buffer_pool_size`, `query_cache_size`.\n  - For MongoDB: `wiredTigerCacheSizeGB`, `operationProfiling.mode`.",
+    "content": "- **CLI Commands**: Use `CREATE TABLE` and `ALTER TABLE` to manage database schema.\n- **Latest Versions**: Ensure using the latest version of your SQL engine for optimal performance and security.\n- **Key Config Options**:\n  - For normalization: Enable constraints like `UNIQUE`, `FOREIGN KEY`.\n  - For denormalization: Use indexes on frequently queried columns.\n- **Normalization Trade-offs**: Reduces redundancy, improves data integrity but can slow down write operations.\n- **Denormalization Trade-offs**: Boosts query performance by introducing redundancy, but can lead to data inconsistency if not managed carefully.",
     "source": "web_search",
-    "updated_at": 1780966810.7893658
+    "updated_at": 1781057004.6792693
   },
   "search:database-design:database normalization denorma_ex": {
-    "content": "- **CLI Commands**: Use `pg_dump` for PostgreSQL to export data and `mysqladmin` for MySQL.\n- **Latest Versions**: PostgreSQL 15, MySQL 8.0.\n- **Key Config Options**:\n  - For PostgreSQL: `max_connections`, `shared_buffers`.\n  - For MySQL: `innodb_buffer_pool_size`, `query_cache_size`.",
+    "content": "- **CLI Commands**: Use `psql` for PostgreSQL and `mysqladmin` for MySQL.\n- **Latest Versions**: Ensure using PostgreSQL 15 and MySQL 8.0.\n- **Key Config Options**:\n  - For PostgreSQL: `max_connections`, `shared_buffers`.\n  - For MySQL: `innodb_buffer_pool_size`, `query_cache_type`.",
     "source": "code_example",
-    "updated_at": 1780966814.9061248
+    "updated_at": 1781057010.6476796
   },
   "search:database-design:nosql vs sql use cases pros co": {
-    "content": "- **CLI Commands**: Use `psql` for PostgreSQL and `mongo` for MongoDB.\n- **Latest Versions**: As of my last update, PostgreSQL is at version 15 and MongoDB is at version 6.0.\n- **Key Config Options**:\n  - For PostgreSQL: `max_connections`, `shared_buffers`, `work_mem`.\n  - For MongoDB: `storage.wiredTiger.engineConfig.cacheSizeGB`, `net.port`, `replication.replSetName`.",
+    "content": "- **CLI Commands**: Use `sqlcmd` for SQL Server or `mongo` for MongoDB.\n- **Latest Versions**: SQL Server 2024, MongoDB 7.0.\n- **Key Config Options**:\n  - SQL Server: `max_connections`, `query_store`.\n  - MongoDB: `replicaSet`, `sharding`.",
     "source": "web_search",
-    "updated_at": 1780966823.9750338
+    "updated_at": 1781057025.1347446
   },
   "search:database-design:nosql vs sql use cases pros co_ex": {
-    "content": "- **CLI Commands**: Use `sqlcmd` for SQL Server and `mongo` for MongoDB.\n- **Latest Versions**: SQL Server 2024, MongoDB 7.0.\n- **Key Config Options**:\n  - SQL Server: `max_connections`, `query_store`.\n  - MongoDB: `replicaSet`, `sharding`.",
+    "content": "- **CLI Commands**: Use `psql` for PostgreSQL and `mongo` for MongoDB.\n- **Latest Versions**: Check [PostgreSQL](https://www.postgresql.org/docs/) and [MongoDB](https://docs.mongodb.com/manual/installation/).\n- **Key Config Options**:\n  - For SQL (e.g., PostgreSQL):\n    - `max_connections`: Maximum number of concurrent connections.\n    - `shared_buffers`: Size of memory used for caching data.\n  - For NoSQL (e.g., MongoDB):\n    - `storage.wiredTiger.cacheSizeGB`: Size of the WiredTiger cache.\n    - `net.port`: Port number for MongoDB server.",
     "source": "code_example",
-    "updated_at": 1780966828.676346
+    "updated_at": 1781057034.227979
   },
   "search:database-design:database indexing strategies p": {
-    "content": "- **CLI Commands**: Use `CREATE INDEX` to add an index, e.g., `CREATE INDEX idx_name ON table_name(column_name);`.\n- **Latest Versions**: Ensure using the latest database management system version for optimal performance.\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on available memory and workload.\n  - `query_cache_type` and `query_cache_size`: Optimize query caching for read-heavy workloads.\n  - `max_connections`: Increase if your application has many concurrent users.",
+    "content": "- **CLI Commands**: \n  - `CREATE INDEX index_name ON table_name (column1, column2);`\n  - `DROP INDEX index_name ON table_name;`\n\n- **Latest Versions**:\n  - PostgreSQL: v15\n  - MySQL: v8.0\n  - MongoDB: v6.0\n\n- **Key Config Options**:\n  - PostgreSQL: `work_mem`, `maintenance_work_mem`\n  - MySQL: `innodb_buffer_pool_size`, `query_cache_size`\n  - MongoDB: `wiredTigerCacheSizeGB`, `operationProfiling.mode`",
     "source": "web_search",
-    "updated_at": 1780966846.0915687
+    "updated_at": 1781057044.3647335
   },
   "search:database-design:database indexing strategies p_ex": {
-    "content": "- Use `CREATE INDEX` to add indexes.\n- Optimize with `ALTER TABLE ... ADD INDEX`.\n- Monitor performance using `EXPLAIN ANALYZE`.\n- Consider GIN and GiST for complex data types.\n- Regularly review and update indexes.\n- Utilize `pg_stat_user_indexes` for insights.\n- Implement partial indexes for large tables.\n- Use `BTREE` for most queries.\n- Avoid over-indexing to prevent performance degradation.",
+    "content": "- **CLI Commands**: Use `CREATE INDEX` to create new indexes and `DROP INDEX` to remove them.\n- **Latest Versions**: Ensure using the latest database management system version for optimal performance.\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on available memory.\n  - `query_cache_size`: Set to a reasonable value, typically 64MB to 256MB.\n  - `max_connections`: Increase if your application has many concurrent users.",
     "source": "code_example",
-    "updated_at": 1780966855.3086085
+    "updated_at": 1781057049.1489892
   },
   "search:database-design:data modeling patterns embedde": {
-    "content": "- **CLI Commands**:\n  - `mongo --eval \"db.collection.insertOne({})\"`\n  - `mongo --eval \"db.collection.updateOne({}, {$set: {}})\"`\n  - `mongo --eval \"db.collection.deleteOne({})\"`\n\n- **Latest Versions**:\n  - MongoDB 6.0\n\n- **Key Config Options**:\n  - `storage.wiredTiger.engineConfig.cacheSizeGB`: Adjusts the cache size for WiredTiger storage engine.\n  - `replication.replSetName`: Specifies the name of the replica set.\n  - `net.port`: Sets the port number on which MongoDB listens.",
+    "content": "- **CLI Commands**: Use `mongo` shell or `mongosh` for direct database operations.\n- **Latest Versions**: MongoDB 6.x is the latest stable version as of my last update in October 2023. Check [MongoDB official website](https://www.mongodb.com/try/download/community) for the most current version.\n- **Key Config Options**:\n  - `storage.wiredTiger.engineConfig.cacheSizeGB`: Adjusts the cache size for WiredTiger storage engine.\n  - `replication.replSetName`: Specifies the name of the replica set.\n  - `net.port`: Sets the port number for MongoDB to listen on.",
     "source": "web_search",
-    "updated_at": 1780966862.2779868
+    "updated_at": 1781057057.1778984
   },
   "search:database-design:data modeling patterns embedde_ex": {
-    "content": "- **CLI Commands**:\n  - `mongoimport --db <database> --collection <collection> --file <file.json>` for importing data.\n  - `mongodump --uri \"mongodb+srv://<username>:<password>@cluster.mongodb.net/<database>\"` for exporting data.\n\n- **Latest Versions**:\n  - MongoDB 6.0 introduced improvements in query performance and new features like Change Streams.\n\n- **Key Config Options**:\n  - `replicaSet`: Configure a replica set for high availability.\n  - `sharding`: Enable sharding to distribute data across multiple servers.\n  - `w`: Set the write concern to ensure data durability.",
+    "content": "- **CLI Commands**:\n  - `mongo` to connect to MongoDB.\n  - `db.collection.insertOne({})` for inserting documents.\n  - `db.collection.find()` for querying documents.\n\n- **Latest Versions**:\n  - MongoDB 6.0 as of Nov 2025.\n\n- **Key Config Options**:\n  - `replicaSet`: For high availability and data redundancy.\n  - `sharding`: For scaling out horizontally.\n  - `wiredTigerCacheSizeGB`: Adjusts the cache size for performance tuning.",
     "source": "code_example",
-    "updated_at": 1780966869.2713435
+    "updated_at": 1781057080.5306876
   },
   "search:database-design:schema design decisions relati": {
-    "content": "- **CLI Commands**: Use `dbSchema` for database schema design.\n- **Latest Version**: Check `dbSchema` version updates on their official website.\n- **Key Config Options**:\n  - `normalize`: Choose the level of normalization (1NF, 2NF, 3NF).\n  - `indexing`: Define indexes to improve query performance.\n  - `foreign_keys`: Enable or disable foreign key constraints.",
+    "content": "- **CLI Commands**: Use `CREATE TABLE` with constraints like `PRIMARY KEY`, `FOREIGN KEY`.\n- **Latest Versions**: Ensure using latest DBMS versions for features and security updates.\n- **Key Config Options**:\n  - `innodb_buffer_pool_size`: Adjust based on available memory.\n  - `max_connections`: Set according to expected load.\n  - `query_cache_type`: Enable if read-heavy workload.",
     "source": "web_search",
-    "updated_at": 1780966876.1808262
+    "updated_at": 1781057088.4290338
   },
   "search:database-design:schema design decisions relati_ex": {
-    "content": "- **CLI Commands**: Use `dbdesigner` for visual schema design.\n- **Latest Versions**: Ensure using the latest version of DbSchema for optimal features and security.\n- **Key Config Options**: Focus on normalization levels (1NF, 2NF, 3NF) to maintain data integrity.",
+    "content": "- **CLI Commands**: Use `CREATE TABLE` and `ALTER TABLE` to define and modify database schemas.\n- **Latest Versions**: Ensure using the latest version of your SQL database management system for optimal performance and security.\n- **Key Config Options**: For MySQL, consider configuring options like `innodb_buffer_pool_size` and `query_cache_type`.\n- **ERD Tools**: Use DBDiagram for creating Entity Relationship Diagrams with its markup language.\n- **SQL Statements**: Generate SQL statements to create tables directly from ERD code using tools like DBDiagram.",
     "source": "code_example",
-    "updated_at": 1780966881.7716537
+    "updated_at": 1781057095.8463042
   }
 }
