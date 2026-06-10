@@ -1,0 +1,12 @@
+{
+  "search:dotnet-core-efcore-performance:entity framework core performa": {
+    "content": "- Use DTOs for projection to improve performance and reduce data transfer.\n- Optimize queries by thinking about lifecycles and pipelines.\n- Upgrade to the latest version of Entity Framework Core for better performance.\n- Configure EF Core's second-level cache for improved query performance.\n- Consider using stored procedures or materialized views for complex queries.\n- Evaluate hardware upgrades if necessary for high-traffic applications.\n- Use Roslyn Source Generators for code generation in .NET Core.\n- Monitor and profile your application to identify bottlenecks.",
+    "source": "web_search",
+    "updated_at": 1781057174.8554811
+  },
+  "search:dotnet-core-efcore-performance:entity framework core performa_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core 7.0\n  - .NET 8\n\n- **Key Config Options**:\n  - `UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)` for read-only scenarios.\n  - `UseLazyLoadingProxies()` for lazy loading.\n  - `MaxBatchSize(int batchSize)` to control batch size for inserts, updates, and deletes.",
+    "source": "code_example",
+    "updated_at": 1781057192.484944
+  }
+}
