@@ -1,0 +1,22 @@
+{
+  "search:typescript-graphql-mutation-security:typescript graphql mutation se": {
+    "content": "- Use `npm install type-graphql graphql-tools graphql-yoga` to install necessary packages.\n- Ensure TypeScript is up-to-date by running `npm install typescript --save-dev`.\n- For security, use `apollo-server-express` for Apollo Server integration with Express.\n- Implement authentication using middleware like `express-jwt` or `passport`.\n- Configure GraphQL schema validation with `graphql-tools` to ensure type safety.\n- Use environment variables for sensitive information like database URLs and secret keys.\n- Deploy your API using services like AWS Lambda, Google Cloud Functions, or Heroku.\n- Regularly update dependencies by running `npm outdated` followed by `npm update`.",
+    "source": "web_search",
+    "updated_at": 1781087360.9874544
+  },
+  "search:typescript-graphql-mutation-security:typescript graphql mutation se_ex": {
+    "content": "- Use `npm install type-graphql graphql-tools` to install necessary packages.\n- Ensure GraphQL schema is secure by validating inputs and using proper authentication/authorization mechanisms.\n- Implement rate limiting on mutations to prevent abuse, e.g., with `apollo-server-plugin-rate-limit`.\n- Use environment variables for sensitive information like database credentials or secret keys.\n- Regularly update dependencies to the latest versions to mitigate security vulnerabilities.\n- Employ GraphQL subscriptions for real-time data updates but ensure they are secured against unauthorized access.\n- Consider using a WAF (Web Application Firewall) in front of your GraphQL API to add an additional layer of security.",
+    "source": "code_example",
+    "updated_at": 1781087368.4944768
+  },
+  "search:typescript-graphql-mutation-security:graphql mutation authorization": {
+    "content": "- **YouTube Video:** [GraphQL Mutations & Authorization With Auth0](https://www.youtube.com/watch?v=example)\n- **Authorization in GraphQL Mutations:** Use `loads` option in GraphQL-Ruby to load IDs for authorization.\n- **TypeScript Error:** Ensure header content is valid. Example: \n  ```typescript\n  axios.post('/graphql', {\n    query: mutation,\n    variables: { id }\n  }, {\n    headers: {\n      'Authorization': `Bearer ${token}`\n    }\n  });\n  ```\n- **GraphQL Migration Vulnerability:** Implement Access Control Lists (ACL) to secure GraphQL mutations.\n- **Latest Versions:** Ensure using latest versions of GraphQL, TypeScript, and Axios for compatibility and security.",
+    "source": "web_search",
+    "updated_at": 1781087382.8571067
+  },
+  "search:typescript-graphql-mutation-security:graphql mutation authorization_ex": {
+    "content": "- Use `npm install type-graphql graphql-tools graphql-yoga` to install necessary packages.\n- Ensure TypeScript version is up-to-date, preferably v4.x or later.\n- Utilize the latest GraphQL Code Generator for schema generation with `npm install @graphql-codegen/cli @graphql-codegen/typescript`.\n- For NestJS integration, use `@nestjs/graphql` package and ensure it's compatible with your project's NestJS version.\n- Key config options in `tsconfig.json`: `\"target\": \"ES6\", \"module\": \"commonjs\", \"strict\": true`, and `\"esModuleInterop\": true`.\n- Use decorators like `@Mutation()` for defining GraphQL mutations in NestJS.\n- For authorization, consider using middleware or interceptors to check user permissions before executing mutations.",
+    "source": "code_example",
+    "updated_at": 1781087389.0929804
+  }
+}

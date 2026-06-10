@@ -1,0 +1,17 @@
+{
+  "search:nodejs-express-middleware-patterns:express middleware patterns fo": {
+    "content": "- **CLI Commands**: Use `npm install express-generator` to create new Express projects.\n- **Latest Versions**: Ensure you are using the latest version of Node.js and npm for compatibility with middleware patterns.\n- **Key Config Options**:\n  - `app.use(express.json())`: Parses incoming requests with JSON payloads.\n  - `app.use(express.urlencoded({ extended: true }))`: Parses URL-encoded bodies.\n  - `app.use(morgan('dev'))`: Logs HTTP requests to the console.\n  - `app.use(cors())`: Enables Cross-Origin Resource Sharing.\n  - `app.use(helmet())`: Secures your app by setting various HTTP headers.",
+    "source": "web_search",
+    "updated_at": 1781087397.0581815
+  },
+  "search:nodejs-express-middleware-patterns:best practices for express mid": {
+    "content": "- Use `compose-middleware` or manually compose middleware to chain related logic.\n- Ensure each middleware function calls `next()` if it doesn't end the request-response cycle.\n- For robust error handling, use dedicated error-handling middleware like `app.use((err, req, res, next) => { ... })`.\n- Optimize route handling by grouping similar routes together and using parameterized routes where possible.\n- Avoid common pitfalls such as forgetting to call `next()` or not properly handling errors.\n- Utilize Express's built-in middleware for common tasks like serving static files (`app.use(express.static('public'))`).\n- For advanced techniques, consider reading \"Advanced Express.js Techniques for Professional Developers\" by Global-Programming.",
+    "source": "web_search",
+    "updated_at": 1781087422.0999687
+  },
+  "search:nodejs-express-middleware-patterns:best practices for express mid_ex": {
+    "content": "- Use `npm install express` to install the latest version of Express.js.\n- Apply middleware using `app.use()`, e.g., `app.use(logRequest); app.use(authenticate); app.use(errorHandler);`.\n- Leverage libraries like `compose-middleware` for manual middleware composition.\n- Middleware execution flow includes request, then middleware, then response.\n- Write custom middleware by defining functions that take `req`, `res`, and `next`.\n- Use built-in middleware like `express.json()` for parsing JSON bodies.\n- Explore third-party middleware options to enhance functionality.\n- Best practices include error handling, logging, authentication, and authorization.",
+    "source": "code_example",
+    "updated_at": 1781087427.5720875
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-ingress-performance-tuning:kubernetes ingress performance": {
+    "content": "- **CLI Commands**: Use `kubectl` to manage Ingress resources.\n- **Latest Versions**: Ensure using the latest stable version of your Ingress controller, e.g., `ingress-nginx=1.2.3`.\n- **Key Config Options**:\n  - **Connection Limits**: Set `max_connections`, `keepalive_timeout`, and `proxy_connect_timeout` in NGINX configuration.\n  - **Timeouts**: Configure `read_timeout`, `write_timeout`, and `send_timeout` for better performance.\n  - **Caching**: Enable caching with `proxy_cache_path` and configure cache settings like `proxy_cache_valid`.\n  - **TLS Configuration**: Use `cert-manager` to manage TLS certificates automatically.\n- **Auto-scaling**: Implement HPA (Horizontal Pod Autoscaler) for dynamic scaling based on traffic.\n- **Security**: Secure Ingress using cert-manager for automatic certificate management.",
+    "source": "web_search",
+    "updated_at": 1781087436.741669
+  },
+  "search:kubernetes-ingress-performance-tuning:kubernetes ingress performance_ex": {
+    "content": "- Use `kubectl apply -f ingress.yaml` to deploy an NGINX Ingress Controller.\n- Ensure Kubernetes version is at least 1.28 for optimal performance.\n- Set `nginx.ingress.kubernetes.io/cache-control: \"public, max-age=86400\"` in your Ingress resource for static content caching.\n- Implement KeepAlive by setting `nginx.ingress.kubernetes.io/keepalive-timeout` to a suitable value (e.g., 30s).\n- Use `kubectl get ingress -o yaml` to view and manage your Ingress resources.\n- Monitor performance using tools like Prometheus and Grafana for NGINX metrics.\n- Adjust worker connections in NGINX by setting `nginx.ingress.kubernetes.io/worker-connections` to a higher value (e.g., 1024).\n- Enable SSL/TLS offloading on the Ingress Controller for improved performance.\n- Use `kubectl scale deployment nginx-ingress-controller --replicas=3` to increase the number of replicas for high availability and better load balancing.",
+    "source": "code_example",
+    "updated_at": 1781087450.5582156
+  },
+  "search:kubernetes-ingress-performance-tuning:optimizing kubernetes ingress ": {
+    "content": "- **CLI Commands**: Use `kubectl apply -f ingress.yaml` to create or update an Ingress resource.\n- **Latest Versions**: Ensure using the latest stable version of your Ingress controller, such as Traefik v2.5.\n- **Key Config Options**:\n  - `rules`: Define routing rules for traffic.\n  - `tls`: Configure TLS termination and certificates.\n  - `annotations`: Use annotations like `nginx.ingress.kubernetes.io/rewrite-target` for URL rewriting.\n  - `backend.serviceName` and `backend.servicePort`: Specify the backend service details.\n- **Optimization Tips**:\n  - Enable compression with `nginx.ingress.kubernetes.io/compress`.\n  - Use sticky sessions with `nginx.ingress.kubernetes.io/session-cookie-name`.\n  - Configure health checks for backends using annotations like `nginx.ingress.kubernetes.io/healthcheck-path`.",
+    "source": "web_search",
+    "updated_at": 1781087458.899909
+  },
+  "search:kubernetes-ingress-performance-tuning:optimizing kubernetes ingress _ex": {
+    "content": "- Use `kubectl apply -f <filename>.yaml` to manage Ingress configurations.\n- Ensure you are using the latest version of Kubernetes for optimal performance and security.\n- Key config options include:\n  - `apiVersion`: Specifies the API version (e.g., `networking.k8s.io/v1`).\n  - `kind`: Defines the resource type, here always `Ingress`.\n  - `metadata.name`: Unique name for the Ingress resource.\n  - `spec.rules`: Define routing rules with host and paths.\n  - `spec.tls`: Configure TLS termination with secret names.\n- For NGINX Ingress Controller, use `nginx.ingress.kubernetes.io/rewrite-target: /` to rewrite URLs.\n- To audit changes, consider using tools like `kubectl diff`.\n- Use `kubectl rollout undo deployment/<deployment-name>` for quick rollback.\n- Share configurations across teams with version control systems like Git.\n- For scalability, ensure your Ingress Controller is horizontally scaled.",
+    "source": "code_example",
+    "updated_at": 1781087479.4002717
+  }
+}
