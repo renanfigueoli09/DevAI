@@ -1,23 +1,23 @@
 {
   "search:anti-patterns:god object anti-pattern refact": {
-    "content": "- **CLI Commands**:\n  - `mvn clean install` for Java projects.\n  - `flutter pub get` and `flutter test` for Flutter projects.\n\n- **Latest Versions**:\n  - Java 21\n  - Flutter 4.0\n\n- **Key Config Options**:\n  - Maven: `pom.xml`\n  - Flutter: `pubspec.yaml`, `analysis_options.yaml`",
+    "content": "- **CLI Commands**:\n  - `git checkout -- <file>` to revert changes in a file.\n  - `mvn clean install` for Maven projects.\n  - `npm run test` for running tests.\n\n- **Latest Versions**:\n  - Java: JDK 17\n  - Node.js: v16.14.0\n\n- **Key Config Options**:\n  - For unit testing, use JUnit 5 and Mockito.\n  - For code formatting, configure Prettier with a `.prettierrc` file.",
     "source": "web_search",
-    "updated_at": 1780975263.4165509
+    "updated_at": 1781062705.2917085
   },
   "search:anti-patterns:god object anti-pattern refact_ex": {
-    "content": "- **CLI Commands**: Use `dotnet` for C# projects.\n- **Latest Versions**: Ensure using the latest .NET SDK and Visual Studio.\n- **Key Config Options**:\n  - `public class GodObjectRefactor`\n    - `private List<SubClass> subClasses;`\n    - `public void AddSubClass(SubClass subclass) { subClasses.Add(subclass); }`\n    - `public SubClass GetSubClass(int index) { return subClasses[index]; }`\n- **Example Code**:\n  ```csharp\n  public class GodObjectRefactor {\n      private List<SubClass> subClasses;\n\n      public void AddSubClass(SubClass subclass) {\n          subClasses.Add(subclass);\n      }\n\n      public SubClass GetSubClass(int index) {\n          return subClasses[index];\n      }\n  }\n\n  public class SubClass {\n      // Class implementation\n  }\n  ```\n- **Refactoring Steps**:\n  - Identify the God object.\n  - Break it down into smaller, focused classes.\n  - Ensure each class has a single responsibility.\n  - Test each new class individually before integrating.",
+    "content": "- **CLI Commands**: Not applicable in this context.\n- **Latest Versions**: Not specified, but ensure you are using the latest stable versions of your development tools and libraries.\n- **Key Config Options**:\n  - Refactor God objects by breaking them down into smaller, more focused classes.\n  - Use design patterns like Single Responsibility Principle (SRP) to ensure each class has one reason to change.\n  - Implement interfaces to decouple components and make the system easier to test and maintain.\n  - Utilize dependency injection frameworks to manage object creation and dependencies effectively.",
     "source": "code_example",
-    "updated_at": 1780975272.4022272
+    "updated_at": 1781062710.9633517
   },
   "search:anti-patterns:premature optimization anti-pa": {
-    "content": "- Avoid micro-optimizations; focus on algorithmic efficiency.\n- Use modern compilers and profiling tools to identify bottlenecks.\n- Refactor code for readability before optimization.\n- Implement lazy initialization where applicable.\n- Use efficient data structures and algorithms.\n- Optimize only after identifying critical performance issues.\n- Profile regularly during development to guide optimizations.\n- Consider using caching strategies for frequently accessed data.\n- Avoid premature optimization in team discussions.",
+    "content": "- **CLI Commands with Exact Flags**: Use `git commit --amend` to modify the last commit without creating a new one.\n- **Latest Versions**: Check for updates using `npm update <package-name>` or `pip install --upgrade <package-name>`.\n- **Key Config Options**:\n  - For Node.js, use `.env` files with `dotenv` package to manage environment variables.\n  - For Python, configure logging in `logging.conf` and set log levels accordingly.",
     "source": "web_search",
-    "updated_at": 1780975282.2517803
+    "updated_at": 1781062719.9675727
   },
   "search:anti-patterns:premature optimization anti-pa_ex": {
-    "content": "- Avoid micro-optimizations; focus on algorithmic efficiency.\n- Use modern compilers and profiling tools to identify bottlenecks.\n- Implement lazy loading for resources that are not immediately needed.\n- Optimize data structures based on access patterns.\n- Use asynchronous programming where applicable.\n- Minimize database queries by batching or using caching.\n- Profile code regularly to measure performance improvements.\n- Refactor code for readability and maintainability before optimizing.",
+    "content": "- Avoid micro-optimizations.\n- Use profiling tools to identify real performance issues.\n- Focus on optimizing at the algorithmic level first.\n- Utilize modern compiler optimizations.\n- Refactor code for readability and maintainability before optimization.\n- Consider using built-in libraries and frameworks for efficiency.\n- Monitor application performance in production environments.",
     "source": "code_example",
-    "updated_at": 1780975290.2060905
+    "updated_at": 1781062735.1587696
   },
   "search:anti-patterns:common nestjs mistakes anti-pa": {
     "content": "- **CLI Commands**:\n  - `nest new project-name`: Create a new NestJS project.\n  - `nest generate module module-name`: Generate a new module.\n  - `nest generate controller controller-name`: Generate a new controller.\n  - `nest generate service service-name`: Generate a new service.\n\n- **Latest Versions**:\n  - NestJS: v10.0.0\n  - Fastify: v3.28.0\n  - Hono: v5.0.0\n\n- **Key Config Options**:\n  - `imports`: Array of modules to import.\n  - `controllers`: Array of controllers to include in the module.\n  - `providers`: Array of providers (services, repositories) to include in the module.\n  - `exports`: Array of providers that this module exports for other modules to use.",
@@ -30,14 +30,14 @@
     "updated_at": 1780975197.49316
   },
   "search:anti-patterns:common spring boot mistakes be": {
-    "content": "- **CLI Commands**: Use `mvn spring-boot:run` to run your Spring Boot application.\n- **Latest Versions**: Ensure you are using the latest stable version of Spring Boot, which as of my last update is 3.2.0.\n- **Key Config Options**:\n  - `application.properties`: Configure properties like server port, database URL, and logging level.\n  - `spring-boot-starter-web`: Adds dependencies for building web applications.\n  - `spring-boot-devtools`: Provides development-time features such as automatic restarts and live reload.\n  - `spring-boot-actuator`: Actuator endpoints to monitor and manage your application.",
+    "content": "- Use `mvn spring-boot:run` to run your Spring Boot application.\n- Update dependencies in `pom.xml` or `build.gradle`.\n- Configure properties in `application.properties` or `application.yml`.\n- Utilize `@Autowired` for dependency injection.\n- Implement `@RestController` for creating RESTful APIs.\n- Use `@Service` and `@Repository` annotations for service and data access layers.\n- Employ Spring Security for authentication and authorization.\n- Optimize performance with `@Async`, `@Cacheable`, and `@Transactional`.\n- Monitor application health with `@HealthIndicator`.",
     "source": "web_search",
-    "updated_at": 1780975207.262129
+    "updated_at": 1781062634.4612534
   },
   "search:anti-patterns:common spring boot mistakes be_ex": {
-    "content": "- Ensure correct dependency management in `pom.xml` or `build.gradle`.\n- Use the latest stable version of Spring Boot.\n- Configure application properties correctly, e.g., `application.properties` or `application.yml`.\n- Avoid using deprecated annotations and methods.\n- Implement proper exception handling to avoid silent failures.\n- Secure sensitive data using environment variables or secrets management tools.\n- Optimize database queries for better performance.\n- Use asynchronous programming for non-blocking operations.\n- Enable logging with appropriate levels for debugging and monitoring.\n- Regularly update dependencies to fix security vulnerabilities.",
+    "content": "- Use `spring-boot-starter-parent` in your `pom.xml` for dependency management.\n- Ensure you use the latest Spring Boot version, currently 3.x as of my last update.\n- Configure application properties using `application.properties` or `application.yml`.\n- Utilize `@SpringBootApplication` to enable auto-configuration and component scanning.\n- Use `@RestController` for creating RESTful controllers.\n- Implement error handling with `@ControllerAdvice` and `@ExceptionHandler`.\n- Leverage Spring Security for authentication and authorization.\n- Configure database connections using `spring.datasource.*` properties.\n- Utilize Lombok annotations like `@Data`, `@Getter`, and `@Setter` to reduce boilerplate code.\n- Use Spring Boot DevTools for faster development with auto-reload and hot swapping.",
     "source": "code_example",
-    "updated_at": 1780975214.760383
+    "updated_at": 1781062642.7539494
   },
   "search:anti-patterns:fat controller anti-pattern so": {
     "content": "- **Refactor Fat Controllers**: Move business logic from controllers to service classes.\n- **Use Service Classes**: For complex workflows, encapsulate logic in service classes.\n- **Implement Dependency Injection**: Use DI frameworks like InversifyJS or NestJS for better testability and maintainability.\n- **Adopt Layered Architecture**: Implement a clean architecture with separate layers (Controller, Service, Repository).\n- **Leverage Design Patterns**: Apply patterns like MVC, MVP, or Hexagonal Architecture to organize code effectively.\n- **Update Node.js**: Ensure using the latest LTS version for performance improvements and security patches.\n- **Configure Testing Frameworks**: Use Jest or Mocha with Chai for unit testing services and controllers.\n- **Implement Code Reviews**: Regularly review code changes to enforce best practices and catch issues early.\n- **Document API Endpoints**: Maintain clear documentation of all API endpoints and their functionalities.",
@@ -50,13 +50,13 @@
     "updated_at": 1780975249.1425283
   },
   "search:anti-patterns:over-engineering simple soluti": {
-    "content": "- **CLI Commands**: Use `git diff` to compare changes.\n- **Latest Versions**: Ensure Node.js is up-to-date using `nvm install node --latest-npm`.\n- **Key Config Options**: Review `.env` files for environment-specific settings.\n- **KISS Principle**: Implement solutions with simplicity in mind, avoiding unnecessary complexity.",
+    "content": "- Avoid adding unnecessary code.\n- Focus on simplicity and minimalism.\n- Use design patterns that fit the problem, not overcomplicate them.\n- Regularly review and refactor code to remove complexity.\n- Prioritize evidence-based growth in architecture decisions.\n- Utilize lightweight frameworks for quick development.\n- Implement automated testing to catch issues early.\n- Keep dependencies up-to-date but avoid excessive library usage.\n- Document assumptions and rationale behind architectural choices.",
     "source": "web_search",
-    "updated_at": 1780975315.764011
+    "updated_at": 1781062751.3511748
   },
   "search:anti-patterns:over-engineering simple soluti_ex": {
-    "content": "- **CLI Commands**: Use `git commit -m \"Simplify solution\"` to document changes.\n- **Latest Versions**: Ensure using Node.js v18.x for the latest features and security patches.\n- **Key Config Options**:\n  - In `package.json`, set `\"type\": \"module\"` for ES6 module support.\n  - Use `.env` files for environment variables, e.g., `DB_HOST=localhost`.\n  - Configure ESLint with a simple rule set: `\"rules\": {\"no-console\": \"off\"}`.",
+    "content": "- **CLI Commands**: Use `git diff` to compare changes and identify unnecessary code.\n- **Latest Versions**: Ensure using the latest version of your development tools and libraries for better performance and security.\n- **Key Config Options**:\n  - Set `max_depth=1` in `pyproject.toml` for Python projects to limit dependency depth.\n  - Use `--no-install` flag with package managers like npm or pip to avoid unnecessary installations.\n  - Configure IDE settings to automatically format code on save and enable linters.",
     "source": "code_example",
-    "updated_at": 1780975321.1657283
+    "updated_at": 1781062760.5452893
   }
 }

@@ -1,33 +1,33 @@
 {
   "search:microservices-design:microservices decomposition st": {
-    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations.\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker: 20.10.17\n  - Helm: v3.9.4\n- **Key Config Options**:\n  - Microservices Decomposition: Use `domain-driven design` for intelligent domain decomposition.\n  - AI-Driven Scaling: Implement `LLM (Large Language Models)` for software decomposition.\n  - Inter-Service Communication: Opt for `gRPC` or `RESTful APIs` for efficient communication.",
+    "content": "- **CLI Commands**: Use `mvn clean install` for Maven projects.\n- **Latest Versions**:\n  - Java: JDK 21\n  - Spring Boot: 3.1.4\n  - Docker: 25.0.7\n  - Kubernetes: v1.26.0\n- **Key Config Options**:\n  - `application.properties` for Spring Boot configurations.\n  - Docker Compose for multi-container setup.\n  - Kubernetes YAML files for defining services and deployments.",
     "source": "web_search",
-    "updated_at": 1780975024.9124882
+    "updated_at": 1781062440.13077
   },
   "search:microservices-design:service communication patterns": {
-    "content": "- **Microservices Communication Patterns**:\n  - Use a message broker for asynchronous communication.\n  - Example: Order Service publishes to Message Broker, which consumes by Payment Service.\n\n- **Backend Communication Patterns**:\n  - Asynchronous tasks use the request-response model.\n  - Update user upon completion of async task.\n\n- **Go-Python Interoperability**:\n  - Edge computing and AI drive pattern evolution.\n  - WebSockets for AR/VR applications.\n  - MQTT for lightweight IoT messaging.\n  - mTLS ensures cybersecurity.\n\n- **Communication Patterns**:\n  - Essential patterns include load balancing, pub/sub, request-reply, circuit breaker, and retry strategies.",
+    "content": "- **Microservices Communication Patterns in 2025**:\n  - Asynchronous Messaging: Use message brokers like RabbitMQ or Kafka for decoupled communication.\n  - WebSockets for Real-Time Applications: Implement WebSocket endpoints for real-time data streams.\n  - MQTT for IoT Devices: Utilize MQTT for lightweight, publish-subscribe messaging.\n\n- **Backend Communication Patterns in 2025**:\n  - Async Tasks with Celery: Use Celery for asynchronous task processing.\n  - Background Jobs with Sidekiq: Employ Sidekiq for background job management.\n\n- **Go-Python Interoperability in 2025**:\n  - gRPC for RPC Calls: Utilize gRPC for high-performance, efficient communication between Go and Python services.\n  - Protocol Buffers for Data Serialization: Use Protocol Buffers to serialize data efficiently.\n\n- **Communication Patterns for Distributed Systems**:\n  - Load Balancing with Nginx: Configure Nginx as a load balancer for distributing traffic across microservices.\n  - Pub/Sub Pattern with Redis: Implement pub/sub messaging using Redis for event-driven architectures.\n  - Circuit Breaker with Hystrix: Use Hystrix to implement circuit breaker patterns for fault tolerance.\n\n- **Key Config Options**:\n  - Message Broker Configuration: Set up RabbitMQ or Kafka with appropriate queue configurations.\n  - Celery Configuration: Configure Celery workers and brokers in the `celeryconfig.py` file.\n  - gRPC Configuration: Define service definitions and use `.proto` files for data serialization.\n\n- **Latest Versions**:\n  - RabbitMQ: Latest version as of 2025 is 3.10.x\n  - Kafka: Latest version as of 2025 is 3.4.x\n  - Celery: Latest version as of 2025 is 5.6.x\n  - gRPC: Latest version as of 2025 is 2.47.x\n\n- **CLI Commands**:\n  - Start RabbitMQ Server: `rabbitmq-server`\n  - Create Kafka Topic: `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - Run Celery Worker: `celery -A my_project worker --loglevel=info`\n  - Start gRPC Server: `python3 server.py`",
     "source": "web_search",
-    "updated_at": 1780975060.2734864
+    "updated_at": 1781062463.7894125
   },
   "search:microservices-design:service communication patterns_ex": {
-    "content": "- **CLI Commands**: Use `aws s3 cp` to copy files between S3 buckets.\n- **Latest Versions**: Ensure using the latest SDKs for AWS services, e.g., `aws-sdk-go-v2`.\n- **Key Config Options**:\n  - For synchronous communication: Set `Timeout` in your HTTP client configuration.\n  - For asynchronous communication: Configure message queue parameters like `VisibilityTimeout`, `MessageRetentionPeriod`.",
+    "content": "- **Microservices Communication Patterns**: Synchronous REST/gRPC, Asynchronous messaging with RabbitMQ/NATS, Event sourcing, Saga pattern.\n- **CLI Commands**:\n  - `docker run --rm rabbitmq:3-management` to start a RabbitMQ container with management UI.\n  - `nats-server` to start a NATS server.\n- **Latest Versions**: \n  - RabbitMQ: 3.12\n  - NATS: 2.7\n- **Key Config Options**:\n  - RabbitMQ: `rabbitmq.conf` for configuration settings.\n  - NATS: `nats-server --config /path/to/config.conf` for specifying a custom config file.",
     "source": "code_example",
-    "updated_at": 1780975067.974681
+    "updated_at": 1781062472.1045773
   },
   "search:microservices-design:api gateway pattern implementa": {
-    "content": "- Use `kubectl apply -f api-gateway.yaml` to deploy an API gateway.\n- Ensure your Kubernetes version is up-to-date, ideally v1.23 or later.\n- Configure the API gateway with security settings using annotations like `nginx.ingress.kubernetes.io/auth-type: basic`.\n- Set up rate limiting with annotations such as `nginx.ingress.kubernetes.io/limit-rpm: \"60\"`.\n- For routing, use annotations like `nginx.ingress.kubernetes.io/backend-protocol: HTTPS`.\n- Ensure your API gateway is configured to handle both synchronous and asynchronous requests.\n- Use Kong Gateway for advanced features like rate limiting, authentication, and more.\n- Implement the Saga Pattern using Spring Boot Microservices with Kafka for event-driven architecture.\n- For best practices, refer to GeeksforGeeks articles on API Gateway implementation.",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f api-gateway.yaml` to deploy an API gateway using Kubernetes.\n  - `istioctl install --set profile=default` to install Istio for service mesh integration.\n\n- **Latest Versions**:\n  - Kubernetes: v1.25.x\n  - Istio: 1.13.x\n  - Node.js: v16.x\n\n- **Key Config Options**:\n  - API Gateway Routing Rules: Define routes based on path, method, and headers.\n  - Authentication & Authorization: Implement OAuth2 or JWT for secure access.\n  - Rate Limiting: Set limits to control the number of requests per minute.\n  - Service Discovery: Integrate with Kubernetes service discovery for backend routing.",
     "source": "web_search",
-    "updated_at": 1780939833.3567145
+    "updated_at": 1781062504.711493
   },
   "search:microservices-design:api gateway pattern implementa_ex": {
-    "content": "- **CLI Commands**:\n  - `spring cloud gateway`\n  - `npm install express`\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: v3.2.5.RELEASE\n  - Express.js: v4.18.2\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the backend service.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/api/**\n  - `express.use(middleware)`: Middleware function to handle requests.",
+    "content": "- **CLI Commands**:\n  - `git clone https://github.com/ruvani/api-gateway-pattern.git`\n  - `cd api-gateway-pattern`\n  - `npm install`\n\n- **Latest Versions**:\n  - Node.js: v18.x\n  - npm: 9.x\n\n- **Key Config Options**:\n  - API Gateway URL: `http://localhost:3000`\n  - Security: JWT token verification\n  - Adapter code for client-specific APIs",
     "source": "code_example",
-    "updated_at": 1780939835.8569446
+    "updated_at": 1781062510.3591688
   },
   "search:microservices-design:service discovery load balanci": {
-    "content": "- **Service Discovery**: Use Consul, etcd, or Kubernetes Service Discovery.\n- **Load Balancing**: Implement client-side load balancing using tools like Envoy, Nginx Plus, or Kubernetes Ingress Controller.\n- **CLI Commands**:\n  - `consul members`: List all nodes in a Consul cluster.\n  - `kubectl get svc`: List all services in a Kubernetes cluster.\n  - `envoy --version`: Check the version of Envoy.\n- **Latest Versions**:\n  - Consul: v1.10\n  - Nginx Plus: v20.3\n  - Envoy: v1.25\n- **Key Config Options**:\n  - Consul: `service` block in configuration files.\n  - Kubernetes Service Discovery: `spec.selector` and `spec.clusterIP`.\n  - Envoy: `cluster` and `listener` configurations.",
+    "content": "- **CLI Commands**:\n  - `consul members`: Lists all the members of a Consul cluster.\n  - `kubectl get svc`: Retrieves information about Kubernetes services.\n\n- **Latest Versions**:\n  - Consul: v1.12.5\n  - Kubernetes: v1.24.0\n\n- **Key Config Options**:\n  - Service Discovery: Use DNS or HTTP API to discover service instances.\n  - Load Balancing: Configure round-robin, least connections, or IP hash algorithms in load balancers like Nginx or HAProxy.",
     "source": "web_search",
-    "updated_at": 1780939838.5198057
+    "updated_at": 1781062526.4659503
   },
   "search:microservices-design:service discovery load balanci_ex": {
     "content": "- **Service Discovery**:\n  - Use Kubernetes `kube-proxy` to manage service discovery.\n  - Configure `kube-proxy` with the flag `--mode=iptables`.\n\n- **Load Balancing**:\n  - In Spring Cloud, use `@LoadBalanced` on a `RestTemplate` or `WebClient`.\n  - Ensure your application is running in a Spring Boot environment.\n\n- **Key Configurations**:\n  - Kubernetes Service: Define a service with type `ClusterIP`, `NodePort`, or `LoadBalancer`.\n  - Consul Configuration: Set up Consul agents on each node for health checks and service discovery.\n  - Spring Cloud Gateway: Configure routes to use load balancing by specifying the service name.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Spring Boot: 3.0\n  - Consul: 1.10\n\n- **CLI Commands**:\n  - `kubectl apply -f service.yaml` to create a Kubernetes service.\n  - `consul agent --dev` to start a development mode Consul agent.\n  - `java -jar my-spring-app.jar` to run a Spring Boot application.\n\nThese actionable facts provide concrete steps and configurations for implementing service discovery and load balancing in a microservices architecture using Kubernetes, Spring Cloud, and Consul.",
@@ -35,28 +35,28 @@
     "updated_at": 1780939840.8861756
   },
   "search:microservices-design:idempotency distributed system": {
-    "content": "- **CLI Commands**: Use `curl` for testing idempotency endpoints.\n- **Latest Versions**: Ensure using the latest version of your distributed system framework.\n- **Key Config Options**:\n  - Enable idempotency middleware in your application.\n  - Configure retry logic with exponential backoff.\n  - Implement a deduplication store to track requests.",
+    "content": "- **CLI Commands**: Use `curl` or `httpie` for testing idempotency endpoints.\n- **Latest Versions**: Ensure using the latest version of your distributed system framework and libraries.\n- **Key Config Options**:\n  - Enable idempotency middleware in your application.\n  - Configure a deduplication store (e.g., Redis, DynamoDB).\n  - Set up two-phase reservation patterns for operations.",
     "source": "web_search",
-    "updated_at": 1780975177.5402741
+    "updated_at": 1781062571.924663
   },
   "search:microservices-design:idempotency distributed system_ex": {
-    "content": "- **CLI Commands**: Use `kubectl` for Kubernetes operations, e.g., `kubectl apply -f deployment.yaml`.\n- **Latest Versions**:\n  - Kubernetes: v1.25.3\n  - Docker: 20.10.7\n  - Terraform: 1.4.6\n- **Key Config Options**:\n  - In Kubernetes, use `replicas` in the deployment YAML to specify the number of instances.\n  - For Docker, set environment variables using `-e VAR=value`.\n  - In Terraform, define resource counts with `count = n`.",
+    "content": "- **CLI Commands**: Use `curl` or `httpie` for testing idempotency endpoints.\n- **Latest Versions**: Ensure using the latest version of your distributed system framework to leverage built-in idempotency features.\n- **Key Config Options**:\n  - Enable idempotency keys in your service configuration.\n  - Configure deduplication stores like Redis or DynamoDB for tracking requests.\n  - Set up two-phase reservation mechanisms if required by your use case.\n  - Implement circuit breakers to handle failures gracefully.",
     "source": "code_example",
-    "updated_at": 1780975184.2193165
+    "updated_at": 1781062587.3434117
   },
   "search:microservices-design:microservices decomposition st_ex": {
-    "content": "- **AI-driven resource allocation & autoscaling**: Use tools like Kubernetes with AI-enhanced features.\n- **ML-assisted monolith-to-microservice decomposition**: Employ services like AWS Lambda and Amazon SageMaker for automated analysis.\n- **CLI commands**:\n  - `kubectl scale deployment <deployment-name> --replicas=<number>` (Kubernetes)\n  - `aws lambda create-function --function-name <name> --runtime <runtime> --role <role> --handler <handler> --zip-file fileb://<path-to-zip>`\n- **Latest versions**:\n  - Kubernetes: v1.26\n  - AWS Lambda: Latest runtime versions (e.g., Python 3.9, Node.js 18)\n  - Amazon SageMaker: Latest model and algorithm versions.\n- **Key config options**:\n  - Kubernetes: `resources`, `autoscaling`\n  - AWS Lambda: `memorySize`, `timeout`, `environmentVariables`\n  - Amazon SageMaker: `instanceType`, `instanceCount`, `role`",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to deploy microservices using Kubernetes.\n  - `docker-compose up` for local development of microservices.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker Compose: v2.16.0\n\n- **Key Config Options**:\n  - Kubernetes Deployment: `replicas`, `resources`, `imagePullPolicy`.\n  - Docker Compose Service: `image`, `ports`, `volumes`.",
     "source": "code_example",
-    "updated_at": 1780975041.4156027
+    "updated_at": 1781062449.355875
   },
   "search:microservices-design:data consistency distributed s": {
-    "content": "- **CLI Commands**: Use `etcdctl` for managing etcd clusters, e.g., `etcdctl put key value`.\n- **Latest Versions**: Ensure using the latest version of frameworks like Apache Kafka (v3.4.0) and Cassandra (4.1.0).\n- **Key Config Options**:\n  - For Kafka: Configure `replication.factor` and `min.insync.replicas`.\n  - For Cassandra: Set `consistency_level` to `QUORUM` or higher.\n- **Advanced Techniques**: Implement distributed consensus algorithms like Raft or Paxos for strong consistency guarantees.\n- **Real-world Examples**: Review Google's Spanner architecture for handling global data consistency across multiple regions.",
+    "content": "- **CLI Commands**: Use `docker-compose up -d` to start services in detached mode.\n- **Latest Versions**: Ensure using Docker version 25.0 and Kubernetes version 1.27.0 for the latest features.\n- **Key Config Options**:\n  - Set `replication_factor=3` in your database configuration for high availability.\n  - Enable `eventual_consistency` mode in distributed systems for better performance with trade-offs on data accuracy.\n  - Configure `sync_mode='async'` to optimize write operations at the cost of consistency.",
     "source": "web_search",
-    "updated_at": 1780975086.2400494
+    "updated_at": 1781062480.0113811
   },
   "search:microservices-design:data consistency distributed s_ex": {
-    "content": "- **CLI Commands**: Use `kubectl get pods` to check pod status.\n- **Latest Versions**: Ensure Kubernetes is at version 1.25 for the latest features and security patches.\n- **Key Config Options**:\n  - Set `replicas: 3` in your deployment YAML for high availability.\n  - Configure `readinessProbe` and `livenessProbe` to monitor pod health.\n  - Use `service.beta.kubernetes.io/aws-load-balancer-type=nlb` for network load balancing.",
+    "content": "- **CLI Commands**: Use `git clone https://github.com/consistent-distributed/workshop.git` to clone the repository.\n- **Latest Versions**: Check for the latest version of tools and libraries in the repository's README or documentation.\n- **Key Config Options**:\n  - For data consistency, consider using Raft or Paxos algorithms.\n  - Configure timeouts and retries based on network latency and system load.\n  - Enable distributed transactions using frameworks like Atomikos or Bitronix.",
     "source": "code_example",
-    "updated_at": 1780975104.0013669
+    "updated_at": 1781062485.2368367
   }
 }

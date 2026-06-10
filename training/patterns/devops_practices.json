@@ -1,48 +1,48 @@
 {
   "search:devops-practices:12 factor app methodology back": {
-    "content": "- **CLI Commands**: Use `heroku create` to provision a new app on Heroku.\n- **Latest Versions**: Ensure using the latest version of Node.js, Python, or Ruby for your backend language.\n- **Key Config Options**:\n  - Environment variables for configuration (e.g., `DATABASE_URL`, `API_KEY`).\n  - Use `.env` files to manage local environment variables securely.\n  - Configure logging with tools like `winston` or `log4js`.\n  - Set up database connections using connection pooling libraries.\n- **Containerization**: Use Docker to containerize your application for consistent environments across development, testing, and production.\n- **CI/CD**: Implement CI/CD pipelines using platforms like GitHub Actions, GitLab CI, or Jenkins.\n- **Monitoring & Logging**: Integrate monitoring tools like Prometheus and Grafana for real-time metrics. Use ELK Stack (Elasticsearch, Logstash, Kibana) for centralized logging.\n- **Security**: Regularly update dependencies and use security scanning tools like Snyk or OWASP Dependency Check.\n- **Scalability**: Design your application to scale horizontally by using load balancers and auto-scaling groups.\n- **Database Management**: Use managed database services like AWS RDS, Google Cloud SQL, or Azure Database for scalability and reliability.",
+    "content": "- **CLI Commands**: Use `heroku create` to create a new app on Heroku.\n- **Latest Versions**: Ensure using the latest version of your programming language and dependencies.\n- **Key Config Options**:\n  - Environment variables for configuration (e.g., `DATABASE_URL`, `API_KEY`).\n  - Scaling with `heroku ps:scale web=2`.\n  - Logging with `heroku logs --tail`.\n  - Database migrations with `rails db:migrate`.",
     "source": "web_search",
-    "updated_at": 1780974863.3790073
+    "updated_at": 1781062283.1693447
   },
   "search:devops-practices:12 factor app methodology back_ex": {
-    "content": "- **CLI Commands**: `git clone https://github.com/aryaaa324/12-Factor-App.git`\n- **Latest Version**: Not specified in the search results.\n- **Key Config Options**:\n  - Environment variables for configuration (`DATABASE_URL`, `PORT`, etc.)\n  - Logging to stdout and stderr\n  - Use of a process manager like PM2 or Foreman",
+    "content": "- **CLI Commands**: Use `npm init -y` to create a new Node.js project.\n- **Latest Versions**: Ensure using the latest stable versions of Node.js, ExpressJS, and Prisma.\n- **Key Config Options**:\n  - For ExpressJS: Configure middleware like `express.json()` for parsing JSON bodies.\n  - For Prisma: Define models in `schema.prisma` and use Prisma Client to interact with your database.",
     "source": "code_example",
-    "updated_at": 1780974877.6280823
+    "updated_at": 1781062296.4787438
   },
   "search:devops-practices:containerization best practice": {
-    "content": "- **CLI Commands**: Use `docker run --rm -it <image_name> /bin/bash` to start an interactive container.\n- **Latest Versions**: Ensure Docker is updated to the latest version using `docker update`.\n- **Key Config Options**:\n  - `-v, --volume list`: Bind mount a volume.\n  - `-p, --publish list`: Publish a container's port(s) to the host.\n  - `--network string`: Connect a container to a network.\n  - `--env-file string`: Read in a line-delimited file of environment variables.\n- **Security**: Use `docker run --security-opt seccomp=unconfined` for unconfined seccomp mode.\n- **Efficiency**: Implement multi-stage builds with `FROM <image> AS stage_name`.\n- **Maintainability**: Use `.dockerignore` to exclude unnecessary files from the build context.\n- **Logging**: Configure logging using `--log-driver` and `--log-opt`.\n- **Health Checks**: Set health checks with `--health-cmd`, `--health-interval`, etc.\n- **Resource Limits**: Limit resources with `--memory` and `--cpu-shares`.",
+    "content": "- **CLI Commands**:\n  - `docker build --pull --no-cache -t myimage:latest .`\n  - `docker run -d --name mycontainer -p 8080:80 myimage:latest`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Docker Engine: v25.1\n  - Docker Compose: v2.13\n\n- **Key Config Options**:\n  - Use non-root users for containers.\n  - Implement multi-stage builds to reduce image size.\n  - Utilize distroless images for minimal attack surface.\n  - Regularly scan images for vulnerabilities using tools like Trivy or Snyk.",
     "source": "web_search",
-    "updated_at": 1780974887.3357503
+    "updated_at": 1781062315.2758791
   },
   "search:devops-practices:containerization best practice_ex": {
-    "content": "- **CLI Commands**:\n  - `docker build --target <stage> .`\n  - `docker run --rm -it <image_name>`\n  - `docker-compose up -d`\n\n- **Latest Versions**:\n  - Docker Engine: v25.0.0\n  - Docker Compose: v2.18.0\n\n- **Key Config Options**:\n  - Use multi-stage builds for optimization.\n  - Employ distroless images to reduce image size.\n  - Implement security hardening techniques.\n  - Avoid using the root user in containers.\n  - Regularly scan images for vulnerabilities.",
+    "content": "- **CLI Commands**:\n  - `docker build --pull --no-cache -t myimage:latest .`\n  - `docker run -d --name mycontainer -p 8080:80 myimage:latest`\n\n- **Latest Versions**:\n  - Docker Engine: v25.1\n  - Docker Compose: v2.13\n\n- **Key Config Options**:\n  - `Dockerfile`: Use `.dockerignore` for efficient builds.\n  - `docker-compose.yml`: Define services, networks, and volumes.\n  - Security: Enable non-root users, use multi-stage builds, and scan images with tools like Clair or Trivy.",
     "source": "code_example",
-    "updated_at": 1780974905.2228012
+    "updated_at": 1781062330.1321661
   },
   "search:devops-practices:ci/cd pipeline best practices ": {
-    "content": "- **CLI Commands**: Use `gitlab-ci-lint` to validate your `.gitlab-ci.yml` file.\n- **Latest Versions**: Ensure you are using the latest version of GitLab CI/CD for optimal features and security updates.\n- **Key Config Options**:\n  - `stages`: Define stages like `build`, `test`, `deploy`.\n  - `script`: Specify commands to run in each job.\n  - `parallel`: Enable parallel execution of jobs within a stage.\n  - `only`/`except`: Control when jobs should run based on branches or tags.",
+    "content": "- Use `gitlab-ci.yml` to define CI/CD pipelines.\n- Employ parallel testing in Cucumber by configuring Jenkins or GitLab CI.\n- For UI and BFF testing, consider using Selenium Grid for distributed testing.\n- Optimize frontend deployment with tools like Webpack Bundle Analyzer.\n- Implement caching strategies in `.gitlab-ci.yml` for faster builds.\n- Use `npm ci` instead of `npm install` to ensure consistent environments.\n- Leverage AWS CodePipeline for automated deployments.\n- Configure environment variables securely using GitLab's CI/CD variables.\n- Monitor pipeline performance with tools like GitLab Analytics.",
     "source": "web_search",
-    "updated_at": 1780974913.1522565
+    "updated_at": 1781062339.4694254
   },
   "search:devops-practices:blue green deployment canary r": {
-    "content": "- **Blue-Green Deployment**:\n  - Deploy to Blue: `kubectl apply -f blue-deployment.yaml`\n  - Deploy to Green: `kubectl apply -f green-deployment.yaml`\n\n- **Canary Release**:\n  - Configure traffic split: `kubectl patch deployment canary-deployment --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/image\", \"value\":\"new-image\"}]'`\n  - Apply traffic policy: `kubectl apply -f canary-traffic-policy.yaml`\n\n- **Key Config Options**:\n  - Deployment YAML: Define replicas, image, and other container settings.\n  - Traffic Policy: Specify percentage of traffic to route to the new version.\n\n- **Latest Versions**:\n  - Kubernetes: v1.25\n  - FastAPI: v0.78.0",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f blue-green-deployment.yaml`\n  - `kubectl rollout restart deployment/my-app`\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.3\n  - Helm: v3.9.0\n\n- **Key Config Options**:\n  - `spec.strategy.blueGreen`: Configuration for blue-green strategy.\n  - `spec.strategy.canary`: Configuration for canary release strategy.\n  - `spec.template.spec.containers.image`: Image version to deploy.",
     "source": "web_search",
-    "updated_at": 1780974945.549675
+    "updated_at": 1781062367.6390283
   },
   "search:devops-practices:blue green deployment canary r_ex": {
-    "content": "- **CLI Commands**:\n  - `kubectl rollout status deployment/<deployment-name>`\n  - `kubectl set image deployment/<deployment-name> <container-name>=<new-image>:<tag>`\n\n- **Latest Versions**:\n  - FastAPI: v0.95.1\n  - Kubernetes: v1.24.3\n\n- **Key Config Options**:\n  - Blue-Green Deployment: `spec.strategy.type=RollingUpdate`\n  - Canary Release: `spec.strategy.canary.weight=<percentage>`\n  - Traffic Management: `kubectl apply -f <traffic-management-yaml>`",
+    "content": "- **Blue-Green Deployment**:\n  - Use `kubectl` to create and manage deployments.\n  - Example command: `kubectl apply -f blue-green-deployment.yaml`.\n  - Latest version: Kubernetes v1.24.\n  - Key config options: `spec.strategy.type=RollingUpdate`, `spec.strategy.rollingUpdate.maxUnavailable`.\n\n- **Canary Deployment**:\n  - Use AWS CodeDeploy for canary deployments.\n  - Example command: `aws deploy create-deployment --application-name MyApp --deployment-group-name MyGroup --deployment-config-name CodeDeployDefault.OneAtATime`.\n  - Latest version: AWS CDK v2.70.\n  - Key config options: `canaryTrafficPercentage`, `canaryTrafficAlias`.\n\n- **Azure Container Apps**:\n  - Use Azure CLI for deployment.\n  - Example command: `az containerapp create --name my-app --resource-group my-resource-group --image my-image`.\n  - Latest version: Azure CLI v2.40.\n  - Key config options: `--min-replicas`, `--max-replicas`.",
     "source": "code_example",
-    "updated_at": 1780974950.5846498
+    "updated_at": 1781062377.0165737
   },
   "search:devops-practices:environment configuration stag": {
-    "content": "- Use `git checkout -b feature-branch` to create a new branch.\n- Run `npm install --save-dev @babel/core @babel/preset-env` for Babel configuration.\n- Execute `docker-compose up -d` to start Docker containers in detached mode.\n- Update `.env` file with environment-specific variables.\n- Use `kubectl apply -f deployment.yaml` for Kubernetes deployments.\n- Configure AWS S3 bucket using `aws s3 mb s3://my-bucket`.\n- Set up CI/CD pipeline with GitHub Actions or Jenkins.\n- Ensure `nginx.conf` is correctly configured for production environments.\n- Update `package.json` scripts section for build and start commands.",
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f staging.yaml` for deploying to staging.\n  - `kubectl apply -f production.yaml` for deploying to production.\n\n- **Latest Versions**:\n  - Kubernetes v1.25.0\n  - Helm v3.8.0\n\n- **Key Config Options**:\n  - Environment-specific variables in deployment YAML files.\n  - Resource limits and requests in pod specifications.\n  - Security context configurations for enhanced security.",
     "source": "web_search",
-    "updated_at": 1780974958.0294566
+    "updated_at": 1781062383.87859
   },
   "search:devops-practices:environment configuration stag_ex": {
-    "content": "- **CLI Commands**: \n  - `dotnet publish --configuration Staging`\n  - `dotnet publish --configuration Production`\n\n- **Latest Versions**:\n  - .NET SDK 7.0\n\n- **Key Config Options**:\n  - `appsettings.Staging.json`\n  - `appsettings.Production.json`",
+    "content": "- **Flutter Environment Setup Guide**:\n  - Use `flutterfire configure` to set up Firebase.\n  - Configure environments in `firebase_options.dart`.\n\n- **Multi-environment Setup**:\n  - Use Docker for consistent development, testing, and staging environments.\n  - Mount volumes for immediate code changes during development.\n\n- **Nginx Docker Builds with GitHub Actions**:\n  - Use GitHub Actions to trigger builds based on branch names.\n  - Configure environment-specific settings in `.github/workflows`.\n\nFor the latest versions and key config options, refer to the official documentation of Flutter, Docker, and GitHub Actions.",
     "source": "code_example",
-    "updated_at": 1780942400.5089982
+    "updated_at": 1781062400.5427728
   },
   "search:devops-practices:observability logging metrics ": {
     "content": "- **CLI Commands**: Use `otel-cli` for managing and querying OpenTelemetry data.\n- **Latest Versions**: Ensure using the latest version of OpenTelemetry SDKs, e.g., `v1.23.0`.\n- **Key Config Options**:\n  - `service.name`: Name of your service.\n  - `resource.attributes`: Define custom attributes for resource identification.\n  - `exporter.otlp.endpoint`: Specify the OTLP endpoint for exporting data.\n  - `sampler.probability`: Set sampling probability for traces.",
@@ -90,8 +90,8 @@
     "updated_at": 1780942420.852513
   },
   "search:devops-practices:ci/cd pipeline best practices _ex": {
-    "content": "- **CLI Commands**: Use `git push origin main` to trigger CI/CD.\n- **Latest Versions**: Ensure using the latest version of tools like Jenkins, GitLab CI, or GitHub Actions for optimal performance and security.\n- **Key Config Options**:\n  - For Jenkins: Configure `Jenkinsfile` with stages like `build`, `test`, `deploy`.\n  - For GitLab CI: Use `.gitlab-ci.yml` to define jobs and pipelines.\n  - For GitHub Actions: Create workflows in `.github/workflows/` directory.",
+    "content": "- **GitLab CI/CD Pipeline Example**:\n  - `deploy-prod` stage script: `echo \"This job deploys something from the $CI_COMMIT_BRANCH branch.\"`\n  - Environment: production\n\n- **GitHub Actions CI/CD Pipeline Example**:\n  - Build, push Docker images, and deploy containers on every Git push.\n  - Use GitHub Actions for automation.\n\n- **Flask Example with CI/CD**:\n  - Run Docker container: `docker run --rm -d -p 8080:8080/tcp --name flask-example flask-example-cicd:latest`\n  - Change environmental variables in the Dockerfile, e.g., `ENV FLASK_PORT=8080`\n\n- **Latest Versions**:\n  - GitLab CI/CD: Ensure using latest GitLab version for features and security.\n  - GitHub Actions: Use latest GitHub Actions runner images for consistency.\n\n- **Key Config Options**:\n  - `.gitlab-ci.yml` or `github/workflows/main.yml`\n  - Define stages, jobs, scripts, and environments\n  - Configure Docker commands for containerization",
     "source": "code_example",
-    "updated_at": 1780974927.287213
+    "updated_at": 1781062349.3962793
   }
 }
