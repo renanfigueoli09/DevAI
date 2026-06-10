@@ -1,0 +1,12 @@
+{
+  "search:python-django-restframework-async:python django rest framework a": {
+    "content": "- Use Django 6.0 for async capabilities.\n- Follow OWASP 2025 guidelines for async security.\n- Utilize Django REST Framework (DRF) version 3.14 or later.\n- Implement async views using `@api_view` decorator.\n- Ensure middleware and database operations are async compatible.\n- Use `await` keyword for asynchronous data retrieval.\n- Configure settings in `settings.py` as needed.\n- Test your async views thoroughly with tools like Django's test framework.\n- Monitor performance and security regularly.",
+    "source": "web_search",
+    "updated_at": 1781072132.6496418
+  },
+  "search:python-django-restframework-async:python django rest framework a_ex": {
+    "content": "- **CLI Commands**:\n  - `pip install django==6.0`\n  - `pip install djangorestframework`\n\n- **Latest Versions**:\n  - Django 6.0\n  - Django REST Framework 3.14\n\n- **Key Config Options**:\n  - `ASGI_APPLICATION = 'myproject.asgi.application'` in `settings.py`\n  - Use `async` views and middleware in your project.\n  - Configure CORS with `django-cors-headers`.\n  - Implement authentication using DRF's built-in classes like `TokenAuthentication`.",
+    "source": "code_example",
+    "updated_at": 1781072140.8245075
+  }
+}

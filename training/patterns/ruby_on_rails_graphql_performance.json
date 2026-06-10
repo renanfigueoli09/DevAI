@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-graphql-performance:ruby on rails graphql performa": {
+    "content": "- Use `gem 'graphql'` and `gem 'graphql-ruby'` in your Gemfile.\n- Run `bundle install` to install the gems.\n- Configure GraphQL schema with `GraphQL::Schema.define`.\n- Implement batch loading using `BatchLoader`.\n- Enable caching with `rack-cache` or `redis-rails`.\n- Use `persisted_queries` for pre-caching queries.\n- Monitor query complexity with tools like `graphql-batch-complexity`.\n- Optimize N+1 queries by using `GraphQL::BatchLoader`.\n- Deploy with `puma` and configure it in `config/puma.rb`.\n- Ensure production readiness with `dotenv-rails` for environment variables.",
+    "source": "web_search",
+    "updated_at": 1781072150.6673317
+  },
+  "search:ruby-on-rails-graphql-performance:ruby on rails graphql performa_ex": {
+    "content": "- Use `rails generate graphql:install` to set up GraphQL in Rails.\n- Add `gem 'graphql'` and `gem 'graphiql-rails', group: :development` to your Gemfile.\n- Run `bundle install` after updating the Gemfile.\n- Configure GraphQL types using classes, e.g., `class QueryType < GraphQL::Schema::Object`.\n- Implement caching strategies like `GraphQL::CacheControl::Middleware` for performance optimization.\n- Monitor and adjust thresholds based on application data relationships.\n- Use `graphiql-rails` for an interactive GraphQL IDE during development.\n- Regularly revisit and optimize GraphQL performance strategies.",
+    "source": "code_example",
+    "updated_at": 1781072160.704367
+  },
+  "search:ruby-on-rails-graphql-performance:ruby on rails graphql error ha": {
+    "content": "- Use `GraphQL::ExecutionError` to handle errors gracefully.\n- Re-raise exceptions to crash the query and halt execution.\n- Report metrics from errors using monitoring tools.\n- Utilize gems like `graphql-ruby` for robust error handling.\n- Implement batch loading for efficient data retrieval.\n- Design mutations for handling side effects in GraphQL APIs.\n- Cache responses to improve API performance.\n- Subscribe to events for real-time updates.\n- Follow the latest version of `graphql-ruby` for features and bug fixes.",
+    "source": "web_search",
+    "updated_at": 1781072168.0810258
+  },
+  "search:ruby-on-rails-graphql-performance:ruby on rails graphql error ha_ex": {
+    "content": "- Use `graphql-ruby` gem for GraphQL in Ruby on Rails.\n- Implement error handling using `rescue_from` method to catch server-side errors.\n- Utilize `add_error` method to handle multiple errors gracefully.\n- Ensure compliance with GraphQL's error handling specification and practices.\n- For detailed implementation, refer to the official `graphql-ruby` documentation.",
+    "source": "code_example",
+    "updated_at": 1781072174.1829069
+  }
+}
