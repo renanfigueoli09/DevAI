@@ -1,0 +1,27 @@
+{
+  "search:kubernetes-rolling-updates-best-practices:kubernetes rolling updates bes": {
+    "content": "- Use `kubectl rollout status deployment/<deployment-name>` to monitor the progress of a rolling update.\n- Set readiness probes using `readinessProbe` in your Pod specification to ensure that only healthy pods receive traffic.\n- Configure `maxUnavailable` and `maxSurge` in your Deployment's strategy for controlled updates. For example:\n  ```yaml\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxUnavailable: 25%\n      maxSurge: 25%\n  ```\n- Use `kubectl rollout undo deployment/<deployment-name>` to rollback if the update fails.\n- Ensure your application is stateless or use StatefulSets for applications with state that requires persistence.\n- Monitor resource usage during updates using `kubectl top pod` and adjust resources as needed.\n- Regularly test rolling updates in a staging environment before applying them to production.",
+    "source": "web_search",
+    "updated_at": 1781075883.7708685
+  },
+  "search:kubernetes-rolling-updates-best-practices:kubernetes rolling updates bes_ex": {
+    "content": "- Use `kubectl rollout status deployment/<deployment-name>` to monitor the progress of a rolling update.\n- For canary updates, consider using `kubectl apply -f <canary-deployment-yaml>`.\n- Set `strategy.type: RollingUpdate` in your Deployment YAML file.\n- Specify `maxSurge` and `maxUnavailable` to control the number of pods that can be updated simultaneously.\n- Use `kubectl rollout undo deployment/<deployment-name>` to rollback a failed update.\n- Ensure your application is stateless or use persistent volumes for data persistence during updates.",
+    "source": "code_example",
+    "updated_at": 1781075893.5121324
+  },
+  "search:kubernetes-rolling-updates-best-practices:kubernetes deployment strategi": {
+    "content": "- **Kubernetes Canary Deployment**: Use `kubectl apply -f deployment.yaml` to deploy.\n- **Progressive Deployment**: Implement using Octopus Deploy's Kubernetes integration for smooth rollout.\n- **Blue/Green Deployment with Argo Rollouts**:\n  - Install Argo Rollouts: `kubectl create namespace argo-rollouts`\n    ```bash\n    kubectl apply -n argo-rollouts -f https://raw.githubusercontent.com/argoproj/argo-rollouts/stable/manifests/install.yaml\n    ```\n  - Create a Rollout manifest and apply it.\n- **FastAPI Deployment**:\n  - Containerize your FastAPI app using Docker.\n  - Deploy to Kubernetes with `kubectl apply -f deployment.yaml`.\n- **GitHub Project**: Explore modern strategies like Blue/Green and Canary deployments in a local Kubernetes environment.",
+    "source": "web_search",
+    "updated_at": 1781075903.0795155
+  },
+  "search:kubernetes-rolling-updates-best-practices:kubernetes rollout management ": {
+    "content": "- **CLI Commands with Exact Flags**:\n  - `kubectl rollout status <deployment-name>`\n  - `kubectl rollout undo <deployment-name>`\n  - `kubectl rollout history <deployment-name>`\n\n- **Latest Versions**:\n  - Kubernetes v1.27 (as of Mar 2026)\n\n- **Key Config Options**:\n  - `spec.strategy.type`: Defines the strategy for rolling updates (e.g., RollingUpdate, Recreate)\n  - `spec.strategy.rollingUpdate.maxUnavailable`: Maximum number or percentage of Pods that can be unavailable during update\n  - `spec.strategy.rollingUpdate.maxSurge`: Maximum number or percentage of Pods that can be created over the desired number of Pods",
+    "source": "web_search",
+    "updated_at": 1781075925.3172421
+  },
+  "search:kubernetes-rolling-updates-best-practices:kubernetes rollout management _ex": {
+    "content": "- **Pause Rollout**: `kubectl rollout pause deployment/<deployment-name>`\n- **Resume Rollout**: `kubectl rollout resume deployment/<deployment-name>`\n- **Check Rollout Status**: `kubectl rollout status deployment/<deployment-name>`\n- **Rollback to Previous Version**: `kubectl rollout undo deployment/<deployment-name>`\n- **Key Config Options**:\n  - `spec.strategy.type`: `RollingUpdate` (default)\n  - `spec.strategy.rollingUpdate.maxUnavailable`\n  - `spec.strategy.rollingUpdate.maxSurge`\n- **Latest Versions**: Ensure using the latest version of Kubernetes for optimal features and security.\n- **YAML Example**:\n  ```yaml\n  apiVersion: apps/v1\n  kind: Deployment\n  metadata:\n    name: example-deployment\n  spec:\n    replicas: 3\n    strategy:\n      type: RollingUpdate\n      rollingUpdate:\n        maxUnavailable: 1\n        maxSurge: 1\n    template:\n      metadata:\n        labels:\n          app: example\n      spec:\n        containers:\n        - name: example-container\n          image: example-image:latest\n  ```\n- **kubectl Commands**:\n  - `kubectl apply -f deployment.yaml`\n  - `kubectl get deployments`\n  - `kubectl describe deployment <deployment-name>`",
+    "source": "code_example",
+    "updated_at": 1781075933.0116708
+  }
+}
