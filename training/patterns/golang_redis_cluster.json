@@ -1,0 +1,17 @@
+{
+  "search:golang-redis-cluster:high availability in golang wi": {
+    "content": "- **Latest Version of go-redis**: v8.x\n- **CLI Commands**:\n  - `go get github.com/go-redis/redis/v8`\n  - `go run main.go` to execute your Go application using the Redis client.\n- **Key Config Options for go-redis**:\n  - `Addr`: Redis server address (e.g., \"localhost:6379\").\n  - `Password`: Password for the Redis server if authentication is enabled.\n  - `DB`: Database number to select on connection.\n  - `PoolSize`: Maximum number of connections in the pool.\n- **Latest Version of Memorystore for Redis Cluster**: As of August 2023, the latest version is not specified in the provided text. Check Google Cloud's official documentation for the most current version.\n- **Key Config Options for Memorystore for Redis Cluster**:\n  - `Zone`: The zone where the cluster is deployed.\n  - `ReplicaCount`: Number of replicas to create for high availability.\n  - `MemorySizeGB`: Amount of memory allocated to each node in the cluster.",
+    "source": "web_search",
+    "updated_at": 1781067610.2786133
+  },
+  "search:golang-redis-cluster:high availability in golang wi_ex": {
+    "content": "- **CLI Commands**:\n  - `docker run --name my-redis-cluster -d redis/cluster`\n  - `redis-cli --cluster create <host1>:<port> <host2>:<port> ...`\n\n- **Latest Versions**:\n  - Go: v1.20.3\n  - Redis: 7.0.5\n  - go-redis: v8.10.0\n\n- **Key Config Options**:\n  - `maxclients`: Maximum number of client connections.\n  - `cluster-enabled yes`: Enables cluster mode.\n  - `cluster-config-file nodes.conf`: Specifies the configuration file for the cluster.\n  - `cluster-node-timeout 5000`: Sets the timeout for a node in milliseconds.",
+    "source": "code_example",
+    "updated_at": 1781067616.6322649
+  },
+  "search:golang-redis-cluster:redis cluster performance opti": {
+    "content": "- Use `redis-cli --cluster check <host>:<port>` to verify the health of your Redis cluster.\n- Ensure data is evenly distributed across nodes using `CLUSTER SLOTS` command.\n- Adjust node balancing with `CLUSTER FAILOVER`.\n- Optimize configuration in `redis.conf`, focusing on `maxmemory`, `maxmemory-policy`, and `cluster-node-timeout`.\n- Monitor performance with `MONITOR` or third-party tools like RedisInsight, Redash.\n- Use `GOFLAGS=\"-tags=netgo -ldflags=-linkmode external\"` to optimize Go's network stack for Kubernetes.\n- Implement caching strategies using `go-cache` or `gocache`, configuring expiration times and eviction policies.\n- Profile your application with `pprof` to identify bottlenecks, run `go tool pprof http://localhost:6060/debug/pprof/profile`.\n- Use `redisearch` for full-text search capabilities in Redis, enhancing query performance.\n- Regularly update Go and Redis versions to benefit from the latest features and security patches.",
+    "source": "web_search",
+    "updated_at": 1781067633.5465546
+  }
+}

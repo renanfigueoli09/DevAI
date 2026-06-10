@@ -1,0 +1,27 @@
+{
+  "search:java-spring-cloud-native:spring cloud native microservi": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot applications.\n  - `docker build -t your-image-name .` to build a Docker image.\n  - `kubectl apply -f deployment.yaml` to deploy on Kubernetes.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Spring Cloud: 2024.0.0\n\n- **Key Config Options**:\n  - `spring.cloud.discovery.enabled`: Enable service discovery.\n  - `spring.cloud.loadbalancer.ribbon.enabled`: Disable Ribbon in favor of Spring LoadBalancer.\n  - `spring.cloud.circuitbreaker.resilience4j.instances.yourServiceName.maxRequests`: Configure circuit breaker settings.",
+    "source": "web_search",
+    "updated_at": 1781067457.9407969
+  },
+  "search:java-spring-cloud-native:spring cloud native microservi_ex": {
+    "content": "- **GitHub Repository**: [arabindamcs/spring-microservices-2024](https://github.com/arabindamcs/spring-microservices-2024)\n  - Section 4: Use `docker-compose up` to deploy microservices.\n  - Section 5: Explore Cloud Native Apps and the 15-Factor Methodology.\n\n- **12 Factor App Principles**:\n  - Each service should have its own codebase.\n  - Avoid sharing code between applications for easier CI/CD processes.\n\n- **Spring Cloud Latest Version**: Check [spring.io/projects/spring-cloud](https://spring.io/projects/spring-cloud) for the latest version.\n  - Key Config Options: `application.yml` or `application.properties` for configuration settings.",
+    "source": "code_example",
+    "updated_at": 1781067473.8508615
+  },
+  "search:java-spring-cloud-native:java spring boot cloud native ": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`: Build the project.\n  - `docker build -t my-spring-app .`: Build a Docker image for your Spring Boot app.\n  - `docker run -p 8080:8080 my-spring-app`: Run the Docker container.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Java: 21\n\n- **Key Config Options**:\n  - Externalized Configuration (`application.yml`/`application.properties`)\n  - Health Checks (`management.endpoints.web.exposure.include=health,info`)\n  - Circuit Breaker (`spring.cloud.circuitbreaker.resilience4j.instances.myCircuitBreaker.maxRequestsInPeriod=20`)\n  - Graceful Shutdown (`server.shutdown=graceful`)",
+    "source": "web_search",
+    "updated_at": 1781067484.9981277
+  },
+  "search:java-spring-cloud-native:java spring boot cloud native _ex": {
+    "content": "- **Spring Cloud**: Use `spring-cloud` version 2024.x.\n- **Non-blocking Microservices**: Implement using `@Async` annotation in Spring Boot.\n- **GraalVM Native Image**: Build with GraalVM Native Image for faster startup and lower memory usage. Use `native-image` CLI command.\n- **Spring Boot 3**: Upgrade to version 3 for enhanced features and performance improvements.\n- **Key Config Options**:\n  - For Spring Cloud: Configure service discovery, load balancing, and circuit breakers using properties files or YAML.\n  - For Non-blocking Microservices: Set `spring.task.execution.pool.core-size` and `spring.task.execution.pool.max-size`.\n  - For GraalVM Native Image: Use `--initialize-at-build-time` for faster startup.",
+    "source": "code_example",
+    "updated_at": 1781067501.9119444
+  },
+  "search:java-spring-cloud-native:cloud-native java spring secur": {
+    "content": "- **Latest Versions**: Spring Boot 3.0, Spring Security 6, Postgres, Prometheus, Micrometer.\n- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `java -jar target/your-application.jar` to run the application.\n- **Key Config Options**:\n  - JWT Authentication: Configure in `application.yml` with `spring.security.jwt`.\n  - Authorization: Define roles and permissions using `@PreAuthorize`, `@PostAuthorize`.\n  - Prometheus Monitoring: Add dependencies for Micrometer and configure endpoints in `application.yml`.\n  - Security Extensions: Customize Spring Security by extending classes like `WebSecurityConfigurerAdapter`.",
+    "source": "web_search",
+    "updated_at": 1781067521.2928638
+  }
+}
