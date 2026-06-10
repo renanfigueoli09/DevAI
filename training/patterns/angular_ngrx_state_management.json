@@ -23,5 +23,30 @@
     "content": "- **CLI Commands**:\n  - `ng generate effects <effect-name>` to create an effect.\n  \n- **Latest Versions**:\n  - Ensure you are using the latest version of Angular CLI and NgRx libraries for compatibility and bug fixes.\n\n- **Key Config Options**:\n  - Use `ofType` from `@ngrx/effects` to filter actions based on their type.\n  - Implement error handling within effects using try-catch blocks or operators like `catchError`.\n  - Configure the store in your Angular module with `StoreModule.forRoot(reducers)` and `EffectsModule.forRoot([YourEffect])`.",
     "source": "code_example",
     "updated_at": 1780942020.9703677
+  },
+  "search:angular-ngrx-state-management:angular ngrx state management ": {
+    "content": "- Use Angular CLI to generate NgRx store, effects, and reducers.\n- Install latest NgRx version via npm or yarn.\n- Configure NgRx Store in `app.module.ts` with `StoreModule.forRoot()`.\n- Define state interfaces and actions using TypeScript.\n- Implement reducers for handling state changes.\n- Create effects for side effects like HTTP requests.\n- Use selectors to access parts of the state.\n- Optimize performance with memoization techniques.\n- Utilize Angular DevTools for debugging NgRx store.",
+    "source": "web_search",
+    "updated_at": 1781084704.3928773
+  },
+  "search:angular-ngrx-state-management:implementing angular ngrx for ": {
+    "content": "- Install Angular CLI globally: `npm install -g @angular/cli`\n- Create a new Angular project: `ng new my-app --routing=true`\n- Add NgRx to an existing project:\n  ```bash\n  ng add @ngrx/store@latest\n  ```\n- Key config options in `app.module.ts`:\n  ```typescript\n  import { StoreModule } from '@ngrx/store';\n  import { EffectsModule } from '@ngrx/effects';\n\n  imports: [\n    StoreModule.forRoot({}),\n    EffectsModule.forRoot([])\n  ],\n  providers: []\n  ```\n- Define reducers and actions using NgRx tools like `ng generate store feature-name`.\n- Use the generated selectors to access state in components.\n- Dispatch actions from components using `store.dispatch(new ActionName(payload))`.\n\nLatest versions:\n- Angular CLI: 18.0.0\n- NgRx: 15.2.0",
+    "source": "web_search",
+    "updated_at": 1781084729.0027099
+  },
+  "search:angular-ngrx-state-management:implementing angular ngrx for _ex": {
+    "content": "- Use `ng add @ngrx/store` to install NgRx.\n- Update Angular version to the latest stable release using `ng update @angular/core @angular/cli`.\n- Configure NgRx in your project by creating actions, reducers, effects, and store modules.\n- Key config options include `StoreModule.forRoot()` for root state management and `EffectsModule.forRoot()` for handling side effects.\n- Use `@ngrx/store-devtools` for debugging and development purposes.\n- Implement selectors to access parts of the state efficiently.\n- Ensure all NgRx entities are properly normalized for efficient data retrieval.",
+    "source": "code_example",
+    "updated_at": 1781084736.8830957
+  },
+  "search:angular-ngrx-state-management:advanced techniques in angular": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>`: Generates a new NgRx store.\n  - `ng generate effect <name>`: Generates a new NgRx effect.\n\n- **Latest Versions**:\n  - Angular CLI: v16.2.0\n  - NgRx: v15.4.0\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)`: Registers the root reducers.\n  - `EffectsModule.forRoot(effects)`: Registers the root effects.\n  - `provideStore({ key: reducer })`: Provides a store with a specific reducer.\n  - `provideEffects([effect])`: Provides an effect for handling side effects.",
+    "source": "web_search",
+    "updated_at": 1781084757.4235442
+  },
+  "search:angular-ngrx-state-management:advanced techniques in angular_ex": {
+    "content": "- **CLI Commands**:\n  - `ng generate store <name>` to create a new NgRx store.\n  - `ng generate effect <name>` to create an NgRx effect.\n\n- **Latest Versions**:\n  - Angular: v16.x\n  - NgRx: v15.x\n\n- **Key Config Options**:\n  - `StoreModule.forRoot(reducers)` in the root module for global state management.\n  - `EffectsModule.forRoot(effects)` to register effects globally.\n  - `createSelector` and `createFeatureSelector` for selecting parts of the state.",
+    "source": "code_example",
+    "updated_at": 1781084762.477505
   }
 }

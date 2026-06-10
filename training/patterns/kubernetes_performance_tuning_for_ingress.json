@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**: `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: Check the latest version on [GORM GitHub](https://github.com/go-gorm/gorm).\n- **Key Config Options**:\n  - `gorm.DB.DB().SetMaxIdleConns(10)` for setting maximum idle connections.\n  - `gorm.DB.DB().SetMaxOpenConns(100)` for setting maximum open connections.\n  - `gorm.DB.DB().SetConnMaxLifetime(time.Hour * 24)` for setting connection lifetime.",
     "source": "code_example",
     "updated_at": 1780938587.9898646
+  },
+  "search:kubernetes-performance-tuning-for-ingress:kubernetes performance tuning ": {
+    "content": "- **CLI Commands**: Use `kubectl` to manage Ingress resources.\n- **Latest Versions**: Ensure using the latest stable version of your Ingress Controller, e.g., Nginx Ingress Controller v1.2.1.\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: Adjust body size limits.\n  - `nginx.ingress.kubernetes.io/proxy-read-timeout` and `nginx.ingress.kubernetes.io/proxy-send-timeout`: Set timeouts for proxy communication.\n- **Horizontal Pod Autoscaler (HPA)**: Configure HPA to scale based on CPU or custom metrics like request rate.\n- **Node Pool Tuning**: Optimize node pools for low-latency, e.g., use nodes with high network bandwidth and low latency.\n- **Observability Tools**: Use Prometheus and Grafana for monitoring Ingress performance and identifying bottlenecks.",
+    "source": "web_search",
+    "updated_at": 1781084657.127756
+  },
+  "search:kubernetes-performance-tuning-for-ingress:kubernetes performance tuning _ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f ingress.yaml`\n  - `kubectl get ingress`\n\n- **Latest Versions**:\n  - Nginx Ingress Controller: v1.2.1\n\n- **Key Config Options**:\n  - `nginx.ingress.kubernetes.io/rewrite-target`: For URL rewriting.\n  - `nginx.ingress.kubernetes.io/proxy-body-size`: Adjusts the maximum body size for requests.\n  - `nginx.ingress.kubernetes.io/proxy-read-timeout`: Sets the read timeout for the backend server.\n  - `nginx.ingress.kubernetes.io/proxy-send-timeout`: Sets the send timeout for the backend server.",
+    "source": "code_example",
+    "updated_at": 1781084662.9752376
+  },
+  "search:kubernetes-performance-tuning-for-ingress:best practices for kubernetes ": {
+    "content": "- Use the latest version of Kubernetes, e.g., `v1.25.0`.\n- Employ `nginx-ingress-controller` for high-performance routing.\n- Configure `nginx.conf` with optimal worker processes and connections:\n  ```bash\n  worker_processes auto;\n  events {\n    worker_connections 1024;\n  }\n  ```\n- Enable SSL termination at the Ingress controller to reduce load on application servers.\n- Use path-based routing for efficient traffic management.\n- Implement health checks in Ingress rules to ensure only healthy pods receive traffic:\n  ```yaml\n  apiVersion: networking.k8s.io/v1\n  kind: Ingress\n  metadata:\n    name: example-ingress\n  spec:\n    rules:\n      - host: example.com\n        http:\n          paths:\n            - path: /app\n              pathType: Prefix\n              backend:\n                service:\n                  name: app-service\n                  port:\n                    number: 80\n  ```\n- Utilize `nginx.ingress.kubernetes.io/rewrite-target` for URL rewriting.\n- Enable caching to reduce latency for frequently accessed content:\n  ```yaml\n  annotations:\n    nginx.ingress.kubernetes.io/proxy-cache-path: /var/cache/nginx levels=1:2 keys_zone=my_cache:10m max_size=1g inactive=60m use_temp_path=off\n    nginx.ingress.kubernetes.io/proxy-cache: my_cache\n    nginx.ingress.kubernetes.io/proxy-cache-revalidate: on\n  ```\n- Monitor and tune Ingress performance using tools like Prometheus and Grafana.\n- Regularly update the `nginx-ingress-controller` to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781084688.9609473
+  },
+  "search:kubernetes-performance-tuning-for-ingress:best practices for kubernetes _ex": {
+    "content": "- Use `kubectl apply -f ingress.yaml` to deploy an Ingress resource.\n- Ensure your Ingress controller is up-to-date, e.g., NGINX Ingress Controller v1.2.1.\n- Configure `nginx.ingress.kubernetes.io/rewrite-target: /$1` for URL rewriting in NGINX.\n- Set `nginx.ingress.kubernetes.io/proxy-body-size: 0` to remove body size restrictions.\n- Use `nginx.ingress.kubernetes.io/backend-protocol: HTTP2` for better performance with HTTP/2.\n- Monitor Ingress metrics using Prometheus and Grafana.\n- Implement rate limiting with `nginx.ingress.kubernetes.io/rate-limit-requests: \"100\"` to prevent abuse.\n- Enable SSL/TLS termination at the Ingress level for secure communication.\n- Use `nginx.ingress.kubernetes.io/enable-cors: \"true\"` if CORS is required.\n- Regularly update your Ingress controller and Kubernetes to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781084696.8237042
   }
 }
