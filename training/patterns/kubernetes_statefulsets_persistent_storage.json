@@ -1,0 +1,12 @@
+{
+  "search:kubernetes-statefulsets-persistent-storage:kubernetes statefulsets data m": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f statefulset.yaml`\n  - `kubectl get statefulsets`\n  - `kubectl describe statefulset <statefulset-name>`\n  - `kubectl scale statefulset <statefulset-name> --replicas=<new-replicas>`\n\n- **Latest Versions**:\n  - Kubernetes StatefulSet: v1.25\n  - etcd: v3.6.0\n  - Consul: v1.10.0\n\n- **Key Config Options**:\n  - `spec.serviceName`: Defines the service name for statefulset pods.\n  - `spec.replicas`: Specifies the number of replicas.\n  - `spec.template.spec.volumes`: Configures persistent storage volumes.\n  - `spec.updateStrategy.type`: Determines how updates are applied (RollingUpdate or OnDelete).\n  - `spec.volumeClaimTemplates`: Defines templates for PersistentVolumeClaims.",
+    "source": "web_search",
+    "updated_at": 1781059624.5135055
+  },
+  "search:kubernetes-statefulsets-persistent-storage:kubernetes statefulsets data m_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl create statefulset <name> --image=<image>` to create a StatefulSet.\n  - `kubectl scale statefulset <name> --replicas=<number>` to scale the number of Pods.\n  - `kubectl delete statefulset <name>` to delete a StatefulSet.\n\n- **Latest Versions**:\n  - Kubernetes v1.24 introduces new features and improvements for StatefulSets.\n\n- **Key Config Options**:\n  - `spec.serviceName`: Specifies the name of the service that will be created.\n  - `spec.template.spec.containers.volumeMounts`: Defines how volumes are mounted into containers.\n  - `spec.updateStrategy.type`: Determines how Pods in a StatefulSet are updated (RollingUpdate or OnDelete).",
+    "source": "code_example",
+    "updated_at": 1781059633.8352115
+  }
+}

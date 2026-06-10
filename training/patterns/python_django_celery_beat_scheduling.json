@@ -1,0 +1,22 @@
+{
+  "search:python-django-celery-beat-scheduling:python django celery beat sche": {
+    "content": "- **CLI Commands**:\n  - `celery -A your_project_name worker --loglevel=info`\n  - `celery -A your_project_name beat --loglevel=info`\n\n- **Latest Versions**:\n  - Celery: 5.6.3\n  - Django-Celery-Beat: Latest version as of Nov 16, 2025\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: Set the message broker URL (e.g., `redis://localhost:6379/0`).\n  - `CELERY_RESULT_BACKEND`: Set the backend for storing task results (e.g., `redis://localhost:6379/1`).\n  - `CELERY_BEAT_SCHEDULE`: Define periodic tasks using a dictionary.\n  - `CELERY_TIMEZONE`: Set the timezone for scheduling.\n\n- **Best Practices**:\n  - Use Redis or RabbitMQ as message brokers.\n  - Store task results in a reliable backend like Redis or PostgreSQL.\n  - Configure Celery Beat to run at regular intervals (e.g., every minute).\n  - Ensure tasks are idempotent to avoid duplicate executions.",
+    "source": "web_search",
+    "updated_at": 1781059436.9121065
+  },
+  "search:python-django-celery-beat-scheduling:python django celery beat sche_ex": {
+    "content": "- Install Django-Celery-Beat using pip: `pip install django-celery-beat`\n- Ensure Celery and Django-Celery-Beat are added to your `INSTALLED_APPS` in settings.py.\n- Configure Celery with a broker (e.g., Redis): `CELERY_BROKER_URL = 'redis://localhost:6379/0'`\n- Run migrations for the beat schedule: `python manage.py migrate django_celery_beat`\n- Register periodic tasks using the Django admin interface or by adding them to your Celery app.\n- Use Celery Beat's crontab syntax for complex scheduling needs.\n- Example of a simple periodic task:\n  ```python\n  from celery import shared_task\n\n  @shared_task\n  def my_periodic_task():\n      print(\"This is a periodic task\")\n  ```\n- Schedule the task in the Django admin or using Celery Beat's API.\n- Ensure Celery worker and beat are running to execute tasks: `celery -A your_project_name worker --loglevel=info`\n- `celery -A your_project_name beat --loglevel=info` for scheduling tasks.",
+    "source": "code_example",
+    "updated_at": 1781059444.2859063
+  },
+  "search:python-django-celery-beat-scheduling:python django celery beat task": {
+    "content": "- Install `django-celery-beat` via PyPI using `$ pip install django-celery-beat`.\n- Run Celery Beat with Django project: `$ celery -A [project-name] worker --beat --scheduler django --loglevel=info`.\n- Key config options include setting up `CELERY_BEAT_SCHEDULE` in your settings.py.\n- Latest versions can be checked on PyPI or Celery documentation.\n- Use Crontab for scheduling tasks at specific times with `CrontabSchedule` in Django-Celery-Beat.",
+    "source": "web_search",
+    "updated_at": 1781059452.6316872
+  },
+  "search:python-django-celery-beat-scheduling:python django celery beat task_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py shell`\n  - `celery -A your_project_name worker --loglevel=info`\n\n- **Latest Versions**:\n  - Django-Celery-Beat: 2.3.4\n  - Celery: 5.6.3\n\n- **Key Config Options**:\n  - `CELERY_BROKER_URL`: URL of the message broker (e.g., `redis://localhost:6379/0`).\n  - `CELERY_RESULT_BACKEND`: URL of the result backend (e.g., `redis://localhost:6379/1`).\n  - `CELERY_BEAT_SCHEDULE`: Dictionary defining periodic tasks.",
+    "source": "code_example",
+    "updated_at": 1781059468.1107981
+  }
+}

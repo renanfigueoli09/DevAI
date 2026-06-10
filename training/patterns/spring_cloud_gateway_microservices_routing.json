@@ -1,0 +1,22 @@
+{
+  "search:spring-cloud-gateway-microservices-routing:spring cloud gateway microserv": {
+    "content": "- **Latest Version**: Spring Cloud Gateway 3.4.2\n- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Target URI\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate type (e.g., Path=/example)\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter type (e.g., RewritePath=/old/(?<segment>.*), /new/$\\{segment})`\n- **Dependencies**:\n  ```xml\n  <dependency>\n      <groupId>org.springframework.cloud</groupId>\n      <artifactId>spring-cloud-starter-gateway</artifactId>\n  </dependency>\n  ```\n- **Documentation**: [Spring Cloud Gateway Documentation](https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/)",
+    "source": "web_search",
+    "updated_at": 1781059544.2583
+  },
+  "search:spring-cloud-gateway-microservices-routing:spring cloud gateway microserv_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the Spring Boot application.\n  - `./mvnw clean install` for building the project.\n\n- **Latest Versions**:\n  - Spring Cloud Gateway: 3.4.x\n  - Spring Boot: 2.7.x\n\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes`: Defines routes to microservices.\n  - `spring.cloud.gateway.discovery.locator.enabled`: Enables service discovery for routing.\n  - `spring.cloud.gateway.default-filters`: Applies default filters globally.",
+    "source": "code_example",
+    "updated_at": 1781059552.022631
+  },
+  "search:spring-cloud-gateway-microservices-routing:spring cloud gateway performan": {
+    "content": "- **Latest Version**: Spring Cloud Gateway 4.x\n- **CLI Commands**:\n  - `./mvnw clean install`\n  - `./gradlew build`\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Route ID\n  - `spring.cloud.gateway.routes[0].uri`: Target URI\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate type (e.g., Path)\n  - `spring.cloud.gateway.filters[0]`: Filter type (e.g., RewritePath)",
+    "source": "web_search",
+    "updated_at": 1781059561.232134
+  },
+  "search:spring-cloud-gateway-microservices-routing:spring cloud gateway performan_ex": {
+    "content": "- **CLI Commands**: `mvn clean install`\n- **Latest Version**: Spring Cloud Gateway 3.4.0\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes[0].id`: Unique identifier for the route.\n  - `spring.cloud.gateway.routes[0].uri`: Target URI of the service.\n  - `spring.cloud.gateway.routes[0].predicates[0]`: Predicate to match requests, e.g., Path=/example/**\n  - `spring.cloud.gateway.routes[0].filters[0]`: Filter to modify requests or responses, e.g., RewritePath=/example/(?<segment>.*), /new/$\\{segment}",
+    "source": "code_example",
+    "updated_at": 1781059574.9037435
+  }
+}
