@@ -1,0 +1,12 @@
+{
+  "search:dotnet-core-entityframeworkcore-sqlserver:dotnet core entity framework c": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - SQL Server Provider: 7.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - `OnConfiguring` method in DbContext for dynamic configuration",
+    "source": "web_search",
+    "updated_at": 1781063930.143397
+  },
+  "search:dotnet-core-entityframeworkcore-sqlserver:dotnet core entity framework c_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `Add-Migration InitialCreate` (for Visual Studio)\n  - `dotnet ef migrations list`\n\n- **Latest Versions**:\n  - Ensure you are using the latest version of Entity Framework Core and .NET SDK.\n\n- **Key Config Options**:\n  - Connection string in `appsettings.json`\n  - Migrations directory configuration",
+    "source": "code_example",
+    "updated_at": 1781063936.882228
+  }
+}
