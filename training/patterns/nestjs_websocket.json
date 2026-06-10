@@ -1,12 +1,12 @@
 {
   "search:nestjs+websocket:nestjs @websocketgateway @subs": {
-    "content": "- **CLI Commands**:\n  - `nest generate gateway my-gateway`\n  - `nest build`\n\n- **Latest Versions**:\n  - NestJS: 10.x\n  - @nestjs/websockets: 10.x\n\n- **Key Config Options**:\n  - `@WebSocketGateway({ cors: true })` for enabling CORS.\n  - `WsAdapter` for using the WebSocket adapter.\n  - JWT authentication with guards and interceptors.",
+    "content": "- **CLI Commands**:\n  - `nest generate gateway my-gateway` to create a new WebSocket gateway.\n  \n- **Latest Versions**:\n  - NestJS: v9.x\n  - @nestjs/websockets: v7.x\n  \n- **Key Config Options**:\n  - Use `WsAdapter` for Socket.IO integration.\n  - Implement JWT authentication using `AuthGuard`.\n  - Define `@WebSocketGateway` to create a gateway.\n  - Use `@SubscribeMessage` to handle incoming messages.\n  \n- **Security**:\n  - Ensure JWT is sent with each WebSocket connection for authentication.",
     "source": "web_search",
-    "updated_at": 1780940765.111316
+    "updated_at": 1781053506.947725
   },
   "search:nestjs+websocket:nestjs @websocketgateway @subs_ex": {
-    "content": "- **CLI Commands**:\n  - `nest generate gateway my-gateway`\n  - `nest generate controller my-controller`\n\n- **Latest Versions**:\n  - NestJS: v10.x\n  - @nestjs/websockets: v10.x\n\n- **Key Config Options**:\n  - `@WebSocketGateway({ cors: true })`: Enable CORS for WebSocket connections.\n  - `@SubscribeMessage('eventName')`: Decorator to handle incoming messages on a specific event.\n  - `WsAdapter`: Adapter for handling WebSocket connections, e.g., `new WsAdapter(app)`.\n  - JWT Authentication: Implement JWT middleware for secure WebSocket communication.",
+    "content": "- Use `nest new project-name` to create a new NestJS project.\n- Install dependencies with `npm install @nestjs/websockets @nestjs/platform-socket.io socket.io`.\n- Import `@SubscribeMessage()` and `@MessageBody()` from `@nestjs/websockets`.\n- Configure the WebSocket gateway using `@WebSocketGateway(port, options)` in your gateway file.\n- Use JWT for authentication by integrating Passport.js with `passport-jwt` strategy.\n- Ensure NestJS version is up to date (latest as of my last update).\n- For real-time communication, consider using Redis or another message broker for scalability.\n- Implement error handling and logging within your WebSocket handlers.\n- Test your WebSocket gateway locally using tools like Postman or a custom client application.",
     "source": "code_example",
-    "updated_at": 1780940767.3267837
+    "updated_at": 1781053512.8326633
   }
 }
