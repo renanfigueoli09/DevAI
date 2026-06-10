@@ -1,0 +1,12 @@
+{
+  "search:Spring Boot + MySQL + Spring Data JPA:advanced spring data jpa queri": {
+    "content": "- Use `@Query` annotation in Spring Data JPA to execute JPQL and native SQL queries.\n- For counting distinct users by last name, use `select count(distinct u.id) from User u where u.lastname = ?1`.\n- To simplify database management, consider using Spring Data JPA with Spring Boot for entities, queries, and pagination.\n- For join queries on one-to-many and many-to-many relationships, utilize Spring Data JPA's query methods or the `@Query` annotation.\n- Ensure you are using the latest version of Spring Data JPA to benefit from performance improvements and new features.",
+    "source": "web_search",
+    "updated_at": 1781082506.7909346
+  },
+  "search:Spring Boot + MySQL + Spring Data JPA:advanced spring data jpa queri_ex": {
+    "content": "- Use `spring.datasource.username` and `spring.datasource.password` to configure database credentials.\n- Set `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect` for MySQL.\n- For complex queries, use `countQuery` in your repository interface.\n- Implement pagination with `Pageable` or `Slice`.\n- Use `@ManyToOne` annotation for relationships in Spring Boot.\n- Configure database properties in `application.properties` or `application.yml`.",
+    "source": "code_example",
+    "updated_at": 1781082512.399955
+  }
+}

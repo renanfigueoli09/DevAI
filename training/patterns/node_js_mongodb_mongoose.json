@@ -1,0 +1,17 @@
+{
+  "search:Node.js + MongoDB + Mongoose:node.js mongoose best practice": {
+    "content": "- **CLI Commands**:\n  - `npm install mongoose --save`\n  - `mongod` to start MongoDB server\n\n- **Latest Versions**:\n  - Node.js: v20.x\n  - Mongoose: v7.x\n\n- **Key Config Options**:\n  - Connection URI: `mongodb://localhost:27017/mydatabase`\n  - Schema Definition: Define models with schemas.\n  - Middleware: Use pre and post hooks for model operations.\n  - Error Handling: Implement error handling in callbacks or using promises.",
+    "source": "web_search",
+    "updated_at": 1781082461.4822302
+  },
+  "search:Node.js + MongoDB + Mongoose:mongoose schema validation and": {
+    "content": "- **Latest Version**: Mongoose v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n  - `npx mongoose --version`\n- **Key Config Options**:\n  - `_id`: Automatically assigned ObjectId if not provided.\n  - `timestamps`: Adds createdAt and updatedAt fields to your schema.\n  - `validate`: Custom validators for schema fields.",
+    "source": "web_search",
+    "updated_at": 1781082479.5981414
+  },
+  "search:Node.js + MongoDB + Mongoose:mongoose schema validation and_ex": {
+    "content": "- **Latest Version**: Mongoose v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n- **Key Config Options**:\n  - `required`: Ensures a field is not null or undefined.\n  - `default`: Specifies a default value for a field if none is provided.\n  - `unique`: Ensures the field values are unique across all documents in the collection.\n  - `index`: Creates an index on the specified field(s) to improve query performance.",
+    "source": "code_example",
+    "updated_at": 1781082484.7916572
+  }
+}

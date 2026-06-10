@@ -1,0 +1,12 @@
+{
+  "search:Kubernetes + Elasticsearch + Logstash:kubernetes logging with elasti": {
+    "content": "- **Install ECK Operator**: `kubectl apply -f https://download.elastic.co/downloads/eck/2.4.0/all-in-one.yaml`\n- **Deploy Logstash**: Use the QuickStart guide from Elastic.\n- **Key Config Options**:\n  - Elasticsearch: `replicas`, `resources`, `storageClass`.\n  - Logstash: `pipeline.conf`, `inputs`, `outputs`.\n  - Kibana: `elasticsearch.url`, `server.host`.\n- **Latest Versions**: ECK 2.4.0, Logstash 8.5.0.\n- **CLI Commands**:\n  - Check ECK status: `kubectl get pods`\n  - Deploy Filebeat: `kubectl apply -f filebeat-config.yaml`",
+    "source": "web_search",
+    "updated_at": 1781082563.6157205
+  },
+  "search:Kubernetes + Elasticsearch + Logstash:kubernetes logging with elasti_ex": {
+    "content": "- **Install ECK Operator**: `kubectl apply -f https://download.elastic.co/downloads/eck/2.8.0/all-in-one.yaml`\n- **Deploy Logstash**: Use the latest version from Elastic's Helm charts.\n- **Key Config Options**:\n  - `output.elasticsearch.hosts`: Elasticsearch URL\n  - `input.file.path`: Path to log files\n  - `filter`: Define log processing rules\n- **CLI Commands**:\n  - `kubectl apply -f <logstash-config-file.yaml>`\n  - `kubectl get pods`\n  - `kubectl logs <logstash-pod-name>`\n\nEnsure you replace placeholders with actual values for your environment.",
+    "source": "code_example",
+    "updated_at": 1781082578.2179568
+  }
+}

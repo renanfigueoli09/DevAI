@@ -1,0 +1,22 @@
+{
+  "search:Ruby on Rails + PostgreSQL + Active Record:active record associations and": {
+    "content": "- Use `rails generate model` to create models.\n- Utilize `rails db:migrate` to apply migrations.\n- For associations, use:\n  - `belongs_to`\n  - `has_many`\n  - `has_and_belongs_to_many`\n  - `polymorphic: true`\n  - Single Table Inheritance (STI) with `type` column.\n- Implement validations in models using methods like `validates_presence_of`, `validates_uniqueness_of`, etc.\n- Use `rails console` for interactive testing and debugging.\n- Check the latest Rails version on [RubyGems](https://rubygems.org/gems/rails).\n- Configure database settings in `config/database.yml`.\n- Utilize callbacks like `before_save`, `after_create`, etc., for model logic.",
+    "source": "web_search",
+    "updated_at": 1781082524.237398
+  },
+  "search:Ruby on Rails + PostgreSQL + Active Record:active record associations and_ex": {
+    "content": "- **CLI Commands**:\n  - `rails generate model ModelName`\n  - `rails db:migrate`\n\n- **Latest Versions**:\n  - Ruby on Rails 7.0.5\n\n- **Key Config Options**:\n  - `config.active_record.database_configuration`\n  - `config.action_controller.default_url_options`",
+    "source": "code_example",
+    "updated_at": 1781082537.1519797
+  },
+  "search:Ruby on Rails + PostgreSQL + Active Record:postgresql indexing strategies": {
+    "content": "- Use `CREATE INDEX CONCURRENTLY` for non-blocking index creation.\n- For Rails, consider using the `pg_indexes` gem to manage indexes.\n- Implement composite indexes on frequently queried columns.\n- Utilize partial indexes for filtering queries based on conditions.\n- Expression indexes can be created for complex query optimizations.\n- Covering indexes should include all necessary data in the index itself.\n- Monitor and analyze query performance with tools like `EXPLAIN ANALYZE`.\n- Regularly review and optimize indexes based on application usage patterns.",
+    "source": "web_search",
+    "updated_at": 1781082544.5459044
+  },
+  "search:Ruby on Rails + PostgreSQL + Active Record:postgresql indexing strategies_ex": {
+    "content": "- Use `rails db:create` to create a new database.\n- Employ `rails db:migrate` to apply migrations.\n- Apply compound indexes using `add_index :table_name, [:column1, :column2]`.\n- Utilize partial indexes with `add_index :table_name, :column, where: \"condition\"`.\n- Implement expression indexes with `add_index :table_name, ->(t){ t[:column].lower }`.\n- Create covering indexes using `add_index :table_name, [:column1, :column2], include: [:column3]`.\n- Monitor index performance with `EXPLAIN ANALYZE SELECT * FROM table_name WHERE condition`.\n- Regularly review and optimize indexes based on query patterns.\n- Ensure latest Rails version for optimal indexing features.",
+    "source": "code_example",
+    "updated_at": 1781082556.195553
+  }
+}
