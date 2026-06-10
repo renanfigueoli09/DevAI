@@ -1,0 +1,22 @@
+{
+  "search:python-django-logging:django logging best practices ": {
+    "content": "- Use `python manage.py runserver --logging-config=LOGGING` to specify logging configuration.\n- Django uses the `dictConfig` format for logging by default.\n- Key config options include `version`, `disable_existing_loggers`, and `formatters`.\n- Consider using `django.utils.log.RequireDebugTrueFilter` to enable debug logs only in development.\n- For production, use a file-based handler like `FileHandler` or `RotatingFileHandler`.\n- Implement `TimedRotatingFileHandler` for time-based log rotation.\n- Use `logging.getLogger(__name__)` to get a logger instance for your application.\n- Configure email handlers using `SMTPHandler` for critical errors.\n- Ensure all log messages include timestamps and severity levels.\n- Regularly review and clean up old logs to avoid disk space issues.",
+    "source": "web_search",
+    "updated_at": 1781063605.9135282
+  },
+  "search:python-django-logging:django logging best practices _ex": {
+    "content": "- Use `python manage.py runserver` to start the Django development server.\n- Configure logging in `settings.py` using the `LOGGING` dictionary.\n- Set log levels such as `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`.\n- Define log handlers like `StreamHandler` for console output or `FileHandler` for file storage.\n- Use formatters to specify the format of log messages, e.g., `'%(asctime)s - %(name)s - %(levelname)s - %(message)s'`.\n- Apply filters to selectively log messages based on conditions.\n- Utilize Django's built-in loggers like `django`, `django.request`, and `django.server` for different parts of your application.",
+    "source": "code_example",
+    "updated_at": 1781063615.852212
+  },
+  "search:python-django-logging:advanced django logging config": {
+    "content": "- Use `python manage.py runserver` to start the Django development server.\n- Configure logging in `settings.py` using the `LOGGING` dictionary.\n- Set log levels like `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`.\n- Define handlers for different outputs (e.g., file, console).\n- Use formatters to specify the log message format.\n- Example of a basic logging configuration:\n  ```python\n  LOGGING = {\n      'version': 1,\n      'disable_existing_loggers': False,\n      'handlers': {\n          'file': {\n              'level': 'DEBUG',\n              'class': 'logging.FileHandler',\n              'filename': '/path/to/debug.log',\n          },\n      },\n      'loggers': {\n          'django': {\n              'handlers': ['file'],\n              'level': 'DEBUG',\n              'propagate': True,\n          },\n      },\n  }\n  ```\n- For JSON formatted logs, use `json` formatter:\n  ```python\n  'formatters': {\n      'json': {\n          '()': 'pythonjsonlogger.jsonlogger.JsonFormatter',\n      },\n  },\n  ```\n- Ensure to install `python-json-logger` for JSON formatting: `pip install python-json-logger`.",
+    "source": "web_search",
+    "updated_at": 1781063636.0825286
+  },
+  "search:python-django-logging:advanced django logging config_ex": {
+    "content": "- **CLI Commands**:\n  - `python manage.py runserver` to start the Django development server.\n  \n- **Latest Versions**:\n  - Ensure using the latest stable version of Django for optimal functionality and security.\n\n- **Key Config Options**:\n  - `LOGGING` dictionary in settings.py to configure logging levels and handlers.\n  - Example configuration for a file handler:\n    ```python\n    LOGGING = {\n        'version': 1,\n        'disable_existing_loggers': False,\n        'formatters': {\n            'verbose': {\n                'format': '{levelname} {asctime} {module} {message}',\n                'style': '{',\n            },\n        },\n        'handlers': {\n            'file': {\n                'level': 'DEBUG',\n                'class': 'logging.FileHandler',\n                'filename': '/path/to/django/debug.log',\n                'formatter': 'verbose',\n            },\n        },\n        'loggers': {\n            'django': {\n                'handlers': ['file'],\n                'level': 'DEBUG',\n                'propagate': True,\n            },\n        },\n    }\n    ```\n  - Adjust `filename` and other parameters as needed for your environment.",
+    "source": "code_example",
+    "updated_at": 1781063651.4165032
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:typescript-svelte-query:typescript svelte query for da": {
+    "content": "- **CLI Commands**:\n  - `npm install @wundergraph/svelte-query`\n  - `npx svelte-query generate`\n\n- **Latest Versions**:\n  - Svelte Query: v4.0.0\n  - TanStack/query: v5.0.0\n\n- **Key Config Options**:\n  - `queryClient`: Custom query client configuration.\n  - `defaultOptions`: Default options for all queries.\n  - `staleTime`: Time in milliseconds after which a query is considered stale.\n  - `refetchInterval`: Interval at which to refetch data.",
+    "source": "web_search",
+    "updated_at": 1781063548.5246043
+  },
+  "search:typescript-svelte-query:typescript svelte query for da_ex": {
+    "content": "- **GitHub Repository**: TanStack/query - For TypeScript/JS, React Query, Solid Query, Svelte Query, and Vue Query.\n- **Latest Version**: Ensure you use the latest version of Svelte Query for compatibility and features.\n- **CLI Commands**:\n  - `npm install @tanstack/svelte-query`\n  - `yarn add @tanstack/svelte-query`\n- **Key Config Options**:\n  - `queryKey`: Unique key for each query.\n  - `queryFn`: Function to fetch data.\n  - `initialData`: Initial data to display before fetching.\n  - `refetchOnWindowFocus`: Boolean to control refetching on window focus.",
+    "source": "code_example",
+    "updated_at": 1781063556.300954
+  },
+  "search:typescript-svelte-query:svelte query performance optim": {
+    "content": "- Install Svelte Query using npm: `npm install @tanstack/svelte-query`\n- Visit TanStack Query documentation at [tanstack.com](https://tanstack.com)\n- Key configuration options include:\n  - `queryKey`: Unique identifier for the query.\n  - `queryFn`: Function that fetches data.\n  - `initialData`: Initial data to display while fetching.\n  - `staleTime`: Time in milliseconds after which data is considered stale.\n  - `refetchInterval`: Interval at which data should be refetched.\n- Use `useQuery` hook for managing queries:\n  ```javascript\n  import { useQuery } from '@tanstack/svelte-query';\n\n  const fetchPosts = async () => {\n    const response = await fetch('https://api.example.com/posts');\n    return response.json();\n  };\n\n  const { data, isLoading, isError } = useQuery(['posts'], fetchPosts);\n  ```\n- For infinite loading, use `useInfiniteQuery`:\n  ```javascript\n  import { useInfiniteQuery } from '@tanstack/svelte-query';\n\n  const fetchPosts = async ({ pageParam = 1 }) => {\n    const response = await fetch(`https://api.example.com/posts?page=${pageParam}`);\n    return response.json();\n  };\n\n  const { data, isLoading, isError, fetchNextPage } = useInfiniteQuery(['posts'], fetchPosts);\n  ```\n- For mutations, use `useMutation`:\n  ```javascript\n  import { useMutation } from '@tanstack/svelte-query';\n\n  const createPost = async (newPost) => {\n    const response = await fetch('https://api.example.com/posts', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify(newPost),\n    });\n    return response.json();\n  };\n\n  const mutation = useMutation(createPost, {\n    onSuccess: (newData) => {\n      // Handle successful creation\n    },\n    onError: (error) => {\n      // Handle error\n    },\n  });\n\n  mutation.mutate({ title: 'New Post', content: 'This is a new post.' });\n  ```\n- Latest version can be found on [npm](https://www.npmjs.com/package/@tanstack/svelte-query).",
+    "source": "web_search",
+    "updated_at": 1781063585.3838592
+  },
+  "search:typescript-svelte-query:svelte query performance optim_ex": {
+    "content": "- **CLI Commands**:\n  - `npm install svelte-query`\n  - `npx create-svelte@latest my-app`\n\n- **Latest Versions**:\n  - Svelte Query: v4.0.0\n\n- **Key Config Options**:\n  - `queryCache`: Manages caching of query results.\n  - `refetchInterval`: Automatically refetches data at specified intervals.\n  - `staleTime`: Determines how long a query result is considered fresh.",
+    "source": "code_example",
+    "updated_at": 1781063595.869914
+  }
+}
