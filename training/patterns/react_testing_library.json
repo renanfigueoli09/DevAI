@@ -2,7 +2,7 @@
   "search:react+testing-library:react testing patterns 2025": {
     "content": "- **React Testing Library**: For component tests.\n- **Jest**: For logic tests.\n- **Wrapper Utilities**: Needed for shared hooks and asynchronous flows, especially when mocking Redux Toolkit slices or simulating queries.\n- **Advanced Testing Patterns**: Explore new patterns to ensure application reliability in 2025.\n- **CLI Commands**:\n  - `npx create-react-app my-app`: To create a new React app.\n  - `npm test`: To run tests using Jest.\n- **Latest Versions**:\n  - React: v18.2\n  - Jest: v29.3\n- **Key Config Options**:\n  - In `jest.config.js`, configure `testEnvironment` to `\"jsdom\"` for DOM testing.\n  - Use `setupFilesAfterEnv` to include setup files like `@testing-library/jest-dom/extend-expect`.",
     "source": "web_search",
-    "updated_at": 1781054530.9610827
+    "updated_at": 1781054729.2527623
   },
   "search:react+testing-library:react testing patterns 2025_ex": {
     "content": "- Use `npm install --save-dev @testing-library/react @testing-library/jest-dom`\n- Run tests with `npm test` or `yarn test`\n- Configure Jest in `package.json`:\n  ```json\n  \"jest\": {\n    \"setupFilesAfterEnv\": [\"@testing-library/jest-dom/extend-expect\"]\n  }\n  ```\n- Key patterns: Render, Interact, Assert\n- Use `render()` from `@testing-library/react`\n- Simulate events with `fireEvent` from `@testing-library/react`\n- Assertions with Jest and `@testing-library/jest-dom`\n- Update dependencies to latest versions regularly",

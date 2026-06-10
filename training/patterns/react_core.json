@@ -1,12 +1,12 @@
 {
   "search:react+core:react 19 hooks tanstack query ": {
-    "content": "- React v19 is now stable.\n- TanStack Query remains popular for data fetching and state management.\n- Zustand offers a lightweight alternative to Redux or MobX.\n- For Next-Gen React State Management, consider using Zustand with TanStack Query.\n- Key config options in Zustand include `create` function and `set` method.\n- Latest versions: React 19, Zustand latest, TanStack Query latest.",
+    "content": "- React v19 is now stable.\n- TanStack Query remains essential for data fetching and caching.\n- Zustand offers lightweight state management.\n- For Next-Gen React State Management, consider Zustand and TanStack Query together.\n- Latest versions:\n  - React: v19\n  - TanStack Query: v4.20.0 (as of Nov 2025)\n  - Zustand: v4.3.0 (as of Nov 2025)\n- Key config options for Zustand include `create` and `useStore`.\n- For integrating TanStack Query with Zustand, use the `useState` hook to manage state.\n- Consider using TypeScript for type safety in both libraries.\n- CLI commands:\n  - To create a new React project: `npx create-react-app my-app`\n  - To install Zustand: `npm install zustand`\n  - To install TanStack Query: `npm install @tanstack/react-query`",
     "source": "web_search",
-    "updated_at": 1780943039.4202342
+    "updated_at": 1781054678.1986122
   },
   "search:react+core:react 19 hooks tanstack query _ex": {
-    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @tanstack/react-query zustand`\n\n- **Latest Versions**:\n  - React 19\n  - TypeScript 4.9\n  - Zustand 4.3.0\n  - TanStack Query 4.25.0\n\n- **Key Config Options**:\n  - In `vite.config.ts`, ensure you have the following plugins: `react()`, `@vitejs/plugin-typescript`.\n  - For Zustand, initialize a store in your project.\n  - Configure TanStack Query with default options in your main component or provider.",
+    "content": "- **CLI Commands**:\n  - `npx create-react-app my-app --template typescript`\n  - `npm install @tanstack/react-query zustand`\n\n- **Latest Versions**:\n  - React Query: v4.x\n  - Zustand: v4.x\n\n- **Key Config Options**:\n  - React Query: `useQuery`, `useMutation`, `queryClient`\n  - Zustand: `createStore`, `getState`, `setState`",
     "source": "code_example",
-    "updated_at": 1780943041.4902964
+    "updated_at": 1781054702.0825288
   }
 }
