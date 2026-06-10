@@ -1,0 +1,7 @@
+{
+  "search:Logging Patterns for Docker and Kubernetes:docker logging": {
+    "content": "- **CLI Commands**:\n  - `docker logs <container_id>`: View logs of a running container.\n  - `docker run --log-driver=loki --log-opt loki-url=http://loki:3100 <image_name>`: Run a container with Loki logging driver.\n\n- **Latest Versions**:\n  - Docker Engine: Latest stable version as of my last update.\n  - Loki: Latest release from Grafana Labs.\n\n- **Key Config Options**:\n  - `--log-driver`: Specifies the logging driver to use (e.g., `json-file`, `syslog`, `gelf`).\n  - `--log-opt`: Additional options for the logging driver, such as `loki-url`.\n\nFor detailed information and updates, refer to the official Docker and Loki documentation.",
+    "source": "web_search",
+    "updated_at": 1781070424.8709848
+  }
+}

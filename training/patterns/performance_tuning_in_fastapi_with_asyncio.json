@@ -1,0 +1,22 @@
+{
+  "search:Performance Tuning in FastAPI with Asyncio:fastapi performance tuning": {
+    "content": "- Use `uvicorn` as the ASGI server for production.\n- Set `workers=4` in `uvicorn` to leverage multiple CPU cores.\n- Enable `keep-alive` connections by setting `keep_alive_timeout=5`.\n- Utilize `asyncio` for asynchronous operations within FastAPI endpoints.\n- Implement caching mechanisms like Redis or Memcached for frequently accessed data.\n- Optimize database queries using SQLAlchemy's ORM capabilities.\n- Use middleware to log request and response times for performance monitoring.\n- Enable gzip compression in production by setting `gzip=True` in `uvicorn`.\n- Regularly update FastAPI, Starlette, and Pydantic to the latest versions for performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781070351.8826668
+  },
+  "search:Performance Tuning in FastAPI with Asyncio:fastapi performance tuning_ex": {
+    "content": "- Use `uvicorn` with the `--reload` flag during development.\n- Upgrade to the latest version of FastAPI and its dependencies.\n- Implement caching mechanisms like Redis or Memcached.\n- Utilize asynchronous programming for I/O-bound tasks.\n- Optimize database queries using SQLAlchemy's ORM features.\n- Configure middleware for logging and request/response times.\n- Use `asyncio` for parallel execution of tasks.\n- Monitor performance with tools like `cProfile` or `PyCharm Profiler`.\n- Adjust worker class in `uvicorn` (`--workers 4` for example).\n- Enable gzip compression to reduce response sizes.",
+    "source": "code_example",
+    "updated_at": 1781070359.4235168
+  },
+  "search:Performance Tuning in FastAPI with Asyncio:asyncio optimization": {
+    "content": "- Use `--inspect` flag in Node.js for profiling.\n- Utilize Chrome DevTools for detailed performance analysis.\n- Employ the async_hooks module to track asynchronous resources.\n- Leverage Performance API methods for precise measurement in browser environments.\n- Visit [MoldStud](https://moldstud.io/blog/asynchronous-programming-optimization-guide-in-python) for a comprehensive guide on optimizing Python's asyncio applications.\n- Master asyncio semaphores using the `asyncio.Semaphore` class for concurrency control.\n- Optimize asyncio event loops by adjusting the number of workers in `concurrent.futures.ThreadPoolExecutor`.\n- Integrate `asyncio.Queue` for efficient task management and synchronization between tasks.",
+    "source": "web_search",
+    "updated_at": 1781070369.5112853
+  },
+  "search:Performance Tuning in FastAPI with Asyncio:asyncio optimization_ex": {
+    "content": "- Import `asyncio` and `aiofiles` modules.\n- Use `aiofiles.read()` instead of `read()`.\n- Declare functions as async using `async def`.\n- Invoke `async.gather()` to run coroutines concurrently.\n- Utilize `awaitable tasks` for efficient program building.\n- Explore Python's asyncio with hands-on examples.\n- Consider using the latest version of Python for optimal performance.",
+    "source": "code_example",
+    "updated_at": 1781070376.1058528
+  }
+}

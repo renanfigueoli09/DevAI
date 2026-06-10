@@ -1,0 +1,22 @@
+{
+  "search:Advanced Error Handling in Microservices:microservices error handling": {
+    "content": "- Use `go build -ldflags=\"-s -w\"` to compile Go microservices for production.\n- Implement centralized error handling using a package like `github.com/pkg/errors`.\n- Configure logging with frameworks such as `logrus` or `zap`, setting levels and output formats.\n- Use HTTP status codes to indicate the type of error (e.g., 400 for bad request, 500 for server error).\n- Implement circuit breakers using libraries like `github.com/sony/gobreaker`.\n- Utilize message brokers with built-in error handling features, such as RabbitMQ or Kafka.\n- Use gRPC's status codes and messages to handle errors in microservices communication.\n- Implement retries with exponential backoff for transient errors using packages like `github.com/cenkalti/backoff/v4`.\n- Monitor error rates and latency using observability tools like Prometheus and Grafana.",
+    "source": "web_search",
+    "updated_at": 1781070271.296587
+  },
+  "search:Advanced Error Handling in Microservices:microservices error handling_ex": {
+    "content": "- Use `curl` or Postman to test microservices endpoints.\n- Implement centralized error handling using frameworks like Spring Boot's `@ControllerAdvice`.\n- Configure logging levels in `application.properties` for better visibility.\n- Use HTTP status codes to indicate the type of error (e.g., 404 for Not Found, 500 for Internal Server Error).\n- Implement circuit breakers with libraries like Hystrix or Resilience4j for fault tolerance.\n- Use a service mesh like Istio for managing and routing traffic between microservices.\n- Regularly update dependencies to the latest versions using tools like Maven or Gradle.\n- Monitor error rates and latency using monitoring tools like Prometheus or Grafana.\n- Implement retries with exponential backoff for transient errors.",
+    "source": "code_example",
+    "updated_at": 1781070279.6811154
+  },
+  "search:Advanced Error Handling in Microservices:resilient microservices": {
+    "content": "- **CLI Commands**:\n  - `kubectl rollout restart deployment <deployment-name>`: Restarts all pods in the specified deployment.\n  - `docker-compose up --force-recreate`: Recreates containers for services defined in a docker-compose.yml file.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Docker Compose: 1.29.2\n\n- **Key Config Options**:\n  - **Kubernetes**: `livenessProbe` and `readinessProbe` for monitoring service health.\n  - **Docker Compose**: `restart_policy` to specify restart behavior of services.",
+    "source": "web_search",
+    "updated_at": 1781070290.4601247
+  },
+  "search:Advanced Error Handling in Microservices:resilient microservices_ex": {
+    "content": "- Use `mvn spring-boot:run` to start the Spring Boot application.\n- Update dependencies in `pom.xml` for latest versions of Spring Boot, Kafka, and Polly.\n- Configure circuit breaker using Polly with options like `CircuitBreakerPolicy`.\n- Implement retry logic with `RetryPolicy` in Polly.\n- Set fallback methods using `FallbackPolicy` to handle failures gracefully.\n- Use `@EnableCircuitBreaker` annotation on the main application class.\n- Configure Kafka properties in `application.properties` for message orchestration.\n- Utilize Spring Boot Actuator for monitoring and managing microservices.",
+    "source": "code_example",
+    "updated_at": 1781070297.852843
+  }
+}
