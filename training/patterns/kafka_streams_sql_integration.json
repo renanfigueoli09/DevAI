@@ -13,5 +13,45 @@
     "content": "- **Latest Kafka Streams Version**: 3.4.0\n- **CLI Commands**:\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n  - `kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic`\n  - `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning`\n- **Key Config Options**:\n  - `application.id`: Unique identifier for the Kafka Streams application.\n  - `bootstrap.servers`: List of Kafka brokers to connect to.\n  - `default.key.serde` and `default.value.serde`: Serdes for key and value types.\n- **ksqlDB Version**: 0.26.0\n- **CLI Commands**:\n  - `ksql --server http://localhost:8088`\n  - `CREATE STREAM my_stream (id INT, name VARCHAR) WITH (KAFKA_TOPIC='my-topic', VALUE_FORMAT='JSON');`\n  - `SELECT * FROM my_stream;`",
     "source": "web_search",
     "updated_at": 1781013095.362592
+  },
+  "search:Kafka Streams SQL Integration:error handling in kafka stream": {
+    "content": "- Use `kafka-topics.sh --bootstrap-server <broker_address> --create --topic <topic_name> --partitions <num_partitions> --replication-factor <replication_factor>`\n- Set `default.deserialization.exception.handler` to `org.apache.kafka.streams.errors.LogAndContinueExceptionHandler`\n- Implement custom exception handlers by extending `org.apache.kafka.streams.errors.StreamsExceptionHandler`\n- Use `KafkaStreams::start()` and `KafkaStreams::close()` for lifecycle management\n- Configure error logging with `log4j.properties` or `logback.xml`\n- Monitor Kafka Streams metrics using JMX or Prometheus\n- Handle `StreamProcessingException` for processing errors\n- Implement retry logic in user-defined functions (UDFs)",
+    "source": "web_search",
+    "updated_at": 1781051743.4898655
+  },
+  "search:Kafka Streams SQL Integration:error handling in kafka stream_ex": {
+    "content": "- Use `kafka-streams` version 3.0.0 or later.\n- Implement error handling in your Kafka Streams SQL queries using the provided interfaces.\n- Configure consumer properties like `enable.auto.commit`, `auto.offset.reset`, and `session.timeout.ms`.\n- Set producer properties such as `acks`, `retries`, and `delivery.timeout.ms` for robust data delivery.\n- Use try-catch blocks to handle exceptions in your stream processing logic.\n- Implement custom error handlers by extending the `ExceptionHandler` interface.\n- Configure logging levels for detailed error tracking using SLF4J or Logback.\n- Monitor Kafka Streams metrics for real-time error detection and resolution.",
+    "source": "code_example",
+    "updated_at": 1781051765.3539379
+  },
+  "search:Kafka Streams SQL Integration:testing strategies for kafka s": {
+    "content": "- Use `TopologyTestDriver` for unit testing Kafka Streams applications.\n- Add `kafka-streams-test-utils` as a dependency in your test codebase.\n- Ensure you have the latest version of Kafka Streams and its dependencies to leverage the most recent features and bug fixes.\n- Key config options include `application.id`, `bootstrap.servers`, and `default.key.deserializer`.\n- For integration testing, consider using tools like Confluent Platform or setting up a local Kafka cluster.\n- Run tests with `mvn test` or `gradle test` depending on your build tool.\n- Utilize the `KafkaTestUtils` class for common tasks such as creating topics and producing/consuming messages.\n- For end-to-end testing, consider using frameworks like Testcontainers to manage Kafka clusters dynamically.",
+    "source": "web_search",
+    "updated_at": 1781051779.4204822
+  },
+  "search:Kafka Streams SQL Integration:testing strategies for kafka s_ex": {
+    "content": "- Use `TopologyTestDriver` for unit tests.\n- Employ `EmbeddedKafka` and `Testcontainers` for integration tests.\n- Ensure Kafka Streams version compatibility with your project.\n- Configure state stores and windowed aggregations in your topology.\n- Utilize `kafka-streams-examples` for practical code snippets.\n- Run tests using Maven or Gradle commands, e.g., `mvn test`.\n- Check the latest Confluent documentation for updates.",
+    "source": "code_example",
+    "updated_at": 1781051790.8639731
+  },
+  "search:Kafka Streams SQL Integration:security best practices for ka": {
+    "content": "- Use `kafka-topics.sh` to create topics with encryption enabled, e.g., `--config encryption.key.provider.class.name=org.apache.kafka.common.security.scram.ScramLoginModule`.\n- Ensure Kafka brokers are configured with SSL for secure communication.\n- Set `security.protocol=SSL` in client properties to connect securely.\n- Use `kafka-configs.sh` to update topic configurations, e.g., `--alter --topic my-topic --add-config \"encryption.key.provider.class.name=org.apache.kafka.common.security.scram.ScramLoginModule\"`.\n- Enable SASL/SCRAM authentication by setting `security.inter.broker.protocol=SASL_SSL`, `sasl.mechanism.inter.broker.protocol=SCRAM-SHA-256` in broker properties.\n- Configure clients with SASL settings, e.g., `sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username=\"admin\" password=\"admin-secret\";`.\n- Use the latest Kafka version for security patches and improvements.\n- Monitor Kafka metrics using tools like Confluent Control Center or JMX to detect anomalies.",
+    "source": "web_search",
+    "updated_at": 1781051801.4093475
+  },
+  "search:Kafka Streams SQL Integration:security best practices for ka_ex": {
+    "content": "- **CLI Commands**: Use `kafka-topics.sh` to manage topics, e.g., `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1`.\n- **Latest Versions**: Ensure using Kafka Streams and Confluent Platform at their latest versions for security patches.\n- **Key Config Options**:\n  - `security.protocol`: Set to `SSL` or `SASL_SSL` for encrypted communication.\n  - `sasl.mechanism`: Specify the SASL mechanism, e.g., `PLAIN`, `SCRAM-SHA-256`.\n  - `ssl.truststore.location`: Path to the truststore file.\n  - `ssl.keystore.location`: Path to the keystore file.\n  - `sasl.jaas.config`: JAAS configuration for SASL authentication.",
+    "source": "code_example",
+    "updated_at": 1781051812.3110805
+  },
+  "search:Kafka Streams SQL Integration:performance optimization techn": {
+    "content": "- **CLI Commands**:\n  - `kafka-topics.sh --bootstrap-server <broker> --alter --topic <topic> --partitions <num_partitions>`\n  - `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group_id>`\n\n- **Latest Versions**:\n  - Kafka Streams: 3.4.0\n  - RocksDB: 7.12.0\n\n- **Key Config Options**:\n  - `state.cleanup.delay.ms`: Delay before state stores are cleaned up.\n  - `cache.max.bytes.buffering`: Maximum size of the in-memory buffer for caching records.\n  - `task.max.concurrency`: Maximum number of tasks per application instance.",
+    "source": "web_search",
+    "updated_at": 1781051821.6300921
+  },
+  "search:Kafka Streams SQL Integration:performance optimization techn_ex": {
+    "content": "- Use `kafka-topics.sh --alter --topic <topic_name> --partitions <num_partitions>` to increase topic partitions.\n- Set `state.cleanup.delay.ms` to a higher value in Kafka Streams configuration to delay state store cleanup.\n- Adjust `cache.max.bytes.buffering` and `buffer.memory` in Kafka Streams properties for better memory management.\n- Use RocksDB as the state store by setting `state.store.cache.enabled=false` to avoid caching.\n- Increase `task.max.concurrency` to allow more parallelism in processing tasks.\n- Monitor and adjust `concurrent.streams` based on available resources.\n- Utilize `kafka-consumer-groups.sh --bootstrap-server <broker> --describe --group <group_id>` for consumer group monitoring.\n- Apply query optimization techniques like partition pruning, filtering early, and using windowing functions effectively.",
+    "source": "code_example",
+    "updated_at": 1781051832.838618
   }
 }

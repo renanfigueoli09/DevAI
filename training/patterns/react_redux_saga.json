@@ -8,5 +8,45 @@
     "content": "- **CLI Commands**: `npx create-react-app my-app` to set up a new React app.\n- **Latest Versions**:\n  - React: v18.2.0\n  - Redux: v4.1.5\n  - Redux-Saga: v1.3.6\n- **Key Config Options**:\n  - In `store.js`, configure middleware with `applyMiddleware(sagaMiddleware)`.\n  - Define sagas using generator functions and `yield` effects.\n  - Use `takeEvery` or `takeLatest` to handle actions asynchronously.\n  - Configure `sagaMiddleware.run(rootSaga)` in the store setup.",
     "source": "code_example",
     "updated_at": 1780942821.039601
+  },
+  "search:React + Redux Saga:error handling in react + redu": {
+    "content": "- Use `redux-saga` version 1.x or later.\n- Implement error handling using `try/catch` blocks within Saga generators.\n- Dispatch actions like `PRODUCTS_REQUEST_FAILED` to handle errors in the store.\n- Consider using Redux Toolkit's `createAsyncThunk` for more robust async action handling.\n- Ensure your Saga listens for specific actions and handles them appropriately.\n- Use `redux-thunk` if you prefer a simpler approach to handling asynchronous actions.",
+    "source": "web_search",
+    "updated_at": 1781051968.605088
+  },
+  "search:React + Redux Saga:error handling in react + redu_ex": {
+    "content": "- Use `try/catch` syntax within Redux Saga Generator functions to handle errors.\n- Example of catching an error in a Saga:\n  ```javascript\n  function* fetchUser(action) {\n    try {\n      const user = yield call(Api.fetchUser, action);\n      yield put({ type: 'FETCH_USER_SUCCESS', user });\n    } catch (error) {\n      yield put({ type: 'FETCH_USER_FAILURE', error });\n    }\n  }\n  ```\n- Ensure your API function returns a Promise that resolves or rejects appropriately.\n- Handle specific errors like unauthorized by checking the response status and throwing custom errors if necessary.\n- Use `yield call` to invoke asynchronous functions within Sagas, which can be intercepted for error handling.",
+    "source": "code_example",
+    "updated_at": 1781051982.2811196
+  },
+  "search:React + Redux Saga:testing strategies for react c": {
+    "content": "- Use Cypress for end-to-end testing instead of Playwright.\n- Employ React Testing Library and Vite for component and integration tests.\n- Install redux-saga-test-plan for advanced saga testing capabilities.\n- For unit testing sagas, use `redux-saga-test-plan` with matchers like `expectSaga`.\n- Key config options in Cypress include `baseUrl`, `defaultCommandTimeout`, and `viewportWidth/Height`.\n- Ensure your test environment is isolated by mocking dependencies within sagas using redux-saga-test-plan.\n- For integration testing, simulate API calls using libraries like `msw` (Mock Service Worker).\n- Use Jest for snapshot testing of React components.\n- Keep your Redux store configuration clean and modular for easier testing.",
+    "source": "web_search",
+    "updated_at": 1781051991.384698
+  },
+  "search:React + Redux Saga:testing strategies for react c_ex": {
+    "content": "- Use `redux-saga-test-plan` for testing Redux Sagas.\n- Install it via npm or yarn: `npm install redux-saga-test-plan --save-dev`.\n- Import `expectSaga` from `redux-saga-test-plan/jest`.\n- Write tests using `expectSaga()` to test sagas in isolation.\n- Use `.put()`, `.call()`, and other matchers to assert on actions and effects.\n- Ensure coverage by testing critical flows, avoiding unnecessary unit tests for simple cases.\n- For integration tests, focus on end-to-end scenarios that require the full stack.",
+    "source": "code_example",
+    "updated_at": 1781052001.9874969
+  },
+  "search:React + Redux Saga:security best practices when i": {
+    "content": "- Use `create-react-app` for setting up new React projects.\n- Install Redux and Redux Toolkit using npm or yarn:\n  ```bash\n  npm install redux react-redux @reduxjs/toolkit\n  ```\n- Install Redux Saga:\n  ```bash\n  npm install redux-saga\n  ```\n- Configure the store with Redux Toolkit's `configureStore` function, including middleware for Redux Saga.\n- Create a root saga using `createSagaMiddleware` and run it in your store setup.\n- Use `redux-toolkit`'s `createAsyncThunk` for handling asynchronous actions in a more structured way.\n- Utilize React hooks like `useSelector` and `useDispatch` from `react-redux` to interact with the Redux store.\n- Implement side effects using Redux Saga's `takeEvery`, `takeLatest`, or `call` effects.\n- For testing, use Jest and React Testing Library along with `redux-mock-store` for mocking the store.\n- Ensure your reducers are pure functions and avoid mutating state directly.",
+    "source": "web_search",
+    "updated_at": 1781052011.9738631
+  },
+  "search:React + Redux Saga:security best practices when i_ex": {
+    "content": "- **CLI Commands**: Use `npm install redux-saga` or `yarn add redux-saga`.\n- **Latest Versions**: Ensure you are using the latest version of Redux and Redux Saga by running `npm update redux redux-saga` or `yarn upgrade redux redux-saga`.\n- **Key Config Options**:\n  - In your store configuration, include Redux Saga middleware: \n    ```javascript\n    import createSagaMiddleware from 'redux-saga';\n    const sagaMiddleware = createSagaMiddleware();\n    const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));\n    ```\n  - Use `sagaMiddleware.run` to start the root saga:\n    ```javascript\n    sagaMiddleware.run(rootSaga);\n    ```\n\nThese actionable facts provide a clear guide for integrating Redux Saga into React applications while ensuring security and efficiency.",
+    "source": "code_example",
+    "updated_at": 1781052029.9981608
+  },
+  "search:React + Redux Saga:advanced debugging methods for": {
+    "content": "- **CLI Commands**: `npm install redux-saga`\n- **Latest Versions**: Check on [Redux-Saga GitHub](https://github.com/redux-saga/redux-saga)\n- **Key Config Options**:\n  - `createSagaMiddleware()`: Creates a middleware that can be used with Redux.\n  - `sagaMiddleware.run(rootSaga)`: Runs the root saga.\n  - `takeEvery(actionType, workerSaga)`: Listens for dispatched actions of type `actionType` and runs `workerSaga`.\n  - `put(action)`: Dispatches an action to the store.",
+    "source": "web_search",
+    "updated_at": 1781052050.520856
+  },
+  "search:React + Redux Saga:advanced debugging methods for_ex": {
+    "content": "- Use `create-react-app` to bootstrap new React projects.\n- Install Redux and Redux-Saga using npm or yarn:\n  ```bash\n  npm install redux react-redux @reduxjs/toolkit redux-saga\n  ```\n- Configure Redux store with `configureStore` from `@reduxjs/toolkit`.\n- Create a root saga file (e.g., `rootSaga.js`) to manage all sagas.\n- Use `yield takeEvery` or `takeLatest` in sagas for handling actions.\n- For debugging, use the Chrome DevTools extension \"Redux DevTools\".\n- Set up middleware in Redux store with `applyMiddleware(sagaMiddleware)`.\n- Run sagas using `sagaMiddleware.run(rootSaga)` after creating the store.\n- Use `redux-saga/effects` like `call`, `put`, and `takeEvery` for side effects.\n- For testing, use libraries like `redux-mock-store` and `redux-saga-test-plan`.",
+    "source": "code_example",
+    "updated_at": 1781052057.215093
   }
 }

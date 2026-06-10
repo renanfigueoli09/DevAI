@@ -1,0 +1,52 @@
+{
+  "search:.NET Core Performance Tuning:error handling in .net core pe": {
+    "content": "- Use `dotnet new webapi` to create a new ASP.NET Core Web API project.\n- Implement error handling using middleware in `Startup.cs`:\n  ```csharp\n  app.UseExceptionHandler(\"/error\");\n  ```\n- Configure structured logging with Serilog or NLog in `appsettings.json`:\n  ```json\n  \"Serilog\": {\n    \"Using\": [ \"Serilog.Sinks.Console\" ],\n    \"MinimumLevel\": { \"Default\": \"Information\", \"Override\": { \"Microsoft\": \"Warning\", \"System\": \"Warning\" } },\n    \"WriteTo\": [ \"Console\" ]\n  }\n  ```\n- Use `IExceptionHandler` for handling exceptions globally:\n  ```csharp\n  services.AddControllers()\n          .ConfigureApiBehaviorOptions(options =>\n          {\n              options.ExceptionHandler = \"/error\";\n          });\n  ```\n- Implement custom exception filters to handle specific exceptions:\n  ```csharp\n  public class CustomExceptionFilter : IExceptionFilter\n  {\n      public void OnException(ExceptionContext context)\n      {\n          // Handle the exception\n      }\n  }\n  ```\n- Use `ILogger` for logging errors and information throughout your application.\n- Ensure that all dependencies are up-to-date by running `dotnet upgrade`.\n- Monitor performance using tools like dotTrace or Visual Studio Profiler.",
+    "source": "web_search",
+    "updated_at": 1781051861.0353844
+  },
+  "search:.NET Core Performance Tuning:error handling in .net core pe_ex": {
+    "content": "- Use `dotnet new mvc -n MyProject` to create a new ASP.NET Core MVC project.\n- Update your project file to target the latest LTS version of .NET Core, e.g., `<TargetFramework>net6.0</TargetFramework>`.\n- Implement global error handling in ASP.NET Core 8 by adding `app.UseExceptionHandler(\"/Home/Error\")` and configuring the `IExceptionHandler` interface.\n- Use `try-catch` blocks within your code to handle exceptions locally where they occur.\n- Configure logging in `appsettings.json` to capture detailed error information, e.g., `\"LogLevel\": { \"Default\": \"Information\", \"Microsoft.AspNetCore\": \"Warning\" }`.\n- Monitor performance using tools like dotTrace or Visual Studio Profiler.\n- Optimize database queries and reduce latency by indexing tables and optimizing joins.\n- Use asynchronous programming with `async` and `await` to improve responsiveness.\n- Cache frequently accessed data to reduce load times.\n- Regularly update dependencies and .NET Core itself to benefit from performance improvements and security patches.",
+    "source": "code_example",
+    "updated_at": 1781051875.1174452
+  },
+  "search:.NET Core Performance Tuning:testing strategies for .net co": {
+    "content": "- Use `dotnet test` to run tests in .NET Core applications.\n- Install the latest version of Visual Studio or JetBrains Rider for a comprehensive testing environment.\n- Configure `appsettings.json` for different environments (development, testing, production).\n- Utilize xUnit.net as a popular testing framework with `dotnet add package xunit`.\n- Employ Moq for mocking dependencies with `dotnet add package Moq`.\n- Use NUnit for an alternative testing framework with `dotnet add package NUnit`.\n- Implement performance testing using BenchmarkDotNet with `dotnet add package BenchmarkDotNet`.\n- Set up load testing with tools like LoadRunner or JMeter.\n- Configure CI/CD pipelines in Azure DevOps, GitHub Actions, or Jenkins for automated testing and deployment.",
+    "source": "web_search",
+    "updated_at": 1781051889.2492836
+  },
+  "search:.NET Core Performance Tuning:testing strategies for .net co_ex": {
+    "content": "- Use `dotnet test` to run tests.\n- Install latest .NET SDK for compatibility.\n- Configure `launchSettings.json` for environment-specific settings.\n- Utilize tools like BenchmarkDotNet for performance testing.\n- Implement xUnit or NUnit for unit testing.\n- Employ Selenium for browser automation and UI testing.\n- Set up integration tests with Docker containers.\n- Use Azure DevOps Pipelines for CI/CD.\n- Apply code coverage analysis with `dotnet test --collect:\"XPlat Code Coverage\"`.\n- Monitor application performance using Application Insights.",
+    "source": "code_example",
+    "updated_at": 1781051905.162398
+  },
+  "search:.NET Core Performance Tuning:security considerations for .n": {
+    "content": "- **CLI Commands**:\n  - `dotnet build`: Build your application.\n  - `dotnet publish`: Publish your application for deployment.\n\n- **Latest Versions**:\n  - .NET Core 6.0\n\n- **Key Config Options**:\n  - `appsettings.json`: Configure application settings.\n  - `IHostedService`: Manage background tasks.\n  - `DOTNET_BUNDLE_EXTRACT_BASE_DIR`: Set the base directory for extracting files in single-file deployment.",
+    "source": "web_search",
+    "updated_at": 1781051912.8556957
+  },
+  "search:.NET Core Performance Tuning:security considerations for .n_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet publish --configuration Release --runtime <RID>`: Publishes the application for a specific runtime.\n  - `dotnet ef migrations add InitialCreate`: Adds an initial migration to the database.\n\n- **Latest Versions**:\n  - .NET Core 7.0\n  - Entity Framework Core 7.0\n\n- **Key Config Options**:\n  - `appsettings.json`:\n    ```json\n    {\n      \"Kestrel\": {\n        \"Endpoints\": {\n          \"Http\": {\n            \"Url\": \"http://*:5000\"\n          }\n        }\n      },\n      \"Logging\": {\n        \"LogLevel\": {\n          \"Default\": \"Information\",\n          \"Microsoft.AspNetCore\": \"Warning\"\n        }\n      }\n    }\n    ```\n  - `Program.cs`:\n    ```csharp\n    var builder = WebApplication.CreateBuilder(args);\n    builder.Services.AddControllers();\n    builder.Services.AddEndpointsApiExplorer();\n    builder.Services.AddSwaggerGen();\n\n    var app = builder.Build();\n\n    if (app.Environment.IsDevelopment())\n    {\n      app.UseSwagger();\n      app.UseSwaggerUI();\n    }\n\n    app.UseHttpsRedirection();\n    app.UseAuthorization();\n    app.MapControllers();\n\n    app.Run();\n    ```",
+    "source": "code_example",
+    "updated_at": 1781051920.9633543
+  },
+  "search:.NET Core Performance Tuning:performance optimization techn": {
+    "content": "- Use `dotnet publish -c Release` for publishing optimized applications.\n- Enable Just-In-Time (JIT) compilation optimizations by setting `<PublishAot>true</PublishAot>` in your project file.\n- Monitor performance using tools like dotTrace, ANTS Performance Profiler, or Visual Studio's built-in profiling tools.\n- Implement asynchronous programming with `async` and `await` to improve responsiveness.\n- Use connection pooling for database operations to reduce overhead.\n- Optimize memory usage by disposing of objects that are no longer needed using `using` statements.\n- Configure logging levels in `appsettings.json` to avoid excessive log output, which can impact performance.\n- Enable caching mechanisms like Redis or in-memory caching to reduce database load and improve response times.\n- Use dependency injection (DI) for better resource management and scalability.\n- Regularly update .NET Core SDK and runtime to benefit from performance improvements and security patches.",
+    "source": "web_search",
+    "updated_at": 1781051929.887181
+  },
+  "search:.NET Core Performance Tuning:performance optimization techn_ex": {
+    "content": "- Use `dotnet build --configuration Release` for optimized builds.\n- Enable Just-In-Time (JIT) compilation by setting `<PublishSingleFile>true</PublishSingleFile>` in your project file.\n- Utilize `GC.Server=true` and `ServerGarbageCollection=true` in the appsettings.json to enable server garbage collection.\n- Implement async programming with `async` and `await` for non-blocking operations.\n- Use `MemoryCache` for caching frequently accessed data.\n- Optimize database queries using LINQ and Entity Framework Core's query optimization features.\n- Enable HTTP/2 by setting `<UseHttp2>true</UseHttp2>` in the project file.\n- Monitor performance with tools like dotTrace, ANTS Performance Profiler, or Visual Studio Diagnostic Tools.",
+    "source": "code_example",
+    "updated_at": 1781051939.1698043
+  },
+  "search:.NET Core Performance Tuning:advanced profiling tools for .": {
+    "content": "- **Microsoft Visual Studio Profiler**: Use `dotnet-trace` or `dotnet-counters` for performance analysis.\n- **dotnet-trace**: Capture traces with `dotnet-trace collect --process-id <PID>`.\n- **dotnet-counters**: Monitor counters with `dotnet-counters monitor -p <PID>`.\n- **Visual Studio Code Profiling**: Use the \"C# for Visual Studio Code\" extension.\n- **JetBrains dotMemory**: For memory profiling, use `dotmemory` command.\n- **ANTS Performance Profiler**: Offers detailed performance analysis and optimization suggestions.\n- **BenchmarkDotNet**: For microbenchmarking with `dotnet benchmark`.\n- **Key Config Options**:\n  - `gcServer`: Enable server garbage collector for better performance on large applications.\n  - `concurrentGC`: Use concurrent garbage collection to reduce pause times.\n  - `compilationMode`: Choose between AOT and JIT compilation based on your needs.",
+    "source": "web_search",
+    "updated_at": 1781051948.6691117
+  },
+  "search:.NET Core Performance Tuning:advanced profiling tools for ._ex": {
+    "content": "- Install Ultra profiler globally using `dotnet tool install -g Ultra`\n- Profile an executable like `my_commands.exe` by running `ultra my_commands.exe`\n- Ensure you have .NET SDK version 8.0 or later installed for compatibility\n- For code coverage, use MiniCover until it supports global tool installation in .NET Core 2.1\n- Integrate OpenTelemetry with .NET to monitor APIs using logs, traces, and metrics\n- Use tools like Jaeger, Prometheus, and Grafana for analyzing telemetry data",
+    "source": "code_example",
+    "updated_at": 1781051955.504305
+  }
+}
