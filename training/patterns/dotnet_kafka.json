@@ -1,12 +1,12 @@
 {
   "search:dotnet+kafka:asp.net core confluent.kafka m": {
-    "content": "- **Install MassTransit.Kafka**: `dotnet add package MassTransit.Kafka --version 8.4.1`\n- **Latest Version**: 8.4.1\n- **Key Config Options**:\n  - `KafkaHost`: Kafka broker address.\n  - `ClientId`: Unique identifier for the client.\n  - `TopicName`: Name of the Kafka topic to consume from or produce to.\n  - `BatchCount`: Number of messages to batch together before sending.\n  - `BatchSize`: Maximum size of a batch in bytes.",
+    "content": "- **Latest Versions**:\n  - MassTransit.Kafka: 8.4.1\n  - Confluent.Kafka: Not explicitly mentioned, but compatible with .NET Core >= v1.0 and .NET Standard >= v1.3\n\n- **CLI Commands**:\n  - To install MassTransit.Kafka: `dotnet add package MassTransit.Kafka --version 8.4.1`\n  - To install Confluent.Kafka: `dotnet add package Confluent.Kafka`\n\n- **Key Config Options**:\n  - For MassTransit Kafka transport configuration, use the `KafkaHost` method in your bus configuration.\n  - For Confluent.Kafka producer and consumer configurations, set properties like `BootstrapServers`, `ClientId`, `GroupId`, etc., in the respective configuration objects.",
     "source": "web_search",
-    "updated_at": 1780939943.4356074
+    "updated_at": 1781054441.1545212
   },
   "search:dotnet+kafka:asp.net core confluent.kafka m_ex": {
-    "content": "- **Latest Versions**: \n  - MassTransit: 2.5.0\n  - Confluent.Kafka: 2.14.2\n\n- **CLI Commands**:\n  - `dotnet add package MassTransit --version 2.5.0`\n  - `dotnet add package Confluent.Kafka --version 2.14.2`\n\n- **Key Config Options**:\n  - For MassTransit: \n    - `Bus.Factory.CreateUsingRabbitMq(cfg => { ... })`\n    - `cfg.Host(\"localhost\", h => { ... })`\n    - `cfg.ReceiveEndpoint(\"queue_name\", e => { ... })`\n  \n  - For Confluent.Kafka:\n    - `var config = new ProducerConfig { BootstrapServers = \"localhost:9092\" };`\n    - `using (var producer = new ProducerBuilder<Null, string>(config).Build()) { ... }`",
+    "content": "- **Latest Versions**:\n  - MassTransit: v8.0.0\n  - Confluent.Kafka: v2.5.0\n\n- **CLI Commands with Exact Flags**:\n  ```bash\n  dotnet add package MassTransit --version 8.0.0\n  dotnet add package Confluent.Kafka --version 2.5.0\n  ```\n\n- **Key Config Options for MassTransit Kafka**:\n  - `KafkaHost`: The address of the Kafka broker.\n  - `ClientId`: A unique identifier for the client.\n  - `Topics`: List of topics to subscribe or publish to.\n\n- **Additional Resources**:\n  - [MassTransit Kafka Sample](https://github.com/MassTransit/Sample-Kafka)\n  - [MassTransit Kafka Guide](https://codestudy.net/masstransit-kafka/)\n  - [Confluent Kafka .NET Documentation](https://docs.confluent.io/platform/current/dotnet/overview.html)",
     "source": "code_example",
-    "updated_at": 1780939945.9096513
+    "updated_at": 1781054465.5191455
   }
 }

@@ -1,12 +1,12 @@
 {
   "search:dotnet+postgres:asp.net core ef core npgsql mi": {
-    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `Add-Migration InitialCreate`\n\n- **Latest Versions**:\n  - Npgsql.EntityFrameworkCore.PostgreSQL: Latest version as of my last update.\n  - EF Core: Latest version as of my last update.\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`: Ensure it points to your PostgreSQL database.\n  - `DbContext` Configuration: Define your entities and relationships within the `DbContext`.",
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate --provider Npgsql.EntityFrameworkCore.PostgreSQL`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - ASP.NET Core: 7.0\n  - EF Core: 7.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 7.0\n\n- **Key Config Options**:\n  - In `appsettings.json`, configure the connection string for PostgreSQL.\n    ```json\n    \"ConnectionStrings\": {\n      \"DefaultConnection\": \"Host=localhost;Database=mydatabase;Username=myuser;Password=mypassword;\"\n    }\n    ```\n  - In `Startup.cs` or `Program.cs`, configure services to use Entity Framework Core with PostgreSQL.\n    ```csharp\n    services.AddDbContext<ApplicationDbContext>(options =>\n        options.UseNpgsql(Configuration.GetConnectionString(\"DefaultConnection\")));\n    ```",
     "source": "web_search",
-    "updated_at": 1780942576.1532028
+    "updated_at": 1781054387.252597
   },
   "search:dotnet+postgres:asp.net core ef core npgsql mi_ex": {
-    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Npgsql EF Core Provider: Latest version as of Oct 2025.\n  - Entity Framework Core: Latest version as of Oct 2025.\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - DbContext Configuration\n  - Migration Scripts",
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate --provider Npgsql.EntityFrameworkCore.PostgreSQL`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - Entity Framework Core: 7.0\n  - Npgsql.EntityFrameworkCore.PostgreSQL: 7.0\n\n- **Key Config Options**:\n  - Connection String: `Server=localhost;Port=5432;Database=mydatabase;Username=myuser;Password=mypassword`\n  - DbContext Configuration: Ensure `OnConfiguring` method sets the connection string.\n  - Migration Scaffolding: Use `dotnet ef dbcontext scaffold \"YourConnectionString\" Npgsql.EntityFrameworkCore.PostgreSQL -o Models`",
     "source": "code_example",
-    "updated_at": 1780942578.2692516
+    "updated_at": 1781054402.3080409
   }
 }

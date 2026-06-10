@@ -1,12 +1,12 @@
 {
   "search:dotnet+mongodb:asp.net core mongodb.driver im": {
-    "content": "- **Create Web API**: Use `dotnet new webapi -n ProductsAPI`\n- **Install MongoDB Driver**: Run `dotnet add package MongoDB.Driver --version 2.13.0`\n- **Configure Connection String**: Set `ConnectionString` in `appsettings.json`\n- **IMongoCollection Methods**:\n  - `InsertOneAsync()`\n  - `ReplaceOneAsync()`\n  - `DeleteOneAsync()`\n- **Filtering Documents**: Use `Builders<T>.Filter.Ne(\"fieldName\", value)`\n- **Latest Version**: MongoDB.Driver v2.13.0\n- **Key Config Options**:\n  - `ConnectionString` in `appsettings.json`\n  - `IMongoClient` for database operations",
+    "content": "- **CLI Commands**:\n  - `dotnet add package MongoDB.Driver`\n  \n- **Latest Versions**:\n  - ASP.NET Core: 6.x\n  - MongoDB.Driver: 2.13.x\n\n- **Key Config Options**:\n  - Connection String: `mongodb://localhost:27017`\n  - Database Name: `YourDatabaseName`\n  - Collection Name: `YourCollectionName`",
     "source": "web_search",
-    "updated_at": 1780942845.777512
+    "updated_at": 1781054369.11661
   },
   "search:dotnet+mongodb:asp.net core mongodb.driver im_ex": {
-    "content": "- Install MongoDB Driver for .NET using `dotnet add package MongoDB.Driver`\n- Configure MongoDB connection in `appsettings.json`:\n  ```json\n  \"ConnectionStrings\": {\n    \"MongoDB\": \"mongodb://localhost:27017\"\n  }\n  ```\n- Create a MongoDB service for database connection:\n  ```csharp\n  public class MongoDbService : IMongoDbService\n  {\n      private readonly IMongoDatabase _database;\n\n      public MongoDbService(IOptions<MongoDbSettings> mongoDbSettings)\n      {\n          var client = new MongoClient(mongoDbSettings.Value.ConnectionString);\n          _database = client.GetDatabase(mongoDbSettings.Value.DatabaseName);\n      }\n\n      public IMongoCollection<T> GetCollection<T>(string collectionName)\n      {\n          return _database.GetCollection<T>(collectionName);\n      }\n  }\n  ```\n- Key config options in `appsettings.json`:\n  ```json\n  \"MongoDbSettings\": {\n    \"ConnectionString\": \"mongodb://localhost:27017\",\n    \"DatabaseName\": \"exampledb\"\n  }\n  ```\n\nNote: Ensure MongoDB is running and accessible at the specified connection string.",
+    "content": "- Install MongoDB.Driver via NuGet: `dotnet add package MongoDB.Driver`\n- Use latest version: Ensure your project targets .NET Core 3.1 or later.\n- Key configuration:\n  - Connection string: `mongodb://localhost:27017`\n  - Database name: `mydatabase`\n  - Collection name: `mycollection`\n- Example code snippet to connect and find documents:\n  ```csharp\n  using MongoDB.Driver;\n\n  var client = new MongoClient(\"mongodb://localhost:27017\");\n  var database = client.GetDatabase(\"mydatabase\");\n  var collection = database.GetCollection<BsonDocument>(\"mycollection\");\n\n  var filter = Builders<BsonDocument>.Filter.Empty;\n  var documents = await collection.Find(filter).ToListAsync();\n  ```\n- Ensure MongoDB server is running on `localhost:27017`.\n- For production, use connection strings with authentication if enabled.",
     "source": "code_example",
-    "updated_at": 1780942848.3445776
+    "updated_at": 1781054376.1709125
   }
 }
