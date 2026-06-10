@@ -23,5 +23,15 @@
     "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install prisma @prisma/client jsonwebtoken`\n\n- **Latest Versions**:\n  - Next.js: 13.x\n  - Prisma: 4.x\n  - JSON Web Tokens (JWT): 8.5.x\n\n- **Key Config Options**:\n  - `.env.local`: Define environment variables like `DATABASE_URL`, `JWT_SECRET`.\n  - `prisma/schema.prisma`: Define your data models and relationships.\n  - `pages/api/auth/[...nextauth].js`: Configure NextAuth.js with Prisma adapter.\n  - JWT Configuration: Set up JWT signing and verification in server-side code.",
     "source": "web_search",
     "updated_at": 1780946662.3228154
+  },
+  "search:NextJS + Prisma Authentication:nextjs prisma authentication": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @prisma/client next-auth`\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n  - NextAuth.js: v4.0\n\n- **Key Config Options**:\n  - In `next.config.js`, enable API routes with `api: { bodyParser: true }`\n  - In `pages/api/auth/[...nextauth].js`, configure providers and callbacks\n  - In `prisma/schema.prisma`, define user model and relationships",
+    "source": "web_search",
+    "updated_at": 1781057501.2957404
+  },
+  "search:NextJS + Prisma Authentication:nextjs prisma authentication_ex": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest my-auth-app`\n  - `npm install @prisma/client next-auth`\n\n- **Latest Versions**:\n  - Next.js: 13.5\n  - Prisma: 4.0\n  - NextAuth.js: 4.1\n\n- **Key Config Options**:\n  - In `next.config.js`, add `reactStrictMode: true`.\n  - In `prisma/schema.prisma`, define your data models.\n  - In `pages/api/auth/[...nextauth].js`, configure providers and callbacks.",
+    "source": "code_example",
+    "updated_at": 1781057506.974283
   }
 }

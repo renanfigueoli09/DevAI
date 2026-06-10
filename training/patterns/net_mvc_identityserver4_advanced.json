@@ -1,0 +1,27 @@
+{
+  "search:.NET MVC IdentityServer4 Advanced:identityserver4 advanced": {
+    "content": "- **CLI Commands**:\n  - `dotnet add package IdentityServer4`\n  - `dotnet ef migrations add InitialIdentityServerPersistedGrantDbMigration`\n  - `dotnet ef database update`\n\n- **Latest Versions**:\n  - IdentityServer4: 5.0.0\n  - ASP.NET Core: 6.0\n\n- **Key Config Options**:\n  - `Clients`: Define client applications.\n  - `IdentityResources`: Define identity claims.\n  - `ApiResources`: Define API access permissions.\n  - `PersistedGrantStore`: Configure token storage.",
+    "source": "web_search",
+    "updated_at": 1781057392.9797642
+  },
+  "search:.NET MVC IdentityServer4 Advanced:mvc identityserver4 setup": {
+    "content": "- Install IdentityServer4 via NuGet: `dotnet add package IdentityServer4`\n- Configure IdentityServer4 in `Startup.cs`:\n  ```csharp\n  services.AddIdentityServer()\n          .AddInMemoryClients(Config.Clients)\n          .AddInMemoryIdentityResources(Config.IdentityResources)\n          .AddInMemoryApiResources(Config.ApiResources);\n  ```\n- Use the `app.UseIdentityServer()` middleware in `Configure` method.\n- Define clients, identity resources, and API resources in separate classes (e.g., `Config.cs`).\n- Set up MVC client using Katana-based docs.\n- Configure OAuth2/OIDC in Angular using Code grant type.",
+    "source": "web_search",
+    "updated_at": 1781057442.036993
+  },
+  "search:.NET MVC IdentityServer4 Advanced:mvc identityserver4 setup_ex": {
+    "content": "- Install IdentityServer4 via NuGet: `dotnet add package IdentityServer4`\n- Configure IdentityServer4 in `Startup.cs`:\n  ```csharp\n  services.AddIdentityServer()\n          .AddInMemoryClients(Config.Clients)\n          .AddInMemoryIdentityResources(Config.IdentityResources)\n          .AddInMemoryApiResources(Config.ApiResources);\n  ```\n- Add OpenID Connect authentication to MVC app:\n  ```csharp\n  services.AddAuthentication(options =>\n      {\n          options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;\n          options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;\n          options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;\n      })\n      .AddCookie()\n      .AddOpenIdConnect(\"oidc\", \"IdentityServer4\", options =>\n      {\n          options.Authority = \"https://localhost:5001\";\n          options.RequireHttpsMetadata = false;\n          options.ClientId = \"mvc\";\n          options.SaveTokens = true;\n      });\n  ```\n- Ensure `appsettings.json` contains IdentityServer4 configuration:\n  ```json\n  \"IdentityServer\": {\n    \"Clients\": [\n      {\n        \"ClientId\": \"mvc\",\n        \"ClientName\": \"MVC Client\",\n        \"AllowedGrantTypes\": [\"authorization_code\", \"refresh_token\"],\n        \"RedirectUris\": [\"/signin-oidc\" ],\n        \"PostLogoutRedirectUris\": [\"/signout-callback-oidc\" ]\n      }\n    ]\n  }\n  ```\n- Run IdentityServer4 and MVC app on different ports to avoid conflicts.",
+    "source": "code_example",
+    "updated_at": 1781057454.3742938
+  },
+  "search:.NET MVC IdentityServer4 Advanced:oauth2 with identityserver4": {
+    "content": "- **CLI Commands**:\n  - `dotnet new mvc -au Individual`\n  - `dotnet add package IdentityServer4`\n\n- **Latest Versions**:\n  - IdentityServer4: 5.x\n\n- **Key Config Options**:\n  - `ClientSecrets`: Define client secrets for authentication.\n  - `AllowedGrantTypes`: Specify the grant types allowed (e.g., ClientCredentials, ResourceOwnerPassword).\n  - `RedirectUris` and `PostLogoutRedirectUris`: Configure URIs for redirecting after login/logout.",
+    "source": "web_search",
+    "updated_at": 1781057480.4511917
+  },
+  "search:.NET MVC IdentityServer4 Advanced:oauth2 with identityserver4_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet new is4empty -n MyIdentityServer`\n  - `dotnet add package IdentityServer4.EntityFrameworkCore`\n  - `dotnet ef migrations add InitialCreate`\n\n- **Latest Versions**:\n  - IdentityServer4: v5.x\n  - EntityFrameworkCore: v6.x\n\n- **Key Config Options**:\n  - `Clients`: Define client applications.\n  - `IdentityResources`: Define identity claims.\n  - `ApiResources`: Define API access.\n  - `PersistedGrantsDbContext`: For storing grants and tokens.",
+    "source": "code_example",
+    "updated_at": 1781057485.6210995
+  }
+}

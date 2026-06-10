@@ -8,5 +8,35 @@
     "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- Employ `kubectl logs -f <pod-name>` for real-time log streaming.\n- For Docker, use `docker logs <container-id>` to access container logs.\n- Implement centralized logging solutions like ELK (Elasticsearch, Logstash, Kibana) or Fluentd for Kubernetes environments.\n- Configure logging drivers in Docker with `--log-driver` flag, e.g., `json-file`, `syslog`.\n- Set log rotation policies using `--log-opt max-size` and `max-file` flags in Docker.\n- Utilize Kubernetes ConfigMaps to manage logging configurations dynamically.\n- Apply Fluentd or Fluent Bit for efficient log collection and forwarding.\n- Ensure logs are stored securely, either on-premises or in cloud storage solutions like AWS S3 or Google Cloud Storage.",
     "source": "code_example",
     "updated_at": 1780941942.5200834
+  },
+  "search:Docker + Kubernetes Logging Best Practices:docker kubernetes logging": {
+    "content": "- Use `kubectl logs <pod-name>` to view logs of a specific pod.\n- For Fluentd logging, deploy it on each node using Helm or Kubernetes manifests.\n- Configure Fluentd with Elasticsearch and Kibana for log aggregation and visualization.\n- Key config options in Fluentd include `<source>`, `<match>`, and `<buffer>`.\n- Use `kubectl apply -f <filename>.yaml` to apply configurations.\n- Ensure Elasticsearch and Kibana are accessible from the Kubernetes cluster.\n- For Docker logging, consider using `json-file` or `syslog` drivers if not using Kubernetes API directly.",
+    "source": "web_search",
+    "updated_at": 1781057585.551172
+  },
+  "search:Docker + Kubernetes Logging Best Practices:docker kubernetes logging_ex": {
+    "content": "- Use `kubectl apply -f deploy.yaml` to deploy logging configuration in Kubernetes.\n- Employ the `kubernetes_metadata_filter` plugin for enriching log events with pod and namespace metadata.\n- Run a simple logging test container using `docker run -it --rm log-generator`.\n- Deploy the test container to Kubernetes with `kubectl apply -f deploy.yaml`.\n- Configure logging architectures for both application and system components in Kubernetes.",
+    "source": "code_example",
+    "updated_at": 1781057600.88848
+  },
+  "search:Docker + Kubernetes Logging Best Practices:kubernetes logging tools": {
+    "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>`: Fetches logs from a specific pod.\n  - `kubectl logs --tail=50 <pod-name>`: Retrieves the last 50 lines of logs for a pod.\n\n- **Latest Versions**:\n  - As of my knowledge cutoff in October 2023, the latest stable versions are:\n    - Kubernetes: v1.27.x\n    - SigNoz: v0.6.x\n    - Vector: v0.24.x\n\n- **Key Config Options**:\n  - **Kubernetes Logging**: Use `kubectl logs` for basic viewing.\n  - **SigNoz**: Configure via YAML files, focusing on data ingestion and visualization.\n  - **Vector**: Define sources, transforms, and sinks in a configuration file to manage log flows.",
+    "source": "web_search",
+    "updated_at": 1781057612.5080025
+  },
+  "search:Docker + Kubernetes Logging Best Practices:kubernetes logging tools_ex": {
+    "content": "- **Grafana**: For visualization.\n  - Install: `kubectl apply -f https://raw.githubusercontent.com/grafana/grafana/main/deploy/kubernetes/production.yaml`\n  - Access: `kubectl port-forward svc/grafana 3000:80`\n\n- **Prometheus**: For metrics collection.\n  - Install: `kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml`\n  - Access: `kubectl port-forward svc/prometheus-server 9090:80`\n\n- **Loki**: For centralized logging.\n  - Install: `kubectl apply -f https://raw.githubusercontent.com/grafana/loki/main/operator/bundles/deployment.yaml`\n  - Access: `kubectl port-forward svc/loki 3100:3100`\n\n- **Filebeat**: For log collection.\n  - Install: `kubectl apply -f https://raw.githubusercontent.com/filebeat/beats/master/deploy/kubernetes/filebeat-daemonset.yml`\n  - Config: Edit `filebeat.yml` to specify log paths and outputs.\n\n- **Logstash**: For log processing (optional).\n  - Install: `kubectl apply -f https://raw.githubusercontent.com/logstash/logstash-forwarder/master/kubernetes/logstash-forwarder.yaml`\n  - Access: `kubectl port-forward svc/logstash 5044:5044`\n\n- **Key Config Options**:\n  - Prometheus: `scrape_configs` in `prometheus.yml`.\n  - Loki: `server_config` and `ingester_config` in `loki-config.yaml`.\n  - Filebeat: `filebeat.yml` for inputs, outputs, and processing.\n\n- **Latest Versions**: Check official GitHub repositories for the latest releases.",
+    "source": "code_example",
+    "updated_at": 1781057622.015252
+  },
+  "search:Docker + Kubernetes Logging Best Practices:containerized app monitoring": {
+    "content": "- Use `docker stats` to monitor real-time resource usage of containers.\n- For Docker, consider using `cAdvisor` for container metrics.\n- Prometheus is a popular choice for monitoring containerized applications; use the latest version available.\n- Grafana can be used with Prometheus to create custom dashboards for monitoring containerized apps.\n- Key config options in Prometheus include `scrape_interval`, `evaluation_interval`, and `job_name`.\n- For network monitoring, consider using `Fluentd` or `Fluent Bit` along with Elasticsearch and Kibana (ELK stack).\n- Use `kubectl top nodes` and `kubectl top pods` to monitor resource usage of Kubernetes clusters.\n- Implement dynamic scaling in containerized apps by using Kubernetes Horizontal Pod Autoscaler (HPA).",
+    "source": "web_search",
+    "updated_at": 1781057632.8690424
+  },
+  "search:Docker + Kubernetes Logging Best Practices:containerized app monitoring_ex": {
+    "content": "- Use `az containerapp create` to deploy an Azure Container App.\n- Set up Application Insights integration using `--logs-workspace-id`.\n- Monitor logs with `az monitor log-analytics query`.\n- Key config options include `scale-rule`, `environment`, and `image`.\n\nLatest versions:\n- Azure CLI: 2.49.0\n- Azure Container Apps: 1.0.0\n\nCLI commands with exact flags:\n```bash\n# Create a new Azure Container App\naz containerapp create --name myContainerApp --resource-group myResourceGroup --image myDockerImage --environment myEnvironment --logs-workspace-id myWorkspaceId\n\n# Query logs in Application Insights\naz monitor log-analytics query --workspace-name myWorkspaceId --analytics-query \"AzureContainerAppLogs | take 10\"\n```",
+    "source": "code_example",
+    "updated_at": 1781057645.526932
   }
 }
