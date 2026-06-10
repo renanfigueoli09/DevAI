@@ -18,5 +18,25 @@
     "content": "- **CLI Commands**:\n  - `npm install @pothos/core`\n  - `npx typegraphql-cli init`\n\n- **Latest Versions**:\n  - Pothos: v1.2.3\n  - TypeGraphQL: v1.4.5\n\n- **Key Config Options**:\n  - Pothos: `buildSchema` function with options like `resolvers`, `plugins`.\n  - TypeGraphQL: `createResolver` decorator for defining resolvers, `ObjectType` for types.",
     "source": "code_example",
     "updated_at": 1781030108.0729544
+  },
+  "search:typescript+graphql-codegen:typescript graphql codegen bes": {
+    "content": "- Use `graphql-codegen` for code generation.\n- Install via npm: `npm install -g @graphql-codegen/cli @graphql-codegen/typescript`.\n- Initialize with: `graphql-codegen init`.\n- Key config options:\n  - `schema`: Path to your GraphQL schema file.\n  - `documents`: Paths to your GraphQL documents (queries, mutations).\n  - `generates`: Output directory and plugins configuration.\n- Example CLI command:\n  ```bash\n  graphql-codegen --config codegen.yml\n  ```\n- Latest version: Check [npm](https://www.npmjs.com/package/@graphql-codegen/cli) for the latest version.\n- Recommended plugins: `typescript`, `typescript-operations`, `typescript-react-apollo`.\n- Best practices:\n  - Automate generation with CI/CD pipelines.\n  - Use TypeScript for full type safety.\n  - Regularly update your schema and documents.",
+    "source": "web_search",
+    "updated_at": 1781074310.5588126
+  },
+  "search:typescript+graphql-codegen:typescript graphql codegen bes_ex": {
+    "content": "- **CLI Commands**:\n  - `npx graphql-codegen init` to initialize Codegen.\n  - `npx graphql-codegen --config codegen.yml` to run Codegen with a configuration file.\n\n- **Latest Versions**:\n  - Ensure using the latest version of `graphql-codegen` and its plugins for optimal functionality.\n\n- **Key Config Options**:\n  - `schema`: Path to your GraphQL schema.\n  - `documents`: Paths to your GraphQL documents (queries, mutations).\n  - `generates`: Output directory and configuration for generated files.\n  - `plugins`: List of plugins to use for code generation.",
+    "source": "code_example",
+    "updated_at": 1781074317.3465712
+  },
+  "search:typescript+graphql-codegen:typescript graphql codegen per": {
+    "content": "- **CLI Command**: `graphql-codegen`\n- **Latest Version**: As of my last update, the latest version is not specified in the provided links.\n- **Key Config Options**:\n  - `schema`: Path to your GraphQL schema file.\n  - `documents`: Paths to your GraphQL documents (queries, mutations).\n  - `generates`: Output directory and configuration for generated files.\n  - `plugins`: Specify plugins like `typescript`, `typescript-operations`, etc.\n\nFor example, a basic configuration might look like this:\n```json\n{\n  \"schema\": \"path/to/schema.graphql\",\n  \"documents\": \"src/**/*.graphql\",\n  \"generates\": {\n    \"./types.ts\": {\n      \"plugins\": [\"typescript\"]\n    }\n  }\n}\n```\n\n- **GitHub Repository**: [Shopify/graphql-codegen](https://github.com/Shopify/graphql-codegen)\n- **Documentation**: For detailed setup and configuration, refer to the [Apollo GraphQL Docs](https://www.apollographql.com/docs/codegen/) or the [GitHub repository](https://github.com/Shopify/graphql-codegen).",
+    "source": "web_search",
+    "updated_at": 1781074329.3918812
+  },
+  "search:typescript+graphql-codegen:typescript graphql codegen per_ex": {
+    "content": "- **CLI Commands**: \n  - `graphql-codegen init`: Initializes a new GraphQL Codegen configuration.\n  - `graphql-codegen generate`: Generates TypeScript definitions based on the schema.\n\n- **Latest Versions**:\n  - Ensure using the latest version of `@graphql-codegen/cli` and related plugins for optimal performance.\n\n- **Key Config Options**:\n  - `schema`: Path to your GraphQL schema file.\n  - `generates`: Specifies output files and their configurations.\n  - `plugins`: Defines which plugins to use, e.g., `typescript`, `typescript-operations`.\n\n- **Performance Optimization Tips**:\n  - Use the `watch` mode with `--watch` flag for real-time code generation.\n  - Configure `noTypesInResponse` if you don't need TypeScript types in your responses.",
+    "source": "code_example",
+    "updated_at": 1781074335.406836
   }
 }
