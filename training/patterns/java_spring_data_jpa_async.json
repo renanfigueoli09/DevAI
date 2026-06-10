@@ -2,21 +2,21 @@
   "search:java-spring-data-jpa-async:spring data jpa async programm": {
     "content": "- Use `@Async` annotation to enable asynchronous execution in Spring Data JPA.\n- Return type should be `Future<T>` or `CompletableFuture<T>`.\n- Ensure your method is annotated with `@Transactional(propagation = Propagation.NOT_SUPPORTED)`.\n- For the latest version of Spring Boot, check [Spring.io](https://spring.io/projects/spring-boot).\n- Key configuration options include `spring.jpa.properties.hibernate.dialect` and `spring.jpa.show-sql`.\n- Use `ScrollableResults` for large data sets in Spring Data JPA.\n- Ensure your application context is aware of the async execution by enabling it with `@EnableAsync`.",
     "source": "web_search",
-    "updated_at": 1781085656.506573
+    "updated_at": 1781085846.681953
   },
   "search:java-spring-data-jpa-async:spring data jpa async programm_ex": {
     "content": "- **Latest Version of Spring Data JPA**: As of my last update, the latest stable version is 2.7.x.\n  \n- **CLI Commands**:\n  - To initialize a new Spring Boot project with Spring Initializr: `curl https://start.spring.io/starter.zip -d dependencies=web,data-jpa -o spring-data-jpa-project.zip`\n  - To run a Spring Boot application: `./mvnw spring-boot:run`\n\n- **Key Config Options**:\n  - `spring.jpa.hibernate.ddl-auto`: Set to `update` for production environments to avoid dropping tables.\n  - `spring.jpa.show-sql`: Set to `true` in development to log SQL queries.\n  - `spring.jpa.properties.hibernate.dialect`: Specify the database dialect, e.g., `org.hibernate.dialect.MySQL5Dialect`.\n\n- **Asynchronous Programming**:\n  - Use `@Async` annotation on repository methods to enable asynchronous execution.\n  - Configure task executor: \n    ```yaml\n    spring:\n      task:\n        execution:\n          pool:\n            core-size: 10\n            max-size: 20\n            queue-capacity: 500\n    ```\n\n- **Updating Entities**:\n  - Use `save` method of `JpaRepository` to update entities. It automatically detects whether the entity is new or existing based on its ID.\n\n- **Spring Boot Asynchronous Execution**:\n  - Spring Boot by default is synchronous.\n  - To enable asynchronous processing, annotate your configuration class with `@EnableAsync`.\n\nThese points should help developers set up and configure Spring Data JPA for both synchronous and asynchronous operations effectively.",
     "source": "code_example",
-    "updated_at": 1781085657.7329257
+    "updated_at": 1781085848.4488773
   },
   "search:java-spring-data-jpa-async:java spring boot asynchronous ": {
     "content": "- Use `@Async` annotation on repository methods to enable asynchronous execution.\n- Configure task executor in Spring Boot by adding `spring.task.execution.pool.core-size` and `spring.task.execution.pool.max-size` properties.\n- Ensure your application is using the latest version of Spring Boot for optimal performance and features.\n- For R2DBC, use `@EnableR2dbcRepositories` to enable reactive repository support.\n- Use `Mono` or `Flux` from Project Reactor in your repository methods for asynchronous data access.\n- Configure database connection pool properties like `spring.datasource.hikari.maximum-pool-size`.\n- Enable Spring Data Envers with `@EnableJpaAuditing` and configure it to use asynchronous queries through Spring's async support.",
     "source": "web_search",
-    "updated_at": 1781085659.0590515
+    "updated_at": 1781085849.8064325
   },
   "search:java-spring-data-jpa-async:java spring boot asynchronous _ex": {
     "content": "- **Enable Async Processing**: Use `@EnableAsync` annotation in your Spring Boot application class.\n- **Configure Executor**: Define a custom executor bean to manage thread pool properties.\n  ```java\n  @Bean\n  public Executor taskExecutor() {\n      ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();\n      executor.setCorePoolSize(5);\n      executor.setMaxPoolSize(10);\n      executor.setQueueCapacity(25);\n      executor.setThreadNamePrefix(\"MyExecutor-\");\n      executor.initialize();\n      return executor;\n  }\n  ```\n- **Use @Async**: Annotate methods in your repository or service layer with `@Async`.\n  ```java\n  @Service\n  public class MyService {\n      @Async(\"taskExecutor\")\n      public void asyncMethod() {\n          // Asynchronous code here\n      }\n  }\n  ```\n- **Exception Handling**: Use `@Async`'s `errorHandler` attribute to handle exceptions.\n  ```java\n  @Bean\n  public AsyncUncaughtExceptionHandler errorHandler() {\n      return new SimpleAsyncUncaughtExceptionHandler();\n  }\n  ```\n- **Latest Version**: Spring Boot 3.0.x is the latest stable version as of my last update.\n- **Key Config Options**:\n  - `corePoolSize`: Minimum number of threads to keep alive.\n  - `maxPoolSize`: Maximum number of threads allowed in the pool.\n  - `queueCapacity`: Size of the queue holding tasks before they are rejected.",
     "source": "code_example",
-    "updated_at": 1781085660.2918308
+    "updated_at": 1781085851.090565
   }
 }

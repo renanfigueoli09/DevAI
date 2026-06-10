@@ -1,0 +1,22 @@
+{
+  "search:java-spring-data-jpa-mongodb:java spring data jpa mongodb s": {
+    "content": "- Use Spring Initializr to bootstrap your project with necessary dependencies.\n- For Java, consider using the latest LTS version.\n- Baeldung offers comprehensive guides on Spring Security and JPA.\n- Spring Data JPA simplifies database operations in Spring Boot projects.\n- Key config options include `spring.data.mongodb.uri` for MongoDB connection.\n- Use `@Entity`, `@Repository`, and `@Service` annotations to define your data model, repositories, and services respectively.\n- For security, configure `WebSecurityConfigurerAdapter` or use the newer `SecurityFilterChain`.\n- Ensure dependency versions are compatible (e.g., Spring Boot 2.7.x with Spring Data JPA 2.6.x).\n- Regularly update dependencies to benefit from security patches and performance improvements.",
+    "source": "web_search",
+    "updated_at": 1781085809.5877857
+  },
+  "search:java-spring-data-jpa-mongodb:java spring data jpa mongodb s_ex": {
+    "content": "- Use `mvn clean install` to build your project.\n- Ensure MongoDB is running and accessible at the default port or specify custom connection details in `application.properties`.\n- Update Spring Boot, Spring Data JPA, and MongoDB dependencies to their latest versions for security patches and performance improvements.\n- Configure database settings in `application.properties`, e.g., `spring.data.mongodb.uri=mongodb://localhost:27017/mydatabase`.\n- Implement repository interfaces extending `JpaRepository` or `MongoRepository` for CRUD operations.\n- Use Spring Security for authentication and authorization, configure it in `SecurityConfig.java`.\n- Enable HTTPS by configuring SSL/TLS in your application properties or server configuration.\n- Regularly update dependencies using tools like Maven or Gradle to ensure security patches are applied.",
+    "source": "code_example",
+    "updated_at": 1781085816.3939676
+  },
+  "search:java-spring-data-jpa-mongodb:java spring data jpa mongodb a": {
+    "content": "- **CLI Commands**: Not applicable for this topic.\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.x\n  - MongoDB Java Driver: 4.3.x\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Connection string to MongoDB.\n  - `spring.jpa.database-platform`: Set to `org.hibernate.dialect.MongoDBDialect` for MongoDB compatibility.\n  - `spring.jpa.show-sql`: Enable SQL logging for debugging.\n  - `spring.jpa.properties.hibernate.dialect`: Explicitly set Hibernate dialect to MongoDB.",
+    "source": "web_search",
+    "updated_at": 1781085825.5413337
+  },
+  "search:java-spring-data-jpa-mongodb:java spring data jpa mongodb a_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `mvn spring-boot:run` to run the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Data JPA: 2.7.5\n  - MongoDB Java Driver: 4.3.1\n\n- **Key Config Options**:\n  - `spring.data.mongodb.uri`: Specifies the MongoDB connection URI.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `create-drop`, `update`).\n  - `spring.jpa.show-sql`: Enables SQL logging for debugging purposes.",
+    "source": "code_example",
+    "updated_at": 1781085834.1820953
+  }
+}
