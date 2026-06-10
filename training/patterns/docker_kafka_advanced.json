@@ -1,0 +1,42 @@
+{
+  "search:Docker + Kafka Advanced:kafka docker setup": {
+    "content": "- Use `docker exec -ti kafka /opt/kafka/bin/kafka-cluster.sh cluster-id --bootstrap-server :9092` to get the Kafka cluster ID.\n- For a beginner's guide, check out \"How to Run Apache Kafka with Docker (Beginner...)\" on Medium.\n- Bitnami and Apache Kafka Docker images are available for setup.\n- Key config options include `broker.id`, `listeners`, and `zookeeper.connect`.\n- Ensure you have the latest versions of Docker and Docker Compose installed.",
+    "source": "web_search",
+    "updated_at": 1781071151.4443793
+  },
+  "search:Docker + Kafka Advanced:kafka docker setup_ex": {
+    "content": "- **CLI Commands**:\n  - `docker-compose up -d`: Start services in detached mode.\n  - `docker-compose down`: Stop and remove containers, networks, volumes, and images created by docker-compose.\n\n- **Latest Versions**:\n  - Kafka: 3.0.1\n  - Zookeeper: 3.7.0\n  - Schema Registry: 6.2.0\n\n- **Key Config Options**:\n  - `KAFKA_BROKER_ID`: Unique identifier for the broker.\n  - `ZOOKEEPER_CLIENT_PORT`: Port for Zookeeper client connections.\n  - `SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS`: Kafka bootstrap servers for Schema Registry.",
+    "source": "code_example",
+    "updated_at": 1781071166.8525474
+  },
+  "search:Docker + Kafka Advanced:docker kafka performance optim": {
+    "content": "- Use the latest version of Kafka and Docker.\n- Configure `num.network.threads` to at least 32 in `server.properties`.\n- Increase `socket.send.buffer.bytes` and `socket.receive.buffer.bytes` for better network performance.\n- Enable producer batching by setting `batch.size` and `linger.ms`.\n- Adjust `replication.factor` and `min.insync.replicas` based on your data durability requirements.\n- Use a dedicated Zookeeper instance or Kraft mode if you're not using Zookeeper.\n- Monitor Kafka metrics using tools like JMX, Prometheus, or Confluent Control Center.\n- Scale horizontally by adding more brokers to your cluster.\n- Adjust JVM heap size with `-Xmx` and `-Xms` flags in the `KAFKA_HEAP_OPTS`.\n- Use Docker Compose for managing multi-container environments efficiently.",
+    "source": "web_search",
+    "updated_at": 1781071183.9660454
+  },
+  "search:Docker + Kafka Advanced:docker kafka performance optim_ex": {
+    "content": "- Use the latest version of Docker and Kafka.\n- Configure `num.partitions` based on the number of CPU cores.\n- Set `replication.factor` to at least 2 for fault tolerance.\n- Adjust `message.max.bytes` and `replica.fetch.max.bytes` according to your message size.\n- Enable compression (`compression.type=gzip`) for reducing network bandwidth.\n- Use `docker-compose.yml` for managing Kafka cluster with multiple brokers.\n- Monitor metrics using tools like Prometheus and Grafana.\n- Scale horizontally by adding more broker instances in the Docker Compose file.",
+    "source": "code_example",
+    "updated_at": 1781071192.618773
+  },
+  "search:Docker + Kafka Advanced:docker kafka security best pra": {
+    "content": "- Use Bitnami or Apache Kafka Docker images.\n- Manage resources effectively using Docker Compose.\n- Implement TLS/SSL for communication security.\n- Configure Kafka with `listeners`, `advertised.listeners`, and `security.inter.broker.protocol`.\n- Set `ssl.keystore.location` and `ssl.keystore.password` for SSL configuration.\n- Use `docker exec -ti kafka /opt/kafka/bin/kafka-cluster.sh cluster-id --bootstrap-server :9092` to get the cluster ID.\n- Ensure latest versions of Docker and Kafka images for security patches.",
+    "source": "web_search",
+    "updated_at": 1781071198.0374646
+  },
+  "search:Docker + Kafka Advanced:docker kafka security best pra_ex": {
+    "content": "- Use `docker-compose` to launch a Kafka cluster.\n- Ensure TLS/SSL is enabled by mounting certificates and keys in the `docker-compose.yml`.\n- Configure ACLs using `kafka-acls.sh` script for secure access control.\n- Set environment variables in `kafka.env` for default configurations.\n- Utilize Bitnami's Docker image for Kafka to simplify setup.\n- Monitor Kafka with tools like Prometheus and Grafana for better visibility.",
+    "source": "code_example",
+    "updated_at": 1781071200.93769
+  },
+  "search:Docker + Kafka Advanced:docker kafka monitoring tools": {
+    "content": "- **GitHub - provectus/kafka-ui**: \n  - `docker run -d --name kafka-ui -p 8080:8080 provectuslabs/kafka-ui`\n  - Latest version: Check [GitHub releases](https://github.com/provectus/kafka-ui/releases)\n  - Key config options: `KAFKA_BROKER_URL`, `KAFKA_CLUSTER_NAME`\n\n- **kafbat/kafka-ui**:\n  - `docker run -d --name kafka-ui -p 8080:8080 kafbat/kafka-ui`\n  - Latest version: Check [Docker Hub](https://hub.docker.com/r/kafbat/kafka-ui)\n  - Key config options: `KAFKA_BROKER_URL`, `KAFKA_CLUSTER_NAME`\n\n- **Kafka Monitor Docker**:\n  - `docker run -d --name kafka-monitor -p 3000:3000 codestudy/kafka-monitor`\n  - Latest version: Check [Docker Hub](https://hub.docker.com/r/codestudy/kafka-monitor)\n  - Key config options: `KAFKA_BROKER_URL`, `KAFKA_CLUSTER_NAME`\n\n- **Kafka Sonar**:\n  - Install as a Docker Desktop extension\n  - No direct CLI commands needed, configure through Docker Desktop settings\n  - Latest version: Check [Docker Hub](https://hub.docker.com/r/kafsonar/kafka-sonar)\n  - Key config options: `KAFKA_BROKER_URL`, `KAFKA_CLUSTER_NAME`",
+    "source": "web_search",
+    "updated_at": 1781071212.0751457
+  },
+  "search:Docker + Kafka Advanced:docker kafka monitoring tools_ex": {
+    "content": "- **GitHub - streamthoughts/kafka-monitoring-stack-docker-compose**: Deploy Kafka monitoring stack using Docker Compose.\n  - **CLI Command**: `docker-compose up`\n  - **Latest Version**: Check latest release on GitHub.\n  - **Key Config Options**: Prometheus, Grafana, and Kafka configurations.\n\n- **kafbat/kafka-ui**: Free, open-source web UI to monitor Apache Kafka clusters.\n  - **CLI Command**: `docker run kafbat/kafka-ui`\n  - **Latest Version**: Check latest release on Docker Hub.\n  - **Key Config Options**: Kafka broker URLs, Avro schema support.\n\n- **GitHub - firasesbai/Monitoring-Kafka**: Easy-to-deploy Kafka monitoring solution using Docker and open-source tools.\n  - **CLI Command**: `docker-compose up`\n  - **Latest Version**: Check latest release on GitHub.\n  - **Key Config Options**: Prometheus, Grafana, and Kafka configurations.",
+    "source": "code_example",
+    "updated_at": 1781071223.1946104
+  }
+}

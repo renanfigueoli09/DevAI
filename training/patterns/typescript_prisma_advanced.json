@@ -28,5 +28,35 @@
     "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates a new migration based on the schema changes.\n\n- **Latest Versions**:\n  - Prisma: v4.x\n  - TypeScript: v5.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model and database connection.\n  - `prismaClientOptions`: Customizes the behavior of the Prisma Client, such as enabling or disabling query batching.",
     "source": "code_example",
     "updated_at": 1781066340.2121942
+  },
+  "search:TypeScript + Prisma Advanced:typescript prisma advanced usa": {
+    "content": "- **CLI Commands**:\n  - `prisma migrate dev --name init`: Initializes a new migration.\n  - `prisma db pull`: Pulls the database schema into Prisma Client.\n  - `prisma studio`: Opens the Prisma Studio for interactive data exploration.\n\n- **Latest Versions**:\n  - Prisma Client: v4.10.0\n  - Prisma Migrate: v2.15.0\n\n- **Key Config Options** in `prisma.config.ts`:\n  - `datasource`: Defines the database connection.\n  - `generator`: Specifies the generator configuration for Prisma Client and Studio.\n  - `schemaPath`: Path to your Prisma schema file (default: `./prisma/schema.prisma`).",
+    "source": "web_search",
+    "updated_at": 1781071338.0280716
+  },
+  "search:TypeScript + Prisma Advanced:typescript prisma advanced usa_ex": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma db pull`: Pulls the schema from your database and updates your Prisma schema file (`schema.prisma`).\n  - `prisma migrate dev --name init`: Creates a new migration based on the changes in your Prisma schema.\n\n- **Latest Versions**:\n  - TypeScript: v4.9.5\n  - Prisma Client JS: v4.10.0\n  - Prisma Migrate: v2.13.0\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your database schema and data models.\n  - `prisma.yml`: Configuration file for Prisma Migrate, specifying the datasource URL and other settings.\n  - Environment variables (`DATABASE_URL`): Specifies the connection string to your database.",
+    "source": "code_example",
+    "updated_at": 1781071344.158501
+  },
+  "search:TypeScript + Prisma Advanced:prisma typescript type generat": {
+    "content": "- **Generate Prisma Client**: Use `prisma generate` to create type-safe queries based on your Prisma schema.\n- **Latest Version**: Ensure you are using the latest version of Prisma by running `npm install prisma@latest`.\n- **Key Config Options**:\n  - `schema`: Path to your Prisma schema file.\n  - `output`: Directory where generated client code will be placed.\n  - `provider`: Database provider (e.g., `postgresql`, `mysql`).\n- **CLI Command Example**: \n  ```bash\n  npx prisma generate --schema=./prisma/schema.prisma --out=./generated/prisma-client\n  ```\n- **Type Generation with Zod and Prisma**: Use Zod for validation schemas and Prisma for database models, enhancing type safety in your TypeScript application.\n- **Custom Prisma Generator**: Learn to create a custom generator using `npx prisma generate --generator myGenerator` and define its behavior in the `prisma.yml` file.",
+    "source": "web_search",
+    "updated_at": 1781071357.3824182
+  },
+  "search:TypeScript + Prisma Advanced:prisma typescript type generat_ex": {
+    "content": "- **CLI Commands**:\n  - `prisma generate`: Generates TypeScript types and Prisma Client based on your schema.\n  - `prisma migrate dev --name init`: Initializes a new migration.\n\n- **Latest Versions**:\n  - Prisma: v4.10.0 (as of my last update)\n  - Zod: v3.21.4\n  - tRPC: v10.7.0\n\n- **Key Config Options**:\n  - `generator client`: Configuration for the Prisma Client generator.\n    ```prisma\n    generator client {\n      provider = \"prisma-client-js\"\n    }\n    ```\n  - `model User`: Defines a model in your schema.\n    ```prisma\n    model User {\n      id    Int     @id @default(autoincrement())\n      email String  @unique\n      name  String?\n    }\n    ```",
+    "source": "code_example",
+    "updated_at": 1781071365.500865
+  },
+  "search:TypeScript + Prisma Advanced:prisma performance optimizatio": {
+    "content": "- **CLI Commands**: Use `prisma generate` to update Prisma Client based on your schema.\n- **Latest Version**: Check the [Prisma documentation](https://www.prisma.io/docs) for the latest version.\n- **Key Config Options**:\n  - `queryLogging`: Enable or disable query logging in `schema.prisma`.\n  - `maxQueryExecutionTime`: Set a maximum execution time for queries in milliseconds.\n  - `retryAttempts` and `retryInterval`: Configure retry logic for failed queries.",
+    "source": "web_search",
+    "updated_at": 1781071374.3267817
+  },
+  "search:TypeScript + Prisma Advanced:prisma performance optimizatio_ex": {
+    "content": "- Use `prisma generate --schema <path-to-schema>` to regenerate Prisma Client based on the latest schema.\n- Run `prisma db pull` to update your local schema from the database.\n- Utilize `prisma migrate dev --name <migration-name>` for developing and applying migrations.\n- Employ `prisma optimize` for AI-powered query performance analysis and recommendations.\n- Set `queryLogging: true` in Prisma Client configuration to log all queries, aiding in debugging and optimization.\n- Use `select` and `include` options to fetch only the necessary data, reducing the amount of data transferred.\n- Implement batching with `prisma.$transaction` for multiple operations in a single transaction, improving performance.\n- Regularly update Prisma CLI and Prisma Client to benefit from performance improvements and new features.",
+    "source": "code_example",
+    "updated_at": 1781071383.4587991
   }
 }

@@ -18,5 +18,45 @@
     "content": "- **CLI Commands**:\n  - Spring Boot: `mvn spring-boot:run`\n  - Quarkus: `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Quarkus: 3.10.4.Final\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`\n  - Quarkus: `application.properties` or `application.yaml`\n\n- **Performance Metrics**:\n  - Spring Boot: Traditional blocking I/O\n  - Quarkus: Non-blocking reactive I/O",
     "source": "code_example",
     "updated_at": 1780940195.4234302
+  },
+  "search:Spring + Quarkus Performance:spring quarkus performance com": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` for building the project.\n  - `./mvnw quarkus:dev` to run Quarkus in development mode.\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.0\n  - Quarkus: 2.14.0.Final\n\n- **Key Config Options**:\n  - For Spring Boot, configure `application.properties` or `application.yml`.\n  - For Quarkus, use `application.properties` or `application.yaml`, and consider using `quarkus.config.profile` for profile-specific settings.\n\n- **Performance Benchmark Highlights**:\n  - Quarkus generally outperforms Spring Boot in startup time and memory usage.\n  - Spring Boot shows better performance with reactive programming models like WebFlux.",
+    "source": "web_search",
+    "updated_at": 1781071427.489193
+  },
+  "search:Spring + Quarkus Performance:spring quarkus performance com_ex": {
+    "content": "- **GitHub Repository**: [https://github.com/ignacioSuay/performance-spring-vs-quarkus](https://github.com/ignacioSuay/performance-spring-vs-quarkus)\n- **Latest Spring Boot Version**: As of my last update, the latest stable version is 3.1.4.\n- **Latest Quarkus Version**: As of my last update, the latest stable version is 2.16.5.Final.\n- **CLI Commands**:\n  - **Spring Boot**: `mvn spring-boot:run`\n  - **Quarkus**: `./mvnw compile quarkus:dev`\n- **Key Config Options**:\n  - **Spring Boot**: `application.properties` or `application.yml`\n  - **Quarkus**: `application.properties` or `application.yaml`\n\nThese details should help developers set up and compare the performance of Spring Boot and Quarkus applications.",
+    "source": "code_example",
+    "updated_at": 1781071433.970839
+  },
+  "search:Spring + Quarkus Performance:quarkus microservices architec": {
+    "content": "- **CLI Commands**:\n  - `quarkus dev`: Starts the Quarkus development mode.\n  - `mvn quarkus:create`: Creates a new Quarkus project.\n  - `quarkus build`: Builds the Quarkus application.\n\n- **Latest Versions**:\n  - Quarkus: [Check latest version on Maven Central](https://search.maven.org/artifact/io.quarkus/quarkus-core)\n  - Java: JDK 17 or later\n\n- **Key Config Options**:\n  - `quarkus.http.host`: Sets the HTTP host.\n  - `quarkus.http.port`: Sets the HTTP port.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for database connection.\n  - `quarkus.datasource.username`: Database username.\n  - `quarkus.datasource.password`: Database password.",
+    "source": "web_search",
+    "updated_at": 1781071444.117051
+  },
+  "search:Spring + Quarkus Performance:quarkus microservices architec_ex": {
+    "content": "- **CLI Commands**:\n  - `quarkus dev`: Runs the application in development mode.\n  - `mvn clean package`: Builds the project.\n  - `docker build -t quarkus-microservice .`: Builds a Docker image for the microservice.\n\n- **Latest Versions**:\n  - Quarkus: [Check latest version on Maven Central](https://search.maven.org/artifact/io.quarkus/quarkus-core)\n  - Java: JDK 17 or later\n  - Maven: 3.8.x\n\n- **Key Config Options**:\n  - `quarkus.http.port`: Specifies the port for HTTP traffic.\n  - `quarkus.datasource.jdbc.url`: JDBC URL for database connection.\n  - `quarkus.kubernetes-service-account.enabled`: Enables Kubernetes service account integration.\n  - `quarkus.container-image.build`: Enables building container images.",
+    "source": "code_example",
+    "updated_at": 1781071453.5920327
+  },
+  "search:Spring + Quarkus Performance:spring boot vs quarkus for per": {
+    "content": "- **CLI Commands**:\n  - Spring Boot: `mvn spring-boot:run`\n  - Quarkus: `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5\n  - Quarkus: 3.14.0\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`\n  - Quarkus: `application.properties` or `application.yaml`\n\n- **Performance Highlights**:\n  - Quarkus is designed for low latency and high throughput.\n  - Spring Boot offers a wide range of features with good performance.\n\n- **Development Cost**:\n  - Both frameworks have similar development costs, but Quarkus might offer lower operational costs due to its native image capability.\n\n- **Market Popularity**:\n  - Spring Boot is more widely adopted for its extensive ecosystem and community support.\n  - Quarkus is gaining popularity for its modern features and performance benefits.",
+    "source": "web_search",
+    "updated_at": 1781071463.8721967
+  },
+  "search:Spring + Quarkus Performance:spring boot vs quarkus for per_ex": {
+    "content": "- **CLI Commands**:\n  - Spring Boot: `mvn spring-boot:run`\n  - Quarkus: `./mvnw compile quarkus:dev`\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.5.RELEASE (as of my last update)\n  - Quarkus: 3.10.Final (as of my last update)\n\n- **Key Config Options**:\n  - Spring Boot: `application.properties` or `application.yml`\n  - Quarkus: `application.properties` or `application.yaml`\n\nFor detailed performance comparisons and migration guides, refer to the provided GitHub repository and articles for specific benchmarks and best practices.",
+    "source": "code_example",
+    "updated_at": 1781071470.3009782
+  },
+  "search:Spring + Quarkus Performance:quarkus caching strategies": {
+    "content": "- **CLI Commands**:\n  - `quarkus dev` to start Quarkus in development mode.\n  - `./mvnw compile quarkus:dev` for building and running a Quarkus application.\n\n- **Latest Versions**:\n  - Quarkus version: [Check latest on Quarkus official website](https://quarkus.io/downloads.html)\n  - Hibernate Reactive: [Check latest on Maven Central](https://search.maven.org/artifact/io.quarkus/quarkus-hibernate-reactive)\n\n- **Key Config Options**:\n  - `quarkus.cache.type`: Specifies the cache type (e.g., `caffeine`, `redisson`).\n  - `quarkus.redis.host`: Redis server host.\n  - `quarkus.redis.port`: Redis server port.\n  - `quarkus.cache.caffeine.spec`: Caffeine cache specification.\n\n- **Additional Resources**:\n  - [Quarkus Cache Extension Documentation](https://quarkus.io/guides/cache)\n  - [Redisson for Quarkus](https://github.com/redisson/redisson-quarkus)",
+    "source": "web_search",
+    "updated_at": 1781071483.410453
+  },
+  "search:Spring + Quarkus Performance:quarkus caching strategies_ex": {
+    "content": "- Use `quarkus.cache.type` to specify the caching provider, e.g., `caffeine`, `infinispan`.\n- Configure cache expiration with `quarkus.cache.expiry.max-idle-time` and `quarkus.cache.expiry.ttl`.\n- Enable caching in a CDI bean by annotating it with `@CacheResult` or `@CacheInvalidate`.\n- Use `quarkus.cache.caffeine.spec` for Caffeine-specific configurations.\n- For Infinispan, set up cache containers and caches in your `application.properties`.\n- Update Quarkus to the latest version using `./mvnw quarkus:dev` or `./gradlew quarkusDev`.\n- Key config options include:\n  - `quarkus.cache.type`\n  - `quarkus.cache.expiry.max-idle-time`\n  - `quarkus.cache.expiry.ttl`\n  - `quarkus.cache.caffeine.spec`\n  - Cache container and cache configurations for Infinispan.",
+    "source": "code_example",
+    "updated_at": 1781071491.3427958
   }
 }

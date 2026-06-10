@@ -13,5 +13,45 @@
     "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> ...`\n  - `redis-cli --cluster add-node <new_host>:<port> <existing_host>:<port>`\n  - `redis-cli --cluster reshard <host>:<port>`\n\n- **Latest Versions**:\n  - Redis Cluster: Version 7.0\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`",
     "source": "code_example",
     "updated_at": 1780965999.577033
+  },
+  "search:Redis Clustering Performance:redis clustering performance t": {
+    "content": "- **CLI Commands**: Use `redis-cli --cluster create <host>:<port> ...` to create a Redis cluster.\n- **Latest Version**: Ensure you are using the latest stable version of Redis for optimal performance and security updates.\n- **Key Config Options**:\n  - `maxmemory`: Set memory limit to prevent out-of-memory errors.\n  - `maxmemory-policy`: Define eviction policy (e.g., allkeys-lru, volatile-ttl).\n  - `cluster-enabled yes`: Enable clustering mode.\n  - `cluster-config-file nodes.conf`: Specify the configuration file for cluster nodes.\n  - `cluster-node-timeout`: Set node timeout for cluster health checks.\n- **Monitoring and Tuning**: Use tools like RedisInsight or Redis Cluster Manager to monitor performance metrics and adjust parameters as needed.",
+    "source": "web_search",
+    "updated_at": 1781071232.1160686
+  },
+  "search:Redis Clustering Performance:redis clustering performance t_ex": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host1>:<port1> <host2>:<port2> ...`\n  - `redis-cli --cluster add-node <new_host>:<new_port> <existing_host>:<existing_port>`\n  - `redis-cli --cluster del-node <host>:<port> <node_id>`\n\n- **Latest Versions**:\n  - Redis 7.0\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`\n  - `appendonly yes`",
+    "source": "code_example",
+    "updated_at": 1781071240.3668256
+  },
+  "search:Redis Clustering Performance:redis cluster replication stra": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> <host>:<port> ...`\n  - `redis-cli --cluster add-node <new_host>:<port> <existing_host>:<port>`\n  - `redis-cli --cluster del-node <host>:<port> <node_id>`\n  - `redis-cli --cluster reshard <host>:<port>`\n\n- **Latest Versions**:\n  - Redis Cluster: Version 7.0\n  - Redis Replication: Version 7.0\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`\n  - `appendonly yes`",
+    "source": "web_search",
+    "updated_at": 1781071260.5168786
+  },
+  "search:Redis Clustering Performance:redis cluster replication stra_ex": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host1>:<port> <host2>:<port> ...`\n  - `redis-cli --replicaof <master-ip> <master-port>`\n  \n- **Latest Versions**:\n  - Redis: 7.0.x\n\n- **Key Config Options**:\n  - `cluster-enabled yes`\n  - `cluster-config-file nodes.conf`\n  - `cluster-node-timeout 5000`",
+    "source": "code_example",
+    "updated_at": 1781071266.878251
+  },
+  "search:Redis Clustering Performance:redis cluster sharding techniq": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> <host>:<port> ...`: Creates a new Redis cluster.\n  - `redis-cli --cluster add-node <new_host>:<new_port> <existing_host>:<existing_port>`: Adds a new node to an existing cluster.\n  - `redis-cli --cluster del-node <host>:<port> <node_id>`: Removes a node from the cluster.\n\n- **Latest Versions**:\n  - Redis Cluster is compatible with Redis versions 3.0 and later.\n\n- **Key Config Options**:\n  - `cluster-enabled yes`: Enables cluster mode.\n  - `cluster-config-file nodes.conf`: Specifies the configuration file for the cluster.\n  - `cluster-node-timeout 5000`: Sets the timeout for a node to be considered down.\n  - `appendonly yes`: Enables append-only file persistence.",
+    "source": "web_search",
+    "updated_at": 1781071275.4055748
+  },
+  "search:Redis Clustering Performance:redis cluster sharding techniq_ex": {
+    "content": "- Use `redis-cli --cluster create <host>:<port> ...` to create a Redis cluster.\n- Implement sharding using hash-slot mapping with the `--cluster-replicas <N>` flag.\n- Key config options include `cluster-enabled yes`, `cluster-config-file nodes.conf`, and `cluster-node-timeout 5000`.\n- Ensure data consistency with `cluster-require-full-coverage no` if partial availability is acceptable.\n- Monitor cluster health using `CLUSTER INFO` and `CLUSTER NODES`.",
+    "source": "code_example",
+    "updated_at": 1781071281.5667696
+  },
+  "search:Redis Clustering Performance:redis cluster monitoring and a": {
+    "content": "- Use `redis-cli --cluster check <host>:<port>` to check the health of your Redis cluster.\n- Monitor memory usage with `redis-cli -h <host> -p <port> INFO memory` and set alerts based on thresholds.\n- Track replication lag using `redis-cli -h <host> -p <port> INFO replication`.\n- Configure alerting in Redis by setting up a custom script or using third-party tools like Prometheus and Grafana.\n- Use `redis-cli --cluster reshard <host>:<port>` to manage shard reassignment during failovers.\n- Key config options include `maxmemory`, `maxmemory-policy`, and `notify-keyspace-events`.\n- Ensure Redis cluster is configured with at least 3 masters for high availability.\n- Regularly update Redis to the latest stable version using `apt-get update && apt-get install redis-server` or equivalent package manager commands.",
+    "source": "web_search",
+    "updated_at": 1781071294.8826246
+  },
+  "search:Redis Clustering Performance:redis cluster security conside": {
+    "content": "- **CLI Commands**:\n  - `redis-cli --cluster create <host>:<port> ...`: Create a Redis cluster.\n  - `redis-cli --user <username> --password <password>`: Connect to Redis with authentication.\n\n- **Latest Versions**:\n  - As of my last update, the latest stable version is Redis 7.0.12. Check [Redis official website](https://redis.io/download) for the most current version.\n\n- **Key Config Options**:\n  - `requirepass`: Set a password for the default user.\n  - `maxclients`: Limit the maximum number of client connections.\n  - `cluster-enabled yes`: Enable clustering mode.\n  - `cluster-config-file nodes.conf`: Specify the cluster configuration file.\n  - `cluster-node-timeout`: Define the timeout for node heartbeats in milliseconds.",
+    "source": "web_search",
+    "updated_at": 1781071314.985825
   }
 }
