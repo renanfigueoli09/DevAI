@@ -1,0 +1,27 @@
+{
+  "search:rust-actix-web:rust actix web tutorial 2025": {
+    "content": "- **Latest Version**: Actix Web v4.0\n- **CLI Commands**:\n  - `cargo new my_actix_app`\n  - `cargo run --bin my_actix_app`\n- **Key Config Options**:\n  - `server.bind`: Specifies the address and port to bind the server to.\n  - `app_state`: Allows you to pass state into your application.\n  - `middleware`: Enables middleware for request handling.",
+    "source": "web_search",
+    "updated_at": 1781073729.9470317
+  },
+  "search:rust-actix-web:rust actix web tutorial 2025_ex": {
+    "content": "- **GitHub Repository**: [actix/actix-web](https://github.com/actix/actix-web)\n- **Latest Version**: Check the repository for the latest release tag.\n- **Key Config Options**:\n  - `App::new()`: Initializes a new Actix Web application.\n  - `HttpServer::bind()`: Binds the server to a specific address and port.\n  - `web::Data<T>`: Allows sharing data across handlers.\n  - `web::Json<T>`: Automatically deserializes JSON requests into Rust structs.\n- **CLI Commands**:\n  - `cargo new my_project --bin`: Creates a new Actix Web project.\n  - `cargo run`: Runs the Actix Web server.\n  - `cargo test`: Runs tests for your Actix Web application.\n- **Documentation and Examples**: \n  - [Website & User Guide](https://actix.rs/docs/)\n  - [Examples Repository](https://github.com/actix/examples)\n  - [Community Chat on Discord](https://discord.gg/actix)",
+    "source": "code_example",
+    "updated_at": 1781073738.7642567
+  },
+  "search:rust-actix-web:building restful apis with rus": {
+    "content": "- **CLI Commands**:\n  - `cargo new my_project --bin`\n  - `cargo run`\n\n- **Latest Versions**:\n  - Rust: 1.65.0\n  - Actix Web: 4.0.0\n\n- **Key Config Options**:\n  - `server.bind`: Specifies the address and port to bind the server to.\n  - `app_data`: Adds application data to the request context.\n  - `middleware`: Registers middleware for handling requests.",
+    "source": "web_search",
+    "updated_at": 1781073749.1110888
+  },
+  "search:rust-actix-web:building restful apis with rus_ex": {
+    "content": "- **CLI Commands**:\n  - `cargo new my_project`\n  - `cargo run`\n\n- **Latest Versions**:\n  - Rust: 1.65.0\n  - Actix Web: 4.0.0\n\n- **Key Config Options**:\n  - `App::new()`: Initialize a new application.\n  - `web::resource(\"/api\")`: Define a resource route.\n  - `.route(web::post().to(handler))`: Map HTTP POST requests to a handler function.\n  - `HttpServer::bind(\"127.0.0.1:8080\").app_data(App::new())`: Bind the server and configure the application data.",
+    "source": "code_example",
+    "updated_at": 1781073754.7265031
+  },
+  "search:rust-actix-web:performance optimization in ru": {
+    "content": "- **CLI Commands**: Use `cargo new --bin my_project` to create a new Actix Web project.\n- **Latest Version**: As of the latest updates, Actix Web is at version 4.0. Check [crates.io](https://crates.io/crates/actix-web) for the most current version.\n- **Key Config Options**:\n  - `server::ServerBuilder`: Configure server settings like address and port.\n  - `web::App`: Define routes and middleware.\n  - `web::Data`: Share application state across handlers.\n  - `web::Json`: Deserialize JSON requests into Rust structs.",
+    "source": "web_search",
+    "updated_at": 1781073763.1141047
+  }
+}

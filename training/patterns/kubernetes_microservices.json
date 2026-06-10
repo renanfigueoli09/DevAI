@@ -1,0 +1,32 @@
+{
+  "search:kubernetes-microservices:kubernetes microservices archi": {
+    "content": "- **CLI Commands**: `kubectl apply -f <filename>` to deploy applications.\n- **Latest Versions**: Kubernetes v1.27, Datadog Agent v7.36.\n- **Key Config Options**:\n  - `service.beta.kubernetes.io/aws-load-balancer-type: nlb` for Network Load Balancers.\n  - `securityContext.runAsUser` and `securityContext.runAsGroup` for setting user permissions.\n  - `resources.requests` and `resources.limits` to manage resource allocation.",
+    "source": "web_search",
+    "updated_at": 1781073663.3749082
+  },
+  "search:kubernetes-microservices:kubernetes microservices archi_ex": {
+    "content": "- Use `kubectl` version 25.3.0 or later.\n- Implement CI/CD using GitHub Actions, Kubernetes, Istio/Linkerd, and OIDC authentication.\n- Deploy microservices with Python Flask and Redis in a Kubernetes cluster on Oracle Cloud Infrastructure.\n- Configure Kubernetes Service Discovery using DNS-based service discovery.\n- Use `docker` version 20.10.7 or later for building Docker images.\n- Apply the latest Istio/Linkerd configurations for advanced networking and security.\n- Ensure OIDC authentication is set up for secure access to your microservices.\n- Monitor deployments with Kubernetes Dashboard or Prometheus.\n- Scale services using `kubectl scale deployment <deployment-name> --replicas=<number>` command.",
+    "source": "code_example",
+    "updated_at": 1781073670.1633792
+  },
+  "search:kubernetes-microservices:ci/cd for kubernetes microserv": {
+    "content": "- **GitHub Actions**: Use `actions/checkout@v3`, `actions/setup-node@v3`, and `kubernetes-sigs/kubectl-kustomize@v4`.\n- **Kubernetes**: Ensure latest version, use `kubectl apply -f <file>`.\n- **Istio/Linkerd**: Install via Helm with `helm install istio istio/istio --namespace istio-system --create-namespace`.\n- **OIDC Authentication**: Configure OIDC in Kubernetes using `kubectl create secret generic oidc-secret --from-literal=client-id=<id> --from-literal=client-secret=<secret>`.\n- **Jenkins**: Install with Blueocean plugin, configure IAM policies for EKS and ECR access.\n- **Terraform**: Use latest version, apply configurations with `terraform init`, `terraform plan`, `terraform apply`.\n- **ArgoCD**: Deploy using Helm with `helm install argocd argoproj/argocd --namespace argocd --create-namespace`.\n- **Prometheus/Grafana**: Install Prometheus and Grafana in Kubernetes using Helm charts.\n- **ELK Stack**: Deploy Elasticsearch, Logstash, and Kibana in Kubernetes using Helm or manifests.",
+    "source": "web_search",
+    "updated_at": 1781073682.6484578
+  },
+  "search:kubernetes-microservices:ci/cd for kubernetes microserv_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>` to deploy resources.\n  - `kubectl get pods` to list all pods.\n  - `kubectl logs <pod-name>` to view pod logs.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27.0\n  - Tekton Pipelines: v0.45.0\n  - Helm: v3.9.0\n\n- **Key Config Options**:\n  - `imagePullPolicy`: Specify when to pull images (e.g., `Always`, `IfNotPresent`).\n  - `resources`: Define CPU and memory limits for containers.\n  - `env`: Set environment variables in the container.",
+    "source": "code_example",
+    "updated_at": 1781073697.5932193
+  },
+  "search:kubernetes-microservices:monitoring and logging in kube": {
+    "content": "- Use `kubectl` for basic cluster operations.\n- For monitoring, consider Prometheus v2.x and Grafana v9.x.\n- Loki v2.x for logging with Promtail for collection.\n- Robusta v0.5.0 for automation and alerting.\n- Configure Prometheus with `prometheus.yml`.\n- Set up Grafana dashboards using JSON files.\n- Use `loki` configuration to define log pipelines.\n- Robusta can be deployed via Helm or directly.\n- Ensure RBAC permissions are correctly set for monitoring tools.",
+    "source": "web_search",
+    "updated_at": 1781073706.1439846
+  },
+  "search:kubernetes-microservices:monitoring and logging in kube_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl logs <pod-name>` to view logs of a specific pod.\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27 (as of Nov 2025)\n  - Fluentd: v1.14\n  - Elasticsearch: v8.6\n\n- **Key Config Options**:\n  - `logLevel`: Set the logging level for components like kubelet, kubeadm.\n  - `fluentdConfig`: Customize Fluentd configuration for log collection.\n  - `elasticsearchHosts`: Specify Elasticsearch hosts for centralized logging.",
+    "source": "code_example",
+    "updated_at": 1781073722.4164505
+  }
+}
