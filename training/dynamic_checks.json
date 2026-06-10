@@ -1,7 +1,21 @@
 {
-  "generated_at": 1781075308.791084,
+  "generated_at": 1781076026.120108,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "python-django-redis-sessions: cache",
+      "queries": [
+        "python-django-redis-sessions cache redis example"
+      ],
+      "must_find": [
+        "redis",
+        "cache"
+      ],
+      "must_not": [],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "python-django-redis-sessions"
+    },
     {
       "name": "kubernetes-statefulsets-mongodb: não usa TypeORM",
       "queries": [
@@ -49,21 +63,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "Spring Boot + Hibernate Performance Tuning"
-    },
-    {
-      "name": "TypeScript  +  NestJS GraphQL: padrões de código",
-      "queries": [
-        "TypeScript + NestJS GraphQL pattern code example",
-        "TypeScript  +  NestJS GraphQL"
-      ],
-      "must_find": [
-        "@prisma",
-        "@nestjs"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "TypeScript + NestJS GraphQL"
     }
   ]
 }
