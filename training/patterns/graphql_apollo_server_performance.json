@@ -1,0 +1,22 @@
+{
+  "search:GraphQL + Apollo Server Performance:graphql apollo server performa": {
+    "content": "- **CLI Commands**:\n  - `apollo service:push` to push your schema changes.\n  - `apollo client:download-schema` to download the latest schema.\n\n- **Latest Versions**:\n  - Apollo Server: v3.x\n  - GraphQL.js: v16.x\n\n- **Key Config Options**:\n  - `cacheControl`: Enable caching for improved performance.\n  - `subscriptions`: Configure subscriptions using WebSocket or other transports.\n  - `dataSources`: Use data sources to abstract database interactions.",
+    "source": "web_search",
+    "updated_at": 1781083241.673398
+  },
+  "search:GraphQL + Apollo Server Performance:graphql apollo server performa_ex": {
+    "content": "- Use `apollo server` version 4 for improved performance.\n- Implement caching strategies using Apollo's built-in caching mechanisms.\n- Utilize the `toIdValue` function to correctly interpret returned values as IDs.\n- Employ batching and deduplication techniques to reduce network requests.\n- Optimize resolver functions by minimizing database queries.\n- Configure `cacheControl` to control cache behavior for GraphQL responses.\n- Use `@defer` and `@stream` directives for asynchronous data fetching.\n- Monitor performance using Apollo's built-in monitoring tools.\n- Regularly update dependencies and follow best practices for server optimization.",
+    "source": "code_example",
+    "updated_at": 1781083251.168819
+  },
+  "search:GraphQL + Apollo Server Performance:graphql apollo server best pra": {
+    "content": "- Use `npm install apollo-server-express express graphql` to install necessary packages.\n- For the latest version of Apollo Server, check [Apollo's GitHub page](https://github.com/apollographql/apollo-server).\n- Key config options include:\n  - `typeDefs`: Define GraphQL schema using SDL or JavaScript.\n  - `resolvers`: Implement resolvers for your schema fields.\n  - `context`: Pass context data to resolvers.\n  - `formatError`: Customize error formatting.\n- Use Apollo Server's built-in middleware with Express by calling `app.use('/graphql', server.getMiddleware())`.\n- For performance optimization, consider:\n  - Caching results using Apollo Server's caching mechanisms.\n  - Using DataLoader for batching and caching of database queries.\n  - Implementing pagination to handle large datasets efficiently.",
+    "source": "web_search",
+    "updated_at": 1781083258.9116933
+  },
+  "search:GraphQL + Apollo Server Performance:graphql apollo server best pra_ex": {
+    "content": "- Use `npx create-graphql-server` to start a new Apollo Server project.\n- Ensure you are using the latest version of Apollo Server, currently at v4.x.\n- Key configuration options include:\n  - `typeDefs`: Define your GraphQL schema.\n  - `resolvers`: Implement resolvers for your schema.\n  - `context`: Pass data into resolvers (e.g., authentication tokens).\n  - `dataSources`: Use data sources to abstract database access.\n- For security, implement permission directives or middleware.\n- Utilize Apollo Server's built-in caching mechanisms.\n- Consider using Apollo Server's subscriptions feature for real-time capabilities.\n- For production environments, use Apollo Server's health checks and logging features.\n- Implement rate limiting to prevent abuse.",
+    "source": "code_example",
+    "updated_at": 1781083266.1467044
+  }
+}
