@@ -1,0 +1,17 @@
+{
+  "search:typescript-nodejs-mongoose:typescript node.js mongoose be": {
+    "content": "- **CLI Commands**:\n  - `npm install typescript @types/node mongoose --save`\n  - `npx tsc --init` to initialize TypeScript configuration\n\n- **Latest Versions**:\n  - Node.js v16 or later\n  - Mongoose v7.x (as of my last update)\n\n- **Key Config Options**:\n  - Use `.build()` method for type-safe document creation.\n  - Implement interfaces (`UserAttrs`) and types (`UserDoc`, `UserModel`) to define schema shapes.\n  - Configure ESLint with TypeScript rules for best practices.",
+    "source": "web_search",
+    "updated_at": 1781084086.1151395
+  },
+  "search:typescript-nodejs-mongoose:typescript node.js mongoose be_ex": {
+    "content": "- Use `npm init -y` to initialize a new Node.js project.\n- Install TypeScript and Mongoose using `npm install typescript mongoose --save`.\n- Configure TypeScript with `tsc --init` and set `\"target\": \"ES6\"` and `\"module\": \"commonjs\"`.\n- Define interfaces for your documents (`UserAttrs`) and models (`UserDoc`).\n- Create a model builder function to ensure type safety during document creation.\n- Use Mongoose middleware for pre-save hooks, validation, etc.\n- Implement error handling using try-catch blocks around database operations.\n- Utilize environment variables for sensitive data like MongoDB URI.\n- Regularly update dependencies with `npm outdated` and `npm update`.\n- Consider using TypeScript decorators for more concise code.",
+    "source": "code_example",
+    "updated_at": 1781084093.1432178
+  },
+  "search:typescript-nodejs-mongoose:mongoose schema validation wit": {
+    "content": "- **Latest Version**: Mongoose v9.6.3\n- **CLI Commands**:\n  - `npm install mongoose@latest`\n  - `yarn add mongoose@latest`\n- **Key Config Options**:\n  - `schema`: Defines the structure of your documents.\n  - `timestamps`: Automatically adds createdAt and updatedAt fields to your schema.\n  - `toJSON`: Customizes how Mongoose converts a document to JSON.",
+    "source": "web_search",
+    "updated_at": 1781084105.1773393
+  }
+}
