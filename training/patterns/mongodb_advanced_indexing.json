@@ -1,0 +1,17 @@
+{
+  "search:MongoDB + Advanced Indexing:mongodb advanced indexing tech": {
+    "content": "- Use `db.collection.createIndex()` to create indexes.\n- For compound indexes, specify fields in an array: `db.collection.createIndex([{\"field1\": 1}, {\"field2\": -1}])`.\n- Monitor index performance with `db.currentOp()`.\n- Adjust the `wiredTigerCacheSizeGB` config option for better memory management.\n- Use `explain()` to analyze query plans and identify bottlenecks.\n- For text searches, use `$text` operator: `db.collection.find({$text: {$search: \"query\"}})`.\n- Implement TTL indexes with `expireAfterSeconds`: `db.collection.createIndex({\"createdAt\": 1}, {expireAfterSeconds: 3600})`.\n- Regularly review and optimize index usage with `db.collection.stats()`.",
+    "source": "web_search",
+    "updated_at": 1781086537.8049214
+  },
+  "search:MongoDB + Advanced Indexing:mongodb indexing performance o": {
+    "content": "- **CLI Commands**:\n  - `db.collection.createIndex({ field: 1 })` to create an ascending index.\n  - `db.collection.dropIndex(\"index_name\")` to drop an index.\n\n- **Latest Versions**:\n  - MongoDB 6.0 introduced improvements in indexing and query performance.\n\n- **Key Config Options**:\n  - `wiredTigerCacheSizeGB`: Adjusts the size of the WiredTiger cache.\n  - `storage.wiredTiger.engineConfig.cache_sizeGB`: Specifies the cache size for the WiredTiger storage engine.\n  - `operationProfiling.mode`: Controls the operation profiling mode.",
+    "source": "web_search",
+    "updated_at": 1781086560.373552
+  },
+  "search:MongoDB + Advanced Indexing:mongodb indexing performance o_ex": {
+    "content": "- Use `db.collection.createIndex()` to create indexes.\n- Optimize queries by using projections (`projection`) and limits (`limit`).\n- Monitor index usage with `db.currentOp()`.\n- Update MongoDB to the latest version for performance improvements.\n- Key config options include `wiredTigerCacheSizeGB` and `storage.wiredTiger.engineConfig.cache_sizeGB`.\n- Use `explain()` on queries to understand execution plans.\n- Regularly review and optimize indexes based on query patterns.",
+    "source": "code_example",
+    "updated_at": 1781086565.4666252
+  }
+}
