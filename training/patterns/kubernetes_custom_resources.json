@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-custom-resources:kubernetes custom resources de": {
+    "content": "- **CLI Command to Create CRD**: `kubectl apply -f crd.yaml`\n- **Latest Version of Kubernetes**: As of my last update, the latest stable version is 1.27. However, for the most current version, check the official Kubernetes website.\n- **Key Config Options in CRD**:\n  - `apiVersion`: Specifies the API version of the custom resource definition.\n  - `kind`: Must be \"CustomResourceDefinition\".\n  - `metadata.name`: Unique name for the CRD.\n  - `spec.group`: The group under which the resources will be served.\n  - `spec.version`: Version of the schema for this resource.\n  - `spec.names.kind`: Kind of the resource.\n  - `spec.scope`: Scope of the resource (Cluster or Namespaced).\n- **Example CRD YAML**:\n  ```yaml\n  apiVersion: apiextensions.k8s.io/v1\n  kind: CustomResourceDefinition\n  metadata:\n    name: mycustomresources.example.com\n  spec:\n    group: example.com\n    versions:\n      - name: v1\n        served: true\n        storage: true\n        schema:\n          openAPIV3Schema:\n            type: object\n            properties:\n              spec:\n                type: object\n                properties:\n                  foo:\n                    type: string\n    scope: Namespaced\n    names:\n      plural: mycustomresources\n      singular: mycustomresource\n      kind: MyCustomResource\n      shortNames:\n        - mcr\n  ```\n- **CLI Command to List CRDs**: `kubectl get crds`\n- **CLI Command to Describe a Specific CRD**: `kubectl describe crd mycustomresources.example.com`",
+    "source": "web_search",
+    "updated_at": 1781077563.971251
+  },
+  "search:kubernetes-custom-resources:kubernetes custom resources de_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f crd.yaml` to create or update a Custom Resource Definition.\n  - `kubectl get crds` to list all custom resource definitions.\n  - `kubectl get <custom-resource>` to list instances of a specific custom resource.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - CRD API Version: apps/v1\n\n- **Key Config Options**:\n  - `spec.names.kind`: The name of the custom resource.\n  - `spec.names.plural`: The plural form of the custom resource.\n  - `spec.scope`: Defines if the custom resource is cluster-scoped or namespace-scoped.",
+    "source": "code_example",
+    "updated_at": 1781077569.7667959
+  },
+  "search:kubernetes-custom-resources:advanced kubernetes resource m": {
+    "content": "- **CLI Commands**: Use `kubectl` for managing Kubernetes resources.\n- **Latest Version**: Ensure using the latest version of `kubectl` and Kubernetes cluster software to benefit from the most recent features and security patches.\n- **Key Config Options**:\n  - Resource Requests (`resources.requests`)\n  - Resource Limits (`resources.limits`)\n  - Horizontal Pod Autoscaler (HPA) with `kubectl autoscale deployment <deployment-name> --cpu-percent=<percentage>`\n  - Vertical Pod Autoscaler (VPA) for dynamic resource scaling.\n- **Manual vs. Automated Management**: Transition from manual to automated resource management using tools like Cluster API, Operators, and automation frameworks like Ansible or Terraform.\n- **Monitoring Tools**: Utilize Prometheus and Grafana for monitoring CPU throttling and OOM kills.\n- **Cluster Autoscaler**: Deploy the Cluster Autoscaler to automatically adjust the number of nodes in your cluster based on workload demand.",
+    "source": "web_search",
+    "updated_at": 1781077581.0542984
+  },
+  "search:kubernetes-custom-resources:advanced kubernetes resource m_ex": {
+    "content": "- **CLI Commands**:\n  - `kubectl apply -f <filename>.yaml` to create or update resources.\n  - `kubectl get crds` to list all custom resource definitions.\n  - `kubectl describe crd <crd-name>` for detailed information about a CRD.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27\n  - Prometheus Operator: v0.53\n\n- **Key Config Options**:\n  - Resource Requests and Limits in Pod Specifications.\n  - Metrics Server for resource usage data.\n  - Horizontal Pod Autoscaler (HPA) to scale based on metrics.\n  - Vertical Pod Autoscaler (VPA) for optimizing pod resources.",
+    "source": "code_example",
+    "updated_at": 1781077588.2375054
+  }
+}

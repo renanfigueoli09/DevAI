@@ -1,0 +1,7 @@
+{
+  "search:spring-cloud-gateway-advanced:spring cloud gateway advanced ": {
+    "content": "- **Latest Version**: Spring Cloud Gateway 3.4.5\n- **Key Config Options**:\n  - `spring.cloud.gateway.routes`: Defines routes.\n  - `spring.cloud.gateway.routes.id`: Unique route ID.\n  - `spring.cloud.gateway.routes.uri`: Target URI.\n  - `spring.cloud.gateway.routes.predicates`: Matching conditions.\n  - `spring.cloud.gateway.routes.filters`: Pre- and post-processing filters.\n- **CLI Commands**:\n  - `mvn clean install` to build the project with Maven.\n  - `gradle build` to build the project with Gradle.\n- **Dependency for Maven**:\n  ```xml\n  <dependency>\n    <groupId>org.springframework.cloud</groupId>\n    <artifactId>spring-cloud-starter-gateway</artifactId>\n  </dependency>\n  ```\n- **Dependency for Gradle**:\n  ```groovy\n  implementation 'org.springframework.cloud:spring-cloud-starter-gateway'\n  ```\n\nThese actionable facts provide a concise overview of the latest version, key configuration options, and necessary dependencies for setting up Spring Cloud Gateway in a project.",
+    "source": "web_search",
+    "updated_at": 1781077477.778567
+  }
+}

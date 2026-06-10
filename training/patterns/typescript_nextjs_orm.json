@@ -1,0 +1,17 @@
+{
+  "search:typescript-nextjs-orm:typescript next.js orm integra": {
+    "content": "- **CLI Commands**:\n  - `npx create-next-app@latest --typescript`: Create a new Next.js app with TypeScript support.\n  - `npm install prisma @prisma/client`: Install Prisma and its client library.\n\n- **Latest Versions**:\n  - Next.js: v13.5\n  - Prisma: v4.0\n\n- **Key Config Options**:\n  - `tsconfig.json`: Configure TypeScript options for your project.\n  - `.env.local`: Define environment variables for development.\n  - `prisma/schema.prisma`: Define your data model and relations using Prisma schema language.",
+    "source": "web_search",
+    "updated_at": 1781077518.1105454
+  },
+  "search:typescript-nextjs-orm:typescript next.js orm integra_ex": {
+    "content": "- **Install Next.js with TypeScript**: `npx create-next-app@latest --typescript`\n- **Add Prisma to your project**: `npm install prisma --save-dev` and then run `npx prisma init`\n- **Generate Prisma Client**: Run `npx prisma generate`\n- **Configure tsconfig.json**: Ensure it includes `\"include\": [\"next-env.d.ts\", \"**/*.ts\", \"**/*.tsx\"]`\n- **Example Prisma Schema**: Define your data model in `prisma/schema.prisma`\n  ```prisma\n  generator client {\n    provider = \"prisma-client-js\"\n  }\n\n  datasource db {\n    provider = \"postgresql\"\n    url      = env(\"DATABASE_URL\")\n  }\n\n  model User {\n    id    Int     @id @default(autoincrement())\n    email String  @unique\n    name  String?\n  }\n  ```\n- **Run Prisma Migrate**: `npx prisma migrate dev --name init`\n- **Access Prisma Client in your code**:\n  ```typescript\n  import { PrismaClient } from '@prisma/client'\n\n  const prisma = new PrismaClient()\n\n  async function main() {\n    const user = await prisma.user.create({\n      data: {\n        email: 'user@example.com',\n        name: 'User Name'\n      }\n    })\n    console.log(user)\n  }\n\n  main()\n    .catch((e) => {\n      throw e\n    })\n    .finally(async () => {\n      await prisma.$disconnect()\n    })\n  ```\n- **Key Config Options**: `DATABASE_URL`, `generator client { provider = \"prisma-client-js\" }`\n- **Latest Versions**: Ensure you use the latest versions of Next.js, Prisma, and TypeScript for compatibility and features.",
+    "source": "code_example",
+    "updated_at": 1781077528.7007015
+  },
+  "search:typescript-nextjs-orm:prisma orm for typescript and ": {
+    "content": "- **CLI Commands**:\n  - `npx prisma init`: Initializes a new Prisma project.\n  - `prisma migrate dev --name init`: Creates and applies the initial migration.\n\n- **Latest Versions**:\n  - Prisma Client: v5.x\n  - Prisma Migrate: v2.x\n  - Prisma Studio: v1.x\n\n- **Key Config Options**:\n  - `schema.prisma`: Defines your data model.\n  - `prismaClientOptions`: Customizes the behavior of Prisma Client.\n  - `migrationsDirectory`: Specifies the directory for migrations.",
+    "source": "web_search",
+    "updated_at": 1781077536.8138368
+  }
+}
