@@ -1,0 +1,12 @@
+{
+  "search:Django + Django REST Framework + MongoDB:django rest framework mongodb ": {
+    "content": "- Use `pip install djangorestframework` to install the latest version of Django REST Framework.\n- Configure your settings.py with `REST_FRAMEWORK = {}` for global API settings.\n- For MongoDB integration, use `djangorestframework-mongoengine`.\n- Optimize queries by using indexes in MongoDB and filtering data efficiently.\n- Implement pagination for large datasets to improve performance.\n- Use serializers for converting complex data types into native Python datatypes.\n- Consider using caching mechanisms like Redis or Memcached to reduce database load.",
+    "source": "web_search",
+    "updated_at": 1781066735.6630397
+  },
+  "search:Django + Django REST Framework + MongoDB:django rest framework mongodb _ex": {
+    "content": "- **CLI Commands**: `pip install djangorestframework-mongoengine`\n- **Latest Versions**: DRF-Mongoengine v3.2.0, Django REST Framework v3.14.0\n- **Key Config Options**:\n  - `INSTALLED_APPS`: Add `'rest_framework_mongoengine'` and `'mongoengine'`.\n  - `DEFAULT_AUTHENTICATION_CLASSES`: Configure authentication methods.\n  - `DEFAULT_PERMISSION_CLASSES`: Set permission classes for views.\n  - `DATABASES`: Define MongoDB connection settings.",
+    "source": "code_example",
+    "updated_at": 1781066752.1586878
+  }
+}

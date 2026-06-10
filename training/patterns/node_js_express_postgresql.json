@@ -1,0 +1,27 @@
+{
+  "search:Node.js + Express + PostgreSQL:node.js express postgresql rea": {
+    "content": "- Install PostgreSQL using `sudo apt-get install postgresql`\n- Create a new database: `createdb mydatabase`\n- Use pgAdmin or command line for database management\n- Install Node.js and npm\n- Initialize a new project: `npm init -y`\n- Install Express, pg (node-postgres), and Sequelize:\n  ```bash\n  npm install express pg sequelize\n  ```\n- Create an Express server in `app.js`:\n  ```javascript\n  const express = require('express');\n  const app = express();\n  app.use(express.json());\n  app.listen(3000, () => console.log('Server running on port 3000'));\n  ```\n- Configure Sequelize with PostgreSQL connection:\n  ```javascript\n  const { Sequelize } = require('sequelize');\n  const sequelize = new Sequelize('mydatabase', 'username', 'password', {\n    host: 'localhost',\n    dialect: 'postgres'\n  });\n  ```\n- Define a model (e.g., User):\n  ```javascript\n  const User = sequelize.define('user', {\n    firstName: {\n      type: Sequelize.STRING,\n      allowNull: false\n    },\n    lastName: {\n      type: Sequelize.STRING\n    }\n  });\n  ```\n- Create tables:\n  ```bash\n  sequelize-cli db:migrate\n  ```\n- Implement CRUD operations using Express and Sequelize\n- Use WebSocket for real-time notifications (e.g., with `socket.io`)\n- Install socket.io: `npm install socket.io`\n- Integrate socket.io in your server:\n  ```javascript\n  const io = require('socket.io')(server);\n  io.on('connection', (socket) => {\n    console.log('a user connected');\n    // Handle real-time events\n  });\n  ```\n- Emit and listen to events from clients",
+    "source": "web_search",
+    "updated_at": 1781066774.0853088
+  },
+  "search:Node.js + Express + PostgreSQL:node.js express postgresql rea_ex": {
+    "content": "- **CLI Commands**:\n  - `npm init -y` to initialize a new Node.js project.\n  - `npm install express pg sequelize` to install necessary packages.\n\n- **Latest Versions**:\n  - Express: v4.18.2\n  - PostgreSQL: v15.3\n  - Sequelize: v6.30.0\n\n- **Key Config Options**:\n  - Express: Use `app.use(express.json())` for JSON parsing.\n  - PostgreSQL: Configure connection string in `.env` file like `DB_URL=postgres://user:password@localhost/dbname`.\n  - Sequelize: Define models and use `sequelize.sync()` to sync with the database.",
+    "source": "code_example",
+    "updated_at": 1781066788.0830703
+  },
+  "search:Node.js + Express + PostgreSQL:node.js express postgresql sec": {
+    "content": "- Use `npm install express sequelize pg` to install Express, Sequelize, and PostgreSQL.\n- Ensure your PostgreSQL version is up-to-date for security patches.\n- Implement input validation using libraries like `express-validator`.\n- Use HTTPS by enabling TLS with `app.use(require('https').createServer(options, app))`.\n- Set secure cookies with options like `{ httpOnly: true, secure: true }`.\n- Regularly update dependencies and use tools like `npm audit` to check for vulnerabilities.\n- Implement rate limiting using middleware like `express-rate-limit`.\n- Use environment variables for sensitive information like database credentials.\n- Configure Sequelize models with proper associations and validations.",
+    "source": "web_search",
+    "updated_at": 1781066795.7171633
+  },
+  "search:Node.js + Express + PostgreSQL:node.js express postgresql per": {
+    "content": "- Use `pg` library for PostgreSQL interaction.\n- Install latest version of `pg` using npm: `npm install pg`.\n- Configure connection pool in Express app:\n  ```javascript\n  const Pool = require('pg').Pool;\n  const pool = new Pool({\n    user: 'your_user',\n    host: 'localhost',\n    database: 'your_db',\n    password: 'your_password',\n    port: 5432,\n  });\n  ```\n- Use `async/await` for handling queries:\n  ```javascript\n  async function getUser(userId) {\n    const client = await pool.connect();\n    try {\n      const result = await client.query('SELECT * FROM users WHERE id=$1', [userId]);\n      return result.rows[0];\n    } finally {\n      client.release();\n    }\n  }\n  ```\n- Enable query caching for frequently used queries.\n- Optimize PostgreSQL configuration (`postgresql.conf` and `pg_hba.conf`) based on your workload.\n- Use prepared statements to reduce parsing overhead:\n  ```javascript\n  const text = 'SELECT * FROM users WHERE id=$1';\n  const values = [userId];\n  client.query(text, values);\n  ```\n- Monitor performance using tools like pgBadger or pg_stat_statements.\n- Implement connection pooling to manage database connections efficiently.",
+    "source": "web_search",
+    "updated_at": 1781066837.407126
+  },
+  "search:Node.js + Express + PostgreSQL:node.js express postgresql per_ex": {
+    "content": "- Use `pg` library for PostgreSQL in Node.js.\n- Install latest versions of Node.js, Express, and pg using npm or yarn.\n- Configure connection pooling with `pool` option in pg to manage database connections efficiently.\n- Implement prepared statements for query optimization.\n- Utilize async/await for handling asynchronous operations in a cleaner way.\n- Monitor performance using tools like `pg_stat_statements` extension in PostgreSQL.\n- Optimize queries by adding appropriate indexes on frequently queried columns.\n- Use connection pooling with `pool` option in pg to manage database connections efficiently.\n- Implement caching mechanisms (e.g., Redis) for frequently accessed data to reduce database load.",
+    "source": "code_example",
+    "updated_at": 1781066843.096804
+  }
+}

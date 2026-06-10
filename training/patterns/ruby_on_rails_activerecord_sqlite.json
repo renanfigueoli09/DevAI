@@ -1,0 +1,12 @@
+{
+  "search:Ruby on Rails + ActiveRecord + SQLite:ruby on rails activerecord sql": {
+    "content": "- Use `includes` to avoid N+1 queries.\n- Set `config.active_record.sqlite3_adapter_strict_strings_by_default = true` in your Rails configuration for better string handling.\n- Update Ruby on Rails and SQLite to their latest versions for performance improvements.\n- Utilize `preload` instead of `eager_load` when possible, as it performs fewer database queries.\n- Optimize SQL queries by using indexes and avoiding subqueries where possible.\n- Use `where.not` or `where.exists` for more efficient filtering.\n- Consider using `pluck` for simple data retrieval operations to reduce memory usage.\n- Regularly analyze and optimize your database schema and queries.",
+    "source": "web_search",
+    "updated_at": 1781066966.7205417
+  },
+  "search:Ruby on Rails + ActiveRecord + SQLite:ruby on rails activerecord sql_ex": {
+    "content": "- **CLI Commands**:\n  - `rails db:migrate` to run migrations.\n  - `rails db:schema:dump` to dump the schema.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - SQLite3: 1.4.x\n\n- **Key Config Options**:\n  - `config.active_record.schema_format`: Set to `:sql` for better performance.\n  - `config.active_record.dump_schema_after_migration`: Set to `false` if not needed.\n\n- **Advanced Query Techniques**:\n  - Use `eager_loading` to reduce N+1 queries.\n  - Utilize `Arel` for complex query building.\n  - Employ `CTEs (Common Table Expressions)` for large datasets.\n  - Implement batch processing with `find_in_batches`.\n\n- **Performance Optimization Tips**:\n  - Indexes on frequently queried columns.\n  - Use `EXPLAIN ANALYZE` to understand query performance.\n  - Optimize database schema design.",
+    "source": "code_example",
+    "updated_at": 1781066973.4959328
+  }
+}

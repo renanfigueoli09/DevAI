@@ -1,0 +1,12 @@
+{
+  "search:Spring Boot + Hibernate + PostgreSQL:spring boot hibernate postgres": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.x\n  - Hibernate: 6.2.x\n  - PostgreSQL: 14.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.datasource.username=myuser`\n  - `spring.datasource.password=mypassword`\n  - `spring.jpa.hibernate.ddl-auto=update`\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect`",
+    "source": "web_search",
+    "updated_at": 1781066659.1680677
+  },
+  "search:Spring Boot + Hibernate + PostgreSQL:spring boot hibernate postgres_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build and run the project.\n  - `./mvnw spring-boot:run` to start the Spring Boot application.\n\n- **Latest Versions**:\n  - Spring Boot: 2.7.x\n  - Hibernate: 5.6.x\n  - PostgreSQL JDBC Driver: 42.3.x\n\n- **Key Config Options**:\n  - `spring.datasource.url=jdbc:postgresql://localhost:5432/mydb`\n  - `spring.datasource.username=myuser`\n  - `spring.datasource.password=mypassword`\n  - `spring.jpa.hibernate.ddl-auto=update`",
+    "source": "code_example",
+    "updated_at": 1781066667.2008781
+  }
+}
