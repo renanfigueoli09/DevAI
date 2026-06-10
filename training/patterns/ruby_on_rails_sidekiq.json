@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails+sidekiq:ruby on rails sidekiq backgrou": {
+    "content": "- **CLI Commands**:\n  - `bundle install` to install Sidekiq.\n  - `sidekiq` to start the Sidekiq server.\n  - `rails generate sidekiq:worker WorkerName` to create a new worker.\n\n- **Latest Versions**:\n  - Sidekiq: 8.0\n  - Redis: 7.2.4\n\n- **Key Config Options**:\n  - `config/sidekiq.yml`: Configure Sidekiq settings like concurrency and queues.\n  - `Sidekiq.configure_server` in `config/initializers/sidekiq.rb`: Server-specific configuration.\n  - `Sidekiq.configure_client` in `config/initializers/sidekiq.rb`: Client-specific configuration.",
+    "source": "web_search",
+    "updated_at": 1781049532.0253294
+  },
+  "search:ruby-on-rails+sidekiq:ruby on rails sidekiq backgrou_ex": {
+    "content": "- **CLI Commands**:\n  - `bundle install` to install Sidekiq and Redis gems.\n  - `rails generate sidekiq:worker WorkerName` to create a new worker.\n  - `sidekiq` to start the Sidekiq server.\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.x\n  - Sidekiq: 6.5.x\n  - Redis: 7.0.x\n\n- **Key Config Options**:\n  - In `config/sidekiq.yml`, configure queues and concurrency levels.\n  - Use `Sidekiq.configure_server` for server-specific settings like retry intervals.\n  - Monitor jobs using Sidekiq's web dashboard accessible at `http://localhost:3000/sidekiq`.",
+    "source": "code_example",
+    "updated_at": 1781049539.476033
+  },
+  "search:ruby-on-rails+sidekiq:sidekiq monitoring and perform": {
+    "content": "- **CLI Commands**:\n  - `sidekiqctl start`: Start Sidekiq.\n  - `sidekiqctl stop`: Stop Sidekiq.\n  - `sidekiqctl restart`: Restart Sidekiq.\n\n- **Latest Versions**:\n  - Sidekiq: 6.5.0\n  - Rails: 8.0\n\n- **Key Config Options**:\n  - `config/initializers/sidekiq.rb`: Configure Sidekiq settings.\n  - `sidekiq_options queue: 'critical'`: Set job priority.\n  - `sidekiq_options retry_in: 5.minutes`: Retry failed jobs after 5 minutes.",
+    "source": "web_search",
+    "updated_at": 1781049548.4220774
+  },
+  "search:ruby-on-rails+sidekiq:sidekiq monitoring and perform_ex": {
+    "content": "- **CLI Commands**:\n  - `sidekiq stats`: Displays Sidekiq statistics.\n  - `sidekiq web`: Starts the Sidekiq web interface.\n\n- **Latest Versions**:\n  - Sidekiq: v6.5.2 (as of my last update in October 2023, but check GitHub for the latest version).\n\n- **Key Config Options**:\n  - `config/initializers/sidekiq.rb`: Configure Sidekiq settings.\n    ```ruby\n    Sidekiq.configure_server do |config|\n      config.redis = { url: 'redis://localhost:6379/0' }\n      config.concurrency = 25\n    end\n\n    Sidekiq.configure_client do |config|\n      config.redis = { url: 'redis://localhost:6379/0' }\n    end\n    ```\n  - `sidekiq_options queue: :critical`: Assign jobs to specific queues.\n  - `sidekiq_options retry: false`: Disable retries for certain jobs.\n\n- **Monitoring Tools**:\n  - Use Sidekiq's built-in web interface (`sidekiq web`).\n  - Integrate with external monitoring tools like Prometheus and Grafana for advanced metrics.",
+    "source": "code_example",
+    "updated_at": 1781049569.283464
+  }
+}

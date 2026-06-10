@@ -1,0 +1,22 @@
+{
+  "search:java-spring-boot+kafka:spring boot kafka messaging sy": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.4.0\n  - Apache Kafka: 3.5.0\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID.\n  - `spring.kafka.consumer.auto-offset-reset`: What to do when there is no initial offset in Kafka or if the current offset does not exist any more on server (e.g., data has been deleted).\n  - `spring.kafka.producer.key-serializer`: Serializer class for key that implements `Serializer`.\n  - `spring.kafka.producer.value-serializer`: Serializer class for value that implements `Serializer`.",
+    "source": "web_search",
+    "updated_at": 1781049631.7139919
+  },
+  "search:java-spring-boot+kafka:spring boot kafka messaging sy_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Set Kafka broker addresses.\n  - `spring.kafka.consumer.group-id`: Consumer group ID for consumer configuration.\n  - `spring.kafka.producer.key-serializer`: Serializer class for key data.\n  - `spring.kafka.producer.value-serializer`: Serializer class for value data.",
+    "source": "code_example",
+    "updated_at": 1781049638.7237663
+  },
+  "search:java-spring-boot+kafka:kafka integration with spring ": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot application.\n  - `kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.1.4\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers`: Set to your Kafka broker address.\n  - `spring.kafka.consumer.group-id`: Unique identifier for the consumer group.\n  - `spring.kafka.consumer.auto-offset-reset`: Controls what to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g., because that data has been deleted).\n  - `spring.kafka.producer.key-serializer` and `spring.kafka.producer.value-serializer`: Specify serializers for keys and values.",
+    "source": "web_search",
+    "updated_at": 1781049661.090015
+  },
+  "search:java-spring-boot+kafka:kafka integration with spring _ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`\n  - `kafka-topics.sh --create --topic example-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1`\n\n- **Latest Versions**:\n  - Spring Boot: 3.0.5\n  - Apache Kafka: 3.3.1\n\n- **Key Config Options**:\n  - `spring.kafka.bootstrap-servers=localhost:9092`\n  - `spring.kafka.consumer.group-id=my-group`\n  - `spring.kafka.consumer.auto-offset-reset=earliest`\n  - `spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer`",
+    "source": "code_example",
+    "updated_at": 1781049667.3991444
+  }
+}
