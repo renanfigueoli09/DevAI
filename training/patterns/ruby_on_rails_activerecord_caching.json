@@ -1,0 +1,22 @@
+{
+  "search:ruby-on-rails-activerecord-caching:rails activerecord caching str": {
+    "content": "- Use `rails cache:clear` to clear the cache.\n- Configure caching stores in `config/environments/development.rb`, e.g., `config.cache_store = :redis_cache_store`.\n- Implement fragment caching with `cache do ... end` blocks in views.\n- Utilize HTTP caching by setting headers like `expires_in 1.hour`.\n- Employ Redis for caching with the `gem 'redis'` and `gem 'redis-rails'`.\n- Use `expire_fragment` to expire specific fragments.\n- Apply `around_action :set_cache_headers` for controller-level caching.\n- Implement cache stampede protection using `cache.fetch(key, expires_in: 1.hour) { ... }`.\n- Monitor cache performance with tools like New Relic or Rails Panel.",
+    "source": "web_search",
+    "updated_at": 1781065624.629009
+  },
+  "search:ruby-on-rails-activerecord-caching:rails activerecord caching str_ex": {
+    "content": "- **Rails Version**: 7.1+\n- **CLI Command**:\n  - `rails cache:clear`\n  - `rails db:schema:dump`\n- **Key Config Options**:\n  - `config.cache_classes`: Set to `true` in production.\n  - `config.action_controller.perform_caching`: Enable caching for controllers.\n  - `config.active_record.query_cache_enabled`: Enable query caching (Rails 7.1+ uses LRU).\n- **Actionable Steps**:\n  - Ensure `config.cache_classes = true` in production to avoid re-loading classes on every request.\n  - Use `rails cache:clear` before deploying new code to clear old caches.\n  - Convert query results to arrays within cache blocks for better performance.",
+    "source": "code_example",
+    "updated_at": 1781065639.00493
+  },
+  "search:ruby-on-rails-activerecord-caching:rails caching performance opti": {
+    "content": "- Use `rails c` to open the Rails console.\n- Update Rails to the latest version using `bundle update rails`.\n- Configure caching strategies in `config/environments/production.rb`, e.g., `config.cache_classes = true`.\n- Utilize `Rails.cache.fetch(\"key\", expires_in: 1.hour) { expensive_method }` for memoization.\n- Employ fragment caching with `render partial: \"shared/header\", cache: true`.\n- Use the `rack-cache` gem for HTTP-level caching, add it to your Gemfile and configure in `config/environments/production.rb`.\n- Monitor performance using tools like `rails runner 'require \"benchmark\"; Benchmark.measure { ... }'`.\n- Implement database query optimization with eager loading (`includes`) and avoiding N+1 queries.\n- Use `rack-mini-profiler` for detailed performance analysis, add it to your Gemfile and configure in `config/environments/development.rb`.",
+    "source": "web_search",
+    "updated_at": 1781065649.5648816
+  },
+  "search:ruby-on-rails-activerecord-caching:rails caching performance opti_ex": {
+    "content": "- Use `rails cache:clear` to clear all caches.\n- Implement fragment caching using `<%= cache 'unique_key' do %>` in views.\n- Utilize `expire_fragment('unique_key')` to expire specific fragments.\n- Employ `Rails.cache.fetch('key', expires_in: 1.hour) { ... }` for memoization.\n- Configure caching stores in `config/environments/production.rb`, e.g., `config.cache_store = :redis_cache_store`.\n- Use `ActiveRecord::Base.connection_pool.with_connection { ... }` to optimize database queries within a block.\n- Implement multi-level caching with `cache_store: [:memory_store, :file_store]`.\n- Monitor cache hit rates using `Rails.cache.stats`.",
+    "source": "code_example",
+    "updated_at": 1781065672.7978075
+  }
+}
