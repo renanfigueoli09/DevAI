@@ -1,0 +1,12 @@
+{
+  "search:typescript-aws-lambda-performance:typescript aws lambda error ha": {
+    "content": "- Use `aws lambda update-function-code` to deploy TypeScript code.\n- Configure logging in AWS Lambda using CloudWatch Logs.\n- Implement try-catch blocks for error handling within your Lambda functions.\n- Utilize the latest version of the AWS SDK for JavaScript (v3) with TypeScript.\n- Set environment variables securely using AWS Secrets Manager or Parameter Store.\n- Use `npm install` to manage dependencies in your TypeScript project.\n- Transpile TypeScript code using `tsc` before deploying it to AWS Lambda.\n- Monitor function performance and errors through CloudWatch Metrics and Logs.",
+    "source": "web_search",
+    "updated_at": 1781083410.4268792
+  },
+  "search:typescript-aws-lambda-performance:typescript aws lambda error ha_ex": {
+    "content": "- Use `aws lambda update-function-code` to deploy TypeScript code.\n- Ensure your `tsconfig.json` is configured correctly for AWS Lambda.\n- For error handling, use try-catch blocks within your handler functions.\n- Utilize the latest version of AWS SDK for JavaScript (v3) in your TypeScript project.\n- Set environment variables securely using AWS Secrets Manager or Parameter Store.\n- Configure logging with AWS CloudWatch Logs to monitor function execution.\n- Use `aws lambda update-function-configuration` to adjust memory and timeout settings as needed.\n- Implement API Gateway for HTTP requests, handling errors gracefully through integration responses.",
+    "source": "code_example",
+    "updated_at": 1781083415.2704766
+  }
+}

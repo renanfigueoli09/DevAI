@@ -1,0 +1,17 @@
+{
+  "search:java-spring-cloud-streams-kafka:spring cloud streams kafka int": {
+    "content": "- Use `spring-cloud-stream` version 3.2.0.RELEASE or later.\n- Configure Kafka Streams binder in `application.yml`:\n  ```yaml\n  spring:\n    cloud:\n      stream:\n        bindings:\n          consumeTextMessages-in-0:\n            destination: text-input-topic\n            group: my-group\n        kafka:\n          streams:\n            application-id: my-app-id\n            bootstrap-servers: localhost:9092\n  ```\n- Use `@StreamListener` to listen for messages.\n- Implement error handling using `@StreamListener errorHandler`.\n- Configure Kafka Streams properties in `application.yml`:\n  ```yaml\n  spring:\n    cloud:\n      stream:\n        kafka:\n          streams:\n            config:\n              default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde\n              default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde\n  ```\n- Use `KafkaStreams` for more complex processing.\n- Monitor Kafka Streams application using metrics and logs.",
+    "source": "web_search",
+    "updated_at": 1781083424.0414145
+  },
+  "search:java-spring-cloud-streams-kafka:spring cloud streams kafka int_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run Spring Boot applications.\n  - `docker-compose up` for multi-container setup.\n\n- **Latest Versions**:\n  - Spring Cloud Stream: 4.0.0\n  - Apache Kafka: 3.2.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: Specifies the Kafka topic.\n  - `spring.cloud.stream.bindings.output.destination`: Specifies the output Kafka topic.\n  - `spring.cloud.stream.kafka.binder.configuration.bootstrap.servers`: Kafka broker addresses.\n  - `spring.cloud.stream.error.default.destination`: Dead letter queue for error messages.",
+    "source": "code_example",
+    "updated_at": 1781083429.3873668
+  },
+  "search:java-spring-cloud-streams-kafka:spring cloud streams kafka per": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install` to build the project.\n  - `java -jar target/your-application.jar` to run the application.\n\n- **Latest Versions**:\n  - Spring Boot: 3.2.0\n  - Spring Cloud Stream: 4.1.0\n  - Apache Kafka: 3.3.0\n\n- **Key Config Options**:\n  - `spring.cloud.stream.bindings.input.destination`: The name of the Kafka topic to subscribe.\n  - `spring.cloud.stream.bindings.output.destination`: The name of the Kafka topic to publish messages.\n  - `spring.kafka.bootstrap-servers`: List of Kafka brokers.\n  - `spring.kafka.consumer.group-id`: Consumer group ID for Kafka consumer.\n  - `spring.kafka.consumer.auto-offset-reset`: Behavior when there is no initial offset in Kafka or if the current offset does not exist any more on server.",
+    "source": "web_search",
+    "updated_at": 1781083441.7052553
+  }
+}

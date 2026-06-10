@@ -1,0 +1,12 @@
+{
+  "search:graphql-apollo-performance:graphql apollo performance opt": {
+    "content": "- **CLI Commands**: Use `apollo service:push` to push your GraphQL schema and resolvers.\n- **Latest Versions**: Ensure using Apollo Server v3.x for the latest features and performance improvements.\n- **Key Config Options**:\n  - `cacheControl`: Enable caching control headers for better client-side caching.\n  - `dataSources`: Use data sources for fetching data from multiple services efficiently.\n  - `subscriptions`: Optimize subscriptions by using connection pooling and batching.",
+    "source": "web_search",
+    "updated_at": 1781083357.2597518
+  },
+  "search:graphql-apollo-performance:graphql apollo performance opt_ex": {
+    "content": "- Use `apollo client:cache` to interact with Apollo's cache.\n- Implement `cacheConfig` in your Apollo Client setup for advanced caching strategies.\n- Utilize `normalize()` function from Apollo Client to manage data normalization.\n- Ensure MongoDB indexes are optimized for frequent queries.\n- Update Apollo Server and related packages to their latest versions for performance improvements.\n- Configure `subscriptionType` in Apollo Server to handle real-time data efficiently.\n- Use `@cacheControl` directives in your GraphQL schema to control caching behavior.\n- Monitor query performance using Apollo's built-in tracing tools.\n- Implement batching with Apollo Client to reduce the number of network requests.",
+    "source": "code_example",
+    "updated_at": 1781083363.3802085
+  }
+}
