@@ -1,7 +1,24 @@
 {
-  "generated_at": 1781069945.601351,
+  "generated_at": 1781070861.3497455,
   "studied_count": 636,
   "checks": [
+    {
+      "name": "golang + mongo-performance-tuning: não usa TypeORM",
+      "queries": [
+        "golang+mongo-performance-tuning schema service"
+      ],
+      "must_find": [
+        "mongo"
+      ],
+      "must_not": [
+        "TypeOrmModule",
+        "@Entity",
+        "Repository<"
+      ],
+      "weight": 1,
+      "dynamic": true,
+      "source_topic": "golang+mongo-performance-tuning"
+    },
     {
       "name": "Error Handling in Spring-Boot-Kafka-Spring-Cloud-Stream: padrões de código",
       "queries": [
@@ -31,49 +48,6 @@
       "weight": 1,
       "dynamic": true,
       "source_topic": "typescript-graphql-mutations"
-    },
-    {
-      "name": "kafka-streams-performance-tuning: producer consumer",
-      "queries": [
-        "kafka-streams-performance-tuning producer consumer example"
-      ],
-      "must_find": [
-        "kafka",
-        "producer",
-        "consumer"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "kafka-streams-performance-tuning"
-    },
-    {
-      "name": "golang-redis-cluster: cache",
-      "queries": [
-        "golang-redis-cluster cache redis example"
-      ],
-      "must_find": [
-        "redis"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "golang-redis-cluster"
-    },
-    {
-      "name": "typescript-eslint-performance: padrões de código",
-      "queries": [
-        "typescript-eslint-performance pattern code example",
-        "typescript-eslint-performance"
-      ],
-      "must_find": [
-        "@eslint",
-        "@types"
-      ],
-      "must_not": [],
-      "weight": 1,
-      "dynamic": true,
-      "source_topic": "typescript-eslint-performance"
     }
   ]
 }
