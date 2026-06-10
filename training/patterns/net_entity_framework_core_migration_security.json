@@ -1,0 +1,22 @@
+{
+  "search:.NET Entity Framework Core Migration Security:.net efcore migration security": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  - `dotnet ef migrations remove`\n\n- **Latest Versions**:\n  - EF Core: 7.0\n  - .NET Core CLI Tools: 6.0\n\n- **Key Config Options**:\n  - Connection String in `appsettings.json`\n  - `DbContext` class configuration\n  - Migrations folder location",
+    "source": "web_search",
+    "updated_at": 1781062992.9993577
+  },
+  "search:.NET Entity Framework Core Migration Security:.net efcore migration security_ex": {
+    "content": "- **CLI Commands**:\n  - `dotnet ef migrations add InitialCreate` to create initial migration.\n  - `dotnet ef database update` to apply migrations.\n\n- **Latest Versions**:\n  - EF Core 9 introduced automatic locking during migration application for better protection against corruption.\n\n- **Key Config Options**:\n  - Use `MigrateAsync` and `Migrate` methods for applying migrations asynchronously or synchronously.\n  - Configure the connection string in your app settings to point to the correct database.",
+    "source": "code_example",
+    "updated_at": 1781063015.6823626
+  },
+  "search:.NET Entity Framework Core Migration Security:efcore migration best practice": {
+    "content": "- **CLI Commands**: \n  - `dotnet ef migrations add <MigrationName>`\n  - `dotnet ef database update`\n  \n- **Latest Versions**:\n  - Ensure using the latest stable version of EF Core and .NET SDK.\n\n- **Key Config Options**:\n  - `UseMigrationsHistoryTable`: Customize the name of the migration history table.\n  - `EnableLazyLoadingProxies`: Enable lazy loading for entities.",
+    "source": "web_search",
+    "updated_at": 1781063039.307136
+  },
+  "search:.NET Entity Framework Core Migration Security:efcore migration best practice_ex": {
+    "content": "- Use `dotnet ef migrations add <MigrationName>` to create a new migration.\n- Apply migrations using `dotnet ef database update`.\n- Always include a description in the migration name for clarity.\n- Regularly review and clean up old migrations.\n- Ensure your data model is versioned with migrations.\n- Utilize `Add-Migration` and `Update-Database` commands in PowerShell for Windows users.\n- Keep your DbContext configuration up-to-date with the latest EF Core version.\n- Use `dotnet ef migrations script` to generate a SQL script from migrations.\n- Configure logging in `appsettings.json` for better migration tracking.",
+    "source": "code_example",
+    "updated_at": 1781063058.5021412
+  }
+}

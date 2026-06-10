@@ -1,0 +1,22 @@
+{
+  "search:Python FastAPI MongoDB Performance Optimization:fastapi mongodb performance": {
+    "content": "- **CLI Commands**:\n  - `fastapi run app --reload`\n  - `pip install fastapi uvicorn motor`\n\n- **Latest Versions**:\n  - FastAPI: 0.95.0\n  - Uvicorn: 10.6.0\n  - Motor: 2.3.0\n\n- **Key Config Options**:\n  - MongoDB URI: `mongodb://localhost:27017`\n  - Database Name: `mydatabase`\n  - Collection Name: `mycollection`\n  - Async Motor Client: `client = AsyncIOMotorClient(\"mongodb://localhost:27017\")`",
+    "source": "web_search",
+    "updated_at": 1781063066.2503982
+  },
+  "search:Python FastAPI MongoDB Performance Optimization:fastapi mongodb performance_ex": {
+    "content": "- Clone example code using `git clone https://github.com/mongodb-pymongo-fastapi/example-code.git`\n- Use Motor, the async MongoDB driver for FastAPI.\n- Install dependencies with `pip install fastapi uvicorn motor pymongo`.\n- Key config options include setting up MongoDB URI and database name in your application settings.",
+    "source": "code_example",
+    "updated_at": 1781063082.027331
+  },
+  "search:Python FastAPI MongoDB Performance Optimization:fastapi pymongo optimization": {
+    "content": "- Use `pip install fastapi pymongo motor` to install FastAPI, PyMongo, and Motor.\n- For asynchronous operations in FastAPI with MongoDB, use the Motor driver instead of PyMongo's synchronous driver.\n- Key configuration options include setting up an asynchronous client for MongoDB using `MotorClient`.\n- Example CLI command: `uvicorn main:app --reload`\n- Latest versions can be checked on [PyPI](https://pypi.org/) or [GitHub](https://github.com/tiangolo/fastapi).\n- For optimal performance, ensure that your MongoDB deployment is properly scaled and configured.\n- Consider using connection pooling with Motor to manage database connections efficiently.",
+    "source": "web_search",
+    "updated_at": 1781063099.749861
+  },
+  "search:Python FastAPI MongoDB Performance Optimization:fastapi pymongo optimization_ex": {
+    "content": "- Use `AsyncMongoClient()` to connect to MongoDB Atlas.\n- Ensure FastAPI endpoints are async to maintain true asynchrony.\n- Clone the repository from GitHub for example code.\n- Install latest versions of FastAPI and PyMongo using pip.\n- Configure environment variables for sensitive data like MongoDB URI.",
+    "source": "code_example",
+    "updated_at": 1781063104.6923552
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "search:Java Spring Boot MySQL Advanced Performance Tuning:java spring boot mysql perform": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run`: Runs a Spring Boot application.\n  - `docker-compose up`: Starts Docker containers defined in docker-compose.yml.\n\n- **Latest Versions**:\n  - Java: 17\n  - Spring Boot: 3.0.x\n  - MySQL: 8.0.x\n\n- **Key Config Options**:\n  - `spring.datasource.url`: JDBC URL for the database.\n  - `spring.datasource.username`: Database username.\n  - `spring.datasource.password`: Database password.\n  - `spring.jpa.hibernate.ddl-auto`: Controls schema generation (e.g., `update`, `create-drop`).",
+    "source": "web_search",
+    "updated_at": 1781062942.427878
+  },
+  "search:Java Spring Boot MySQL Advanced Performance Tuning:java spring boot mysql perform_ex": {
+    "content": "- Use `mvn spring-boot:run` to run your Spring Boot application.\n- Ensure MySQL version is up-to-date, e.g., MySQL 8.0.\n- Configure data source in `application.properties`:\n  ```properties\n  spring.datasource.url=jdbc:mysql://localhost:3306/yourdb?useSSL=false&serverTimezone=UTC\n  spring.datasource.username=root\n  spring.datasource.password=password\n  ```\n- Enable query logging for debugging:\n  ```properties\n  spring.jpa.show-sql=true\n  spring.jpa.properties.hibernate.format_sql=true\n  ```\n- Use `@Transactional` to manage transactions.\n- Optimize SQL queries using indexes and proper joins.\n- Configure connection pool settings in `application.properties`:\n  ```properties\n  spring.datasource.hikari.maximum-pool-size=20\n  spring.datasource.hikari.minimum-idle=5\n  ```\n- Monitor performance with tools like JConsole or VisualVM.\n- Regularly update Spring Boot and MySQL to benefit from the latest features and security patches.",
+    "source": "code_example",
+    "updated_at": 1781062952.207207
+  },
+  "search:Java Spring Boot MySQL Advanced Performance Tuning:spring boot mysql query optimi": {
+    "content": "- Use `EXPLAIN` to analyze query performance.\n- Optimize MySQL indexes for faster data retrieval.\n- Employ batch processing for large datasets.\n- Utilize Spring Data JPA for efficient repository operations.\n- Implement caching strategies like Ehcache or Redis.\n- Ensure proper database connection pooling with HikariCP.\n- Regularly update dependencies and libraries to the latest versions.\n- Use `@Query` annotations in Spring Data JPA for custom SQL queries.\n- Consider using query derivation for type-safe query construction.",
+    "source": "web_search",
+    "updated_at": 1781062969.3874328
+  },
+  "search:Java Spring Boot MySQL Advanced Performance Tuning:spring boot mysql query optimi_ex": {
+    "content": "- Use `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect` in `application.properties` for MySQL 8.\n- Enable query logging with `spring.jpa.show-sql=true` to identify slow queries.\n- Optimize SQL queries by using indexes, avoiding N+1 selects, and minimizing joins.\n- Use `@Query` annotations for JPQL or native SQL queries to fine-tune performance.\n- Configure connection pool settings like `spring.datasource.hikari.maximum-pool-size=20` in `application.properties`.\n- Enable lazy loading with `@Lazy` on associations to reduce initial query load.\n- Regularly analyze and optimize MySQL tables using `ANALYZE TABLE` command.\n- Use Spring Data JPA's `Pageable` interface for pagination to limit result sets.",
+    "source": "code_example",
+    "updated_at": 1781062986.0420787
+  }
+}
