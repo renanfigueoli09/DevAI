@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-advanced:gorm advanced usage patterns i": {
+    "content": "- **Latest Version**: GORM v1.30.0 introduced support for Go Generics.\n- **CLI Commands**:\n  - `go get gorm.io/gorm`\n  - `go get gorm.io/driver/sqlite` (for SQLite)\n- **Key Config Options**:\n  - `gorm.Config{...}` for customizing GORM behavior.\n  - `db.AutoMigrate(&User{})` for database migrations.\n  - `db.Create(&user)` to create a new record.\n  - `db.First(&user, 1)` to find the first record with primary key = 1.\n  - `db.Model(&user).Update(\"name\", \"newName\")` to update a field.\n  - `db.Where(\"age > ?\", 20).Find(&users)` for conditional queries.",
+    "source": "web_search",
+    "updated_at": 1781068094.150599
+  },
+  "search:go-gorm-advanced:gorm advanced usage patterns i_ex": {
+    "content": "- Clone the GORM example repository using `git clone git@github.com:adlerhsieh/gorm_example.git`.\n- Navigate to the project directory.\n- Use MySQL as the database for this demo.\n- For pagination, create a function `GeneratePaginationFromRequest` in `pagination.go`.\n- Set default values for limit and page within the function.\n- Explore GORM's advanced features such as hooks, transactions, and raw SQL.\n- Ensure you have the latest version of GORM installed.",
+    "source": "code_example",
+    "updated_at": 1781068099.1649728
+  },
+  "search:go-gorm-advanced:gorm best practices for large ": {
+    "content": "- Use the latest version of GORM to take advantage of new features and improvements.\n- Employ connection pooling by setting `pool_size` in your DSN configuration.\n- Utilize `AutoMigrate` for schema management, but be cautious with it on production databases.\n- Implement batch inserts using `CreateInBatches` for large datasets.\n- Use `Where` clauses to filter data efficiently and avoid loading unnecessary records.\n- Employ `Select` and `Omit` methods to control the fields loaded in queries.\n- Regularly update your database driver to ensure compatibility and security.\n- Monitor query performance with GORM's logging capabilities.\n- Implement transactions using `Begin`, `Commit`, and `Rollback` for data integrity.\n- Use `Preload` judiciously to avoid N+1 query problems.",
+    "source": "web_search",
+    "updated_at": 1781068107.0199645
+  },
+  "search:go-gorm-advanced:gorm best practices for large _ex": {
+    "content": "- Use `go get -u gorm.io/gorm` and `go get -u gorm.io/driver/sqlite` to install the latest version of GORM and its SQLite driver.\n- Define models using Go structs, where each struct represents a table in the database.\n- Utilize efficient querying techniques such as eager loading (`Preload`) and batch processing (`FindInBatches`) for large datasets.\n- Implement performance optimization by indexing database columns that are frequently queried.\n- Handle errors gracefully using GORM's error handling mechanisms to ensure robust application behavior.",
+    "source": "code_example",
+    "updated_at": 1781068126.2693458
+  }
+}

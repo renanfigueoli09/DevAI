@@ -1,0 +1,22 @@
+{
+  "search:kubernetes-networking-advanced:kubernetes advanced networking": {
+    "content": "- **CLI Commands**:\n  - `kubectl get pods --all-namespaces` to list all pods across namespaces.\n  - `kubectl describe pod <pod-name> -n <namespace>` for detailed information about a specific pod.\n\n- **Latest Versions**:\n  - Kubernetes: v1.27 (as of my last update in October 2023).\n  - Container Network Interface (CNI): Latest version varies by CNI plugin, check official repositories for the most current version.\n\n- **Key Config Options**:\n  - `service.beta.kubernetes.io/aws-load-balancer-type`: Set to `nlb` or `elb` for AWS.\n  - `networking.k8s.io/ingress.class`: Specifies the ingress controller class.\n  - `spec.subdomain`: Used in StatefulSets to create a subdomain for each pod.",
+    "source": "web_search",
+    "updated_at": 1781068136.7074115
+  },
+  "search:kubernetes-networking-advanced:kubernetes advanced networking_ex": {
+    "content": "- **Multus**: Use `kubectl apply -f multus-daemonset.yml` to deploy.\n- **Ingress Controllers**: Deploy NGINX Ingress with `helm install nginx-ingress stable/nginx-ingress`.\n- **Service Mesh**: Istio can be installed using `istioctl install --set profile=demo`.\n- **Network Policies**: Define policies with YAML, e.g., `kubectl apply -f network-policy.yaml`.\n- **Latest Versions**:\n  - Kubernetes: v1.24\n  - Multus: v3.5\n  - NGINX Ingress Controller: v1.0.0\n  - Istio: v1.10\n- **Key Config Options**:\n  - Multus: `cni-conf-dir`, `log-level`\n  - NGINX Ingress: `controller.service.type`, `controller.replicaCount`\n  - Istio: `global.meshExpansion.enabled`, `global.controlPlaneSecurityEnabled`",
+    "source": "code_example",
+    "updated_at": 1781068152.3817854
+  },
+  "search:kubernetes-networking-advanced:best practices for kubernetes ": {
+    "content": "- Use `kubectl apply -f <network-policy-file.yaml>` to create or update network policies.\n- Ensure Kubernetes version is up-to-date, e.g., `v1.24` as of my last update.\n- Key config options in network policies include:\n  - `apiVersion: networking.k8s.io/v1`\n  - `kind: NetworkPolicy`\n  - `metadata.name`: Name of the policy\n  - `spec.podSelector`: Selects pods to which this policy applies\n  - `spec.policyTypes`: Specifies the types of traffic controlled by this policy (e.g., Ingress, Egress)\n- For Azure Kubernetes Service (AKS), use `az aks create --network-plugin azure` to enable Azure CNI.\n- Implement RBAC for enhanced security with `kubectl apply -f <rbac-config-file.yaml>`.\n- Enable audit logging with `--audit-log-path=/var/log/kubernetes/audit.log` in the kube-apiserver configuration.\n- Lock down Kubelet by configuring it with appropriate flags and ensuring it runs as a non-root user.",
+    "source": "web_search",
+    "updated_at": 1781068173.4067507
+  },
+  "search:kubernetes-networking-advanced:best practices for kubernetes _ex": {
+    "content": "- **CLI Commands**: `kubectl create network-policy` to apply policies.\n- **Latest Versions**: Ensure using Kubernetes v1.23 or later for enhanced Network Policy features.\n- **Key Config Options**:\n  - `podSelector`: Selects pods based on labels.\n  - `ingress`: Defines rules for incoming traffic.\n  - `egress`: Defines rules for outgoing traffic.\n  - `policyTypes`: Specifies whether the policy applies to Ingress, Egress, or both.",
+    "source": "code_example",
+    "updated_at": 1781068179.1156106
+  }
+}
