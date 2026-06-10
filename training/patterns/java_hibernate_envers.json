@@ -1,0 +1,22 @@
+{
+  "search:Java + Hibernate Envers:hibernate envers auditing 2025": {
+    "content": "- **CLI Commands**:\n  - `mvn clean install`\n  - `./gradlew build`\n\n- **Latest Versions**:\n  - Hibernate Envers: 6.2.5.Final\n  - Spring Boot: 3.1.4\n\n- **Key Config Options**:\n  - `@EnableJpaAuditing` in main application class\n  - `@EntityListeners(AuditingEntityListener.class)` on entity classes\n  - `application.properties`: \n    ```properties\n    spring.jpa.hibernate.ddl-auto=update\n    spring.jpa.show-sql=true\n    ```\n  - `@Configurable`\n  - `@EnableTransactionManagement`",
+    "source": "web_search",
+    "updated_at": 1781068796.027292
+  },
+  "search:Java + Hibernate Envers:hibernate envers auditing 2025_ex": {
+    "content": "- **CLI Commands**: None required.\n- **Latest Versions**:\n  - Hibernate Envers: 6.2.3.Final\n  - Spring Boot: 3.1.4\n- **Key Config Options**:\n  - `@EnableJpaAuditing` on main application class\n  - Define entity classes with `@EntityListeners(AuditingEntityListener.class)`\n  - Configure audit tables using `@AuditTable`\n  - Customize revision entities with `@RevisionEntity`\n  - Enable auditing in Spring Boot properties: `spring.jpa.hibernate.ddl-auto=update`\n- **Example Code Snippet**:\n  ```java\n  @Configuration\n  @EnableJpaAuditing(auditorAwareRef = \"auditorProvider\")\n  public class AuditConfig {\n      @Bean\n      public AuditorAware<String> auditorProvider() {\n          return () -> Optional.of(\"system\");\n      }\n  }\n\n  @EntityListeners(AuditingEntityListener.class)\n  @Entity\n  public class MyEntity {\n      @Id\n      @GeneratedValue(strategy = GenerationType.IDENTITY)\n      private Long id;\n\n      // other fields\n\n      @CreatedDate\n      @Column(name = \"created_date\")\n      private Date createdDate;\n\n      @LastModifiedDate\n      @Column(name = \"last_modified_date\")\n      private Date lastModifiedDate;\n  }\n  ```",
+    "source": "code_example",
+    "updated_at": 1781068808.7519972
+  },
+  "search:Java + Hibernate Envers:hibernate envers performance o": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate Envers 6.2.0.Final, Hibernate ORM 5.6.7.Final.\n- **Key Config Options**:\n  - `hibernate.envers.audit_table_suffix`: Suffix for audit tables.\n  - `hibernate.envers.revision_type_field_name`: Field name for revision type.\n  - `hibernate.envers.revision_entity_class`: Custom revision entity class.",
+    "source": "web_search",
+    "updated_at": 1781068819.0776188
+  },
+  "search:Java + Hibernate Envers:hibernate envers performance o_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Versions**: Hibernate Envers 6.2.3.Final, Hibernate Core 5.6.7.Final.\n- **Key Config Options**:\n  - `hibernate.envers.audit_table_suffix`: Customize the suffix for audit tables.\n  - `hibernate.envers.revision_type_field_name`: Define a custom field name for revision types.\n  - `hibernate.cache.use_second_level_cache`: Enable second-level cache for better performance.",
+    "source": "code_example",
+    "updated_at": 1781068824.5903325
+  }
+}
