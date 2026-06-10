@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-mysql-advanced-queries:gorm mysql advanced queries 20": {
+    "content": "- **CLI Commands**:\n  - `go get gorm.io/gorm` to install the latest version of GORM.\n  - `go get gorm.io/driver/mysql` to install the MySQL driver for GORM.\n\n- **Latest Versions**:\n  - GORM: v1.23.10\n  - MySQL Driver: v1.5.0\n\n- **Key Config Options**:\n  - Use `gorm.DB.Select(\"field1, field2\")` to select specific fields.\n  - Enable logging with `db.Logger = logger.Default.LogMode(logger.Info)` for development environments.\n  - Use `db.Preload(\"User\").Find(&todos)` to preload associated data efficiently.",
+    "source": "web_search",
+    "updated_at": 1781083838.6557813
+  },
+  "search:go-gorm-mysql-advanced-queries:gorm mysql advanced queries 20_ex": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: Check the latest version on [GORM GitHub](https://github.com/go-gorm/gorm).\n- **Key Config Options**:\n  - `gorm.DB.AutoMigrate(&User{})`: Automatically migrates schema based on model definition.\n  - `gorm.DB.Create(&user)`: Inserts a new record into the database.\n  - `gorm.DB.First(&user, 1)`: Finds the first record with primary key = 1.\n  - `gorm.DB.Where(\"name = ?\", \"jinzhu\").First(&user)`: Finds the first record where name is jinzhu.",
+    "source": "code_example",
+    "updated_at": 1781083845.040377
+  },
+  "search:go-gorm-mysql-advanced-queries:go gorm with mysql performance": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Versions**: Ensure using the latest version of GORM and MySQL driver by checking their respective GitHub repositories.\n- **Key Config Options**:\n  - Set `gorm.Config{Logger: logger.New(...)}` for custom logging.\n  - Use `db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})` to connect to MySQL with GORM.\n  - Optimize queries by using preloading (`Preload`) and eager loading (`Joins`).",
+    "source": "web_search",
+    "updated_at": 1781083854.1303778
+  },
+  "search:go-gorm-mysql-advanced-queries:go gorm with mysql performance_ex": {
+    "content": "- **CLI Commands**:\n  - `go get -u gorm.io/gorm`\n  - `go get -u gorm.io/driver/mysql`\n\n- **Latest Versions**:\n  - GORM: v2.34.0\n  - MySQL Driver for GORM: v1.5.0\n\n- **Key Config Options**:\n  - `gorm.DB` instance configuration\n  - Connection string parameters (e.g., `charset`, `parseTime`, `loc`)\n  - Auto-migration (`AutoMigrate()`)\n  - Batch size (`BatchSize()`)\n  - Preload associations (`Preload()`)\n  - Caching (`Cache()`)\n\n- **Performance Tips**:\n  - Use connection pooling\n  - Optimize queries with indexes\n  - Avoid N+1 query problem\n  - Use batch operations where possible",
+    "source": "code_example",
+    "updated_at": 1781083860.979637
+  }
+}

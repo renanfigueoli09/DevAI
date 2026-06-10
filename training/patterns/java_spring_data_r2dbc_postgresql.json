@@ -1,0 +1,22 @@
+{
+  "search:java-spring-data-r2dbc-postgresql:spring data r2dbc postgresql a": {
+    "content": "- **CLI Commands**:\n  - `./mvnw spring-boot:run` to run the Spring Boot application.\n  - `./mvnw clean install` to build and package the application.\n\n- **Latest Versions**:\n  - Spring Data R2DBC: 1.6.0.RELEASE\n  - PostgreSQL Driver: 42.3.3\n\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for PostgreSQL.\n  - `spring.r2dbc.username`: Username for the database.\n  - `spring.r2dbc.password`: Password for the database.\n  - `spring.r2dbc.properties.cache-prepared-statements`: Enable caching of prepared statements.",
+    "source": "web_search",
+    "updated_at": 1781083765.5357628
+  },
+  "search:java-spring-data-r2dbc-postgresql:spring data r2dbc postgresql a_ex": {
+    "content": "- **CLI Commands**:\n  - `mvn spring-boot:run` to run the application.\n  - `./gradlew bootRun` for Gradle-based projects.\n\n- **Latest Versions**:\n  - Spring Boot: 3.x\n  - R2DBC: 0.8.x\n  - PostgreSQL Driver: 42.2.x\n\n- **Key Config Options**:\n  - `spring.r2dbc.url`: JDBC URL for PostgreSQL.\n  - `spring.r2dbc.username`: Database username.\n  - `spring.r2dbc.password`: Database password.\n  - `spring.r2dbc.properties.cache-prepared-statements=true`: Enable caching of prepared statements.",
+    "source": "code_example",
+    "updated_at": 1781083775.4404132
+  },
+  "search:java-spring-data-r2dbc-postgresql:r2dbc with postgresql performa": {
+    "content": "- **Latest Version of pgjdbc/r2dbc-postgresql**: Check GitHub repository for the latest release.\n- **CLI Commands**:\n  - `git clone https://github.com/pgjdbc/r2dbc-postgresql.git`\n  - `mvn clean install` to build from source.\n- **Key Config Options**:\n  - Connection Pooling: Use HikariCP or Apache Commons DBCP2.\n  - Asynchronous Execution: Enable Netty for non-blocking I/O.\n  - Query Optimization: Analyze and optimize PostgreSQL queries using EXPLAIN ANALYZE.",
+    "source": "web_search",
+    "updated_at": 1781083784.4741158
+  },
+  "search:java-spring-data-r2dbc-postgresql:r2dbc with postgresql performa_ex": {
+    "content": "- Use `./mvnw clean install` to build the project.\n- Update dependencies in `pom.xml` to use latest R2DBC and PostgreSQL versions.\n- Configure R2DBC URL, username, and password in `application.properties`.\n- Enable reactive endpoints with `@EnableWebFlux`.\n- Use `@Repository` for data access methods.\n- Implement CRUD operations using Spring Data R2DBC repositories.\n- Monitor performance with tools like Gatling.\n- Optimize queries by indexing database tables.",
+    "source": "code_example",
+    "updated_at": 1781083789.6119409
+  }
+}

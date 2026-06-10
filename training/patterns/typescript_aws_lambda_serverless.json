@@ -1,0 +1,22 @@
+{
+  "search:typescript-aws-lambda-serverless:serverless typescript aws lamb": {
+    "content": "- Use the latest AWS CLI version.\n- Initialize a new TypeScript project using `npm init -y`.\n- Install necessary packages like `aws-lambda`, `typescript`, and `ts-node-dev` with `npm install aws-lambda typescript ts-node-dev --save-dev`.\n- Configure TypeScript by creating a `tsconfig.json` file with the following settings:\n  ```json\n  {\n    \"compilerOptions\": {\n      \"target\": \"ES6\",\n      \"module\": \"commonjs\",\n      \"strict\": true,\n      \"esModuleInterop\": true,\n      \"skipLibCheck\": true,\n      \"forceConsistentCasingInFileNames\": true,\n      \"outDir\": \"./dist\"\n    },\n    \"include\": [\"src\"]\n  }\n  ```\n- Create a Lambda function handler in TypeScript, e.g., `handler.ts`:\n  ```typescript\n  export const handler = async (event: any) => {\n    return {\n      statusCode: 200,\n      body: JSON.stringify('Hello from Lambda!')\n    };\n  };\n  ```\n- Transpile TypeScript code to JavaScript using the command: `npx tsc`.\n- Deploy the transpiled code in AWS Lambda by creating a `.zip` file of the `dist` directory and uploading it through the AWS Management Console or using the AWS CLI.\n- Use environment variables for configuration in your Lambda function.\n- Implement error handling and logging within your Lambda functions.\n- Utilize TypeScript interfaces and types to enforce type safety.\n- Consider using AWS SAM (Serverless Application Model) for deploying serverless applications with TypeScript, as it simplifies the process of defining and deploying serverless architectures.",
+    "source": "web_search",
+    "updated_at": 1781083803.5356698
+  },
+  "search:typescript-aws-lambda-serverless:serverless typescript aws lamb_ex": {
+    "content": "- Use `npm init -y` to initialize a new Node.js project.\n- Install TypeScript and AWS Lambda dependencies using `npm install typescript @types/node aws-lambda --save-dev`.\n- Transpile TypeScript code to JavaScript with `tsc --init` followed by `tsc`.\n- Deploy your function using the AWS CLI: `aws lambda update-function-code --function-name <your-function-name> --zip-file fileb://<path-to-your-zip-file>.zip`.\n- Configure environment variables in Lambda via the AWS Management Console or using the CLI with `aws lambda update-function-configuration --function-name <your-function-name> --environment Variables={key1=value1,key2=value2}`.\n- Use IAM roles to manage permissions for your Lambda function.\n- Implement error handling and logging within your Lambda functions.\n- Consider using layers to share code between functions.\n- Optimize cold start times by minimizing dependencies and using efficient code.",
+    "source": "code_example",
+    "updated_at": 1781083810.634708
+  },
+  "search:typescript-aws-lambda-serverless:aws lambda typescript serverle": {
+    "content": "- **CLI Commands**:\n  - `aws lambda create-function --function-name myFunction --runtime nodejs14.x --role arn:aws:iam::123456789012:role/lambda-role --handler index.handler --zip-file fileb://myFunction.zip`\n  - `aws lambda update-function-code --function-name myFunction --zip-file fileb://newMyFunction.zip`\n\n- **Latest Versions**:\n  - Node.js runtime: nodejs14.x\n  - AWS CLI: v2.7.30\n\n- **Key Config Options**:\n  - Runtime: Specifies the execution environment for your Lambda function.\n  - Role: IAM role that grants permissions to the function.\n  - Handler: The entry point of your code, typically `index.handler`.\n  - Code Packaging: Use `.zip` files or container images.",
+    "source": "web_search",
+    "updated_at": 1781083819.718288
+  },
+  "search:typescript-aws-lambda-serverless:aws lambda typescript serverle_ex": {
+    "content": "- Use `npm init serverless` to create a new Serverless project.\n- Install AWS Lambda Powertools for TypeScript using `npm install @aws-lambda-powertools/core`.\n- Configure your `serverless.yml` with the latest version of Node.js runtime, e.g., `runtime: nodejs18.x`.\n- Set environment variables in `serverless.yml` under `provider.environment`.\n- Use `sls deploy` to deploy your serverless application.\n- Utilize Powertools for logging and tracing by importing and using its utilities in your Lambda functions.",
+    "source": "code_example",
+    "updated_at": 1781083827.9584668
+  }
+}
