@@ -1,0 +1,12 @@
+{
+  "search:ruby-on-rails-actioncable-websockets:ruby on rails actioncable webs": {
+    "content": "- **CLI Commands**:\n  - `rails generate channel <channel_name>`\n  - `rails generate action_cable:install`\n\n- **Latest Versions**:\n  - Ruby on Rails 7.x\n\n- **Key Config Options**:\n  - Subscription Adapter: Configure in `config/cable.yml`\n  - Allowed Request Origins: Set in `config/initializers/cable.rb`",
+    "source": "web_search",
+    "updated_at": 1781074495.8352916
+  },
+  "search:ruby-on-rails-actioncable-websockets:ruby on rails actioncable webs_ex": {
+    "content": "- **CLI Commands**:\n  - `rails generate channel <channel_name>`\n  - `rails server`\n\n- **Latest Versions**:\n  - Ruby on Rails: 7.0.6\n  - ActionCable: Included in Rails 5+\n\n- **Key Config Options**:\n  - `config/cable.yml`: Configure Redis URL and adapter.\n  - `app/channels/application_cable/connection.rb`: Define connection logic.\n  - `app/channels/<channel_name>_channel.rb`: Implement channel methods.",
+    "source": "code_example",
+    "updated_at": 1781074511.7832382
+  }
+}

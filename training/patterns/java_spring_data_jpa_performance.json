@@ -1,0 +1,22 @@
+{
+  "search:java-spring-data-jpa-performance:spring data jpa performance tu": {
+    "content": "- Use `@QueryHints` to optimize query performance.\n- Enable Hibernate's second-level cache and query cache in `application.properties`.\n- Configure batch updates using `spring.jpa.properties.hibernate.jdbc.batch_size=50`.\n- Implement lazy loading for collections with `fetch = FetchType.LAZY`.\n- Use `@EntityGraph` to fetch related entities efficiently.\n- Optimize queries by avoiding N+1 selects with proper joins.\n- Enable query profiling in `application.properties` for performance analysis.\n- Regularly update Spring Data JPA and Hibernate to the latest versions.\n- Monitor application metrics using tools like Prometheus and Grafana.",
+    "source": "web_search",
+    "updated_at": 1781074452.487192
+  },
+  "search:java-spring-data-jpa-performance:spring data jpa performance tu_ex": {
+    "content": "- **CLI Commands**: Use `mvn clean install` to build your project.\n- **Latest Version**: Spring Data JPA 3.x is the latest stable version as of my last update.\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size=50`\n  - `spring.jpa.properties.hibernate.order_inserts=true`\n  - `spring.jpa.properties.hibernate.order_updates=true`\n  - `spring.jpa.show-sql=false` to disable SQL logging in production\n  - `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect` for MySQL 8 compatibility",
+    "source": "code_example",
+    "updated_at": 1781074467.8991196
+  },
+  "search:java-spring-data-jpa-performance:java spring data jpa optimizat": {
+    "content": "- **Latest Version**: Spring Data JPA 2025.1.0-M3\n- **Key Config Options**:\n  - `spring.jpa.properties.hibernate.jdbc.batch_size`\n  - `spring.jpa.properties.hibernate.order_inserts`\n  - `spring.jpa.properties.hibernate.order_updates`\n- **CLI Commands**:\n  ```bash\n  mvn clean install -DskipTests\n  ```\n  ```bash\n  ./mvnw spring-boot:run\n  ```\n- **Performance Enhancements**:\n  - AOT processing for faster startup times and reduced memory consumption.\n  - Batch processing to reduce the number of database round-trips.",
+    "source": "web_search",
+    "updated_at": 1781074477.0117111
+  },
+  "search:java-spring-data-jpa-performance:java spring data jpa optimizat_ex": {
+    "content": "- Use `@Query` annotation for complex queries.\n- Employ Spring Data JPA's SpEL (Spring Expression Language) for dynamic query parameters.\n- Optimize repository methods by using method naming conventions.\n- Implement pagination with `Pageable` and `Slice`.\n- Utilize `@EntityGraph` for fetching related entities efficiently.\n- Configure `spring.jpa.properties.hibernate.jdbc.batch_size` for batch processing.\n- Enable second-level caching with `@EnableCaching` and configure cache providers like Ehcache or Caffeine.\n- Monitor query performance using Spring Boot Actuator's `/actuator/jpa-metrics`.\n- Regularly update dependencies to the latest versions for security and performance improvements.",
+    "source": "code_example",
+    "updated_at": 1781074484.2637274
+  }
+}

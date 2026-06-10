@@ -1,0 +1,22 @@
+{
+  "search:go-gorm-middleware:go gorm middleware best practi": {
+    "content": "- **CLI Commands**: Use `go get -u gorm.io/gorm` to update GORM.\n- **Latest Version**: As of my last update, the latest version is v2.x. Check [GORM's official GitHub page](https://github.com/go-gorm/gorm) for the most current version.\n- **Key Config Options**:\n  - `gorm.DB`: The primary database connection object.\n  - `AutoMigrate()`: Automatically migrates schema to match models.\n  - `Raw()`: Executes raw SQL queries.\n  - `WithContext(context.Context)`: Adds context to database operations for timeout and cancellation handling.",
+    "source": "web_search",
+    "updated_at": 1781074408.4152646
+  },
+  "search:go-gorm-middleware:go gorm middleware best practi_ex": {
+    "content": "- Use `go get -u gorm.io/gorm` to update GORM to the latest version.\n- Implement middleware in Go using `net/http` package for handling requests and responses.\n- Configure database connection with GORM using `gorm.Open()` method, e.g., `db, err := gorm.Open(sqlite.Open(\"test.db\"), &gorm.Config{})`.\n- Set timeout settings in context for database operations: `ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)`, defer `cancel()`.\n- Use `db.Migrator()` to manage database schema migrations.\n- Implement logging middleware to log request details and response status.\n- Utilize GORM hooks for performing actions before or after model operations.\n- Configure connection pool settings with `gorm.Config{...}` options like `MaxIdleConns`, `MaxOpenConns`, etc.",
+    "source": "code_example",
+    "updated_at": 1781074427.3197396
+  },
+  "search:go-gorm-middleware:gorm middleware for go applica": {
+    "content": "- **Latest Version**: Check latest version on [GitHub](https://github.com/go-gorm/gorm) or [Go Modules](https://pkg.go.dev/github.com/go-gorm/gorm).\n  \n- **CLI Commands**:\n  - `go get -u gorm.io/gorm` to update GORM.\n  - `go mod tidy` to clean up unused dependencies.\n\n- **Key Config Options**:\n  - `gorm.DB`, the primary struct for interacting with the database.\n  - `db, err := gorm.Open(sqlite.Open(\"test.db\"), &gorm.Config{})` to open a connection.\n  - `AutoMigrate(&User{})` to auto migrate schema.\n  - `Raw(\"SELECT * FROM users WHERE name = ?\", \"jinzhu\").Scan(&users)` for raw SQL queries.\n\n- **Middleware**:\n  - Use middleware for logging, transaction management, and more. Example: `db.Use(gorm.Logger.Default.LogMode(gorm.Info))`.\n\n- **Documentation**: Refer to [GORM Documentation](https://gorm.io/docs) for detailed usage and advanced features.",
+    "source": "web_search",
+    "updated_at": 1781074436.5400968
+  },
+  "search:go-gorm-middleware:gorm middleware for go applica_ex": {
+    "content": "- **CLI Commands**: `go get -u gorm.io/gorm` to install the latest version of GORM.\n- **Latest Version**: As of my last update, the latest stable version is 2.x. Check [GORM's official GitHub page](https://github.com/go-gorm/gorm) for the most current version.\n- **Key Config Options**:\n  - `gorm.DB` instance configuration: `db, err := gorm.Open(sqlite.Open(\"test.db\"), &gorm.Config{})`\n  - Middleware registration: Use `db.Use(gorm.MiddlewareName())` to add middleware like logging or performance tracking.\n  - Context management: Pass context in database operations to handle timeouts and cancellations effectively. Example: `ctx, cancel := context.WithTimeout(context.Background(), time.Second*5); defer cancel(); db.WithContext(ctx).Find(&users)`",
+    "source": "code_example",
+    "updated_at": 1781074444.4616356
+  }
+}
